@@ -1,0 +1,726 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <rozporzadzenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/1896</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>b5233a5b-73ac-4b8c-8016-25492f475055</gd:GUIDwersji>
+      <AdresISAP>WDU20250001896</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>1896</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 1896</AdresWyswietlany>
+      <Tytul>Rozporządzenie Ministra Energii z dnia 30 grudnia 2025 r. w sprawie finansowania likwidacji kopalni, zakładu górniczego lub jego oznaczonej części oraz działań podejmowanych po zakończeniu tej likwidacji</Tytul>
+      <Rodzaj>ROZP</Rodzaj>
+      <DataOgloszenia>2025-12-31</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-12-30</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane" rodzaj="wejscie-w-zycie" pochodzenie="odczytane" data="2026-01-01" podstawa="§ 14" zrodlo="https://eli.gov.pl/eli/DU/2025/1896" dowod="DU/2025/1896__art_14" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="f361fde6-ef17-4fe4-abea-84b4ccb6d21e" rola="wydajacy">
+          <Nazwa>Minister Energii</Nazwa>
+          <OrganPodpisujacy>Minister Energii</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>M.</imie> <nazwisko>Motyka</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Rozporządzenie</rodzaj-aktu>
+    <autor-aktu>Ministra Energii<odnosnik id-odnosnika="1" symbol="1" gd:GUID="4134ae9a-8061-4386-a569-0da8b3b38182"><p><zdanie nr="1" gd:zdGUID="9555ebe1-b204-4745-b5d1-ef94ed0be35c" fragment="1" gd:fragmentGUID="d635d3aa-be2a-468c-b496-da5921e43f3f">Minister Energii kieruje działem administracji rządowej – gospodarka surowcami energetycznymi, na podstawie § 1 ust. 2 pkt 2 rozporządzenia Prezesa Rady Ministrów z dnia 25 lipca 2025 r. w sprawie szczegółowego zakresu działania Ministra Energii (Dz. U. poz. 1206).</zdanie></p></odnosnik></autor-aktu>
+    <data>z dnia 30 grudnia 2025 r.</data>
+    <tytul>w sprawie finansowania likwidacji kopalni, zakładu górniczego lub jego oznaczonej części oraz działań podejmowanych po zakończeniu tej likwidacji</tytul>
+    <podstawa-prawna>Na podstawie art. 8 ust. 5 ustawy z dnia 7 września 2007 r. o funkcjonowaniu górnictwa węgla kamiennego (Dz. U. z 2024 r. poz. 1383 oraz z 2025 r. poz. 1822) zarządza się, co następuje:</podstawa-prawna>
+    <paragraf eId="DU/2025/1896__art_1" gd:GUID="48c4a426-7494-4a7b-9b99-a4e79c2b12a8" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="db534de2-75f9-4907-87af-80141089bfa6" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="53b3e38d-b308-46e9-ad77-3e835748a9b6" fragment="1" gd:fragmentGUID="ccc5e58b-12fc-47c1-9714-4e5235cd8ae0" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">Rozporządzenie określa:</zdanie>
+        </p>
+        <punkt eId="DU/2025/1896__art_1__pkt_1" gd:GUID="e70269ce-c81f-4ed6-a659-488a305b62fc" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="53b3e38d-b308-46e9-ad77-3e835748a9b6" fragment="2" gd:fragmentGUID="2a730829-6d35-4e29-a71a-b0ad56b93df9" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">szczegółowe warunki i tryb przyznawania dotacji budżetowej oraz sposób przekazywania skarbowych papierów wartościowych na podwyższenie kapitału zakładowego przedsiębiorstwa górniczego przez Skarb Państwa, zwanych dalej odpowiednio „dotacją” oraz „skarbowymi papierami wartościowymi”, przeznaczonych na finansowanie:</zdanie>
+          </p>
+          <litera eId="DU/2025/1896__art_1__pkt_1__lit_a" gd:GUID="e76d5a06-2c21-4f40-b736-8c879a0cb8c0" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="53b3e38d-b308-46e9-ad77-3e835748a9b6" fragment="3" gd:fragmentGUID="5156f2cc-e85c-4dea-beb7-35c0072d2a27" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">likwidacji kopalni, zakładu górniczego lub jego oznaczonej części,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1896__art_1__pkt_1__lit_b" gd:GUID="a0fba72a-cdac-42a3-9332-0bebfa03413a" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="53b3e38d-b308-46e9-ad77-3e835748a9b6" fragment="4" gd:fragmentGUID="21745f3d-f17a-436e-b30b-965656202a4f" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">zabezpieczenia kopalń sąsiednich przed zagrożeniem wodnym, gazowym oraz pożarowym, w trakcie i po zakończeniu likwidacji kopalni,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1896__art_1__pkt_1__lit_c" gd:GUID="f0a1562e-6ca9-4135-8a63-6c2de2236335" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+            <nr>c</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="53b3e38d-b308-46e9-ad77-3e835748a9b6" fragment="5" gd:fragmentGUID="a9e0485c-3fe3-4761-9bec-d480f7f65081" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">naprawiania szkód wywołanych ruchem zakładu górniczego w trakcie i po zakończeniu likwidacji zakładu górniczego, w tym szkód powstałych w wyniku reaktywacji starych zrobów,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1896__art_1__pkt_1__lit_d" gd:GUID="34d2a0f9-f856-4bfe-8c66-6e1a83196bc2" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+            <nr>d</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="53b3e38d-b308-46e9-ad77-3e835748a9b6" fragment="6" gd:fragmentGUID="c3443998-b320-47ef-a9c9-0fc56bc4e834" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">rekultywacji terenów zdegradowanych,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1896__art_1__pkt_1__lit_e" gd:GUID="f959f620-4bb4-49cf-8ac4-1b99d56b9903" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+            <nr>e</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="53b3e38d-b308-46e9-ad77-3e835748a9b6" fragment="7" gd:fragmentGUID="4c5c10bc-f074-41b6-9d18-263a6e70772b" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">zagospodarowania majątku likwidowanej kopalni,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1896__art_1__pkt_1__lit_f" gd:GUID="5310d5ab-5b69-414f-86f6-630f74b6e993" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+            <nr>f</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="53b3e38d-b308-46e9-ad77-3e835748a9b6" fragment="8" gd:fragmentGUID="03a048e0-c65b-424a-920d-cfea06aa1458" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">likwidacji i zagospodarowania zbędnego majątku przedsiębiorstwa górniczego;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2025/1896__art_1__pkt_2" gd:GUID="41456a71-6b39-4d65-97cf-21cb0028ac09" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="53b3e38d-b308-46e9-ad77-3e835748a9b6" fragment="9" gd:fragmentGUID="d35b9333-689f-43fc-8cee-8698d0b253b8" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">sposób wykorzystania przyznanej dotacji budżetowej oraz środków uzyskanych ze sprzedaży przekazanych skarbowych papierów wartościowych;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1896__art_1__pkt_3" gd:GUID="b0327f92-8a75-47ce-9577-25a5766b2c8b" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="53b3e38d-b308-46e9-ad77-3e835748a9b6" fragment="10" gd:fragmentGUID="d518ca30-63f0-40a0-9ad9-8a79e0aafc67" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">tryb rozliczania przyznanej dotacji budżetowej oraz środków uzyskanych ze sprzedaży przekazanych skarbowych papierów wartościowych;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1896__art_1__pkt_4" gd:GUID="d2861527-42a1-4c64-9373-299868dab071" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="53b3e38d-b308-46e9-ad77-3e835748a9b6" fragment="11" gd:fragmentGUID="3bd4797d-10c5-4ec7-8672-528f4188f90c" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">szczegółowe warunki powodujące cofnięcie lub czasowe wstrzymanie wypłaty przyznanej dotacji budżetowej oraz sposób zwrotu, w całości lub w części, równowartości środków uzyskanych ze sprzedaży skarbowych papierów wartościowych.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2025/1896__art_2" gd:GUID="bb6b3ba0-a353-4a67-b52e-6b33fc2c6a24" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="21b56298-c0fa-44d5-82d2-3010a8c2c7fb" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="f3e4ec8e-e8fc-488c-abcd-56261fa3f12e" fragment="1" gd:fragmentGUID="68e53c1e-fbc2-4288-a4a1-098683a55fbe" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">Dotację oraz środki uzyskane ze sprzedaży skarbowych papierów wartościowych wykorzystuje się na finansowanie:</zdanie>
+        </p>
+        <punkt eId="DU/2025/1896__art_2__pkt_1" gd:GUID="6502a4c3-3070-4eb7-94bc-4738d2b5b238" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="f3e4ec8e-e8fc-488c-abcd-56261fa3f12e" fragment="2" gd:fragmentGUID="8b5580f3-3152-4375-92ca-a8757bded647" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">zadań wykonywanych w trakcie likwidacji zakładu górniczego lub jego oznaczonej części, w szczególności:</zdanie>
+          </p>
+          <litera eId="DU/2025/1896__art_2__pkt_1__lit_a" gd:GUID="9b68aca4-6830-4f2d-b5ff-9f9ebb0963bf" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="f3e4ec8e-e8fc-488c-abcd-56261fa3f12e" fragment="3" gd:fragmentGUID="aa5c134b-930e-49fb-a433-9e6e5b667a32" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">likwidację oraz zabezpieczenie wyrobisk,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1896__art_2__pkt_1__lit_b" gd:GUID="becc1e0f-8d18-41f3-8eef-ed4eade3b714" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="f3e4ec8e-e8fc-488c-abcd-56261fa3f12e" fragment="4" gd:fragmentGUID="c5ee4e6d-9a46-4cce-b2f3-eac0c275f309" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">likwidację oraz zabezpieczenie szybów i szybików,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1896__art_2__pkt_1__lit_c" gd:GUID="7d9c0e01-3e78-4892-ad6d-38138954f0b8" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+            <nr>c</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="f3e4ec8e-e8fc-488c-abcd-56261fa3f12e" fragment="5" gd:fragmentGUID="8f74712f-23d2-48bd-868b-86bd745c1254" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">zabezpieczenie sąsiednich zakładów górniczych przed zagrożeniem wodnym, gazowym oraz pożarowym,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1896__art_2__pkt_1__lit_d" gd:GUID="59aedc5c-8921-49d5-b177-474256d05f8e" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+            <nr>d</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="f3e4ec8e-e8fc-488c-abcd-56261fa3f12e" fragment="6" gd:fragmentGUID="5c15ef13-ff3c-43cc-a700-d4510a295f0f" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">likwidację infrastruktury zakładu górniczego,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1896__art_2__pkt_1__lit_e" gd:GUID="bcc0652c-5384-4557-a3e8-134f65d06ab5" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+            <nr>e</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="f3e4ec8e-e8fc-488c-abcd-56261fa3f12e" fragment="7" gd:fragmentGUID="f0d3248b-d233-4adc-883c-b98ca827159d" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">rekultywację terenów zdegradowanych działalnością górniczą,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1896__art_2__pkt_1__lit_f" gd:GUID="98761d4c-1e7a-4354-aecc-249e2c716802" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+            <nr>f</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="f3e4ec8e-e8fc-488c-abcd-56261fa3f12e" fragment="8" gd:fragmentGUID="aa84d3d2-42b4-41d8-a64a-d8a0dd720d00" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">utrzymanie obiektów przeznaczonych do likwidacji w kolejności zapewniającej bezpieczną likwidację zakładu górniczego lub jego oznaczonej części, a także bezpieczne funkcjonowanie sąsiednich zakładów górniczych,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1896__art_2__pkt_1__lit_g" gd:GUID="c2ed822e-5f48-4170-b3b9-222c246f423e" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+            <nr>g</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="f3e4ec8e-e8fc-488c-abcd-56261fa3f12e" fragment="9" gd:fragmentGUID="f04bef94-ab6f-41ec-b21e-ef22eadfedda" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">prace zabezpieczające oraz przedsięwzięcia zapobiegające zagrożeniom w związku z likwidowanym zakładem górniczym lub likwidowaną oznaczoną częścią zakładu górniczego,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1896__art_2__pkt_1__lit_h" gd:GUID="94e6b921-7e84-4d71-8e75-70f68ad51510" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+            <nr>h</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="f3e4ec8e-e8fc-488c-abcd-56261fa3f12e" fragment="10" gd:fragmentGUID="a1e6bc78-db73-4bdb-8530-2d0f83518851" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">opracowanie wymaganych odrębnymi przepisami projektów, dokumentacji, opinii, ekspertyz i analiz związanych z realizacją zadań, o których mowa w lit. a–g;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2025/1896__art_2__pkt_2" gd:GUID="d85978e8-347c-42d6-9957-57c0ed97d649" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="f3e4ec8e-e8fc-488c-abcd-56261fa3f12e" fragment="11" gd:fragmentGUID="cc17a910-2f02-424f-ae14-77211b353abc" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">działań wykonywanych po zakończeniu likwidacji zakładu górniczego lub jego oznaczonej części, w szczególności:</zdanie>
+          </p>
+          <litera eId="DU/2025/1896__art_2__pkt_2__lit_a" gd:GUID="0621881b-658c-4bf7-97d6-69c5006496fb" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="f3e4ec8e-e8fc-488c-abcd-56261fa3f12e" fragment="12" gd:fragmentGUID="9947c9f2-12c4-44f6-a51c-ab998e33a932" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">likwidację oraz zabezpieczenie wyrobisk,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1896__art_2__pkt_2__lit_b" gd:GUID="e939c918-3fa3-46ab-83ac-20c985edd1e8" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="f3e4ec8e-e8fc-488c-abcd-56261fa3f12e" fragment="13" gd:fragmentGUID="55bd5ace-56fc-47aa-86eb-ff9b5044bafc" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">likwidację oraz zabezpieczenie szybów i szybików,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1896__art_2__pkt_2__lit_c" gd:GUID="1e3643f0-76d1-4af2-9dee-13acdda92021" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+            <nr>c</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="f3e4ec8e-e8fc-488c-abcd-56261fa3f12e" fragment="14" gd:fragmentGUID="7fd5701b-3466-42cd-bb0c-6daf4d81502f" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">zabezpieczenie sąsiednich zakładów górniczych przed zagrożeniem wodnym, gazowym oraz pożarowym,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1896__art_2__pkt_2__lit_d" gd:GUID="9e982755-de78-489d-b991-67a33da0dddf" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+            <nr>d</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="f3e4ec8e-e8fc-488c-abcd-56261fa3f12e" fragment="15" gd:fragmentGUID="5c0fff2a-0c28-4537-90fa-957d935d7ef6" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">zagospodarowanie majątku likwidowanego zakładu górniczego lub likwidowanej oznaczonej części zakładu górniczego, w tym likwidację infrastruktury,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1896__art_2__pkt_2__lit_e" gd:GUID="17681ec3-c0fd-4a6f-86a0-f14899262ce8" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+            <nr>e</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="f3e4ec8e-e8fc-488c-abcd-56261fa3f12e" fragment="16" gd:fragmentGUID="2e3cbaaf-1aff-4871-9f5b-f4a48368da36" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">likwidację i zagospodarowanie zbędnego majątku przedsiębiorstwa górniczego, innego niż wymieniony w lit. d,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1896__art_2__pkt_2__lit_f" gd:GUID="4c341d25-7001-490d-b655-47ae2f9a812c" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+            <nr>f</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="f3e4ec8e-e8fc-488c-abcd-56261fa3f12e" fragment="17" gd:fragmentGUID="a68794a8-3f7f-4a51-8bbc-24ff957a911e" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">prace zabezpieczające oraz przedsięwzięcia zapobiegające zagrożeniom w związku ze zlikwidowanym zakładem górniczym lub zlikwidowaną częścią zakładu górniczego, inne niż wymienione w lit. a–e,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1896__art_2__pkt_2__lit_g" gd:GUID="9b4ceb70-9d57-476f-ab62-48395fb30ee2" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+            <nr>g</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="f3e4ec8e-e8fc-488c-abcd-56261fa3f12e" fragment="18" gd:fragmentGUID="8066d744-3d5e-467b-bc42-0bd20d7add38" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">rekultywację terenów zdegradowanych działalnością górniczą,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1896__art_2__pkt_2__lit_h" gd:GUID="0fb14af9-0d7b-402f-9952-54182773f74a" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+            <nr>h</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="f3e4ec8e-e8fc-488c-abcd-56261fa3f12e" fragment="19" gd:fragmentGUID="69b55713-6fee-42f5-a545-eb4ce5c340ec" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">utrzymanie obiektów niezbędnych do realizacji działań wykonywanych po zakończeniu likwidacji zakładu górniczego lub jego oznaczonej części,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1896__art_2__pkt_2__lit_i" gd:GUID="915d1211-3049-4042-8bdd-ae26c76be9ed" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+            <nr>i</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="f3e4ec8e-e8fc-488c-abcd-56261fa3f12e" fragment="20" gd:fragmentGUID="4fcbf68c-0e04-4de0-867c-fab7ba40145d" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">opracowywanie wymaganych odrębnymi przepisami projektów, dokumentacji, opinii, ekspertyz i analiz związanych z realizacją działań, o których mowa w lit. a–h;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2025/1896__art_2__pkt_3" gd:GUID="988fc8c8-a622-43d5-8bdb-82b472fcec63" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="f3e4ec8e-e8fc-488c-abcd-56261fa3f12e" fragment="21" gd:fragmentGUID="fb780b5d-4858-4289-ac95-f8e73ef7a86a" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">pokrywanie kosztów ogólnego zarządu:</zdanie>
+          </p>
+          <litera eId="DU/2025/1896__art_2__pkt_3__lit_a" gd:GUID="f3eefb12-2e67-48ec-b522-d2c8fc681240" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="f3e4ec8e-e8fc-488c-abcd-56261fa3f12e" fragment="22" gd:fragmentGUID="ae2d90b6-3cb1-44bc-8469-72045df58889" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">oddziału wchodzącego w skład przedsiębiorstwa górniczego, o którym mowa w art. 8 ust. 1 ustawy z dnia 7 wrześ- nia 2007 r. o funkcjonowaniu górnictwa węgla kamiennego, zwanej dalej „ustawą”, realizującego działania wykonywane po zakończeniu likwidacji zakładu górniczego lub jego oznaczonej części,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1896__art_2__pkt_3__lit_b" gd:GUID="6075ebb7-708f-4cde-b897-49cb1fc585d1" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="f3e4ec8e-e8fc-488c-abcd-56261fa3f12e" fragment="23" gd:fragmentGUID="f583cf78-ba00-4ca9-b859-c2834f32ce11" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">przedsiębiorstwa górniczego, o którym mowa w art. 8 ust. 1 ustawy, związanych wyłącznie z działaniami wykonywanymi po zakończeniu likwidacji zakładu górniczego lub jego oznaczonej części,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1896__art_2__pkt_3__lit_c" gd:GUID="6b721952-4a25-4023-a317-7ef5c44919d6" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+            <nr>c</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="f3e4ec8e-e8fc-488c-abcd-56261fa3f12e" fragment="24" gd:fragmentGUID="98e4327d-fc1c-42db-bf35-77c0fe84369f" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">przedsiębiorstwa górniczego objętego systemem wsparcia, związanych wyłącznie z zadaniami wykonywanymi w trakcie likwidacji zakładu górniczego lub jego oznaczonej części,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1896__art_2__pkt_3__lit_d" gd:GUID="e92532a2-fa37-41a4-a878-18e16b4856af" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+            <nr>d</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="f3e4ec8e-e8fc-488c-abcd-56261fa3f12e" fragment="25" gd:fragmentGUID="6a244fae-8624-4a60-b6e8-652e2cde7955" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">przedsiębiorstwa górniczego objętego systemem wsparcia, związanych wyłącznie z działaniami wykonywanymi po zakończeniu likwidacji zakładu górniczego lub jego oznaczonej części;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2025/1896__art_2__pkt_4" gd:GUID="52d10422-2ac7-4b0e-868c-663203d417b7" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="f3e4ec8e-e8fc-488c-abcd-56261fa3f12e" fragment="26" gd:fragmentGUID="ea2ca1f2-5bff-4eb8-a00f-f02f7c716f99" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">naprawiania szkód wywołanych ruchem zakładu górniczego w trakcie i po zakończeniu likwidacji zakładu górniczego lub jego oznaczonej części, w tym szkód powstałych w wyniku reaktywacji starych zrobów, odbudowy zwierciadła wód podziemnych lub zmian hydrogeochemicznych w środowisku wodnym, oraz zapobiegania tym szkodom.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2025/1896__art_3" gd:GUID="535fbcbb-f73c-43a1-9f56-464dcb8f429f" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+      <nr>3</nr>
+      <ustep eId="DU/2025/1896__art_3__ust_1" gd:GUID="b68852af-30cf-482d-a144-b11782354f01" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="25481495-d15d-4e34-b01f-01588e958e16" fragment="1" gd:fragmentGUID="47d0f064-c08c-4e5f-9e83-d9ee6f42c393" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">Dotację lub skarbowe papiery wartościowe na finansowanie zadań i kosztów, o których mowa w § 2 pkt 1 i pkt 3 lit. c, odpowiednio przyznaje się albo przekazuje się, na wniosek przedsiębiorstwa górniczego objętego systemem wsparcia w przypadku zaakceptowania przez ministra właściwego do spraw gospodarki surowcami energetycznymi, zwanego dalej „ministrem”:</zdanie>
+        </p>
+        <punkt eId="DU/2025/1896__art_3__ust_1__pkt_1" gd:GUID="8a74d435-953e-4646-833b-7bfe7d801f4e" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="25481495-d15d-4e34-b01f-01588e958e16" fragment="2" gd:fragmentGUID="ac369a66-84d5-48e8-ac67-ca3da2f7d885" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">programu likwidacji zakładu górniczego lub jego oznaczonej części;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1896__art_3__ust_1__pkt_2" gd:GUID="ea4a01f9-d764-4aa1-889e-b27d954bd0f7" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="25481495-d15d-4e34-b01f-01588e958e16" fragment="3" gd:fragmentGUID="6fc008e0-48f8-4b0e-a9b8-cbdb3bdeb3ff" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">rocznego planu zadań wykonywanych w trakcie likwidacji zakładu górniczego lub jego oznaczonej części, w podziale na miesiące, obejmującego:</zdanie>
+          </p>
+          <litera eId="DU/2025/1896__art_3__ust_1__pkt_2__lit_a" gd:GUID="57104ef5-10dc-4371-bd4f-c9eb3d321e98" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="25481495-d15d-4e34-b01f-01588e958e16" fragment="4" gd:fragmentGUID="c608cab0-a3c8-4d1c-b6c3-a3047cd1467e" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">zakres rzeczowy zadań oraz harmonogram ich realizacji,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1896__art_3__ust_1__pkt_2__lit_b" gd:GUID="f407f2fa-89bc-4dc0-a466-ff8c4a7994a3" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="25481495-d15d-4e34-b01f-01588e958e16" fragment="5" gd:fragmentGUID="ecf2b88b-b43b-46f9-a8cb-565a3578a441" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">zakres finansowy zadań,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1896__art_3__ust_1__pkt_2__lit_c" gd:GUID="ff0646d8-91f7-4808-9283-3041ca20f499" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+            <nr>c</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="25481495-d15d-4e34-b01f-01588e958e16" fragment="6" gd:fragmentGUID="e9590162-974b-40c5-bd17-248c999b4972" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">przychody z likwidacji majątku zakładu górniczego oraz innych źródeł.</zdanie>
+            </p>
+          </litera>
+        </punkt>
+      </ustep>
+      <ustep eId="DU/2025/1896__art_3__ust_2" gd:GUID="9f4ff424-ec70-4099-8602-edf1e09edd81" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="989db466-58ed-4f12-a4f3-2172a2f763b6" fragment="1" gd:fragmentGUID="639fbc0b-133c-43ed-ad29-c081ca5f8490" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">Dotację lub skarbowe papiery wartościowe na finansowanie działań i kosztów, o których mowa w § 2 pkt 2 oraz pkt 3 lit. a, b i d, odpowiednio przyznaje się albo przekazuje się, na wniosek przedsiębiorstwa górniczego, o którym mowa w art. 8 ust. 1 ustawy, lub przedsiębiorstwa górniczego objętego systemem wsparcia, w przypadku zaakceptowania przez ministra odpowiednio:</zdanie>
+        </p>
+        <punkt eId="DU/2025/1896__art_3__ust_2__pkt_1" gd:GUID="ca4ae417-e456-4041-9db8-0adbe7901ef3" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="989db466-58ed-4f12-a4f3-2172a2f763b6" fragment="2" gd:fragmentGUID="5d5b491f-6fcf-4bf0-97a1-e8ffb8ae9478" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">rocznego planu działań wykonywanych po zakończeniu likwidacji zakładu górniczego lub jego oznaczonej części, w podziale na miesiące, obejmującego:</zdanie>
+          </p>
+          <litera eId="DU/2025/1896__art_3__ust_2__pkt_1__lit_a" gd:GUID="c4b8fc6c-32bb-4f36-9698-fb1199cf887c" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="989db466-58ed-4f12-a4f3-2172a2f763b6" fragment="3" gd:fragmentGUID="b3e1d3e0-451f-43f9-9e09-a3879b3fe2de" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">zakres rzeczowy działań oraz harmonogram ich realizacji,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1896__art_3__ust_2__pkt_1__lit_b" gd:GUID="7513bb9c-fb91-46e7-8cf9-d726ebbfd8e1" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="989db466-58ed-4f12-a4f3-2172a2f763b6" fragment="4" gd:fragmentGUID="a1933fc2-40b6-4fa2-ad0a-36994e7f5089" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">zakres finansowy działań,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1896__art_3__ust_2__pkt_1__lit_c" gd:GUID="ad219507-0ce8-4007-a43c-3378bd5cc4ec" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+            <nr>c</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="989db466-58ed-4f12-a4f3-2172a2f763b6" fragment="5" gd:fragmentGUID="b30ee66a-8886-4380-9656-8f7a07569587" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">przychody z działań polikwidacyjnych oraz innych źródeł,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1896__art_3__ust_2__pkt_1__lit_d" gd:GUID="f4674eac-d391-494a-b005-47fca9fc8e70" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+            <nr>d</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="989db466-58ed-4f12-a4f3-2172a2f763b6" fragment="6" gd:fragmentGUID="21078d94-1901-494c-a10f-33e735d37475" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">koszty ogólnego zarządu, o których mowa w § 2 pkt 3 lit. a;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2025/1896__art_3__ust_2__pkt_2" gd:GUID="38d877ac-8617-4fca-9f68-7759c47049cb" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="989db466-58ed-4f12-a4f3-2172a2f763b6" fragment="7" gd:fragmentGUID="f81b1ab6-0de7-423a-ac2c-da8bc8b965cc" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">rocznego planu kosztów ogólnego zarządu, o których mowa w § 2 pkt 3 lit. b;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1896__art_3__ust_2__pkt_3" gd:GUID="85ca4d1b-10c9-4bd7-b4b9-66684d90b111" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="989db466-58ed-4f12-a4f3-2172a2f763b6" fragment="8" gd:fragmentGUID="59532a59-3fc2-47a5-9f3c-74efddd55cae" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">rocznego planu kosztów ogólnego zarządu, o których mowa w § 2 pkt 3 lit. d.</zdanie>
+          </p>
+        </punkt>
+      </ustep>
+      <ustep eId="DU/2025/1896__art_3__ust_3" gd:GUID="ea4803a0-3117-4eb9-807c-457110e9a566" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <nr>3</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="433a0cc2-2f74-4fe7-b10e-7d8f6311c829" fragment="1" gd:fragmentGUID="4e04d4f6-f686-46d1-b8d4-0eaf06b3f626" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">Wniosek, o którym mowa w ust. 1 i 2, zawiera odpowiednio:</zdanie>
+        </p>
+        <punkt eId="DU/2025/1896__art_3__ust_3__pkt_1" gd:GUID="5262a645-0f13-4fea-8fde-5ac375def072" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="433a0cc2-2f74-4fe7-b10e-7d8f6311c829" fragment="2" gd:fragmentGUID="e0679dff-3afc-4aeb-9f55-c4792f7c8589" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">oznaczenie przedsiębiorstwa górniczego;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1896__art_3__ust_3__pkt_2" gd:GUID="97a80bb0-bfbe-46b9-9f4f-27e69fc42066" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="433a0cc2-2f74-4fe7-b10e-7d8f6311c829" fragment="3" gd:fragmentGUID="b8cdb38a-e36f-4756-b712-d36a86d1f6c5" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">tytuły zadań przewidzianych do realizacji w trakcie likwidacji zakładu górniczego lub jego oznaczonej części lub działań wykonywanych po zakończeniu likwidacji zakładu górniczego lub jego oznaczonej części;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1896__art_3__ust_3__pkt_3" gd:GUID="7592b607-036e-4b36-9e1e-55553330c217" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="433a0cc2-2f74-4fe7-b10e-7d8f6311c829" fragment="4" gd:fragmentGUID="b3e1e83b-c87e-43f2-a8a3-30f7e587beb6" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">strukturę kosztów ogólnego zarządu, o których mowa w § 2 pkt 3;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1896__art_3__ust_3__pkt_4" gd:GUID="b327eb18-3bc4-494d-8325-977b08b15ae3" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="433a0cc2-2f74-4fe7-b10e-7d8f6311c829" fragment="5" gd:fragmentGUID="0e675b1a-2bf1-46ae-85f8-e08dca81051f" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">preliminarz wydatków planowanych na realizację zadań wykonywanych w trakcie likwidacji zakładu górniczego lub jego oznaczonej części lub działań wykonywanych po zakończeniu likwidacji zakładu górniczego lub jego oznaczonej części w danym roku kalendarzowym;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1896__art_3__ust_3__pkt_5" gd:GUID="395f2a67-fd33-448a-84a9-78cfd513ce33" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="433a0cc2-2f74-4fe7-b10e-7d8f6311c829" fragment="6" gd:fragmentGUID="14ab4a6e-f313-418d-a373-2a63550b1188" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">określenie stanu zaawansowania zadań wykonywanych w trakcie likwidacji zakładu górniczego lub jego oznaczonej części lub działań wykonywanych po zakończeniu likwidacji zakładu górniczego lub jego oznaczonej części.</zdanie>
+          </p>
+        </punkt>
+      </ustep>
+    </paragraf>
+    <paragraf eId="DU/2025/1896__art_4" gd:GUID="4a53d1b8-ed95-4e03-bf83-bfba66257964" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+      <nr>4</nr>
+      <ustep eId="DU/2025/1896__art_4__ust_1" gd:GUID="36cdc9a8-cee4-4f2f-b4be-ef053b58cd0e" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="28226e35-da17-45d2-aa42-d6ca21371ad1" fragment="1" gd:fragmentGUID="a7600444-fa9e-4b96-86d1-719be47a05cb" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">Dotację lub skarbowe papiery wartościowe na finansowanie naprawiania szkód wywołanych ruchem zakładu górniczego w trakcie i po zakończeniu likwidacji zakładu górniczego lub jego oznaczonej części, w tym szkód powstałych w wyniku reaktywacji starych zrobów, odbudowy zwierciadła wód podziemnych lub zmian hydrogeochemicznych w środowisku wodnym, oraz zapobiegania tym szkodom, odpowiednio przyznaje się albo przekazuje się, na wniosek przed- siębiorstwa górniczego, o którym mowa w art. 8 ust. 1 ustawy, lub przedsiębiorstwa górniczego objętego systemem wsparcia.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/1896__art_4__ust_2" gd:GUID="e25bdf35-3cb5-49e2-afef-ba152fad822e" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="aafea5ef-cd1d-48c8-bc1b-3a86304ba94c" fragment="1" gd:fragmentGUID="c2be5c38-98dc-4a14-aa89-958dc136c5ef" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">Wniosek, o którym mowa w ust. 1, zawiera:</zdanie>
+        </p>
+        <punkt eId="DU/2025/1896__art_4__ust_2__pkt_1" gd:GUID="c53a472d-34c4-453a-bf4d-8381eeae4924" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="aafea5ef-cd1d-48c8-bc1b-3a86304ba94c" fragment="2" gd:fragmentGUID="3fcd0788-f454-403e-9072-c783c8c2b444" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">oznaczenie przedsiębiorstwa górniczego;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1896__art_4__ust_2__pkt_2" gd:GUID="505e9a1a-c023-4a8f-8c1b-8394eacc159c" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="aafea5ef-cd1d-48c8-bc1b-3a86304ba94c" fragment="3" gd:fragmentGUID="0109fc40-7bf6-4d0f-9d15-9fb448dc72a5" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">tytuł zadania przewidzianego do realizacji w ramach obowiązku naprawiania szkód wywołanych ruchem zakładu górniczego lub zapobiegania tym szkodom,</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1896__art_4__ust_2__pkt_3" gd:GUID="be6c24e1-f5bd-44a4-9eb9-05b57836c26c" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="aafea5ef-cd1d-48c8-bc1b-3a86304ba94c" fragment="4" gd:fragmentGUID="5f354e7b-4743-42d9-a07d-88b090dffdb0" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">preliminarz wydatków planowanych na realizację zadań w zakresie naprawienia szkód wywołanych ruchem zakładu górniczego lub zapobiegania tym szkodom w danym roku kalendarzowym.</zdanie>
+          </p>
+        </punkt>
+      </ustep>
+      <ustep eId="DU/2025/1896__art_4__ust_3" gd:GUID="90eaf880-6df4-4814-bb83-2d3a169c1f59" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <nr>3</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="90a45cb2-babf-4401-8a94-c78ea2e91d1c" fragment="1" gd:fragmentGUID="0b295dd2-da88-4d07-9fae-d6e2537c0103" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">Warunkiem przyznania dotacji lub przekazania skarbowych papierów wartościowych na podstawie ust. 1 jest zaakceptowanie przez ministra właściwego do spraw gospodarki surowcami energetycznymi rocznego planu zadań przedsiębiorstwa górniczego z tytułu naprawiania szkód wywołanych ruchem zakładu górniczego w trakcie i po zakończeniu likwidacji zakładu górniczego lub jego oznaczonej części, w tym szkód powstałych w wyniku reaktywacji starych zrobów, odbudowy zwierciadła wód podziemnych lub zmian hydrogeochemicznych w środowisku wodnym, oraz zapobiegania tym szkodom.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/1896__art_4__ust_4" gd:GUID="6c8f4f84-84dd-4ef8-a6ad-a7d2287e659e" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <nr>4</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="49cc4968-3e44-498f-85e5-debe81999395" fragment="1" gd:fragmentGUID="166af6ba-826e-4aec-aa70-66847401fadf" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">Plan, o którym mowa w ust. 3, zawiera:</zdanie>
+        </p>
+        <punkt eId="DU/2025/1896__art_4__ust_4__pkt_1" gd:GUID="79671f33-de45-42f1-969a-1aa2bd02979f" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="49cc4968-3e44-498f-85e5-debe81999395" fragment="2" gd:fragmentGUID="c72f0bbb-1eca-45e2-bc44-c2afca931014" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">oznaczenie przedsiębiorstwa górniczego;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1896__art_4__ust_4__pkt_2" gd:GUID="6c542de0-c239-49cd-9079-df86858fa642" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="49cc4968-3e44-498f-85e5-debe81999395" fragment="3" gd:fragmentGUID="ec14e11f-fb94-4929-9481-1b0a7c2e64a8" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">tytuł zadania przewidzianego do realizacji w ramach obowiązku naprawiania szkód wywołanych ruchem zakładu górniczego lub zapobiegania tym szkodom, w tym podstawę prawną wykonania tego obowiązku poprzez wskazanie prawomocnego wyroku sądu, ugody lub oświadczenia przedsiębiorstwa górniczego o uznaniu roszczenia w części w toku toczącego się postępowania są przed sądem;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1896__art_4__ust_4__pkt_3" gd:GUID="e8a381e5-d3a9-4dab-b53e-fd57a2eb752d" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="49cc4968-3e44-498f-85e5-debe81999395" fragment="4" gd:fragmentGUID="fa65c642-29db-416c-9acf-bf25dc363ec3" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">preliminarz wydatków planowanych na realizację zadań w zakresie naprawienia szkód wywołanych ruchem zakładu górniczego lub zapobiegania tym szkodom w danym roku kalendarzowym;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1896__art_4__ust_4__pkt_4" gd:GUID="30237d3e-c613-4f13-87c9-a3365980eca6" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="49cc4968-3e44-498f-85e5-debe81999395" fragment="5" gd:fragmentGUID="bf067ba2-b54f-4d2b-ac63-8ac35834e72d" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">opis zamierzonego sposobu naprawienia szkód wywołanych ruchem zakładu górniczego lub zapobiegania tym szkodom;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1896__art_4__ust_4__pkt_5" gd:GUID="5ea3f255-db99-43a5-962b-20685eb38cbe" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="49cc4968-3e44-498f-85e5-debe81999395" fragment="6" gd:fragmentGUID="52ce0d59-a400-4366-bace-4491c63a3cbd" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">stan zaawansowania prac związanych z naprawieniem szkód wywołanych ruchem zakładu górniczego lub zapobiegania tym szkodom.</zdanie>
+          </p>
+        </punkt>
+      </ustep>
+      <ustep eId="DU/2025/1896__art_4__ust_5" gd:GUID="8a51468b-2716-48c8-8fb1-abc8f828e7b6" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <nr>5</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="0c288b58-7979-4fe4-a4d0-250f29e14fbc" fragment="1" gd:fragmentGUID="1040c8ee-69c2-4d08-a2de-76dc8dc1147b" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">Załącznikiem do planu, o którym mowa w ust. 3, są odpisy ugód, prawomocnych wyroków sądów lub oświadczeń przedsiębiorstwa górniczego o uznaniu roszczenia w części w toku toczącego się postępowania ugodowego lub sądowego, stanowiące podstawę prawną wykonywania obowiązku naprawy szkód wywołanych ruchem zakładu górniczego lub zapobiegania tym szkodom.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/1896__art_4__ust_6" gd:GUID="85af6013-4270-4c69-a28a-1458037e1abe" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <nr>6</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="be23b33d-5b36-4671-be65-d7dc1c5e2c71" fragment="1" gd:fragmentGUID="0bd182fe-0201-4591-9cc2-55df4da7e1bc" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">Plan, o którym mowa w ust. 3, może zawierać wyodrębnienie środków, o których mowa w § 5 ust. 3.</zdanie>
+        </p>
+      </ustep>
+    </paragraf>
+    <paragraf eId="DU/2025/1896__art_5" gd:GUID="dfa328ed-14ab-4b19-80e2-71442581d859" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+      <nr>5</nr>
+      <ustep eId="DU/2025/1896__art_5__ust_1" gd:GUID="a41e6151-af50-4a4a-b837-6f792cbc22b7" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="28567020-c5b4-4626-bfd2-406c591e45ff" fragment="1" gd:fragmentGUID="73e94b3e-3056-403f-9499-1f46ea63508d" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">Dotację lub skarbowe papiery wartościowe, odpowiednio przyznaje się albo przekazuje się, na podstawie umowy zawartej między ministrem a przedsiębiorstwem górniczym, po złożeniu wniosku, o którym mowa w § 4 ust. 1.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/1896__art_5__ust_2" gd:GUID="c522dccb-7715-494e-9d78-ac91ab7b3a3e" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="58be03c2-c3fc-4375-afc5-e10afcafd879" fragment="1" gd:fragmentGUID="4609ce3e-7bca-4fa8-9b88-17ca1c196a63" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">Umowa, o której mowa w ust. 1, określa w szczególności:</zdanie>
+        </p>
+        <punkt eId="DU/2025/1896__art_5__ust_2__pkt_1" gd:GUID="f9a57585-dee4-4c70-9942-a770c7397d7a" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="58be03c2-c3fc-4375-afc5-e10afcafd879" fragment="2" gd:fragmentGUID="21588caa-3ec0-4518-98fe-5933fa5d5b29" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">szczegółowe przeznaczenie przyznanych środków dotacyjnych albo środków uzyskanych ze sprzedaży skarbowych papierów wartościowych;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1896__art_5__ust_2__pkt_2" gd:GUID="9d54a0d7-42d3-47cf-8647-36e78c2d8d3e" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="58be03c2-c3fc-4375-afc5-e10afcafd879" fragment="3" gd:fragmentGUID="0bf03573-961b-49ba-9fe5-12b7fcfca977" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">wysokość udzielonej dotacji albo wartość nominalną przekazanych skarbowych papierów wartościowych;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1896__art_5__ust_2__pkt_3" gd:GUID="4e9534ba-2f32-4297-aebb-87fa8896c81c" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="58be03c2-c3fc-4375-afc5-e10afcafd879" fragment="4" gd:fragmentGUID="66746e32-dd12-4241-969b-da538f777d1a" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">termin wykorzystania dotacji, nie dłuższy niż do dnia 31 grudnia danego roku budżetowego i sposób jej rozliczenia albo termin i sposób rozliczenia środków uzyskanych ze sprzedaży skarbowych papierów wartościowych;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1896__art_5__ust_2__pkt_4" gd:GUID="dcf2eb27-a639-4fdd-976c-ddd807c59a76" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="58be03c2-c3fc-4375-afc5-e10afcafd879" fragment="5" gd:fragmentGUID="52e31f97-b86f-4a7c-b0fa-18568840afd8" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">termin zwrotu niewykorzystanej części dotacji;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1896__art_5__ust_2__pkt_5" gd:GUID="d2744c5f-f178-4df3-bf8f-175354b5363c" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="58be03c2-c3fc-4375-afc5-e10afcafd879" fragment="6" gd:fragmentGUID="c00846d2-00c4-4139-96b6-a5950ca7e1b4" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">monitoring i tryb kontroli wykorzystania dotacji lub środków uzyskanych ze sprzedaży skarbowych papierów wartościowych.</zdanie>
+          </p>
+        </punkt>
+      </ustep>
+      <ustep eId="DU/2025/1896__art_5__ust_3" gd:GUID="89091ecc-cdaa-4592-8650-5c2332ce5b1f" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <nr>3</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="8d436e35-d54a-4fef-9970-7bdb163495e7" fragment="1" gd:fragmentGUID="af61d7a5-2ef7-4144-97ee-cd5600d21155" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">W umowie, o której mowa w ust. 1, mogą być wyodrębnione środki:</zdanie>
+        </p>
+        <punkt eId="DU/2025/1896__art_5__ust_3__pkt_1" gd:GUID="5e6ab196-763c-4b9e-89bc-3aee9df0d809" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="8d436e35-d54a-4fef-9970-7bdb163495e7" fragment="2" gd:fragmentGUID="da57614c-3e87-439a-819e-c60b5a7063b2" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">nieprzypisane do konkretnych zadań, przeznaczone na sporządzanie dokumentacji w zakresie wycen szkód wywołanych ruchem zakładu górniczego, niezbędnej do zawierania ugód o naprawienie szkody z poszkodowanymi, w wysokości do 10 % wartości umowy, nie więcej jednak niż 1 000 000 zł;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1896__art_5__ust_3__pkt_2" gd:GUID="15c94e2b-8abd-4a10-9e82-8f1ccb2e78dd" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="8d436e35-d54a-4fef-9970-7bdb163495e7" fragment="3" gd:fragmentGUID="c456ce17-bb6d-4312-92ac-e5aa04f7b23e" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">nieprzypisane do konkretnych zadań, przeznaczone na usuwanie szkód wywołanych ruchem zakładu górniczego, zagrażających bezpieczeństwu ruchu zakładu górniczego lub jego pracowników lub zdrowiu lub życiu użytkowników powierzchni terenu lub mogących spowodować powstanie szkody o znacznych rozmiarach, w wysokości do 5 % wartości umowy, nie więcej jednak niż 500 000 zł.</zdanie>
+          </p>
+        </punkt>
+      </ustep>
+    </paragraf>
+    <paragraf eId="DU/2025/1896__art_6" gd:GUID="84dca155-4e8c-4cc3-91ee-9a806172e0f9" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+      <nr>6</nr>
+      <ustep eId="DU/2025/1896__art_6__ust_1" gd:GUID="7eefe3c3-9950-416d-bc54-b85814cd4092" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="3065c963-adbf-4848-9c0a-ccac2014d624" fragment="1" gd:fragmentGUID="315c197a-9a6c-49d6-b4c2-4d4f70ef3fa1" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">Dotacja jest przekazywana w transzach na specjalnie w tym celu wyodrębniony przez przedsiębiorstwo górnicze rachunek bankowy.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/1896__art_6__ust_2" gd:GUID="f2f9ab3b-1054-465e-9a7d-defa9612d78f" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="076e004e-305a-4323-bfff-5e4e3db0acc3" fragment="1" gd:fragmentGUID="4c67345d-b8af-437c-9140-90b42c4b0cd1" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">Podstawę do przekazania transzy dotacji stanowi przedłożenie przez przedsiębiorstwo górnicze:</zdanie>
+        </p>
+        <punkt eId="DU/2025/1896__art_6__ust_2__pkt_1" gd:GUID="416879cb-4431-4979-a217-68d1e1b11ad0" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="076e004e-305a-4323-bfff-5e4e3db0acc3" fragment="2" gd:fragmentGUID="3ecc8e2b-bb9f-4fdd-a46f-f2c8474dd358" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">wniosku o wypłacenie transzy dotacji wynikających z rocznych planów, o których mowa w § 3 ust. 1 pkt 2 i ust. 2, lub</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1896__art_6__ust_2__pkt_2" gd:GUID="c5a7b6c6-5905-4df4-8c20-6502bc9906cc" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="076e004e-305a-4323-bfff-5e4e3db0acc3" fragment="3" gd:fragmentGUID="86a9ca63-c023-4d47-bf8d-1767f3468d79" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">wniosku o wypłacenie transzy dotacji w wysokości wynikającej z aktualnego stanu realizacji zadań w zakresie naprawiania szkód wywołanych ruchem zakładu górniczego lub zapobiegania tym szkodom w trakcie i po zakończeniu likwidacji zakładu górniczego lub jego oznaczonej części, w tym szkód powstałych w wyniku reaktywacji starych zrobów, odbudowy zwierciadła wód podziemnych lub zmian hydrogeochemicznych w środowisku wodnym;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1896__art_6__ust_2__pkt_3" gd:GUID="26ae9992-32d4-4adb-b9ec-816049d4e5bb" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="076e004e-305a-4323-bfff-5e4e3db0acc3" fragment="4" gd:fragmentGUID="bdb33e73-b71e-494e-afa5-c0bee74e941e" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">sprawozdania, o którym mowa w § 7 ust. 1, z wykorzystania dotacji lub środków uzyskanych ze sprzedaży przekazanych skarbowych papierów wartościowych i realizacji zadań rzeczowych za okres poprzedni.</zdanie>
+          </p>
+        </punkt>
+      </ustep>
+      <ustep eId="DU/2025/1896__art_6__ust_3" gd:GUID="dec3b0eb-138c-49d5-bbd4-916d1efbac40" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <nr>3</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="3e860271-85ed-4a8e-a6e1-9873e63eeab1" fragment="1" gd:fragmentGUID="ae4290dc-a621-4d44-a943-266daf1ca126" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">Obowiązek przedłożenia sprawozdania miesięcznego z wykorzystania dotacji lub środków uzyskanych ze sprzedaży przekazanych skarbowych papierów wartościowych nie dotyczy transzy dotacji wnioskowanej po raz pierwszy i drugi.</zdanie>
+        </p>
+      </ustep>
+    </paragraf>
+    <paragraf eId="DU/2025/1896__art_7" gd:GUID="64517605-135c-457d-9f9a-2c9ff9f2e78a" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+      <nr>7</nr>
+      <ustep eId="DU/2025/1896__art_7__ust_1" gd:GUID="aba98a3b-a181-4b34-bca6-a9e985a86a80" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="11688f36-5967-4c06-a100-eb3a259f67ee" fragment="1" gd:fragmentGUID="ee9ec1cf-389b-4243-a6b5-f975c3fac84f" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">Przedsiębiorstwo górnicze, które otrzymało dotację lub skarbowe papiery wartościowe, składa ministrowi, do 20. dnia miesiąca poprzedzającego miesiąc przekazania kolejnej transzy dotacji lub skarbowych papierów wartościowych, sprawozdania miesięczne zawierające odpowiednio rozliczenie rzeczowo-finansowe:</zdanie>
+        </p>
+        <punkt eId="DU/2025/1896__art_7__ust_1__pkt_1" gd:GUID="38754ce6-69c9-4e67-a3db-5847e2c8990a" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="11688f36-5967-4c06-a100-eb3a259f67ee" fragment="2" gd:fragmentGUID="ea70e5f9-797b-406b-bf72-f2c5d40c2857" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">zadań wykonywanych w trakcie likwidacji zakładu górniczego lub jego oznaczonej części, o których mowa w § 2 pkt 1, oraz działań wykonywanych po zakończeniu likwidacji zakładu górniczego lub jego oznaczonej części, o których mowa w § 2 pkt 2;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1896__art_7__ust_1__pkt_2" gd:GUID="50f98e9c-9e4d-4686-a610-e6ebd9b23e63" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="11688f36-5967-4c06-a100-eb3a259f67ee" fragment="3" gd:fragmentGUID="85061d78-dfaf-4212-86ea-053411e3c658" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">kosztów ogólnego zarządu, o których mowa w § 2 pkt 3;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1896__art_7__ust_1__pkt_3" gd:GUID="7df95efb-6807-4ced-9f82-5177e571600f" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="11688f36-5967-4c06-a100-eb3a259f67ee" fragment="4" gd:fragmentGUID="10e1fc2c-7787-4234-b13e-9eea43eab44a" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">wykonywanych zadań w zakresie naprawiania szkód wywołanych ruchem zakładu górniczego lub zapobiegania tym szkodom w trakcie i po zakończeniu likwidacji zakładu górniczego lub jego oznaczonej części, w tym szkód powstałych w wyniku reaktywacji starych zrobów, odbudowy zwierciadła wód podziemnych lub zmian hydrogeochemicznych w środowisku wodnym.</zdanie>
+          </p>
+        </punkt>
+      </ustep>
+      <ustep eId="DU/2025/1896__art_7__ust_2" gd:GUID="ade818f0-0df9-4ec7-b075-a4ed319d6784" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="66c760a8-4c54-4b63-a15d-ba5bbfa61848" fragment="1" gd:fragmentGUID="f9673c2e-8f04-4cf3-818e-5a6ae1ef81b4" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">Sprawozdanie, o którym mowa w ust. 1, za grudzień, składa się do dnia 20 stycznia roku następnego.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/1896__art_7__ust_3" gd:GUID="1946e40a-5d9c-479f-aec2-3bf09ab63468" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <nr>3</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="013d9043-45eb-4682-8c29-0b12933e52a1" fragment="1" gd:fragmentGUID="66422a87-1c87-49c7-ad75-2dfa30de89da" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">Przedsiębiorstwo górnicze przedkłada ministrowi, do dnia 20 lutego roku następnego, wraz z rocznym rozliczeniem rzeczowo-finansowym, odpowiednio sprawozdanie z realizacji:</zdanie>
+        </p>
+        <punkt eId="DU/2025/1896__art_7__ust_3__pkt_1" gd:GUID="ab9c2723-d509-4627-8d7a-f3d316742a3d" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="013d9043-45eb-4682-8c29-0b12933e52a1" fragment="2" gd:fragmentGUID="58109fc7-67df-4ab9-a20e-a1ec15b62ab3" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">rocznego planu zadań wykonywanych w trakcie likwidacji zakładu górniczego lub jego oznaczonej części, o którym mowa w § 3 ust. 1 pkt 2;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1896__art_7__ust_3__pkt_2" gd:GUID="1dba0f9f-dd14-4fe3-b45a-24bb6ba7c9c0" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="013d9043-45eb-4682-8c29-0b12933e52a1" fragment="3" gd:fragmentGUID="65c92bff-a57a-4c44-88bc-60e9e844ce5c" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">rocznego planu działań wykonywanych po zakończeniu likwidacji zakładu górniczego lub jego oznaczonej części, o którym mowa w § 3 ust. 2 pkt 1;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1896__art_7__ust_3__pkt_3" gd:GUID="7d828f32-e3f0-4acb-8fa6-dae902a5c2ac" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="013d9043-45eb-4682-8c29-0b12933e52a1" fragment="4" gd:fragmentGUID="c6537a9e-5aa0-4ae7-9d6d-e2b60d4050af" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">rocznego planu kosztów ogólnego zarządu, o którym mowa w § 3 ust. 2 pkt 2;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1896__art_7__ust_3__pkt_4" gd:GUID="1fe3f58d-ba69-4e3d-b791-ebe04e8d252f" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="013d9043-45eb-4682-8c29-0b12933e52a1" fragment="5" gd:fragmentGUID="68f32dbb-64d7-4f5f-b2b1-7a107064b9d1" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">zadań w zakresie naprawiania szkód wywołanych ruchem zakładu górniczego lub zapobiegania tym szkodom w trakcie i po zakończeniu likwidacji zakładu górniczego lub jego oznaczonej części, w tym szkód powstałych w wyniku reaktywacji starych zrobów, odbudowy zwierciadła wód podziemnych lub zmian hydrogeochemicznych w środowisku wodnym.</zdanie>
+          </p>
+        </punkt>
+      </ustep>
+      <ustep eId="DU/2025/1896__art_7__ust_4" gd:GUID="15252b6a-5be0-4330-8532-f7962a8e11cf" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <nr>4</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="93e5f86b-73c9-4e95-90d0-643e88b0c73f" fragment="1" gd:fragmentGUID="1e017e9d-5fb9-49b2-b779-0bc9b04ef4f9" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">Jeżeli termin złożenia sprawozdania lub rozliczenia, o którym mowa w ust. 1, 2 lub 3, przypada na dzień uznany za ustawowo za wolny od pracy lub na sobotę, termin upływa pierwszego dnia roboczego po terminie, o którym mowa odpowiednio w ust. 1, 2 lub 3.</zdanie>
+        </p>
+      </ustep>
+    </paragraf>
+    <paragraf eId="DU/2025/1896__art_8" gd:GUID="f0a1c234-b2f9-4254-9bbb-1255d59be6e8" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+      <nr>8</nr>
+      <ustep eId="DU/2025/1896__art_8__ust_1" gd:GUID="63ca5fa9-c92d-4e10-885d-4bdfe80c4e79" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="91d62600-cbba-4d5c-a793-c4f50071b955" fragment="1" gd:fragmentGUID="c757bda8-8765-4131-82fc-e944118130db" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">Dotacja w części niewykorzystanej do końca roku budżetowego podlega zwrotowi w terminie 5 dni po zakończeniu roku.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/1896__art_8__ust_2" gd:GUID="ddfce740-3b97-4c87-8a32-f67f4f32d6ea" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="85a7bae4-4c44-4278-bcdf-bcad13296225" fragment="1" gd:fragmentGUID="0da4c56a-e1f6-48a8-b628-954f23859b72" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">Niewykorzystane do końca roku budżetowego środki uzyskane ze sprzedaży skarbowych papierów wartościowych:</zdanie>
+        </p>
+        <punkt eId="DU/2025/1896__art_8__ust_2__pkt_1" gd:GUID="4accd0db-3bc5-4ba5-9ad5-d6bf50384299" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="85a7bae4-4c44-4278-bcdf-bcad13296225" fragment="2" gd:fragmentGUID="428d0687-2cc1-4851-887b-55f2e7a33a89" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">nie podlegają zwrotowi i są przeznaczane na finansowanie zadań wskazanych w § 1 w kolejnym roku budżetowym, pomniejszając wysokość wsparcia w tym roku, albo</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1896__art_8__ust_2__pkt_2" gd:GUID="596157b1-e98d-4416-b878-4a73eca754af" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="85a7bae4-4c44-4278-bcdf-bcad13296225" fragment="3" gd:fragmentGUID="7eb2f882-aa60-4011-b240-c1695c76eadf" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">podlegają zwrotowi w terminie 5 dni po zakończeniu roku, jeżeli przedsiębiorstwo zakończyło realizację tych zadań.</zdanie>
+          </p>
+        </punkt>
+      </ustep>
+    </paragraf>
+    <paragraf eId="DU/2025/1896__art_9" gd:GUID="bd0543c0-c2c3-4145-aa42-93e42c102d33" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+      <nr>9</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="a8241169-991f-4d42-ab0d-82e649a7f545" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="1b752826-07d9-4bf6-a403-63e0f125b9fd" fragment="1" gd:fragmentGUID="75aaf205-382d-49dd-bb4e-b4f8f7d0848c" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">Do przyznanej dotacji stosuje się art. 169 ustawy z dnia 27 sierpnia 2009 r. o finansach publicznych (Dz. U. z 2025 r. poz. 1483, 1844 i 1846).</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2025/1896__art_10" gd:GUID="29fb9236-3fa1-4509-916f-da3736025531" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+      <nr>10</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="bf54585e-1b2b-4d9a-8a44-e1f418029253" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="9a89a9de-a897-4bf5-84b6-52ab5cd3fb5d" fragment="1" gd:fragmentGUID="689c10f6-68a0-464d-b8e3-34ddad001a53" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">Czasowe wstrzymanie wypłaty dotacji następuje w przypadku, gdy przedsiębiorstwo górnicze nie przedłoży ministrowi w wymaganym terminie, sprawozdań wraz z rozliczeniami, o których mowa w § 7 ust. 1, i trwa do czasu przedłożenia powyższych dokumentów.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2025/1896__art_11" gd:GUID="bdf1501b-8335-47f4-9653-64542b92d41f" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+      <nr>11</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="e4c69fb6-0ba2-4fae-a9e8-a54c14961e56" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="36397e48-5d0f-4e09-8184-201a6916a136" fragment="1" gd:fragmentGUID="7ef86b34-b39a-41b8-87f2-9b0076d489de" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">Niewykorzystane przez przedsiębiorstwo górnicze środki pochodzące z przekazanej transzy dotacji lub ze sprzedaży przekazanych skarbowych papierów wartościowych pomniejszają wysokość wsparcia w kolejnym okresie w ciągu roku.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2025/1896__art_12" gd:GUID="36062965-d410-499a-aeb9-919d61298cfd" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+      <nr>12</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="48f0cd29-8b1e-4bc8-beeb-8a8940af6bc4" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="8442bf19-f177-4669-868b-f9fff848d776" fragment="1" gd:fragmentGUID="76036493-aa30-48e0-af99-8e1e77914913" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">Równowartość środków uzyskanych ze sprzedaży skarbowych papierów wartościowych, wykorzystanych niezgodnie z przeznaczeniem, podlega zwrotowi na rachunek bankowy wskazany przez ministra.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2025/1896__art_13" gd:GUID="b78214c4-9f2b-48e0-8f0d-be6974b3553e" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+      <nr>13</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="8fc4e301-2ea3-44ee-a5c9-11c06dd8ee70" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="1143623e-f835-447c-800c-6e7a02f4093f" fragment="1" gd:fragmentGUID="e852b097-c23f-46ac-9c2d-de87748ab994" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">Do sprawozdań z wykorzystania dotacji za 2025 r. składanych na podstawie rozporządzenia Ministra Energii z dnia 24 marca 2017 r. w sprawie dotacji budżetowej przeznaczonej na finansowanie likwidacji kopalń, działań wykonywanych po zakończeniu likwidacji kopalń, naprawiania szkód wywołanych ruchem zakładu górniczego oraz zabezpieczenia kopalń sąsiednich przed zagrożeniem wodnym, gazowym oraz pożarowym (Dz. U. z 2025 r. poz. 1331) stosuje się przepisy dotychczasowe.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2025/1896__art_14" gd:GUID="43a6aa4d-097c-4da5-b2c7-87dbd37adcbb" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+      <nr>14</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="45feca1c-4e16-48fc-9e60-34833d704862" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="bc016e72-c0ea-4cc4-894f-455d14e78984" fragment="1" gd:fragmentGUID="9e55350a-5261-4e60-8d46-dc5ffa5c252b" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1896_odczytane.x" wejscie-w-zycie="2026-01-01">Rozporządzenie wchodzi w życie z dniem 1 stycznia 2026 r.<odnosnik id-odnosnika="2" symbol="2" gd:GUID="484c00fc-2921-4aec-82f2-a47827b7bded"><p><zdanie nr="1" gd:zdGUID="fe9bde76-ab4d-4ae6-879a-0314f1aac052" fragment="1" gd:fragmentGUID="01fc26dc-ff1f-48a7-b968-33ddd1a1fdca">Niniejsze rozporządzenie było poprzedzone rozporządzeniem Ministra Energii z dnia 24 marca 2017 r. w sprawie dotacji budżetowej przeznaczonej na finansowanie likwidacji kopalń, działań wykonywanych po zakończeniu likwidacji kopalń, naprawiania szkód wywołanych ruchem zakładu górniczego oraz zabezpieczenia kopalń sąsiednich przed zagrożeniem wodnym, gazowym oraz pożarowym (Dz. U. z 2025 r. poz. 1331), które traci moc z dniem 1 stycznia 2026 r. w związku z wejściem w życie ustawy z dnia 4 grudnia 2025 r. o zmianie ustawy o funkcjonowaniu górnictwa węgla kamiennego oraz niektórych innych ustaw (Dz. U. poz. 1822).</zdanie></p></odnosnik></zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <organ-podpisujacy>Minister Energii: <i><osoba podpisujacy="true" gd:osobaGUID="8ceb88a9-ce18-42a6-81b4-48a55cd89c62"><imie>M.</imie> <nazwisko>Motyka</nazwisko></osoba></i></organ-podpisujacy>
+  </rozporzadzenie>
+</akt-prawny>

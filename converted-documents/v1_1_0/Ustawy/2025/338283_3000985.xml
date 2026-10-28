@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <ustawa>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/1170</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>ac562a22-531a-4f00-8974-8f9d6df13489</gd:GUIDwersji>
+      <AdresISAP>WDU20250001170</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>1170</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 1170</AdresWyswietlany>
+      <Tytul>Ustawa z dnia 5 sierpnia 2025 r. o zmianie ustawy – Prawo bankowe oraz niektórych innych ustaw</Tytul>
+      <Rodzaj>USTAWA</Rodzaj>
+      <DataOgloszenia>2025-08-25</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-08-05</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2025-09-09_DU-2025-1170_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2025-09-09" warunek="po upływie 14 dni od dnia ogłoszenia" podstawa="art. 6" zrodlo="https://eli.gov.pl/eli/DU/2025/1170" dowod="DU/2025/1170__art_6" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2025-09-09_DU-2025-1170_domyslne.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2025-09-09_DU-2025-1170_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="94d1ea34-5936-4ac0-b870-3f297630bcfd" rola="wydajacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Sejm">
+          <Nazwa>SEJM</Nazwa>
+        </Organ>
+        <Organ gd:GUID="e8ab8997-5163-4c93-923e-baa560977d6e" rola="podpisujacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Prezydent">
+          <Nazwa>Prezydent Rzeczypospolitej Polskiej</Nazwa>
+          <OrganPodpisujacy>Prezydent Rzeczypospolitej Polskiej</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>K.</imie> <nazwisko>Nawrocki</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Ustawa</rodzaj-aktu>
+    <data>z dnia 5 sierpnia 2025 r.</data>
+    <tytul>o zmianie ustawy – Prawo bankowe oraz niektórych innych ustaw<odnosnik id-odnosnika="1" symbol="1" gd:GUID="ca8ec507-887c-4f86-9624-428ed18f8f85"><p><zdanie nr="1" gd:zdGUID="d1d8ff5b-e762-4d95-a0b2-5dc1e072b241" fragment="1" gd:fragmentGUID="6e9b538a-7746-4907-b135-d48efd31c997">Niniejszą ustawą zmienia się ustawy: ustawę z dnia 28 lutego 2003 r. – Prawo upadłościowe, ustawę z dnia 5 listopada 2009 r. o spółdzielczych kasach oszczędnościowo-kredytowych oraz ustawę z dnia 15 maja 2015 r. – Prawo restrukturyzacyjne.</zdanie></p></odnosnik></tytul>
+    <artykul eId="DU/2025/1170__art_1" gd:GUID="dd22a546-b9b3-4435-a958-dc9b1f3b77c8" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-09_DU-2025-1170_domyslne.x" wejscie-w-zycie="2025-09-09">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="b495ad56-0e89-427e-8baa-9912130d9190" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-09_DU-2025-1170_domyslne.x" wejscie-w-zycie="2025-09-09">
+        <p>
+          <zdanie nr="1" gd:zdGUID="f8ddaa0a-e9ee-477e-9f67-a50ed4a985c7" fragment="1" gd:fragmentGUID="8530e697-b33d-4ae2-9aa6-4f3a9aab636a" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-09_DU-2025-1170_domyslne.x" wejscie-w-zycie="2025-09-09">W ustawie z dnia 29 sierpnia 1997 r. – Prawo bankowe (Dz. U. z 2024 r. poz. 1646, z późn. zm.<odnosnik id-odnosnika="2" symbol="2" gd:GUID="225243cb-4d45-482d-9008-8ad3bb98fae6"><p><zdanie nr="1" gd:zdGUID="35970c1e-1315-44a0-9fe6-a0ae9117e095" fragment="1" gd:fragmentGUID="fba9af86-719a-4b53-834e-4c80f60d5997">Zmiany tekstu jednolitego wymienionej ustawy zostały ogłoszone w Dz. U. z 2024 r. poz. 1685 i 1863 oraz z 2025 r. poz. 146, 222, 525, 769, 820 i 1069.</zdanie></p></odnosnik>) w art. 104 w ust. 2 po pkt 4a dodaje się pkt 4b–4d w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/1646" cudzyslowy="oba" gd:nowGUID="9cf3f106-8e2a-4149-891a-16d1f30023fe" element-eId="DU/2024/1646__art_104__ust_2__pkt_4a" funkcja="dodaj-po"><punkt eId="DU/2024/1646__art_104__ust_2__pkt_4b" gd:GUID="2f0f4954-aa2c-4a08-b05e-2491346ddec2" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-09_DU-2025-1170_domyslne.x" wejscie-w-zycie="2025-09-09"><nr>4b</nr><p><zdanie nr="1" gd:zdGUID="9cbfbbe1-9b19-4d00-82ea-6b1c43c83276" fragment="1" gd:fragmentGUID="e80029bd-f1a5-4328-8446-24710c6bd031" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-09_DU-2025-1170_domyslne.x" wejscie-w-zycie="2025-09-09">następuje udzielenie informacji objętych tajemnicą bankową syndykowi wyznaczonemu w postępowaniu upadłościowym prowadzonym wobec podmiotu, którego te informacje dotyczą, w zakresie niezbędnym do wykonywania czynności w tym postępowaniu;</zdanie></p></punkt><punkt eId="DU/2024/1646__art_104__ust_2__pkt_4c" gd:GUID="488a547e-79fd-4f65-ba8f-d0a1d32f76e7" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-09_DU-2025-1170_domyslne.x" wejscie-w-zycie="2025-09-09"><nr>4c</nr><p><zdanie nr="1" gd:zdGUID="9cbfbbe1-9b19-4d00-82ea-6b1c43c83276" fragment="2" gd:fragmentGUID="c201235b-b107-4306-aeb7-adf6c8b97502" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-09_DU-2025-1170_domyslne.x" wejscie-w-zycie="2025-09-09">następuje udzielenie informacji objętych tajemnicą bankową nadzorcy sądowemu albo zarządcy wyznaczonym w postępowaniu restrukturyzacyjnym prowadzonym wobec podmiotu, którego te informacje dotyczą, w zakresie niezbędnym do wykonywania czynności w tym postępowaniu;</zdanie></p></punkt><punkt eId="DU/2024/1646__art_104__ust_2__pkt_4d" gd:GUID="fb8ffe78-0f40-4a2d-807c-120fa60d9254" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-09_DU-2025-1170_domyslne.x" wejscie-w-zycie="2025-09-09"><nr>4d</nr><p><zdanie nr="1" gd:zdGUID="9cbfbbe1-9b19-4d00-82ea-6b1c43c83276" fragment="3" gd:fragmentGUID="36ddb1e5-3b60-4719-a894-e4b94c09952e" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-09_DU-2025-1170_domyslne.x" wejscie-w-zycie="2025-09-09">następuje udzielenie informacji objętych tajemnicą bankową tymczasowemu nadzorcy sądowemu w postępowaniu w przedmiocie ogłoszenia upadłości podmiotu, którego te informacje dotyczą, w zakresie niezbędnym do wykonywania czynności w tym postępowaniu;</zdanie></p></punkt></cytat-strukt>.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2025/1170__art_2" gd:GUID="9feeabd0-59fc-4f39-9244-65e1334691a1" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-09_DU-2025-1170_domyslne.x" wejscie-w-zycie="2025-09-09">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="054f3ecf-c4f8-49fb-8651-1f41deca6338" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-09_DU-2025-1170_domyslne.x" wejscie-w-zycie="2025-09-09">
+        <p>
+          <zdanie nr="1" gd:zdGUID="1e9f4b32-3392-4618-998f-990aad599feb" fragment="1" gd:fragmentGUID="0bba40a2-8d50-4bd0-9a43-94c7a48140fa" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-09_DU-2025-1170_domyslne.x" wejscie-w-zycie="2025-09-09"><now:zamien-tekst stary-tekst="sejfy lub skrytki," nowy-tekst="sejfy lub skrytki, oraz spółdzielcze kasy oszczędnościowo-kredytowe, które prowadzą rachunki upadłego," element-eId="DU/2025/614__art_178__ust_5" akt="https://eli.gov.pl/eli/DU/2025/614" gd:nowGUID="f033c7e6-37bc-452c-8931-c000097982d7" />W ustawie z dnia 28 lutego 2003 r. – Prawo upadłościowe (Dz. U. z 2025 r. poz. 614 i 1085) w art. 178 w ust. 5 po wyrazach „sejfy lub skrytki,” dodaje się wyrazy „oraz spółdzielcze kasy oszczędnościowo-kredytowe, które prowadzą rachunki upadłego,”.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2025/1170__art_3" gd:GUID="7acff515-289b-4bd8-98e2-13cf7a8b5233" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-09_DU-2025-1170_domyslne.x" wejscie-w-zycie="2025-09-09">
+      <nr>3</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="92f9ab44-4a35-4766-85dd-9af3e2b8b7eb" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-09_DU-2025-1170_domyslne.x" wejscie-w-zycie="2025-09-09">
+        <p>
+          <zdanie nr="1" gd:zdGUID="c6c38cb6-67a5-4eb1-a5e4-cb930b2079ee" fragment="1" gd:fragmentGUID="37c2edeb-bb40-4b54-8296-213cc38a0329" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-09_DU-2025-1170_domyslne.x" wejscie-w-zycie="2025-09-09">W ustawie z dnia 5 listopada 2009 r. o spółdzielczych kasach oszczędnościowo-kredytowych (Dz. U. z 2025 r. poz. 379, 820 i 1069) w art. 9f w ust. 1 po pkt 14a dodaje się pkt 14b–14d w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2025/379" cudzyslowy="oba" gd:nowGUID="7843aa60-9121-446c-9240-bd0b7af069e6" element-eId="DU/2025/379__art_9f__ust_1__pkt_14a" funkcja="dodaj-po"><punkt eId="DU/2025/379__art_9f__ust_1__pkt_14b" gd:GUID="b0755146-b74c-4fee-ae7a-53c7bf146951" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-09_DU-2025-1170_domyslne.x" wejscie-w-zycie="2025-09-09"><nr>14b</nr><p><zdanie nr="1" gd:zdGUID="7d31742c-8f78-47b4-88a4-437d8e368d71" fragment="1" gd:fragmentGUID="569a9df4-9800-4053-9f71-2495352df50a" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-09_DU-2025-1170_domyslne.x" wejscie-w-zycie="2025-09-09">syndykowi wyznaczonemu w postępowaniu upadłościowym prowadzonym wobec podmiotu, którego te informacje dotyczą, w zakresie niezbędnym do wykonywania czynności w tym postępowaniu;</zdanie></p></punkt><punkt eId="DU/2025/379__art_9f__ust_1__pkt_14c" gd:GUID="de7327c6-6492-492b-ab8f-21627dfd434c" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-09_DU-2025-1170_domyslne.x" wejscie-w-zycie="2025-09-09"><nr>14c</nr><p><zdanie nr="1" gd:zdGUID="7d31742c-8f78-47b4-88a4-437d8e368d71" fragment="2" gd:fragmentGUID="495f7fba-0048-4eb4-8154-2c18fc26c29b" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-09_DU-2025-1170_domyslne.x" wejscie-w-zycie="2025-09-09">nadzorcy sądowemu albo zarządcy wyznaczonym w postępowaniu restrukturyzacyjnym prowadzonym wobec podmiotu, którego te informacje dotyczą, w zakresie niezbędnym do wykonywania czynności w tym postępowaniu;</zdanie></p></punkt><punkt eId="DU/2025/379__art_9f__ust_1__pkt_14d" gd:GUID="b9b7903a-ef47-4874-b90b-d5e94de8726e" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-09_DU-2025-1170_domyslne.x" wejscie-w-zycie="2025-09-09"><nr>14d</nr><p><zdanie nr="1" gd:zdGUID="7d31742c-8f78-47b4-88a4-437d8e368d71" fragment="3" gd:fragmentGUID="1f37b1fa-eeec-49e7-b884-efc04c610e90" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-09_DU-2025-1170_domyslne.x" wejscie-w-zycie="2025-09-09">tymczasowemu nadzorcy sądowemu w postępowaniu w przedmiocie ogłoszenia upadłości podmiotu, którego te informacje dotyczą, w zakresie niezbędnym do wykonywania czynności w tym postępowaniu;</zdanie></p></punkt></cytat-strukt>.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2025/1170__art_4" gd:GUID="d21b5b57-343b-4306-b320-a5c1af36bba8" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-09_DU-2025-1170_domyslne.x" wejscie-w-zycie="2025-09-09">
+      <nr>4</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="7ae52c62-59a8-481f-8e69-d053d80da077" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-09_DU-2025-1170_domyslne.x" wejscie-w-zycie="2025-09-09">
+        <p>
+          <zdanie nr="1" gd:zdGUID="0a912a6d-e0b2-4ed9-a5dd-c7a4c1bd5fdd" fragment="1" gd:fragmentGUID="8de4add5-7153-49bb-a089-da52c41a7fe5" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-09_DU-2025-1170_domyslne.x" wejscie-w-zycie="2025-09-09">W ustawie z dnia 15 maja 2015 r. – Prawo restrukturyzacyjne (Dz. U. z 2024 r. poz. 1428 oraz z 2025 r. poz. 1085) po art. 26 dodaje się art. 26a w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/1428" cudzyslowy="oba" gd:nowGUID="6f56bc15-cfc5-4614-bbdb-a9c32625f8c3" element-eId="DU/2024/1428__art_26" funkcja="dodaj-po"><artykul eId="DU/2024/1428__art_26a" gd:GUID="ce78fdb5-d019-443b-b511-5c4cfbb5b5f6" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-09_DU-2025-1170_domyslne.x" wejscie-w-zycie="2025-09-09"><nr>26a</nr><ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="65a167de-38d3-4d83-b610-974ae65607e5" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-09_DU-2025-1170_domyslne.x" wejscie-w-zycie="2025-09-09"><p><zdanie nr="1" gd:zdGUID="4b636cf9-65bb-4d09-a0ec-d5bc60ef3d08" fragment="1" gd:fragmentGUID="d41c4d5d-8917-4a94-8df2-9ed46952e2bd" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-09_DU-2025-1170_domyslne.x" wejscie-w-zycie="2025-09-09">Po obwieszczeniu postanowienia o otwarciu postępowania restrukturyzacyjnego banki, w których dłużnik ma rachunki bankowe, sejfy lub skrytki, oraz spółdzielcze kasy oszczędnościowo-kredytowe, które prowadzą rachunki dłużnika, są obowiązane zawiadomić o tym nadzorcę sądowego albo zarządcę.</zdanie></p></ustep-n></artykul></cytat-strukt>.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2025/1170__art_5" gd:GUID="c21ae7b1-cb33-4371-b895-7f15a21ecf2a" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-09_DU-2025-1170_domyslne.x" wejscie-w-zycie="2025-09-09">
+      <nr>5</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="8fda2a63-b2d3-4295-bdd5-0b794fb8bcfa" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-09_DU-2025-1170_domyslne.x" wejscie-w-zycie="2025-09-09">
+        <p>
+          <zdanie nr="1" gd:zdGUID="efa4a0d5-4b65-45d3-9b2c-263a00a3f76b" fragment="1" gd:fragmentGUID="3568519d-96ef-405c-93a7-9f8eae50050b" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-09_DU-2025-1170_domyslne.x" wejscie-w-zycie="2025-09-09">Do postępowań upadłościowych oraz postępowań restrukturyzacyjnych, wszczętych i niezakończonych przed dniem wejścia w życie niniejszej ustawy, stosuje się przepisy dotychczasowe.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2025/1170__art_6" gd:GUID="5eabb209-24e5-4984-a9a9-f8c4e80b4ffb" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-09_DU-2025-1170_domyslne.x" wejscie-w-zycie="2025-09-09">
+      <nr>6</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="a3718edf-fd03-4f67-9a6e-42023e65dfe1" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-09_DU-2025-1170_domyslne.x" wejscie-w-zycie="2025-09-09">
+        <p>
+          <zdanie nr="1" gd:zdGUID="54ec7cd5-b980-42c1-b035-b5f3bfcf7284" fragment="1" gd:fragmentGUID="26ffab7b-9b97-48b7-b384-b62629adc2a4" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-09_DU-2025-1170_domyslne.x" wejscie-w-zycie="2025-09-09">Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <organ-podpisujacy>Prezydent Rzeczypospolitej Polskiej: <i><osoba podpisujacy="true" gd:osobaGUID="5f043beb-b721-4622-b192-73972f849372"><imie>K.</imie> <nazwisko>Nawrocki</nazwisko></osoba></i></organ-podpisujacy>
+  </ustawa>
+</akt-prawny>

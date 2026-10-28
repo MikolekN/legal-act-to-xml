@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <rozporzadzenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/1664</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>c78492f2-26ae-4c86-b9cb-f877f5409a99</gd:GUIDwersji>
+      <AdresISAP>WDU20250001664</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>1664</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 1664</AdresWyswietlany>
+      <Tytul>Rozporządzenie Ministra Energii z dnia 28 listopada 2025 r. w sprawie wysokości stawki opłaty kogeneracyjnej na rok 2026</Tytul>
+      <Rodzaj>ROZP</Rodzaj>
+      <DataOgloszenia>2025-11-28</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-11-28</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2026-01-01_DU-2025-1664_odczytane" rodzaj="wejscie-w-zycie" pochodzenie="odczytane" data="2026-01-01" podstawa="§ 2" zrodlo="https://eli.gov.pl/eli/DU/2025/1664" dowod="DU/2025/1664__art_2" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1664_odczytane.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2026-01-01_DU-2025-1664_odczytane" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="c76307be-210b-466f-b534-d99077331196" rola="wydajacy">
+          <Nazwa>Minister Energii</Nazwa>
+          <OrganPodpisujacy>Minister Energii</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>M.</imie> <nazwisko>Motyka</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Rozporządzenie</rodzaj-aktu>
+    <autor-aktu>Ministra Energii<odnosnik id-odnosnika="1" symbol="1" gd:GUID="5fd6d89d-e3da-4c97-8cad-65beef74bd84"><p><zdanie nr="1" gd:zdGUID="54c7b3f9-e07c-4fc0-b10a-5d30eca1e0d3" fragment="1" gd:fragmentGUID="dca8b62f-299f-43f1-a76a-1ce744de13df">Minister Energii kieruje działem administracji rządowej – energia, na podstawie § 1 ust. 2 pkt 1 rozporządzenia Prezesa Rady Ministrów z dnia 25 lipca 2025 r. w sprawie szczegółowego zakresu działania Ministra Energii (Dz. U. poz. 1206).</zdanie></p></odnosnik></autor-aktu>
+    <data>z dnia 28 listopada 2025 r.</data>
+    <tytul>w sprawie wysokości stawki opłaty kogeneracyjnej na rok 2026</tytul>
+    <podstawa-prawna>Na podstawie art. 64 ust. 4 ustawy z dnia 14 grudnia 2018 r. o promowaniu energii elektrycznej z wysokosprawnej kogeneracji (Dz. U. z 2025 r. poz. 602) zarządza się, co następuje:</podstawa-prawna>
+    <paragraf eId="DU/2025/1664__art_1" gd:GUID="a064b87b-cec9-4b3b-8130-c95f6ef9c9ea" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1664_odczytane.x" wejscie-w-zycie="2026-01-01">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="3b7d1157-aa5b-492e-ab6e-73003e93acce" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1664_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="b9573aaa-489a-473a-8246-8d7b770a4d5f" fragment="1" gd:fragmentGUID="8035477c-3e93-4c23-bcd9-fdc40ffbdd52" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1664_odczytane.x" wejscie-w-zycie="2026-01-01">Wysokość stawki opłaty kogeneracyjnej na rok 2026 wynosi 3,00 zł/MWh.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2025/1664__art_2" gd:GUID="ebf89af8-d3b3-419b-ba8a-23bb2727a743" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1664_odczytane.x" wejscie-w-zycie="2026-01-01">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="52f8d4c3-fe85-4375-96b0-08bf2dc33bd9" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1664_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="c4cd16e2-d1ff-428f-919d-72186951c3e3" fragment="1" gd:fragmentGUID="1e817e0a-d093-47ed-8ea3-59309cab725a" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1664_odczytane.x" wejscie-w-zycie="2026-01-01">Rozporządzenie wchodzi w życie z dniem 1 stycznia 2026 r.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <organ-podpisujacy>Minister Energii: <i><osoba podpisujacy="true" gd:osobaGUID="a643fe60-7d90-4edd-9da3-18097f02fa30"><imie>M.</imie> <nazwisko>Motyka</nazwisko></osoba></i></organ-podpisujacy>
+  </rozporzadzenie>
+</akt-prawny>

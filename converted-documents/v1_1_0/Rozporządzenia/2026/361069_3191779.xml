@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <rozporzadzenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2026/169</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>dc0aaf3d-496f-4335-bb37-c3285078c409</gd:GUIDwersji>
+      <AdresISAP>WDU20260000169</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2026</Rok>
+      <Pozycja>169</Pozycja>
+      <AdresWyswietlany>Dz.U. 2026 poz. 169</AdresWyswietlany>
+      <Tytul>Rozporządzenie Ministra Finansów i Gospodarki z dnia 13 lutego 2026 r. zmieniające rozporządzenie w sprawie korzystania z Krajowego Systemu e-Faktur</Tytul>
+      <Rodzaj>ROZP</Rodzaj>
+      <DataOgloszenia>2026-02-13</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2026-02-13</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2026-02-13_DU-2026-169_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2026-02-13" warunek="z dniem ogłoszenia" podstawa="§ 2" zrodlo="https://eli.gov.pl/eli/DU/2026/169" dowod="DU/2026/169__art_2" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2026-02-13_DU-2026-169_domyslne.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2026-02-13_DU-2026-169_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="b9bd349f-08d9-45e2-8e01-834ad4f1f4b1" rola="wydajacy">
+          <Nazwa>Minister Finansów i Gospodarki</Nazwa>
+          <OrganPodpisujacy>Minister Finansów i Gospodarki</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>J.</imie> <nazwisko>Neneman</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Rozporządzenie</rodzaj-aktu>
+    <autor-aktu>Ministra Finansów i Gospodarki<odnosnik id-odnosnika="1" symbol="1" gd:GUID="19771e25-c350-458d-8028-828250d01497"><p><zdanie nr="1" gd:zdGUID="ad2edf81-e7ac-43da-a852-485e9a70ab7c" fragment="1" gd:fragmentGUID="5cf00a5b-53c9-4724-96e6-5b33414fec99">Minister Finansów i Gospodarki kieruje działem administracji rządowej – finanse publiczne, na podstawie § 1 ust. 2 pkt 3 rozporządzenia Prezesa Rady Ministrów z dnia 25 lipca 2025 r. w sprawie szczegółowego zakresu działania Ministra Finansów i Gospodarki (Dz. U. poz. 997).</zdanie></p></odnosnik></autor-aktu>
+    <data>z dnia 13 lutego 2026 r.</data>
+    <tytul>zmieniające rozporządzenie w sprawie korzystania z Krajowego Systemu e-Faktur</tytul>
+    <podstawa-prawna>Na podstawie art. 106r ustawy z dnia 11 marca 2004 r. o podatku od towarów i usług (Dz. U. z 2025 r. poz. 775, 894, 896, 1203, 1541 i 1811) zarządza się, co następuje:</podstawa-prawna>
+    <paragraf eId="DU/2026/169__art_1" gd:GUID="a423d39b-76a9-417b-8c29-8df163658e42" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-13_DU-2026-169_domyslne.x" wejscie-w-zycie="2026-02-13">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="89dfc22d-3c4d-4be7-8cf1-50be0d617640" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-13_DU-2026-169_domyslne.x" wejscie-w-zycie="2026-02-13">
+        <p>
+          <zdanie nr="1" gd:zdGUID="6c95c382-d778-40d9-a971-f2bac21ea421" fragment="1" gd:fragmentGUID="6b92cf2d-cd9a-41b6-8add-583cb06617e0" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-13_DU-2026-169_domyslne.x" wejscie-w-zycie="2026-02-13">W rozporządzeniu Ministra Finansów i Gospodarki z dnia 12 grudnia 2025 r. w sprawie korzystania z Krajowego Systemu e-Faktur (Dz. U. poz. 1815) wprowadza się następujące zmiany:</zdanie>
+        </p>
+        <punkt eId="DU/2026/169__art_1__pkt_1" gd:GUID="0b63f84b-9fe1-40d0-bf9e-2a773c034d70" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-13_DU-2026-169_domyslne.x" wejscie-w-zycie="2026-02-13">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="6c95c382-d778-40d9-a971-f2bac21ea421" fragment="2" gd:fragmentGUID="f24aef61-d521-488f-8712-37ef4c6d22d1" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-13_DU-2026-169_domyslne.x" wejscie-w-zycie="2026-02-13"><now:zamien-tekst stary-tekst="31 marca 2026 r." nowy-tekst="13 lutego 2026 r." element-eId="DU/2025/1815__art_13__ust_1__pkt_2" akt="https://eli.gov.pl/eli/DU/2025/1815" gd:nowGUID="2d13cc8d-8665-4e5c-aa71-952de0952243" />w § 13 w ust. 1 w pkt 2 wyrazy „31 marca 2026 r.” zastępuje się wyrazami „13 lutego 2026 r.”;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/169__art_1__pkt_2" gd:GUID="2627c66e-9467-4cd2-97ca-8e05665ec345" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-13_DU-2026-169_domyslne.x" wejscie-w-zycie="2026-02-13">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="6c95c382-d778-40d9-a971-f2bac21ea421" fragment="3" gd:fragmentGUID="e0ec884a-f909-41f7-a434-b68a197295de" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-13_DU-2026-169_domyslne.x" wejscie-w-zycie="2026-02-13"><now:zamien-tekst stary-tekst="1 kwietnia 2026 r." nowy-tekst="14 lutego 2026 r." element-eId="DU/2025/1815__art_15__pkt_2" akt="https://eli.gov.pl/eli/DU/2025/1815" gd:nowGUID="509c7af7-1367-44a7-9f4b-33cee4b47c35" />w § 15 w pkt 2 wyrazy „1 kwietnia 2026 r.” zastępuje się wyrazami „14 lutego 2026 r.”.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2026/169__art_2" gd:GUID="cda59d87-59ae-450f-8586-db9985ecf5e6" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-13_DU-2026-169_domyslne.x" wejscie-w-zycie="2026-02-13">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="6d4cf171-7770-464d-b6c9-c6d541ff9075" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-13_DU-2026-169_domyslne.x" wejscie-w-zycie="2026-02-13">
+        <p>
+          <zdanie nr="1" gd:zdGUID="8c45f59a-ecbd-4b67-900b-18ba346e5468" fragment="1" gd:fragmentGUID="d48f745b-1dad-41a0-8321-e44e6b126c19" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-13_DU-2026-169_domyslne.x" wejscie-w-zycie="2026-02-13">Rozporządzenie wchodzi w życie z dniem ogłoszenia.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <organ-podpisujacy>Minister Finansów i Gospodarki: wz. <i><osoba podpisujacy="true" gd:osobaGUID="d92c484b-b91d-4826-99e9-9af7992afe97"><imie>J.</imie> <nazwisko>Neneman</nazwisko></osoba></i></organ-podpisujacy>
+  </rozporzadzenie>
+</akt-prawny>

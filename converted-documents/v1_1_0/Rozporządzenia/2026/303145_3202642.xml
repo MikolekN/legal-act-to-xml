@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <rozporzadzenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2026/210</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>af82748f-3e82-4fdb-bc94-a6403244a5bd</gd:GUIDwersji>
+      <AdresISAP>WDU20260000210</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2026</Rok>
+      <Pozycja>210</Pozycja>
+      <AdresWyswietlany>Dz.U. 2026 poz. 210</AdresWyswietlany>
+      <Tytul>Rozporządzenie Ministra Infrastruktury z dnia 20 lutego 2026 r. w sprawie sposobu przeprowadzania weryfikacji i prób efektywności w zakresie ochrony żeglugi i portów</Tytul>
+      <Rodzaj>ROZP</Rodzaj>
+      <DataOgloszenia>2026-02-24</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2026-02-20</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2026-03-11_DU-2026-210_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2026-03-11" warunek="po upływie 14 dni od dnia ogłoszenia" podstawa="§ 5" zrodlo="https://eli.gov.pl/eli/DU/2026/210" dowod="DU/2026/210__art_5" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2026-03-11_DU-2026-210_domyslne.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2026-03-11_DU-2026-210_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="7528db0f-f281-4d30-b95a-8f9df74514f4" rola="wydajacy">
+          <Nazwa>Minister Infrastruktury</Nazwa>
+          <OrganPodpisujacy>Minister Infrastruktury</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>A.</imie> <nazwisko>Marchewka</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Rozporządzenie</rodzaj-aktu>
+    <autor-aktu>Ministra Infrastruktury<odnosnik id-odnosnika="1" symbol="1" gd:GUID="c042b8c5-35d1-41c5-b3ea-972fc03700cf"><p><zdanie nr="1" gd:zdGUID="93ce6689-e745-4148-b2c8-2cb2da89233f" fragment="1" gd:fragmentGUID="60eef871-ab78-4180-9773-7932590726a3">Minister Infrastruktury kieruje działem administracji rządowej – gospodarka morska, na podstawie § 1 ust. 2 pkt 1 rozporządzenia Prezesa Rady Ministrów z dnia 18 grudnia 2023 r. w sprawie szczegółowego zakresu działania Ministra Infrastruktury (Dz. U. poz. 2725).</zdanie></p></odnosnik></autor-aktu>
+    <data>z dnia 20 lutego 2026 r.</data>
+    <tytul>w sprawie sposobu przeprowadzania weryfikacji i prób efektywności w zakresie ochrony żeglugi i portów</tytul>
+    <podstawa-prawna>Na podstawie art. 37 ustawy z dnia 4 września 2008 r. o ochronie żeglugi i portów morskich (Dz. U. z 2024 r. poz. 597) zarządza się, co następuje:</podstawa-prawna>
+    <paragraf eId="DU/2026/210__art_1" gd:GUID="fcacd53b-41de-4741-9dd3-68750e706f39" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-11_DU-2026-210_domyslne.x" wejscie-w-zycie="2026-03-11">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="eec16949-3803-47a2-b9d3-be3df661beb4" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-11_DU-2026-210_domyslne.x" wejscie-w-zycie="2026-03-11">
+        <p>
+          <zdanie nr="1" gd:zdGUID="c41efd7d-020d-4f9b-ac00-991225f4277c" fragment="1" gd:fragmentGUID="19594d37-1175-4bdf-80e2-d74ae326a71c" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-11_DU-2026-210_domyslne.x" wejscie-w-zycie="2026-03-11">Weryfikacja w zakresie ochrony żeglugi i portów obejmuje sprawdzenie:</zdanie>
+        </p>
+        <punkt eId="DU/2026/210__art_1__pkt_1" gd:GUID="7793a3ff-29dd-40c7-ab35-09327bea88db" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-11_DU-2026-210_domyslne.x" wejscie-w-zycie="2026-03-11">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="c41efd7d-020d-4f9b-ac00-991225f4277c" fragment="2" gd:fragmentGUID="e7b430c6-663d-4988-a4ff-0d3dafecec65" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-11_DU-2026-210_domyslne.x" wejscie-w-zycie="2026-03-11">stanu zabezpieczenia statku, obiektu portowego lub portu;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/210__art_1__pkt_2" gd:GUID="4342ed3a-f7db-4110-b740-b4d2031cd527" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-11_DU-2026-210_domyslne.x" wejscie-w-zycie="2026-03-11">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="c41efd7d-020d-4f9b-ac00-991225f4277c" fragment="3" gd:fragmentGUID="1b363a77-e67a-48dd-9c7d-21690f7cf377" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-11_DU-2026-210_domyslne.x" wejscie-w-zycie="2026-03-11">sprawności sprzętu służącego do ochrony statku, obiektu portowego lub portu;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/210__art_1__pkt_3" gd:GUID="ff7bca7a-9908-4e03-9c6d-096f11b3d83c" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-11_DU-2026-210_domyslne.x" wejscie-w-zycie="2026-03-11">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="c41efd7d-020d-4f9b-ac00-991225f4277c" fragment="4" gd:fragmentGUID="b154eed4-087f-410e-939d-9bbe5ec7b411" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-11_DU-2026-210_domyslne.x" wejscie-w-zycie="2026-03-11">wiedzy załogi statku lub personelu obiektu portowego lub portu w zakresie ochrony odpowiednio statku, obiektu portowego lub portu;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/210__art_1__pkt_4" gd:GUID="c11a56a7-351c-41a9-b697-38da482a422f" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-11_DU-2026-210_domyslne.x" wejscie-w-zycie="2026-03-11">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="c41efd7d-020d-4f9b-ac00-991225f4277c" fragment="5" gd:fragmentGUID="3f596675-05c3-410a-9aae-f49127b444bb" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-11_DU-2026-210_domyslne.x" wejscie-w-zycie="2026-03-11">zgodności stanu ochrony statku, obiektu portowego lub portu odpowiednio z planem ochrony statku, planem ochrony obiektu portowego lub planem ochrony portu.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2026/210__art_2" gd:GUID="2f9d6183-e139-460b-af3d-d7c5716e8488" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-11_DU-2026-210_domyslne.x" wejscie-w-zycie="2026-03-11">
+      <nr>2</nr>
+      <ustep eId="DU/2026/210__art_2__ust_1" gd:GUID="65bb95be-42e7-42e1-833f-47abb43d9466" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-11_DU-2026-210_domyslne.x" wejscie-w-zycie="2026-03-11">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="19d00ec5-6c07-452a-bede-69c9ef967dff" fragment="1" gd:fragmentGUID="cef37240-3006-4e86-8eca-5abeded7cbd9" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-11_DU-2026-210_domyslne.x" wejscie-w-zycie="2026-03-11">Weryfikację statku przeprowadza się z uwzględnieniem szczegółowych zagadnień z zakresu ochrony statku określonych w załączniku nr 1 do rozporządzenia.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2026/210__art_2__ust_2" gd:GUID="f3677e85-68ac-4351-920c-73d46c118443" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-11_DU-2026-210_domyslne.x" wejscie-w-zycie="2026-03-11">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="d4a0ffaf-e074-4d6a-95b7-b1deda49f649" fragment="1" gd:fragmentGUID="e32e5373-3735-4eab-b07a-bb44bcd5163a" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-11_DU-2026-210_domyslne.x" wejscie-w-zycie="2026-03-11">Weryfikację obiektu portowego przeprowadza się na podstawie listy kontrolnej uwzględniającej szczegółowe zagadnienia z zakresu ochrony obiektu portowego określone w załączniku nr 2 do rozporządzenia.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2026/210__art_2__ust_3" gd:GUID="26099bbb-b69d-4974-ac3d-ec6724eb39e7" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-11_DU-2026-210_domyslne.x" wejscie-w-zycie="2026-03-11">
+        <nr>3</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="79dacf5d-7a3f-4baf-98e7-5bd7e4aba262" fragment="1" gd:fragmentGUID="0d64d2b1-d0fe-4780-b5d9-4a700715524c" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-11_DU-2026-210_domyslne.x" wejscie-w-zycie="2026-03-11">Weryfikację portu przeprowadza się na podstawie scenariusza działań określającego zakres weryfikacji, kolejność i harmonogram działań, uwzględniającego szczegółowe zagadnienia z zakresu ochrony portu określone w załączniku nr 2 do ustawy z dnia 4 września 2008 r. o ochronie żeglugi i portów morskich.</zdanie>
+        </p>
+      </ustep>
+    </paragraf>
+    <paragraf eId="DU/2026/210__art_3" gd:GUID="a2e3a12b-4550-4630-b144-11b72d8ab8ff" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-11_DU-2026-210_domyslne.x" wejscie-w-zycie="2026-03-11">
+      <nr>3</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="e3e579a1-f0b4-4318-8aa1-69f82ac2d9ce" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-11_DU-2026-210_domyslne.x" wejscie-w-zycie="2026-03-11">
+        <p>
+          <zdanie nr="1" gd:zdGUID="a4241bc8-4631-4d5e-9e11-f5bc22eab15f" fragment="1" gd:fragmentGUID="d0b01c85-655c-41b2-8503-39d37b5f20f2" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-11_DU-2026-210_domyslne.x" wejscie-w-zycie="2026-03-11">Próba efektywności w zakresie ochrony statku, obiektu portowego lub portu jest przeprowadzana w sposób bezpieczny i niezagrażający bezpieczeństwu osób ją przeprowadzających oraz – w odniesieniu do obiektu portowego lub portu – uwzględniający zagrożenia ujęte odpowiednio w ocenie stanu ochrony obiektu portowego lub ocenie stanu ochrony portu.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2026/210__art_4" gd:GUID="6283e6f3-a61e-410f-8038-c322d6f462c7" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-11_DU-2026-210_domyslne.x" wejscie-w-zycie="2026-03-11">
+      <nr>4</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="55cef0cc-5a6c-4b2a-b005-393f63f844a6" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-11_DU-2026-210_domyslne.x" wejscie-w-zycie="2026-03-11">
+        <p>
+          <zdanie nr="1" gd:zdGUID="bc0c6233-5cbe-4133-becb-d1bea710a890" fragment="1" gd:fragmentGUID="33f03a19-39d6-4d23-83c2-3cf4ed592b6b" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-11_DU-2026-210_domyslne.x" wejscie-w-zycie="2026-03-11">Weryfikacje i próby efektywności w zakresie ochrony statku, obiektu portowego lub portu przeprowadza się, w miarę możliwości, w sposób niezakłócający normalnej eksploatacji statku, obiektu portowego lub portu.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2026/210__art_5" gd:GUID="c823cd34-5f0d-4f48-906b-66527a7ef6a6" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-11_DU-2026-210_domyslne.x" wejscie-w-zycie="2026-03-11">
+      <nr>5</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="1f0e7e54-b034-4b32-9844-275f1db07b0f" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-11_DU-2026-210_domyslne.x" wejscie-w-zycie="2026-03-11">
+        <p>
+          <zdanie nr="1" gd:zdGUID="5c490ce0-c3b5-49d6-ab6e-354795174143" fragment="1" gd:fragmentGUID="dd4538ba-8782-4b82-98c8-c5e9a81ca14f" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-11_DU-2026-210_domyslne.x" wejscie-w-zycie="2026-03-11">Rozporządzenie wchodzi w życie po upływie 14 dni od dnia ogłoszenia.<odnosnik id-odnosnika="2" symbol="2" gd:GUID="42ed6e6a-6c13-4810-9946-a36ec8739397"><p><zdanie nr="1" gd:zdGUID="7d7f1deb-7254-437e-9a0b-7576f271246e" fragment="1" gd:fragmentGUID="6ce08ebe-cf72-428a-a840-89fe4e45a523">Niniejsze rozporządzenie było poprzedzone rozporządzeniem Ministra Infrastruktury z dnia 14 lipca 2010 r. w sprawie sposobu przeprowadzania weryfikacji i prób efektywności w zakresie ochrony żeglugi i portów morskich oraz wysokości wynagrodzenia ekspertów (Dz. U. poz. 915), które traci moc z dniem wejścia w życie niniejszego rozporządzenia zgodnie z art. 19 ustawy z dnia 13 stycznia 2023 r. o zmianie ustawy o bezpieczeństwie morskim oraz niektórych innych ustaw (Dz. U. poz. 261).</zdanie></p></odnosnik></zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <organ-podpisujacy>Minister Infrastruktury: wz. <i><osoba podpisujacy="true" gd:osobaGUID="2ab1b465-bb20-4ced-b575-815eae3682bb"><imie>A.</imie> <nazwisko>Marchewka</nazwisko></osoba></i></organ-podpisujacy>
+    <zalacznik eId="DU/2026/210__zal_1" gd:GUID="3a758c39-b312-4f87-a60b-296fa142dd8e">
+      <zalacznik-do gd:GUID="9872fd12-7180-4713-80b2-b363f0b79c04">Załączniki do rozporządzenia Ministra Infrastruktury z dnia 20 lutego 2026 r. (Dz. U. poz. 210)</zalacznik-do>
+      <zalacznik-nr gd:GUID="2a4656d7-3f19-4dac-87b8-109f2de2c491">
+        <nr>1</nr>
+      </zalacznik-nr>
+      <tytul-zalacznika gd:GUID="38ab14a9-b6e0-491c-9658-a7ff24a2c996">SZCZEGÓŁOWE ZAGADNIENIA Z ZAKRESU OCHRONY STATKU, KTÓRE UWZGLĘDNIA SIĘ PODCZAS PRZEPROWADZANIA WERYFIKACJI STATKU</tytul-zalacznika>
+      <segment-zalacznika gd:GUID="6bf25e1a-6653-4acf-ad43-e3b29ce62c2e" orientacja="pionowa">
+        <tekst-zwykly gd:GUID="6f4c9e3a-1116-40e3-889f-aece32e124af">Podczas przeprowadzania weryfikacji statku uwzględnia się następujące zagadnienia, w dowolnej konfiguracji:</tekst-zwykly>
+        <tekst-zwykly gd:GUID="43cf7899-428f-4b15-a6ba-cbf8dd51276d">1) sekcja 7.2 części A Kodeksu ISPS – kontrola punktów dostępu;</tekst-zwykly>
+        <tekst-zwykly gd:GUID="fee138f6-341c-43eb-a2a9-1f4475428cc1">2) sekcja 7.6 części A Kodeksu ISPS – podniesienie poziomu bezpieczeństwa w porcie;</tekst-zwykly>
+        <tekst-zwykly gd:GUID="d020d539-9249-43a5-b5b1-ab6e067cfdf9">3) sekcja 8.4 części A Kodeksu ISPS – ocena stanu ochrony statku;</tekst-zwykly>
+        <tekst-zwykly gd:GUID="cc0cde7c-838b-49a9-abaf-2f6ce0840f3f">4) sekcja 9.4 części A Kodeksu ISPS – plan ochrony statku;</tekst-zwykly>
+        <tekst-zwykly gd:GUID="129e5cf5-576f-4c48-b458-747b117d9e2a">5) sekcja 9.6 części A Kodeksu ISPS – zabezpieczenie planu ochrony statku;</tekst-zwykly>
+        <tekst-zwykly gd:GUID="9ac21df8-c4d1-4788-bfe2-d6c139fd4357">6) sekcja 9.7 części A Kodeksu ISPS – ochrona dostępu do planu ochrony statku;</tekst-zwykly>
+        <tekst-zwykly gd:GUID="ff36fb0f-2b00-4863-8e79-b759e9546a5c">7) sekcja 10 części A Kodeksu ISPS – zapisy, dokumentacja i archiwizacja;</tekst-zwykly>
+        <tekst-zwykly gd:GUID="8ab59a2c-2887-46cc-a472-07c2f9608e4b">8) sekcja 13.2 części A Kodeksu ISPS – kompetencje oficera ochrony statku;</tekst-zwykly>
+        <tekst-zwykly gd:GUID="f4e0b824-e239-4f16-b96e-cc72f30c4e6f">9) sekcja 13.3 części A Kodeksu ISPS – kompetencje załogi statku;</tekst-zwykly>
+        <tekst-zwykly gd:GUID="53a5b1ab-8df0-46a0-8bcd-85965a66cc01">10) sekcja 13.4 części A Kodeksu ISPS – ćwiczenia załogi statku;</tekst-zwykly>
+        <tekst-zwykly gd:GUID="660806e0-0ade-403d-bd57-96da7611f098">11) sekcja 8.5 części B Kodeksu ISPS – informacje dotyczące bezpieczeństwa;</tekst-zwykly>
+        <tekst-zwykly gd:GUID="3c6a7647-df1f-45e1-ab4a-f3c62affafd0">12) sekcja 9.9 części B Kodeksu ISPS – ochrona środków dostępu na statek;</tekst-zwykly>
+        <tekst-zwykly gd:GUID="905b29d1-5dc8-40fb-8caa-366733ff571b">13) sekcja 9.11 części B Kodeksu ISPS – środki identyfikacji osób;</tekst-zwykly>
+        <tekst-zwykly gd:GUID="18d1a891-c484-4b80-ba1b-fbb507b2e216">14) sekcja 9.14 części B Kodeksu ISPS – ochrona punktów dostępu;</tekst-zwykly>
+        <tekst-zwykly gd:GUID="8dcde5d3-05a8-40c3-bfd1-b72c88971cd1">15) sekcja 9.15 części B Kodeksu ISPS – kontrola osób wchodzących na statek;</tekst-zwykly>
+        <tekst-zwykly gd:GUID="b5a7668b-6215-4b30-a20a-cc2167a6aa59">16) sekcja 9.16 części B Kodeksu ISPS – wzmocnienie ochrony na poziomie 2;</tekst-zwykly>
+        <tekst-zwykly gd:GUID="dfa82893-8629-4ff0-98e2-07447f109216">17) sekcja 9.17 części B Kodeksu ISPS – wzmocnienie ochrony na poziomie 3;</tekst-zwykly>
+        <tekst-zwykly gd:GUID="098cfbf5-37d7-4f87-abfe-415aa02913f7">18) sekcja 9.20 części B Kodeksu ISPS – oznakowanie obszarów o ograniczonym dostępie;</tekst-zwykly>
+        <tekst-zwykly gd:GUID="fa5c419b-655f-4342-b6ff-58d2708af27d">19) sekcja 9.21 części B Kodeksu ISPS – określenie obszarów o ograniczonym dostępie;</tekst-zwykly>
+        <tekst-zwykly gd:GUID="7571415b-236f-4302-8df5-e55b848fdaf6">20) sekcja 9.22 części B Kodeksu ISPS – obszary o ograniczonym dostępie na poziomie 1;</tekst-zwykly>
+        <tekst-zwykly gd:GUID="b4d3ec02-38c2-413f-aa53-8811ac315d3e">21) sekcja 9.23 części B Kodeksu ISPS – obszary o ograniczonym dostępie na poziomie 2;</tekst-zwykly>
+        <tekst-zwykly gd:GUID="799390b1-17db-43e2-a951-f9b3f8c9613b">22) sekcja 9.24 części B Kodeksu ISPS – obszary o ograniczonym dostępie na poziomie 3;</tekst-zwykly>
+        <tekst-zwykly gd:GUID="da730365-674a-44ca-9d83-862668e574de">23) sekcja 9.33 części B Kodeksu ISPS – środki ochrony podczas dostaw zapasów statkowych;</tekst-zwykly>
+        <tekst-zwykly gd:GUID="9e7e058c-f641-4340-8e13-003a8829e3d5">24) sekcja 9.35 części B Kodeksu ISPS – przyjmowanie zapasów przez statek na poziomie 1;</tekst-zwykly>
+        <tekst-zwykly gd:GUID="e109eece-2b6f-4a2a-aa75-5115cc52b81c">25) sekcja 9.38 i 9.39 części B Kodeksu ISPS – załadunek bagażu bez nadzoru;</tekst-zwykly>
+        <tekst-zwykly gd:GUID="344e8b7e-b2b2-41c5-b8bd-9c2ce9c462b3">26) sekcja 9.42 części B Kodeksu ISPS – ogólne zasady monitorowania statku;</tekst-zwykly>
+        <tekst-zwykly gd:GUID="946cdef3-620f-43f2-9d65-a24e3f382014">27) sekcja 9.45 części B Kodeksu ISPS – monitorowanie statku na poziomie 1;</tekst-zwykly>
+        <tekst-zwykly gd:GUID="81717464-8664-40c9-a258-2f7193d3763f">28) sekcja 9.46 części B Kodeksu ISPS – oświetlenie statku;</tekst-zwykly>
+        <tekst-zwykly gd:GUID="e9d1eac8-4f95-4ec6-bde1-950d3a14096f">29) sekcja 13.1 części B Kodeksu ISPS – kompetencje oficera ochrony armatora;</tekst-zwykly>
+        <tekst-zwykly gd:GUID="78f61295-88a6-473e-ba8b-89f58386582c">30) sekcja 13.2 części B Kodeksu ISPS – kompetencje oficera ochrony statku;</tekst-zwykly>
+        <tekst-zwykly gd:GUID="95587181-b298-49a0-8e0c-20727ce89b7f">31) sekcja 13.3 części B Kodeksu ISPS – kompetencje załogi pokładowej;</tekst-zwykly>
+        <tekst-zwykly gd:GUID="b8156f9e-7261-4b7e-b4b3-d40afc7c8350">32) sekcja 13.4 części B Kodeksu ISPS – kompetencje pozostałych członków załogi;</tekst-zwykly>
+        <tekst-zwykly gd:GUID="e1b8d82d-7f09-4582-9587-680dbb8dde88">33) sekcja 13.5 części B Kodeksu ISPS – ćwiczenia załogi statku;</tekst-zwykly>
+        <tekst-zwykly gd:GUID="3c531592-4a2c-44f3-9833-78e641605dc4">34) sekcja 13.6 części B Kodeksu ISPS – alarmy próbne;</tekst-zwykly>
+        <tekst-zwykly gd:GUID="62f555ec-7758-4c02-8bbe-10c1abd739af">35) sekcja 13.7 części B Kodeksu ISPS – wspólne ćwiczenia administracji morskiej, oficerów ochrony armatora (CSO), oficerów ochrony statku (SSO) i oficerów ochrony obiektów portowych (PFSO);</tekst-zwykly>
+        <tekst-zwykly gd:GUID="acc9c637-9402-48f5-bee9-78045ccf7394">36) zagrożenia i zdarzenia naruszające ochronę przedstawione w ocenie stanu ochrony i planie ochrony statku;</tekst-zwykly>
+        <tekst-zwykly gd:GUID="4be0a483-c0b2-4462-aa1a-d35526bb1552">37) nowe zagrożenia, które pojawiają się wraz z rozwojem techniki i gospodarki światowej;</tekst-zwykly>
+        <tekst-zwykly gd:GUID="e31c7585-762c-4fd7-bd8f-a74da072c0ad">38) inne zagadnienia z zakresu ochrony uznane za stosowne i uwarunkowane panującymi okolicznościami.</tekst-zwykly>
+      </segment-zalacznika>
+    </zalacznik>
+    <zalacznik eId="DU/2026/210__zal_2" gd:GUID="2643eff4-dbf8-4f89-b6cc-086d897a294e">
+      <zalacznik-nr gd:GUID="3f18455c-fbdd-41b3-94c1-3315bf8d59e4">
+        <nr>2</nr>
+      </zalacznik-nr>
+      <tytul-zalacznika gd:GUID="f82bc96f-498a-40e1-8c09-29d146ab22d7">SZCZEGÓŁOWE ZAGADNIENIA Z ZAKRESU OCHRONY OBIEKTU PORTOWEGO, KTÓRE UWZGLĘDNIA SIĘ PODCZAS PRZEPROWADZANIA WERYFIKACJI OBIEKTU PORTOWEGO</tytul-zalacznika>
+      <segment-zalacznika gd:GUID="67b5c403-7e28-4e3e-8504-b9deb913a1c9" orientacja="pionowa">
+        <tekst-zwykly gd:GUID="cd796194-fa5d-44cd-9439-91c89759da37">Podczas przeprowadzania weryfikacji obiektu portowego uwzględnia się następujące zagadnienia, w dowolnej konfiguracji:</tekst-zwykly>
+        <tekst-zwykly gd:GUID="3748ad6d-b4d2-4604-a8b8-64f9b79a3ca8">1) sekcja 14.1 części A Kodeksu ISPS – środki i procedury ochrony;</tekst-zwykly>
+        <tekst-zwykly gd:GUID="cd3abd54-0bd7-4320-bd38-ab57527fd2da">2) sekcja 14.6 części A Kodeksu ISPS – różnice w poziomach ochrony pomiędzy statkiem a obiektem portowym;</tekst-zwykly>
+        <tekst-zwykly gd:GUID="dee872a0-414e-4607-b803-1e416c542d36">3) sekcja 15.5 części A Kodeksu ISPS – ocena stanu ochrony obiektu portowego;</tekst-zwykly>
+        <tekst-zwykly gd:GUID="93a1c17e-58ce-4b71-b3bd-b76945a076ad">4) sekcja 16.3 części A Kodeksu ISPS – plan ochrony obiektu portowego;</tekst-zwykly>
+        <tekst-zwykly gd:GUID="8d3ebd43-3c7c-43b8-918a-79af8be94ba1">5) sekcja 16.7 części A Kodeksu ISPS – zabezpieczenie planu ochrony obiektu portowego;</tekst-zwykly>
+        <tekst-zwykly gd:GUID="2af7632b-42b2-4561-aecc-d1f6b95b99ba">6) sekcja 16.8 części A Kodeksu ISPS – ochrona dostępu do planu ochrony obiektu portowego;</tekst-zwykly>
+        <tekst-zwykly gd:GUID="7fd33c19-36ce-4551-94f8-540154c26c31">7) sekcja 18.2 części A Kodeksu ISPS – kompetencje personelu ochrony obiektu portowego;</tekst-zwykly>
+        <tekst-zwykly gd:GUID="c32a76c5-5ff2-4ef1-bbac-f0a9d2a78025">8) sekcja 18.3 części A Kodeksu ISPS – ćwiczenia personelu ochrony obiektu portowego;</tekst-zwykly>
+        <tekst-zwykly gd:GUID="175adbf8-851d-4086-ad75-97163bf334ab">9) sekcja 15.7 części B Kodeksu ISPS – infrastruktura obiektu portowego;</tekst-zwykly>
+        <tekst-zwykly gd:GUID="292481f3-f7f2-4bb5-9799-eba159447be7">10) sekcja 15.12 części B Kodeksu ISPS – obiekty przyległe do obiektu portowego;</tekst-zwykly>
+        <tekst-zwykly gd:GUID="333845a9-3958-4f34-949d-b91779819bf4">11) sekcja 16.12 części B Kodeksu ISPS – środki identyfikacji osób;</tekst-zwykly>
+        <tekst-zwykly gd:GUID="1a4db7b3-aebd-4d4a-9c4a-87ddc1055175">12) sekcja 16.17 części B Kodeksu ISPS – ochrona punktów dostępu;</tekst-zwykly>
+        <tekst-zwykly gd:GUID="4a92b38d-270d-45b2-9873-0ebee1a20e54">13) sekcja 16.18 części B Kodeksu ISPS – kontrola osób wchodzących na teren obiektu portowego;</tekst-zwykly>
+        <tekst-zwykly gd:GUID="c2c19f2d-4dac-4c86-a316-0d7dddee7c0b">14) sekcja 16.19 części B Kodeksu ISPS – wzmocnienie ochrony na poziomie 2;</tekst-zwykly>
+        <tekst-zwykly gd:GUID="1a7f6de9-99cb-44b2-a50e-f05f4c344093">15) sekcja 16.20 części B Kodeksu ISPS – wzmocnienie ochrony na poziomie 3;</tekst-zwykly>
+        <tekst-zwykly gd:GUID="6f786a6c-06a4-42a3-81db-214a2377c7be">16) sekcja 16.23 części B Kodeksu ISPS – oznakowanie obszarów o ograniczonym dostępie;</tekst-zwykly>
+        <tekst-zwykly gd:GUID="c8348044-a35e-450a-8362-53e2ae2db8f2">17) sekcja 16.24 części B Kodeksu ISPS – systemy alarmowe wykrywające wtargnięcie;</tekst-zwykly>
+        <tekst-zwykly gd:GUID="d3454891-b711-4f97-bed3-45bd6a60fa3f">18) sekcja 16.25 części B Kodeksu ISPS – określenie obszarów o ograniczonym dostępie;</tekst-zwykly>
+        <tekst-zwykly gd:GUID="0d870f97-de85-480e-b10a-e0693e474500">19) sekcja 16.27 części B Kodeksu ISPS – obszary o ograniczonym dostępie na poziomie 1;</tekst-zwykly>
+        <tekst-zwykly gd:GUID="a5b5fe14-72ff-4d35-ac20-2d88e67a17f8">20) sekcja 16.28 części B Kodeksu ISPS – obszary o ograniczonym dostępie na poziomie 2;</tekst-zwykly>
+        <tekst-zwykly gd:GUID="6c64dcff-9aa5-4fde-83ae-d777a459a186">21) sekcja 16.29 części B Kodeksu ISPS – obszary o ograniczonym dostępie na poziomie 3;</tekst-zwykly>
+        <tekst-zwykly gd:GUID="da5609cd-1f8c-46e3-a07e-a22073313e27">22) sekcja 16.30 części B Kodeksu ISPS – środki ochrony podczas przeładunku towarów;</tekst-zwykly>
+        <tekst-zwykly gd:GUID="2d246a0b-1ec3-4234-9b79-c593773c7cea">23) sekcja 16.32 części B Kodeksu ISPS – kontrola przeładowywanych towarów;</tekst-zwykly>
+        <tekst-zwykly gd:GUID="36220f0f-135d-4e1c-b22f-16b798e74c5d">24) sekcja 16.38 części B Kodeksu ISPS – środki ochrony podczas dostaw zapasów statkowych;</tekst-zwykly>
+        <tekst-zwykly gd:GUID="0bdc9e20-381f-4f3a-a48f-a72983509a9d">25) sekcja 16.40 części B Kodeksu ISPS – kontrola dostaw zapasów statkowych;</tekst-zwykly>
+        <tekst-zwykly gd:GUID="0f01e55d-7a84-41a4-8edb-9ff9b18b26e8">26) sekcja 16.49 części B Kodeksu ISPS – ogólne zasady monitorowania obiektu portowego;</tekst-zwykly>
+        <tekst-zwykly gd:GUID="600743ef-d989-4552-aaa8-54968ff8bd13">27) sekcja 16.52 części B Kodeksu ISPS – monitorowanie obiektu portowego na poziomie 1;</tekst-zwykly>
+        <tekst-zwykly gd:GUID="634975ee-99ab-48bf-a0d4-005ad29674ac">28) sekcja 18.1 części B Kodeksu ISPS – kompetencje oficera ochrony obiektu portowego;</tekst-zwykly>
+        <tekst-zwykly gd:GUID="b48cf484-90c6-4321-84ec-e695d43685e0">29) sekcja 18.2 części B Kodeksu ISPS – kompetencje personelu obiektu portowego posiadającego konkretne zadania w zakresie ochrony;</tekst-zwykly>
+        <tekst-zwykly gd:GUID="9b68c4e8-d931-4c64-ac5a-6a4f2fd5a035">30) sekcja 18.3 części B Kodeksu ISPS – kompetencje pozostałego personelu obiektu portowego;</tekst-zwykly>
+        <tekst-zwykly gd:GUID="be9fffbc-0938-4da8-8770-fe822a640906">31) sekcja 18.5 części B Kodeksu ISPS – treningi personelu obiektu portowego;</tekst-zwykly>
+        <tekst-zwykly gd:GUID="6c518c6d-58d7-42eb-b058-4749b2ed7b4c">32) sekcja 18.6 części B Kodeksu ISPS – wspólne ćwiczenia administracji morskiej, oficerów ochrony armatora (CSO), oficerów ochrony statku (SSO) i oficerów ochrony obiektów portowych (PFSO);</tekst-zwykly>
+        <tekst-zwykly gd:GUID="ac821531-ee27-4f3f-b688-e33dc378ba45">33) zagrożenia i zdarzenia naruszające ochronę przedstawione w ocenie stanu ochrony i planie ochrony obiektu portowego;</tekst-zwykly>
+        <tekst-zwykly gd:GUID="6e02f552-0da7-4599-99e4-e4747d985a6d">34) nowe zagrożenia, które pojawiają się wraz z rozwojem techniki i gospodarki światowej;</tekst-zwykly>
+        <tekst-zwykly gd:GUID="e98d9bec-eb06-4469-924f-6d55ccefb48f">35) inne zagadnienia z zakresu ochrony uznane za stosowne i uwarunkowane panującymi okolicznościami.</tekst-zwykly>
+      </segment-zalacznika>
+    </zalacznik>
+  </rozporzadzenie>
+</akt-prawny>

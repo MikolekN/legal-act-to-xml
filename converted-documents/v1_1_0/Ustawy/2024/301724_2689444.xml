@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <ustawa>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2024/1494</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>e5bab446-5faf-4107-918a-6fdf4252c9e5</gd:GUIDwersji>
+      <AdresISAP>WDU20240001494</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2024</Rok>
+      <Pozycja>1494</Pozycja>
+      <AdresWyswietlany>Dz.U. 2024 poz. 1494</AdresWyswietlany>
+      <Tytul>Ustawa z dnia 25 września 2024 r. o zmianie ustawy o rehabilitacji zawodowej i społecznej oraz zatrudnianiu osób niepełnosprawnych</Tytul>
+      <Rodzaj>USTAWA</Rodzaj>
+      <DataOgloszenia>2024-10-08</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2024-09-25</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_moc-wsteczna_2024-09-30_DU-2024-1494_odczytane" rodzaj="stosowanie-z-moca-wsteczna" pochodzenie="odczytane" data="2024-09-30" podstawa="art. 6" zrodlo="https://eli.gov.pl/eli/DU/2024/1494" dowod="DU/2024/1494__art_6">
+            <JednostkaAktu eId="DU/2024/1494__art_1" />
+            <JednostkaAktu eId="DU/2024/1494__art_4" />
+          </Zdarzenie>
+          <Zdarzenie id="zdarz_wejscie_2024-10-08_DU-2024-1494_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2024-10-08" warunek="z dniem ogłoszenia" podstawa="art. 6" zrodlo="https://eli.gov.pl/eli/DU/2024/1494" dowod="DU/2024/1494__art_6" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_moc-wsteczna.zdarz_moc-wsteczna_2024-09-30_DU-2024-1494_odczytane.obowiazywanie.zdarz_wejscie_2024-10-08_DU-2024-1494_domyslne.x" glowna="false">
+          <Przedzial rodzaj="stosowanie-z-moca-wsteczna" od="zdarz_moc-wsteczna_2024-09-30_DU-2024-1494_odczytane" do="zdarz_wejscie_2024-10-08_DU-2024-1494_domyslne" />
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2024-10-08_DU-2024-1494_domyslne" />
+        </GrupaCzasowa>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2024-10-08_DU-2024-1494_domyslne.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2024-10-08_DU-2024-1494_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="1b0412ec-de73-4946-8916-e2c6fdc8fc64" rola="wydajacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Sejm">
+          <Nazwa>SEJM</Nazwa>
+        </Organ>
+        <Organ gd:GUID="8d234bdf-c88d-4bd4-b8f4-8aa8d9900de0" rola="podpisujacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Prezydent">
+          <Nazwa>Prezydent Rzeczypospolitej Polskiej</Nazwa>
+          <OrganPodpisujacy>Prezydent Rzeczypospolitej Polskiej</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>A.</imie> <nazwisko>Duda</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Ustawa</rodzaj-aktu>
+    <data>z dnia 25 września 2024 r.</data>
+    <tytul>o zmianie ustawy o rehabilitacji zawodowej i społecznej oraz zatrudnianiu osób niepełnosprawnych</tytul>
+    <artykul eId="DU/2024/1494__art_1" gd:GUID="7fd31d92-6fb4-427d-8b41-3348fb707818" okres="okr_moc-wsteczna.zdarz_moc-wsteczna_2024-09-30_DU-2024-1494_odczytane.obowiazywanie.zdarz_wejscie_2024-10-08_DU-2024-1494_domyslne.x" wejscie-w-zycie="2024-09-30">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="3df18887-a1f7-4c2e-9b40-70e305badb66" okres="okr_moc-wsteczna.zdarz_moc-wsteczna_2024-09-30_DU-2024-1494_odczytane.obowiazywanie.zdarz_wejscie_2024-10-08_DU-2024-1494_domyslne.x" wejscie-w-zycie="2024-09-30">
+        <p>
+          <zdanie nr="1" gd:zdGUID="6bfb2764-698f-4c49-85d5-61fb331e7a96" fragment="1" gd:fragmentGUID="c32cb851-4b6d-4ec8-ad1d-0ed7c6cc9289" okres="okr_moc-wsteczna.zdarz_moc-wsteczna_2024-09-30_DU-2024-1494_odczytane.obowiazywanie.zdarz_wejscie_2024-10-08_DU-2024-1494_domyslne.x" wejscie-w-zycie="2024-09-30"><now:uchyl akt="https://eli.gov.pl/eli/DU/2024/44" element-eId="DU/2024/44__art_6bb__ust_2" gd:nowGUID="fbd955bd-b5a4-4487-9699-b8768d9b0e33" />W ustawie z dnia 27 sierpnia 1997 r. o rehabilitacji zawodowej i społecznej oraz zatrudnianiu osób niepełnosprawnych (Dz. U. z 2024 r. poz. 44, 858, 1089 i 1165) w art. 6bb uchyla się ust. 2.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2024/1494__art_2" gd:GUID="19211f37-3455-4310-bad7-02cd2fee69e3" okres="okr_obowiazywanie.zdarz_wejscie_2024-10-08_DU-2024-1494_domyslne.x" wejscie-w-zycie="2024-10-08">
+      <nr>2</nr>
+      <ustep eId="DU/2024/1494__art_2__ust_1" gd:GUID="089c42b3-a487-4cbe-b2f2-2a293d38112c" okres="okr_obowiazywanie.zdarz_wejscie_2024-10-08_DU-2024-1494_domyslne.x" wejscie-w-zycie="2024-10-08">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="02198ce3-948e-4836-aec5-df934249229a" fragment="1" gd:fragmentGUID="43071f7d-8268-4930-b2eb-f2a0fbe4a32a" okres="okr_obowiazywanie.zdarz_wejscie_2024-10-08_DU-2024-1494_domyslne.x" wejscie-w-zycie="2024-10-08">Decyzje i rozstrzygnięcia, na mocy których przyznano prawo do uzależnionych od niepełnosprawności świadczeń rodzinnych, świadczeń z funduszu alimentacyjnego, zasiłków dla opiekunów, świadczeń lub dodatków na pokrycie kosztów utrzymania dziecka lub osoby pełnoletniej w rodzinnej pieczy zastępczej albo świadczenia „aktywni rodzice w pracy” lub „aktywnie w żłobku”, wydane na podstawie orzeczeń o niepełnosprawności albo orzeczeń o stopniu niepełnosprawności, których okres ważności uległ przedłużeniu na podstawie art. 6bb ust. 1 ustawy zmienianej w art. 1 zmienia się w zakresie okresu, na jaki przyznano prawo do tych świadczeń, zasiłków albo dodatków, z uwzględnieniem określonego w art. 6bb ust. 1 ustawy zmienianej w art. 1 terminu ważności orzeczenia o niepełnosprawności albo orzeczenia o stopniu niepełnosprawności.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2024/1494__art_2__ust_2" gd:GUID="6946d4a5-40da-49d8-9a5c-20b39040e2d4" okres="okr_obowiazywanie.zdarz_wejscie_2024-10-08_DU-2024-1494_domyslne.x" wejscie-w-zycie="2024-10-08">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="9827add2-520e-4a26-a258-1884512163f7" fragment="1" gd:fragmentGUID="5f63f07e-e528-4bd3-8692-1419c7582773" okres="okr_obowiazywanie.zdarz_wejscie_2024-10-08_DU-2024-1494_domyslne.x" wejscie-w-zycie="2024-10-08">Postępowanie w sprawie zmiany decyzji i rozstrzygnięć przyznających prawo do świadczeń, zasiłków albo dodatków, o których mowa w ust. 1, wszczyna się z urzędu na podstawie danych z systemu, o którym mowa w art. 6d ust. 1 ustawy zmienianej w art. 1, lub danych z zaświadczenia, o którym mowa w art. 6bb ust. 3 ustawy zmienianej w art. 1.</zdanie>
+          <zdanie nr="2" gd:zdGUID="46773c53-7e05-4ee5-8e8f-7485a994961a" fragment="1" gd:fragmentGUID="8e6cba1e-b536-4141-89ab-ebb1d89ae463" okres="okr_obowiazywanie.zdarz_wejscie_2024-10-08_DU-2024-1494_domyslne.x" wejscie-w-zycie="2024-10-08">Przepisów art. 10 i art. 61 § 4 ustawy z dnia 14 czerwca 1960 r. – Kodeks postępowania administracyjnego (Dz. U. z 2024 r. poz. 572) nie stosuje się.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2024/1494__art_2__ust_3" gd:GUID="3574e8de-72c5-497c-a8d5-19d0e47075f8" okres="okr_obowiazywanie.zdarz_wejscie_2024-10-08_DU-2024-1494_domyslne.x" wejscie-w-zycie="2024-10-08">
+        <nr>3</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="234a2669-3da8-4f88-bf59-1c1644636ab9" fragment="1" gd:fragmentGUID="0559818e-ceda-4547-b537-0101791c8824" okres="okr_obowiazywanie.zdarz_wejscie_2024-10-08_DU-2024-1494_domyslne.x" wejscie-w-zycie="2024-10-08">Przepisy ust. 1 i 2 stosuje się także do decyzji i rozstrzygnięć, w których upłynął już okres, na który przyznano prawo do uzależnionych od niepełnosprawności świadczeń, zasiłków albo dodatków.</zdanie>
+        </p>
+      </ustep>
+    </artykul>
+    <artykul eId="DU/2024/1494__art_3" gd:GUID="171390dd-4eec-4537-8251-45363bf61745" okres="okr_obowiazywanie.zdarz_wejscie_2024-10-08_DU-2024-1494_domyslne.x" wejscie-w-zycie="2024-10-08">
+      <nr>3</nr>
+      <ustep eId="DU/2024/1494__art_3__ust_1" gd:GUID="9e9640ca-0d24-4e2d-8b8b-0e88093903cb" okres="okr_obowiazywanie.zdarz_wejscie_2024-10-08_DU-2024-1494_domyslne.x" wejscie-w-zycie="2024-10-08">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="74a90228-3510-40ca-a1c8-8aa591645cad" fragment="1" gd:fragmentGUID="f174e451-2353-4701-8fde-c0d9b1bc638e" okres="okr_obowiazywanie.zdarz_wejscie_2024-10-08_DU-2024-1494_domyslne.x" wejscie-w-zycie="2024-10-08">Jeżeli decyzja przyznająca świadczenie z pomocy społecznej, o której mowa w ustawie z dnia 12 marca 2004 r. o pomocy społecznej (Dz. U. z 2024 r. poz. 1283), została wydana w związku z niepełnosprawnością potwierdzoną orzeczeniem o niepełnosprawności albo orzeczeniem o stopniu niepełnosprawności i okres, na który została przyznana pomoc, jest uzależniony od terminu ważności tego orzeczenia, którego okres ważności uległ przedłużeniu na podstawie art. 6bb ust. 1 ustawy zmienianej w art. 1, okres wskazany w decyzji ulega przedłużeniu na okres, na jaki zachowuje ważność orzeczenie o niepełnosprawności albo orzeczenie o stopniu niepełnosprawności, zgodnie z art. 6bb ust. 1 ustawy zmienianej w art. 1, na podstawie decyzji wydanej z urzędu.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2024/1494__art_3__ust_2" gd:GUID="4cade15d-e8aa-4ffc-83f2-d7ca6cf269f2" okres="okr_obowiazywanie.zdarz_wejscie_2024-10-08_DU-2024-1494_domyslne.x" wejscie-w-zycie="2024-10-08">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="9c52777c-546c-4e30-a6b4-0727c212dd66" fragment="1" gd:fragmentGUID="95fe806a-c561-4929-9809-737cd69c2b1d" okres="okr_obowiazywanie.zdarz_wejscie_2024-10-08_DU-2024-1494_domyslne.x" wejscie-w-zycie="2024-10-08">Zmiana decyzji w przypadku, o którym mowa w ust. 1, następuje na podstawie danych z systemu, o którym mowa w art. 6d ust. 1 ustawy zmienianej w art. 1, lub danych z zaświadczenia, o którym mowa w art. 6bb ust. 3 ustawy zmienianej w art. 1, i nie wymaga przeprowadzenia rodzinnego wywiadu środowiskowego ani jego aktualizacji.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2024/1494__art_3__ust_3" gd:GUID="0f8c72f5-62eb-4b4b-b7fa-1811dde83b37" okres="okr_obowiazywanie.zdarz_wejscie_2024-10-08_DU-2024-1494_domyslne.x" wejscie-w-zycie="2024-10-08">
+        <nr>3</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="5592b4bd-5191-4cb9-af2f-daddff024a38" fragment="1" gd:fragmentGUID="61623854-bc07-4260-a465-e664e77728dc" okres="okr_obowiazywanie.zdarz_wejscie_2024-10-08_DU-2024-1494_domyslne.x" wejscie-w-zycie="2024-10-08">Przepisy ust. 1 i 2 stosuje się także do decyzji, w których upłynął już okres, na który przyznano prawo do uzależnionych od niepełnosprawności świadczeń z pomocy społecznej.</zdanie>
+        </p>
+      </ustep>
+    </artykul>
+    <artykul eId="DU/2024/1494__art_4" gd:GUID="684b0b46-802f-4209-96e7-7865fd03c862" okres="okr_moc-wsteczna.zdarz_moc-wsteczna_2024-09-30_DU-2024-1494_odczytane.obowiazywanie.zdarz_wejscie_2024-10-08_DU-2024-1494_domyslne.x" wejscie-w-zycie="2024-09-30">
+      <nr>4</nr>
+      <ustep eId="DU/2024/1494__art_4__ust_1" gd:GUID="4fa06260-f2d8-407c-878b-dfafc842fb07" okres="okr_moc-wsteczna.zdarz_moc-wsteczna_2024-09-30_DU-2024-1494_odczytane.obowiazywanie.zdarz_wejscie_2024-10-08_DU-2024-1494_domyslne.x" wejscie-w-zycie="2024-09-30">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="32786516-8979-406e-a69f-50394eb6879b" fragment="1" gd:fragmentGUID="292ab811-1330-4185-867c-c573802e4278" okres="okr_moc-wsteczna.zdarz_moc-wsteczna_2024-09-30_DU-2024-1494_odczytane.obowiazywanie.zdarz_wejscie_2024-10-08_DU-2024-1494_domyslne.x" wejscie-w-zycie="2024-09-30">Do osób niepełnosprawnych, o których mowa w art. 6bb ust. 2 ustawy zmienianej w art. 1 w brzmieniu dotychczasowym, które ukończyły 16 rok życia po dniu 30 września 2024 r. stosuje się art. 6bb ust. 1 ustawy zmienianej w art. 1.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2024/1494__art_4__ust_2" gd:GUID="b43be0c4-2c69-4339-9e32-99968fc0a354" okres="okr_moc-wsteczna.zdarz_moc-wsteczna_2024-09-30_DU-2024-1494_odczytane.obowiazywanie.zdarz_wejscie_2024-10-08_DU-2024-1494_domyslne.x" wejscie-w-zycie="2024-09-30">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="7c3ac17e-8cad-4771-b948-2468f7090a3d" fragment="1" gd:fragmentGUID="c9576b10-e357-40ac-bd17-8a07ca466306" okres="okr_moc-wsteczna.zdarz_moc-wsteczna_2024-09-30_DU-2024-1494_odczytane.obowiazywanie.zdarz_wejscie_2024-10-08_DU-2024-1494_domyslne.x" wejscie-w-zycie="2024-09-30">Do spraw wszczętych i niezakończonych przed dniem wejścia w życie niniejszej ustawy, dotyczących wniosków osób niepełnosprawnych, o których mowa w art. 6bb ust. 2 ustawy zmienianej w art. 1 w brzmieniu dotychczasowym, dotyczących wydania orzeczenia o stopniu niepełnosprawności, stosuje się art. 6bb ust. 1 ustawy zmienianej w art. 1.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2024/1494__art_4__ust_3" gd:GUID="2722e903-da12-4149-a0c0-20af6b16e966" okres="okr_moc-wsteczna.zdarz_moc-wsteczna_2024-09-30_DU-2024-1494_odczytane.obowiazywanie.zdarz_wejscie_2024-10-08_DU-2024-1494_domyslne.x" wejscie-w-zycie="2024-09-30">
+        <nr>3</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="281c109f-d572-4b48-a428-b894d2ba8dfa" fragment="1" gd:fragmentGUID="0801e772-032a-4d3c-a95d-6477c9567fd8" okres="okr_moc-wsteczna.zdarz_moc-wsteczna_2024-09-30_DU-2024-1494_odczytane.obowiazywanie.zdarz_wejscie_2024-10-08_DU-2024-1494_domyslne.x" wejscie-w-zycie="2024-09-30">Osobom niepełnosprawnym, o których mowa w ust. 1 i 2, przewodniczący powiatowego zespołu do spraw orzekania o niepełnosprawności wydaje zaświadczenie określające nowy termin ważności dotychczasowego orzeczenia o niepełnosprawności, uwzględniając przepisy art. 6bb ust. 1 ustawy zmienianej w art. 1.</zdanie>
+        </p>
+      </ustep>
+    </artykul>
+    <artykul eId="DU/2024/1494__art_5" gd:GUID="d67f815d-12b6-42e2-b381-ad8d8e423273" okres="okr_obowiazywanie.zdarz_wejscie_2024-10-08_DU-2024-1494_domyslne.x" wejscie-w-zycie="2024-10-08">
+      <nr>5</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="9fd4d1a6-b2f2-4c4d-9956-2d5303f47ad1" okres="okr_obowiazywanie.zdarz_wejscie_2024-10-08_DU-2024-1494_domyslne.x" wejscie-w-zycie="2024-10-08">
+        <p>
+          <zdanie nr="1" gd:zdGUID="9349ae92-5660-48a3-a7c2-06d8ec1ae55d" fragment="1" gd:fragmentGUID="ab85d3ba-0419-490a-97fa-67f91d852fa3" okres="okr_obowiazywanie.zdarz_wejscie_2024-10-08_DU-2024-1494_domyslne.x" wejscie-w-zycie="2024-10-08">W decyzjach, o których mowa w art. 6b<sup>3</sup> ust. 1 ustawy zmienianej w art. 1, wydanych w wyniku rozpatrzenia wniosków złożonych w okresie od dnia 1 stycznia 2025 r. do dnia 31 grudnia 2025 r., poziom potrzeby wsparcia, o którym mowa w art. 4b ust. 3 ustawy zmienianej w art. 1, ustala się od dnia złożenia wniosku.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2024/1494__art_6" gd:GUID="2ec2b690-56a7-4e53-b24c-0c0b3f7fccba" okres="okr_obowiazywanie.zdarz_wejscie_2024-10-08_DU-2024-1494_domyslne.x" wejscie-w-zycie="2024-10-08">
+      <nr>6</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="759146a9-935b-4ac0-8a1f-79d599b9ef63" okres="okr_obowiazywanie.zdarz_wejscie_2024-10-08_DU-2024-1494_domyslne.x" wejscie-w-zycie="2024-10-08">
+        <p>
+          <zdanie nr="1" gd:zdGUID="719a0ae6-be44-421f-a419-3016277f9c1a" fragment="1" gd:fragmentGUID="3a0ee850-1bbc-4804-9221-a45ddbb82bd1" okres="okr_obowiazywanie.zdarz_wejscie_2024-10-08_DU-2024-1494_domyslne.x" wejscie-w-zycie="2024-10-08">Ustawa wchodzi w życie z dniem ogłoszenia, z wyjątkiem art. 1 i art. 4, które wchodzą w życie z dniem ogłoszenia, z mocą od dnia 30 września 2024 r.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <organ-podpisujacy>Prezydent Rzeczypospolitej Polskiej: <i><osoba podpisujacy="true" gd:osobaGUID="d7d73a3a-0271-410a-ab3c-8a68a656a889"><imie>A.</imie> <nazwisko>Duda</nazwisko></osoba></i></organ-podpisujacy>
+  </ustawa>
+</akt-prawny>

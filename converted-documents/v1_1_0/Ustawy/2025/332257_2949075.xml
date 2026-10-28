@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <ustawa>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/897</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>c2d897c5-9ff7-4c17-901c-a1b794236910</gd:GUIDwersji>
+      <AdresISAP>WDU20250000897</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>897</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 897</AdresWyswietlany>
+      <Tytul>Ustawa z dnia 24 czerwca 2025 r. o zmianie ustawy – Kodeks rodzinny i opiekuńczy</Tytul>
+      <Rodzaj>USTAWA</Rodzaj>
+      <DataOgloszenia>2025-07-07</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-06-24</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2025-10-08_DU-2025-897_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2025-10-08" warunek="po upływie 3 miesięcy od dnia ogłoszenia" podstawa="art. 3" zrodlo="https://eli.gov.pl/eli/DU/2025/897" dowod="DU/2025/897__art_3" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2025-10-08_DU-2025-897_domyslne.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2025-10-08_DU-2025-897_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="0209692f-a4a7-4ae7-b70e-37e068666e49" rola="wydajacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Sejm">
+          <Nazwa>SEJM</Nazwa>
+        </Organ>
+        <Organ gd:GUID="9bd69e5f-1712-4cf4-acd1-d8e645a3f6f2" rola="podpisujacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Prezydent">
+          <Nazwa>Prezydent Rzeczypospolitej Polskiej</Nazwa>
+          <OrganPodpisujacy>Prezydent Rzeczypospolitej Polskiej</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>A.</imie> <nazwisko>Duda</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Ustawa</rodzaj-aktu>
+    <data>z dnia 24 czerwca 2025 r.</data>
+    <tytul>o zmianie ustawy – Kodeks rodzinny i opiekuńczy</tytul>
+    <artykul eId="DU/2025/897__art_1" gd:GUID="e045565a-3b15-4a3f-98ce-415c3d050dc2" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-08_DU-2025-897_domyslne.x" wejscie-w-zycie="2025-10-08">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="ac607a6b-a1df-41c7-9963-a1e6fe61510d" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-08_DU-2025-897_domyslne.x" wejscie-w-zycie="2025-10-08">
+        <p>
+          <zdanie nr="1" gd:zdGUID="df5e6b08-6025-4785-863f-9c2e32a171f8" fragment="1" gd:fragmentGUID="b121e695-0a7a-4f43-977a-bacffbd71dfe" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-08_DU-2025-897_domyslne.x" wejscie-w-zycie="2025-10-08">W ustawie z dnia 25 lutego 1964 r. – Kodeks rodzinny i opiekuńczy (Dz. U. z 2023 r. poz. 2809) art. 59 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/2809" cudzyslowy="oba" gd:nowGUID="c47aafa2-9f9c-40e5-aeec-4c6fdc64ef70" element-eId="DU/2023/2809__art_59" funkcja="zastap"><artykul eId="DU/2023/2809__art_59" gd:GUID="dfc5eff4-b8c5-4799-b006-bfe97f12ce05" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-08_DU-2025-897_domyslne.x" wejscie-w-zycie="2025-10-08"><nr>59</nr><ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="3aa2c71d-9ff0-4aeb-b424-2bfcea30930a" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-08_DU-2025-897_domyslne.x" wejscie-w-zycie="2025-10-08"><p><zdanie nr="1" gd:zdGUID="c79c96fb-4003-421d-be01-f7cafe27510f" fragment="1" gd:fragmentGUID="a795dece-38a8-4d0e-8b08-67a94529289f" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-08_DU-2025-897_domyslne.x" wejscie-w-zycie="2025-10-08">W ciągu roku od chwili uprawomocnienia się orzeczenia rozwodu małżonek rozwiedziony, który wskutek zawarcia małżeństwa zmienił swoje dotychczasowe nazwisko, może przez oświadczenie złożone przed kierownikiem urzędu stanu cywilnego lub konsulem powrócić do nazwiska, które nosił przed zawarciem małżeństwa.</zdanie></p></ustep-n></artykul></cytat-strukt>.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2025/897__art_2" gd:GUID="9a1439bf-b541-4d05-bb19-6f4d6f37abbb" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-08_DU-2025-897_domyslne.x" wejscie-w-zycie="2025-10-08">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="e236ee3f-36bc-4c38-8d8b-859cdff95f09" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-08_DU-2025-897_domyslne.x" wejscie-w-zycie="2025-10-08">
+        <p>
+          <zdanie nr="1" gd:zdGUID="2eb18168-00e5-404c-b71e-3ff37dcba29b" fragment="1" gd:fragmentGUID="3580668b-f387-4d0c-87b0-4f2da8dc3dd6" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-08_DU-2025-897_domyslne.x" wejscie-w-zycie="2025-10-08">Jeżeli termin do złożenia przez małżonka oświadczenia o powrocie do nazwiska, które nosił przed zawarciem małżeństwa, wskazany w art. 59 ustawy zmienianej w art. 1 w brzmieniu dotychczasowym, nie upłynął przed dniem wejścia w życie niniejszej ustawy, podlega on wydłużeniu do roku.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2025/897__art_3" gd:GUID="df919e8e-74de-4300-86ff-161a5f5606a1" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-08_DU-2025-897_domyslne.x" wejscie-w-zycie="2025-10-08">
+      <nr>3</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="05d4e4d7-5270-4f98-9ee5-8a9595eff1c2" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-08_DU-2025-897_domyslne.x" wejscie-w-zycie="2025-10-08">
+        <p>
+          <zdanie nr="1" gd:zdGUID="7883d6e7-7ed3-42b1-88f4-7bf0ae8ffcd0" fragment="1" gd:fragmentGUID="c943effc-cc2c-48dd-958b-ea41551dbadf" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-08_DU-2025-897_domyslne.x" wejscie-w-zycie="2025-10-08">Ustawa wchodzi w życie po upływie 3 miesięcy od dnia ogłoszenia.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <organ-podpisujacy>Prezydent Rzeczypospolitej Polskiej: <i><osoba podpisujacy="true" gd:osobaGUID="642c8aad-48fe-473d-aeb1-ebb33bd368eb"><imie>A.</imie> <nazwisko>Duda</nazwisko></osoba></i></organ-podpisujacy>
+  </ustawa>
+</akt-prawny>

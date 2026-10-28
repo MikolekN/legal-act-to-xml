@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <obwieszczenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>MP/2026/49</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>91e32ca7-ee6c-4a13-8770-066840e63f2b</gd:GUIDwersji>
+      <AdresISAP>WMP20260000049</AdresISAP>
+      <Wydawnictwo>MP</Wydawnictwo>
+      <Rok>2026</Rok>
+      <Pozycja>49</Pozycja>
+      <AdresWyswietlany>M.P. 2026 poz. 49</AdresWyswietlany>
+      <Tytul>Obwieszczenie Prezesa Głównego Urzędu Statystycznego z dnia 8 stycznia 2026 r. w sprawie wskaźników zmian cen dla lokali mieszkalnych w trzecim kwartale 2025 r., z podziałem na województwa</Tytul>
+      <Rodzaj>OBW</Rodzaj>
+      <DataOgloszenia>2026-01-09</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2026-01-08</DataWydania>
+      </DataAktu>
+      <Organy>
+        <Organ gd:GUID="c20f6526-a7bf-48d7-a7e3-779bba79efdb" rola="wydajacy">
+          <Nazwa>Prezes Głównego Urzędu Statystycznego</Nazwa>
+          <OrganPodpisujacy>Prezes Głównego Urzędu Statystycznego</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>M.</imie> <nazwisko>Cierpiał-Wolan</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Obwieszczenie</rodzaj-aktu>
+    <autor-aktu>Prezesa Głównego Urzędu Statystycznego</autor-aktu>
+    <data>z dnia 8 stycznia 2026 r.</data>
+    <tytul>w sprawie wskaźników zmian cen dla lokali mieszkalnych w trzecim kwartale 2025 r., z podziałem na województwa</tytul>
+    <podstawa-prawna>Na podstawie art. 5 ust. 2 ustawy z dnia 21 sierpnia 1997 r. o gospodarce nieruchomościami (Dz. U. z 2024 r. poz. 1145, 1222, 1717 i 1881 oraz z 2025 r. poz. 1077 i 1080) ogłasza się wskaźniki zmian cen dla lokali mieszkalnych w trzecim kwartale 2025 r., z podziałem na województwa, określone w tabeli stanowiącej załącznik do obwieszczenia.</podstawa-prawna>
+    <organ-podpisujacy>Prezes Głównego Urzędu Statystycznego: <i><osoba podpisujacy="true" gd:osobaGUID="d1405f5e-7202-436d-8155-18de1e2e8f49"><imie>M.</imie> <nazwisko>Cierpiał-Wolan</nazwisko></osoba></i></organ-podpisujacy>
+    <zalacznik eId="MP/2026/49__zal_1" gd:GUID="066a9712-439d-4914-804d-32c8d8fa61b3">
+      <zalacznik-do gd:GUID="023c62a2-c5ac-4663-ad82-2ada8e68ba01">Załącznik do obwieszczenia Prezesa Głównego Urzędu Statystycznego z dnia 8 stycznia 2026 r. (M.P. poz. 49)</zalacznik-do>
+      <tytul-zalacznika gd:GUID="7d9da6fc-263f-4249-b36c-4ca40d6d943b">WSKAŹNIKI ZMIAN CEN DLA LOKALI MIESZKALNYCH W TRZECIM KWARTALE 2025 R., Z PODZIAŁEM NA WOJEWÓDZTWA</tytul-zalacznika>
+      <segment-zalacznika gd:GUID="d970e8ff-11e5-448d-b650-a1a7c8fb83a2" orientacja="pionowa">
+        <tabela gd:GUID="acc30942-0968-4266-923d-44804253797b">
+          <tbody>
+            <tr gd:GUID="7ab7e3f7-29c7-4e72-b28a-9c036aa4cd6e">
+              <td rowspan="2" gd:GUID="336a706e-6ba9-4790-8c2c-9cccf977155f">
+                <tekst-zwykly gd:GUID="31c8106d-3a35-41d5-874c-60393e6fe765">WYSZCZEGÓLNIENIE</tekst-zwykly>
+              </td>
+              <td gd:GUID="8c0c5923-cdac-4700-9808-38197bcaddab">
+                <tekst-zwykly gd:GUID="fa8ba0f6-4c62-4135-81a8-c17d77d341f5">III KWARTAŁ 2025</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="15ecfd70-26cc-4545-98b5-5d16d0791c07">
+              <td gd:GUID="60cff972-c678-4fa1-917f-c4aa7cb824d0">
+                <tekst-zwykly gd:GUID="13997965-3253-4043-a344-4ddbf17e3d84">KWARTAŁ POPRZEDNI = 100</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="ec1754cf-a9d2-4515-9dad-b480740b9809">
+              <td gd:GUID="3e0514c3-9393-4c51-bcdc-9d2b9a821bcd">
+                <tekst-zwykly gd:GUID="639944f6-c414-4b4f-a65b-cb91b6d15685">POLSKA</tekst-zwykly>
+              </td>
+              <td gd:GUID="0c51f379-0e30-4a27-8044-9e41ec40cd4f">
+                <liczba gd:GUID="ca366cfe-bdcf-4570-99cc-01d62aae3d1d">100,9</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="531c13c0-0950-4069-9291-7a77ddc6e2be">
+              <td gd:GUID="adb6aba8-dbc7-4571-b5c7-cd7651a4d72a">
+                <tekst-zwykly gd:GUID="8288304a-812b-4d1b-9ac8-94cd232bd103">Dolnośląskie</tekst-zwykly>
+              </td>
+              <td gd:GUID="1dc187ae-bc0a-4b66-89df-fdc2a819a253">
+                <liczba gd:GUID="55bb1d6f-73bb-4384-8d51-0cbd7ab48687">100,5</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="b5ae4a47-7343-4f96-8b4f-a71d833892d2">
+              <td gd:GUID="a3e5247e-f7ae-455a-9950-99e075415e6b">
+                <tekst-zwykly gd:GUID="1a9a98cf-b704-4b89-b174-d34da4c353b9">Kujawsko-pomorskie</tekst-zwykly>
+              </td>
+              <td gd:GUID="fc623318-cb22-4657-af7c-7d85fd8f6359">
+                <liczba gd:GUID="16604e48-f5f9-463d-bb7c-7cde54674599">102,1</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="7c87297f-2984-4a0b-a67c-44cb130e54d7">
+              <td gd:GUID="225e8d0f-d59f-4eed-8fa6-f0d3136037cd">
+                <tekst-zwykly gd:GUID="1b45a77f-c0c3-4c64-962c-7970110c365b">Lubelskie</tekst-zwykly>
+              </td>
+              <td gd:GUID="29d9768e-076f-4ad3-a6dd-4d3b32460981">
+                <liczba gd:GUID="4b8176a3-f9ea-4283-b878-2fbaa7e0a671">100,3</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="e9ce5e92-f3de-4404-aa06-fc314db31475">
+              <td gd:GUID="f37835ff-31f7-4cbe-a573-5508de024b4b">
+                <tekst-zwykly gd:GUID="155ae4bf-7c85-40ad-9cf7-8098d396b037">Lubuskie</tekst-zwykly>
+              </td>
+              <td gd:GUID="57ec335b-7916-4e51-8027-cfb1b404607f">
+                <liczba gd:GUID="cfbc4a05-dcdd-4dea-b28f-57bd5b8da75c">101,4</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="ba980538-e22a-4c7d-913f-6acdb327bd6a">
+              <td gd:GUID="d6b9afe9-a71a-4b07-9969-bf1047e94f6c">
+                <tekst-zwykly gd:GUID="b4beeb21-8028-4795-ac2e-4e1baecc4a49">Łódzkie</tekst-zwykly>
+              </td>
+              <td gd:GUID="54f060d1-5870-4d01-bf22-9a96419e0191">
+                <liczba gd:GUID="c324c053-6cd6-411d-8dd6-8bd620a77737">100,4</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="ea9b06fb-55c1-468f-8969-0a5fb3796436">
+              <td gd:GUID="e4cdb955-0cea-4f89-bd6a-0da92e90f26b">
+                <tekst-zwykly gd:GUID="4e08a996-908d-4ec7-b7af-aeafd55f4cc2">Małopolskie</tekst-zwykly>
+              </td>
+              <td gd:GUID="3080ba12-d6c7-4962-887b-6296d544858c">
+                <liczba gd:GUID="ae6104a7-1a91-4f01-b1e0-c3704bb26b5a">100,7</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="b503bd05-13ec-45c9-b1d2-4be0cea14260">
+              <td gd:GUID="e46694a7-f4d1-46b1-9198-f1c4c2962355">
+                <tekst-zwykly gd:GUID="4c20b03b-38c7-4b2a-a4b5-1474fcb1464f">Mazowieckie</tekst-zwykly>
+              </td>
+              <td gd:GUID="dd4b8d1d-c08d-457c-b2e4-6cdbf1b6e1fc">
+                <liczba gd:GUID="c2762380-e8e6-4cbc-8ea0-a01542ef79e8">100,6</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="d0ef91da-6312-4a01-b512-bde700b297da">
+              <td gd:GUID="8bd7a9ef-6213-49d1-ab71-9cd469dcb9c7">
+                <tekst-zwykly gd:GUID="fdc68f4d-2d4a-47ea-a37b-fbb7b3582736">Opolskie</tekst-zwykly>
+              </td>
+              <td gd:GUID="2e31587d-a171-4f4c-85cf-ebf06622de54">
+                <liczba gd:GUID="6a4e4292-5bdd-4693-9712-20a62ae9edf7">101,4</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="a785bd42-e4f9-4c1a-9904-967481451fb4">
+              <td gd:GUID="df91c6df-5136-4b21-8b6a-d24f6ac979a0">
+                <tekst-zwykly gd:GUID="2e5fa2cb-b346-44b8-a874-39ffe17628e6">Podkarpackie</tekst-zwykly>
+              </td>
+              <td gd:GUID="3c06c8d9-0b18-42bc-b8b2-12a8ed89c860">
+                <liczba gd:GUID="c8f578ed-7027-4ce1-b388-f7f03b810ea9">100,4</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="25d7eb4b-aa4a-47a1-b6ab-19b089546a21">
+              <td gd:GUID="20b99a1d-a28f-4761-9510-3142f2e685e6">
+                <tekst-zwykly gd:GUID="00caba39-05cc-44b9-a255-d52fa39c3526">Podlaskie</tekst-zwykly>
+              </td>
+              <td gd:GUID="09e7f527-ed07-4052-9248-34c3adc7bbe7">
+                <liczba gd:GUID="a2000b74-5489-46b3-a85b-e9d3cb3a6531">101,8</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="a7be51ca-5c76-486e-880d-03fc896de88a">
+              <td gd:GUID="8e6856e5-8d60-40dc-93c6-aff1427b1a44">
+                <tekst-zwykly gd:GUID="4d48fcf9-c31c-42de-8578-456179a01e3f">Pomorskie</tekst-zwykly>
+              </td>
+              <td gd:GUID="99f3b0b8-4f0d-4f1b-aee2-5c3100fce82c">
+                <liczba gd:GUID="3dd3d741-7e97-4c33-b6ef-18d976b91f5c">101,1</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="550c37bd-2c2c-4d18-9387-4c00121000e0">
+              <td gd:GUID="642a7225-9567-4960-bfba-63b8b3d301e9">
+                <tekst-zwykly gd:GUID="79ebd4ae-4dce-456e-9d4a-8eb4f4fab88a">Śląskie</tekst-zwykly>
+              </td>
+              <td gd:GUID="a2cd8736-3629-4b70-a416-f7202a2a11a1">
+                <liczba gd:GUID="33b4597f-4be2-4f72-9dec-e11ebc25784f">100,8</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="4a5d317d-fc4c-4103-9ca0-f9908ccaf550">
+              <td gd:GUID="e775a213-0d88-4adb-a634-ba4916cd5b5c">
+                <tekst-zwykly gd:GUID="d66a3edf-61dd-4e34-ba39-b5e2575ee91c">Świętokrzyskie</tekst-zwykly>
+              </td>
+              <td gd:GUID="e16d78dc-c5fc-4356-9f2e-93a2ce581623">
+                <liczba gd:GUID="38d4e23b-b8e7-414c-b905-dfb1ef736fa4">101,4</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="3b692947-2c7e-4bde-a27b-045f4476b9fc">
+              <td gd:GUID="821e5025-56bc-48c9-9ac6-1779f1770d65">
+                <tekst-zwykly gd:GUID="d760f9a8-3304-4bf5-923d-7c8460b4d888">Warmińsko-mazurskie</tekst-zwykly>
+              </td>
+              <td gd:GUID="32b2dced-4eb6-4005-b035-ca7d9e51b0ed">
+                <liczba gd:GUID="7c33d843-0b54-4adf-b04b-a71cc6376200">101,9</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="e5acccbb-1c3f-4ea7-91e2-b41362e37e38">
+              <td gd:GUID="2a0010c8-3733-4f83-8c69-8a3c84f18bc4">
+                <tekst-zwykly gd:GUID="8ce22606-4076-4e79-a41d-d6cb42388308">Wielkopolskie</tekst-zwykly>
+              </td>
+              <td gd:GUID="387c15ae-fe55-4b0c-967e-5d457685f31d">
+                <liczba gd:GUID="f42d992e-44e2-4fea-850c-3b004c0a4d4e">101,6</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="928a59e4-c0d9-4120-8c8e-5e508594ea18">
+              <td gd:GUID="b33a9a55-3086-45e1-b635-be24def87188">
+                <tekst-zwykly gd:GUID="0437596a-235d-4df1-b85b-3379c3ea17a9">Zachodniopomorskie</tekst-zwykly>
+              </td>
+              <td gd:GUID="0053331f-37bb-40bb-bdb5-2ece3a64c371">
+                <liczba gd:GUID="7c4e61fe-683a-4774-993d-db6eab4519ca">100,5</liczba>
+              </td>
+            </tr>
+          </tbody>
+        </tabela>
+      </segment-zalacznika>
+    </zalacznik>
+  </obwieszczenie>
+</akt-prawny>

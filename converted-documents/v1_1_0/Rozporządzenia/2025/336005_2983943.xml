@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <rozporzadzenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/1076</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>cbfaef83-54af-4f56-bd2c-bef22fde81af</gd:GUIDwersji>
+      <AdresISAP>WDU20250001076</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>1076</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 1076</AdresWyswietlany>
+      <Tytul>Rozporządzenie Rady Ministrów z dnia 5 sierpnia 2025 r. w sprawie przekształcenia Ministerstwa Spraw Zagranicznych</Tytul>
+      <Rodzaj>ROZP</Rodzaj>
+      <DataOgloszenia>2025-08-06</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-08-05</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_moc-wsteczna_2025-07-24_DU-2025-1076_odczytane" rodzaj="stosowanie-z-moca-wsteczna" pochodzenie="odczytane" data="2025-07-24" podstawa="§ 2" zrodlo="https://eli.gov.pl/eli/DU/2025/1076" dowod="DU/2025/1076__art_2" />
+          <Zdarzenie id="zdarz_wejscie_2025-08-06_DU-2025-1076_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2025-08-06" warunek="z dniem ogłoszenia" podstawa="§ 2" zrodlo="https://eli.gov.pl/eli/DU/2025/1076" dowod="DU/2025/1076__art_2" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_moc-wsteczna.zdarz_moc-wsteczna_2025-07-24_DU-2025-1076_odczytane.obowiazywanie.zdarz_wejscie_2025-08-06_DU-2025-1076_domyslne.x" glowna="true">
+          <Przedzial rodzaj="stosowanie-z-moca-wsteczna" od="zdarz_moc-wsteczna_2025-07-24_DU-2025-1076_odczytane" do="zdarz_wejscie_2025-08-06_DU-2025-1076_domyslne" />
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2025-08-06_DU-2025-1076_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="b5c02d9a-c99c-4b59-90d3-45da3eb5399c" rola="wydajacy">
+          <Nazwa>Rada Ministrów</Nazwa>
+        </Organ>
+        <Organ gd:GUID="c9e1bd10-5255-4b83-808d-0e30a206e674" rola="podpisujacy">
+          <Nazwa>Prezes Rady Ministrów</Nazwa>
+          <OrganPodpisujacy>Prezes Rady Ministrów</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>D.</imie> <nazwisko>Tusk</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Rozporządzenie</rodzaj-aktu>
+    <autor-aktu>Rady Ministrów</autor-aktu>
+    <data>z dnia 5 sierpnia 2025 r.</data>
+    <tytul>w sprawie przekształcenia Ministerstwa Spraw Zagranicznych</tytul>
+    <podstawa-prawna>Na podstawie art. 39 ust. 1 ustawy z dnia 8 sierpnia 1996 r. o Radzie Ministrów (Dz. U. z 2025 r. poz. 780) zarządza się, co następuje:</podstawa-prawna>
+    <paragraf eId="DU/2025/1076__art_1" gd:GUID="ce534aff-f7a0-49de-bfff-b5051f00a43a" okres="okr_moc-wsteczna.zdarz_moc-wsteczna_2025-07-24_DU-2025-1076_odczytane.obowiazywanie.zdarz_wejscie_2025-08-06_DU-2025-1076_domyslne.x" wejscie-w-zycie="2025-07-24">
+      <nr>1</nr>
+      <ustep eId="DU/2025/1076__art_1__ust_1" gd:GUID="5d69eed6-e2c5-4c11-a6c4-255bced7b906" okres="okr_moc-wsteczna.zdarz_moc-wsteczna_2025-07-24_DU-2025-1076_odczytane.obowiazywanie.zdarz_wejscie_2025-08-06_DU-2025-1076_domyslne.x" wejscie-w-zycie="2025-07-24">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="b92b9e77-9dd9-4f55-bc89-53a499cd0d46" fragment="1" gd:fragmentGUID="9da2e19e-a42e-47b5-9bc2-c82e19bffe8c" okres="okr_moc-wsteczna.zdarz_moc-wsteczna_2025-07-24_DU-2025-1076_odczytane.obowiazywanie.zdarz_wejscie_2025-08-06_DU-2025-1076_domyslne.x" wejscie-w-zycie="2025-07-24">Przekształca się Ministerstwo Spraw Zagranicznych.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/1076__art_1__ust_2" gd:GUID="862c91f6-84c4-4cd9-b512-298e64b650bd" okres="okr_moc-wsteczna.zdarz_moc-wsteczna_2025-07-24_DU-2025-1076_odczytane.obowiazywanie.zdarz_wejscie_2025-08-06_DU-2025-1076_domyslne.x" wejscie-w-zycie="2025-07-24">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="386655fc-6ad2-480a-9861-60e40bcb3be1" fragment="1" gd:fragmentGUID="81989eb6-fdb6-445b-8ded-a59ad1afe6cc" okres="okr_moc-wsteczna.zdarz_moc-wsteczna_2025-07-24_DU-2025-1076_odczytane.obowiazywanie.zdarz_wejscie_2025-08-06_DU-2025-1076_domyslne.x" wejscie-w-zycie="2025-07-24">Przekształcenie, o którym mowa w ust. 1, polega na włączeniu do Ministerstwa Spraw Zagranicznych komórek organizacyjnych zapewniających obsługę zadań ministra właściwego do spraw członkostwa Rzeczypospolitej Polskiej w Unii Europejskiej oraz pracowników obsługujących te zadania i wyłączeniu tych komórek organizacyjnych oraz tych pracowników z urzędu dotychczas obsługującego ministra właściwego do spraw członkostwa Rzeczypospolitej Polskiej w Unii Europejskiej.</zdanie>
+        </p>
+      </ustep>
+    </paragraf>
+    <paragraf eId="DU/2025/1076__art_2" gd:GUID="5c7d5258-34e3-4542-b40d-f845212af161" okres="okr_moc-wsteczna.zdarz_moc-wsteczna_2025-07-24_DU-2025-1076_odczytane.obowiazywanie.zdarz_wejscie_2025-08-06_DU-2025-1076_domyslne.x" wejscie-w-zycie="2025-07-24">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="0baaae3b-5f3e-48ba-9335-05ce6909b07f" okres="okr_moc-wsteczna.zdarz_moc-wsteczna_2025-07-24_DU-2025-1076_odczytane.obowiazywanie.zdarz_wejscie_2025-08-06_DU-2025-1076_domyslne.x" wejscie-w-zycie="2025-07-24">
+        <p>
+          <zdanie nr="1" gd:zdGUID="c6acd2f6-fe9d-4d34-8c7e-d235b372bbbc" fragment="1" gd:fragmentGUID="2d87caa6-a627-4f90-8a37-ae4573ed0798" okres="okr_moc-wsteczna.zdarz_moc-wsteczna_2025-07-24_DU-2025-1076_odczytane.obowiazywanie.zdarz_wejscie_2025-08-06_DU-2025-1076_domyslne.x" wejscie-w-zycie="2025-07-24">Rozporządzenie wchodzi w życie z dniem ogłoszenia, z mocą od dnia 24 lipca 2025 r.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <organ-podpisujacy>Prezes Rady Ministrów: <i><osoba podpisujacy="true" gd:osobaGUID="40e1df88-5b91-4957-b476-acef4aecf21e"><imie>D.</imie> <nazwisko>Tusk</nazwisko></osoba></i></organ-podpisujacy>
+  </rozporzadzenie>
+</akt-prawny>

@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <rozporzadzenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/1307</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>11e29acd-0b59-4d37-95f4-83b395f9e037</gd:GUIDwersji>
+      <AdresISAP>WDU20250001307</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>1307</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 1307</AdresWyswietlany>
+      <Tytul>Rozporządzenie Ministra Finansów i Gospodarki z dnia 25 września 2025 r. w sprawie wskaźnika bufora antycyklicznego</Tytul>
+      <Rodzaj>ROZP</Rodzaj>
+      <DataOgloszenia>2025-09-29</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-09-25</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2026-09-30_DU-2025-1307_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2026-09-30" warunek="po upływie 12 miesięcy od dnia ogłoszenia" podstawa="§ 4" zrodlo="https://eli.gov.pl/eli/DU/2025/1307" dowod="DU/2025/1307__art_4" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2026-09-30_DU-2025-1307_domyslne.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2026-09-30_DU-2025-1307_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="0b217066-bc5d-4262-b854-17df0357e79f" rola="wydajacy">
+          <Nazwa>Minister Finansów i Gospodarki</Nazwa>
+          <OrganPodpisujacy>Minister Finansów i Gospodarki</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>A.</imie> <nazwisko>Domański</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Rozporządzenie</rodzaj-aktu>
+    <autor-aktu>Ministra Finansów i Gospodarki<odnosnik id-odnosnika="1" symbol="1" gd:GUID="90113d99-a1c9-4cdf-968b-f404d5013d92"><p><zdanie nr="1" gd:zdGUID="f8f75941-42a0-46b2-8276-d8daf06cdaeb" fragment="1" gd:fragmentGUID="69d2a096-52c8-46b2-a2a8-c61bead76a06">Minister Finansów i Gospodarki kieruje działem administracji rządowej – instytucje finansowe, na podstawie § 1 ust. 2 pkt 5 rozporządzenia Prezesa Rady Ministrów z dnia 25 lipca 2025 r. w sprawie szczegółowego zakresu działania Ministra Finansów i Gospodarki (Dz. U. poz. 997).</zdanie></p></odnosnik></autor-aktu>
+    <data>z dnia 25 września 2025 r.</data>
+    <tytul>w sprawie wskaźnika bufora antycyklicznego</tytul>
+    <podstawa-prawna>Na podstawie art. 24 ust. 3 ustawy z dnia 5 sierpnia 2015 r. o nadzorze makroostrożnościowym nad systemem finansowym i zarządzaniu kryzysowym w systemie finansowym (Dz. U. z 2025 r. poz. 819) zarządza się, co następuje:</podstawa-prawna>
+    <paragraf eId="DU/2025/1307__art_1" gd:GUID="4ee0a45a-01dd-492b-a59d-2629e24cd39d" okres="okr_obowiazywanie.zdarz_wejscie_2026-09-30_DU-2025-1307_domyslne.x" wejscie-w-zycie="2026-09-30">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="a11bcdba-2ee6-48b6-addd-4bad1afc7fbc" okres="okr_obowiazywanie.zdarz_wejscie_2026-09-30_DU-2025-1307_domyslne.x" wejscie-w-zycie="2026-09-30">
+        <p>
+          <zdanie nr="1" gd:zdGUID="247c578e-7bae-4a4d-bec2-52ec511e007c" fragment="1" gd:fragmentGUID="623b14ec-3e49-4b65-b28e-acc63a2daf56" okres="okr_obowiazywanie.zdarz_wejscie_2026-09-30_DU-2025-1307_domyslne.x" wejscie-w-zycie="2026-09-30">Wskaźnik bufora antycyklicznego wynosi 2 % łącznej kwoty ekspozycji na ryzyko instytucji, które posiadają ekspozycje kredytowe na terytorium Rzeczypospolitej Polskiej, obliczonej zgodnie z art. 92 ust. 3 rozporządzenia Parlamentu Europejskiego i Rady (UE) nr 575/2013 z dnia 26 czerwca 2013 r. w sprawie wymogów ostrożnościowych dla instytucji kredytowych oraz zmieniającego rozporządzenie (UE) nr 648/2012 (Dz. Urz. UE L 176 z 27.06.2013, str. 1, z późn. zm.<odnosnik id-odnosnika="2" symbol="2" gd:GUID="34f178d8-a92b-4279-9a68-4d558079fc43"><p><zdanie nr="1" gd:zdGUID="00dcb5aa-bb1a-42ad-b5e3-24eb75f9d14d" fragment="1" gd:fragmentGUID="dbb091e4-9cc4-47ef-9680-eab10c315dff">Zmiany wymienionego rozporządzenia zostały ogłoszone w Dz. Urz. UE L 208 z 02.08.2013, str. 68, Dz. Urz. UE L 321 z 30.11.2013, str. 6, Dz. Urz. UE L 11 z 17.01.2015, str. 37, Dz. Urz. UE L 171 z 29.06.2016, str. 153, Dz. Urz. UE L 20 z 25.01.2017, str. 4, Dz. Urz. UE L 310 z 25.11.2017, str. 1, Dz. Urz. UE L 345 z 27.12.2017, str. 27, Dz. Urz. UE L 347 z 28.12.2017, str. 1, Dz. Urz. UE L 111 z 25.04.2019, str. 4, Dz. Urz. UE L 150 z 07.06.2019, str. 1, Dz. Urz. UE L 183 z 09.07.2019, str. 14, Dz. Urz. UE L 314 z 05.12.2019, str. 1, Dz. Urz. UE L 328 z 18.12.2019, str. 1, Dz. Urz. UE L 204 z 26.06.2020, str. 4, Dz. Urz. UE L 335 z 13.10.2020, str. 20, Dz. Urz. UE L 405 z 02.12.2020, str. 79, Dz. Urz. UE L 65 z 25.02.2021, str. 70, Dz. Urz. UE L 84 z 11.03.2021, str. 1, Dz. Urz. UE L 116 z 06.04.2021, str. 25, Dz. Urz. UE L 398 z 11.11.2021, str. 39, Dz. Urz. UE L 275 z 25.10.2022, str. 1, Dz. Urz. UE L 92 z 30.03.2023, str. 29, Dz. Urz. UE L 2023/2869 z 20.12.2023, Dz. Urz. UE L 2024/1623 z 19.06.2024, Dz. Urz. UE L 2024/2795 z 31.10.2024, Dz. Urz. UE L 2024/2987 z 04.12.2024, Dz. Urz. UE L 2025/90328 z 16.04.2025 oraz Dz. Urz. UE L 2025/1215 z 25.06.2025.</zdanie></p></odnosnik>).</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2025/1307__art_2" gd:GUID="669a11c8-65f4-4500-a243-43b1465105d9" okres="okr_obowiazywanie.zdarz_wejscie_2026-09-30_DU-2025-1307_domyslne.x" wejscie-w-zycie="2026-09-30">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="035ec91d-fc31-45ba-9d99-0732a0e0b294" okres="okr_obowiazywanie.zdarz_wejscie_2026-09-30_DU-2025-1307_domyslne.x" wejscie-w-zycie="2026-09-30">
+        <p>
+          <zdanie nr="1" gd:zdGUID="31a8ade6-3ebd-49a1-b2c7-89150392d0ca" fragment="1" gd:fragmentGUID="8967032d-e770-40f7-b047-dfeee056eacb" okres="okr_obowiazywanie.zdarz_wejscie_2026-09-30_DU-2025-1307_domyslne.x" wejscie-w-zycie="2026-09-30">Wskaźnik bufora antycyklicznego określony w § 1 stosuje się od pierwszego dnia po upływie 12 miesięcy od dnia ogłoszenia rozporządzenia.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2025/1307__art_3" gd:GUID="4ae12e97-8e95-4d60-9ead-ff3072cc45c0" okres="okr_obowiazywanie.zdarz_wejscie_2026-09-30_DU-2025-1307_domyslne.x" wejscie-w-zycie="2026-09-30">
+      <nr>3</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="c45e4174-a63e-4424-bee7-0a051053d6cd" okres="okr_obowiazywanie.zdarz_wejscie_2026-09-30_DU-2025-1307_domyslne.x" wejscie-w-zycie="2026-09-30">
+        <p>
+          <zdanie nr="1" gd:zdGUID="7ee1903a-4f65-4ec3-a26f-470bc6ebd844" fragment="1" gd:fragmentGUID="a4520543-102e-44a0-b4fd-6e4285f33d91" okres="okr_obowiazywanie.zdarz_wejscie_2026-09-30_DU-2025-1307_domyslne.x" wejscie-w-zycie="2026-09-30">Traci moc rozporządzenie Ministra Finansów z dnia 18 września 2024 r. w sprawie wskaźnika bufora antycyklicznego (Dz. U. poz. 1400).</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2025/1307__art_4" gd:GUID="224399f5-92e6-4db3-b533-aa0d3393d835" okres="okr_obowiazywanie.zdarz_wejscie_2026-09-30_DU-2025-1307_domyslne.x" wejscie-w-zycie="2026-09-30">
+      <nr>4</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="86fa5a18-00aa-4a89-896b-7f2c1a1c9ae6" okres="okr_obowiazywanie.zdarz_wejscie_2026-09-30_DU-2025-1307_domyslne.x" wejscie-w-zycie="2026-09-30">
+        <p>
+          <zdanie nr="1" gd:zdGUID="912db516-76dd-40e8-8e69-15a642f9dd58" fragment="1" gd:fragmentGUID="0fd774f8-818e-42ba-ab05-34b0ecd3157b" okres="okr_obowiazywanie.zdarz_wejscie_2026-09-30_DU-2025-1307_domyslne.x" wejscie-w-zycie="2026-09-30">Rozporządzenie wchodzi w życie po upływie 12 miesięcy od dnia ogłoszenia.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <organ-podpisujacy>Minister Finansów i Gospodarki: <i><osoba podpisujacy="true" gd:osobaGUID="b414b4a9-bfd3-4d53-beac-62eda4fd4cf8"><imie>A.</imie> <nazwisko>Domański</nazwisko></osoba></i></organ-podpisujacy>
+  </rozporzadzenie>
+</akt-prawny>

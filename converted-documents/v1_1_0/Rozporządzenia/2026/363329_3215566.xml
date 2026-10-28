@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <rozporzadzenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2026/284</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>07dc7bb2-c4ef-46b1-92a7-6b70629ae194</gd:GUIDwersji>
+      <AdresISAP>WDU20260000284</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2026</Rok>
+      <Pozycja>284</Pozycja>
+      <AdresWyswietlany>Dz.U. 2026 poz. 284</AdresWyswietlany>
+      <Tytul>Rozporządzenie Ministra Sprawiedliwości z dnia 3 marca 2026 r. zmieniające rozporządzenie w sprawie przenoszenia do służby w Służbie Więziennej</Tytul>
+      <Rodzaj>ROZP</Rodzaj>
+      <DataOgloszenia>2026-03-06</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2026-03-03</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2026-03-21_DU-2026-284_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2026-03-21" warunek="po upływie 14 dni od dnia ogłoszenia" podstawa="§ 2" zrodlo="https://eli.gov.pl/eli/DU/2026/284" dowod="DU/2026/284__art_2" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2026-03-21_DU-2026-284_domyslne.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2026-03-21_DU-2026-284_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="2b957ff5-ec2b-47af-b7dc-755adea26419" rola="wydajacy">
+          <Nazwa>Minister Sprawiedliwości</Nazwa>
+          <OrganPodpisujacy>Minister Sprawiedliwości</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>W.</imie> <nazwisko>Żurek</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Rozporządzenie</rodzaj-aktu>
+    <autor-aktu>Ministra Sprawiedliwości</autor-aktu>
+    <data>z dnia 3 marca 2026 r.</data>
+    <tytul>zmieniające rozporządzenie w sprawie przenoszenia do służby w Służbie Więziennej</tytul>
+    <podstawa-prawna>Na podstawie art. 38a ust. 8 ustawy z dnia 9 kwietnia 2010 r. o Służbie Więziennej (Dz. U. z 2025 r. poz. 1750 i 1823) zarządza się, co następuje:</podstawa-prawna>
+    <paragraf eId="DU/2026/284__art_1" gd:GUID="67ddf989-ece4-4724-8058-82345e847af1" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-21_DU-2026-284_domyslne.x" wejscie-w-zycie="2026-03-21">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="498ca3fa-67b9-4f5a-b1a1-e0666ee9300f" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-21_DU-2026-284_domyslne.x" wejscie-w-zycie="2026-03-21">
+        <p>
+          <zdanie nr="1" gd:zdGUID="15f07969-8a1f-4cf2-b49a-c6f9d995bbd9" fragment="1" gd:fragmentGUID="2c8f9861-89c0-4e5b-bf00-136820b8c5ff" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-21_DU-2026-284_domyslne.x" wejscie-w-zycie="2026-03-21">W rozporządzeniu Ministra Sprawiedliwości z dnia 29 września 2022 r. w sprawie przenoszenia do służby w Służbie Więziennej (Dz. U. poz. 2052) wprowadza się następujące zmiany:</zdanie>
+        </p>
+        <punkt eId="DU/2026/284__art_1__pkt_1" gd:GUID="b81cb369-7d31-44cc-9949-5a6c4f7d88c9" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-21_DU-2026-284_domyslne.x" wejscie-w-zycie="2026-03-21">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="15f07969-8a1f-4cf2-b49a-c6f9d995bbd9" fragment="2" gd:fragmentGUID="34cea619-06c9-4aab-b3fb-2b209a87a86a" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-21_DU-2026-284_domyslne.x" wejscie-w-zycie="2026-03-21"><now:uchyl akt="https://eli.gov.pl/eli/DU/2022/2052" element-eId="DU/2022/2052__art_1__ust_2__pkt_3" gd:nowGUID="823c7edf-1e05-4936-80d9-b463ef537b12" />w § 1 w ust. 2 uchyla się pkt 3;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/284__art_1__pkt_2" gd:GUID="91ee815d-7105-4017-93d6-e465548c7e9a" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-21_DU-2026-284_domyslne.x" wejscie-w-zycie="2026-03-21">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="15f07969-8a1f-4cf2-b49a-c6f9d995bbd9" fragment="3" gd:fragmentGUID="85e458d0-494f-478f-b12b-08965baee589" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-21_DU-2026-284_domyslne.x" wejscie-w-zycie="2026-03-21">w § 3:</zdanie>
+          </p>
+          <litera eId="DU/2026/284__art_1__pkt_2__lit_a" gd:GUID="52ba271f-bfa9-40da-be0b-8b7f37671e52" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-21_DU-2026-284_domyslne.x" wejscie-w-zycie="2026-03-21">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="15f07969-8a1f-4cf2-b49a-c6f9d995bbd9" fragment="4" gd:fragmentGUID="d99a01dc-ede7-4f10-8810-b8d285299eba" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-21_DU-2026-284_domyslne.x" wejscie-w-zycie="2026-03-21">ust. 1 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2022/2052" cudzyslowy="oba" gd:nowGUID="8d1451b6-bc77-4398-a53b-841e191687e2" element-eId="DU/2022/2052__art_3__ust_1" funkcja="zastap"><ustep eId="DU/2022/2052__art_3__ust_1" gd:GUID="8c616d90-6a50-4c17-b0a7-97840d98a142" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-21_DU-2026-284_domyslne.x" wejscie-w-zycie="2026-03-21"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="89bdfa4c-8b54-4c0e-ab74-99cd7a13bae4" fragment="1" gd:fragmentGUID="77719316-fd3d-482d-b105-e7bf1836e589" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-21_DU-2026-284_domyslne.x" wejscie-w-zycie="2026-03-21">Funkcjonariusz albo żołnierz zawodowy składają wniosek o przeniesienie do pełnienia służby w Służbie Więziennej, zwany dalej „wnioskiem”, odpowiednio do Dyrektora Generalnego Służby Więziennej albo Rektora, za pośrednictwem odpowiednio: Komendanta Głównego Policji, Komendanta Głównego Straży Granicznej, Szefa Kancelarii Sejmu, Komendanta Służby Ochrony Państwa, Szefa Krajowej Administracji Skarbowej, Komendanta Głównego Państwowej Straży Pożarnej, Szefa Agencji Bezpieczeństwa Wewnętrznego, Szefa Agencji Wywiadu, Szefa Służby Wywiadu Wojskowego, Szefa Służby Kontrwywiadu Wojskowego, Szefa Centralnego Biura Antykorupcyjnego lub Ministra Obrony Narodowej, którzy opiniują wniosek, dołączają do niego uwierzytelniony wyciąg z akt osobowych funkcjonariusza, zaświadczenie o dotychczasowym przebiegu służby w przypadku żołnierza zawodowego, odpis dokumentów potwierdzających posiadane kwalifikacje i uprawnienia i przekazują go w terminie 14 dni od dnia jego otrzymania odpowiednio Dyrektorowi Generalnemu Służby Więziennej albo Rektorowi.</zdanie></p></ustep></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2026/284__art_1__pkt_2__lit_b" gd:GUID="ad68cd57-7622-4655-bda4-de0941d102a8" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-21_DU-2026-284_domyslne.x" wejscie-w-zycie="2026-03-21">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="15f07969-8a1f-4cf2-b49a-c6f9d995bbd9" fragment="5" gd:fragmentGUID="6d929327-974e-4f8c-ae3d-9891bec4b4e4" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-21_DU-2026-284_domyslne.x" wejscie-w-zycie="2026-03-21"><now:zamien-tekst stary-tekst=", Szef IWSW" nowy-tekst="" element-eId="DU/2022/2052__art_3__ust_2" akt="https://eli.gov.pl/eli/DU/2022/2052" gd:nowGUID="b73a0a26-9f85-4052-be9d-c5fb7f0adbe5" />w ust. 2 skreśla się wyrazy „ , Szef IWSW”;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2026/284__art_1__pkt_3" gd:GUID="1fa850ce-64b1-4b90-be69-3910a0afd4a9" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-21_DU-2026-284_domyslne.x" wejscie-w-zycie="2026-03-21">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="15f07969-8a1f-4cf2-b49a-c6f9d995bbd9" fragment="6" gd:fragmentGUID="67532693-8fb5-4022-8e6e-b4a52a44e53b" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-21_DU-2026-284_domyslne.x" wejscie-w-zycie="2026-03-21"><now:zamien-tekst stary-tekst=", Szef IWSW" nowy-tekst="" element-eId="DU/2022/2052__art_4" akt="https://eli.gov.pl/eli/DU/2022/2052" gd:nowGUID="f94b01fc-fdfd-4bc1-b179-d202f3e00b55" />w § 4 skreśla się wyrazy „ , Szef IWSW”;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/284__art_1__pkt_4" gd:GUID="66734c7a-7579-4cd3-915c-e6fbc49e263a" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-21_DU-2026-284_domyslne.x" wejscie-w-zycie="2026-03-21">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="15f07969-8a1f-4cf2-b49a-c6f9d995bbd9" fragment="7" gd:fragmentGUID="3cc7a08d-a371-4dc1-b3a4-5ac9eb59b831" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-21_DU-2026-284_domyslne.x" wejscie-w-zycie="2026-03-21">w § 5:</zdanie>
+          </p>
+          <litera eId="DU/2026/284__art_1__pkt_4__lit_a" gd:GUID="70741929-679f-4e28-95fa-2474f0eec5ce" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-21_DU-2026-284_domyslne.x" wejscie-w-zycie="2026-03-21">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="15f07969-8a1f-4cf2-b49a-c6f9d995bbd9" fragment="8" gd:fragmentGUID="4f983a0b-df41-4057-96ca-de154cd5ae42" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-21_DU-2026-284_domyslne.x" wejscie-w-zycie="2026-03-21"><now:zamien-tekst stary-tekst=", Szef IWSW" nowy-tekst="" element-eId="DU/2022/2052__art_5__ust_1" akt="https://eli.gov.pl/eli/DU/2022/2052" gd:nowGUID="028eab5d-4ed2-46c4-944d-0ae47f052d18" />w ust. 1 skreśla się wyrazy „ , Szef IWSW”,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2026/284__art_1__pkt_4__lit_b" gd:GUID="d98a9011-ae06-4a1a-b447-a24b4c4e336b" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-21_DU-2026-284_domyslne.x" wejscie-w-zycie="2026-03-21">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="15f07969-8a1f-4cf2-b49a-c6f9d995bbd9" fragment="9" gd:fragmentGUID="af81e0d3-6c95-4743-83f0-a592e4cc802d" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-21_DU-2026-284_domyslne.x" wejscie-w-zycie="2026-03-21"><now:zamien-tekst stary-tekst=", Szef IWSW" nowy-tekst="" element-eId="DU/2022/2052__art_5__ust_2" akt="https://eli.gov.pl/eli/DU/2022/2052" gd:nowGUID="a37ffd7e-1ed8-4917-860e-f72de7cff004" />w ust. 2 skreśla się wyrazy „ , Szef IWSW”,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2026/284__art_1__pkt_4__lit_c" gd:GUID="9f3e9de2-a10c-4d2f-90b1-96f6bce36c2d" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-21_DU-2026-284_domyslne.x" wejscie-w-zycie="2026-03-21">
+            <nr>c</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="15f07969-8a1f-4cf2-b49a-c6f9d995bbd9" fragment="10" gd:fragmentGUID="ac9d89d6-9d83-44d1-9e84-5d058fb2ba05" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-21_DU-2026-284_domyslne.x" wejscie-w-zycie="2026-03-21"><now:zamien-tekst stary-tekst=", w IWSW" nowy-tekst="" element-eId="DU/2022/2052__art_5__ust_3" akt="https://eli.gov.pl/eli/DU/2022/2052" gd:nowGUID="edb77ffc-17ac-4d64-b308-2a21fa724d47" />w ust. 3 skreśla się wyrazy „ , w IWSW”;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2026/284__art_1__pkt_5" gd:GUID="451d392b-21d5-46c0-9b2f-07182ca49eec" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-21_DU-2026-284_domyslne.x" wejscie-w-zycie="2026-03-21">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="15f07969-8a1f-4cf2-b49a-c6f9d995bbd9" fragment="11" gd:fragmentGUID="1dc0e5ff-84bc-45df-8f87-132c64efe8d0" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-21_DU-2026-284_domyslne.x" wejscie-w-zycie="2026-03-21"><now:zamien-tekst stary-tekst=", Szef IWSW" nowy-tekst="" element-eId="DU/2022/2052__art_6__ust_1" akt="https://eli.gov.pl/eli/DU/2022/2052" gd:nowGUID="966a52c7-9420-4cf5-a90d-040d99d99cb0" />w § 6 w ust. 1 skreśla się wyrazy „ , Szef IWSW”;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/284__art_1__pkt_6" gd:GUID="6b19f4b1-4625-44d5-910f-19801ee879d2" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-21_DU-2026-284_domyslne.x" wejscie-w-zycie="2026-03-21">
+          <nr>6</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="15f07969-8a1f-4cf2-b49a-c6f9d995bbd9" fragment="12" gd:fragmentGUID="370af74a-1b58-4b6c-abc7-f29e44813e22" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-21_DU-2026-284_domyslne.x" wejscie-w-zycie="2026-03-21"><now:zamien-tekst stary-tekst=", w IWSW" nowy-tekst="" element-eId="DU/2022/2052__art_7__ust_1" akt="https://eli.gov.pl/eli/DU/2022/2052" gd:nowGUID="266bd7b7-d79d-4848-90cd-34ca3b5a1087" />w § 7 w ust. 1 skreśla się wyrazy „ , w IWSW”;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/284__art_1__pkt_7" gd:GUID="7737b824-7b67-4500-ad95-eba41c34e3a8" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-21_DU-2026-284_domyslne.x" wejscie-w-zycie="2026-03-21">
+          <nr>7</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="15f07969-8a1f-4cf2-b49a-c6f9d995bbd9" fragment="13" gd:fragmentGUID="8cb2d960-31dd-4386-9d70-c954100d1523" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-21_DU-2026-284_domyslne.x" wejscie-w-zycie="2026-03-21"><now:zamien-tekst stary-tekst=", Szef IWSW" nowy-tekst="" element-eId="DU/2022/2052__art_8" akt="https://eli.gov.pl/eli/DU/2022/2052" gd:nowGUID="ff04297c-e7e5-499b-9137-b301896ac049" />w § 8 skreśla się wyrazy „ , Szef IWSW”;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/284__art_1__pkt_8" gd:GUID="564ea478-684f-4d94-af30-23e4f4472d48" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-21_DU-2026-284_domyslne.x" wejscie-w-zycie="2026-03-21">
+          <nr>8</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="15f07969-8a1f-4cf2-b49a-c6f9d995bbd9" fragment="14" gd:fragmentGUID="08e63823-7120-43d0-b842-96829703387f" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-21_DU-2026-284_domyslne.x" wejscie-w-zycie="2026-03-21"><now:zamien-tekst stary-tekst=", Szef IWSW" nowy-tekst="" element-eId="DU/2022/2052__art_9" akt="https://eli.gov.pl/eli/DU/2022/2052" gd:nowGUID="d7a47402-1eb2-4ffd-8b16-ba3b2242aef8" />w § 9 skreśla się wyrazy „ , Szef IWSW”.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2026/284__art_2" gd:GUID="1a861add-7aaf-422c-a583-113fe05de223" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-21_DU-2026-284_domyslne.x" wejscie-w-zycie="2026-03-21">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="4493e91f-878b-426c-964e-61080614ab62" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-21_DU-2026-284_domyslne.x" wejscie-w-zycie="2026-03-21">
+        <p>
+          <zdanie nr="1" gd:zdGUID="f1842642-6b61-4f29-9c2b-a2b0e5ef39f0" fragment="1" gd:fragmentGUID="8445d09c-e79d-4317-8cfb-f068b36f02b8" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-21_DU-2026-284_domyslne.x" wejscie-w-zycie="2026-03-21">Rozporządzenie wchodzi w życie po upływie 14 dni od dnia ogłoszenia.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <organ-podpisujacy>Minister Sprawiedliwości: <i><osoba podpisujacy="true" gd:osobaGUID="d88133cd-df3a-4c50-8f9e-88a67a8b48db"><imie>W.</imie> <nazwisko>Żurek</nazwisko></osoba></i></organ-podpisujacy>
+  </rozporzadzenie>
+</akt-prawny>

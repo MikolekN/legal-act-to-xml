@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <ustawa>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/631</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>9b4dbf52-ff4c-46d1-a7da-78acdfaac51d</gd:GUIDwersji>
+      <AdresISAP>WDU20250000631</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>631</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 631</AdresWyswietlany>
+      <Tytul>Ustawa z dnia 4 kwietnia 2025 r. o zmianie ustawy o Narodowym Centrum Nauki</Tytul>
+      <Rodzaj>USTAWA</Rodzaj>
+      <DataOgloszenia>2025-05-14</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-04-04</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2025-05-29_DU-2025-631_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2025-05-29" warunek="po upływie 14 dni od dnia ogłoszenia" podstawa="art. 3" zrodlo="https://eli.gov.pl/eli/DU/2025/631" dowod="DU/2025/631__art_3" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2025-05-29_DU-2025-631_domyslne.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2025-05-29_DU-2025-631_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="680d0cfd-7324-47b8-9daa-67d47e428e04" rola="wydajacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Sejm">
+          <Nazwa>SEJM</Nazwa>
+        </Organ>
+        <Organ gd:GUID="283b9f2c-7afc-4d01-9802-a057e745b2a0" rola="podpisujacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Prezydent">
+          <Nazwa>Prezydent Rzeczypospolitej Polskiej</Nazwa>
+          <OrganPodpisujacy>Prezydent Rzeczypospolitej Polskiej</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>A.</imie> <nazwisko>Duda</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Ustawa</rodzaj-aktu>
+    <data>z dnia 4 kwietnia 2025 r.</data>
+    <tytul>o zmianie ustawy o Narodowym Centrum Nauki</tytul>
+    <artykul eId="DU/2025/631__art_1" gd:GUID="a28c2630-9f20-411d-9b37-e265866b7a39" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-29_DU-2025-631_domyslne.x" wejscie-w-zycie="2025-05-29">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="8ee091f5-1dfe-4223-9cbb-20165065337f" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-29_DU-2025-631_domyslne.x" wejscie-w-zycie="2025-05-29">
+        <p>
+          <zdanie nr="1" gd:zdGUID="af8952f6-2ff8-4203-92aa-c9b0e7707b76" fragment="1" gd:fragmentGUID="3146d523-9232-4a13-b6e5-4973977a8800" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-29_DU-2025-631_domyslne.x" wejscie-w-zycie="2025-05-29">W ustawie z dnia 30 kwietnia 2010 r. o Narodowym Centrum Nauki (Dz. U. z 2023 r. poz. 153) wprowadza się następujące zmiany:</zdanie>
+        </p>
+        <punkt eId="DU/2025/631__art_1__pkt_1" gd:GUID="eda9b69c-5bdc-4b97-8514-3d9475157d94" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-29_DU-2025-631_domyslne.x" wejscie-w-zycie="2025-05-29">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="af8952f6-2ff8-4203-92aa-c9b0e7707b76" fragment="2" gd:fragmentGUID="db03582a-319f-4fb6-aeed-f185f8e9e2d4" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-29_DU-2025-631_domyslne.x" wejscie-w-zycie="2025-05-29"><now:uchyl akt="https://eli.gov.pl/eli/DU/2023/153" element-eId="DU/2023/153__art_10" gd:nowGUID="f0f86367-fcba-4b31-aafa-dcf71418bb3d" />uchyla się art. 10;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/631__art_1__pkt_2" gd:GUID="e25328b0-0f92-41cc-b158-af81c7b5e4a9" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-29_DU-2025-631_domyslne.x" wejscie-w-zycie="2025-05-29">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="af8952f6-2ff8-4203-92aa-c9b0e7707b76" fragment="3" gd:fragmentGUID="a03b3ab5-1ee6-44a3-9246-c589731a130e" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-29_DU-2025-631_domyslne.x" wejscie-w-zycie="2025-05-29">po art. 19 dodaje się art. 19a w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/153" cudzyslowy="oba" gd:nowGUID="3d0db913-d11f-43a7-b41c-e447b9127fd2" element-eId="DU/2023/153__art_19" funkcja="dodaj-po"><artykul eId="DU/2023/153__art_19a" gd:GUID="c347e0da-d5ef-4ccf-8931-58ce9793deda" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-29_DU-2025-631_domyslne.x" wejscie-w-zycie="2025-05-29"><nr>19a</nr><ustep eId="DU/2023/153__art_19a__ust_1" gd:GUID="f4bb3752-f59b-4290-abb8-c76ddeaacf83" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-29_DU-2025-631_domyslne.x" wejscie-w-zycie="2025-05-29"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="56807a94-3c65-49ec-994b-819daa63125e" fragment="1" gd:fragmentGUID="fe757fd9-37fb-4d46-954b-f3d1103bb518" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-29_DU-2025-631_domyslne.x" wejscie-w-zycie="2025-05-29">Dyrektor określa w regulaminie wynagradzania Koordynatorów Dyscyplin i pracowników Biura Centrum warunki wynagradzania Koordynatorów Dyscyplin i pracowników Biura Centrum, uwzględniając w szczególności:</zdanie></p><punkt eId="DU/2023/153__art_19a__ust_1__pkt_1" gd:GUID="7eacbf1e-c9fb-41b4-9f1f-d56735c18c89" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-29_DU-2025-631_domyslne.x" wejscie-w-zycie="2025-05-29"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="56807a94-3c65-49ec-994b-819daa63125e" fragment="2" gd:fragmentGUID="8fd3967c-a925-4c62-a7c1-87f4b4b4cf0a" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-29_DU-2025-631_domyslne.x" wejscie-w-zycie="2025-05-29">rodzaj wykonywanej pracy;</zdanie></p></punkt><punkt eId="DU/2023/153__art_19a__ust_1__pkt_2" gd:GUID="001dcef8-e2cd-4c97-9998-974fe71523d8" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-29_DU-2025-631_domyslne.x" wejscie-w-zycie="2025-05-29"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="56807a94-3c65-49ec-994b-819daa63125e" fragment="3" gd:fragmentGUID="04e06ad6-2fc4-4f01-91ff-92b27de78675" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-29_DU-2025-631_domyslne.x" wejscie-w-zycie="2025-05-29">posiadane wykształcenie, doświadczenie i dodatkowe kwalifikacje zawodowe oraz ich przydatność do realizacji zadań na stanowisku pracy;</zdanie></p></punkt><punkt eId="DU/2023/153__art_19a__ust_1__pkt_3" gd:GUID="e2f20693-92d2-400e-9944-afc4b158edb8" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-29_DU-2025-631_domyslne.x" wejscie-w-zycie="2025-05-29"><nr>3</nr><p><zdanie nr="1" gd:zdGUID="56807a94-3c65-49ec-994b-819daa63125e" fragment="4" gd:fragmentGUID="344b5393-f8ed-4c01-b91f-fccfa23bfce4" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-29_DU-2025-631_domyslne.x" wejscie-w-zycie="2025-05-29">kompetencje społeczne i ich przydatność do realizacji zadań na stanowisku pracy;</zdanie></p></punkt><punkt eId="DU/2023/153__art_19a__ust_1__pkt_4" gd:GUID="517633bc-6b8e-4a12-b5f9-73c68fce26cb" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-29_DU-2025-631_domyslne.x" wejscie-w-zycie="2025-05-29"><nr>4</nr><p><zdanie nr="1" gd:zdGUID="56807a94-3c65-49ec-994b-819daa63125e" fragment="5" gd:fragmentGUID="12bd47d5-f5a2-4bdd-a823-3fb1895c9b0b" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-29_DU-2025-631_domyslne.x" wejscie-w-zycie="2025-05-29">zakres odpowiedzialności na stanowisku pracy, w tym za realizację zadań przez podległych pracowników;</zdanie></p></punkt><punkt eId="DU/2023/153__art_19a__ust_1__pkt_5" gd:GUID="2a22582d-9e40-4744-8f94-8f53ec415882" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-29_DU-2025-631_domyslne.x" wejscie-w-zycie="2025-05-29"><nr>5</nr><p><zdanie nr="1" gd:zdGUID="56807a94-3c65-49ec-994b-819daa63125e" fragment="6" gd:fragmentGUID="ea718416-2ba5-44b7-9f45-171d4b0c9766" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-29_DU-2025-631_domyslne.x" wejscie-w-zycie="2025-05-29">poziom złożoności zadań realizowanych na stanowisku pracy wraz z poziomem wymaganej samodzielności i kreatywności;</zdanie></p></punkt><punkt eId="DU/2023/153__art_19a__ust_1__pkt_6" gd:GUID="5cf270d3-88dd-4ba4-8dfc-59ad241254ee" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-29_DU-2025-631_domyslne.x" wejscie-w-zycie="2025-05-29"><nr>6</nr><p><zdanie nr="1" gd:zdGUID="56807a94-3c65-49ec-994b-819daa63125e" fragment="7" gd:fragmentGUID="5c900b72-3660-45c7-b4ed-2284ca886158" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-29_DU-2025-631_domyslne.x" wejscie-w-zycie="2025-05-29">poziom obciążenia zadaniami realizowanymi na stanowisku pracy i jakość wykonywanej pracy.</zdanie></p></punkt></ustep><ustep eId="DU/2023/153__art_19a__ust_2" gd:GUID="d50db2f3-4083-4b72-9613-486d55d9c2a1" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-29_DU-2025-631_domyslne.x" wejscie-w-zycie="2025-05-29"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="7151cebf-d8d5-4b4d-a656-603ec4c96a0d" fragment="1" gd:fragmentGUID="04d276f7-e9dd-4d33-a22c-ae1548725fc1" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-29_DU-2025-631_domyslne.x" wejscie-w-zycie="2025-05-29">Dyrektor przekazuje Ministrowi do zatwierdzenia regulamin wynagradzania Koordynatorów Dyscyplin i pracowników Biura Centrum.</zdanie></p></ustep></artykul></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/631__art_1__pkt_3" gd:GUID="75aa2d31-d8c1-48d1-a573-523fb09c861b" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-29_DU-2025-631_domyslne.x" wejscie-w-zycie="2025-05-29">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="af8952f6-2ff8-4203-92aa-c9b0e7707b76" fragment="4" gd:fragmentGUID="a77bdaa4-54c8-47d7-859b-9eb3534c3318" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-29_DU-2025-631_domyslne.x" wejscie-w-zycie="2025-05-29">w art. 43 w ust. 2 po pkt 5 dodaje się pkt 5a w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/153" cudzyslowy="oba" gd:nowGUID="51055477-562c-461b-9eca-5867ca595536" element-eId="DU/2023/153__art_43__ust_2__pkt_5" funkcja="dodaj-po"><punkt eId="DU/2023/153__art_43__ust_2__pkt_5a" gd:GUID="1c0e50b6-f43b-4855-9e62-7efca101a441" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-29_DU-2025-631_domyslne.x" wejscie-w-zycie="2025-05-29"><nr>5a</nr><p><zdanie nr="1" gd:zdGUID="825950dd-f473-4f38-abe4-496bb78332e0" fragment="1" gd:fragmentGUID="d6888a62-cd02-4790-84b0-a40253ec9e1c" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-29_DU-2025-631_domyslne.x" wejscie-w-zycie="2025-05-29">zatwierdza regulamin wynagradzania Koordynatorów Dyscyplin i pracowników Biura Centrum;</zdanie></p></punkt></cytat-strukt>.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2025/631__art_2" gd:GUID="21ffc77b-1d37-4389-b6cf-5209317e9650" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-29_DU-2025-631_domyslne.x" wejscie-w-zycie="2025-05-29">
+      <nr>2</nr>
+      <ustep eId="DU/2025/631__art_2__ust_1" gd:GUID="5f74277d-6253-44e0-a809-eb9633644650" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-29_DU-2025-631_domyslne.x" wejscie-w-zycie="2025-05-29">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="55d04a0c-08ed-4a9d-8882-3e1b0c8ed9d1" fragment="1" gd:fragmentGUID="2a12f8c3-6a90-424e-9d7d-534ef7ccd995" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-29_DU-2025-631_domyslne.x" wejscie-w-zycie="2025-05-29">W terminie 3 miesięcy od dnia wejścia w życie niniejszej ustawy Dyrektor Narodowego Centrum Nauki, zwanego dalej „Centrum”, ustali regulamin wynagradzania Koordynatorów Dyscyplin i pracowników Biura Centrum, zwany dalej „regulaminem”, i przekaże go do zatwierdzenia ministrowi właściwemu do spraw szkolnictwa wyższego i nauki, zwanemu dalej „Ministrem”.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/631__art_2__ust_2" gd:GUID="16bd703e-6fa2-4321-84de-e50e06f59818" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-29_DU-2025-631_domyslne.x" wejscie-w-zycie="2025-05-29">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="bdd5ad1b-0f23-41d2-95a4-0df7fae661d5" fragment="1" gd:fragmentGUID="c6b5e352-aa1d-4b87-aaed-afe5b0fabb60" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-29_DU-2025-631_domyslne.x" wejscie-w-zycie="2025-05-29">Minister zatwierdzi regulamin albo zgłosi zastrzeżenia odnośnie do jego treści w terminie miesiąca od dnia otrzymania regulaminu.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/631__art_2__ust_3" gd:GUID="d801d5c9-86ec-4e09-81c2-e18299acf289" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-29_DU-2025-631_domyslne.x" wejscie-w-zycie="2025-05-29">
+        <nr>3</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="0e9de59a-de68-414f-8cb4-40b5ddfb5bd5" fragment="1" gd:fragmentGUID="71d695aa-6589-4403-9833-5954b6a238fc" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-29_DU-2025-631_domyslne.x" wejscie-w-zycie="2025-05-29">W przypadku zgłoszenia przez Ministra zastrzeżeń odnośnie do treści regulaminu i konieczności dokonania jego zmiany przez Dyrektora Centrum termin, o którym mowa w ust. 2, jest liczony od dnia otrzymania zmienionego regulaminu.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/631__art_2__ust_4" gd:GUID="b143be7f-d8b2-4e24-8786-642312a1d610" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-29_DU-2025-631_domyslne.x" wejscie-w-zycie="2025-05-29">
+        <nr>4</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="97d109ec-ace9-4ab0-94d2-e60ec829f619" fragment="1" gd:fragmentGUID="30d5cf45-8aba-4793-98dc-a4e4d4d9dca0" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-29_DU-2025-631_domyslne.x" wejscie-w-zycie="2025-05-29">Regulamin zatwierdzony przez Ministra Dyrektor Centrum podaje do wiadomości przez zamieszczenie w Biuletynie Informacji Publicznej na stronie podmiotowej Centrum.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/631__art_2__ust_5" gd:GUID="78beaad2-fea9-49c0-bdfa-0c9522035ef3" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-29_DU-2025-631_domyslne.x" wejscie-w-zycie="2025-05-29">
+        <nr>5</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="159dad42-6a4f-4cc6-b6a3-036afafe4dd9" fragment="1" gd:fragmentGUID="f37611e7-3188-41a1-8fef-91a8eb052d3f" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-29_DU-2025-631_domyslne.x" wejscie-w-zycie="2025-05-29">Regulamin wchodzi w życie po upływie 2 tygodni od dnia podania go do wiadomości w sposób określony w ust. 4.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/631__art_2__ust_6" gd:GUID="3af124cb-7715-4fbb-8387-d70ea4ad7caf" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-29_DU-2025-631_domyslne.x" wejscie-w-zycie="2025-05-29">
+        <nr>6</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="aeb55def-55fb-42d7-9351-da741a19c195" fragment="1" gd:fragmentGUID="e997c73b-0dcc-49d4-8a96-85ad166539cc" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-29_DU-2025-631_domyslne.x" wejscie-w-zycie="2025-05-29">Do dnia wejścia w życie regulaminu do określania warunków wynagradzania Koordynatorów Dyscyplin i pracowników Biura Centrum stosuje się przepisy wydane na podstawie art. 10 ust. 2 ustawy zmienianej w art. 1 w brzmieniu dotychczasowym.</zdanie>
+        </p>
+      </ustep>
+    </artykul>
+    <artykul eId="DU/2025/631__art_3" gd:GUID="ad88d8b9-0ae6-442a-a93b-847e02a52b6c" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-29_DU-2025-631_domyslne.x" wejscie-w-zycie="2025-05-29">
+      <nr>3</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="34a77091-2f65-42df-bb5d-c4ea4cf4e653" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-29_DU-2025-631_domyslne.x" wejscie-w-zycie="2025-05-29">
+        <p>
+          <zdanie nr="1" gd:zdGUID="c8e0197b-4fc6-4652-b59c-3de7de208c1a" fragment="1" gd:fragmentGUID="ddf49702-bf75-4244-9e1c-a831736ff451" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-29_DU-2025-631_domyslne.x" wejscie-w-zycie="2025-05-29">Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <organ-podpisujacy>Prezydent Rzeczypospolitej Polskiej: <i><osoba podpisujacy="true" gd:osobaGUID="09620d3b-072f-4f51-8852-2a1f18e4a8fe"><imie>A.</imie> <nazwisko>Duda</nazwisko></osoba></i></organ-podpisujacy>
+  </ustawa>
+</akt-prawny>

@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <rozporzadzenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/1025</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>578996a7-326f-4cdc-8038-4031467be1ad</gd:GUIDwersji>
+      <AdresISAP>WDU20250001025</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>1025</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 1025</AdresWyswietlany>
+      <Tytul>Rozporządzenie Ministra Obrony Narodowej z dnia 24 lipca 2025 r. w sprawie niezbędnych świadczeń rzeczowych w 2026 r. na rzecz obrony</Tytul>
+      <Rodzaj>ROZP</Rodzaj>
+      <DataOgloszenia>2025-07-28</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-07-24</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2026-01-01_DU-2025-1025_odczytane" rodzaj="wejscie-w-zycie" pochodzenie="odczytane" data="2026-01-01" podstawa="§ 2" zrodlo="https://eli.gov.pl/eli/DU/2025/1025" dowod="DU/2025/1025__art_2" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1025_odczytane.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2026-01-01_DU-2025-1025_odczytane" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="003123b5-5269-4ca1-ad6f-555c4a21cfff" rola="wydajacy">
+          <Nazwa>Minister Obrony Narodowej</Nazwa>
+          <OrganPodpisujacy>Minister Obrony Narodowej</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>P.</imie> <nazwisko>Bejda</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Rozporządzenie</rodzaj-aktu>
+    <autor-aktu>Ministra Obrony Narodowej</autor-aktu>
+    <data>z dnia 24 lipca 2025 r.</data>
+    <tytul>w sprawie niezbędnych świadczeń rzeczowych w 2026 r. na rzecz obrony</tytul>
+    <podstawa-prawna>Na podstawie art. 628 ust. 6 ustawy z dnia 11 marca 2022 r. o obronie Ojczyzny (Dz. U. z 2025 r. poz. 825 i 1014) zarządza się, co następuje:</podstawa-prawna>
+    <paragraf eId="DU/2025/1025__art_1" gd:GUID="52e36a3b-822e-4bb4-b5af-8f560a85dc2f" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1025_odczytane.x" wejscie-w-zycie="2026-01-01">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="f09265be-a73e-4b0d-ad29-ea3e9fdfe3fe" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1025_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="1f0d3aca-8537-4937-862a-e018881f8f61" fragment="1" gd:fragmentGUID="c963331c-85de-4516-ac62-66ad7348a889" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1025_odczytane.x" wejscie-w-zycie="2026-01-01">Niezbędne świadczenia rzeczowe wykonywane w 2026 r. na rzecz obrony wynoszą nie więcej niż:</zdanie>
+        </p>
+        <punkt eId="DU/2025/1025__art_1__pkt_1" gd:GUID="98c455aa-d3f2-4e33-b936-5c3e954ad64d" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1025_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="1f0d3aca-8537-4937-862a-e018881f8f61" fragment="2" gd:fragmentGUID="2256001c-e84c-4469-89fe-8feca778da17" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1025_odczytane.x" wejscie-w-zycie="2026-01-01">400 nieruchomości (budynków lub ich części) – na potrzeby organów administracji rządowej i organów samorządu terytorialnego wykonujących zadania związane z prowadzeniem kwalifikacji wojskowej;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1025__art_1__pkt_2" gd:GUID="8c384e6d-41bf-4890-ac5f-5d5027884e55" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1025_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="1f0d3aca-8537-4937-862a-e018881f8f61" fragment="3" gd:fragmentGUID="ccd9da0a-04b7-4935-abae-7be592f179e3" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1025_odczytane.x" wejscie-w-zycie="2026-01-01">192 pojazdy samochodowe oraz 26 przyczep (naczep) i 15 maszyn wraz z niezbędnym wyposażeniem – na potrzeby jednostek organizacyjnych Sił Zbrojnych Rzeczypospolitej Polskiej wykonujących zadania związane z przeprowadzaniem ćwiczeń wojskowych, w tym organizowanych w trybie natychmiastowego stawiennictwa żołnierzy rezerwy i związanych ze sprawdzaniem gotowości mobilizacyjnej Sił Zbrojnych Rzeczypospolitej Polskiej.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2025/1025__art_2" gd:GUID="7d774575-96ee-4c05-9dc4-f40a16291e7b" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1025_odczytane.x" wejscie-w-zycie="2026-01-01">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="2d43ce32-d095-4575-9a45-1d200ee92e15" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1025_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="b29e9b61-24a5-46bf-8d75-c0cf5344037f" fragment="1" gd:fragmentGUID="0270892b-510f-4dd7-b8a3-dcb346be826b" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1025_odczytane.x" wejscie-w-zycie="2026-01-01">Rozporządzenie wchodzi w życie z dniem 1 stycznia 2026 r.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <organ-podpisujacy>Minister Obrony Narodowej: z up. <i><osoba podpisujacy="true" gd:osobaGUID="a8fbb89e-ef0b-4167-8c10-d989e452e1f9"><imie>P.</imie> <nazwisko>Bejda</nazwisko></osoba></i></organ-podpisujacy>
+  </rozporzadzenie>
+</akt-prawny>

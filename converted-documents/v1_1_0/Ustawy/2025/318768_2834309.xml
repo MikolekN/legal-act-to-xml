@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <ustawa>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/295</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>aa350eab-761b-4c92-9e30-0975756e4f25</gd:GUIDwersji>
+      <AdresISAP>WDU20250000295</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>295</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 295</AdresWyswietlany>
+      <Tytul>Ustawa z dnia 6 lutego 2025 r. o zmianie ustawy o znakach Sił Zbrojnych Rzeczypospolitej Polskiej</Tytul>
+      <Rodzaj>USTAWA</Rodzaj>
+      <DataOgloszenia>2025-03-11</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-02-06</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2025-03-26_DU-2025-295_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2025-03-26" warunek="po upływie 14 dni od dnia ogłoszenia" podstawa="art. 2" zrodlo="https://eli.gov.pl/eli/DU/2025/295" dowod="DU/2025/295__art_2" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2025-03-26_DU-2025-295_domyslne.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2025-03-26_DU-2025-295_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="d3ac8e35-ed6e-411a-bac4-8b879073f028" rola="wydajacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Sejm">
+          <Nazwa>SEJM</Nazwa>
+        </Organ>
+        <Organ gd:GUID="31db4ea7-4522-4919-923b-3b6804fa8477" rola="podpisujacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Prezydent">
+          <Nazwa>Prezydent Rzeczypospolitej Polskiej</Nazwa>
+          <OrganPodpisujacy>Prezydent Rzeczypospolitej Polskiej</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>A.</imie> <nazwisko>Duda</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Ustawa</rodzaj-aktu>
+    <data>z dnia 6 lutego 2025 r.</data>
+    <tytul>o zmianie ustawy o znakach Sił Zbrojnych Rzeczypospolitej Polskiej</tytul>
+    <artykul eId="DU/2025/295__art_1" gd:GUID="d6394984-ece5-48e1-bbe6-30e9e04ecdf0" okres="okr_obowiazywanie.zdarz_wejscie_2025-03-26_DU-2025-295_domyslne.x" wejscie-w-zycie="2025-03-26">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="cc2da467-dce9-4564-9114-82ba84d92655" okres="okr_obowiazywanie.zdarz_wejscie_2025-03-26_DU-2025-295_domyslne.x" wejscie-w-zycie="2025-03-26">
+        <p>
+          <zdanie nr="1" gd:zdGUID="72abc53e-9abc-4ea7-a029-8ce59fa3ed76" fragment="1" gd:fragmentGUID="2ac5db26-9f25-4c62-a394-6e87e10efef2" okres="okr_obowiazywanie.zdarz_wejscie_2025-03-26_DU-2025-295_domyslne.x" wejscie-w-zycie="2025-03-26">W ustawie z dnia 19 lutego 1993 r. o znakach Sił Zbrojnych Rzeczypospolitej Polskiej (Dz. U. z 2019 r. poz. 1351) wprowadza się następujące zmiany:</zdanie>
+        </p>
+        <punkt eId="DU/2025/295__art_1__pkt_1" gd:GUID="da3da582-3dba-48e2-b2c0-b06fe57b5453" okres="okr_obowiazywanie.zdarz_wejscie_2025-03-26_DU-2025-295_domyslne.x" wejscie-w-zycie="2025-03-26">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="72abc53e-9abc-4ea7-a029-8ce59fa3ed76" fragment="2" gd:fragmentGUID="257b7b43-90e3-4e4a-ad5e-e9dca52ce266" okres="okr_obowiazywanie.zdarz_wejscie_2025-03-26_DU-2025-295_domyslne.x" wejscie-w-zycie="2025-03-26">w art. 2 ust. 2 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2019/1351" cudzyslowy="oba" gd:nowGUID="2fe2b9a5-92dd-4245-8f9e-44347965bf16" element-eId="DU/2019/1351__art_2__ust_2" funkcja="zastap"><ustep eId="DU/2019/1351__art_2__ust_2" gd:GUID="0022c69f-e1ec-4b1a-b30e-7ec7406d6ea6" okres="okr_obowiazywanie.zdarz_wejscie_2025-03-26_DU-2025-295_domyslne.x" wejscie-w-zycie="2025-03-26"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="5cf134c2-0609-48f6-9d3e-1056419fb71d" fragment="1" gd:fragmentGUID="985f6601-36c8-47b5-a023-61c0eb105c16" okres="okr_obowiazywanie.zdarz_wejscie_2025-03-26_DU-2025-295_domyslne.x" wejscie-w-zycie="2025-03-26">Minister Obrony Narodowej może wyrazić zgodę na używanie, w tym modyfikowanie, znaków, o których mowa w art. 1, poza Siłami Zbrojnymi Rzeczypospolitej Polskiej.</zdanie></p></ustep></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/295__art_1__pkt_2" gd:GUID="a7912541-9a30-4fe9-9822-59b69fdfe131" okres="okr_obowiazywanie.zdarz_wejscie_2025-03-26_DU-2025-295_domyslne.x" wejscie-w-zycie="2025-03-26">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="72abc53e-9abc-4ea7-a029-8ce59fa3ed76" fragment="3" gd:fragmentGUID="6bba153a-2b54-405c-a6d3-0335aecd5bf6" okres="okr_obowiazywanie.zdarz_wejscie_2025-03-26_DU-2025-295_domyslne.x" wejscie-w-zycie="2025-03-26">w art. 17 ust. 2 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2019/1351" cudzyslowy="oba" gd:nowGUID="925d37fa-e0d0-40e1-aa07-91d0046725a1" element-eId="DU/2019/1351__art_17__ust_2" funkcja="zastap"><ustep eId="DU/2019/1351__art_17__ust_2" gd:GUID="8d79206e-a0ca-48e2-b939-9e1edd190991" okres="okr_obowiazywanie.zdarz_wejscie_2025-03-26_DU-2025-295_domyslne.x" wejscie-w-zycie="2025-03-26"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="cc2b20a9-13aa-4abf-a737-05c569a34570" fragment="1" gd:fragmentGUID="66713096-d4e5-4795-ad3c-fe711a4c7f76" okres="okr_obowiazywanie.zdarz_wejscie_2025-03-26_DU-2025-295_domyslne.x" wejscie-w-zycie="2025-03-26">Na sztandarach jednostek wojskowych odznaczonych Orderem Wojennym Virtuti Militari lub Orderem Krzyża Wojskowego lub dziedziczących tradycje jednostek wojskowych odznaczonych tymi orderami szarfy ze wstęg tych orderów umieszcza się pod szarfą o barwach Rzeczypospolitej Polskiej.</zdanie></p></ustep></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/295__art_1__pkt_3" gd:GUID="29e9b43a-de0d-4578-b4b1-e7ea1895c09e" okres="okr_obowiazywanie.zdarz_wejscie_2025-03-26_DU-2025-295_domyslne.x" wejscie-w-zycie="2025-03-26">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="72abc53e-9abc-4ea7-a029-8ce59fa3ed76" fragment="4" gd:fragmentGUID="9ef4e798-808d-4411-8981-3b409e85921d" okres="okr_obowiazywanie.zdarz_wejscie_2025-03-26_DU-2025-295_domyslne.x" wejscie-w-zycie="2025-03-26">w art. 20 ust. 2 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2019/1351" cudzyslowy="oba" gd:nowGUID="d519aca3-7fb2-433a-8692-178bd35ab6e2" element-eId="DU/2019/1351__art_20__ust_2" funkcja="zastap"><ustep eId="DU/2019/1351__art_20__ust_2" gd:GUID="a47bdfd2-51bb-4d20-93db-f1ae8c5cfcc4" okres="okr_obowiazywanie.zdarz_wejscie_2025-03-26_DU-2025-295_domyslne.x" wejscie-w-zycie="2025-03-26"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="28b431dc-5011-4ed7-9ddb-872f9292c3c2" fragment="1" gd:fragmentGUID="7c078020-4fb7-4579-9dc5-487054d73c49" okres="okr_obowiazywanie.zdarz_wejscie_2025-03-26_DU-2025-295_domyslne.x" wejscie-w-zycie="2025-03-26">Proporcem marynarki wojennej jest prostokątny płat tkaniny o barwach Rzeczypospolitej Polskiej.</zdanie><zdanie nr="2" gd:zdGUID="5844b5f9-dca8-4df0-a44a-6ac76ce4b504" fragment="1" gd:fragmentGUID="4c9e234b-9ad0-4ff4-831e-1574ea5d080c" okres="okr_obowiazywanie.zdarz_wejscie_2025-03-26_DU-2025-295_domyslne.x" wejscie-w-zycie="2025-03-26">Stosunek szerokości płata do jego długości wynosi 5:6.</zdanie><zdanie nr="3" gd:zdGUID="bb228565-814c-4df5-a4ca-9721a016db84" fragment="1" gd:fragmentGUID="3b52d02d-13bc-4221-b57c-e69b75cc4219" okres="okr_obowiazywanie.zdarz_wejscie_2025-03-26_DU-2025-295_domyslne.x" wejscie-w-zycie="2025-03-26">Pośrodku płata jest umieszczony krzyż kawalerski.</zdanie><zdanie nr="4" gd:zdGUID="9263aecf-6998-4ed5-9df3-d993ed366bec" fragment="1" gd:fragmentGUID="53bc62a4-40ff-4b6a-afb8-5ee0167c5ae5" okres="okr_obowiazywanie.zdarz_wejscie_2025-03-26_DU-2025-295_domyslne.x" wejscie-w-zycie="2025-03-26">Jego ramiona położone na białym pasie są koloru czerwonego, a ramiona położone na pasie czerwonym – białego.</zdanie><zdanie nr="5" gd:zdGUID="45aaa591-a535-4fc0-9db7-51b7a5f216c4" fragment="1" gd:fragmentGUID="3ffbf016-2fd0-454a-aacd-36f90385890c" okres="okr_obowiazywanie.zdarz_wejscie_2025-03-26_DU-2025-295_domyslne.x" wejscie-w-zycie="2025-03-26">Pośrodku krzyża, w kręgu czerwonym, jest umieszczony wizerunek ręki z szablą.</zdanie><zdanie nr="6" gd:zdGUID="a1c9e18b-3b9c-48b7-9fdd-8627a0d082bb" fragment="1" gd:fragmentGUID="716858b7-e544-4d83-9c29-fc18295098e3" okres="okr_obowiazywanie.zdarz_wejscie_2025-03-26_DU-2025-295_domyslne.x" wejscie-w-zycie="2025-03-26">Ręka jest koloru cielistego, a szabla – koloru srebrnego, z żółtą rękojeścią.</zdanie><zdanie nr="7" gd:zdGUID="cc5eab6a-ed40-48c7-a82d-b924290de623" fragment="1" gd:fragmentGUID="5071c49b-b9c0-4aad-bffe-d66403c78eb7" okres="okr_obowiazywanie.zdarz_wejscie_2025-03-26_DU-2025-295_domyslne.x" wejscie-w-zycie="2025-03-26">Ramię ręki jest ubrane w niebieski rękaw z żółtym przybraniem.</zdanie><zdanie nr="8" gd:zdGUID="b84615ff-7bc2-425f-b729-5175fe33644e" fragment="1" gd:fragmentGUID="15aa4c35-eca8-466a-8033-7f37c9e5af84" okres="okr_obowiazywanie.zdarz_wejscie_2025-03-26_DU-2025-295_domyslne.x" wejscie-w-zycie="2025-03-26">Stosunek wysokości krzyża do szerokości płata wynosi 4:5.</zdanie></p></ustep></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/295__art_1__pkt_4" gd:GUID="19718182-db85-4244-b349-5cee65b4ee56" okres="okr_obowiazywanie.zdarz_wejscie_2025-03-26_DU-2025-295_domyslne.x" wejscie-w-zycie="2025-03-26">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="72abc53e-9abc-4ea7-a029-8ce59fa3ed76" fragment="5" gd:fragmentGUID="77398aeb-3375-4b6b-8535-a77174849e01" okres="okr_obowiazywanie.zdarz_wejscie_2025-03-26_DU-2025-295_domyslne.x" wejscie-w-zycie="2025-03-26">w art. 22 dodaje się ust. 3 i 4 w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2019/1351" cudzyslowy="oba" gd:nowGUID="9a067999-d0ab-4f2f-a9b9-9150f2635681" element-eId="DU/2019/1351__art_22" funkcja="dodaj-w"><ustep eId="DU/2019/1351__art_22__ust_3" gd:GUID="37a9312a-933d-4b35-a8a6-246e547900d6" okres="okr_obowiazywanie.zdarz_wejscie_2025-03-26_DU-2025-295_domyslne.x" wejscie-w-zycie="2025-03-26"><nr>3</nr><p><zdanie nr="1" gd:zdGUID="f95bac7b-c95a-44d3-967b-14c0ee2d726d" fragment="1" gd:fragmentGUID="444dbe4b-cf68-48e2-b76f-415409ebc67c" okres="okr_obowiazywanie.zdarz_wejscie_2025-03-26_DU-2025-295_domyslne.x" wejscie-w-zycie="2025-03-26">W przypadkach uzasadnionych wymogami bezpieczeństwa lub warunkami prowadzenia działań operacyjnych można używać szachownicy lotniczej w wersji o niskiej widzialności.</zdanie><zdanie nr="2" gd:zdGUID="1f600527-e79b-4970-9fed-b57e71d527de" fragment="1" gd:fragmentGUID="a1509aa5-d9f0-4892-a6ff-8b045ab4330f" okres="okr_obowiazywanie.zdarz_wejscie_2025-03-26_DU-2025-295_domyslne.x" wejscie-w-zycie="2025-03-26">W takim przypadku pola czerwone są zastąpione kolorem powierzchni, na którą jest nanoszona szachownica lotnicza, a pola białe – kolorem jaśniejszym od koloru tła dopasowanym pod względem kontrastu.</zdanie></p></ustep><ustep eId="DU/2019/1351__art_22__ust_4" gd:GUID="78f437cc-15ac-4aae-86dd-73278ffef61a" okres="okr_obowiazywanie.zdarz_wejscie_2025-03-26_DU-2025-295_domyslne.x" wejscie-w-zycie="2025-03-26"><nr>4</nr><p><zdanie nr="1" gd:zdGUID="ba56cfa5-608f-419d-a519-3a8c25005923" fragment="1" gd:fragmentGUID="d0be85eb-50ec-478b-ab43-2321ef11bb6f" okres="okr_obowiazywanie.zdarz_wejscie_2025-03-26_DU-2025-295_domyslne.x" wejscie-w-zycie="2025-03-26">Wzór szachownicy lotniczej w wersji o niskiej widzialności zawiera załącznik nr 10a.</zdanie></p></ustep></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/295__art_1__pkt_5" gd:GUID="5c1430a0-679c-4ec7-92d3-e1e3f31859fc" okres="okr_obowiazywanie.zdarz_wejscie_2025-03-26_DU-2025-295_domyslne.x" wejscie-w-zycie="2025-03-26">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="72abc53e-9abc-4ea7-a029-8ce59fa3ed76" fragment="6" gd:fragmentGUID="f78e1123-43fa-4a84-b6f1-83c712710b9a" okres="okr_obowiazywanie.zdarz_wejscie_2025-03-26_DU-2025-295_domyslne.x" wejscie-w-zycie="2025-03-26"><now:zastap akt="https://eli.gov.pl/eli/DU/2019/1351" element-eId="DU/2019/1351__zal_4a" akt-nowelizujacy="https://eli.gov.pl/eli/DU/2025/295" nowelizujacy-element-eId="DU/2025/295__zal_1" gd:nowGUID="b70821bc-0bd2-4835-8c98-dda6ae642992" />załącznik nr 4a do ustawy otrzymuje brzmienie określone w załączniku nr 1 do niniejszej ustawy;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/295__art_1__pkt_6" gd:GUID="323861b9-f9d3-4190-adca-3c0c71837b90" okres="okr_obowiazywanie.zdarz_wejscie_2025-03-26_DU-2025-295_domyslne.x" wejscie-w-zycie="2025-03-26">
+          <nr>6</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="72abc53e-9abc-4ea7-a029-8ce59fa3ed76" fragment="7" gd:fragmentGUID="13b28741-e609-4a3f-98e2-fab3e4c16b6b" okres="okr_obowiazywanie.zdarz_wejscie_2025-03-26_DU-2025-295_domyslne.x" wejscie-w-zycie="2025-03-26"><now:zastap akt="https://eli.gov.pl/eli/DU/2019/1351" element-eId="DU/2019/1351__zal_8" akt-nowelizujacy="https://eli.gov.pl/eli/DU/2025/295" nowelizujacy-element-eId="DU/2025/295__zal_2" gd:nowGUID="e33c1b68-cf6f-4ece-af11-d65504744f92" />załącznik nr 8 do ustawy otrzymuje brzmienie określone w załączniku nr 2 do niniejszej ustawy;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/295__art_1__pkt_7" gd:GUID="20e6c3bd-8d32-4213-84e4-0a3469d6ee68" okres="okr_obowiazywanie.zdarz_wejscie_2025-03-26_DU-2025-295_domyslne.x" wejscie-w-zycie="2025-03-26">
+          <nr>7</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="72abc53e-9abc-4ea7-a029-8ce59fa3ed76" fragment="8" gd:fragmentGUID="0eb0f91f-428d-4d7a-89d3-db036179fbcc" okres="okr_obowiazywanie.zdarz_wejscie_2025-03-26_DU-2025-295_domyslne.x" wejscie-w-zycie="2025-03-26"><now:dodaj-po akt="https://eli.gov.pl/eli/DU/2019/1351" element-eId="DU/2019/1351__zal_10" akt-nowelizujacy="https://eli.gov.pl/eli/DU/2025/295" nowelizujacy-element-eId="DU/2025/295__zal_3" gd:nowGUID="24d1b0e2-d836-4183-91bc-e78ba46b7a06" />po załączniku nr 10 do ustawy dodaje się załącznik nr 10a do ustawy w brzmieniu określonym w załączniku nr 3 do niniejszej ustawy.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2025/295__art_2" gd:GUID="1b1a861b-adca-45d5-b7f8-92f1296b0779" okres="okr_obowiazywanie.zdarz_wejscie_2025-03-26_DU-2025-295_domyslne.x" wejscie-w-zycie="2025-03-26">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="8e65f280-7497-4485-93ff-4848233a1346" okres="okr_obowiazywanie.zdarz_wejscie_2025-03-26_DU-2025-295_domyslne.x" wejscie-w-zycie="2025-03-26">
+        <p>
+          <zdanie nr="1" gd:zdGUID="46cfa159-e116-460d-82ed-43ac883e740f" fragment="1" gd:fragmentGUID="cdb5af2e-a7e6-4ccf-908f-863c1d7e1592" okres="okr_obowiazywanie.zdarz_wejscie_2025-03-26_DU-2025-295_domyslne.x" wejscie-w-zycie="2025-03-26">Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <organ-podpisujacy>Prezydent Rzeczypospolitej Polskiej: <i><osoba podpisujacy="true" gd:osobaGUID="2c521ff7-32a0-4a38-ac79-0c7988003f24"><imie>A.</imie> <nazwisko>Duda</nazwisko></osoba></i></organ-podpisujacy>
+    <zalacznik eId="DU/2025/295__zal_1" gd:GUID="73c7c146-e3b8-41ef-874e-74c7c506469f">
+      <zalacznik-do gd:GUID="8b9ab0f8-2537-444b-afb1-ace2c604d362">Załączniki do ustawy z dnia 6 lutego 2025 r. (Dz. U. poz. 295)</zalacznik-do>
+      <zalacznik-nr gd:GUID="f4527637-6ff8-4169-89d8-645a51f55d19">
+        <nr>1</nr>
+      </zalacznik-nr>
+      <tytul-zalacznika gd:GUID="0d7ca43b-a7e6-46a3-97a9-90bcf433c962">SZTANDAR JEDNOSTKI WOJSKOWEJ</tytul-zalacznika>
+      <segment-zalacznika gd:GUID="c1048261-f32a-4672-b234-059cf47a5f3d" orientacja="pionowa">
+        <tekst-zwykly gd:GUID="3031b0f5-56ad-4a93-b875-6c097925eaaf">strona odwrotna</tekst-zwykly>
+      </segment-zalacznika>
+    </zalacznik>
+    <zalacznik eId="DU/2025/295__zal_2" gd:GUID="1d6f34a7-d65d-45cf-a787-b335bfce8585">
+      <zalacznik-nr gd:GUID="4387f59b-4eaf-4c9c-bd83-4a666fd13ab7">
+        <nr>2</nr>
+      </zalacznik-nr>
+      <tytul-zalacznika gd:GUID="e63b7754-42c9-4e87-b973-99b832e45f0d">PROPORZEC MARYNARKI WOJENNEJ</tytul-zalacznika>
+      <segment-zalacznika gd:GUID="d6e06e0c-0cd2-4162-b607-946523b8a071" orientacja="pionowa">
+        <tekst-zwykly gd:GUID="b9cda15c-f836-419b-a96b-a6569ee6f6bf">strona główna</tekst-zwykly>
+        <tekst-zwykly gd:GUID="fa8d4847-61d5-43a6-817e-8d584bf80e6d">5:6</tekst-zwykly>
+        <tekst-zwykly gd:GUID="5976edb6-b357-4ef7-bd68-284ee2e12934">strona odwrotna</tekst-zwykly>
+      </segment-zalacznika>
+    </zalacznik>
+    <zalacznik eId="DU/2025/295__zal_3" gd:GUID="8baed7bb-5edc-471a-a874-66c9260e8405">
+      <zalacznik-nr gd:GUID="6c55f8a9-fa74-4c40-bc9c-22f92ee0b95a">
+        <nr>3</nr>
+      </zalacznik-nr>
+      <tytul-zalacznika gd:GUID="764aa3d5-3194-404d-bf38-1c832d030c88">SZACHOWNICA LOTNICZA W WERSJI O NISKIEJ WIDZIALNOŚCI</tytul-zalacznika>
+      <segment-zalacznika gd:GUID="83c3c5b0-060a-46a3-b74b-d114230a5c20" orientacja="pionowa">
+        <tekst-zwykly gd:GUID="0d4f5e8e-88c8-432c-a27a-c6af3fbf06f5">poziom</tekst-zwykly>
+      </segment-zalacznika>
+    </zalacznik>
+  </ustawa>
+</akt-prawny>

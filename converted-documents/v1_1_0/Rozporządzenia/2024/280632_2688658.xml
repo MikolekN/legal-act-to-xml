@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <rozporzadzenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2024/1489</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>11216600-451b-4b4b-a58a-e126725c79c4</gd:GUIDwersji>
+      <AdresISAP>WDU20240001489</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2024</Rok>
+      <Pozycja>1489</Pozycja>
+      <AdresWyswietlany>Dz.U. 2024 poz. 1489</AdresWyswietlany>
+      <Tytul>Rozporządzenie Rady Ministrów z dnia 11 września 2024 r. zmieniające rozporządzenie w sprawie Pełnomocnika Rządu do spraw Strategicznej Infrastruktury Energetycznej</Tytul>
+      <Rodzaj>ROZP</Rodzaj>
+      <DataOgloszenia>2024-10-08</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2024-09-11</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2024-10-09_DU-2024-1489_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2024-10-09" warunek="z dniem następującym po dniu ogłoszenia" podstawa="§ 2" zrodlo="https://eli.gov.pl/eli/DU/2024/1489" dowod="DU/2024/1489__art_2" />
+          <Zdarzenie id="zdarz_wejscie_2024-11-01_DU-2024-1489_odczytane" rodzaj="wejscie-w-zycie" pochodzenie="odczytane" data="2024-11-01" podstawa="§ 2" zrodlo="https://eli.gov.pl/eli/DU/2024/1489" dowod="DU/2024/1489__art_2">
+            <JednostkaAktu eId="DU/2024/1489__art_1__pkt_2" />
+          </Zdarzenie>
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2024-10-09_DU-2024-1489_domyslne.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2024-10-09_DU-2024-1489_domyslne" />
+        </GrupaCzasowa>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2024-11-01_DU-2024-1489_odczytane.x" glowna="false">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2024-11-01_DU-2024-1489_odczytane" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="ba8f8b6a-7ca4-4c8e-bd37-9b60d9aa1c3d" rola="wydajacy">
+          <Nazwa>Rada Ministrów</Nazwa>
+        </Organ>
+        <Organ gd:GUID="f20b11b0-2513-4335-bda2-4aea690c3e7c" rola="podpisujacy">
+          <Nazwa>Prezes Rady Ministrów</Nazwa>
+          <OrganPodpisujacy>Prezes Rady Ministrów</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>D.</imie> <nazwisko>Tusk</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Rozporządzenie</rodzaj-aktu>
+    <autor-aktu>Rady Ministrów</autor-aktu>
+    <data>z dnia 11 września 2024 r.</data>
+    <tytul>zmieniające rozporządzenie w sprawie Pełnomocnika Rządu do spraw Strategicznej Infrastruktury Energetycznej</tytul>
+    <podstawa-prawna>Na podstawie art. 10 ust. 4 ustawy z dnia 8 sierpnia 1996 r. o Radzie Ministrów (Dz. U. z 2024 r. poz. 1050 i 1473) w związku z art. 12a ust. 1 ustawy z dnia 10 kwietnia 1997 r. – Prawo energetyczne (Dz. U. z 2024 r. poz. 266, 834 i 859) zarządza się, co następuje:</podstawa-prawna>
+    <paragraf eId="DU/2024/1489__art_1" gd:GUID="179a860b-debe-4884-97bc-cdfc5f506ca6" okres="okr_obowiazywanie.zdarz_wejscie_2024-10-09_DU-2024-1489_domyslne.x" wejscie-w-zycie="2024-10-09">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="f499e144-426c-4f7a-b053-6baca30079fb" okres="okr_obowiazywanie.zdarz_wejscie_2024-10-09_DU-2024-1489_domyslne.x" wejscie-w-zycie="2024-10-09">
+        <p>
+          <zdanie nr="1" gd:zdGUID="7f7f604a-58c6-4bd8-af10-36b9fa0f3975" fragment="1" gd:fragmentGUID="01c553ea-672f-40a6-ada6-1dd047f6c014" okres="okr_obowiazywanie.zdarz_wejscie_2024-10-09_DU-2024-1489_domyslne.x" wejscie-w-zycie="2024-10-09">W rozporządzeniu Rady Ministrów z dnia 3 grudnia 2015 r. w sprawie Pełnomocnika Rządu do spraw Strategicznej Infrastruktury Energetycznej (Dz. U. z 2021 r. poz. 562 oraz z 2023 r. poz. 2620) wprowadza się następujące zmiany:</zdanie>
+        </p>
+        <punkt eId="DU/2024/1489__art_1__pkt_1" gd:GUID="d686d684-09d7-4b91-a848-bf9177d807ca" okres="okr_obowiazywanie.zdarz_wejscie_2024-10-09_DU-2024-1489_domyslne.x" wejscie-w-zycie="2024-10-09">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="7f7f604a-58c6-4bd8-af10-36b9fa0f3975" fragment="2" gd:fragmentGUID="3635e6c1-2e6e-4aad-8be2-7211044155c7" okres="okr_obowiazywanie.zdarz_wejscie_2024-10-09_DU-2024-1489_domyslne.x" wejscie-w-zycie="2024-10-09">§ 1 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2021/562" cudzyslowy="oba" gd:nowGUID="8d648cd7-58f1-400d-80d6-3fd92aa92d03" element-eId="DU/2021/562__art_1" funkcja="zastap"><paragraf eId="DU/2021/562__art_1" gd:GUID="248db071-c4c1-4638-88fd-954d915ad90e" okres="okr_obowiazywanie.zdarz_wejscie_2024-10-09_DU-2024-1489_domyslne.x" wejscie-w-zycie="2024-10-09"><nr>1</nr><ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="ecb1fcc9-671a-445f-a8bd-107b72c83a19" okres="okr_obowiazywanie.zdarz_wejscie_2024-10-09_DU-2024-1489_domyslne.x" wejscie-w-zycie="2024-10-09"><p><zdanie nr="1" gd:zdGUID="69eef613-9f2f-4d2e-8d1c-5335799729d2" fragment="1" gd:fragmentGUID="eaab53b9-3939-4628-9a98-9beaf9cc0c78" okres="okr_obowiazywanie.zdarz_wejscie_2024-10-09_DU-2024-1489_domyslne.x" wejscie-w-zycie="2024-10-09">Pełnomocnikiem Rządu do spraw Strategicznej Infrastruktury Energetycznej, o którym mowa w art. 12a ustawy z dnia 10 kwietnia 1997 r. – Prawo energetyczne, zwanym dalej „Pełnomocnikiem”, jest sekretarz stanu albo podsekretarz stanu w urzędzie obsługującym ministra właściwego do spraw gospodarki surowcami energetycznymi.</zdanie></p></ustep-n></paragraf></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2024/1489__art_1__pkt_2" gd:GUID="3468c4ea-d086-4d51-a2db-a51e701f7861" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-01_DU-2024-1489_odczytane.x" wejscie-w-zycie="2024-11-01">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="7f7f604a-58c6-4bd8-af10-36b9fa0f3975" fragment="3" gd:fragmentGUID="c079f115-3310-4c99-86e4-9b4560f3ff07" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-01_DU-2024-1489_odczytane.x" wejscie-w-zycie="2024-11-01">§ 6 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2021/562" cudzyslowy="oba" gd:nowGUID="d038e0c0-bb52-4439-ae71-c2f79257d8ff" element-eId="DU/2021/562__art_6" funkcja="zastap"><paragraf eId="DU/2021/562__art_6" gd:GUID="d54d5f1f-9578-45cf-8a0c-af115b2cb6c0" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-01_DU-2024-1489_odczytane.x" wejscie-w-zycie="2024-11-01"><nr>6</nr><ustep eId="DU/2021/562__art_6__ust_1" gd:GUID="ef56d346-7c0a-4d9a-bb2f-6cc84dabbd7d" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-01_DU-2024-1489_odczytane.x" wejscie-w-zycie="2024-11-01"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="cbeb1b5e-d16c-4f11-b7a1-080eaa21e17a" fragment="1" gd:fragmentGUID="cc501868-a3e2-45bc-8b7f-5f2d6a68581d" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-01_DU-2024-1489_odczytane.x" wejscie-w-zycie="2024-11-01">Obsługę merytoryczną, organizacyjno-prawną, techniczną i kancelaryjno-biurową Pełnomocnika zapewnia urząd obsługujący ministra właściwego do spraw gospodarki surowcami energetycznymi.</zdanie></p></ustep><ustep eId="DU/2021/562__art_6__ust_2" gd:GUID="2f3f61b9-fd5c-404e-a55a-cbbbe4397645" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-01_DU-2024-1489_odczytane.x" wejscie-w-zycie="2024-11-01"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="cfa6a90c-3d6c-4b50-81ee-8eec060170f8" fragment="1" gd:fragmentGUID="12183e38-5647-42bc-ad1e-a4720391c6ff" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-01_DU-2024-1489_odczytane.x" wejscie-w-zycie="2024-11-01">Wydatki związane z działalnością Pełnomocnika są pokrywane z budżetu państwa z części, której dysponentem jest minister właściwy do spraw gospodarki surowcami energetycznymi.</zdanie></p></ustep></paragraf></cytat-strukt>.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2024/1489__art_2" gd:GUID="5c35ab1d-e311-43e3-babd-a62972c0f9e5" okres="okr_obowiazywanie.zdarz_wejscie_2024-10-09_DU-2024-1489_domyslne.x" wejscie-w-zycie="2024-10-09">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="43b3f109-471e-4147-82de-2f7a7cbefded" okres="okr_obowiazywanie.zdarz_wejscie_2024-10-09_DU-2024-1489_domyslne.x" wejscie-w-zycie="2024-10-09">
+        <p>
+          <zdanie nr="1" gd:zdGUID="288e38b2-d7e4-454e-b5aa-311c8d163751" fragment="1" gd:fragmentGUID="6ce775c8-3486-4d09-b494-1895fc075acb" okres="okr_obowiazywanie.zdarz_wejscie_2024-10-09_DU-2024-1489_domyslne.x" wejscie-w-zycie="2024-10-09">Rozporządzenie wchodzi w życie z dniem następującym po dniu ogłoszenia, z wyjątkiem § 1 pkt 2, który wchodzi w życie z dniem 1 listopada 2024 r.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <organ-podpisujacy>Prezes Rady Ministrów: <i><osoba podpisujacy="true" gd:osobaGUID="a1cbb8b2-3a9d-4109-a927-2ee184cffdb3"><imie>D.</imie> <nazwisko>Tusk</nazwisko></osoba></i></organ-podpisujacy>
+  </rozporzadzenie>
+</akt-prawny>

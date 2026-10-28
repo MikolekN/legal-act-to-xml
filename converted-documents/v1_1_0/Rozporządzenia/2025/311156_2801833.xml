@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <rozporzadzenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/136</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>136fd6ff-47b5-49d7-859b-49fc6563dcfb</gd:GUIDwersji>
+      <AdresISAP>WDU20250000136</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>136</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 136</AdresWyswietlany>
+      <Tytul>Rozporządzenie Rady Ministrów z dnia 23 stycznia 2025 r. w sprawie szczegółowej zawartości Programu Ochrony Ludności i Obrony Cywilnej</Tytul>
+      <Rodzaj>ROZP</Rodzaj>
+      <DataOgloszenia>2025-02-03</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-01-23</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2025-02-04_DU-2025-136_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2025-02-04" warunek="z dniem następującym po dniu ogłoszenia" podstawa="§ 2" zrodlo="https://eli.gov.pl/eli/DU/2025/136" dowod="DU/2025/136__art_2" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2025-02-04_DU-2025-136_domyslne.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2025-02-04_DU-2025-136_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="2381adad-9dd1-402e-82bb-25b74004000d" rola="wydajacy">
+          <Nazwa>Rada Ministrów</Nazwa>
+        </Organ>
+        <Organ gd:GUID="7d4a3d4a-f256-4ecf-91f6-5245c5b8b314" rola="podpisujacy">
+          <Nazwa>Prezes Rady Ministrów</Nazwa>
+          <OrganPodpisujacy>Prezes Rady Ministrów</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>D.</imie> <nazwisko>Tusk</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Rozporządzenie</rodzaj-aktu>
+    <autor-aktu>Rady Ministrów</autor-aktu>
+    <data>z dnia 23 stycznia 2025 r.</data>
+    <tytul>w sprawie szczegółowej zawartości Programu Ochrony Ludności i Obrony Cywilnej</tytul>
+    <podstawa-prawna>Na podstawie art. 156 ust. 6 ustawy z dnia 5 grudnia 2024 r. o ochronie ludności i obronie cywilnej (Dz. U. poz. 1907) zarządza się, co następuje:</podstawa-prawna>
+    <paragraf eId="DU/2025/136__art_1" gd:GUID="cd03ea41-596b-4dac-bdb1-edc80d22098e" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-04_DU-2025-136_domyslne.x" wejscie-w-zycie="2025-02-04">
+      <nr>1</nr>
+      <ustep eId="DU/2025/136__art_1__ust_1" gd:GUID="66745ee0-75f4-4d7f-a551-9efabda4ba4b" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-04_DU-2025-136_domyslne.x" wejscie-w-zycie="2025-02-04">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="3ba49cfe-27d8-4dd6-a03d-ea59c07f9d19" fragment="1" gd:fragmentGUID="f9af0646-9603-45db-8491-2aa97079646e" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-04_DU-2025-136_domyslne.x" wejscie-w-zycie="2025-02-04">Program Ochrony Ludności i Obrony Cywilnej, zwany dalej „Programem”, zawiera:</zdanie>
+        </p>
+        <punkt eId="DU/2025/136__art_1__ust_1__pkt_1" gd:GUID="330d2a09-b0ca-4cba-b719-fb36bf316b4c" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-04_DU-2025-136_domyslne.x" wejscie-w-zycie="2025-02-04">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="3ba49cfe-27d8-4dd6-a03d-ea59c07f9d19" fragment="2" gd:fragmentGUID="3d3ff4e6-ff38-49a3-8e0e-a285fd7ff4bf" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-04_DU-2025-136_domyslne.x" wejscie-w-zycie="2025-02-04">informację o okresie realizacji Programu;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/136__art_1__ust_1__pkt_2" gd:GUID="3cd45f68-42fb-4807-80d1-090001bc42ac" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-04_DU-2025-136_domyslne.x" wejscie-w-zycie="2025-02-04">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="3ba49cfe-27d8-4dd6-a03d-ea59c07f9d19" fragment="3" gd:fragmentGUID="85b8dbfe-d092-46ee-b242-93ec2f87c9fe" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-04_DU-2025-136_domyslne.x" wejscie-w-zycie="2025-02-04">określenie planowanej wysokości corocznych środków przeznaczonych na finansowanie zadań z zakresu ochrony ludności i obrony cywilnej, o których mowa w art. 155 ust. 2 ustawy z dnia 5 grudnia 2024 r. o ochronie ludności i obronie cywilnej, zwanej dalej „ustawą”, z podziałem na poszczególne lata realizacji Programu;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/136__art_1__ust_1__pkt_3" gd:GUID="1ef7354b-d597-4d17-ad61-660114b0a777" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-04_DU-2025-136_domyslne.x" wejscie-w-zycie="2025-02-04">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="3ba49cfe-27d8-4dd6-a03d-ea59c07f9d19" fragment="4" gd:fragmentGUID="db1b8cea-cc5d-40f7-a0d5-dc84c9cb719a" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-04_DU-2025-136_domyslne.x" wejscie-w-zycie="2025-02-04">wskazanie zadań ochrony ludności i obrony cywilnej, z uwzględnieniem:</zdanie>
+          </p>
+          <litera eId="DU/2025/136__art_1__ust_1__pkt_3__lit_a" gd:GUID="94da3276-db34-422c-8d6a-f1fde9d6b58a" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-04_DU-2025-136_domyslne.x" wejscie-w-zycie="2025-02-04">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="3ba49cfe-27d8-4dd6-a03d-ea59c07f9d19" fragment="5" gd:fragmentGUID="eba86424-fb68-4959-968a-657edcaedccf" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-04_DU-2025-136_domyslne.x" wejscie-w-zycie="2025-02-04">formy i zakresu realizacji poszczególnych zadań ochrony ludności i obrony cywilnej,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/136__art_1__ust_1__pkt_3__lit_b" gd:GUID="e80a76b3-036d-4326-b095-514842cc8507" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-04_DU-2025-136_domyslne.x" wejscie-w-zycie="2025-02-04">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="3ba49cfe-27d8-4dd6-a03d-ea59c07f9d19" fragment="6" gd:fragmentGUID="e4c02951-fd61-433a-a5d4-938d04ed86be" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-04_DU-2025-136_domyslne.x" wejscie-w-zycie="2025-02-04">formy i wysokości planowanych środków na realizację poszczególnych zadań ochrony ludności i obrony cywilnej, przy czym w przypadku zadań realizowanych w okresie dłuższym niż rok – z wyszczególnieniem podziału wysokości planowanych środków na kolejne lata realizacji zadania,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/136__art_1__ust_1__pkt_3__lit_c" gd:GUID="bc565c6a-7fed-4b22-bcbf-4aef72163ac4" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-04_DU-2025-136_domyslne.x" wejscie-w-zycie="2025-02-04">
+            <nr>c</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="3ba49cfe-27d8-4dd6-a03d-ea59c07f9d19" fragment="7" gd:fragmentGUID="629431ad-1bc4-42d4-a8e1-fb1e81388a52" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-04_DU-2025-136_domyslne.x" wejscie-w-zycie="2025-02-04">podmiotów przekazujących środki, o których mowa w art. 155 ust. 2 ustawy, na realizację poszczególnych zadań ochrony ludności i obrony cywilnej,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/136__art_1__ust_1__pkt_3__lit_d" gd:GUID="a5d78139-9514-4a75-bf8d-e230468bb99b" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-04_DU-2025-136_domyslne.x" wejscie-w-zycie="2025-02-04">
+            <nr>d</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="3ba49cfe-27d8-4dd6-a03d-ea59c07f9d19" fragment="8" gd:fragmentGUID="e87c2395-6810-4f43-a21e-555f1dc7fbe4" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-04_DU-2025-136_domyslne.x" wejscie-w-zycie="2025-02-04">organów i podmiotów ochrony ludności realizujących poszczególne zadania ochrony ludności i obrony cywilnej,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/136__art_1__ust_1__pkt_3__lit_e" gd:GUID="577914d5-2cd0-4583-ac00-20c9386ef0c0" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-04_DU-2025-136_domyslne.x" wejscie-w-zycie="2025-02-04">
+            <nr>e</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="3ba49cfe-27d8-4dd6-a03d-ea59c07f9d19" fragment="9" gd:fragmentGUID="79854fe4-c6ae-491c-aec3-4ae704f21698" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-04_DU-2025-136_domyslne.x" wejscie-w-zycie="2025-02-04">planowanego harmonogramu realizacji poszczególnych zadań ochrony ludności i obrony cywilnej, ze wskazaniem zadań priorytetowych.</zdanie>
+            </p>
+          </litera>
+        </punkt>
+      </ustep>
+      <ustep eId="DU/2025/136__art_1__ust_2" gd:GUID="378ed643-7fe4-4e45-8906-435b5ee5d1f4" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-04_DU-2025-136_domyslne.x" wejscie-w-zycie="2025-02-04">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="0b41ff73-4c53-4f91-a60c-809fe71c24a2" fragment="1" gd:fragmentGUID="b6796a44-1221-4672-9dc3-8f10d68153e2" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-04_DU-2025-136_domyslne.x" wejscie-w-zycie="2025-02-04">Program zawiera informację o planowanej kontynuacji realizacji określonego zadania ochrony ludności i obrony cywilnej, jeżeli jego realizacja wykracza poza okres realizacji danego Programu.</zdanie>
+        </p>
+      </ustep>
+    </paragraf>
+    <paragraf eId="DU/2025/136__art_2" gd:GUID="273604b1-d1bf-4ed1-97bd-26e2c95132fb" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-04_DU-2025-136_domyslne.x" wejscie-w-zycie="2025-02-04">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="fddc67b7-5d62-4ffa-ab87-7f5e055d1c11" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-04_DU-2025-136_domyslne.x" wejscie-w-zycie="2025-02-04">
+        <p>
+          <zdanie nr="1" gd:zdGUID="7cd6a927-6a3e-4125-b087-eda73daf397a" fragment="1" gd:fragmentGUID="4bd0d9da-b1d6-41f5-87a4-196a8d27ac6d" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-04_DU-2025-136_domyslne.x" wejscie-w-zycie="2025-02-04">Rozporządzenie wchodzi w życie z dniem następującym po dniu ogłoszenia.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <organ-podpisujacy>Prezes Rady Ministrów: <i><osoba podpisujacy="true" gd:osobaGUID="893f148d-2c69-41bd-99d0-d728f7e611da"><imie>D.</imie> <nazwisko>Tusk</nazwisko></osoba></i></organ-podpisujacy>
+  </rozporzadzenie>
+</akt-prawny>

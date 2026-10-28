@@ -1,0 +1,1304 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <obwieszczenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2024/1541</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>bbd89fd2-9042-4b24-9bc5-ae42a93112a3</gd:GUIDwersji>
+      <AdresISAP>WDU20240001541</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2024</Rok>
+      <Pozycja>1541</Pozycja>
+      <AdresWyswietlany>Dz.U. 2024 poz. 1541</AdresWyswietlany>
+      <Tytul>Obwieszczenie Marszałka Sejmu Rzeczypospolitej Polskiej z dnia 10 października 2024 r. w sprawie ogłoszenia jednolitego tekstu ustawy o Polskiej Organizacji Turystycznej</Tytul>
+      <Rodzaj>OBW_TJ</Rodzaj>
+      <DataOgloszenia>2024-10-17</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2024-10-10</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_ujednolicenie_2024-10-17_DU-2024-1541_domyslne" rodzaj="ujednolicenie" pochodzenie="domyslne-z-aktu" data="2024-10-17" />
+          <Zdarzenie id="zdarz_wejscie_2025-01-01_DU-2024-1089_odczytane" rodzaj="wejscie-w-zycie" pochodzenie="odczytane" data="2025-01-01" podstawa="art. 8 pkt 3" zrodlo="https://eli.gov.pl/eli/DU/2024/1089" dowod="DU/2024/1541__odn_4" />
+          <Zdarzenie id="zdarz_uchylenie_2025-01-01_DU-2024-1089_odczytane" rodzaj="uchylenie" pochodzenie="odczytane" data="2025-01-01" podstawa="art. 8 pkt 4" zrodlo="https://eli.gov.pl/eli/DU/2024/1089" dowod="DU/2024/1541__odn_7" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_ujednolicenie.zdarz_ujednolicenie_2024-10-17_DU-2024-1541_domyslne" glowna="true">
+          <Przedzial rodzaj="ujednolicenie" od="zdarz_ujednolicenie_2024-10-17_DU-2024-1541_domyslne" />
+        </GrupaCzasowa>
+        <GrupaCzasowa id="okr_obowiazywanie.x.zdarz_wejscie_2025-01-01_DU-2024-1089_odczytane" glowna="false">
+          <Przedzial rodzaj="obowiazywanie" do="zdarz_wejscie_2025-01-01_DU-2024-1089_odczytane" />
+        </GrupaCzasowa>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1089_odczytane.x" glowna="false">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2025-01-01_DU-2024-1089_odczytane" />
+        </GrupaCzasowa>
+        <GrupaCzasowa id="okr_obowiazywanie.x.zdarz_uchylenie_2025-01-01_DU-2024-1089_odczytane" glowna="false">
+          <Przedzial rodzaj="obowiazywanie" do="zdarz_uchylenie_2025-01-01_DU-2024-1089_odczytane" />
+        </GrupaCzasowa>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_uchylenie_2025-01-01_DU-2024-1089_odczytane.x" glowna="false">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_uchylenie_2025-01-01_DU-2024-1089_odczytane" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <DataObowiazywaniaWersji>
+        <Od>zdarz_ujednolicenie_2024-10-17_DU-2024-1541_domyslne</Od>
+      </DataObowiazywaniaWersji>
+      <Organy>
+        <Organ gd:GUID="793300fa-0a93-47ff-9af5-da531019ace5" rola="wydajacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/MSEJMU">
+          <Nazwa>Marszałek Sejmu</Nazwa>
+          <OrganPodpisujacy>Marszałek Sejmu</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>S.</imie> <nazwisko>Hołownia</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Obwieszczenie</rodzaj-aktu>
+    <autor-aktu>Marszałka Sejmu Rzeczypospolitej Polskiej</autor-aktu>
+    <data>z dnia 10 października 2024 r.</data>
+    <tytul>w sprawie ogłoszenia jednolitego tekstu ustawy o Polskiej Organizacji Turystycznej</tytul>
+    <punkt-OTJ eId="DU/2024/1541__pkt_1" gd:GUID="3ff6bed8-cd7c-4339-bee8-b0dd5db4fab3">
+      <nr>1</nr>
+      <p>
+        <zdanie nr="1" gd:zdGUID="e3c1a86a-3625-4c09-ba63-17d5f0b64c28" fragment="1" gd:fragmentGUID="72faaf2f-fb0f-4e62-a0b6-0a40201477bd">Na podstawie art. 16 ust. 1 zdanie pierwsze ustawy z dnia 20 lipca 2000 r. o ogłaszaniu aktów normatywnych i niektórych innych aktów prawnych (Dz. U. z 2019 r. poz. 1461) ogłasza się w załączniku do niniejszego obwieszczenia jednolity tekst ustawy z dnia 25 czerwca 1999 r. o Polskiej Organizacji Turystycznej (Dz. U. z 2023 r. poz. 1608), z uwzględnieniem zmian wprowadzonych ustawą z dnia 28 czerwca 2024 r. o zmianie ustawy o finansach publicznych oraz niektórych innych ustaw (Dz. U. poz. 1089) oraz zmian wynikających z przepisów ogłoszonych przed dniem 2 października 2024 r.</zdanie>
+      </p>
+    </punkt-OTJ>
+    <punkt-OTJ eId="DU/2024/1541__pkt_2" gd:GUID="73a9235c-291e-4fd6-bcbf-f7512bc10162">
+      <nr>2</nr>
+      <p>
+        <zdanie nr="1" gd:zdGUID="3dc0cd87-d6e3-4b6a-9e80-665a2ecd390f" fragment="1" gd:fragmentGUID="fcd1d24b-83e4-4eb5-9f68-b957df62ba6e">Podany w załączniku do niniejszego obwieszczenia tekst jednolity ustawy nie obejmuje art. 34 i art. 44 ustawy z dnia 28 czerwca 2024 r. o zmianie ustawy o finansach publicznych oraz niektórych innych ustaw (Dz. U. poz. 1089), które stanowią:<tresc-strukt cudzyslowy="oba" gd:GUID="f1dbc85e-7337-46ad-b1f7-f451a767d805"><artykul eId="DU/2024/1089__art_34" gd:GUID="daee9632-a832-482c-afad-a6a0d59bbb7c"><nr>34</nr><ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="fa993f0d-28f3-409a-a269-33d87ef7e7e3"><p><zdanie nr="1" gd:zdGUID="c681f6ea-830c-4811-87a8-9e83fbb83c75" fragment="1" gd:fragmentGUID="a67abddf-9a06-4802-94f7-a2502d787ab4">Przepis art. 18 ust. 4 ustawy zmienianej w art. 8, w brzmieniu nadanym niniejszą ustawą, ma zastosowanie po raz pierwszy do rocznego sprawozdania finansowego Polskiej Organizacji Turystycznej za rok 2024.</zdanie></p></ustep-n></artykul></tresc-strukt><tresc-strukt cudzyslowy="oba" gd:GUID="00b1c2ac-dc68-452e-9490-844d581a6d1f"><artykul eId="DU/2024/1089__art_44" gd:GUID="15db46b5-3e1d-417d-8e74-a7595b1da424"><nr>44</nr><ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="cad4d32e-f044-4e22-882c-fb8bf7008a80"><p><zdanie nr="1" gd:zdGUID="7bdb322a-1c96-495a-9e68-81e2ae868310" fragment="1" gd:fragmentGUID="ac5ec873-9458-45e7-943b-2ba80c69839c">Ustawa wchodzi w życie z dniem następującym po dniu ogłoszenia, z wyjątkiem art. 8 pkt 3 i 4 oraz art. 16 pkt 2, które wchodzą w życie z dniem 1 stycznia 2025 r.</zdanie></p></ustep-n></artykul></tresc-strukt>.</zdanie>
+      </p>
+    </punkt-OTJ>
+    <organ-podpisujacy>Marszałek Sejmu: <i><osoba podpisujacy="true" gd:osobaGUID="a220b412-e0d0-4869-ace0-89da9dd04604"><imie>S.</imie> <nazwisko>Hołownia</nazwisko></osoba></i></organ-podpisujacy>
+    <ustawa>
+      <zalacznik-do>Załącznik do obwieszczenia Marszałka Sejmu Rzeczypospolitej Polskiej z dnia 10 października 2024 r. (Dz. U. poz. 1541)</zalacznik-do>
+      <rodzaj-aktu>Ustawa</rodzaj-aktu>
+      <data>z dnia 25 czerwca 1999 r.</data>
+      <tytul>o Polskiej Organizacji Turystycznej</tytul>
+      <rozdzial eId="DU/2024/1541__rozdz_1" gd:GUID="8a141c1a-e395-4070-9574-3c34e1d23b39">
+        <naglowek-rozdzialu>
+          <nr>1</nr>
+          <p>Przepisy ogólne</p>
+        </naglowek-rozdzialu>
+        <oddzial-n brak-eid="jednostka-nieoznaczona" gd:GUID="2a059936-de35-43bf-a117-74c4e834b4e2">
+          <artykul eId="DU/2024/1541__art_1" gd:GUID="098703b6-c44d-4146-a800-8568814b0349">
+            <nr>1</nr>
+            <ustep eId="DU/2024/1541__art_1__ust_1" gd:GUID="eeb0498f-3c15-4430-a57e-502b55bef086">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="e97e2f6b-5977-499c-b269-8603f1971cb6" fragment="1" gd:fragmentGUID="8e58ebba-bc3c-4352-9ed8-521503b716ba">W celu wzmocnienia promocji Polski w dziedzinie turystyki w kraju i za granicą tworzy się Polską Organizację Turystyczną z siedzibą w Warszawie.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2024/1541__art_1__ust_2" gd:GUID="c802778a-b99a-4dab-9e9e-ce8bc34822e4">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ba5307e9-6aa8-4b63-8dbc-519232ec6c65" fragment="1" gd:fragmentGUID="e7de8344-1140-43fc-b835-56a9fbba5669">Polska Organizacja Turystyczna tworzy warunki współpracy organów administracji rządowej, samorządu terytorialnego i organizacji zrzeszających przedsiębiorców z dziedziny turystyki, w tym samorządu gospodarczego i zawodowego, oraz stowarzyszeń działających w tej dziedzinie.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2024/1541__art_2" gd:GUID="d0127b2a-52d0-4758-bedf-399b1bdd0f07">
+            <nr>2</nr>
+            <ustep eId="DU/2024/1541__art_2__ust_1" gd:GUID="f7d6a925-2145-4237-9488-147d3d25b6bc">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="61b21c43-d772-4c55-8ce2-a447db7cab45" fragment="1" gd:fragmentGUID="49b278b6-b0a0-418b-8b73-f1406d259efb">Polska Organizacja Turystyczna jest państwową osobą prawną.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2024/1541__art_2__ust_2" gd:GUID="6b18039a-d555-48bc-8312-5c74800dd30b">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="47b6989a-ff28-435c-95b4-b29f1cd3ccf1" fragment="1" gd:fragmentGUID="c4ae0a96-90ae-413b-bc36-fd07709cece0">Nadzór nad Polską Organizacją Turystyczną sprawuje minister właściwy do spraw turystyki, zwany dalej „właściwym ministrem”.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2024/1541__art_3" gd:GUID="889fd467-6b9f-4606-901b-47bc6722f1cb">
+            <nr>3</nr>
+            <ustep eId="DU/2024/1541__art_3__ust_1" gd:GUID="0db2fab3-3a1a-464d-a284-6ca1f3546dc2">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="19f63369-d57c-4d3b-92cc-e1f220621d21" fragment="1" gd:fragmentGUID="85291dcf-376b-4c10-a0e2-c482a190f6a1">Do zadań Polskiej Organizacji Turystycznej należy:</zdanie>
+              </p>
+              <punkt eId="DU/2024/1541__art_3__ust_1__pkt_1" gd:GUID="d821d8ef-c53c-4243-b10a-8142d12da8fb">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="19f63369-d57c-4d3b-92cc-e1f220621d21" fragment="2" gd:fragmentGUID="bb9caabd-190b-4805-89da-80184ebe066e">promocja Polski jako kraju atrakcyjnego turystycznie;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1541__art_3__ust_1__pkt_2" gd:GUID="c1177778-03ce-4294-93c9-33193595456d">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="19f63369-d57c-4d3b-92cc-e1f220621d21" fragment="3" gd:fragmentGUID="756418ac-a98e-4a26-b648-55a9cc9bafea">zapewnianie funkcjonowania i rozwijania polskiego systemu informacji turystycznej w kraju i na świecie;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1541__art_3__ust_1__pkt_3" gd:GUID="4253663f-0ca2-4ba2-8738-1cae8aa43bd3">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="19f63369-d57c-4d3b-92cc-e1f220621d21" fragment="4" gd:fragmentGUID="26d767bb-3d42-4e67-8b42-51e30f198e02">inicjowanie, opiniowanie i wspomaganie planów rozwoju i modernizacji infrastruktury turystycznej;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1541__art_3__ust_1__pkt_4" gd:GUID="5f50e50e-60b6-45bb-a021-8aba2b95a1f1">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="19f63369-d57c-4d3b-92cc-e1f220621d21" fragment="5" gd:fragmentGUID="2638c225-3e25-44a8-93ff-fe08716d0144">wykonywanie innych zadań powierzonych przez organy i jednostki, o których mowa w ust. 2 pkt 1, 1c i 2, na zasadach określonych w umowie zawieranej pomiędzy tymi organami i jednostkami a Polską Organizacją Turystyczną;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1541__art_3__ust_1__pkt_5" gd:GUID="fc174e8a-588f-4f48-8019-919b00b2d36e">
+                <nr>5</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="19f63369-d57c-4d3b-92cc-e1f220621d21" fragment="6" gd:fragmentGUID="794e6489-031b-4c01-9cfb-d1ef4db2f693">inspirowanie tworzenia regionalnych organizacji turystycznych, obejmujących swoim zakresem działania obszar jednego lub więcej województw, oraz lokalnych organizacji turystycznych, obejmujących swoim zakresem działania obszar jednej lub więcej jednostek samorządu lokalnego, a także z nimi współdziałanie.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2024/1541__art_3__ust_2" gd:GUID="21848d32-1b53-46cc-9c41-d3060c733451">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="4b1184f0-7751-4e65-8d30-48a750128cfd" fragment="1" gd:fragmentGUID="b33ee5d1-5fa3-4daa-ad72-8ba8d5ba5faa">Polska Organizacja Turystyczna, wykonując swoje zadania, współpracuje w szczególności z:</zdanie>
+              </p>
+              <punkt eId="DU/2024/1541__art_3__ust_2__pkt_1" gd:GUID="40a4261c-63f0-4453-9565-8d54ce8325b7">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="4b1184f0-7751-4e65-8d30-48a750128cfd" fragment="2" gd:fragmentGUID="0c7c3220-564c-44e5-b823-ed8171b1baa9">jednostkami samorządu terytorialnego;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1541__art_3__ust_2__pkt_1a" gd:GUID="2f8588a1-f362-49d7-bf5b-e95c77ded623">
+                <nr>1a</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="4b1184f0-7751-4e65-8d30-48a750128cfd" fragment="3" gd:fragmentGUID="8e0631b4-74d7-4667-ae6b-2a11b2db2cbb">regionalnymi i lokalnymi organizacjami turystycznymi;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1541__art_3__ust_2__pkt_1b" gd:GUID="4e018e93-ad2a-44c6-b02d-fa04985028de">
+                <nr>1b</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="4b1184f0-7751-4e65-8d30-48a750128cfd" fragment="4" gd:fragmentGUID="4c0ec429-899b-413c-93ef-bef38601383b">związkami metropolitalnymi;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1541__art_3__ust_2__pkt_1c" gd:GUID="646a042c-5162-4ce3-b9a3-81923a1c15a4">
+                <nr>1c</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="4b1184f0-7751-4e65-8d30-48a750128cfd" fragment="5" gd:fragmentGUID="f64cefcd-c512-45d8-8d89-808b62038425">ministrem właściwym do spraw kultury fizycznej – w zakresie promocji Polski przez polskich sportowców lub kluby sportowe w sportach drużynowych uczestniczące we współzawodnictwie sportowym organizowanym przez polskie związki sportowe oraz biorące udział w międzynarodowych rozgrywkach sportowych;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1541__art_3__ust_2__pkt_2" gd:GUID="d7dd3eba-da9b-4a62-b64d-b53eecd27110">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="4b1184f0-7751-4e65-8d30-48a750128cfd" fragment="6" gd:fragmentGUID="caf8c86d-7bab-4d46-aa8c-327641d75bf6">organizacjami zrzeszającymi przedsiębiorców z dziedziny turystyki, w tym samorządu gospodarczego i zawodowego, oraz stowarzyszeniami działającymi w tej dziedzinie;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1541__art_3__ust_2__pkt_3" gd:GUID="6d634fb9-bcba-47c7-ba36-41b5464ea0f6">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="4b1184f0-7751-4e65-8d30-48a750128cfd" fragment="7" gd:fragmentGUID="05a8f8b8-45a8-4633-a440-ceba6ce6ebb1">polskimi przedstawicielstwami zagranicznymi – w zakresie zadań wykonywanych za granicą.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2024/1541__art_3__ust_3" gd:GUID="a1ed467a-368f-426a-ae18-ad9181dc55cf">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="b5505eec-268e-48ef-a9ab-c22edf937435" fragment="1" gd:fragmentGUID="9c8fe269-b8f3-4025-8f65-840bf1b6cbea">W sprawach określonych w art. 27a ustawy z dnia 4 września 1997 r. o działach administracji rządowej (Dz. U. z 2024 r. poz. 1370) Polska Organizacja Turystyczna wspomaga właściwego ministra.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2024/1541__art_3__ust_4" gd:GUID="dd89a7cd-5cb3-4765-a242-db63efca1146">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="0ec2ca90-b814-49f2-b1d9-15fb5274a0be" fragment="1" gd:fragmentGUID="b4b0ccd7-03ba-4e9f-b0ae-3810487f9ef5">Do zamówień na usługi lub dostawy, udzielanych przez Polską Organizację Turystyczną w ramach realizacji zadań powierzonych jej w umowie, o której mowa w ust. 1 pkt 4, przez ministra właściwego do spraw kultury fizycznej, nie stosuje się przepisów ustawy z dnia 11 września 2019 r. – Prawo zamówień publicznych (Dz. U. z 2024 r. poz. 1320).</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2024/1541__art_3__ust_5" gd:GUID="20df13e7-8ee5-4133-9c16-471e0a52c570">
+              <nr>5</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="b27038b3-730e-4385-93da-8ac774d69746" fragment="1" gd:fragmentGUID="824fb8da-863c-4f94-8ffd-b9a8640f981e">Udzielając zamówień, o których mowa w ust. 4, Polska Organizacja Turystyczna:</zdanie>
+              </p>
+              <punkt eId="DU/2024/1541__art_3__ust_5__pkt_1" gd:GUID="8a7ba86b-212c-4a1e-9c6d-8e967e7abc0f">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="b27038b3-730e-4385-93da-8ac774d69746" fragment="2" gd:fragmentGUID="7ca0192f-5d11-45d9-94e9-820afad7a77f">zamieszcza ogłoszenie o udzielanym zamówieniu w Biuletynie Informacji Publicznej Polskiej Organizacji Turystycznej;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1541__art_3__ust_5__pkt_2" gd:GUID="3dacbec1-e89a-4674-b65b-5bffccb42efa">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="b27038b3-730e-4385-93da-8ac774d69746" fragment="3" gd:fragmentGUID="549bbaa9-63b1-443d-92b4-5077ab9e168b">zapewnia przejrzystość postępowania o udzielenie zamówienia i równe traktowanie podmiotów zainteresowanych realizacją zamówienia oraz uwzględnia okoliczności mogące mieć wpływ na jego udzielenie;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1541__art_3__ust_5__pkt_3" gd:GUID="cd3d12dc-0dc1-46b5-9207-82af8e09779f">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="b27038b3-730e-4385-93da-8ac774d69746" fragment="4" gd:fragmentGUID="66ab5858-1c10-47c4-90c8-cb8108f98d2a">w odniesieniu do zamawianych dostaw lub usług może kierować się, oprócz kryterium ceny, również innymi kryteriami, w szczególności odnoszącymi się do aspektów środowiskowych lub społecznych;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1541__art_3__ust_5__pkt_4" gd:GUID="d0b7ac54-ad21-4377-ab83-ddcbdbd82130">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="b27038b3-730e-4385-93da-8ac774d69746" fragment="5" gd:fragmentGUID="c8825f76-8519-441d-be5f-b36984a5c877">nie udostępnia informacji związanych z zamówieniem stanowiących tajemnicę przedsiębiorstwa w rozumieniu ustawy z dnia 16 kwietnia 1993 r. o zwalczaniu nieuczciwej konkurencji (Dz. U. z 2022 r. poz. 1233), jeżeli nie później niż w terminie składania ofert podmiot zainteresowany realizacją zamówienia zastrzegł, że nie mogą być one udostępniane, oraz wykazał, że zastrzeżone informacje stanowią tajemnicę przedsiębiorstwa, z wyjątkiem nazwy (firmy) albo imienia i nazwiska oraz adresu podmiotu zainteresowanego realizacją zamówienia, a także informacji dotyczących ceny, terminu realizacji zamówienia, okresu gwarancji i warunków płatności zawartych w ofercie, które nie mogą zostać zastrzeżone;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1541__art_3__ust_5__pkt_5" gd:GUID="f3e3aa55-f05a-4d1d-9e8c-857ed226b863">
+                <nr>5</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="b27038b3-730e-4385-93da-8ac774d69746" fragment="6" gd:fragmentGUID="c9260ee6-954a-4115-9586-62beba21e2b8">niezwłocznie zamieszcza w Biuletynie Informacji Publicznej Polskiej Organizacji Turystycznej informację o udzieleniu zamówienia, podając nazwę (firmę) albo imię i nazwisko podmiotu, z którym zawarła umowę o realizację zamówienia, albo informację o nieudzieleniu zamówienia.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2024/1541__art_3__ust_6" gd:GUID="851a3014-4a0e-42c5-bdfd-19e88460e234">
+              <nr>6</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="40ef7ea5-aae1-466c-a263-dbf43da61014" fragment="1" gd:fragmentGUID="dc1f6cf3-7ec9-48c6-a758-4ee74348297b">Osoby wykonujące czynności w postępowaniu o udzielenie zamówienia, o którym mowa w ust. 4, podlegają wyłączeniu z tego postępowania, jeżeli:</zdanie>
+              </p>
+              <punkt eId="DU/2024/1541__art_3__ust_6__pkt_1" gd:GUID="f8ff9540-4a16-4e7f-bb42-96548b9a4c19">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="40ef7ea5-aae1-466c-a263-dbf43da61014" fragment="2" gd:fragmentGUID="fd3e24ad-cb37-44a0-a138-1b7c172f9b0a">ubiegają się o udzielenie tego zamówienia;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1541__art_3__ust_6__pkt_2" gd:GUID="d9a68898-d8ed-4ec1-a4bf-b652e72ed3be">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="40ef7ea5-aae1-466c-a263-dbf43da61014" fragment="3" gd:fragmentGUID="107ac4da-eb4f-465f-b45b-9d15bf293c81">pozostają w związku małżeńskim, w stosunku pokrewieństwa lub powinowactwa w linii prostej, pokrewieństwa lub powinowactwa w linii bocznej do drugiego stopnia lub są związane z tytułu przysposobienia, opieki lub kurateli z podmiotem zainteresowanym realizacją zamówienia, jego zastępcą prawnym lub członkiem jego organu zarządzającego lub nadzorczego;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1541__art_3__ust_6__pkt_3" gd:GUID="42a6de82-8d67-4ccb-bd7b-58e5f154d5f9">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="40ef7ea5-aae1-466c-a263-dbf43da61014" fragment="4" gd:fragmentGUID="97136177-e400-4883-9b1e-aefb6a8b2f8f">przed upływem 3 lat od dnia wszczęcia postępowania o udzielenie zamówienia pozostawały lub pozostają w stosunku pracy lub zlecenia z podmiotem zainteresowanym realizacją zamówienia lub były członkami jego organu zarządzającego lub nadzorczego;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1541__art_3__ust_6__pkt_4" gd:GUID="00a6a18c-4aca-4f75-8ab5-a44c5d67107c">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="40ef7ea5-aae1-466c-a263-dbf43da61014" fragment="5" gd:fragmentGUID="f99a4f45-d4b8-422b-b3f0-dded89528596">pozostają z podmiotem zainteresowanym realizacją zamówienia w takim stosunku prawnym lub faktycznym, że może to budzić uzasadnione wątpliwości co do bezstronności tych osób;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1541__art_3__ust_6__pkt_5" gd:GUID="f06310e4-4a12-4b16-9ce5-f2862ea1eb9d">
+                <nr>5</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="40ef7ea5-aae1-466c-a263-dbf43da61014" fragment="6" gd:fragmentGUID="4cc1f637-f6a4-40e5-adf9-d23dccc008de">zostały prawomocnie skazane za przestępstwo popełnione w związku z postępowaniem o udzielenie zamówienia publicznego, o którym mowa w art. 228–230a, art. 270, art. 276, art. 286, art. 287, art. 296, art. 296a, art. 297, art. 303 lub art. 305 ustawy z dnia 6 czerwca 1997 r. – Kodeks karny (Dz. U. z 2024 r. poz. 17 i 1228), o ile nie nastąpiło zatarcie skazania.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2024/1541__art_3__ust_7" gd:GUID="941ad2c3-9095-4323-98f5-172fbb5ca135">
+              <nr>7</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="453a6456-b444-48a5-b5a1-ade044e212b8" fragment="1" gd:fragmentGUID="6a67b6b0-c136-4a15-8302-cb6b5f5d1596">Osoby wykonujące czynności w postępowaniu o udzielenie zamówienia, o którym mowa w ust. 4, składają, pod rygorem odpowiedzialności karnej za złożenie fałszywego oświadczenia, w formie pisemnej, oświadczenie o braku istnienia lub istnieniu okoliczności, o których mowa w ust. 6.</zdanie>
+                <zdanie nr="2" gd:zdGUID="1ce521cd-862b-40e2-8c3c-2916b9455573" fragment="1" gd:fragmentGUID="c43293e1-e0b9-4806-bfbe-3e1b140a8b6f">Składający oświadczenie jest obowiązany do zawarcia w nim klauzuli o następującej treści: „Jestem świadomy odpowiedzialności karnej za złożenie fałszywego oświadczenia.”.</zdanie>
+                <zdanie nr="3" gd:zdGUID="a688e6f3-c11b-4760-a23c-f69a87be3165" fragment="1" gd:fragmentGUID="e8aab948-2cf2-4e59-b7e8-9abdd059f7ff">Klauzula ta zastępuje pouczenie o odpowiedzialności karnej za złożenie fałszywego oświadczenia.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2024/1541__art_4" gd:GUID="f6c496ce-92eb-40cc-81fb-c714f0b76450">
+            <nr>4</nr>
+            <ustep eId="DU/2024/1541__art_4__ust_1" gd:GUID="807b46f9-12aa-47ba-85cb-b1862ef85678">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="f914a1ca-0fda-43b8-ac41-3c081272d4c1" fragment="1" gd:fragmentGUID="1c186a46-a9e1-40bf-9bc3-e4327d910bbc">W celu wykonania zadania, o którym mowa w art. 3 ust. 1 pkt 5, mogą być tworzone regionalne i lokalne organizacje turystyczne.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2024/1541__art_4__ust_2" gd:GUID="db7cb2a7-9ca7-44cb-8e0f-363547959800">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="7346d450-5e60-4bcc-bc19-adfdebc151ef" fragment="1" gd:fragmentGUID="9c300cc7-5038-45b5-ad35-34e3d2acffc7">Do tworzenia i działania regionalnych i lokalnych organizacji turystycznych stosuje się przepisy ustawy z dnia 7 kwietnia 1989 r. – Prawo o stowarzyszeniach (Dz. U. z 2020 r. poz. 2261), z tym że:</zdanie>
+              </p>
+              <punkt eId="DU/2024/1541__art_4__ust_2__pkt_1" gd:GUID="6794593e-a8a9-4944-81c1-dd1db2f4de2f">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="7346d450-5e60-4bcc-bc19-adfdebc151ef" fragment="2" gd:fragmentGUID="c41b9e7f-9dc0-4d27-b19a-00cf218e8247">członkiem tych organizacji mogą być osoby fizyczne i osoby prawne, w szczególności podmioty, o których mowa w art. 3 ust. 2 pkt 1, 1b i 2;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1541__art_4__ust_2__pkt_2" gd:GUID="4a9b4aa7-6614-4ed7-b7c5-7495cff2989b">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="7346d450-5e60-4bcc-bc19-adfdebc151ef" fragment="3" gd:fragmentGUID="c7adb937-cc31-466c-b3cc-6671ffbb8ced">nadzór nad tymi organizacjami sprawuje minister właściwy do spraw turystyki;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1541__art_4__ust_2__pkt_3" gd:GUID="a70d70f1-1c85-4f52-bdc4-86adfd323559">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="7346d450-5e60-4bcc-bc19-adfdebc151ef" fragment="4" gd:fragmentGUID="47125fa2-ca00-4f38-92d1-99cb63dbe256">organizacje te mogą prowadzić działalność gospodarczą w rozmiarach służących realizacji ich celów i w przedmiocie określonym w ich statutach.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2024/1541__art_4__ust_3" gd:GUID="04845610-79ac-4a07-9af3-995b5a4e9b8e">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="414b8b6c-7b95-4fd9-a742-1268ea542c95" fragment="1" gd:fragmentGUID="b14d8686-86a4-4d49-b860-215c55eb3b8c">Do zadań regionalnych i lokalnych organizacji turystycznych należy:</zdanie>
+              </p>
+              <punkt eId="DU/2024/1541__art_4__ust_3__pkt_1" gd:GUID="0b5e2361-f87f-4c87-8427-a07e8f8e0275">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="414b8b6c-7b95-4fd9-a742-1268ea542c95" fragment="2" gd:fragmentGUID="610f3a98-9dd5-4234-8f66-8093bd10b9c2">promocja turystyczna obszaru ich działania;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1541__art_4__ust_3__pkt_2" gd:GUID="39a59590-c8d7-44c0-88aa-fda117391136">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="414b8b6c-7b95-4fd9-a742-1268ea542c95" fragment="3" gd:fragmentGUID="aa3bca73-a26a-46cd-b587-2d7b4b4f39b6">wspomaganie funkcjonowania i rozwoju informacji turystycznej;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1541__art_4__ust_3__pkt_3" gd:GUID="bc0f3cec-6a8d-40f0-998f-b59054e63fb2">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="414b8b6c-7b95-4fd9-a742-1268ea542c95" fragment="4" gd:fragmentGUID="feec5d42-35e3-41a3-a96f-e4cf3d9c2a26">inicjowanie, opiniowanie i wspieranie planów rozwoju i modernizacji infrastruktury turystycznej;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1541__art_4__ust_3__pkt_4" gd:GUID="626a4c17-39e1-4dcb-b61c-28e8d56f80f7">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="414b8b6c-7b95-4fd9-a742-1268ea542c95" fragment="5" gd:fragmentGUID="627f009a-837e-4a65-a612-dc0fbea0e3cc">współpraca z Polską Organizacją Turystyczną.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2024/1541__art_4__ust_4" gd:GUID="1a68719c-684e-48d5-9482-ab7b7ae777cf">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="1fd2ffe1-3f2e-4263-974b-6b2a90782cd9" fragment="1" gd:fragmentGUID="8f3ee9d5-a320-4ff5-a715-f7056506e40c">Minister właściwy do spraw turystyki może, w drodze rozporządzenia, przekazać nadzór nad regionalnymi organizacjami turystycznymi lub lokalnymi organizacjami turystycznymi właściwym wojewodom.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2024/1541__art_4a" gd:GUID="5f0c650b-fd0e-4500-9450-61fb8221a215">
+            <nr>4a</nr>
+            <ustep eId="DU/2024/1541__art_4a__ust_1" gd:GUID="7b6bcdd9-acc9-4556-b9d8-1516b210f499">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="d231d845-f6e9-47d5-a0f7-df9c29d75d6e" fragment="1" gd:fragmentGUID="5fbcd9a2-9d3b-49dd-8d36-b80515c06c90">Polskiej Organizacji Turystycznej przysługuje wyłączne prawo używania znaku ustalonego dla celów promocji Polski w dziedzinie turystyki.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2024/1541__art_4a__ust_2" gd:GUID="c82709d9-dff2-4266-8b57-9db5420d69c8">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="80e6c87f-1377-4515-9a38-5451fe748d3a" fragment="1" gd:fragmentGUID="861f853e-a465-4a02-941f-61d68fced9e7">Minister właściwy do spraw turystyki określi, w drodze rozporządzenia, wzór znaku, o którym mowa w ust. 1.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+        </oddzial-n>
+      </rozdzial>
+      <rozdzial eId="DU/2024/1541__rozdz_2" gd:GUID="1e2ebfb6-dfea-4c6f-8508-6c0803726924">
+        <naglowek-rozdzialu>
+          <nr>2</nr>
+          <p>Organy Polskiej Organizacji Turystycznej</p>
+        </naglowek-rozdzialu>
+        <oddzial-n brak-eid="jednostka-nieoznaczona" gd:GUID="bd638525-8d9f-4a9e-835b-66080b31bf0d">
+          <artykul eId="DU/2024/1541__art_5" gd:GUID="0ba63d28-9277-4a3c-8d79-b492d1d7f709">
+            <nr>5</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="d67f6d77-ac1c-4b52-bafb-699d78e71b66">
+              <p>
+                <zdanie nr="1" gd:zdGUID="35b649f4-f2f4-41a0-b91e-6d653274af71" fragment="1" gd:fragmentGUID="a8a41534-db38-4b3e-bddb-056402e30142">Organami Polskiej Organizacji Turystycznej są:</zdanie>
+              </p>
+              <punkt eId="DU/2024/1541__art_5__pkt_1" gd:GUID="34816b58-7058-420d-b372-00094e030a1b">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="35b649f4-f2f4-41a0-b91e-6d653274af71" fragment="2" gd:fragmentGUID="48e67f96-ba0d-4688-8d71-62215775cfb2">Rada Polskiej Organizacji Turystycznej;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1541__art_5__pkt_2" gd:GUID="6aad8a85-9eb4-42bd-8e29-0df1d562ae7c">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="35b649f4-f2f4-41a0-b91e-6d653274af71" fragment="3" gd:fragmentGUID="97338539-6639-4b7f-ae79-a08316b885f7">Prezes Polskiej Organizacji Turystycznej.</zdanie>
+                </p>
+              </punkt>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2024/1541__art_6" gd:GUID="2b7e6f4e-043e-4210-8e8b-913d61b379bc">
+            <nr>6</nr>
+            <ustep eId="DU/2024/1541__art_6__ust_1" gd:GUID="e7fa4564-1864-41ce-b833-9980691abbef">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="a0d275c4-8a89-4c99-b754-3c8a193f223d" fragment="1" gd:fragmentGUID="bd54a5e7-56b8-48ad-9958-d998661e5097">Rada Polskiej Organizacji Turystycznej wykonuje kompetencje stanowiące i opiniodawcze określone w ustawie.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2024/1541__art_6__ust_2" gd:GUID="140353b6-bfd5-4089-bfe4-78cb1d22e96e">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="9e9f17a1-b07f-4bdb-a035-25c5fe962e8b" fragment="1" gd:fragmentGUID="5afb1d4f-5c40-4e42-b9c8-b6d541945540">Do kompetencji Rady Polskiej Organizacji Turystycznej należy w szczególności:</zdanie>
+              </p>
+              <punkt eId="DU/2024/1541__art_6__ust_2__pkt_1" gd:GUID="2fc4ce41-8351-4b8d-a23f-1d56c1a644d1">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="9e9f17a1-b07f-4bdb-a035-25c5fe962e8b" fragment="2" gd:fragmentGUID="0f5d04ab-2b2e-431a-a560-2afe6b6941dc">przyjmowanie przedstawionych przez Prezesa Polskiej Organizacji Turystycznej projektów rocznych planów finansowych;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1541__art_6__ust_2__pkt_2" gd:GUID="b9b3820e-9f18-4132-8868-2d0c2a906245">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="9e9f17a1-b07f-4bdb-a035-25c5fe962e8b" fragment="3" gd:fragmentGUID="e2888747-23dd-47a6-8336-2c09ebfccbeb">przyjmowanie rocznych i wieloletnich programów działania Polskiej Organizacji Turystycznej;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1541__art_6__ust_2__pkt_3" gd:GUID="eef9cc23-e937-4d02-90e8-5924d8bcc4ae">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="9e9f17a1-b07f-4bdb-a035-25c5fe962e8b" fragment="4" gd:fragmentGUID="a64bfb60-9767-4052-acc3-d29f53bfd698">zatwierdzanie rocznych sprawozdań z działalności Polskiej Organizacji Turystycznej;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1541__art_6__ust_2__pkt_4" gd:GUID="cb83aaac-6634-4574-9f03-83313d41da2c">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="9e9f17a1-b07f-4bdb-a035-25c5fe962e8b" fragment="5" gd:fragmentGUID="d26922df-27cf-4dcb-90de-1bb921f9d820">przyjmowanie rocznych sprawozdań finansowych Polskiej Organizacji Turystycznej;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1541__art_6__ust_2__pkt_5" gd:GUID="125d2d1d-3be4-49d2-8c99-d3e474f450e8">
+                <nr>5</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="9e9f17a1-b07f-4bdb-a035-25c5fe962e8b" fragment="6" gd:fragmentGUID="a5dea3a4-b4ee-44f6-a0e0-fc8f0a2b2244">opiniowanie kandydatów na stanowisko Prezesa i wiceprezesów Polskiej Organizacji Turystycznej;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1541__art_6__ust_2__pkt_6" gd:GUID="c1917fd7-7bd9-4f44-bd66-8cae89348964">
+                <nr>6</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="9e9f17a1-b07f-4bdb-a035-25c5fe962e8b" fragment="7" gd:fragmentGUID="dae36c4a-5035-4b17-a6b0-567c86d41521">określanie zasad wynagradzania pracowników Polskiej Organizacji Turystycznej i wymagań kwalifikacyjnych wobec tych pracowników.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2024/1541__art_6__ust_3" gd:GUID="e7d37f30-d69b-4d78-906a-367277a69ca3">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="614d17bc-1bee-4d8b-a5ad-d1d683446a1e" fragment="1" gd:fragmentGUID="2a4a8e06-4651-4a7c-b7cc-9f85c224f294">Rada Polskiej Organizacji Turystycznej jest uprawniona do przedstawiania opinii lub wniosków we wszystkich sprawach dotyczących działalności Polskiej Organizacji Turystycznej.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2024/1541__art_7" gd:GUID="b8f5cf26-644d-4673-9a31-7d3183636062">
+            <nr>7</nr>
+            <ustep eId="DU/2024/1541__art_7__ust_1" gd:GUID="4248fc87-2803-4d6a-843b-4ccd14f5e4d0">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ade63538-db59-49a5-863b-b5557a1d560a" fragment="1" gd:fragmentGUID="0f6af6c4-66b0-459a-abe4-1856e186cff0">W skład Rady Polskiej Organizacji Turystycznej wchodzi 12–18 członków powoływanych przez właściwego ministra spośród kandydatów przedstawionych przez:</zdanie>
+              </p>
+              <punkt eId="DU/2024/1541__art_7__ust_1__pkt_1" gd:GUID="48517d80-f0a1-4e9e-a869-cb65c164c98a">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="ade63538-db59-49a5-863b-b5557a1d560a" fragment="2" gd:fragmentGUID="c9502a0b-2ca9-4d94-9782-bdc7b304f58a">administrację rządową;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1541__art_7__ust_1__pkt_2" gd:GUID="02bdc24d-0888-41ed-a873-9ab6875a3499">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="ade63538-db59-49a5-863b-b5557a1d560a" fragment="3" gd:fragmentGUID="e2aa90a3-ac28-4886-ad4a-9d3ab3b2eb67">jednostki lub ogólnopolskie reprezentacje samorządu terytorialnego;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1541__art_7__ust_1__pkt_3" gd:GUID="c3774add-232d-4dd0-bac6-3d79674948a5">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="ade63538-db59-49a5-863b-b5557a1d560a" fragment="4" gd:fragmentGUID="005a785c-3736-4c43-b09c-22d9de70267e">samorząd gospodarczy i samorząd zawodowy oraz stowarzyszenia działające w dziedzinie turystyki, a także przewoźników.</zdanie>
+                </p>
+                <fragment gd:GUID="fdfda2c4-40e1-4f42-bc84-1304d151a978">Podmioty wymienione w pkt 1–3 są reprezentowane w Radzie Polskiej Organizacji Turystycznej w równych proporcjach.</fragment>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2024/1541__art_7__ust_2" gd:GUID="4247fa53-fbee-40c6-bb38-09250d176d1b">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="5a19e516-2e61-43f7-8805-626cf6b7292e" fragment="1" gd:fragmentGUID="37725243-ce5a-4633-aebb-eba91b5c5e34">Kadencja Rady Polskiej Organizacji Turystycznej trwa 3 lata.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2024/1541__art_7__ust_3" gd:GUID="8e7fc893-23c8-48f2-af2d-76b5bee319ee">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="cfdb7ecf-0eb5-42f1-a2df-d47377b9a3d4" fragment="1" gd:fragmentGUID="b677679d-2e35-446e-9d36-1dcfcb547fd3">Rada powołuje ze swojego składu i odwołuje Przewodniczącego i zastępcę Przewodniczącego Rady Polskiej Organizacji Turystycznej.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2024/1541__art_7__ust_4" gd:GUID="643666f0-11ec-4a15-99db-a7edbc43d74b">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="4d7e8622-7871-4269-bce2-c6197a9ceaca" fragment="1" gd:fragmentGUID="2d0d1bd5-e70a-41b6-91cd-499fb36b2b33">W razie uzyskania równej liczby głosów w Radzie Polskiej Organizacji Turystycznej, rozstrzyga głos jej Przewodniczącego.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2024/1541__art_7__ust_5" gd:GUID="7918ac04-5c28-4831-b31e-ee85b0060321">
+              <nr>5</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="cc7b5959-34e3-4071-8a5b-7b39362db56d" fragment="1" gd:fragmentGUID="46956c88-cf30-4afd-a3b2-6eb8b897f013">Ustanie członkostwa w Radzie Polskiej Organizacji Turystycznej może nastąpić z powodu:</zdanie>
+              </p>
+              <punkt eId="DU/2024/1541__art_7__ust_5__pkt_1" gd:GUID="ecae7dcd-24f4-4b73-9f25-a73efb7e5166">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="cc7b5959-34e3-4071-8a5b-7b39362db56d" fragment="2" gd:fragmentGUID="2350379e-6429-4e6e-a091-5738ab6d3514">odwołania na umotywowany wniosek podmiotu, który przedstawił kandydaturę;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1541__art_7__ust_5__pkt_2" gd:GUID="8641d804-d8aa-4658-a14a-d4dae2d31920">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="cc7b5959-34e3-4071-8a5b-7b39362db56d" fragment="3" gd:fragmentGUID="eb720559-d4ac-478e-bbf4-d456aac6b963">pisemnej rezygnacji;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1541__art_7__ust_5__pkt_3" gd:GUID="1edca60a-d0a7-4797-9232-ec9d897eda6e">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="cc7b5959-34e3-4071-8a5b-7b39362db56d" fragment="4" gd:fragmentGUID="fb314f1b-2668-4893-aa28-5bf44acc3c07">ograniczenia albo utraty zdolności do czynności prawnych;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1541__art_7__ust_5__pkt_4" gd:GUID="a9b91b22-0088-402f-81cd-94c73c78b467">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="cc7b5959-34e3-4071-8a5b-7b39362db56d" fragment="5" gd:fragmentGUID="d0ab3f8b-8f5d-4f24-9c26-50143d87b042">śmierci.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2024/1541__art_7__ust_6" gd:GUID="3ebd1b5e-4bf3-4dfb-92e2-b09f46f4f3d7">
+              <nr>6</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="6405babe-15d8-4545-8340-22f1fcfcb35a" fragment="1" gd:fragmentGUID="b47f3148-a602-49e5-957e-5e95dccf87ed">Właściwy minister:</zdanie>
+              </p>
+              <punkt eId="DU/2024/1541__art_7__ust_6__pkt_1" gd:GUID="3554ae79-73fc-4800-864d-3d664583b970">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="6405babe-15d8-4545-8340-22f1fcfcb35a" fragment="2" gd:fragmentGUID="e3cb1d94-daa8-4a4a-969c-312ad9885385">odwołuje członka Rady Polskiej Organizacji Turystycznej w wypadku, o którym mowa w ust. 5 pkt 1;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1541__art_7__ust_6__pkt_2" gd:GUID="57094909-4586-4a69-9494-0799c155903f">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="6405babe-15d8-4545-8340-22f1fcfcb35a" fragment="3" gd:fragmentGUID="025ad5a7-75c8-418e-93f3-8ac9b4e75ebf">stwierdza ustanie członkostwa w wypadkach, o których mowa w ust. 5 pkt 2–4.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2024/1541__art_8" gd:GUID="352b6a63-ca34-4333-b7c4-881da568949f">
+            <nr>8</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="869910fd-af73-4604-b745-fc8aa20ef21f">
+              <p>
+                <zdanie nr="1" gd:zdGUID="cc3edc36-e770-4839-b5ef-e626f8efec82" fragment="1" gd:fragmentGUID="285f6e58-e73a-44c4-8f92-89267a3a0faa">Prezes Polskiej Organizacji Turystycznej kieruje Polską Organizacją Turystyczną i reprezentuje ją na zewnątrz.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2024/1541__art_9" gd:GUID="75dea754-cec4-4530-b562-24a6d172aa2c">
+            <nr>9</nr>
+            <ustep eId="DU/2024/1541__art_9__ust_1" gd:GUID="7e019e2a-fec0-4a7e-8e56-45aec6484003">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="e2b1ac0c-3d1a-4325-8d08-26b8babae498" fragment="1" gd:fragmentGUID="8248d811-ea66-4988-b572-639004ba83f7">Prezesa Polskiej Organizacji Turystycznej powołuje minister właściwy do spraw turystyki, spośród osób wyłonionych w drodze otwartego i konkurencyjnego naboru, po zasięgnięciu opinii Rady Polskiej Organizacji Turystycznej.</zdanie>
+                <zdanie nr="2" gd:zdGUID="522b9054-6a64-4830-a5d0-d9ec43eb0e2b" fragment="1" gd:fragmentGUID="fc0ba564-ffe1-4ab9-b69a-22740998374b">Minister właściwy do spraw turystyki odwołuje Prezesa Polskiej Organizacji Turystycznej.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2024/1541__art_9__ust_2" gd:GUID="d380b0ea-de9d-4d02-8e96-3cd259523db2">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="1ce9fe08-7985-4c2d-86c0-224ce22de54a" fragment="1" gd:fragmentGUID="712117a6-8968-41a9-8219-fea7cb0286f2">Prezesem Polskiej Organizacji Turystycznej może być także osoba zajmująca kierownicze stanowisko państwowe w rozumieniu przepisów o wynagradzaniu osób zajmujących kierownicze stanowiska państwowe.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2024/1541__art_9__ust_3" gd:GUID="8d7b4d71-6214-404e-bb8b-5c0ab9d85e33">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="6854776c-77a9-4595-aab5-52fd46699854" fragment="1" gd:fragmentGUID="d326ce36-943f-4edc-a8b0-34ea74649c6d">Stanowisko Prezesa Polskiej Organizacji Turystycznej może zajmować osoba, która:</zdanie>
+              </p>
+              <punkt eId="DU/2024/1541__art_9__ust_3__pkt_1" gd:GUID="f7aa3a5b-ab8c-46e8-97ca-4f8db09f35e1">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="6854776c-77a9-4595-aab5-52fd46699854" fragment="2" gd:fragmentGUID="fceb99a2-8e43-44a8-8f90-db2189f6dea6">posiada tytuł zawodowy magistra lub równorzędny;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1541__art_9__ust_3__pkt_2" gd:GUID="ecee757f-cc15-4f9e-a267-bbda60d01518">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="6854776c-77a9-4595-aab5-52fd46699854" fragment="3" gd:fragmentGUID="627e521f-5c8e-4341-a576-05befee80d63">jest obywatelem polskim;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1541__art_9__ust_3__pkt_3" gd:GUID="91175232-59ac-4d5a-8166-2c02a81e91bf">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="6854776c-77a9-4595-aab5-52fd46699854" fragment="4" gd:fragmentGUID="1d34f851-f384-477d-affe-97c52f0b4d61">korzysta z pełni praw publicznych;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1541__art_9__ust_3__pkt_4" gd:GUID="a0ed5190-cce0-4ab4-8d62-37d4868e81f5">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="6854776c-77a9-4595-aab5-52fd46699854" fragment="5" gd:fragmentGUID="1f6d2a10-0bcb-4a7f-8b4b-6dddeab275b2">nie była skazana prawomocnym wyrokiem za umyślne przestępstwo lub umyślne przestępstwo skarbowe;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1541__art_9__ust_3__pkt_5" gd:GUID="9cc62d51-360e-49e8-bab7-d736f07860bc">
+                <nr>5</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="6854776c-77a9-4595-aab5-52fd46699854" fragment="6" gd:fragmentGUID="a584bf46-8508-49c8-a7d5-383415f5f8a9">posiada kompetencje kierownicze;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1541__art_9__ust_3__pkt_6" gd:GUID="352b6771-beb9-4b3b-8e27-7473723bce22">
+                <nr>6</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="6854776c-77a9-4595-aab5-52fd46699854" fragment="7" gd:fragmentGUID="89b238b6-1273-4680-9fe3-ee03c43e8394">posiada co najmniej 6-letni staż pracy, w tym co najmniej 3-letni staż pracy na stanowisku kierowniczym;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1541__art_9__ust_3__pkt_7" gd:GUID="7235c65f-65f5-43a8-a848-266aa4e37e5b">
+                <nr>7</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="6854776c-77a9-4595-aab5-52fd46699854" fragment="8" gd:fragmentGUID="d6b7dc69-5534-410e-b5aa-10491269017b">posiada wykształcenie i wiedzę z zakresu spraw należących do właściwości Polskiej Organizacji Turystycznej.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2024/1541__art_9__ust_4" gd:GUID="bec890ed-cdb1-40cd-867d-264f3d82579b">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="19c7240f-9297-4bea-9bc1-3e3a183d7231" fragment="1" gd:fragmentGUID="1e9cfa1a-8040-4e24-b4b9-f4dea10541d6">Informację o naborze na stanowisko Prezesa Polskiej Organizacji Turystycznej ogłasza się przez umieszczenie ogłoszenia w miejscu powszechnie dostępnym w siedzibie Polskiej Organizacji Turystycznej oraz w Biuletynie Informacji Publicznej Polskiej Organizacji Turystycznej i Biuletynie Informacji Publicznej Kancelarii Prezesa Rady Ministrów.</zdanie>
+                <zdanie nr="2" gd:zdGUID="64aaeed7-e70b-4248-8be8-accd67b7e764" fragment="1" gd:fragmentGUID="391f138e-6979-4e4c-8ba0-1cb1179c3df6">Ogłoszenie powinno zawierać:</zdanie>
+              </p>
+              <punkt eId="DU/2024/1541__art_9__ust_4__pkt_1" gd:GUID="073bda99-1444-4f7e-8fac-189b2e3ed15e">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="2" gd:zdGUID="64aaeed7-e70b-4248-8be8-accd67b7e764" fragment="2" gd:fragmentGUID="eada6236-5103-429a-90b6-01d9d82dd847">nazwę i adres Polskiej Organizacji Turystycznej;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1541__art_9__ust_4__pkt_2" gd:GUID="322c7d90-4df7-414c-8849-8ac0748b0d6f">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="2" gd:zdGUID="64aaeed7-e70b-4248-8be8-accd67b7e764" fragment="3" gd:fragmentGUID="071eb8df-0db3-458c-89f0-f1d6a491a7fc">określenie stanowiska;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1541__art_9__ust_4__pkt_3" gd:GUID="3a33d69d-cb98-406a-8b8b-882c3652b843">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="2" gd:zdGUID="64aaeed7-e70b-4248-8be8-accd67b7e764" fragment="4" gd:fragmentGUID="3cfcd425-5433-4796-815c-eac99726bbba">wymagania związane ze stanowiskiem wynikające z przepisów prawa;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1541__art_9__ust_4__pkt_4" gd:GUID="320d6e60-8458-47d4-930c-f1e82f5b5c0f">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="2" gd:zdGUID="64aaeed7-e70b-4248-8be8-accd67b7e764" fragment="5" gd:fragmentGUID="eecf54a3-f2c1-4a97-ba2a-f2b5d79c92f7">zakres zadań wykonywanych na stanowisku;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1541__art_9__ust_4__pkt_5" gd:GUID="9c68ef77-7f40-4b00-bdbc-02c2c83600ee">
+                <nr>5</nr>
+                <p>
+                  <zdanie nr="2" gd:zdGUID="64aaeed7-e70b-4248-8be8-accd67b7e764" fragment="6" gd:fragmentGUID="746be98b-51aa-464d-83f6-2f937b0226a8">wskazanie wymaganych dokumentów;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1541__art_9__ust_4__pkt_6" gd:GUID="cb0ee71c-73a2-4dcf-a108-071f9d9516fd">
+                <nr>6</nr>
+                <p>
+                  <zdanie nr="2" gd:zdGUID="64aaeed7-e70b-4248-8be8-accd67b7e764" fragment="7" gd:fragmentGUID="eecad569-12fe-4f9a-9243-8f601e43b5bf">termin i miejsce składania dokumentów;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1541__art_9__ust_4__pkt_7" gd:GUID="462053aa-0ed5-428b-a716-fc1057aa8dc3">
+                <nr>7</nr>
+                <p>
+                  <zdanie nr="2" gd:zdGUID="64aaeed7-e70b-4248-8be8-accd67b7e764" fragment="8" gd:fragmentGUID="85b4b991-51ce-4fc4-9bac-effd7fff29e6">informację o metodach i technikach naboru.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2024/1541__art_9__ust_5" gd:GUID="8cde00a3-15a4-4177-8a58-cb4d892d4363">
+              <nr>5</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ff4ac897-ec75-4d77-bbb7-9774bef071fd" fragment="1" gd:fragmentGUID="84cf394a-064a-4f6b-b8cf-b98a14cc870c">Termin, o którym mowa w ust. 4 pkt 6, nie może być krótszy niż 10 dni od dnia opublikowania ogłoszenia w Biuletynie Informacji Publicznej Kancelarii Prezesa Rady Ministrów.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2024/1541__art_9__ust_6" gd:GUID="6464982a-9843-42b6-aa73-1acf5788f46b">
+              <nr>6</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="a6df5e03-d4d6-4f34-87d6-905cc18b944a" fragment="1" gd:fragmentGUID="be2c7fa2-78bf-421e-92af-a766c58b261d">Nabór na stanowisko Prezesa Polskiej Organizacji Turystycznej przeprowadza zespół, powołany przez ministra właściwego do spraw turystyki, liczący co najmniej 3 osoby, których wiedza i doświadczenie dają rękojmię wyłonienia najlepszych kandydatów.</zdanie>
+                <zdanie nr="2" gd:zdGUID="b683af9b-a4c5-4897-8798-1e0a014d158e" fragment="1" gd:fragmentGUID="2fccd14d-38df-4e3f-be21-6795e7be5327">W toku naboru ocenia się doświadczenie zawodowe kandydata, wiedzę niezbędną do wykonywania zadań na stanowisku, na które jest przeprowadzany nabór, oraz kompetencje kierownicze.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2024/1541__art_9__ust_7" gd:GUID="d8034e1d-d62c-4610-b2ea-32a1b5eb9242">
+              <nr>7</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="5d040cba-9aee-47c9-9096-fb8dff2368a4" fragment="1" gd:fragmentGUID="99b03f5d-2d0f-4d48-8c30-001ab0318eb9">Ocena wiedzy i kompetencji kierowniczych, o których mowa w ust. 6, może być dokonana na zlecenie zespołu przez osobę niebędącą członkiem zespołu, która posiada odpowiednie kwalifikacje do dokonania tej oceny.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2024/1541__art_9__ust_8" gd:GUID="f31b27f8-e569-473a-b5f4-b72ca8ebcd01">
+              <nr>8</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ee6f204f-2c91-4191-9af7-973023e37e6e" fragment="1" gd:fragmentGUID="6b980d75-a098-4f6b-981d-5cdb6f9a340d">Członek zespołu oraz osoba, o której mowa w ust. 7, mają obowiązek zachowania w tajemnicy informacji dotyczących osób ubiegających się o stanowisko, uzyskanych w trakcie naboru.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2024/1541__art_9__ust_9" gd:GUID="c7f2e010-20ad-4448-9ad2-a3fda65c07a8">
+              <nr>9</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="dc517aa6-ee5c-4e1c-9c8f-f9536c086864" fragment="1" gd:fragmentGUID="e8e55263-18b5-435b-a330-c2b723826000">W toku naboru zespół wyłania nie więcej niż 3 kandydatów, których przedstawia ministrowi właściwemu do spraw turystyki.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2024/1541__art_9__ust_10" gd:GUID="167a0460-6968-4333-ba87-11471b7cd742">
+              <nr>10</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="dbabab62-f5e3-4d24-8fe6-722aed57ffb0" fragment="1" gd:fragmentGUID="664cd7b4-aa0b-4594-acc1-575d15fe91f1">Z przeprowadzonego naboru zespół sporządza protokół zawierający:</zdanie>
+              </p>
+              <punkt eId="DU/2024/1541__art_9__ust_10__pkt_1" gd:GUID="e000a371-5970-4e0a-a0d8-edc7306df454">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="dbabab62-f5e3-4d24-8fe6-722aed57ffb0" fragment="2" gd:fragmentGUID="08c41958-1066-480e-ad94-fee3302e56e6">nazwę i adres Polskiej Organizacji Turystycznej;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1541__art_9__ust_10__pkt_2" gd:GUID="2959b23e-1555-46f9-8f51-788f9c9da6cb">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="dbabab62-f5e3-4d24-8fe6-722aed57ffb0" fragment="3" gd:fragmentGUID="244d1f74-ac95-4ff0-9590-f5c3d2837f69">określenie stanowiska, na które był prowadzony nabór, oraz liczbę kandydatów;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1541__art_9__ust_10__pkt_3" gd:GUID="1135fe8c-597f-4849-919a-981cbefac11b">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="dbabab62-f5e3-4d24-8fe6-722aed57ffb0" fragment="4" gd:fragmentGUID="ed1b63e5-8245-4fac-b840-195d37c6b6f2">imiona, nazwiska i adresy nie więcej niż 3 najlepszych kandydatów uszeregowanych według poziomu spełniania przez nich wymagań określonych w ogłoszeniu o naborze;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1541__art_9__ust_10__pkt_4" gd:GUID="1e4719ba-2d69-426f-afcf-b20390edb865">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="dbabab62-f5e3-4d24-8fe6-722aed57ffb0" fragment="5" gd:fragmentGUID="2ff5c5d2-e649-4a9a-b536-6c82056af810">informację o zastosowanych metodach i technikach naboru;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1541__art_9__ust_10__pkt_5" gd:GUID="2513cc65-a0db-4136-83ec-85b215b851ca">
+                <nr>5</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="dbabab62-f5e3-4d24-8fe6-722aed57ffb0" fragment="6" gd:fragmentGUID="01a3760b-a353-4268-9b0c-6b74d02ca8e8">uzasadnienie dokonanego wyboru albo powody niewyłonienia kandydata;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1541__art_9__ust_10__pkt_6" gd:GUID="e78d2683-8348-4688-bbb3-5e5ffeec9df8">
+                <nr>6</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="dbabab62-f5e3-4d24-8fe6-722aed57ffb0" fragment="7" gd:fragmentGUID="1ce5fb9e-d334-4707-89dc-103c14721f29">skład zespołu.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2024/1541__art_9__ust_11" gd:GUID="024776d5-122c-4222-bcb4-f89c7fb73ce7">
+              <nr>11</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="03ea7f3e-451e-46ea-ad63-7156464f267e" fragment="1" gd:fragmentGUID="3e6f6028-13ef-4d8a-9961-46ca410511ed">Wynik naboru ogłasza się niezwłocznie przez umieszczenie informacji w Biuletynie Informacji Publicznej Polskiej Organizacji Turystycznej i Biuletynie Informacji Publicznej Kancelarii Prezesa Rady Ministrów.</zdanie>
+                <zdanie nr="2" gd:zdGUID="ae88c673-a047-46db-875f-d700029bd0ba" fragment="1" gd:fragmentGUID="4ae0bb07-8ae0-4db1-88c6-b05158357ab7">Informacja o wyniku naboru zawiera:</zdanie>
+              </p>
+              <punkt eId="DU/2024/1541__art_9__ust_11__pkt_1" gd:GUID="5c3379a0-8170-47c1-9d3f-3d0eeb180a12">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="2" gd:zdGUID="ae88c673-a047-46db-875f-d700029bd0ba" fragment="2" gd:fragmentGUID="bb9d21e1-401c-466e-9b51-b361cc49fecf">nazwę i adres Polskiej Organizacji Turystycznej;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1541__art_9__ust_11__pkt_2" gd:GUID="cbb9158a-9b33-4385-a607-5d763664214b">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="2" gd:zdGUID="ae88c673-a047-46db-875f-d700029bd0ba" fragment="3" gd:fragmentGUID="3ff2055d-7e6c-4ad7-9115-8e546ee5d5a4">określenie stanowiska, na które był prowadzony nabór;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1541__art_9__ust_11__pkt_3" gd:GUID="e0ca4701-6f1a-4d6d-af9b-44198c788344">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="2" gd:zdGUID="ae88c673-a047-46db-875f-d700029bd0ba" fragment="4" gd:fragmentGUID="0e6b62da-cb80-42b3-8605-6303accee196">imiona, nazwiska wybranych kandydatów oraz ich miejsca zamieszkania w rozumieniu przepisów Kodeksu cywilnego albo informację o niewyłonieniu kandydata.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2024/1541__art_9__ust_12" gd:GUID="2eaa1604-00d6-4322-b430-9339876c04a4">
+              <nr>12</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="274cc8f5-1ea8-45d5-a620-bb5cde85614d" fragment="1" gd:fragmentGUID="38e2df61-54b2-4a42-93c4-25c8f350b671">Umieszczenie w Biuletynie Informacji Publicznej Kancelarii Prezesa Rady Ministrów ogłoszenia o naborze oraz o wyniku tego naboru jest bezpłatne.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2024/1541__art_10" gd:GUID="27b9132f-a18e-4abb-8b7b-b4dd2c601d1a">
+            <nr>10</nr>
+            <ustep eId="DU/2024/1541__art_10__ust_1" gd:GUID="23c40efb-768b-4b1f-b917-a17e1a88c931">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="51bce718-5a09-437a-88de-12895ded1228" fragment="1" gd:fragmentGUID="07cd5635-cd14-4858-911b-cbb3029fa55f">Wiceprezesów Polskiej Organizacji Turystycznej w liczbie od 1 do 3 powołuje Prezes Polskiej Organizacji Turystycznej, spośród osób wyłonionych w drodze otwartego i konkurencyjnego naboru, po zasięgnięciu opinii Rady Polskiej Organizacji Turystycznej.</zdanie>
+                <zdanie nr="2" gd:zdGUID="7af0595d-b79c-4e9a-9a0e-078e6c461a92" fragment="1" gd:fragmentGUID="b7179ee3-e7ce-413a-9d7f-9854739c89e5">Prezes Polskiej Organizacji Turystycznej odwołuje wiceprezesów Polskiej Organizacji Turystycznej, po zasięgnięciu opinii Rady Polskiej Organizacji Turystycznej.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2024/1541__art_10__ust_2" gd:GUID="3d223fec-f7a7-4594-9e85-12e191549006">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="081c5309-e1c9-41a3-9760-b4371bb6ae11" fragment="1" gd:fragmentGUID="67ba1d01-5a81-4501-afc6-e73be11cdfa8">Prezesa Polskiej Organizacji Turystycznej w razie potrzeby zastępuje wyznaczony przez niego jeden z wiceprezesów.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2024/1541__art_10__ust_3" gd:GUID="2d2d50e1-d76e-4a54-964e-cd987306a289">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="bd4480ab-0521-486b-b0e7-92447918592c" fragment="1" gd:fragmentGUID="ae4545da-f4cf-46d5-905a-94428b00c801">Zespół przeprowadzający nabór na stanowiska, o których mowa w ust. 1, powołuje Prezes Polskiej Organizacji Turystycznej.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2024/1541__art_10__ust_4" gd:GUID="227aeacd-bae5-4af8-b1c9-cd78a045fcde">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="7a65577b-c495-4308-9f03-a8287d9e0a39" fragment="1" gd:fragmentGUID="e5bbb702-f845-4c58-ac4c-9ef91461cb60">Do sposobu przeprowadzania naboru na stanowiska, o których mowa w ust. 1, stosuje się odpowiednio przepisy art. 9 ust. 3–12.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2024/1541__art_11" gd:GUID="0d7a48ec-151d-452d-9ade-09e4efc547c8">
+            <nr>11</nr>
+            <ustep eId="DU/2024/1541__art_11__ust_1" gd:GUID="01d9baeb-2365-4d10-91a7-1900ca0f690b">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="02b49b0f-18d5-4169-a321-3cbf15a027e5" fragment="1" gd:fragmentGUID="df5b93be-d3d9-4631-a7fc-8d89b270f14d">Do obowiązków Prezesa Polskiej Organizacji Turystycznej należy realizowanie zadań Polskiej Organizacji Turystycznej, określonych w art. 3, a w szczególności:</zdanie>
+              </p>
+              <punkt eId="DU/2024/1541__art_11__ust_1__pkt_1" gd:GUID="d606f6e1-1524-49e8-b4dc-96a80008cade">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="02b49b0f-18d5-4169-a321-3cbf15a027e5" fragment="2" gd:fragmentGUID="e50fa0b5-2e6f-4132-a760-e33099023581">opracowywanie projektu rocznego planu finansowego Polskiej Organizacji Turystycznej, a także występowanie z wnioskami do właściwego ministra w sprawie wysokości dotacji budżetowej na realizację tych zadań;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1541__art_11__ust_1__pkt_2" gd:GUID="baecbc80-d6bf-455c-8521-cba49a5a2aef">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="02b49b0f-18d5-4169-a321-3cbf15a027e5" fragment="3" gd:fragmentGUID="34b3f553-0c6e-4e7a-a174-4b083b4ce7ad">opracowywanie projektów rocznych i wieloletnich programów działania Polskiej Organizacji Turystycznej;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1541__art_11__ust_1__pkt_3" gd:GUID="c26dcbf5-3164-44b6-b474-b191119a1058">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="02b49b0f-18d5-4169-a321-3cbf15a027e5" fragment="4" gd:fragmentGUID="497614a3-f918-4d87-8bfe-809023ac6793">przedstawianie Radzie Polskiej Organizacji Turystycznej i właściwemu ministrowi rocznych sprawozdań z działalności Polskiej Organizacji Turystycznej;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1541__art_11__ust_1__pkt_4" gd:GUID="23e2a0d9-6a23-48e6-be2d-d9b76c34f34f">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="02b49b0f-18d5-4169-a321-3cbf15a027e5" fragment="5" gd:fragmentGUID="322a5e38-baba-4659-8fe9-c78acbd2dd4f">tworzenie jednostek organizacyjnych Polskiej Organizacji Turystycznej, w tym jednostek wykonujących zadania za granicą, a zwłaszcza ośrodków informacji turystycznej.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2024/1541__art_11__ust_2" gd:GUID="51027060-60bc-4b2e-929b-51e47a80fc06">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="8808881e-4867-448c-af2d-16c9289e05a1" fragment="1" gd:fragmentGUID="bb7a7d07-2103-403f-b190-e8bfb16fb848">Prezes Polskiej Organizacji Turystycznej wykonuje swoje zadania przy pomocy Biura Prezesa Polskiej Organizacji Turystycznej.</zdanie>
+                <zdanie nr="2" gd:zdGUID="1bcd5c15-2507-4395-9e97-11fed47ebf88" fragment="1" gd:fragmentGUID="a2f0ad9e-4db0-4de3-a5a1-a247df022af3">Zadania i organizację Biura określa statut, o którym mowa w art. 12.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2024/1541__art_12" gd:GUID="418ae7a2-8b21-4d73-9ff3-ee2486d4a12c">
+            <nr>12</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="cf3c9fc8-a351-4566-954a-48ce75661b5d">
+              <p>
+                <zdanie nr="1" gd:zdGUID="91f118ab-87a2-4eaf-8c4c-43bf86676c53" fragment="1" gd:fragmentGUID="16c5ed2a-6446-4739-a6f5-232b9a1f0f98">Szczegółowy zakres działania Polskiej Organizacji Turystycznej z uwzględnieniem jednostek organizacyjnych wykonujących zadania za granicą, jej strukturę organizacyjną, tryb działania oraz inne sprawy wymienione w ustawie określa statut Polskiej Organizacji Turystycznej, nadany, w drodze rozporządzenia, przez właściwego ministra po zasięgnięciu opinii Rady Polskiej Organizacji Turystycznej.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+        </oddzial-n>
+      </rozdzial>
+      <rozdzial eId="DU/2024/1541__rozdz_3" gd:GUID="6fa1d2c0-38c2-41e3-b100-aa3549e031f3">
+        <naglowek-rozdzialu>
+          <nr>3</nr>
+          <p>Mienie i zasady gospodarki finansowej Polskiej Organizacji Turystycznej</p>
+        </naglowek-rozdzialu>
+        <oddzial-n brak-eid="jednostka-nieoznaczona" gd:GUID="1eb3f912-c413-443f-acc1-2c8043f20c6c">
+          <artykul eId="DU/2024/1541__art_13" gd:GUID="9fba8c32-10cb-4cf5-b3e6-d4ae31db93d5">
+            <nr>13</nr>
+            <ustep eId="DU/2024/1541__art_13__ust_1" gd:GUID="57c2f4bc-b217-4883-a3de-5705479773eb">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="a67a2909-828d-48eb-9504-f291632e4903" fragment="1" gd:fragmentGUID="c420cacb-2d13-464b-b91a-794645867f76">Skarb Państwa przekaże Polskiej Organizacji Turystycznej:</zdanie>
+              </p>
+              <punkt eId="DU/2024/1541__art_13__ust_1__pkt_1" gd:GUID="4ff1b9fa-d8ac-49c2-8d19-0ab2d8e644ac">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="a67a2909-828d-48eb-9504-f291632e4903" fragment="2" gd:fragmentGUID="c40a10ff-e421-4e9d-a271-454271d0e4f5">mienie przedsiębiorstwa państwowego Polska Agencja Promocji Turystyki z siedzibą w Warszawie;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1541__art_13__ust_1__pkt_2" gd:GUID="a7ceeaa9-efc1-4444-9b53-8d948ed829d5">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="a67a2909-828d-48eb-9504-f291632e4903" fragment="3" gd:fragmentGUID="7b248b38-af61-42f1-989f-c6954a352562">inne składniki majątkowe niezbędne do podjęcia działalności Polskiej Organizacji Turystycznej, które właściwy minister przekaże jej w porozumieniu z ministrem właściwym do spraw Skarbu Państwa;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1541__art_13__ust_1__pkt_3" gd:GUID="f092354f-baed-44da-afe2-75cf030d6a38">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="a67a2909-828d-48eb-9504-f291632e4903" fragment="4" gd:fragmentGUID="df165560-13b2-4120-a491-201f1dec88db">składniki majątkowe należące do polskich ośrodków informacji turystycznej za granicą.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2024/1541__art_13__ust_2" gd:GUID="93649724-0c65-41e3-b85e-b6a8612f1d7c">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="c628aa9b-eaf2-4916-8468-3dbc745ff35d" fragment="1" gd:fragmentGUID="21a325dc-f69c-4020-ab16-34ec4abf3309">Skarb Państwa, w celu podwyższenia funduszu statutowego Polskiej Organizacji Turystycznej, przekaże jej nieodpłatnie akcje Polskiej Agencji Rozwoju Turystyki S.A. z siedzibą w Warszawie.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2024/1541__art_13__ust_3" gd:GUID="4f7a8bf3-44ff-4c3e-bd4b-097ecbdb6add">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="f446f269-04a1-472b-be6d-62f09f8585f5" fragment="1" gd:fragmentGUID="48158a76-6357-4c27-8ea9-f9cddfa3624a">Nabycie mienia, o którym mowa w ust. 1 pkt 1 i 3, następuje nieodpłatnie, przy czym do jego trybu i skutków stosuje się odpowiednio przepisy o komercjalizacji i prywatyzacji dotyczące prywatyzacji bezpośredniej poprzez sprzedaż przedsiębiorstwa, z wyłączeniem przepisów dotyczących zarządzenia o prywatyzacji bezpośredniej.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2024/1541__art_13__ust_4" gd:GUID="696bf2b4-8c0c-463d-bdcd-17d90b5e9106">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="3007c550-9b7b-41f6-b938-350abcc2dff3" fragment="1" gd:fragmentGUID="bb5d5c92-8d1c-4f9a-a4d0-ec9c91e5506f">Polska Organizacja Turystyczna, z chwilą nabycia składników mienia, o których mowa w ust. 1 i 2, wstępuje w prawa i obowiązki z nimi związane w stosunku do Skarbu Państwa oraz osób trzecich.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2024/1541__art_14" gd:GUID="e6ad8798-cf61-4485-a6ed-44aed38ac260">
+            <nr>14</nr>
+            <ustep eId="DU/2024/1541__art_14__ust_1" gd:GUID="745f32f0-cd03-4f91-a5b7-80ef2aa9cba4">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="3ee786fe-9a64-4015-bbc2-9df1071e049b" fragment="1" gd:fragmentGUID="a4ffe895-e754-4ec4-b2b0-bf713e5d881b">Przychodami Polskiej Organizacji Turystycznej są:</zdanie>
+              </p>
+              <punkt eId="DU/2024/1541__art_14__ust_1__pkt_1" gd:GUID="7aaa10c1-2fb6-4181-b17f-f7aee9a74665">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="3ee786fe-9a64-4015-bbc2-9df1071e049b" fragment="2" gd:fragmentGUID="5ff8410b-6647-4567-996f-50128bdeaf39">dotacje budżetowe:</zdanie>
+                </p>
+                <litera eId="DU/2024/1541__art_14__ust_1__pkt_1__lit_a" gd:GUID="f05b362f-f0cf-4acf-bbcc-96b6a352ce01">
+                  <nr>a</nr>
+                  <p>
+                    <zdanie nr="1" gd:zdGUID="3ee786fe-9a64-4015-bbc2-9df1071e049b" fragment="3" gd:fragmentGUID="2279f5af-216e-47a2-8721-69dae17db8ce">podmiotowe,</zdanie>
+                  </p>
+                </litera>
+                <litera eId="DU/2024/1541__art_14__ust_1__pkt_1__lit_b" gd:GUID="49bff723-cc17-418a-9af5-ac5899f1d1e9">
+                  <nr>b</nr>
+                  <p>
+                    <zdanie nr="1" gd:zdGUID="3ee786fe-9a64-4015-bbc2-9df1071e049b" fragment="4" gd:fragmentGUID="05e30dbf-62d7-4e7e-8a00-9fbe2a7723ea">celowe;</zdanie>
+                  </p>
+                </litera>
+              </punkt>
+              <punkt eId="DU/2024/1541__art_14__ust_1__pkt_2" gd:GUID="1be3dc37-1c47-4468-834c-57aaf3b81cf1">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="3ee786fe-9a64-4015-bbc2-9df1071e049b" fragment="5" gd:fragmentGUID="dc708832-05c6-4b63-b9ed-9b01ed8ebf50">bezzwrotna pomoc zagraniczna;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1541__art_14__ust_1__pkt_3" gd:GUID="e8cec259-63d8-45bc-81ac-8d3ea48a510e">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="3ee786fe-9a64-4015-bbc2-9df1071e049b" fragment="6" gd:fragmentGUID="a99f6594-0cb1-4da3-8859-7def408dab14">dochody z działalności gospodarczej;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1541__art_14__ust_1__pkt_4" gd:GUID="4e0cc2ca-1e30-4fcb-a4df-ef9a3d0fdf69">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="3ee786fe-9a64-4015-bbc2-9df1071e049b" fragment="7" gd:fragmentGUID="7f27dcb9-a075-445a-8124-c5086e2c7110">wpłaty jednostek samorządu terytorialnego;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1541__art_14__ust_1__pkt_5" gd:GUID="c340179d-6bed-4873-badf-367026902e55">
+                <nr>5</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="3ee786fe-9a64-4015-bbc2-9df1071e049b" fragment="8" gd:fragmentGUID="59052e93-4275-4bef-bbed-8fd2ac1d85c6">przychody ze sprzedaży rzeczowych składników mienia;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1541__art_14__ust_1__pkt_6" gd:GUID="db247f31-6755-4023-bb49-9eee1135111a">
+                <nr>6</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="3ee786fe-9a64-4015-bbc2-9df1071e049b" fragment="9" gd:fragmentGUID="d7069da2-9a33-4d25-8bb5-a620a16445bf">przychody z tytułu przekazania do odpłatnego używania rzeczowych składników mienia;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1541__art_14__ust_1__pkt_7" gd:GUID="5b01714c-1597-4286-a08c-44ba1a0cd148">
+                <nr>7</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="3ee786fe-9a64-4015-bbc2-9df1071e049b" fragment="10" gd:fragmentGUID="0e8159a2-4fad-4bfc-a59a-6d69f929357f">wpłaty organizacji zrzeszających przedsiębiorców, prowadzących działalność gospodarczą w dziedzinie turystyki, wypoczynku, sportu i rekreacji;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1541__art_14__ust_1__pkt_8" gd:GUID="ad250a58-ea73-41f7-b172-7c458e4669c1">
+                <nr>8</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="3ee786fe-9a64-4015-bbc2-9df1071e049b" fragment="11" gd:fragmentGUID="02f9f21d-06bd-4ddb-a7ea-deff4eef7262">wpłaty przedsiębiorców, prowadzących działalność gospodarczą w dziedzinie turystyki, wypoczynku, sportu i rekreacji;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1541__art_14__ust_1__pkt_9" gd:GUID="963428bd-33ec-4944-bade-742dec778197">
+                <nr>9</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="3ee786fe-9a64-4015-bbc2-9df1071e049b" fragment="12" gd:fragmentGUID="cd83d4c8-97bc-45e6-ba7e-11901702e70c">darowizny i zapisy;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1541__art_14__ust_1__pkt_10" gd:GUID="08f899b3-e246-4df4-a393-41faacfc5601">
+                <nr>10</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="3ee786fe-9a64-4015-bbc2-9df1071e049b" fragment="13" gd:fragmentGUID="a1b76772-2753-4a65-abee-d417fd8912e7">inne przychody.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2024/1541__art_14__ust_2" gd:GUID="753453e9-2150-4104-b91c-87c22fb3d8ef">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="7bcc1f52-22d8-4e13-8343-153352b10da9" fragment="1" gd:fragmentGUID="035b6f85-5396-4121-8356-8556cb06c7a0">Wpłaty, o których mowa w ust. 1 pkt 4, 7 i 8, mają charakter dobrowolny.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2024/1541__art_14__ust_3" gd:GUID="0e9cf375-2a4b-4e8e-adc0-6d8bc80b2fb4">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="15ce8320-2569-4ceb-9a08-779f9ce93443" fragment="1" gd:fragmentGUID="b4baab3c-6607-4167-ad16-76b2e8797913">Kwoty dotacji, o których mowa w ust. 1 pkt 1 lit. a, ustala ustawa budżetowa.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2024/1541__art_14__ust_4" gd:GUID="95c049c9-dcf0-4b9c-8ca6-662a89d08f26">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="4c5e20fc-2b88-47d0-84a2-21b93032b2b0" fragment="1" gd:fragmentGUID="6cad93f2-859e-4027-8e7f-803967e10bc6">Polska Organizacja Turystyczna prowadzi rachunkowość według zasad określonych w przepisach o rachunkowości.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2024/1541__art_14__ust_5" gd:GUID="e197c6ba-ba35-48aa-a135-7fb227f66d2c">
+              <nr>5</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="d4cc7be1-75f8-455d-bab6-6c1fb0d24d90" fragment="1" gd:fragmentGUID="483912b1-5426-471e-bf27-9453f33db5bd">Rokiem obrotowym i podatkowym Polskiej Organizacji Turystycznej jest rok kalendarzowy.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2024/1541__art_14__ust_6" gd:GUID="7143cefa-127e-4980-88fc-bd6ecc7bfe71">
+              <nr>6</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="96bbca64-7446-447e-a5fb-99db99bff9d3" fragment="1" gd:fragmentGUID="d1ef06d5-7d70-43b1-8338-7d89ead8968e">Nadwyżki środków finansowych w danym roku kalendarzowym przechodzą na rok następny, z wyjątkiem przychodów, o których mowa w ust. 1 pkt 1.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2024/1541__art_15" gd:GUID="0c30460d-85a2-428e-9446-a1f8f43eb81d">
+            <nr>15</nr>
+            <ustep eId="DU/2024/1541__art_15__ust_1" gd:GUID="c11c98e0-5485-438e-bbaa-eb70aee782d2">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="a2cb009c-ff9b-4931-95ee-2fffee20135b" fragment="1" gd:fragmentGUID="7c4a556f-d1e7-4a01-896e-a27e406824c9"><odnosnik id-odnosnika="1" symbol="1" gd:GUID="aba5f2dc-fd2b-472c-9816-d5cfe0cae4fd"><p><zdanie nr="1" gd:zdGUID="f30857a3-d18e-47b2-a467-d53bcbb499ce" fragment="1" gd:fragmentGUID="0f91ef23-c6c0-41d5-8368-f80b5172aca2">W brzmieniu ustalonym przez art. 8 pkt 1 ustawy z dnia 28 czerwca 2024 r. o zmianie ustawy o finansach publicznych oraz niektórych innych ustaw (Dz. U. poz. 1089), która weszła w życie z dniem 23 lipca 2024 r.</zdanie></p></odnosnik> Polska Organizacja Turystyczna prowadzi gospodarkę finansową na podstawie rocznego planu finansowego.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2024/1541__art_15__ust_2" gd:GUID="e46cfaae-7408-4180-8438-0c4dfda2982b">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="471fd8de-ce7d-4b95-a874-5e062c9ad5c6" fragment="1" gd:fragmentGUID="8e84c5ee-7951-42a9-83e0-74067c1876f1">Projekt rocznego planu finansowego Polskiej Organizacji Turystycznej, po przyjęciu przez Radę Polskiej Organizacji Turystycznej i zatwierdzeniu przez właściwego ministra, jest przekazywany ministrowi właściwemu do spraw finansów publicznych w trybie określonym w przepisach dotyczących prac nad projektem ustawy budżetowej.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2024/1541__art_15__ust_3" gd:GUID="eb983a0d-b9f0-4d1c-8bc9-9878b76fef42">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="a3e6adc7-8a11-475f-892c-f358f914cd95" fragment="1" gd:fragmentGUID="3ecb8ca6-75e8-4096-8e21-7fd6a7a83d1a">Roczny plan finansowy Polskiej Organizacji Turystycznej obejmuje w szczególności:</zdanie>
+              </p>
+              <punkt eId="DU/2024/1541__art_15__ust_3__pkt_1" gd:GUID="cad05a31-5184-427b-a9ba-90f509aad7a4">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="a3e6adc7-8a11-475f-892c-f358f914cd95" fragment="2" gd:fragmentGUID="ec9513c4-534e-4420-8e9a-7cd6bfa0dcec">planowane przychody, w tym dotacje na realizację zadań, o których mowa w art. 3;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1541__art_15__ust_3__pkt_2" gd:GUID="3d43ac40-2fdd-417f-8159-402f5dda6e8a">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="a3e6adc7-8a11-475f-892c-f358f914cd95" fragment="3" gd:fragmentGUID="5df1f1be-ac8f-49ad-9911-f73037a34bd5">planowane koszty operacyjne;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1541__art_15__ust_3__pkt_3" gd:GUID="26bfbb43-3234-4434-9679-9da2e49940f6">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="a3e6adc7-8a11-475f-892c-f358f914cd95" fragment="4" gd:fragmentGUID="e18c493b-6c93-44f0-84b9-4b31cdf5ee1d">planowane wydatki inwestycyjne;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1541__art_15__ust_3__pkt_4" gd:GUID="3a21d015-1d26-40f5-b4c7-096eb2101821">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="a3e6adc7-8a11-475f-892c-f358f914cd95" fragment="5" gd:fragmentGUID="0270605f-d683-47b7-bf27-f0124125e97d">stan środków obrotowych na dzień 31 grudnia roku poprzedzającego rok obrotowy;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1541__art_15__ust_3__pkt_5" gd:GUID="b0cf64be-7fa4-43ec-bfc2-503759bd31ed">
+                <nr>5</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="a3e6adc7-8a11-475f-892c-f358f914cd95" fragment="6" gd:fragmentGUID="5e73a117-519d-4eb6-aa02-c1aedbe39652">planowany przyrost lub spadek środków obrotowych na ostatni dzień roku obrotowego;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1541__art_15__ust_3__pkt_6" gd:GUID="514e2e6b-69b9-4414-8fde-08e9e5f964cb">
+                <nr>6</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="a3e6adc7-8a11-475f-892c-f358f914cd95" fragment="7" gd:fragmentGUID="2ffc4884-522c-45ff-bee5-8294b4b5aec0">sposób pokrycia planowanego niedoboru przychodów w stosunku do kosztów.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2024/1541__art_16" gd:GUID="9221e911-699b-4868-bb2a-97eda509babb">
+            <nr>16</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="8002b719-c31f-49ed-b501-a57a67ae1675">
+              <p>
+                <zdanie nr="1" gd:zdGUID="735d4973-6a8a-4810-9294-04fd7db8f8cf" fragment="1" gd:fragmentGUID="54d55adb-6fcc-48fb-a463-06d28939d0fb">W razie gdy działalność Polskiej Organizacji Turystycznej w roku obrotowym zakończy się nadwyżką przychodów w stosunku do kosztów, nadwyżka podlega wpłacie na fundusz rezerwowy, o którym mowa w art. 17 ust. 1 pkt 2.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2024/1541__art_17" gd:GUID="f0aae834-932a-44e7-bd85-2d9faa927f6b">
+            <nr>17</nr>
+            <ustep eId="DU/2024/1541__art_17__ust_1" gd:GUID="1ef4779b-4ef1-4ff9-94a0-026b936a4d2c">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="2ec5fc3d-34f2-477e-8261-0a6c7b502c0a" fragment="1" gd:fragmentGUID="66b3984c-854a-4038-a80b-a959e7ff29f2">Tworzy się następujące fundusze własne Polskiej Organizacji Turystycznej:</zdanie>
+              </p>
+              <punkt eId="DU/2024/1541__art_17__ust_1__pkt_1" gd:GUID="1507bedf-0b3e-4cbd-867e-6bdc37ab3a3d">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="2ec5fc3d-34f2-477e-8261-0a6c7b502c0a" fragment="2" gd:fragmentGUID="b408bbbf-3fd2-49a9-9696-e56ebfac4c2e">fundusz statutowy;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1541__art_17__ust_1__pkt_2" gd:GUID="170f0658-a39c-4bc5-9207-e5fe3becab2d">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="2ec5fc3d-34f2-477e-8261-0a6c7b502c0a" fragment="3" gd:fragmentGUID="88d51c6c-18de-4749-8c7c-3efb570df29f">fundusz rezerwowy.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2024/1541__art_17__ust_2" gd:GUID="f365d57d-7758-4926-8681-7ccce2b60869">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="c6b20ecc-dbee-4e51-ac9b-f5c57f0ac434" fragment="1" gd:fragmentGUID="06c31f77-9eb7-42c3-bade-0989fe4a7d35">Na fundusz statutowy Polskiej Organizacji Turystycznej składa się w szczególności:</zdanie>
+              </p>
+              <punkt eId="DU/2024/1541__art_17__ust_2__pkt_1" gd:GUID="b90ea6ea-3da8-445f-bd05-d4c2de19f965">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="c6b20ecc-dbee-4e51-ac9b-f5c57f0ac434" fragment="2" gd:fragmentGUID="f25fb027-be29-40b6-89c7-68bd8f0238f1">wartość mienia Polskiej Organizacji Turystycznej;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1541__art_17__ust_2__pkt_2" gd:GUID="a44e972a-0d74-4329-962a-adc1b2eb8333">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="c6b20ecc-dbee-4e51-ac9b-f5c57f0ac434" fragment="3" gd:fragmentGUID="d5c61eb0-be08-4df9-a361-987c4c9f1941">inwestycje realizowane z dotacji budżetowej;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1541__art_17__ust_2__pkt_3" gd:GUID="47741f13-a395-4c67-af53-bc2c50e0b4ec">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="c6b20ecc-dbee-4e51-ac9b-f5c57f0ac434" fragment="4" gd:fragmentGUID="c420d62d-5daf-4fa4-b1c9-a0d6f4d60a53">wartość netto środków trwałych;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1541__art_17__ust_2__pkt_4" gd:GUID="dfdba8c7-2c93-4bf9-b7ab-b8dcd2f129bd">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="c6b20ecc-dbee-4e51-ac9b-f5c57f0ac434" fragment="5" gd:fragmentGUID="8d1c2c0e-8638-43fe-a5b2-ddaf9f956d73">wartości niematerialne i prawne;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1541__art_17__ust_2__pkt_5" gd:GUID="9e0b27af-72a6-4568-a8b4-92482a2beaf1">
+                <nr>5</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="c6b20ecc-dbee-4e51-ac9b-f5c57f0ac434" fragment="6" gd:fragmentGUID="46c661d2-7bac-4045-a70d-b5ea9dd972fd">wartość środków obrotowych przekazanych Polskiej Organizacji Turystycznej.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2024/1541__art_17__ust_3" gd:GUID="fb0a283c-1f3d-4e6e-a3e4-c3b8f59b5c0d">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="28781324-b1af-4238-b961-01129bda6c47" fragment="1" gd:fragmentGUID="8bf249f3-9045-4dfb-b9ab-0648b38f5dbc">Fundusz statutowy ulega zmniejszeniu o wartość umorzenia składników majątkowych zaliczanych do majątku trwałego dokonywanego zgodnie z obowiązującymi przepisami oraz ulega zwiększeniu o wartość nabytych bądź wytworzonych składników mienia Polskiej Organizacji Turystycznej.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2024/1541__art_17__ust_4" gd:GUID="a333bea9-3b3f-447c-80f7-fc07b82d1f2e">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="1d13fe24-83c9-47c6-94f4-e40e10c91d27" fragment="1" gd:fragmentGUID="98e88b20-f616-4b4b-92c3-c06bdf962222">Dysponentem funduszu rezerwowego jest Prezes Polskiej Organizacji Turystycznej.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2024/1541__art_17__ust_5" gd:GUID="080214d1-9dbf-474a-bbcd-abf68dbce3c7">
+              <nr>5</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="dffa4a10-5c86-4841-9362-693e2ac9b953" fragment="1" gd:fragmentGUID="f419122c-9d7f-4884-bc3f-c0f25e05ea2f">Fundusz rezerwowy przeznacza się w pierwszej kolejności na finansowanie niedoborów wynikających z działalności prowadzonej przez Polską Organizację Turystyczną; pozostała nadwyżka może być przeznaczona na finansowanie wieloletnich zadań inwestycyjnych i wieloletnich programów promocyjnych ujętych w wieloletnich programach działania Polskiej Organizacji Turystycznej.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2024/1541__art_18" gd:GUID="d0bb6530-c2d8-458b-81b0-03dbb885bcc8">
+            <nr>18</nr>
+            <ustep eId="DU/2024/1541__art_18__ust_1" gd:GUID="718b3f1d-9551-41b3-84c6-e9fe42351efa">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="849fa183-49e0-42c2-900b-7d43884ffe3f" fragment="1" gd:fragmentGUID="7cb307c4-e78e-4d14-8b73-974723dc9bd2">Roczne sprawozdanie finansowe Polskiej Organizacji Turystycznej podlega badaniu przez firmę audytorską; badanie dokonywane jest za każdy rok obrotowy.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2024/1541__art_18__ust_2" gd:GUID="8f9be52e-dc8e-4129-b6d8-f7268ac481c8">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="b36533a9-9c53-4c4b-9b10-6e2cbbc1df0f" fragment="1" gd:fragmentGUID="125514cc-066c-4614-be58-2fe00d9bfd3a">Wyboru firmy audytorskiej do badania rocznego sprawozdania finansowego Polskiej Organizacji Turystycznej dokonuje Rada Polskiej Organizacji Turystycznej.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2024/1541__art_18__ust_3" gd:GUID="cf0bdebf-aa17-4fdc-8582-acd0388131c3">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="3a80b2f7-b599-4dd0-9020-904664885fe3" fragment="1" gd:fragmentGUID="f7b88f48-9d16-4dca-8fd3-a49bc56d3999">Prezes Polskiej Organizacji Turystycznej przedstawia Radzie Polskiej Organizacji Turystycznej oraz właściwemu ministrowi roczne sprawozdanie finansowe Polskiej Organizacji Turystycznej wraz ze sprawozdaniem z badania.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2024/1541__art_18__ust_4" gd:GUID="4815f3b7-ecb9-4b0e-86de-36558a67504e">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="29cb56c9-b5bc-4e0c-9e1c-2ada82da5492" fragment="1" gd:fragmentGUID="40347b77-3943-49a6-a401-9b845c96c06f"><odnosnik id-odnosnika="2" symbol="2" gd:GUID="a9bff93b-594a-4aff-a737-fc7100df37fd"><p><zdanie nr="1" gd:zdGUID="580f7e52-0e9d-4a79-a9eb-32941ae887ee" fragment="1" gd:fragmentGUID="89b7a3b9-458d-4e28-8dfc-fffd7d003bd3">W brzmieniu ustalonym przez art. 8 pkt 2 ustawy, o której mowa w odnośniku 1; przepis w tym brzmieniu ma zastosowanie po raz pierwszy do rocznego sprawozdania finansowego Polskiej Organizacji Turystycznej za rok 2024, na podstawie art. 34 tej ustawy.</zdanie></p></odnosnik> Roczne sprawozdanie finansowe Polskiej Organizacji Turystycznej zatwierdza właściwy minister.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2024/1541__art_19" gd:GUID="4994216f-41d3-4d86-a7fc-54734f9acb1c" okres="okr_obowiazywanie.x.zdarz_wejscie_2025-01-01_DU-2024-1089_odczytane" obowiazuje-do="2025-01-01">
+            <nr>19</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="d78e6407-b245-4e2b-9f7f-b4abb8efca37" okres="okr_obowiazywanie.x.zdarz_wejscie_2025-01-01_DU-2024-1089_odczytane" obowiazuje-do="2025-01-01">
+              <p>
+                <zdanie nr="1" gd:zdGUID="c11a4f34-5935-4bfc-8612-314dd0ed2f2c" fragment="1" gd:fragmentGUID="afd10a80-b500-408e-8f04-5e047ea8e044"><odnosnik id-odnosnika="3" symbol="3" gd:GUID="313e0390-cca5-4691-8c69-f00d55eb7c36"><p><zdanie nr="1" gd:zdGUID="1286c0fd-70fc-4e5e-8ee5-4104d67ffa20" fragment="1" gd:fragmentGUID="7ceefcca-f84d-40e2-981d-18743ef863a3">W tym brzmieniu obowiązuje do wejścia w życie zmiany, o której mowa w odnośniku 4.</zdanie></p></odnosnik> Polska Organizacja Turystyczna może otrzymywać z budżetu państwa dotacje celowe na finansowanie zadań, o których mowa w art. 3.</zdanie>
+                <zdanie nr="2" gd:zdGUID="fd405c27-8174-4619-ac9d-609d21782362" fragment="1" gd:fragmentGUID="4d1da49c-56e7-4649-8737-4b2592423481">Kwoty tych dotacji ustala ustawa budżetowa.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2024/1541__art_19" gd:GUID="253b264a-6adc-417e-af05-0df5da18dc67" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1089_odczytane.x" wejscie-w-zycie="2025-01-01">
+            <nr>19</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="942cde62-b177-40ae-b8da-e84fa6328571" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1089_odczytane.x" wejscie-w-zycie="2025-01-01">
+              <p>
+                <zdanie nr="1" gd:zdGUID="7abdcc66-9c22-419b-895a-ecd790aebb9d" fragment="1" gd:fragmentGUID="d61dae9f-3310-4d91-b339-7ae7a1810093"><odnosnik id-odnosnika="4" symbol="4" gd:GUID="3e790036-5e86-46e3-a810-9961120d122d"><p><zdanie nr="1" gd:zdGUID="78e39296-70bd-4981-a8d0-5d0f25568be2" fragment="1" gd:fragmentGUID="3b73c814-a542-4f35-a4f3-dd1d96dc06f1">W brzmieniu ustalonym przez art. 8 pkt 3 ustawy, o której mowa w odnośniku 1; wejdzie w życie z dniem 1 stycznia 2025 r.</zdanie></p></odnosnik> Polska Organizacja Turystyczna może otrzymywać z budżetu państwa dotacje celowe na finansowanie zadań, o których mowa w art. 3.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2024/1541__art_19a" gd:GUID="cbd2bdb3-cd43-4bda-a384-cdb06e9490f3">
+            <nr>19a</nr>
+            <ustep eId="DU/2024/1541__art_19a__ust_1" gd:GUID="79eabf52-e5e1-49d6-a51a-1f6b2d418b1a">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="26d56af4-4212-420b-a1b7-9ca97b126639" fragment="1" gd:fragmentGUID="49ac36a7-2ad9-4e29-8e95-c990fd93f458">Polska Organizacja Turystyczna może otrzymywać z budżetu państwa dotacje celowe na finansowanie zadań wynikających z odrębnych przepisów.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2024/1541__art_19a__ust_2" gd:GUID="760b3f46-715c-48e7-8fae-0b660375ae44" okres="okr_obowiazywanie.x.zdarz_uchylenie_2025-01-01_DU-2024-1089_odczytane" obowiazuje-do="2025-01-01">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="28a925bf-7c2d-4f32-8b01-398e40994e68" fragment="1" gd:fragmentGUID="3d6e1a09-c477-4598-8b08-fb9e73453e7f"><odnosnik id-odnosnika="5" symbol="5" gd:GUID="a5b4757a-4b89-4804-861c-d59710058561"><p><zdanie nr="1" gd:zdGUID="782b16e0-a3f0-40c1-b297-35ff87d7045a" fragment="1" gd:fragmentGUID="b79b6a75-56a8-47ef-8982-3420fd5b9a51">Obowiązuje do wejścia w życie zmiany, o której mowa w odnośniku 7.</zdanie></p></odnosnik> Przyznanie dotacji celowej na podstawie ust. 1 wymaga zmiany planu finansowego, o którym mowa w art. 15.</zdanie>
+                <zdanie nr="2" gd:zdGUID="7f2a70eb-0884-47a5-b091-b7259d679fb4" fragment="1" gd:fragmentGUID="f73497c2-d1ff-4402-ae82-c193046fe466">Do zmiany planu finansowego nie stosuje się art. 52 ust. 2 ustawy z dnia 27 sierpnia 2009 r. o finansach publicznych (Dz. U. z 2023 r. poz. 1270, z późn. zm.<odnosnik id-odnosnika="6" symbol="6" gd:GUID="0f42691d-1344-4304-819b-c3c94cd7d7db"><p><zdanie nr="1" gd:zdGUID="7d4c0126-34be-4bc3-a3c9-9da2d5da7950" fragment="1" gd:fragmentGUID="f23b7b44-eaa5-4b1f-923d-ac9647f507c4">Zmiany tekstu jednolitego wymienionej ustawy zostały ogłoszone w Dz. U. z 2023 r. poz. 1273, 1407, 1429, 1641, 1693 i 1872 oraz z 2024 r. poz. 858 i 1089.</zdanie></p></odnosnik>).</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2024/1541__art_19a__ust_2" gd:GUID="71699a96-586c-4ef6-9710-ccb00ee5571e" okres="okr_obowiazywanie.zdarz_uchylenie_2025-01-01_DU-2024-1089_odczytane.x" stan-jednostki="uchylony">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="1864edaf-81b9-4540-b19f-39d0d8eb530c" fragment="1" gd:fragmentGUID="b4d75763-0054-40c3-853c-b7242a16e0a5">(uchylony)<odnosnik id-odnosnika="7" symbol="7" gd:GUID="5f7140aa-0585-4d26-bcc1-884892b92e0f"><p><zdanie nr="1" gd:zdGUID="96411780-b601-43b0-b3d7-729676770dc1" fragment="1" gd:fragmentGUID="76f86c66-7919-44e4-8e65-f3d591de346e">Przez art. 8 pkt 4 ustawy, o której mowa w odnośniku 1; wejdzie w życie z dniem 1 stycznia 2025 r.</zdanie></p></odnosnik></zdanie>
+              </p>
+            </ustep>
+          </artykul>
+        </oddzial-n>
+      </rozdzial>
+      <rozdzial eId="DU/2024/1541__rozdz_4" gd:GUID="efe3bc86-a9e6-4b0a-9fd2-1bc2bdc291c5">
+        <naglowek-rozdzialu>
+          <nr>4</nr>
+          <p>Działalność gospodarcza Polskiej Organizacji Turystycznej</p>
+        </naglowek-rozdzialu>
+        <oddzial-n brak-eid="jednostka-nieoznaczona" gd:GUID="d640adeb-f85e-4e5e-abf8-86c3438c38ba">
+          <artykul eId="DU/2024/1541__art_20" gd:GUID="c367de38-b2d4-4b64-91b1-6caf68c48709">
+            <nr>20</nr>
+            <ustep eId="DU/2024/1541__art_20__ust_1" gd:GUID="3b3092ea-f9bf-415a-8b88-9ecf159f2eb6">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="9a38676f-a96b-400d-b768-9d1646e367fd" fragment="1" gd:fragmentGUID="59a2d3f9-8383-43f0-b7d0-4c4a3dbf79d6">Polska Organizacja Turystyczna może prowadzić działalność gospodarczą na podstawie przepisów o działalności gospodarczej w zakresie i w sposób określony w statucie.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2024/1541__art_20__ust_2" gd:GUID="aaa5dacc-9cc3-4b06-948f-a546ac79fc98">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="65e2e717-9fe3-44f6-8f88-70c1ed2ed82b" fragment="1" gd:fragmentGUID="1cf7b47d-fc13-4b0a-a7cb-d25d394cf351">Dochód z działalności gospodarczej służy wyłącznie realizacji zadań Polskiej Organizacji Turystycznej określonych w art. 3 ust. 1.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+        </oddzial-n>
+      </rozdzial>
+      <rozdzial eId="DU/2024/1541__rozdz_5" gd:GUID="0db303de-16ee-4ad8-ac4c-23d1c9389a48">
+        <naglowek-rozdzialu>
+          <nr>5</nr>
+          <p>Zmiany w przepisach obowiązujących</p>
+        </naglowek-rozdzialu>
+        <oddzial-n brak-eid="jednostka-nieoznaczona" gd:GUID="b8e87b53-27f8-440e-8322-b7d2207c0b15">
+          <artykul eId="DU/2024/1541__art_21" gd:GUID="63a4efe5-e265-4455-a354-4df1fb2999e8">
+            <nr />
+            <nr-od>21</nr-od>
+            <nr-do>23</nr-do>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="4613b8b3-fb1a-4abb-a879-45d9af0127e7">
+              <p>
+                <zdanie nr="1" gd:zdGUID="374df95e-d0f9-4fa1-bd5a-151ed0cf5aec" fragment="1" gd:fragmentGUID="b90af73b-ac62-4b28-9d62-874c908a70f7">(pominięte)</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+        </oddzial-n>
+      </rozdzial>
+      <rozdzial eId="DU/2024/1541__rozdz_6" gd:GUID="feb80ba1-1ad0-4b02-84a4-e2012e2a4fa9">
+        <naglowek-rozdzialu>
+          <nr>6</nr>
+          <p>Przepisy przejściowe i końcowe</p>
+        </naglowek-rozdzialu>
+        <oddzial-n brak-eid="jednostka-nieoznaczona" gd:GUID="4643bca3-78df-42b2-abf4-993caf9dd816">
+          <artykul eId="DU/2024/1541__art_24" gd:GUID="384f9056-a87c-4bb5-9957-eb8f65e5c303">
+            <nr>24</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="3155598e-557b-45ac-a65e-df0c3eaaea1e">
+              <p>
+                <zdanie nr="1" gd:zdGUID="efa780f1-45c9-4d75-964b-40d9155a8904" fragment="1" gd:fragmentGUID="6a3ec4b8-2dae-4e1f-a3b5-d6dee6f898e0">Do czasu powołania ministra właściwego do spraw kultury fizycznej i turystyki jego kompetencje określone w art. 7, art. 9 i art. 11 wykonuje Prezes Urzędu Kultury Fizycznej i Turystyki, a określone w art. 12 – Prezes Rady Ministrów.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2024/1541__art_25" gd:GUID="b62e02fd-9769-4c39-9cfc-54b1bb88a086">
+            <nr>25</nr>
+            <ustep eId="DU/2024/1541__art_25__ust_1" gd:GUID="329c31f4-b8cd-48a8-9dae-a994e7cf0c7e">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ab730ea5-b511-422f-a176-6acd23a0e6c7" fragment="1" gd:fragmentGUID="aa30385f-0883-4e8c-bda0-1c2c3dfabecd">Polska Organizacja Turystyczna staje się pracodawcą w stosunku do pracowników polskich ośrodków informacji turystycznej za granicą.</zdanie>
+                <zdanie nr="2" gd:zdGUID="a745c728-ad09-4262-a94c-ead105d08558" fragment="1" gd:fragmentGUID="0ad90a7e-840b-465d-812e-3a86d7dbdca8">Przepisy art. 23<sup>1</sup> § 1, 2 i 5 Kodeksu pracy, z zastrzeżeniem przepisów o pracownikach urzędów państwowych oraz o służbie cywilnej, stosuje się odpowiednio.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2024/1541__art_25__ust_2" gd:GUID="05b84221-cc45-4b9b-9cba-53c6ce1953e5">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="f8565878-995f-44f4-a2d4-0cc0b5342ca2" fragment="1" gd:fragmentGUID="6ad74792-e32a-41ce-a4f1-7f6eaf6d003e">Przepis ust. 1 stosuje się odpowiednio do pracowników przedsiębiorstwa państwowego Polska Agencja Promocji Turystyki.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2024/1541__art_26" gd:GUID="9103f00c-0ef1-43a4-b2ce-e975fbf4f303">
+            <nr>26</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="a179833f-38ac-4632-88c1-167c57411837">
+              <p>
+                <zdanie nr="1" gd:zdGUID="87c1b18f-9eae-45b7-ab1c-a49014280a28" fragment="1" gd:fragmentGUID="d98243c7-c1de-4460-b201-d0b46a960280">Ustawa wchodzi w życie z dniem 1 stycznia 2000 r., z wyjątkiem przepisów rozdziału 2 i art. 24, które wchodzą w życie z dniem ogłoszenia<odnosnik id-odnosnika="8" symbol="8" gd:GUID="6f3141b2-07a6-4115-a428-eb34a5f3165b"><p><zdanie nr="1" gd:zdGUID="58623b59-439c-44d1-9ed0-5c55201302cb" fragment="1" gd:fragmentGUID="d663d08d-9ae8-42d4-a9cc-7ae97d3016d1">Ustawa została ogłoszona w dniu 23 lipca 1999 r.</zdanie></p></odnosnik>.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+        </oddzial-n>
+      </rozdzial>
+    </ustawa>
+  </obwieszczenie>
+</akt-prawny>

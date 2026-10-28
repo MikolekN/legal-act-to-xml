@@ -1,0 +1,1196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <obwieszczenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/515</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>a0703ad9-c1c0-4226-adaa-860526d4ba69</gd:GUIDwersji>
+      <AdresISAP>WDU20250000515</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>515</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 515</AdresWyswietlany>
+      <Tytul>Obwieszczenie Marszałka Sejmu Rzeczypospolitej Polskiej z dnia 10 kwietnia 2025 r. w sprawie ogłoszenia jednolitego tekstu ustawy o podstawowej opiece zdrowotnej</Tytul>
+      <Rodzaj>OBW_TJ</Rodzaj>
+      <DataOgloszenia>2025-04-18</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-04-10</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_ujednolicenie_2025-04-18_DU-2025-515_domyslne" rodzaj="ujednolicenie" pochodzenie="domyslne-z-aktu" data="2025-04-18" />
+          <Zdarzenie id="zdarz_wejscie_2027-01-01_DU-2025-515_odczytane" rodzaj="wejscie-w-zycie" pochodzenie="odczytane" data="2027-01-01" dowod="DU/2025/515__odn_2" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_ujednolicenie.zdarz_ujednolicenie_2025-04-18_DU-2025-515_domyslne" glowna="true">
+          <Przedzial rodzaj="ujednolicenie" od="zdarz_ujednolicenie_2025-04-18_DU-2025-515_domyslne" />
+        </GrupaCzasowa>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2027-01-01_DU-2025-515_odczytane.x" glowna="false">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2027-01-01_DU-2025-515_odczytane" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <DataObowiazywaniaWersji>
+        <Od>zdarz_ujednolicenie_2025-04-18_DU-2025-515_domyslne</Od>
+      </DataObowiazywaniaWersji>
+      <Organy>
+        <Organ gd:GUID="aa14747b-2f23-47ad-9701-7da904a4cf51" rola="wydajacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/MSEJMU">
+          <Nazwa>Marszałek Sejmu</Nazwa>
+          <OrganPodpisujacy>Marszałek Sejmu</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>P.</imie> <nazwisko>Zgorzelski</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Obwieszczenie</rodzaj-aktu>
+    <autor-aktu>Marszałka Sejmu Rzeczypospolitej Polskiej</autor-aktu>
+    <data>z dnia 10 kwietnia 2025 r.</data>
+    <tytul>w sprawie ogłoszenia jednolitego tekstu ustawy o podstawowej opiece zdrowotnej</tytul>
+    <punkt-OTJ eId="DU/2025/515__pkt_1" gd:GUID="2731c128-a09c-4073-919a-9d80247062ba">
+      <nr>1</nr>
+      <p>
+        <zdanie nr="1" gd:zdGUID="cd1d9744-9314-400f-a9b9-a071396157a6" fragment="1" gd:fragmentGUID="47a88955-5cec-42ec-8ec0-770f6ee82679">Na podstawie art. 16 ust. 1 zdanie pierwsze ustawy z dnia 20 lipca 2000 r. o ogłaszaniu aktów normatywnych i niektórych innych aktów prawnych (Dz. U. z 2019 r. poz. 1461) ogłasza się w załączniku do niniejszego obwieszczenia jednolity tekst ustawy z dnia 27 października 2017 r. o podstawowej opiece zdrowotnej (Dz. U. z 2022 r. poz. 2527), z uwzględnieniem zmian wprowadzonych ustawą z dnia 27 listopada 2024 r. o zmianie ustawy o Centrum Medycznym Kształcenia Podyplomowego oraz niektórych innych ustaw (Dz. U. poz. 1897) oraz zmian wynikających z przepisów ogłoszonych przed dniem 4 kwietnia 2025 r.</zdanie>
+      </p>
+    </punkt-OTJ>
+    <punkt-OTJ eId="DU/2025/515__pkt_2" gd:GUID="9d401ca8-6285-4532-bc51-20912cbb5bd7">
+      <nr>2</nr>
+      <p>
+        <zdanie nr="1" gd:zdGUID="bf0d30cd-d35c-425a-9037-797a561533ec" fragment="1" gd:fragmentGUID="cf3cb33b-2bf9-45d6-836f-3f8b7b0a35d0">Podany w załączniku do niniejszego obwieszczenia tekst jednolity ustawy nie obejmuje art. 41 ustawy z dnia 27 listopada 2024 r. o zmianie ustawy o Centrum Medycznym Kształcenia Podyplomowego oraz niektórych innych ustaw (Dz. U. poz. 1897), który stanowi:<tresc-strukt cudzyslowy="oba" gd:GUID="76df3d3e-7f51-4d24-be6e-453835d15057"><artykul eId="DU/2024/1897__art_41" gd:GUID="2fdb06c4-78a0-4ba4-80ea-0266c267b10b"><nr>41</nr><ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="46af8481-ced3-4cc6-8783-03a2dc8b9017"><p><zdanie nr="1" gd:zdGUID="2e6c729b-cef5-4d12-9dae-9af3a91c7f2a" fragment="1" gd:fragmentGUID="4287ad9c-d414-4c12-9f41-d3c915a651ca">Ustawa wchodzi w życie z dniem 1 stycznia 2025 r., z wyjątkiem:</zdanie></p><punkt eId="DU/2024/1897__art_41__pkt_1" gd:GUID="8f476758-496c-4805-9577-efd37c7b3f8a"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="2e6c729b-cef5-4d12-9dae-9af3a91c7f2a" fragment="2" gd:fragmentGUID="7e75e4ed-dadd-4726-a415-6aa8b00dceaa">art. 12, art. 15, art. 19 i art. 40, które wchodzą w życie z dniem 30 grudnia 2024 r.;</zdanie></p></punkt><punkt eId="DU/2024/1897__art_41__pkt_2" gd:GUID="3553c0d0-e40e-40fa-a67c-d1ee0b35bfee"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="2e6c729b-cef5-4d12-9dae-9af3a91c7f2a" fragment="3" gd:fragmentGUID="a601a558-3f8f-4455-90e1-2843f6d46b08">art. 9 pkt 14 i 15 oraz art. 28 ust. 5 i 6, które wchodzą w życie z dniem 16 stycznia 2025 r.;</zdanie></p></punkt><punkt eId="DU/2024/1897__art_41__pkt_3" gd:GUID="ddfe0b17-92c4-4202-bb7c-daf52080f2ba"><nr>3</nr><p><zdanie nr="1" gd:zdGUID="2e6c729b-cef5-4d12-9dae-9af3a91c7f2a" fragment="4" gd:fragmentGUID="88460703-37f2-4e40-8810-8c6012b5afe0">art. 2 pkt 3 i 4 oraz art. 35, które wchodzą w życie z dniem 1 września 2025 r.;</zdanie></p></punkt><punkt eId="DU/2024/1897__art_41__pkt_4" gd:GUID="4f30f3eb-77cb-4cf3-a51f-70159ea60d6d"><nr>4</nr><p><zdanie nr="1" gd:zdGUID="2e6c729b-cef5-4d12-9dae-9af3a91c7f2a" fragment="5" gd:fragmentGUID="1dea40ff-44a0-432e-92ce-2f6781b505a3">art. 9 pkt 7 lit. b–e i pkt 9, które wchodzą w życie z dniem 1 stycznia 2027 r.</zdanie></p></punkt></ustep-n></artykul></tresc-strukt>.</zdanie>
+      </p>
+    </punkt-OTJ>
+    <organ-podpisujacy>Marszałek Sejmu: wz. <i><osoba podpisujacy="true" gd:osobaGUID="d171d45e-228b-4660-b8fd-7548fe72781f"><imie>P.</imie> <nazwisko>Zgorzelski</nazwisko></osoba></i></organ-podpisujacy>
+    <ustawa>
+      <zalacznik-do>Załącznik do obwieszczenia Marszałka Sejmu Rzeczypospolitej Polskiej z dnia 10 kwietnia 2025 r. (Dz. U. poz. 515)</zalacznik-do>
+      <rodzaj-aktu>Ustawa</rodzaj-aktu>
+      <data>z dnia 27 października 2017 r.</data>
+      <tytul>o podstawowej opiece zdrowotnej</tytul>
+      <rozdzial eId="DU/2025/515__rozdz_1" gd:GUID="01b4a492-61d2-42ba-a03a-6b88112e8e41">
+        <naglowek-rozdzialu>
+          <nr>1</nr>
+          <p>Przepisy ogólne</p>
+        </naglowek-rozdzialu>
+        <oddzial-n brak-eid="jednostka-nieoznaczona" gd:GUID="3bf6479c-fd92-42e6-a712-eeacbefde848">
+          <artykul eId="DU/2025/515__art_1" gd:GUID="a20c90b5-0e63-4c1f-94ba-3379fcedacae">
+            <nr>1</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="723e8910-5094-481e-aa56-a86974eab2f5">
+              <p>
+                <zdanie nr="1" gd:zdGUID="06a29792-64d1-42ec-8bff-ea68b844fe57" fragment="1" gd:fragmentGUID="de7bed4f-9031-4462-be91-d9e53dd90145">Ustawa określa cele i organizację podstawowej opieki zdrowotnej oraz zasady zapewnienia odpowiedniej jakości świadczeń opieki zdrowotnej z zakresu podstawowej opieki zdrowotnej.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2025/515__art_2" gd:GUID="52775752-c232-4dfb-9322-e3531619f153">
+            <nr>2</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="d482c6d8-5e3c-42b4-b5e7-158c21c189c8">
+              <p>
+                <zdanie nr="1" gd:zdGUID="d9b45c36-e146-474a-9208-2b57ab60bafe" fragment="1" gd:fragmentGUID="87577105-384d-4aa6-9d8a-b5dc42113b8c">Podstawowa opieka zdrowotna stanowi miejsce pierwszego kontaktu świadczeniobiorcy, w rozumieniu przepisów ustawy z dnia 27 sierpnia 2004 r. o świadczeniach opieki zdrowotnej finansowanych ze środków publicznych (Dz. U. z 2024 r. poz. 146, z późn. zm.<odnosnik id-odnosnika="1" symbol="1" gd:GUID="450323df-00ac-41c1-b1d6-f66edcd542a6"><p><zdanie nr="1" gd:zdGUID="59910b0a-a93f-4abd-b59a-64a17a4275ae" fragment="1" gd:fragmentGUID="e1945d40-3649-4766-9041-05607bfed4dc">Zmiany tekstu jednolitego wymienionej ustawy zostały ogłoszone w Dz. U. z 2024 r. poz. 858, 1222, 1593, 1615 i 1915 oraz z 2025 r. poz. 129 i 304.</zdanie></p></odnosnik>), zwanego dalej „świadczeniobiorcą”, z systemem ochrony zdrowia, z wyłączeniem sytuacji, w których świadczeniobiorca znajduje się w stanie nagłego zagrożenia zdrowotnego, o którym mowa w art. 3 pkt 8 ustawy z dnia 8 września 2006 r. o Państwowym Ratownictwie Medycznym (Dz. U. z 2025 r. poz. 91), lub udzielane są mu świadczenia, o których mowa w art. 57 ust. 2 ustawy z dnia 27 sierpnia 2004 r. o świadczeniach opieki zdrowotnej finansowanych ze środków publicznych, zwanej dalej „ustawą o świadczeniach”, w ramach którego jest zapewniony dostęp do profilaktycznych, diagnostycznych, leczniczych, pielęgnacyjnych oraz rehabilitacyjnych świadczeń opieki zdrowotnej finansowanych ze środków publicznych.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2025/515__art_3" gd:GUID="11be3d46-b20e-4b96-bbb8-475937fe9d12">
+            <nr>3</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="762d22d0-2b4e-456b-92e2-0d4914a846f1">
+              <p>
+                <zdanie nr="1" gd:zdGUID="ea11e9a7-c7ea-400f-b0b8-e55639e37ce0" fragment="1" gd:fragmentGUID="f7341a4d-7a68-47bd-a874-f5ad050a2c36">Podstawowa opieka zdrowotna ma na celu:</zdanie>
+              </p>
+              <punkt eId="DU/2025/515__art_3__pkt_1" gd:GUID="09109b50-ce93-4b28-98d8-56b5b6c8f2fb">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="ea11e9a7-c7ea-400f-b0b8-e55639e37ce0" fragment="2" gd:fragmentGUID="4f552fde-77d5-4cbe-9399-6bbbeb5cdf01">zapewnienie opieki zdrowotnej nad świadczeniobiorcą i jego rodziną;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/515__art_3__pkt_2" gd:GUID="ec56d43a-0961-420a-bb34-93b0a529acba">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="ea11e9a7-c7ea-400f-b0b8-e55639e37ce0" fragment="3" gd:fragmentGUID="49519729-e420-456f-bb4e-28a7cf49e332">koordynację opieki zdrowotnej nad świadczeniobiorcą w systemie ochrony zdrowia;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/515__art_3__pkt_3" gd:GUID="fc1979ab-d0f5-466e-b4f1-fd146e7539cd">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="ea11e9a7-c7ea-400f-b0b8-e55639e37ce0" fragment="4" gd:fragmentGUID="b561617f-cc75-4ab6-9c51-e9c75ef72472">ocenę potrzeb oraz ustalenie priorytetów zdrowotnych populacji objętej opieką oraz wdrażanie działań profilaktycznych;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/515__art_3__pkt_4" gd:GUID="cab190fa-bd9b-4817-b00b-83d1a9eb1e8d">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="ea11e9a7-c7ea-400f-b0b8-e55639e37ce0" fragment="5" gd:fragmentGUID="8bb85c83-37ab-424f-ad84-5147e5c71fb0">rozpoznawanie, eliminowanie lub ograniczanie zagrożeń i problemów zdrowia fizycznego i psychicznego;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/515__art_3__pkt_5" gd:GUID="eab28c83-cca9-4591-8313-d3e55cf13aa2">
+                <nr>5</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="ea11e9a7-c7ea-400f-b0b8-e55639e37ce0" fragment="6" gd:fragmentGUID="df65d21c-a867-4d79-b21f-dc0adad672df">zapewnienie profilaktycznej opieki zdrowotnej oraz promocji zdrowia dostosowanych do potrzeb różnych grup społeczeństwa;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/515__art_3__pkt_6" gd:GUID="a3bd0f8e-30d4-4c42-86ca-da795492dd1f">
+                <nr>6</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="ea11e9a7-c7ea-400f-b0b8-e55639e37ce0" fragment="7" gd:fragmentGUID="9db2c15a-667b-4af9-9341-7684a837096f">zapewnienie edukacji świadczeniobiorcy w zakresie odpowiedzialności za własne zdrowie i kształtowanie świadomości prozdrowotnej.</zdanie>
+                </p>
+              </punkt>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2025/515__art_4" gd:GUID="8a0dc4d8-e011-4dc9-b095-3cd19466c8f1">
+            <nr>4</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="1eb6e7fb-54f0-4b7c-81bb-50db7ebd6366">
+              <p>
+                <zdanie nr="1" gd:zdGUID="8728bbb3-f071-4d10-baf7-00ccee641d35" fragment="1" gd:fragmentGUID="06d337b3-5384-45d9-8e8e-2feb426c54a9">Koordynacja opieki zdrowotnej nad świadczeniobiorcą w systemie ochrony zdrowia polega na zintegrowaniu udzielania świadczeń opieki zdrowotnej, obejmujących wszystkie etapy i elementy procesu ich realizacji, z wykorzystaniem systemów teleinformatycznych, środków komunikacji elektronicznej lub publicznie dostępnych usług telekomunikacyjnych, ze szczególnym uwzględnieniem jakości i efektywności udzielanych świadczeń.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2025/515__art_5" gd:GUID="577db5eb-cc07-4d60-b5dc-902edd48db6b">
+            <nr>5</nr>
+            <ustep eId="DU/2025/515__art_5__ust_1" gd:GUID="c9456d02-5388-477a-9da9-693394486991">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="e44e967f-054a-4794-8d8d-74cd811858ce" fragment="1" gd:fragmentGUID="6b9c56e9-1c14-4754-ae11-1bc41e8b6740">Koordynację, o której mowa w art. 4, zapewnia lekarz podstawowej opieki zdrowotnej, zwany dalej „lekarzem POZ”, we współpracy z pielęgniarką podstawowej opieki zdrowotnej, zwaną dalej „pielęgniarką POZ”, i położną podstawowej opieki zdrowotnej, zwaną dalej „położną POZ”.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/515__art_5__ust_2" gd:GUID="cbcd30eb-348f-430e-8fb5-de5c687e63cb">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="51274594-a1ec-4cfc-a169-956faabda445" fragment="1" gd:fragmentGUID="18dd1c01-7914-4366-8b46-d6fb8f2a59e9">Lekarz POZ w ramach koordynacji, o której mowa w art. 4, inicjuje lub kontynuuje postępowanie diagnostyczno-lecznicze podejmowane w odniesieniu do świadczeniobiorcy przez innego świadczeniodawcę, w rozumieniu ustawy o świadczeniach, zwanego dalej „świadczeniodawcą”, w ramach swoich kompetencji zawodowych, zgodnie z aktualną wiedzą medyczną.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/515__art_5__ust_3" gd:GUID="79d317c6-1f95-42b3-b244-b9c212604a5b">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="29e6f560-bf2f-4cf0-b943-b5894134d8df" fragment="1" gd:fragmentGUID="b681c233-70e3-4141-8403-679487d850a6">Pielęgniarka POZ i położna POZ, o których mowa w ust. 1, w ramach współpracy z lekarzem POZ, rozpoznają warunki i potrzeby zdrowotne u świadczeniobiorcy oraz problemy pielęgnacyjne, planują i sprawują kompleksową opiekę pielęgniarską, a także kontynuują postępowanie terapeutyczne zlecone przez innego świadczeniodawcę, w ramach swoich kompetencji zawodowych, zgodnie z aktualną wiedzą medyczną.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2025/515__art_6" gd:GUID="0ed097b3-1ab5-43fd-9c38-8b832a6fcec1">
+            <nr>6</nr>
+            <ustep eId="DU/2025/515__art_6__ust_1" gd:GUID="46e61c26-8ad7-41cd-acd6-7a7eeab126f2">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="e19bda30-206f-4578-bf8b-3ecbe0aa8139" fragment="1" gd:fragmentGUID="85f2c45a-2b98-4fa5-bd05-4130981b08bb">Lekarz POZ to lekarz, który:</zdanie>
+              </p>
+              <punkt eId="DU/2025/515__art_6__ust_1__pkt_1" gd:GUID="b7c74557-3f3c-4c93-91ed-06e809a4c461">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="e19bda30-206f-4578-bf8b-3ecbe0aa8139" fragment="2" gd:fragmentGUID="79488a6f-c95d-4862-8acb-abebcf074d88">posiada tytuł specjalisty w dziedzinie medycyny rodzinnej albo</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/515__art_6__ust_1__pkt_2" gd:GUID="f0da800c-a182-4f01-b404-902887da7ce7">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="e19bda30-206f-4578-bf8b-3ecbe0aa8139" fragment="3" gd:fragmentGUID="36c11e03-bdb6-4dc9-9700-a69a5855161c">odbywa szkolenie specjalizacyjne w dziedzinie medycyny rodzinnej, albo</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/515__art_6__ust_1__pkt_3" gd:GUID="6848d8cb-29a6-4018-8a87-6372fe717beb">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="e19bda30-206f-4578-bf8b-3ecbe0aa8139" fragment="4" gd:fragmentGUID="dd9b0719-bd41-4edb-91b9-f1bf8f116059">posiada specjalizację II stopnia w dziedzinie medycyny ogólnej, albo</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/515__art_6__ust_1__pkt_4" gd:GUID="f33d6824-b352-402c-8d51-7815eb9b0967" okres="okr_obowiazywanie.zdarz_wejscie_2027-01-01_DU-2025-515_odczytane.x" wejscie-w-zycie="2027-01-01">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="e19bda30-206f-4578-bf8b-3ecbe0aa8139" fragment="5" gd:fragmentGUID="8ec950ee-9ba0-402e-b58c-b88588ee1cbf"><odnosnik id-odnosnika="2" symbol="2" gd:GUID="ae232a87-f7d7-4bea-a93f-20b089fe80e4"><p><zdanie nr="1" gd:zdGUID="9bb262dd-26b2-44cf-9fec-f2a66e6cd530" fragment="1" gd:fragmentGUID="382a3842-969c-4cca-9bea-847ba397e258">Wejdzie w życie z dniem 1 stycznia 2027 r., w zakresie obowiązku ukończenia kursu w dziedzinie medycyny rodzinnej, na podstawie art. 38 pkt 4 niniejszej ustawy.</zdanie></p></odnosnik> posiada specjalizację I lub II stopnia lub tytuł specjalisty w dziedzinie pediatrii, pod warunkiem ukończenia kursu w dziedzinie medycyny rodzinnej</zdanie>
+                </p>
+              </punkt>
+              <czesc-wspolna-punkt eId="DU/2025/515__art_6__ust_1__czw" gd:GUID="3bc685d3-71ba-425a-a740-834d44196253">
+                <p>
+                  <zdanie nr="1" gd:zdGUID="e19bda30-206f-4578-bf8b-3ecbe0aa8139" fragment="6" gd:fragmentGUID="9fc8b039-6e83-477c-9bd9-c783410c183a">– z którym Narodowy Fundusz Zdrowia zawarł umowę o udzielanie świadczeń z zakresu podstawowej opieki zdrowotnej albo który wykonuje zawód u świadczeniodawcy, z którym Narodowy Fundusz Zdrowia zawarł umowę o udzielanie świadczeń z zakresu podstawowej opieki zdrowotnej, wybrany przez świadczeniobiorcę zgodnie z art. 9.</zdanie>
+                </p>
+              </czesc-wspolna-punkt>
+            </ustep>
+            <ustep eId="DU/2025/515__art_6__ust_2" gd:GUID="480cc169-54b0-4bcc-8b39-88c8319b113d" okres="okr_obowiazywanie.zdarz_wejscie_2027-01-01_DU-2025-515_odczytane.x" wejscie-w-zycie="2027-01-01">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="b742b1b5-6c7e-4d96-a3d3-444ed3a1d64e" fragment="1" gd:fragmentGUID="e02b418a-4fb8-422b-b626-401b21b326a5"><odsylacz-do-odnosnika id-odnosnika="2" symbol="2" /> Lekarzem POZ jest także lekarz:</zdanie>
+              </p>
+              <punkt eId="DU/2025/515__art_6__ust_2__pkt_1" gd:GUID="cb67a43f-0018-4bf0-898c-cdefeeb854e6" okres="okr_obowiazywanie.zdarz_wejscie_2027-01-01_DU-2025-515_odczytane.x" wejscie-w-zycie="2027-01-01">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="b742b1b5-6c7e-4d96-a3d3-444ed3a1d64e" fragment="2" gd:fragmentGUID="28a2cd72-43a3-48ec-9330-b69effc642d4">posiadający specjalizację I stopnia w dziedzinie medycyny ogólnej lub</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/515__art_6__ust_2__pkt_2" gd:GUID="9ab13f9b-6493-4368-be0f-8f69a1bae20f" okres="okr_obowiazywanie.zdarz_wejscie_2027-01-01_DU-2025-515_odczytane.x" wejscie-w-zycie="2027-01-01">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="b742b1b5-6c7e-4d96-a3d3-444ed3a1d64e" fragment="3" gd:fragmentGUID="53884448-b018-4f06-98fa-0af8ad7c0e64">posiadający specjalizację I lub II stopnia lub tytuł specjalisty w dziedzinie chorób wewnętrznych</zdanie>
+                </p>
+              </punkt>
+              <czesc-wspolna-punkt eId="DU/2025/515__art_6__ust_2__czw" gd:GUID="75aa9d3e-7238-49b3-958e-cb48e88c8476" okres="okr_obowiazywanie.zdarz_wejscie_2027-01-01_DU-2025-515_odczytane.x" wejscie-w-zycie="2027-01-01">
+                <p>
+                  <zdanie nr="1" gd:zdGUID="b742b1b5-6c7e-4d96-a3d3-444ed3a1d64e" fragment="4" gd:fragmentGUID="abe5bd0e-8c88-4063-ab0a-b7d2209a017e" okres="okr_obowiazywanie.zdarz_wejscie_2027-01-01_DU-2025-515_odczytane.x" wejscie-w-zycie="2027-01-01">– udzielający świadczeń zdrowotnych z zakresu podstawowej opieki zdrowotnej przed dniem 31 grudnia 2026 r., pod warunkiem ukończenia kursu, o którym mowa w ust. 1 pkt 4, z zastrzeżeniem art. 14 ustawy z dnia 24 sierpnia 2007 r. o zmianie ustawy o świadczeniach opieki zdrowotnej finansowanych ze środków publicznych oraz niektórych innych ustaw (Dz. U. poz. 1172).<odnosnik id-odnosnika="3" symbol="3" gd:GUID="9603d397-a923-4a9d-838a-fe545f5053e8"><p><zdanie nr="1" gd:zdGUID="cc3c8a00-ea16-4f95-a28c-4dd87ab34381" fragment="1" gd:fragmentGUID="bccde2b4-50c8-4d75-95b0-ce46de90e401">Część wspólna ze zmianą wprowadzoną przez art. 12 pkt 1 lit. a ustawy z dnia 27 listopada 2024 r. o zmianie ustawy o Centrum Medycznym Kształcenia Podyplomowego oraz niektórych innych ustaw (Dz. U. poz. 1897); weszła w życie z dniem 30 grudnia 2024 r.</zdanie></p></odnosnik></zdanie>
+                </p>
+              </czesc-wspolna-punkt>
+            </ustep>
+            <ustep eId="DU/2025/515__art_6__ust_2a" gd:GUID="18676d69-2565-44cc-b65b-7f0677e9d2b1">
+              <nr>2a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="09c7b1e2-55c0-4e19-bbe2-5bf2a3aae509" fragment="1" gd:fragmentGUID="80b23b93-16c3-48b0-894f-80691be2512a"><odnosnik id-odnosnika="4" symbol="4" gd:GUID="450d134f-440c-4914-a612-8f354088932a"><p><zdanie nr="1" gd:zdGUID="50330c7a-7f05-44f8-9117-416c636a3c3c" fragment="1" gd:fragmentGUID="ce02c3cb-375d-4386-b404-ccbc31601ca5">Dodany przez art. 12 pkt 1 lit. b ustawy, o której mowa w odnośniku 3; weszła w życie z dniem 30 grudnia 2024 r.</zdanie></p></odnosnik> Obowiązek ukończenia kursu w dziedzinie medycyny rodzinnej, o którym mowa w ust. 1 pkt 4 i ust. 2, nie dotyczy lekarzy, którzy przez okres co najmniej dziesięciu lat udzielali świadczeń zdrowotnych z zakresu podstawowej opieki zdrowotnej jako lekarze podstawowej opieki zdrowotnej.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/515__art_6__ust_3" gd:GUID="af4dae26-2d9c-485d-9ed4-6cbb0b5992f0">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="e256806f-27f8-41b1-9755-d1e11ef4dc14" fragment="1" gd:fragmentGUID="a50709ba-62d7-443b-9f29-e40b2aac3de5">Lekarz, o którym mowa w ust. 1 pkt 4, może sprawować opiekę nad świadczeniobiorcą wyłącznie do ukończenia przez tego świadczeniobiorcę 18. roku życia.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/515__art_6__ust_4" gd:GUID="aecd8aa5-df5c-4441-a14d-35337c872826">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="7e4d7d91-2eec-4c5b-ac20-36a76f4c3c0e" fragment="1" gd:fragmentGUID="fe65dabe-fed9-4814-b6bb-00f7027090fa">Kurs, o którym mowa w ust. 1 pkt 4, organizuje instytut, o którym mowa w art. 15 ust. 2, lub Centrum Medycznego Kształcenia Podyplomowego, na podstawie ramowego programu kursu określonego w przepisach wydanych na podstawie ust. 6.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/515__art_6__ust_4a" gd:GUID="608e4218-d619-47dc-b0bc-20b1bcac1a26">
+              <nr>4a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="651b034a-ea6d-40ef-9302-36632843fda7" fragment="1" gd:fragmentGUID="d596b2af-da1f-41b7-bfd9-766fcba217bc"><odnosnik id-odnosnika="5" symbol="5" gd:GUID="579a4c8a-df05-4dcc-b038-4f1e4b729f73"><p><zdanie nr="1" gd:zdGUID="a775d580-1590-4af6-930e-150793b3713e" fragment="1" gd:fragmentGUID="da2b95dc-a0b4-44d4-b91d-a974a7f09b8e">Dodany przez art. 12 pkt 1 lit. c ustawy, o której mowa w odnośniku 3; weszła w życie z dniem 30 grudnia 2024 r.</zdanie></p></odnosnik> Warunkiem ukończenia kursu, o którym mowa w ust. 1 pkt 4, jest uczestnictwo w kursie i zaliczenie końcowego sprawdzianu testowego obejmującego zagadnienia z programu kursu.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/515__art_6__ust_4b" gd:GUID="c74efbf3-0002-4117-8421-653a80bf002f">
+              <nr>4b</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="0a45f143-6d31-486e-acdc-f0cfdf25744c" fragment="1" gd:fragmentGUID="a119069d-d550-4695-91b7-07aa6add2259"><odsylacz-do-odnosnika id-odnosnika="5" symbol="5" /> Uczestnik kursu, o którym mowa w ust. 1 pkt 4, po jego ukończeniu z wynikiem pozytywnym otrzymuje zaświadczenie o ukończeniu kursu obejmujące następujące dane:</zdanie>
+              </p>
+              <punkt eId="DU/2025/515__art_6__ust_4b__pkt_1" gd:GUID="fdd6baae-bb5a-486a-b9de-75ab2d804520">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="0a45f143-6d31-486e-acdc-f0cfdf25744c" fragment="2" gd:fragmentGUID="f6d3a708-9087-4ae1-8de6-3398671ef235">nazwę i adres organizatora kursu;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/515__art_6__ust_4b__pkt_2" gd:GUID="e74cf90b-db40-4331-953a-e6dc22725732">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="0a45f143-6d31-486e-acdc-f0cfdf25744c" fragment="3" gd:fragmentGUID="22b630c0-704f-4791-a23c-2261094e1e3b">nazwę kursu;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/515__art_6__ust_4b__pkt_3" gd:GUID="1c15c955-8b36-4969-bfa4-3b008d40a793">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="0a45f143-6d31-486e-acdc-f0cfdf25744c" fragment="4" gd:fragmentGUID="7359a57d-85a3-4d87-beef-051abac7dd22">imię i nazwisko uczestnika kursu;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/515__art_6__ust_4b__pkt_4" gd:GUID="66f3d4c6-611a-47a7-bf23-082c057cf0bd">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="0a45f143-6d31-486e-acdc-f0cfdf25744c" fragment="5" gd:fragmentGUID="4c49d915-475c-4c7f-8382-940745295b94">numer prawa wykonywania zawodu lekarza;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/515__art_6__ust_4b__pkt_5" gd:GUID="abe0b203-feba-4a76-977a-ae5af1fbf700">
+                <nr>5</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="0a45f143-6d31-486e-acdc-f0cfdf25744c" fragment="6" gd:fragmentGUID="eba3d362-fdb3-40f9-a274-02a169d0b20c">nazwę organu wydającego prawo wykonywania zawodu lekarza;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/515__art_6__ust_4b__pkt_6" gd:GUID="e7f5e07d-71ec-48b1-bdae-ee9fea5240d5">
+                <nr>6</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="0a45f143-6d31-486e-acdc-f0cfdf25744c" fragment="7" gd:fragmentGUID="0c5a4582-420c-4243-ab50-09da8b7c5c5e">datę odbycia kursu;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/515__art_6__ust_4b__pkt_7" gd:GUID="e2199a2a-bcae-429d-abce-a4b9183a31fa">
+                <nr>7</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="0a45f143-6d31-486e-acdc-f0cfdf25744c" fragment="8" gd:fragmentGUID="c83a1195-f740-42da-8f3e-e86926aa2b1c">informację o ukończeniu kursu z wynikiem pozytywnym;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/515__art_6__ust_4b__pkt_8" gd:GUID="bbec6b5d-b752-4aa0-b04b-81a791e52500">
+                <nr>8</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="0a45f143-6d31-486e-acdc-f0cfdf25744c" fragment="9" gd:fragmentGUID="0c4463fd-809c-4186-8707-a5da7c13f461">datę wydania zaświadczenia;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/515__art_6__ust_4b__pkt_9" gd:GUID="3eebf27b-7c3f-4954-beca-02778d71fd41">
+                <nr>9</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="0a45f143-6d31-486e-acdc-f0cfdf25744c" fragment="10" gd:fragmentGUID="e5ec0d13-4c92-4b11-85ab-6f09d46e1636">podpis z podaniem imienia i nazwiska osoby reprezentującej organizatora kursu.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2025/515__art_6__ust_5" gd:GUID="0399296b-915f-411d-9ff3-f0af2037040a">
+              <nr>5</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="212e70da-1f08-4690-82b7-3577a2eac0bc" fragment="1" gd:fragmentGUID="a87a0056-3134-48f9-8570-3b9aa1f2d930"><odnosnik id-odnosnika="6" symbol="6" gd:GUID="0994d113-ac33-482f-88b4-cb5dedf3c3f0"><p><zdanie nr="1" gd:zdGUID="f1e5688c-c840-483d-b3fa-8bf4aea38b2c" fragment="1" gd:fragmentGUID="d668af94-20f1-4b85-b614-21d6f7301e27">W brzmieniu ustalonym przez art. 12 pkt 1 lit. d ustawy, o której mowa w odnośniku 3; weszła w życie z dniem 30 grudnia 2024 r.</zdanie></p></odnosnik> Koszty kursu, o którym mowa w ust. 1 pkt 4, pokrywa lekarz lub świadczeniodawca, z którym Narodowy Fundusz Zdrowia zawarł umowę o udzielanie świadczeń podstawowej opieki zdrowotnej, lub podmiot, o którym mowa w ust. 4.</zdanie>
+                <zdanie nr="2" gd:zdGUID="b84bf78a-0bd1-4ceb-b7f1-5e9173c86a38" fragment="1" gd:fragmentGUID="c64193cb-61a3-4518-9d56-7882e26750d6">Koszty te mogą być również pokrywane w ramach dofinansowania pochodzącego ze środków europejskich w rozumieniu art. 2 pkt 5 ustawy z dnia 27 sierpnia 2009 r. o finansach publicznych (Dz. U. z 2024 r. poz. 1530, 1572, 1717, 1756 i 1907 oraz z 2025 r. poz. 39).</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/515__art_6__ust_6" gd:GUID="dd731a49-e33f-45f9-9bbd-c615718fe995">
+              <nr>6</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="4e1c6bfd-ad55-47fa-9b5b-6077afaaff2e" fragment="1" gd:fragmentGUID="6d6adfd4-8026-436e-acd3-f3d0bdb6aed1"><odsylacz-do-odnosnika id-odnosnika="6" symbol="6" /> Minister właściwy do spraw zdrowia określi, w drodze rozporządzenia:</zdanie>
+              </p>
+              <punkt eId="DU/2025/515__art_6__ust_6__pkt_1" gd:GUID="c0072f6e-7c0c-414d-bc03-47875c42c191">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="4e1c6bfd-ad55-47fa-9b5b-6077afaaff2e" fragment="2" gd:fragmentGUID="737a0997-a249-4c9e-bca6-1b793c2e755a">ramowy program kursu obejmujący założenia organizacyjno-programowe, plan nauczania zawierający rozkład zajęć, wykaz treści nauczania i wymaganej wiedzy oraz szczegółowe warunki ukończenia kursu, uwzględniając zakres wiedzy niezbędnej do udzielania świadczeń z zakresu podstawowej opieki zdrowotnej;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/515__art_6__ust_6__pkt_2" gd:GUID="f41e5e0f-94da-4130-9ec9-f4da3d1dc1f8">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="4e1c6bfd-ad55-47fa-9b5b-6077afaaff2e" fragment="3" gd:fragmentGUID="fc72159b-8327-4866-b76b-496c3e71e119">wzór zaświadczenia o ukończeniu kursu w dziedzinie medycyny rodzinnej, mając na uwadze zapewnienie jednolitości wydawanych zaświadczeń.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2025/515__art_7" gd:GUID="d2d755fe-1bf3-4086-80b7-6896e75f5508">
+            <nr>7</nr>
+            <ustep eId="DU/2025/515__art_7__ust_1" gd:GUID="c69e27c0-ba8a-44e8-b665-e484ab27a3e5">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="f624c5e2-a5ab-43e8-a67c-3451fc12080c" fragment="1" gd:fragmentGUID="de60313a-c686-4e90-8afd-ee88276d114c">Pielęgniarka POZ to pielęgniarka, która:</zdanie>
+              </p>
+              <punkt eId="DU/2025/515__art_7__ust_1__pkt_1" gd:GUID="ecaafcd3-cba4-452b-ad9a-719a911ebd9c">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="f624c5e2-a5ab-43e8-a67c-3451fc12080c" fragment="2" gd:fragmentGUID="871e87f0-1a0a-4ac9-85ff-213bb245959a">posiada tytuł specjalisty w dziedzinie pielęgniarstwa rodzinnego albo</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/515__art_7__ust_1__pkt_2" gd:GUID="a08b769f-c6aa-4f9f-97e4-5e851416ec30">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="f624c5e2-a5ab-43e8-a67c-3451fc12080c" fragment="3" gd:fragmentGUID="8bf2b5c6-71c1-44ab-b6b6-d2e46b8a84de">ukończyła kurs kwalifikacyjny w dziedzinie pielęgniarstwa rodzinnego, albo</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/515__art_7__ust_1__pkt_3" gd:GUID="7907907c-4950-4370-9c97-cecb0dd3fe96">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="f624c5e2-a5ab-43e8-a67c-3451fc12080c" fragment="4" gd:fragmentGUID="0fcd2a06-0a03-40a3-9829-0a65f557ac61">odbywa szkolenie specjalizacyjne w dziedzinie pielęgniarstwa rodzinnego, albo</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/515__art_7__ust_1__pkt_4" gd:GUID="b2c6f675-4ada-419d-b48e-5dc092e4a31b">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="f624c5e2-a5ab-43e8-a67c-3451fc12080c" fragment="5" gd:fragmentGUID="0329c4ca-0f74-4990-b2a4-389ed36e2a90">odbywa kurs kwalifikacyjny w dziedzinie pielęgniarstwa rodzinnego, albo</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/515__art_7__ust_1__pkt_5" gd:GUID="227d37c7-9a72-4cc9-b068-e72ef85b4e65">
+                <nr>5</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="f624c5e2-a5ab-43e8-a67c-3451fc12080c" fragment="6" gd:fragmentGUID="cefbf3fb-a668-4396-8cfa-17627a1cce61">posiada tytuł zawodowy magistra pielęgniarstwa</zdanie>
+                </p>
+              </punkt>
+              <czesc-wspolna-punkt eId="DU/2025/515__art_7__ust_1__czw" gd:GUID="a889a274-f8d4-4f54-ab0c-b3bb9210fa86">
+                <p>
+                  <zdanie nr="1" gd:zdGUID="f624c5e2-a5ab-43e8-a67c-3451fc12080c" fragment="7" gd:fragmentGUID="529cdbba-67fe-4be8-975d-91e4ea829732">– z którą Narodowy Fundusz Zdrowia zawarł umowę o udzielanie świadczeń z zakresu podstawowej opieki zdrowotnej albo która wykonuje zawód u świadczeniodawcy, z którym Narodowy Fundusz Zdrowia zawarł umowę o udzielanie świadczeń z zakresu podstawowej opieki zdrowotnej, wybrana przez świadczeniobiorcę zgodnie z art. 9.</zdanie>
+                </p>
+              </czesc-wspolna-punkt>
+            </ustep>
+            <ustep eId="DU/2025/515__art_7__ust_2" gd:GUID="53e1a887-e02c-42da-82d5-5fd74e565a5e">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="c0bae8d1-4d98-4a84-a2bd-bd7911b308d6" fragment="1" gd:fragmentGUID="c0f1ebfc-0c41-4236-ac01-b6f1432ba16d">Pielęgniarką POZ jest także pielęgniarka, która:</zdanie>
+              </p>
+              <punkt eId="DU/2025/515__art_7__ust_2__pkt_1" gd:GUID="306db0f5-2508-42c7-a713-00c2c80ff8e7">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="c0bae8d1-4d98-4a84-a2bd-bd7911b308d6" fragment="2" gd:fragmentGUID="59f4047f-67af-4f35-a6fa-393c35794bb2">posiada tytuł specjalisty w dziedzinie pielęgniarstwa: pediatrycznego, środowiskowego, środowiskowo-rodzinnego, przewlekle chorych i niepełnosprawnych, opieki długoterminowej, w ochronie zdrowia pracujących, środowiska nauczania i wychowania, zachowawczego, promocji zdrowia i edukacji zdrowotnej albo</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/515__art_7__ust_2__pkt_2" gd:GUID="fbd59aa9-b42d-4d91-9e82-3a304ef53070">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="c0bae8d1-4d98-4a84-a2bd-bd7911b308d6" fragment="3" gd:fragmentGUID="14fae4b3-5d88-47b6-bd3b-e5f2c2d9c183">ukończyła kurs kwalifikacyjny w dziedzinie pielęgniarstwa: pediatrycznego, środowiskowego, środowiskowo-rodzinnego, przewlekle chorych i niepełnosprawnych, opieki długoterminowej, w ochronie zdrowia pracujących, środowiska nauczania i wychowania, zachowawczego, promocji zdrowia i edukacji zdrowotnej, albo</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/515__art_7__ust_2__pkt_3" gd:GUID="7251f995-a4c1-46cd-83b8-cb41c09db1c3">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="c0bae8d1-4d98-4a84-a2bd-bd7911b308d6" fragment="4" gd:fragmentGUID="b3174708-d4f5-4ba3-8f0c-7ae84e734ba3">odbywa szkolenie specjalizacyjne w dziedzinie pielęgniarstwa: pediatrycznego, opieki długoterminowej, środowiska nauczania i wychowania, zachowawczego, promocji zdrowia i edukacji zdrowotnej, albo</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/515__art_7__ust_2__pkt_4" gd:GUID="8ff39d9e-69dd-414c-a315-4a009532b0a2">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="c0bae8d1-4d98-4a84-a2bd-bd7911b308d6" fragment="5" gd:fragmentGUID="d0c79c6a-d504-4389-8c2f-e46d7eaeca90">odbywa kurs kwalifikacyjny w dziedzinie pielęgniarstwa: pediatrycznego, opieki długoterminowej, środowiska nauczania i wychowania, zachowawczego, promocji zdrowia i edukacji zdrowotnej</zdanie>
+                </p>
+              </punkt>
+              <czesc-wspolna-punkt eId="DU/2025/515__art_7__ust_2__czw" gd:GUID="f2633618-fedc-44a9-853d-a89435b9c1e9">
+                <p>
+                  <zdanie nr="1" gd:zdGUID="c0bae8d1-4d98-4a84-a2bd-bd7911b308d6" fragment="6" gd:fragmentGUID="be451b1e-3e34-4b42-85a2-811e65e6f4a0">– udzielająca świadczeń zdrowotnych z zakresu podstawowej opieki zdrowotnej przed dniem 31 grudnia 2024 r.</zdanie>
+                </p>
+              </czesc-wspolna-punkt>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2025/515__art_8" gd:GUID="ac4fb784-4414-40bb-86a1-56485d36c088">
+            <nr>8</nr>
+            <ustep eId="DU/2025/515__art_8__ust_1" gd:GUID="66d728ed-f95d-443d-ab1f-249d467137cd">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="5f7c9918-2945-4c32-8f1c-9a1d54be63b7" fragment="1" gd:fragmentGUID="9a899d65-9ce0-4137-9a7b-e4a3af8edbd8">Położna POZ to położna, która:</zdanie>
+              </p>
+              <punkt eId="DU/2025/515__art_8__ust_1__pkt_1" gd:GUID="a6b74f21-5022-4fd4-9c4d-89223a0dbaa2">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="5f7c9918-2945-4c32-8f1c-9a1d54be63b7" fragment="2" gd:fragmentGUID="81dd98a0-5b65-4bb7-8cd6-b2983e97c8f8">posiada tytuł specjalisty w dziedzinie pielęgniarstwa rodzinnego albo</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/515__art_8__ust_1__pkt_2" gd:GUID="e047cfac-476c-4193-aee7-da8c554a3d79">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="5f7c9918-2945-4c32-8f1c-9a1d54be63b7" fragment="3" gd:fragmentGUID="bd689959-e589-4b3c-a833-980d02e092ee">ukończyła kurs kwalifikacyjny w dziedzinie pielęgniarstwa rodzinnego, albo</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/515__art_8__ust_1__pkt_3" gd:GUID="94becb5b-4ae7-420b-a204-562c7ec48a6c">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="5f7c9918-2945-4c32-8f1c-9a1d54be63b7" fragment="4" gd:fragmentGUID="c5d4ce7e-debf-40a3-84bb-cf6b99aac063">odbywa szkolenie specjalizacyjne w dziedzinie pielęgniarstwa rodzinnego, albo</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/515__art_8__ust_1__pkt_4" gd:GUID="27ab7f96-2a3c-4904-8626-d9f5c01bd4fe">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="5f7c9918-2945-4c32-8f1c-9a1d54be63b7" fragment="5" gd:fragmentGUID="44dd687e-e3f8-4011-9dbd-1f225790532f">odbywa kurs kwalifikacyjny w dziedzinie pielęgniarstwa rodzinnego, albo</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/515__art_8__ust_1__pkt_5" gd:GUID="5d0ce891-c4a4-493d-aa3c-8f5bc02a918d">
+                <nr>5</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="5f7c9918-2945-4c32-8f1c-9a1d54be63b7" fragment="6" gd:fragmentGUID="7f2aa2f1-a757-475d-b84a-a7513b27cc31">posiada tytuł zawodowy magistra położnictwa</zdanie>
+                </p>
+              </punkt>
+              <czesc-wspolna-punkt eId="DU/2025/515__art_8__ust_1__czw" gd:GUID="c6bcec54-69e0-45b8-83e6-7a29793993de">
+                <p>
+                  <zdanie nr="1" gd:zdGUID="5f7c9918-2945-4c32-8f1c-9a1d54be63b7" fragment="7" gd:fragmentGUID="c6c0ca3f-0536-4c78-bbde-067294ee6252">– z którą Narodowy Fundusz Zdrowia zawarł umowę o udzielanie świadczeń z zakresu podstawowej opieki zdrowotnej albo która wykonuje zawód u świadczeniodawcy, z którym Narodowy Fundusz Zdrowia zawarł umowę o udzielanie świadczeń z zakresu podstawowej opieki zdrowotnej, wybrana przez świadczeniobiorcę zgodnie z art. 9.</zdanie>
+                </p>
+              </czesc-wspolna-punkt>
+            </ustep>
+            <ustep eId="DU/2025/515__art_8__ust_2" gd:GUID="394ce6c3-6eb2-4d2c-8606-0a4780142d62">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="20faa109-64ed-4afe-b2d6-1873ec539346" fragment="1" gd:fragmentGUID="7677fd9f-b5ab-43dd-aed1-1bd4d733fac8">Położną POZ jest także położna, która:</zdanie>
+              </p>
+              <punkt eId="DU/2025/515__art_8__ust_2__pkt_1" gd:GUID="aaa76ad2-df0a-4e2c-8873-78cc2ef23d4b">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="20faa109-64ed-4afe-b2d6-1873ec539346" fragment="2" gd:fragmentGUID="d530ac4b-64bd-4e32-89dd-0c277b05e98f">posiada tytuł specjalisty w dziedzinie pielęgniarstwa: środowiskowego, środowiskowo-rodzinnego oraz promocji zdrowia i edukacji zdrowotnej albo</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/515__art_8__ust_2__pkt_2" gd:GUID="eec8a116-aed0-47da-8727-2b1bc492a552">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="20faa109-64ed-4afe-b2d6-1873ec539346" fragment="3" gd:fragmentGUID="7a3ebbea-0eea-4dde-b47e-d7aefeef71d7">ukończyła kurs kwalifikacyjny w dziedzinie pielęgniarstwa: środowiskowego, środowiskowo-rodzinnego oraz promocji zdrowia i edukacji zdrowotnej</zdanie>
+                </p>
+              </punkt>
+              <czesc-wspolna-punkt eId="DU/2025/515__art_8__ust_2__czw" gd:GUID="de175117-d388-4ddf-a007-b5e2b04e18c9">
+                <p>
+                  <zdanie nr="1" gd:zdGUID="20faa109-64ed-4afe-b2d6-1873ec539346" fragment="4" gd:fragmentGUID="38b25e66-76d3-44d1-91ed-72f663927424">– udzielająca świadczeń zdrowotnych z zakresu podstawowej opieki zdrowotnej przed dniem 31 grudnia 2024 r.</zdanie>
+                </p>
+              </czesc-wspolna-punkt>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2025/515__art_9" gd:GUID="64ce067e-e1dd-40f4-8fab-76387603a655">
+            <nr>9</nr>
+            <ustep eId="DU/2025/515__art_9__ust_1" gd:GUID="fc634995-1a77-4080-b331-2bf612cada37">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="4a05d651-2660-4e23-8fbf-105d3f2fd0de" fragment="1" gd:fragmentGUID="4b1a2396-fc9b-45bb-916d-cf75f4e8a98b">Świadczeniobiorca ma prawo wyboru świadczeniodawcy, udzielającego świadczeń z zakresu podstawowej opieki zdrowotnej, spośród świadczeniodawców, którzy zawarli umowy o udzielanie świadczeń z zakresu podstawowej opieki zdrowotnej, z zastrzeżeniem art. 325 i art. 599 ustawy z dnia 11 marca 2022 r. o obronie Ojczyzny (Dz. U. z 2024 r. poz. 248, z późn. zm.<odnosnik id-odnosnika="7" symbol="7" gd:GUID="848555ce-4afd-4099-aabe-be1249b3cb08"><p><zdanie nr="1" gd:zdGUID="6a2b7316-8b6b-49d7-a43d-f8901537aa68" fragment="1" gd:fragmentGUID="38720814-ceb6-4d10-b070-28b043b4ce52">Zmiany tekstu jednolitego wymienionej ustawy zostały ogłoszone w Dz. U. z 2024 r. poz. 834, 1089, 1222, 1248, 1585, 1871 i 1907 oraz z 2025 r. poz. 39.</zdanie></p></odnosnik>), art. 153 ust. 7a ustawy z dnia 12 października 1990 r. o Straży Granicznej (Dz. U. z 2024 r. poz. 915, z późn. zm.<odnosnik id-odnosnika="8" symbol="8" gd:GUID="322c29d8-7b5c-428d-b0f6-866cb636473c"><p><zdanie nr="1" gd:zdGUID="1b9bc114-1d07-49df-b9b1-33eecb7a850b" fragment="1" gd:fragmentGUID="16639bc2-8ef2-49a9-ac30-521766dd5be6">Zmiany tekstu jednolitego wymienionej ustawy zostały ogłoszone w Dz. U. z 2024 r. poz. 1089, 1222, 1248, 1473, 1562, 1688, 1717 i 1871 oraz z 2025 r. poz. 179.</zdanie></p></odnosnik>), art. 115 § 1a ustawy z dnia 6 czerwca 1997 r. – Kodeks karny wykonawczy (Dz. U. z 2024 r. poz. 706 i 1907) i art. 112 ust. 1 i 2 ustawy z dnia 9 czerwca 2022 r. o wspieraniu i resocjalizacji nieletnich (Dz. U. z 2024 r. poz. 978 i 1228).</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/515__art_9__ust_2" gd:GUID="7c037298-5899-40c7-a781-b1d45a09242e">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="65bc2037-f152-4113-848c-2df0570bf421" fragment="1" gd:fragmentGUID="14ffe91b-9937-48a9-8a9c-21b67d0e7b44">Świadczeniobiorca, w ramach wyboru, o którym mowa w ust. 1, wybiera lekarza POZ, pielęgniarkę POZ lub położną POZ.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/515__art_9__ust_3" gd:GUID="21010677-b6fe-4132-bdbf-7b5840bf9e46">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ece76fb7-f870-4682-af06-eea295f2f714" fragment="1" gd:fragmentGUID="e6ea3709-8b0a-4a0b-b3cd-2e815b749867">Świadczeniobiorca, w ramach wyboru, o którym mowa w ust. 1, może wybrać:</zdanie>
+              </p>
+              <punkt eId="DU/2025/515__art_9__ust_3__pkt_1" gd:GUID="7de8d27e-5b69-4ce5-bef5-fe9713d06fea">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="ece76fb7-f870-4682-af06-eea295f2f714" fragment="2" gd:fragmentGUID="a21646e9-115a-465d-af3f-8f4df4e3f105">lekarza POZ, pielęgniarkę POZ lub położną POZ u tego samego świadczeniodawcy albo</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/515__art_9__ust_3__pkt_2" gd:GUID="7ad54f56-2be6-409a-81e3-f10951144890">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="ece76fb7-f870-4682-af06-eea295f2f714" fragment="3" gd:fragmentGUID="dbc6ceb5-8fd9-4495-a974-076ed1b97dbc">lekarza POZ, pielęgniarkę POZ lub położną POZ u różnych świadczeniodawców, albo</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/515__art_9__ust_3__pkt_3" gd:GUID="55fc8ba3-cdc4-43a3-bd03-c8183b0cca32">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="ece76fb7-f870-4682-af06-eea295f2f714" fragment="4" gd:fragmentGUID="affc610d-6050-478e-842e-e02685453752">lekarza POZ, pielęgniarkę POZ lub położną POZ będących świadczeniodawcami</zdanie>
+                </p>
+              </punkt>
+              <czesc-wspolna-punkt eId="DU/2025/515__art_9__ust_3__czw" gd:GUID="712b32b9-e706-4e18-af5d-fb77c5079c4a">
+                <p>
+                  <zdanie nr="1" gd:zdGUID="ece76fb7-f870-4682-af06-eea295f2f714" fragment="5" gd:fragmentGUID="f8911020-bc25-4f88-a746-e6d4a8a18960">– w tym tworzących zespół POZ, o którym mowa w art. 11.<odnosnik id-odnosnika="9" symbol="9" gd:GUID="a1000e1f-eda5-4cd6-839f-8b5d3cca8959"><p><zdanie nr="1" gd:zdGUID="c8e0704b-91ad-4081-803b-a84365179bf7" fragment="1" gd:fragmentGUID="6d592f17-a800-4973-b111-1e438633c891">Część wspólna w brzmieniu ustalonym przez art. 12 pkt 2 ustawy, o której mowa w odnośniku 3; wszedł w życie z dniem 30 grudnia 2024 r.</zdanie></p></odnosnik></zdanie>
+                </p>
+              </czesc-wspolna-punkt>
+            </ustep>
+            <ustep eId="DU/2025/515__art_9__ust_4" gd:GUID="2b05bedf-caed-4cc8-9778-7d65d343aeee">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="588aa62c-1050-49a6-a162-bc758bd29a76" fragment="1" gd:fragmentGUID="359c3623-f976-4c65-8aaa-a4a955e9840f">Świadczeniobiorca ma prawo bezpłatnego wyboru, o którym mowa w ust. 1 i 2, nie częściej niż dwa razy w roku kalendarzowym, a w przypadku każdej kolejnej zmiany wnosi opłatę w wysokości 80 złotych.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/515__art_9__ust_5" gd:GUID="4da72f13-7c52-4d10-8fe5-bfcdb4531c8f">
+              <nr>5</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ed60cc09-4dfa-4b83-9a11-85b1942feb43" fragment="1" gd:fragmentGUID="df27b0f5-18bc-4671-912d-666ca6a629dd">Świadczeniobiorca nie wnosi opłaty, o której mowa w ust. 4, w przypadku zmiany swojego miejsca zamieszkania lub w przypadku zaprzestania udzielania świadczeń opieki zdrowotnej przez wybranego świadczeniodawcę, lekarza POZ, pielęgniarkę POZ lub położną POZ u wybranego świadczeniodawcy, lub z innych przyczyn powstałych po stronie świadczeniodawcy, a także w przypadku wystąpienia okoliczności, o których mowa w art. 6 ust. 3.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/515__art_9__ust_6" gd:GUID="8eeb74ed-349f-4065-9745-457fcab69839">
+              <nr>6</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="60907069-7184-4984-ab04-421809632463" fragment="1" gd:fragmentGUID="2feb71ad-6e22-478b-a6f8-c39e1ff2bd67">Opłata, o której mowa w ust. 4, stanowi przychód podmiotu zobowiązanego do finansowania świadczeń opieki zdrowotnej ze środków publicznych w rozumieniu ustawy o świadczeniach.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/515__art_9__ust_7" gd:GUID="721bf51f-281a-467f-9c73-c4f527d5fe51">
+              <nr>7</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="212bd9a0-162f-4785-94dc-128662bd07a2" fragment="1" gd:fragmentGUID="e6008de4-ac9b-4fcd-832c-689a99496802">Dokonanie przez świadczeniobiorcę wyboru, o którym mowa w ust. 1 i 2, nie wiąże go w zakresie świadczeniodawcy udzielającego świadczeń nocnej i świątecznej opieki zdrowotnej, o której mowa w art. 5 pkt 17a ustawy o świadczeniach.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2025/515__art_10" gd:GUID="a931da9e-22f9-433e-b5a4-d6f5c04e4b36">
+            <nr>10</nr>
+            <ustep eId="DU/2025/515__art_10__ust_1" gd:GUID="be210045-a398-4140-9932-799c42a32790">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="89b1f241-e96a-4372-a361-80705f8a91ad" fragment="1" gd:fragmentGUID="55be189d-71a1-46e2-810e-578242e8a1c3">Wybór, o którym mowa w art. 9 ust. 1 i 2, świadczeniobiorca potwierdza oświadczeniem woli, zwanym dalej „deklaracją wyboru”:</zdanie>
+              </p>
+              <punkt eId="DU/2025/515__art_10__ust_1__pkt_1" gd:GUID="ffa8ec20-1435-4a1d-ba38-ec39ea9e1fe5">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="89b1f241-e96a-4372-a361-80705f8a91ad" fragment="2" gd:fragmentGUID="ede3b487-7076-45d8-a728-a0373b3117c9">w postaci papierowej;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/515__art_10__ust_1__pkt_2" gd:GUID="1748a177-5ac5-4a97-bff1-ec965f5137eb">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="89b1f241-e96a-4372-a361-80705f8a91ad" fragment="3" gd:fragmentGUID="29156f30-7981-4437-951f-4cc892613193">w postaci elektronicznej, złożonym za pośrednictwem środków komunikacji elektronicznej, opatrzonym kwalifikowanym podpisem elektronicznym, podpisem zaufanym albo podpisem osobistym;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/515__art_10__ust_1__pkt_3" gd:GUID="e2acdbba-f697-4006-b0dd-a111e30a2149">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="89b1f241-e96a-4372-a361-80705f8a91ad" fragment="4" gd:fragmentGUID="e99b071b-8459-491e-8a88-f78c0a46ff07">złożonym za pośrednictwem Internetowego Konta Pacjenta, o którym mowa w art. 7a ust. 1 ustawy z dnia 28 kwietnia 2011 r. o systemie informacji w ochronie zdrowia (Dz. U. z 2025 r. poz. 302).</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2025/515__art_10__ust_2" gd:GUID="6ef22275-b4f9-42a2-a9f4-ff4201a4fb3d">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="58c6359d-e21d-447f-b114-2d02d47eb23e" fragment="1" gd:fragmentGUID="17501edf-4daf-42c2-916e-92b8398ce275">(uchylony)</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/515__art_10__ust_3" gd:GUID="7ee23dfd-a207-49ff-bdc2-6d0a62bd0c75">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="dfb2c97e-279f-435a-a24f-3375f9643ce3" fragment="1" gd:fragmentGUID="1da28b64-7f03-4bfa-a0f7-0d56270aa310">Deklaracja wyboru zawiera:</zdanie>
+              </p>
+              <punkt eId="DU/2025/515__art_10__ust_3__pkt_1" gd:GUID="2aa11bf1-fe57-4ede-8bfd-8096de3468af">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="dfb2c97e-279f-435a-a24f-3375f9643ce3" fragment="2" gd:fragmentGUID="fbdd97a7-3804-4555-bc09-5b56b0ded247">dane świadczeniobiorcy:</zdanie>
+                </p>
+                <litera eId="DU/2025/515__art_10__ust_3__pkt_1__lit_a" gd:GUID="2b29a126-2b57-4bd0-827a-a4dc4fd9a786">
+                  <nr>a</nr>
+                  <p>
+                    <zdanie nr="1" gd:zdGUID="dfb2c97e-279f-435a-a24f-3375f9643ce3" fragment="3" gd:fragmentGUID="d4db54d0-ba94-4e0b-a9fe-fd5116e9d3a9">imię i nazwisko,</zdanie>
+                  </p>
+                </litera>
+                <litera eId="DU/2025/515__art_10__ust_3__pkt_1__lit_b" gd:GUID="5340c695-d657-483d-91ba-43cd37066880">
+                  <nr>b</nr>
+                  <p>
+                    <zdanie nr="1" gd:zdGUID="dfb2c97e-279f-435a-a24f-3375f9643ce3" fragment="4" gd:fragmentGUID="55b2b136-f5a1-4678-8aa7-27e7f27b9515">(uchylona)</zdanie>
+                  </p>
+                </litera>
+                <litera eId="DU/2025/515__art_10__ust_3__pkt_1__lit_c" gd:GUID="22d38601-afa8-4ce3-ace6-731e6fa43d34">
+                  <nr>c</nr>
+                  <p>
+                    <zdanie nr="1" gd:zdGUID="dfb2c97e-279f-435a-a24f-3375f9643ce3" fragment="5" gd:fragmentGUID="4742ca13-c902-451b-9cf4-56df0dd60b0c">datę urodzenia,</zdanie>
+                  </p>
+                </litera>
+                <litera eId="DU/2025/515__art_10__ust_3__pkt_1__lit_d" gd:GUID="c0004be0-b9b0-4f11-8833-fed8e1a69d91">
+                  <nr>d</nr>
+                  <p>
+                    <zdanie nr="1" gd:zdGUID="dfb2c97e-279f-435a-a24f-3375f9643ce3" fragment="6" gd:fragmentGUID="f673e1b6-097a-40e6-9365-88691839a1c1">(uchylona)</zdanie>
+                  </p>
+                </litera>
+                <litera eId="DU/2025/515__art_10__ust_3__pkt_1__lit_e" gd:GUID="7fc502e9-ec4e-4d8b-b447-80eb6c3d2188">
+                  <nr>e</nr>
+                  <p>
+                    <zdanie nr="1" gd:zdGUID="dfb2c97e-279f-435a-a24f-3375f9643ce3" fragment="7" gd:fragmentGUID="ebce9122-1766-454e-9e1f-dc8cc372e5d1">numer PESEL, a w przypadku jego braku serię i numer dokumentu potwierdzającego tożsamość,</zdanie>
+                  </p>
+                </litera>
+                <litera eId="DU/2025/515__art_10__ust_3__pkt_1__lit_f" gd:GUID="506106a7-78e1-4eeb-be71-b7cf7259ac5a">
+                  <nr>f</nr>
+                  <p>
+                    <zdanie nr="1" gd:zdGUID="dfb2c97e-279f-435a-a24f-3375f9643ce3" fragment="8" gd:fragmentGUID="3c0b34fe-955a-4dcb-8c50-c83ab949c4d4">adres miejsca zamieszkania,</zdanie>
+                  </p>
+                </litera>
+                <litera eId="DU/2025/515__art_10__ust_3__pkt_1__lit_g" gd:GUID="f593eff0-7f3a-4826-9b51-38dd12b61284">
+                  <nr>g</nr>
+                  <p>
+                    <zdanie nr="1" gd:zdGUID="dfb2c97e-279f-435a-a24f-3375f9643ce3" fragment="9" gd:fragmentGUID="fc406eb4-bdff-4e7d-ba78-523346653770">numer telefonu,</zdanie>
+                  </p>
+                </litera>
+                <litera eId="DU/2025/515__art_10__ust_3__pkt_1__lit_h" gd:GUID="2b14593a-0f39-44be-a0af-eeaef698c531">
+                  <nr>h</nr>
+                  <p>
+                    <zdanie nr="1" gd:zdGUID="dfb2c97e-279f-435a-a24f-3375f9643ce3" fragment="10" gd:fragmentGUID="77fcc70c-f3c5-4d08-8d7d-95e958056f27">adres e-mail,</zdanie>
+                  </p>
+                </litera>
+                <litera eId="DU/2025/515__art_10__ust_3__pkt_1__lit_i" gd:GUID="0bad6fcd-8f81-4c84-bcc0-9b0351c419ce">
+                  <nr>i</nr>
+                  <p>
+                    <zdanie nr="1" gd:zdGUID="dfb2c97e-279f-435a-a24f-3375f9643ce3" fragment="11" gd:fragmentGUID="fc0c8bcd-203a-4bff-acd8-28d72662e2a4">imię i nazwisko przedstawiciela ustawowego, adres jego miejsca zamieszkania i numer telefonu – w przypadku gdy świadczeniobiorcą jest osoba małoletnia lub całkowicie ubezwłasnowolniona;</zdanie>
+                  </p>
+                </litera>
+              </punkt>
+              <punkt eId="DU/2025/515__art_10__ust_3__pkt_2" gd:GUID="21329116-65f7-4839-9069-e32c95168143">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="dfb2c97e-279f-435a-a24f-3375f9643ce3" fragment="12" gd:fragmentGUID="5ba7e43b-ec44-4106-adcd-5d3179878946">określenie, który raz w danym roku jest dokonywany wybór, oraz czy powodem dokonania wyboru jest wystąpienie okoliczności określonych w art. 9 ust. 5;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/515__art_10__ust_3__pkt_3" gd:GUID="9c4056c1-9336-483f-9364-c694174c86cd">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="dfb2c97e-279f-435a-a24f-3375f9643ce3" fragment="13" gd:fragmentGUID="bed7059b-93bf-4560-b636-b6f291ad077e">(uchylony)</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/515__art_10__ust_3__pkt_4" gd:GUID="03377135-7cc7-4b10-b504-69a7dd9ff172">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="dfb2c97e-279f-435a-a24f-3375f9643ce3" fragment="14" gd:fragmentGUID="909e58c2-b4f5-43b2-9b78-d8fbe0aa0d4a">(uchylony)</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/515__art_10__ust_3__pkt_5" gd:GUID="8c40d05f-ddde-4e08-b358-fa8ae09de651">
+                <nr>5</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="dfb2c97e-279f-435a-a24f-3375f9643ce3" fragment="15" gd:fragmentGUID="903e970f-e545-4c56-8c33-5d7748a8c9f8">dane dotyczące świadczeniodawcy, w tym jego nazwę (firmę) i adres siedziby;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/515__art_10__ust_3__pkt_6" gd:GUID="062796f3-7e5b-49d8-a232-e6320e1cba7e">
+                <nr>6</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="dfb2c97e-279f-435a-a24f-3375f9643ce3" fragment="16" gd:fragmentGUID="d1a5ddb1-bc6b-4fba-bb46-f9696ef8c89b">imię i nazwisko lekarza POZ, pielęgniarki POZ lub położnej POZ;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/515__art_10__ust_3__pkt_7" gd:GUID="4c9780d0-9ee6-4082-a5d0-e890ed49ee27">
+                <nr>7</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="dfb2c97e-279f-435a-a24f-3375f9643ce3" fragment="17" gd:fragmentGUID="7b9957a2-55e8-4557-8050-b46dffe29532">datę dokonania wyboru;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/515__art_10__ust_3__pkt_8" gd:GUID="755854f0-4c3b-451c-84d4-557d685bc0a5">
+                <nr>8</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="dfb2c97e-279f-435a-a24f-3375f9643ce3" fragment="18" gd:fragmentGUID="19e9251e-55e4-469f-95c7-6e1c0d184834">podpis świadczeniobiorcy lub jego przedstawiciela ustawowego w przypadku dokonania wyboru, o którym mowa w ust. 1 pkt 1 albo 2.</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/515__art_10__ust_3__pkt_9" gd:GUID="7b837dad-33d7-422c-bd54-697c21d03c34">
+                <nr>9</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="dfb2c97e-279f-435a-a24f-3375f9643ce3" fragment="19" gd:fragmentGUID="ec456c77-d54e-4fc5-a157-d1e93d018009">(uchylony)</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2025/515__art_10__ust_4" gd:GUID="810e091c-4246-4328-9c78-97e8ab9f7edf">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="c7519d5b-0804-4990-ac7f-ada749a76bbb" fragment="1" gd:fragmentGUID="9fb507e0-5eb1-4ad3-8668-e3bbda255d4e">Świadczeniodawca udzielający świadczeń z zakresu podstawowej opieki zdrowotnej jest obowiązany:</zdanie>
+              </p>
+              <punkt eId="DU/2025/515__art_10__ust_4__pkt_1" gd:GUID="b6ce22f0-bee7-4ae6-948b-e564a267274a">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="c7519d5b-0804-4990-ac7f-ada749a76bbb" fragment="2" gd:fragmentGUID="0a1ecb53-dcc7-4eaf-9347-0c645d8947bf">udostępnić świadczeniobiorcy deklarację wyboru, o której mowa w ust. 1 pkt 1, i sprawdzić poprawność jej wypełnienia;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/515__art_10__ust_4__pkt_2" gd:GUID="f4778450-d1f3-4b75-8a60-a40d808c8ed1">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="c7519d5b-0804-4990-ac7f-ada749a76bbb" fragment="3" gd:fragmentGUID="d1701242-8335-480a-a600-20eab0294f41">przed przyjęciem deklaracji wyboru, o której mowa w ust. 1 pkt 1 i 2, sprawdzić uprawnienia świadczeniobiorcy do korzystania ze świadczeń opieki zdrowotnej finansowanych ze środków publicznych.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2025/515__art_10__ust_5" gd:GUID="6ee46a8d-4748-4b71-ad18-c3bfd1ae66b9">
+              <nr>5</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="d40cf1e4-4b65-4ba5-80fb-d323d1ad7336" fragment="1" gd:fragmentGUID="cc8fbee7-8c59-4c1a-8c5d-1daf8b70c40c">Wypełnione deklaracje wyboru, o których mowa w ust. 1 pkt 1, świadczeniodawca przechowuje w swojej siedzibie albo w miejscu udzielania świadczeń z zakresu podstawowej opieki zdrowotnej, zapewniając ich dostępność świadczeniobiorcom, którzy je złożyli, z zachowaniem wymagań wynikających z przepisów o ochronie danych osobowych.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/515__art_10__ust_6" gd:GUID="bcf6d047-a2e2-4e08-95e2-81260a50fde3">
+              <nr>6</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="37a44e81-9335-4329-86e1-a90ba0ac0e90" fragment="1" gd:fragmentGUID="0a5be55d-8930-4331-8fef-f53a8883355e">(uchylony)</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/515__art_10__ust_7" gd:GUID="c93cb894-ff1e-42f1-8e45-e293dd0aa31b">
+              <nr>7</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="a0eb8d54-f318-4438-9299-43c31143b1b6" fragment="1" gd:fragmentGUID="da611273-46a2-4e52-ba73-ddb93642083f">W przypadku zaprzestania udzielania świadczeń opieki zdrowotnej przez wybranego lekarza POZ, pielęgniarkę POZ lub położną POZ u wybranego świadczeniodawcy lub wystąpienia okoliczności, o których mowa w art. 6 ust. 3, deklaracje wyboru zachowują ważność w zakresie wyboru tego świadczeniodawcy do czasu wyboru innego lekarza POZ, pielęgniarki POZ lub położnej POZ, lub wyboru nowego świadczeniodawcy.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/515__art_10__ust_8" gd:GUID="d142ff62-dab4-42ea-b30a-b420bacb86b0">
+              <nr>8</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="1852cafb-89f3-4def-a513-e1abcbbbb688" fragment="1" gd:fragmentGUID="7d812170-e85a-4168-841e-d98d7673877c">Minister właściwy do spraw zdrowia, po zasięgnięciu opinii Naczelnej Rady Lekarskiej oraz Naczelnej Rady Pielęgniarek i Położnych, określi, w drodze rozporządzenia, wzory deklaracji wyboru, uwzględniając możliwość wyboru lekarza POZ, pielęgniarki POZ oraz położnej POZ udzielających świadczeń u tego samego świadczeniodawcy albo u różnych świadczeniodawców, albo będących świadczeniodawcami oraz konieczność zapewnienia przejrzystości danych zawartych w deklaracji wyboru.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2025/515__art_10a" gd:GUID="22302025-c89c-415b-a135-6411165b43f0">
+            <nr>10a</nr>
+            <ustep eId="DU/2025/515__art_10a__ust_1" gd:GUID="cbe69ee2-d91b-49ac-af7f-32c850ee5afb">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="a290ae7f-8d45-4fb1-8440-ff427c75592a" fragment="1" gd:fragmentGUID="9318ffdf-7470-4c2c-9688-efcc11446b9a">Świadczeniodawca udzielający świadczeń z zakresu podstawowej opieki zdrowotnej może złożyć do Prezesa Narodowego Funduszu Zdrowia wniosek, w którym wskaże świadczeniodawcę, który zabezpieczy udzielanie tych świadczeń świadczeniobiorcom, którzy potwierdzili w deklaracji wyboru wybór wnioskującego świadczeniodawcy, w przypadku gdy jego umowa wygaśnie lub ulegnie rozwiązaniu.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/515__art_10a__ust_2" gd:GUID="02b3877b-80bf-4204-93e5-0d91153abad4">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="c05a320a-9d3a-4df1-bd0f-f4b3f66386cb" fragment="1" gd:fragmentGUID="fa5974cc-0ac3-451e-8f64-c6befe8809fd">W przypadku rozwiązania lub wygaśnięcia umowy o udzielanie świadczeń z zakresu podstawowej opieki zdrowotnej Prezes Narodowego Funduszu Zdrowia, kierując się koniecznością zapewnienia dostępu do świadczeń podstawowej opieki zdrowotnej na danym obszarze, wskazuje świadczeniodawcę lub świadczeniodawców, którzy zabezpieczą udzielanie tych świadczeń świadczeniobiorcom, którzy potwierdzili w deklaracji wyboru wybór świadczeniodawcy, którego umowa wygasła lub uległa rozwiązaniu, uwzględniając świadczeniodawcę wskazanego we wniosku, o którym mowa w ust. 1.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/515__art_10a__ust_3" gd:GUID="b86d3c9d-6381-47b3-ac2a-bb056a67b9d2">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ecc88cbc-4ea8-4887-9e4a-e3ba7a8fb045" fragment="1" gd:fragmentGUID="cdddb1e8-915b-4353-8c3e-d0b04ae24dd7">Deklaracje wyboru złożone do dotychczasowego świadczeniodawcy stanowią podstawę do rozliczania świadczeń przez świadczeniodawcę wskazanego przez Prezesa Narodowego Funduszu Zdrowia w sposób, o którym mowa w ust. 2.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/515__art_10a__ust_4" gd:GUID="1269cb41-b400-41a0-8916-d803045ad2d3">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="da176e8a-4683-4f70-a4b4-9fa259846998" fragment="1" gd:fragmentGUID="e8d34033-1ab9-4d8e-8467-240e94fd9e26">Narodowy Fundusz Zdrowia oraz świadczeniodawcy, o których mowa w ust. 2, są obowiązani do poinformowania świadczeniobiorców o możliwości zmiany wyboru świadczeniodawcy udzielającego świadczeń z zakresu podstawowej opieki zdrowotnej.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+        </oddzial-n>
+      </rozdzial>
+      <rozdzial eId="DU/2025/515__rozdz_2" gd:GUID="2acd6409-a9eb-4934-b1c0-23ee4c05f9bd">
+        <naglowek-rozdzialu>
+          <nr>2</nr>
+          <p>Organizacja podstawowej opieki zdrowotnej</p>
+        </naglowek-rozdzialu>
+        <oddzial-n brak-eid="jednostka-nieoznaczona" gd:GUID="da6d578b-0a18-4980-ac89-7fccf738a70b">
+          <artykul eId="DU/2025/515__art_11" gd:GUID="cf29a883-cf9b-4f35-8754-367ee9612137">
+            <nr>11</nr>
+            <ustep eId="DU/2025/515__art_11__ust_1" gd:GUID="26bda5cd-6e59-4844-bda0-222727a452f1">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="1fce636b-83f7-4e9f-8ccc-983d2a5eb02b" fragment="1" gd:fragmentGUID="dbb70915-7251-410d-a186-285f0755a646">Zadania z zakresu podstawowej opieki zdrowotnej realizuje zespół podstawowej opieki zdrowotnej, zwany dalej „zespołem POZ”.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/515__art_11__ust_2" gd:GUID="b87498f5-497d-45fb-be16-c9afdb774071">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="6b1c2544-2814-4530-aa8c-bbb4c4d23a90" fragment="1" gd:fragmentGUID="1c2e3b46-08bc-44c8-b193-e1439f5178cb">W skład zespołu POZ wchodzą: lekarz POZ, pielęgniarka POZ i położna POZ.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/515__art_11__ust_3" gd:GUID="cb3bf67d-dc04-4f92-a4db-05fde785b213">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="c8b9d5bf-f99e-4180-af7e-a64c04072e2b" fragment="1" gd:fragmentGUID="0fdbbeb6-9987-4f47-ac38-c3ab879e783c">Pracę zespołu POZ koordynuje lekarz POZ, który rozstrzyga o sposobie planowania i realizacji postępowania diagnostyczno-leczniczego nad świadczeniobiorcą.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2025/515__art_12" gd:GUID="77d2c589-6dec-4040-bd42-a7ef656015b2">
+            <nr>12</nr>
+            <ustep eId="DU/2025/515__art_12__ust_1" gd:GUID="dfcd658c-30e0-4202-a631-6836348668a0">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="d17eed02-3123-4526-9064-23fb791ea7bd" fragment="1" gd:fragmentGUID="81e40147-05ee-4cf7-b97a-41360d2f71de">Lekarz POZ planuje i realizuje opiekę lekarską nad świadczeniobiorcą, w zakresie działań mających na celu zachowanie zdrowia, profilaktykę chorób, rozpoznawanie i leczenie chorób oraz rehabilitację świadczeniobiorcy.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/515__art_12__ust_2" gd:GUID="8461846c-ce1e-414a-9a11-79daa177a2b1">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="025af31d-ce30-4592-a4da-858039316249" fragment="1" gd:fragmentGUID="0c36a3be-ed96-4528-8ced-7871b40f47ab">Pielęgniarka POZ planuje i realizuje opiekę pielęgniarską nad świadczeniobiorcą i jego rodziną, w zakresie promocji zdrowia i profilaktyki chorób, świadczeń pielęgnacyjnych, diagnostycznych, leczniczych i rehabilitacyjnych.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/515__art_12__ust_3" gd:GUID="02336b83-30bd-4924-8c76-739906d84d59">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="1a31b611-07eb-42ff-b1cc-a2cf2c5af0a0" fragment="1" gd:fragmentGUID="ad5194fc-7116-4eb1-b7c1-3b9eae74d504">Położna POZ planuje i realizuje pielęgnacyjną opiekę położniczo-neonatologiczno-ginekologiczną, w zakresie promocji zdrowia i profilaktyki chorób, świadczeń pielęgnacyjnych, diagnostycznych, leczniczych i rehabilitacyjnych.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/515__art_12__ust_4" gd:GUID="b8360bd7-6eba-4b1d-897a-4804ba28de93">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="8b170b41-16c6-4819-9db7-c0e323094a64" fragment="1" gd:fragmentGUID="3dd8baa5-3b1d-4841-a608-00865c3152ff">Lekarz POZ, pielęgniarka POZ i położna POZ, wybrani przez świadczeniobiorcę, wydają skierowania na realizację zabiegów i procedur medycznych, w zakresie posiadanych kompetencji.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2025/515__art_13" gd:GUID="e000eda2-2bf0-4b84-a1ce-127468717937">
+            <nr>13</nr>
+            <ustep eId="DU/2025/515__art_13__ust_1" gd:GUID="2678356e-5659-4aaf-9d93-d615275bac5a">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="0426367d-5af2-4771-825f-805922da61af" fragment="1" gd:fragmentGUID="d03ffbca-3f21-4c3c-9536-ba9cc0867038">Świadczeniodawca udzielający świadczeń z zakresu podstawowej opieki zdrowotnej jest obowiązany do zapewnienia możliwości realizacji postępowania diagnostyczno-leczniczego, odpowiednio dla lekarza POZ, pielęgniarki POZ lub położnej POZ, zgodnie z zakresem zadań określonych w przepisach wydanych na podstawie ust. 4.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/515__art_13__ust_2" gd:GUID="95e7218a-0069-4def-99fc-e15f660473dc">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="3ce13604-92b8-4dcf-8c1f-995ec350d2ea" fragment="1" gd:fragmentGUID="f67a5d1f-6be1-4d9c-a826-5e4cfdb1cb1a">Świadczeniodawca, o którym mowa w ust. 1, zapewnia świadczeniobiorcom, w kosztach własnej działalności, dostęp do:</zdanie>
+              </p>
+              <punkt eId="DU/2025/515__art_13__ust_2__pkt_1" gd:GUID="d78d15b9-e84b-47aa-a9f8-46970c312256">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="3ce13604-92b8-4dcf-8c1f-995ec350d2ea" fragment="2" gd:fragmentGUID="4fed2a48-5af0-4cf3-8566-c7963660d327">opieki ambulatoryjnej w miejscu udzielania świadczeń;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/515__art_13__ust_2__pkt_2" gd:GUID="1551589b-9c3e-4261-9f35-36d6c505c49b">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="3ce13604-92b8-4dcf-8c1f-995ec350d2ea" fragment="3" gd:fragmentGUID="8e69b565-e32f-4777-81d8-d2e2087e8771">opieki w miejscu zamieszkania świadczeniobiorcy, którego stan zdrowia uniemożliwia opiekę ambulatoryjną.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2025/515__art_13__ust_3" gd:GUID="d994539d-c04f-4208-b43f-c1d12a302a06">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="f5566f34-b781-46c5-ac03-8d82b49bec2e" fragment="1" gd:fragmentGUID="47b6c3a7-2abb-4fd4-ab02-5a85a7496b66">Świadczeniodawca udzielający świadczeń z zakresu podstawowej opieki zdrowotnej jest obowiązany do informowania świadczeniobiorców o zasadach i organizacji nocnej i świątecznej opieki zdrowotnej, o której mowa w art. 5 pkt 17a ustawy o świadczeniach, oraz o okolicznościach, w których deklaracja wyboru traci ważność, w szczególności przez umieszczenie, w sposób widoczny i ogólnodostępny, informacji w miejscu udzielania świadczeń i w siedzibie świadczeniodawcy.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/515__art_13__ust_4" gd:GUID="387edd51-cb24-43e7-8f34-52f1729eb6c5">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="1ca20320-0af7-4e78-bf1f-f1f442361250" fragment="1" gd:fragmentGUID="2c90e73c-4951-4759-b72e-edf2bfef7012">Minister właściwy do spraw zdrowia określi, w drodze rozporządzenia, zakres zadań lekarza POZ, pielęgniarki POZ i położnej POZ, uwzględniając konieczność zapewnienia ciągłości i kompleksowości udzielanych świadczeń oraz bezpieczeństwo zdrowotne świadczeniobiorcy.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2025/515__art_14" gd:GUID="1bb231df-8cde-4381-9388-21d2420d91a7">
+            <nr>14</nr>
+            <ustep eId="DU/2025/515__art_14__ust_1" gd:GUID="540ec169-ddec-4425-9fdb-769b81451dc3">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="c734f884-8337-4bcf-b5cb-21b8daf0964a" fragment="1" gd:fragmentGUID="d14e3d2f-207d-4b6f-ac42-4d50c9f82454">W ramach koordynacji, o której mowa w art. 4, świadczeniodawca zapewnia:</zdanie>
+              </p>
+              <punkt eId="DU/2025/515__art_14__ust_1__pkt_1" gd:GUID="514e037d-fe44-45d5-8db9-07e42f073be5">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="c734f884-8337-4bcf-b5cb-21b8daf0964a" fragment="2" gd:fragmentGUID="b6e668bd-b5a6-4d3c-88f5-f1b064218d7d">profilaktyczną opiekę zdrowotną dostosowaną do wieku i płci świadczeniobiorcy oraz zidentyfikowanych problemów zdrowotnych świadczeniobiorcy i populacji objętej opieką;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/515__art_14__ust_1__pkt_2" gd:GUID="f016fdf1-fb58-4050-87ca-a86f744d064a">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="c734f884-8337-4bcf-b5cb-21b8daf0964a" fragment="3" gd:fragmentGUID="98d3fa2e-5169-40d3-8cf6-8318f2ff76c8">badania diagnostyczne i konsultacje specjalistyczne, zgodnie z indywidualnym planem diagnostyki, leczenia i opieki, zgodnie z przepisami wydanymi na podstawie art. 31d ustawy o świadczeniach.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2025/515__art_14__ust_2" gd:GUID="71a0444b-f5cf-473c-a2a8-f9afdf07bda3">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="3638f3d1-d4c0-41b9-b209-a62c12f122a4" fragment="1" gd:fragmentGUID="deb9848d-429d-4ec6-9469-afee8a66514c">Świadczeniodawca wyznacza osobę, do której zadań należy organizacja procesu udzielania świadczeń zdrowotnych, w tym udzielanie informacji o tym procesie oraz zapewnienie współpracy między osobami udzielającymi świadczeń zdrowotnych.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2025/515__art_15" gd:GUID="3e06cdaa-b1cc-4b0a-9cec-18c94078f9b9">
+            <nr>15</nr>
+            <ustep eId="DU/2025/515__art_15__ust_1" gd:GUID="ebdd4a09-31ad-4a41-8ceb-9c0113c8456b">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="287dc123-3d80-4909-bec2-cfc1a7d5d181" fragment="1" gd:fragmentGUID="c0258684-7c7b-4816-bef7-52457174ec16">Osoby udzielające świadczeń z zakresu podstawowej opieki zdrowotnej mogą realizować programy edukacyjne i badawczo-rozwojowe.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/515__art_15__ust_2" gd:GUID="bf108d8c-517a-4c69-bc83-0f106b6e39e2">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="e06acc4c-a4b9-4715-8be4-44be7e43ac3c" fragment="1" gd:fragmentGUID="c1f654ac-f1d5-48c2-b58c-492f2fae538a">Prowadzenie badań naukowych i prac rozwojowych oraz wdrażanie ich wyników, a także prowadzenie działalności szkoleniowej i edukacyjnej w zakresie podstawowej opieki zdrowotnej może być prowadzone przez instytut badawczy działający na podstawie ustawy z dnia 30 kwietnia 2010 r. o instytutach badawczych (Dz. U. z 2024 r. poz. 534) lub uczelnię, w której jest prowadzone kształcenie na kierunku studiów w obszarze nauk medycznych i nauk o zdrowiu oraz nauk o kulturze fizycznej.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2025/515__art_16" gd:GUID="783fd408-7c4d-4c6c-9ba9-51420368f9ca">
+            <nr>16</nr>
+            <ustep eId="DU/2025/515__art_16__ust_1" gd:GUID="a06a7335-c525-4769-b7ff-c7b78708b125">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="f98f26c2-81b8-4ef1-b875-6af2b8435940" fragment="1" gd:fragmentGUID="7992df1b-d72c-493c-bab7-43f15d109b99">Współpraca w ramach podstawowej opieki zdrowotnej polega na stałej wymianie informacji o świadczeniobiorcy oraz podejmowaniu wspólnych działań przez członków zespołu POZ, w zakresie niezbędnym do zachowania zdrowia, profilaktyki, rozpoznawania i leczenia chorób, pielęgnowania oraz rehabilitacji świadczeniobiorcy.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/515__art_16__ust_2" gd:GUID="abb0bcdb-d898-4646-841f-44a6bada7089">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="079f2063-f3b0-43e0-8f2d-b82899294a01" fragment="1" gd:fragmentGUID="b3c2f9d1-b43c-43ed-92c4-1ec23cf37192">Informacje, o których mowa w ust. 1, dotyczą w szczególności rozpoznania, sposobu leczenia, rokowań, ordynowanych leków, środków spożywczych specjalnego przeznaczenia żywieniowego i wyrobów medycznych, w tym okresu ich stosowania i sposobu dawkowania, oraz wyznaczonych wizyt, udzielonych i zaplanowanych świadczeń opieki zdrowotnej, w tym w innych niż podstawowa opieka zdrowotna zakresach świadczeń opieki zdrowotnej określonych w art. 15 ust. 2 ustawy o świadczeniach.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2025/515__art_17" gd:GUID="ae2c69c3-c9bd-48a1-b51d-9764204f786e">
+            <nr>17</nr>
+            <ustep eId="DU/2025/515__art_17__ust_1" gd:GUID="c6f844eb-05d4-494d-b59c-38b6c4eb76b2">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="c5ae03bb-5728-41c8-9fcb-6239107e0a8c" fragment="1" gd:fragmentGUID="47f8d787-1488-4dde-8d81-58b72de04486">W ramach profilaktycznej opieki zdrowotnej nad dziećmi i młodzieżą zespół POZ współpracuje z pielęgniarką środowiska nauczania i wychowania lub higienistką szkolną, o których mowa w przepisach wydanych na podstawie art. 31d ustawy o świadczeniach.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/515__art_17__ust_2" gd:GUID="da7d4f72-8aab-4aa2-8a60-c12f18d7943a">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="0f5104b6-1196-487e-97e7-f14d0be50a5a" fragment="1" gd:fragmentGUID="948525be-27b0-4bd3-8afc-d9a82d53e4be">Współpraca, o której mowa w ust. 1, polega na udzielaniu porad, przekazywaniu informacji, o których mowa w art. 16 ust. 2, oraz podejmowaniu wspólnych działań w celu zachowania zdrowia i profilaktyki chorób, rozpoznawania i leczenia chorób oraz rehabilitacji świadczeniobiorcy.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2025/515__art_18" gd:GUID="86b980ca-c71f-4854-a409-71a029652606">
+            <nr>18</nr>
+            <ustep eId="DU/2025/515__art_18__ust_1" gd:GUID="5d7a8390-acce-4892-8bd8-4b45da0b3303">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="a59647f7-ce25-48fb-931b-9f6748a394ce" fragment="1" gd:fragmentGUID="468238c0-3ae4-4e2b-8268-291f253eb02b">W ramach koordynacji, o której mowa w art. 4, zespół POZ i poszczególni jego członkowie współpracują z:</zdanie>
+              </p>
+              <punkt eId="DU/2025/515__art_18__ust_1__pkt_1" gd:GUID="b0761c62-b11b-4472-af5f-5b3ac0f3b696">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="a59647f7-ce25-48fb-931b-9f6748a394ce" fragment="2" gd:fragmentGUID="49df915c-2c14-41ee-8d5c-87894ac17659">osobami udzielającymi świadczeniobiorcy świadczeń specjalistycznych, w rozumieniu ustawy o świadczeniach;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/515__art_18__ust_1__pkt_2" gd:GUID="acf15547-6784-4dd5-8d6a-48531c2af81b">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="a59647f7-ce25-48fb-931b-9f6748a394ce" fragment="3" gd:fragmentGUID="26ee32c4-1ab2-458e-b606-e40d7e9ae2d7">przedstawicielami organizacji i instytucji działających na rzecz zdrowia oraz organami administracji publicznej;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/515__art_18__ust_1__pkt_3" gd:GUID="4f77307c-392e-4b55-8085-b8161eda6ec9">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="a59647f7-ce25-48fb-931b-9f6748a394ce" fragment="4" gd:fragmentGUID="ab2a8044-9de4-442d-9bc1-5af4fd7aec33">dyrektorami szkół oraz innych placówek, o których mowa w art. 2 pkt 7 ustawy z dnia 14 grudnia 2016 r. – Prawo oświatowe (Dz. U. z 2024 r. poz. 737, 854, 1562, 1635 i 1933).</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2025/515__art_18__ust_2" gd:GUID="7bb1ce36-3e37-434b-aec0-e8d703367428">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="b1ab4646-ab15-4bce-bf51-4c5106a291a7" fragment="1" gd:fragmentGUID="cbf6c934-2ed5-4288-b24f-63488bc1a209">Współpraca, o której mowa w ust. 1:</zdanie>
+              </p>
+              <punkt eId="DU/2025/515__art_18__ust_2__pkt_1" gd:GUID="b8cc64bb-4cfb-4601-a87d-cd8a491c9333">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="b1ab4646-ab15-4bce-bf51-4c5106a291a7" fragment="2" gd:fragmentGUID="3496981e-39c8-4d34-b9a5-13997c969876">pkt 1 – polega na udzielaniu porad, przekazywaniu informacji, o których mowa w art. 16 ust. 2, oraz podejmowaniu wspólnych działań w celu zachowania zdrowia i profilaktyki chorób, rozpoznawania i leczenia chorób oraz rehabilitacji świadczeniobiorcy;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/515__art_18__ust_2__pkt_2" gd:GUID="18e567e5-fcc0-4f73-babe-1dc449e87145">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="b1ab4646-ab15-4bce-bf51-4c5106a291a7" fragment="3" gd:fragmentGUID="c7686b0e-5bea-4b80-ba13-4d6229f22ab3">pkt 2 i 3 – polega na podejmowaniu wspólnych działań w celu zachowania zdrowia i profilaktyki chorób, w tym promocji zdrowia i edukacji zdrowotnej oraz identyfikacji czynników ryzyka oraz zagrożeń zdrowotnych.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2025/515__art_18__ust_3" gd:GUID="5afee1a1-7f67-4e1d-b05f-2aa3621a7e84">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="0d80d769-d96a-4b6d-af35-ecea16a2d0b0" fragment="1" gd:fragmentGUID="5c6b885d-95b0-41a8-a84b-2190b7f11f5f">Członkowie zespołu POZ po otrzymaniu pisemnej informacji, o której mowa w ust. 2 pkt 1, zapoznają się z nią i dołączają do dokumentacji medycznej świadczeniobiorcy.</zdanie>
+                <zdanie nr="2" gd:zdGUID="8eb30bad-8571-4160-9543-2ae0adc7bba8" fragment="1" gd:fragmentGUID="05f6163c-1617-4ec2-a42f-3c688c630187">Informacja ustna wymaga odnotowania w dokumentacji medycznej.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2025/515__art_19" gd:GUID="17fab36e-f104-4e65-8b3e-c3bd496cbde2">
+            <nr>19</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="b7f0f447-52a3-4343-a373-6e1b7873448d">
+              <p>
+                <zdanie nr="1" gd:zdGUID="58af8b71-fa27-4ac8-be31-b0442ae64e50" fragment="1" gd:fragmentGUID="6df611b2-e0d2-43f0-921f-7273721c4757">Współpraca, o której mowa w art. 16–18, może odbywać się z wykorzystaniem systemów teleinformatycznych, środków komunikacji elektronicznej lub publicznie dostępnych usług telekomunikacyjnych.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2025/515__art_20" gd:GUID="69711cda-2f64-4fa7-a125-c22e71f28cd7">
+            <nr>20</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="d47b489b-0d68-4eff-868f-e696f152c532">
+              <p>
+                <zdanie nr="1" gd:zdGUID="e7cf0c95-a906-4c51-ba53-c53c861568ca" fragment="1" gd:fragmentGUID="75905200-d214-48cc-935e-6abe193b5dc3">Świadczeniodawca udzielający świadczeń z zakresu podstawowej opieki zdrowotnej jest obowiązany do przetwarzania, przechowywania i udostępniania danych osobowych zawartych w deklaracji wyboru oraz w informacjach, o których mowa w art. 16–18, zgodnie z przepisami ustawy z dnia 6 listopada 2008 r. o prawach pacjenta i Rzeczniku Praw Pacjenta (Dz. U. z 2024 r. poz. 581) oraz przepisami o ochronie danych osobowych.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2025/515__art_21" gd:GUID="e3812eeb-8d2d-4ca7-85b9-09ccc5e0565f">
+            <nr>21</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="0cddbcad-6dda-4472-a69d-c14598bbdde9">
+              <p>
+                <zdanie nr="1" gd:zdGUID="7322b494-fdcb-41ae-a9a0-9a0c4ce87976" fragment="1" gd:fragmentGUID="deb7bc0d-3b0f-4658-a1ff-a5a2bee72891">Szczegółowe zasady organizacji procesu udzielania świadczeń zdrowotnych, w tym przekazywania informacji o tym procesie, określa regulamin organizacyjny świadczeniodawcy, zgodnie z przepisami ustawy z dnia 15 kwietnia 2011 r. o działalności leczniczej (Dz. U. z 2024 r. poz. 799 i 1897 oraz z 2025 r. poz. 129).</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+        </oddzial-n>
+      </rozdzial>
+      <rozdzial eId="DU/2025/515__rozdz_3" gd:GUID="963355ab-4c14-4000-91e0-5df71b65444c">
+        <naglowek-rozdzialu>
+          <nr>3</nr>
+          <p>Finansowanie podstawowej opieki zdrowotnej</p>
+        </naglowek-rozdzialu>
+        <oddzial-n brak-eid="jednostka-nieoznaczona" gd:GUID="f1cd1e8c-6e31-4b83-92dc-38605c5ece27">
+          <artykul eId="DU/2025/515__art_22" gd:GUID="f353384d-9ede-4f50-b06b-122c680589ad">
+            <nr>22</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="e6147746-4a85-4602-8e6c-555bde69064f">
+              <p>
+                <zdanie nr="1" gd:zdGUID="888d3f67-8584-4848-a2fb-bd4c89c08cb0" fragment="1" gd:fragmentGUID="c4043a47-584c-43d0-a20b-7cae266120ed">Finansowanie podstawowej opieki zdrowotnej następuje na zasadach określonych w ustawie o świadczeniach, ze środków ujętych w planie finansowym Narodowego Funduszu Zdrowia.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+        </oddzial-n>
+      </rozdzial>
+      <rozdzial eId="DU/2025/515__rozdz_4" gd:GUID="861e7361-6bdc-4b23-961b-71959f3eb073">
+        <naglowek-rozdzialu>
+          <nr>4</nr>
+          <p>Jakość świadczeń z zakresu podstawowej opieki zdrowotnej</p>
+        </naglowek-rozdzialu>
+        <oddzial-n brak-eid="jednostka-nieoznaczona" gd:GUID="9046e69b-b652-4864-b040-2564988cc811">
+          <artykul eId="DU/2025/515__art_23" gd:GUID="def9d3da-6aa5-43aa-840e-38d93c3b239b">
+            <nr>23</nr>
+            <ustep eId="DU/2025/515__art_23__ust_1" gd:GUID="252bf34e-1c11-4f3f-a75a-3509e651d575">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="7a4b5509-03e4-4a3c-b3a2-df7980b76269" fragment="1" gd:fragmentGUID="ad5226f9-fde7-4b35-aefb-837f1e163ff2">Świadczeniodawcy są obowiązani do monitorowania jakości udzielanych świadczeń z zakresu podstawowej opieki zdrowotnej.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/515__art_23__ust_2" gd:GUID="908d6ea5-bc0d-4334-9616-cf8a2bdfa291">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="46e2e8ff-364f-496e-978d-7fad23d1ade0" fragment="1" gd:fragmentGUID="042c8fcc-5378-4f5d-b01c-a4a3640eae0e">Monitorowanie, o którym mowa w ust. 1, obejmuje:</zdanie>
+              </p>
+              <punkt eId="DU/2025/515__art_23__ust_2__pkt_1" gd:GUID="2410dac8-83a1-4879-a3ad-d2c39b085a12">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="46e2e8ff-364f-496e-978d-7fad23d1ade0" fragment="2" gd:fragmentGUID="13f2601d-35ed-4c59-9f8e-483095be72bd">dostępność świadczeń opieki zdrowotnej;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/515__art_23__ust_2__pkt_2" gd:GUID="8deee095-793c-44df-a016-068e8b6ab73b">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="46e2e8ff-364f-496e-978d-7fad23d1ade0" fragment="3" gd:fragmentGUID="ef2ec6f6-0339-4754-aaf6-a47dc1dcf99c">kompleksowość świadczeń opieki zdrowotnej;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/515__art_23__ust_2__pkt_3" gd:GUID="2d0bc9dc-b8b4-4c94-9014-f52097efd9bd">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="46e2e8ff-364f-496e-978d-7fad23d1ade0" fragment="4" gd:fragmentGUID="4b6ef0d6-4539-455f-b568-071cb62767d0">ciągłość świadczeń opieki zdrowotnej;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/515__art_23__ust_2__pkt_4" gd:GUID="0b089d00-422c-4842-80a5-208e95a147f6">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="46e2e8ff-364f-496e-978d-7fad23d1ade0" fragment="5" gd:fragmentGUID="852c6eb2-449a-4121-ad7b-faea83833dc9">zarządzanie i organizację udzielania świadczeń opieki zdrowotnej;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/515__art_23__ust_2__pkt_5" gd:GUID="30a1aed0-f625-4608-a7fb-f23d1506efad">
+                <nr>5</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="46e2e8ff-364f-496e-978d-7fad23d1ade0" fragment="6" gd:fragmentGUID="6d0d306e-77b2-4556-9100-91d2cbc43d1c">uzyskanie efektu zdrowotnego.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2025/515__art_23__ust_3" gd:GUID="f9756373-aa50-48c6-9bd9-bf500574c96f">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="b2452aea-1af7-45e4-ac8f-9af42fceb4c3" fragment="1" gd:fragmentGUID="507a8085-4e90-496d-9d06-f461f2445d3e">Minister właściwy do spraw zdrowia może określić, w drodze rozporządzenia, kryteria monitorowania jakości świadczeń z zakresu podstawowej opieki zdrowotnej, uwzględniając konieczność zapewnienia odpowiedniej jakości świadczeń zdrowotnych, bezpieczeństwo zdrowotne świadczeniobiorców oraz obszary monitorowania, o których mowa w ust. 2.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2025/515__art_24" gd:GUID="1d659c3b-de10-4c19-ac9b-cf564c99df19">
+            <nr>24</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="a822d820-4ca2-4000-b50d-7118a8fdf0cd">
+              <p>
+                <zdanie nr="1" gd:zdGUID="86f668e1-2b3a-436d-b1be-7ea3f07c242e" fragment="1" gd:fragmentGUID="ded03881-f51b-47c1-9e39-356f7054eaba">Świadczeniodawca może brać udział w programach poprawy jakości z zakresu podstawowej opieki zdrowotnej, określonych przez instytut, o którym mowa w art. 15 ust. 2, których celem jest zapewnienie odpowiedniej jakości świadczeń zdrowotnych, bezpieczeństwa zdrowotnego świadczeniobiorców oraz uzyskanie efektu zdrowotnego.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+        </oddzial-n>
+      </rozdzial>
+      <rozdzial eId="DU/2025/515__rozdz_5" gd:GUID="536aeb07-17cc-4a88-91e3-da4436cd2689">
+        <naglowek-rozdzialu>
+          <nr>5</nr>
+          <p>Przepisy zmieniające</p>
+        </naglowek-rozdzialu>
+        <oddzial-n brak-eid="jednostka-nieoznaczona" gd:GUID="322332a1-38b6-48cd-ac22-5318348d9711">
+          <artykul eId="DU/2025/515__art_25" gd:GUID="96d54632-dc06-4555-8dce-a1f70a7aa379">
+            <nr />
+            <nr-od>25</nr-od>
+            <nr-do>32</nr-do>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="d6c7bfc8-b648-4440-b9d5-2b674550fed4">
+              <p>
+                <zdanie nr="1" gd:zdGUID="cf6317eb-c199-4751-be6f-a808e30282c5" fragment="1" gd:fragmentGUID="b390571e-9618-4fe2-acb1-410f568f8b35">(pominięte)</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+        </oddzial-n>
+      </rozdzial>
+      <rozdzial eId="DU/2025/515__rozdz_6" gd:GUID="b4134fd9-3a79-46ad-81f0-1e9cb125d660">
+        <naglowek-rozdzialu>
+          <nr>6</nr>
+          <p>Przepisy przejściowe, dostosowujące i końcowe</p>
+        </naglowek-rozdzialu>
+        <oddzial-n brak-eid="jednostka-nieoznaczona" gd:GUID="fde4c09f-7d44-4587-9301-5cd0c4dfbad8">
+          <artykul eId="DU/2025/515__art_33" gd:GUID="5b5a68a9-7577-4da8-a48d-146f6b22cf9a">
+            <nr>33</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="385238be-6332-4b3c-a40e-248be7266f0c">
+              <p>
+                <zdanie nr="1" gd:zdGUID="dbd04a47-5b82-4f09-8dde-ff202c6ff2b0" fragment="1" gd:fragmentGUID="f9da031d-8469-4e91-9958-b43744af14d4">(uchylony)<odnosnik id-odnosnika="10" symbol="10" gd:GUID="5020b33f-d75b-4c19-b149-ceb61cf5a408"><p><zdanie nr="1" gd:zdGUID="c104c9ef-4e66-4c4f-ad77-ca570204bb03" fragment="1" gd:fragmentGUID="e2b88d5d-e037-4bd9-8050-3691696c911d">Przez art. 12 pkt 3 ustawy, o której mowa w odnośniku 3; wszedł w życie z dniem 30 grudnia 2024 r.</zdanie></p></odnosnik></zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2025/515__art_34" gd:GUID="9274e77d-4c08-45a6-a7d5-81d366f47781">
+            <nr>34</nr>
+            <ustep eId="DU/2025/515__art_34__ust_1" gd:GUID="a83a312f-cb4a-481f-acd0-754a6cf701d9">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="6762f43f-d4d8-4501-a5fe-7b3e3b2fba2d" fragment="1" gd:fragmentGUID="4dc65340-49e4-46af-b274-7f4128815758">Oświadczenia woli świadczeniobiorców o wyborze świadczeniodawcy, lekarza POZ, pielęgniarki POZ i położnej POZ, złożone przed dniem wejścia w życie niniejszej ustawy, zachowują ważność.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/515__art_34__ust_2" gd:GUID="879aabeb-1e5e-41b3-bb12-a6b8e5fe3222">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="f0b6f726-f210-4a4e-95cb-b36771bbb5a4" fragment="1" gd:fragmentGUID="f3b19d0e-6f04-4ba7-b9d3-da314ccbc7d3">(uchylony)<odnosnik id-odnosnika="11" symbol="11" gd:GUID="9b7c3493-cc26-412c-ad06-fa1cb17c20ee"><p><zdanie nr="1" gd:zdGUID="727d4420-01e6-4c2c-84e3-a68a1416dbbc" fragment="1" gd:fragmentGUID="900f3213-de50-47b3-b851-ccbe6bf7e177">Przez art. 12 pkt 4 ustawy, o której mowa w odnośniku 3; wszedł w życie z dniem 30 grudnia 2024 r.</zdanie></p></odnosnik></zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2025/515__art_35" gd:GUID="1c49adfe-ca45-4ef4-81e2-9fd97db1bb2d">
+            <nr>35</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="246f8111-634d-4e0a-8568-0ca388b65e6b">
+              <p>
+                <zdanie nr="1" gd:zdGUID="7c66bde9-8374-428b-bca1-997250fbaf14" fragment="1" gd:fragmentGUID="060d1ecd-07ad-4e75-90eb-fc1dc6cd216d">Dotychczasowe przepisy wykonawcze wydane na podstawie art. 55 ust. 6 oraz art. 56 ust. 3 ustawy zmienianej w art. 29<odnosnik id-odnosnika="12" symbol="12" gd:GUID="0c8f5ae2-63cf-4e05-87ef-b4fa9c66a44c"><p><zdanie nr="1" gd:zdGUID="4d34a07a-dbb8-4750-ad6b-29a7e5f9c777" fragment="1" gd:fragmentGUID="447131d0-8484-427a-808c-c59e13f0689c">Art. 29 zawiera zmiany do ustawy z dnia 27 sierpnia 2004 r. o świadczeniach opieki zdrowotnej finansowanych ze środków publicznych.</zdanie></p></odnosnik> oraz art. 22 ust. 4a ustawy zmienianej w art. 31<odnosnik id-odnosnika="13" symbol="13" gd:GUID="ec2ffdb0-1dc3-42b0-a3d3-cdb53b140834"><p><zdanie nr="1" gd:zdGUID="be96394d-fb0a-4de2-b2a3-37c390dbbf93" fragment="1" gd:fragmentGUID="9c7c7a46-92ac-46bf-902c-7870955c8c85">Art. 31 zawiera zmiany do ustawy z dnia 15 kwietnia 2011 r. o działalności leczniczej.</zdanie></p></odnosnik> zachowują moc do dnia wejścia w życie przepisów wykonawczych wydanych na podstawie art. 13 ust. 4 oraz art. 10 ust. 8 niniejszej ustawy oraz art. 22 ust. 4a ustawy zmienianej w art. 31<odsylacz-do-odnosnika id-odnosnika="13" symbol="13" /> w brzmieniu nadanym niniejszą ustawą, nie dłużej jednak niż przez 24 miesiące od dnia wejścia w życie niniejszej ustawy.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2025/515__art_36" gd:GUID="90d3f110-2630-4c47-99ef-7a94dad8287c">
+            <nr>36</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="b75a6751-5c54-4127-a3f7-0cd970bd7626">
+              <p>
+                <zdanie nr="1" gd:zdGUID="2bbadfd5-74f3-4d91-aca0-b22e616cd68a" fragment="1" gd:fragmentGUID="fbbe19a0-ff2f-4294-83a1-ea486278d298">Umowy o udzielanie świadczeń opieki zdrowotnej z zakresu podstawowej opieki zdrowotnej zawarte przed dniem wejścia w życie niniejszej ustawy zachowują ważność.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2025/515__art_37" gd:GUID="622f1d53-ed62-4954-bd82-f00e496dc371">
+            <nr>37</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="964d9696-02a6-4942-9bd5-85509eb39071">
+              <p>
+                <zdanie nr="1" gd:zdGUID="a596d15c-ce34-46fc-a57e-f4b6259f6207" fragment="1" gd:fragmentGUID="ad243e8e-19d9-4dc9-a282-6b9125c88a45">Program polityki zdrowotnej realizowany i finansowany przez ministra właściwego do spraw zdrowia na podstawie art. 48a ust. 1a ustawy zmienianej w art. 29<odsylacz-do-odnosnika id-odnosnika="12" symbol="12" />, przed dniem wejścia w życie niniejszej ustawy, staje się programem polityki zdrowotnej, o którym mowa w art. 48a ust. 17 ustawy zmienianej w art. 29<odsylacz-do-odnosnika id-odnosnika="12" symbol="12" />, w brzmieniu nadanym niniejszą ustawą.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2025/515__art_38" gd:GUID="0b1a63a3-2aaf-401c-a313-f70a452e8a2a">
+            <nr>38</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="5b63ee0e-97c8-47e6-ba15-a4e6037485a3">
+              <p>
+                <zdanie nr="1" gd:zdGUID="fa2b7453-c8ca-40c9-8d4b-873477ca5700" fragment="1" gd:fragmentGUID="1192ba8f-33b2-4728-a73b-3421eeb683ae">Ustawa wchodzi w życie z dniem 1 grudnia 2017 r., z wyjątkiem:</zdanie>
+              </p>
+              <punkt eId="DU/2025/515__art_38__pkt_1" gd:GUID="08402762-a6bb-4f10-ab2c-9d417a72f0ae">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="fa2b7453-c8ca-40c9-8d4b-873477ca5700" fragment="2" gd:fragmentGUID="4c880296-ce90-4fd1-a1c5-6ec5a89abda9">art. 29 pkt 7 w zakresie uchylenia ust. 2b w art. 55, który wchodzi w życie z dniem ogłoszenia<odnosnik id-odnosnika="14" symbol="14" gd:GUID="bce2d4e0-e77f-474c-a54b-0ba60ed67504"><p><zdanie nr="1" gd:zdGUID="3c2b826a-9e58-41ab-8107-24bdc36681a7" fragment="1" gd:fragmentGUID="5119c2e7-9d52-4fac-8567-14c560c1efc3">Ustawa została ogłoszona w dniu 30 listopada 2017 r.</zdanie></p></odnosnik>;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/515__art_38__pkt_2" gd:GUID="b7ea0e80-f557-4fa1-9232-4635a111f279">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="fa2b7453-c8ca-40c9-8d4b-873477ca5700" fragment="3" gd:fragmentGUID="00e72e55-f5a4-43c8-9b58-346ed19967fb">art. 6 ust. 4–6, które wchodzą w życie z dniem 1 stycznia 2019 r.;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/515__art_38__pkt_3" gd:GUID="a70ae394-3b80-4113-a07d-9dd197dbcbab">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="fa2b7453-c8ca-40c9-8d4b-873477ca5700" fragment="4" gd:fragmentGUID="0b8d84bb-398a-4184-87c5-add62681740b">art. 14 ust. 2 i art. 29 pkt 10 i 11, które wchodzą w życie z dniem 1 października 2021 r.;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/515__art_38__pkt_4" gd:GUID="5d754259-0018-4a35-a4f7-cb4edb9c3d14">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="fa2b7453-c8ca-40c9-8d4b-873477ca5700" fragment="5" gd:fragmentGUID="c82ef6b1-1723-4d0f-8cf6-cd08c0045846"><odnosnik id-odnosnika="15" symbol="15" gd:GUID="aa0886a2-8e67-4c7e-ad57-45c5f26a12e8"><p><zdanie nr="1" gd:zdGUID="daa9e84b-3242-4c93-baad-819beb05fcca" fragment="1" gd:fragmentGUID="f04c92ac-2289-4d3a-bd39-8cbf8315549a">Ze zmianą wprowadzoną przez art. 12 pkt 5 ustawy, o której mowa w odnośniku 3; wszedł w życie z dniem 30 grudnia 2024 r.</zdanie></p></odnosnik> art. 6 ust. 1 pkt 4 i ust. 2, w zakresie obowiązku ukończenia kursu w dziedzinie medycyny rodzinnej, które wchodzą w życie z dniem 1 stycznia 2027 r.</zdanie>
+                </p>
+              </punkt>
+            </ustep-n>
+          </artykul>
+        </oddzial-n>
+      </rozdzial>
+    </ustawa>
+  </obwieszczenie>
+</akt-prawny>

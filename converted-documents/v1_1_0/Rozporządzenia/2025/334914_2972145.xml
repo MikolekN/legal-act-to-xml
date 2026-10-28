@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <rozporzadzenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/1004</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>c44cea81-2232-42bd-96aa-fc4cb6ed8824</gd:GUIDwersji>
+      <AdresISAP>WDU20250001004</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>1004</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 1004</AdresWyswietlany>
+      <Tytul>Rozporządzenie Prezesa Rady Ministrów z dnia 25 lipca 2025 r. w sprawie szczegółowego zakresu działania Ministra Zdrowia</Tytul>
+      <Rodzaj>ROZP</Rodzaj>
+      <DataOgloszenia>2025-07-25</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-07-25</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_moc-wsteczna_2025-07-24_DU-2025-1004_odczytane" rodzaj="stosowanie-z-moca-wsteczna" pochodzenie="odczytane" data="2025-07-24" podstawa="§ 2" zrodlo="https://eli.gov.pl/eli/DU/2025/1004" dowod="DU/2025/1004__art_2" />
+          <Zdarzenie id="zdarz_wejscie_2025-07-25_DU-2025-1004_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2025-07-25" warunek="z dniem ogłoszenia" podstawa="§ 2" zrodlo="https://eli.gov.pl/eli/DU/2025/1004" dowod="DU/2025/1004__art_2" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_moc-wsteczna.zdarz_moc-wsteczna_2025-07-24_DU-2025-1004_odczytane.obowiazywanie.zdarz_wejscie_2025-07-25_DU-2025-1004_domyslne.x" glowna="true">
+          <Przedzial rodzaj="stosowanie-z-moca-wsteczna" od="zdarz_moc-wsteczna_2025-07-24_DU-2025-1004_odczytane" do="zdarz_wejscie_2025-07-25_DU-2025-1004_domyslne" />
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2025-07-25_DU-2025-1004_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="5f4d943e-372e-496c-a44c-b43b3979d072" rola="wydajacy">
+          <Nazwa>Prezes Rady Ministrów</Nazwa>
+          <OrganPodpisujacy>Prezes Rady Ministrów</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>D.</imie> <nazwisko>Tusk</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Rozporządzenie</rodzaj-aktu>
+    <autor-aktu>Prezesa Rady Ministrów</autor-aktu>
+    <data>z dnia 25 lipca 2025 r.</data>
+    <tytul>w sprawie szczegółowego zakresu działania Ministra Zdrowia</tytul>
+    <podstawa-prawna>Na podstawie art. 33 ust. 1 i 1a ustawy z dnia 8 sierpnia 1996 r. o Radzie Ministrów (Dz. U. z 2025 r. poz. 780) zarządza się, co następuje:</podstawa-prawna>
+    <paragraf eId="DU/2025/1004__art_1" gd:GUID="644373bd-fb45-475a-97c3-6e10ce280488" okres="okr_moc-wsteczna.zdarz_moc-wsteczna_2025-07-24_DU-2025-1004_odczytane.obowiazywanie.zdarz_wejscie_2025-07-25_DU-2025-1004_domyslne.x" wejscie-w-zycie="2025-07-24">
+      <nr>1</nr>
+      <ustep eId="DU/2025/1004__art_1__ust_1" gd:GUID="4ef9b59c-a2a0-4602-b642-9ff492f5986e" okres="okr_moc-wsteczna.zdarz_moc-wsteczna_2025-07-24_DU-2025-1004_odczytane.obowiazywanie.zdarz_wejscie_2025-07-25_DU-2025-1004_domyslne.x" wejscie-w-zycie="2025-07-24">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="0da6e990-9207-4f67-8b30-e2c655d249ea" fragment="1" gd:fragmentGUID="913dbb2f-1f01-454d-8b4a-341e7404e3d7" okres="okr_moc-wsteczna.zdarz_moc-wsteczna_2025-07-24_DU-2025-1004_odczytane.obowiazywanie.zdarz_wejscie_2025-07-25_DU-2025-1004_domyslne.x" wejscie-w-zycie="2025-07-24">Rozporządzenie określa szczegółowy zakres działania Ministra Zdrowia, zwanego dalej „ministrem”.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/1004__art_1__ust_2" gd:GUID="7dcf790e-a474-4cbb-9b53-b301cad91d57" okres="okr_moc-wsteczna.zdarz_moc-wsteczna_2025-07-24_DU-2025-1004_odczytane.obowiazywanie.zdarz_wejscie_2025-07-25_DU-2025-1004_domyslne.x" wejscie-w-zycie="2025-07-24">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="b4715e61-675d-489c-8861-5679adad626c" fragment="1" gd:fragmentGUID="a856f7fb-ba23-45e3-b3fd-8f76b412a25b" okres="okr_moc-wsteczna.zdarz_moc-wsteczna_2025-07-24_DU-2025-1004_odczytane.obowiazywanie.zdarz_wejscie_2025-07-25_DU-2025-1004_domyslne.x" wejscie-w-zycie="2025-07-24">Minister kieruje działem administracji rządowej – zdrowie.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/1004__art_1__ust_3" gd:GUID="e00bd2c4-83cf-4a10-8b91-7ba5f7d0f885" okres="okr_moc-wsteczna.zdarz_moc-wsteczna_2025-07-24_DU-2025-1004_odczytane.obowiazywanie.zdarz_wejscie_2025-07-25_DU-2025-1004_domyslne.x" wejscie-w-zycie="2025-07-24">
+        <nr>3</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="1dacb71d-f72f-4477-8d82-a15cf96cdadf" fragment="1" gd:fragmentGUID="0ab1bba2-5dae-4c65-950f-cb8fe1183ad8" okres="okr_moc-wsteczna.zdarz_moc-wsteczna_2025-07-24_DU-2025-1004_odczytane.obowiazywanie.zdarz_wejscie_2025-07-25_DU-2025-1004_domyslne.x" wejscie-w-zycie="2025-07-24">Minister jest dysponentem części 46 budżetu państwa.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/1004__art_1__ust_4" gd:GUID="ae1d7b7e-3397-4929-baa5-de0a7e4fb834" okres="okr_moc-wsteczna.zdarz_moc-wsteczna_2025-07-24_DU-2025-1004_odczytane.obowiazywanie.zdarz_wejscie_2025-07-25_DU-2025-1004_domyslne.x" wejscie-w-zycie="2025-07-24">
+        <nr>4</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="72ed1fb2-4460-4f82-b048-748a3bbedad5" fragment="1" gd:fragmentGUID="46360fb2-35dc-4a48-bf96-ec7ada1c53b7" okres="okr_moc-wsteczna.zdarz_moc-wsteczna_2025-07-24_DU-2025-1004_odczytane.obowiazywanie.zdarz_wejscie_2025-07-25_DU-2025-1004_domyslne.x" wejscie-w-zycie="2025-07-24">Obsługę ministra zapewnia Ministerstwo Zdrowia.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/1004__art_1__ust_5" gd:GUID="104c03df-30ab-41c4-933e-d88c1bc3f7d5" okres="okr_moc-wsteczna.zdarz_moc-wsteczna_2025-07-24_DU-2025-1004_odczytane.obowiazywanie.zdarz_wejscie_2025-07-25_DU-2025-1004_domyslne.x" wejscie-w-zycie="2025-07-24">
+        <nr>5</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="92d0be02-dbc1-4d5f-b9ce-1c3b4e47c0d3" fragment="1" gd:fragmentGUID="981298ce-b1cb-47da-8b68-0df4e8ca4403" okres="okr_moc-wsteczna.zdarz_moc-wsteczna_2025-07-24_DU-2025-1004_odczytane.obowiazywanie.zdarz_wejscie_2025-07-25_DU-2025-1004_domyslne.x" wejscie-w-zycie="2025-07-24">Organy podległe ministrowi lub przez niego nadzorowane określa załącznik do rozporządzenia.</zdanie>
+        </p>
+      </ustep>
+    </paragraf>
+    <paragraf eId="DU/2025/1004__art_2" gd:GUID="3ff2e31f-b019-417c-8dee-84ea39441eca" okres="okr_moc-wsteczna.zdarz_moc-wsteczna_2025-07-24_DU-2025-1004_odczytane.obowiazywanie.zdarz_wejscie_2025-07-25_DU-2025-1004_domyslne.x" wejscie-w-zycie="2025-07-24">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="8a56fc40-47ab-43cc-93ec-c9a9463cb56c" okres="okr_moc-wsteczna.zdarz_moc-wsteczna_2025-07-24_DU-2025-1004_odczytane.obowiazywanie.zdarz_wejscie_2025-07-25_DU-2025-1004_domyslne.x" wejscie-w-zycie="2025-07-24">
+        <p>
+          <zdanie nr="1" gd:zdGUID="1eb533ec-261e-49e9-a2bb-cb9d551d8d93" fragment="1" gd:fragmentGUID="65928feb-b8b6-4c2e-872f-3532dfe2aca4" okres="okr_moc-wsteczna.zdarz_moc-wsteczna_2025-07-24_DU-2025-1004_odczytane.obowiazywanie.zdarz_wejscie_2025-07-25_DU-2025-1004_domyslne.x" wejscie-w-zycie="2025-07-24">Rozporządzenie wchodzi w życie z dniem ogłoszenia, z mocą od dnia 24 lipca 2025 r.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <organ-podpisujacy>Prezes Rady Ministrów: <i><osoba podpisujacy="true" gd:osobaGUID="d9311cb7-774a-476a-a379-056d95682b5d"><imie>D.</imie> <nazwisko>Tusk</nazwisko></osoba></i></organ-podpisujacy>
+    <zalacznik eId="DU/2025/1004__zal_1" gd:GUID="70ced325-1af7-462c-92ea-81f40fc3db06">
+      <zalacznik-do gd:GUID="0a593ff0-c57a-47aa-a795-ff1d984e1257">Załącznik do rozporządzenia Prezesa Rady Ministrów z dnia 25 lipca 2025 r. (Dz. U. poz. 1004)</zalacznik-do>
+      <tytul-zalacznika gd:GUID="0c930acf-5671-4d6d-a290-8229ead1976e">ORGANY PODLEGŁE MINISTROWI ZDROWIA LUB PRZEZ NIEGO NADZOROWANE</tytul-zalacznika>
+      <segment-zalacznika gd:GUID="848f582b-0adc-4918-9a15-abd0dd91fb65" orientacja="pionowa">
+        <punkt eId="DU/2025/1004__zal_1__pkt_1" gd:GUID="f2d3a71a-af30-4f4b-b127-0e27fb4dd568" wejscie-w-zycie="2025-07-24">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="574da182-4799-48ed-ad96-c3e72c4eff37" fragment="1" gd:fragmentGUID="d3ed758b-d129-4a74-b0c5-16daf685f507" wejscie-w-zycie="2025-07-24">Główny Inspektor Farmaceutyczny;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1004__zal_1__pkt_2" gd:GUID="2bda8e9b-8874-4125-9804-efd1817ddb2a" wejscie-w-zycie="2025-07-24">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="c3def84f-88fe-4ef2-ad04-be9b0b1e58f7" fragment="1" gd:fragmentGUID="4af3d135-e46c-459c-84c4-b485d666ec5f" wejscie-w-zycie="2025-07-24">Główny Inspektor Sanitarny;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1004__zal_1__pkt_3" gd:GUID="0db501a5-597b-44ec-9beb-eda8c6006877" wejscie-w-zycie="2025-07-24">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="721bb29f-37cf-423e-b6a8-a82c2c4537df" fragment="1" gd:fragmentGUID="07542eeb-8a67-4667-ab96-735ffe658f27" wejscie-w-zycie="2025-07-24">Prezes Biura do spraw Substancji Chemicznych;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1004__zal_1__pkt_4" gd:GUID="b6305164-4995-4eae-b2dd-52b04fa77142" wejscie-w-zycie="2025-07-24">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="e3d91f78-8bdf-47d5-80e7-60b4efdcc6a4" fragment="1" gd:fragmentGUID="8ce9826b-3baa-48e7-9919-170a4b2f6782" wejscie-w-zycie="2025-07-24">Prezes Urzędu Rejestracji Produktów Leczniczych, Wyrobów Medycznych i Produktów Biobójczych.</zdanie>
+          </p>
+        </punkt>
+      </segment-zalacznika>
+    </zalacznik>
+  </rozporzadzenie>
+</akt-prawny>

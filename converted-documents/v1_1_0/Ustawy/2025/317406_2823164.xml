@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <ustawa>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/240</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>e772afea-449c-4817-9a88-9f4ccb9d3774</gd:GUIDwersji>
+      <AdresISAP>WDU20250000240</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>240</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 240</AdresWyswietlany>
+      <Tytul>Ustawa z dnia 24 stycznia 2025 r. o zmianie ustawy o Służbie Więziennej</Tytul>
+      <Rodzaj>USTAWA</Rodzaj>
+      <DataOgloszenia>2025-02-27</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-01-24</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2025-03-01_DU-2025-240_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2025-03-01" warunek="pierwszego dnia miesiąca następującego po miesiącu ogłoszenia" podstawa="art. 2" zrodlo="https://eli.gov.pl/eli/DU/2025/240" dowod="DU/2025/240__art_2" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2025-03-01_DU-2025-240_domyslne.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2025-03-01_DU-2025-240_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="e510fcb0-cb80-4c9c-befa-6df99ff75403" rola="wydajacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Sejm">
+          <Nazwa>SEJM</Nazwa>
+        </Organ>
+        <Organ gd:GUID="c1488db7-916a-49a9-95c9-e570d5317d35" rola="podpisujacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Prezydent">
+          <Nazwa>Prezydent Rzeczypospolitej Polskiej</Nazwa>
+          <OrganPodpisujacy>Prezydent Rzeczypospolitej Polskiej</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>A.</imie> <nazwisko>Duda</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Ustawa</rodzaj-aktu>
+    <data>z dnia 24 stycznia 2025 r.</data>
+    <tytul>o zmianie ustawy o Służbie Więziennej</tytul>
+    <artykul eId="DU/2025/240__art_1" gd:GUID="3bf5787e-fd01-479c-bae8-da7bc4acda37" okres="okr_obowiazywanie.zdarz_wejscie_2025-03-01_DU-2025-240_domyslne.x" wejscie-w-zycie="2025-03-01">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="b37fbfd0-b6be-4e76-a874-3c3f76cccf8e" okres="okr_obowiazywanie.zdarz_wejscie_2025-03-01_DU-2025-240_domyslne.x" wejscie-w-zycie="2025-03-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="cc22d851-11ed-4350-82b2-52d772457517" fragment="1" gd:fragmentGUID="ee75dc57-8c3d-4ab2-acfb-cde167f10be7" okres="okr_obowiazywanie.zdarz_wejscie_2025-03-01_DU-2025-240_domyslne.x" wejscie-w-zycie="2025-03-01">W ustawie z dnia 9 kwietnia 2010 r. o Służbie Więziennej (Dz. U. z 2024 r. poz. 1869 i 1871 oraz z 2025 r. poz. 179) wprowadza się następujące zmiany:</zdanie>
+        </p>
+        <punkt eId="DU/2025/240__art_1__pkt_1" gd:GUID="fe3d662a-e46d-4f4a-b066-a021d1fce7fc" okres="okr_obowiazywanie.zdarz_wejscie_2025-03-01_DU-2025-240_domyslne.x" wejscie-w-zycie="2025-03-01">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="cc22d851-11ed-4350-82b2-52d772457517" fragment="2" gd:fragmentGUID="cdb2885f-b4d0-4edc-86bb-0fed55fe1262" okres="okr_obowiazywanie.zdarz_wejscie_2025-03-01_DU-2025-240_domyslne.x" wejscie-w-zycie="2025-03-01">w art. 9 w ust. 1 wprowadzenie do wyliczenia otrzymuje brzmienie:<cytat-w-tekscie now:akt="https://eli.gov.pl/eli/DU/2024/1869" cudzyslowy="oba" gd:nowGUID="4d5261e6-da10-4ab1-b2e0-2b76b68509e9" element-eId="DU/2024/1869__art_9__ust_1" funkcja="zastap-tekst"><zdanie nr="1" gd:zdGUID="466b38db-f029-4b86-8159-2395a8384cd4" fragment="1" gd:fragmentGUID="6c0b5caf-6f67-4685-954a-3c05f5ccb757" okres="okr_obowiazywanie.zdarz_wejscie_2025-03-01_DU-2025-240_domyslne.x" wejscie-w-zycie="2025-03-01">Liczbę etatów w poszczególnych jednostkach organizacyjnych nalicza się w oparciu o przyznaną dla więziennictwa na dany rok liczbę etatów funkcjonariuszy Służby Więziennej, zwanych dalej „funkcjonariuszami”, oraz przyznaną dla więziennictwa liczbę etatów pracowników Służby Więziennej, zwanych dalej „pracownikami”, uwzględniając następujące kryteria:</zdanie></cytat-w-tekscie>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/240__art_1__pkt_2" gd:GUID="450795e4-6251-4f59-a2da-07dab5c2e8d5" okres="okr_obowiazywanie.zdarz_wejscie_2025-03-01_DU-2025-240_domyslne.x" wejscie-w-zycie="2025-03-01">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="cc22d851-11ed-4350-82b2-52d772457517" fragment="3" gd:fragmentGUID="ec413d92-b134-47ff-b5c4-10898ad1cecd" okres="okr_obowiazywanie.zdarz_wejscie_2025-03-01_DU-2025-240_domyslne.x" wejscie-w-zycie="2025-03-01"><now:zamien-tekst stary-tekst="oficerów Służby Więziennej" nowy-tekst="oficerów Służby Więziennej lub pracowników" element-eId="DU/2024/1869__art_64__ust_2" akt="https://eli.gov.pl/eli/DU/2024/1869" gd:nowGUID="279f52af-0316-4d15-81a2-a72152764aab" />w art. 64 w ust. 2 po wyrazach „oficerów Służby Więziennej” dodaje się wyrazy „lub pracowników”;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/240__art_1__pkt_3" gd:GUID="5300b342-290b-4c3a-8bd2-1ec9705c9e93" okres="okr_obowiazywanie.zdarz_wejscie_2025-03-01_DU-2025-240_domyslne.x" wejscie-w-zycie="2025-03-01">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="cc22d851-11ed-4350-82b2-52d772457517" fragment="4" gd:fragmentGUID="e9c14fe9-332f-44d3-a99b-2afdb64898e8" okres="okr_obowiazywanie.zdarz_wejscie_2025-03-01_DU-2025-240_domyslne.x" wejscie-w-zycie="2025-03-01"><now:zamien-tekst stary-tekst="oficerów Służby Więziennej" nowy-tekst="oficerów Służby Więziennej lub pracowników" element-eId="DU/2024/1869__art_65__ust_2" akt="https://eli.gov.pl/eli/DU/2024/1869" gd:nowGUID="b6517e1a-c0cb-41cb-b12b-5074f14cc4d8" />w art. 65 w ust. 2 po wyrazach „oficerów Służby Więziennej” dodaje się wyrazy „lub pracowników”;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/240__art_1__pkt_4" gd:GUID="19e35719-e631-4f0a-9008-69c4f0b3b685" okres="okr_obowiazywanie.zdarz_wejscie_2025-03-01_DU-2025-240_domyslne.x" wejscie-w-zycie="2025-03-01">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="cc22d851-11ed-4350-82b2-52d772457517" fragment="5" gd:fragmentGUID="4f7b8620-3110-4a23-9246-8418d4407b09" okres="okr_obowiazywanie.zdarz_wejscie_2025-03-01_DU-2025-240_domyslne.x" wejscie-w-zycie="2025-03-01"><now:zamien-tekst stary-tekst="oficerów Służby Więziennej" nowy-tekst="oficerów Służby Więziennej lub pracowników" element-eId="DU/2024/1869__art_66__ust_2" akt="https://eli.gov.pl/eli/DU/2024/1869" gd:nowGUID="f3b18fd7-f3d8-4959-bbbd-6ce685c9b22f" />w art. 66 w ust. 2 po wyrazach „oficerów Służby Więziennej” dodaje się wyrazy „lub pracowników”;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/240__art_1__pkt_5" gd:GUID="cce5d97f-2063-47f3-b812-2d8965759708" okres="okr_obowiazywanie.zdarz_wejscie_2025-03-01_DU-2025-240_domyslne.x" wejscie-w-zycie="2025-03-01">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="cc22d851-11ed-4350-82b2-52d772457517" fragment="6" gd:fragmentGUID="878e85a8-14f4-4f60-9073-84027c4fa5f3" okres="okr_obowiazywanie.zdarz_wejscie_2025-03-01_DU-2025-240_domyslne.x" wejscie-w-zycie="2025-03-01"><now:zamien-tekst stary-tekst="oficerów Służby Więziennej" nowy-tekst="oficerów Służby Więziennej lub pracowników" element-eId="DU/2024/1869__art_67__ust_2" akt="https://eli.gov.pl/eli/DU/2024/1869" gd:nowGUID="89e03226-8c79-4504-84fe-e005782e38f4" />w art. 67 w ust. 2 po wyrazach „oficerów Służby Więziennej” dodaje się wyrazy „lub pracowników”.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2025/240__art_2" gd:GUID="088a313e-8f47-4cf7-89c5-bfaee3194c61" okres="okr_obowiazywanie.zdarz_wejscie_2025-03-01_DU-2025-240_domyslne.x" wejscie-w-zycie="2025-03-01">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="bfdd19d2-f52a-44e7-ab5f-62515d3a9875" okres="okr_obowiazywanie.zdarz_wejscie_2025-03-01_DU-2025-240_domyslne.x" wejscie-w-zycie="2025-03-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="1a645995-298e-4c57-ab45-d8ea4e83cf33" fragment="1" gd:fragmentGUID="57eb71af-667d-4540-81fc-e1821e6db8fa" okres="okr_obowiazywanie.zdarz_wejscie_2025-03-01_DU-2025-240_domyslne.x" wejscie-w-zycie="2025-03-01">Ustawa wchodzi w życie pierwszego dnia miesiąca następującego po miesiącu ogłoszenia.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <organ-podpisujacy>Prezydent Rzeczypospolitej Polskiej: <i><osoba podpisujacy="true" gd:osobaGUID="84a4b6fa-1cc0-4b0e-bd77-00f7e85a4137"><imie>A.</imie> <nazwisko>Duda</nazwisko></osoba></i></organ-podpisujacy>
+  </ustawa>
+</akt-prawny>

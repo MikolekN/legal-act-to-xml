@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <ustawa>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2026/119</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>4df6b14d-0f6e-4a78-bd3f-c6b2a0d6f72b</gd:GUIDwersji>
+      <AdresISAP>WDU20260000119</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2026</Rok>
+      <Pozycja>119</Pozycja>
+      <AdresWyswietlany>Dz.U. 2026 poz. 119</AdresWyswietlany>
+      <Tytul>Ustawa z dnia 9 stycznia 2026 r. o zmianie ustawy o księgach wieczystych i hipotece oraz ustawy o Krajowym Rejestrze Sądowym</Tytul>
+      <Rodzaj>USTAWA</Rodzaj>
+      <DataOgloszenia>2026-02-02</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2026-01-09</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2026-03-31_DU-2026-119_odczytane" rodzaj="wejscie-w-zycie" pochodzenie="odczytane" data="2026-03-31" podstawa="art. 4" zrodlo="https://eli.gov.pl/eli/DU/2026/119" dowod="DU/2026/119__art_4" />
+          <Zdarzenie id="zdarz_wejscie_2026-05-31_DU-2026-119_odczytane" rodzaj="wejscie-w-zycie" pochodzenie="odczytane" data="2026-05-31" podstawa="art. 4" zrodlo="https://eli.gov.pl/eli/DU/2026/119" dowod="DU/2026/119__art_4">
+            <JednostkaAktu eId="DU/2026/119__art_2" />
+          </Zdarzenie>
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2026-03-31_DU-2026-119_odczytane.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2026-03-31_DU-2026-119_odczytane" />
+        </GrupaCzasowa>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2026-05-31_DU-2026-119_odczytane.x" glowna="false">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2026-05-31_DU-2026-119_odczytane" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="ec5fd2d2-4e11-46c3-b71d-b0cf6505df83" rola="wydajacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Sejm">
+          <Nazwa>SEJM</Nazwa>
+        </Organ>
+        <Organ gd:GUID="8a958c17-c8b6-4d91-8ee4-ed08f18dc12e" rola="podpisujacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Prezydent">
+          <Nazwa>Prezydent Rzeczypospolitej Polskiej</Nazwa>
+          <OrganPodpisujacy>Prezydent Rzeczypospolitej Polskiej</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>K.</imie> <nazwisko>Nawrocki</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Ustawa</rodzaj-aktu>
+    <data>z dnia 9 stycznia 2026 r.</data>
+    <tytul>o zmianie ustawy o księgach wieczystych i hipotece oraz ustawy o Krajowym Rejestrze Sądowym</tytul>
+    <artykul eId="DU/2026/119__art_1" gd:GUID="31241e95-0c5a-4620-b676-d9bac133f007" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-31_DU-2026-119_odczytane.x" wejscie-w-zycie="2026-03-31">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="06c0557d-e86a-46bf-82d9-c71434ad2dd6" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-31_DU-2026-119_odczytane.x" wejscie-w-zycie="2026-03-31">
+        <p>
+          <zdanie nr="1" gd:zdGUID="aa80cb27-fc9e-4af8-96a1-4bcff35673d1" fragment="1" gd:fragmentGUID="e47469ba-4211-4e13-9fb2-5d5be518fc23" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-31_DU-2026-119_odczytane.x" wejscie-w-zycie="2026-03-31">W ustawie z dnia 6 lipca 1982 r. o księgach wieczystych i hipotece (Dz. U. z 2025 r. poz. 341, 1669, 1792 i 1793) wprowadza się następujące zmiany:</zdanie>
+        </p>
+        <punkt eId="DU/2026/119__art_1__pkt_1" gd:GUID="e9ec4308-0bcb-4e06-b23f-303382aae47c" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-31_DU-2026-119_odczytane.x" wejscie-w-zycie="2026-03-31">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="aa80cb27-fc9e-4af8-96a1-4bcff35673d1" fragment="2" gd:fragmentGUID="1ba89199-b13d-47b2-b3fa-9fbfb82532a7" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-31_DU-2026-119_odczytane.x" wejscie-w-zycie="2026-03-31">w art. 36<sup>4</sup>:</zdanie>
+          </p>
+          <litera eId="DU/2026/119__art_1__pkt_1__lit_a" gd:GUID="51fb1c9e-f32b-43cc-8096-1bf7fde7ffc7" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-31_DU-2026-119_odczytane.x" wejscie-w-zycie="2026-03-31">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="aa80cb27-fc9e-4af8-96a1-4bcff35673d1" fragment="3" gd:fragmentGUID="8176bc73-6fa6-4ab7-8c2d-0d0242bc3ab6" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-31_DU-2026-119_odczytane.x" wejscie-w-zycie="2026-03-31">ust. 4 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2025/341" cudzyslowy="oba" gd:nowGUID="70a5c702-a029-42f9-a1e6-877ebf50e17d" element-eId="DU/2025/341__art_36[4]__ust_4" funkcja="zastap"><ustep eId="DU/2025/341__art_36[4]__ust_4" gd:GUID="17b3bd33-f27e-41b4-a7fc-e1fee7507751" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-31_DU-2026-119_odczytane.x" wejscie-w-zycie="2026-03-31"><nr>4</nr><p><zdanie nr="1" gd:zdGUID="e6522a8c-60c1-42ee-8caa-4259ae914e1c" fragment="1" gd:fragmentGUID="08283a93-3327-48c9-95ff-469c73973e46" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-31_DU-2026-119_odczytane.x" wejscie-w-zycie="2026-03-31">W przypadku złożenia za pośrednictwem systemu teleinformatycznego wniosku o wydanie dokumentów, o których mowa w ust. 2, Centralna Informacja umożliwia pobranie tych dokumentów w postaci dokumentów elektronicznych pozwalających na samodzielne sporządzenie wydruków za pośrednictwem systemu teleinformatycznego.</zdanie><zdanie nr="2" gd:zdGUID="00cbcc3f-6b0b-41e4-a996-797cb01c5124" fragment="1" gd:fragmentGUID="7baed78a-ed3d-4dc0-9cb6-39caeb3c6e33" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-31_DU-2026-119_odczytane.x" wejscie-w-zycie="2026-03-31">Pobrane dokumenty elektroniczne oraz ich wydruki mają moc dokumentów wydawanych przez sąd, jeżeli posiadają cechy umożliwiające ich weryfikację z danymi zawartymi w centralnej bazie danych ksiąg wieczystych.</zdanie></p></ustep></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2026/119__art_1__pkt_1__lit_b" gd:GUID="0e787c8d-f4b0-427b-b294-b04402dbbe87" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-31_DU-2026-119_odczytane.x" wejscie-w-zycie="2026-03-31">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="aa80cb27-fc9e-4af8-96a1-4bcff35673d1" fragment="4" gd:fragmentGUID="b7540a1f-17d1-4add-a0d5-f6beda668d8e" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-31_DU-2026-119_odczytane.x" wejscie-w-zycie="2026-03-31">w ust. 17:</zdanie>
+            </p>
+            <tiret eId="DU/2026/119__art_1__pkt_1__lit_b__tir_1" gd:GUID="46f03164-510d-48c2-b6e0-1b6771b8b837" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-31_DU-2026-119_odczytane.x" wejscie-w-zycie="2026-03-31">
+              <p>
+                <zdanie nr="1" gd:zdGUID="aa80cb27-fc9e-4af8-96a1-4bcff35673d1" fragment="5" gd:fragmentGUID="e9c19a7f-af1c-4b63-bf41-97362868490f" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-31_DU-2026-119_odczytane.x" wejscie-w-zycie="2026-03-31">pkt 6 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2025/341" cudzyslowy="oba" gd:nowGUID="3d65e08c-b16c-4e30-9e9d-87a143201730" element-eId="DU/2025/341__art_36[4]__ust_17__pkt_6" funkcja="zastap"><punkt eId="DU/2025/341__art_36[4]__ust_17__pkt_6" gd:GUID="eef0fa31-490f-47f3-bdd6-99cb3afd4b5b" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-31_DU-2026-119_odczytane.x" wejscie-w-zycie="2026-03-31"><nr>6</nr><p><zdanie nr="1" gd:zdGUID="c79b8774-5b1b-4bc8-8c0b-e6decff8f3dd" fragment="1" gd:fragmentGUID="b65d3e31-79d0-4051-bf31-ef3576ca88a1" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-31_DU-2026-119_odczytane.x" wejscie-w-zycie="2026-03-31">cechy dokumentów elektronicznych oraz wydruków tych dokumentów, mających moc dokumentów wydawanych przez sąd, oraz sposób i tryb ich weryfikacji z danymi zawartymi w centralnej bazie danych ksiąg wieczystych,</zdanie></p></punkt></cytat-strukt>,</zdanie>
+              </p>
+            </tiret>
+            <tiret eId="DU/2026/119__art_1__pkt_1__lit_b__tir_2" gd:GUID="62d2e9c2-9ee3-471e-b0a2-3c08f0a34fe2" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-31_DU-2026-119_odczytane.x" wejscie-w-zycie="2026-03-31">
+              <p>
+                <zdanie nr="1" gd:zdGUID="aa80cb27-fc9e-4af8-96a1-4bcff35673d1" fragment="6" gd:fragmentGUID="b6812e23-e854-40d4-a614-a2facef61dde" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-31_DU-2026-119_odczytane.x" wejscie-w-zycie="2026-03-31">część wspólna otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2025/341" cudzyslowy="oba" gd:nowGUID="56eb8dce-f0a5-4e49-af3d-b08865bd58da" element-eId="DU/2025/341__art_36[4]__ust_17__czw" funkcja="zastap"><czesc-wspolna-punkt eId="DU/2025/341__art_36[4]__ust_17__czw" gd:GUID="b0c12a81-3bea-4d79-b80e-16b8f84320da" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-31_DU-2026-119_odczytane.x" wejscie-w-zycie="2026-03-31"><p><zdanie nr="1" gd:zdGUID="aa4d6fec-943f-4140-91b4-d05fea8bda64" fragment="1" gd:fragmentGUID="726b76e3-2a6d-4197-8a11-a6c184160ec2" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-31_DU-2026-119_odczytane.x" wejscie-w-zycie="2026-03-31">– uwzględniając zasadę jawności ksiąg wieczystych i powszechność dostępu do nich, szybkość postępowania, zakres danych zawartych we wniosku, konieczność zapewnienia możliwości i sprawności weryfikacji pobranego dokumentu elektronicznego oraz samodzielnie wydrukowanego dokumentu z danymi zawartymi w centralnej bazie danych ksiąg wieczystych oraz konieczność zapewnienia ochrony centralnej bazy danych ksiąg wieczystych przed nieuprawnionym dostępem osób trzecich, a także treść i strukturę księgi wieczystej.</zdanie></p></czesc-wspolna-punkt></cytat-strukt>;</zdanie>
+              </p>
+            </tiret>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2026/119__art_1__pkt_2" gd:GUID="90f54497-cdfd-4ee1-a630-be0a9e7a3e54" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-31_DU-2026-119_odczytane.x" wejscie-w-zycie="2026-03-31">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="aa80cb27-fc9e-4af8-96a1-4bcff35673d1" fragment="7" gd:fragmentGUID="0077e6ee-b06d-4821-b9f0-e2232acd9ee7" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-31_DU-2026-119_odczytane.x" wejscie-w-zycie="2026-03-31">w art. 36<sup>5</sup> ust. 2 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2025/341" cudzyslowy="oba" gd:nowGUID="cd4d983a-04cd-49cf-898f-fbd1ce514f3b" element-eId="DU/2025/341__art_36[5]__ust_2" funkcja="zastap"><ustep eId="DU/2025/341__art_36[5]__ust_2" gd:GUID="3cc7871e-9db5-4e25-9cc3-df397d718992" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-31_DU-2026-119_odczytane.x" wejscie-w-zycie="2026-03-31"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="7417b28e-480a-4647-93c5-ca5cc524548f" fragment="1" gd:fragmentGUID="3aadc86c-fb87-4c21-a4f2-fa37e68600ff" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-31_DU-2026-119_odczytane.x" wejscie-w-zycie="2026-03-31">Minister Sprawiedliwości, w porozumieniu z ministrem właściwym do spraw finansów publicznych, określi, w drodze rozporządzenia, wysokość opłat, o których mowa w ust. 1, uwzględniając potrzebę pokrycia kosztów administracyjnych oraz zróżnicowania opłat od wniosków o uzyskanie poszczególnych dokumentów w zależności od sposobu złożenia wniosku, sposobu doręczenia dokumentów oraz postaci wydawanego dokumentu, a także konieczność realizacji ustawowych zadań przez podmiot wnioskujący o wyszukanie ksiąg wieczystych.</zdanie></p></ustep></cytat-strukt>.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2026/119__art_2" gd:GUID="e5cf95ea-7e2e-45c0-8443-ac68b11bd45d" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-31_DU-2026-119_odczytane.x" wejscie-w-zycie="2026-05-31">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="4eb727d7-86f2-4a0e-8192-19dc9bf42ff0" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-31_DU-2026-119_odczytane.x" wejscie-w-zycie="2026-05-31">
+        <p>
+          <zdanie nr="1" gd:zdGUID="57239a7a-0032-41cc-9a1c-c1a384299577" fragment="1" gd:fragmentGUID="5a524291-a85d-43f8-920d-ef1dff801ec7" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-31_DU-2026-119_odczytane.x" wejscie-w-zycie="2026-05-31">W ustawie z dnia 20 sierpnia 1997 r. o Krajowym Rejestrze Sądowym (Dz. U. z 2025 r. poz. 869, 1556 i 1792) w art. 10a:</zdanie>
+        </p>
+        <punkt eId="DU/2026/119__art_2__pkt_1" gd:GUID="5e53eec9-dec3-4f6d-acf8-fc5af6f310e8" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-31_DU-2026-119_odczytane.x" wejscie-w-zycie="2026-05-31">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="57239a7a-0032-41cc-9a1c-c1a384299577" fragment="2" gd:fragmentGUID="cda3de88-4111-488c-8352-c545784cc768" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-31_DU-2026-119_odczytane.x" wejscie-w-zycie="2026-05-31">po ust. 1 dodaje się ust. 1a w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2025/869" cudzyslowy="oba" gd:nowGUID="00b52868-2446-4827-b12d-5090cc9cc866" element-eId="DU/2025/869__art_10a__ust_1" funkcja="dodaj-po"><ustep eId="DU/2025/869__art_10a__ust_1a" gd:GUID="5d1f8026-9de0-4353-ab60-34e3296375b9" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-31_DU-2026-119_odczytane.x" wejscie-w-zycie="2026-05-31"><nr>1a</nr><p><zdanie nr="1" gd:zdGUID="3d872690-9118-49c5-8e17-42949e37d1c6" fragment="1" gd:fragmentGUID="5b89e986-5b3f-4b85-aa34-eece7dc178e2" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-31_DU-2026-119_odczytane.x" wejscie-w-zycie="2026-05-31">Informacje, o których mowa w ust. 1, mogą być automatycznie przesyłane za pośrednictwem aplikacji mObywatel, o której mowa w ustawie z dnia 26 maja 2023 r. o aplikacji mObywatel (Dz. U. z 2024 r. poz. 1275 i 1717 oraz z 2025 r. poz. 1019), użytkownikowi tej aplikacji, który za jej pośrednictwem wskazał numer w Rejestrze podmiotu, którego informacja ta ma dotyczyć, a z którym użytkownik ten jest powiązany przez numer PESEL.</zdanie></p></ustep></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/119__art_2__pkt_2" gd:GUID="01e02db3-d12d-46b4-8a2e-7e2616b05cda" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-31_DU-2026-119_odczytane.x" wejscie-w-zycie="2026-05-31">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="57239a7a-0032-41cc-9a1c-c1a384299577" fragment="3" gd:fragmentGUID="a124af96-2fb9-47e6-8bc6-1579aa20cbfd" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-31_DU-2026-119_odczytane.x" wejscie-w-zycie="2026-05-31">w ust. 2 zdanie pierwsze otrzymuje brzmienie:<cytat-w-tekscie now:akt="https://eli.gov.pl/eli/DU/2025/869" cudzyslowy="oba" gd:nowGUID="fc5d4b96-ac22-4126-a1b6-0e8849537495" element-eId="DU/2025/869__art_10a__ust_2__zdn_1" funkcja="zastap-tekst"><zdanie nr="1" gd:zdGUID="61d58c12-c344-4bee-906d-32de4b4a9679" fragment="1" gd:fragmentGUID="d1a4e81a-9e6e-47be-8a9f-40d67ea6a03c" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-31_DU-2026-119_odczytane.x" wejscie-w-zycie="2026-05-31">Informacje, o których mowa w ust. 1 i 1a, są przesyłane przez wskazany okres, niedłużej niż przez rok, albo do chwili rezygnacji z otrzymywania tych informacji.</zdanie></cytat-w-tekscie>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/119__art_2__pkt_3" gd:GUID="c9e51e02-85f4-418b-9fb5-91a7555f472c" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-31_DU-2026-119_odczytane.x" wejscie-w-zycie="2026-05-31">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="57239a7a-0032-41cc-9a1c-c1a384299577" fragment="4" gd:fragmentGUID="cafcdeda-0f3b-4eab-ac58-10b67bcf3f60" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-31_DU-2026-119_odczytane.x" wejscie-w-zycie="2026-05-31">ust. 3 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2025/869" cudzyslowy="oba" gd:nowGUID="b6930361-2957-40eb-91b0-42775e5cb3ad" element-eId="DU/2025/869__art_10a__ust_3" funkcja="zastap"><ustep eId="DU/2025/869__art_10a__ust_3" gd:GUID="ed50cfc3-824e-4cbc-9c17-6a7a0a03cdf5" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-31_DU-2026-119_odczytane.x" wejscie-w-zycie="2026-05-31"><nr>3</nr><p><zdanie nr="1" gd:zdGUID="799c493b-988c-4f59-a793-f75cd6a1ad4a" fragment="1" gd:fragmentGUID="d1b5a0b2-7470-47ed-94e0-c709858c5264" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-31_DU-2026-119_odczytane.x" wejscie-w-zycie="2026-05-31">Jednocześnie przesyła się informacje, o których mowa w ust. 1 i 1a, dotyczące niewięcej niż pięćdziesięciu podmiotów za pośrednictwem systemu teleinformatycznego i niewięcej niż pięćdziesięciu podmiotów za pośrednictwem aplikacji mObywatel.</zdanie></p></ustep></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/119__art_2__pkt_4" gd:GUID="6b30c3f8-8ce9-4b99-bdfc-aaf7e691e311" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-31_DU-2026-119_odczytane.x" wejscie-w-zycie="2026-05-31">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="57239a7a-0032-41cc-9a1c-c1a384299577" fragment="5" gd:fragmentGUID="4af29619-cfc6-4857-b3dc-79caa8b06d53" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-31_DU-2026-119_odczytane.x" wejscie-w-zycie="2026-05-31">w ust. 4 wprowadzenie do wyliczenia otrzymuje brzmienie:<cytat-w-tekscie now:akt="https://eli.gov.pl/eli/DU/2025/869" cudzyslowy="oba" gd:nowGUID="b511ece9-2163-400e-97af-fcbd99f9d7c1" element-eId="DU/2025/869__art_10a__ust_4" funkcja="zastap-tekst"><zdanie nr="1" gd:zdGUID="e1ab8114-6ba3-4926-ae1c-2e149a14a441" fragment="1" gd:fragmentGUID="e1521370-f136-469a-a2ba-ffdeefd1ccde" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-31_DU-2026-119_odczytane.x" wejscie-w-zycie="2026-05-31">Informacje, o których mowa w ust. 1 i 1a, są przesyłane automatycznie po:</zdanie></cytat-w-tekscie>.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2026/119__art_3" gd:GUID="bf472052-0fcd-4a64-8555-7c50ff73abce" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-31_DU-2026-119_odczytane.x" wejscie-w-zycie="2026-03-31">
+      <nr>3</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="30f7d9ff-674b-49bc-a6aa-61991f5186ad" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-31_DU-2026-119_odczytane.x" wejscie-w-zycie="2026-03-31">
+        <p>
+          <zdanie nr="1" gd:zdGUID="bd18d54e-4d42-4dc0-82ba-dfdddc278297" fragment="1" gd:fragmentGUID="f8e92dd6-1788-4802-a971-44995dbe8590" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-31_DU-2026-119_odczytane.x" wejscie-w-zycie="2026-03-31">Odpisy ksiąg wieczystych, wyciągi z ksiąg wieczystych oraz zaświadczenia o zamknięciu ksiąg wieczystych, których samodzielne wydrukowanie Centralna Informacja Ksiąg Wieczystych umożliwiła za pośrednictwem systemu teleinformatycznego przed dniem wejścia w życie niniejszej ustawy, na podstawie art. 36<sup>4</sup> ust. 4 ustawy zmienianej w art. 1, zachowują moc dokumentów wydawanych przez sąd, jeżeli posiadają cechy umożliwiające ich weryfikację z danymi zawartymi w centralnej bazie danych ksiąg wieczystych.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2026/119__art_4" gd:GUID="ca754c75-5a02-4064-be55-a22e00f62d0e" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-31_DU-2026-119_odczytane.x" wejscie-w-zycie="2026-03-31">
+      <nr>4</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="8a821396-aee5-4803-8a9f-08304d6a9ad7" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-31_DU-2026-119_odczytane.x" wejscie-w-zycie="2026-03-31">
+        <p>
+          <zdanie nr="1" gd:zdGUID="98dbc464-dd8f-4692-8f97-4413b7e1dc78" fragment="1" gd:fragmentGUID="53d9b344-70e5-475d-9d99-2a10478e7b36" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-31_DU-2026-119_odczytane.x" wejscie-w-zycie="2026-03-31">Ustawa wchodzi w życie z dniem 31 marca 2026 r., z wyjątkiem art. 2, który wchodzi w życie z dniem 31 maja 2026 r.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <organ-podpisujacy>Prezydent Rzeczypospolitej Polskiej: <i><osoba podpisujacy="true" gd:osobaGUID="dfd7751c-1426-4e75-9224-9a3b3f288c7d"><imie>K.</imie> <nazwisko>Nawrocki</nazwisko></osoba></i></organ-podpisujacy>
+  </ustawa>
+</akt-prawny>

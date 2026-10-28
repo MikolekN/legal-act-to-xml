@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <ustawa>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/1507</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>bee8e61a-273e-4fbd-a84d-dcd864480f69</gd:GUIDwersji>
+      <AdresISAP>WDU20250001507</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>1507</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 1507</AdresWyswietlany>
+      <Tytul>Ustawa z dnia 12 września 2025 r. o zmianie ustawy o sporcie</Tytul>
+      <Rodzaj>USTAWA</Rodzaj>
+      <DataOgloszenia>2025-11-03</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-09-12</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2025-11-18_DU-2025-1507_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2025-11-18" warunek="po upływie 14 dni od dnia ogłoszenia" podstawa="art. 2" zrodlo="https://eli.gov.pl/eli/DU/2025/1507" dowod="DU/2025/1507__art_2" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2025-11-18_DU-2025-1507_domyslne.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2025-11-18_DU-2025-1507_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="06c67392-2c1d-44eb-9716-5f67ac4b5e1d" rola="wydajacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Sejm">
+          <Nazwa>SEJM</Nazwa>
+        </Organ>
+        <Organ gd:GUID="692b5f19-6d3f-4eca-adfa-892a5577b36c" rola="podpisujacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Prezydent">
+          <Nazwa>Prezydent Rzeczypospolitej Polskiej</Nazwa>
+          <OrganPodpisujacy>Prezydent Rzeczypospolitej Polskiej</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>K.</imie> <nazwisko>Nawrocki</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Ustawa</rodzaj-aktu>
+    <data>z dnia 12 września 2025 r.</data>
+    <tytul>o zmianie ustawy o sporcie</tytul>
+    <artykul eId="DU/2025/1507__art_1" gd:GUID="80297061-4ea5-41f2-a295-3cfaff3d2135" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-18_DU-2025-1507_domyslne.x" wejscie-w-zycie="2025-11-18">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="75fdba46-eef8-4151-95da-30ab49d39735" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-18_DU-2025-1507_domyslne.x" wejscie-w-zycie="2025-11-18">
+        <p>
+          <zdanie nr="1" gd:zdGUID="2f4befa0-147a-4efd-a89e-71d1b2b5adcc" fragment="1" gd:fragmentGUID="b0f1fd00-edbf-4271-84ee-e7ea7e75715c" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-18_DU-2025-1507_domyslne.x" wejscie-w-zycie="2025-11-18">W ustawie z dnia 25 czerwca 2010 r. o sporcie (Dz. U. z 2024 r. poz. 1488 oraz z 2025 r. poz. 28, 620 i 769) po art. 38 dodaje się art. 38a w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/1488" cudzyslowy="oba" gd:nowGUID="0681af3a-1d92-4acb-9f31-4b391b9d6aa7" element-eId="DU/2024/1488__art_38" funkcja="dodaj-po"><artykul eId="DU/2024/1488__art_38a" gd:GUID="5c99b1e3-1197-4aef-bb47-9519f0a6cbbd" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-18_DU-2025-1507_domyslne.x" wejscie-w-zycie="2025-11-18"><nr>38a</nr><ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="3e5d0d45-8fb9-4b65-b2d3-864b42f65ffb" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-18_DU-2025-1507_domyslne.x" wejscie-w-zycie="2025-11-18"><p><zdanie nr="1" gd:zdGUID="6be316d7-5b6d-44e8-9b1d-9b84e7e42ff7" fragment="1" gd:fragmentGUID="cefc98bf-7e6f-4a98-b46f-7682b72e5dd0" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-18_DU-2025-1507_domyslne.x" wejscie-w-zycie="2025-11-18">Uprawianie sportu na boiskach, kortach, bieżniach, lodowiskach, siłowniach plenerowych, skateparkach, rolkowiskach i pumptrackach stanowi powszechne korzystanie ze środowiska w rozumieniu art. 4 ust. 1 ustawy z dnia 27 kwietnia 2001 r. – Prawo ochrony środowiska (Dz. U. z 2025 r. poz. 647 i 1080), jeżeli odbywa się w ramach szkolenia sportowego albo aktywności sportowej o charakterze szkolnym lub rekreacyjnym.</zdanie></p></ustep-n></artykul></cytat-strukt>.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2025/1507__art_2" gd:GUID="2aad5117-7dc7-408d-8439-160d508aee2b" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-18_DU-2025-1507_domyslne.x" wejscie-w-zycie="2025-11-18">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="b4f06ee0-48ff-4a32-b188-1ec4e1c17091" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-18_DU-2025-1507_domyslne.x" wejscie-w-zycie="2025-11-18">
+        <p>
+          <zdanie nr="1" gd:zdGUID="30996353-d71c-4097-9a92-25bcaf43241c" fragment="1" gd:fragmentGUID="d5a3767a-b40c-417f-9443-eaa2ff81224d" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-18_DU-2025-1507_domyslne.x" wejscie-w-zycie="2025-11-18">Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <organ-podpisujacy>Prezydent Rzeczypospolitej Polskiej: <i><osoba podpisujacy="true" gd:osobaGUID="80fe9236-6644-4e42-8bf0-f68bd37b32da"><imie>K.</imie> <nazwisko>Nawrocki</nazwisko></osoba></i></organ-podpisujacy>
+  </ustawa>
+</akt-prawny>

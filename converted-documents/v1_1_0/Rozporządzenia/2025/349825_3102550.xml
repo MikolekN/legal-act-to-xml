@@ -1,0 +1,776 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <rozporzadzenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/1632</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>98d0a77f-cbf8-4678-929c-c7f316e47717</gd:GUIDwersji>
+      <AdresISAP>WDU20250001632</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>1632</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 1632</AdresWyswietlany>
+      <Tytul>Rozporządzenie Ministra Rodziny, Pracy i Polityki Społecznej z dnia 21 listopada 2025 r. w sprawie refundowania ze środków Funduszu Pracy wynagrodzeń wypłacanych młodocianym pracownikom</Tytul>
+      <Rodzaj>ROZP</Rodzaj>
+      <DataOgloszenia>2025-11-26</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-11-21</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane" rodzaj="wejscie-w-zycie" pochodzenie="odczytane" data="2025-12-01" podstawa="§ 10" zrodlo="https://eli.gov.pl/eli/DU/2025/1632" dowod="DU/2025/1632__art_10" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="7fbebf6c-b735-4736-a7f1-ea8ad461a52d" rola="wydajacy">
+          <Nazwa>Minister Rodziny, Pracy i Polityki Społecznej</Nazwa>
+          <OrganPodpisujacy>Minister Rodziny, Pracy i Polityki Społecznej</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>A.</imie> <nazwisko>Dziemianowicz-Bąk</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Rozporządzenie</rodzaj-aktu>
+    <autor-aktu>Ministra Rodziny, Pracy i Polityki Społecznej<odnosnik id-odnosnika="1" symbol="1" gd:GUID="20cac7ac-3b9a-4c25-a23c-3ee556229e7d"><p><zdanie nr="1" gd:zdGUID="5613b89d-a3f5-4c39-8dc1-a3c95b003679" fragment="1" gd:fragmentGUID="40ac00cd-eb7e-4e8c-bdb5-4ff3a44a52dc">Minister Rodziny, Pracy i Polityki Społecznej kieruje działem administracji rządowej – praca, na podstawie § 1 ust. 2 pkt 2 rozporządzenia Prezesa Rady Ministrów z dnia 18 grudnia 2023 r. w sprawie szczegółowego zakresu działania Ministra Rodziny, Pracy i Polityki Społecznej (Dz. U. poz. 2715).</zdanie></p></odnosnik></autor-aktu>
+    <data>z dnia 21 listopada 2025 r.</data>
+    <tytul>w sprawie refundowania ze środków Funduszu Pracy wynagrodzeń wypłacanych młodocianym pracownikom</tytul>
+    <podstawa-prawna>Na podstawie art. 350 ustawy z dnia 20 marca 2025 r. o rynku pracy i służbach zatrudnienia (Dz. U. poz. 620) zarządza się, co następuje:</podstawa-prawna>
+    <paragraf eId="DU/2025/1632__art_1" gd:GUID="f4cd789b-4c55-417f-a009-109ccc31da4e" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="f96e5704-1ee6-422b-8325-4d9da05bfccd" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="b74907b1-3ad5-48a1-8baa-edffeaecf887" fragment="1" gd:fragmentGUID="ba47f92c-611b-4bb2-80bd-8e8c3347aef8" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">Rozporządzenie określa szczegółowe warunki i tryb refundowania pracodawcom ze środków Funduszu Pracy wynagrodzeń wypłacanych młodocianym pracownikom, zwanym dalej „młodocianymi”, oraz składek na ubezpieczenia społeczne od refundowanych wynagrodzeń, w tym:</zdanie>
+        </p>
+        <punkt eId="DU/2025/1632__art_1__pkt_1" gd:GUID="da31db18-14f1-4a54-a018-d277df0eb7d0" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="b74907b1-3ad5-48a1-8baa-edffeaecf887" fragment="2" gd:fragmentGUID="e13a5a64-a35b-4589-ac2a-aa474c564076" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">elementy wniosku o zawarcie umowy o refundację oraz rodzaje dołączanych do niego informacji;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1632__art_1__pkt_2" gd:GUID="e8dc2f2c-b17d-47b5-935b-ef3331cd64d7" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="b74907b1-3ad5-48a1-8baa-edffeaecf887" fragment="3" gd:fragmentGUID="7fa893d0-d65a-4721-b6fc-3d0fb6cb52cb" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">terminy składania wniosku;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1632__art_1__pkt_3" gd:GUID="501da587-eb42-41fe-9003-58b83efcf4f5" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="b74907b1-3ad5-48a1-8baa-edffeaecf887" fragment="4" gd:fragmentGUID="822fe18d-6ba6-4e3b-a02f-39bd4d9cc397" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">elementy opinii do wniosku złożonego przez pracodawcę o zawarcie umowy o refundację;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1632__art_1__pkt_4" gd:GUID="6c510c9c-d1d7-41a9-b0b8-bc2dcfce0e90" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="b74907b1-3ad5-48a1-8baa-edffeaecf887" fragment="5" gd:fragmentGUID="0748b7ab-62b4-44c0-8536-140d98cf999e" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">elementy wniosku Ochotniczych Hufców Pracy, zwanych dalej „OHP”, o przyznanie refundacji;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1632__art_1__pkt_5" gd:GUID="f5c21a26-ff51-4965-bd8a-1d840bfaf917" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="b74907b1-3ad5-48a1-8baa-edffeaecf887" fragment="6" gd:fragmentGUID="fdefe81a-545d-4050-b293-09c1f9cc5fc8" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">elementy umowy o refundację;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1632__art_1__pkt_6" gd:GUID="a362d0fa-3cbb-4281-9668-44695c6948eb" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+          <nr>6</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="b74907b1-3ad5-48a1-8baa-edffeaecf887" fragment="7" gd:fragmentGUID="366c3c6f-087a-43a8-8b17-1886202bc901" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">elementy wniosku o zwrot poniesionych kosztów przez pracodawcę.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2025/1632__art_2" gd:GUID="e814dfe0-2576-48ba-8b4d-cb2d8df0cad5" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+      <nr>2</nr>
+      <ustep eId="DU/2025/1632__art_2__ust_1" gd:GUID="a767a950-ec6e-43f1-94e3-7d8ae40e9a06" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="d6777e0d-0d81-4659-b777-d869b1004459" fragment="1" gd:fragmentGUID="5ba194be-6f3c-4aca-bc8a-2e1f07503461" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">Pracodawca, o którym mowa w art. 349 ust. 1 ustawy z dnia 20 marca 2025 r. o rynku pracy i służbach zatrudnienia, zwanej dalej „ustawą”, składa wniosek o zawarcie umowy o refundację wynagrodzeń wypłacanych młodocianym oraz składek na ubezpieczenia społeczne od refundowanych wynagrodzeń, zwany dalej „wnioskiem o zawarcie umowy o refundację”, w postaci papierowej lub elektronicznej, do wojewódzkiej komendy OHP za pośrednictwem centrum edukacji i pracy młodzieży OHP, o którym mowa w przepisach wydanych na podstawie art. 352 ustawy, zwanego dalej „centrum edukacji”, właściwego ze względu na miejsce odbywania przez młodocianego przygotowania zawodowego.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/1632__art_2__ust_2" gd:GUID="d704342b-bfa7-46e5-ae08-3bc697251549" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="980d474a-d676-473d-91ad-1cccb4e7e96b" fragment="1" gd:fragmentGUID="88861b13-c421-41f2-b1dd-5b6e36d38fbe" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">Wniosek o zawarcie umowy o refundację zawiera:</zdanie>
+        </p>
+        <punkt eId="DU/2025/1632__art_2__ust_2__pkt_1" gd:GUID="4bddee09-21d4-492d-8bee-8094d83a7caf" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="980d474a-d676-473d-91ad-1cccb4e7e96b" fragment="2" gd:fragmentGUID="e9152d30-57e9-4626-a1c5-b22f5273a186" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">nazwę miejscowości i datę wypełnienia wniosku;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1632__art_2__ust_2__pkt_2" gd:GUID="e1e0e72d-4e97-430a-944c-0d10f28d54fe" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="980d474a-d676-473d-91ad-1cccb4e7e96b" fragment="3" gd:fragmentGUID="9408c8b0-0d9f-4cfe-9669-be0baf66898d" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">wskazanie wojewódzkiej komendy OHP i centrum edukacji, za którego pośrednictwem jest składany wniosek;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1632__art_2__ust_2__pkt_3" gd:GUID="545db343-0ff2-4760-b972-b5bbf3ece964" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="980d474a-d676-473d-91ad-1cccb4e7e96b" fragment="4" gd:fragmentGUID="ef5b3606-99a0-4309-8539-5cac17f58745" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">nazwę pracodawcy i adres jego siedziby;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1632__art_2__ust_2__pkt_4" gd:GUID="45303915-a839-458f-b37b-7f27621e251b" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="980d474a-d676-473d-91ad-1cccb4e7e96b" fragment="5" gd:fragmentGUID="ba819781-9168-4b2e-9858-bef30c83331f" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">formę prawną prowadzonej działalności;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1632__art_2__ust_2__pkt_5" gd:GUID="c55ef2fe-5f95-4a91-973c-92d7754bd56d" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="980d474a-d676-473d-91ad-1cccb4e7e96b" fragment="6" gd:fragmentGUID="13109cae-f40c-4e36-b54c-d6e0b7ce1937" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">miejsce odbywania przygotowania zawodowego przez młodocianych;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1632__art_2__ust_2__pkt_6" gd:GUID="cd79c259-e944-47bf-9d7f-a82c5bf78f71" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+          <nr>6</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="980d474a-d676-473d-91ad-1cccb4e7e96b" fragment="7" gd:fragmentGUID="c9fe7b7f-5652-43bd-b564-0197891b9a61" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">numer rachunku płatniczego, na który będzie przekazywana refundacja;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1632__art_2__ust_2__pkt_7" gd:GUID="70b1e1c6-c4d3-43c4-8043-2d952e81ad80" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+          <nr>7</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="980d474a-d676-473d-91ad-1cccb4e7e96b" fragment="8" gd:fragmentGUID="85e270dc-9ac4-4323-88a4-e47424629de9" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">numer identyfikacji podatkowej (NIP) pracodawcy;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1632__art_2__ust_2__pkt_8" gd:GUID="465e74ed-fcc3-4e49-b0dc-3f371543ea4a" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+          <nr>8</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="980d474a-d676-473d-91ad-1cccb4e7e96b" fragment="9" gd:fragmentGUID="b501b2d3-8c3f-47d3-bec9-cb3596bba12d" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">oznaczenie prowadzonej działalności pracodawcy według Polskiej Klasyfikacji Działalności (PKD);</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1632__art_2__ust_2__pkt_9" gd:GUID="a6d22f67-0732-4d11-9196-33bf9720c29d" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+          <nr>9</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="980d474a-d676-473d-91ad-1cccb4e7e96b" fragment="10" gd:fragmentGUID="ee88614a-32f6-45ed-80f2-546fc864201d" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">nazwę albo nazwy dokumentów potwierdzających kwalifikacje instruktora praktycznej nauki zawodu określone w przepisach wydanych na podstawie art. 120 ust. 4 ustawy z dnia 14 grudnia 2016 r. – Prawo oświatowe (Dz. U. z 2025 r. poz. 1043 i 1160), zwanej dalej „prawem oświatowym”, posiadane przez pracodawcę lub osobę prowadzącą zakład pracy w imieniu pracodawcy, lub osobę zatrudnioną u pracodawcy;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1632__art_2__ust_2__pkt_10" gd:GUID="75535ca7-e34a-4f8a-b158-f60d97d41215" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+          <nr>10</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="980d474a-d676-473d-91ad-1cccb4e7e96b" fragment="11" gd:fragmentGUID="4d814d1c-09c8-40cc-8ca8-2caee69ecc83" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">wykaz informacji o młodocianych, których dotyczy wniosek o zawarcie umowy o refundację, obejmujący:</zdanie>
+          </p>
+          <litera eId="DU/2025/1632__art_2__ust_2__pkt_10__lit_a" gd:GUID="f94e646c-0ce8-4739-ba71-83efc4097c0c" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="980d474a-d676-473d-91ad-1cccb4e7e96b" fragment="12" gd:fragmentGUID="073a2bfd-0fc2-48b8-8e10-2c0c87607422" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">imię i nazwisko młodocianego,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1632__art_2__ust_2__pkt_10__lit_b" gd:GUID="4ac127c4-cc9d-4559-96ed-c865d41a5528" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="980d474a-d676-473d-91ad-1cccb4e7e96b" fragment="13" gd:fragmentGUID="5be7f6b8-0e2f-4c72-85e9-40c7c7c1c7a3" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">numer PESEL młodocianego, a w przypadku jego braku – rodzaj, serię i numer dokumentu potwierdzającego tożsamość,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1632__art_2__ust_2__pkt_10__lit_c" gd:GUID="0f96e9f5-ad96-428e-94a0-735a487c1a3d" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+            <nr>c</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="980d474a-d676-473d-91ad-1cccb4e7e96b" fragment="14" gd:fragmentGUID="2878a648-09d4-4125-9dcb-7b1ee8a6cb8c" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">datę zawarcia umowy o pracę w celu przygotowania zawodowego oraz okres trwania przygotowania zawodowego,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1632__art_2__ust_2__pkt_10__lit_d" gd:GUID="4565273b-618c-49a1-bfdf-614cbeab38c6" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+            <nr>d</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="980d474a-d676-473d-91ad-1cccb4e7e96b" fragment="15" gd:fragmentGUID="b8a8525a-ca99-4885-bd4f-5e8c8d3c742c" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">formę przygotowania zawodowego polegającą na nauce zawodu albo na przyuczeniu do wykonywania określonej pracy,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1632__art_2__ust_2__pkt_10__lit_e" gd:GUID="e465bd1d-8559-4e5f-8151-5a3e7b7d722c" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+            <nr>e</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="980d474a-d676-473d-91ad-1cccb4e7e96b" fragment="16" gd:fragmentGUID="b6a2a0ba-a22b-42cf-b8bf-7a7227eda7ce" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">w przypadku wskazania formy przygotowania zawodowego polegającej na nauce zawodu – nazwę tego zawodu, a w przypadku wskazania przyuczenia do wykonywania określonej pracy – zakres przyuczenia do pracy;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2025/1632__art_2__ust_2__pkt_11" gd:GUID="bd4aa784-d0e8-4689-af5e-0c6053a9ef22" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+          <nr>11</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="980d474a-d676-473d-91ad-1cccb4e7e96b" fragment="17" gd:fragmentGUID="a148d6b6-0207-42e5-ba7b-c6e94b3de7bd" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">podpis pracodawcy lub osoby upoważnionej.</zdanie>
+          </p>
+        </punkt>
+      </ustep>
+      <ustep eId="DU/2025/1632__art_2__ust_3" gd:GUID="831980fd-5187-4671-a581-0793e0dbc205" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+        <nr>3</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="20d06d3d-7da7-4f12-84c8-6d7e98f89b4f" fragment="1" gd:fragmentGUID="60862366-2438-4bf8-9fb8-f31aaea318f2" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">Do wniosku o zawarcie umowy o refundację pracodawca dołącza:</zdanie>
+        </p>
+        <punkt eId="DU/2025/1632__art_2__ust_3__pkt_1" gd:GUID="6c9ab377-87b9-45f3-b1ab-f6f07a546d02" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="20d06d3d-7da7-4f12-84c8-6d7e98f89b4f" fragment="2" gd:fragmentGUID="82724379-e40a-4903-82b5-f819898a0e20" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">poświadczoną za zgodność z oryginałem kopię umowy o pracę w celu przygotowania zawodowego, o której mowa w art. 348 ust. 1 ustawy;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1632__art_2__ust_3__pkt_2" gd:GUID="8a7cab86-4779-4e1c-ab70-011116902a04" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="20d06d3d-7da7-4f12-84c8-6d7e98f89b4f" fragment="3" gd:fragmentGUID="f82c1eac-427b-4ac7-b515-296f298c1f03" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">oryginały lub poświadczone za zgodność z oryginałem kopie dokumentów potwierdzających kwalifikacje instruktora praktycznej nauki zawodu, o których mowa w ust. 2 pkt 9;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1632__art_2__ust_3__pkt_3" gd:GUID="027d4b40-4566-4fcc-9ea8-58fcf2289db1" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="20d06d3d-7da7-4f12-84c8-6d7e98f89b4f" fragment="4" gd:fragmentGUID="3f85cd8e-f940-4cb2-bd84-fe63797a6903" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">zaświadczenia lub oświadczenie o pomocy <i>de minimis</i> w zakresie, o którym mowa w art. 37 ust. 1 pkt 1 oraz ust. 2 ustawy z dnia 30 kwietnia 2004 r. o postępowaniu w sprawach dotyczących pomocy publicznej (Dz. U. z 2025 r. poz. 468);</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1632__art_2__ust_3__pkt_4" gd:GUID="e48d4022-fc9a-4054-8de3-f2d50afc8c1e" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="20d06d3d-7da7-4f12-84c8-6d7e98f89b4f" fragment="5" gd:fragmentGUID="5dccff0f-c96a-4ed9-b308-3df33ce6e917" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">informacje, o których mowa w art. 37 ust. 1 pkt 2 albo ust. 2 pkt 3 ustawy z dnia 30 kwietnia 2004 r. o postępowaniu w sprawach dotyczących pomocy publicznej;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1632__art_2__ust_3__pkt_5" gd:GUID="5e10a3ce-c656-4cb4-917b-4c44d8e94be1" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="20d06d3d-7da7-4f12-84c8-6d7e98f89b4f" fragment="6" gd:fragmentGUID="f542548c-1d60-4e63-82f9-fbd4930d601f" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">deklarację zatrudnienia na podstawie umowy o pracę przez okres co najmniej 6 miesięcy po zakończeniu przygotowania zawodowego każdego młodocianego, którego dotyczy wniosek o zawarcie umowy o refundację;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1632__art_2__ust_3__pkt_6" gd:GUID="82eb1c8a-65ad-4585-8be9-a007d90d3d48" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+          <nr>6</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="20d06d3d-7da7-4f12-84c8-6d7e98f89b4f" fragment="7" gd:fragmentGUID="05599984-6b8d-4f1a-8afe-c4a47e066226" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">upoważnienie do reprezentowania pracodawcy przez osobę upoważnioną, w przypadku podpisania wniosku o zawarcie umowy o refundację przez tę osobę;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1632__art_2__ust_3__pkt_7" gd:GUID="bc85f6e0-1828-4574-9b23-e9d8d455855d" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+          <nr>7</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="20d06d3d-7da7-4f12-84c8-6d7e98f89b4f" fragment="8" gd:fragmentGUID="2f4b0960-a08d-4511-a4c6-692c61046612" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">oświadczenie o:</zdanie>
+          </p>
+          <litera eId="DU/2025/1632__art_2__ust_3__pkt_7__lit_a" gd:GUID="d4d987c3-c72e-416c-868f-3e65d9bc26d1" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="20d06d3d-7da7-4f12-84c8-6d7e98f89b4f" fragment="9" gd:fragmentGUID="180591ab-eb42-4cf0-9460-fca83dfdf8ad" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">liczbie zatrudnionych pracowników niebędących młodocianymi w przeliczeniu na pełny wymiar czasu pracy na czas nieokreślony oraz o liczbie zatrudnionych młodocianych i roku ich nauki – w dniu składania wniosku o zawarcie umowy o refundację,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1632__art_2__ust_3__pkt_7__lit_b" gd:GUID="33280516-112c-42bd-bf65-2aaddf0223e7" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="20d06d3d-7da7-4f12-84c8-6d7e98f89b4f" fragment="10" gd:fragmentGUID="083fd72a-0660-4892-a3b2-dc0450cfb612" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">liczbie pracowników posiadających kwalifikacje instruktora praktycznej nauki zawodu określone w przepisach wydanych na podstawie art. 120 ust. 4 prawa oświatowego,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1632__art_2__ust_3__pkt_7__lit_c" gd:GUID="8c849657-9006-42f8-aba6-047790ff16be" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+            <nr>c</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="20d06d3d-7da7-4f12-84c8-6d7e98f89b4f" fragment="11" gd:fragmentGUID="e4d764a7-1a27-4900-ac10-6982132de6de" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">spełnieniu warunku 6-miesięcznego zatrudnienia co najmniej 50 % młodocianych pracowników w okresie 24 miesięcy poprzedzających dzień złożenia wniosku o zawarcie umowy o refundację, o którym mowa w art. 349 ust. 8 ustawy, lub o niespełnieniu tego warunku z przyczyn nieleżących po stronie zakładu pracy,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1632__art_2__ust_3__pkt_7__lit_d" gd:GUID="cfe1233a-eb3e-48c0-aedd-5cd74344ebb0" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+            <nr>d</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="20d06d3d-7da7-4f12-84c8-6d7e98f89b4f" fragment="12" gd:fragmentGUID="48dab4e7-0835-4856-97c5-9829d42a3db8" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">niekorzystaniu z bezzwrotnych środków Funduszu Pracy lub innych środków publicznych na refundację wynagrodzeń młodocianych i składek na ubezpieczenia społeczne od refundowanych wynagrodzeń, których dotyczy wniosek.</zdanie>
+            </p>
+          </litera>
+        </punkt>
+      </ustep>
+      <ustep eId="DU/2025/1632__art_2__ust_4" gd:GUID="2a357f61-a771-49c6-8411-f8029e78c8c0" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+        <nr>4</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="a7b9baa3-2d66-46c6-9257-e88b55ce4b97" fragment="1" gd:fragmentGUID="e03dca00-bf39-41e2-9179-28fd40da4452" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">Jeżeli dokumenty, o których mowa w ust. 3 pkt 2, były już złożone przez pracodawcę do tego samego centrum edukacji, do którego składany jest wniosek o zawarcie umowy o refundację, nie dołącza się ich ponownie.</zdanie>
+          <zdanie nr="2" gd:zdGUID="a423550c-3ccb-4cf6-b5eb-a1725df135d8" fragment="1" gd:fragmentGUID="0cdc54ec-5cbb-439c-a1a7-1fd3e722d853" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">W tym przypadku pracodawca składa oświadczenie, że dokumenty, o których mowa w ust. 3 pkt 2, zostały złożone do centrum edukacji z wcześniejszym wnioskiem o zawarcie umowy o refundację i są aktualne na dzień składania wniosku.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/1632__art_2__ust_5" gd:GUID="b3a0e9b2-2669-4fa0-8019-d58f98d963c5" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+        <nr>5</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="52db1fb7-a6f1-4bc5-9844-93503c65acb7" fragment="1" gd:fragmentGUID="1967b644-cd4b-4106-991f-e6f2b24033e4" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">Jeżeli pracodawca złożył oświadczenie o niespełnieniu warunku 6-miesięcznego zatrudnienia co najmniej 50 % młodocianych pracowników w okresie 24 miesięcy poprzedzających dzień złożenia wniosku o zawarcie umowy o refundację – z przyczyn nieleżących po stronie zakładu pracy, podaje we wniosku przyczyny niespełnienia tego warunku.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/1632__art_2__ust_6" gd:GUID="85afa692-567f-491c-be55-3ac2a172a3fe" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+        <nr>6</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="491f7392-f31b-48ba-a2ef-859ac935f529" fragment="1" gd:fragmentGUID="70720067-1ce3-4497-a014-008a326fc5dc" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">Oświadczenie złożone przez pracodawcę, o którym mowa w ust. 3 pkt 7 lit. c, wojewódzka komenda OHP weryfikuje na podstawie danych udostępnianych przez Zakład Ubezpieczeń Społecznych na podstawie art. 351 ust. 12 pkt 7 ustawy.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/1632__art_2__ust_7" gd:GUID="593ffdaf-928f-49e1-88e6-aa140444b82e" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+        <nr>7</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="8e2fddc4-8b57-46fd-a538-8ffd82c8241c" fragment="1" gd:fragmentGUID="58c4d320-329c-4cea-9ea9-171a40cf4b2b" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">Wniosek, o którym mowa w ust. 1, może zostać złożony przez organizację zrzeszającą pracodawców reprezentującą pracodawcę na podstawie upoważnienia.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/1632__art_2__ust_8" gd:GUID="d8908dcb-ebf0-4870-bf59-fdd74985ba9f" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+        <nr>8</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="2be871d9-adb3-437e-ac5f-1848c5bf67d5" fragment="1" gd:fragmentGUID="c1d6555f-baf8-4966-9798-186b1a022930" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">Wniosek o zawarcie umowy o refundację dotyczący młodocianych, którzy dokształcają się w formach szkolnych oraz pozaszkolnych, składa się w terminie od pierwszego do ostatniego dnia roku kalendarzowego, w którym pracodawca zawarł z młodocianym umowę o pracę w celu przygotowania zawodowego.</zdanie>
+        </p>
+      </ustep>
+    </paragraf>
+    <paragraf eId="DU/2025/1632__art_3" gd:GUID="a469ec62-a71d-431d-9622-c358ad90c631" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+      <nr>3</nr>
+      <ustep eId="DU/2025/1632__art_3__ust_1" gd:GUID="e123c466-1342-46cb-a726-33f5e8f745fd" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="cf48f21f-7bfc-4e7a-8be3-6c4cd281ceab" fragment="1" gd:fragmentGUID="ab4d7454-eed8-4c19-b16f-8a35113f08b3" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">Centrum edukacji sprawdza wniosek o zawarcie umowy o refundację pod względem formalnym i przekazuje go w postaci papierowej lub elektronicznej do właściwej wojewódzkiej komendy OHP nie później niż w terminie 14 dni od dnia złożenia tego wniosku.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/1632__art_3__ust_2" gd:GUID="67606b39-4721-4f3b-9b37-7effa82c94ce" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="3fdc395e-997b-40d9-8df2-da9b382557eb" fragment="1" gd:fragmentGUID="d848a97e-0089-4f54-9142-af62943a4117" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">Do wniosku o zawarcie umowy o refundację centrum edukacji dołącza opinię.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/1632__art_3__ust_3" gd:GUID="0b1d150c-8b36-4a51-ae34-6e969f9c2b19" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+        <nr>3</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="40a2ba37-fe84-47a2-8623-3a558f0dc603" fragment="1" gd:fragmentGUID="b8fe5e3d-601b-474d-955e-be055d1cead0" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">Opinia zawiera:</zdanie>
+        </p>
+        <punkt eId="DU/2025/1632__art_3__ust_3__pkt_1" gd:GUID="5667b3ba-1e01-49ed-b030-6f402d791c06" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="40a2ba37-fe84-47a2-8623-3a558f0dc603" fragment="2" gd:fragmentGUID="5a89ac40-6344-40ed-b4e3-445153b09cb2" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">ocenę spełniania przez pracodawcę warunków wymaganych do zawarcia umowy o refundację;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1632__art_3__ust_3__pkt_2" gd:GUID="137b21f7-400e-4a1f-9ef3-ac91f7cb5dfb" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="40a2ba37-fe84-47a2-8623-3a558f0dc603" fragment="3" gd:fragmentGUID="0e731eb9-552e-49cd-8978-e55ef9ebc99e" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">rekomendację dotyczącą pozytywnego lub negatywnego rozpatrzenia wniosku;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1632__art_3__ust_3__pkt_3" gd:GUID="ac477481-3456-4d3a-8580-75370a6af1d9" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="40a2ba37-fe84-47a2-8623-3a558f0dc603" fragment="4" gd:fragmentGUID="1f142c6f-c8c4-4895-b782-ca438d877391" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">uzasadnienie rekomendacji;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1632__art_3__ust_3__pkt_4" gd:GUID="315c7bc4-3179-4fb9-a0c9-c17f4120d5bc" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="40a2ba37-fe84-47a2-8623-3a558f0dc603" fragment="5" gd:fragmentGUID="454d5c36-7d96-4801-8ec4-e65fa0ea5f46" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">podpis osoby sporządzającej opinię.</zdanie>
+          </p>
+        </punkt>
+      </ustep>
+      <ustep eId="DU/2025/1632__art_3__ust_4" gd:GUID="7f8e8828-7e3a-4e8d-8d99-9e95d96f048e" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+        <nr>4</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="43e1ec50-aa76-4c1e-b71f-6554bf7e592a" fragment="1" gd:fragmentGUID="e7815e9e-cbf8-44c7-a923-a2997b03a85f" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">W przypadku braków formalnych we wniosku o zawarcie umowy o refundację centrum edukacji wzywa pracodawcę do ich usunięcia w terminie 21 dni od dnia otrzymania wezwania.</zdanie>
+          <zdanie nr="2" gd:zdGUID="b777988d-203b-4fbd-a76b-b0c69b7c3f1e" fragment="1" gd:fragmentGUID="479f06e4-159c-4f99-bcd1-00ba37f8a6c5" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">Termin, o którym mowa w ust. 1, zostaje w tym przypadku wydłużony o czas, w jakim pracodawca usunął braki formalne.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/1632__art_3__ust_5" gd:GUID="ca94d298-4512-4536-aa14-d09bc0e45e19" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+        <nr>5</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="d5480b44-5774-4aa3-9a70-124546e31e00" fragment="1" gd:fragmentGUID="22e66f2f-5150-459a-b87f-f1cfb9fc777c" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">W przypadku rekomendacji pozytywnego rozpatrzenia wniosku o zawarcie umowy o refundację wojewódzka komenda OHP zawiera z pracodawcą, w ciągu 30 dni od dnia otrzymania wniosku wraz z opinią z centrum edukacji, umowę o refundację wynagrodzeń wypłacanych młodocianym oraz składek na ubezpieczenia społeczne od refundowanych wynagrodzeń, zwaną dalej „umową”.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/1632__art_3__ust_6" gd:GUID="4090fd80-e3ad-4174-89f3-830a8d146c20" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+        <nr>6</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="9c591928-18dc-4918-94a1-c32d11c10d55" fragment="1" gd:fragmentGUID="c3cc7e5f-219d-45e7-881a-c814c940cff5" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">Refundacja obejmuje okres przygotowania zawodowego u danego pracodawcy, zgodnie z umową o pracę w celu przygotowania zawodowego.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/1632__art_3__ust_7" gd:GUID="fe454fd0-ec38-4b6e-840e-a1a85d6c64c2" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+        <nr>7</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="674fcde5-b41d-4c2a-8a1b-549c792705cc" fragment="1" gd:fragmentGUID="5159d361-df77-40e9-a643-f2d753ad2d8d" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">Jeżeli pracodawca wystąpi z wnioskiem o zawarcie umowy o refundację w roku kalendarzowym następującym po roku, w którym zawarł z młodocianym umowę o pracę w celu przygotowania zawodowego, refundacja może zostać przyznana najwcześniej od początku roku kalendarzowego, w którym został złożony wniosek o zawarcie umowy o refundację.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/1632__art_3__ust_8" gd:GUID="84dbdef1-8b27-4dce-bf78-dd4f2f193674" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+        <nr>8</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="a68ec6f4-294e-4f43-9c78-dfd0eafa3539" fragment="1" gd:fragmentGUID="a0e1cd55-97a7-41b3-be1f-e4c09e942760" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">Umowa zawiera:</zdanie>
+        </p>
+        <punkt eId="DU/2025/1632__art_3__ust_8__pkt_1" gd:GUID="4cc8e4a0-40c8-4053-b9e4-3a36c50ad8de" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a68ec6f4-294e-4f43-9c78-dfd0eafa3539" fragment="2" gd:fragmentGUID="d15f415e-e066-4523-a2d6-82d4f15d123a" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">numer oraz datę jej zawarcia;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1632__art_3__ust_8__pkt_2" gd:GUID="5a430b42-f59f-4aaa-89f8-7fd1fad728e8" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a68ec6f4-294e-4f43-9c78-dfd0eafa3539" fragment="3" gd:fragmentGUID="0ae7c9a3-0f66-4b2c-abd9-01b4a584cbee" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">określenie stron umowy wraz z informacjami, o których mowa w § 2 ust. 2 pkt 3–4 i 6;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1632__art_3__ust_8__pkt_3" gd:GUID="49611eba-67a3-44f6-ae50-84d8fdc0c93d" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a68ec6f4-294e-4f43-9c78-dfd0eafa3539" fragment="4" gd:fragmentGUID="5a7759ef-c59e-41aa-8309-7ad97e019737" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">okres, na jaki zostaje zawarta;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1632__art_3__ust_8__pkt_4" gd:GUID="607451ab-f3d6-485c-83f6-1daad4b50746" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a68ec6f4-294e-4f43-9c78-dfd0eafa3539" fragment="5" gd:fragmentGUID="0767e804-5b9d-4245-88f3-3a03a1f6e91c" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">wykaz informacji o młodocianych, o których mowa w § 2 ust. 2 pkt 10;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1632__art_3__ust_8__pkt_5" gd:GUID="44e779b5-2266-4e24-b181-d68283322afa" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a68ec6f4-294e-4f43-9c78-dfd0eafa3539" fragment="6" gd:fragmentGUID="6678eca0-1171-4d65-849d-22fa4181d10d" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">deklarację, o której mowa w § 2 ust. 3 pkt 5;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1632__art_3__ust_8__pkt_6" gd:GUID="82fe38f3-e926-40b4-9d9d-4c5e3aac7d46" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+          <nr>6</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a68ec6f4-294e-4f43-9c78-dfd0eafa3539" fragment="7" gd:fragmentGUID="9c47d2cb-d143-4fdc-903d-9604ff8db4d8" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">zobowiązanie wojewódzkiej komendy OHP do wypłaty refundacji wypłaconych wynagrodzeń oraz opłaconych składek na ubezpieczenia społeczne od refundowanych wynagrodzeń za zatrudnionych młodocianych wskazanych w umowie na rachunek płatniczy wskazany we wniosku o zawarcie umowy o refundację;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1632__art_3__ust_8__pkt_7" gd:GUID="a8fb77bc-ee7a-4e8f-bfff-07831de18ff1" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+          <nr>7</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a68ec6f4-294e-4f43-9c78-dfd0eafa3539" fragment="8" gd:fragmentGUID="b9d04d71-f215-4dac-8c63-0ab68dcf047a" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">wysokość refundacji;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1632__art_3__ust_8__pkt_8" gd:GUID="2946c608-6b5e-4da6-8fc1-c10dcdb42100" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+          <nr>8</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a68ec6f4-294e-4f43-9c78-dfd0eafa3539" fragment="9" gd:fragmentGUID="c1d420cf-fc0f-43e0-9ce8-87f275e4ed1f" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">okres, przez który będzie wypłacana refundacja, oraz częstotliwość jej wypłaty;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1632__art_3__ust_8__pkt_9" gd:GUID="22be2fcf-b343-4279-a180-ae7db98aa9cb" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+          <nr>9</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a68ec6f4-294e-4f43-9c78-dfd0eafa3539" fragment="10" gd:fragmentGUID="acba7fd2-f97c-4eba-905d-6c5fb42f3c67" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">termin wypłacania przez wojewódzką komendę OHP refundacji, licząc od dnia złożenia przez pracodawcę kompletnego wniosku o zwrot kosztów, o którym mowa w § 8 ust. 1;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1632__art_3__ust_8__pkt_10" gd:GUID="18ec0cf0-5fac-4f76-a44d-d228b45bbb66" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+          <nr>10</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a68ec6f4-294e-4f43-9c78-dfd0eafa3539" fragment="11" gd:fragmentGUID="71f5410f-c780-46a9-8ba6-d1bf446f25bd" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">zobowiązanie pracodawcy do umożliwienia przeprowadzenia kontroli realizacji umów związanych z przyznaną refundacją w miejscu odbywania przygotowania zawodowego przez młodocianych pracowników lub w siedzibie podmiotu działającego w imieniu pracodawcy;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1632__art_3__ust_8__pkt_11" gd:GUID="958f5be1-94ae-4490-aab5-c2268934345e" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+          <nr>11</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a68ec6f4-294e-4f43-9c78-dfd0eafa3539" fragment="12" gd:fragmentGUID="7c3d0b6d-2572-46b8-a4b4-5917a23c2885" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">zobowiązanie pracodawcy do niezwłocznego informowania o okolicznościach mających wpływ na realizację umowy;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1632__art_3__ust_8__pkt_12" gd:GUID="4893e324-cd40-452e-b09a-ca27d1a579ec" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+          <nr>12</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a68ec6f4-294e-4f43-9c78-dfd0eafa3539" fragment="13" gd:fragmentGUID="bdf09e4e-c98d-4a82-9237-dcd0e219d68d" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">wskazanie właściwego rozporządzenia Komisji Europejskiej, które określa warunki dopuszczalności pomocy <i>de minimis</i> albo pomocy <i>de minimis</i> udzielanej pracodawcy;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1632__art_3__ust_8__pkt_13" gd:GUID="baaf3a4c-fbfc-4e3f-9467-86437cacd9c3" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+          <nr>13</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a68ec6f4-294e-4f43-9c78-dfd0eafa3539" fragment="14" gd:fragmentGUID="74277bdf-fee3-42eb-90dc-ff4ef4e62864" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">skutki nieprzestrzegania przez pracodawcę warunków umowy;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1632__art_3__ust_8__pkt_14" gd:GUID="3ae34754-7a62-491b-9281-490696cc8e6d" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+          <nr>14</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a68ec6f4-294e-4f43-9c78-dfd0eafa3539" fragment="15" gd:fragmentGUID="60c0b5ea-d7f5-421b-a0ac-27c3921497e4" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">sąd właściwy do rozpatrywania sporów wynikających z umowy, zgodnie z Kodeksem postępowania cywilnego;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1632__art_3__ust_8__pkt_15" gd:GUID="44295258-7961-4176-897b-4dcf8d1a667a" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+          <nr>15</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a68ec6f4-294e-4f43-9c78-dfd0eafa3539" fragment="16" gd:fragmentGUID="4271239e-90f5-47ee-903c-223f307e6d9f" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">inne ważne postanowienia istotne dla stron umowy;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1632__art_3__ust_8__pkt_16" gd:GUID="c524ec7f-194d-4e50-ae7c-7c0afb81895d" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+          <nr>16</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a68ec6f4-294e-4f43-9c78-dfd0eafa3539" fragment="17" gd:fragmentGUID="ba897de0-6fa3-4bbe-a4b9-3fd0abf1bcbd" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">podpisy stron umowy.</zdanie>
+          </p>
+        </punkt>
+      </ustep>
+    </paragraf>
+    <paragraf eId="DU/2025/1632__art_4" gd:GUID="b6030bbb-d67b-4ad7-8648-6076bd055326" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+      <nr>4</nr>
+      <ustep eId="DU/2025/1632__art_4__ust_1" gd:GUID="1746bc58-b640-4384-bde2-250c51148222" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="e829cfd4-0dac-4a13-92a8-8d75e73dcb91" fragment="1" gd:fragmentGUID="d3bb222b-ee96-413d-8835-a5c552b6b1b9" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">Jednostka organizacyjna OHP organizująca przygotowanie zawodowe młodocianych, spełniająca warunki, o których mowa w art. 349 ust. 1 ustawy, składa wniosek o przyznanie refundacji wynagrodzeń wypłacanych młodocianym oraz składek na ubezpieczenia społeczne od refundowanych wynagrodzeń, zwany dalej „wnioskiem OHP o przyznanie refundacji”, do wojewódzkiej komendy OHP właściwej ze względu na miejsce odbywania przygotowania zawodowego za pośrednictwem centrum edukacji.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/1632__art_4__ust_2" gd:GUID="9d3dd914-7f6f-4045-a5b3-0ff858c8d709" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="d3d2bc04-ea1a-419f-80ea-4a9024242bbe" fragment="1" gd:fragmentGUID="c5536a65-a66f-46f4-aaae-9eaa1b51338f" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">Wniosek OHP o przyznanie refundacji zawiera:</zdanie>
+        </p>
+        <punkt eId="DU/2025/1632__art_4__ust_2__pkt_1" gd:GUID="0c8398a2-e4fc-4b76-bdf7-c7acf8b51426" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="d3d2bc04-ea1a-419f-80ea-4a9024242bbe" fragment="2" gd:fragmentGUID="4d4e732b-5511-4538-90c9-32b6041c106e" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">informacje, o których mowa w § 2 ust. 2 pkt 1 i 2 oraz pkt 6 i 9;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1632__art_4__ust_2__pkt_2" gd:GUID="9c579def-b4fd-4bb6-8bd5-5da36010da39" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="d3d2bc04-ea1a-419f-80ea-4a9024242bbe" fragment="3" gd:fragmentGUID="9372ee0f-459c-41cb-8425-aa3c505b5435" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">nazwę jednostki organizacyjnej OHP prowadzącej przygotowanie zawodowe i adres siedziby;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1632__art_4__ust_2__pkt_3" gd:GUID="768a9bc1-67f3-46bb-bb72-54027997516f" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="d3d2bc04-ea1a-419f-80ea-4a9024242bbe" fragment="4" gd:fragmentGUID="2a980011-b669-4c9a-bc89-6436dd147a94" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">wykaz informacji o młodocianych, których dotyczy wniosek OHP o przyznanie refundacji, zawierający dane, o których mowa w § 2 ust. 2 pkt 10.</zdanie>
+          </p>
+        </punkt>
+      </ustep>
+      <ustep eId="DU/2025/1632__art_4__ust_3" gd:GUID="7f0a3739-fb3d-419c-8a1a-261cb814c9c9" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+        <nr>3</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="4d4eb193-4567-417d-af46-2653b4998f67" fragment="1" gd:fragmentGUID="c202005e-050e-4ade-9e8e-c95059db0179" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">Do wniosku OHP o przyznanie refundacji dołącza się dokumenty, o których mowa w § 2 ust. 3 pkt 1 i 2.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/1632__art_4__ust_4" gd:GUID="d841b3e0-00a1-444e-953e-b27bd689ff91" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+        <nr>4</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="78aab383-241c-490b-8537-07f48a33c826" fragment="1" gd:fragmentGUID="73dd069c-d0d9-4fe2-8ce8-be82e22ff440" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">Jeżeli jednostka organizacyjna OHP zatrudnia młodocianych pracowników w ramach prowadzonej działalności gos-podarczej, do wniosku OHP o przyznanie refundacji dołącza dokumenty, o których mowa w § 2 ust. 3 pkt 3 i 4.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/1632__art_4__ust_5" gd:GUID="64a8d4ae-4e58-40bb-b54c-7dabbe1dfb39" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+        <nr>5</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="db354ff4-cd67-42a3-ad65-95cfef751f04" fragment="1" gd:fragmentGUID="2e3e9d8e-b785-4ed4-95fb-aa4eedf0af9a" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">Przepis § 2 ust. 4 stosuje się odpowiednio.</zdanie>
+        </p>
+      </ustep>
+    </paragraf>
+    <paragraf eId="DU/2025/1632__art_5" gd:GUID="4f5679a9-f97c-47b7-8b45-a2a4699dac84" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+      <nr>5</nr>
+      <ustep eId="DU/2025/1632__art_5__ust_1" gd:GUID="3eb3b966-d5ef-45aa-984e-6aaea3060976" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="24b69056-f6e7-4f3c-946f-3ad2ec132e33" fragment="1" gd:fragmentGUID="c848c4a8-2698-4194-8105-a0c6af280cd5" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">Do sprawdzania wniosków OHP o przyznanie refundacji przez centrum edukacji przepisy § 3 ust. 1–4 stosuje się odpowiednio.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/1632__art_5__ust_2" gd:GUID="b70a0315-218b-4ebe-9c6c-db0f401764b5" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="b885b214-b69d-4305-9d96-fa1f4c9ccc51" fragment="1" gd:fragmentGUID="7bcb0a32-ea34-4db7-9a8b-1b4b97c234ae" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">W przypadku pozytywnego rozpatrzenia wniosku OHP o przyznanie refundacji przez wojewódzką komendę OHP centrum edukacji informuje na piśmie jednostkę organizacyjną OHP o warunkach przyznania refundacji, w tym o wysokości refundacji oraz terminach jej wypłaty.</zdanie>
+        </p>
+      </ustep>
+    </paragraf>
+    <paragraf eId="DU/2025/1632__art_6" gd:GUID="f62fcaf3-fe7f-4d82-9da4-164ad5a4cda0" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+      <nr>6</nr>
+      <ustep eId="DU/2025/1632__art_6__ust_1" gd:GUID="8a06b5ac-72ee-45d9-b440-360f6751c99c" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="9f41d2a9-c4b3-4c8c-b364-c8ead0597eda" fragment="1" gd:fragmentGUID="2fd0ee50-a968-467d-9e58-7afa75f12a39" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">W przypadku zmiany wysokości najniższych stawek wynagrodzeń młodocianych określonych w przepisach, o których mowa w art. 348 ust. 1 ustawy, pracodawca, który zawarł umowę, może w terminie 60 dni od dnia wejścia w życie nowych stawek wystąpić do centrum edukacji właściwego ze względu na miejsce odbywania przez młodocianego przygotowania zawodowego z wnioskiem, w postaci papierowej lub elektronicznej, o zmianę umowy w zakresie wysokości refundacji za okres od dnia wejścia w życie zmiany dotyczącej wysokości najniższych stawek wynagrodzeń młodocianych.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/1632__art_6__ust_2" gd:GUID="4f3244f7-869c-43e3-8883-1f1e8b9c834d" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="f9e8e362-ab21-49e5-bac3-52f0bac1db5b" fragment="1" gd:fragmentGUID="df5b2b44-7ff3-406c-b1e5-535f9cd1feef" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">Do wniosku, o którym mowa w ust. 1, przepis § 2 ust. 7 stosuje się odpowiednio.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/1632__art_6__ust_3" gd:GUID="7b448c2d-d19a-4f87-a80d-e60ccd08bf61" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+        <nr>3</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="cb0303a7-6bfd-4c2a-9251-a95667af332f" fragment="1" gd:fragmentGUID="4c5ba263-9e50-41a2-a042-cfb70d9575c7" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">W przypadku wystąpienia przez pracodawcę z wnioskiem o zmianę umowy w zakresie wysokości refundacji po terminie, o którym mowa w ust. 1, refundacja obejmuje okres od pierwszego dnia miesiąca następującego po miesiącu złożenia wniosku do centrum edukacji.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/1632__art_6__ust_4" gd:GUID="821a6c56-3e9e-4220-8437-58ff0d77401a" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+        <nr>4</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="4f8b7531-00c6-450b-b4a6-6380e100fe25" fragment="1" gd:fragmentGUID="461b5604-29d5-4799-89ef-cd4e6bf98f26" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">Centrum edukacji przekazuje wnioski pracodawców o zmianę umowy w zakresie wysokości refundacji do właściwej wojewódzkiej komendy OHP.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/1632__art_6__ust_5" gd:GUID="76e51e38-88b3-4ee9-b0ca-fc229a21af7a" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+        <nr>5</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="cd893490-43e6-482c-93da-f638ca80a95a" fragment="1" gd:fragmentGUID="b4785b60-50b3-44a0-a7cc-37feb072f47e" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">Właściwa wojewódzka komenda OHP rozpatruje wnioski o zmianę umowy w zakresie wysokości refundacji zgodnie z kolejnością ich wpływu.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/1632__art_6__ust_6" gd:GUID="28374b04-23d0-4c34-b8f7-2cd272bd7c50" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+        <nr>6</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="144274b4-2979-445c-9cca-d0dcfce4cea4" fragment="1" gd:fragmentGUID="8a6acf2c-18d3-4832-8be4-c133de0ecc6e" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">Właściwa wojewódzka komenda OHP w terminie 60 dni od dnia otrzymania z centrum edukacji wniosku o zmianę umowy w zakresie wysokości refundacji zawiadamia pracodawcę o sposobie jego rozpatrzenia.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/1632__art_6__ust_7" gd:GUID="fa593258-1146-4a25-93a2-fd28b5b5e6e1" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+        <nr>7</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="a6c44a04-3886-4c35-9362-dfda3dbabb1d" fragment="1" gd:fragmentGUID="83617047-a738-4e60-b490-dc3e8951a355" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">W przypadku pozytywnego rozpatrzenia wniosku o zmianę umowy w zakresie wysokości refundacji wojewódzka komenda OHP zawiera z pracodawcą aneks do umowy.</zdanie>
+        </p>
+      </ustep>
+    </paragraf>
+    <paragraf eId="DU/2025/1632__art_7" gd:GUID="443a6e3a-df25-4b11-abcc-2ef186a78432" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+      <nr>7</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="9c7e8b2d-318a-48b8-a82a-5ae5d59857d5" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="b7dc9d40-f5eb-4e5b-a01e-3bb92a9fcdf8" fragment="1" gd:fragmentGUID="39022eb6-0f0b-42e8-a4df-611ff7ccb26d" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">Jeżeli pracodawcą dla młodocianych zatrudnianych w celu przygotowania zawodowego jest jednostka OHP, w przypadku zmiany wysokości najniższych stawek wynagrodzeń młodocianych określonych w przepisach, o których mowa w art. 348 ust. 1 ustawy, centrum edukacji informuje na piśmie jednostki organizacyjne OHP zatrudniające młodocianych w celu przygotowania zawodowego, którym przyznano refundację, o wysokości refundacji po zmianie stawek.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2025/1632__art_8" gd:GUID="e7f7240b-5b9d-4d76-9a02-e98c24f24566" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+      <nr>8</nr>
+      <ustep eId="DU/2025/1632__art_8__ust_1" gd:GUID="4d9f071f-1df7-40ee-8188-11b47ac8433e" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="f92a3395-5907-4a94-b118-a3040c8235eb" fragment="1" gd:fragmentGUID="87622f5f-655b-492a-a6ae-1c703f5ceaba" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">Pracodawca składa wniosek o zwrot poniesionych kosztów wynagrodzeń młodocianych oraz składek na ubezpieczenia społeczne od tych wynagrodzeń wypłaconych przez pracodawcę, zwany dalej „wnioskiem o zwrot kosztów”, w postaci papierowej lub elektronicznej, do wojewódzkiej komendy OHP za pośrednictwem centrum edukacji na warunkach i w terminach określonych w umowie.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/1632__art_8__ust_2" gd:GUID="a032e65c-da9c-4f04-aa66-4aaf95544f32" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="bb08c721-c0dc-4aa1-bf67-46d4ba1b0aa8" fragment="1" gd:fragmentGUID="bec54518-7a35-4d6d-9e12-b28ae0044123" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">Wniosek o zwrot kosztów zawiera:</zdanie>
+        </p>
+        <punkt eId="DU/2025/1632__art_8__ust_2__pkt_1" gd:GUID="15d604d3-99f3-4143-b6fe-b37a8e1ea477" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="bb08c721-c0dc-4aa1-bf67-46d4ba1b0aa8" fragment="2" gd:fragmentGUID="5ba5029c-86ba-40f4-892f-8cb0aa037e69" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">informacje, o których mowa w § 2 ust. 2 pkt 1–3 oraz pkt 6;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1632__art_8__ust_2__pkt_2" gd:GUID="a957ffba-b769-4d0e-bd06-9d07d15e2268" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="bb08c721-c0dc-4aa1-bf67-46d4ba1b0aa8" fragment="3" gd:fragmentGUID="59c208fa-65c1-4c7f-aa2f-62f54b9e815f" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">okres, za który pracodawca ubiega się o zwrot kosztów;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1632__art_8__ust_2__pkt_3" gd:GUID="7e27353e-5c61-4249-9f68-459ddb06035a" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="bb08c721-c0dc-4aa1-bf67-46d4ba1b0aa8" fragment="4" gd:fragmentGUID="73da953f-1e77-467c-90c2-2b49aae115ae" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">wskazanie numeru i daty umowy;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1632__art_8__ust_2__pkt_4" gd:GUID="77519148-f67a-4a07-9f5a-8f65f97a9dc3" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="bb08c721-c0dc-4aa1-bf67-46d4ba1b0aa8" fragment="5" gd:fragmentGUID="5c914341-47a0-4f30-945d-c5e0c995c28b" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">wskazanie kwoty wydatków poniesionych na wynagrodzenia oraz składki na ubezpieczenia społeczne oraz ogólnej kwoty refundacji;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1632__art_8__ust_2__pkt_5" gd:GUID="df737221-7aff-4dc2-b2d2-8d02faea764e" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="bb08c721-c0dc-4aa1-bf67-46d4ba1b0aa8" fragment="6" gd:fragmentGUID="65fbf754-d3e1-47dc-a7b8-819b4dea12c2" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">rozliczenie finansowe wypłaconych wynagrodzeń młodocianych oraz opłaconych składek na ubezpieczenia społeczne od tych wynagrodzeń, zawierające:</zdanie>
+          </p>
+          <litera eId="DU/2025/1632__art_8__ust_2__pkt_5__lit_a" gd:GUID="e6617a30-011a-47a3-a1ca-5c5e11e35e12" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="bb08c721-c0dc-4aa1-bf67-46d4ba1b0aa8" fragment="7" gd:fragmentGUID="3b159540-a13a-4398-a92d-f5a86f6df683" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">miesiąc lub miesiące, których rozliczenie finansowe dotyczy,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1632__art_8__ust_2__pkt_5__lit_b" gd:GUID="d2b7821c-1b1e-429c-98ab-60740af18171" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="bb08c721-c0dc-4aa1-bf67-46d4ba1b0aa8" fragment="8" gd:fragmentGUID="86bf8017-2ed1-4d66-8a19-d600aafb9455" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">imię i nazwisko młodocianego,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1632__art_8__ust_2__pkt_5__lit_c" gd:GUID="86796734-3fe8-41c4-abaa-eeffd2166053" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+            <nr>c</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="bb08c721-c0dc-4aa1-bf67-46d4ba1b0aa8" fragment="9" gd:fragmentGUID="b56c3dc5-2ec5-46cf-b8fa-11435a467249" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">rok nauki i zawód lub zakres przyuczenia do pracy,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1632__art_8__ust_2__pkt_5__lit_d" gd:GUID="c73c2081-1f98-4f14-be7b-32e3010b7f9f" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+            <nr>d</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="bb08c721-c0dc-4aa1-bf67-46d4ba1b0aa8" fragment="10" gd:fragmentGUID="ec581287-b05b-4f00-9896-9f920cd07473" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">stawkę miesięczną brutto minimalnego wynagrodzenia za pracę młodocianego,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1632__art_8__ust_2__pkt_5__lit_e" gd:GUID="b27dafde-9c2c-4a1d-b83c-3384ae5fce47" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+            <nr>e</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="bb08c721-c0dc-4aa1-bf67-46d4ba1b0aa8" fragment="11" gd:fragmentGUID="4cf79aab-c84c-4c4e-9f39-d9965c885c90" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">kwotę wypłaconych wynagrodzeń osobowych w miesiącu,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1632__art_8__ust_2__pkt_5__lit_f" gd:GUID="3e63a5b4-69ad-43ae-91e5-4a4c7a362891" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+            <nr>f</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="bb08c721-c0dc-4aa1-bf67-46d4ba1b0aa8" fragment="12" gd:fragmentGUID="76051d74-3532-4d0a-bd72-e807066e9efa" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">wysokość składki na ubezpieczenia społeczne,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1632__art_8__ust_2__pkt_5__lit_g" gd:GUID="692dc88f-30b7-4f29-89d0-cdf76b371651" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+            <nr>g</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="bb08c721-c0dc-4aa1-bf67-46d4ba1b0aa8" fragment="13" gd:fragmentGUID="66b4bba2-829e-49a6-b6e1-50d42bcc54af" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">wynagrodzenia chorobowe wypłacone za dany miesiąc,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1632__art_8__ust_2__pkt_5__lit_h" gd:GUID="8dacb800-2bfc-42c0-8979-9474ebb93f45" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+            <nr>h</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="bb08c721-c0dc-4aa1-bf67-46d4ba1b0aa8" fragment="14" gd:fragmentGUID="1b2e6b37-7e12-4a09-ba83-39192f82e28f" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">kwotę do refundacji ogółem;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2025/1632__art_8__ust_2__pkt_6" gd:GUID="c981b84d-6f42-467d-8a03-97e17db3b29f" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+          <nr>6</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="bb08c721-c0dc-4aa1-bf67-46d4ba1b0aa8" fragment="15" gd:fragmentGUID="e0b26368-93b3-4902-8c8c-46096ec8c76f" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">kopie list płac młodocianych wraz z pokwitowaniem odbioru wynagrodzenia lub potwierdzenie przelewu wynagrodzenia na rachunek młodocianego;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1632__art_8__ust_2__pkt_7" gd:GUID="3c2feff5-ebbb-4585-8e55-702ab90a579d" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+          <nr>7</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="bb08c721-c0dc-4aa1-bf67-46d4ba1b0aa8" fragment="16" gd:fragmentGUID="6694cd16-4abf-4702-9440-22d5da83d5a8" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">poświadczone za zgodność z oryginałem kopie dokumentów potwierdzających wypłatę wynagrodzeń oraz opłacenie składek na ubezpieczenia społeczne od tych wynagrodzeń wraz z kopiami deklaracji rozliczeniowych;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1632__art_8__ust_2__pkt_8" gd:GUID="5398beab-32c4-40d0-87f0-24dd30c3df5c" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+          <nr>8</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="bb08c721-c0dc-4aa1-bf67-46d4ba1b0aa8" fragment="17" gd:fragmentGUID="c6ded257-b7e6-417b-b4eb-92351ce0ccb8" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">zaświadczenie o niezaleganiu w opłacaniu składek na ubezpieczenia społeczne;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1632__art_8__ust_2__pkt_9" gd:GUID="5122131c-5f16-4ba9-a76c-ccca24e76116" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+          <nr>9</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="bb08c721-c0dc-4aa1-bf67-46d4ba1b0aa8" fragment="18" gd:fragmentGUID="2906cd6e-64d4-4eff-92ca-b2fc309b7c6f" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">upoważnienie do reprezentowania pracodawcy, w przypadku złożenia wniosku o zwrot kosztów przez osobę upoważnioną;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1632__art_8__ust_2__pkt_10" gd:GUID="40b051d5-2566-4e66-9e0d-1f13e2b8af1d" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+          <nr>10</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="bb08c721-c0dc-4aa1-bf67-46d4ba1b0aa8" fragment="19" gd:fragmentGUID="29ac5b11-5e7e-4a20-8e70-2e0d00981587" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">podpis pracodawcy lub osoby upoważnionej.</zdanie>
+          </p>
+        </punkt>
+      </ustep>
+      <ustep eId="DU/2025/1632__art_8__ust_3" gd:GUID="813eaad8-0ace-43e6-9b1c-4bcb1ca5a468" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+        <nr>3</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="b7758fd1-134b-423b-8a3f-909588baa5d8" fragment="1" gd:fragmentGUID="e6f4b5c4-19ba-4dd2-883e-eba78c359895" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">W przypadku podpisania przez pracodawcę umowy dotyczącej rozłożenia na raty lub odroczenia płatności z tytułu zaległych składek na ubezpieczenia społeczne pracodawca może złożyć wniosek o zwrot kosztów jedynie wynagrodzeń młodocianych, a po opłaceniu składek na ubezpieczenia społeczne może złożyć wniosek o zrefundowanie opłaconych składek od tych wynagrodzeń.</zdanie>
+          <zdanie nr="2" gd:zdGUID="6b53438b-25d0-4bf5-99b1-ec207285bdda" fragment="1" gd:fragmentGUID="0919e898-6e79-4bda-83da-31403407a85e" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">Do wniosku o zwrot kosztów pracodawca ma obowiązek przedłożyć zaświadczenie z Zakładu Ubezpieczeń Społecznych potwierdzające odprowadzenie składek na ubezpieczenia społeczne od pracowników młodocianych, na rzecz których zrealizowana została uprzednia wypłata refundacji wynagrodzenia.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/1632__art_8__ust_4" gd:GUID="a7d92cda-a572-4f52-a2a1-c2a9489c51e9" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+        <nr>4</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="2f318f30-c885-4457-9e7f-9aed6a4ed9af" fragment="1" gd:fragmentGUID="4a34b779-5ed0-4dc6-b623-f25b468f3ffd" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">Przepis § 2 ust. 7 stosuje się odpowiednio.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/1632__art_8__ust_5" gd:GUID="8ee0f7a2-6e21-46eb-8462-af3ca97c1d86" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+        <nr>5</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="8820304e-1a6c-4d1d-902f-0de4b7fb6aaa" fragment="1" gd:fragmentGUID="59c03f66-0ef7-4478-8555-9116315a62d7" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">W przypadku pozytywnego rozpatrzenia wniosku o zwrot kosztów wojewódzka komenda OHP przekazuje środki Funduszu Pracy z tytułu refundacji wynagrodzeń i składek na ubezpieczenia społeczne od tych wynagrodzeń na wskazany w umowie rachunek płatniczy w terminach określonych w umowie.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/1632__art_8__ust_6" gd:GUID="92165aa7-95db-4139-8fdc-967b32bfc5a2" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+        <nr>6</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="9f6987c4-8276-4d0d-8664-46f305c3bb59" fragment="1" gd:fragmentGUID="0c8e3682-8e12-4dd9-8773-e8f2a5136ded" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">W przypadku pozytywnego rozpatrzenia wniosku o zwrot kosztów jednostki organizacyjnej OHP wojewódzka komenda OHP przekazuje środki Funduszu Pracy z tytułu refundacji wynagrodzeń i składek na ubezpieczenia społeczne od tych wynagrodzeń na wskazany we wniosku OHP o przyznanie refundacji rachunek płatniczy.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/1632__art_8__ust_7" gd:GUID="f8aa348e-e08b-45d5-8bb7-548b0f39f6d2" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+        <nr>7</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="b896e018-fd8f-4da4-b4f6-ad8dce23b74b" fragment="1" gd:fragmentGUID="28514c82-61c1-4eae-bd03-c7ced94417da" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">Komenda wojewódzka OHP przekazuje środki Funduszu Pracy z tytułu refundacji wynagrodzeń i składek na ubezpieczenia społeczne od tych wynagrodzeń w terminie nie dłuższym niż 40 dni od dnia złożenia przez pracodawcę kompletnego wniosku o zwrot kosztów.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/1632__art_8__ust_8" gd:GUID="ef523b24-f00b-44f1-a4b7-c36c2e0e249e" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+        <nr>8</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="788e9fe3-4912-4ca1-be58-9d58dc86f884" fragment="1" gd:fragmentGUID="4439b9d6-5cf0-4ffd-9c0c-bf13c473b6a0" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">Przepisy ust. 1, 2 oraz ust. 7 dotyczące pracodawcy stosuje się do jednostek organizacyjnych OHP zatrudniających młodocianych w celu przygotowania zawodowego, którym przyznano refundację.</zdanie>
+        </p>
+      </ustep>
+    </paragraf>
+    <paragraf eId="DU/2025/1632__art_9" gd:GUID="f8b4b9ac-7531-45ab-8f85-0ba78449b0ca" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+      <nr>9</nr>
+      <ustep eId="DU/2025/1632__art_9__ust_1" gd:GUID="f3fd5e9a-3188-4eed-a60d-520a40efa20b" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="27ea6af9-246c-4a2c-953d-2290586f6271" fragment="1" gd:fragmentGUID="df03846d-a160-456a-986d-e91aca86dbff" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">Wnioski o zawarcie umowy o refundację i wnioski o przyznanie refundacji złożone i nierozpatrzone przed dniem wejścia w życie rozporządzenia rozpatruje się na podstawie niniejszego rozporządzenia.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/1632__art_9__ust_2" gd:GUID="583edd43-a137-47c0-aa33-405c11fa00c2" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="11a2bfd4-a6e8-4202-9f3e-1fcd6ec1bb74" fragment="1" gd:fragmentGUID="b3522e5a-2ddf-4da1-8f74-53d6be6a8f7e" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">Wnioski, o których mowa w ust. 1, wymagające uzupełnienia w zakresie wynikającym z niniejszego rozporządzenia pracodawca oraz jednostka OHP zatrudniająca młodocianych w celu przygotowania zawodowego uzupełniają w terminie 14 dni od dnia otrzymania wezwania centrum edukacji pod rygorem pozostawienia wniosku bez rozpoznania.</zdanie>
+        </p>
+      </ustep>
+    </paragraf>
+    <paragraf eId="DU/2025/1632__art_10" gd:GUID="a6c179a7-6856-436c-a42c-888d94842beb" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+      <nr>10</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="c5b04b70-a1af-45db-8b3c-eaa1e1fc0142" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="1fbd4d1c-7e67-432a-ab75-016aeb259627" fragment="1" gd:fragmentGUID="d29d5d42-aaaa-412a-8a67-03bf98af2333" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-01_DU-2025-1632_odczytane.x" wejscie-w-zycie="2025-12-01">Rozporządzenie wchodzi w życie z dniem 1 grudnia 2025 r.<odnosnik id-odnosnika="2" symbol="2" gd:GUID="904d129c-cdb3-4243-84d8-793bf90606f3"><p><zdanie nr="1" gd:zdGUID="c88b9b48-9b91-43ac-8ed6-7ed215eb2659" fragment="1" gd:fragmentGUID="cc0e6933-26e0-4ce9-b04f-8351e888f46b">Niniejsze rozporządzenie było poprzedzone rozporządzeniem Ministra Pracy i Polityki Społecznej z dnia 25 czerwca 2014 r. w sprawie refundowania ze środków Funduszu Pracy wynagrodzeń wypłacanych młodocianym pracownikom (Dz. U. z 2020 r. poz. 1581), które traci moc z dniem wejścia w życie niniejszego rozporządzenia zgodnie z art. 459 ust. 1 pkt 1 ustawy z dnia 20 marca 2025 r. o rynku pracy i służbach zatrudnienia (Dz. U. poz. 620).</zdanie></p></odnosnik></zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <organ-podpisujacy>Minister Rodziny, Pracy i Polityki Społecznej: <i><osoba podpisujacy="true" gd:osobaGUID="9c0d0521-97a5-4fa1-80a4-3bd1c6a644cf"><imie>A.</imie> <nazwisko>Dziemianowicz-Bąk</nazwisko></osoba></i></organ-podpisujacy>
+  </rozporzadzenie>
+</akt-prawny>

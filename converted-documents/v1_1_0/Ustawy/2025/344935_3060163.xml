@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <ustawa>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/1413</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>3afbd8f4-5592-4823-bb13-4d4aefb22c67</gd:GUIDwersji>
+      <AdresISAP>WDU20250001413</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>1413</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 1413</AdresWyswietlany>
+      <Tytul>Ustawa z dnia 12 września 2025 r. o zmianie ustawy o systemie ubezpieczeń społecznych</Tytul>
+      <Rodzaj>USTAWA</Rodzaj>
+      <DataOgloszenia>2025-10-20</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-09-12</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2026-11-01_DU-2025-1413_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2026-11-01" warunek="pierwszego dnia miesiąca po upływie 12 miesięcy od dnia ogłoszenia" podstawa="art. 2" zrodlo="https://eli.gov.pl/eli/DU/2025/1413" dowod="DU/2025/1413__art_2" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2026-11-01_DU-2025-1413_domyslne.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2026-11-01_DU-2025-1413_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="244f9a58-4e69-414b-9a90-d17f55612274" rola="wydajacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Sejm">
+          <Nazwa>SEJM</Nazwa>
+        </Organ>
+        <Organ gd:GUID="87bbac8c-f09c-4499-a6ec-42602d61eae2" rola="podpisujacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Prezydent">
+          <Nazwa>Prezydent Rzeczypospolitej Polskiej</Nazwa>
+          <OrganPodpisujacy>Prezydent Rzeczypospolitej Polskiej</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>K.</imie> <nazwisko>Nawrocki</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Ustawa</rodzaj-aktu>
+    <data>z dnia 12 września 2025 r.</data>
+    <tytul>o zmianie ustawy o systemie ubezpieczeń społecznych</tytul>
+    <artykul eId="DU/2025/1413__art_1" gd:GUID="d1716130-673c-4a1f-834d-8d2b39b002a3" okres="okr_obowiazywanie.zdarz_wejscie_2026-11-01_DU-2025-1413_domyslne.x" wejscie-w-zycie="2026-11-01">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="5a7d4c88-05dc-4ebe-9267-9d415ed901bb" okres="okr_obowiazywanie.zdarz_wejscie_2026-11-01_DU-2025-1413_domyslne.x" wejscie-w-zycie="2026-11-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="dc9a3945-e57a-4095-93c1-a4d9897961b7" fragment="1" gd:fragmentGUID="b1ec6635-8bf1-460a-82bd-b60dd0a7351d" okres="okr_obowiazywanie.zdarz_wejscie_2026-11-01_DU-2025-1413_domyslne.x" wejscie-w-zycie="2026-11-01">W ustawie z dnia 13 października 1998 r. o systemie ubezpieczeń społecznych (Dz. U. z 2025 r. poz. 350, z późn. zm.<odnosnik id-odnosnika="1" symbol="1" gd:GUID="54a92b0c-e3ae-4331-8f79-da796ca8491f"><p><zdanie nr="1" gd:zdGUID="d4cf2151-567f-4f92-962a-bb831b1ab921" fragment="1" gd:fragmentGUID="3e0395b3-da53-4320-9ba2-3545e4ebfdd3">Zmiany tekstu jednolitego wymienionej ustawy zostały ogłoszone w Dz. U. z 2025 r. poz. 620, 622, 769, 820, 1083, 1160, 1216 i 1409.</zdanie></p></odnosnik>) wprowadza się następujące zmiany:</zdanie>
+        </p>
+        <punkt eId="DU/2025/1413__art_1__pkt_1" gd:GUID="d2804014-b48b-46e9-8c00-eff5fed2138f" okres="okr_obowiazywanie.zdarz_wejscie_2026-11-01_DU-2025-1413_domyslne.x" wejscie-w-zycie="2026-11-01">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="dc9a3945-e57a-4095-93c1-a4d9897961b7" fragment="2" gd:fragmentGUID="6d05c546-023b-4be4-a0d4-7ea6340c7c36" okres="okr_obowiazywanie.zdarz_wejscie_2026-11-01_DU-2025-1413_domyslne.x" wejscie-w-zycie="2026-11-01"><now:zamien-tekst stary-tekst="." nowy-tekst=";" element-eId="DU/2025/350__art_45__ust_1__pkt_3" akt="https://eli.gov.pl/eli/DU/2025/350" now:wystapienie="ostatnie" gd:nowGUID="065e0e33-3e68-4866-a891-56dc8d640b19" />w art. 45 w ust. 1 w pkt 3 kropkę zastępuje się średnikiem i dodaje się pkt 4 w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2025/350" cudzyslowy="oba" gd:nowGUID="3c28e49b-a2ee-443d-92e7-1f358c921ede" element-eId="DU/2025/350__art_45__ust_1__pkt_3" funkcja="dodaj-po"><punkt eId="DU/2025/350__art_45__ust_1__pkt_4" gd:GUID="676cb6bf-ee33-47ea-9cbd-1b389ed2862f" okres="okr_obowiazywanie.zdarz_wejscie_2026-11-01_DU-2025-1413_domyslne.x" wejscie-w-zycie="2026-11-01"><nr>4</nr><p><zdanie nr="1" gd:zdGUID="a1383be1-2a54-494b-a694-4cc8aef558c5" fragment="1" gd:fragmentGUID="dcc7586f-06ce-4cb4-8bc8-21bb3c29b6de" okres="okr_obowiazywanie.zdarz_wejscie_2026-11-01_DU-2025-1413_domyslne.x" wejscie-w-zycie="2026-11-01">ewidencjonuje się informację o zgodzie, o której mowa w art. 50 ust. 28 i 31, wraz z danymi osoby lub podmiotu, któremu płatnik składek udzielił zgody na udostępnienie danych.</zdanie></p></punkt></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1413__art_1__pkt_2" gd:GUID="f9aa0b5e-db5e-4a35-b402-3ab6c2cb9f7a" okres="okr_obowiazywanie.zdarz_wejscie_2026-11-01_DU-2025-1413_domyslne.x" wejscie-w-zycie="2026-11-01">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="dc9a3945-e57a-4095-93c1-a4d9897961b7" fragment="3" gd:fragmentGUID="c5542c8c-7b65-4ebf-a77e-0f110ed6a27e" okres="okr_obowiazywanie.zdarz_wejscie_2026-11-01_DU-2025-1413_domyslne.x" wejscie-w-zycie="2026-11-01">w art. 50:</zdanie>
+          </p>
+          <litera eId="DU/2025/1413__art_1__pkt_2__lit_a" gd:GUID="b904a1ac-b8ef-480f-b53a-905fa5b6fa94" okres="okr_obowiazywanie.zdarz_wejscie_2026-11-01_DU-2025-1413_domyslne.x" wejscie-w-zycie="2026-11-01">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="dc9a3945-e57a-4095-93c1-a4d9897961b7" fragment="4" gd:fragmentGUID="f70d053f-c5a9-4edf-ac29-7f2f97673cd9" okres="okr_obowiazywanie.zdarz_wejscie_2026-11-01_DU-2025-1413_domyslne.x" wejscie-w-zycie="2026-11-01">w ust. 7 wprowadzenie do wyliczenia otrzymuje brzmienie:<cytat-w-tekscie now:akt="https://eli.gov.pl/eli/DU/2025/350" cudzyslowy="oba" gd:nowGUID="839b797d-c184-4156-96b3-99adfa5ad613" element-eId="DU/2025/350__art_50__ust_7" funkcja="zastap-tekst"><zdanie nr="1" gd:zdGUID="f2d24346-fac1-4043-89c5-ca211d4b05f7" fragment="1" gd:fragmentGUID="5dbb85b3-3aeb-40e9-a64d-b82f4dcbb750" okres="okr_obowiazywanie.zdarz_wejscie_2026-11-01_DU-2025-1413_domyslne.x" wejscie-w-zycie="2026-11-01">W przypadkach, o których mowa w ust. 3–6, 12, 13 i 28, wniosek powinien zawierać:</zdanie></cytat-w-tekscie>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1413__art_1__pkt_2__lit_b" gd:GUID="f909e656-48a9-4431-8dfc-f1ed2f0554fb" okres="okr_obowiazywanie.zdarz_wejscie_2026-11-01_DU-2025-1413_domyslne.x" wejscie-w-zycie="2026-11-01">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="dc9a3945-e57a-4095-93c1-a4d9897961b7" fragment="5" gd:fragmentGUID="c44a4086-3078-4b9b-9094-a53768cb9d3a" okres="okr_obowiazywanie.zdarz_wejscie_2026-11-01_DU-2025-1413_domyslne.x" wejscie-w-zycie="2026-11-01">dodaje się ust. 28–31 w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2025/350" cudzyslowy="oba" gd:nowGUID="166a198f-c101-45cd-b537-6ec55c9f9c56" element-eId="DU/2025/350__art_50" funkcja="dodaj-w"><ustep eId="DU/2025/350__art_50__ust_28" gd:GUID="7b9a7367-cf80-497c-999c-52d49be5211a" okres="okr_obowiazywanie.zdarz_wejscie_2026-11-01_DU-2025-1413_domyslne.x" wejscie-w-zycie="2026-11-01"><nr>28</nr><p><zdanie nr="1" gd:zdGUID="68aca9b2-6bdd-441a-b73b-856acbf054c4" fragment="1" gd:fragmentGUID="d68f1ed4-c428-4a26-bf98-06158f189c66" okres="okr_obowiazywanie.zdarz_wejscie_2026-11-01_DU-2025-1413_domyslne.x" wejscie-w-zycie="2026-11-01">Zakład, na wniosek złożony w postaci elektronicznej, udostępnia bezpłatnie bankom, instytucjom finansowym, instytucjom kredytowym oraz instytucjom pożyczkowym, o których mowa w art. 4 ustawy z dnia 29 sierpnia 1997 r. – Prawo bankowe (Dz. U. z 2024 r. poz. 1646, z późn. zm.<odnosnik id-odnosnika="2" symbol="2" gd:GUID="fea7e955-9f26-44de-9281-591c17e27211"><p><zdanie nr="1" gd:zdGUID="215ea12b-e455-44b5-bf9f-0a33aa60b3ee" fragment="1" gd:fragmentGUID="d7c43235-7999-4002-9d13-5e10ff207856">Zmiany tekstu jednolitego wymienionej ustawy zostały ogłoszone w Dz. U. z 2024 r. poz. 1685 i 1863 oraz z 2025 r. poz. 146, 222, 525, 769, 820, 1069, 1170, 1191 i 1216.</zdanie></p></odnosnik>), oraz osobom prawnym, jednostkom organizacyjnym lub osobom fizycznym będącym przedsiębiorcami, za zgodą płatnika składek, dane zgromadzone na koncie płatnika składek, o których mowa w art. 45, obejmujące:</zdanie></p><punkt eId="DU/2025/350__art_50__ust_28__pkt_1" gd:GUID="01296138-6f8f-49ea-ae75-6a7924b41d84" okres="okr_obowiazywanie.zdarz_wejscie_2026-11-01_DU-2025-1413_domyslne.x" wejscie-w-zycie="2026-11-01"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="68aca9b2-6bdd-441a-b73b-856acbf054c4" fragment="2" gd:fragmentGUID="c938d676-0ce4-41a1-a4ed-398d9ddae3a2" okres="okr_obowiazywanie.zdarz_wejscie_2026-11-01_DU-2025-1413_domyslne.x" wejscie-w-zycie="2026-11-01">numer NIP lub numer identyfikacyjny REGON, a jeżeli nie nadano tych numerów lub jednego z nich – numer PESEL lub serię i numer dowodu osobistego albo paszportu,</zdanie></p></punkt><punkt eId="DU/2025/350__art_50__ust_28__pkt_2" gd:GUID="9723e56c-cd42-4a68-8ab8-27c148ea3148" okres="okr_obowiazywanie.zdarz_wejscie_2026-11-01_DU-2025-1413_domyslne.x" wejscie-w-zycie="2026-11-01"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="68aca9b2-6bdd-441a-b73b-856acbf054c4" fragment="3" gd:fragmentGUID="88a33a90-2894-4067-9d35-13e818f612fa" okres="okr_obowiazywanie.zdarz_wejscie_2026-11-01_DU-2025-1413_domyslne.x" wejscie-w-zycie="2026-11-01">nazwę skróconą lub imię i nazwisko,</zdanie></p></punkt><punkt eId="DU/2025/350__art_50__ust_28__pkt_3" gd:GUID="664dd518-686d-4c41-bb08-7f99d39420e4" okres="okr_obowiazywanie.zdarz_wejscie_2026-11-01_DU-2025-1413_domyslne.x" wejscie-w-zycie="2026-11-01"><nr>3</nr><p><zdanie nr="1" gd:zdGUID="68aca9b2-6bdd-441a-b73b-856acbf054c4" fragment="4" gd:fragmentGUID="023d84e5-51b3-4052-ab18-e11df166edb8" okres="okr_obowiazywanie.zdarz_wejscie_2026-11-01_DU-2025-1413_domyslne.x" wejscie-w-zycie="2026-11-01">okres rozliczeniowy,</zdanie></p></punkt><punkt eId="DU/2025/350__art_50__ust_28__pkt_4" gd:GUID="d18fe2bb-91da-47e5-b88a-3ffdae859a19" okres="okr_obowiazywanie.zdarz_wejscie_2026-11-01_DU-2025-1413_domyslne.x" wejscie-w-zycie="2026-11-01"><nr>4</nr><p><zdanie nr="1" gd:zdGUID="68aca9b2-6bdd-441a-b73b-856acbf054c4" fragment="5" gd:fragmentGUID="e25a2e59-aaba-4346-870e-696010db0049" okres="okr_obowiazywanie.zdarz_wejscie_2026-11-01_DU-2025-1413_domyslne.x" wejscie-w-zycie="2026-11-01">stan rozliczeń należnych składek, do poboru których uprawniony jest Zakład</zdanie></p></punkt><czesc-wspolna-punkt eId="DU/2025/350__art_50__ust_28__czw" gd:GUID="7196f0a7-85cf-4958-85b1-9b5a8c2c82b2" okres="okr_obowiazywanie.zdarz_wejscie_2026-11-01_DU-2025-1413_domyslne.x" wejscie-w-zycie="2026-11-01"><p><zdanie nr="1" gd:zdGUID="68aca9b2-6bdd-441a-b73b-856acbf054c4" fragment="6" gd:fragmentGUID="53c094cb-5b60-44ae-bf1f-6b64980d5719" okres="okr_obowiazywanie.zdarz_wejscie_2026-11-01_DU-2025-1413_domyslne.x" wejscie-w-zycie="2026-11-01">– w zakresie niezbędnym do zrealizowania przez banki, instytucje finansowe, instytucje kredytowe oraz instytucje pożyczkowe wniosku płatnika składek o udzielenie kredytu, pożyczki pieniężnej lub świadczenie innej usługi, o których mowa w art. 5 i art. 6 ustawy z dnia 29 sierpnia 1997 r. – Prawo bankowe, albo w zakresie niezbędnym do zweryfikowania sytuacji finansowej i gospodarczej płatnika składek przez osoby prawne, jednostki organizacyjne lub osoby fizyczne będące przedsiębiorcami.</zdanie></p></czesc-wspolna-punkt></ustep><ustep eId="DU/2025/350__art_50__ust_29" gd:GUID="db73661d-3627-4c35-ba66-81d7fab7d1f2" okres="okr_obowiazywanie.zdarz_wejscie_2026-11-01_DU-2025-1413_domyslne.x" wejscie-w-zycie="2026-11-01"><nr>29</nr><p><zdanie nr="1" gd:zdGUID="5124d065-b713-4319-9b5b-5b8746587ec8" fragment="1" gd:fragmentGUID="029af0c5-1663-413a-839c-57956c478687" okres="okr_obowiazywanie.zdarz_wejscie_2026-11-01_DU-2025-1413_domyslne.x" wejscie-w-zycie="2026-11-01">Dane i informacje, o których mowa w ust. 28, udostępnia się wyłącznie w postaci elektronicznej, z uwzględnieniem przepisów dotyczących ochrony danych osobowych.</zdanie></p></ustep><ustep eId="DU/2025/350__art_50__ust_30" gd:GUID="73037b1e-8b2d-4e40-b22e-a4e4151a4ea5" okres="okr_obowiazywanie.zdarz_wejscie_2026-11-01_DU-2025-1413_domyslne.x" wejscie-w-zycie="2026-11-01"><nr>30</nr><p><zdanie nr="1" gd:zdGUID="723b1ec8-314e-4b27-95dd-aa2cc89649fd" fragment="1" gd:fragmentGUID="85bee44b-87e9-4064-866b-ea8ec7e7875e" okres="okr_obowiazywanie.zdarz_wejscie_2026-11-01_DU-2025-1413_domyslne.x" wejscie-w-zycie="2026-11-01">Zgoda, o której mowa w ust. 28, uprawnia do jednorazowego dostępu do danych.</zdanie></p></ustep><ustep eId="DU/2025/350__art_50__ust_31" gd:GUID="2d14a874-5a83-4142-aa0a-047bad45b2b2" okres="okr_obowiazywanie.zdarz_wejscie_2026-11-01_DU-2025-1413_domyslne.x" wejscie-w-zycie="2026-11-01"><nr>31</nr><p><zdanie nr="1" gd:zdGUID="d62948aa-cf63-4a83-9dbf-225ab2388f96" fragment="1" gd:fragmentGUID="2c9a8b42-1b83-4dba-8155-aad594976cd0" okres="okr_obowiazywanie.zdarz_wejscie_2026-11-01_DU-2025-1413_domyslne.x" wejscie-w-zycie="2026-11-01">Zgoda jest udzielana osobie lub podmiotowi uprawnionemu, o których mowa w ust. 28, i jest przekazywana do Zakładu wraz z wnioskiem o udostępnienie danych albo jest udzielana bezpośrednio Zakładowi i zawiera dane płatnika składek oraz:</zdanie></p><punkt eId="DU/2025/350__art_50__ust_31__pkt_1" gd:GUID="1f743407-976b-4033-8da2-a7ad4cd3c32a" okres="okr_obowiazywanie.zdarz_wejscie_2026-11-01_DU-2025-1413_domyslne.x" wejscie-w-zycie="2026-11-01"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="d62948aa-cf63-4a83-9dbf-225ab2388f96" fragment="2" gd:fragmentGUID="9ed6c805-a676-4763-aea5-17a8994c355d" okres="okr_obowiazywanie.zdarz_wejscie_2026-11-01_DU-2025-1413_domyslne.x" wejscie-w-zycie="2026-11-01">imię i nazwisko oraz numer PESEL, a w razie gdy nie nadano numeru PESEL – serię i numer dowodu osobistego lub paszportu – w przypadku, jeżeli zgoda jest udzielana osobie fizycznej;</zdanie></p></punkt><punkt eId="DU/2025/350__art_50__ust_31__pkt_2" gd:GUID="43c5d2f2-ffbb-4b77-b942-34240985cf0e" okres="okr_obowiazywanie.zdarz_wejscie_2026-11-01_DU-2025-1413_domyslne.x" wejscie-w-zycie="2026-11-01"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="d62948aa-cf63-4a83-9dbf-225ab2388f96" fragment="3" gd:fragmentGUID="6d1f7c11-1c66-4ac2-b09c-8657e6429957" okres="okr_obowiazywanie.zdarz_wejscie_2026-11-01_DU-2025-1413_domyslne.x" wejscie-w-zycie="2026-11-01">nazwę oraz numer NIP albo numer identyfikacyjny REGON – w przypadku, jeżeli zgoda jest udzielana podmiotowi innemu niż osoba fizyczna.</zdanie></p></punkt></ustep></cytat-strukt>.</zdanie>
+            </p>
+          </litera>
+        </punkt>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2025/1413__art_2" gd:GUID="0c27d133-2353-4f67-b4cd-ec42e243b75a" okres="okr_obowiazywanie.zdarz_wejscie_2026-11-01_DU-2025-1413_domyslne.x" wejscie-w-zycie="2026-11-01">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="1b91ca8d-996c-457a-a3a2-8c0f1f8f43c4" okres="okr_obowiazywanie.zdarz_wejscie_2026-11-01_DU-2025-1413_domyslne.x" wejscie-w-zycie="2026-11-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="bc4cc16f-1655-45ab-9781-14639ccc6d42" fragment="1" gd:fragmentGUID="27644b4d-25d7-4ece-bce8-bc8a845466fc" okres="okr_obowiazywanie.zdarz_wejscie_2026-11-01_DU-2025-1413_domyslne.x" wejscie-w-zycie="2026-11-01">Ustawa wchodzi w życie pierwszego dnia miesiąca po upływie 12 miesięcy od dnia ogłoszenia.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <organ-podpisujacy>Prezydent Rzeczypospolitej Polskiej: <i><osoba podpisujacy="true" gd:osobaGUID="3437b6e1-7eca-4dc9-baba-cfbb2f2eca4a"><imie>K.</imie> <nazwisko>Nawrocki</nazwisko></osoba></i></organ-podpisujacy>
+  </ustawa>
+</akt-prawny>

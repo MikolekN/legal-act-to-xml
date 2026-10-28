@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <ustawa>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2024/1836</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>49b82c9a-38cb-4575-936c-2d870b3146d8</gd:GUIDwersji>
+      <AdresISAP>WDU20240001836</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2024</Rok>
+      <Pozycja>1836</Pozycja>
+      <AdresWyswietlany>Dz.U. 2024 poz. 1836</AdresWyswietlany>
+      <Tytul>Ustawa z dnia 27 listopada 2024 r. o zmianie ustawy o ubezpieczeniach upraw rolnych i zwierząt gospodarskich</Tytul>
+      <Rodzaj>USTAWA</Rodzaj>
+      <DataOgloszenia>2024-12-12</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2024-11-27</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2025-01-01_DU-2024-1836_odczytane" rodzaj="wejscie-w-zycie" pochodzenie="odczytane" data="2025-01-01" podstawa="art. 7" zrodlo="https://eli.gov.pl/eli/DU/2024/1836" dowod="DU/2024/1836__art_7" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1836_odczytane.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2025-01-01_DU-2024-1836_odczytane" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="6717becb-55b1-4712-90ee-86afb4ff8db6" rola="wydajacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Sejm">
+          <Nazwa>SEJM</Nazwa>
+        </Organ>
+        <Organ gd:GUID="8932772e-a337-45c0-ad39-9b71ddabb837" rola="podpisujacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Prezydent">
+          <Nazwa>Prezydent Rzeczypospolitej Polskiej</Nazwa>
+          <OrganPodpisujacy>Prezydent Rzeczypospolitej Polskiej</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>A.</imie> <nazwisko>Duda</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Ustawa</rodzaj-aktu>
+    <data>z dnia 27 listopada 2024 r.</data>
+    <tytul>o zmianie ustawy o ubezpieczeniach upraw rolnych i zwierząt gospodarskich</tytul>
+    <artykul eId="DU/2024/1836__art_1" gd:GUID="acae6ee8-dabb-4b68-82a9-d57d493db681" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1836_odczytane.x" wejscie-w-zycie="2025-01-01">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="01ed8b3a-8b32-4da1-80be-0d9f3ff17d34" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1836_odczytane.x" wejscie-w-zycie="2025-01-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="8828ff6e-9aa9-4a54-b24a-88487f17283e" fragment="1" gd:fragmentGUID="977463b0-51c1-4dc8-b87b-cb607ff70746" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1836_odczytane.x" wejscie-w-zycie="2025-01-01">W ustawie z dnia 7 lipca 2005 r. o ubezpieczeniach upraw rolnych i zwierząt gospodarskich (Dz. U. z 2019 r. poz. 477) wprowadza się następujące zmiany:</zdanie>
+        </p>
+        <punkt eId="DU/2024/1836__art_1__pkt_1" gd:GUID="f27d8939-e971-4fc7-897c-1cd729e9e246" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1836_odczytane.x" wejscie-w-zycie="2025-01-01">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="8828ff6e-9aa9-4a54-b24a-88487f17283e" fragment="2" gd:fragmentGUID="53780851-caa4-4545-81d7-9543ab6e5ef4" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1836_odczytane.x" wejscie-w-zycie="2025-01-01">w art. 2 pkt 2 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2019/477" cudzyslowy="oba" gd:nowGUID="24a3adcd-c62d-493b-98b5-40ab42679057" element-eId="DU/2019/477__art_2__pkt_2" funkcja="zastap"><punkt eId="DU/2019/477__art_2__pkt_2" gd:GUID="4289db7e-bb6a-4511-af38-466940a939ab" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1836_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="e5e0cd82-cb77-4c78-a3fe-7c2457f0c9d7" fragment="1" gd:fragmentGUID="7a477170-4d24-4b64-a947-17432663971e" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1836_odczytane.x" wejscie-w-zycie="2025-01-01">producent rolny – osobę fizyczną, osobę prawną albo jednostkę organizacyjną nieposiadającą osobowości prawnej, w której posiadaniu lub współposiadaniu jest gospodarstwo rolne, prowadzącą działalność rolniczą określoną w art. 4 ust. 2 rozporządzenia Parlamentu Europejskiego i Rady (UE) 2021/2115 z dnia 2 grudnia 2021 r. ustanawiającego przepisy dotyczące wsparcia planów strategicznych sporządzanych przez państwa członkowskie w ramach wspólnej polityki rolnej (planów strategicznych WPR) i finansowanych z Europejskiego Funduszu Rolniczego Gwarancji (EFRG) i z Europejskiego Funduszu Rolnego na rzecz Rozwoju Obszarów Wiejskich (EFRROW) oraz uchylającego rozporządzenia (UE) nr 1305/2013 i (UE) nr 1307/2013 (Dz. Urz. UE L 435 z 06.12.2021, str. 1, z późn. zm.<odnosnik id-odnosnika="1" symbol="1" gd:GUID="ee8f6929-270f-4a75-8cf2-7e5c9cd1cb26"><p><zdanie nr="1" gd:zdGUID="a6b86574-f0ab-48d0-937e-d7096553bb7e" fragment="1" gd:fragmentGUID="f34c1daa-c204-4ace-a354-36e60d7ca781">Zmiany wymienionego rozporządzenia zostały ogłoszone w Dz. Urz. UE L 119 z 21.04.2022, str. 1, Dz. Urz. UE L 181 z 07.07.2022, str. 35, Dz. Urz. UE L 227 z 01.09.2022, str. 136, Dz. Urz. UE L 102 z 17.04.2023, str. 1, Dz. Urz. UE L 148 z 08.06.2023, str. 130, Dz. Urz. UE L 2024/946 z 26.03.2024 oraz Dz. Urz. UE L 2024/1468 z 24.05.2024.</zdanie></p></odnosnik>).</zdanie></p></punkt></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2024/1836__art_1__pkt_2" gd:GUID="4accb7ff-0eb4-4d0a-a1f7-63ae1fe92a3a" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1836_odczytane.x" wejscie-w-zycie="2025-01-01">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="8828ff6e-9aa9-4a54-b24a-88487f17283e" fragment="3" gd:fragmentGUID="247fb989-8bf5-4888-b172-5339b9744824" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1836_odczytane.x" wejscie-w-zycie="2025-01-01">w art. 3:</zdanie>
+          </p>
+          <litera eId="DU/2024/1836__art_1__pkt_2__lit_a" gd:GUID="c94104a6-c5b2-48ec-8fd1-555faf8a00cd" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1836_odczytane.x" wejscie-w-zycie="2025-01-01">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="8828ff6e-9aa9-4a54-b24a-88487f17283e" fragment="4" gd:fragmentGUID="6b317778-4b15-4039-b928-4467e4c46632" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1836_odczytane.x" wejscie-w-zycie="2025-01-01">w ust. 1 pkt 1 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2019/477" cudzyslowy="oba" gd:nowGUID="62d44d1c-07fe-46b3-82b6-7f17883b95af" element-eId="DU/2019/477__art_3__ust_1__pkt_1" funkcja="zastap"><punkt eId="DU/2019/477__art_3__ust_1__pkt_1" gd:GUID="3e199552-7cdd-45aa-b373-60d79e7904e1" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1836_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="1cbd7875-824c-43ea-96ea-1bf3946dbfc1" fragment="1" gd:fragmentGUID="08943033-94ef-4525-b724-d58a7a81d329" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1836_odczytane.x" wejscie-w-zycie="2025-01-01">upraw zbóż, w tym gryki i kukurydzy, upraw rzepaku, rzepiku, słonecznika, facelii, gorczycy, lnu, konopi włóknistych, chmielu, tytoniu, warzyw gruntowych, drzew i krzewów owocowych, truskawek, ziemniaków, buraków cukrowych, bobowatych grubonasiennych (roślin strączkowych), w tym soi, upraw bobowatych drobnonasiennych lub roślin zielarskich, od zasiewu lub wysadzenia do ich zbioru, od ryzyka wystąpienia szkód spowodowanych przez huragan, powódź, deszcz nawalny, grad, piorun, obsunięcie się ziemi, lawinę, suszę, ujemne skutki przezimowania oraz przymrozki wiosenne lub</zdanie></p></punkt></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2024/1836__art_1__pkt_2__lit_b" gd:GUID="3ba73e75-532d-4bc7-a9f8-7463d4b1a257" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1836_odczytane.x" wejscie-w-zycie="2025-01-01">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="8828ff6e-9aa9-4a54-b24a-88487f17283e" fragment="5" gd:fragmentGUID="446b56fb-ed2b-45b3-b13e-a5f22a3d0c98" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1836_odczytane.x" wejscie-w-zycie="2025-01-01"><now:zamien-tekst stary-tekst="od dnia 15 kwietnia" nowy-tekst="od dnia 1 kwietnia" element-eId="DU/2019/477__art_3__ust_2__pkt_11a" akt="https://eli.gov.pl/eli/DU/2019/477" gd:nowGUID="40a131ab-7970-4ae0-a5a5-2ea366096f28" />w ust. 2 w pkt 11a wyrazy „od dnia 15 kwietnia” zastępuje się wyrazami „od dnia 1 kwietnia”,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2024/1836__art_1__pkt_2__lit_c" gd:GUID="ac83c7e2-29fd-4f57-9b8a-5512bcd04350" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1836_odczytane.x" wejscie-w-zycie="2025-01-01">
+            <nr>c</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="8828ff6e-9aa9-4a54-b24a-88487f17283e" fragment="6" gd:fragmentGUID="a87101ff-37d4-4ad9-a023-57a1a24a2aec" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1836_odczytane.x" wejscie-w-zycie="2025-01-01">w ust. 3:</zdanie>
+            </p>
+            <tiret eId="DU/2024/1836__art_1__pkt_2__lit_c__tir_1" gd:GUID="abf5cfa8-94ee-4456-b943-f7c949983759" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1836_odczytane.x" wejscie-w-zycie="2025-01-01">
+              <p>
+                <zdanie nr="1" gd:zdGUID="8828ff6e-9aa9-4a54-b24a-88487f17283e" fragment="7" gd:fragmentGUID="c1e61bf2-76e2-4760-9610-ddae16556f36" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1836_odczytane.x" wejscie-w-zycie="2025-01-01">pkt 3 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2019/477" cudzyslowy="oba" gd:nowGUID="ec57bc06-4ea3-4e9c-acf3-be7af93d5f9e" element-eId="DU/2019/477__art_3__ust_3__pkt_3" funkcja="zastap"><punkt eId="DU/2019/477__art_3__ust_3__pkt_3" gd:GUID="c3364a8f-9a7b-429a-a179-a141286c6aa6" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1836_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>3</nr><p><zdanie nr="1" gd:zdGUID="26697af6-e929-4819-ad8a-89c0cea06ed3" fragment="1" gd:fragmentGUID="3b768318-3f90-4726-91c9-57ae35593585" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1836_odczytane.x" wejscie-w-zycie="2025-01-01">zbóż, w tym gryki i kukurydzy przeznaczonej na ziarno, oraz rzepaku, rzepiku, słonecznika, facelii, gorczycy, lnu i konopi włóknistych – ziarna lub nasiona;</zdanie></p></punkt></cytat-strukt>,</zdanie>
+              </p>
+            </tiret>
+            <tiret eId="DU/2024/1836__art_1__pkt_2__lit_c__tir_2" gd:GUID="742af5ec-e9c4-4faa-877e-3029420f5cb8" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1836_odczytane.x" wejscie-w-zycie="2025-01-01">
+              <p>
+                <zdanie nr="1" gd:zdGUID="8828ff6e-9aa9-4a54-b24a-88487f17283e" fragment="8" gd:fragmentGUID="35a8bb3c-cd10-4e36-86b9-304a30305613" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1836_odczytane.x" wejscie-w-zycie="2025-01-01">pkt 9 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2019/477" cudzyslowy="oba" gd:nowGUID="0813aa1c-b1cd-4eb7-9ffd-cecd583b09b5" element-eId="DU/2019/477__art_3__ust_3__pkt_9" funkcja="zastap"><punkt eId="DU/2019/477__art_3__ust_3__pkt_9" gd:GUID="ff9d38ad-6eab-4a85-b780-392c641e8475" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1836_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>9</nr><p><zdanie nr="1" gd:zdGUID="0e716831-20ad-4821-9476-aaa14ae755b6" fragment="1" gd:fragmentGUID="481d32d0-bb5a-4cb1-91c1-a8c6b21f93a9" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1836_odczytane.x" wejscie-w-zycie="2025-01-01">bobowatych grubonasiennych (roślin strączkowych), w tym soi, oraz bobowatych drobnonasiennych – nasiona;</zdanie></p></punkt></cytat-strukt>,</zdanie>
+              </p>
+            </tiret>
+            <tiret eId="DU/2024/1836__art_1__pkt_2__lit_c__tir_3" gd:GUID="314f698f-131a-4cb9-ae84-e3b99fd92700" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1836_odczytane.x" wejscie-w-zycie="2025-01-01">
+              <p>
+                <zdanie nr="1" gd:zdGUID="8828ff6e-9aa9-4a54-b24a-88487f17283e" fragment="9" gd:fragmentGUID="e013b687-0c2e-473e-8ab5-1241e1872e2b" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1836_odczytane.x" wejscie-w-zycie="2025-01-01">dodaje się pkt 10 w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2019/477" cudzyslowy="oba" gd:nowGUID="4f398775-28ca-4a21-abb4-125b0171acff" element-eId="DU/2019/477__art_3__ust_3" funkcja="dodaj-w"><punkt eId="DU/2019/477__art_3__ust_3__pkt_10" gd:GUID="da034c68-28d7-4356-98d5-325e93282067" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1836_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>10</nr><p><zdanie nr="1" gd:zdGUID="716ff72a-874a-47db-96f3-9e1e4a965806" fragment="1" gd:fragmentGUID="21319eda-1c1c-4415-9a0b-40d990bc10c9" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1836_odczytane.x" wejscie-w-zycie="2025-01-01">roślin zielarskich – części użytkowane gospodarczo.</zdanie></p></punkt></cytat-strukt>;</zdanie>
+              </p>
+            </tiret>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2024/1836__art_1__pkt_3" gd:GUID="c623fe9b-b784-4d4d-8c77-cbc8daae3a83" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1836_odczytane.x" wejscie-w-zycie="2025-01-01">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="8828ff6e-9aa9-4a54-b24a-88487f17283e" fragment="10" gd:fragmentGUID="7acc7494-4b04-490d-ae9d-b1b01dfb581d" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1836_odczytane.x" wejscie-w-zycie="2025-01-01">w art. 5:</zdanie>
+          </p>
+          <litera eId="DU/2024/1836__art_1__pkt_3__lit_a" gd:GUID="67391313-6e31-488d-b5a6-fb681b59cbeb" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1836_odczytane.x" wejscie-w-zycie="2025-01-01">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="8828ff6e-9aa9-4a54-b24a-88487f17283e" fragment="11" gd:fragmentGUID="dd7b93ed-9f46-4060-9df9-76ff51eaa30b" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1836_odczytane.x" wejscie-w-zycie="2025-01-01">w ust. 2:</zdanie>
+            </p>
+            <tiret eId="DU/2024/1836__art_1__pkt_3__lit_a__tir_1" gd:GUID="9bfea67b-54dd-423c-a5ff-b4c20ad20d09" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1836_odczytane.x" wejscie-w-zycie="2025-01-01">
+              <p>
+                <zdanie nr="1" gd:zdGUID="8828ff6e-9aa9-4a54-b24a-88487f17283e" fragment="12" gd:fragmentGUID="e81dacdf-3ef0-4fd5-af0d-b8567837db39" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1836_odczytane.x" wejscie-w-zycie="2025-01-01">w pkt 1 wprowadzenie do wyliczenia otrzymuje brzmienie:<cytat-w-tekscie now:akt="https://eli.gov.pl/eli/DU/2019/477" cudzyslowy="oba" gd:nowGUID="f8b703d0-c563-423d-9ee4-15143f90d20e" element-eId="DU/2019/477__art_5__ust_2__pkt_1" funkcja="zastap-tekst"><zdanie nr="1" gd:zdGUID="831b79c0-220e-489d-8e9d-b7518567bfcb" fragment="1" gd:fragmentGUID="a595831f-adf8-4417-bc67-6f1b69894233" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1836_odczytane.x" wejscie-w-zycie="2025-01-01">do 65 % składki z tytułu ubezpieczenia upraw zbóż, w tym gryki i kukurydzy, upraw rzepaku, rzepiku, słonecznika, facelii, gorczycy, lnu, konopi włóknistych, chmielu, tytoniu, warzyw gruntowych, ziemniaków, buraków cukrowych, bobowatych grubonasiennych (roślin strączkowych), w tym soi, upraw bobowatych drobnonasiennych lub roślin zielarskich, jeżeli określone przez zakłady ubezpieczeń stawki taryfowe ubezpieczenia od ubezpieczenia upraw od wszystkich rodzajów ryzyka, o których mowa w art. 3 ust. 1 pkt 1, nie przekraczają 9 % sumy ubezpieczenia, a w przypadku:</zdanie></cytat-w-tekscie>,</zdanie>
+              </p>
+            </tiret>
+            <tiret eId="DU/2024/1836__art_1__pkt_3__lit_a__tir_2" gd:GUID="6cd7b535-e274-484a-8dbe-aa0fd7f55a93" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1836_odczytane.x" wejscie-w-zycie="2025-01-01">
+              <p>
+                <zdanie nr="1" gd:zdGUID="8828ff6e-9aa9-4a54-b24a-88487f17283e" fragment="13" gd:fragmentGUID="12ad88c8-d992-4d77-8335-5970cbaa360e" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1836_odczytane.x" wejscie-w-zycie="2025-01-01">po pkt 1 dodaje się pkt 1a w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2019/477" cudzyslowy="oba" gd:nowGUID="4fedeb34-dba1-4fc7-b799-34ffc141fdf0" element-eId="DU/2019/477__art_5__ust_2__pkt_1" funkcja="dodaj-po"><punkt eId="DU/2019/477__art_5__ust_2__pkt_1a" gd:GUID="92fd24be-9856-43c6-8472-1f009c9a1621" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1836_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>1a</nr><p><zdanie nr="1" gd:zdGUID="1532e535-45c8-4b94-b6fb-48c80ed6c632" fragment="1" gd:fragmentGUID="09594061-ecb4-4059-9ac3-bb6eeb882104" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1836_odczytane.x" wejscie-w-zycie="2025-01-01">do 65 % składki z tytułu ubezpieczenia upraw drzew i krzewów owocowych oraz truskawek, jeżeli określone przez zakłady ubezpieczeń stawki taryfowe ubezpieczenia od ubezpieczenia upraw od wszystkich rodzajów ryzyka, o których mowa w art. 3 ust. 1 pkt 1, nie przekraczają 20 % sumy ubezpieczenia, a w przypadku:</zdanie></p><litera eId="DU/2019/477__art_5__ust_2__pkt_1a__lit_a" gd:GUID="6c618355-d007-496c-8740-023552a3f94f" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1836_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>a</nr><p><zdanie nr="1" gd:zdGUID="1532e535-45c8-4b94-b6fb-48c80ed6c632" fragment="2" gd:fragmentGUID="dced83c2-b450-47b9-ab04-7f09cb793022" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1836_odczytane.x" wejscie-w-zycie="2025-01-01">upraw prowadzonych na użytkach rolnych klasy V – nie przekraczają 22 % sumy ubezpieczenia tych upraw,</zdanie></p></litera><litera eId="DU/2019/477__art_5__ust_2__pkt_1a__lit_b" gd:GUID="5d428227-809f-431d-b200-91fe52dd2326" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1836_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>b</nr><p><zdanie nr="1" gd:zdGUID="1532e535-45c8-4b94-b6fb-48c80ed6c632" fragment="3" gd:fragmentGUID="24fd8a66-d9ac-4242-b579-b9d423347b40" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1836_odczytane.x" wejscie-w-zycie="2025-01-01">upraw prowadzonych na użytkach rolnych klasy VI – nie przekraczają 25 % sumy ubezpieczenia tych upraw;</zdanie></p></litera></punkt></cytat-strukt>,</zdanie>
+              </p>
+            </tiret>
+          </litera>
+          <litera eId="DU/2024/1836__art_1__pkt_3__lit_b" gd:GUID="d5e4e3aa-3b24-4079-bac7-dda0a448d424" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1836_odczytane.x" wejscie-w-zycie="2025-01-01">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="8828ff6e-9aa9-4a54-b24a-88487f17283e" fragment="14" gd:fragmentGUID="fd4ff6b4-f366-4d68-9eb3-17adfb56faea" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1836_odczytane.x" wejscie-w-zycie="2025-01-01">w ust. 5 pkt 1a otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2019/477" cudzyslowy="oba" gd:nowGUID="6f518b72-7e85-4a4b-ab8f-3de8ca5432d6" element-eId="DU/2019/477__art_5__ust_5__pkt_1a" funkcja="zastap"><punkt eId="DU/2019/477__art_5__ust_5__pkt_1a" gd:GUID="4acd68c9-2d13-479b-9806-8f7ac95936dd" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1836_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>1a</nr><p><zdanie nr="1" gd:zdGUID="ab29cffd-92fb-47a4-a119-6770136a10ec" fragment="1" gd:fragmentGUID="d179bd1c-4c77-45bc-b25f-8a85db9f410c" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1836_odczytane.x" wejscie-w-zycie="2025-01-01">odpowiednio 20 %, 22 % i 25 % sumy ubezpieczenia upraw drzew i krzewów owocowych oraz truskawek, od ubezpieczenia tych upraw od wszystkich rodzajów ryzyka, o których mowa w art. 3 ust. 1 pkt 1, dopłaty przysługują w wysokości określonej w ust. 2 pkt 1a;</zdanie></p></punkt></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2024/1836__art_1__pkt_3__lit_c" gd:GUID="cf5b5ff8-4e29-4c83-bf1c-6cfc0d3fac81" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1836_odczytane.x" wejscie-w-zycie="2025-01-01">
+            <nr>c</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="8828ff6e-9aa9-4a54-b24a-88487f17283e" fragment="15" gd:fragmentGUID="6080730f-d2d2-46d3-9ce8-18d7ade31c85" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1836_odczytane.x" wejscie-w-zycie="2025-01-01">ust. 7b otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2019/477" cudzyslowy="oba" gd:nowGUID="442fb09a-848e-4eb0-9870-e987a3f8f135" element-eId="DU/2019/477__art_5__ust_7b" funkcja="zastap"><ustep eId="DU/2019/477__art_5__ust_7b" gd:GUID="3f39d618-4835-4382-b41c-9a2aa28f88b0" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1836_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>7b</nr><p><zdanie nr="1" gd:zdGUID="e36f53f0-658f-446d-a35c-a719ee77d2ab" fragment="1" gd:fragmentGUID="f9f79002-3ded-41bf-b9d5-511ae9488ab7" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1836_odczytane.x" wejscie-w-zycie="2025-01-01">Jeżeli określone przez zakłady ubezpieczeń stawki taryfowe ubezpieczenia upraw drzew i krzewów owocowych oraz truskawek przekroczą stawki taryfowe ubezpieczenia określone w ust. 2 pkt 1a, dopłaty przysługują w wysokości określonej w ust. 2 pkt 1a.</zdanie></p></ustep></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2024/1836__art_1__pkt_3__lit_d" gd:GUID="32305e41-3aed-4ec8-b909-63da2ae18a17" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1836_odczytane.x" wejscie-w-zycie="2025-01-01">
+            <nr>d</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="8828ff6e-9aa9-4a54-b24a-88487f17283e" fragment="16" gd:fragmentGUID="63f2e650-155f-4e42-bfdc-3c35297661b5" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1836_odczytane.x" wejscie-w-zycie="2025-01-01">po ust. 7b dodaje się ust. 7c w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2019/477" cudzyslowy="oba" gd:nowGUID="a689f85c-5344-483c-a379-0d96583896ba" element-eId="DU/2019/477__art_5__ust_7b" funkcja="dodaj-po"><ustep eId="DU/2019/477__art_5__ust_7c" gd:GUID="ee63bc87-fdc3-407d-ab9b-f86e8d78301e" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1836_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>7c</nr><p><zdanie nr="1" gd:zdGUID="bdf5f22a-a84d-4a2d-ad78-128dd2f33f11" fragment="1" gd:fragmentGUID="15be522d-e1a9-4e1a-a8e0-351ba6057729" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1836_odczytane.x" wejscie-w-zycie="2025-01-01">W przypadku umów ubezpieczenia upraw drzew i krzewów owocowych oraz truskawek zawieranych za pośrednictwem dystrybutora ubezpieczeń w rozumieniu art. 3 ust. 1 pkt 8 ustawy z dnia 15 grudnia 2017 r. o dystrybucji ubezpieczeń (Dz. U. z 2024 r. poz. 1214) innego niż zakład ubezpieczeń dopłaty przysługują w wysokości określonej w ust. 2 pkt 1a, jeżeli wynagrodzenie tego dystrybutora ubezpieczeń wynosi nie więcej niż 3 % składki z tytułu ubezpieczenia tych upraw, a jeżeli to wynagrodzenie wynosi więcej niż 3 % składki z tytułu ubezpieczenia tych upraw – wysokość dopłaty jest pomniejszana o różnicę między wysokością tego wynagrodzenia a równowartością 3 % tej składki.</zdanie></p></ustep></cytat-strukt>;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2024/1836__art_1__pkt_4" gd:GUID="545afd89-2401-41e3-905a-cfe4f3f33ca7" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1836_odczytane.x" wejscie-w-zycie="2025-01-01">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="8828ff6e-9aa9-4a54-b24a-88487f17283e" fragment="17" gd:fragmentGUID="3a973d0c-d1d8-43ed-ba17-a3b460a400d4" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1836_odczytane.x" wejscie-w-zycie="2025-01-01">w art. 6 ust. 3 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2019/477" cudzyslowy="oba" gd:nowGUID="b30e8dc2-0e28-4215-801b-34558376ef61" element-eId="DU/2019/477__art_6__ust_3" funkcja="zastap"><ustep eId="DU/2019/477__art_6__ust_3" gd:GUID="4426d03f-1200-417f-bd85-437690aeb8f7" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1836_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>3</nr><p><zdanie nr="1" gd:zdGUID="61ee6c41-f354-4b31-b623-9fdda5612f43" fragment="1" gd:fragmentGUID="6495aa02-31c2-48c3-a355-3c959bbbf17a" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1836_odczytane.x" wejscie-w-zycie="2025-01-01">Odszkodowanie za szkody, o których mowa w ust. 2:</zdanie></p><punkt eId="DU/2019/477__art_6__ust_3__pkt_1" gd:GUID="58c9e1b5-0837-49cd-9140-230bb4fd6863" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1836_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="61ee6c41-f354-4b31-b623-9fdda5612f43" fragment="2" gd:fragmentGUID="aa38a132-5fd5-4305-9f46-95973ece9f65" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1836_odczytane.x" wejscie-w-zycie="2025-01-01">pkt 1 – może być pomniejszone nie więcej niż o:</zdanie></p><litera eId="DU/2019/477__art_6__ust_3__pkt_1__lit_a" gd:GUID="f44dac36-61e6-4946-8256-1fcfee0f814d" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1836_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>a</nr><p><zdanie nr="1" gd:zdGUID="61ee6c41-f354-4b31-b623-9fdda5612f43" fragment="3" gd:fragmentGUID="d2813dbe-b8f7-4154-a3ec-bee6daeaf46f" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1836_odczytane.x" wejscie-w-zycie="2025-01-01">35 % sumy ubezpieczenia – w odniesieniu do upraw drzew i krzewów owocowych oraz truskawek,</zdanie></p></litera><litera eId="DU/2019/477__art_6__ust_3__pkt_1__lit_b" gd:GUID="506e1251-9f1b-4493-b9af-14e0aa46f8cf" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1836_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>b</nr><p><zdanie nr="1" gd:zdGUID="61ee6c41-f354-4b31-b623-9fdda5612f43" fragment="4" gd:fragmentGUID="99ce193c-7b88-4585-96a0-56793f64e1cc" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1836_odczytane.x" wejscie-w-zycie="2025-01-01">10 % wartości tych szkód – w odniesieniu do upraw zbóż, w tym gryki i kukurydzy, upraw rzepaku, rzepiku, słonecznika, facelii, gorczycy, lnu, konopi włóknistych, chmielu, tytoniu, warzyw gruntowych, ziemniaków, buraków cukrowych, bobowatych grubonasiennych (roślin strączkowych), w tym soi, upraw bobowatych drobnonasiennych lub roślin zielarskich;</zdanie></p></litera></punkt><punkt eId="DU/2019/477__art_6__ust_3__pkt_2" gd:GUID="a9b08ede-0515-463a-8dd1-5d78ab6b65ad" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1836_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="61ee6c41-f354-4b31-b623-9fdda5612f43" fragment="5" gd:fragmentGUID="4a01441a-f7d2-46dc-962f-f1869bd4c6c2" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1836_odczytane.x" wejscie-w-zycie="2025-01-01">pkt 2 – może być pomniejszone o 20 %, 25 % albo 30 % sumy ubezpieczenia, w zależności od wysokości pomniejszenia wskazanej w umowie ubezpieczenia.</zdanie></p></punkt></ustep></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2024/1836__art_1__pkt_5" gd:GUID="39fc9dd2-aae5-4f1f-aff3-799320756b2b" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1836_odczytane.x" wejscie-w-zycie="2025-01-01">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="8828ff6e-9aa9-4a54-b24a-88487f17283e" fragment="18" gd:fragmentGUID="b8c3c446-5c32-4f21-bce3-3b0d44ce9276" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1836_odczytane.x" wejscie-w-zycie="2025-01-01">w art. 10c ust. 1 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2019/477" cudzyslowy="oba" gd:nowGUID="d33f65fd-d4e6-4227-8114-2af40f10153f" element-eId="DU/2019/477__art_10c__ust_1" funkcja="zastap"><ustep eId="DU/2019/477__art_10c__ust_1" gd:GUID="3be16a8e-dd40-41fa-b52f-a18db941e46c" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1836_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="b7da8eee-bc49-4d30-a405-f01269e99ef0" fragment="1" gd:fragmentGUID="b836fddf-5078-4187-9537-732bb3824483" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1836_odczytane.x" wejscie-w-zycie="2025-01-01">Rolnik w rozumieniu art. 3 pkt 1 rozporządzenia Parlamentu Europejskiego i Rady (UE) 2021/2115 z dnia 2 grudnia 2021 r. ustanawiającego przepisy dotyczące wsparcia planów strategicznych sporządzanych przez państwa członkowskie w ramach wspólnej polityki rolnej (planów strategicznych WPR) i finansowanych z Europejskiego Funduszu Rolniczego Gwarancji (EFRG) i z Europejskiego Funduszu Rolnego na rzecz Rozwoju Obszarów Wiejskich (EFRROW) oraz uchylającego rozporządzenia (UE) nr 1305/2013 i (UE) nr 1307/2013, zwany dalej „rolnikiem”, który uzyskał płatności bezpośrednie, o których mowa w przepisach o Planie Strategicznym dla Wspólnej Polityki Rolnej na lata 2023–2027, jest obowiązany zawrzeć umowę ubezpieczenia obowiązkowego upraw, o których mowa w art. 3 ust. 1 pkt 1, od ryzyka wystąpienia szkód spowodowanych przez powódź, suszę, grad, ujemne skutki przezimowania lub przymrozki wiosenne.</zdanie></p></ustep></cytat-strukt>.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2024/1836__art_2" gd:GUID="d67345d7-3bd7-439d-949e-29f3ab4edd4f" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1836_odczytane.x" wejscie-w-zycie="2025-01-01">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="4fe3ca04-0862-4c89-960f-bbab006a111a" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1836_odczytane.x" wejscie-w-zycie="2025-01-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="9ab43178-0338-4fb7-a4f4-06817be4898f" fragment="1" gd:fragmentGUID="a4737ef1-e72f-470d-bb96-36e376051a66" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1836_odczytane.x" wejscie-w-zycie="2025-01-01">Zakłady ubezpieczeń, z którymi minister właściwy do spraw rolnictwa zawarł na 2025 r. umowy w sprawie dopłat, o których mowa w art. 9 ust. 1 ustawy zmienianej w art. 1, przedstawią ministrowi właściwemu do spraw rolnictwa zaktualizowane oferty z warunkami ubezpieczenia upraw i zwierząt w zakresie, o którym mowa w art. 9 ust. 4 pkt 4–7 i 10 ustawy zmienianej w art. 1, w odniesieniu do upraw słonecznika, facelii, gorczycy, lnu, konopi włóknistych, bobowatych drobnonasiennych lub roślin zielarskich, w terminie 60 dni od dnia wejścia w życie niniejszej ustawy, w przypadku gdy będą zawierać z producentami rolnymi umowy ubezpieczenia tych upraw.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2024/1836__art_3" gd:GUID="eb4550b5-0e38-485c-be41-0fe1d465f73d" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1836_odczytane.x" wejscie-w-zycie="2025-01-01">
+      <nr>3</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="090bd857-6c94-46dd-8f42-a3db10033a77" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1836_odczytane.x" wejscie-w-zycie="2025-01-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="20753369-a3a7-4ed3-83ed-de91f242d6bf" fragment="1" gd:fragmentGUID="afcbb6a9-5bf9-4156-9e93-0de62f662818" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1836_odczytane.x" wejscie-w-zycie="2025-01-01">W terminie do dnia 15 lutego 2025 r. minister właściwy do spraw rolnictwa określi, w drodze rozporządzenia, maksymalne sumy ubezpieczenia na rok 2025 dla upraw słonecznika, facelii, gorczycy, lnu, konopi włóknistych, bobowatych drobnonasiennych i roślin zielarskich, mając na uwadze zapewnienie odpowiedniego poziomu ochrony ubezpieczeniowej producentów rolnych, a także uwzględniając możliwości budżetu państwa.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2024/1836__art_4" gd:GUID="d4df1bed-45b6-4992-af0d-ac358146adee" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1836_odczytane.x" wejscie-w-zycie="2025-01-01">
+      <nr>4</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="c2487d11-2289-4842-b536-ee31f8aabf32" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1836_odczytane.x" wejscie-w-zycie="2025-01-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="ed5a7d17-f5b6-4f9b-86b1-afb4ba5a206b" fragment="1" gd:fragmentGUID="926b7b36-0d05-4f12-8280-5c2d1f6e3029" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1836_odczytane.x" wejscie-w-zycie="2025-01-01">Dotychczasowe przepisy wykonawcze wydane na podstawie art. 5 ust. 9 ustawy zmienianej w art. 1 zachowują moc do dnia wejścia w życie nowych przepisów wykonawczych wydanych na podstawie art. 5 ust. 9 ustawy zmienianej w art. 1.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2024/1836__art_5" gd:GUID="ae68564a-b1d4-4b5f-b8d8-e29bff98d6a0" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1836_odczytane.x" wejscie-w-zycie="2025-01-01">
+      <nr>5</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="3df85dd1-424b-4431-b6ed-d17e5e80e72b" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1836_odczytane.x" wejscie-w-zycie="2025-01-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="54d35dc5-40db-4add-b73e-0309ea0c7bba" fragment="1" gd:fragmentGUID="abc8dd06-3509-4212-b6d8-20ec4414ca22" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1836_odczytane.x" wejscie-w-zycie="2025-01-01">W 2025 r. dopłata do składki z tytułu ubezpieczenia upraw słonecznika, facelii, gorczycy, lnu, konopi włóknistych, bobowatych drobnonasiennych i roślin zielarskich wynosi 65 % składki do 1 ha uprawy.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2024/1836__art_6" gd:GUID="1704691a-a858-4223-a5db-8141709bd779" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1836_odczytane.x" wejscie-w-zycie="2025-01-01">
+      <nr>6</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="da3222c8-b561-440e-a63e-bfdd9466334f" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1836_odczytane.x" wejscie-w-zycie="2025-01-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="5b9e10ef-e1c0-4860-bb1a-664dc0ed657e" fragment="1" gd:fragmentGUID="d2c6af79-6c55-479f-9cd2-a25aec8497dd" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1836_odczytane.x" wejscie-w-zycie="2025-01-01">Przepisy art. 3 ust. 1 pkt 1 i ust. 3 pkt 3 i 9, art. 5 ust. 2 pkt 1 i ust. 5 pkt 1a oraz art. 6 ust. 3 ustawy zmienianej w art. 1 w brzmieniu nadanym niniejszą ustawą oraz przepisy art. 3 ust. 3 pkt 10 i art. 5 ust. 2 pkt 1a ustawy zmienianej w art. 1 stosuje się od dnia ogłoszenia pozytywnej decyzji Komisji Europejskiej o zgodności ze wspólnym rynkiem zmiany programu pomocy dotyczącego dopłat do składek z tytułu ubezpieczenia upraw rolnych i zwierząt gospodarskich oraz częściowego dofinansowania odszkodowań wypłacanych producentom rolnym w związku z suszą (reasekuracja).</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2024/1836__art_7" gd:GUID="34335760-567d-4e34-ae9c-71a8de11413a" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1836_odczytane.x" wejscie-w-zycie="2025-01-01">
+      <nr>7</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="10dc472d-0d47-49ed-b3fc-d4b9bc0eb2cd" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1836_odczytane.x" wejscie-w-zycie="2025-01-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="964c7b47-bf97-4533-9330-32f42afd761b" fragment="1" gd:fragmentGUID="7ade174f-5653-48ac-9bd8-752ddbffd145" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1836_odczytane.x" wejscie-w-zycie="2025-01-01">Ustawa wchodzi w życie z dniem 1 stycznia 2025 r.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <organ-podpisujacy>Prezydent Rzeczypospolitej Polskiej: <i><osoba podpisujacy="true" gd:osobaGUID="d4b42cd0-2da3-4b34-8a19-bf5c21724afa"><imie>A.</imie> <nazwisko>Duda</nazwisko></osoba></i></organ-podpisujacy>
+  </ustawa>
+</akt-prawny>

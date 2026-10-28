@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <rozporzadzenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2026/49</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>0fc68831-1df3-4c73-a6ba-b912c669d85b</gd:GUIDwersji>
+      <AdresISAP>WDU20260000049</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2026</Rok>
+      <Pozycja>49</Pozycja>
+      <AdresWyswietlany>Dz.U. 2026 poz. 49</AdresWyswietlany>
+      <Tytul>Rozporządzenie Ministra Sprawiedliwości z dnia 13 stycznia 2026 r. zmieniające rozporządzenie w sprawie odbywania aplikacji sędziowskiej i aplikacji prokuratorskiej</Tytul>
+      <Rodzaj>ROZP</Rodzaj>
+      <DataOgloszenia>2026-01-16</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2026-01-13</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2026-01-17_DU-2026-49_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2026-01-17" warunek="z dniem następującym po dniu ogłoszenia" podstawa="§ 3" zrodlo="https://eli.gov.pl/eli/DU/2026/49" dowod="DU/2026/49__art_3" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2026-01-17_DU-2026-49_domyslne.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2026-01-17_DU-2026-49_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="efd40ace-49ed-4732-90b9-f964d14dad0d" rola="wydajacy">
+          <Nazwa>Minister Sprawiedliwości</Nazwa>
+          <OrganPodpisujacy>Minister Sprawiedliwości</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>W.</imie> <nazwisko>Żurek</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Rozporządzenie</rodzaj-aktu>
+    <autor-aktu>Ministra Sprawiedliwości</autor-aktu>
+    <data>z dnia 13 stycznia 2026 r.</data>
+    <tytul>zmieniające rozporządzenie w sprawie odbywania aplikacji sędziowskiej i aplikacji prokuratorskiej</tytul>
+    <podstawa-prawna>Na podstawie art. 52 pkt 2 ustawy z dnia 23 stycznia 2009 r. o Krajowej Szkole Sądownictwa i Prokuratury (Dz. U. z 2022 r. poz. 217 i 2695) zarządza się, co następuje:</podstawa-prawna>
+    <paragraf eId="DU/2026/49__art_1" gd:GUID="f4d112e8-3078-4d76-affa-538080e517a3" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-17_DU-2026-49_domyslne.x" wejscie-w-zycie="2026-01-17">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="dca6cdfe-7ad9-44e9-a3a2-9bbe7dc46b74" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-17_DU-2026-49_domyslne.x" wejscie-w-zycie="2026-01-17">
+        <p>
+          <zdanie nr="1" gd:zdGUID="111ead69-c35f-491b-8d17-4ddedabb3d51" fragment="1" gd:fragmentGUID="719c4940-cdd7-46af-9340-0c87ad5c7b87" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-17_DU-2026-49_domyslne.x" wejscie-w-zycie="2026-01-17">W rozporządzeniu Ministra Sprawiedliwości z dnia 5 lutego 2018 r. w sprawie odbywania aplikacji sędziowskiej i aplikacji prokuratorskiej (Dz. U. z 2022 r. poz. 355) w § 5:</zdanie>
+        </p>
+        <punkt eId="DU/2026/49__art_1__pkt_1" gd:GUID="22815fb6-635f-422e-99e2-6e4172bc81e4" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-17_DU-2026-49_domyslne.x" wejscie-w-zycie="2026-01-17">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="111ead69-c35f-491b-8d17-4ddedabb3d51" fragment="2" gd:fragmentGUID="268d64ad-4d3e-445c-bcee-5640f46ca758" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-17_DU-2026-49_domyslne.x" wejscie-w-zycie="2026-01-17">ust. 2 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2022/355" cudzyslowy="oba" gd:nowGUID="8ebed7d6-8cb4-480f-a5e3-c3aa32906b3f" element-eId="DU/2022/355__art_5__ust_2" funkcja="zastap"><ustep eId="DU/2022/355__art_5__ust_2" gd:GUID="39770ac4-7e87-4f32-8745-ebf87a474ea9" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-17_DU-2026-49_domyslne.x" wejscie-w-zycie="2026-01-17"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="b98cf52f-27b7-4497-981e-6b8199916132" fragment="1" gd:fragmentGUID="b404e6c1-c284-4bbc-bcc6-239bba719f8f" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-17_DU-2026-49_domyslne.x" wejscie-w-zycie="2026-01-17">Zajęcia odbywają się w siedzibie Krajowej Szkoły lub w innym miejscu wyznaczonym przez Dyrektora Krajowej Szkoły.</zdanie></p></ustep></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/49__art_1__pkt_2" gd:GUID="200f5e4d-8c68-412c-bd9f-64624b7e57b2" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-17_DU-2026-49_domyslne.x" wejscie-w-zycie="2026-01-17">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="111ead69-c35f-491b-8d17-4ddedabb3d51" fragment="3" gd:fragmentGUID="770f0e5c-1e61-4feb-95f9-11bb3c8dd835" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-17_DU-2026-49_domyslne.x" wejscie-w-zycie="2026-01-17">dodaje się ust. 3–5 w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2022/355" cudzyslowy="oba" gd:nowGUID="bacc0489-d5ad-4af8-92a6-57f33e15bc34" element-eId="DU/2022/355__art_5" funkcja="dodaj-w"><ustep eId="DU/2022/355__art_5__ust_3" gd:GUID="e199ee48-b7c2-4268-baa1-8731075595e6" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-17_DU-2026-49_domyslne.x" wejscie-w-zycie="2026-01-17"><nr>3</nr><p><zdanie nr="1" gd:zdGUID="4904679b-7a79-4936-adb9-63862058c360" fragment="1" gd:fragmentGUID="e5fa116f-e9fb-43c3-b860-f5a7c0b78a1f" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-17_DU-2026-49_domyslne.x" wejscie-w-zycie="2026-01-17">Dyrektor Krajowej Szkoły, kierując się możliwościami organizacyjnymi Krajowej Szkoły, wyznacza aplikantowi miejsce odbywania zajęć, położone możliwie najbliżej miejsca zamieszkania aplikanta.</zdanie></p></ustep><ustep eId="DU/2022/355__art_5__ust_4" gd:GUID="da7957b3-72fc-44d0-ad41-a84da76ff662" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-17_DU-2026-49_domyslne.x" wejscie-w-zycie="2026-01-17"><nr>4</nr><p><zdanie nr="1" gd:zdGUID="9cdab0bb-66bf-4ef3-82b1-00666139cb09" fragment="1" gd:fragmentGUID="4af0d46b-6833-4f07-9e84-0f0e686bde2b" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-17_DU-2026-49_domyslne.x" wejscie-w-zycie="2026-01-17">Pierwszy zjazd aplikantów w pierwszym roku odbywania aplikacji odbywa się w siedzibie Krajowej Szkoły.</zdanie></p></ustep><ustep eId="DU/2022/355__art_5__ust_5" gd:GUID="1904a84b-944b-4c64-9cb3-cc1356216541" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-17_DU-2026-49_domyslne.x" wejscie-w-zycie="2026-01-17"><nr>5</nr><p><zdanie nr="1" gd:zdGUID="ce46670c-c778-406f-8df8-a400f95398b6" fragment="1" gd:fragmentGUID="eb9891d9-c48e-427e-afdf-76ca11540511" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-17_DU-2026-49_domyslne.x" wejscie-w-zycie="2026-01-17">W szczególnie uzasadnionych przypadkach Dyrektor Krajowej Szkoły może uwzględnić wniosek aplikanta co do miejsca odbywania zajęć.</zdanie></p></ustep></cytat-strukt>.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2026/49__art_2" gd:GUID="570de3f5-8144-4947-bb01-cdd2b37c02f5" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-17_DU-2026-49_domyslne.x" wejscie-w-zycie="2026-01-17">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="459bb55a-67ab-4d1e-9195-7e5cc0873fb5" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-17_DU-2026-49_domyslne.x" wejscie-w-zycie="2026-01-17">
+        <p>
+          <zdanie nr="1" gd:zdGUID="caca0ee5-955a-42c8-bf44-e76c205ab3aa" fragment="1" gd:fragmentGUID="cba93564-aa6c-43cd-855d-880e083f8181" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-17_DU-2026-49_domyslne.x" wejscie-w-zycie="2026-01-17">Do aplikantów aplikacji sędziowskiej i aplikacji prokuratorskiej, którzy rozpoczęli odbywanie aplikacji w Krajowej Szkole Sądownictwa i Prokuratury przed dniem wejścia w życie niniejszego rozporządzenia, stosuje się przepisy dotychczasowe.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2026/49__art_3" gd:GUID="c7b6558c-64a2-4d61-8235-3c5433eea4f6" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-17_DU-2026-49_domyslne.x" wejscie-w-zycie="2026-01-17">
+      <nr>3</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="cf288f80-c6b0-45c1-a8f5-b37a3a8c8c0f" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-17_DU-2026-49_domyslne.x" wejscie-w-zycie="2026-01-17">
+        <p>
+          <zdanie nr="1" gd:zdGUID="e12e6f79-ee69-461f-95d6-cdc695f9fdb5" fragment="1" gd:fragmentGUID="44ffb82d-9fea-49f5-a8c4-91abb49bb439" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-17_DU-2026-49_domyslne.x" wejscie-w-zycie="2026-01-17">Rozporządzenie wchodzi w życie z dniem następującym po dniu ogłoszenia.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <organ-podpisujacy>Minister Sprawiedliwości: <i><osoba podpisujacy="true" gd:osobaGUID="f11ec9c7-7ef5-487d-b988-6c145155bd28"><imie>W.</imie> <nazwisko>Żurek</nazwisko></osoba></i></organ-podpisujacy>
+  </rozporzadzenie>
+</akt-prawny>

@@ -1,0 +1,1414 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <obwieszczenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2026/76</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>cc2b0fe9-af27-4732-bc55-76c299b7dd3b</gd:GUIDwersji>
+      <AdresISAP>WDU20260000076</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2026</Rok>
+      <Pozycja>76</Pozycja>
+      <AdresWyswietlany>Dz.U. 2026 poz. 76</AdresWyswietlany>
+      <Tytul>Obwieszczenie Marszałka Sejmu Rzeczypospolitej Polskiej z dnia 21 stycznia 2026 r. w sprawie ogłoszenia jednolitego tekstu ustawy o Karcie Polaka</Tytul>
+      <Rodzaj>OBW_TJ</Rodzaj>
+      <DataOgloszenia>2026-01-23</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2026-01-21</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_ujednolicenie_2026-01-23_DU-2026-76_domyslne" rodzaj="ujednolicenie" pochodzenie="domyslne-z-aktu" data="2026-01-23" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_ujednolicenie.zdarz_ujednolicenie_2026-01-23_DU-2026-76_domyslne" glowna="true">
+          <Przedzial rodzaj="ujednolicenie" od="zdarz_ujednolicenie_2026-01-23_DU-2026-76_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <DataObowiazywaniaWersji>
+        <Od>zdarz_ujednolicenie_2026-01-23_DU-2026-76_domyslne</Od>
+      </DataObowiazywaniaWersji>
+      <Organy>
+        <Organ gd:GUID="4e44cc10-b720-47e4-b0fb-3b2d40889e05" rola="wydajacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/MSEJMU">
+          <Nazwa>Marszałek Sejmu</Nazwa>
+          <OrganPodpisujacy>Marszałek Sejmu</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>W.</imie> <nazwisko>Czarzasty</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Obwieszczenie</rodzaj-aktu>
+    <autor-aktu>Marszałka Sejmu Rzeczypospolitej Polskiej</autor-aktu>
+    <data>z dnia 21 stycznia 2026 r.</data>
+    <tytul>w sprawie ogłoszenia jednolitego tekstu ustawy o Karcie Polaka</tytul>
+    <punkt-OTJ eId="DU/2026/76__pkt_1" gd:GUID="459def13-33dc-4ee3-ae93-7f594906d42e">
+      <nr>1</nr>
+      <p>
+        <zdanie nr="1" gd:zdGUID="fcde3754-e5ee-4ec6-b9ae-9fd51bcb0829" fragment="1" gd:fragmentGUID="cb37f39c-9ff5-4e24-a157-f5b5e267cf73">Na podstawie art. 16 ust. 1 zdanie pierwsze ustawy z dnia 20 lipca 2000 r. o ogłaszaniu aktów normatywnych i niektórych innych aktów prawnych (Dz. U. z 2019 r. poz. 1461) ogłasza się w załączniku do niniejszego obwieszczenia jednolity tekst ustawy z dnia 7 września 2007 r. o Karcie Polaka (Dz. U. z 2023 r. poz. 192), z uwzględnieniem zmiany wprowadzonej ustawą z dnia 20 marca 2025 r. o warunkach dopuszczalności powierzania pracy cudzoziemcom na terytorium Rzeczypospolitej Polskiej (Dz. U. poz. 621) oraz zmian wynikających z przepisów ogłoszonych przed dniem 13 stycznia 2026 r.</zdanie>
+      </p>
+    </punkt-OTJ>
+    <punkt-OTJ eId="DU/2026/76__pkt_2" gd:GUID="446d8739-78ac-4924-b1cb-05cf9cd1771a">
+      <nr>2</nr>
+      <p>
+        <zdanie nr="1" gd:zdGUID="7df7b25a-25a8-4a6d-9097-3c249bbcf206" fragment="1" gd:fragmentGUID="0b32f5a3-943e-4b3a-9658-f9746df885a3">Podany w załączniku do niniejszego obwieszczenia tekst jednolity ustawy nie obejmuje art. 114 ustawy z dnia 20 marca 2025 r. o warunkach dopuszczalności powierzania pracy cudzoziemcom na terytorium Rzeczypospolitej Polskiej (Dz. U. poz. 621), który stanowi:<tresc-strukt cudzyslowy="oba" gd:GUID="fc99a259-4630-4820-82dd-eda194d35861"><artykul eId="DU/2025/621__art_114" gd:GUID="17f18432-7799-40a4-8df8-5f2df7c8a7dd"><nr>114</nr><ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="03f58a09-860e-479f-84cd-01bc4bd87355"><p><zdanie nr="1" gd:zdGUID="1d6266fd-2fc8-49a8-a5b2-9e06c642af94" fragment="1" gd:fragmentGUID="aae77f07-54ed-418c-90fa-b7d81c4db208">Ustawa wchodzi w życie pierwszego dnia miesiąca następującego po upływie 14 dni od dnia ogłoszenia.</zdanie></p></ustep-n></artykul></tresc-strukt>.</zdanie>
+      </p>
+    </punkt-OTJ>
+    <organ-podpisujacy>Marszałek Sejmu: <i><osoba podpisujacy="true" gd:osobaGUID="86cedcbe-3577-4293-ac63-f3c0a7069a9e"><imie>W.</imie> <nazwisko>Czarzasty</nazwisko></osoba></i></organ-podpisujacy>
+    <ustawa>
+      <zalacznik-do>Załącznik do obwieszczenia Marszałka Sejmu Rzeczypospolitej Polskiej z dnia 21 stycznia 2026 r. (Dz. U. poz. 76)</zalacznik-do>
+      <rodzaj-aktu>Ustawa</rodzaj-aktu>
+      <data>z dnia 7 września 2007 r.</data>
+      <tytul>o Karcie Polaka</tytul>
+      <preambula gd:GUID="c2d0ef78-bd42-4260-9690-27da18a1a1f8">
+        <p>
+          <zdanie nr="1" gd:zdGUID="9d566084-a1a0-4862-b29c-34684ddc725e" fragment="1" gd:fragmentGUID="f766a809-a65f-4070-bb19-e9599bbe1287">realizując postanowienia Konstytucji Rzeczypospolitej Polskiej w zakresie udzielania pomocy Polakom zamieszkałym za granicą w zachowaniu ich związków z narodowym dziedzictwem kulturalnym,</zdanie>
+        </p>
+        <p>
+          <zdanie nr="1" gd:zdGUID="9d5ae107-6dc2-4735-b455-73c54ad234b4" fragment="1" gd:fragmentGUID="f160d4d9-2c0b-4b37-9bfa-80186db698ac">wypełniając moralny obowiązek wobec Polaków, którzy na skutek zmiennych losów naszej Ojczyzny utracili obywatelstwo polskie,</zdanie>
+        </p>
+        <p>
+          <zdanie nr="1" gd:zdGUID="3b2f418d-fd02-4451-aee3-fdccb927ba08" fragment="1" gd:fragmentGUID="2dd9128f-2580-472d-a7ad-d78f4436b452">spełniając oczekiwania tych, którzy polskimi obywatelami nigdy wcześniej nie byli, lecz ze względu na swoje poczucie tożsamości narodowej pragną uzyskać potwierdzenie przynależności do Narodu Polskiego,</zdanie>
+        </p>
+        <p>
+          <zdanie nr="1" gd:zdGUID="b5955eb8-7675-44c0-8d4c-030bb8051f68" fragment="1" gd:fragmentGUID="7d4b3dbc-6d97-4432-a960-35fedff2fab2">w celu wzmocnienia więzi łączących Polaków z Macierzą oraz wspierając ich starania o zachowanie języka polskiego oraz kultywowanie tradycji narodowej,</zdanie>
+        </p>
+        <p>
+          <zdanie nr="1" gd:zdGUID="234529fe-3862-400c-9ece-747d982e5e14" fragment="1" gd:fragmentGUID="56a73030-8638-472d-989a-e3c4a7762501">postanawia się, co następuje:</zdanie>
+        </p>
+      </preambula>
+      <rozdzial eId="DU/2026/76__rozdz_1" gd:GUID="d7965254-27b1-4497-be04-f374e532f3a2">
+        <naglowek-rozdzialu>
+          <nr>1</nr>
+          <p>Przepisy ogólne</p>
+        </naglowek-rozdzialu>
+        <oddzial-n brak-eid="jednostka-nieoznaczona" gd:GUID="eb2955e2-4286-4cf1-bca1-eb9f651aa22f">
+          <artykul eId="DU/2026/76__art_1" gd:GUID="03bbf224-cbf8-4004-9cb6-5a6640488dea">
+            <nr>1</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="4b8bdb63-14e1-40f9-a537-c0169cbfe32c">
+              <p>
+                <zdanie nr="1" gd:zdGUID="49e3ae38-0d06-447c-86fc-e04371f23cb7" fragment="1" gd:fragmentGUID="c08843fb-0a6a-4090-bcb1-a98d2423fb5e">Ustawa określa uprawnienia osoby, której przyznano Kartę Polaka, zwanej dalej „posiadaczem Karty Polaka”, zasady przyznawania, utraty ważności i unieważniania Karty Polaka oraz właściwość i tryb postępowania organów w tych sprawach.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2026/76__art_2" gd:GUID="c8d2ea51-b2f0-415d-a2d8-db0a3ad1a77c">
+            <nr>2</nr>
+            <ustep eId="DU/2026/76__art_2__ust_1" gd:GUID="ffedd66f-2d13-46b7-af19-bd8a9f959d9f">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="cd7ea5f5-c3ba-494c-9c7b-1348a8f28e27" fragment="1" gd:fragmentGUID="d0ecf5fb-4af4-4ccf-921b-28e85cd7d03c">Karta Polaka może być przyznana osobie, która deklaruje przynależność do Narodu Polskiego i spełni łącznie następujące warunki:</zdanie>
+              </p>
+              <punkt eId="DU/2026/76__art_2__ust_1__pkt_1" gd:GUID="51ebab57-39d7-4247-9ee7-cb486e9f5a0d">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="cd7ea5f5-c3ba-494c-9c7b-1348a8f28e27" fragment="2" gd:fragmentGUID="1a7eccaf-f01a-4fb0-b933-35931cf53ade">wykaże swój związek z polskością przez przynajmniej podstawową znajomość języka polskiego, który uważa za język ojczysty, oraz znajomość i kultywowanie polskich tradycji i zwyczajów;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/76__art_2__ust_1__pkt_2" gd:GUID="ac8c9b75-2d64-40fd-8a2e-aa84b2b20a7f">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="cd7ea5f5-c3ba-494c-9c7b-1348a8f28e27" fragment="3" gd:fragmentGUID="ba17cfee-78a0-4281-b3ac-686f7302dbfc">w obecności konsula Rzeczypospolitej Polskiej, zwanego dalej „konsulem”, lub w przypadku, o którym mowa w art. 12 ust. 4 – wojewody, albo wyznaczonego przez niego pracownika, złoży pisemną deklarację przynależności do Narodu Polskiego;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/76__art_2__ust_1__pkt_3" gd:GUID="dea8cc84-f6f9-441c-bedd-87c9efb771c8">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="cd7ea5f5-c3ba-494c-9c7b-1348a8f28e27" fragment="4" gd:fragmentGUID="7c45fab0-27f6-4951-a98b-eba5ceb8129a">wykaże, że jest narodowości polskiej lub co najmniej jedno z jej rodziców lub dziadków albo dwoje pradziadków było narodowości polskiej, albo przedstawi zaświadczenie organizacji polskiej lub polonijnej potwierdzające aktywne zaangażowanie w działalność na rzecz języka i kultury polskiej lub polskiej mniejszości narodowej przez okres co najmniej ostatnich trzech lat;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/76__art_2__ust_1__pkt_4" gd:GUID="7f69c007-d5cd-4b42-a31c-6e83f5bb04bb">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="cd7ea5f5-c3ba-494c-9c7b-1348a8f28e27" fragment="5" gd:fragmentGUID="6a5f2923-ded8-462b-a2a9-8e223859919e">złoży oświadczenie, że ona lub jej wstępni nie repatriowali się lub nie zostali repatriowani z terytorium Rzeczypospolitej Polskiej albo Polskiej Rzeczypospolitej Ludowej, na podstawie umów repatriacyjnych zawartych w latach 1944–1957 przez Rzeczpospolitą Polską albo przez Polską Rzeczpospolitą Ludową z Białoruską Socjalistyczną Republiką Radziecką, Ukraińską Socjalistyczną Republiką Radziecką, Litewską Socjalistyczną Republiką Radziecką i Związkiem Socjalistycznych Republik Radzieckich, do jednego z państw będących stroną tych umów.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2026/76__art_2__ust_2" gd:GUID="c3f3f73e-9913-4f27-943b-5c80e4edd501">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="aca6f787-648f-476f-ad06-8bdefbec5f82" fragment="1" gd:fragmentGUID="31e24bfd-950d-4998-a784-ec7eec46c24d">Karta Polaka może być przyznana osobie:</zdanie>
+              </p>
+              <punkt eId="DU/2026/76__art_2__ust_2__pkt_1" gd:GUID="fa717f8a-7d94-4b66-8480-72ce4b407fac">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="aca6f787-648f-476f-ad06-8bdefbec5f82" fragment="2" gd:fragmentGUID="64524070-d7e1-4463-b776-2b49ffec599f">nieposiadającej w dniu złożenia wniosku o wydanie Karty Polaka oraz w dniu przyznania Karty Polaka obywatelstwa polskiego lub</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/76__art_2__ust_2__pkt_2" gd:GUID="1285df26-8113-41ef-b6a2-522a78b20ecb">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="aca6f787-648f-476f-ad06-8bdefbec5f82" fragment="3" gd:fragmentGUID="d0287f65-0e88-46ad-8825-c639483efd34">nieposiadającej zezwolenia na pobyt stały na terytorium Rzeczypospolitej Polskiej, lub</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/76__art_2__ust_2__pkt_3" gd:GUID="61150fc6-9a50-448a-9738-073e7972c640">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="aca6f787-648f-476f-ad06-8bdefbec5f82" fragment="4" gd:fragmentGUID="b345021f-e3a3-48cc-9887-cb6802f6bf64">posiadającej status bezpaństwowca.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2026/76__art_2__ust_3" gd:GUID="119a5c90-e3db-4ef3-8cb0-a7b65d4c585f">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="b9f93522-29fa-424c-ab48-58b3b92afa9d" fragment="1" gd:fragmentGUID="d6919370-b36c-4fff-bfd9-a53f050857bd">Karta Polaka może być także przyznana osobie, której polskie pochodzenie zostało stwierdzone zgodnie z przepisami ustawy z dnia 9 listopada 2000 r. o repatriacji (Dz. U. z 2022 r. poz. 1105 oraz z 2025 r. poz. 620, 921 i 1794), pod warunkiem wykazania się znajomością języka polskiego w stopniu co najmniej podstawowym.</zdanie>
+                <zdanie nr="2" gd:zdGUID="782dfc74-87fd-45cb-8790-7dabc506bec0" fragment="1" gd:fragmentGUID="3c91a5f3-3faf-4bc5-920a-daa930b0b60c">Przepisy art. 13 ust. 7 i 8 stosuje się odpowiednio.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/76__art_2__ust_4" gd:GUID="6d0d4206-99a1-4df0-a2bd-28318b2c2a4d">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="1bd49743-c49d-4ce5-aa41-6b510c1d9d0f" fragment="1" gd:fragmentGUID="141ffb5e-240b-46eb-b49d-acf062f56c7f">(uchylony)</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/76__art_3" gd:GUID="70d63c72-27e0-420c-b6ed-2c8728f1b4f5">
+            <nr>3</nr>
+            <ustep eId="DU/2026/76__art_3__ust_1" gd:GUID="404b39e0-6510-4692-97f7-319fe4861e63">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="21dea1c0-320a-495c-b196-02ec23dc7d27" fragment="1" gd:fragmentGUID="63d1c1c4-efa5-4521-b723-09ffb72e6eb9">Karta Polaka jest dokumentem potwierdzającym przynależność do Narodu Polskiego.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/76__art_3__ust_2" gd:GUID="7d377a98-7a73-4139-9ad2-2907d50a8f38">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ee7d7661-9414-4ac8-867d-2774c287b76e" fragment="1" gd:fragmentGUID="07932511-c064-4b36-b8b1-13bb97b43902">Karta Polaka poświadcza uprawnienia wynikające z niniejszej ustawy.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/76__art_4" gd:GUID="10c3e2fa-e2de-4ca8-aa11-5955699bddcb">
+            <nr>4</nr>
+            <ustep eId="DU/2026/76__art_4__ust_1" gd:GUID="f4c2761d-ecd4-4ff1-8854-24ec5ff0b572">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="dbe49883-afb5-432b-bbc5-e1640e073dc8" fragment="1" gd:fragmentGUID="f94ddd8c-45df-44a0-8b4f-b972818b03cc">Do postępowań w sprawach uregulowanych w ustawie stosuje się przepisy ustawy z dnia 14 czerwca 1960 r. – Kodeks postępowania administracyjnego (Dz. U. z 2025 r. poz. 1691), jeżeli niniejsza ustawa nie stanowi inaczej.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/76__art_4__ust_2" gd:GUID="fff0e53b-d862-4bdd-9ed8-8190bc3c9c96">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="932e06e2-fac5-4bd1-b2fd-9d9ac72ebf39" fragment="1" gd:fragmentGUID="ba6616e9-720a-47fd-a0db-8f20350c562b">Do postępowań w sprawach należących do właściwości konsulów stosuje się przepisy ustawy z dnia 25 czerwca 2015 r. – Prawo konsularne (Dz. U. z 2023 r. poz. 1329 oraz z 2025 r. poz. 1006 i 1171).</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+        </oddzial-n>
+      </rozdzial>
+      <rozdzial eId="DU/2026/76__rozdz_2" gd:GUID="3d3f0450-6332-4b31-b554-2640a235075b">
+        <naglowek-rozdzialu>
+          <nr>2</nr>
+          <p>Uprawnienia posiadacza Karty Polaka</p>
+        </naglowek-rozdzialu>
+        <oddzial-n brak-eid="jednostka-nieoznaczona" gd:GUID="93370039-61cc-43aa-9637-e0befd975b4a">
+          <artykul eId="DU/2026/76__art_5" gd:GUID="f0e1c5e0-d5f0-41b3-a0b3-e20db20d94f8">
+            <nr>5</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="9d9432d2-7ee2-4dce-a7fe-e20963e9855c">
+              <p>
+                <zdanie nr="1" gd:zdGUID="94cbc29e-997a-41ff-a9b7-e8ddd70deaf4" fragment="1" gd:fragmentGUID="b5cf9398-1e31-43b3-8b63-b519f84e5fb6">Posiadacz Karty Polaka jest zwolniony z opłat konsularnych za przyjęcie i rozpatrzenie wniosku o wydanie wizy krajowej w celu korzystania z uprawnień wynikających z posiadania Karty Polaka.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2026/76__art_5a" gd:GUID="eef56f06-64bf-4c87-8aed-a0c2da071082">
+            <nr>5a</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="7af0ae22-f1d4-493a-98af-ba474acc42b8">
+              <p>
+                <zdanie nr="1" gd:zdGUID="e493881a-d6e9-4cf6-b126-544fb781f70d" fragment="1" gd:fragmentGUID="4ee7bea2-0eee-4021-8184-82980d98b425">Posiadacz Karty Polaka jest zwolniony z opłat konsularnych za przyjęcie wniosku i opracowanie dokumentacji w sprawie o nadanie obywatelstwa polskiego.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2026/76__art_6" gd:GUID="3645c799-1f17-40cd-9fcd-a51847931e34">
+            <nr>6</nr>
+            <ustep eId="DU/2026/76__art_6__ust_1" gd:GUID="85e4a20f-571d-4b7f-97d4-b5baa93e40db">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ffb4161e-71f7-4d01-a997-4c97cdf9735c" fragment="1" gd:fragmentGUID="c91c704f-a7fa-47e4-987d-4c43702f3943">Posiadacz Karty Polaka ma prawo do:</zdanie>
+              </p>
+              <punkt eId="DU/2026/76__art_6__ust_1__pkt_1" gd:GUID="950e87d0-5837-4698-8d11-a8c8e3217197">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="ffb4161e-71f7-4d01-a997-4c97cdf9735c" fragment="2" gd:fragmentGUID="a47b60fe-45c5-4960-8bdb-d707fae02917"><odnosnik id-odnosnika="1" symbol="1" gd:GUID="2ac8bb63-a848-4674-8fb9-d9904c1ac709"><p><zdanie nr="1" gd:zdGUID="9dda6466-60bf-4cc9-b051-08fded9c41bf" fragment="1" gd:fragmentGUID="255f5386-a156-4d97-a6e7-fbf369883a29">W brzmieniu ustalonym przez art. 93 ustawy z dnia 20 marca 2025 r. o warunkach dopuszczalności powierzania pracy cudzoziemcom na terytorium Rzeczypospolitej Polskiej (Dz. U. poz. 621), która weszła w życie z dniem 1 czerwca 2025 r.</zdanie></p></odnosnik> wykonywania pracy na zasadach określonych w ustawie z dnia 20 marca 2025 r. o warunkach dopuszczalności powierzania pracy cudzoziemcom na terytorium Rzeczypospolitej Polskiej (Dz. U. poz. 621 i 1794);</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/76__art_6__ust_1__pkt_2" gd:GUID="31771dfa-86ce-4812-ac07-99a33c2da7cd">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="ffb4161e-71f7-4d01-a997-4c97cdf9735c" fragment="3" gd:fragmentGUID="5ad62a46-1b6d-4cfd-a95d-a7e73b30057d">podejmowania i wykonywania działalności gospodarczej na takich samych zasadach jak obywatele polscy na zasadach określonych w ustawie z dnia 6 marca 2018 r. – Prawo przedsiębiorców (Dz. U. z 2025 r. poz. 1480, 1795 i 1826) oraz w ustawie z dnia 6 marca 2018 r. o zasadach uczestnictwa przedsiębiorców zagranicznych i innych osób zagranicznych w obrocie gospodarczym na terytorium Rzeczypospolitej Polskiej (Dz. U. z 2025 r. poz. 89, 619, 621 i 1794);</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/76__art_6__ust_1__pkt_3" gd:GUID="b93330d3-c13e-4875-8e35-2b0a0aedd0df">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="ffb4161e-71f7-4d01-a997-4c97cdf9735c" fragment="4" gd:fragmentGUID="f0f49d72-d369-4f32-adca-1e82180abc7d">kształcenia w szkole doktorskiej, podejmowania i odbywania studiów oraz innych form kształcenia, a także uczestniczenia w działalności naukowej na zasadach określonych w ustawie z dnia 20 lipca 2018 r. – Prawo o szkolnictwie wyższym i nauce (Dz. U. z 2024 r. poz. 1571, z późn. zm.<odnosnik id-odnosnika="2" symbol="2" gd:GUID="5f24f474-6540-4fb6-92c2-d070e2e40123"><p><zdanie nr="1" gd:zdGUID="f31521e8-aa73-40c2-8c69-420093bf9ba1" fragment="1" gd:fragmentGUID="88dffc07-63fe-4c52-a544-8c21ecb393b2">Zmiany tekstu jednolitego wymienionej ustawy zostały ogłoszone w Dz. U. z 2024 r. poz. 1871 i 1897 oraz z 2025 r. poz. 619, 620, 621, 622, 1162, 1794, 1837 i 1864.</zdanie></p></odnosnik>);</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/76__art_6__ust_1__pkt_4" gd:GUID="56f30a7c-8ee8-4c64-913d-fd4d097e510a">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="ffb4161e-71f7-4d01-a997-4c97cdf9735c" fragment="5" gd:fragmentGUID="f72bcb4b-2299-4f20-a708-b66dd8bb3c88">korzystania z form kształcenia na zasadach określonych w ustawie z dnia 14 grudnia 2016 r. – Prawo oświatowe (Dz. U. z 2025 r. poz. 1043, 1160 i 1837) oraz ustawie z dnia 7 września 1991 r. o systemie oświaty (Dz. U. z 2025 r. poz. 881 i 1019);</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/76__art_6__ust_1__pkt_5" gd:GUID="b9e9a125-40c7-42d9-ad0d-0f37cca9708f">
+                <nr>5</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="ffb4161e-71f7-4d01-a997-4c97cdf9735c" fragment="6" gd:fragmentGUID="a2aec736-77d4-4440-9dfc-ee83bdec2a24">korzystania ze świadczeń opieki zdrowotnej w stanach nagłych, w zakresie określonym w ustawie z dnia 27 sierpnia 2004 r. o świadczeniach opieki zdrowotnej finansowanych ze środków publicznych (Dz. U. z 2025 r. poz. 1461, 1537 i 1739 oraz z 2026 r. poz. 26), chyba że umowa międzynarodowa, której Rzeczpospolita Polska jest stroną, przewiduje zasady bardziej korzystne;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/76__art_6__ust_1__pkt_6" gd:GUID="28f0fd8b-801e-46b0-bab7-704d0aad4356">
+                <nr>6</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="ffb4161e-71f7-4d01-a997-4c97cdf9735c" fragment="7" gd:fragmentGUID="d89e0eca-08d0-491a-b41d-139858301736">ulgi 37 % przy przejazdach środkami publicznego transportu zbiorowego kolejowego w pociągach osobowych, pospiesznych i ekspresowych, na podstawie biletów jednorazowych, na zasadach określonych w ustawie z dnia 20 czerwca 1992 r. o uprawnieniach do ulgowych przejazdów środkami publicznego transportu zbiorowego (Dz. U. z 2024 r. poz. 380);</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/76__art_6__ust_1__pkt_7" gd:GUID="be71796f-58eb-4c87-b3ba-b125112defb2">
+                <nr>7</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="ffb4161e-71f7-4d01-a997-4c97cdf9735c" fragment="8" gd:fragmentGUID="ee9624e4-3169-45ab-88db-0aed5b69fe36">bezpłatnego wstępu do muzeów państwowych;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/76__art_6__ust_1__pkt_8" gd:GUID="b6e30db3-0f27-43b3-b0a9-7099f1c6eadb">
+                <nr>8</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="ffb4161e-71f7-4d01-a997-4c97cdf9735c" fragment="9" gd:fragmentGUID="e629d9b7-415a-463b-9f1e-5117d577e96d">pomocy konsula, w ramach jego kompetencji i z zastosowaniem i poszanowaniem zwyczajów i prawa międzynarodowego, w sytuacji zagrożenia życia lub bezpieczeństwa.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2026/76__art_6__ust_2" gd:GUID="711f9bbb-1cef-4943-a102-bb2b794695e1">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ab33a428-a42b-422f-a397-dc399d98a9b1" fragment="1" gd:fragmentGUID="814380c5-dc34-46bb-ad3e-68995095c849">Posiadacz Karty Polaka lub osoba, której stwierdzono pochodzenie polskie zgodnie z ustawą o repatriacji, korzysta z pierwszeństwa przy ubieganiu się o pomoc finansową udzielaną osobom fizycznym ze środków budżetu państwa lub budżetów samorządów terytorialnych przeznaczonych na wspieranie Polaków za granicą.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/76__art_6__ust_3" gd:GUID="c5a87ae6-00c4-46b5-926d-cf9a5a5d9d11">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="070ef68a-e642-4ab2-a307-99799fe655a5" fragment="1" gd:fragmentGUID="a6c21349-38e2-4880-a791-dc0f3c2fdf26">Posiadacz Karty Polaka podejmujący kształcenie, o którym mowa w ust. 1 pkt 3, zachowuje prawo do ubiegania się o stypendia i inną pomoc przewidzianą dla cudzoziemców w odrębnych przepisach.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/76__art_6__ust_4" gd:GUID="b50c4cca-c0f2-4e05-8ae9-d23de9c82195">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="b035785b-e31a-4be8-8471-ee3e40987937" fragment="1" gd:fragmentGUID="dd73ea85-87f0-47d4-93f5-b199760027f5">Przepis ust. 1 pkt 5 nie ma zastosowania do osób uprawnionych do świadczeń opieki zdrowotnej na podstawie przepisów o koordynacji systemów zabezpieczenia społecznego.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/76__art_7" gd:GUID="eaf8b85a-1fcd-42f7-b759-d8d56cc7e0e2">
+            <nr>7</nr>
+            <ustep eId="DU/2026/76__art_7__ust_1" gd:GUID="8bb71eb6-be8e-45cb-b0fd-1e555b64cba6">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="1a415a2d-874f-43a7-8044-2cedbf6a3cb9" fragment="1" gd:fragmentGUID="8f2dcc56-edd8-4ab9-b45a-9809e50766de">Przyznanie Karty Polaka nie oznacza nabycia polskiego obywatelstwa ani stwierdzenia polskiego pochodzenia w rozumieniu odrębnych przepisów.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/76__art_7__ust_2" gd:GUID="848559b2-dbe6-4e06-a066-bed9d760a933">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="834f193f-4709-4299-a3fe-a5fb1d6d0ac3" fragment="1" gd:fragmentGUID="adf30028-c3d2-4876-bf38-1d1e32a79d99">Karta Polaka nie jest dokumentem uprawniającym do przekraczania granicy ani do osiedlenia się na terytorium Rzeczypospolitej Polskiej.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/76__art_8" gd:GUID="a99abdbd-bd64-4b6c-8247-62c6ea1ef3e3">
+            <nr>8</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="c0fd4d7e-9c6a-4de2-86ae-f2ec95d6fd24">
+              <p>
+                <zdanie nr="1" gd:zdGUID="11cec591-60ce-40ff-ac93-0ed284902b22" fragment="1" gd:fragmentGUID="9cd72e58-95ad-4b7f-a812-6470b89271ee">Koszty świadczeń opieki zdrowotnej, o których mowa w art. 6 ust. 1 pkt 5, są finansowane z budżetu państwa, z części, której dysponentem jest minister właściwy do spraw zdrowia, na zasadach określonych w ustawie z dnia 27 sierpnia 2004 r. o świadczeniach opieki zdrowotnej finansowanych ze środków publicznych.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+        </oddzial-n>
+      </rozdzial>
+      <rozdzial eId="DU/2026/76__rozdz_2a" gd:GUID="2a1db4c1-06b7-4820-82c9-41fcbb411863">
+        <naglowek-rozdzialu>
+          <nr>2a</nr>
+          <p>Świadczenie pieniężne dla posiadaczy Karty Polaka osiedlających się w Rzeczypospolitej Polskiej</p>
+        </naglowek-rozdzialu>
+        <oddzial-n brak-eid="jednostka-nieoznaczona" gd:GUID="ac198fe2-410b-4f3b-b6d6-9af004db2d78">
+          <artykul eId="DU/2026/76__art_8a" gd:GUID="8de7112e-0f0e-44f6-b565-57b80bdba42c">
+            <nr>8a</nr>
+            <ustep eId="DU/2026/76__art_8a__ust_1" gd:GUID="944cf45b-bb13-4979-8467-13f6e5f1a28a">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="3d798b14-d7cf-413b-a909-7ebd259b7d90" fragment="1" gd:fragmentGUID="1b9ff852-9e9a-44d9-be71-f1c214dd7823">Osobie, która złoży wniosek o udzielenie zezwolenia na pobyt stały z powołaniem się na okoliczność, o której mowa w art. 195 ust. 1 pkt 9 ustawy z dnia 12 grudnia 2013 r. o cudzoziemcach (Dz. U. z 2025 r. poz. 1079 i 1794), na jej wniosek, może być przyznane świadczenie pieniężne przeznaczone na częściowe pokrycie kosztów zagospodarowania i bieżącego utrzymania w Rzeczypospolitej Polskiej, zwane dalej „świadczeniem pieniężnym”.</zdanie>
+                <zdanie nr="2" gd:zdGUID="9cd78b79-314a-4a9a-a178-3cf9d250546e" fragment="1" gd:fragmentGUID="8a2a64d3-96a6-46ff-9938-7e945b98c208">Świadczenie pieniężne przyznaje się na okres do 9 miesięcy.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/76__art_8a__ust_2" gd:GUID="d7b39b42-eee3-4929-bb68-ff6ce11fa24d">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="a526986a-cb93-4ad8-92c6-8103f4072a7f" fragment="1" gd:fragmentGUID="75a6fdcc-696c-4a98-860d-46d1e8b367e0">Wniosek o przyznanie świadczenia pieniężnego składa się do wojewody, do którego został złożony wniosek o udzielenie zezwolenia na pobyt stały, o którym mowa w ust. 1.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/76__art_8a__ust_3" gd:GUID="59b5dc6f-d151-41a1-a25f-eedc921680cc">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="2b30ee56-8c82-448b-b54d-7ec1f78ea982" fragment="1" gd:fragmentGUID="e0c23d76-9555-4276-883e-ba9ac90b57f4">Pierwszy wniosek o przyznanie świadczenia pieniężnego składa się w terminie do 3 miesięcy od daty złożenia wniosku o udzielenie zezwolenia na pobyt stały, o którym mowa w ust. 1.</zdanie>
+                <zdanie nr="2" gd:zdGUID="a48da7f1-250d-4366-85e8-6e4136ed010e" fragment="1" gd:fragmentGUID="23acf8cb-5bba-4305-9874-eb34f46bf777">Pierwszy wniosek o przyznanie świadczenia pieniężnego złożony po upływie tego terminu pozostawia się bez rozpoznania.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/76__art_8a__ust_4" gd:GUID="57ab596d-85ed-43d4-ac04-fc8720581f44">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="1a528552-0b4e-4609-b0a1-7ffe71c21c6c" fragment="1" gd:fragmentGUID="571da28e-6286-4272-b0d0-c2a4aabbd393">Kolejny wniosek o świadczenie pieniężne złożony przez osobę, której przyznano świadczenie pieniężne w łącznym wymiarze 9 miesięcy, pozostawia się bez rozpoznania.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/76__art_8b" gd:GUID="b861d551-fb83-437b-9c0b-862f0f75d3c4">
+            <nr>8b</nr>
+            <ustep eId="DU/2026/76__art_8b__ust_1" gd:GUID="2c631967-ccff-4acb-b2b4-92ec04bc93d8">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="83dc5a3d-f95d-4c1e-9835-4d05570361a5" fragment="1" gd:fragmentGUID="48612cbe-e168-4cc1-9335-67515ccfd852">Świadczenie pieniężne przyznaje w drodze decyzji wojewoda właściwy do przyjęcia wniosku o przyznanie świadczenia.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/76__art_8b__ust_2" gd:GUID="37dd6d9f-d3e9-447d-81a7-6a7aa8f24f6a">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="2d69f78c-352f-41e5-94cb-a1789ba45b42" fragment="1" gd:fragmentGUID="07ba30c3-39e0-4fb5-83b6-f0f616f53d63">Wypłaty świadczenia pieniężnego dokonuje w okresach miesięcznych starosta wskazany przez wojewodę w decyzji przyznającej świadczenie pieniężne jako właściwy ze względu na miejsce pobytu na terytorium Rzeczypospolitej Polskiej osoby uprawnionej do świadczenia pieniężnego.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/76__art_8b__ust_3" gd:GUID="7ba866c7-69de-490e-ba32-f0bd50438401">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="6a129540-5a67-4930-9c8d-2fbf0822ef3f" fragment="1" gd:fragmentGUID="49d6f331-5d3b-4538-b371-fa5151d1653e">Zadanie starosty, o którym mowa w ust. 2, jest zadaniem zleconym z zakresu administracji rządowej.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/76__art_8b__ust_4" gd:GUID="18cb7468-7875-48fd-9876-e00910e0306c">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="3338ba2b-8781-4407-aeae-6322c62ddab8" fragment="1" gd:fragmentGUID="2f7767a6-4e90-4d87-b241-ef9ddada096a">Organem wyższego stopnia w stosunku do wojewody w rozumieniu ustawy z dnia 14 czerwca 1960 r. – Kodeks postępowania administracyjnego w sprawach, o których mowa w ust. 1, jest minister właściwy do spraw wewnętrznych.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/76__art_8c" gd:GUID="6e3b8ec1-da1d-43f3-9087-148d342a33b1">
+            <nr>8c</nr>
+            <ustep eId="DU/2026/76__art_8c__ust_1" gd:GUID="172dceb2-d3b0-45eb-b0d3-86e52419c4e2">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="b30523b0-c03a-4d5f-8705-1c7de407f134" fragment="1" gd:fragmentGUID="98bab0e7-3b4a-4e59-aca9-1743dbdfc4bb">Świadczenie pieniężne ustala się w kwocie stanowiącej:</zdanie>
+              </p>
+              <punkt eId="DU/2026/76__art_8c__ust_1__pkt_1" gd:GUID="1af5c940-2ef1-457f-a38e-1813101521ca">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="b30523b0-c03a-4d5f-8705-1c7de407f134" fragment="2" gd:fragmentGUID="64c6bab9-e04a-486d-bc44-b88607100107">w okresie pierwszych 3 miesięcy – równowartość 50 % minimalnego wynagrodzenia za pracę, obowiązującego w roku złożenia wniosku o przyznanie świadczenia pieniężnego – na wnioskodawcę i jego małżonka oraz równowartość 50 % tej kwoty na każde małoletnie dziecko pozostające pod władzą rodzicielską wnioskodawcy lub jego małżonka;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/76__art_8c__ust_1__pkt_2" gd:GUID="ddffbb4e-1239-4326-b214-657c432d0f32">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="b30523b0-c03a-4d5f-8705-1c7de407f134" fragment="3" gd:fragmentGUID="95959c46-65d3-4e3a-8600-871ccfb0b1e2">w okresie od 4. do 9. miesiąca – odpowiednio 60 % kwot określonych w pkt 1.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2026/76__art_8c__ust_2" gd:GUID="e3451e55-9033-4214-bdaa-ce666170e116">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="859afe97-27c2-4f7a-a214-3f9f98db07b8" fragment="1" gd:fragmentGUID="1749702a-8a6c-4a53-a406-fe7168306b9d">Przy ustalaniu wysokości świadczenia pieniężnego uwzględnia się wyłącznie członków rodziny wnioskodawcy, określonych w ust. 1 pkt 1, którzy przebywają razem z nim na terenie Rzeczypospolitej Polskiej.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/76__art_8c__ust_3" gd:GUID="fe57ebe3-f2f1-42d2-99a8-38052a101cc5">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="cef8c830-2f84-4d42-b578-bb2cdb5defb0" fragment="1" gd:fragmentGUID="3e300c4c-7b3f-473f-bc47-63de71e0e488">Świadczenia pieniężnego nie wlicza się do dochodu, o którym mowa w art. 8 ust. 3 ustawy z dnia 12 marca 2004 r. o pomocy społecznej (Dz. U. z 2025 r. poz. 1214 i 1302 oraz z 2026 r. poz. 26).</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/76__art_8c__ust_4" gd:GUID="30859d25-3766-45be-af6d-ad157ddf2e74">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="361f64c9-c6c0-40d0-8024-a38be6440ae6" fragment="1" gd:fragmentGUID="b80a49b1-9673-4f05-85eb-30b7f4f0f17e">Świadczenie pieniężne nie przysługuje osobie, która została objęta tym świadczeniem jako członek rodziny wnioskodawcy, a następnie złożyła wniosek o udzielenie zezwolenia na pobyt stały, o którym mowa w art. 8a ust. 1.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/76__art_8d" gd:GUID="56ed1502-679f-408d-8c60-5697716e3735">
+            <nr>8d</nr>
+            <ustep eId="DU/2026/76__art_8d__ust_1" gd:GUID="afa2dd0e-f262-4b7a-89bf-65a5d3ae5f68">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="7ebf769c-b2af-46fb-ae14-8e67c99acf59" fragment="1" gd:fragmentGUID="cf117f82-f65e-4ad0-9985-c1a8d8513c4b">W przypadku zmiany miejsca pobytu przez wnioskodawcę lub członków rodziny określonych w art. 8c ust. 1 pkt 1 na inne znajdujące się na terytorium Rzeczypospolitej Polskiej, właściwy do wypłaty świadczenia pozostaje starosta wskazany przez wojewodę w decyzji o przyznaniu świadczenia pieniężnego.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/76__art_8d__ust_2" gd:GUID="678e8dc8-c2bc-4fc1-be18-d1cf14cf1eb3">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="a764a106-d650-4425-8836-b75bf99c9b8c" fragment="1" gd:fragmentGUID="6ba867cc-bc69-4e03-80cc-fd8cefe93338">W przypadku wydania decyzji o odmowie udzielenia zezwolenia na pobyt stały następuje z mocy prawa zawieszenie wypłaty świadczenia pieniężnego.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/76__art_8d__ust_3" gd:GUID="85cebb93-8556-413a-8bb6-94f8b4f19cb9">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="196e8c4d-47fc-409b-aa2a-2c4cca17010b" fragment="1" gd:fragmentGUID="60e163c8-ee9b-4ac4-810f-988143a306d4">W przypadku, gdy decyzja o odmowie udzielenia zezwolenia na pobyt stały stanie się ostateczna następuje z mocy prawa utrata świadczenia pieniężnego.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/76__art_8e" gd:GUID="d6b07867-f5c5-4770-ab88-3d711fb54872">
+            <nr>8e</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="f7ace0d3-8f34-44b7-a427-75fb788a1b1b">
+              <p>
+                <zdanie nr="1" gd:zdGUID="30b549f9-5ef1-45c4-8e87-2939bb5334b5" fragment="1" gd:fragmentGUID="183c2236-71a3-4531-a61a-fe78fedf1f87">Minister właściwy do spraw wewnętrznych określi, w drodze rozporządzenia, wzór formularza wniosku o przyznanie świadczenia pieniężnego oraz sposób przyznawania pomocy, biorąc pod uwagę sprawność postępowania oraz możliwość kontroli zasadności przyznanych świadczeń pieniężnych.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+        </oddzial-n>
+      </rozdzial>
+      <rozdzial eId="DU/2026/76__rozdz_3" gd:GUID="bdc8600c-ecd1-4e02-8936-1e1b1f2a2f1a">
+        <naglowek-rozdzialu>
+          <nr>3</nr>
+          <p>Rada do Spraw Polaków poza Granicami Kraju</p>
+        </naglowek-rozdzialu>
+        <oddzial-n brak-eid="jednostka-nieoznaczona" gd:GUID="dfe8f71d-3e3f-484e-b50a-a1991aa147c7">
+          <artykul eId="DU/2026/76__art_9" gd:GUID="1b3441c1-ada1-4b44-9a1e-7d6b0f1be39b">
+            <nr>9</nr>
+            <ustep eId="DU/2026/76__art_9__ust_1" gd:GUID="64c4dcd6-e817-4567-8929-cb111ceb4639">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ba580207-fd4b-4ae1-9469-a5ea985f1cf2" fragment="1" gd:fragmentGUID="ce8543b1-59e5-46ff-afd0-0745d1aec186">(uchylony)</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/76__art_9__ust_2" gd:GUID="e3731909-c67b-4bec-ae2b-4e27dedf9b76">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="99693f41-cb25-44c3-a819-816082621aaf" fragment="1" gd:fragmentGUID="e1e03862-6761-4a0c-b78b-98aad0ad4619">Rada do Spraw Polaków poza Granicami Kraju, zwana dalej „Radą”, jest organem administracji publicznej rozpatrującym odwołania od decyzji, o których mowa w art. 12, art. 19 i art. 20.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/76__art_9__ust_3" gd:GUID="32eaf28a-f9bb-4fa1-9b70-a7d69a94e71f">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="df85c7a3-a9c8-43a8-8af1-07c1566b970d" fragment="1" gd:fragmentGUID="30566e02-483e-4113-92e0-24dad1fdc395">Rada jest organem wyższego stopnia w rozumieniu ustawy z dnia 14 czerwca 1960 r. – Kodeks postępowania administracyjnego.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/76__art_9__ust_4" gd:GUID="c3d2cb78-349c-4f7f-aff9-0fad693ef712">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="5ad678d4-4eb8-434e-a72a-b0070df2a47d" fragment="1" gd:fragmentGUID="9e4c1d1b-efbe-4715-ad65-49a946336435">Rada jest także organem właściwym w sprawach wznowienia postępowania, uchylenia, zmiany lub stwierdzenia nieważności wydanych przez siebie decyzji lub postanowień.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/76__art_9__ust_5" gd:GUID="44789dfd-f5ca-482e-be3a-244d29f86a7e">
+              <nr>5</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="904a0567-831e-4872-bb9c-cee685740206" fragment="1" gd:fragmentGUID="be29f00d-c0ae-49ea-8d6a-4e29b54aa6b2">Minister właściwy do spraw zagranicznych określi, w drodze rozporządzenia:</zdanie>
+              </p>
+              <punkt eId="DU/2026/76__art_9__ust_5__pkt_1" gd:GUID="bcbeeae8-dd4c-4f27-b4bb-46ac0ed21c04">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="904a0567-831e-4872-bb9c-cee685740206" fragment="2" gd:fragmentGUID="5b47d49f-d8d1-4610-9715-00cbbfc1c6d4">wewnętrzną organizację i tryb pracy Rady, w tym tryb podejmowania decyzji,</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/76__art_9__ust_5__pkt_2" gd:GUID="bde0e8ef-6a38-48ed-afd4-8fde03ffd64f">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="904a0567-831e-4872-bb9c-cee685740206" fragment="3" gd:fragmentGUID="4a5bae29-2ef3-4a08-9b51-59929209e6d5">tryb wyboru, uprawnienia i obowiązki przewodniczącego Rady, wysokość wynagrodzenia przewodniczącego i członków Rady oraz sposób pokrywania pozostałych wydatków związanych z pracami Rady</zdanie>
+                </p>
+              </punkt>
+              <czesc-wspolna-punkt eId="DU/2026/76__art_9__ust_5__czw" gd:GUID="9b90158a-e62e-41bb-87ac-4a3ddd21ecc8">
+                <p>
+                  <zdanie nr="1" gd:zdGUID="904a0567-831e-4872-bb9c-cee685740206" fragment="4" gd:fragmentGUID="206d9a8e-d2e1-4f61-a5ce-7b7c02407a2a">– uwzględniając zakres zadań Rady oraz konieczność ich sprawnego i terminowego wykonywania.</zdanie>
+                </p>
+              </czesc-wspolna-punkt>
+            </ustep>
+            <ustep eId="DU/2026/76__art_9__ust_6" gd:GUID="69ac64a9-b5d7-4fb1-b301-0028d4580021">
+              <nr>6</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="3e19cb68-eac7-4880-acf4-d1f13e16ba5b" fragment="1" gd:fragmentGUID="8998704e-5bb8-42c5-9d97-a7a1e61089f6">Obsługę administracyjną i kancelaryjną Rady wykonuje urząd obsługujący ministra właściwego do spraw zagranicznych w szczególności poprzez:</zdanie>
+              </p>
+              <punkt eId="DU/2026/76__art_9__ust_6__pkt_1" gd:GUID="99d8f2d0-fdc2-4066-9b3b-ec531b4a4648">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="3e19cb68-eac7-4880-acf4-d1f13e16ba5b" fragment="2" gd:fragmentGUID="06842169-0bb1-419c-afb3-3a21380823fb">zbieranie i opracowywanie materiałów w sprawach należących do zakresu działania Rady;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/76__art_9__ust_6__pkt_2" gd:GUID="4de468e6-679b-4a4d-92af-111a2b31a7ba">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="3e19cb68-eac7-4880-acf4-d1f13e16ba5b" fragment="3" gd:fragmentGUID="486a8ac0-2574-4744-a5d5-12559ad254f8">prowadzenie rejestru odwołań od decyzji konsulów lub wojewodów w sprawach odmowy przyznania oraz unieważnienia Karty Polaka;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/76__art_9__ust_6__pkt_3" gd:GUID="06325816-9033-4f1d-b227-391804a4da2c">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="3e19cb68-eac7-4880-acf4-d1f13e16ba5b" fragment="4" gd:fragmentGUID="7418f872-55cd-419a-8b1b-a5b1f41d78b6">wykonywanie innych czynności związanych z działalnością Rady, w tym czynności technicznych i kancelaryjno--biurowych.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2026/76__art_9__ust_7" gd:GUID="d4b25c19-e941-49ae-b537-7a2d8ca58bda">
+              <nr>7</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="bcb2c7e0-8258-4e5b-83fb-547bb79a80c8" fragment="1" gd:fragmentGUID="b4d873b5-78b1-4772-8025-83fe3a5e47d8">Działalność Rady jest finansowana z budżetu państwa, z rozdziału dotyczącego Rady do Spraw Polaków poza Granicami Kraju, z części – Sprawy zagraniczne.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/76__art_9__ust_8" gd:GUID="d40d7348-30b6-440f-a783-871f1aae6831">
+              <nr>8</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="3d44fb46-74d1-4b07-8176-c8120075c88e" fragment="1" gd:fragmentGUID="f4d46333-aff0-4380-ba5f-98f8a63d9113">(uchylony)</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/76__art_10" gd:GUID="dea61000-c714-4349-90d8-02f8484718b7">
+            <nr>10</nr>
+            <ustep eId="DU/2026/76__art_10__ust_1" gd:GUID="2edb0bb0-b2fb-4037-9ffa-4796f5d35aed">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ae010905-fd6e-45e1-b13d-66fde2f73672" fragment="1" gd:fragmentGUID="8eca2d93-2a0a-4a46-8cbe-11179f826d32">W skład Rady wchodzi 9 członków powoływanych przez Prezesa Rady Ministrów na wniosek ministra właściwego do spraw zagranicznych na pięcioletnią kadencję spośród osób wyróżniających się wiedzą i doświadczeniem z zakresu spraw dotyczących Polonii i Polaków za granicą.</zdanie>
+                <zdanie nr="2" gd:zdGUID="5ee6f54b-1acf-445f-afff-eb81a163ac7a" fragment="1" gd:fragmentGUID="e5daf20f-d560-4693-aa5d-a93df47bf3e7">Co najmniej połowa członków Rady powinna posiadać wyższe wykształcenie prawnicze.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/76__art_10__ust_2" gd:GUID="b3debf74-face-444a-bf68-b972fefb4924">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="8079545e-a05f-4207-9f84-b1374b7d541c" fragment="1" gd:fragmentGUID="7b789b59-9fbb-4906-9c21-3ad76e450000">Członkiem Rady może być osoba posiadająca obywatelstwo polskie i korzystająca z pełni praw publicznych oraz niekarana za przestępstwo popełnione umyślnie, ścigane z oskarżenia publicznego.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/76__art_11" gd:GUID="0cc29772-0e0b-4062-bf1a-978472e944a2">
+            <nr>11</nr>
+            <ustep eId="DU/2026/76__art_11__ust_1" gd:GUID="0ac5299e-e0c5-4e7a-8de2-3974b2318dbc">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="0f17d0dd-2cb8-4cdb-9438-10266a264f80" fragment="1" gd:fragmentGUID="58b248eb-e4bd-48a1-a716-4a97df9e7123">Prezes Rady Ministrów na wniosek ministra właściwego do spraw zagranicznych może odwołać członka Rady przed upływem kadencji.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/76__art_11__ust_2" gd:GUID="1e74530c-deb1-4999-9dc2-28c1a22fa2be">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="862a4ea1-b6da-4515-9064-403e5996e2d2" fragment="1" gd:fragmentGUID="8be456c7-c5ba-46a2-9ae9-14025badcb60">Prezes Rady Ministrów odwołuje członka Rady w przypadku prawomocnego skazania za przestępstwo popełnione umyślnie, ścigane z oskarżenia publicznego.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/76__art_11__ust_3" gd:GUID="ef46a877-e2fe-4819-895d-7ada1307f246">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="374af977-c7e0-4381-b7f3-e45548a1ea46" fragment="1" gd:fragmentGUID="7327daee-5fd3-4543-9a2f-c1b763bf8aba">W przypadku odwołania członka Rady lub jego śmierci Prezes Rady Ministrów na wniosek ministra właściwego do spraw zagranicznych uzupełnia skład Rady powołując, na miejsce opróżnione, nowego członka Rady na okres do końca kadencji.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+        </oddzial-n>
+      </rozdzial>
+      <rozdzial eId="DU/2026/76__rozdz_4" gd:GUID="d873b108-9c84-43dc-af47-73d6ea5097e4">
+        <naglowek-rozdzialu>
+          <nr>4</nr>
+          <p>Przyznawanie i unieważnianie Karty Polaka</p>
+        </naglowek-rozdzialu>
+        <oddzial-n brak-eid="jednostka-nieoznaczona" gd:GUID="bb0c334e-d2bc-43bf-b840-fe422edeeca1">
+          <artykul eId="DU/2026/76__art_12" gd:GUID="32d8ce50-6978-4bec-89cc-12ba4b14498e">
+            <nr>12</nr>
+            <ustep eId="DU/2026/76__art_12__ust_1" gd:GUID="4f985b55-7725-4f2a-aa17-072e3502ea68">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="20fab77a-170f-40ee-b4d4-15100b7fbcc6" fragment="1" gd:fragmentGUID="0b787447-b8d9-45e9-93ce-0e55642dcd96">Przyznanie Karty Polaka i przedłużenie jej ważności następuje w drodze decyzji, na pisemny wniosek, odpowiednio osoby ubiegającej się o jej wydanie albo przedłużenie, zwanej dalej „wnioskodawcą”, lub jej przedstawiciela ustawowego.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/76__art_12__ust_2" gd:GUID="2ac3b3b0-570b-45dc-be18-638f21687119">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="61eadedc-33a5-433a-83b1-0cf48482f237" fragment="1" gd:fragmentGUID="c56b1e17-1083-4b35-8782-36e4a131baca">Organem właściwym w sprawie przyznania Karty Polaka lub przedłużenia jej ważności jest konsul właściwy ze względu na miejsce zamieszkania wnioskodawcy lub w przypadku, o którym mowa w ust. 4, wskazany wojewoda.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/76__art_12__ust_3" gd:GUID="2ca09d5f-dda6-4702-a992-1422a416924d">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="1ae45ed4-36bd-4bf3-80e7-df38c355ed47" fragment="1" gd:fragmentGUID="6327a8a8-b3f8-4334-8725-9e76b9a266de">Czynności wykonywane w związku ze złożeniem przez wnioskodawcę wniosku o przyznanie Karty Polaka lub przedłużenie jej ważności oraz wydaniem decyzji w tych sprawach są wolne od wszelkich opłat, w tym opłat konsularnych.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/76__art_12__ust_4" gd:GUID="6f51dd69-c6c1-453f-a74d-ddd19cd6ec12">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="bae492c4-21ad-4d1e-b0c6-dee164322bc3" fragment="1" gd:fragmentGUID="0b13735f-92ce-48ac-9611-b2fa8f1dc256">Rada Ministrów może, w drodze rozporządzenia, wyznaczyć wojewodę jako organ właściwy w zakresie przyjmowania wniosków o przyznanie lub przedłużenie ważności Karty Polaka oraz wydania decyzji w tych sprawach, a także wskazać państwo pochodzenia osób mogących skorzystać z tej właściwości, biorąc pod uwagę konieczność zapewnienia szybkiego i sprawnego dostępu osób zainteresowanych otrzymaniem Karty Polaka.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/76__art_13" gd:GUID="0533bfd3-0263-44e1-b0e7-826cac74d075">
+            <nr>13</nr>
+            <ustep eId="DU/2026/76__art_13__ust_1" gd:GUID="a5947d73-8c9a-4f89-a4f9-a3785a1192ce">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="86174a42-b3ea-4b7e-a09b-1b6fe6cb1a7a" fragment="1" gd:fragmentGUID="e619bbfa-dc5d-4409-afbb-48100e72b4fb">Wniosek o przyznanie Karty Polaka lub przedłużenie jej ważności zawiera następujące dane:</zdanie>
+              </p>
+              <punkt eId="DU/2026/76__art_13__ust_1__pkt_1" gd:GUID="c0db4427-f0d6-4376-a160-f1d9e75014bc">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="86174a42-b3ea-4b7e-a09b-1b6fe6cb1a7a" fragment="2" gd:fragmentGUID="66380429-242f-4db1-9be0-984ae9a3cecc">imię i nazwisko;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/76__art_13__ust_1__pkt_2" gd:GUID="8753df96-3b10-4a1f-937d-8c0d4521458d">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="86174a42-b3ea-4b7e-a09b-1b6fe6cb1a7a" fragment="3" gd:fragmentGUID="193244d6-7e87-4f08-aac2-4a28108cb503">datę i miejsce urodzenia;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/76__art_13__ust_1__pkt_3" gd:GUID="d8a0df1f-ceb3-4523-9aef-4eabe61dc6a4">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="86174a42-b3ea-4b7e-a09b-1b6fe6cb1a7a" fragment="4" gd:fragmentGUID="a1bf3d00-80cf-4196-ba9a-21a02a42e37d">płeć;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/76__art_13__ust_1__pkt_4" gd:GUID="08bd9117-81e8-450c-b26e-0d16a4a11f80">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="86174a42-b3ea-4b7e-a09b-1b6fe6cb1a7a" fragment="5" gd:fragmentGUID="96569884-18b2-4b73-bea1-2c67a890f223">adres zamieszkania za granicą;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/76__art_13__ust_1__pkt_5" gd:GUID="df8cadde-b0c6-4db8-8ea3-fc11f37c2242">
+                <nr>5</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="86174a42-b3ea-4b7e-a09b-1b6fe6cb1a7a" fragment="6" gd:fragmentGUID="4747bc7f-6d0e-48ac-a9ce-4c374f0bec27">obywatelstwo albo status bezpaństwowca;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/76__art_13__ust_1__pkt_6" gd:GUID="c6ae50b2-13db-4b05-87d6-6e6178ba0236">
+                <nr>6</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="86174a42-b3ea-4b7e-a09b-1b6fe6cb1a7a" fragment="7" gd:fragmentGUID="2c0df255-32c2-4f96-96ad-6a2e712e5779">narodowość;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/76__art_13__ust_1__pkt_7" gd:GUID="9b154056-b493-464d-a7bd-55713412c9e8">
+                <nr>7</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="86174a42-b3ea-4b7e-a09b-1b6fe6cb1a7a" fragment="8" gd:fragmentGUID="c5a04295-b633-4cef-be2f-bbed6c33479f">obywatelstwo i narodowość rodziców, dziadków lub pradziadków, jeżeli ich dane zostały wskazane przez osobę ubiegającą się o przyznanie Karty Polaka.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2026/76__art_13__ust_2" gd:GUID="e4335216-b7ae-4de0-b42b-32638e13c875">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="b87d06a4-cf25-45cf-8338-c7ff08305178" fragment="1" gd:fragmentGUID="404f0175-f31e-42ad-b8ae-09245197cbd6">Wnioskodawca ma obowiązek przedstawić dokumenty i inne dowody potwierdzające spełnianie warunków, o których mowa w art. 2 ust. 1 i 2.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/76__art_13__ust_3" gd:GUID="c03ede9d-5c37-43f0-8e75-fbd3cf65d1e2">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="611dd303-52ee-478c-9d6d-82d3ee974a5a" fragment="1" gd:fragmentGUID="3bff29a1-b561-4133-9e4c-a91372aff36a">Dokumentami i dowodami, o których mowa w ust. 2, mogą być w szczególności:</zdanie>
+              </p>
+              <punkt eId="DU/2026/76__art_13__ust_3__pkt_1" gd:GUID="76f43e55-9e44-4649-a84a-318911cd6c3c">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="611dd303-52ee-478c-9d6d-82d3ee974a5a" fragment="2" gd:fragmentGUID="8f488e9b-df9a-4655-b064-52b5baf8e880">polskie dokumenty tożsamości;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/76__art_13__ust_3__pkt_2" gd:GUID="ec727092-68b6-481a-a194-bc9031b63b5b">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="611dd303-52ee-478c-9d6d-82d3ee974a5a" fragment="3" gd:fragmentGUID="316fa5f5-1ef4-4b5c-b5a1-9f8c3c9ded6b">akty stanu cywilnego lub ich odpisy, metryki chrztu, świadectwa szkolne lub inne dokumenty potwierdzające związek z polskością;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/76__art_13__ust_3__pkt_3" gd:GUID="3607198c-1e83-453c-b97f-962929ef25b1">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="611dd303-52ee-478c-9d6d-82d3ee974a5a" fragment="4" gd:fragmentGUID="ab6a0813-30de-4956-ac74-35c1ff119106">dokumenty potwierdzające odbycie służby wojskowej w polskich formacjach wojskowych;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/76__art_13__ust_3__pkt_4" gd:GUID="a1edc81e-dc6c-4fb5-bade-7c9dd8470dee">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="611dd303-52ee-478c-9d6d-82d3ee974a5a" fragment="5" gd:fragmentGUID="cb726dd2-919c-4dda-8c92-41090e71f4e2">dokumenty potwierdzające fakt deportacji lub uwięzienia, zawierające wpis informujący o polskim pochodzeniu;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/76__art_13__ust_3__pkt_5" gd:GUID="6227908c-de5c-4149-81aa-0ef3df049147">
+                <nr>5</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="611dd303-52ee-478c-9d6d-82d3ee974a5a" fragment="6" gd:fragmentGUID="ebaee671-1bca-4eb0-8578-b97aac0e4c40">dokumenty o rehabilitacji osoby deportowanej, zawierające wpis informujący o polskim pochodzeniu;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/76__art_13__ust_3__pkt_6" gd:GUID="623733b9-e047-4005-8d0c-84a506374e65">
+                <nr>6</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="611dd303-52ee-478c-9d6d-82d3ee974a5a" fragment="7" gd:fragmentGUID="8b467e67-566c-468c-b0f9-885634a5f2c1">zagraniczne dowody tożsamości zawierające informacje na temat narodowości polskiej ich posiadacza;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/76__art_13__ust_3__pkt_7" gd:GUID="e619b7c9-41a6-43f8-b524-4c719e1db9b9">
+                <nr>7</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="611dd303-52ee-478c-9d6d-82d3ee974a5a" fragment="8" gd:fragmentGUID="8ace95c7-8c0a-4ab1-a3c7-ced2a176a81a">zaświadczenie organizacji polskiej lub polonijnej potwierdzające aktywne zaangażowanie w działalność na rzecz języka i kultury polskiej lub polskiej mniejszości narodowej;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/76__art_13__ust_3__pkt_8" gd:GUID="d7a2bc45-c755-43c7-9dbb-840d20dc05b3">
+                <nr>8</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="611dd303-52ee-478c-9d6d-82d3ee974a5a" fragment="9" gd:fragmentGUID="5f99d812-51ab-4d2f-942a-f1031d2fa32e">prawomocna decyzja w sprawie stwierdzenia polskiego pochodzenia, wydana zgodnie z przepisami ustawy o repatriacji;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/76__art_13__ust_3__pkt_9" gd:GUID="cc764cca-0a64-40ad-8657-f7a24eebf938">
+                <nr>9</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="611dd303-52ee-478c-9d6d-82d3ee974a5a" fragment="10" gd:fragmentGUID="af0c8c3a-0e9e-4ba4-ac0f-0f66cfe0b542">Karta Polaka rodzica lub jednego z dziadków wnioskodawcy.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2026/76__art_13__ust_4" gd:GUID="fbf86434-37f4-4a35-b9c1-7ba078aef7fd">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="96a04061-e942-44b5-b2b7-0265ec2236f4" fragment="1" gd:fragmentGUID="7910ceff-1ea6-46bf-9e74-1eb2e975297e">Minister właściwy do spraw zagranicznych ogłasza, w drodze obwieszczenia, w Dzienniku Urzędowym Rzeczypospolitej Polskiej „Monitor Polski” wykaz organizacji polskich lub polonijnych uprawnionych do wystawiania zaświadczeń, o których mowa w ust. 3 pkt 7.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/76__art_13__ust_5" gd:GUID="c1017b9d-c144-4037-a21a-eb0ce452a372">
+              <nr>5</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="c66c5b48-6cbd-430d-9ffd-61ae7281b7ce" fragment="1" gd:fragmentGUID="747a4fa6-cf97-4b03-932e-f8b75cfc08e5">W przypadku osób, o których mowa w art. 2 ust. 3, właściwy organ wydaje decyzję o przyznaniu Karty Polaka na podstawie decyzji, o której mowa w ust. 3 pkt 8.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/76__art_13__ust_6" gd:GUID="c3a31558-226c-41c0-aadc-310ff2d38da1">
+              <nr>6</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="a574ca24-2317-44c9-8207-8c3f2a5ccf44" fragment="1" gd:fragmentGUID="9b205648-ae00-4bdd-8edc-c8aa90326602">W odniesieniu do wnioskodawcy szczególnie zasłużonego dla Rzeczypospolitej Polskiej konsul lub w przypadku, o którym mowa w art. 12 ust. 4 – wojewoda, może wydać decyzję o przyznaniu Karty Polaka bez konieczności przedstawiania przez wnioskodawcę dokumentów, o których mowa w ust. 3.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/76__art_13__ust_7" gd:GUID="2c0d8080-9207-4e0e-9e1d-78795ac50961">
+              <nr>7</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="59e8c525-0590-498f-8064-8764e822a139" fragment="1" gd:fragmentGUID="e4b8a551-ccc1-431c-a7ef-e3fbf0a3b24c">Wnioskodawca ubiegający się o przyznanie Karty Polaka wykazuje posiadanie znajomości języka polskiego przez przedłożenie poświadczenia, o którym mowa w art. 11a ustawy z dnia 7 października 1999 r. o języku polskim (Dz. U. z 2024 r. poz. 1556 oraz z 2025 r. poz. 622 i 1564), świadectwa ukończenia szkoły lub studiów w Rzeczypospolitej Polskiej lub świadectwa ukończenia szkoły za granicą z wykładowym językiem polskim.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/76__art_13__ust_8" gd:GUID="021240c6-6ea1-484b-a0b2-bca4f9cdd9f6">
+              <nr>8</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ba0761c7-5253-4992-b78c-91b915c3c1d8" fragment="1" gd:fragmentGUID="4e67a7fd-1acd-4ce8-8a82-a4f572b70910">W odniesieniu do wnioskodawców, którzy nie wykazali posiadania znajomości języka polskiego w trybie przewidzianym w ust. 7, oceny znajomości języka polskiego dokonuje podczas rozmowy konsul, a w przypadku, o którym mowa w art. 12 ust. 4 – wojewoda.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/76__art_14" gd:GUID="e9aafa3d-de21-423a-b1ad-88faec1c3e24">
+            <nr>14</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="ba5f0204-e42f-4f48-8564-ca8f55069efd">
+              <p>
+                <zdanie nr="1" gd:zdGUID="eb90d787-3dae-4acd-bfa2-1ec74a2c444c" fragment="1" gd:fragmentGUID="54053388-41ef-4880-87a6-90e25d684a39">Do wniosku o przyznanie Karty Polaka wnioskodawca dołącza kopię ważnego dokumentu potwierdzającego tożsamość.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2026/76__art_15" gd:GUID="cd10d7b6-c304-4a92-a215-d051d6c08f25">
+            <nr>15</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="b3f6826a-9b1c-48ec-a7e5-d0026a9b21b0">
+              <p>
+                <zdanie nr="1" gd:zdGUID="7eb0db6b-bead-4988-9c3a-6eacccac103e" fragment="1" gd:fragmentGUID="b0e08de2-f999-46d6-b4ec-acb5cee20cc1">(uchylony)</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2026/76__art_16" gd:GUID="0200bede-7f0d-483f-838f-4c4902796c86">
+            <nr>16</nr>
+            <ustep eId="DU/2026/76__art_16__ust_1" gd:GUID="9638c765-ff31-4581-a232-be83b0f69066">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="c7f860ec-bbfb-4e5c-a123-78c95d08876c" fragment="1" gd:fragmentGUID="5dac00d8-5b35-4215-9f69-8a4195ba9853">Małoletniemu przyznaje się Kartę Polaka na wniosek rodziców, gdy:</zdanie>
+              </p>
+              <punkt eId="DU/2026/76__art_16__ust_1__pkt_1" gd:GUID="f6b2660c-5c58-4ce8-9d22-ec6a3b45bf5f">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="c7f860ec-bbfb-4e5c-a123-78c95d08876c" fragment="2" gd:fragmentGUID="411878a8-4026-4d82-8651-4ba453018437">oboje rodzice posiadają Kartę Polaka;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/76__art_16__ust_1__pkt_2" gd:GUID="0ea92dd5-c539-4cb2-8bb5-4b81573b64fd">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="c7f860ec-bbfb-4e5c-a123-78c95d08876c" fragment="3" gd:fragmentGUID="b4bee38f-066c-4b26-a0a5-b0f51ad07b03">jeden z rodziców posiada Kartę Polaka – za zgodą drugiego z rodziców wyrażoną w oświadczeniu złożonym przed konsulem lub notariuszem, a w przypadku, o którym mowa w art. 12 ust. 4 – wojewodą, chyba że drugiemu z rodziców nie przysługuje władza rodzicielska.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2026/76__art_16__ust_2" gd:GUID="e6efe24c-0a67-4d38-9e5d-e9730d04130d">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="90171018-407d-41c4-908f-679cc381c128" fragment="1" gd:fragmentGUID="0300bb2a-d802-4d17-86d2-8a525c89fdb0">Przyznanie Karty Polaka małoletniemu, który ukończył 16 lat, może nastąpić jedynie za jego zgodą.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/76__art_16__ust_3" gd:GUID="ee7bae4e-4f16-469d-bfab-570bcb0f9ac5">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="4617705b-87a1-4a3e-aa20-3b7372eee9d8" fragment="1" gd:fragmentGUID="da0e9643-ffd1-479d-93a7-41f25d416e67">W przypadku śmierci jednego z rodziców, który spełniał warunki, o których mowa w art. 2 ust. 1 pkt 3, w części dotyczącej polskiej narodowości, Karta Polaka może być przyznana małoletniemu na wniosek żyjącego rodzica w przypadku wykazania, że małoletni spełnia warunki określone w art. 2 ust. 1 pkt 3, w części dotyczącej polskiej narodowości.</zdanie>
+                <zdanie nr="2" gd:zdGUID="2c2ca6f1-f072-4514-8ffa-ef1fcef715e1" fragment="1" gd:fragmentGUID="513ffb4e-5641-4d4d-a3eb-e41be737d6c9">W przypadku śmierci obojga rodziców, z których przynajmniej jeden spełniał warunki, o których mowa w art. 2 ust. 1 pkt 3, w części dotyczącej polskiej narodowości, Karta Polaka może zostać przyznana małoletniemu na wniosek przedstawiciela ustawowego w przypadku wykazania, że małoletni spełnia warunki określone w art. 2 ust. 1 pkt 3, w części dotyczącej polskiej narodowości.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/76__art_16__ust_4" gd:GUID="a38bcd14-b585-4f5f-84a4-8c39bfc87796">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="fd4e1abf-015c-4bc8-9101-afa50ac74756" fragment="1" gd:fragmentGUID="11fa82d7-1a93-4435-bdf4-71929c3f3b1f">Jeżeli rodzic małoletniego posiadał Kartę Polaka, ale utraciła ona ważność z powodu uzyskania pozwolenia na pobyt stały, przepis ust. 1 stosuje się tak, jakby rodzic posiadał kartę.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/76__art_16__ust_5" gd:GUID="02120f96-2960-4812-9254-75fd885db603">
+              <nr>5</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="2fc7a020-68c0-42e8-b739-13ebb6ebb25a" fragment="1" gd:fragmentGUID="cf5a476b-a1f8-430f-b76d-86c0f883fc3a">Wniosek o wydanie Karty Polaka małoletniemu może być dołączony do wniosku o wydanie Karty Polaka rodzicowi, przy czym wszczęcie postępowania o przyznanie Karty Polaka małoletniemu następuje z dniem przyznania Karty Polaka rodzicowi.</zdanie>
+                <zdanie nr="2" gd:zdGUID="89eb7769-890f-42cf-9801-de52a1a9c420" fragment="1" gd:fragmentGUID="e9bbc5c3-9aef-48ea-94ab-d9c5ab0b4217">Przepisy ust. 1–4 stosuje się odpowiednio.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/76__art_17" gd:GUID="4ebd2083-f2d7-41a0-ad27-04b7f842dfd5">
+            <nr>17</nr>
+            <ustep eId="DU/2026/76__art_17__ust_1" gd:GUID="662aa932-819d-4a60-be29-e294fe0c9720">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="1740c0f4-44e8-451b-943a-3be50e46812c" fragment="1" gd:fragmentGUID="9bc3080c-23b5-4e3a-8834-0d86ba6703c1">Karta Polaka jest ważna przez okres 10 lat od dnia jej przyznania, z zastrzeżeniem ust. 2a i 3.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/76__art_17__ust_2" gd:GUID="9caed6c4-7f46-46ca-9090-e3ebe1e71f0d">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="fce4ef63-4057-42f6-be7f-302e344f1861" fragment="1" gd:fragmentGUID="6ef0fe46-41d3-44c3-a068-9dd92276d84d">Jeżeli posiadacz Karty Polaka złoży wniosek o przedłużenie jej ważności, ważność Karty Polaka jest przedłużana na okres kolejnych 10 lat.</zdanie>
+                <zdanie nr="2" gd:zdGUID="da03236b-a020-4109-98a2-9e29b0ee44c4" fragment="1" gd:fragmentGUID="87b24e7c-ad20-4ab9-beb4-7bd9edebe912">Wniosek może zostać złożony nie wcześniej niż 6 miesięcy przed upływem terminu jej ważności.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/76__art_17__ust_2a" gd:GUID="bd01b267-7710-49b2-918d-ed2466b99c3b">
+              <nr>2a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="d4a0047c-c4c4-4ccb-9d59-3cfd99e02892" fragment="1" gd:fragmentGUID="a0aa1180-edf5-4a32-8d60-cc1f54206407">Karta Polaka przyznana osobie, która ukończyła 65 lat, jest ważna na czas nieoznaczony.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/76__art_17__ust_3" gd:GUID="e2c9823a-1357-4627-bfd6-d35aac3efe1c">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="076f722f-f52b-417d-b398-35b968d38cb3" fragment="1" gd:fragmentGUID="12c25d16-3511-4a5d-9606-45500a74138e">Karta Polaka przyznana małoletniemu jest ważna przez okres 10 lat od dnia jej przyznania, jednak nie dłużej niż do dnia, w którym upływa rok od dnia uzyskania przez niego pełnoletności.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/76__art_17__ust_4" gd:GUID="3a69573d-5c5a-4683-b46c-a67550bd1fc0">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="a7f456b7-3c7d-4830-89a4-2bb5c233a694" fragment="1" gd:fragmentGUID="0f8f2101-5d6a-4507-90aa-52f36da07d6b">Jeżeli po osiągnięciu pełnoletności, najpóźniej na 3 miesiące przed terminem, o którym mowa w ust. 3, posiadacz Karty Polaka złoży wniosek o przedłużenie jej ważności oraz podpisze deklarację przynależności do Narodu Polskiego, o której mowa w art. 2 ust. 1 pkt 2, ważność Karty Polaka jest przedłużana na okres kolejnych 10 lat.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/76__art_17__ust_5" gd:GUID="318bab23-a954-49a7-a352-a70370853a3d">
+              <nr>5</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="7922d8b5-e75f-48f2-88e3-b4a1b1cb512d" fragment="1" gd:fragmentGUID="27c827a7-a4ee-4a02-a53c-2c50bf214b41">(uchylony)</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/76__art_17__ust_6" gd:GUID="36be47c5-fe3d-40ee-9f62-c259a36eec53">
+              <nr>6</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="55106b47-8063-402c-b0ba-22e1b54ca59f" fragment="1" gd:fragmentGUID="68d6a208-a45f-483a-8cf9-381ebe22dd48">Jeżeli w okresie ważności Karty Polaka nastąpiła zmiana danych jej posiadacza uwidocznionych w tej Karcie, na wniosek posiadacza lub jego przedstawiciela ustawowego, na podstawie przedłożonych dokumentów stanu cywilnego, właściwy konsul, a w przypadku, o którym mowa w art. 12 ust. 4 – wojewoda, wydaje Kartę Polaka z uwzględnieniem zmienionych danych.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/76__art_17__ust_7" gd:GUID="6ec6f44b-c3af-4ca2-aae5-e48a72908757">
+              <nr>7</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="7b014876-62ea-4558-ac93-bdd6ce7eedb5" fragment="1" gd:fragmentGUID="b72567e5-87f2-4773-8625-7c8253b288b8">Nowa Karta Polaka wydawana w związku ze zmianą danych lub duplikat Karty Polaka wydawane są na okres 10 lat; przepisy ust. 2a i 3 stosuje się odpowiednio.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/76__art_18" gd:GUID="0eaac70e-57d1-43c7-9559-63235046b65b">
+            <nr>18</nr>
+            <ustep eId="DU/2026/76__art_18__ust_1" gd:GUID="bd00fb92-cf69-4791-8a81-4067bdecf9b0">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="bdc26c2c-a59d-4afe-b82e-1005700be1ad" fragment="1" gd:fragmentGUID="91053827-5f9c-41b7-9eb6-19bc0894bd7f">Kartę Polaka osobie, której ją przyznano, wydaje konsul a w przypadku, o którym mowa w art. 12 ust. 4 – wojewoda, albo inna wyznaczona przez niego osoba.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/76__art_18__ust_2" gd:GUID="d5ee87ab-a2e0-4800-879f-e6e8f8bcb82f">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="22462879-5d4e-409a-b6dc-453f7ac33671" fragment="1" gd:fragmentGUID="f41fb486-9ba3-4efd-b0c9-00c079ef700c">Jeżeli jest to możliwe, wręczenie Karty Polaka następuje w sposób uroczysty.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/76__art_18__ust_3" gd:GUID="c8dc6deb-e042-4bf9-a4ea-23d9462e17c1">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="e5fd42c5-d280-43c8-890b-f9bf643c944a" fragment="1" gd:fragmentGUID="2b8df1f5-b8c4-4a39-bacb-ef21b51d92db">Korzystanie z uprawnień, o których mowa w art. 6 ust. 1 pkt 3–5, wymaga okazywania Karty Polaka oraz ważnego dokumentu potwierdzającego tożsamość jej posiadacza.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/76__art_18__ust_4" gd:GUID="aec9b6c0-6191-48b6-a109-d38777646b4a">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="3f6cee32-584c-416d-bacc-2c451c34221a" fragment="1" gd:fragmentGUID="e0d726a1-28e0-41e5-a241-4d93e1914d7a">W przypadku zagubienia lub zniszczenia Karty Polaka właściwy konsul lub wojewoda, na wniosek jej posiadacza, wydaje duplikat Karty Polaka.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/76__art_19" gd:GUID="74d6e5ca-dd57-46b9-8ea6-81b094c4a1ab">
+            <nr>19</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="c2cf23b3-0263-4516-8768-041824ebfade">
+              <p>
+                <zdanie nr="1" gd:zdGUID="f971283b-28c6-46eb-9024-80f1a4b5c92d" fragment="1" gd:fragmentGUID="889fffb5-75c5-430b-b7da-cd3d7a67d327">Konsul lub w przypadku, o którym mowa w art. 12 ust. 4 – wojewoda, wydaje decyzję o odmowie przyznania Karty Polaka w przypadku, gdy:</zdanie>
+              </p>
+              <punkt eId="DU/2026/76__art_19__pkt_1" gd:GUID="d3543bd7-f47a-4843-9cdb-8cb77717ec22">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="f971283b-28c6-46eb-9024-80f1a4b5c92d" fragment="2" gd:fragmentGUID="a9f3259a-8b54-468a-87f4-458991f28f19">wnioskodawca nie spełnia warunków określonych w art. 2, z zastrzeżeniem art. 13 ust. 6;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/76__art_19__pkt_2" gd:GUID="0977691d-3675-41cf-aa0d-816c097ea3ed">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="f971283b-28c6-46eb-9024-80f1a4b5c92d" fragment="3" gd:fragmentGUID="7d3448af-126c-42cc-b91c-b19460534a6d">w postępowaniu o przyznanie Karty Polaka wnioskodawca złożył wniosek lub dołączył do niego dokumenty zawierające nieprawdziwe dane osobowe lub fałszywe informacje, jak również gdy oświadczył nieprawdę lub zataił prawdę albo, w celu użycia jako autentycznego, podrobił lub przerobił dokument albo takiego dokumentu jako autentycznego użył;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/76__art_19__pkt_3" gd:GUID="28f7edef-f6c4-4cfb-aeb5-045f14af54c3">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="f971283b-28c6-46eb-9024-80f1a4b5c92d" fragment="4" gd:fragmentGUID="6505be19-2d0f-4047-8dca-908bb7444500">wnioskodawca lub jego wstępni repatriowali się lub zostali repatriowani z terytorium Rzeczypospolitej Polskiej albo Polskiej Rzeczypospolitej Ludowej, na podstawie umów repatriacyjnych zawartych w latach 1944–1957 przez Rzeczpospolitą Polską albo przez Polską Rzeczpospolitą Ludową z Białoruską Socjalistyczną Republiką Radziecką, Ukraińską Socjalistyczną Republiką Radziecką, Litewską Socjalistyczną Republiką Radziecką i Związkiem Socjalistycznych Republik Radzieckich, do jednego z państw będących stroną tych umów;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/76__art_19__pkt_4" gd:GUID="56bcbfcc-9aee-43c5-bef5-e82d759073af">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="f971283b-28c6-46eb-9024-80f1a4b5c92d" fragment="5" gd:fragmentGUID="60bafd7c-d191-40ea-87fd-8a45de852333">wnioskodawca nabył obywatelstwo polskie albo uzyskał zezwolenie na pobyt stały na terytorium Rzeczypospolitej Polskiej;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/76__art_19__pkt_5" gd:GUID="23f962e0-4cbe-4866-992e-19aea020034b">
+                <nr>5</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="f971283b-28c6-46eb-9024-80f1a4b5c92d" fragment="6" gd:fragmentGUID="4e829be6-9814-4e8a-bff0-709ad8a49e6e">przemawiają za tym względy obronności, bezpieczeństwa albo ochrony porządku publicznego Rzeczypospolitej Polskiej;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/76__art_19__pkt_6" gd:GUID="bf1b4b63-32fc-451d-b29f-4b07ead280e1">
+                <nr>6</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="f971283b-28c6-46eb-9024-80f1a4b5c92d" fragment="7" gd:fragmentGUID="e64cf980-67db-4bb8-92e8-3e1c781c8c47">wnioskodawca działał lub działa na szkodę Rzeczypospolitej Polskiej, a zwłaszcza jej niepodległości i suwerenności, lub uczestniczył lub uczestniczy w łamaniu praw człowieka.</zdanie>
+                </p>
+              </punkt>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2026/76__art_19a" gd:GUID="e180b396-e1c3-45ea-ab03-38f4af25d0f4">
+            <nr>19a</nr>
+            <ustep eId="DU/2026/76__art_19a__ust_1" gd:GUID="8fab3c94-bf25-486b-b1a4-925741c1f2a0">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="23023e97-ce30-4167-97b0-602d139e9a4f" fragment="1" gd:fragmentGUID="8b41f190-c8f7-47b2-b0d5-d7af5059dbc5">Po wprowadzeniu przez właściwego konsula lub w przypadku, o którym mowa w art. 12 ust. 4 – wojewodę, wniosku o przyznanie Karty Polaka lub przedłużenie jej ważności do rejestru, o którym mowa w art. 23 ust. 1, Szef Agencji Bezpieczeństwa Wewnętrznego przedstawia informację, czy wobec wnioskodawcy zachodzą okoliczności, o których mowa w art. 19 pkt 5 lub 6.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/76__art_19a__ust_2" gd:GUID="a44e7ded-6aa2-40d4-bbe2-7133e04fd289">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="0855bbaf-0d1d-43ee-8dec-1382495ffefc" fragment="1" gd:fragmentGUID="e7c7178c-42ec-4d02-abb0-c0830f7aedeb">Właściwy konsul lub – w przypadku, o którym mowa w art. 12 ust. 4 – wojewoda może, niezależnie od trybu określonego w ust. 1, zwrócić się do Szefa Agencji Bezpieczeństwa Wewnętrznego, a w razie potrzeby także do innych organów administracji publicznej, o przedstawienie informacji, czy wobec wnioskodawcy zachodzą okoliczności, o których mowa w art. 19 pkt 5 lub 6, wskazując okoliczności istotne w sprawie.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/76__art_19a__ust_3" gd:GUID="4e95ef2d-a7c3-427e-8c18-fa995e636792">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="8f301f33-2abb-4aa8-a12a-9f8c6986de76" fragment="1" gd:fragmentGUID="c436738f-3d55-4228-a481-7949f72646a9">Właściwe organy przedstawiają informacje, o których mowa w ust. 1 i 2, w terminie 30 dni od dnia wprowadzenia wniosku o przyznanie Karty Polaka lub przedłużenie jej ważności do rejestru, o którym mowa w art. 23 ust. 1.</zdanie>
+                <zdanie nr="2" gd:zdGUID="118bd80f-2a2a-4e0b-bea2-f28001007d4e" fragment="1" gd:fragmentGUID="fc16c8ca-3b4f-4601-8c2c-49d0589ce534">Nieprzedstawienie informacji w tym terminie uznaje się za równoważne z brakiem okoliczności, o których mowa w art. 19 pkt 5 i 6.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/76__art_19a__ust_4" gd:GUID="496e530b-d8bb-49c6-be8e-58b425868519">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="dfda6796-f76e-4444-be92-399be2251a1b" fragment="1" gd:fragmentGUID="869877e0-5616-4fbd-baae-c0b623043c57">Właściwy konsul lub – w przypadku, o którym mowa w art. 12 ust. 4 – wojewoda wydaje decyzję o przyznaniu albo odmowie przyznania Karty Polaka lub decyzję o przedłużeniu ważności Karty Polaka albo odmowie przedłużenia jej ważności nie później niż w terminie 30 dni od dnia przedstawienia przez właściwe organy informacji, o której mowa w ust. 1 i 2, albo upływu terminu określonego w ust. 3.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/76__art_20" gd:GUID="b02841c9-122c-4ca1-851e-686e6d317973">
+            <nr>20</nr>
+            <ustep eId="DU/2026/76__art_20__ust_1" gd:GUID="29e03558-97d6-4f01-8b62-025add98cfe7">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="f0b22096-7695-453d-8136-2cdc932ea628" fragment="1" gd:fragmentGUID="39299fb8-6c75-44fe-be1a-9ab66840e425">Konsul lub w przypadku, o którym mowa w art. 12 ust. 4 – wojewoda, w drodze decyzji, z urzędu unieważnia Kartę Polaka w przypadku:</zdanie>
+              </p>
+              <punkt eId="DU/2026/76__art_20__ust_1__pkt_1" gd:GUID="ffca9c3b-d9e1-4e65-9916-2af86cbdeb05">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="f0b22096-7695-453d-8136-2cdc932ea628" fragment="2" gd:fragmentGUID="316085fa-e217-4a3f-a285-680f4d90d983">gdy po otrzymaniu Karty Polaka jej posiadacz zachowuje się w sposób uwłaczający Rzeczypospolitej Polskiej lub Polakom;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/76__art_20__ust_1__pkt_2" gd:GUID="781d89f8-ad3c-423f-9c65-4c54a2bca586">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="f0b22096-7695-453d-8136-2cdc932ea628" fragment="3" gd:fragmentGUID="58ee3a7f-749a-407c-aa13-673538f88990">gdy zachodzi jedna z przesłanek określonych w art. 19 pkt 2, 5 lub 6;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/76__art_20__ust_1__pkt_3" gd:GUID="fd820558-dd96-4740-9356-cfc01017c6bd">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="f0b22096-7695-453d-8136-2cdc932ea628" fragment="4" gd:fragmentGUID="41682cce-3d2a-43a9-a0d1-d9df1732705d">zrzeczenia się Karty Polaka;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/76__art_20__ust_1__pkt_4" gd:GUID="5ef79d25-77d3-4633-bb2a-930ec4fecb8d">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="f0b22096-7695-453d-8136-2cdc932ea628" fragment="5" gd:fragmentGUID="8d9f561e-b489-4880-ade7-672e2629f41f">gdy na podstawie art. 17 ust. 6 wydał nową Kartę Polaka zawierającą zmienione dane.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2026/76__art_20__ust_1a" gd:GUID="769d4a56-91d5-48b3-b175-ac6a08581c60">
+              <nr>1a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="688a20c5-142f-4565-97d5-c98661c100eb" fragment="1" gd:fragmentGUID="74b383e1-945c-4052-9084-b64a470060ef">Jeżeli posiadacz Karty Polaka nabył obywatelstwo polskie albo uzyskał zezwolenie na pobyt stały na terytorium Rzeczypospolitej Polskiej, posiadana przez niego Karta Polaka traci ważność z mocy prawa z dniem wydania dokumentu potwierdzającego nabycie obywatelstwa polskiego albo uzyskania zezwolenia na pobyt stały.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/76__art_20__ust_2" gd:GUID="5f1e5d2e-05b4-4a6d-b18b-a4f92dfa1c53">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="7cc3b184-15db-452d-ae5b-f5378c37e2e3" fragment="1" gd:fragmentGUID="46225dd0-44eb-4e55-8681-d31333742d2d">W przypadku, o którym mowa w ust. 1, posiadacz Karty Polaka niezwłocznie zwraca Kartę Polaka konsulowi albo wojewodzie, który ją wydał.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/76__art_20__ust_3" gd:GUID="27ccd2a9-e036-40e1-bca2-c51aea670552">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="791a63d3-d1c1-408e-b4ed-2512b58f6387" fragment="1" gd:fragmentGUID="947680b0-ddf6-4700-9537-cbbabdb1cbc3">W przypadku, o którym mowa w ust. 1a, posiadacz Karty Polaka zwraca Kartę Polaka wojewodzie właściwemu ze względu na miejsce pobytu, nie później niż w terminie 14 dni od dnia, w którym:</zdanie>
+              </p>
+              <punkt eId="DU/2026/76__art_20__ust_3__pkt_1" gd:GUID="d01fac54-fb09-4a14-b4b5-8eb7906a0ede">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="791a63d3-d1c1-408e-b4ed-2512b58f6387" fragment="2" gd:fragmentGUID="a1e2681e-97f8-434f-acc9-d21bc6114e9e">doręczono mu dokument potwierdzający nabycie obywatelstwa polskiego albo</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/76__art_20__ust_3__pkt_2" gd:GUID="529d1bad-0215-4e8e-aa69-0fa919774e16">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="791a63d3-d1c1-408e-b4ed-2512b58f6387" fragment="3" gd:fragmentGUID="eede8846-0cf5-479e-9427-41754105e7cb">decyzja o uzyskaniu zezwolenia na pobyt stały stała się ostateczna.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/76__art_21" gd:GUID="424c32e8-61c3-468f-b4e0-15c904df4037">
+            <nr>21</nr>
+            <ustep eId="DU/2026/76__art_21__ust_1" gd:GUID="8960a6ff-d002-4404-9b0a-d3b60daa6147">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ea287234-476b-482e-8021-69918c6fe85b" fragment="1" gd:fragmentGUID="d9ef367d-6664-4a6b-aedb-57f0d8b157a9">Organem odwoławczym od decyzji, o których mowa w art. 12, art. 19 i art. 20, jest Rada.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/76__art_21__ust_2" gd:GUID="bf730f7a-924c-4cdd-9431-6041db09e2ab">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="212e9e4f-a520-4ca6-bd04-492cd3f47a65" fragment="1" gd:fragmentGUID="55e92135-81c9-4168-9e7b-fa8005c5be9a">Odwołanie wnosi się za pośrednictwem konsula, a w przypadku, o którym mowa w art. 12 ust. 4 – wojewody, w terminie 30 dni od dnia doręczenia decyzji.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/76__art_22" gd:GUID="55a63825-1d83-4007-bf33-fda4b6f92c6b">
+            <nr>22</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="bebcaad1-1723-4a3e-8347-e77bfd0807ce">
+              <p>
+                <zdanie nr="1" gd:zdGUID="3cb8e322-1d75-4768-8948-2e37d0f74bc6" fragment="1" gd:fragmentGUID="ec4e9b65-9adf-4ce3-813e-b7ab020eed85">Minister właściwy do spraw zagranicznych określi, w drodze rozporządzenia:</zdanie>
+              </p>
+              <punkt eId="DU/2026/76__art_22__pkt_1" gd:GUID="2cc9687f-ce85-430b-a792-907263df317a">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="3cb8e322-1d75-4768-8948-2e37d0f74bc6" fragment="2" gd:fragmentGUID="03844a7e-868c-446d-b8cf-1cbc139dc306">wzór wniosku o przyznanie Karty Polaka lub przedłużenie jej ważności,</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/76__art_22__pkt_2" gd:GUID="50c84b3d-ad73-4998-a483-381092debe39">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="3cb8e322-1d75-4768-8948-2e37d0f74bc6" fragment="3" gd:fragmentGUID="401c63fd-7109-425f-9e88-f11da948f350">wzór Karty Polaka</zdanie>
+                </p>
+              </punkt>
+              <czesc-wspolna-punkt eId="DU/2026/76__art_22__czw" gd:GUID="8bc87eda-e1ee-4d10-86dd-fb2f4e6eaebf">
+                <p>
+                  <zdanie nr="1" gd:zdGUID="3cb8e322-1d75-4768-8948-2e37d0f74bc6" fragment="4" gd:fragmentGUID="f56ab3f4-3aca-4ce4-9e67-83f1c96cc174">– uwzględniając dane, które muszą być zawarte we wniosku oraz dane i informacje, jakie powinny być zawarte w Karcie Polaka, a także biorąc pod uwagę, że zapisu imienia i nazwiska w Karcie Polaka dokonuje się zgodnie z dokumentem tożsamości wnioskodawcy, chyba że we wniosku wnioskodawca oświadczy, że chce aby te dane były zapisane również w języku polskim.</zdanie>
+                </p>
+              </czesc-wspolna-punkt>
+            </ustep-n>
+          </artykul>
+        </oddzial-n>
+      </rozdzial>
+      <rozdzial eId="DU/2026/76__rozdz_5" gd:GUID="00dcecbf-58c0-40a2-bbb2-c62e5a331c1f">
+        <naglowek-rozdzialu>
+          <nr>5</nr>
+          <p>Rejestry i ewidencje</p>
+        </naglowek-rozdzialu>
+        <oddzial-n brak-eid="jednostka-nieoznaczona" gd:GUID="b76a3253-b472-40ad-9bca-c1dfd6219ffa">
+          <artykul eId="DU/2026/76__art_23" gd:GUID="68526f28-8b58-4887-9a95-22417c9e2f4b">
+            <nr>23</nr>
+            <ustep eId="DU/2026/76__art_23__ust_1" gd:GUID="190f135c-777a-4390-ba97-47b31ecab756">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="93b7e745-f965-4bf9-b1ec-d86ab277b4f5" fragment="1" gd:fragmentGUID="4c41c07a-01be-4a90-827c-8fa88d035325">Konsul i wojewoda prowadzą, każdy w zakresie swojej właściwości, rejestr złożonych wniosków o przyznanie Karty Polaka lub przedłużenie jej ważności, decyzji wydanych w tych sprawach, przyznanych i unieważnionych Kart Polaka oraz Kart Polaka, które utraciły ważność z mocy prawa.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/76__art_23__ust_2" gd:GUID="ea02b422-53ed-4352-872c-f97f23240e3c">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="84bf6a48-e625-42e8-baf5-cbac018d1ea9" fragment="1" gd:fragmentGUID="fca51596-991b-4adb-bf5b-354c229bff5d">Rejestr, o którym mowa w ust. 1, zawiera informację o wydanych decyzjach oraz następujące dane osób, którym przyznano albo odmówiono przyznania Karty Polaka, których Kartę Polaka unieważniono albo w przypadku których Karta Polaka utraciła ważność z mocy prawa:</zdanie>
+              </p>
+              <punkt eId="DU/2026/76__art_23__ust_2__pkt_1" gd:GUID="a48ad5f9-5b8c-40ce-9144-5694b337ce5c">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="84bf6a48-e625-42e8-baf5-cbac018d1ea9" fragment="2" gd:fragmentGUID="02947f7e-38fe-4597-a7af-e1da8db938cb">imię i nazwisko;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/76__art_23__ust_2__pkt_2" gd:GUID="176d4ef4-fa24-42b2-9418-9534d994b88e">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="84bf6a48-e625-42e8-baf5-cbac018d1ea9" fragment="3" gd:fragmentGUID="7d9de072-2f94-4029-a780-f4e286cda132">datę i miejsce urodzenia;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/76__art_23__ust_2__pkt_3" gd:GUID="6c3f4530-afd4-4c68-b2dc-7679293211b5">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="84bf6a48-e625-42e8-baf5-cbac018d1ea9" fragment="4" gd:fragmentGUID="93d13269-6283-4fe0-bdd5-d9c86316ad5c">płeć;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/76__art_23__ust_2__pkt_4" gd:GUID="1effb1a1-0d6d-4e55-956d-2546127b336e">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="84bf6a48-e625-42e8-baf5-cbac018d1ea9" fragment="5" gd:fragmentGUID="d4a2c07f-6931-4b02-bf78-4a45fc92eca0">adres zamieszkania za granicą;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/76__art_23__ust_2__pkt_5" gd:GUID="ca47830a-fc8b-4331-a94d-7a1cad056900">
+                <nr>5</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="84bf6a48-e625-42e8-baf5-cbac018d1ea9" fragment="6" gd:fragmentGUID="a168752b-3ba5-42b1-8fd0-f6e45d905315">obywatelstwo albo status bezpaństwowca;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/76__art_23__ust_2__pkt_6" gd:GUID="5b7b1265-80bd-486c-9805-b6cafe0285ba">
+                <nr>6</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="84bf6a48-e625-42e8-baf5-cbac018d1ea9" fragment="7" gd:fragmentGUID="e2b8f973-a6a5-488d-9060-eac052f8207b">narodowość;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/76__art_23__ust_2__pkt_7" gd:GUID="9696a605-5080-4541-ab14-6c1619187328">
+                <nr>7</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="84bf6a48-e625-42e8-baf5-cbac018d1ea9" fragment="8" gd:fragmentGUID="47956b8d-f414-44f6-a0fa-a7ddd98f9e2d">obywatelstwo i narodowość rodziców, dziadków lub pradziadków, jeżeli ich dane zostały wskazane przez osobę ubiegającą się o przyznanie Karty Polaka.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2026/76__art_23__ust_2a" gd:GUID="0a71e842-f3e0-40eb-b6b9-58edd3556d90">
+              <nr>2a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="5f091aa2-f9c6-47b0-8239-65c449ed1da3" fragment="1" gd:fragmentGUID="b7f563b4-56d6-4d99-b545-1a98f7ef87da">Wojewoda oraz minister właściwy do spraw wewnętrznych prowadzą w systemie teleinformatycznym, każdy w zakresie swojej właściwości, rejestr złożonych wniosków o przyznanie świadczenia pieniężnego oraz decyzji i postanowień wydanych w tych sprawach.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/76__art_23__ust_2b" gd:GUID="95aa2cc6-9046-4af3-ace2-9efa5ee889c2">
+              <nr>2b</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="fa046705-4474-4f50-959b-5b266e286986" fragment="1" gd:fragmentGUID="be09392c-0f9b-429f-8a8c-56149fa53258">Rejestr, o którym mowa w ust. 2a, zawiera informację o wydanych decyzjach, postanowieniach, okresach, na jaki przyznano świadczenie, miesięcznej wysokości świadczenia pieniężnego oraz następujące dane osób, które złożyły wniosek o przyznanie świadczenia pieniężnego, i członków ich rodzin objętych wnioskiem:</zdanie>
+              </p>
+              <punkt eId="DU/2026/76__art_23__ust_2b__pkt_1" gd:GUID="dfec19b1-3e97-4d02-9a9b-fccc40269367">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="fa046705-4474-4f50-959b-5b266e286986" fragment="2" gd:fragmentGUID="0f4e7bf1-7d45-4ccf-93a3-1a52e0bf19e5">imię (imiona) i nazwisko;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/76__art_23__ust_2b__pkt_2" gd:GUID="d2e84242-648f-4544-9b17-350f77370b8f">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="fa046705-4474-4f50-959b-5b266e286986" fragment="3" gd:fragmentGUID="59f74c11-2006-4393-a97b-40069e8bef2f">nazwisko rodowe;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/76__art_23__ust_2b__pkt_3" gd:GUID="9e5cd96f-83e1-4dd5-aeef-35b79a1bef1d">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="fa046705-4474-4f50-959b-5b266e286986" fragment="4" gd:fragmentGUID="e1a02f07-03fa-453a-a87c-a571fcce9ced">nazwisko poprzednie;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/76__art_23__ust_2b__pkt_4" gd:GUID="e1e96898-c505-44fb-9c47-1cad25ca85dc">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="fa046705-4474-4f50-959b-5b266e286986" fragment="5" gd:fragmentGUID="abd38594-3867-4ed0-8c2b-97205025d054">płeć;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/76__art_23__ust_2b__pkt_5" gd:GUID="5c227583-ad15-4a1c-8520-914019d85f42">
+                <nr>5</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="fa046705-4474-4f50-959b-5b266e286986" fragment="6" gd:fragmentGUID="17389720-ac73-47cd-860f-106e66875814">data urodzenia;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/76__art_23__ust_2b__pkt_6" gd:GUID="08af5c16-1ec3-44bb-a0c0-1b51ec94cc6c">
+                <nr>6</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="fa046705-4474-4f50-959b-5b266e286986" fragment="7" gd:fragmentGUID="bd7e6e51-c6f9-458f-9c7d-e4b90ebc52d3">miejsce i kraj urodzenia;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/76__art_23__ust_2b__pkt_7" gd:GUID="878644b5-008d-4e68-8534-c545f25d0c0f">
+                <nr>7</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="fa046705-4474-4f50-959b-5b266e286986" fragment="8" gd:fragmentGUID="a9a2f8a3-b310-4dd4-8b14-4e7636683a7f">obywatelstwo;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/76__art_23__ust_2b__pkt_8" gd:GUID="6f50c22e-8e45-49c0-affc-d67beb72b106">
+                <nr>8</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="fa046705-4474-4f50-959b-5b266e286986" fragment="9" gd:fragmentGUID="482dcfbe-d8fe-4586-b52c-835df4ca3a85">miejsce zamieszkania za granicą;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/76__art_23__ust_2b__pkt_9" gd:GUID="881383e9-cbf1-4c65-a939-88f3192b4c11">
+                <nr>9</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="fa046705-4474-4f50-959b-5b266e286986" fragment="10" gd:fragmentGUID="d94f87d7-a886-431e-80d5-35cb4cbddc56">miejsce zamierzonego osiedlenia na terytorium Rzeczypospolitej Polskiej.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2026/76__art_23__ust_2c" gd:GUID="033644ac-200c-44f6-8efa-83ff13389cf6">
+              <nr>2c</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="9b6aa4ac-5f05-49c9-a476-347a6eee90b1" fragment="1" gd:fragmentGUID="98ca285c-5e1b-4858-8dc2-18d3296c0df1">Dane przechowywane w rejestrze, o którym mowa w ust. 2a, udostępnia się organom administracji publicznej, sądom, prokuraturom, Policji, Straży Granicznej, Służbie Kontrwywiadu Wojskowego, Agencji Bezpieczeństwa Wewnętrznego, Agencji Wywiadu oraz organom Krajowej Administracji Skarbowej, w zakresie niezbędnym do realizacji ich ustawowych zadań.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/76__art_23__ust_2d" gd:GUID="6fd90920-e5c3-4ebc-a7ca-d30f9e3f6007">
+              <nr>2d</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="87f56aed-910e-459a-8b1f-032a3ee21881" fragment="1" gd:fragmentGUID="51c939e3-f0f5-4dcf-bcb4-cd361821c05b">Do sposobu i trybu udostępniania danych zawartych w rejestrze, o którym mowa w ust. 2a, stosuje się odpowiednio przepisy art. 452–456 ustawy z dnia 12 grudnia 2013 r. o cudzoziemcach oraz przepisy wydane na podstawie art. 457 i art. 458 tej ustawy.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/76__art_23__ust_3" gd:GUID="c37bb7a3-ee74-4368-ba19-3d928a208c43">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="883a79b4-3f24-4693-93ef-735e4d0f9546" fragment="1" gd:fragmentGUID="a6eef068-72e4-4865-826a-4fbfe3b4df2a">Minister właściwy do spraw zagranicznych prowadzi centralny rejestr przyznanych oraz unieważnionych Kart Polaka oraz Kart Polaka, które utraciły ważność z mocy prawa.</zdanie>
+                <zdanie nr="2" gd:zdGUID="b53dd8c8-efe6-4243-816e-8cf3cc0256ab" fragment="1" gd:fragmentGUID="63845376-2050-472c-9acf-81ab0c528858">Centralny rejestr zawiera dane, o których mowa w ust. 2.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/76__art_23__ust_4" gd:GUID="ce755c4c-e845-44e1-a426-d7ede62ca6eb">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="c1d36d22-e5e1-4390-89c9-c1a25689df7a" fragment="1" gd:fragmentGUID="b053be32-7aa2-4c81-aa06-e5bf9d8e170b">Konsul i wojewoda, o którym mowa w art. 12 ust. 4, przekazują ministrowi właściwemu do spraw zagranicznych dane, o których mowa w ust. 2.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/76__art_24" gd:GUID="1d72dde3-955a-4524-a2e0-8766243add2b">
+            <nr>24</nr>
+            <ustep eId="DU/2026/76__art_24__ust_1" gd:GUID="5fff42a7-4de1-4005-bcff-6129ec2214cc">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="f401ffd4-e0bd-4a42-959c-5ace361ae8bd" fragment="1" gd:fragmentGUID="8256a09b-7e39-4364-98cf-52cc8bee4633">Dane z rejestru, o którym mowa w art. 23 ust. 1, są udostępniane za pośrednictwem urządzeń teleinformatycznych, bez konieczności składania pisemnych wniosków, ministrowi właściwemu do spraw wewnętrznych, Szefowi Agencji Bezpieczeństwa Wewnętrznego, Szefowi Agencji Wywiadu, konsulom oraz organom Policji i Straży Granicznej, w zakresie niezbędnym do wykonywania zadań ustawowych tych organów.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/76__art_24__ust_1a" gd:GUID="0183607d-aa1e-4dd8-ac5e-06c32d1028c9">
+              <nr>1a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="2d3c2775-9c94-4064-b6b4-62b48034a8a9" fragment="1" gd:fragmentGUID="cbbf4f21-19b3-4a5c-b387-be70cc6d8bc2">Dane z rejestru, o którym mowa w art. 23 ust. 1, są udostępniane za pośrednictwem urządzeń teleinformatycznych, bez konieczności składania pisemnych wniosków, także ministrowi właściwemu do spraw gospodarki w zakresie niezbędnym do prowadzenia Centralnej Ewidencji i Informacji o Działalności Gospodarczej.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/76__art_24__ust_2" gd:GUID="6aada888-84d7-4728-b567-679efcbaf892">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="5a71ad7a-f655-4bc8-a275-bdade9d34cf2" fragment="1" gd:fragmentGUID="bb15c858-f4da-45f1-92de-e34362ac9c39">Minister właściwy do spraw zagranicznych, w porozumieniu z ministrem właściwym do spraw administracji publicznej, określi, w drodze rozporządzenia, sposób prowadzenia rejestrów, o których mowa w art. 23 ust. 1, i centralnego rejestru, o którym mowa w art. 23 ust. 3, sposób przetwarzania danych w nich zawartych, a także sposób przekazywania przez konsula i wojewodę, o którym mowa w art. 12 ust. 4, danych do centralnego rejestru, biorąc pod uwagę konieczność zapewnienia bezpieczeństwa przekazywania danych.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/76__art_24__ust_3" gd:GUID="f98844a1-3167-49ae-842a-f4c05420c17e">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="94ac4147-9881-4ebc-96eb-1cbea193f382" fragment="1" gd:fragmentGUID="191a9938-c8a5-40a4-b0e7-c46ecd5c8899">Ustala się dziesięcioletni okres przechowywania danych w rejestrach.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+        </oddzial-n>
+      </rozdzial>
+      <rozdzial eId="DU/2026/76__rozdz_5a" gd:GUID="ad150fa4-8f9b-4ccd-bb8e-f285e7cd531a">
+        <naglowek-rozdzialu>
+          <nr>5a</nr>
+          <p>Finansowanie wypłaty świadczeń pieniężnych z budżetu państwa</p>
+        </naglowek-rozdzialu>
+        <oddzial-n brak-eid="jednostka-nieoznaczona" gd:GUID="c635eb7a-2863-4dc0-aeb4-c9c7596965ca">
+          <artykul eId="DU/2026/76__art_24a" gd:GUID="ca7fff2b-5109-4836-8297-d203ec32eb13">
+            <nr>24a</nr>
+            <ustep eId="DU/2026/76__art_24a__ust_1" gd:GUID="a3796c66-f985-4dd3-be21-d4e8cf0eabdb">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="59e7968f-f749-43a2-b69f-47070787320f" fragment="1" gd:fragmentGUID="290f2312-b3a9-430e-8423-fd6ade004c16">Wypłata świadczeń pieniężnych finansowana jest z rezerwy celowej budżetu państwa.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/76__art_24a__ust_2" gd:GUID="5724936f-29d9-43a2-9c4d-9c9a81aabdff">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="fb1ddd1d-b176-46eb-85dc-1a300354ad0d" fragment="1" gd:fragmentGUID="85dec7f0-9c40-4ea0-850a-ba3e909fc381">Dysponentem rezerwy celowej, o której mowa w ust. 1, jest minister właściwy do spraw wewnętrznych.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/76__art_24b" gd:GUID="f1cdfc80-02c9-48c8-bd33-0eee27733d6a">
+            <nr>24b</nr>
+            <ustep eId="DU/2026/76__art_24b__ust_1" gd:GUID="c08013c4-26f6-4d5f-8d55-10ae635983dd">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="91468acd-4210-4a0f-ad57-3383359c88c4" fragment="1" gd:fragmentGUID="c95f763e-c8f4-48ef-b6d6-455de75ede68">Świadczenia pieniężne są wypłacane w danym roku budżetowym do wysokości kwoty rezerwy celowej, o której mowa w art. 24a ust. 1.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/76__art_24b__ust_2" gd:GUID="76696940-0766-49c5-83a5-63dcd503a963">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ba4d3c9d-3a17-447e-8b33-39a59a413048" fragment="1" gd:fragmentGUID="2dded044-11e9-4cc2-af69-9b72a47912ea">Starosta składa do wojewody wniosek o udzielenie dotacji na wypłatę świadczeń pieniężnych.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/76__art_24c" gd:GUID="65296997-bf5d-4eb2-8d74-8d65f0bf3378">
+            <nr>24c</nr>
+            <ustep eId="DU/2026/76__art_24c__ust_1" gd:GUID="2dfc2bae-e462-4ff4-b7d4-b598ffb9feed">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="18a64a32-b6cc-49a2-8168-c59a9014aed5" fragment="1" gd:fragmentGUID="3232324f-378d-466c-94ec-63e863cad97e">Minister właściwy do spraw wewnętrznych monitoruje wykorzystanie limitu środków zaplanowanych w ustawie budżetowej na wypłatę świadczeń pieniężnych.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/76__art_24c__ust_2" gd:GUID="098ba934-62d6-497e-8ffb-31bcf5c365b6">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="f42c93e8-62a7-4e6a-9350-fdbbb8b53def" fragment="1" gd:fragmentGUID="065d26e1-354f-4fda-91d7-b2957280b3ae">W przypadku gdy łączna kwota wynikająca z wniosków o przyznanie świadczenia pieniężnego z terminem wypłaty w danym roku osiągnie równowartość 75 % kwoty zaplanowanej w ustawie budżetowej na wypłatę świadczeń pieniężnych, minister właściwy do spraw wewnętrznych ogłasza w Biuletynie Informacji Publicznej informację o wstrzymaniu rozpatrywania wniosków o przyznanie świadczenia pieniężnego z terminem wypłaty przypadającym na dany rok, do czasu zabezpieczenia w ustawie budżetowej środków na ich wypłatę, a wojewodowie wstrzymują rozpatrywanie takich wniosków, począwszy od dnia następującego po dniu ogłoszenia informacji przez ministra właściwego do spraw wewnętrznych.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/76__art_24c__ust_3" gd:GUID="37e79c45-54c3-451d-abc6-d91621f2c10c">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="a759bca4-911c-4ec7-96af-5bce8f907483" fragment="1" gd:fragmentGUID="fd3ebc72-5979-48c7-90f7-ab9fb82cea13">Starostowie są obowiązani do przekazywania wojewodom informacji o poziomie wykorzystania dotacji na wypłatę świadczeń pieniężnych, w terminie określonym w przepisach wydanych na podstawie art. 24d.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/76__art_24c__ust_4" gd:GUID="f1a33dd5-bee1-4ca4-b10b-dc68cc142010">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="53ab5f18-7a08-4efb-8a79-6878bad01d9e" fragment="1" gd:fragmentGUID="2828570c-2da4-4594-9a17-8c288dcbb514">Wojewodowie są obowiązani do przekazywania ministrowi właściwemu do spraw wewnętrznych informacji o koniecznej do zabezpieczenia wypłaty świadczeń pieniężnych kwocie wynikającej z wniosków o przyznanie świadczenia pieniężnego oraz o poziomie wykorzystania dotacji przez starostów, w terminie określonym w przepisach wydanych na podstawie art. 24d.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/76__art_24c__ust_5" gd:GUID="b022c3a5-423d-4d3c-aa42-88317e0ed60b">
+              <nr>5</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="65b5a9e0-d7f8-4907-a5e5-34d0649e91c5" fragment="1" gd:fragmentGUID="e0ccb59c-fd9d-4019-af29-fde9c8af9151">Minister właściwy do spraw wewnętrznych ogłasza w Biuletynie Informacji Publicznej informację o poziomie wykorzystania kwoty zaplanowanej w ustawie budżetowej na wypłatę świadczeń pieniężnych według stanu na koniec każdego miesiąca.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/76__art_24d" gd:GUID="59db8ec2-4a31-4019-8c03-0270fe22c03a">
+            <nr>24d</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="51dda876-871f-4804-b615-03ea26276ecd">
+              <p>
+                <zdanie nr="1" gd:zdGUID="a954c8ba-7b20-4d25-9585-9d1cd95a025a" fragment="1" gd:fragmentGUID="b1d666fe-3d6d-4191-a556-106c26e8d463">Minister właściwy do spraw wewnętrznych określi, w drodze rozporządzenia:</zdanie>
+              </p>
+              <punkt eId="DU/2026/76__art_24d__pkt_1" gd:GUID="4215ebc9-98e8-41e2-b394-4fcbb84fc2ed">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="a954c8ba-7b20-4d25-9585-9d1cd95a025a" fragment="2" gd:fragmentGUID="4300c78e-4bec-4896-bf8f-f5caffface6d">szczegółowy tryb podziału rezerwy celowej na wypłatę świadczeń pieniężnych oraz przekazywania środków na pokrycie wydatków związanych z udzielaniem tych świadczeń,</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/76__art_24d__pkt_2" gd:GUID="8590f9da-5c70-433f-981d-6cdaba4ea4d0">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="a954c8ba-7b20-4d25-9585-9d1cd95a025a" fragment="3" gd:fragmentGUID="87e4a72f-b24e-4c72-8652-60d2f7de385d">termin składania wniosków o dotacje, o których mowa w art. 24b ust. 2,</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/76__art_24d__pkt_3" gd:GUID="cbd1eeb1-023f-4520-b75d-a3bd144c0aa4">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="a954c8ba-7b20-4d25-9585-9d1cd95a025a" fragment="4" gd:fragmentGUID="f4e526ba-7577-4550-bbf6-9c70f4f1be02">wzór wniosku o udzielenie dotacji, o którym mowa w art. 24b ust. 2,</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/76__art_24d__pkt_4" gd:GUID="acab3ccc-4761-426d-b2f5-58087c73e08a">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="a954c8ba-7b20-4d25-9585-9d1cd95a025a" fragment="5" gd:fragmentGUID="efaaf1cb-c51f-4a28-9c50-2868954ecdc2">termin przekazywania informacji, o których mowa w art. 24c ust. 3 i 4</zdanie>
+                </p>
+              </punkt>
+              <czesc-wspolna-punkt eId="DU/2026/76__art_24d__czw" gd:GUID="0d95984f-630d-4434-8fcf-d557f8d8c543">
+                <p>
+                  <zdanie nr="1" gd:zdGUID="a954c8ba-7b20-4d25-9585-9d1cd95a025a" fragment="6" gd:fragmentGUID="4cdf6543-e00b-4193-8bb1-454a59c035a6">– uwzględniając konieczność efektywnego wykorzystania środków rezerwy celowej oraz rozliczania przez jednostki samorządu terytorialnego otrzymanych w formie dotacji środków budżetowych.</zdanie>
+                </p>
+              </czesc-wspolna-punkt>
+            </ustep-n>
+          </artykul>
+        </oddzial-n>
+      </rozdzial>
+      <rozdzial eId="DU/2026/76__rozdz_6" gd:GUID="77643614-e924-434c-8476-bf6fcdd44081">
+        <naglowek-rozdzialu>
+          <nr>6</nr>
+          <p>Zmiany w przepisach obowiązujących i przepisy końcowe</p>
+        </naglowek-rozdzialu>
+        <oddzial-n brak-eid="jednostka-nieoznaczona" gd:GUID="d119e96a-cbf3-427d-9b63-247cfb85c9f0">
+          <artykul eId="DU/2026/76__art_25" gd:GUID="04ac0329-b632-4b80-b6c8-f25b1da8f39a">
+            <nr />
+            <nr-od>25</nr-od>
+            <nr-do>29</nr-do>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="452327e8-2601-496f-9279-a479697282fa">
+              <p>
+                <zdanie nr="1" gd:zdGUID="ed64dc40-9045-4b96-a407-1326d196e3cd" fragment="1" gd:fragmentGUID="5f82d45a-e36b-411d-b4f8-78a7271d3f60">(pominięte)</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2026/76__art_30" gd:GUID="45065d03-4bee-4fb8-be06-6afeff0da716">
+            <nr>30</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="40ab5ab8-6822-4de7-851d-476143ca7418">
+              <p>
+                <zdanie nr="1" gd:zdGUID="f7223381-07f7-4a9d-b8b1-3fa16d32e4af" fragment="1" gd:fragmentGUID="3579aeb6-2229-465f-8f27-828feeea7fbc">(uchylony)</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2026/76__art_31" gd:GUID="7d461221-2de5-4310-ab14-8441f514420f">
+            <nr>31</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="9d923131-ad08-47b7-a653-8daf300d9a56">
+              <p>
+                <zdanie nr="1" gd:zdGUID="96f7bf6b-cbc6-4f39-98a4-d28b09ecdcf5" fragment="1" gd:fragmentGUID="0712f1dc-1290-498c-bacd-f6cdd767eb7c">(pominięty)</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2026/76__art_32" gd:GUID="4f62b475-650c-451d-beef-0c0459d9a84a">
+            <nr>32</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="9ee0505b-85d7-4123-aebf-8493e62e9f23">
+              <p>
+                <zdanie nr="1" gd:zdGUID="ec4e664b-f4d5-4e75-b6d6-e2d0f2f854a3" fragment="1" gd:fragmentGUID="8fb2538a-5c4b-48ab-93d4-005b74cdb3d9">Ustawa wchodzi w życie po upływie 6 miesięcy od dnia ogłoszenia<odnosnik id-odnosnika="3" symbol="3" gd:GUID="1acfc87b-b9f5-4de3-99ee-1c1e85ce19a0"><p><zdanie nr="1" gd:zdGUID="a1a2ed77-eaaa-4a60-a97d-125fdd23f4ab" fragment="1" gd:fragmentGUID="2bdde2d9-b7c2-4d0e-888b-e3b294d77943">Ustawa została ogłoszona w dniu 28 września 2007 r.</zdanie></p></odnosnik>.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+        </oddzial-n>
+      </rozdzial>
+    </ustawa>
+  </obwieszczenie>
+</akt-prawny>

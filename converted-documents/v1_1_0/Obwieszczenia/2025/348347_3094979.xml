@@ -1,0 +1,973 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <obwieszczenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/1585</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>df7f0840-05a9-4a58-89bb-07fd38ad09d4</gd:GUIDwersji>
+      <AdresISAP>WDU20250001585</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>1585</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 1585</AdresWyswietlany>
+      <Tytul>Obwieszczenie Marszałka Sejmu Rzeczypospolitej Polskiej z dnia 7 listopada 2025 r. w sprawie ogłoszenia jednolitego tekstu ustawy o opłatach abonamentowych</Tytul>
+      <Rodzaj>OBW_TJ</Rodzaj>
+      <DataOgloszenia>2025-11-20</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-11-07</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_ujednolicenie_2025-11-20_DU-2025-1585_domyslne" rodzaj="ujednolicenie" pochodzenie="domyslne-z-aktu" data="2025-11-20" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_ujednolicenie.zdarz_ujednolicenie_2025-11-20_DU-2025-1585_domyslne" glowna="true">
+          <Przedzial rodzaj="ujednolicenie" od="zdarz_ujednolicenie_2025-11-20_DU-2025-1585_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <DataObowiazywaniaWersji>
+        <Od>zdarz_ujednolicenie_2025-11-20_DU-2025-1585_domyslne</Od>
+      </DataObowiazywaniaWersji>
+      <Organy>
+        <Organ gd:GUID="4b1571ec-6db6-4fa3-acf8-7b9d9e1f5b7f" rola="wydajacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/MSEJMU">
+          <Nazwa>Marszałek Sejmu</Nazwa>
+          <OrganPodpisujacy>Marszałek Sejmu</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>S.</imie> <nazwisko>Hołownia</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Obwieszczenie</rodzaj-aktu>
+    <autor-aktu>Marszałka Sejmu Rzeczypospolitej Polskiej</autor-aktu>
+    <data>z dnia 7 listopada 2025 r.</data>
+    <tytul>w sprawie ogłoszenia jednolitego tekstu ustawy o opłatach abonamentowych</tytul>
+    <punkt-OTJ eId="DU/2025/1585__pkt_1" gd:GUID="5aa89d21-4fbb-4c2d-8d8c-9565bdc4a5f6">
+      <nr>1</nr>
+      <p>
+        <zdanie nr="1" gd:zdGUID="b9d135d2-f549-477e-b254-ac1183d56215" fragment="1" gd:fragmentGUID="72f9ee7c-119c-43bb-8d18-e3773bcf0a75">Na podstawie art. 16 ust. 1 zdanie pierwsze ustawy z dnia 20 lipca 2000 r. o ogłaszaniu aktów normatywnych i niektórych innych aktów prawnych (Dz. U. z 2019 r. poz. 1461) ogłasza się w załączniku do niniejszego obwieszczenia jednolity tekst ustawy z dnia 21 kwietnia 2005 r. o opłatach abonamentowych (Dz. U. z 2020 r. poz. 1689), z uwzględnieniem zmian wprowadzonych ustawą z dnia 20 marca 2025 r. o rynku pracy i służbach zatrudnienia (Dz. U. poz. 620) oraz zmian wynikających z przepisów ogłoszonych przed dniem 6 listopada 2025 r.</zdanie>
+      </p>
+    </punkt-OTJ>
+    <punkt-OTJ eId="DU/2025/1585__pkt_2" gd:GUID="ff9d3ff0-92d6-44c6-a5aa-4f296d5ba23b">
+      <nr>2</nr>
+      <p>
+        <zdanie nr="1" gd:zdGUID="ac40f5ba-4100-4c39-8691-41457da2a701" fragment="1" gd:fragmentGUID="20a6a40b-abec-4130-8b62-8e6f818014f9">Podany w załączniku do niniejszego obwieszczenia jednolity tekst ustawy nie obejmuje art. 461 ustawy z dnia 20 marca 2025 r. o rynku pracy i służbach zatrudnienia (Dz. U. poz. 620), który stanowi:<tresc-strukt cudzyslowy="oba" gd:GUID="02d9aa30-6690-4313-9cd6-21550d02ef12"><artykul eId="DU/2025/620__art_461" gd:GUID="7409b429-7659-463b-938b-457178c7c9d3"><nr>461</nr><ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="de755f98-2fda-45f6-8082-1c9fb8ad9a8b"><p><zdanie nr="1" gd:zdGUID="4bf27d8b-1da9-4a8a-b930-60fb9b6bfe34" fragment="1" gd:fragmentGUID="7d694dd2-0084-41ae-94b7-6cabe693c8b3">Ustawa wchodzi w życie pierwszego dnia miesiąca następującego po upływie 14 dni od dnia ogłoszenia, z wyjątkiem:</zdanie></p><punkt eId="DU/2025/620__art_461__pkt_1" gd:GUID="5be5b44a-5ad9-4451-835c-e303f8ad11bc"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="4bf27d8b-1da9-4a8a-b930-60fb9b6bfe34" fragment="2" gd:fragmentGUID="4426c57f-f926-4fc5-983c-f79c1595bcea">art. 392 pkt 2 lit. b oraz art. 458, które wchodzą w życie z dniem następującym po dniu ogłoszenia;</zdanie></p></punkt><punkt eId="DU/2025/620__art_461__pkt_2" gd:GUID="3a2e42ce-ec2d-4fc1-910f-9c5678f239bf"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="4bf27d8b-1da9-4a8a-b930-60fb9b6bfe34" fragment="3" gd:fragmentGUID="2c32a7f1-b6cb-4c26-9425-07ff51d62477">art. 106, art. 128 ust. 2, art. 203 oraz art. 300 ust. 3 pkt 11, które wchodzą w życie z dniem 1 stycznia 2026 r.</zdanie></p></punkt></ustep-n></artykul></tresc-strukt>.</zdanie>
+      </p>
+    </punkt-OTJ>
+    <organ-podpisujacy>Marszałek Sejmu: <i><osoba podpisujacy="true" gd:osobaGUID="9a54e350-2fb5-4af6-a414-9f66d248f754"><imie>S.</imie> <nazwisko>Hołownia</nazwisko></osoba></i></organ-podpisujacy>
+    <ustawa>
+      <zalacznik-do>Załącznik do obwieszczenia Marszałka Sejmu Rzeczypospolitej Polskiej z dnia 7 listopada 2025 r. (Dz. U. poz. 1585)</zalacznik-do>
+      <rodzaj-aktu>Ustawa</rodzaj-aktu>
+      <data>z dnia 21 kwietnia 2005 r.</data>
+      <tytul>o opłatach abonamentowych</tytul>
+      <artykul eId="DU/2025/1585__art_1" gd:GUID="eda1ba75-aa13-4184-90e6-9cc8e6da6fb0">
+        <nr>1</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="a9e1be7c-61a3-4a46-ac91-483996350317">
+          <p>
+            <zdanie nr="1" gd:zdGUID="331fd46b-95c7-497c-9845-efa4edf77c01" fragment="1" gd:fragmentGUID="04569a31-6d71-4657-9ef2-ce1e73ce8b3d">Opłaty abonamentowe pobiera się w celu umożliwienia realizacji misji publicznej, o której mowa w art. 21 ust. 1 ustawy z dnia 29 grudnia 1992 r. o radiofonii i telewizji (Dz. U. z 2022 r. poz. 1722 oraz z 2024 r. poz. 96 i 1222), zwanej dalej „ustawą o radiofonii i telewizji”, przez jednostki publicznej radiofonii i telewizji.</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2025/1585__art_2" gd:GUID="3b1eab7f-9400-49a9-b38e-381a2f40ed39">
+        <nr>2</nr>
+        <ustep eId="DU/2025/1585__art_2__ust_1" gd:GUID="06c9b842-84f0-42b5-b2a9-0017195389eb">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="39af1007-224d-4ab2-8717-ee7907352746" fragment="1" gd:fragmentGUID="f79f4032-3407-4ec6-b45c-fd3971b17193">Za używanie odbiorników radiofonicznych oraz telewizyjnych pobiera się opłaty abonamentowe.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1585__art_2__ust_2" gd:GUID="7870cfdd-4323-4cfc-9da0-ae9ed217dd87">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="cc714cda-3dc2-4053-b79c-6fbf995207b2" fragment="1" gd:fragmentGUID="9521e629-b2a0-4bff-86b2-10f5bc13f0c4">Domniemywa się, że osoba, która posiada odbiornik radiofoniczny lub telewizyjny w stanie umożliwiającym natychmiastowy odbiór programu, używa tego odbiornika.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1585__art_2__ust_3" gd:GUID="8ddb8b46-8a1a-4591-b571-338374de9873">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="51801f70-63df-4801-a9d3-8575f5a9e91b" fragment="1" gd:fragmentGUID="cf565862-4fe7-4b01-bcf2-98548159da15">Obowiązek uiszczania opłaty abonamentowej powstaje z pierwszym dniem miesiąca następującego po miesiącu, w którym dokonano rejestracji odbiornika radiofonicznego lub telewizyjnego.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1585__art_2__ust_4" gd:GUID="81e1e1d5-be47-4067-bdf5-f507a7100608">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="7cc84507-e6c1-43f5-9ac2-e80a0e8fd49f" fragment="1" gd:fragmentGUID="b1f769c4-5f01-4f31-9eb5-b17b0bc90a66">Opłatę abonamentową uiszcza się za każdy odbiornik radiofoniczny i telewizyjny, z zastrzeżeniem ust. 5.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1585__art_2__ust_5" gd:GUID="2342b363-2f54-492f-ad05-8f4a114cdee4">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="10b0b1a6-08e4-429b-84e1-2c3e1ceb6fa3" fragment="1" gd:fragmentGUID="73db599a-e863-481e-8ada-3c5fb0a1e61c">Niezależnie od liczby odbiorników radiofonicznych i telewizyjnych używanych przez:</zdanie>
+          </p>
+          <punkt eId="DU/2025/1585__art_2__ust_5__pkt_1" gd:GUID="0030772a-8102-49bd-89d0-c58460ab6434">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="10b0b1a6-08e4-429b-84e1-2c3e1ceb6fa3" fragment="2" gd:fragmentGUID="2ee98f2f-eee3-4e95-983a-22d7e2d70f2d">osoby fizyczne w tym samym gospodarstwie domowym lub w samochodzie stanowiącym ich własność,</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/1585__art_2__ust_5__pkt_2" gd:GUID="2f823cc6-9974-477e-ab52-08a6804f3d07">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="10b0b1a6-08e4-429b-84e1-2c3e1ceb6fa3" fragment="3" gd:fragmentGUID="a6c61c24-3a53-4fca-ab97-b0c64402e1d7">podmioty lecznicze niebędące przedsiębiorcami w rozumieniu przepisów o działalności leczniczej, sanatoria, żłobki, publiczne i niepubliczne jednostki organizacyjne systemu oświaty, publiczne i niepubliczne uczelnie, a także domy pomocy społecznej – w tym samym budynku, zespole budynków lub w samochodach będących w używaniu tych instytucji</zdanie>
+            </p>
+          </punkt>
+          <czesc-wspolna-punkt eId="DU/2025/1585__art_2__ust_5__czw" gd:GUID="bccddb4c-913d-4148-a6fe-cffd93fed3e9">
+            <p>
+              <zdanie nr="1" gd:zdGUID="10b0b1a6-08e4-429b-84e1-2c3e1ceb6fa3" fragment="4" gd:fragmentGUID="601163b4-7142-4696-a0d1-9fb7f984e755">– uiszcza się tylko jedną z opłat, o której mowa w art. 3 ust. 1.</zdanie>
+            </p>
+          </czesc-wspolna-punkt>
+        </ustep>
+        <ustep eId="DU/2025/1585__art_2__ust_6" gd:GUID="14803668-28e2-44f0-b08c-dda8ed29653a">
+          <nr>6</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="29df3d02-ac2c-48fa-bbaf-6e948322ca6f" fragment="1" gd:fragmentGUID="2bb4ef81-38b8-4f2a-8806-8b5ae29e42e1">Gospodarstwem domowym, w rozumieniu przepisów niniejszej ustawy, jest zespół osób mieszkających i utrzymujących się wspólnie albo jedna osoba utrzymująca się samodzielnie.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1585__art_2__ust_7" gd:GUID="f1c340bd-39c8-42f4-bc26-204ae9dbaa0e">
+          <nr>7</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="b61bdf90-d8d6-40c2-b364-5bbe9ec9a7ef" fragment="1" gd:fragmentGUID="d31d65c3-30a6-4f8d-bdc9-e8d4b914d822">Odbiornikiem radiofonicznym albo telewizyjnym, w rozumieniu przepisów niniejszej ustawy, jest urządzenie techniczne dostosowane do odbioru programu.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/1585__art_3" gd:GUID="0756f46f-d922-44e3-9550-8a7159bd3d4f">
+        <nr>3</nr>
+        <ustep eId="DU/2025/1585__art_3__ust_1" gd:GUID="11a992e7-964a-461f-ad44-038d5f4073df">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="88de0356-930a-4749-b031-9ba1c3004210" fragment="1" gd:fragmentGUID="c774e79e-a643-40f7-a49e-e62e8e53260a">Wysokość miesięcznej opłaty abonamentowej w danym roku kalendarzowym wynosi:</zdanie>
+          </p>
+          <punkt eId="DU/2025/1585__art_3__ust_1__pkt_1" gd:GUID="b5158104-5133-4d6a-916f-cb9a6da53574">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="88de0356-930a-4749-b031-9ba1c3004210" fragment="2" gd:fragmentGUID="9ada9302-e822-48d5-a225-1ca48c64ed3d">za używanie odbiornika radiofonicznego – <i>5,94 zł</i><odnosnik id-odnosnika="1" symbol="1" gd:GUID="187b22dd-6e49-4228-800f-b4f8c72e3bfd"><p><zdanie nr="1" gd:zdGUID="f26b2394-f52b-498b-aa63-2e98f38b054a" fragment="1" gd:fragmentGUID="c3155881-6005-41d9-ba2f-80657f08abb7">Wysokość miesięcznej opłaty abonamentowej w danym roku kalendarzowym ustalana jest przez Krajową Radę Radiofonii i Telewizji na podstawie art. 3 ust. 2 albo 5 niniejszej ustawy.</zdanie></p></odnosnik>;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/1585__art_3__ust_1__pkt_2" gd:GUID="cf27e688-79ab-43a5-81f5-441d87122377">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="88de0356-930a-4749-b031-9ba1c3004210" fragment="3" gd:fragmentGUID="0f295bec-837b-4c3d-8ad4-7cc5e2c6b1ab">za używanie odbiornika telewizyjnego albo odbiornika radiofonicznego i telewizyjnego – <i>18,68 zł</i><odsylacz-do-odnosnika id-odnosnika="1" symbol="1" />.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/1585__art_3__ust_1a" gd:GUID="48033b8a-8981-47d2-a037-bf5505d95a38">
+          <nr>1a</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="75687320-f8b0-44d2-9b09-3c6ed13b57cf" fragment="1" gd:fragmentGUID="65c80979-a758-4288-9b2d-4cb62c168500">Kwoty, o których mowa w ust. 1, są waloryzowane w każdym roku średniorocznym wskaźnikiem cen towarów i usług konsumpcyjnych ogółem, ustalonym w ustawie budżetowej.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1585__art_3__ust_2" gd:GUID="d7b4afe5-50cd-41a6-b7d6-336b53b0cab5">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="50801524-b8de-4cdb-8eec-3113d2924239" fragment="1" gd:fragmentGUID="73fc4cc1-1c79-4a42-a343-5b7ffb911f04">Krajowa Rada Radiofonii i Telewizji do dnia 31 maja każdego roku ogłasza w Dzienniku Urzędowym Rzeczypospolitej Polskiej „Monitor Polski” stawki kwotowe opłat abonamentowych na następny rok kalendarzowy obliczone zgodnie z ust. 1, z zastrzeżeniem ust. 5.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1585__art_3__ust_3" gd:GUID="79e05658-00b1-4067-b3c9-99befb07c278">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="aabaa1cc-848f-45e6-8cac-6d3965d15bc1" fragment="1" gd:fragmentGUID="c847a1b5-1a48-4eae-9f28-7ae61b769c61">Stawki kwotowe opłat abonamentowych, o których mowa w ust. 2, zaokrągla się w górę do pełnych dziesiątek groszy.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1585__art_3__ust_4" gd:GUID="f0429d5c-350e-45cd-a325-b5bc4b2bf81e">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="155343e3-869b-4800-a796-0d0cdfa5dccf" fragment="1" gd:fragmentGUID="a44c7c0f-5ba6-4b53-b15e-7455da99d958">Opłatę abonamentową uiszcza się z góry do 25. dnia miesiąca, za który opłata jest należna.</zdanie>
+            <zdanie nr="2" gd:zdGUID="4a56c157-a891-4ee8-a853-2527f056621e" fragment="1" gd:fragmentGUID="f99cf782-6251-48a3-97f3-26a4c5cea4ca">Opłata może być uiszczona z góry za cały rok albo za wybrane miesiące.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1585__art_3__ust_5" gd:GUID="7fba09d3-b79e-4dcc-80c5-3960a274f91e">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="21d6fa37-5e43-4cc9-8ca4-bff07091f058" fragment="1" gd:fragmentGUID="013c97d7-d8bb-49a6-9fcc-71267531b392">Krajowa Rada Radiofonii i Telewizji może określić do dnia 31 lipca każdego roku, w drodze rozporządzenia, niższą niż ustaloną w ust. 1 wysokość opłat abonamentowych na następny rok kalendarzowy, z uwzględnieniem:</zdanie>
+          </p>
+          <punkt eId="DU/2025/1585__art_3__ust_5__pkt_1" gd:GUID="07d76fd5-f1cf-49c8-844c-9347c41e28ae">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="21d6fa37-5e43-4cc9-8ca4-bff07091f058" fragment="2" gd:fragmentGUID="a14925cf-280e-45a5-9bbc-4d900802963c">prognozowanych kosztów realizacji misji publicznej, o której mowa w art. 21 ust. 1 ustawy o radiofonii i telewizji, oszacowanych na podstawie planu programowo-finansowego, o którym mowa w art. 21c ust. 1 tej ustawy, oraz sprawozdania, o którym mowa w art. 31b ust. 1 tej ustawy;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/1585__art_3__ust_5__pkt_2" gd:GUID="4dd0121f-443c-4d31-b49e-8d389411dfa0">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="21d6fa37-5e43-4cc9-8ca4-bff07091f058" fragment="3" gd:fragmentGUID="0d3e0e76-a1a1-4e43-9fab-51e079884ca1">możliwości pokrywania kosztów realizacji misji, o której mowa w pkt 1, z wpływów określonych w art. 31 ust. 1 pkt 2–4 ustawy o radiofonii i telewizji;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/1585__art_3__ust_5__pkt_3" gd:GUID="1e2fe11f-3e5c-44e4-ba6d-05b7faee2c54">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="21d6fa37-5e43-4cc9-8ca4-bff07091f058" fragment="4" gd:fragmentGUID="70acc887-ec3f-4763-a714-28872658edbf">stopnia i sposobu wykorzystania w roku ubiegłym środków, o których mowa w art. 2 ust. 1.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/1585__art_3__ust_6" gd:GUID="ae6d6298-360a-408c-8ca2-2526157b161d">
+          <nr>6</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="7f3e3e63-9999-4064-80b5-defd98a5cfd5" fragment="1" gd:fragmentGUID="452471f4-565e-41c3-9d09-9bf8cf863a89">Krajowa Rada Radiofonii i Telewizji określa, w drodze rozporządzenia, zniżki za uiszczanie opłat abonamentowych z góry za okres dłuższy niż jeden miesiąc, uwzględniając:</zdanie>
+          </p>
+          <punkt eId="DU/2025/1585__art_3__ust_6__pkt_1" gd:GUID="71e495b9-e90e-4748-be35-1e67590ecafa">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="7f3e3e63-9999-4064-80b5-defd98a5cfd5" fragment="2" gd:fragmentGUID="eda3de0c-12ac-4769-b0fc-725f72a372f7">prognozowaną, na podstawie liczby osób uiszczających opłaty z góry za okres dłuższy niż jeden miesiąc w roku poprzednim, liczbę osób korzystających z tych zniżek;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/1585__art_3__ust_6__pkt_2" gd:GUID="540c4969-ad32-482f-8380-4f35846dec84">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="7f3e3e63-9999-4064-80b5-defd98a5cfd5" fragment="3" gd:fragmentGUID="4d752cc3-6807-4b47-811d-aa28b9dda5e6">konieczność zapewnienia pokrycia kosztów realizacji misji, o której mowa w ust. 5 pkt 1.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/1585__art_4" gd:GUID="98edffa3-8b71-44c9-806c-0cfece59482f">
+        <nr>4</nr>
+        <ustep eId="DU/2025/1585__art_4__ust_1" gd:GUID="42798f8d-95b0-4eaa-92c4-bd92fc9d0829">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="51480099-3412-4d3c-bc99-4559d45e3661" fragment="1" gd:fragmentGUID="61e7f6db-c43d-4017-af33-a7933b4f9cb3">Zwalnia się od opłat abonamentowych:</zdanie>
+          </p>
+          <punkt eId="DU/2025/1585__art_4__ust_1__pkt_1" gd:GUID="8f4b3296-3e59-4ccc-9f78-95f087c03243">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="51480099-3412-4d3c-bc99-4559d45e3661" fragment="2" gd:fragmentGUID="79f140f0-30c9-4565-acd3-bf91f219d0a4">osoby, co do których orzeczono o:</zdanie>
+            </p>
+            <litera eId="DU/2025/1585__art_4__ust_1__pkt_1__lit_a" gd:GUID="174f83f7-fffd-4fdc-982e-18a17d79d350">
+              <nr>a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="51480099-3412-4d3c-bc99-4559d45e3661" fragment="3" gd:fragmentGUID="e4a62634-4232-4a7e-bf7c-142229aec6a4">zaliczeniu do I grupy inwalidów, lub</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/1585__art_4__ust_1__pkt_1__lit_b" gd:GUID="f7fb3ad9-7417-4bd4-99e9-21ffd0f630a3">
+              <nr>b</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="51480099-3412-4d3c-bc99-4559d45e3661" fragment="4" gd:fragmentGUID="bb866324-0d56-4647-b37d-6cdb30114d07">całkowitej niezdolności do pracy, na podstawie ustawy z dnia 17 grudnia 1998 r. o emeryturach i rentach z Funduszu Ubezpieczeń Społecznych (Dz. U. z 2024 r. poz. 1631 i 1674 oraz z 2025 r. poz. 718, 769 i 1159), lub</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/1585__art_4__ust_1__pkt_1__lit_c" gd:GUID="f5bfde1b-3974-4573-a93d-264dc9b7cd74">
+              <nr>c</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="51480099-3412-4d3c-bc99-4559d45e3661" fragment="5" gd:fragmentGUID="7fdcfc9f-7270-4802-bb80-db0121594047">znacznym stopniu niepełnosprawności, na podstawie ustawy z dnia 27 sierpnia 1997 r. o rehabilitacji zawodowej i społecznej oraz zatrudnianiu osób niepełnosprawnych (Dz. U. z 2025 r. poz. 913 i 1301), lub</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/1585__art_4__ust_1__pkt_1__lit_d" gd:GUID="66c1cfbb-d843-4cb4-9cd3-1b9f22b2c806">
+              <nr>d</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="51480099-3412-4d3c-bc99-4559d45e3661" fragment="6" gd:fragmentGUID="1f09c3b4-dce8-4843-ac03-23894f77bb4f">trwałej lub okresowej całkowitej niezdolności do pracy w gospodarstwie rolnym, na podstawie ustawy z dnia 20 grudnia 1990 r. o ubezpieczeniu społecznym rolników (Dz. U. z 2025 r. poz. 197, 620, 621 i 1160);</zdanie>
+              </p>
+            </litera>
+          </punkt>
+          <punkt eId="DU/2025/1585__art_4__ust_1__pkt_2" gd:GUID="6a9cc4b6-5f7e-4864-9dc9-e726077541fb">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="51480099-3412-4d3c-bc99-4559d45e3661" fragment="7" gd:fragmentGUID="24242ff3-cc96-442b-8074-4362c41615ae">osoby, które ukończyły 75 lat;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/1585__art_4__ust_1__pkt_3" gd:GUID="d82f1093-1cbd-4cad-b0dc-9fbc193d19c4">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="51480099-3412-4d3c-bc99-4559d45e3661" fragment="8" gd:fragmentGUID="0b149423-a53c-4b27-9197-35ed9c34a60e">osoby, które otrzymują świadczenie pielęgnacyjne lub specjalny zasiłek opiekuńczy z właściwego organu realizującego zadania w zakresie świadczeń rodzinnych jako zadanie zlecone z zakresu administracji rządowej lub rentę socjalną z Zakładu Ubezpieczeń Społecznych lub innego organu emerytalno-rentowego;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/1585__art_4__ust_1__pkt_4" gd:GUID="1dab3f5d-f916-4626-a502-a408aeac22f6">
+            <nr>4</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="51480099-3412-4d3c-bc99-4559d45e3661" fragment="9" gd:fragmentGUID="a3fd1dd8-d4db-490b-9fee-211cad6ca38e">osoby niesłyszące, u których stwierdzono całkowitą głuchotę lub obustronne upośledzenie słuchu (mierzone na częstotliwości 2000 Hz o natężeniu od 80 dB);</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/1585__art_4__ust_1__pkt_5" gd:GUID="57e96bc2-04c7-43d1-8db7-7244bcc8e7fb">
+            <nr>5</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="51480099-3412-4d3c-bc99-4559d45e3661" fragment="10" gd:fragmentGUID="244d0162-d084-43ad-aa35-3b4ffbbbffac">osoby niewidome, których ostrość wzroku nie przekracza 15 %;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/1585__art_4__ust_1__pkt_6" gd:GUID="105b83f2-12e9-49e0-98d5-d953884a1b67">
+            <nr>6</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="51480099-3412-4d3c-bc99-4559d45e3661" fragment="11" gd:fragmentGUID="85824479-1cfe-48be-987f-837fd9001f47">osoby, które ukończyły 60 lat oraz mają ustalone prawo do emerytury, której wysokość nie przekracza miesięcznie kwoty 50 % przeciętnego miesięcznego wynagrodzenia w gospodarce narodowej w roku poprzedzającym, ogłaszanego przez Prezesa Głównego Urzędu Statystycznego;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/1585__art_4__ust_1__pkt_7" gd:GUID="85aecb65-a492-4d61-afdc-07ba174c4e37">
+            <nr>7</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="51480099-3412-4d3c-bc99-4559d45e3661" fragment="12" gd:fragmentGUID="0a2b6fdc-28a2-4fd9-9dbd-db6103b76458">osoby:</zdanie>
+            </p>
+            <litera eId="DU/2025/1585__art_4__ust_1__pkt_7__lit_a" gd:GUID="6c09cd1f-d51a-4a3d-8d6f-896cbc96f90f">
+              <nr>a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="51480099-3412-4d3c-bc99-4559d45e3661" fragment="13" gd:fragmentGUID="cd8a295a-422f-4f13-a8c1-87796d96d181">które mają prawo do korzystania ze świadczeń pieniężnych z tytułu ustawy z dnia 12 marca 2004 r. o pomocy społecznej (Dz. U. z 2025 r. poz. 1214 i 1302),</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/1585__art_4__ust_1__pkt_7__lit_b" gd:GUID="1db32a20-64e3-4797-8b81-deaba38bdcd0">
+              <nr>b</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="51480099-3412-4d3c-bc99-4559d45e3661" fragment="14" gd:fragmentGUID="f5e1f2b9-3f7a-487c-b01f-7621717a7665">spełniające kryteria dochodowe, określone w ustawie z dnia 28 listopada 2003 r. o świadczeniach rodzinnych (Dz. U. z 2025 r. poz. 1208),</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/1585__art_4__ust_1__pkt_7__lit_c" gd:GUID="7314cab9-730d-4039-95d1-225987947760">
+              <nr>c</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="51480099-3412-4d3c-bc99-4559d45e3661" fragment="15" gd:fragmentGUID="8ec07e42-9411-46f0-a0a9-2dd8c708f964"><odnosnik id-odnosnika="2" symbol="2" gd:GUID="99570df4-395f-4cbe-bdca-864a6d9bd4bd"><p><zdanie nr="1" gd:zdGUID="0f63c6c3-6278-4e74-b5a6-33a42562abff" fragment="1" gd:fragmentGUID="ebd71c2b-70bb-44b8-9fb5-2e8ee341396e">W brzmieniu ustalonym przez art. 395 ustawy z dnia 20 marca 2025 r. o rynku pracy i służbach zatrudnienia (Dz. U. poz. 620), która weszła w życie z dniem 1 czerwca 2025 r.</zdanie></p></odnosnik> bezrobotne, o których mowa w art. 2 pkt 1 ustawy z dnia 20 marca 2025 r. o rynku pracy i służbach zatrudnienia (Dz. U. poz. 620),</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/1585__art_4__ust_1__pkt_7__lit_d" gd:GUID="51cc2a8c-37bf-4074-b45e-d2dd8050b420">
+              <nr>d</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="51480099-3412-4d3c-bc99-4559d45e3661" fragment="16" gd:fragmentGUID="ea4aa8a2-5889-4266-80f7-6d4834539a42"><odsylacz-do-odnosnika id-odnosnika="2" symbol="2" /> posiadające prawo do zasiłku przedemerytalnego, określonego w ustawie z dnia 30 kwietnia 2004 r. o świadczeniach przedemerytalnych (Dz. U. z 2025 r. poz. 421 i 620),</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/1585__art_4__ust_1__pkt_7__lit_e" gd:GUID="217f3637-002a-4b35-95ca-3dee3aa09502">
+              <nr>e</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="51480099-3412-4d3c-bc99-4559d45e3661" fragment="17" gd:fragmentGUID="73f53650-c1d3-4037-97b1-eec037fb2175">posiadające prawo do świadczenia przedemerytalnego, określonego w ustawie z dnia 30 kwietnia 2004 r. o świadczeniach przedemerytalnych,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/1585__art_4__ust_1__pkt_7__lit_f" gd:GUID="ae573d95-847e-491e-9d9f-87e54524089f">
+              <nr>f</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="51480099-3412-4d3c-bc99-4559d45e3661" fragment="18" gd:fragmentGUID="a1684a64-e545-491a-a909-163904b60b23">(pominięta),<odnosnik id-odnosnika="3" symbol="3" gd:GUID="666f6c21-85a5-4684-8b34-8e7ad8237913"><p><zdanie nr="1" gd:zdGUID="3705d725-701f-407c-acdd-74e77c1094be" fragment="1" gd:fragmentGUID="842a936a-415f-477f-b8ff-45ba47e6b4d7">Na podstawie wyroku Trybunału Konstytucyjnego z dnia 4 listopada 2009 r. sygn. akt Kp 1/08 (M.P. poz. 953).</zdanie></p></odnosnik></zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/1585__art_4__ust_1__pkt_7__lit_g" gd:GUID="f09ef881-f5ca-4278-8f81-ba641cebdb6e">
+              <nr>g</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="51480099-3412-4d3c-bc99-4559d45e3661" fragment="19" gd:fragmentGUID="a8c481c9-b292-4f7b-9f7f-ff2774196fad">(pominięta);<odsylacz-do-odnosnika id-odnosnika="3" symbol="3" /></zdanie>
+              </p>
+            </litera>
+          </punkt>
+          <punkt eId="DU/2025/1585__art_4__ust_1__pkt_8" gd:GUID="01c67b3b-65d8-443c-bc89-404edc4a220b">
+            <nr>8</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="51480099-3412-4d3c-bc99-4559d45e3661" fragment="20" gd:fragmentGUID="36174c54-032a-42ae-a90c-1289cb86706a">osoby, które otrzymują zasiłek dla opiekuna określony w ustawie z dnia 4 kwietnia 2014 r. o ustaleniu i wypłacie zasiłków dla opiekunów (Dz. U. z 2024 r. poz. 246).</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/1585__art_4__ust_2" gd:GUID="ebd89947-c1f1-4b4b-9aa7-9bc2e7b19eb4">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="47afb5a7-1a95-4459-8a11-c2282ded631c" fragment="1" gd:fragmentGUID="dd79f236-3260-4fa0-a302-553ba8644679">(uchylony)</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1585__art_4__ust_3" gd:GUID="16b8d7b4-8cce-4fce-9caf-1970a792c89e">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="16d97709-4406-460d-b3a4-b2098303bed2" fragment="1" gd:fragmentGUID="43eb0cd2-975f-4862-a77a-a58a4887c259">Zwolnienia określone w ust. 1 pkt 1 i 3–8 przysługują od pierwszego dnia miesiąca następującego po miesiącu, w którym złożono w placówce pocztowej operatora wyznaczonego w rozumieniu ustawy z dnia 23 listopada 2012 r. – Prawo pocztowe (Dz. U. z 2025 r. poz. 366, 820 i 1456) oświadczenie o spełnianiu warunków do korzystania z tych zwolnień i przedstawiono dokumenty potwierdzające uprawnienie do tych zwolnień.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1585__art_4__ust_3a" gd:GUID="480c09c7-a3c1-4b32-9063-8e208b0e3db8">
+          <nr>3a</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="7dbc010b-6ee0-49da-85f3-9f86e0470eff" fragment="1" gd:fragmentGUID="ef95fe69-46f2-4eca-880b-03eb96bc02a4">Zwolnienie określone w ust. 1 pkt 2 przysługuje od pierwszego dnia miesiąca następującego po miesiącu, w którym osoba ukończyła 75 lat.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1585__art_4__ust_3b" gd:GUID="95493805-55ca-4b31-9dd0-45e79f023b78">
+          <nr>3b</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="76da277a-9f07-47bb-9e2e-c67b250aa355" fragment="1" gd:fragmentGUID="94f62521-95c4-408f-9716-50b6480229ac">W okresie obowiązywania stanu zagrożenia epidemicznego albo stanu epidemii lub w przypadku zaprzestania działania placówek operatora pocztowego świadczącego usługi powszechne oświadczenie o spełnianiu warunków do korzystania ze zwolnień od opłat abonamentowych wraz z cyfrowym odwzorowaniem dokumentów potwierdzających uprawnienie do tych zwolnień może zostać przekazane operatorowi wyznaczonemu na dedykowany adres poczty elektronicznej.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1585__art_4__ust_4" gd:GUID="e7c73a14-88b8-42c0-bae8-520fe99a18e9">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="1404e7e2-1390-4df0-ae8b-e50266958b43" fragment="1" gd:fragmentGUID="988fb2bb-d452-468b-b909-f61ad066410d">Osoby korzystające ze zwolnień od opłat abonamentowych z wyjątkiem osób, o których mowa w ust. 1 pkt 2, obowiązane są zgłosić placówce pocztowej operatora wyznaczonego, o której mowa w ust. 3, zmiany stanu prawnego lub faktycznego, które mają wpływ na uzyskane zwolnienia, w terminie 30 dni od dnia, w którym taka zmiana nastąpiła.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1585__art_4__ust_5" gd:GUID="03f8104e-99a4-4b03-a354-98f728e4420e">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="81572c0f-01ec-478a-a83b-adf098d79612" fragment="1" gd:fragmentGUID="0dc28a65-de86-4560-a25f-49916f2959f0">Krajowa Rada Radiofonii i Telewizji określi, w drodze rozporządzenia:</zdanie>
+          </p>
+          <punkt eId="DU/2025/1585__art_4__ust_5__pkt_1" gd:GUID="49d7de60-e48c-4134-8a10-6374fdd57572">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="81572c0f-01ec-478a-a83b-adf098d79612" fragment="2" gd:fragmentGUID="5e055d06-3502-45d1-bd87-b8f6574cc3fd">rodzaje dokumentów potwierdzających uprawnienia do zwolnień od opłat abonamentowych,</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/1585__art_4__ust_5__pkt_2" gd:GUID="84979eec-3532-4960-a2ff-fa43bde67a31">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="81572c0f-01ec-478a-a83b-adf098d79612" fragment="3" gd:fragmentGUID="a583f445-4881-49fb-9888-7bbda5b3c699">wzór oświadczenia, o którym mowa w ust. 3</zdanie>
+            </p>
+          </punkt>
+          <czesc-wspolna-punkt eId="DU/2025/1585__art_4__ust_5__czw" gd:GUID="a0b35b13-385b-453d-8f0b-8006421e68f2">
+            <p>
+              <zdanie nr="1" gd:zdGUID="81572c0f-01ec-478a-a83b-adf098d79612" fragment="4" gd:fragmentGUID="986b5754-ff25-4d74-a653-0a86f5d65a7b">– z uwzględnieniem dokumentów wydawanych przez uprawnione organy oraz nieobciążania osób korzystających ze zwolnień nadmiernymi utrudnieniami.</zdanie>
+            </p>
+          </czesc-wspolna-punkt>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/1585__art_5" gd:GUID="76120e0d-28cb-40a1-806c-936e1161ef33">
+        <nr>5</nr>
+        <ustep eId="DU/2025/1585__art_5__ust_1" gd:GUID="07548b2f-3084-4e0a-9204-d4f81c2f9449">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="8ac5f076-005f-42b3-bf20-4c2a33ce3c28" fragment="1" gd:fragmentGUID="e0630b44-861b-469d-bfa5-b8a7d3f3a4be">Odbiorniki radiofoniczne i telewizyjne podlegają, dla celów pobierania opłat abonamentowych za ich używanie, zarejestrowaniu w placówkach pocztowych operatora wyznaczonego w rozumieniu ustawy z dnia 23 listopada 2012 r. – Prawo pocztowe.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1585__art_5__ust_2" gd:GUID="bdd9f268-bcfe-483e-8ace-2cc94a898d29">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="59799ea7-922f-4d40-80f0-c1c2a082550c" fragment="1" gd:fragmentGUID="f3603ee0-17fd-4610-ae5f-f0f081be5ee0">Obowiązkowi rejestracji nie podlegają odbiorniki radiofoniczne i telewizyjne:</zdanie>
+          </p>
+          <punkt eId="DU/2025/1585__art_5__ust_2__pkt_1" gd:GUID="2faf30db-df2d-471d-90ed-e99d2e02fb4a">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="59799ea7-922f-4d40-80f0-c1c2a082550c" fragment="2" gd:fragmentGUID="07fe93d4-4c86-4bde-8b53-1779c01e4792">wykorzystywane wyłącznie przy tworzeniu audycji lub innych przekazów;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/1585__art_5__ust_2__pkt_2" gd:GUID="fc1f79a0-58bd-4715-956d-31a241adff78">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="59799ea7-922f-4d40-80f0-c1c2a082550c" fragment="3" gd:fragmentGUID="f5541d96-3557-4443-b5a0-2e4f2d092daa">wykorzystywane wyłącznie do tworzenia, rozpowszechniania lub rozprowadzania programów radiowych lub telewizyjnych, w tym do kontroli jakości rozpowszechniania lub rozprowadzania;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/1585__art_5__ust_2__pkt_3" gd:GUID="beb9f503-33f5-46aa-93e3-fd108d54121e">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="59799ea7-922f-4d40-80f0-c1c2a082550c" fragment="4" gd:fragmentGUID="7b608c2b-5fea-4c4a-9d6d-71f71f2690bd">przeznaczone przez przedsiębiorcę wyłącznie do sprzedaży lub przekazania osobom trzecim do używania na podstawie umów, jeżeli czynności te należą do przedmiotu działalności gospodarczej danego przedsiębiorcy.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/1585__art_5__ust_3" gd:GUID="b6b723f1-3d0c-4f3e-8bf0-ebb8ceccd01c">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a054a55f-1355-44b7-8719-1cebfeb93313" fragment="1" gd:fragmentGUID="aa71e0d5-6f5f-452d-b80c-b3d33efe37cd">W przypadku stwierdzenia używania niezarejestrowanego odbiornika radiofonicznego lub telewizyjnego pobiera się opłatę w wysokości stanowiącej trzydziestokrotność miesięcznej opłaty abonamentowej obowiązującej w dniu stwierdzenia używania niezarejestrowanego odbiornika.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1585__art_5__ust_4" gd:GUID="c5bccb5f-6fad-43e5-bf11-87c78e2ef252">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="25b52cfb-5185-4b0b-bfe7-70cdd5494893" fragment="1" gd:fragmentGUID="338f3ac8-dd44-4267-9cd7-857aada854d0">Uiszczenie opłaty, o której mowa w ust. 3, nie zwalnia od obowiązku uiszczania bieżącej opłaty abonamentowej za okres od dnia stwierdzenia używania niezarejestrowanego odbiornika.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1585__art_5__ust_5" gd:GUID="8c5520ae-6f1b-47cd-b19b-8304d598a8bd">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="287c229a-87c2-474a-978b-9313acb0f474" fragment="1" gd:fragmentGUID="c86afee6-7f1f-4bcc-ba13-5bd3f731aac8">Osoba fizyczna lub podmiot posiadający zarejestrowany odbiornik radiofoniczny lub telewizyjny może dokonać zgłoszenia zaprzestania używania tych urządzeń.</zdanie>
+            <zdanie nr="2" gd:zdGUID="97120b93-5930-4b29-8a58-91455fe30717" fragment="1" gd:fragmentGUID="b313f965-0606-4c83-bafe-86c0282c61d3">Operator wyznaczony w rozumieniu ustawy z dnia 23 listopada 2012 r. – Prawo pocztowe dokonuje wyrejestrowania odbiorników radiofonicznych lub telewizyjnych.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1585__art_5__ust_6" gd:GUID="9d42bed4-27b0-4bdd-bafa-b4123857ad06">
+          <nr>6</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="9b2c7827-77e7-4f35-a538-1affa9416943" fragment="1" gd:fragmentGUID="131aa9b9-6015-489a-a7d3-dbb25283d36a">Po wyrejestrowaniu odbiornika usunięcie danych osobowych osób, o których mowa w ust. 5, następuje po upływie 5 lat, licząc od końca roku kalendarzowego, w którym dokonano wyrejestrowania odbiornika, pod warunkiem że osoby te nie są zadłużone w uiszczaniu opłat abonamentowych oraz nie toczą się przeciwko nim postępowania w sprawie zaległości w uiszczaniu opłat abonamentowych albo postępowania egzekucyjne.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1585__art_5__ust_7" gd:GUID="ac55bc39-961c-426e-8c86-39684c8345fa">
+          <nr>7</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="af89d604-4512-4223-8150-46d4d39b9d1a" fragment="1" gd:fragmentGUID="e641e818-a3a5-430b-b37b-44af5a194480">W przypadku spłaty zadłużenia w opłatach abonamentowych lub zakończenia toczących się postępowań, o których mowa w ust. 6, po dacie wyrejestrowania odbiornika, usunięcie danych osobowych następuje po upływie 5 lat, licząc od końca roku kalendarzowego, w którym nastąpiło wygaśnięcie zobowiązania.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/1585__art_6" gd:GUID="93ce2046-cdba-434e-b13a-dbbf13f35295">
+        <nr>6</nr>
+        <ustep eId="DU/2025/1585__art_6__ust_1" gd:GUID="df84f970-c1b2-408d-8a74-f7be4b81655c">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="63c9d9fe-f067-453c-b0d0-dd75f9e39567" fragment="1" gd:fragmentGUID="357f18b6-439c-496f-a0cb-109955ebc357">Opłaty abonamentowe są pobierane przez operatora wyznaczonego w rozumieniu ustawy z dnia 23 listopada 2012 r. – Prawo pocztowe.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1585__art_6__ust_2" gd:GUID="0574bdb5-d5f5-4bc6-acc4-f0f967c2cd8f">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="679d3565-6506-47ad-a932-e3d6987738c1" fragment="1" gd:fragmentGUID="1199c091-ac75-4402-b480-a0877002d221">Wpływy z pobranych opłat abonamentowych oraz odsetek za zwłokę w uiszczaniu tych opłat operator wyznaczony przekazuje na wyodrębniony rachunek Krajowej Rady Radiofonii i Telewizji, z przeznaczeniem na cele określone w art. 8 ust. 1, po potrąceniu umownego wynagrodzenia za te usługi.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1585__art_6__ust_3" gd:GUID="182586de-5844-43a8-9692-93f7cab1926c">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="c1582605-bc1a-4e87-a408-6a4920943c4c" fragment="1" gd:fragmentGUID="e0e53a0b-bd1f-4df6-a5b7-f326a2184b44">Rachunek, o którym mowa w ust. 2 oraz w art. 7 ust. 9, jest prowadzony przez Bank Gospodarstwa Krajowego.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1585__art_6__ust_4" gd:GUID="effc108b-6dde-4fa0-b6ab-362a86b88a24">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="63b7bf7e-de65-4bd6-8a29-9f102086ba49" fragment="1" gd:fragmentGUID="97b04876-15aa-4a31-9656-610b8fc1a808">Minister właściwy do spraw łączności w porozumieniu z Krajową Radą Radiofonii i Telewizji określi, w drodze rozporządzenia, warunki i tryb rejestracji odbiorników radiofonicznych i telewizyjnych, uwzględniając dostępność placówek pocztowych operatora wyznaczonego oraz jego organizację.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/1585__art_7" gd:GUID="e977d1ef-03c4-4b86-b90a-d9d31a40ce99">
+        <nr>7</nr>
+        <ustep eId="DU/2025/1585__art_7__ust_1" gd:GUID="07d29754-d610-4977-b9ee-1ca5050ea2d1">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="ec87ed81-4135-47d8-9529-cd475dd41a5f" fragment="1" gd:fragmentGUID="2c602133-9c92-40e6-aa02-2251374a024c">Kontrolę wykonywania obowiązku rejestracji odbiorników radiofonicznych i telewizyjnych oraz obowiązku uiszczania opłaty abonamentowej prowadzi operator wyznaczony w rozumieniu ustawy z dnia 23 listopada 2012 r. – Prawo pocztowe.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1585__art_7__ust_1a" gd:GUID="855da38a-5061-44a8-90d3-f962165a39a2">
+          <nr>1a</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="89ea262f-a4bb-4ca0-a92f-eee3f78fb3db" fragment="1" gd:fragmentGUID="1a29720c-6eae-4ea6-abd5-a194559775bd">Operator wyznaczony, o którym mowa w ust. 1, jest uprawniony do otrzymywania danych z rejestru Powszechnego Elektronicznego Systemu Ewidencji Ludności (PESEL) na zasadach określonych w ustawie z dnia 24 września 2010 r. o ewidencji ludności (Dz. U. z 2025 r. poz. 274, 1006, 1176, 1191, 1216 i 1301).</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1585__art_7__ust_2" gd:GUID="9588508c-478c-41f0-accd-7f762bb8be79">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="65fb93f6-7451-4746-b684-f8dbd920089d" fragment="1" gd:fragmentGUID="12309358-5428-445a-836f-b20ff6284f03">Nadzór nad wykonywaniem kontroli obowiązku rejestracji odbiorników radiofonicznych i telewizyjnych oraz obowiązku pobierania opłaty abonamentowej sprawuje minister właściwy do spraw łączności.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1585__art_7__ust_3" gd:GUID="04432338-b50b-4a8f-9e51-f9f413a36128">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="20920fa3-cb95-4231-a81a-d0d5642da05f" fragment="1" gd:fragmentGUID="3ec8706e-ccf0-42ae-b05d-07e21b638094">Do opłat abonamentowych oraz do opłaty, o której mowa w art. 5 ust. 3, stosuje się przepisy o postępowaniu egzekucyjnym w administracji w zakresie egzekucji obowiązków o charakterze pieniężnym.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1585__art_7__ust_4" gd:GUID="4391c101-7ae7-437f-9f63-65b30d985235">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="c9733cf8-f789-4485-9bdb-f80e09e336f0" fragment="1" gd:fragmentGUID="f46c813a-41a0-4c94-9846-b993c411f9b2">W przypadku opóźnienia w uiszczaniu opłaty abonamentowej naliczane są odsetki w wysokości jak dla zaległości podatkowych w rozumieniu ustawy z dnia 29 sierpnia 1997 r. – Ordynacja podatkowa (Dz. U. z 2025 r. poz. 111, z późn. zm.<odnosnik id-odnosnika="4" symbol="4" gd:GUID="ea432eab-200b-46eb-aaee-7825c34636e3"><p><zdanie nr="1" gd:zdGUID="20351d52-1f3a-4cd0-8de7-b019b765a234" fragment="1" gd:fragmentGUID="2664412e-33c1-4a42-bcaa-7560faffb2ff">Zmiany tekstu jednolitego wymienionej ustawy zostały ogłoszone w Dz. U. z 2025 r. poz. 497, 621, 622, 769, 820, 1203, 1235, 1414 i 1417.</zdanie></p></odnosnik>).</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1585__art_7__ust_5" gd:GUID="5b8e9739-acf7-4797-bf02-e6fbc8c6af36">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="e612301b-0147-49ca-8fe4-77dcbd132c7a" fragment="1" gd:fragmentGUID="32794bf9-7b16-45f0-950e-701ab443c583">Uprawnionymi do żądania wykonania w drodze egzekucji administracyjnej obowiązków określonych w ust. 1 są kierownicy jednostek operatora wyznaczonego.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1585__art_7__ust_6" gd:GUID="b5cc8509-0cbd-414a-b3e2-26efb1524cac">
+          <nr>6</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="bf2e9d23-7a4d-412a-85a5-f1ce4d7d44d8" fragment="1" gd:fragmentGUID="cdc6e9ca-3aa5-4b49-ae36-81f5f803d73f">W przypadku stwierdzenia używania niezarejestrowanego odbiornika radiofonicznego lub telewizyjnego kierownik jednostki operatora wyznaczonego przeprowadzający kontrolę, wydaje decyzję, w której nakazuje rejestrację odbiornika oraz ustala opłatę za używanie niezarejestrowanego odbiornika radiofonicznego lub telewizyjnego, o której mowa w art. 5 ust. 3.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1585__art_7__ust_7" gd:GUID="0bffdadd-4922-4c77-80d9-e6efd7744c0d">
+          <nr>7</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="3e40390f-38a8-405f-bbe8-792cb0004e7e" fragment="1" gd:fragmentGUID="f42d6c12-7f24-4ee0-b65f-e7c642fc1481">Od decyzji, o której mowa w ust. 6, służy odwołanie do ministra właściwego do spraw łączności.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1585__art_7__ust_8" gd:GUID="64640206-4779-497f-8106-848e9a7b2f75">
+          <nr>8</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="c7955b77-ac5f-4dcb-8b5f-70da70f18239" fragment="1" gd:fragmentGUID="5d948130-7253-4488-bde3-e23dd334e243">Połowa wpływów z opłaty, o której mowa w art. 5 ust. 3, stanowi dochód operatora wyznaczonego.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1585__art_7__ust_9" gd:GUID="08b1de47-cd4a-4cf1-a6e2-d40226d525c6">
+          <nr>9</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="76e88868-fc2f-43f3-90b5-5529dd5f50db" fragment="1" gd:fragmentGUID="eb1ebdfa-ec22-49b1-ab47-b97259356fda">Wpływy z opłaty, o której mowa w art. 5 ust. 3, pomniejszone o kwoty, o których mowa w ust. 8, są przekazywane na wyodrębniony rachunek Krajowej Rady Radiofonii i Telewizji, z przeznaczeniem na cele wskazane w art. 8 ust. 1.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1585__art_7__ust_10" gd:GUID="876d8fa9-fdf4-4e7e-8e76-a855072fc9f6">
+          <nr>10</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="4fc2222d-a8bf-4b19-afd7-4ed68dda3c8f" fragment="1" gd:fragmentGUID="a38eb70a-dc6f-4337-ab2b-8f5c2452e2de">Minister właściwy do spraw łączności w porozumieniu z Krajową Radą Radiofonii i Telewizji określi, w drodze rozporządzenia:</zdanie>
+          </p>
+          <punkt eId="DU/2025/1585__art_7__ust_10__pkt_1" gd:GUID="e79fd6d0-96f3-4a76-b390-8c9a668facb2">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="4fc2222d-a8bf-4b19-afd7-4ed68dda3c8f" fragment="2" gd:fragmentGUID="39a85c2e-5de3-4caf-8e0b-edfc50590fa7">jednostki operatora wyznaczonego przeprowadzające kontrolę określoną w ust. 1,</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/1585__art_7__ust_10__pkt_2" gd:GUID="2443692d-56b6-48bd-9904-888a4b6e4133">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="4fc2222d-a8bf-4b19-afd7-4ed68dda3c8f" fragment="3" gd:fragmentGUID="42165d66-a1b9-4d38-a90c-f5a3f01c6508">wzór upoważnienia do wykonywania czynności kontrolnych oraz zasady i tryb wydawania upoważnień</zdanie>
+            </p>
+          </punkt>
+          <czesc-wspolna-punkt eId="DU/2025/1585__art_7__ust_10__czw" gd:GUID="7566cffe-6b24-492b-94ff-7534df8e18ba">
+            <p>
+              <zdanie nr="1" gd:zdGUID="4fc2222d-a8bf-4b19-afd7-4ed68dda3c8f" fragment="4" gd:fragmentGUID="4e67c26e-db3b-4929-8cd5-1df3fe4119c1">– mając na uwadze zapewnienie prawidłowego wykonania czynności kontrolnych i organizację operatora wyznaczonego.</zdanie>
+            </p>
+          </czesc-wspolna-punkt>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/1585__art_8" gd:GUID="ffd5b0c7-a79b-418b-be6e-dd4597f456f0">
+        <nr>8</nr>
+        <ustep eId="DU/2025/1585__art_8__ust_1" gd:GUID="5a33d4cd-340e-488c-badf-638dd64aa626">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="3c8ea10c-3502-451d-84cd-6bb3f2caa62c" fragment="1" gd:fragmentGUID="0831a5c5-7333-4c19-9069-bb7bf36be559">Wpływy, o których mowa w art. 2 ust. 1, art. 5 ust. 3 i art. 7 ust. 4, z wyłączeniem potrąceń przewidzianych w art. 6 ust. 2 i art. 7 ust. 8, są przeznaczane wyłącznie na realizację przez nadawców publicznej radiofonii i telewizji misji, o której mowa w art. 21 ust. 1 ustawy o radiofonii i telewizji, w wysokości nieprzekraczającej wydatków ponoszonych w związku z realizacją tej misji.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1585__art_8__ust_2" gd:GUID="6fb21aa8-c76a-49e5-a378-6c9fdc1aedc1">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="9b0e1a45-c335-4e49-adcd-51cecfecfc8c" fragment="1" gd:fragmentGUID="cbf2f315-e2af-4737-8db7-e04aa356f44a">Krajowa Rada Radiofonii i Telewizji ustala corocznie, po analizie planu programowo-finansowego, o którym mowa w art. 21c ust. 1 ustawy o radiofonii i telewizji, oraz sprawozdania, o którym mowa w art. 31b ust. 1 tej ustawy, za poprzedni rok kalendarzowy i analizie określonych w nich kosztów, nie później niż do dnia 30 września, sposób podziału wpływów, o których mowa w ust. 1, między jednostki publicznej radiofonii i telewizji w następnym roku kalendarzowym, w tym minimalny udział terenowych oddziałów spółki, o której mowa w art. 26 ust. 2 ustawy o radiofonii i telewizji.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1585__art_8__ust_3" gd:GUID="961056cf-2d4d-4b31-b73e-d9b1bfec650e">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="baaf0364-5738-4de7-ae55-a8625d245a86" fragment="1" gd:fragmentGUID="5516c190-293d-4631-90fb-b4255ad21719">Przewodniczący Krajowej Rady Radiofonii i Telewizji przekazuje zaliczkowo jednostkom publicznej radiofonii i telewizji środki na realizację misji, o której mowa w art. 21 ust. 1 ustawy o radiofonii i telewizji, na podstawie sposobu podziału wpływów, o którym mowa w ust. 2.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1585__art_8__ust_4" gd:GUID="c6f26e52-3565-4fd6-9e96-98b95d2f077c">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="0dbb38eb-9bd0-4677-967b-4cdb5e1b5bd0" fragment="1" gd:fragmentGUID="587fde9e-6ccb-4ec6-b288-7662fa5b7662">(uchylony)</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/1585__art_9" gd:GUID="efd94094-6693-485b-8b54-111def7a6694">
+        <nr>9</nr>
+        <ustep eId="DU/2025/1585__art_9__ust_1" gd:GUID="1ea702b3-03c9-42cb-baed-8b64d0081da9">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a1968350-75aa-4158-8e6d-d9dab2b3cc55" fragment="1" gd:fragmentGUID="a42a9e78-42c8-49ac-a234-06523a933c99">Krajowa Rada Radiofonii i Telewizji, na wniosek kierownika jednostki operatora wyznaczonego w rozumieniu ustawy z dnia 23 listopada 2012 r. – Prawo pocztowe umarza zaległości w płatności opłat abonamentowych, odsetki za zwłokę w ich uiszczaniu oraz opłatę, o której mowa w art. 5 ust. 3, i odsetki za zwłokę w jej uiszczeniu, w przypadku gdy:</zdanie>
+          </p>
+          <punkt eId="DU/2025/1585__art_9__ust_1__pkt_1" gd:GUID="4608a401-59e3-44f9-aa34-9669805c72b6">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="a1968350-75aa-4158-8e6d-d9dab2b3cc55" fragment="2" gd:fragmentGUID="d1cc2dc3-134d-4d10-9c14-b05cf5a1a64d">niemożliwe jest ustalenie podmiotu zobowiązanego do uiszczenia tych opłat lub jego adresu lub</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/1585__art_9__ust_1__pkt_2" gd:GUID="7bb542cd-edc4-440c-89b3-b496e4b9b1c3">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="a1968350-75aa-4158-8e6d-d9dab2b3cc55" fragment="3" gd:fragmentGUID="e9f0aa1c-f943-42a9-aa58-ed1ade9c0287">podmiot zobowiązany do uiszczenia tych opłat nie posiada majątku, z którego można zaspokoić należności.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/1585__art_9__ust_2" gd:GUID="0480e74d-c7f7-451b-91fa-ffbe2eb529b5">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="6a200582-2b71-4a67-a94b-45716bc51b53" fragment="1" gd:fragmentGUID="46bc72bd-dc11-49b3-b060-079842c73abb">Podstawą do umorzenia należności w przypadkach, o których mowa w ust. 1 pkt 1, są ustalenia dokonane przez kierownika jednostki operatora wyznaczonego, a w przypadku, o którym mowa w ust. 1 pkt 2, informacja organu egzekucyjnego o nieskuteczności egzekucji.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1585__art_9__ust_3" gd:GUID="3fbd9d50-2aa1-4b2a-90ec-0f62b45b9e0b">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="b126bbc8-0a66-4824-8e97-df4652159271" fragment="1" gd:fragmentGUID="ec842528-f93e-46e7-ab63-2ef18bb172e6">Wniosek, o którym mowa w ust. 1, wraz z wykazem dłużników, należnych od nich opłat i odsetek za zwłokę w ich uiszczaniu oraz wskazaniem przyczyny braku możliwości uzyskania tych należności, kierownik jednostki operatora wyznaczonego przedstawia Krajowej Radzie Radiofonii i Telewizji raz na kwartał.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/1585__art_10" gd:GUID="d7656b1e-d447-4080-a5f8-773323d3ae5e">
+        <nr>10</nr>
+        <ustep eId="DU/2025/1585__art_10__ust_1" gd:GUID="96080ae2-4218-43dc-9a1d-3b946cfbe9d2">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="ad0713f4-172f-4509-a4d4-09a6d114210b" fragment="1" gd:fragmentGUID="5ee9e85c-dfb0-4537-8254-3d274eee3216">W wyjątkowych sytuacjach, jeżeli przemawiają za tym szczególne względy społeczne lub przypadki losowe, Krajowa Rada Radiofonii i Telewizji może umorzyć lub rozłożyć na raty zaległości w płatności opłat abonamentowych, odsetki za zwłokę w ich uiszczaniu, opłatę, o której mowa w art. 5 ust. 3, oraz odsetki za zwłokę w jej uiszczeniu.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1585__art_10__ust_2" gd:GUID="ec087e87-df46-4c4c-ae64-1adaec4b6646">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="07270f9d-176a-4fd8-bd9b-191c99046092" fragment="1" gd:fragmentGUID="677cf38f-53b0-49ec-8090-eef455655e60">Wniosek o umorzenie lub rozłożenie na raty należności wymienionych w ust. 1 podmiot zobowiązany do uiszczania opłat abonamentowych składa do Krajowej Rady Radiofonii i Telewizji.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1585__art_10__ust_3" gd:GUID="83f62c8b-72ce-485a-af73-174c53979bc9">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="8be559c8-54b5-49db-a187-ec35483d4932" fragment="1" gd:fragmentGUID="fe7da183-131b-4f45-848e-e347252f5831">Podmiot zobowiązany do uiszczania opłat abonamentowych składa w placówce pocztowej operatora wyznaczonego w rozumieniu ustawy z dnia 23 listopada 2012 r. – Prawo pocztowe dokument stwierdzający umorzenie lub rozłożenie na raty należności wymienionych w ust. 1, w terminie 14 dni od dnia jego otrzymania.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/1585__art_11" gd:GUID="7665ffdc-1ac2-4db5-9682-1ad8aa600c92">
+        <nr>11</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="1f6f2be7-2743-4ddb-945f-3310be1e2660">
+          <p>
+            <zdanie nr="1" gd:zdGUID="44704425-e149-4409-a4b1-7e2844fbca93" fragment="1" gd:fragmentGUID="cfb0e971-215d-481e-bc49-22efce0531a3">(pominięty)</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2025/1585__art_11a" gd:GUID="09e8c2cb-9cb9-47e2-944e-85ee7b4a2003">
+        <nr>11a</nr>
+        <ustep eId="DU/2025/1585__art_11a__ust_1" gd:GUID="2087b5bf-e3f1-41c5-9aa2-276053825886">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="03cabb0a-6c27-428f-bd46-5a5d7d2c1559" fragment="1" gd:fragmentGUID="fba3b304-8a8d-413a-9061-c875b290fdb3">W roku 2019 minister właściwy do spraw budżetu, na wniosek ministra właściwego do spraw kultury i ochrony dziedzictwa narodowego, przekaże jednostkom publicznej radiofonii i telewizji skarbowe papiery wartościowe jako rekompensatę z tytułu utraconych w latach 2018 i 2019 opłat abonamentowych z tytułu zwolnień, o których mowa w art. 4 ust. 1.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1585__art_11a__ust_2" gd:GUID="1b720831-f3a0-4db4-bd41-361406d0ec97">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="3c28afcd-17dd-496c-8ab2-f5c7a38de48f" fragment="1" gd:fragmentGUID="8fd3c7bb-dfeb-4f74-9936-7ef210869026">Łączna wartość nominalna skarbowych papierów wartościowych, o których mowa w ust. 1, nie może przekroczyć kwoty 1 260 000 tys. zł.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1585__art_11a__ust_3" gd:GUID="ac547093-a9e8-469c-a633-dc89edea8d7d">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="f33e8320-183d-403a-ada6-11329609a05d" fragment="1" gd:fragmentGUID="aaa36231-8f77-4b70-81d2-704ff4bd9cbe">Do rekompensaty, o której mowa w ust. 1, stosuje się odpowiednio przepisy ustawy o radiofonii i telewizji dotyczące opłat abonamentowych.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1585__art_11a__ust_4" gd:GUID="c34e080a-be68-4b56-8375-e0a3cff3cdaa">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="4a3c1f03-4ac5-4ada-8d1f-4e6406cee63c" fragment="1" gd:fragmentGUID="a1f802bd-3eb4-4a5c-bafd-156175e2d9a5">Krajowa Rada Radiofonii i Telewizji ustali, w drodze uchwały, do dnia 31 maja 2019 r.:</zdanie>
+          </p>
+          <punkt eId="DU/2025/1585__art_11a__ust_4__pkt_1" gd:GUID="106910d5-f727-4874-926d-54aefc92f276">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="4a3c1f03-4ac5-4ada-8d1f-4e6406cee63c" fragment="2" gd:fragmentGUID="989f524e-dc2b-45a1-96ee-26e4ad4a2c40">kwotę rekompensaty, o której mowa w ust. 1, nie większą niż kwota, o której mowa w ust. 2, uwzględniając średnioroczną liczbę osób zwolnionych, o których mowa w art. 4 ust. 1, obliczoną na podstawie danych za rok 2017, przekazanych przez operatora wyznaczonego, dotyczących liczby tych osób zwolnionych, i rodzaju opłat, których te zwolnienia dotyczą, oraz wysokość opłat abonamentowych ustalonych na rok 2019;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/1585__art_11a__ust_4__pkt_2" gd:GUID="188fee8f-0bab-41b0-9f84-1b76579c4839">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="4a3c1f03-4ac5-4ada-8d1f-4e6406cee63c" fragment="3" gd:fragmentGUID="0ef1661c-6e09-46af-9703-1d6b10d5de4b">wartość nominalną skarbowych papierów wartościowych dla poszczególnych jednostek publicznej radiofonii i telewizji z przeznaczeniem na realizację misji publicznej, o której mowa w art. 21 ust. 1 ustawy o radiofonii i telewizji, kierując się koniecznością zachowania proporcjonalności publicznego finansowania misji publicznej radiofonii i telewizji, w wysokości nieprzekraczającej wydatków ponoszonych w związku z realizacją tej misji.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/1585__art_11a__ust_5" gd:GUID="de692ec4-97a2-4c37-829e-388fb7d1d483">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="75992835-08cb-4c0f-ae15-3fa36289c181" fragment="1" gd:fragmentGUID="3a995e72-9456-4146-8b46-223cf2066ae4">Krajowa Rada Radiofonii i Telewizji przekazuje uchwałę, o której mowa w ust. 4, ministrowi właściwemu do spraw kultury i ochrony dziedzictwa narodowego.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1585__art_11a__ust_6" gd:GUID="745e4d18-a758-4fa0-8a62-90be98a4ac6d">
+          <nr>6</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="d980e641-0c74-40b9-a66a-9c63ff0333c3" fragment="1" gd:fragmentGUID="c6bae985-1570-4f8f-b277-63d6c9bf4f0c">Minister właściwy do spraw kultury i ochrony dziedzictwa narodowego, na podstawie uchwały, o której mowa w ust. 4, składa wniosek do ministra właściwego do spraw budżetu o przekazanie jednostkom publicznej radiofonii i telewizji skarbowych papierów wartościowych.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1585__art_11a__ust_7" gd:GUID="3d52ba5f-6219-48b1-808e-fb44bc7b0a52">
+          <nr>7</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="0dbb95db-3806-4dad-90c4-8476f44d78ea" fragment="1" gd:fragmentGUID="54ebcf44-ac93-4170-ba45-0336a2bf7620">Minister właściwy do spraw budżetu określi w liście emisyjnym warunki emisji skarbowych papierów wartościowych oraz sposób realizacji świadczeń z nich wynikających.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1585__art_11a__ust_8" gd:GUID="49c8de6e-aab8-4068-9a39-da9bf325a3d1">
+          <nr>8</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="81659d3a-58db-462d-b1ec-e5c90b2e3f76" fragment="1" gd:fragmentGUID="79839fc5-2bac-4f14-9827-23ac2d8d0f07">List emisyjny zawiera w szczególności:</zdanie>
+          </p>
+          <punkt eId="DU/2025/1585__art_11a__ust_8__pkt_1" gd:GUID="3157be36-477d-4271-aead-d52a72c184d2">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="81659d3a-58db-462d-b1ec-e5c90b2e3f76" fragment="2" gd:fragmentGUID="357c0889-d399-4c19-bbbb-55553b3dd941">datę emisji;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/1585__art_11a__ust_8__pkt_2" gd:GUID="9ca2781a-fb93-4a90-b0bd-2dfbb6742552">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="81659d3a-58db-462d-b1ec-e5c90b2e3f76" fragment="3" gd:fragmentGUID="77fe9d84-3439-4ad6-85a6-483e4ae487a4">powołanie podstawy prawnej emisji;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/1585__art_11a__ust_8__pkt_3" gd:GUID="5ca4f175-6529-48d8-aace-e600a7879677">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="81659d3a-58db-462d-b1ec-e5c90b2e3f76" fragment="4" gd:fragmentGUID="790cee90-a29c-40e4-b2fb-3326be45752c">jednostkową wartość nominalną w złotych;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/1585__art_11a__ust_8__pkt_4" gd:GUID="a8102edc-2aa8-40dd-9a72-1af11ea1d4a2">
+            <nr>4</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="81659d3a-58db-462d-b1ec-e5c90b2e3f76" fragment="5" gd:fragmentGUID="ff1a6874-1dfc-4345-afb2-6446c8ee1c53">cenę i sposób jej ustalenia;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/1585__art_11a__ust_8__pkt_5" gd:GUID="c62356f0-cb47-4c3a-8b79-d40ae51a90b3">
+            <nr>5</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="81659d3a-58db-462d-b1ec-e5c90b2e3f76" fragment="6" gd:fragmentGUID="0469a9c9-e77e-4713-896f-6fa581d5f530">stopę procentową lub sposób jej obliczania;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/1585__art_11a__ust_8__pkt_6" gd:GUID="8ddada84-b79b-48e0-8ef2-7ea4fc28d0e8">
+            <nr>6</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="81659d3a-58db-462d-b1ec-e5c90b2e3f76" fragment="7" gd:fragmentGUID="4d5910a2-4158-4c08-a5a9-6131e988038d">określenie sposobu i terminów wypłaty należności głównej oraz należności ubocznych;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/1585__art_11a__ust_8__pkt_7" gd:GUID="6793ad44-c1e3-42d1-b86b-4c5b58802cc6">
+            <nr>7</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="81659d3a-58db-462d-b1ec-e5c90b2e3f76" fragment="8" gd:fragmentGUID="9244d87a-ad11-4b3a-9781-8c98c8f39dfa">datę, od której nalicza się oprocentowanie skarbowych papierów wartościowych tej emisji;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/1585__art_11a__ust_8__pkt_8" gd:GUID="20a7bdbe-e3bd-4ec4-bb28-6e44583998e0">
+            <nr>8</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="81659d3a-58db-462d-b1ec-e5c90b2e3f76" fragment="9" gd:fragmentGUID="cfa066a5-cac7-4454-9a49-c4873c2b7c11">termin wykupu oraz zastrzeżenia w przedmiocie możliwości wcześniejszego wykupu.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/1585__art_11a__ust_9" gd:GUID="fc4a92d5-6d9e-4292-8456-e0d15e617de0">
+          <nr>9</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="ec4677c8-6f4b-4c7d-95c8-25d5cea6c88e" fragment="1" gd:fragmentGUID="a101869d-9e52-410c-84e0-c70c702cd084">Emisja skarbowych papierów wartościowych następuje z dniem zarejestrowania skarbowych papierów wartościowych w depozycie papierów wartościowych oraz w kwocie równej wartości nominalnej wyemitowanych papierów wartościowych.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1585__art_11a__ust_10" gd:GUID="7abdc12d-afc9-4da5-9c36-e8d8ab86ca8b">
+          <nr>10</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="5cf78ba4-be49-4b2c-a4dc-744477618440" fragment="1" gd:fragmentGUID="46680738-26ad-4821-ae74-2e63de299aa5">Do emisji skarbowych papierów wartościowych nie stosuje się przepisów art. 98 i art. 102 ustawy z dnia 27 sierpnia 2009 r. o finansach publicznych (Dz. U. z 2025 r. poz. 1483) oraz przepisów wydanych na podstawie art. 97 tej ustawy.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1585__art_11a__ust_11" gd:GUID="488c9e66-8af2-406a-b7dc-6a457c89018d">
+          <nr>11</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="54dee307-f147-4af4-952c-56fe8830d5aa" fragment="1" gd:fragmentGUID="2bec3ba7-6cfd-4251-8961-4323da0e159c">Rozporządzanie skarbowymi papierami wartościowymi, o których mowa w ust. 1, wymaga zgody ministra właściwego do spraw finansów publicznych.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/1585__art_11b" gd:GUID="206adc38-e168-47f4-b03e-dbdc7d9c69b8">
+        <nr>11b</nr>
+        <ustep eId="DU/2025/1585__art_11b__ust_1" gd:GUID="e7f8b06d-0f0b-4f5b-b882-33ada55b186a">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="23fd5b81-49d7-4058-aad2-79e11111a8b2" fragment="1" gd:fragmentGUID="bbda41e4-85fb-46a6-a491-806052ff69b1">W roku 2020 minister właściwy do spraw budżetu, na wniosek Krajowej Rady Radiofonii i Telewizji, przekaże jednostkom publicznej radiofonii i telewizji skarbowe papiery wartościowe jako rekompensatę z tytułu utraconych:</zdanie>
+          </p>
+          <punkt eId="DU/2025/1585__art_11b__ust_1__pkt_1" gd:GUID="3f7934ad-1c68-4b8a-9638-f0261ab9733e">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="23fd5b81-49d7-4058-aad2-79e11111a8b2" fragment="2" gd:fragmentGUID="0e53c865-6aad-4f83-a41a-308978240d36">w latach 2018 i 2019, a niezrekompensowanych na podstawie art. 11a,</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/1585__art_11b__ust_1__pkt_2" gd:GUID="2e6a7135-1d8a-4db3-879d-aeb72c77375f">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="23fd5b81-49d7-4058-aad2-79e11111a8b2" fragment="3" gd:fragmentGUID="9dfd8b73-55a0-491f-b906-96d6e0588f3d">w roku 2020</zdanie>
+            </p>
+          </punkt>
+          <czesc-wspolna-punkt eId="DU/2025/1585__art_11b__ust_1__czw" gd:GUID="c57c5817-ab0d-402e-acba-ae3de57be6d3">
+            <p>
+              <zdanie nr="1" gd:zdGUID="23fd5b81-49d7-4058-aad2-79e11111a8b2" fragment="4" gd:fragmentGUID="61ff67d4-b2f7-472b-aac0-02c4310ef18e">– wpływów z opłat abonamentowych z tytułu zwolnień, o których mowa w art. 4 ust. 1, z przeznaczeniem na realizację przez jednostki publicznej radiofonii i telewizji misji publicznej, o której mowa w art. 21 ust. 1 ustawy o radiofonii i telewizji.</zdanie>
+            </p>
+          </czesc-wspolna-punkt>
+        </ustep>
+        <ustep eId="DU/2025/1585__art_11b__ust_2" gd:GUID="97488e25-b88a-45dd-bea6-90cad4ff4483">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="34972eb5-1448-444d-8e88-4c2605624267" fragment="1" gd:fragmentGUID="a1c43c69-293f-4136-bf00-af3936df67b2">Łączna wartość nominalna skarbowych papierów wartościowych, o których mowa w ust. 1, wynosi 1 950 000 tys. zł.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1585__art_11b__ust_3" gd:GUID="0ee91c71-bd83-48aa-bee0-f97396201c77">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="aba16d63-3fe4-47cb-a403-f00b29dfdead" fragment="1" gd:fragmentGUID="f4d120ae-622b-455c-a742-836357ee829e">Do rekompensaty, o której mowa w ust. 1, stosuje się odpowiednio przepisy ustawy o radiofonii i telewizji dotyczące opłat abonamentowych.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1585__art_11b__ust_4" gd:GUID="d67f5d12-37a3-4b17-89cf-2c2c519c3d1e">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="2905a59a-df02-4fc2-ab2c-a17056365fb1" fragment="1" gd:fragmentGUID="82a12869-f076-45d8-806f-f1056ca2d7ae">Krajowa Rada Radiofonii i Telewizji ustali, w drodze uchwały, do dnia 15 marca 2020 r. łączną wartość nominalną skarbowych papierów wartościowych, zaokrągloną do 1 tys. zł na zasadach ogólnych, dla poszczególnych jednostek publicznej radiofonii i telewizji z przeznaczeniem na realizację misji publicznej, o której mowa w art. 21 ust. 1 ustawy o radiofonii i telewizji, kierując się koniecznością zachowania proporcjonalności publicznego finansowania misji publicznej radiofonii i telewizji, w wysokości nieprzekraczającej wydatków ponoszonych w związku z realizacją tej misji.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1585__art_11b__ust_5" gd:GUID="75994449-68d2-420b-b683-669da21bd38f">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="c31aad00-7f85-4b3a-a89f-9c4e89fa46f9" fragment="1" gd:fragmentGUID="5d1b6bbb-79ee-4448-b6da-7679e8340366">Krajowa Rada Radiofonii i Telewizji przekaże ministrowi właściwemu do spraw budżetu w terminie 7 dni od dnia podjęcia uchwały, o której mowa w ust. 4, wniosek o przekazanie jednostkom publicznej radiofonii i telewizji skarbowych papierów wartościowych.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1585__art_11b__ust_6" gd:GUID="a595d29e-c592-4e37-877d-e14fd1b61ca9">
+          <nr>6</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="ec52558b-f52c-4312-af7a-3a0fb06c9e90" fragment="1" gd:fragmentGUID="35576c7d-8de4-4d2a-b529-6d257fc90224">We wniosku, o którym mowa w ust. 5, Krajowa Rada Radiofonii i Telewizji wskazuje wartość nominalną skarbowych papierów wartościowych, jakie mają być przekazane poszczególnym jednostkom publicznej radiofonii i telewizji, numery rachunków papierów wartościowych tych jednostek oraz nazwy podmiotów prowadzących te rachunki papierów wartościowych i ich kody uczestnika bezpośredniego Krajowego Depozytu Papierów Wartościowych S.A.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1585__art_11b__ust_7" gd:GUID="8eaff694-eb52-4a92-92db-9ca2fa89c9e4">
+          <nr>7</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="0b3669e8-2542-41fe-a231-f584391c4004" fragment="1" gd:fragmentGUID="b02a15b0-76cd-4720-b4e8-0776c49d5b49">Minister właściwy do spraw budżetu przekaże skarbowe papiery wartościowe jednostkom publicznej radiofonii i telewizji wskazanym we wniosku, o którym mowa w ust. 5, w terminie 30 dni od dnia otrzymania tego wniosku.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1585__art_11b__ust_8" gd:GUID="3a69e448-5cda-4362-8e66-1c6840b5932e">
+          <nr>8</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a8e20e01-62d7-47de-af1e-2d624af35437" fragment="1" gd:fragmentGUID="f4a4169d-e295-45b5-8346-354455ac51e3">Minister właściwy do spraw budżetu określi w liście emisyjnym warunki emisji skarbowych papierów wartościowych oraz sposób realizacji świadczeń z nich wynikających.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1585__art_11b__ust_9" gd:GUID="b4b15fcc-0c45-4da5-9eab-10a0c983916a">
+          <nr>9</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="9e2be05d-99ea-4e05-874b-0335fd710e8d" fragment="1" gd:fragmentGUID="17231ba6-b8e3-476c-9605-32cb001f4599">List emisyjny zawiera w szczególności:</zdanie>
+          </p>
+          <punkt eId="DU/2025/1585__art_11b__ust_9__pkt_1" gd:GUID="d28435dd-4abd-407e-b134-b7928ca41301">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="9e2be05d-99ea-4e05-874b-0335fd710e8d" fragment="2" gd:fragmentGUID="8ef29e3d-4e30-4f04-a642-b8ef346c6757">datę emisji;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/1585__art_11b__ust_9__pkt_2" gd:GUID="8503d555-ccf8-4de1-8e24-356940994740">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="9e2be05d-99ea-4e05-874b-0335fd710e8d" fragment="3" gd:fragmentGUID="94f6266f-ff75-4a71-943f-93a44eac0329">powołanie podstawy prawnej emisji;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/1585__art_11b__ust_9__pkt_3" gd:GUID="2ae0587c-b3df-46f1-97f9-68722d6b0a81">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="9e2be05d-99ea-4e05-874b-0335fd710e8d" fragment="4" gd:fragmentGUID="32412d1e-a719-4d46-b214-57e76a22049d">jednostkową wartość nominalną w złotych;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/1585__art_11b__ust_9__pkt_4" gd:GUID="a273c834-257e-4bae-bc6b-457d7791bec3">
+            <nr>4</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="9e2be05d-99ea-4e05-874b-0335fd710e8d" fragment="5" gd:fragmentGUID="1083ad56-ae5b-4aaa-ae61-33b02debe6f1">cenę i sposób jej ustalenia;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/1585__art_11b__ust_9__pkt_5" gd:GUID="31a097f4-376e-4f8d-aac4-244c56568ea5">
+            <nr>5</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="9e2be05d-99ea-4e05-874b-0335fd710e8d" fragment="6" gd:fragmentGUID="95605cf5-facd-485c-ae07-4af65a923811">stopę procentową lub sposób jej obliczania;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/1585__art_11b__ust_9__pkt_6" gd:GUID="7d93237d-8db1-4ee0-8f42-e9beb62d511c">
+            <nr>6</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="9e2be05d-99ea-4e05-874b-0335fd710e8d" fragment="7" gd:fragmentGUID="809066fa-e314-427d-8750-001baf07cb79">określenie sposobu i terminów wypłaty należności głównej oraz należności ubocznych;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/1585__art_11b__ust_9__pkt_7" gd:GUID="5a221a58-9a8a-4f42-9042-eaaf116e91d8">
+            <nr>7</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="9e2be05d-99ea-4e05-874b-0335fd710e8d" fragment="8" gd:fragmentGUID="7d59cdab-d4e3-482c-8782-348d5d8e9ef3">datę, od której nalicza się oprocentowanie skarbowych papierów wartościowych tej emisji;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/1585__art_11b__ust_9__pkt_8" gd:GUID="bf5371c7-c366-4f89-b436-1a361fe0b05a">
+            <nr>8</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="9e2be05d-99ea-4e05-874b-0335fd710e8d" fragment="9" gd:fragmentGUID="0ef5eb97-33d2-4db3-ac92-5649622e7cfd">termin wykupu oraz zastrzeżenia w przedmiocie możliwości wcześniejszego wykupu.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/1585__art_11b__ust_10" gd:GUID="1d6df1df-e71e-4e98-8892-bba00caa79ff">
+          <nr>10</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="2a456b17-da29-4586-884e-7a00168ae08a" fragment="1" gd:fragmentGUID="438d761f-a6d6-4757-9c98-c3b6a6aa47ac">Emisja skarbowych papierów wartościowych następuje z dniem zarejestrowania skarbowych papierów wartościowych w depozycie papierów wartościowych oraz w kwocie równej wartości nominalnej wyemitowanych papierów wartościowych.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1585__art_11b__ust_11" gd:GUID="354dc0c2-f09c-4f76-89e9-e70f99b8215c">
+          <nr>11</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="81ce062f-276f-494c-a571-39f5d1d52e8b" fragment="1" gd:fragmentGUID="c1b53d73-e06e-40db-96f9-7f7d76815364">Do emisji skarbowych papierów wartościowych nie stosuje się przepisów art. 98 i art. 102 ustawy z dnia 27 sierpnia 2009 r. o finansach publicznych oraz przepisów wydanych na podstawie art. 97 tej ustawy.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1585__art_11b__ust_12" gd:GUID="99938112-7b5f-474c-8176-5977bc7bf52e">
+          <nr>12</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="09ead41b-fcdb-474b-bb31-e9c905dee58c" fragment="1" gd:fragmentGUID="dd93b444-3fe4-4bf8-9488-0a9e92dec879">Rozporządzanie skarbowymi papierami wartościowymi, o których mowa w ust. 1, wymaga zgody ministra właściwego do spraw finansów publicznych.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/1585__art_12" gd:GUID="727cadc0-3421-4837-aaac-49bea3497e7a">
+        <nr>12</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="68e61499-d341-4741-809f-e88b57a08eaa">
+          <p>
+            <zdanie nr="1" gd:zdGUID="4970415d-cc79-4cbc-8088-68843acc145c" fragment="1" gd:fragmentGUID="eb15a978-6a6a-45bf-9716-c19739d4412c">Zachowują prawo do zwolnień od opłat abonamentowych osoby, które korzystają z tego prawa na podstawie dotychczasowych przepisów, pod warunkiem złożenia, w terminie 6 miesięcy od dnia wejścia w życie niniejszej ustawy, oświadczenia, o którym mowa w art. 4 ust. 3.</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2025/1585__art_13" gd:GUID="2b16bbd8-1635-4e9f-98d3-af7744a2294c">
+        <nr>13</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="350bf356-0e12-45c0-b853-ebb802f725db">
+          <p>
+            <zdanie nr="1" gd:zdGUID="7584023f-7b30-4f28-8fe3-7b195691aabd" fragment="1" gd:fragmentGUID="aa68a8fb-c540-43ff-8db8-412af26ab156">(pominięty)</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2025/1585__art_14" gd:GUID="e8b466e1-0b92-436a-a7c2-b9481e1fdc17">
+        <nr>14</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="0681609c-e9e6-4833-994d-bc15f2e7a49e">
+          <p>
+            <zdanie nr="1" gd:zdGUID="4213a6cd-474d-432d-add7-8d5774d0be69" fragment="1" gd:fragmentGUID="483a7284-427d-46f9-953e-d4ffabee81de">(pominięty)</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2025/1585__art_15" gd:GUID="3ff5062e-487d-4d3a-b5e8-73246e5353e7">
+        <nr>15</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="eba7b036-5240-4871-8e85-f336f85543fa">
+          <p>
+            <zdanie nr="1" gd:zdGUID="ad2380f7-46de-4312-855e-ad0b13256091" fragment="1" gd:fragmentGUID="90f9aa06-ffb4-447a-ae1e-de2e86bca0f7">(pominięty)</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2025/1585__art_16" gd:GUID="9647fcad-48c9-4691-81d5-ede9ec1a00f7">
+        <nr>16</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="b401068f-4a5c-46fb-a47b-547194cad392">
+          <p>
+            <zdanie nr="1" gd:zdGUID="52fb1bc8-52dd-4c5f-9b77-f4226ebf9fa8" fragment="1" gd:fragmentGUID="4f5aa936-6de3-4009-96d4-4827cd7b0055">Ustawa wchodzi w życie po upływie 30 dni od dnia ogłoszenia<odnosnik id-odnosnika="5" symbol="5" gd:GUID="d1de6261-a240-4c29-9030-fc0cafae9e5f"><p><zdanie nr="1" gd:zdGUID="c2e881b0-5b05-424b-93e4-e9af7187d711" fragment="1" gd:fragmentGUID="1bceaf57-4c98-4d0c-a6a8-a314ece6edfb">Ustawa została ogłoszona w dniu 16 maja 2005 r.</zdanie></p></odnosnik>, z wyjątkiem art. 6 ust. 3, który wchodzi w życie po upływie 3 miesięcy od dnia ogłoszenia.</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+    </ustawa>
+  </obwieszczenie>
+</akt-prawny>

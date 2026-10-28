@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <ustawa>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2026/27</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>b1f02299-e7e0-43be-ae50-6302cdfb234b</gd:GUIDwersji>
+      <AdresISAP>WDU20260000027</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2026</Rok>
+      <Pozycja>27</Pozycja>
+      <AdresWyswietlany>Dz.U. 2026 poz. 27</AdresWyswietlany>
+      <Tytul>Ustawa z dnia 4 grudnia 2025 r. o zmianie ustawy o ochronie praw nabywcy lokalu mieszkalnego lub domu jednorodzinnego oraz Deweloperskim Funduszu Gwarancyjnym</Tytul>
+      <Rodzaj>USTAWA</Rodzaj>
+      <DataOgloszenia>2026-01-12</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-12-04</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2026-02-13_DU-2026-27_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2026-02-13" warunek="po upływie miesiąca od dnia ogłoszenia" podstawa="art. 3" zrodlo="https://eli.gov.pl/eli/DU/2026/27" dowod="DU/2026/27__art_3" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2026-02-13_DU-2026-27_domyslne.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2026-02-13_DU-2026-27_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="f34663bf-3f55-40cd-b629-ecf7aeca0700" rola="wydajacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Sejm">
+          <Nazwa>SEJM</Nazwa>
+        </Organ>
+        <Organ gd:GUID="3b1ebef0-a040-40d8-b52c-fc7e90b514cc" rola="podpisujacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Prezydent">
+          <Nazwa>Prezydent Rzeczypospolitej Polskiej</Nazwa>
+          <OrganPodpisujacy>Prezydent Rzeczypospolitej Polskiej</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>K.</imie> <nazwisko>Nawrocki</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Ustawa</rodzaj-aktu>
+    <data>z dnia 4 grudnia 2025 r.</data>
+    <tytul>o zmianie ustawy o ochronie praw nabywcy lokalu mieszkalnego lub domu jednorodzinnego oraz Deweloperskim Funduszu Gwarancyjnym</tytul>
+    <artykul eId="DU/2026/27__art_1" gd:GUID="a3f472d8-5c00-4465-8376-6504e99e53ae" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-13_DU-2026-27_domyslne.x" wejscie-w-zycie="2026-02-13">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="028c2c41-6441-4727-8931-012312ae950e" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-13_DU-2026-27_domyslne.x" wejscie-w-zycie="2026-02-13">
+        <p>
+          <zdanie nr="1" gd:zdGUID="45a6cab7-ded2-4eae-a648-b50d94401d55" fragment="1" gd:fragmentGUID="be86e942-6fb6-41b9-a969-2e3428f8a9db" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-13_DU-2026-27_domyslne.x" wejscie-w-zycie="2026-02-13">W ustawie z dnia 20 maja 2021 r. o ochronie praw nabywcy lokalu mieszkalnego lub domu jednorodzinnego oraz Deweloperskim Funduszu Gwarancyjnym (Dz. U. z 2024 r. poz. 695 oraz z 2025 r. poz. 758, 1077, 1167 i 1669) po art. 5 dodaje się art. 5a w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/695" cudzyslowy="oba" gd:nowGUID="f0343e57-eb54-405b-8a56-e7041b0f6f32" element-eId="DU/2024/695__art_5" funkcja="dodaj-po"><artykul eId="DU/2024/695__art_5a" gd:GUID="a81b4e10-f9b0-4ba0-8f15-3d8e73b6ebd4" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-13_DU-2026-27_domyslne.x" wejscie-w-zycie="2026-02-13"><nr>5a</nr><ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="f8c71766-0cf2-49a4-a877-df2b3f825b07" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-13_DU-2026-27_domyslne.x" wejscie-w-zycie="2026-02-13"><p><zdanie nr="1" gd:zdGUID="3b89da74-69ca-4aab-9ba3-a962bdec0366" fragment="1" gd:fragmentGUID="c0a818e4-358a-444d-af87-2b00c14575dd" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-13_DU-2026-27_domyslne.x" wejscie-w-zycie="2026-02-13">W umowach, o których mowa w art. 2–4, i w umowie rezerwacyjnej, o której mowa w art. 29 ust. 2, cenę lokalu lub domu jednorodzinnego określa się jako iloczyn m<sup>2</sup> ich powierzchni użytkowej oraz ceny za 1 m<sup>2</sup> powierzchni użytkowej.</zdanie><zdanie nr="2" gd:zdGUID="e965506a-f4af-4072-9343-7ec06962ec62" fragment="1" gd:fragmentGUID="a095e36a-aa39-4d6b-a7bc-9dba735c59a7" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-13_DU-2026-27_domyslne.x" wejscie-w-zycie="2026-02-13">Powierzchnię użytkową ustala się zgodnie z zasadami zawartymi w Polskiej Normie dotyczącej określania i obliczania wskaźników powierzchniowych i kubaturowych w budownictwie, obowiązującej w dniu złożenia wniosku o pozwolenie na budowę lub dokonania zgłoszenia budowy, o którym mowa w art. 29 ust. 1 pkt 1 ustawy z dnia 7 lipca 1994 r. – Prawo budowlane, dotyczącego lokalu lub domu jednorodzinnego, którego powierzchnia jest ustalana.</zdanie></p></ustep-n></artykul></cytat-strukt>.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2026/27__art_2" gd:GUID="3acfc0cb-7d92-4f39-a99d-efac4b837fef" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-13_DU-2026-27_domyslne.x" wejscie-w-zycie="2026-02-13">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="cf2df401-2313-420c-9553-1787e64cd1ca" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-13_DU-2026-27_domyslne.x" wejscie-w-zycie="2026-02-13">
+        <p>
+          <zdanie nr="1" gd:zdGUID="1a5f95fb-9c03-4cbb-8dc9-5cfa6d04f169" fragment="1" gd:fragmentGUID="42502b94-5956-4ddf-aea3-a38091b6393c" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-13_DU-2026-27_domyslne.x" wejscie-w-zycie="2026-02-13">Do umów, o których mowa w art. 2–4 i art. 29 ust. 2 ustawy zmienianej w art. 1, zawartych od dnia wejścia w życie niniejszej ustawy stosuje się przepisy ustawy zmienianej w art. 1 w brzmieniu nadanym niniejszą ustawą.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2026/27__art_3" gd:GUID="7d922289-f666-4016-bc75-0ee88cded324" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-13_DU-2026-27_domyslne.x" wejscie-w-zycie="2026-02-13">
+      <nr>3</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="3066d2f2-4b83-410e-ae10-c2d8708203af" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-13_DU-2026-27_domyslne.x" wejscie-w-zycie="2026-02-13">
+        <p>
+          <zdanie nr="1" gd:zdGUID="d99becb5-4c44-41a5-93c9-d116ba527a64" fragment="1" gd:fragmentGUID="3061109f-78f9-43e1-b26f-97a1c0684378" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-13_DU-2026-27_domyslne.x" wejscie-w-zycie="2026-02-13">Ustawa wchodzi w życie po upływie miesiąca od dnia ogłoszenia.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <organ-podpisujacy>Prezydent Rzeczypospolitej Polskiej: <i><osoba podpisujacy="true" gd:osobaGUID="f341e4d0-80f4-44c1-b7c1-1f0382db30a1"><imie>K.</imie> <nazwisko>Nawrocki</nazwisko></osoba></i></organ-podpisujacy>
+  </ustawa>
+</akt-prawny>

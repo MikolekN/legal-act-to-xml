@@ -1,0 +1,842 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <obwieszczenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/420</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>6a1757c3-2fc2-4cea-87fb-dfbee29b6cbc</gd:GUIDwersji>
+      <AdresISAP>WDU20250000420</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>420</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 420</AdresWyswietlany>
+      <Tytul>Obwieszczenie Marszałka Sejmu Rzeczypospolitej Polskiej z dnia 24 marca 2025 r. w sprawie ogłoszenia jednolitego tekstu ustawy o rencie socjalnej</Tytul>
+      <Rodzaj>OBW_TJ</Rodzaj>
+      <DataOgloszenia>2025-04-01</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-03-24</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_ujednolicenie_2025-04-01_DU-2025-420_domyslne" rodzaj="ujednolicenie" pochodzenie="domyslne-z-aktu" data="2025-04-01" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_ujednolicenie.zdarz_ujednolicenie_2025-04-01_DU-2025-420_domyslne" glowna="true">
+          <Przedzial rodzaj="ujednolicenie" od="zdarz_ujednolicenie_2025-04-01_DU-2025-420_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <DataObowiazywaniaWersji>
+        <Od>zdarz_ujednolicenie_2025-04-01_DU-2025-420_domyslne</Od>
+      </DataObowiazywaniaWersji>
+      <Organy>
+        <Organ gd:GUID="cd36157f-1a83-41d4-b44f-e0e2e3d60517" rola="wydajacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/MSEJMU">
+          <Nazwa>Marszałek Sejmu</Nazwa>
+          <OrganPodpisujacy>Marszałek Sejmu</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>S.</imie> <nazwisko>Hołownia</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Obwieszczenie</rodzaj-aktu>
+    <autor-aktu>Marszałka Sejmu Rzeczypospolitej Polskiej</autor-aktu>
+    <data>z dnia 24 marca 2025 r.</data>
+    <tytul>w sprawie ogłoszenia jednolitego tekstu ustawy o rencie socjalnej</tytul>
+    <punkt-OTJ eId="DU/2025/420__pkt_1" gd:GUID="dacaf06e-8712-49be-bd68-c875d1106908">
+      <nr>1</nr>
+      <p>
+        <zdanie nr="1" gd:zdGUID="823946ec-d250-4a3b-bf7d-dfefc57d17a9" fragment="1" gd:fragmentGUID="3ecfdbf6-9842-476d-90fd-932bcd87e597">Na podstawie art. 16 ust. 1 zdanie pierwsze ustawy z dnia 20 lipca 2000 r. o ogłaszaniu aktów normatywnych i niektórych innych aktów prawnych (Dz. U. z 2019 r. poz. 1461) ogłasza się w załączniku do niniejszego obwieszczenia jednolity tekst ustawy z dnia 27 czerwca 2003 r. o rencie socjalnej (Dz. U. z 2023 r. poz. 2194), z uwzględnieniem zmian wprowadzonych ustawą z dnia 27 września 2024 r. o zmianie ustawy o rencie socjalnej oraz niektórych innych ustaw (Dz. U. poz. 1615) oraz zmian wynikających z przepisów ogłoszonych przed dniem 11 marca 2025 r.</zdanie>
+      </p>
+    </punkt-OTJ>
+    <punkt-OTJ eId="DU/2025/420__pkt_2" gd:GUID="d1930b09-ab6e-4b19-b477-3631832eed81">
+      <nr>2</nr>
+      <p>
+        <zdanie nr="1" gd:zdGUID="d0fa334d-c2f7-445f-856d-9ca071f57810" fragment="1" gd:fragmentGUID="41e064df-acca-45cf-8849-727f8625c791">Podany w załączniku do niniejszego obwieszczenia tekst jednolity ustawy nie obejmuje art. 10–12 ustawy z dnia 27 września 2024 r. o zmianie ustawy o rencie socjalnej oraz niektórych innych ustaw (Dz. U. poz. 1615), które stanowią:<tresc-strukt cudzyslowy="oba" gd:GUID="6cde697f-e3ac-4b7a-abbe-2057721aa29f"><artykul eId="DU/2024/1615__art_10" gd:GUID="1e643e98-b1ff-4a4b-88a0-3f872c57527f"><nr>10</nr><ustep eId="DU/2024/1615__art_10__ust_1" gd:GUID="3375c3d9-b61f-42ca-8892-0bd32aec9d3f"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="7e9e42f7-cbac-4fea-8ca5-b30d87ff3001" fragment="1" gd:fragmentGUID="b37546f2-1728-44f1-bd4e-1c93838a1767">Przyznanie dodatku dopełniającego, o którym mowa w art. 6a ustawy zmienianej w art. 1, osobie pobierającej rentę socjalną, która w dniu wejścia w życie niniejszej ustawy ma orzeczoną niezdolność do samodzielnej egzystencji, następuje z urzędu i nie wymaga wydania decyzji.</zdanie></p></ustep><ustep eId="DU/2024/1615__art_10__ust_2" gd:GUID="282d20ad-abfd-48a2-a305-9d9bd3a2febd"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="1bbe7952-920c-4fad-b5e1-a840345974d6" fragment="1" gd:fragmentGUID="dc4b00dd-df49-4ebc-95b0-311cab141738">Zakład Ubezpieczeń Społecznych przekazuje osobie, o której mowa w ust. 1, informację o przyznaniu dodatku dopełniającego, o którym mowa w art. 6a ustawy zmienianej w art. 1, a także udostępnia tę informację na jej profilu informacyjnym utworzonym w systemie teleinformatycznym udostępnionym przez Zakład Ubezpieczeń Społecznych.</zdanie><zdanie nr="2" gd:zdGUID="a4b130cc-cf29-41aa-af78-5292324eee18" fragment="1" gd:fragmentGUID="1e4f3e28-3830-496a-a52a-680d7e09a4dc">W przypadku gdy rentę socjalną wypłaca organ emerytalno-rentowy, informację o przyznaniu dodatku dopełniającego przekazuje ten organ.</zdanie></p></ustep><ustep eId="DU/2024/1615__art_10__ust_3" gd:GUID="5af94f34-1c06-441d-adf0-d562dd21fa42"><nr>3</nr><p><zdanie nr="1" gd:zdGUID="bbc96238-4d69-45a9-b9fe-18df3cfe4e19" fragment="1" gd:fragmentGUID="1866a7ca-1865-42f1-933b-5ffda65f67ef">W przypadku gdy osoba pobierająca rentę socjalną nie ma w dniu wejścia w życie niniejszej ustawy orzeczonej niezdolności do samodzielnej egzystencji, dodatek dopełniający, o którym mowa w art. 6a ustawy zmienianej w art. 1, przysługuje na jej wniosek, o ile osoba ta uzyska orzeczenie o niezdolności do samodzielnej egzystencji.</zdanie></p></ustep><ustep eId="DU/2024/1615__art_10__ust_4" gd:GUID="9c534542-298f-4e0a-838f-f57b4b5f7e47"><nr>4</nr><p><zdanie nr="1" gd:zdGUID="1b4798ac-2dca-4864-9c02-7bb4fb1aeed9" fragment="1" gd:fragmentGUID="dbdd117b-8e7b-4694-9820-d89ad5569796">Do postępowania w sprawie wniosku, o którym mowa w ust. 3, stosuje się odpowiednio przepisy ustawy zmienianej w art. 1.</zdanie></p></ustep></artykul><artykul eId="DU/2024/1615__art_11" gd:GUID="767b2925-99c1-4ec4-9059-2c1162abe848"><nr>11</nr><ustep eId="DU/2024/1615__art_11__ust_1" gd:GUID="d635c3a6-8e50-43d7-853c-c40f6cfe2767"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="6a7bfdd7-fbf6-4836-b154-b4fcb78892c2" fragment="1" gd:fragmentGUID="5ae5d62b-4bd7-43a7-9168-10c2a2694d77">Pierwsza wypłata dodatku dopełniającego, o którym mowa w art. 6a ustawy zmienianej w art. 1, nastąpi w maju 2025 r. w terminach płatności rent socjalnych.</zdanie></p></ustep><ustep eId="DU/2024/1615__art_11__ust_2" gd:GUID="952154ac-7176-49a8-9157-ed702a477180"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="df4fc297-0cb2-454b-9e87-cff6696adc6f" fragment="1" gd:fragmentGUID="f958e5cc-70aa-4d42-a2b8-07ea3a116a2e">W przypadku osoby, o której mowa w art. 10 ust. 1, wypłata dodatku dopełniającego, o którym mowa w art. 6a ustawy zmienianej w art. 1, nastąpi w terminie określonym w ust. 1, z wyrównaniem od dnia 1 stycznia 2025 r.</zdanie></p></ustep><ustep eId="DU/2024/1615__art_11__ust_3" gd:GUID="82c4c34a-07a4-41a3-92c1-bac6e8a3bb69"><nr>3</nr><p><zdanie nr="1" gd:zdGUID="51ff7ae0-9221-46ad-861f-f644c7d75e36" fragment="1" gd:fragmentGUID="a125cbe0-d542-433e-b630-ecd9ce471bda">W przypadku osoby, o której mowa w art. 10 ust. 3, wypłata dodatku dopełniającego, o którym mowa w art. 6a ustawy zmienianej w art. 1, nastąpi nie wcześniej niż w terminie płatności określonym w ust. 1, z wyrównaniem od miesiąca złożenia wniosku.</zdanie></p></ustep><ustep eId="DU/2024/1615__art_11__ust_4" gd:GUID="6935ef1e-9d18-488c-8c9f-c0d0e8ac1c28"><nr>4</nr><p><zdanie nr="1" gd:zdGUID="c3e3a9cf-843e-4a7a-9cc3-7a7261d9b8d5" fragment="1" gd:fragmentGUID="ffe9dd8e-2b4b-4342-9e12-2ebb4a198fbc">W przypadku wypłaty dodatku dopełniającego, o którym mowa w art. 6a ustawy zmienianej w art. 1, z wyrównaniem osobie, której za okres wyrównania wypłacono świadczenie uzupełniające, o którym mowa w art. 1 ust. 1 ustawy z dnia 31 lipca 2019 r. o świadczeniu uzupełniającym dla osób niezdolnych do samodzielnej egzystencji (Dz. U. z 2024 r. poz. 256, 859 i 1246), dodatek dopełniający wypłaca się po potrąceniu kwoty wypłaconego świadczenia uzupełniającego.</zdanie></p></ustep></artykul><artykul eId="DU/2024/1615__art_12" gd:GUID="01da9bbf-d491-49b7-94ce-81a92bd366b0"><nr>12</nr><ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="4a05888a-427e-474d-92dd-410a5e0f1fb8"><p><zdanie nr="1" gd:zdGUID="f8624055-0b0f-4b41-8785-f5607fb142b4" fragment="1" gd:fragmentGUID="355a8962-25d8-4040-905c-2016a56a7ccb">Ustawa wchodzi w życie z dniem 1 stycznia 2025 r.</zdanie></p></ustep-n></artykul></tresc-strukt>.</zdanie>
+      </p>
+    </punkt-OTJ>
+    <organ-podpisujacy>Marszałek Sejmu: <i><osoba podpisujacy="true" gd:osobaGUID="70aae974-ab2e-4fae-96d7-f10da5ab685a"><imie>S.</imie> <nazwisko>Hołownia</nazwisko></osoba></i></organ-podpisujacy>
+    <ustawa>
+      <zalacznik-do>Załącznik do obwieszczenia Marszałka Sejmu Rzeczypospolitej Polskiej z dnia 24 marca 2025 r. (Dz. U. poz. 420)</zalacznik-do>
+      <rodzaj-aktu>Ustawa</rodzaj-aktu>
+      <data>z dnia 27 czerwca 2003 r.</data>
+      <tytul>o rencie socjalnej</tytul>
+      <artykul eId="DU/2025/420__art_1" gd:GUID="a61768ef-19ed-44d9-a738-f6e369ada675">
+        <nr>1</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="8b72b04b-6486-4589-b038-73a8007a6df2">
+          <p>
+            <zdanie nr="1" gd:zdGUID="5296177e-51e5-418a-9332-fb9d13ef2548" fragment="1" gd:fragmentGUID="3f5bbdbc-a1c2-47c8-852d-ed7c8312d27a"><odnosnik id-odnosnika="1" symbol="1" gd:GUID="991a39d4-411a-40d6-9018-a9f5d9dd70b8"><p><zdanie nr="1" gd:zdGUID="420df12f-8930-4936-9dbd-628303dc0841" fragment="1" gd:fragmentGUID="590e401f-279d-441e-b7c1-ba9a39f0d39e">W brzmieniu ustalonym przez art. 1 pkt 1 ustawy z dnia 27 września 2024 r. o zmianie ustawy o rencie socjalnej oraz niektórych innych ustaw (Dz. U. poz. 1615), która weszła w życie z dniem 1 stycznia 2025 r.</zdanie></p></odnosnik> Ustawa określa zasady i tryb przyznawania oraz wypłaty renty socjalnej oraz dodatku dopełniającego.</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2025/420__art_2" gd:GUID="2892f51f-5a48-4ed4-ad52-1337f5d5f76f">
+        <nr>2</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="b69dbfb9-c3f9-4fe6-94d9-0b49edeca2f6">
+          <p>
+            <zdanie nr="1" gd:zdGUID="e62f11c3-6f45-46a6-ba01-22fe6afa9bbe" fragment="1" gd:fragmentGUID="06778425-121d-4a40-bd11-f28f54c7dc8d">Prawo do renty socjalnej przysługuje:</zdanie>
+          </p>
+          <punkt eId="DU/2025/420__art_2__pkt_1" gd:GUID="7615ea23-f5c5-4284-8dfd-59e5ecdd2084">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="e62f11c3-6f45-46a6-ba01-22fe6afa9bbe" fragment="2" gd:fragmentGUID="11734ccb-25e3-4b5e-b99e-9ebdb425a255">osobom posiadającym obywatelstwo polskie zamieszkującym na terytorium Rzeczypospolitej Polskiej;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/420__art_2__pkt_2" gd:GUID="79dbb0bc-0eaf-4fe3-8fea-f647da250644">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="e62f11c3-6f45-46a6-ba01-22fe6afa9bbe" fragment="3" gd:fragmentGUID="ca4ad10d-205d-46e0-a26f-5e30607c474d">cudzoziemcom zamieszkującym na terytorium Rzeczypospolitej Polskiej na podstawie zezwolenia na pobyt stały, zezwolenia na pobyt rezydenta długoterminowego Unii Europejskiej, zezwolenia na pobyt czasowy udzielonego w związku z okolicznościami, o których mowa w art. 127 lub art. 186 ust. 1 pkt 3 ustawy z dnia 12 grudnia 2013 r. o cudzoziemcach (Dz. U. z 2024 r. poz. 769, 1222 i 1688), lub w związku z uzyskaniem w Rzeczypospolitej Polskiej statusu uchodźcy albo ochrony uzupełniającej;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/420__art_2__pkt_3" gd:GUID="4c311d31-92ed-4d6b-9758-b1fb042002ec">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="e62f11c3-6f45-46a6-ba01-22fe6afa9bbe" fragment="4" gd:fragmentGUID="def64ace-86ec-43e2-8580-c817e03782ef">cudzoziemcom posiadającym kartę pobytu z adnotacją „dostęp do rynku pracy”, z wyłączeniem obywateli państw trzecich, którzy uzyskali zezwolenie na pracę na terytorium państwa członkowskiego na okres nieprzekraczający 6 miesięcy, obywateli państw trzecich przyjętych w celu podjęcia studiów lub pracy sezonowej oraz obywateli państw trzecich, którzy mają prawo do wykonywania pracy na podstawie wizy;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/420__art_2__pkt_4" gd:GUID="545c794f-6c7c-44e5-8f7d-5aee99021984">
+            <nr>4</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="e62f11c3-6f45-46a6-ba01-22fe6afa9bbe" fragment="5" gd:fragmentGUID="ff5467ff-0d0c-474f-8630-c625045fee84">mającym miejsce zamieszkania na terytorium Rzeczypospolitej Polskiej obywatelom państw członkowskich Unii Europejskiej, państw członkowskich Europejskiego Porozumienia o Wolnym Handlu (EFTA) – stron umowy o Europejskim Obszarze Gospodarczym lub Konfederacji Szwajcarskiej oraz członkom ich rodzin w rozumieniu art. 2 pkt 4 ustawy z dnia 14 lipca 2006 r. o wjeździe na terytorium Rzeczypospolitej Polskiej, pobycie oraz wyjeździe z tego terytorium obywateli państw członkowskich Unii Europejskiej i członków ich rodzin (Dz. U. z 2024 r. poz. 633 i 1688), posiadającym prawo pobytu lub prawo stałego pobytu na terytorium Rzeczypospolitej Polskiej.</zdanie>
+            </p>
+          </punkt>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2025/420__art_3" gd:GUID="6187bf16-1160-46a4-897d-c7cebddaacf5">
+        <nr>3</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="18b43961-7f96-4607-be4c-55081e4509e4">
+          <p>
+            <zdanie nr="1" gd:zdGUID="933fc9c4-8625-4bcc-b111-a369e7eedc3a" fragment="1" gd:fragmentGUID="b1e20224-828f-4b26-8621-4424e6e53b3f">Użyte w ustawie określenia oznaczają:</zdanie>
+          </p>
+          <punkt eId="DU/2025/420__art_3__pkt_1" gd:GUID="04bd0f1b-5154-434e-8d31-44b1b28248f4">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="933fc9c4-8625-4bcc-b111-a369e7eedc3a" fragment="2" gd:fragmentGUID="91a21b18-707d-461b-97bb-4538077cb838">renta rodzinna – rentę rodzinną oraz uposażenie rodzinne przyznane na podstawie odrębnych przepisów;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/420__art_3__pkt_2" gd:GUID="a9cc32e2-9310-4a5f-8228-cc7439074e5f">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="933fc9c4-8625-4bcc-b111-a369e7eedc3a" fragment="3" gd:fragmentGUID="9b9d4451-410a-429e-83fe-0559938ad264">organ emerytalno-rentowy – organ wypłacający rentę rodzinną inny niż Zakład Ubezpieczeń Społecznych.</zdanie>
+            </p>
+          </punkt>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2025/420__art_4" gd:GUID="6fb82793-567c-41d1-9798-4a06d6d7af87">
+        <nr>4</nr>
+        <ustep eId="DU/2025/420__art_4__ust_1" gd:GUID="c4f92235-7c6d-423f-a971-7569395a3d42">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="2febb11b-9146-4550-baec-b01178f935ef" fragment="1" gd:fragmentGUID="7bfe9488-af96-42da-98dc-fa25d833262a">Renta socjalna przysługuje osobie pełnoletniej całkowicie niezdolnej do pracy z powodu naruszenia sprawności organizmu, które powstało:</zdanie>
+          </p>
+          <punkt eId="DU/2025/420__art_4__ust_1__pkt_1" gd:GUID="8d498b5d-3f2a-40d2-a3d2-26e67626ba08">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="2febb11b-9146-4550-baec-b01178f935ef" fragment="2" gd:fragmentGUID="ecb4bf4e-2d54-4b36-a653-072762a7d532">przed ukończeniem 18. roku życia;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/420__art_4__ust_1__pkt_2" gd:GUID="0305ca0e-00f1-4c6a-9948-b9a6a7b5700c">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="2febb11b-9146-4550-baec-b01178f935ef" fragment="3" gd:fragmentGUID="81f36b47-d953-416f-bc9c-ae2eb91b0bc0">w trakcie nauki w szkole lub w szkole wyższej – przed ukończeniem 25. roku życia;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/420__art_4__ust_1__pkt_3" gd:GUID="e97b9be2-97ae-4e7f-aef9-0ae98d251f5d">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="2febb11b-9146-4550-baec-b01178f935ef" fragment="4" gd:fragmentGUID="447b3b9d-db61-437a-967e-a64497bf59b0">w trakcie kształcenia w szkole doktorskiej, studiów doktoranckich lub aspirantury naukowej.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/420__art_4__ust_2" gd:GUID="354dc7e6-dafb-4877-8f63-130885b1b8a6">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="2c21ea3f-4116-486a-9b07-e1e78067a363" fragment="1" gd:fragmentGUID="7cc1ea2b-3f3a-43fa-8e3d-0a2b353a385f">Osobie, która spełnia warunki określone w ust. 1, przysługuje:</zdanie>
+          </p>
+          <punkt eId="DU/2025/420__art_4__ust_2__pkt_1" gd:GUID="bd2bc1cd-4046-4e2b-af5a-c7d891135859">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="2c21ea3f-4116-486a-9b07-e1e78067a363" fragment="2" gd:fragmentGUID="9ff41a3d-e9d0-471b-b722-4aa078add023">renta socjalna stała – jeżeli całkowita niezdolność do pracy jest trwała;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/420__art_4__ust_2__pkt_2" gd:GUID="a127b2d6-1449-44e3-9305-a730f9183c44">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="2c21ea3f-4116-486a-9b07-e1e78067a363" fragment="3" gd:fragmentGUID="9ee4309d-8c01-495f-9ef7-cb47d5b25f87">renta socjalna okresowa – jeżeli całkowita niezdolność do pracy jest okresowa.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/420__art_4__ust_3" gd:GUID="f94953c5-ea74-404c-bcd8-0ebcc35a14b1">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="c23a4449-5d9d-4ff6-9e9a-092ee0effa1a" fragment="1" gd:fragmentGUID="415331c9-6b7f-45b4-9b53-6bc936680975">Renta socjalna okresowa przysługuje przez okres wskazany w decyzji jednostki organizacyjnej Zakładu Ubezpieczeń Społecznych, zwanego dalej „Zakładem”.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/420__art_5" gd:GUID="660b3ce5-af46-49ca-8cc0-6de4db5ec9a5">
+        <nr>5</nr>
+        <ustep eId="DU/2025/420__art_5__ust_1" gd:GUID="ea713709-26ed-4504-809d-f2dbfe188a73">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="0c4cb768-a1a3-412e-87e7-4328360c1fb5" fragment="1" gd:fragmentGUID="cddca463-a44f-463a-b1c7-e507be4a9cce">Ustalenia całkowitej niezdolności do pracy dokonuje lekarz orzecznik Zakładu, zwany dalej „lekarzem orzecznikiem”, na zasadach i w trybie określonych w ustawie z dnia 17 grudnia 1998 r. o emeryturach i rentach z Funduszu Ubezpieczeń Społecznych (Dz. U. z 2024 r. poz. 1631 i 1674), zwanej dalej „ustawą o emeryturach i rentach z Funduszu Ubezpieczeń Społecznych”.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/420__art_5__ust_2" gd:GUID="021f8a16-bab1-4c06-9597-37fcdbbf7ac1">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="eb1be633-49f4-4639-ac9c-49203c3bdca8" fragment="1" gd:fragmentGUID="494b8016-2ffb-45a9-900e-7f3b058e4bcc"><odnosnik id-odnosnika="2" symbol="2" gd:GUID="0eac75d6-32ff-4e5c-be4d-fa41b15b0c83"><p><zdanie nr="1" gd:zdGUID="51e49054-36b1-4584-a41e-1f9f083858bd" fragment="1" gd:fragmentGUID="1bec900e-f3a7-42ae-9ded-a518f9660db5">W brzmieniu ustalonym przez art. 1 pkt 2 ustawy, o której mowa w odnośniku 1.</zdanie></p></odnosnik> Ustalając całkowitą niezdolność do pracy, lekarz orzecznik, za zgodą osoby ubiegającej się o rentę socjalną lub jej przedstawiciela ustawowego, zgłoszoną nie później niż w trakcie badania tej osoby, ustala niezdolność tej osoby do samodzielnej egzystencji, na zasadach i w trybie określonym ustawą o emeryturach i rentach z Funduszu Ubezpieczeń Społecznych, w celu uzyskania świadczenia, o którym mowa w art. 1 ust. 1 ustawy z dnia 31 lipca 2019 r. o świadczeniu uzupełniającym dla osób niezdolnych do samodzielnej egzystencji (Dz. U. z 2024 r. poz. 1649), lub dodatku dopełniającego, o którym mowa w art. 6a.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/420__art_6" gd:GUID="e4615893-de93-4c8c-a827-e251ebeb404e">
+        <nr>6</nr>
+        <ustep eId="DU/2025/420__art_6__ust_1" gd:GUID="2e851285-2689-4b3f-b72f-51b513ef38b0">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="8714eaa6-0f7b-4e5d-b323-cad84f6d2369" fragment="1" gd:fragmentGUID="053baa39-aba4-41d5-bc25-cfc377168a30">Renta socjalna wynosi 100 % kwoty najniższej renty z tytułu całkowitej niezdolności do pracy ustalonej i podwyższonej zgodnie z ustawą o emeryturach i rentach z Funduszu Ubezpieczeń Społecznych.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/420__art_6__ust_2" gd:GUID="52621fef-bc86-4ddf-a734-0b5611954456">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="0b83731f-657c-49d1-be5f-84f6a5e4ecc3" fragment="1" gd:fragmentGUID="8e68e68f-8a0a-40ca-b1e6-c29a69052b1c">Podwyższenia renty socjalnej dokonuje jednostka organizacyjna Zakładu lub organ emerytalno-rentowy.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/420__art_6__ust_3" gd:GUID="ba89bb41-e9fd-433b-8af0-1e3a77798141">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="be3bc9c9-ea36-467b-ae23-c63ebde8963c" fragment="1" gd:fragmentGUID="2885e3c6-baa4-41a2-b4cd-00347ec0bbc6">Podwyższenie renty socjalnej następuje z urzędu, a jeżeli wypłata renty została wstrzymana – po jej wznowieniu.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/420__art_6a" gd:GUID="147ddb1c-e397-4c9f-a8b1-94739a13308b">
+        <nr>6a</nr>
+        <ustep eId="DU/2025/420__art_6a__ust_1" gd:GUID="031f2e85-d668-4844-bf5c-d0dc8eebefc2">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="3fb6066b-9201-46d7-a650-6089724dbdbb" fragment="1" gd:fragmentGUID="97b6e5ae-24bb-4425-b0af-637ec5e6c06f"><odnosnik id-odnosnika="3" symbol="3" gd:GUID="a45f3281-8249-4d49-a52b-26f67de89dd7"><p><zdanie nr="1" gd:zdGUID="4d7ddf6c-053e-4889-a102-ef705c0d3958" fragment="1" gd:fragmentGUID="824de34c-5119-4ca0-a923-ba7c026b50bb">Dodany przez art. 1 pkt 3 ustawy, o której mowa w odnośniku 1.</zdanie></p></odnosnik> Osobie uprawnionej do renty socjalnej, będącej całkowicie niezdolną do pracy oraz do samodzielnej egzystencji, przysługuje dodatek dopełniający w wysokości 2520 zł <odnosnik id-odnosnika="4" symbol="4" gd:GUID="1e54698e-39ba-44ba-81b1-cd43106ad4ca"><p><zdanie nr="1" gd:zdGUID="70b1dc7e-6d13-4f73-a272-c539c6b94469" fragment="1" gd:fragmentGUID="40e1562d-efa4-4ded-b36a-402f270e3b3a">Aktualną zwaloryzowaną kwotę dodatku dopełniającego ogłasza Prezes Zakładu Ubezpieczeń Społecznych na podstawie art. 6a ust. 8 niniejszej ustawy.</zdanie></p></odnosnik>.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/420__art_6a__ust_2" gd:GUID="abe4b05c-1e35-4591-bfdf-35a909d569d4">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="406d2b08-82f4-47e8-b1ee-ee24c8950e80" fragment="1" gd:fragmentGUID="d076e6dc-9506-4459-afda-37723550ee27">Dodatek dopełniający przyznaje się na wniosek osoby ubiegającej się o ten dodatek lub jej przedstawiciela ustawowego.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/420__art_6a__ust_3" gd:GUID="8f547fe7-4d47-4bfe-9ce1-8ec8f6d1eda0">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="419da07e-b271-4dc5-b665-583111a53c59" fragment="1" gd:fragmentGUID="b59d5eb5-0214-4dc5-bc32-059b1e00e1c1">Dodatek dopełniający przyznaje się również na wniosek innej osoby albo kierownika ośrodka pomocy społecznej, a w przypadku przekształcenia ośrodka pomocy społecznej w centrum usług społecznych na podstawie przepisów ustawy z dnia 19 lipca 2019 r. o realizowaniu usług społecznych przez centrum usług społecznych (Dz. U. poz. 1818) – dyrektora centrum usług społecznych, działających za zgodą osób, o których mowa w ust. 2.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/420__art_6a__ust_4" gd:GUID="00aa96da-702a-4b4b-88fe-5587feb8f37d">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="d5e1219b-56c2-4cde-9601-f809fa3349c4" fragment="1" gd:fragmentGUID="96e5f991-201b-423e-8fb8-3355bf9fb0c6">Dodatek dopełniający wypłaca się z rentą socjalną.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/420__art_6a__ust_5" gd:GUID="13e669ce-32b6-4ef0-b7f3-667fc8a21cf4">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="bd1f4a62-5ef3-49df-8766-0f9602104a84" fragment="1" gd:fragmentGUID="10a59cc3-2375-41a7-8b16-02ef2df87a76">Kwota dodatku dopełniającego podlega corocznie waloryzacji od dnia 1 marca.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/420__art_6a__ust_6" gd:GUID="0b3e60cd-2a9e-4bb1-9f38-bd0067cab86a">
+          <nr>6</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="e85d4d67-5c2f-4f1a-9a3b-39f6de02d23c" fragment="1" gd:fragmentGUID="05c8ed4c-7d46-47f1-ac8b-8fa4a447f7bf">Waloryzacja polega na pomnożeniu kwoty dodatku dopełniającego przez wskaźnik waloryzacji.</zdanie>
+            <zdanie nr="2" gd:zdGUID="4f7058f6-560f-450f-b889-61ef5d305b28" fragment="1" gd:fragmentGUID="30d4fb4b-9001-4496-9663-530d0d4d7b82">W wyniku przeprowadzonej waloryzacji kwota dodatku nie może ulec obniżeniu.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/420__art_6a__ust_7" gd:GUID="cc8df636-26ca-42b7-a1fb-83cd83144704">
+          <nr>7</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="148a4c18-f5af-4e6b-89f4-ba2856506e7f" fragment="1" gd:fragmentGUID="9172503f-0658-4837-b8a7-f0a43f7e53a1">Wskaźnik waloryzacji to średnioroczny wskaźnik cen towarów i usług konsumpcyjnych ogółem w poprzednim roku kalendarzowym ogłaszany przez Prezesa Głównego Urzędu Statystycznego na podstawie art. 94 ust. 1 pkt 1 lit. a ustawy o emeryturach i rentach z Funduszu Ubezpieczeń Społecznych.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/420__art_6a__ust_8" gd:GUID="318d1a7f-0573-40d9-9a43-9082dafd1092">
+          <nr>8</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="7c35968b-f4f8-4ac5-981c-8316851cf850" fragment="1" gd:fragmentGUID="61a7fbfa-5a57-45f6-971b-4f5e37cdc575">Prezes Zakładu ogłasza, w formie komunikatu, w Dzienniku Urzędowym Rzeczypospolitej Polskiej „Monitor Polski”, co najmniej na 14 dni roboczych przed najbliższym terminem waloryzacji należną od terminu waloryzacji kwotę dodatku dopełniającego.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/420__art_6a__ust_9" gd:GUID="2095348f-721b-433f-bf36-62a9f70e10c2">
+          <nr>9</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="bf7e1c8d-70d9-41d2-b7b7-31dc38f50e8b" fragment="1" gd:fragmentGUID="18fc9b1b-bd63-42b7-910f-b81e48825106">Podwyższenie kwoty dodatku dopełniającego w związku z waloryzacją następuje z urzędu i nie wymaga wydania decyzji.</zdanie>
+            <zdanie nr="2" gd:zdGUID="d02b949d-27f6-47fe-8f1d-e58c0d6f387e" fragment="1" gd:fragmentGUID="32513c72-37ee-476e-921b-b3a238aff6d2">Zakład lub organ emerytalno-rentowy przekazuje osobie pobierającej rentę socjalną informację o podwyższeniu wysokości dodatku dopełniającego, a Zakład udostępnia tę informację także na jej profilu informacyjnym utworzonym w systemie teleinformatycznym udostępnionym przez Zakład.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/420__art_6b" gd:GUID="066fb996-0bd0-45df-982f-ac2e0771b611">
+        <nr>6b</nr>
+        <ustep eId="DU/2025/420__art_6b__ust_1" gd:GUID="62aba440-faf5-4b79-a016-6f7168269028">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="2411d8f9-b454-4ab5-b984-41ca460912f2" fragment="1" gd:fragmentGUID="3b1ee8de-70be-48e6-863c-7779ec75784f"><odsylacz-do-odnosnika id-odnosnika="3" symbol="3" /> Wniosek o dodatek dopełniający zawiera:</zdanie>
+          </p>
+          <punkt eId="DU/2025/420__art_6b__ust_1__pkt_1" gd:GUID="70ca08d7-e3d2-4e38-a18c-5b295dc20776">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="2411d8f9-b454-4ab5-b984-41ca460912f2" fragment="2" gd:fragmentGUID="d8a3c939-80fe-41e4-8288-559f9b8a09ad">dane osoby ubiegającej się o dodatek dopełniający:</zdanie>
+            </p>
+            <litera eId="DU/2025/420__art_6b__ust_1__pkt_1__lit_a" gd:GUID="8099f4af-6198-4851-8a18-4ca29dbdc878">
+              <nr>a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="2411d8f9-b454-4ab5-b984-41ca460912f2" fragment="3" gd:fragmentGUID="3e9845ae-588c-4a62-9435-57d9d6dccb8b">imię i nazwisko,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/420__art_6b__ust_1__pkt_1__lit_b" gd:GUID="44533886-29c0-4f06-8f7f-e4cf6bf93087">
+              <nr>b</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="2411d8f9-b454-4ab5-b984-41ca460912f2" fragment="4" gd:fragmentGUID="e2f13c4a-a81c-48d9-9a98-450fb37341c8">datę urodzenia,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/420__art_6b__ust_1__pkt_1__lit_c" gd:GUID="e20f714b-fbb3-4a3b-a0f9-76955fec9ba4">
+              <nr>c</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="2411d8f9-b454-4ab5-b984-41ca460912f2" fragment="5" gd:fragmentGUID="504f53cc-46a9-4a54-9b2d-91a981c3b853">numer PESEL albo, jeżeli nie nadano tego numeru, serię i numer dowodu osobistego lub numer paszportu,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/420__art_6b__ust_1__pkt_1__lit_d" gd:GUID="9327bd55-7f5e-485f-b28f-1f1a79b7b59a">
+              <nr>d</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="2411d8f9-b454-4ab5-b984-41ca460912f2" fragment="6" gd:fragmentGUID="c324ead0-d9a3-4b81-80d6-1e9dfc3ce226">adres miejsca zamieszkania,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/420__art_6b__ust_1__pkt_1__lit_e" gd:GUID="024956c5-c08a-417a-9903-b9c24eada3f1">
+              <nr>e</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="2411d8f9-b454-4ab5-b984-41ca460912f2" fragment="7" gd:fragmentGUID="bd0686b0-25ec-4750-b8d0-922c0f3fee3c">adres miejsca pobytu lub ostatniego miejsca zamieszkania – w przypadku osoby nieposiadającej adresu miejsca zamieszkania,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/420__art_6b__ust_1__pkt_1__lit_f" gd:GUID="4b5b01e4-49ba-4753-a247-dfdb8fbf2c56">
+              <nr>f</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="2411d8f9-b454-4ab5-b984-41ca460912f2" fragment="8" gd:fragmentGUID="ebf7c421-48c4-4b67-9c7d-b752ff9d604d">adres do korespondencji, jeżeli jest inny niż adres miejsca zamieszkania;</zdanie>
+              </p>
+            </litera>
+          </punkt>
+          <punkt eId="DU/2025/420__art_6b__ust_1__pkt_2" gd:GUID="31d2adfc-2849-4626-870f-6097bcf2b2cd">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="2411d8f9-b454-4ab5-b984-41ca460912f2" fragment="9" gd:fragmentGUID="58d6b128-a4e7-42b8-aa50-361c7018050c">podpis osoby ubiegającej się o dodatek dopełniający lub jej przedstawiciela ustawowego albo pełnomocnika.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/420__art_6b__ust_2" gd:GUID="6f928d78-d937-425f-806a-61fe449a5efd">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="b616f928-dcf0-4e89-a90d-5525abecf23d" fragment="1" gd:fragmentGUID="ee389431-d911-4e9e-b0bb-d52c07a6bbcf">Do wniosku należy dołączyć:</zdanie>
+          </p>
+          <punkt eId="DU/2025/420__art_6b__ust_2__pkt_1" gd:GUID="448ed94c-ad34-4721-abce-b0580b970ca6">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="b616f928-dcf0-4e89-a90d-5525abecf23d" fragment="2" gd:fragmentGUID="a68e8315-c939-4fa6-bf94-d1000339626a">zaświadczenie o stanie zdrowia wystawione przez lekarza leczącego nie wcześniej niż miesiąc przed dniem złożenia wniosku;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/420__art_6b__ust_2__pkt_2" gd:GUID="9646839a-f7c1-417a-820d-851f7e3726ad">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="b616f928-dcf0-4e89-a90d-5525abecf23d" fragment="3" gd:fragmentGUID="e33f017f-6073-4f2e-a0b6-36e628510146">posiadaną dokumentację medyczną z przebiegu leczenia.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/420__art_6c" gd:GUID="75e2cc21-6c6d-49c3-99c3-c7cbf44190f5">
+        <nr>6c</nr>
+        <ustep eId="DU/2025/420__art_6c__ust_1" gd:GUID="5e286f70-8a60-4d9e-976b-f265a37e7433">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="5b96ee54-c083-435f-a449-cf57638e1ad0" fragment="1" gd:fragmentGUID="7a6b0d82-ee89-4ad0-90c7-2c7cb4b3bbab"><odsylacz-do-odnosnika id-odnosnika="3" symbol="3" /> Dla celów ustalania uprawnień do świadczeń pieniężnych finansowanych ze środków publicznych oraz ustalania wysokości tych świadczeń, dodatek dopełniający uwzględnia się na tych samych zasadach jak rentę socjalną.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/420__art_6c__ust_2" gd:GUID="c1d213bd-dd8d-478e-bb92-2e7098291387">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="d625a514-351d-477a-8fdd-20ef44a8b4d7" fragment="1" gd:fragmentGUID="7a60e893-c726-410c-a26d-07e97d59c4ea">Przepis ust. 1 nie dotyczy świadczenia wspierającego, o którym mowa w art. 1 ustawy z dnia 7 lipca 2023 r. o świadczeniu wspierającym (Dz. U. poz. 1429 i 2760).</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/420__art_7" gd:GUID="0a665d78-0788-4132-8182-98bef90989ab">
+        <nr>7</nr>
+        <ustep eId="DU/2025/420__art_7__ust_1" gd:GUID="47ccb2f2-9809-405a-ad30-ba438ce391de">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="fdc45c98-118c-4250-b210-af706d2a51ab" fragment="1" gd:fragmentGUID="c4eca4c2-d14f-41a1-b855-36f7facf0c5b">Renta socjalna nie przysługuje osobie uprawnionej do emerytury, uposażenia w stanie spoczynku, renty z tytułu niezdolności do pracy, renty inwalidzkiej lub pobierającej świadczenie o charakterze rentowym z instytucji zagranicznych, renty strukturalnej, a także osobie uprawnionej do zasiłku przedemerytalnego, świadczenia przedemerytalnego lub nauczycielskiego świadczenia kompensacyjnego.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/420__art_7__ust_2" gd:GUID="f6d92843-2480-42cf-a35e-b9ea53bcf13c">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="3dcd2af9-dd0f-4518-83b1-4199a8c0b0c9" fragment="1" gd:fragmentGUID="c85f8909-9051-43a2-b138-5b1703195f65">Renta socjalna nie przysługuje osobie będącej właścicielem lub posiadaczem (samoistnym lub zależnym) nieruchomości rolnej w rozumieniu Kodeksu cywilnego o powierzchni użytków rolnych przekraczającej 5 ha przeliczeniowych.</zdanie>
+            <zdanie nr="2" gd:zdGUID="1a651d7b-cd98-4f5d-91e8-d6196b72e882" fragment="1" gd:fragmentGUID="9624d64b-1de5-4a0a-a954-92058872dc1c">Osobie będącej współwłaścicielem nieruchomości rolnej nie przysługuje renta socjalna, jeśli udział tej osoby przekracza 5 ha przeliczeniowych.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/420__art_8" gd:GUID="40d0f845-681c-442f-9dac-8789ce8e0dce">
+        <nr>8</nr>
+        <ustep eId="DU/2025/420__art_8__ust_1" gd:GUID="7c7c67ee-3373-46e7-b30b-283458892a95">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="8c8107dd-8a5c-4f7f-846d-3f7f6492fea1" fragment="1" gd:fragmentGUID="173fe9b1-5205-475d-947e-7c89ab6b14c8"><odnosnik id-odnosnika="5" symbol="5" gd:GUID="492a6622-44bf-475b-a849-da2bf908e9dc"><p><zdanie nr="1" gd:zdGUID="21f0a3e1-09a8-4123-9641-93546881a16f" fragment="1" gd:fragmentGUID="e711c816-3787-408c-8afb-bbd8923a9042">W brzmieniu ustalonym przez art. 1 pkt 4 lit. a ustawy, o której mowa w odnośniku 1.</zdanie></p></odnosnik> Renta socjalna oraz dodatek dopełniający nie przysługują za okres tymczasowego aresztowania lub odbywania kary pozbawienia wolności, z zastrzeżeniem ust. 1a.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/420__art_8__ust_1a" gd:GUID="5c07653a-7445-499f-a132-8005d4dc3250">
+          <nr>1a</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="8c3065b4-350c-45bf-a0d8-3fa5e77ffdfd" fragment="1" gd:fragmentGUID="3bd81de0-cc79-46b9-8c63-c7312680240a">Przepisu ust. 1 nie stosuje się do osób odbywających karę pozbawienia wolności w systemie dozoru elektronicznego.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/420__art_8__ust_2" gd:GUID="f69982d8-199c-4a89-8d98-7c8e4d49f467">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="f832ba82-bc92-4d04-adcc-5aa75b353015" fragment="1" gd:fragmentGUID="d555d866-df99-49b8-b0b5-09749577cf67">Osoba tymczasowo aresztowana lub odbywająca karę pozbawienia wolności jest obowiązana niezwłocznie powiadomić właściwy organ wypłacający rentę socjalną o tymczasowym aresztowaniu lub o odbywaniu kary pozbawienia wolności.</zdanie>
+            <zdanie nr="2" gd:zdGUID="bb973207-046f-4ceb-8b79-edf8011eac72" fragment="1" gd:fragmentGUID="db3856c9-606c-4c6a-b683-f1e0f1945d84">Obowiązek ten spoczywa również na dyrektorze aresztu lub zakładu karnego.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/420__art_8__ust_3" gd:GUID="762342ce-16de-4bf5-ba0e-30200e989e29">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="97863b20-25bf-4885-8bd4-61cc1e122ac3" fragment="1" gd:fragmentGUID="b5ac7586-b2e4-4f9f-ad77-472b2a363adf"><odnosnik id-odnosnika="6" symbol="6" gd:GUID="0fe6c60b-a72b-4fa7-ae09-05dd34d846b6"><p><zdanie nr="1" gd:zdGUID="22303445-5dbc-41e8-9731-6f3d496cda93" fragment="1" gd:fragmentGUID="e8f350af-f3f3-4442-afb6-de95565d6e28">W brzmieniu ustalonym przez art. 1 pkt 4 lit. b ustawy, o której mowa w odnośniku 1.</zdanie></p></odnosnik> Osobie, o której mowa w ust. 2, samotnie gospodarującej, nieposiadającej innego przychodu i niemającej prawa do renty rodzinnej, która jest właścicielem lokalu mieszkalnego (domu jednorodzinnego), której przysługuje spółdzielcze prawo do lokalu lub która jest najemcą lokalu mieszkalnego wchodzącego w skład mieszkaniowego zasobu gminy, innych jednostek samorządu terytorialnego albo stanowiącego własność Skarbu Państwa lub państwowych osób prawnych, może być wypłacane 50 % kwoty renty socjalnej oraz 50 % kwoty dodatku dopełniającego, jeżeli zobowiąże się pisemnie, że z kwoty tej będzie dokonywała opłat z tytułu czynszu lub innych należności za lokal mieszkalny (dom jednorodzinny), a w lokalu (domu jednorodzinnym) nie przebywają inne osoby.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/420__art_8__ust_4" gd:GUID="5740533b-3213-411e-a79c-f11e80e580ec">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="299efdd6-22f8-48cf-8295-a9a249e26567" fragment="1" gd:fragmentGUID="8c8906e2-4bcf-49a2-9da5-4cceb42da6ca">Z kwoty określonej w ust. 3 nie dokonuje się potrąceń i egzekucji.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/420__art_9" gd:GUID="74f35a9e-6aa0-4820-84fc-2a601d6c5687">
+        <nr>9</nr>
+        <ustep eId="DU/2025/420__art_9__ust_1" gd:GUID="6733a39e-4584-423c-9a50-d7003c6807a1">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="461b2189-e775-4c1e-a926-fc9c24ed6ecf" fragment="1" gd:fragmentGUID="d6dd6cd4-0d15-4163-9686-027f316419c9"><odnosnik id-odnosnika="7" symbol="7" gd:GUID="840bbcc9-117d-49e2-9271-2e712df5da25"><p><zdanie nr="1" gd:zdGUID="26a6330c-e1ee-489f-8d31-8ddaa945b942" fragment="1" gd:fragmentGUID="deaa9205-154e-4f50-afb1-bdaa946a0123">W brzmieniu ustalonym przez art. 1 pkt 5 lit. a ustawy, o której mowa w odnośniku 1.</zdanie></p></odnosnik> W przypadku zbiegu uprawnień do renty socjalnej z uprawnieniem do renty rodzinnej lub świadczenia pieniężnego przyznanego na zasadach określonych w ustawie z dnia 8 lutego 2023 r. o świadczeniu pieniężnym przysługującym członkom rodziny funkcjonariuszy lub żołnierzy zawodowych, których śmierć nastąpiła w związku ze służbą albo podjęciem poza służbą czynności ratowania życia lub zdrowia ludzkiego albo mienia (Dz. U. poz. 658) kwota renty socjalnej ulega takiemu obniżeniu, aby łączna kwota obu świadczeń nie przekraczała 300 % kwoty najniższej renty z tytułu całkowitej niezdolności do pracy.</zdanie>
+            <zdanie nr="2" gd:zdGUID="56b5d45d-2f47-4ee3-89fd-16f0fb34c3f4" fragment="1" gd:fragmentGUID="ce1a787b-4a4f-4b1d-82b6-ba9ac8597f47">Kwota obniżonej renty socjalnej nie może być niższa niż 10 % kwoty najniższej renty z tytułu całkowitej niezdolności do pracy.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/420__art_9__ust_2" gd:GUID="f0241db0-2c32-469d-8107-52c94cc61c0f">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="3fb6e893-a87c-4982-9b87-aa8a32047d77" fragment="1" gd:fragmentGUID="b888376e-5dc8-4d43-bfff-4ad5762de3fd"><odsylacz-do-odnosnika id-odnosnika="7" symbol="7" /> Renta socjalna nie przysługuje, jeżeli kwota renty rodzinnej lub świadczenia pieniężnego, o którym mowa w ust. 1, przekracza 300 % kwoty najniższej renty z tytułu całkowitej niezdolności do pracy.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/420__art_9__ust_3" gd:GUID="d97f1883-41f0-4d25-b1c4-978b921a56e6">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="fbba001a-396a-41cb-b4a6-4df1b0aab743" fragment="1" gd:fragmentGUID="c6ed82b5-33e7-42a5-876a-5ce599b634e5">Osoba ubiegająca się o rentę socjalną bądź ją pobierająca jest obowiązana powiadomić jednostkę organizacyjną Zakładu przyjmującą wniosek bądź wypłacającą rentę socjalną o posiadaniu uprawnień do renty rodzinnej lub świadczenia pieniężnego, o którym mowa w ust. 1, oraz organ emerytalno-rentowy wypłacający rentę rodzinną lub świadczenie pieniężne, o którym mowa w ust. 1, o posiadaniu uprawnień do renty socjalnej.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/420__art_9__ust_4" gd:GUID="61b5cbde-341d-4413-b965-c79aec3b2900">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="293ec29a-bcaa-449f-a02d-d98c98773c68" fragment="1" gd:fragmentGUID="f630c325-39af-43be-8245-7fc735e49e2d"><odnosnik id-odnosnika="8" symbol="8" gd:GUID="05b49e01-9131-4f2b-be4b-d52f0ca97865"><p><zdanie nr="1" gd:zdGUID="7f442176-ecff-46a6-a1a9-c3a9e8669fa7" fragment="1" gd:fragmentGUID="8f68b998-f5c8-4348-b6d4-529f67dee1fe">Dodany przez art. 1 pkt 5 lit. b ustawy, o której mowa w odnośniku 1.</zdanie></p></odnosnik> W przypadku obniżenia renty socjalnej z przyczyn, o których mowa w ust. 1, kwota dodatku dopełniającego ulega obniżeniu o taki sam procent, o jaki obniżono rentę socjalną.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/420__art_10" gd:GUID="e294f52e-50d2-4884-8f5c-a64df556c4d4">
+        <nr>10</nr>
+        <ustep eId="DU/2025/420__art_10__ust_1" gd:GUID="4277e03e-6c10-49b2-b330-672dcbf82b52">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="f9e8d942-bb38-4018-a0ea-8186ce4e4ca7" fragment="1" gd:fragmentGUID="b926e111-0716-493d-bbe5-d7a5f4755091"><odnosnik id-odnosnika="9" symbol="9" gd:GUID="b69d5c49-64f0-4cb1-9750-f352ba277141"><p><zdanie nr="1" gd:zdGUID="1827b0cc-90d0-4349-b490-3e244fb3afdb" fragment="1" gd:fragmentGUID="0bb4238a-f49c-46db-a234-75d4f9529734">W brzmieniu ustalonym przez art. 1 pkt 6 ustawy, o której mowa w odnośniku 1.</zdanie></p></odnosnik> Prawo do renty socjalnej oraz dodatku dopełniającego ulega zawieszeniu lub świadczenia te ulegają zmniejszeniu w razie osiągania przychodu z tytułu działalności podlegającej obowiązkowi ubezpieczenia społecznego, na zasadach określonych w art. 104 ustawy o emeryturach i rentach z Funduszu Ubezpieczeń Społecznych.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/420__art_10__ust_2" gd:GUID="0e9c9fb0-7635-4c98-bfb7-91f9f812cb70">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="3eb6678a-c583-482f-b6ff-fbf9b2ff5603" fragment="1" gd:fragmentGUID="1911914f-ed73-44ea-8296-75e4ac275314">(uchylony)</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/420__art_10__ust_3" gd:GUID="3a26be1d-507d-4ccc-9289-ca6b95c70899">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="941b5106-22d0-4237-a163-5fea875fdbeb" fragment="1" gd:fragmentGUID="cc1909b8-c0f9-4478-847c-11c88d08f2f6">(uchylony)</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/420__art_10__ust_4" gd:GUID="d7f284c7-2e33-47cb-a0c7-542b710bd57a">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="603bce94-e733-4491-bd6e-6b8bfa80f2fb" fragment="1" gd:fragmentGUID="45e18ed0-f3fb-47f2-a88a-397043de495c">(uchylony)</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/420__art_10__ust_5" gd:GUID="3e5bd65a-e11d-46fb-a1e9-ea82bfd3c5fe">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="2ff8fd8a-824e-4a28-b4b0-731917a45a7c" fragment="1" gd:fragmentGUID="243cec9c-f315-4677-9c7b-632dd0a70625">(uchylony)</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/420__art_10__ust_5a" gd:GUID="a049dc25-8bec-43e0-8176-ca811a38a91d">
+          <nr>5a</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="667f18bc-fb8b-4eec-8361-8866ae2a0e82" fragment="1" gd:fragmentGUID="2943b4d3-dbd3-472e-9003-f1d8da5b50f4">(uchylony)</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/420__art_10__ust_5b" gd:GUID="93a3f655-284a-4dab-a320-42ecd57705c6">
+          <nr>5b</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="818651d2-f1e6-4d3e-ab55-72ac7aa220e7" fragment="1" gd:fragmentGUID="3e97f631-8926-408c-a284-8e4de3fa5af7">(uchylony)</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/420__art_10__ust_6" gd:GUID="3517e266-d0cf-4e3e-a22e-39cc171acfd2">
+          <nr>6</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="df594112-f9e8-4e17-8023-25e1b43d47c8" fragment="1" gd:fragmentGUID="d8e7edab-8214-4a78-8e71-b0f255e57242">(uchylony)</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/420__art_10__ust_7" gd:GUID="1cce291a-33cb-44bf-97c0-4954f354afc1">
+          <nr>7</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="f641e4b7-05af-45e9-8722-6b8bebe38aec" fragment="1" gd:fragmentGUID="7225d28c-b3e1-4dd8-9c5a-ddaf15b9af9d">Osoba pobierająca rentę socjalną lub jej przedstawiciel ustawowy są obowiązani niezwłocznie powiadomić organ wypłacający rentę socjalną o okolicznościach powodujących zawieszenie prawa do tego świadczenia albo zmniejszenie jego wysokości.</zdanie>
+            <zdanie nr="2" gd:zdGUID="bd900dc3-f059-445f-9c42-9dc86733038f" fragment="1" gd:fragmentGUID="0abac97c-39f8-4503-822c-8985d25f21ff">Powiadomienie następuje w formie pisemnego oświadczenia.</zdanie>
+            <zdanie nr="3" gd:zdGUID="fd86cbea-d7ae-4a2a-9a11-b81a24ccb7a6" fragment="1" gd:fragmentGUID="a5778aaa-06a9-405b-916e-ecb52d8def88">W przypadku gdy składki na ubezpieczenia społeczne są odprowadzane przez płatnika składek, osoba pobierająca rentę socjalną jest obowiązana do przedstawienia zaświadczenia albo oświadczenia określającego kwotę przychodu.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/420__art_10__ust_7a" gd:GUID="6b12ad25-da20-4586-a9fc-b13c4a5a5f93">
+          <nr>7a</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="6b28c386-9b6a-473f-8dd2-c97a7d2195da" fragment="1" gd:fragmentGUID="22eb9430-8160-4dc7-b27a-517375463e3a">Oświadczenia, o których mowa w ust. 7, składa się pod rygorem odpowiedzialności karnej za składanie fałszywych zeznań.</zdanie>
+            <zdanie nr="2" gd:zdGUID="f77ea598-5381-48ac-826e-fa9b485587d6" fragment="1" gd:fragmentGUID="20558dde-a505-4b87-a886-83f2467fc65b">Składający oświadczenie jest obowiązany do zawarcia w nim klauzuli następującej treści: „Jestem świadomy odpowiedzialności karnej za złożenie fałszywego oświadczenia.”.</zdanie>
+            <zdanie nr="3" gd:zdGUID="48c7e708-67ed-4c02-aa7d-34f4e1604792" fragment="1" gd:fragmentGUID="2267e882-1202-4b76-aacf-81179013fec4">Klauzula ta zastępuje pouczenie organu o odpowiedzialności karnej za składanie fałszywych zeznań.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/420__art_10__ust_8" gd:GUID="9d942bee-d09c-49ff-97d3-faf012682555">
+          <nr>8</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="9466245a-c992-4645-9d0e-3ebf08038d0c" fragment="1" gd:fragmentGUID="b408293d-108f-41b8-a02d-69c431ce9505">Organ wypłacający rentę socjalną może wystąpić do urzędu skarbowego o przekazanie informacji o wysokości przychodów objętych podatkiem dochodowym od osób fizycznych lub zryczałtowanym podatkiem dochodowym od niektórych przychodów osiąganych przez osoby fizyczne lub informacji o opodatkowaniu działalności na zasadzie karty podatkowej w celu dokonania weryfikacji oświadczenia złożonego przez osobę pobierającą rentę.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/420__art_10__ust_9" gd:GUID="9df9bc12-7d5a-4824-883d-ff74bbb2c01e">
+          <nr>9</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a07d39c0-bc1c-4f64-bdf4-29eaa410f52e" fragment="1" gd:fragmentGUID="7e08669f-126c-4069-8dec-59cd1bd1be10">(uchylony)</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/420__art_11" gd:GUID="b6c0dfa7-fc87-48ba-b6eb-d82be5d472bc">
+        <nr>11</nr>
+        <ustep eId="DU/2025/420__art_11__ust_1" gd:GUID="dca1dcc9-8c83-498f-9a6d-2ee3f1ea21a8">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="89957af9-7908-4c93-bc55-0ddd619f09c3" fragment="1" gd:fragmentGUID="e6728331-7a83-4461-8120-eb19cf0f50fb">Postępowanie w sprawie przyznania renty socjalnej wszczyna się na podstawie wniosku osoby ubiegającej się o rentę socjalną lub jej przedstawiciela ustawowego.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/420__art_11__ust_2" gd:GUID="f02721e2-8822-423d-9807-7f1acca26cbf">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="ab71b889-1c70-4f97-804b-b52235eb15d2" fragment="1" gd:fragmentGUID="69a58e55-86fb-4869-a640-c549b00ea47f">Postępowanie w sprawie przyznania renty socjalnej wszczyna się również na wniosek innej osoby albo kierownika ośrodka pomocy społecznej, a w przypadku przekształcenia ośrodka pomocy społecznej w centrum usług społecznych na podstawie przepisów ustawy z dnia 19 lipca 2019 r. o realizowaniu usług społecznych przez centrum usług społecznych – dyrektora centrum usług społecznych, działających za zgodą osób, o których mowa w ust. 1.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/420__art_11__ust_3" gd:GUID="70a2d80d-3ed4-49c9-b119-2ebf50aa076b">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="62f4c90a-7573-4d73-9edd-0b1460f62a5e" fragment="1" gd:fragmentGUID="b86510e9-6897-42fa-b3d0-802a926372e9">Minister właściwy do spraw zabezpieczenia społecznego określi, w drodze rozporządzenia, wzór wniosku o przyznanie renty socjalnej, uwzględniając instrukcję jego wypełnienia, wykaz dokumentów, które należy dołączyć do wniosku, szczegółowy tryb postępowania w sprawach o przyznanie renty socjalnej, tryb powiadamiania Zakładu oraz organów emerytalno-rentowych o tymczasowym aresztowaniu i odbywaniu kary pozbawienia wolności, wykaz dokumentów potwierdzających prawo do 50 % kwoty renty socjalnej, uwzględniając współdziałanie osoby aresztowanej lub odbywającej karę pozbawienia wolności z dyrektorem aresztu śledczego lub zakładu karnego.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/420__art_12" gd:GUID="36b3801e-67e5-4f6b-85bd-ec6e6c9d1f92">
+        <nr>12</nr>
+        <ustep eId="DU/2025/420__art_12__ust_1" gd:GUID="29a53622-86c2-41ad-be3f-270728a33ddf">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="19f8b4dd-b104-4109-bf2e-13ce1cdd837f" fragment="1" gd:fragmentGUID="e3be9de0-f434-4820-9b2b-ded2892a5fbd">Decyzję w sprawie przyznania renty socjalnej wydaje i świadczenie to wypłaca jednostka organizacyjna Zakładu właściwa ze względu na miejsce zamieszkania lub pobytu osoby ubiegającej się o rentę socjalną.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/420__art_12__ust_2" gd:GUID="5adb1b6f-28ab-438c-82fe-594a135d7c2c">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="376e86a1-680e-4c61-b7f1-dda89ae9eea4" fragment="1" gd:fragmentGUID="2000d9ab-1802-4659-b3dd-5a0362d968c4">W przypadku gdy rentę rodzinną wypłaca jednostka organizacyjna Zakładu wskazana przez Prezesa Zakładu, rentę socjalną przyznaje i wypłaca ta jednostka.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/420__art_12__ust_3" gd:GUID="69459f56-ece6-4770-985b-127f2164755d">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="731a0783-500d-454a-a01d-b476edd9a164" fragment="1" gd:fragmentGUID="cc51ce82-861c-48e8-95ba-13695f1c95f7">W przypadku gdy uprawnienia do renty rodzinnej lub świadczenia pieniężnego, o którym mowa w art. 9 ust. 1, zostały ustalone przez organ emerytalno-rentowy, organ ten ustala, w drodze decyzji, wysokość renty socjalnej, wypłaca tę rentę, a w przypadku określonym w art. 9 ust. 2 odmawia wypłaty renty socjalnej lub wstrzymuje wypłatę tej renty.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/420__art_12__ust_3a" gd:GUID="653bd836-1693-4bff-8013-8b14fb37bde9">
+          <nr>3a</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="00236309-fb73-4330-af7c-7fa189b2806c" fragment="1" gd:fragmentGUID="b4d906b9-9d81-490d-aff8-69174fcb2bac"><odnosnik id-odnosnika="10" symbol="10" gd:GUID="dc7ba130-428b-48ab-89f5-394eb4beef58"><p><zdanie nr="1" gd:zdGUID="18b11f9e-d1a5-4756-a967-c0daa19c9d18" fragment="1" gd:fragmentGUID="5e6cdc36-585a-434f-a665-c0498106abf5">Dodany przez art. 1 pkt 7 lit. a ustawy, o której mowa w odnośniku 1.</zdanie></p></odnosnik> Przepisy ust. 1–3 stosuje się odpowiednio do przyznania i wypłaty dodatku dopełniającego.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/420__art_12__ust_4" gd:GUID="4facd28a-3f7a-4521-90ec-21085892d818">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="676ae914-dd88-4ff8-8116-d3d9cdcce44b" fragment="1" gd:fragmentGUID="53a3ad10-3de7-40f0-8fe6-c00ea4f32122"><odnosnik id-odnosnika="11" symbol="11" gd:GUID="6b0e06b7-0712-4767-b11b-e8491227cea4"><p><zdanie nr="1" gd:zdGUID="6fb7404d-18ed-47c4-967c-55e77636f088" fragment="1" gd:fragmentGUID="9bf6eb1f-3ee9-4901-948a-69e6d601d998">W brzmieniu ustalonym przez art. 1 pkt 7 lit. b ustawy, o której mowa w odnośniku 1.</zdanie></p></odnosnik> Organ emerytalno-rentowy wypłacający rentę socjalną lub rentę socjalną z dodatkiem dopełniającym wydaje decyzję o wstrzymaniu wypłaty renty socjalnej lub renty socjalnej z dodatkiem dopełniającym lub dodatku dopełniającego w razie wystąpienia okoliczności powodujących zawieszenie prawa do renty socjalnej lub renty socjalnej z dodatkiem dopełniającym lub wstrzymanie wypłaty renty socjalnej lub renty socjalnej z dodatkiem dopełniającym lub dodatku dopełniającego.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/420__art_12__ust_5" gd:GUID="9e590c88-5c1d-41e2-8b04-253e440c976c">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="115afee5-1dba-4be7-ae79-8cc50598deff" fragment="1" gd:fragmentGUID="eb1b1b32-50cb-4367-b991-fd70db24260c"><odsylacz-do-odnosnika id-odnosnika="11" symbol="11" /> W przypadku gdy organ emerytalno-rentowy ustali prawo do renty rodzinnej lub świadczenia pieniężnego, o którym mowa w art. 9 ust. 1, jest obowiązany do powiadomienia Zakładu o przyznaniu tej renty lub tego świadczenia osobom pobierającym rentę socjalną lub rentę socjalną z dodatkiem dopełniającym.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/420__art_12__ust_6" gd:GUID="9448df0c-6e69-482b-9bb9-52106a8c2dd4">
+          <nr>6</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a746cc1c-7d97-4cb0-ad16-cde22d3c9666" fragment="1" gd:fragmentGUID="fdb384ed-4cbf-4313-9535-7579d98a8c79"><odsylacz-do-odnosnika id-odnosnika="11" symbol="11" /> Od decyzji w sprawie renty socjalnej lub renty socjalnej z dodatkiem dopełniającym lub dodatku dopełniającego wydanej przez jednostkę organizacyjną Zakładu lub przez organ emerytalno-rentowy osobie ubiegającej się o rentę socjalną lub o rentę socjalną z dodatkiem dopełniającym lub o dodatek dopełniający przysługują środki odwoławcze przewidziane dla decyzji w sprawach emerytur i rent w ustawie z dnia 13 października 1998 r. o systemie ubezpieczeń społecznych (Dz. U. z 2024 r. poz. 497, 863, 1243 i 1615).</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/420__art_12a" gd:GUID="d7066397-add0-45ef-bfee-850ef09155bf">
+        <nr>12a</nr>
+        <ustep eId="DU/2025/420__art_12a__ust_1" gd:GUID="10e82ada-84f0-4d9a-9a95-022e2f96ff83">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a1074852-f26f-48a3-8796-d2c4bb84dc09" fragment="1" gd:fragmentGUID="343fe40f-a852-45df-90da-4adcd9b21a22">W razie śmierci osoby pobierającej rentę socjalną przysługuje zasiłek pogrzebowy, na zasadach i w wysokości określonych w przepisach o emeryturach i rentach z Funduszu Ubezpieczeń Społecznych, o ile zasiłek pogrzebowy lub świadczenie w wysokości zasiłku pogrzebowego nie przysługuje z innego tytułu.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/420__art_12a__ust_2" gd:GUID="01f01419-1c68-4ab1-b31d-b82793c417d0">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="7a72ecef-e699-46d1-a9c9-0514e9b42340" fragment="1" gd:fragmentGUID="454dfbd2-d109-4ac0-831d-0b443a9feea7">Decyzję w sprawie przyznania zasiłku pogrzebowego wydaje oraz zasiłek wypłaca jednostka organizacyjna Zakładu albo Kasa Rolniczego Ubezpieczenia Społecznego.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/420__art_12b" gd:GUID="4553e0eb-bb2f-49c9-8b64-67b4666ba97f">
+        <nr>12b</nr>
+        <ustep eId="DU/2025/420__art_12b__ust_1" gd:GUID="be3cb590-e3c6-45d9-b54a-efe7e6593fb8">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="b29c68d3-c348-4531-bc7a-3ef18d34b4e4" fragment="1" gd:fragmentGUID="04d4afd5-b9b8-48cd-8f82-b6f2a4bb0bf7"><odnosnik id-odnosnika="12" symbol="12" gd:GUID="d9223eac-13cb-40f7-a2ac-f0a64918ea8e"><p><zdanie nr="1" gd:zdGUID="a9080b36-0f8b-4318-9cd3-07cf07e33255" fragment="1" gd:fragmentGUID="f98c2228-e070-448c-80e1-8c12d2e02b49">W brzmieniu ustalonym przez art. 1 pkt 8 ustawy, o której mowa w odnośniku 1.</zdanie></p></odnosnik> Jeżeli dla osoby uprawnionej do renty socjalnej lub do renty socjalnej z dodatkiem dopełniającym ustanowiono opiekę prawną, świadczenie to wypłaca się osobie sprawującej tę opiekę.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/420__art_12b__ust_2" gd:GUID="dbba6bc8-ae6a-41ea-8544-d8833c148bbd">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="f8dc112c-3b4b-4a87-83a4-b3281d760d34" fragment="1" gd:fragmentGUID="8da0421a-c4c0-4efa-82db-654c36935efc">Jeżeli do renty socjalnej lub do renty socjalnej z dodatkiem dopełniającym uprawniona jest osoba, która wymaga opieki innej osoby oraz nad którą nie została ustanowiona opieka prawna, w przypadku gdy osoba uprawniona do renty socjalnej lub do renty socjalnej z dodatkiem dopełniającym nie może odebrać jej samodzielnie, świadczenia są wypłacane osobie sprawującej nad nią opiekę faktyczną, na podstawie oświadczenia o sprawowaniu tej opieki.</zdanie>
+            <zdanie nr="2" gd:zdGUID="9963e431-7142-4327-97f7-1964ce1647e7" fragment="1" gd:fragmentGUID="f98dab7d-7fe4-40f2-adca-0ab707daecf7">Sprawowanie opieki faktycznej nad osobą uprawnioną do renty socjalnej potwierdza wójt (burmistrz, prezydent miasta) właściwy ze względu na miejsce zamieszkania lub pobytu osoby uprawnionej.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/420__art_12b__ust_3" gd:GUID="e2222dee-0a33-4bb9-8d37-32efc1ada1a4">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="ee565d25-38c9-444d-b871-26ea13ffdad3" fragment="1" gd:fragmentGUID="b6f53fb2-ea41-41b4-ac4c-f83d91df2a8c">Rentę socjalną lub rentę socjalną z dodatkiem dopełniającym wypłaca się osobom sprawującym opiekę prawną lub opiekę faktyczną nad osobami uprawnionymi do renty socjalnej lub do renty socjalnej z dodatkiem dopełniającym, po uprzednim pouczeniu o konieczności poinformowania organu rentowego o zajściu okoliczności powodujących ustanie lub zawieszenie prawa do świadczeń albo wstrzymanie wypłaty świadczeń w całości lub w części oraz o obowiązku zwrotu świadczenia przez te osoby w przypadku, gdy zostało pobrane nienależnie.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/420__art_12c" gd:GUID="497148b7-cca3-486b-925a-ed566b32573b">
+        <nr>12c</nr>
+        <ustep eId="DU/2025/420__art_12c__ust_1" gd:GUID="662b8795-bad1-4ea4-8172-c563b0074dbd">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="6d0196f1-a95a-465d-b1f5-e7a713b5211f" fragment="1" gd:fragmentGUID="2c28b402-9a34-4763-9471-6f42b795d68e"><odsylacz-do-odnosnika id-odnosnika="12" symbol="12" /> Rentę socjalną lub rentę socjalną z dodatkiem dopełniającym wypłaca się osobie uprawnionej:</zdanie>
+          </p>
+          <punkt eId="DU/2025/420__art_12c__ust_1__pkt_1" gd:GUID="97f199d9-1578-4046-b370-c7187f3304b8">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="6d0196f1-a95a-465d-b1f5-e7a713b5211f" fragment="2" gd:fragmentGUID="6a7d0214-4f46-4f43-80bf-8498ef837cfa">w formie bezgotówkowej na wskazany przez nią jej rachunek płatniczy prowadzony w kraju lub wydany w kraju jej instrument płatniczy w rozumieniu ustawy z dnia 19 sierpnia 2011 r. o usługach płatniczych (Dz. U. z 2024 r. poz. 30, 731 i 1222 oraz z 2025 r. poz. 146) albo</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/420__art_12c__ust_1__pkt_2" gd:GUID="8c7e676b-4003-42a8-aa40-f4a99006c4eb">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="6d0196f1-a95a-465d-b1f5-e7a713b5211f" fragment="3" gd:fragmentGUID="412565dd-6cb3-44dc-8f71-f5c174ab4d54">za pośrednictwem podmiotów prowadzących działalność w zakresie doręczania świadczeń.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/420__art_12c__ust_2" gd:GUID="956f8e6e-2503-4fbf-831a-e0ea282632eb">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="cee15676-55d3-4e16-ab9e-ee2019f79296" fragment="1" gd:fragmentGUID="4ccbf1db-af88-48bc-8f8a-17eea14e526c">Osobie odbywającej karę pozbawienia wolności, karę aresztu wojskowego albo karę aresztu za wykroczenie oraz osobie tymczasowo aresztowanej rentę socjalną lub rentę socjalną z dodatkiem dopełniającym wypłaca się:</zdanie>
+          </p>
+          <punkt eId="DU/2025/420__art_12c__ust_2__pkt_1" gd:GUID="4869da17-e4aa-407f-b716-b8f1dc38eacb">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="cee15676-55d3-4e16-ab9e-ee2019f79296" fragment="2" gd:fragmentGUID="1b444c33-7737-40ae-8367-230bb2f09410">w formie bezgotówkowej na wskazany przez nią jej rachunek płatniczy prowadzony w kraju lub wydany w kraju jej instrument płatniczy w rozumieniu ustawy z dnia 19 sierpnia 2011 r. o usługach płatniczych albo</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/420__art_12c__ust_2__pkt_2" gd:GUID="54631830-7352-41c1-b508-7b35f44f41c8">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="cee15676-55d3-4e16-ab9e-ee2019f79296" fragment="3" gd:fragmentGUID="302e5437-e4ec-47a3-9e8b-2aa10f3ee93b">na jej wniosek za pośrednictwem podmiotów prowadzących działalność w zakresie doręczania świadczeń pod adresem zakładu karnego lub aresztu.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/420__art_12c__ust_3" gd:GUID="d27993e2-d4a8-40f7-9f75-c32160c81348">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="8c06481f-f2d0-4c65-a7e1-5284e254f352" fragment="1" gd:fragmentGUID="515ca938-9b0b-465c-a23a-561b3ed04d85">W przypadku gdy rentę socjalną lub rentę socjalną z dodatkiem dopełniającym wypłaca organ emerytalno-rentowy, wypłata następuje w tej samej formie, w której następuje wypłata renty rodzinnej lub świadczenia pieniężnego, o których mowa w art. 9 ust. 1, wypłacanych w zbiegu z rentą socjalną lub rentą socjalną z dodatkiem dopełniającym.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/420__art_12c__ust_4" gd:GUID="27925aad-c3ca-42fe-be82-4c2cb6d1fb46">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="b54b4722-1488-4f7e-84e3-9a0ba3b3b9b9" fragment="1" gd:fragmentGUID="53fda123-8ff5-4623-bd77-3de963c85b62">Przepis ust. 1 stosuje się odpowiednio do osób sprawujących opiekę prawną nad osobami uprawnionymi do renty socjalnej lub renty socjalnej z dodatkiem dopełniającym.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/420__art_12c__ust_5" gd:GUID="905ecca0-2a26-464c-b487-1fa98c5d8e1f">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="29f40a42-0527-417c-9409-947e89ef73cf" fragment="1" gd:fragmentGUID="4ee7a3b2-728f-46f1-9bea-0b8dbfbdc8ee">Przepisu ust. 1 nie stosuje się w przypadku, gdy osoba sprawująca opiekę prawną nad osobą uprawnioną do renty socjalnej lub renty socjalnej z dodatkiem dopełniającym odbywa karę pozbawienia wolności, karę aresztu wojskowego albo karę aresztu za wykroczenie lub jest tymczasowo aresztowana.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/420__art_12d" gd:GUID="15887c14-bcd4-4bf3-95ea-33bfb374dc56">
+        <nr>12d</nr>
+        <ustep eId="DU/2025/420__art_12d__ust_1" gd:GUID="9cc9127f-114f-4bd9-99c5-4c2c50032f14">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="c649db7e-8c8e-49d6-b93f-265b765c7b6a" fragment="1" gd:fragmentGUID="41efeaee-6995-4a64-8aa2-13488d67f940">Osoba uprawniona do renty z tytułu niezdolności do pracy na podstawie art. 63 ust. 1 ustawy z dnia 14 grudnia 1982 r. o zaopatrzeniu emerytalnym pracowników i ich rodzin (Dz. U. poz. 267, z późn. zm.<odnosnik id-odnosnika="13" symbol="13" gd:GUID="ebb55504-5957-472e-8c2d-c97c8f063a6d"><p><zdanie nr="1" gd:zdGUID="65ba8b3a-c6bd-4668-9b96-3b9163764791" fragment="1" gd:fragmentGUID="4e92091f-57c7-421b-a1d7-558cd28c3188">Zmiany wymienionej ustawy zostały ogłoszone w Dz. U. z 1984 r. poz. 268 i 270, z 1986 r. poz. 1, z 1989 r. poz. 190 i 192, z 1990 r. poz. 58, 61, 206, 390 i 506, z 1991 r. poz. 24, 350 i 422, z 1992 r. poz. 84 i 321, z 1994 r. poz. 339 i 516, z 1995 r. poz. 17, z 1996 r. poz. 461, 636 i 687, z 1997 r. poz. 153, 569 i 725 oraz z 1998 r. poz. 668.</zdanie></p></odnosnik>) albo jej przedstawiciel ustawowy mogą złożyć do Zakładu wniosek o wydanie decyzji o zamianie tej renty na rentę socjalną.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/420__art_12d__ust_2" gd:GUID="b782416c-93e9-419f-bf5a-4265e855ae5c">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="d7d71089-44ba-4be7-a4c1-81b2f671e531" fragment="1" gd:fragmentGUID="51e6e7b5-c72f-4c7e-80ea-8e2ccb4275e2">Do wniosku, o którym mowa w ust. 1, dołącza się orzeczenie uprawniające do renty z tytułu niezdolności do pracy na podstawie art. 63 ust. 1 ustawy z dnia 14 grudnia 1982 r. o zaopatrzeniu emerytalnym pracowników i ich rodzin<i>.</i></zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/420__art_12d__ust_3" gd:GUID="06b99d86-71ca-4f45-9092-ff8b11f389d9">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="75eb2472-22ce-4b67-913a-9739264a40d8" fragment="1" gd:fragmentGUID="a2472fe3-8994-489f-8384-824dc165c28b">W przypadku, o którym mowa w ust. 1, całkowitą niezdolność do pracy osoby ubiegającej się o rentę socjalną ustala się na podstawie orzeczenia wymienionego w ust. 2.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/420__art_12d__ust_4" gd:GUID="7ca1f9b1-28a7-4b01-8382-8151256ec415">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="441ca9c3-3282-48e4-8795-5bb74afe7e0d" fragment="1" gd:fragmentGUID="3b44b0ab-95da-4961-9af1-e3f7da0b628f">Z dniem przyznania na podstawie ust. 1 prawa do renty socjalnej ustaje prawo do renty z tytułu niezdolności do pracy na podstawie art. 63 ust. 1 ustawy z dnia 14 grudnia 1982 r. o zaopatrzeniu emerytalnym pracowników i ich rodzin.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/420__art_13" gd:GUID="fe1b8d57-1c39-4e93-b3b1-1cdba9000ca0">
+        <nr>13</nr>
+        <ustep eId="DU/2025/420__art_13__ust_1" gd:GUID="21bc8fa2-c639-442e-8b54-46ffaad00c6a">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="4bce6dbc-789a-4475-9082-bf97ed947ed1" fragment="1" gd:fragmentGUID="0959e6fa-9fc8-47a6-88b1-a6671c8adb64"><odnosnik id-odnosnika="14" symbol="14" gd:GUID="0a309829-8cc2-4b72-8d02-5c48f835f72c"><p><zdanie nr="1" gd:zdGUID="643397ab-7ca0-400e-a647-77b94c61ff4d" fragment="1" gd:fragmentGUID="3a4b4a5c-1411-47ac-bf77-21b12535ddd9">W brzmieniu ustalonym przez art. 1 pkt 9 ustawy, o której mowa w odnośniku 1.</zdanie></p></odnosnik> Zakład jest uprawniony do przetwarzania danych osobowych w zakresie niezbędnym do przyznawania i wypłacania renty socjalnej, dodatku dopełniającego oraz zasiłku pogrzebowego, zapewniając rzetelność tych danych.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/420__art_13__ust_2" gd:GUID="d0c86738-d42b-4a52-9cab-90831939aa62">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="6bd681ea-fafd-41d4-a9ab-1194dce557c2" fragment="1" gd:fragmentGUID="cc9e6592-6f17-4576-88e2-c5a80b731252">(uchylony)</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/420__art_13__ust_3" gd:GUID="7a74c72f-cdd6-477c-b040-b00fed80eb49">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="32c4d09c-3443-426d-a6b9-b3795b72adbe" fragment="1" gd:fragmentGUID="fe159656-1445-469e-a494-05e18c15627c">Przepis ust. 1 stosuje się odpowiednio do organu emerytalno-rentowego.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/420__art_14" gd:GUID="d260c512-bc66-4720-b7ce-fd8c0a609ac8">
+        <nr>14</nr>
+        <ustep eId="DU/2025/420__art_14__ust_1" gd:GUID="2116385c-b1b2-4815-a1ca-9a60c5f2b87c">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="78a93baa-d837-4d5b-b847-c052bd3f142d" fragment="1" gd:fragmentGUID="df62fe0a-d7fd-420d-9b1a-451d82e1c6fa"><odnosnik id-odnosnika="15" symbol="15" gd:GUID="4f59cf4e-0bf8-4a7d-9b6d-054aadd51061"><p><zdanie nr="1" gd:zdGUID="8f9a2842-5703-4894-acce-06f3bcceeb94" fragment="1" gd:fragmentGUID="c8a7e06a-ae39-48b3-86a4-51564cdb4e78">W brzmieniu ustalonym przez art. 1 pkt 10 lit. a ustawy, o której mowa w odnośniku 1.</zdanie></p></odnosnik> Renta socjalna, odsetki za opóźnienia w wypłacie renty socjalnej, dodatek dopełniający, zasiłek pogrzebowy oraz koszty ich obsługi wypłacane przez Zakład i Kasę Rolniczego Ubezpieczenia Społecznego są finansowane ze środków Funduszu Solidarnościowego, o którym mowa w przepisach ustawy z dnia 23 października 2018 r. o Funduszu Solidarnościowym (Dz. U. z 2024 r. poz. 1848).</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/420__art_14__ust_2" gd:GUID="d8f26780-4ae2-4598-9549-94345ad945ab">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="8c3d697e-ff8a-40b1-9d49-1cc25ff3006f" fragment="1" gd:fragmentGUID="2bbfa157-2faf-4220-a6ef-0abc3cad5fb4">Koszty obsługi, o których mowa w ust. 1, wynoszą łącznie 2,5 % kwoty przeznaczonej na wypłatę renty socjalnej i zasiłku pogrzebowego.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/420__art_14__ust_2a" gd:GUID="3ef64f33-8f4d-4b28-87ec-51bb6283f262">
+          <nr>2a</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="87c4d4c2-cc7b-4732-a86d-225965d1cb95" fragment="1" gd:fragmentGUID="a5c408a0-4700-47fe-b7e3-a9cabf6d3fe8"><odnosnik id-odnosnika="16" symbol="16" gd:GUID="a892faac-36b9-4a20-95b8-9c3b2af1fe7c"><p><zdanie nr="1" gd:zdGUID="87ac0f91-38a0-4a88-86af-28d6671d8a46" fragment="1" gd:fragmentGUID="6e58cb58-cc80-485d-bb55-5be9d0651464">Dodany przez art. 1 pkt 10 lit. b ustawy, o której mowa w odnośniku 1.</zdanie></p></odnosnik> Koszty obsługi wypłaty dodatku dopełniającego wynoszą 0,5 % kwoty przeznaczonej na jego wypłatę.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/420__art_14__ust_3" gd:GUID="9ba48f96-ee5d-4a39-a55e-a14991c8af42">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="63cc6d6e-82a8-42dc-94a4-34920ce943b4" fragment="1" gd:fragmentGUID="1f1252b4-cf86-47a7-b820-a3513659139b"><odnosnik id-odnosnika="17" symbol="17" gd:GUID="c0aa2f19-d428-4731-80b4-4cd836f7b8c2"><p><zdanie nr="1" gd:zdGUID="c0e55378-593b-4360-9d8c-9e2f639b6e8a" fragment="1" gd:fragmentGUID="6ec27be0-d146-47fe-8774-0f96b841ab94">W brzmieniu ustalonym przez art. 1 pkt 10 lit. c ustawy, o której mowa w odnośniku 1.</zdanie></p></odnosnik> Renta socjalna, dodatek dopełniający, zasiłek pogrzebowy oraz koszty ich obsługi wypłacane przez organy emerytalno-rentowe, z wyłączeniem Kasy Rolniczego Ubezpieczenia Społecznego, są finansowane ze środków budżetu państwa.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/420__art_15" gd:GUID="2c387b00-3ce1-4e85-a46a-1137414468b0">
+        <nr>15</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="48935f8c-bbb0-4fba-ae5c-c2cc5c2bc209">
+          <p>
+            <zdanie nr="1" gd:zdGUID="0b6d4bb7-c761-406a-b7aa-88d52420b4aa" fragment="1" gd:fragmentGUID="08594068-abc3-406b-b5d0-0a5504480690">W sprawach nieuregulowanych w ustawie stosuje się odpowiednio:</zdanie>
+          </p>
+          <punkt eId="DU/2025/420__art_15__pkt_1" gd:GUID="ee8277b2-ea76-4ae0-9ec1-248fa8d11c92">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="0b6d4bb7-c761-406a-b7aa-88d52420b4aa" fragment="2" gd:fragmentGUID="9ad14b38-8cf8-4c9e-9299-09a4942f38fa">art. 12–14, art. 61, art. 78–81, art. 93 ust. 2, art. 98, art. 100 ust. 1 i 2, art. 101, art. 102 ust. 1, art. 104 ust. 4, art. 107, art. 114, art. 116 ust. 1b i 2, art. 118 ust. 1–5, art. 119 ust. 1, art. 121, art. 122 ust. 1, art. 126, art. 128, art. 129 ust. 1, art. 130 ust. 1, art. 133–135, art. 136a i art. 138–144 ustawy o emeryturach i rentach z Funduszu Ubezpieczeń Społecznych oraz przepisy wydane na podstawie art. 128a tej ustawy;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/420__art_15__pkt_2" gd:GUID="af925cfb-056d-46bc-a5ac-4b97222da383">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="0b6d4bb7-c761-406a-b7aa-88d52420b4aa" fragment="3" gd:fragmentGUID="0e4ca473-7ace-4589-a91f-897d189a260c">art. 80–82, art. 84 ust. 1, 1a, 4, 4a, 6–8e i 11 oraz art. 85 ustawy o systemie ubezpieczeń społecznych.</zdanie>
+            </p>
+          </punkt>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2025/420__art_16" gd:GUID="8b8854ac-e817-487d-8540-de3a2a64ed5d">
+        <nr>16</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="88245340-e3ca-46ff-885a-e593486a609b">
+          <p>
+            <zdanie nr="1" gd:zdGUID="57dca2b1-5d91-4bbb-89b9-04141491ace2" fragment="1" gd:fragmentGUID="d843d506-07c3-4986-8ce1-20b573c9fc17"><odnosnik id-odnosnika="18" symbol="18" gd:GUID="91ed375e-cb75-4f39-8b39-254a702e61de"><p><zdanie nr="1" gd:zdGUID="ad1ee440-3896-4767-940a-527449fb75d6" fragment="1" gd:fragmentGUID="8ac44997-302e-49b8-9063-05374b40d425">W brzmieniu ustalonym przez art. 1 pkt 11 ustawy, o której mowa w odnośniku 1.</zdanie></p></odnosnik> W postępowaniu w sprawach o rentę socjalną oraz dodatek dopełniający stosuje się przepisy Kodeksu postępowania administracyjnego, chyba że niniejsza ustawa stanowi inaczej.</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2025/420__art_17" gd:GUID="98d02789-8bd0-4a29-8e03-18704b997e75">
+        <nr />
+        <nr-od>17</nr-od>
+        <nr-do>25</nr-do>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="171cc240-5154-4850-bbb8-d71e7b0c9f7e">
+          <p>
+            <zdanie nr="1" gd:zdGUID="ad7039cd-d875-4348-9937-ab216e02bd87" fragment="1" gd:fragmentGUID="8911d9e6-f522-428c-acc8-173d7db6f99e">(pominięte)</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2025/420__art_26" gd:GUID="5f422d89-d3fa-46fe-a8bf-c9aff5c43d66">
+        <nr>26</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="6b5f4be1-6634-4011-98a5-6d99ed35598b">
+          <p>
+            <zdanie nr="1" gd:zdGUID="45137f49-f300-43e7-81b3-6cd46f426afb" fragment="1" gd:fragmentGUID="84cfa464-cba3-4584-a5a8-518f8f0d5897">(pominięty)</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2025/420__art_27" gd:GUID="b9b5bb0b-8a26-4f2e-96d6-c4d1740a7f2a">
+        <nr>27</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="fe732b2b-0e9c-43f9-adfa-9943db64230c">
+          <p>
+            <zdanie nr="1" gd:zdGUID="813c9773-4544-4a94-9ea2-7795197f0069" fragment="1" gd:fragmentGUID="a45d56bd-4729-4080-b9f9-03e4e4a08312">(pominięty)</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2025/420__art_28" gd:GUID="5684900b-8847-4256-897d-658152e99a78">
+        <nr>28</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="08c2ea3d-876b-4470-8f4e-b80c9937cdd7">
+          <p>
+            <zdanie nr="1" gd:zdGUID="b3471b58-0ad7-4240-8a81-4d2480f476dc" fragment="1" gd:fragmentGUID="93d14bc6-9c78-4515-a639-440470500167">(pominięty)</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2025/420__art_29" gd:GUID="0a9e0773-32ac-4cdf-84ea-e9f522332df2">
+        <nr>29</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="acbe6dce-cb22-4212-ad28-ce2518696760">
+          <p>
+            <zdanie nr="1" gd:zdGUID="1335f7ec-ddb2-413b-ba26-17ed85658191" fragment="1" gd:fragmentGUID="a092396e-064c-416a-ade6-19645a9b7b79">(pominięty)</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2025/420__art_30" gd:GUID="ea39768d-fd45-4a39-a28f-b950c49829c4">
+        <nr>30</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="1128cf8e-77e2-47ac-b41d-b03c59cae772">
+          <p>
+            <zdanie nr="1" gd:zdGUID="abaeb5dd-454b-4ca0-87e2-b7511e70a302" fragment="1" gd:fragmentGUID="ed343f43-7088-4870-b5f8-f8e2c19a44c9">Ustawa wchodzi w życie z dniem 1 października 2003 r., z wyjątkiem:</zdanie>
+          </p>
+          <punkt eId="DU/2025/420__art_30__pkt_1" gd:GUID="8d5876af-8eb6-4882-aab7-82ce7fa48e72">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="abaeb5dd-454b-4ca0-87e2-b7511e70a302" fragment="2" gd:fragmentGUID="d686d8dc-d84f-4228-873c-37bc749b2729">art. 13 ust. 1 i 2 oraz art. 26 ust. 4 i 5, które wchodzą w życie z dniem 1 sierpnia 2003 r.;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/420__art_30__pkt_2" gd:GUID="c21c6b10-d662-4d52-9530-4ef501dc867c">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="abaeb5dd-454b-4ca0-87e2-b7511e70a302" fragment="3" gd:fragmentGUID="67610276-b0de-411d-8e47-506bc215d037">art. 2 pkt 3, który wchodzi w życie z dniem uzyskania przez Rzeczpospolitą Polską członkostwa w Unii Europejskiej<odnosnik id-odnosnika="19" symbol="19" gd:GUID="7f62e926-6d7a-4a8e-b0e4-f6114d7e0685"><p><zdanie nr="1" gd:zdGUID="4da86c71-cc9d-4043-94fc-2ad83860a2fc" fragment="1" gd:fragmentGUID="281608ee-8225-4701-8d21-6dcda33399ba">Rzeczpospolita Polska uzyskała członkostwo w Unii Europejskiej w dniu 1 maja 2004 r.</zdanie></p></odnosnik>.</zdanie>
+            </p>
+          </punkt>
+        </ustep-n>
+      </artykul>
+    </ustawa>
+  </obwieszczenie>
+</akt-prawny>

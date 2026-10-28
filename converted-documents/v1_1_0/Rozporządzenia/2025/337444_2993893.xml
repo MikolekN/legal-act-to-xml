@@ -1,0 +1,643 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <rozporzadzenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/1132</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>8371e0a8-fa0d-4782-9e77-a55669a025b9</gd:GUIDwersji>
+      <AdresISAP>WDU20250001132</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>1132</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 1132</AdresWyswietlany>
+      <Tytul>Rozporządzenie Ministra Zdrowia z dnia 12 sierpnia 2025 r. w sprawie Lekarskiego Egzaminu Końcowego i Lekarsko-Dentystycznego Egzaminu Końcowego</Tytul>
+      <Rodzaj>ROZP</Rodzaj>
+      <DataOgloszenia></DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-08-12</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane" rodzaj="wejscie-w-zycie" pochodzenie="odczytane" data="2025-09-01" podstawa="§ 19" zrodlo="https://eli.gov.pl/eli/DU/2025/1132" dowod="DU/2025/1132__art_19" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="f32ed7a0-cac4-4478-a906-57d7a26af8f7" rola="wydajacy">
+          <Nazwa>Minister Zdrowia</Nazwa>
+          <OrganPodpisujacy>Minister Zdrowia</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>W.</imie> <nazwisko>Konieczny</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Rozporządzenie</rodzaj-aktu>
+    <autor-aktu>Ministra Zdrowia<odnosnik id-odnosnika="1" symbol="1" gd:GUID="033fb7f0-77a4-4669-a67a-027c5dcf73f9"><p><zdanie nr="1" gd:zdGUID="a1c33cbc-d66c-48fc-a986-734ed6a44c72" fragment="1" gd:fragmentGUID="e0984408-90d9-49b1-b126-305eedb2db11">Minister Zdrowia kieruje działem administracji rządowej – zdrowie, na podstawie § 1 ust. 2 rozporządzenia Prezesa Rady Ministrów z dnia 25 lipca 2025 r. w sprawie szczegółowego zakresu działania Ministra Zdrowia (Dz. U. poz. 1004).</zdanie></p></odnosnik></autor-aktu>
+    <data>z dnia 12 sierpnia 2025 r.</data>
+    <tytul>w sprawie Lekarskiego Egzaminu Końcowego i Lekarsko-Dentystycznego Egzaminu Końcowego</tytul>
+    <podstawa-prawna>Na podstawie art. 14f ust. 1 ustawy z dnia 5 grudnia 1996 r. o zawodach lekarza i lekarza dentysty (Dz. U. z 2024 r. poz. 1287 i 1897 oraz z 2025 r. poz. 619 i 769) zarządza się, co następuje:</podstawa-prawna>
+    <paragraf eId="DU/2025/1132__art_1" gd:GUID="9691021a-07c5-46db-9aa6-6105b5cdef92" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="65ce1763-d2a4-4415-87c6-1a18d8441e41" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="d3e73f49-bbb3-4bb3-a1c9-2b855906793a" fragment="1" gd:fragmentGUID="4ef3ce62-cb2d-444c-8a44-da070025b422" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">Rozporządzenie określa:</zdanie>
+        </p>
+        <punkt eId="DU/2025/1132__art_1__pkt_1" gd:GUID="a33a8c67-5f89-499b-b0c6-88b2794e3dfb" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="d3e73f49-bbb3-4bb3-a1c9-2b855906793a" fragment="2" gd:fragmentGUID="15d4d672-5fe7-4297-bebf-1fb90ac76508" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">wykaz dziedzin medycyny oraz zakres problematyki uwzględnianej przy opracowywaniu pytań testowych Lekarskiego Egzaminu Końcowego, zwanego dalej „LEK”, i Lekarsko-Dentystycznego Egzaminu Końcowego, zwanego dalej „LDEK”;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1132__art_1__pkt_2" gd:GUID="209719aa-929c-4da9-9a66-b1312e7d8682" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="d3e73f49-bbb3-4bb3-a1c9-2b855906793a" fragment="3" gd:fragmentGUID="fc9ec1b7-5075-4cb7-bf78-494d236a73d0" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">tryb powoływania członków Komisji Egzaminacyjnej, o której mowa w art. 14b ust. 1 ustawy z dnia 5 grudnia 1996 r. o zawodach lekarza i lekarza dentysty, zwanej dalej ,,ustawą”, i komisji, o której mowa w art. 14e ust. 2 ustawy;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1132__art_1__pkt_3" gd:GUID="c3207ae7-e670-4f27-a70e-870daef17717" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="d3e73f49-bbb3-4bb3-a1c9-2b855906793a" fragment="4" gd:fragmentGUID="3245c76c-ca5b-4440-bcec-2335146cf63d" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">wzór oświadczenia, o którym mowa w art. 14b ust. 8 ustawy;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1132__art_1__pkt_4" gd:GUID="ea59b146-d2b1-465c-91ad-b9e1f4b5ffe5" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="d3e73f49-bbb3-4bb3-a1c9-2b855906793a" fragment="5" gd:fragmentGUID="efa33500-8f5d-4744-883f-99562cbcc20a" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">sposób i szczegółowy tryb przeprowadzania LEK i LDEK, w tym okres, w którym powinny być wyznaczone ich terminy;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1132__art_1__pkt_5" gd:GUID="962364f7-5cca-42eb-be7f-f0e7d69d2353" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="d3e73f49-bbb3-4bb3-a1c9-2b855906793a" fragment="6" gd:fragmentGUID="3f7e8eeb-dcb7-45ae-a810-85f7a5a91d78" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">wysokość opłaty, o której mowa w art. 14a ust. 8 ustawy, oraz sposób jej uiszczania;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1132__art_1__pkt_6" gd:GUID="729bbe0c-e349-40a1-b6fb-2161f9550f21" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+          <nr>6</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="d3e73f49-bbb3-4bb3-a1c9-2b855906793a" fragment="7" gd:fragmentGUID="ee8c8c12-7312-42f0-97fa-0566f4862645" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">wysokość wynagrodzenia dla członków i przewodniczących Zespołów Egzaminacyjnych oraz komisji, o której mowa w art. 14e ust. 2 ustawy;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1132__art_1__pkt_7" gd:GUID="f2bf8a39-e044-4ada-b783-7d71bc14ea8a" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+          <nr>7</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="d3e73f49-bbb3-4bb3-a1c9-2b855906793a" fragment="8" gd:fragmentGUID="f803aefd-fbaa-4781-8cda-cecaf314899f" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">szczegółowy sposób ustalania wyników LEK i LDEK.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2025/1132__art_2" gd:GUID="24b67a06-2e4e-4323-92a7-615e20e25591" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+      <nr>2</nr>
+      <ustep eId="DU/2025/1132__art_2__ust_1" gd:GUID="460bcffa-cc97-4e90-aa0d-b9c93d051361" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="8207778a-2029-4a36-9a18-0633684e6dbb" fragment="1" gd:fragmentGUID="696dd5ec-42fe-47c1-bb13-3c08ffd13a97" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">Zakres problematyki uwzględnianej przy opracowywaniu pytań testowych LEK i LDEK obejmuje efekty uczenia się w zakresie wiedzy, które są określone w programie studiów przygotowujących do wykonywania zawodu odpowiednio lekarza i lekarza dentysty.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/1132__art_2__ust_2" gd:GUID="df63427f-c3c3-428f-b14e-a78f83d83b2d" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="b57abe42-6735-4b4c-a443-c6e840a31a69" fragment="1" gd:fragmentGUID="bc6ef953-f9f6-4ec2-98a5-a96c63c2cf3d" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">LEK zawiera pytania testowe z zakresu:</zdanie>
+        </p>
+        <punkt eId="DU/2025/1132__art_2__ust_2__pkt_1" gd:GUID="77d4aa73-5a17-4279-867a-f233c60297be" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="b57abe42-6735-4b4c-a443-c6e840a31a69" fragment="2" gd:fragmentGUID="88b2bdad-31c4-4bbc-ba44-208f05e498a0" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">chorób wewnętrznych, w tym chorób układu sercowo-naczyniowego – 39 pytań,</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1132__art_2__ust_2__pkt_2" gd:GUID="be6ae40d-27e1-4e09-9da0-6067aa5c6083" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="b57abe42-6735-4b4c-a443-c6e840a31a69" fragment="3" gd:fragmentGUID="3803408c-d93a-4973-a010-33fbbd331fe8" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">pediatrii, w tym neonatologii – 29 pytań,</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1132__art_2__ust_2__pkt_3" gd:GUID="31d7c359-3f24-4bfb-8a5f-f32dd9d19ce2" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="b57abe42-6735-4b4c-a443-c6e840a31a69" fragment="4" gd:fragmentGUID="f4f477f9-e570-4b95-ab85-ef1b7e04e7ce" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">chirurgii, w tym chirurgii urazowej – 27 pytań,</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1132__art_2__ust_2__pkt_4" gd:GUID="79bc252e-ca01-402d-808a-bd9ebbbbd826" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="b57abe42-6735-4b4c-a443-c6e840a31a69" fragment="5" gd:fragmentGUID="32e05383-adb9-433e-b730-b0e51b2320e3" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">położnictwa i ginekologii – 26 pytań,</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1132__art_2__ust_2__pkt_5" gd:GUID="dca4a4f3-1491-40e9-91e4-d74966f26628" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="b57abe42-6735-4b4c-a443-c6e840a31a69" fragment="6" gd:fragmentGUID="2d822879-edc7-46fd-ab68-bbb7219c7515" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">psychiatrii – 14 pytań,</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1132__art_2__ust_2__pkt_6" gd:GUID="e32ded7c-8e5d-4a9f-aaa5-37983bdd92c4" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+          <nr>6</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="b57abe42-6735-4b4c-a443-c6e840a31a69" fragment="7" gd:fragmentGUID="5d3fafe5-0bae-46a0-86e1-4158002de074" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">medycyny rodzinnej – 20 pytań,</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1132__art_2__ust_2__pkt_7" gd:GUID="a2d1b291-83ca-484a-9466-4bbdfcd5986c" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+          <nr>7</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="b57abe42-6735-4b4c-a443-c6e840a31a69" fragment="8" gd:fragmentGUID="34790303-529d-4908-b30f-ba42e1f6732e" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">medycyny ratunkowej i intensywnej terapii – 20 pytań,</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1132__art_2__ust_2__pkt_8" gd:GUID="ab4474cb-5fc8-4381-90d4-037c069d0cc4" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+          <nr>8</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="b57abe42-6735-4b4c-a443-c6e840a31a69" fragment="9" gd:fragmentGUID="41087d74-4dee-4c7b-a106-20a24957b3b2" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">bioetyki i prawa medycznego – 10 pytań,</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1132__art_2__ust_2__pkt_9" gd:GUID="e4df2010-8cf0-4396-b236-0574d6e629fa" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+          <nr>9</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="b57abe42-6735-4b4c-a443-c6e840a31a69" fragment="10" gd:fragmentGUID="d2179ed1-ffff-45de-a25c-78962ede27c9" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">orzecznictwa lekarskiego – 7 pytań,</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1132__art_2__ust_2__pkt_10" gd:GUID="eb83dd94-5437-4612-9ba5-90faff18acc5" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+          <nr>10</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="b57abe42-6735-4b4c-a443-c6e840a31a69" fragment="11" gd:fragmentGUID="d0dba1bd-c9fa-4bb7-a817-3636126a24c2" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">zdrowia publicznego – 8 pytań</zdanie>
+          </p>
+        </punkt>
+        <czesc-wspolna-punkt eId="DU/2025/1132__art_2__ust_2__czw" gd:GUID="81db9bde-4714-48d0-b8f6-bb6dc9717cfb" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+          <p>
+            <zdanie nr="1" gd:zdGUID="b57abe42-6735-4b4c-a443-c6e840a31a69" fragment="12" gd:fragmentGUID="b6d0581f-5ac9-445e-a1f2-31c24c087e65" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">– przy czym wśród pytań testowych z zakresu chorób wewnętrznych, pediatrii, chirurgii, położnictwa i ginekologii oraz medycyny rodzinnej znajduje się co najmniej łącznie 30 pytań z dziedziny onkologii.</zdanie>
+          </p>
+        </czesc-wspolna-punkt>
+      </ustep>
+      <ustep eId="DU/2025/1132__art_2__ust_3" gd:GUID="16ea63da-0b18-4ea4-89e5-3609d1313973" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+        <nr>3</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="829d0106-1636-4579-b443-2ce171f47d8b" fragment="1" gd:fragmentGUID="8a346ce4-aa76-45f9-a85d-5baff514f8a8" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">LDEK zawiera pytania testowe z zakresu:</zdanie>
+        </p>
+        <punkt eId="DU/2025/1132__art_2__ust_3__pkt_1" gd:GUID="583652b3-e6fb-4640-80d7-ede2999a46bb" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="829d0106-1636-4579-b443-2ce171f47d8b" fragment="2" gd:fragmentGUID="97949e13-060f-416b-88dc-cb31e13ab961" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">stomatologii zachowawczej – 46 pytań,</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1132__art_2__ust_3__pkt_2" gd:GUID="de816945-3085-4751-973e-f2f3a5af6a98" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="829d0106-1636-4579-b443-2ce171f47d8b" fragment="3" gd:fragmentGUID="811d0606-513c-402e-8c04-047e2ddcdc8d" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">stomatologii dziecięcej – 29 pytań,</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1132__art_2__ust_3__pkt_3" gd:GUID="2c207834-ea4b-457d-b74a-5a5f5c0b9590" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="829d0106-1636-4579-b443-2ce171f47d8b" fragment="4" gd:fragmentGUID="bdde51f7-bd52-4068-b2ff-a7f19ce8a58a" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">chirurgii stomatologicznej – 25 pytań,</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1132__art_2__ust_3__pkt_4" gd:GUID="d617bf7c-5971-4ac2-90b1-b9385147c4a0" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="829d0106-1636-4579-b443-2ce171f47d8b" fragment="5" gd:fragmentGUID="ec1a9aef-a11d-4adc-9225-6a9bc24fbec8" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">protetyki stomatologicznej – 25 pytań,</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1132__art_2__ust_3__pkt_5" gd:GUID="086c5032-c222-4242-84bf-3c173e79facf" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="829d0106-1636-4579-b443-2ce171f47d8b" fragment="6" gd:fragmentGUID="b6ba8aaf-caad-4b40-9385-de5171ccad68" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">periodontologii – 20 pytań,</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1132__art_2__ust_3__pkt_6" gd:GUID="6b0d12be-d571-4e3d-a2ce-a6bb3babebaf" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+          <nr>6</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="829d0106-1636-4579-b443-2ce171f47d8b" fragment="7" gd:fragmentGUID="38ec8636-ced6-4eaa-95a2-8c64c5cc4f91" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">ortodoncji – 20 pytań,</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1132__art_2__ust_3__pkt_7" gd:GUID="e2317a09-5603-44e5-832b-36f15ea09012" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+          <nr>7</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="829d0106-1636-4579-b443-2ce171f47d8b" fragment="8" gd:fragmentGUID="b6a494e6-e0a3-4a3f-9fe9-fb620466a8f0" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">medycyny ratunkowej – 10 pytań,</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1132__art_2__ust_3__pkt_8" gd:GUID="5d8ba29d-f130-4aec-a677-88057181cb9c" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+          <nr>8</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="829d0106-1636-4579-b443-2ce171f47d8b" fragment="9" gd:fragmentGUID="1c37e352-b52b-4c10-95e8-4bbc9c855a64" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">bioetyki i prawa medycznego – 10 pytań,</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1132__art_2__ust_3__pkt_9" gd:GUID="d0755cc8-d367-46e8-93df-01b9c469c79b" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+          <nr>9</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="829d0106-1636-4579-b443-2ce171f47d8b" fragment="10" gd:fragmentGUID="24fb0782-bce4-4269-aa25-458d9e90495d" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">orzecznictwa lekarskiego – 7 pytań,</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1132__art_2__ust_3__pkt_10" gd:GUID="b0ee85cf-a274-4712-a030-742dc8afde65" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+          <nr>10</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="829d0106-1636-4579-b443-2ce171f47d8b" fragment="11" gd:fragmentGUID="2ebd4779-011c-4d23-a82d-b325b526fd2b" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">zdrowia publicznego – 8 pytań</zdanie>
+          </p>
+        </punkt>
+        <czesc-wspolna-punkt eId="DU/2025/1132__art_2__ust_3__czw" gd:GUID="1b98a8d2-15ac-41f8-8804-76dc68df65d1" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+          <p>
+            <zdanie nr="1" gd:zdGUID="829d0106-1636-4579-b443-2ce171f47d8b" fragment="12" gd:fragmentGUID="f193438a-9d44-4ea0-b27e-fa8d9fdaa0f3" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">– przy czym wśród pytań testowych z zakresu stomatologii zachowawczej, stomatologii dziecięcej, chirurgii stomatologicznej, periodontologii oraz ortodoncji znajduje się co najmniej łącznie 25 pytań z dziedziny onkologii.</zdanie>
+          </p>
+        </czesc-wspolna-punkt>
+      </ustep>
+    </paragraf>
+    <paragraf eId="DU/2025/1132__art_3" gd:GUID="7d4c5d00-59fb-4461-a5f6-be52eee4f682" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+      <nr>3</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="5a993e03-d7b9-4c7a-ad1f-69fdbb1d6579" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="d62c67fb-61d5-42d7-b8d2-1a8b4a9a2f46" fragment="1" gd:fragmentGUID="e86929c5-5496-4684-8919-38f1db9362e4" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">Test opracowany w języku innym niż język polski jest tłumaczeniem testu przygotowanego na dany LEK albo LDEK w języku polskim.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2025/1132__art_4" gd:GUID="4f9d454b-db93-4087-a2a9-51c0735d8b90" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+      <nr>4</nr>
+      <ustep eId="DU/2025/1132__art_4__ust_1" gd:GUID="00b98919-7a08-4ce3-9cf3-b08b2d77f240" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="21d802e4-3437-423e-aa0d-f80c67f6e56a" fragment="1" gd:fragmentGUID="6837d1f5-607e-4fca-946c-1aa4c75b4187" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">W celu powołania członków Komisji Egzaminacyjnej, o której mowa w art. 14b ust. 1 ustawy, dyrektor Centrum Egzaminów Medycznych, zwanego dalej „CEM”, zwraca się do podmiotów, o których mowa w art. 14b ust. 2 ustawy, o wskazanie kandydatów do tej komisji.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/1132__art_4__ust_2" gd:GUID="8df91079-a395-4185-987e-626967fb5965" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="4fe29a2c-1e18-4578-a1d4-5c8f2bc3eb2e" fragment="1" gd:fragmentGUID="b43f18ab-858f-47dc-aa58-f738bdbbd43a" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">Wskazanie, o którym mowa w ust. 1, zawiera następujące dane kandydata:</zdanie>
+        </p>
+        <punkt eId="DU/2025/1132__art_4__ust_2__pkt_1" gd:GUID="61a77e4d-020a-4c07-864e-33d754a92620" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="4fe29a2c-1e18-4578-a1d4-5c8f2bc3eb2e" fragment="2" gd:fragmentGUID="bda18068-0c4e-4ee3-94f6-36f151160209" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">imię (imiona) i nazwisko;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1132__art_4__ust_2__pkt_2" gd:GUID="b3e8651c-96a4-4109-9de0-34be3ef33de0" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="4fe29a2c-1e18-4578-a1d4-5c8f2bc3eb2e" fragment="3" gd:fragmentGUID="2435ad2e-962c-436c-9762-d9689fddc9f8" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">numer PESEL, a w przypadku jego braku – datę i miejsce urodzenia;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1132__art_4__ust_2__pkt_3" gd:GUID="0a55e318-093d-4179-bac4-53c4a0c41943" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="4fe29a2c-1e18-4578-a1d4-5c8f2bc3eb2e" fragment="4" gd:fragmentGUID="1177a23f-cffe-4388-a203-15895389ad3e" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">adres do korespondencji;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1132__art_4__ust_2__pkt_4" gd:GUID="a6c613e9-4dd2-40c3-be66-35b8c4592bc7" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="4fe29a2c-1e18-4578-a1d4-5c8f2bc3eb2e" fragment="5" gd:fragmentGUID="da9801ec-d9f9-4d1b-a0b6-c6eaf3c95763" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">numer telefonu i adres poczty elektronicznej, jeżeli posiada;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1132__art_4__ust_2__pkt_5" gd:GUID="824018a9-1dee-4425-a352-e28d5135c15c" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="4fe29a2c-1e18-4578-a1d4-5c8f2bc3eb2e" fragment="6" gd:fragmentGUID="949f14a3-a833-46b4-a415-d9b2c51e91ef" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">określenie podmiotu reprezentowanego przez kandydata.</zdanie>
+          </p>
+        </punkt>
+      </ustep>
+      <ustep eId="DU/2025/1132__art_4__ust_3" gd:GUID="7cfba31b-1209-4ed0-8177-760b34b33e3c" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+        <nr>3</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="707df2f5-260a-406e-8dbd-cfb744d72aae" fragment="1" gd:fragmentGUID="1e1593bb-e95c-4925-acfe-36408c3ee34c" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">Listy kandydatów przesyła się do CEM za pomocą środków komunikacji elektronicznej lub w postaci papierowej.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/1132__art_4__ust_4" gd:GUID="dc51ac40-2fdb-4d9f-9411-26a5ee4963cf" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+        <nr>4</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="b1399a12-ba08-461d-a1fa-56c9e150902a" fragment="1" gd:fragmentGUID="09fa88a7-8c97-4c49-b915-582961b29069" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">Wzór oświadczenia członka Zespołu Egzaminacyjnego, o którym mowa w art. 14b ust. 8 ustawy, jest określony w załączniku do rozporządzenia.</zdanie>
+        </p>
+      </ustep>
+    </paragraf>
+    <paragraf eId="DU/2025/1132__art_5" gd:GUID="31b9d5c1-f50b-4db1-9f11-69fd56e7cf6c" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+      <nr>5</nr>
+      <ustep eId="DU/2025/1132__art_5__ust_1" gd:GUID="3a84f557-c5cb-44ee-809d-e793152ffb0b" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="1b3fc09a-3d43-4531-ac0f-a0c16f1b9f18" fragment="1" gd:fragmentGUID="f9f65b4b-a68d-4fdd-b26e-d5bbd690be60" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">W celu powołania komisji, o której mowa w art. 14e ust. 2 ustawy, dyrektor CEM zwraca się do konsultantów krajowych właściwych dla dziedzin, o których mowa w § 2, o wskazanie kandydatów do tej komisji.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/1132__art_5__ust_2" gd:GUID="f35eb4d7-7009-4f06-b0cc-d4fbbd0d4b0a" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="fa183606-6617-4753-80c4-f8b083174309" fragment="1" gd:fragmentGUID="d78330dc-6520-40c0-9409-4329ed2b1c8e" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">Przy wskazywaniu kandydatów do komisji, o której mowa w art. 14e ust. 2 ustawy, podaje się dane, o których mowa w § 4 ust. 2.</zdanie>
+          <zdanie nr="2" gd:zdGUID="5a6da8a3-1f26-4d67-bada-ce67566958a0" fragment="1" gd:fragmentGUID="93620032-1ed1-449e-8fae-4edf15e736cf" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">Przepis § 4 ust. 3 stosuje się.</zdanie>
+        </p>
+      </ustep>
+    </paragraf>
+    <paragraf eId="DU/2025/1132__art_6" gd:GUID="5f319fea-f444-4817-8426-bf1a91d886a9" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+      <nr>6</nr>
+      <ustep eId="DU/2025/1132__art_6__ust_1" gd:GUID="e5168fc3-38d8-4e49-a744-cda385cce06d" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="c64eeb50-a47f-44cd-aba6-402090c50282" fragment="1" gd:fragmentGUID="e301d000-a5fd-4bb7-9c5c-a13bbe072877" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">Przy organizacji i przeprowadzaniu LEK i LDEK dyrektor CEM może współpracować z właściwymi wojewodami.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/1132__art_6__ust_2" gd:GUID="806f6b75-7355-4c68-9d40-2be969166cb0" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="f1c7601b-346a-4e0f-b3f1-db2daf6998e8" fragment="1" gd:fragmentGUID="bcccbbba-509a-471e-9ec0-6a51580c3d96" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">W ramach współpracy, o której mowa w ust. 1, wojewodowie wspomagają CEM w zakresie organizacyjno-technicznym, w szczególności przez:</zdanie>
+        </p>
+        <punkt eId="DU/2025/1132__art_6__ust_2__pkt_1" gd:GUID="46930d57-8912-45ef-bac0-7be6301cf941" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="f1c7601b-346a-4e0f-b3f1-db2daf6998e8" fragment="2" gd:fragmentGUID="efdc834e-58bf-465f-8a72-30ab6b0446f9" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">wskazanie sal egzaminacyjnych przeznaczonych do przeprowadzenia LEK i LDEK w danym terminie, spełniających warunki określone w regulaminie porządkowym LEK i LDEK, o którym mowa w art. 14f ust. 2 ustawy;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1132__art_6__ust_2__pkt_2" gd:GUID="3f8a831b-fd6d-42cd-adf4-41ddd09060be" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="f1c7601b-346a-4e0f-b3f1-db2daf6998e8" fragment="3" gd:fragmentGUID="bb968414-536c-4698-be03-6806b9d35275" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">pomoc w negocjacjach umów dotyczących udostępnienia sal egzaminacyjnych, o których mowa w pkt 1;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1132__art_6__ust_2__pkt_3" gd:GUID="4ee89740-4538-44c0-b1d6-3af7938870cf" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="f1c7601b-346a-4e0f-b3f1-db2daf6998e8" fragment="4" gd:fragmentGUID="eb3989dc-32e2-4063-92b0-689b8b5dbab2" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">przygotowanie sal egzaminacyjnych, o których mowa w pkt 1, przed dniem LEK albo LDEK lub w dniu LEK albo LDEK;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1132__art_6__ust_2__pkt_4" gd:GUID="e50b75f6-d1b0-453b-b690-2be237fb120f" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="f1c7601b-346a-4e0f-b3f1-db2daf6998e8" fragment="5" gd:fragmentGUID="b7234bb7-72a3-43aa-9023-c0fae472180c" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">przechowywanie i przygotowanie materiałów biurowych niezbędnych do przeprowadzenia LEK albo LDEK.</zdanie>
+          </p>
+        </punkt>
+      </ustep>
+      <ustep eId="DU/2025/1132__art_6__ust_3" gd:GUID="dcf845bf-0827-4fce-ba99-69c4a4606769" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+        <nr>3</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="e8d2f2f0-107d-4fe4-82ff-60a065bb5687" fragment="1" gd:fragmentGUID="168a2b07-3010-4208-829f-aec4fc61cbf4" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">W ramach współpracy, o której mowa w ust. 1, CEM jest obowiązane nieodpłatnie dostarczać właściwym wojewodom materiały biurowe niezbędne do przeprowadzenia LEK i LDEK.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/1132__art_6__ust_4" gd:GUID="d900344e-11f6-41f6-9222-c5edb8818a42" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+        <nr>4</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="75f242f0-6308-4327-a8b9-e1ff078fe1cd" fragment="1" gd:fragmentGUID="b57fc9ca-dfe0-4dc8-b901-915718e4b211" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">Szczegóły dotyczące współpracy, o której mowa w ust. 1, są określane w porozumieniu zawieranym przez dyrektora CEM z poszczególnymi wojewodami.</zdanie>
+        </p>
+      </ustep>
+    </paragraf>
+    <paragraf eId="DU/2025/1132__art_7" gd:GUID="e880f719-bb11-4f65-ad8e-6b6aa5cfccfb" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+      <nr>7</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="452c8bbe-8863-4111-8e38-71b6b6c94643" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="066e977e-df80-4787-a2ee-e8742446c68c" fragment="1" gd:fragmentGUID="86546f75-aee7-4ec2-adf8-42293a441d1f" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">Terminy LEK i LDEK wyznacza się w okresie od dnia 1 lutego do dnia 28 lutego oraz od dnia 1 września do dnia 30 września.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2025/1132__art_8" gd:GUID="dd3a003e-faff-433a-85aa-4f9f4ccd008b" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+      <nr>8</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="2a147924-49de-4377-89d6-f7f07ae58395" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="93828bfd-93c4-4187-a632-cf3169accffd" fragment="1" gd:fragmentGUID="2f3455f9-b798-4df6-985a-fe6fb479a900" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">Przebieg LEK i LDEK jest dokumentowany w protokole egzaminacyjnym.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2025/1132__art_9" gd:GUID="8dced1bc-5519-47bd-8343-462e501a3714" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+      <nr>9</nr>
+      <ustep eId="DU/2025/1132__art_9__ust_1" gd:GUID="286f10c5-3fd9-4e21-9345-93b44c6d341e" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="7e6d63fc-2a3d-4f51-8d4e-314eea4ac1b4" fragment="1" gd:fragmentGUID="a6472e6c-f6e3-46b6-80a0-d601d7acdab9" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">Zdający LEK albo LDEK jest obowiązany podporządkować się poleceniom członków Zespołu Egzaminacyjnego, o którym mowa w art. 14b ust. 5 ustawy.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/1132__art_9__ust_2" gd:GUID="b5cde956-b82e-4d93-bfd3-8a01103fc2ac" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="5c8b654b-1245-4c92-9377-d2cf93e147ac" fragment="1" gd:fragmentGUID="aa60710d-056f-4033-8159-6cff2a321984" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">Zespół Egzaminacyjny przeprowadzający dany LEK albo LDEK jest odpowiedzialny za zapewnienie przestrzegania norm porządkowych przez zdającego.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/1132__art_9__ust_3" gd:GUID="e6086cd3-abfd-4c48-a653-9b698e8fdb80" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+        <nr>3</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="fa55ff43-ac20-4337-803f-a6d2863e7756" fragment="1" gd:fragmentGUID="9fa02409-fdb3-400f-b688-3e96cd11b868" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">Pracami Zespołu Egzaminacyjnego kieruje przewodniczący wskazany przez dyrektora CEM spośród członków tego zespołu.</zdanie>
+        </p>
+      </ustep>
+    </paragraf>
+    <paragraf eId="DU/2025/1132__art_10" gd:GUID="5265ad33-c329-4e86-b731-a21a6abb98ae" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+      <nr>10</nr>
+      <ustep eId="DU/2025/1132__art_10__ust_1" gd:GUID="4bcf50e5-b4bc-45d7-a715-7de56a3d4d3d" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="fed4d232-0559-43a1-9a31-674007649bff" fragment="1" gd:fragmentGUID="5e22d3cb-7312-4a54-8338-1dfddfb3e692" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">Rozpoczęcie LEK albo LDEK dla wszystkich zdających w skali kraju wyznacza się na tę samą godzinę.</zdanie>
+          <zdanie nr="2" gd:zdGUID="9f6160a3-43aa-4dc8-9b89-9bae4aa24d5f" fragment="1" gd:fragmentGUID="16a77c86-24ec-4df7-af02-0ae082b0e15b" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">Dopuszcza się maksymalnie 30-minutowe opóźnienie w rozpoczęciu LEK albo LDEK.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/1132__art_10__ust_2" gd:GUID="1029efd4-1672-469c-b28b-2750f50abbcd" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="e35436cb-c0c2-4ba0-bc47-73dbb10e51c9" fragment="1" gd:fragmentGUID="d6eedec2-6c4a-4755-be6b-d1d689681b8f" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">Decyzję o rozpoczęciu wpuszczania zdających do sali egzaminacyjnej podejmuje przewodniczący Zespołu Egzaminacyjnego.</zdanie>
+          <zdanie nr="2" gd:zdGUID="67dc604b-2f69-4b67-8941-7f11071cb0ce" fragment="1" gd:fragmentGUID="51408b0b-8ad1-4586-a693-f2d0d035f36e" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">Po ogłoszeniu rozpoczęcia wpuszczania do sali egzaminacyjnej osoba, która zgłosiła się na dany LEK albo LDEK, poddaje się niezwłocznie procedurze, o której mowa w art. 14d ust. 1 ustawy.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/1132__art_10__ust_3" gd:GUID="42e4ac09-1dff-44d7-a629-8b4340a8c57b" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+        <nr>3</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="4db28a6b-9332-4478-aa11-f599152e78dd" fragment="1" gd:fragmentGUID="18aa45cc-aa4b-4815-8d05-1b8e9bbd6e43" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">Osoba, która nie dokonała zgłoszenia w trybie art. 14a ust. 5 ustawy lub nie wniosła opłaty egzaminacyjnej, o której mowa w art. 14a ust. 8 ustawy, lub wniosła tę opłatę w wysokości niższej niż należna, nie może przystąpić do danego LEK albo LDEK.</zdanie>
+          <zdanie nr="2" gd:zdGUID="ae341a73-4a4e-47fe-9910-723266aedaca" fragment="1" gd:fragmentGUID="f14a5ec7-d6cf-4655-b132-58bf391bd173" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">Przyczynę niedopuszczenia do LEK albo LDEK odnotowuje się w protokole egzaminacyjnym.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/1132__art_10__ust_4" gd:GUID="fe6d8fee-199b-45d9-9bf9-d07c7fb0d123" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+        <nr>4</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="2a3580bc-a91a-4435-a704-94e6667905ec" fragment="1" gd:fragmentGUID="aba7d238-81cc-404d-bb56-06ae203e9ae5" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">Po rozpoczęciu LEK albo LDEK wchodzenie do sali egzaminacyjnej innych osób niż przedstawiciele CEM i członkowie Zespołu Egzaminacyjnego jest zabronione.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/1132__art_10__ust_5" gd:GUID="005663dd-2a16-4097-9e65-5d18aad3c888" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+        <nr>5</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="8c5986f7-97a1-450a-b73e-06e50ae190c4" fragment="1" gd:fragmentGUID="f1cfebee-863f-4d72-8a9f-391fc6141b1b" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">Czas trwania LEK albo LDEK wynosi 4 godziny.</zdanie>
+        </p>
+      </ustep>
+    </paragraf>
+    <paragraf eId="DU/2025/1132__art_11" gd:GUID="c4ba25d8-318a-4643-b470-f7cbe53a527b" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+      <nr>11</nr>
+      <ustep eId="DU/2025/1132__art_11__ust_1" gd:GUID="9b83c22f-d700-41b0-8038-c645cb797092" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="58970611-25d8-46a3-8da0-da88cb674e12" fragment="1" gd:fragmentGUID="a714041f-d528-4956-a6d1-cb28a4ff43ef" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">Zdający LEK albo LDEK zajmuje w sali egzaminacyjnej miejsce oznaczone wcześniej numerem kodowym nadanym przez CEM.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/1132__art_11__ust_2" gd:GUID="d2cbdcb7-2a61-490f-ab1a-217d239ec253" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="a3c395de-756b-4461-83a1-9cad026fcb5e" fragment="1" gd:fragmentGUID="353f88c0-f2c4-489b-9c0b-75e9fd9eaea3" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">Po zajęciu miejsc w sali egzaminacyjnej przez wszystkich zdających LEK albo LDEK przewodniczący Zespołu Egzaminacyjnego, o którym mowa w art. 14b ust. 5 ustawy, informuje o:</zdanie>
+        </p>
+        <punkt eId="DU/2025/1132__art_11__ust_2__pkt_1" gd:GUID="5c168ed7-044b-489f-a2ca-1f4b54daa77b" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a3c395de-756b-4461-83a1-9cad026fcb5e" fragment="2" gd:fragmentGUID="227b28ca-8ac1-45aa-ba55-5f0d3260fd81" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">organizacji i przebiegu LEK albo LDEK;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1132__art_11__ust_2__pkt_2" gd:GUID="72a182e4-2d06-4496-8320-e6085edc820d" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a3c395de-756b-4461-83a1-9cad026fcb5e" fragment="3" gd:fragmentGUID="492adf18-0b5a-445a-a183-ab1c5f23887a" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">zakazach obowiązujących podczas LEK albo LDEK i konsekwencjach ich naruszenia, w szczególności o dyskwalifikacji, o której mowa w art. 14d ust. 4–6 ustawy.</zdanie>
+          </p>
+        </punkt>
+      </ustep>
+    </paragraf>
+    <paragraf eId="DU/2025/1132__art_12" gd:GUID="825b2d10-dc0b-4314-835f-dcbdf71e207e" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+      <nr>12</nr>
+      <ustep eId="DU/2025/1132__art_12__ust_1" gd:GUID="60703c03-ee6b-4452-aa0e-e4772faacb0a" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="255f65a3-b8ac-4e82-a883-60ddd36240c0" fragment="1" gd:fragmentGUID="1ace10df-f878-46e6-a3a2-75999afc7be4" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">W celu sprawdzenia, czy zdający posiada przy sobie urządzenia służące do kopiowania oraz przekazywania i odbioru informacji, członkowie Zespołu Egzaminacyjnego mogą posługiwać się elektronicznym wykrywaczem takich urządzeń.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/1132__art_12__ust_2" gd:GUID="68a71b1b-fffb-436c-b7da-94198371b3c9" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="f372a24e-57bc-48c5-97f1-41b3c7cdf4df" fragment="1" gd:fragmentGUID="bf03a370-bfeb-4691-b329-7b39728d76c2" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">W trakcie LEK albo LDEK zdającemu nie wolno zachowywać się w sposób rozpraszający uwagę innych zdających.</zdanie>
+        </p>
+      </ustep>
+    </paragraf>
+    <paragraf eId="DU/2025/1132__art_13" gd:GUID="9f7fb2ce-512f-439f-81bb-840815549180" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+      <nr>13</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="f329bf4f-34bf-41e2-87fb-6491be2e8dc7" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="d04b0b9b-56c6-4d7b-8804-0af7574daedb" fragment="1" gd:fragmentGUID="5470b64b-c863-48e8-962f-6d1df5b42ab6" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">Jedynym dokumentem przeznaczonym do udzielania odpowiedzi w trakcie LEK albo LDEK jest karta testowa oznaczona numerem kodowym zdającego nadanym przez CEM.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2025/1132__art_14" gd:GUID="0e52e5b5-515c-4e60-942e-7bf56e63574f" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+      <nr>14</nr>
+      <ustep eId="DU/2025/1132__art_14__ust_1" gd:GUID="59f67b95-a5ba-44f1-bf55-6c50fd2416e0" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="e864f428-ff59-4f52-8a63-9aa4297a6992" fragment="1" gd:fragmentGUID="03a679c2-5537-4c6d-83bf-f6e88209cbcf" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">Po upływie czasu przeznaczonego na rozwiązanie pytań testowych przewodniczący Zespołu Egzaminacyjnego ogłasza koniec LEK albo LDEK.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/1132__art_14__ust_2" gd:GUID="579a0335-3d29-4359-be07-84deec50cf29" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="99e65747-9d38-4c00-a191-e9f9e194a39c" fragment="1" gd:fragmentGUID="df905ee3-afa1-4910-832a-4f2a7223b1f9" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">Po ogłoszeniu końca LEK albo LDEK zdający odkłada książeczkę testową i karty testowe.</zdanie>
+          <zdanie nr="2" gd:zdGUID="69c5765d-23cc-492d-bea6-6706d24723e4" fragment="1" gd:fragmentGUID="19ab4ed1-6066-471f-b962-957236bb0405" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">Zdający pozostaje na miejscu do momentu zebrania wszystkich książeczek testowych i kart testowych przez członków Zespołu Egzaminacyjnego, po czym opuszcza salę egzaminacyjną.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/1132__art_14__ust_3" gd:GUID="9aaac8d0-ce77-4832-bf04-57ef2d0a37b5" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+        <nr>3</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="c18daba8-8309-47e0-a12f-2af293bf4337" fragment="1" gd:fragmentGUID="4c3abb8a-f85c-4b10-a530-5aec6e0d8478" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">W przypadku wcześniejszego zakończenia rozwiązywania testu zdający przekazuje książeczkę testową i karty testowe członkowi Zespołu Egzaminacyjnego lub jego przewodniczącemu i opuszcza salę egzaminacyjną bez możliwości powrotu.</zdanie>
+        </p>
+      </ustep>
+    </paragraf>
+    <paragraf eId="DU/2025/1132__art_15" gd:GUID="4fd53b70-206a-4faf-b7ce-d1e584af84fc" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+      <nr>15</nr>
+      <ustep eId="DU/2025/1132__art_15__ust_1" gd:GUID="fc4acafc-38e9-4e67-ac1a-f03b524c4cf6" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="c29514ad-f2e8-467b-965f-da77d8abab24" fragment="1" gd:fragmentGUID="a721cd13-4b18-4aff-a997-5895e2d0dca5" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">Zdający dany LEK albo LDEK ma prawo wglądu do treści pytań testowych w celu składania zastrzeżeń.</zdanie>
+          <zdanie nr="2" gd:zdGUID="68fd5138-6146-49be-b5c4-abff8098ae7e" fragment="1" gd:fragmentGUID="e8d7843f-fc13-4be2-b6f9-a1c85de2b757" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">Książeczki testowe są udostępniane w sali egzaminacyjnej bezpośrednio po danym LEK albo LDEK.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/1132__art_15__ust_2" gd:GUID="cc4873bd-6d97-470b-9ba1-c2786719c294" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="78b07be3-7e9b-4ab3-a309-8b057ece2614" fragment="1" gd:fragmentGUID="b9247e3d-d0c8-4ab9-80cf-f3c2b226a4ef" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">Zastrzeżenia, o których mowa w art. 14e ust. 1 ustawy, złożone bez zachowania trybu określonego w tym przepisie nie podlegają rozpatrzeniu.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/1132__art_15__ust_3" gd:GUID="b0559a9a-51ab-4e2b-b884-ee20201d0285" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+        <nr>3</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="31cfedf0-96a6-403d-813b-6e73fe444903" fragment="1" gd:fragmentGUID="db26dc8f-0ee0-44d4-80e0-f23d42c9b89a" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">Komisja, o której mowa w art. 14e ust. 2 ustawy, rozpatruje zastrzeżenia na posiedzeniu.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/1132__art_15__ust_4" gd:GUID="39ed1a90-4dff-440b-96db-767e1759bd48" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+        <nr>4</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="9ac4a0dc-6b37-4414-af7a-71bbb93c8796" fragment="1" gd:fragmentGUID="f69aa432-df0c-42a2-8e30-19903f0ea7a0" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">Z posiedzenia komisji, o której mowa w art. 14e ust. 2 ustawy, jest sporządzany protokół, zawierający w szczególności rozstrzygnięcie o uznaniu albo odrzuceniu zastrzeżeń wraz z uzasadnieniem.</zdanie>
+          <zdanie nr="2" gd:zdGUID="7c0433a7-7b3a-425d-9a3c-b0001fba2825" fragment="1" gd:fragmentGUID="81a38dcb-6b21-40b8-99ea-36f803d4f3fa" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">Do protokołu dołącza się złożone zastrzeżenia w postaci elektronicznej lub papierowej.</zdanie>
+        </p>
+      </ustep>
+    </paragraf>
+    <paragraf eId="DU/2025/1132__art_16" gd:GUID="5c84a057-3cfc-42b8-9db2-d7984ec479c3" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+      <nr>16</nr>
+      <ustep eId="DU/2025/1132__art_16__ust_1" gd:GUID="9b44fc63-f421-4c4d-91e0-2e7c1270caef" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="397a4711-1b71-4d87-901a-feaed539d89a" fragment="1" gd:fragmentGUID="cf9a992f-b8a7-4821-a9ee-c6deed2812c4" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">Ustalenie wyników LEK i LDEK następuje po rozpatrzeniu zastrzeżeń, o których mowa w art. 14e ust. 1 ustawy.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/1132__art_16__ust_2" gd:GUID="a0cc52bd-5d5e-405f-9a78-1756c7e7d9b3" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="ff68fea9-15d4-4215-8313-df2cde916524" fragment="1" gd:fragmentGUID="dadbc033-60cb-4c57-b896-ef822ddbf0f1" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">Unieważnienie pytania testowego zostaje uwzględnione przy ustalaniu liczby punktów umożliwiających złożenie LEK albo LDEK.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/1132__art_16__ust_3" gd:GUID="e711c8f6-c2f3-4231-8721-a7e24498b5c8" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+        <nr>3</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="27145d21-03a5-417c-9a04-132fc669f469" fragment="1" gd:fragmentGUID="6e6b6f47-f29e-49ed-bb0f-f0a5a3770448" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">Ustalenie wyników LEK i LDEK następuje za pomocą systemu informatycznego przez odczyt kart testowych oznaczonych numerem kodowym.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/1132__art_16__ust_4" gd:GUID="6addc989-6888-4263-8f15-db103b1961de" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+        <nr>4</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="f1cab7e7-c5ad-4d4b-a37d-11ef785dd271" fragment="1" gd:fragmentGUID="7bc0a106-7c0d-4e15-b66d-cc56b1e7816a" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">Udostępnienie zdającemu wyniku jego LEK albo LDEK następuje przez podanie wyniku procentowego do dwóch miejsc po przecinku i liczby poprawnie udzielonych odpowiedzi.</zdanie>
+        </p>
+      </ustep>
+    </paragraf>
+    <paragraf eId="DU/2025/1132__art_17" gd:GUID="9074bbd2-21c7-4b90-8805-09d697a83032" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+      <nr>17</nr>
+      <ustep eId="DU/2025/1132__art_17__ust_1" gd:GUID="6355d40c-cac1-452c-91ac-42dca4401094" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="46681abb-e08d-482f-a7d3-b13cadd9c6b1" fragment="1" gd:fragmentGUID="b2143b79-f5dc-4dc3-b7b9-8f447e24eabd" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">W przypadku złożenia zgłoszenia do LEK albo LDEK, o którym mowa w art. 14a ust. 5 ustawy, po raz drugi i kolejny zgłaszający się wnosi opłatę egzaminacyjną w wysokości 250 zł, z zastrzeżeniem przepisu art. 14a ust. 11 ustawy.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/1132__art_17__ust_2" gd:GUID="b3a92976-655e-4b47-a62d-4be00fb36aa6" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="119d1b38-c35a-4c28-83fa-4467a2e2f43e" fragment="1" gd:fragmentGUID="e8414a49-2846-4b27-b136-4d8b8f08386e" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">W przypadku złożenia zgłoszenia do składanego w języku obcym LEK albo LDEK, o którym mowa w art. 5 ust. 4 ustawy, zgłaszający się wnosi opłatę egzaminacyjną w wysokości 400 zł.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/1132__art_17__ust_3" gd:GUID="90d0d0d5-477c-4e38-aa92-d535644887d4" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+        <nr>3</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="ed5bba39-8c48-440f-901d-0947a22cf104" fragment="1" gd:fragmentGUID="9ba083e6-df06-4de9-bc7b-8043aefefcf7" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">Opłatę egzaminacyjną uiszcza się w polskich złotych.</zdanie>
+        </p>
+      </ustep>
+    </paragraf>
+    <paragraf eId="DU/2025/1132__art_18" gd:GUID="639dd4bd-5dc1-4ffb-92e9-b01cc36a05f1" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+      <nr>18</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="81d6d639-5b82-4791-82be-287da9780941" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="6d654881-c105-489b-ad49-061ac313a385" fragment="1" gd:fragmentGUID="631c66f4-2c27-446f-ac12-660de13008c0" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">Wysokość wynagrodzenia:</zdanie>
+        </p>
+        <punkt eId="DU/2025/1132__art_18__pkt_1" gd:GUID="a878e031-d470-42db-8e82-6162434dfa40" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="6d654881-c105-489b-ad49-061ac313a385" fragment="2" gd:fragmentGUID="71dc1b97-3678-4c7d-a1d2-4840fbd3caa9" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">przewodniczącego Zespołu Egzaminacyjnego wynosi 1000 zł za przeprowadzenie danego LEK albo LDEK;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1132__art_18__pkt_2" gd:GUID="fbd893fa-e04a-4d8e-ac62-a7ed6ee915a3" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="6d654881-c105-489b-ad49-061ac313a385" fragment="3" gd:fragmentGUID="6cfacbc3-8ef8-48fc-95e5-07d31ca5f2a5" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">członka Zespołu Egzaminacyjnego wynosi 600 zł za przeprowadzenie danego LEK albo LDEK;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1132__art_18__pkt_3" gd:GUID="03a22127-fcb5-4e7b-9faf-ddcfa86c8dd9" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="6d654881-c105-489b-ad49-061ac313a385" fragment="4" gd:fragmentGUID="26d58712-b723-42c9-84e2-16e14ee94836" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">przewodniczącego komisji, o której mowa w art. 14e ust. 2 ustawy, wynosi 1000 zł za posiedzenie;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1132__art_18__pkt_4" gd:GUID="90f51868-8257-4290-8b7c-3d6173ac2b7c" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="6d654881-c105-489b-ad49-061ac313a385" fragment="5" gd:fragmentGUID="a26fc0fd-54ed-4f4a-b14a-792cac087139" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">członka komisji, o której mowa w art. 14e ust. 2 ustawy, wynosi 600 zł za posiedzenie.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2025/1132__art_19" gd:GUID="28be2cc1-9326-42de-a4d4-b37de3dff8af" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+      <nr>19</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="62834292-2cb6-49b3-91f5-a460cd4fd8cd" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="405dad3d-4638-484f-978c-b5a8821db8bb" fragment="1" gd:fragmentGUID="c92e90bc-c7e7-48e5-8f4e-472214222f01" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1132_odczytane.x" wejscie-w-zycie="2025-09-01">Rozporządzenie wchodzi w życie z dniem 1 września 2025 r.<odnosnik id-odnosnika="2" symbol="2" gd:GUID="5fdbd4bb-2921-4c87-be62-9efbefd0490a"><p><zdanie nr="1" gd:zdGUID="84458272-633e-4e00-af2a-5cdda37d6760" fragment="1" gd:fragmentGUID="6a912d6b-4a9b-48b4-b570-dcc0dd7e1ba5">Niniejsze rozporządzenie było poprzedzone rozporządzeniem Ministra Zdrowia z dnia 27 kwietnia 2021 r. w sprawie Lekarskiego Egzaminu Końcowego i Lekarsko-Dentystycznego Egzaminu Końcowego (Dz. U. z 2023 r. poz. 105 oraz z 2025 r. poz. 143), które traci moc z dniem wejścia w życie niniejszego rozporządzenia zgodnie z art. 41 pkt 3 ustawy z dnia 27 listopada 2024 r. o zmianie ustawy o Centrum Medycznym Kształcenia Podyplomowego oraz niektórych innych ustaw (Dz. U. poz. 1897).</zdanie></p></odnosnik></zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <organ-podpisujacy>Minister Zdrowia: wz. <i><osoba podpisujacy="true" gd:osobaGUID="e4930497-34ba-4c95-989c-83a6abc1da96"><imie>W.</imie> <nazwisko>Konieczny</nazwisko></osoba></i></organ-podpisujacy>
+    <zalacznik eId="DU/2025/1132__zal_1" gd:GUID="61c60afa-044a-4209-88d4-711d205a02f3">
+      <zalacznik-do gd:GUID="5a203f65-381f-4169-bc0b-f99ed4ef8e6d">Załącznik do rozporządzenia Ministra Zdrowia z dnia 12 sierpnia 2025 r. (Dz. U. poz. 1132)</zalacznik-do>
+      <tytul-zalacznika gd:GUID="13eb6e67-5a52-4798-a50c-063b8c5c768e">WZÓR</tytul-zalacznika>
+    </zalacznik>
+  </rozporzadzenie>
+</akt-prawny>

@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <rozporzadzenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/1319</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>a885e593-452a-465a-9ace-d6187481e409</gd:GUIDwersji>
+      <AdresISAP>WDU20250001319</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>1319</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 1319</AdresWyswietlany>
+      <Tytul>Rozporządzenie Ministra Finansów i Gospodarki z dnia 29 września 2025 r. zmieniające rozporządzenie w sprawie korzystania z e-Urzędu Skarbowego</Tytul>
+      <Rodzaj>ROZP</Rodzaj>
+      <DataOgloszenia>2025-09-30</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-09-29</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2025-10-01_DU-2025-1319_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2025-10-01" warunek="z dniem następującym po dniu ogłoszenia" podstawa="§ 2" zrodlo="https://eli.gov.pl/eli/DU/2025/1319" dowod="DU/2025/1319__art_2" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2025-10-01_DU-2025-1319_domyslne.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2025-10-01_DU-2025-1319_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="819b02a8-4fcb-41b5-9dbe-a2b66581bd64" rola="wydajacy">
+          <Nazwa>Minister Finansów i Gospodarki</Nazwa>
+          <OrganPodpisujacy>Minister Finansów i Gospodarki</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>J.</imie> <nazwisko>Drop</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Rozporządzenie</rodzaj-aktu>
+    <autor-aktu>Ministra Finansów i Gospodarki<odnosnik id-odnosnika="1" symbol="1" gd:GUID="33b3c1e3-bd25-4a6c-8316-f33e8246446f"><p><zdanie nr="1" gd:zdGUID="7fc8db1c-4426-4f55-bee5-148b0995f1c3" fragment="1" gd:fragmentGUID="07408227-ebcb-41a3-ba76-2765c92d172f">Minister Finansów i Gospodarki kieruje działem administracji rządowej – finanse publiczne, na podstawie § 1 ust. 2 pkt 3 rozporządzenia Prezesa Rady Ministrów z dnia 25 lipca 2025 r. w sprawie szczegółowego zakresu działania Ministra Finansów i Gospodarki (Dz. U. poz. 997).</zdanie></p></odnosnik></autor-aktu>
+    <data>z dnia 29 września 2025 r.</data>
+    <tytul>zmieniające rozporządzenie w sprawie korzystania z e-Urzędu Skarbowego</tytul>
+    <podstawa-prawna>Na podstawie art. 35b ust. 6 ustawy z dnia 16 listopada 2016 r. o Krajowej Administracji Skarbowej (Dz. U. z 2025 r. poz. 1131) zarządza się, co następuje:</podstawa-prawna>
+    <paragraf eId="DU/2025/1319__art_1" gd:GUID="4d762267-ee75-4283-bd2a-9bee6a62ca98" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-01_DU-2025-1319_domyslne.x" wejscie-w-zycie="2025-10-01">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="38230e75-c333-48eb-84f7-51c3196c27f3" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-01_DU-2025-1319_domyslne.x" wejscie-w-zycie="2025-10-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="0657f450-e054-4471-b196-4d87e96803c4" fragment="1" gd:fragmentGUID="c852b1ce-047a-4730-a65d-a4a225f2acf7" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-01_DU-2025-1319_domyslne.x" wejscie-w-zycie="2025-10-01">W rozporządzeniu Ministra Finansów z dnia 21 czerwca 2023 r. w sprawie korzystania z e-Urzędu Skarbowego (Dz. U. poz. 1178) wprowadza się następujące zmiany:</zdanie>
+        </p>
+        <punkt eId="DU/2025/1319__art_1__pkt_1" gd:GUID="ecb6e749-4970-49a3-bcec-7a5b3502f29c" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-01_DU-2025-1319_domyslne.x" wejscie-w-zycie="2025-10-01">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="0657f450-e054-4471-b196-4d87e96803c4" fragment="2" gd:fragmentGUID="408fcb6f-1b97-4ba9-966e-20fdcc2be7e5" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-01_DU-2025-1319_domyslne.x" wejscie-w-zycie="2025-10-01">w § 4 ust. 1 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/1178" cudzyslowy="otwierajacy" gd:nowGUID="5236950d-d22f-4c4f-b255-47701713c08a" element-eId="DU/2023/1178__art_4__ust_1" funkcja="zastap"><ustep eId="DU/2023/1178__art_4__ust_1" gd:GUID="958caee7-00ae-45bd-b03d-ca4391dec93a" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-01_DU-2025-1319_domyslne.x" wejscie-w-zycie="2025-10-01"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="f5692021-c627-4213-9b00-fe5d24d9226a" fragment="1" gd:fragmentGUID="02b299da-230e-4c47-beca-577eff8e73dc" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-01_DU-2025-1319_domyslne.x" wejscie-w-zycie="2025-10-01">W e-Urzędzie Skarbowym udostępnia się konto jednostki organizacyjnej:</zdanie></p><punkt eId="DU/2023/1178__art_4__ust_1__pkt_1" gd:GUID="faaa2b4f-ae82-4ecb-bb63-b4a79ece3cff" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-01_DU-2025-1319_domyslne.x" wejscie-w-zycie="2025-10-01"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="f5692021-c627-4213-9b00-fe5d24d9226a" fragment="2" gd:fragmentGUID="b866dcac-937c-4778-a0bc-6e2b8850c430" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-01_DU-2025-1319_domyslne.x" wejscie-w-zycie="2025-10-01">osobom prawnym, w tym gminom, powiatom, miastom na prawach powiatu i województwom,</zdanie></p></punkt><punkt eId="DU/2023/1178__art_4__ust_1__pkt_2" gd:GUID="b45163e0-40f6-41b4-8ba7-695083132acb" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-01_DU-2025-1319_domyslne.x" wejscie-w-zycie="2025-10-01"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="f5692021-c627-4213-9b00-fe5d24d9226a" fragment="3" gd:fragmentGUID="2a59ee21-b822-4e9b-816f-06330fe07cbe" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-01_DU-2025-1319_domyslne.x" wejscie-w-zycie="2025-10-01">jednostkom organizacyjnym niebędącym osobami prawnymi</zdanie></p></punkt></ustep></cytat-strukt><cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/1178" cudzyslowy="zamykajacy" gd:nowGUID="3b92a582-f5e2-4b36-b8be-086b78f1dc29" element-eId="DU/2023/1178__art_4__ust_1" funkcja="zastap"><tiret eId="DU/2023/1178__art_4__ust_1__tir_1" gd:GUID="d8ddd21b-768e-440a-97da-a9cdaf61f036" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-01_DU-2025-1319_domyslne.x" wejscie-w-zycie="2025-10-01"><p><zdanie nr="1" gd:zdGUID="ec5a6e38-11a8-4fca-a6e2-5bd7024adc2b" fragment="1" gd:fragmentGUID="940768e9-c7ca-4ddb-b03a-84f416900eb5" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-01_DU-2025-1319_domyslne.x" wejscie-w-zycie="2025-10-01">posiadającym NIP.</zdanie></p></tiret></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1319__art_1__pkt_2" gd:GUID="c1fa7612-7fc4-42ef-81b8-fd74a47fb46f" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-01_DU-2025-1319_domyslne.x" wejscie-w-zycie="2025-10-01">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="0657f450-e054-4471-b196-4d87e96803c4" fragment="3" gd:fragmentGUID="afa19c7b-a067-4516-afde-2b61417af37c" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-01_DU-2025-1319_domyslne.x" wejscie-w-zycie="2025-10-01">w § 6 po ust. 2 dodaje się ust. 2a w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/1178" cudzyslowy="oba" gd:nowGUID="e52c7e0f-72e0-4109-8744-c8a2c2fd60db" element-eId="DU/2023/1178__art_6__ust_2" funkcja="dodaj-po"><ustep eId="DU/2023/1178__art_6__ust_2a" gd:GUID="08616678-c5fb-4e9a-8ea4-16049bb9a610" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-01_DU-2025-1319_domyslne.x" wejscie-w-zycie="2025-10-01"><nr>2a</nr><p><zdanie nr="1" gd:zdGUID="fde01579-c5d1-4d53-a9c1-cfd80cddd0ca" fragment="1" gd:fragmentGUID="d4c354d4-c560-44ae-ab0d-05b1085e0ec2" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-01_DU-2025-1319_domyslne.x" wejscie-w-zycie="2025-10-01">Użytkownik konta osoby fizycznej i użytkownik konta jednostki organizacyjnej nie są uprawnieni do wnoszenia za pośrednictwem tych kont pism związanych z wykonywaniem władzy publicznej przez tego użytkownika lub jednostkę organizacyjną, w imieniu której działa.</zdanie></p></ustep></cytat-strukt>.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2025/1319__art_2" gd:GUID="0011a242-780f-4cb1-b190-24fda31ca2bf" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-01_DU-2025-1319_domyslne.x" wejscie-w-zycie="2025-10-01">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="f8a53cfe-4f2c-47e1-bc4c-f63038273acf" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-01_DU-2025-1319_domyslne.x" wejscie-w-zycie="2025-10-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="0e5cbd99-8645-458d-8464-1300b4cff708" fragment="1" gd:fragmentGUID="dc99c046-5f26-4020-a3c8-e01905581b20" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-01_DU-2025-1319_domyslne.x" wejscie-w-zycie="2025-10-01">Rozporządzenie wchodzi w życie z dniem następującym po dniu ogłoszenia.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <organ-podpisujacy>Minister Finansów i Gospodarki: wz. <i><osoba podpisujacy="true" gd:osobaGUID="e23a9f54-0385-422a-a644-8d84593ecf3e"><imie>J.</imie> <nazwisko>Drop</nazwisko></osoba></i></organ-podpisujacy>
+  </rozporzadzenie>
+</akt-prawny>

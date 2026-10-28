@@ -1,0 +1,1744 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <obwieszczenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/1643</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>c518712b-525a-4028-8b15-80ccde79289d</gd:GUIDwersji>
+      <AdresISAP>WDU20250001643</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>1643</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 1643</AdresWyswietlany>
+      <Tytul>Obwieszczenie Marszałka Sejmu Rzeczypospolitej Polskiej z dnia 7 listopada 2025 r. w sprawie ogłoszenia jednolitego tekstu ustawy o Narodowej Agencji Wymiany Akademickiej</Tytul>
+      <Rodzaj>OBW_TJ</Rodzaj>
+      <DataOgloszenia>2025-11-27</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-11-07</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_ujednolicenie_2025-11-27_DU-2025-1643_domyslne" rodzaj="ujednolicenie" pochodzenie="domyslne-z-aktu" data="2025-11-27" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_ujednolicenie.zdarz_ujednolicenie_2025-11-27_DU-2025-1643_domyslne" glowna="true">
+          <Przedzial rodzaj="ujednolicenie" od="zdarz_ujednolicenie_2025-11-27_DU-2025-1643_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <DataObowiazywaniaWersji>
+        <Od>zdarz_ujednolicenie_2025-11-27_DU-2025-1643_domyslne</Od>
+      </DataObowiazywaniaWersji>
+      <Organy>
+        <Organ gd:GUID="8ddcc5a3-8d78-4804-a33a-575e9c927e06" rola="wydajacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/MSEJMU">
+          <Nazwa>Marszałek Sejmu</Nazwa>
+          <OrganPodpisujacy>Marszałek Sejmu</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>S.</imie> <nazwisko>Hołownia</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Obwieszczenie</rodzaj-aktu>
+    <autor-aktu>Marszałka Sejmu Rzeczypospolitej Polskiej</autor-aktu>
+    <data>z dnia 7 listopada 2025 r.</data>
+    <tytul>w sprawie ogłoszenia jednolitego tekstu ustawy o Narodowej Agencji Wymiany Akademickiej</tytul>
+    <punkt-OTJ eId="DU/2025/1643__pkt_1" gd:GUID="0cb6b7e6-d278-46f5-8b91-8ee48fd799da">
+      <nr>1</nr>
+      <p>
+        <zdanie nr="1" gd:zdGUID="dd69836a-6b80-434d-81dc-fe0622392c5f" fragment="1" gd:fragmentGUID="bd6a40f2-0582-459d-807f-0a7514ad7634">Na podstawie art. 16 ust. 1 zdanie pierwsze ustawy z dnia 20 lipca 2000 r. o ogłaszaniu aktów normatywnych i niektórych innych aktów prawnych (Dz. U. z 2019 r. poz. 1461) ogłasza się w załączniku do niniejszego obwieszczenia jednolity tekst ustawy z dnia 7 lipca 2017 r. o Narodowej Agencji Wymiany Akademickiej (Dz. U. z 2023 r. poz. 843), z uwzględnieniem zmiany wprowadzonej ustawą z dnia 4 kwietnia 2025 r. o zmianie niektórych ustaw w celu wyeliminowania nieprawidłowości w systemie wizowym Rzeczypospolitej Polskiej (Dz. U. poz. 622) oraz zmian wynikających z przepisów ogłoszonych przed dniem 6 listopada 2025 r.</zdanie>
+      </p>
+    </punkt-OTJ>
+    <punkt-OTJ eId="DU/2025/1643__pkt_2" gd:GUID="1c3f3f92-22fd-48a6-b4bc-598b6fbfb323">
+      <nr>2</nr>
+      <p>
+        <zdanie nr="1" gd:zdGUID="f4d9382c-5334-46b5-a19f-f2a8532df3ba" fragment="1" gd:fragmentGUID="36d2d971-0796-4d27-9e13-0e7b6f71b148">Podany w załączniku do niniejszego obwieszczenia tekst jednolity ustawy nie obejmuje art. 37–39 ustawy z dnia 4 kwietnia 2025 r. o zmianie niektórych ustaw w celu wyeliminowania nieprawidłowości w systemie wizowym Rzeczypospolitej Polskiej (Dz. U. poz. 622), które stanowią:<tresc-strukt cudzyslowy="oba" gd:GUID="6133299b-7562-4dda-9f3e-e9df089e743a"><artykul eId="DU/2025/622__art_37" gd:GUID="f103c06f-af65-4134-880a-39ad46f6c28f"><nr>37</nr><ustep eId="DU/2025/622__art_37__ust_1" gd:GUID="653fc8ca-1e44-4cb4-9214-cf6d7b1661a2"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="47d5a2b2-1c74-4a88-be12-96ef2a52b2fd" fragment="1" gd:fragmentGUID="56447600-7aba-44d2-8a80-ea16126ab425">Narodowa Agencja Wymiany Akademickiej podejmie czynności organizacyjne i przygotowujące do realizacji zadań, o których mowa w art. 2 ust. 3 pkt 3a ustawy zmienianej w art. 8.</zdanie></p></ustep><ustep eId="DU/2025/622__art_37__ust_2" gd:GUID="3b0cecb2-f991-4da9-bd05-d84370f705a8"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="03658f76-d5ad-47fc-9b3f-2bbbceed452b" fragment="1" gd:fragmentGUID="2489071c-c968-4d9d-9892-19c7aa08224b">Minister właściwy do spraw szkolnictwa wyższego i nauki zapewni Narodowej Agencji Wymiany Akademickiej środki finansowe na realizację czynności, o których mowa w ust. 1.</zdanie></p></ustep></artykul><artykul eId="DU/2025/622__art_38" gd:GUID="faac3b0a-dc7a-4e50-ac78-cbb8616ac094"><nr>38</nr><ustep eId="DU/2025/622__art_38__ust_1" gd:GUID="5312ec89-3185-4e9d-ab72-1b25322b5df2"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="e2d2eb53-658e-4528-9e18-eeac3fdde712" fragment="1" gd:fragmentGUID="a92257e9-fadd-4c61-a9b0-1def3108dab3">W latach 2025–2034 maksymalny limit wydatków z budżetu państwa, będących skutkiem finansowym niniejszej ustawy, przeznaczonych na sfinansowanie nowego zadania Narodowej Agencji Wymiany Akademickiej polegającego na prowadzeniu spraw z zakresu potwierdzania uprawnień do ubiegania się o przyjęcie na studia pierwszego stopnia, studia drugiego stopnia oraz jednolite studia magisterskie na podstawie ustawy zmienianej w art. 10, wynosi 56 249 900 zł, w tym w:</zdanie></p><punkt eId="DU/2025/622__art_38__ust_1__pkt_1" gd:GUID="5df1166a-3902-4e43-8226-f5add4433eab"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="e2d2eb53-658e-4528-9e18-eeac3fdde712" fragment="2" gd:fragmentGUID="9149161b-4103-4535-af0a-8a9d7f4e11f1">2025 r. – 6 309 980 zł;</zdanie></p></punkt><punkt eId="DU/2025/622__art_38__ust_1__pkt_2" gd:GUID="ea3bc4b6-25f6-4f85-93cb-a7d0e8f877d9"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="e2d2eb53-658e-4528-9e18-eeac3fdde712" fragment="3" gd:fragmentGUID="cddae240-f224-430d-81a5-884fb66b3d2f">2026 r. – 5 548 880 zł;</zdanie></p></punkt><punkt eId="DU/2025/622__art_38__ust_1__pkt_3" gd:GUID="6ba25376-6744-4512-8529-0c9cea16a079"><nr>3</nr><p><zdanie nr="1" gd:zdGUID="e2d2eb53-658e-4528-9e18-eeac3fdde712" fragment="4" gd:fragmentGUID="0e8796e6-36a0-4dd6-a26b-69489af7bd57">2027 r. – 5 548 880 zł;</zdanie></p></punkt><punkt eId="DU/2025/622__art_38__ust_1__pkt_4" gd:GUID="2de5fae2-5fb6-408f-a0ec-8a7768b9c8ca"><nr>4</nr><p><zdanie nr="1" gd:zdGUID="e2d2eb53-658e-4528-9e18-eeac3fdde712" fragment="5" gd:fragmentGUID="d9aa6faa-e464-47b3-8794-992e5f812afb">2028 r. – 5 548 880 zł;</zdanie></p></punkt><punkt eId="DU/2025/622__art_38__ust_1__pkt_5" gd:GUID="be27e25e-d0d4-4a98-90f0-c5013a4a79dd"><nr>5</nr><p><zdanie nr="1" gd:zdGUID="e2d2eb53-658e-4528-9e18-eeac3fdde712" fragment="6" gd:fragmentGUID="6c5a4c10-6702-4707-914c-dac1e0c59436">2029 r. – 5 548 880 zł;</zdanie></p></punkt><punkt eId="DU/2025/622__art_38__ust_1__pkt_6" gd:GUID="10540d72-b0df-4ea5-8fff-715fc65bc56b"><nr>6</nr><p><zdanie nr="1" gd:zdGUID="e2d2eb53-658e-4528-9e18-eeac3fdde712" fragment="7" gd:fragmentGUID="ac927d16-2ef6-4ec1-961e-4dfa34f9baab">2030 r. – 5 548 880 zł;</zdanie></p></punkt><punkt eId="DU/2025/622__art_38__ust_1__pkt_7" gd:GUID="6fe90b49-3b4a-4924-b6f6-7fd449cbfe27"><nr>7</nr><p><zdanie nr="1" gd:zdGUID="e2d2eb53-658e-4528-9e18-eeac3fdde712" fragment="8" gd:fragmentGUID="8cd97a4a-6359-499e-a0be-d064dc2f2c86">2031 r. – 5 548 880 zł;</zdanie></p></punkt><punkt eId="DU/2025/622__art_38__ust_1__pkt_8" gd:GUID="8de7fedc-1d17-4667-aabb-98a97bd98c78"><nr>8</nr><p><zdanie nr="1" gd:zdGUID="e2d2eb53-658e-4528-9e18-eeac3fdde712" fragment="9" gd:fragmentGUID="52cb4ea4-5a38-4531-a081-7f60387d68a9">2032 r. – 5 548 880 zł;</zdanie></p></punkt><punkt eId="DU/2025/622__art_38__ust_1__pkt_9" gd:GUID="7d970389-650b-43b7-8fcb-76d753f0c50a"><nr>9</nr><p><zdanie nr="1" gd:zdGUID="e2d2eb53-658e-4528-9e18-eeac3fdde712" fragment="10" gd:fragmentGUID="8d0e1a61-0f63-4bcd-a5dc-01e575ff6fea">2033 r. – 5 548 880 zł;</zdanie></p></punkt><punkt eId="DU/2025/622__art_38__ust_1__pkt_10" gd:GUID="81882b0d-58f9-4684-aea6-1c7f3236f3bf"><nr>10</nr><p><zdanie nr="1" gd:zdGUID="e2d2eb53-658e-4528-9e18-eeac3fdde712" fragment="11" gd:fragmentGUID="48ea916c-c8f3-467d-ac57-dbc2c77e193f">2034 r. – 5 548 880 zł.</zdanie></p></punkt></ustep><ustep eId="DU/2025/622__art_38__ust_2" gd:GUID="7c7de669-3317-477a-b64c-a4c83d17d430"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="641a03eb-bdf4-4b89-8eae-5831763eb198" fragment="1" gd:fragmentGUID="780e336c-2bb8-48b7-9719-3d00308e4157">W przypadku przekroczenia lub zagrożenia przekroczeniem limitu wydatków, o którym mowa w ust. 1, stosuje się mechanizm korygujący polegający na obniżeniu kosztów realizacji nowego zadania Narodowej Agencji Wymiany Akademickiej, o którym mowa w ust. 1.</zdanie></p></ustep><ustep eId="DU/2025/622__art_38__ust_3" gd:GUID="f2475e84-accf-4d2f-af21-b29e8ac7ae37"><nr>3</nr><p><zdanie nr="1" gd:zdGUID="292eb527-349c-4cbd-9dd1-0616f49e39f8" fragment="1" gd:fragmentGUID="f95c2eb8-6df1-470d-ba53-858234e27f2c">Organem właściwym do monitorowania wykorzystania limitu wydatków, o którym mowa w ust. 1, oraz wdrożenia mechanizmu korygującego, o którym mowa w ust. 2, jest minister właściwy do spraw szkolnictwa wyższego i nauki.</zdanie></p></ustep></artykul><artykul eId="DU/2025/622__art_39" gd:GUID="46b3c48b-b984-4f05-bef2-5f91b440d66b"><nr>39</nr><ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="c6bf18ee-a7c6-4ef7-8c22-450a340681d2"><p><zdanie nr="1" gd:zdGUID="4a6f910e-6f5a-45d6-bc11-591bc032e95f" fragment="1" gd:fragmentGUID="3e1834ab-878d-4be7-acc5-b3bbb791e6fe">Ustawa wchodzi w życie pierwszego dnia miesiąca następującego po upływie 14 dni od dnia ogłoszenia, z wyjątkiem:</zdanie></p><punkt eId="DU/2025/622__art_39__pkt_1" gd:GUID="7724ed49-bfab-4d30-9acc-7e592850229b"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="4a6f910e-6f5a-45d6-bc11-591bc032e95f" fragment="2" gd:fragmentGUID="a93d310f-0d73-4ab5-9f37-eb2e912416e6">art. 33 oraz art. 35–38, które wchodzą w życie z dniem następującym po dniu ogłoszenia;</zdanie></p></punkt><punkt eId="DU/2025/622__art_39__pkt_2" gd:GUID="5c017a4a-fcae-49cf-bedf-ab05f6536143"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="4a6f910e-6f5a-45d6-bc11-591bc032e95f" fragment="3" gd:fragmentGUID="4aea989f-ea89-42cc-b833-410525a7f627">art. 1, art. 4, art. 5, art. 6 pkt 2, 3, pkt 4 lit. b, pkt 6 i 8–16, art. 8, art. 10–19, art. 21, art. 23–30 oraz art. 34, które wchodzą w życie z dniem 1 lipca 2025 r.;</zdanie></p></punkt><punkt eId="DU/2025/622__art_39__pkt_3" gd:GUID="e38fc1b2-5887-4442-84a0-8567fcf04029"><nr>3</nr><p><zdanie nr="1" gd:zdGUID="4a6f910e-6f5a-45d6-bc11-591bc032e95f" fragment="4" gd:fragmentGUID="76070f55-ef61-474e-b146-1cc9dfba4cbd">art. 7 oraz art. 31, które wchodzą w życie z dniem 1 września 2025 r.</zdanie></p></punkt></ustep-n></artykul></tresc-strukt>.</zdanie>
+      </p>
+    </punkt-OTJ>
+    <organ-podpisujacy>Marszałek Sejmu: <i><osoba podpisujacy="true" gd:osobaGUID="4949e6be-13e1-42a2-9416-1dfe7d3a4594"><imie>S.</imie> <nazwisko>Hołownia</nazwisko></osoba></i></organ-podpisujacy>
+    <ustawa>
+      <zalacznik-do>Załącznik do obwieszczenia Marszałka Sejmu Rzeczypospolitej Polskiej z dnia 7 listopada 2025 r. (Dz. U. poz. 1643)</zalacznik-do>
+      <rodzaj-aktu>Ustawa</rodzaj-aktu>
+      <data>z dnia 7 lipca 2017 r.</data>
+      <tytul>o Narodowej Agencji Wymiany Akademickiej</tytul>
+      <rozdzial eId="DU/2025/1643__rozdz_1" gd:GUID="43c367f8-a00d-4321-9bd4-4e5aa5763439">
+        <naglowek-rozdzialu>
+          <nr>1</nr>
+          <p>Przepisy ogólne</p>
+        </naglowek-rozdzialu>
+        <oddzial-n brak-eid="jednostka-nieoznaczona" gd:GUID="6af2c938-faf2-4fa2-a505-ee6f69e30e5c">
+          <artykul eId="DU/2025/1643__art_1" gd:GUID="8530f803-eaed-4dbe-9816-69dcb03c92ad">
+            <nr>1</nr>
+            <ustep eId="DU/2025/1643__art_1__ust_1" gd:GUID="656bcccd-6c70-4ad7-8d66-7197c4a62b66">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="8abac38d-df31-41c2-8198-c414fb3859e1" fragment="1" gd:fragmentGUID="dbe09601-c24f-419d-8910-09093dcc2d09">Narodowa Agencja Wymiany Akademickiej, zwana dalej „Agencją”, jest państwową osobą prawną.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/1643__art_1__ust_2" gd:GUID="75621fba-4b61-475a-8100-e64c33699e93">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="d7730cd8-4655-40d9-a079-5ba36180d309" fragment="1" gd:fragmentGUID="0914fc93-8e43-4611-8028-0b0bb4a5f7c5">Siedzibą Agencji jest miasto stołeczne Warszawa.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/1643__art_1__ust_3" gd:GUID="7f74218f-ebb6-430c-b52c-49eb6b4c0988">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="d2f21d0f-d1e0-4be4-9186-7fe5ac1ec4d9" fragment="1" gd:fragmentGUID="2c26606f-2a78-4e70-94c2-b7831c04d655">Agencja może używać wizerunku orła ustalonego dla godła Rzeczypospolitej Polskiej oraz pieczęci urzędowej.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2025/1643__art_2" gd:GUID="953736bb-8f1c-4332-99b6-da3b47c21649">
+            <nr>2</nr>
+            <ustep eId="DU/2025/1643__art_2__ust_1" gd:GUID="b0e59077-d1b1-43f8-95ea-aff2cb55966b">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="27609245-64cf-481d-a7a2-455179b04abe" fragment="1" gd:fragmentGUID="ad23fd60-4c85-405c-9d16-1f8412fbd730">Agencja realizuje zadania z zakresu umiędzynarodowienia szkolnictwa wyższego i nauki.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/1643__art_2__ust_2" gd:GUID="eacb28de-e152-4f60-b062-e48094554eb9">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="4d7257d7-459d-4a86-a913-153dab249d44" fragment="1" gd:fragmentGUID="b918f663-2479-4447-a97b-0b52eb5fcc60">Do zadań Agencji należy:</zdanie>
+              </p>
+              <punkt eId="DU/2025/1643__art_2__ust_2__pkt_1" gd:GUID="e2e8eb0e-bf0d-4716-96bf-4df100221b46">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="4d7257d7-459d-4a86-a913-153dab249d44" fragment="2" gd:fragmentGUID="bad06b9d-15ad-42da-8a5e-5ccdeb2f86a7">inicjowanie i realizowanie działań wspierających międzynarodową wymianę akademicką oraz proces umiędzynarodowienia podmiotów, o których mowa w art. 7 ust. 1 ustawy z dnia 20 lipca 2018 r. – Prawo o szkolnictwie wyższym i nauce (Dz. U. z 2024 r. poz. 1571, z późn. zm.<odnosnik id-odnosnika="1" symbol="1" gd:GUID="51bc4ed9-d7a7-4ce4-8caf-33d0abf5e8b0"><p><zdanie nr="1" gd:zdGUID="f7b7c5cb-665f-4b61-9f4e-109e16dd13b8" fragment="1" gd:fragmentGUID="505f1451-e1a6-4c81-9b23-c53e11c8edd5">Zmiany tekstu jednolitego wymienionej ustawy zostały ogłoszone w Dz. U. z 2024 r. poz. 1871 i 1897 oraz z 2025 r. poz. 619, 620, 621, 622 i 1162.</zdanie></p></odnosnik>);</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/1643__art_2__ust_2__pkt_2" gd:GUID="3e21033d-05c6-4ffa-8b1f-8d4f1d62e842">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="4d7257d7-459d-4a86-a913-153dab249d44" fragment="3" gd:fragmentGUID="02e466d1-1f71-490b-9ad3-b33113df915d">upowszechnianie informacji o polskim systemie szkolnictwa wyższego i nauki;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/1643__art_2__ust_2__pkt_3" gd:GUID="38384dd1-f7e6-44ed-bd58-c8e8fdaa30b9">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="4d7257d7-459d-4a86-a913-153dab249d44" fragment="4" gd:fragmentGUID="28966ad3-6be5-4a52-b37f-fa4873edd68e">upowszechnianie języka polskiego poza granicami Rzeczypospolitej Polskiej.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2025/1643__art_2__ust_3" gd:GUID="5b1711fe-0183-4ffb-b599-a27491bea8d0">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="d4d3fbaf-aab5-433e-bc2d-d7d0ebf865e1" fragment="1" gd:fragmentGUID="2eae0854-01c7-4c17-806d-8bec36122233">Agencja realizuje także zadania związane z:</zdanie>
+              </p>
+              <punkt eId="DU/2025/1643__art_2__ust_3__pkt_1" gd:GUID="57428016-2378-4f78-aef5-8b1cf74973f7">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="d4d3fbaf-aab5-433e-bc2d-d7d0ebf865e1" fragment="2" gd:fragmentGUID="45ec46eb-af85-48e1-84aa-4f60e9108a29">prowadzeniem spraw osób podejmujących i odbywających studia, kształcenie w szkołach doktorskich, studia podyplomowe, kształcenie specjalistyczne i inne formy kształcenia oraz uczestniczących w prowadzeniu działalności naukowej lub w prowadzeniu kształcenia na podstawie umów międzynarodowych lub innych porozumień;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/1643__art_2__ust_3__pkt_2" gd:GUID="35cab448-4d33-442c-aca1-a9594ac2c95b">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="d4d3fbaf-aab5-433e-bc2d-d7d0ebf865e1" fragment="3" gd:fragmentGUID="ab0cf73f-a305-4c71-b0aa-1c7f06106bc9">prowadzeniem spraw osób podejmujących i odbywających studia, kształcenie w szkołach doktorskich, studia podyplomowe, kształcenie specjalistyczne i inne formy kształcenia oraz uczestniczących w prowadzeniu działalności naukowej lub w prowadzeniu kształcenia na podstawie decyzji ministra właściwego do spraw szkolnictwa wyższego i nauki, o której mowa w art. 323 ust. 1 pkt 3 ustawy z dnia 20 lipca 2018 r. – Prawo o szkolnictwie wyższym i nauce;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/1643__art_2__ust_3__pkt_3" gd:GUID="9e39704c-6be7-47ea-8bc6-a0008dabe109">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="d4d3fbaf-aab5-433e-bc2d-d7d0ebf865e1" fragment="4" gd:fragmentGUID="7f1adb5d-751f-49fe-9538-8fb8d2a43171">prowadzeniem spraw z zakresu uznawalności wyższego wykształcenia oraz stopni naukowych i stopni w zakresie sztuki;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/1643__art_2__ust_3__pkt_3a" gd:GUID="f2d8cb38-d1b1-4c39-8003-c4c19634853d">
+                <nr>3a</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="d4d3fbaf-aab5-433e-bc2d-d7d0ebf865e1" fragment="5" gd:fragmentGUID="261fd5a3-74b5-45d4-b640-27d9ad9d24c2"><odnosnik id-odnosnika="2" symbol="2" gd:GUID="098c3648-d654-4854-ac83-a2de7b6c3301"><p><zdanie nr="1" gd:zdGUID="eafa2654-731f-4090-9d00-d22b108c5115" fragment="1" gd:fragmentGUID="f2e13592-fa09-4ae2-a271-2f2543c36da6">Dodany przez art. 8 ustawy z dnia 4 kwietnia 2025 r. o zmianie niektórych ustaw w celu wyeliminowania nieprawidłowości w systemie wizowym Rzeczypospolitej Polskiej (Dz. U. poz. 622); wszedł w życie z dniem 1 lipca 2025 r.</zdanie></p></odnosnik> prowadzeniem spraw z zakresu potwierdzania uprawnień do ubiegania się o przyjęcie na studia pierwszego stopnia, studia drugiego stopnia oraz jednolite studia magisterskie w Rzeczypospolitej Polskiej;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/1643__art_2__ust_3__pkt_4" gd:GUID="f01e3503-a86c-4d42-a0ef-d359c614697c">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="d4d3fbaf-aab5-433e-bc2d-d7d0ebf865e1" fragment="6" gd:fragmentGUID="7fa4518a-e901-4e89-b9bb-1e16fca828b5">zapewnianiem obsługi administracyjnej i finansowej Państwowej Komisji do spraw Poświadczania Znajomości Języka Polskiego jako Obcego, działającej na podstawie ustawy z dnia 7 października 1999 r. o języku polskim (Dz. U. z 2024 r. poz. 1556 oraz z 2025 r. poz. 622);</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/1643__art_2__ust_3__pkt_5" gd:GUID="4163aae1-a850-4c0a-be5d-182834ec7219">
+                <nr>5</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="d4d3fbaf-aab5-433e-bc2d-d7d0ebf865e1" fragment="7" gd:fragmentGUID="c49b5c85-2c80-4bd2-9b4a-a681a17eb9c8">uwierzytelnianiem dokumentów, o których mowa w art. 78 ust. 3 i art. 180 ust. 1 pkt 1 ustawy z dnia 20 lipca 2018 r. – Prawo o szkolnictwie wyższym i nauce, oraz uwierzytelnianiem dokumentów w przypadkach, o których mowa w art. 78 ust. 4 tej ustawy.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2025/1643__art_2__ust_4" gd:GUID="0193ddda-dae2-4d19-9035-e517d0959bfd">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="717244fe-606b-430a-bd00-e2cee27afb69" fragment="1" gd:fragmentGUID="02676a3f-1b99-4e62-af0f-ad227142264e">Agencja może uczestniczyć w realizacji programów finansowanych z udziałem środków pochodzących z budżetu Unii Europejskiej.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/1643__art_2__ust_5" gd:GUID="05120285-cdca-4d52-b721-408721eaa9ca">
+              <nr>5</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="4cd8825a-abe5-42d9-b67b-591650661e2d" fragment="1" gd:fragmentGUID="cfcfb362-64d3-461e-875d-42d959a6415c">Ministrowie kierujący działami administracji rządowej mogą zlecać Agencji wykonywanie zadań związanych z umiędzynarodowieniem szkolnictwa wyższego lub nauki, należących do ich właściwości, zapewniając środki na ich realizację.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/1643__art_2__ust_6" gd:GUID="147136a5-e4c7-477e-95c0-be401f49f04d">
+              <nr>6</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="fcec536f-9b32-4d80-b54f-bb0533c5eec3" fragment="1" gd:fragmentGUID="dad1d342-618c-4e69-853e-fb3b5fdf643d">Przy realizacji zadań, o których mowa w ust. 2 i 3, Agencja może współpracować z polskimi i zagranicznymi podmiotami, w szczególności jako partner umów o wspólne przedsięwzięcie.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+        </oddzial-n>
+      </rozdzial>
+      <rozdzial eId="DU/2025/1643__rozdz_2" gd:GUID="2e109460-52cc-4e77-b80e-cd5227fd282f">
+        <naglowek-rozdzialu>
+          <nr>2</nr>
+          <p>Organy i organizacja Agencji</p>
+        </naglowek-rozdzialu>
+        <oddzial-n brak-eid="jednostka-nieoznaczona" gd:GUID="81ff0bf0-998c-4ba2-a271-3c1b8ee874eb">
+          <artykul eId="DU/2025/1643__art_3" gd:GUID="aabb633f-cf27-449c-b38d-feed8b25af32">
+            <nr>3</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="7c969c91-470a-4fa1-83b4-094f9698a2f0">
+              <p>
+                <zdanie nr="1" gd:zdGUID="8bdf1c57-d119-48bb-a15b-2e4d0d3856dc" fragment="1" gd:fragmentGUID="c5c28b56-5259-4445-802a-3126c911acd9">Organami Agencji są:</zdanie>
+              </p>
+              <punkt eId="DU/2025/1643__art_3__pkt_1" gd:GUID="d0630dfc-165c-4637-b9fd-41569a93e93b">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="8bdf1c57-d119-48bb-a15b-2e4d0d3856dc" fragment="2" gd:fragmentGUID="036576ed-71a5-4698-a592-ec0071a20f28">Dyrektor Agencji, zwany dalej „Dyrektorem”;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/1643__art_3__pkt_2" gd:GUID="b8660341-2039-4412-8ea7-3bce184fbe2b">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="8bdf1c57-d119-48bb-a15b-2e4d0d3856dc" fragment="3" gd:fragmentGUID="5da92e59-a533-45da-a858-c1482078db0e">Rada Agencji, zwana dalej „Radą”.</zdanie>
+                </p>
+              </punkt>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2025/1643__art_4" gd:GUID="ebfbd520-d711-4a6d-a0e7-33e31a086d66">
+            <nr>4</nr>
+            <ustep eId="DU/2025/1643__art_4__ust_1" gd:GUID="d40f02d0-6d75-4a8b-aad2-ac11bde4915c">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="79b0d900-a81a-4de4-958f-d13325ebe3f6" fragment="1" gd:fragmentGUID="06667fea-8d08-4566-a817-cfd3f6207f68">Dyrektor kieruje Agencją i reprezentuje ją na zewnątrz.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/1643__art_4__ust_2" gd:GUID="3b4ed940-bdb3-4bbb-ac03-8c5b43df36d8">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="c19a9633-7bbd-4a35-a185-6b665b2fae7e" fragment="1" gd:fragmentGUID="867534d4-c230-4701-9f09-4b13406bc06a">Do zadań Dyrektora należy:</zdanie>
+              </p>
+              <punkt eId="DU/2025/1643__art_4__ust_2__pkt_1" gd:GUID="fe0ffeec-2de5-4239-86fa-fb56ce72e549">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="c19a9633-7bbd-4a35-a185-6b665b2fae7e" fragment="2" gd:fragmentGUID="d03f482b-a77c-4ada-a3fd-5c08e7c766eb">opracowywanie i realizowanie programów, o których mowa w art. 17 ust. 2, oraz ich ewaluacja;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/1643__art_4__ust_2__pkt_2" gd:GUID="67849b00-1b20-474c-984d-0b81e0c72a53">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="c19a9633-7bbd-4a35-a185-6b665b2fae7e" fragment="3" gd:fragmentGUID="d1814e42-421e-4cee-95b5-657b147b13a5">sporządzanie projektu rocznego planu działania oraz projektu rocznego planu finansowego Agencji;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/1643__art_4__ust_2__pkt_3" gd:GUID="23bbec4e-f7b5-4421-b1cc-5f7aec2ab4e9">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="c19a9633-7bbd-4a35-a185-6b665b2fae7e" fragment="4" gd:fragmentGUID="5c367d8a-e354-4a58-9aa8-48e00a2cc1f5">sporządzanie rocznego sprawozdania z działalności Agencji w roku poprzednim oraz rocznego sprawozdania finansowego Agencji;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/1643__art_4__ust_2__pkt_4" gd:GUID="a2d31f11-8e32-482d-9fc3-d80eca89fcf2">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="c19a9633-7bbd-4a35-a185-6b665b2fae7e" fragment="5" gd:fragmentGUID="a9821e36-59fb-4082-b649-6e1afbe49afa">prowadzenie gospodarki finansowej Agencji;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/1643__art_4__ust_2__pkt_5" gd:GUID="b7c7045d-1403-45f6-a483-19cfbb3114b8">
+                <nr>5</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="c19a9633-7bbd-4a35-a185-6b665b2fae7e" fragment="6" gd:fragmentGUID="0a5e9e65-aa50-43f4-bd90-fce9cba6530a">zarządzanie majątkiem Agencji.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2025/1643__art_4__ust_3" gd:GUID="7b21a7cd-922d-44d0-8d5a-1de0b2547149">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="e64ba1b4-3974-4db2-82e8-04ac2a7b1e06" fragment="1" gd:fragmentGUID="48630fe5-6913-4061-bee4-7a3f38881293">Dyrektor jest uprawniony do samodzielnego dokonywania czynności prawnych w imieniu Agencji.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/1643__art_4__ust_4" gd:GUID="4adced41-021b-4244-a05c-71e9549c2aa1">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="431e6544-991b-4e93-a43b-e399d9a23126" fragment="1" gd:fragmentGUID="614ab13d-aab8-4403-9925-eb7e9142ba1b">Dyrektor przekazuje ministrowi właściwemu do spraw szkolnictwa wyższego i nauki informacje o przeprowadzonych w Agencji kontrolach.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2025/1643__art_5" gd:GUID="fcef22d1-ddfd-42cf-a5d7-37276027abca">
+            <nr>5</nr>
+            <ustep eId="DU/2025/1643__art_5__ust_1" gd:GUID="c4e404b4-1291-4997-9d81-8d6c4dbccd84">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="833c5f6e-21b3-4971-baec-d73e08cb2f57" fragment="1" gd:fragmentGUID="3abf986e-4f81-4f6b-b476-387274ef74b4">Dyrektor działa przy pomocy swoich zastępców, kierowników komórek organizacyjnych oraz głównego księgowego.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/1643__art_5__ust_2" gd:GUID="fbeccda5-3a84-4adb-b64f-8e5437329168">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="888f5d02-303d-40af-b6c6-ac51cb2171b9" fragment="1" gd:fragmentGUID="2c9f4dbe-2135-4651-ade7-9a1270ac72d1">W Agencji nie może powstać stosunek podległości służbowej między małżonkami oraz osobami pozostającymi ze sobą w stosunku pokrewieństwa do drugiego stopnia włącznie lub powinowactwa pierwszego stopnia.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2025/1643__art_6" gd:GUID="b0abcb1a-04ae-49f3-b49b-586f165371cf">
+            <nr>6</nr>
+            <ustep eId="DU/2025/1643__art_6__ust_1" gd:GUID="b60b2c5d-747d-4252-99af-8eb6397d5ee9">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ada9000c-5219-4c7e-8a82-22cc58a4a008" fragment="1" gd:fragmentGUID="9d58da11-f031-49be-9103-f9864c6a603a">Dyrektora powołuje i odwołuje Prezes Rady Ministrów na wniosek ministra właściwego do spraw szkolnictwa wyższego i nauki.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/1643__art_6__ust_2" gd:GUID="caee9283-230b-45d2-a666-1b09f609e89a">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="dcad4311-f3f9-4f89-8a62-b70b491b3a93" fragment="1" gd:fragmentGUID="7317b250-ab22-4195-b0ae-079717d6e19c">Kadencja Dyrektora trwa 5 lat.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/1643__art_6__ust_3" gd:GUID="957d392b-b5e6-4691-b2de-e71d37f7e32a">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="c1ffe125-cca9-4190-aad5-57fe1cd8bbc0" fragment="1" gd:fragmentGUID="7e576e96-ccdf-4efc-a5a0-c63d638ba67e">Stanowisko Dyrektora może zajmować osoba, która:</zdanie>
+              </p>
+              <punkt eId="DU/2025/1643__art_6__ust_3__pkt_1" gd:GUID="95cd7152-8fdb-4bc8-9ec2-58e1eba2e9ba">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="c1ffe125-cca9-4190-aad5-57fe1cd8bbc0" fragment="2" gd:fragmentGUID="451e45d3-a363-45d1-81db-506e461c87e1">posiada dyplom ukończenia studiów drugiego stopnia, jednolitych studiów magisterskich lub inny równorzędny;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/1643__art_6__ust_3__pkt_2" gd:GUID="18ed6a44-e673-47dc-8392-82a9103d05ec">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="c1ffe125-cca9-4190-aad5-57fe1cd8bbc0" fragment="3" gd:fragmentGUID="632a80ea-98ea-4ea7-8fce-486719ec28dd">jest obywatelem polskim;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/1643__art_6__ust_3__pkt_3" gd:GUID="55a52cb1-a317-4429-8d81-17a714004de9">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="c1ffe125-cca9-4190-aad5-57fe1cd8bbc0" fragment="4" gd:fragmentGUID="7cf7685f-607b-40a9-bac1-3a2f95ddbd18">korzysta z pełni praw publicznych;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/1643__art_6__ust_3__pkt_4" gd:GUID="bc10fa54-53d2-4b6c-b871-871334a08843">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="c1ffe125-cca9-4190-aad5-57fe1cd8bbc0" fragment="5" gd:fragmentGUID="28f26790-82ca-4123-b71e-6c9d611bf22a">nie była skazana prawomocnym wyrokiem za umyślne przestępstwo lub umyślne przestępstwo skarbowe;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/1643__art_6__ust_3__pkt_5" gd:GUID="767dc97e-aad0-4f87-935a-3190f9414f15">
+                <nr>5</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="c1ffe125-cca9-4190-aad5-57fe1cd8bbc0" fragment="6" gd:fragmentGUID="c4941224-1bac-474b-8c3d-49b7d24617d8">posiada co najmniej 6-letni staż pracy, w tym co najmniej 3-letni staż pracy na stanowisku kierowniczym;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/1643__art_6__ust_3__pkt_6" gd:GUID="d4ba5d94-cdc4-48cb-b7a8-24f782eabf04">
+                <nr>6</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="c1ffe125-cca9-4190-aad5-57fe1cd8bbc0" fragment="7" gd:fragmentGUID="657a0396-c265-486a-9684-1aae1d6cb833">posiada doświadczenie w zakresie współpracy międzynarodowej dotyczącej szkolnictwa wyższego lub nauki;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/1643__art_6__ust_3__pkt_7" gd:GUID="ebebe3e7-020d-4f9a-91db-22c9581ffdd2">
+                <nr>7</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="c1ffe125-cca9-4190-aad5-57fe1cd8bbc0" fragment="8" gd:fragmentGUID="dea91105-4fa8-4a75-8c18-1aa4c295e9c5">zna język obcy w stopniu umożliwiającym swobodne porozumiewanie się;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/1643__art_6__ust_3__pkt_8" gd:GUID="b9d090b0-c47e-42de-92db-78545d7de4d1">
+                <nr>8</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="c1ffe125-cca9-4190-aad5-57fe1cd8bbc0" fragment="9" gd:fragmentGUID="f2b8fa4f-a394-492e-86af-fb3a6ac6d8b5">w okresie od dnia 22 lipca 1944 r. do dnia 31 lipca 1990 r. nie pracowała i nie służyła w organach bezpieczeństwa państwa w rozumieniu art. 2 ustawy z dnia 18 października 2006 r. o ujawnianiu informacji o dokumentach organów bezpieczeństwa państwa z lat 1944–1990 oraz treści tych dokumentów (Dz. U. z 2025 r. poz. 1519) oraz nie współpracowała z tymi organami.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2025/1643__art_6__ust_4" gd:GUID="bd638096-e08c-47a8-bf5b-2b5333f72e44">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ee758489-c61c-4ac1-be1b-dcbf38f1327d" fragment="1" gd:fragmentGUID="e586022f-d87b-4d2a-a59c-fcb234b5277c">Przed powołaniem na stanowisko Dyrektora osoba powoływana składa oświadczenie o spełnieniu wymagań, o których mowa w ust. 3, a w przypadku osób urodzonych przed dniem 1 sierpnia 1972 r. – także oświadczenie, o którym mowa w art. 7 ust. 1 ustawy z dnia 18 października 2006 r. o ujawnianiu informacji o dokumentach organów bezpieczeństwa państwa z lat 1944–1990 oraz treści tych dokumentów, albo informację, o której mowa w art. 7 ust. 3a tej ustawy.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/1643__art_6__ust_5" gd:GUID="2bfbb2d2-3393-4c5f-ab51-ae6d50ae0a3d">
+              <nr>5</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="151810dd-c1a2-4d91-bed3-746cc31bae14" fragment="1" gd:fragmentGUID="840d9b1e-4429-4238-83fd-a161a16985e1">Powołanie na stanowisko Dyrektora jest równoznaczne z nawiązaniem stosunku pracy na podstawie powołania w rozumieniu przepisów ustawy z dnia 26 czerwca 1974 r. – Kodeks pracy (Dz. U. z 2025 r. poz. 277, 807 i 1423).</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/1643__art_6__ust_6" gd:GUID="4110a4df-ebf3-48f6-8d09-bd17ef9d9ad4">
+              <nr>6</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="b0dc0086-70fc-4df9-ab43-c0391c03a56e" fragment="1" gd:fragmentGUID="af31eab4-1e67-4710-81ab-695cee5205bc">Po upływie kadencji Dyrektor pełni obowiązki do dnia powołania jego następcy.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2025/1643__art_7" gd:GUID="ef515995-0491-40a5-b360-cf21571ed209">
+            <nr>7</nr>
+            <ustep eId="DU/2025/1643__art_7__ust_1" gd:GUID="02ccb3c1-b1bd-4616-9aa6-107047d8ce44">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="878c4873-425b-4ea3-8bef-63ec3e4ce714" fragment="1" gd:fragmentGUID="efa511ec-db13-4207-b29d-ab4abb13242a">Odwołanie Dyrektora przed upływem kadencji następuje w przypadku:</zdanie>
+              </p>
+              <punkt eId="DU/2025/1643__art_7__ust_1__pkt_1" gd:GUID="1409427f-992c-4094-bda0-35343e32c19d">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="878c4873-425b-4ea3-8bef-63ec3e4ce714" fragment="2" gd:fragmentGUID="36ffee92-1bd4-470f-b759-6c053b82210c">złożenia rezygnacji;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/1643__art_7__ust_1__pkt_2" gd:GUID="fc061b9d-1298-4a33-bd24-628bc111d18a">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="878c4873-425b-4ea3-8bef-63ec3e4ce714" fragment="3" gd:fragmentGUID="7f2debcb-012f-4465-a102-fc929f3586e1">utraty zdolności do pełnienia powierzonych obowiązków na skutek długotrwałej choroby, trwającej dłużej niż 6 miesięcy;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/1643__art_7__ust_1__pkt_3" gd:GUID="d58c4730-12eb-4250-b973-3538b1880dec">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="878c4873-425b-4ea3-8bef-63ec3e4ce714" fragment="4" gd:fragmentGUID="2820b9d5-ca7d-4bc8-9b67-d5323615100b">zaprzestania spełniania przez Dyrektora któregokolwiek z wymogów określonych w art. 6 ust. 3 pkt 2–4;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/1643__art_7__ust_1__pkt_4" gd:GUID="b1d3cb17-f67b-4e4d-8539-998fe5461d0d">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="878c4873-425b-4ea3-8bef-63ec3e4ce714" fragment="5" gd:fragmentGUID="ac725e47-5574-4b50-be80-34e11a13501c">działania niezgodnego z prawem lub zasadami rzetelności i gospodarności;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/1643__art_7__ust_1__pkt_5" gd:GUID="8f93ea83-4820-4f8c-a891-f777205c3de4">
+                <nr>5</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="878c4873-425b-4ea3-8bef-63ec3e4ce714" fragment="6" gd:fragmentGUID="ebbeb896-f636-4ac0-9fa7-ce0dc7b85aaf">niezatwierdzenia rocznego sprawozdania finansowego Agencji lub jego nieprzedstawienia w terminie określonym w art. 29 ust. 4;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/1643__art_7__ust_1__pkt_6" gd:GUID="86ee68ee-a1d9-4db2-9b7d-0ff8f4bb1608">
+                <nr>6</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="878c4873-425b-4ea3-8bef-63ec3e4ce714" fragment="7" gd:fragmentGUID="454273bb-eacc-40c2-bed6-2ebeb5207108">złożenia niezgodnych z prawdą oświadczenia, o którym mowa w art. 7 ust. 1 ustawy z dnia 18 października 2006 r. o ujawnianiu informacji o dokumentach organów bezpieczeństwa państwa z lat 1944–1990 oraz treści tych dokumentów, albo informacji, o której mowa w art. 7 ust. 3a tej ustawy, stwierdzonego prawomocnym orzeczeniem sądu;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/1643__art_7__ust_1__pkt_7" gd:GUID="25372640-802b-4709-939a-9a751695d09f">
+                <nr>7</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="878c4873-425b-4ea3-8bef-63ec3e4ce714" fragment="8" gd:fragmentGUID="ae565d1b-c7db-4aad-b203-241827dbe590">nieprzeprowadzenia audytu zewnętrznego, o którym mowa w art. 28a.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2025/1643__art_7__ust_2" gd:GUID="aec8733c-7f7d-4c19-9db1-baf51ba39f07">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="7fc0c53d-6eaf-4684-bdec-412c5af5cc89" fragment="1" gd:fragmentGUID="ac456422-4f9b-4b52-9dd9-36a49e331e0e">Kadencja Dyrektora wygasa w razie jego śmierci lub odwołania.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/1643__art_7__ust_3" gd:GUID="65ae33ea-52d5-483e-9bfb-11433839c28c">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="3c499874-82aa-46ab-a4ab-9db3e140eb1d" fragment="1" gd:fragmentGUID="2819287b-9560-47ba-9de7-188bdb6dd8e7">W przypadku wygaśnięcia kadencji Dyrektora, do czasu powołania nowego Dyrektora, jego obowiązki pełni zastępca Dyrektora wskazany przez ministra właściwego do spraw szkolnictwa wyższego i nauki.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2025/1643__art_8" gd:GUID="c70ca0f6-5f4e-423f-89ac-c0f0426abc74">
+            <nr>8</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="20bf8fe5-bc32-45aa-84e0-932025ffc6d3">
+              <p>
+                <zdanie nr="1" gd:zdGUID="8c20b15c-c0af-416c-b742-c23b59c9ccd2" fragment="1" gd:fragmentGUID="7df486e7-a71b-4d48-8427-69f506692305">Zastępców Dyrektora powołuje i odwołuje Dyrektor.</zdanie>
+                <zdanie nr="2" gd:zdGUID="520f2fc4-2901-4c9c-88e4-0cbf295b2c28" fragment="1" gd:fragmentGUID="788d21c6-9b3c-4cbc-994a-0058b84f264e">Zastępcą Dyrektora może być osoba, która spełnia wymagania określone w art. 6 ust. 3 pkt 1–4 i 6–8.</zdanie>
+                <zdanie nr="3" gd:zdGUID="27f88475-2a97-419b-95d9-94fd97b3c3b4" fragment="1" gd:fragmentGUID="5ddda3f2-53e8-494a-b5b4-f9b778e160d5">Przepisy art. 6 ust. 4 i 5 stosuje się odpowiednio.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2025/1643__art_9" gd:GUID="9a84b30b-bf20-4707-98af-955593adc294">
+            <nr>9</nr>
+            <ustep eId="DU/2025/1643__art_9__ust_1" gd:GUID="ef144c37-e194-4229-a2e6-efaf9cd86480">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="a5197a88-7031-4908-86e0-70490c315305" fragment="1" gd:fragmentGUID="486b8300-adaa-4e1c-aa99-06589199a318">Do zadań Rady należy:</zdanie>
+              </p>
+              <punkt eId="DU/2025/1643__art_9__ust_1__pkt_1" gd:GUID="6933af80-9707-4e51-87b1-a6d1c033ae33">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="a5197a88-7031-4908-86e0-70490c315305" fragment="2" gd:fragmentGUID="a0fb4451-15a4-4a19-a5a3-5abec1a053e9">przygotowywanie i przedstawianie Dyrektorowi propozycji kierunków działania i rozwoju Agencji, w tym w perspektywie wieloletniej;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/1643__art_9__ust_1__pkt_2" gd:GUID="390e4aa9-633f-48d2-b93e-e77444724c86">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="a5197a88-7031-4908-86e0-70490c315305" fragment="3" gd:fragmentGUID="200940de-0f67-4b6f-ab18-8eac1bbe793b">opiniowanie projektów rocznych planów działania Agencji, projektów zmian tych planów oraz projektu rocznego planu finansowego;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/1643__art_9__ust_1__pkt_3" gd:GUID="14c40549-ade4-45f9-aeab-007ca32737a3">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="a5197a88-7031-4908-86e0-70490c315305" fragment="4" gd:fragmentGUID="82f6b5d5-4f3b-4ad4-a0de-30765afd2542">opiniowanie rocznego sprawozdania z działalności Agencji oraz rocznego sprawozdania finansowego Agencji;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/1643__art_9__ust_1__pkt_4" gd:GUID="8994c5ad-97cd-44df-b856-37642c226b28">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="a5197a88-7031-4908-86e0-70490c315305" fragment="5" gd:fragmentGUID="64e0ed8d-72be-4c5c-b96c-c5007d68e7b7">dokonywanie okresowej oceny wykonywania planów działania Agencji.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2025/1643__art_9__ust_2" gd:GUID="70be8867-6fd9-48d0-b242-811922e957ce">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="d26ce3cd-656a-4f91-8994-0a3c28bc3754" fragment="1" gd:fragmentGUID="c3400b03-5644-4fee-96bb-5382e7642baf">Rada działa na posiedzeniach.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/1643__art_9__ust_3" gd:GUID="8bd5fc14-ab5c-4036-987b-e8148a54d14f">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="db8e4ace-d376-4f9a-adfd-83bea7d35687" fragment="1" gd:fragmentGUID="b93e89b2-d236-477b-800e-fca7d2d52627">Pracami Rady kieruje przewodniczący.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/1643__art_9__ust_4" gd:GUID="c0c5178d-940f-4508-b595-0c29560e6cec">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="fe305955-c8ea-4ada-8919-ac91c79757c2" fragment="1" gd:fragmentGUID="64bd75d8-6dcf-449c-996e-81fb3930028e">Rada podejmuje uchwały w celu realizacji zadań określonych ustawą.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/1643__art_9__ust_5" gd:GUID="e2a601d6-25c3-4acf-916a-5b1f0c24f732">
+              <nr>5</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="17f60b4f-faff-40a8-8d1f-6053644c7d47" fragment="1" gd:fragmentGUID="097f4066-1d8a-423c-9b79-d5e70a68c6a5">Dyrektor niezwłocznie udostępnia Radzie, na jej żądanie, dokumenty związane z działalnością Agencji.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2025/1643__art_10" gd:GUID="b04eae86-de4b-4626-a806-2597b8443dd9">
+            <nr>10</nr>
+            <ustep eId="DU/2025/1643__art_10__ust_1" gd:GUID="8910d2da-dbf4-4ebc-9b4c-8e460fded092">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="dcc89cab-09ba-4691-84ac-4f739ba68bcf" fragment="1" gd:fragmentGUID="0234bfaf-b9ec-42b6-bcf6-28891eb95e7a">W skład Rady wchodzą:</zdanie>
+              </p>
+              <punkt eId="DU/2025/1643__art_10__ust_1__pkt_1" gd:GUID="1ce291a5-5c21-4498-96f1-b7c8897f2336">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="dcc89cab-09ba-4691-84ac-4f739ba68bcf" fragment="2" gd:fragmentGUID="b202eaf1-e446-425a-b839-214a744265fc">przedstawiciel Prezesa Rady Ministrów;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/1643__art_10__ust_1__pkt_2" gd:GUID="89ea8b9f-b61f-48a7-a820-c4aff7222bf6">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="dcc89cab-09ba-4691-84ac-4f739ba68bcf" fragment="3" gd:fragmentGUID="d504d7ce-c222-4132-aa37-3a6883e50553">dwóch przedstawicieli ministra właściwego do spraw szkolnictwa wyższego i nauki;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/1643__art_10__ust_1__pkt_3" gd:GUID="4dacd1a8-fb86-4113-9893-93b9ceed3265">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="dcc89cab-09ba-4691-84ac-4f739ba68bcf" fragment="4" gd:fragmentGUID="60dfecea-ac96-498b-ae22-abd6b1bf8e91">przedstawiciel ministra właściwego do spraw zagranicznych;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/1643__art_10__ust_1__pkt_4" gd:GUID="0b46bc3e-d8bc-4173-9a91-7d4e0080a106">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="dcc89cab-09ba-4691-84ac-4f739ba68bcf" fragment="5" gd:fragmentGUID="5e5c695f-19e4-4369-980f-7ea9aefc42ac">przedstawiciel ministra właściwego do spraw finansów publicznych;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/1643__art_10__ust_1__pkt_5" gd:GUID="a004f17b-0e4e-43d3-ab72-4a9f0341920d">
+                <nr>5</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="dcc89cab-09ba-4691-84ac-4f739ba68bcf" fragment="6" gd:fragmentGUID="c6391f94-c2b9-40e3-bee1-f517aaccb986">przedstawiciel ministra właściwego do spraw gospodarki;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/1643__art_10__ust_1__pkt_6" gd:GUID="16cc4bba-c816-4eaf-a6d8-33341827599f">
+                <nr>6</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="dcc89cab-09ba-4691-84ac-4f739ba68bcf" fragment="7" gd:fragmentGUID="834d1ef9-4192-4363-870a-e4b4df399e57">przedstawiciel Konferencji Rektorów Akademickich Szkół Polskich;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/1643__art_10__ust_1__pkt_7" gd:GUID="f9647703-fdf9-44df-a7c5-905f8ac1dbf6">
+                <nr>7</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="dcc89cab-09ba-4691-84ac-4f739ba68bcf" fragment="8" gd:fragmentGUID="ec7c6c47-b6a9-4190-913e-9367684b6e1f">przedstawiciel Krajowej Reprezentacji Doktorantów;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/1643__art_10__ust_1__pkt_8" gd:GUID="71166ad4-4e59-4c86-89c8-c260ed0d0e57">
+                <nr>8</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="dcc89cab-09ba-4691-84ac-4f739ba68bcf" fragment="9" gd:fragmentGUID="32b7fb95-5509-4519-a57a-95f7ffb3a35c">przedstawiciel Parlamentu Studentów Rzeczypospolitej Polskiej;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/1643__art_10__ust_1__pkt_9" gd:GUID="7b718558-4054-4a48-b4d7-8ef49013c59a">
+                <nr>9</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="dcc89cab-09ba-4691-84ac-4f739ba68bcf" fragment="10" gd:fragmentGUID="e72ce85c-3936-45df-bd58-25f17c3fb644">przedstawiciel Rady Głównej Nauki i Szkolnictwa Wyższego.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2025/1643__art_10__ust_2" gd:GUID="0b326480-2594-47fb-b2b5-ec32c22ceae3">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="39941750-071d-4020-a2d1-327bec1a04e5" fragment="1" gd:fragmentGUID="2247e0c3-ede8-42ff-9210-da11cbfcf4bc">Członkiem Rady może być osoba spełniająca wymagania, o których mowa w art. 6 ust. 3 pkt 3, 4, 6 i 8.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/1643__art_10__ust_3" gd:GUID="5a29abc1-cc22-41a7-9293-074f44606bda">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="b12406c5-6c50-41b6-adfb-d958e1f47c1c" fragment="1" gd:fragmentGUID="e5cdb421-64b0-4702-b046-e32043b4bfde">Przed powołaniem w skład Rady osoba powoływana składa oświadczenie o spełnieniu wymagań, o których mowa w art. 6 ust. 3 pkt 3, 4, 6 i 8.</zdanie>
+                <zdanie nr="2" gd:zdGUID="cdae2aca-6cc7-423a-a82c-47ef77619f95" fragment="1" gd:fragmentGUID="9b3e75fd-b73f-481e-bc9c-e529d7ace6ee">Przepis art. 6 ust. 4 stosuje się odpowiednio.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2025/1643__art_11" gd:GUID="4928cd7a-2a77-4f81-8ff4-90d776f0132c">
+            <nr>11</nr>
+            <ustep eId="DU/2025/1643__art_11__ust_1" gd:GUID="1fe72964-891f-4c45-980d-0f383cc97ecd">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ceba0f68-2072-4024-92d7-fa037f03d0d0" fragment="1" gd:fragmentGUID="4fe3d76b-d78c-47ef-b37f-ad240cdc1499">Kadencja Rady trwa 4 lata.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/1643__art_11__ust_2" gd:GUID="e62f8930-4edc-455e-a344-b375f30abd1c">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="5c845b11-25d9-40b8-84af-4f0d653a14dc" fragment="1" gd:fragmentGUID="1e476bfd-3a25-44ef-8590-2f48e3a5c768">Członka Rady, o którym mowa w art. 10 ust. 1:</zdanie>
+              </p>
+              <punkt eId="DU/2025/1643__art_11__ust_2__pkt_1" gd:GUID="54edaea8-ae1f-4547-b4a5-afa15bc9290b">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="5c845b11-25d9-40b8-84af-4f0d653a14dc" fragment="2" gd:fragmentGUID="5e4eb16f-3d4d-4d9a-a7d8-18a56b7bac19">pkt 1 – powołuje i odwołuje Prezes Rady Ministrów;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/1643__art_11__ust_2__pkt_2" gd:GUID="17367d3d-4fc1-4895-8389-6d017b495a99">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="5c845b11-25d9-40b8-84af-4f0d653a14dc" fragment="3" gd:fragmentGUID="c3d911ff-55b7-4a52-bc64-0575db78c09d">pkt 2 – powołuje i odwołuje minister właściwy do spraw szkolnictwa wyższego i nauki.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2025/1643__art_11__ust_3" gd:GUID="77c7a3d5-2001-45b7-94e2-cd6c5b5ba054">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="476b5d1c-ad52-407f-922c-f25fb6bcbdc9" fragment="1" gd:fragmentGUID="1d64d4b1-b159-417b-a192-f3bd00d680f6">Członków Rady wyznaczonych przez podmioty, o których mowa w art. 10 ust. 1 pkt 3–9, powołuje i odwołuje minister właściwy do spraw szkolnictwa wyższego i nauki na wniosek tych podmiotów.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/1643__art_11__ust_4" gd:GUID="591ead88-8a29-4b97-9979-8e4f4fe41c5e">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="d7783f49-8348-400e-aa20-c284ecbb7cd4" fragment="1" gd:fragmentGUID="e58bd727-f49c-4d50-a715-ec06d7e849b0">W przypadku odwołania albo śmierci członka Rady odpowiednio Prezes Rady Ministrów albo minister właściwy do spraw szkolnictwa wyższego i nauki, na wniosek podmiotu, który wyznaczył danego członka Rady, powołuje inną osobę na jego miejsce.</zdanie>
+                <zdanie nr="2" gd:zdGUID="635b0abb-c968-4398-8b15-6577b6461ce5" fragment="1" gd:fragmentGUID="479b0f4f-b493-46a1-acfb-2eb075a08357">Członek Rady powołany w tym trybie pełni funkcję do końca kadencji Rady.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/1643__art_11__ust_5" gd:GUID="2a0a2433-7a14-49a9-a7a6-b75e5331a3fe">
+              <nr>5</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ed53b4d0-77f3-42bb-b3ac-600263df1e10" fragment="1" gd:fragmentGUID="6dfb775e-cc23-4b80-8d71-f2bd13f07d7a">Minister właściwy do spraw szkolnictwa wyższego i nauki wyznacza spośród członków Rady przewodniczącego Rady i jego zastępcę.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2025/1643__art_12" gd:GUID="30eddc19-fc16-493c-90da-4613bafb35fd">
+            <nr>12</nr>
+            <ustep eId="DU/2025/1643__art_12__ust_1" gd:GUID="ab12b8e3-3e53-4200-a427-ef1815636951">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="eb2e7d97-47b8-448e-89d2-b787fb848c3e" fragment="1" gd:fragmentGUID="74bc9fbb-d907-4673-82fd-e38566fe3beb">Wynagrodzenie za udział w pracach Rady przysługuje wyłącznie członkom Rady niebędącym pracownikami urzędu obsługującego ministra.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/1643__art_12__ust_2" gd:GUID="1bb496b9-1dcf-4ad9-b977-932d7963bd31">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="3c1e9c95-a756-4a48-a31f-a52fade8c89a" fragment="1" gd:fragmentGUID="aa69762f-954f-46e2-a25f-9ca238221105">Wynagrodzenie, o którym mowa w ust. 1, przysługuje za udział w posiedzeniach Rady, z tym że miesięcznie nie może ono przekroczyć:</zdanie>
+              </p>
+              <punkt eId="DU/2025/1643__art_12__ust_2__pkt_1" gd:GUID="50f33dd6-4d72-4cfa-ae1d-2c353a735cad">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="3c1e9c95-a756-4a48-a31f-a52fade8c89a" fragment="2" gd:fragmentGUID="acd4a656-0655-4332-b4b7-105c07a9f6f8">60 % przeciętnego miesięcznego wynagrodzenia w sektorze przedsiębiorstw bez wypłat nagród z zysku w czwartym kwartale roku poprzedniego, ogłaszanego przez Prezesa Głównego Urzędu Statystycznego – w przypadku przewodniczącego Rady;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/1643__art_12__ust_2__pkt_2" gd:GUID="41455694-dcce-4661-bcb0-4072f695e859">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="3c1e9c95-a756-4a48-a31f-a52fade8c89a" fragment="3" gd:fragmentGUID="948f32a7-8ab9-442d-9b8c-6895baba2f15">30 % przeciętnego miesięcznego wynagrodzenia, o którym mowa w pkt 1 – w przypadku pozostałych członków Rady.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2025/1643__art_12__ust_3" gd:GUID="61b00c67-7b74-4f77-bf6b-bb8cf578eb51">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="b27f9a36-7551-4dfc-9f7c-7930b2466043" fragment="1" gd:fragmentGUID="d34528ef-6e22-443c-8558-5e1d24975f37">Członkom Rady przysługuje zwrot kosztów podróży na zasadach określonych w przepisach wydanych na podstawie art. 77<sup>5</sup> § 2 ustawy z dnia 26 czerwca 1974 r. – Kodeks pracy.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/1643__art_12__ust_4" gd:GUID="83337ff6-0f26-4685-8631-8ac445af5dfb">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="217e3f4f-d808-4bf2-bf28-bf1bd2e71e67" fragment="1" gd:fragmentGUID="0fc0032a-b298-4f23-bc29-b3aca6c59a07">Minister właściwy do spraw szkolnictwa wyższego i nauki określi, w drodze rozporządzenia, wysokość wynagrodzenia członków Rady, uwzględniając funkcje pełnione przez nich w Radzie, zakres wykonywanych zadań, w szczególności związanych z organizowaniem i przeprowadzaniem posiedzenia Rady, a także znaczenie tych zadań dla efektywnego funkcjonowania Agencji.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2025/1643__art_13" gd:GUID="2b9c89c2-5a59-4351-a9e4-59723be636ca">
+            <nr>13</nr>
+            <ustep eId="DU/2025/1643__art_13__ust_1" gd:GUID="2deafd2a-5a39-4cf5-ba9b-377072916539">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="9d017d21-a72d-436a-b2f6-d91188342de4" fragment="1" gd:fragmentGUID="6db17f6e-c6f4-4de4-b8c2-043f19f5502e">Minister właściwy do spraw szkolnictwa wyższego i nauki ustala wysokość wynagrodzenia Dyrektora.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/1643__art_13__ust_2" gd:GUID="77ad3c80-11df-45d6-9027-04495b185722">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="9f7f9ae0-7091-48f8-8bc9-e37dd95dcd09" fragment="1" gd:fragmentGUID="657fbeb7-ac14-4ae4-8b03-52e7f5d40030">Dyrektor ustala i przekazuje do zatwierdzenia ministrowi właściwemu do spraw szkolnictwa wyższego i nauki regulamin wynagradzania osób zatrudnionych w Agencji.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2025/1643__art_14" gd:GUID="bfa965f3-281c-4b14-ab6e-23f27a038202">
+            <nr>14</nr>
+            <ustep eId="DU/2025/1643__art_14__ust_1" gd:GUID="e14dac2d-d570-4e4f-87af-3f518b4d9b5c">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="a8d04948-2a78-4124-83a5-8f1db14993d8" fragment="1" gd:fragmentGUID="3e7d1c5f-ded0-40dd-95ff-b62c6423663a">Agencja prowadzi system teleinformatyczny w rozumieniu art. 3 pkt 3 ustawy z dnia 17 lutego 2005 r. o informatyzacji działalności podmiotów realizujących zadania publiczne (Dz. U. z 2024 r. poz. 1557 i 1717 oraz z 2025 r. poz. 1006, 1019, 1158 i 1301), w którym są przetwarzane dane niezbędne do wydania decyzji w sprawie przyznania środków finansowych w ramach programów, o których mowa w art. 17 ust. 2.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/1643__art_14__ust_2" gd:GUID="d0bb7d89-c54c-449b-a884-f4674abc290c">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="3d5ac53f-a89c-4050-a811-835794afffbd" fragment="1" gd:fragmentGUID="fda43cf7-89bd-4e75-b9e5-1b7c0af679f7">System teleinformatyczny Agencji zapewnia elektroniczną realizację postępowań w sprawach, o których mowa w ust. 1, w tym składanie wniosków o udział w programie, dokonywanie oceny formalnej i merytorycznej tych wniosków oraz doręczanie pism i decyzji.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/1643__art_14__ust_3" gd:GUID="52580d7f-c838-4cce-9a23-ef997706bae4">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="c36507e2-958c-4599-8403-0824b357e55a" fragment="1" gd:fragmentGUID="38c8f410-928e-42f9-a883-09d3e8e6c60b">Składanie wniosków o udział w programie na formularzu elektronicznym za pośrednictwem systemu teleinformatycznego Agencji odbywa się za pomocą konta w systemie założonego dla wnioskodawcy przez Agencję.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/1643__art_14__ust_4" gd:GUID="ae8147c6-ce78-4aac-b009-32ac391f721c">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="4ebceddf-6c6c-43ff-aa36-347fc8d4fe29" fragment="1" gd:fragmentGUID="4a3b6525-9e5a-40b3-ae40-8fe5fefabb1c">Dyrektor jest administratorem danych przetwarzanych w systemie teleinformatycznym Agencji.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/1643__art_14__ust_5" gd:GUID="ee6eb60d-ddcd-41ec-bd1a-23ee31e150dd">
+              <nr>5</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="3c47b831-e853-48bc-9087-c7f65f85c6c9" fragment="1" gd:fragmentGUID="dcce92d4-d2e2-40ad-bd30-63f8bc0bd13b">Dyrektor może zlecić instytutowi badawczemu, nadzorowanemu przez ministra właściwego do spraw szkolnictwa wyższego i nauki, którego przedmiot działania jest związany ze świadczeniem usług w zakresie systemów informacyjnych, administrowanie systemem teleinformatycznym Agencji, zapewniając środki finansowe na ten cel.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2025/1643__art_15" gd:GUID="5ec05f73-2f12-4178-836b-9e36e4535d45">
+            <nr>15</nr>
+            <ustep eId="DU/2025/1643__art_15__ust_1" gd:GUID="c837953f-aa97-4112-a20a-5099d74d663d">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="1a9cd438-443d-4461-b7ae-ad9ec2358910" fragment="1" gd:fragmentGUID="81e3b2c1-ff69-439a-89fb-d4c823cd2a6a">Agencja działa zgodnie z rocznym planem działania.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/1643__art_15__ust_2" gd:GUID="2c06eea3-6720-4b6f-a0d8-f0126dbebbdc">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="edbfc02f-3fde-4e95-a4e6-4964419564e9" fragment="1" gd:fragmentGUID="c699ced3-8dc7-4fad-a051-f95a7a9d139a">Dyrektor, w terminie do dnia 1 grudnia, przekazuje ministrowi właściwemu do spraw szkolnictwa wyższego i nauki do zatwierdzenia projekt rocznego planu działania na następny rok wraz z opinią Rady.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/1643__art_15__ust_3" gd:GUID="7e19941e-0c29-41f1-8c7d-65660f5901c5">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="9efec720-cf1f-4751-821e-fb3af548e651" fragment="1" gd:fragmentGUID="cce89ec9-2428-40b4-b10a-16b3eb8bbab7">Do dnia zatwierdzenia rocznego planu działania Agencja działa na podstawie projektu tego planu.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/1643__art_15__ust_4" gd:GUID="07760648-69eb-48e8-9115-be30d2ab5d7c">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="6848aa1a-5cfa-4707-bc67-40fba95f9c36" fragment="1" gd:fragmentGUID="2fa3fd81-74bc-47e1-8100-a4a0dc71f40c">W przypadku konieczności zmiany rocznego planu działania Dyrektor przekazuje do zatwierdzenia ministrowi właściwemu do spraw szkolnictwa wyższego i nauki zmieniony plan działania wraz z opinią Rady.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2025/1643__art_16" gd:GUID="e87abbeb-8f89-456b-abdc-2a5ff65eecfd">
+            <nr>16</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="5a975533-ba04-4015-8f21-5a887b2a7e08">
+              <p>
+                <zdanie nr="1" gd:zdGUID="0b0bd360-6294-4ab2-a853-ee7af3aaffb5" fragment="1" gd:fragmentGUID="e2b54d2c-4f95-437b-b271-91dcdcffb0ad">Minister właściwy do spraw szkolnictwa wyższego i nauki, w drodze rozporządzenia, nadaje Agencji statut, w którym określa:</zdanie>
+              </p>
+              <punkt eId="DU/2025/1643__art_16__pkt_1" gd:GUID="b8cbc41f-2bbc-47e0-9b3f-268cf371b0d8">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="0b0bd360-6294-4ab2-a853-ee7af3aaffb5" fragment="2" gd:fragmentGUID="bd63bc23-2fdb-4441-9474-a25cf291a349">szczegółowy zakres zadań i tryb pracy organów Agencji,</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/1643__art_16__pkt_2" gd:GUID="3033a90d-5c41-43c1-98fd-75639c447016">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="0b0bd360-6294-4ab2-a853-ee7af3aaffb5" fragment="3" gd:fragmentGUID="31740381-6f8f-4bca-95e5-83aff9a99dbb">organizację wewnętrzną Agencji</zdanie>
+                </p>
+              </punkt>
+              <czesc-wspolna-punkt eId="DU/2025/1643__art_16__czw" gd:GUID="ed5a0526-173c-49e4-9011-e879a8923efc">
+                <p>
+                  <zdanie nr="1" gd:zdGUID="0b0bd360-6294-4ab2-a853-ee7af3aaffb5" fragment="4" gd:fragmentGUID="abb7bfcb-b87a-4333-91f0-004fe9dd6447">– mając na uwadze zakres zadań Agencji oraz konieczność zapewnienia sprawnej i efektywnej ich realizacji.</zdanie>
+                </p>
+              </czesc-wspolna-punkt>
+            </ustep-n>
+          </artykul>
+        </oddzial-n>
+      </rozdzial>
+      <rozdzial eId="DU/2025/1643__rozdz_3" gd:GUID="638a94f8-b7ba-4898-8b80-e3fef7cfe24c">
+        <naglowek-rozdzialu>
+          <nr>3</nr>
+          <p>Sposób realizacji zadań Agencji oraz nadzór nad jej działalnością</p>
+        </naglowek-rozdzialu>
+        <oddzial-n brak-eid="jednostka-nieoznaczona" gd:GUID="06935621-022a-4691-ada3-2d0c05c32b0f">
+          <artykul eId="DU/2025/1643__art_17" gd:GUID="cba2aff3-1ba1-4562-9fd6-6492c342ea53">
+            <nr>17</nr>
+            <ustep eId="DU/2025/1643__art_17__ust_1" gd:GUID="d3acd65d-2766-4128-93bd-24ed7fea9e37">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="2fea3bec-3388-49fa-8ff9-28c7a3b0afab" fragment="1" gd:fragmentGUID="8877b793-0093-49f7-a6a6-f2c69f7a19e4">Agencja realizuje zadania, o których mowa w art. 2, w szczególności przez:</zdanie>
+              </p>
+              <punkt eId="DU/2025/1643__art_17__ust_1__pkt_1" gd:GUID="918b6d7f-7187-4c7d-ad74-81be6c802c53">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="2fea3bec-3388-49fa-8ff9-28c7a3b0afab" fragment="2" gd:fragmentGUID="a04b59b2-5e52-489f-8715-7dfd0cb7ef09">ustanawianie programów, o których mowa w ust. 2, oraz konkursów, o których mowa w ust. 3, w tym określanie terminów i warunków ich realizacji;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/1643__art_17__ust_1__pkt_2" gd:GUID="fc8c3a9c-4c37-4f66-96e3-8d66fb8d55bd">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="2fea3bec-3388-49fa-8ff9-28c7a3b0afab" fragment="3" gd:fragmentGUID="8f112a2d-cbc1-4a13-ad7e-d0f90e980f33">ocenę i wybór wniosków o udział w programach, o których mowa w ust. 2;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/1643__art_17__ust_1__pkt_3" gd:GUID="f6629fa1-97bb-4594-9e6b-686d034a4d86">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="2fea3bec-3388-49fa-8ff9-28c7a3b0afab" fragment="4" gd:fragmentGUID="cd44b91d-14d4-401a-95d7-8482c5b0fc87">zawieranie i finansowanie umów z podmiotami, którym zostały przyznane środki finansowe.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2025/1643__art_17__ust_2" gd:GUID="b1fe0cd5-0361-4095-94b7-b04d428d0f42">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="c89f453f-64f1-44c3-820d-2e85626fd38e" fragment="1" gd:fragmentGUID="f388bbb2-c2ce-4d8e-946d-bca8bc05a5c6">Dyrektor ustanawia programy służące realizacji zadań Agencji, których celem jest tworzenie warunków do inicjowania i rozwoju międzynarodowej kariery akademickiej lub naukowej osób kształcących się, środowiska akademickiego i naukowego, zwiększenie poziomu umiędzynarodowienia instytucji działających w obszarze szkolnictwa wyższego i nauki oraz upowszechnianie języka polskiego za granicą, zwane dalej „programami”.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/1643__art_17__ust_3" gd:GUID="3e17aa4c-3c29-4afc-817c-f4aaa38c010e">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ae627238-f0c3-4d2c-bd19-06695a8d54cd" fragment="1" gd:fragmentGUID="4d77230c-bbb3-47a5-9af1-9fcc8b09b90b">Dyrektor ogłasza konkursy, w których są przyznawane nagrody za działalność i osiągnięcia o istotnym znaczeniu w obszarze umiędzynarodowienia szkolnictwa wyższego i nauki.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2025/1643__art_18" gd:GUID="f20d283d-4223-470b-9a75-a90750c59f50">
+            <nr>18</nr>
+            <ustep eId="DU/2025/1643__art_18__ust_1" gd:GUID="7a9ccfd9-f48c-4fcd-b23d-506ca2d56a5d">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="3a02cea7-27e4-4c96-9426-0f418e5737fc" fragment="1" gd:fragmentGUID="efe15df0-f76b-46e4-9b41-ae581c0c756c">W ramach programu Agencja może przyznawać środki finansowe:</zdanie>
+              </p>
+              <punkt eId="DU/2025/1643__art_18__ust_1__pkt_1" gd:GUID="ff0f05e0-aabc-434e-b6af-bd3de7f83afc">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="3a02cea7-27e4-4c96-9426-0f418e5737fc" fragment="2" gd:fragmentGUID="235780df-66ec-4b99-b7a9-7adc602b5289">studentom i doktorantom;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/1643__art_18__ust_1__pkt_2" gd:GUID="ecac078d-2f63-4575-86bb-20224b657da6">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="3a02cea7-27e4-4c96-9426-0f418e5737fc" fragment="3" gd:fragmentGUID="9faa76c2-8d7d-4a0a-a019-3ef355a81ad6">uczestnikom kursów przygotowawczych do podjęcia nauki w języku polskim;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/1643__art_18__ust_1__pkt_3" gd:GUID="746e8ae5-c296-495c-8d1b-17a00720781f">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="3a02cea7-27e4-4c96-9426-0f418e5737fc" fragment="4" gd:fragmentGUID="124e9926-42d2-4ac3-956b-52bb9f24ff06">pracownikom podmiotów, o których mowa w art. 7 ust. 1 ustawy z dnia 20 lipca 2018 r. – Prawo o szkolnictwie wyższym i nauce, oraz zagranicznych uczelni i instytucji naukowych;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/1643__art_18__ust_1__pkt_4" gd:GUID="edb2e296-57c0-4076-97a8-78a2258ed8a4">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="3a02cea7-27e4-4c96-9426-0f418e5737fc" fragment="5" gd:fragmentGUID="df82a93a-375e-4262-94c6-f461210328a1">osobom posiadającym co najmniej stopień doktora albo równorzędny stopień uzyskany za granicą;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/1643__art_18__ust_1__pkt_5" gd:GUID="a37adfcb-2ae5-40be-93eb-0671fbbec605">
+                <nr>5</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="3a02cea7-27e4-4c96-9426-0f418e5737fc" fragment="6" gd:fragmentGUID="5c2bff62-ac5f-4332-b6bc-bd6c230ed2ce">osobom kierowanym za granicę w celu nauczania języka polskiego jako obcego;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/1643__art_18__ust_1__pkt_6" gd:GUID="b5726008-981d-422f-8858-5f2a2427f8b3">
+                <nr>6</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="3a02cea7-27e4-4c96-9426-0f418e5737fc" fragment="7" gd:fragmentGUID="f2ed8ee4-0509-40fc-b333-609db31709a5">podmiotom, o których mowa w art. 7 ust. 1 ustawy z dnia 20 lipca 2018 r. – Prawo o szkolnictwie wyższym i nauce, oraz zagranicznym uczelniom i instytucjom naukowym;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/1643__art_18__ust_1__pkt_7" gd:GUID="8f4d4fc5-7c32-4750-8b27-7541758a4d19">
+                <nr>7</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="3a02cea7-27e4-4c96-9426-0f418e5737fc" fragment="8" gd:fragmentGUID="6b51f0ab-5efd-475a-a89b-502a613fee67">organizacjom pozarządowym podejmującym działania na rzecz umiędzynarodowienia szkolnictwa wyższego lub nauki;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/1643__art_18__ust_1__pkt_8" gd:GUID="ff826acb-dc70-4027-81f9-6a4cda69b3c5">
+                <nr>8</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="3a02cea7-27e4-4c96-9426-0f418e5737fc" fragment="9" gd:fragmentGUID="40b0d683-58ab-4089-a1b8-af95dfb0f3e3">jednostkom sektora finansów publicznych podejmującym działania na rzecz umiędzynarodowienia szkolnictwa wyższego lub nauki.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2025/1643__art_18__ust_2" gd:GUID="5856d80c-44df-4173-b2f7-10123c883075">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="862ecae5-7892-48cf-b38b-a5be2f11b3eb" fragment="1" gd:fragmentGUID="19c089db-ace9-4db7-9269-7ee0502329d6">Środki finansowe mogą być przyznawane w formie:</zdanie>
+              </p>
+              <punkt eId="DU/2025/1643__art_18__ust_2__pkt_1" gd:GUID="5361a884-7e19-4fb5-abca-5ee155b6280a">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="862ecae5-7892-48cf-b38b-a5be2f11b3eb" fragment="2" gd:fragmentGUID="7989f163-9e85-4231-8741-5cc45dee44f7">stypendium, finansowania lub dofinansowania do kosztów opłat za kształcenie, pomocy materialnej oraz ryczałtu na koszty podróży, utrzymania i zakwaterowania – osobom, o których mowa w ust. 1 pkt 1–5;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/1643__art_18__ust_2__pkt_2" gd:GUID="190c57c1-4678-430e-a0ca-abba13d55c3e">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="862ecae5-7892-48cf-b38b-a5be2f11b3eb" fragment="3" gd:fragmentGUID="3616b563-99c0-46b7-8b5c-8375a4911a48">finansowania lub dofinansowania kosztów działań objętych zakresem tematycznym programu oraz kosztów zatrudnienia – podmiotom, o których mowa w ust. 1 pkt 6–8.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2025/1643__art_19" gd:GUID="cc2d4f05-a630-4db1-ac91-8e96c34a43fe">
+            <nr>19</nr>
+            <ustep eId="DU/2025/1643__art_19__ust_1" gd:GUID="bfd613b5-aef1-4c9d-9264-652d8dc182b3">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="249417df-58c4-4ba9-a277-69458447f84b" fragment="1" gd:fragmentGUID="25455052-8be2-4687-96e4-6a9b1bf29d80">Dyrektor ogłasza nabory wniosków o udział w programie oraz konkursy.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/1643__art_19__ust_2" gd:GUID="1b174ec9-e8f4-4b35-ae3c-d71db8115f5d">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="918e0347-6099-4b55-9335-0d2f84e96e59" fragment="1" gd:fragmentGUID="67b1d238-c162-4d2f-83a5-632236311597">Ogłoszenia o naborze wniosków o udział w programie oraz o konkursie zamieszcza się na stronie podmiotowej Agencji w Biuletynie Informacji Publicznej.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2025/1643__art_20" gd:GUID="a5aa8493-ff32-4ca5-b9c0-7d187000bf72">
+            <nr>20</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="6bc5aeb0-74d6-4126-a695-1dfa2d93b32c">
+              <p>
+                <zdanie nr="1" gd:zdGUID="8dcdf5b7-6c25-4ade-be49-89139ec8275e" fragment="1" gd:fragmentGUID="98ab165e-6699-4e89-bc03-f16a7241fdf6">Ogłoszenie o naborze wniosków o udział w programie zawiera:</zdanie>
+              </p>
+              <punkt eId="DU/2025/1643__art_20__pkt_1" gd:GUID="8c1cdffe-3f88-44c5-946b-02930a6bb139">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="8dcdf5b7-6c25-4ade-be49-89139ec8275e" fragment="2" gd:fragmentGUID="6aae85e8-4b7f-45bf-a6dd-871bb30f3ec4">cel programu;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/1643__art_20__pkt_2" gd:GUID="473234b7-3d4e-4d85-af4e-a502b198fce7">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="8dcdf5b7-6c25-4ade-be49-89139ec8275e" fragment="3" gd:fragmentGUID="33898d69-358c-4022-b1c8-1bc1804fb489">zakres tematyczny działań realizowanych w ramach programu oraz termin realizacji programu;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/1643__art_20__pkt_3" gd:GUID="4a163449-acb0-4abb-bfde-ae8958b7fa1a">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="8dcdf5b7-6c25-4ade-be49-89139ec8275e" fragment="4" gd:fragmentGUID="a9874da3-f8fa-4bb5-b772-04ae036d5542">regulamin programu;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/1643__art_20__pkt_4" gd:GUID="6bef01f7-69a9-471e-a91d-46784da31f23">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="8dcdf5b7-6c25-4ade-be49-89139ec8275e" fragment="5" gd:fragmentGUID="600cd6de-4d16-4c96-8e86-be5e9790991d">określenie terminu i formy składania wniosków oraz języka, w jakim mają być sporządzone;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/1643__art_20__pkt_5" gd:GUID="b3a164d9-19e2-4acf-b9f9-62a51af4be9a">
+                <nr>5</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="8dcdf5b7-6c25-4ade-be49-89139ec8275e" fragment="6" gd:fragmentGUID="067b4730-ba7e-48f1-87ff-21b315be3858">wzór umowy, o której mowa w art. 26 ust. 1;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/1643__art_20__pkt_6" gd:GUID="09b34433-597e-4d41-98ee-bbc6cd71fdee">
+                <nr>6</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="8dcdf5b7-6c25-4ade-be49-89139ec8275e" fragment="7" gd:fragmentGUID="d893f65f-df6a-446b-8b0e-8f63f4ad14f4">wysokość środków finansowych przeznaczonych na realizację programu.</zdanie>
+                </p>
+              </punkt>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2025/1643__art_21" gd:GUID="43d746ba-0e53-4f61-88c2-fd2e7bdbe451">
+            <nr>21</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="c64811ad-a102-49fb-9e89-fe26854b4b4d">
+              <p>
+                <zdanie nr="1" gd:zdGUID="c105a1ff-03e2-4f19-b77b-60934bbfbdec" fragment="1" gd:fragmentGUID="c93aa4dc-3dca-46d5-b670-03675f151671">Ogłoszenie o konkursie zawiera:</zdanie>
+              </p>
+              <punkt eId="DU/2025/1643__art_21__pkt_1" gd:GUID="6fe4cf81-aeb1-4b53-8644-fc8d6304a1ec">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="c105a1ff-03e2-4f19-b77b-60934bbfbdec" fragment="2" gd:fragmentGUID="5dd994f0-a05f-40db-86c7-e6ba1efc8100">przedmiot konkursu;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/1643__art_21__pkt_2" gd:GUID="da7967c3-7bbb-46ad-8af6-638c953fd168">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="c105a1ff-03e2-4f19-b77b-60934bbfbdec" fragment="3" gd:fragmentGUID="32c3c3a0-7245-425b-9db0-0ea152dcd0b4">regulamin konkursu;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/1643__art_21__pkt_3" gd:GUID="a00c6a86-3359-47b6-bcbd-7aaf5a9c6528">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="c105a1ff-03e2-4f19-b77b-60934bbfbdec" fragment="4" gd:fragmentGUID="bbbad77c-26ec-40b2-bfcf-70281e05a9e3">skład komisji konkursowej;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/1643__art_21__pkt_4" gd:GUID="ab5d87ec-2813-4038-9dd3-1a278ab9aaff">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="c105a1ff-03e2-4f19-b77b-60934bbfbdec" fragment="5" gd:fragmentGUID="fd8d1f41-f5e6-4c1f-87b1-01b7796a9bea">termin ogłoszenia wyniku konkursu.</zdanie>
+                </p>
+              </punkt>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2025/1643__art_22" gd:GUID="0ec3c29f-15f9-4e2c-a0a9-50b219fcf471">
+            <nr>22</nr>
+            <ustep eId="DU/2025/1643__art_22__ust_1" gd:GUID="1c6b7112-adb6-411b-969f-844385b4f3b9">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="134c7342-d23e-41f7-a109-80dd750823da" fragment="1" gd:fragmentGUID="e05ff549-8f47-421f-a079-df189b72a5c0">Wnioski o udział w programie podlegają ocenie formalnej i merytorycznej.</zdanie>
+                <zdanie nr="2" gd:zdGUID="952488dd-894f-4cb9-8c05-98345ed7cca2" fragment="1" gd:fragmentGUID="0a6bae93-c153-4904-ba72-4bcbf36811cc">Regulamin programu może przewidywać przeprowadzenie wyłącznie oceny formalnej wniosków.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/1643__art_22__ust_2" gd:GUID="dfd65a84-dc59-4af5-ab9e-db702f8f99e8">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="eaf1ad70-405e-4b7a-94e4-ccc7fd099c2b" fragment="1" gd:fragmentGUID="d14c525e-c72f-45a7-a763-7f58da02b039">Ocena merytoryczna może być przeprowadzana przez ekspertów zewnętrznych.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/1643__art_22__ust_3" gd:GUID="0b106198-f9bb-41b8-bbca-51b6278d0f23">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="1ac8a112-1d58-4632-86cf-7ad3ebac3794" fragment="1" gd:fragmentGUID="622554f3-22f9-447e-8008-5952a9c67693">Eksperci zewnętrzni, o których mowa w ust. 2, są powoływani na zasadach określonych przez Dyrektora.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2025/1643__art_23" gd:GUID="1fb6828a-e086-401e-9abc-a3113d26909a">
+            <nr>23</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="2deb7ade-d5c1-4c32-be85-1bdd920e54fb">
+              <p>
+                <zdanie nr="1" gd:zdGUID="55afd910-78ee-4dbf-a149-a3da98f43dea" fragment="1" gd:fragmentGUID="9f2476a8-f8c5-4fe7-a491-80e28f74e24d">W ramach oceny merytorycznej, o której mowa w art. 22, uwzględnia się w przypadku:</zdanie>
+              </p>
+              <punkt eId="DU/2025/1643__art_23__pkt_1" gd:GUID="db133ceb-287b-4dd7-bb5f-b83815ba5352">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="55afd910-78ee-4dbf-a149-a3da98f43dea" fragment="2" gd:fragmentGUID="d007e972-bf58-466f-97c8-fb77d2fe08d4">osób, o których mowa w art. 18 ust. 1 pkt 1 i 2:</zdanie>
+                </p>
+                <litera eId="DU/2025/1643__art_23__pkt_1__lit_a" gd:GUID="645fb5f0-5d56-4bf5-80d1-2d65b0e22724">
+                  <nr>a</nr>
+                  <p>
+                    <zdanie nr="1" gd:zdGUID="55afd910-78ee-4dbf-a149-a3da98f43dea" fragment="3" gd:fragmentGUID="3a4fa107-fd41-4446-ba10-727187ae87fa">dotychczasowy przebieg nauczania lub kształcenia, w tym osiągnięcia naukowe, lub</zdanie>
+                  </p>
+                </litera>
+                <litera eId="DU/2025/1643__art_23__pkt_1__lit_b" gd:GUID="9e8e12fa-c7d5-4303-924f-3d31d3253bd5">
+                  <nr>b</nr>
+                  <p>
+                    <zdanie nr="1" gd:zdGUID="55afd910-78ee-4dbf-a149-a3da98f43dea" fragment="4" gd:fragmentGUID="ae099eb6-32ca-453b-9bc5-73924407fc3f">opinię podmiotu, w którym osoba ta odbywała nauczanie lub kształcenie, lub</zdanie>
+                  </p>
+                </litera>
+                <litera eId="DU/2025/1643__art_23__pkt_1__lit_c" gd:GUID="91d6812e-30a4-4196-8916-423bedbe10d3">
+                  <nr>c</nr>
+                  <p>
+                    <zdanie nr="1" gd:zdGUID="55afd910-78ee-4dbf-a149-a3da98f43dea" fragment="5" gd:fragmentGUID="b4eebb88-14f8-498d-bdf5-c1cab424b8ed">wiedzę lub umiejętności w zakresie odpowiadającym planom kształcenia, lub</zdanie>
+                  </p>
+                </litera>
+                <litera eId="DU/2025/1643__art_23__pkt_1__lit_d" gd:GUID="960008d5-4aa9-411d-b3a3-1f8b22b131b6">
+                  <nr>d</nr>
+                  <p>
+                    <zdanie nr="1" gd:zdGUID="55afd910-78ee-4dbf-a149-a3da98f43dea" fragment="6" gd:fragmentGUID="42019c75-65a8-4c64-89fe-080af9b3cfae">dotychczasową aktywność społeczną, lub</zdanie>
+                  </p>
+                </litera>
+                <litera eId="DU/2025/1643__art_23__pkt_1__lit_e" gd:GUID="be0cf3da-ed3b-469c-bb5d-1ad0682cb2c4">
+                  <nr>e</nr>
+                  <p>
+                    <zdanie nr="1" gd:zdGUID="55afd910-78ee-4dbf-a149-a3da98f43dea" fragment="7" gd:fragmentGUID="c2def7eb-86d8-4fb1-80d8-65dc26a2823c">plany naukowe lub zawodowe, lub</zdanie>
+                  </p>
+                </litera>
+                <litera eId="DU/2025/1643__art_23__pkt_1__lit_f" gd:GUID="8dd01f4f-a16e-407b-bca7-eaada0968d86">
+                  <nr>f</nr>
+                  <p>
+                    <zdanie nr="1" gd:zdGUID="55afd910-78ee-4dbf-a149-a3da98f43dea" fragment="8" gd:fragmentGUID="ddec439e-0a04-4a66-ad01-b198a62c505a">znajomość języka, w którym będzie odbywało się kształcenie, lub</zdanie>
+                  </p>
+                </litera>
+                <litera eId="DU/2025/1643__art_23__pkt_1__lit_g" gd:GUID="6819063f-c174-4b8b-9148-3606dd33a082">
+                  <nr>g</nr>
+                  <p>
+                    <zdanie nr="1" gd:zdGUID="55afd910-78ee-4dbf-a149-a3da98f43dea" fragment="9" gd:fragmentGUID="b93d4f8f-17af-4590-8430-96edb3006e8e">uzasadnienie odbywania kształcenia w danym podmiocie, o którym mowa w art. 7 ust. 1 ustawy z dnia 20 lipca 2018 r. – Prawo o szkolnictwie wyższym i nauce, zagranicznej uczelni lub instytucji naukowej, lub</zdanie>
+                  </p>
+                </litera>
+                <litera eId="DU/2025/1643__art_23__pkt_1__lit_h" gd:GUID="4ecc6932-c37f-4e4c-a1d0-00d3bb81e4bd">
+                  <nr>h</nr>
+                  <p>
+                    <zdanie nr="1" gd:zdGUID="55afd910-78ee-4dbf-a149-a3da98f43dea" fragment="10" gd:fragmentGUID="3e2792ef-b03a-4bd7-8365-ca29e00bbf36">zasadność kosztów związanych z realizacją planowanych działań;</zdanie>
+                  </p>
+                </litera>
+              </punkt>
+              <punkt eId="DU/2025/1643__art_23__pkt_2" gd:GUID="8a77b448-a1b8-437e-9a90-fb8112811b98">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="55afd910-78ee-4dbf-a149-a3da98f43dea" fragment="11" gd:fragmentGUID="44c3c916-9b3b-4891-b163-372c66d9dabd">osób, o których mowa w art. 18 ust. 1 pkt 3 i 4:</zdanie>
+                </p>
+                <litera eId="DU/2025/1643__art_23__pkt_2__lit_a" gd:GUID="a783ff14-2a73-4c4e-b503-b818b1c81d15">
+                  <nr>a</nr>
+                  <p>
+                    <zdanie nr="1" gd:zdGUID="55afd910-78ee-4dbf-a149-a3da98f43dea" fragment="12" gd:fragmentGUID="c2fcf059-71dc-41c1-8f35-8b38d20810f2">dotychczasowy przebieg kariery naukowej lub akademickiej, w tym osiągnięcia naukowe, lub</zdanie>
+                  </p>
+                </litera>
+                <litera eId="DU/2025/1643__art_23__pkt_2__lit_b" gd:GUID="7087da82-a81a-4ec4-89e4-a28fdb47e44a">
+                  <nr>b</nr>
+                  <p>
+                    <zdanie nr="1" gd:zdGUID="55afd910-78ee-4dbf-a149-a3da98f43dea" fragment="13" gd:fragmentGUID="4c16d738-45ca-47fc-bca3-51d39f1501ad">opinię podmiotu, o którym mowa w art. 7 ust. 1 ustawy z dnia 20 lipca 2018 r. – Prawo o szkolnictwie wyższym i nauce, zagranicznej uczelni lub instytucji naukowej, lub</zdanie>
+                  </p>
+                </litera>
+                <litera eId="DU/2025/1643__art_23__pkt_2__lit_c" gd:GUID="360d8414-cbea-438b-bfc5-501ff1989f0a">
+                  <nr>c</nr>
+                  <p>
+                    <zdanie nr="1" gd:zdGUID="55afd910-78ee-4dbf-a149-a3da98f43dea" fragment="14" gd:fragmentGUID="f2fb4b34-d9c0-4e69-8d6b-ba65280b8c29">renomę i poziom naukowy podmiotu, o którym mowa w art. 7 ust. 1 ustawy z dnia 20 lipca 2018 r. – Prawo o szkolnictwie wyższym i nauce, zagranicznej uczelni lub instytucji naukowej, z którą osoba ta zamierza podjąć współpracę, lub</zdanie>
+                  </p>
+                </litera>
+                <litera eId="DU/2025/1643__art_23__pkt_2__lit_d" gd:GUID="42b64b5d-92b2-4869-ba5d-d579961a218f">
+                  <nr>d</nr>
+                  <p>
+                    <zdanie nr="1" gd:zdGUID="55afd910-78ee-4dbf-a149-a3da98f43dea" fragment="15" gd:fragmentGUID="7ea7e879-267e-4fee-98e7-31820975c8be">zakres i sposób realizacji planowanych działań o charakterze naukowym lub dydaktycznym, lub</zdanie>
+                  </p>
+                </litera>
+                <litera eId="DU/2025/1643__art_23__pkt_2__lit_e" gd:GUID="e77b6eb9-887b-40ac-bbe8-a6b2674891af">
+                  <nr>e</nr>
+                  <p>
+                    <zdanie nr="1" gd:zdGUID="55afd910-78ee-4dbf-a149-a3da98f43dea" fragment="16" gd:fragmentGUID="e8a766b3-84fe-49a6-9d4e-4ab606228b00">uzasadnienie podjęcia współpracy ze wskazanym podmiotem, o którym mowa w art. 7 ust. 1 ustawy z dnia 20 lipca 2018 r. – Prawo o szkolnictwie wyższym i nauce, zagraniczną uczelnią lub instytucją naukową, lub</zdanie>
+                  </p>
+                </litera>
+                <litera eId="DU/2025/1643__art_23__pkt_2__lit_f" gd:GUID="9471c7b0-9c68-48ef-85f0-91ae26ea7c81">
+                  <nr>f</nr>
+                  <p>
+                    <zdanie nr="1" gd:zdGUID="55afd910-78ee-4dbf-a149-a3da98f43dea" fragment="17" gd:fragmentGUID="427ec06a-25c4-4f6b-bb67-85e2dcc9e610">zasadność kosztów związanych z realizacją planowanych działań;</zdanie>
+                  </p>
+                </litera>
+              </punkt>
+              <punkt eId="DU/2025/1643__art_23__pkt_3" gd:GUID="4fda6e31-b9a5-4844-92e9-55a30eaf1f7f">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="55afd910-78ee-4dbf-a149-a3da98f43dea" fragment="18" gd:fragmentGUID="2f2a3b32-4320-44d7-9148-cc0c35fccc04">osób, o których mowa w art. 18 ust. 1 pkt 5:</zdanie>
+                </p>
+                <litera eId="DU/2025/1643__art_23__pkt_3__lit_a" gd:GUID="a12d3b81-e5c9-4ffd-8070-bf7fed49f2a2">
+                  <nr>a</nr>
+                  <p>
+                    <zdanie nr="1" gd:zdGUID="55afd910-78ee-4dbf-a149-a3da98f43dea" fragment="19" gd:fragmentGUID="639e377e-dcb5-4bc2-a4d8-6cb1e1e4636b">posiadanie wymaganego przez stronę przyjmującą wykształcenia oraz kwalifikacji uprawniających do nauczania języka polskiego jako obcego lub</zdanie>
+                  </p>
+                </litera>
+                <litera eId="DU/2025/1643__art_23__pkt_3__lit_b" gd:GUID="590d6c53-fdd4-43bf-a7d5-30d178129779">
+                  <nr>b</nr>
+                  <p>
+                    <zdanie nr="1" gd:zdGUID="55afd910-78ee-4dbf-a149-a3da98f43dea" fragment="20" gd:fragmentGUID="27574a2b-4a2c-45b5-a38b-f9425af9df3f">znajomość kultury państwa, do którego ta osoba ma być skierowana, oraz języka urzędowego tego państwa lub innego języka umożliwiającego komunikowanie się w tym państwie;</zdanie>
+                  </p>
+                </litera>
+              </punkt>
+              <punkt eId="DU/2025/1643__art_23__pkt_4" gd:GUID="6112ae9c-230e-4e6b-b5fb-10d378c7a6e0">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="55afd910-78ee-4dbf-a149-a3da98f43dea" fragment="21" gd:fragmentGUID="77c181cb-cc0b-40e9-b22a-e290c182523c">podmiotów, o których mowa w art. 18 ust. 1 pkt 6–8:</zdanie>
+                </p>
+                <litera eId="DU/2025/1643__art_23__pkt_4__lit_a" gd:GUID="95ebc641-ea6f-46c0-8faf-e0773a5a6bc1">
+                  <nr>a</nr>
+                  <p>
+                    <zdanie nr="1" gd:zdGUID="55afd910-78ee-4dbf-a149-a3da98f43dea" fragment="22" gd:fragmentGUID="6d95f88b-baa6-48ce-bbbc-158cd607b57d">potencjał organizacyjny i doświadczenie w zakresie realizacji projektów, w tym w zakresie współpracy międzynarodowej, lub</zdanie>
+                  </p>
+                </litera>
+                <litera eId="DU/2025/1643__art_23__pkt_4__lit_b" gd:GUID="c2e41c1b-5793-4f41-bda3-9eef8bc90332">
+                  <nr>b</nr>
+                  <p>
+                    <zdanie nr="1" gd:zdGUID="55afd910-78ee-4dbf-a149-a3da98f43dea" fragment="23" gd:fragmentGUID="f5e7d9b0-e9f8-409c-8de2-21ad25921bd0">zgodność działań z celami polityki naukowej, innowacyjnej i społecznej państwa, lub</zdanie>
+                  </p>
+                </litera>
+                <litera eId="DU/2025/1643__art_23__pkt_4__lit_c" gd:GUID="e00b8621-8b6f-4259-94a5-095d732415c8">
+                  <nr>c</nr>
+                  <p>
+                    <zdanie nr="1" gd:zdGUID="55afd910-78ee-4dbf-a149-a3da98f43dea" fragment="24" gd:fragmentGUID="fb3275b8-f144-42d2-8369-c931f1ae2fad">zgodność działań z celami i strategią podmiotu, lub</zdanie>
+                  </p>
+                </litera>
+                <litera eId="DU/2025/1643__art_23__pkt_4__lit_d" gd:GUID="faf05621-2f57-49f7-b4b3-17733034c746">
+                  <nr>d</nr>
+                  <p>
+                    <zdanie nr="1" gd:zdGUID="55afd910-78ee-4dbf-a149-a3da98f43dea" fragment="25" gd:fragmentGUID="cdeff471-606f-4f3c-a274-d27f886b74bd">praktyczne znaczenie działań dla wzmocnienia potencjału podmiotu, w tym w zakresie międzynarodowej współpracy naukowej lub akademickiej, lub</zdanie>
+                  </p>
+                </litera>
+                <litera eId="DU/2025/1643__art_23__pkt_4__lit_e" gd:GUID="df4537f2-d474-46af-8503-715ad463bc0e">
+                  <nr>e</nr>
+                  <p>
+                    <zdanie nr="1" gd:zdGUID="55afd910-78ee-4dbf-a149-a3da98f43dea" fragment="26" gd:fragmentGUID="20a5e0e8-b756-493f-a157-756de0820f97">zakres i sposób realizacji planowanych działań, lub</zdanie>
+                  </p>
+                </litera>
+                <litera eId="DU/2025/1643__art_23__pkt_4__lit_f" gd:GUID="96cfe187-56c5-49c0-9801-c6627ae5cc9d">
+                  <nr>f</nr>
+                  <p>
+                    <zdanie nr="1" gd:zdGUID="55afd910-78ee-4dbf-a149-a3da98f43dea" fragment="27" gd:fragmentGUID="37134231-2efd-4f2b-8d0d-88d9d33da300">zasadność kosztów związanych z realizacją planowanych działań.</zdanie>
+                  </p>
+                </litera>
+              </punkt>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2025/1643__art_24" gd:GUID="ab1e99d2-6100-4352-841b-95ec4e015571">
+            <nr>24</nr>
+            <ustep eId="DU/2025/1643__art_24__ust_1" gd:GUID="2cf77832-d138-402b-9adf-1b0ca715acb5">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="dbbf3cdc-0323-44ad-aa16-26a7b699a995" fragment="1" gd:fragmentGUID="5dd0d1f7-f203-47a7-9efc-167032081179">Do rozpatrzenia kierowane są wyłącznie wnioski kompletne.</zdanie>
+                <zdanie nr="2" gd:zdGUID="cd613ca3-1209-4ed7-b33e-04cb2a26e291" fragment="1" gd:fragmentGUID="4d37a308-5c99-442e-8836-bb547bda0fb8">W przypadku złożenia wniosku niekompletnego wzywa się wnioskodawcę do jego uzupełnienia, w terminie 14 dni od dnia otrzymania wezwania, z pouczeniem, że brak uzupełnienia spowoduje pozostawienie wniosku bez rozpatrzenia.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/1643__art_24__ust_2" gd:GUID="1e59dc18-9bb3-4a7c-8abb-6b582a60a370">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="c17132ec-599d-4f40-80a7-bc3ad56174d7" fragment="1" gd:fragmentGUID="93611bf8-bd76-48b6-91e5-b43cf58d2d1b">Bez rozpatrzenia pozostawia się również wnioski:</zdanie>
+              </p>
+              <punkt eId="DU/2025/1643__art_24__ust_2__pkt_1" gd:GUID="257c2f98-0ea8-4d00-afc6-3f1c96a812cc">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="c17132ec-599d-4f40-80a7-bc3ad56174d7" fragment="2" gd:fragmentGUID="44f59e53-310a-4372-b82c-a6ee8fa51116">złożone po terminie określonym w ogłoszeniu o naborze wniosków o udział w programie;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/1643__art_24__ust_2__pkt_2" gd:GUID="8f0d673c-1e3f-4f2e-beff-33edc62f92e3">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="c17132ec-599d-4f40-80a7-bc3ad56174d7" fragment="3" gd:fragmentGUID="abd01e6a-7b77-4a02-9000-8b943f4e73a4">niespełniające wymagań formalnych określonych w ogłoszeniu o naborze wniosków o udział w programie.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2025/1643__art_25" gd:GUID="9c540199-f1cb-4897-9835-29ca85ce85cf">
+            <nr>25</nr>
+            <ustep eId="DU/2025/1643__art_25__ust_1" gd:GUID="81138aa5-7bb9-4f5b-b9e5-59e94c71e2dc">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="17c833c3-d571-4151-82c4-1e2e29c1ad9c" fragment="1" gd:fragmentGUID="11432cfc-9727-4360-8f70-cbe2da5aa571">Dyrektor wydaje decyzję o przyznaniu albo o odmowie przyznania środków finansowych w ramach realizacji programu.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/1643__art_25__ust_2" gd:GUID="defda248-26a4-48f5-8e65-6f84214841ae">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="bae0baa6-a90c-4fca-bb81-fad34e8bffb6" fragment="1" gd:fragmentGUID="dd112bdb-b490-4e1d-b83d-44dba6937742">W przypadku wystąpienia naruszeń formalnych przy przyznawaniu środków finansowych wnioskodawca może zwrócić się do Dyrektora z wnioskiem o ponowne rozpatrzenie sprawy.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/1643__art_25__ust_3" gd:GUID="15a4b979-4b07-4587-a48e-819b4a0dbaba">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ddba16e7-0d81-4046-aad1-409cf146b75d" fragment="1" gd:fragmentGUID="30276eb3-72bf-4959-acb0-00a1874fe8b1">Listę podmiotów, którym zostały przyznane środki finansowe, zawierającą imiona i nazwiska lub ich nazwy, zamieszcza się na stronie podmiotowej Agencji w Biuletynie Informacji Publicznej.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/1643__art_25__ust_4" gd:GUID="ea62690a-83f5-4f25-ac60-95df7482fcdd">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="664233f6-909d-4f88-be55-e1b59f36ae1e" fragment="1" gd:fragmentGUID="6a0d0f81-792d-448f-9d01-bd1cbff87d04">W uzasadnionych przypadkach, za zgodą ministra właściwego do spraw szkolnictwa wyższego i nauki, Agencja nie zamieszcza imion i nazwisk obywateli państw, których dotyczy ta zgoda, oraz nazw podmiotów działających na terytorium tych państw, na listach, o których mowa w ust. 3, oraz nie udostępnia informacji o tych osobach i podmiotach posiadanych w związku z realizacją zadań, o których mowa w art. 2, na podstawie ustawy z dnia 6 września 2001 r. o dostępie do informacji publicznej (Dz. U. z 2022 r. poz. 902).</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2025/1643__art_26" gd:GUID="85120d0e-bec4-4c4d-83ee-300ab2228978">
+            <nr>26</nr>
+            <ustep eId="DU/2025/1643__art_26__ust_1" gd:GUID="d12dba51-797a-442a-b941-d290b4f65d54">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="73b4c4bc-a642-4f10-9b64-a40c1d4f2fd4" fragment="1" gd:fragmentGUID="2c4aaa25-d891-4e0f-9971-61735c01e686">Środki finansowe w ramach realizacji programu są przekazywane na podstawie umowy zawieranej przez Dyrektora z osobą lub podmiotem, którym zostały one przyznane.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/1643__art_26__ust_2" gd:GUID="5731c577-01da-4b47-bc8b-d51ce48cf3cb">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="6085241f-94b5-4997-918b-f4a8109219b3" fragment="1" gd:fragmentGUID="a3d21bf9-3af3-4572-b3c8-4a3da16ae830">Umowa, o której mowa w ust. 1, określa w szczególności:</zdanie>
+              </p>
+              <punkt eId="DU/2025/1643__art_26__ust_2__pkt_1" gd:GUID="bcc3b1a2-53ee-470f-b80d-fc83b91c31b7">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="6085241f-94b5-4997-918b-f4a8109219b3" fragment="2" gd:fragmentGUID="6078d284-f4e6-4600-ab0c-35da84c3b8ec">warunki jej realizacji i finansowania;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/1643__art_26__ust_2__pkt_2" gd:GUID="52649375-3006-4840-96fb-88fb3c146f10">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="6085241f-94b5-4997-918b-f4a8109219b3" fragment="3" gd:fragmentGUID="bf401e29-7668-4130-8660-edf097cfbbfe">warunki i sposób rozliczania przyznanych środków finansowych.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2025/1643__art_26a" gd:GUID="a757fdf4-2d70-4d2f-8ea1-91924572e888">
+            <nr>26a</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="1895ff39-da66-4efd-be71-e8989625dc2f">
+              <p>
+                <zdanie nr="1" gd:zdGUID="dd7753b9-d1de-4d2b-a452-983ee18e458e" fragment="1" gd:fragmentGUID="a940f0ff-b519-4ee7-8fdf-dacb9beccf08">Dyrektor może powoływać ekspertów zewnętrznych do przeprowadzania ocen wykonania umów i rozliczenia przyznanych środków finansowych.</zdanie>
+                <zdanie nr="2" gd:zdGUID="2740fad5-0bc2-490b-9dd4-f1bced28fb3b" fragment="1" gd:fragmentGUID="ad9be5be-b2f7-4105-b012-c8d0db3c9a21">Do powoływania ekspertów przepis art. 22 ust. 3 stosuje się.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2025/1643__art_27" gd:GUID="8922de3c-d20e-4b99-9f0f-e7212f72cf22">
+            <nr>27</nr>
+            <ustep eId="DU/2025/1643__art_27__ust_1" gd:GUID="27247941-b276-4bed-af3b-52032286e5e6">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="32c63b1c-f363-4e9c-a563-e73798d137bd" fragment="1" gd:fragmentGUID="059eaca9-ffa6-439b-b757-45a8b75da656">Agencja prowadzi systematyczną ewaluację realizowanych programów oraz innych zadań Agencji, w tym ocenę ich wpływu na rozwój nauki i gospodarki.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/1643__art_27__ust_2" gd:GUID="85ae1bd7-5747-4131-bc9c-a84242095c0a">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="98955b4d-f7a3-414a-830e-3b4603af2c1c" fragment="1" gd:fragmentGUID="03b48034-48ad-447a-a89f-90f4685ae584">Dyrektor, w terminie do dnia 1 grudnia, przedstawia ministrowi właściwemu do spraw szkolnictwa wyższego i nauki plan ewaluacji na kolejny rok.</zdanie>
+                <zdanie nr="2" gd:zdGUID="14a1746a-c478-419e-a505-1bc35ba649fc" fragment="1" gd:fragmentGUID="7f10a16d-849e-4eb6-9a7e-296b28e4edc3">Informacja o wynikach ewaluacji stanowi część sprawozdania z działalności Agencji.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2025/1643__art_28" gd:GUID="cd96f357-4978-410a-a5c8-83ba53c0984e">
+            <nr>28</nr>
+            <ustep eId="DU/2025/1643__art_28__ust_1" gd:GUID="069e19da-63be-4b24-8dd8-5e297b31e750">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="24db2fab-0a7a-4e28-abbf-12df0b24df0b" fragment="1" gd:fragmentGUID="4f43e1f0-5035-4eb1-ad50-29e2ced13f4b">Minister właściwy do spraw szkolnictwa wyższego i nauki sprawuje nadzór nad działalnością Agencji pod względem legalności, rzetelności, celowości i gospodarności.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/1643__art_28__ust_2" gd:GUID="f6c5da3c-5009-4d7a-aff0-25b1b8708581">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="d4cdbf9e-64fe-4574-9c16-71c3a5b813b4" fragment="1" gd:fragmentGUID="74793a5e-2a31-42ae-a259-9f741e0a880a">W ramach nadzoru minister właściwy do spraw szkolnictwa wyższego i nauki:</zdanie>
+              </p>
+              <punkt eId="DU/2025/1643__art_28__ust_2__pkt_1" gd:GUID="e0cc364c-ff00-4b11-866d-e7e547c0a981">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="d4cdbf9e-64fe-4574-9c16-71c3a5b813b4" fragment="2" gd:fragmentGUID="b7a847b0-976f-4352-a6ea-41e9aad2c905">zatwierdza roczny plan finansowy i roczne sprawozdanie finansowe Agencji oraz wyraża zgodę na zmianę rocznego planu finansowego Agencji;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/1643__art_28__ust_2__pkt_2" gd:GUID="bb22e5d9-02a5-4693-8015-162131aed98a">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="d4cdbf9e-64fe-4574-9c16-71c3a5b813b4" fragment="3" gd:fragmentGUID="0f0f4a35-9128-4d43-a81d-dc998eef01e2">sprawuje kontrolę nad Agencją w trybie i na zasadach określonych w ustawie z dnia 15 lipca 2011 r. o kontroli w administracji rządowej (Dz. U. z 2020 r. poz. 224 oraz z 2025 r. poz. 1158);</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/1643__art_28__ust_2__pkt_3" gd:GUID="a71dde6f-5d08-4041-a503-3230976c338c">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="d4cdbf9e-64fe-4574-9c16-71c3a5b813b4" fragment="4" gd:fragmentGUID="cd58de20-6b11-491f-a0f2-f91be66423d4">przyjmuje sprawozdanie z działalności Agencji przedstawione przez Dyrektora oraz ocenia na jego podstawie działalność Agencji;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/1643__art_28__ust_2__pkt_4" gd:GUID="1718451b-700f-4e38-84c1-80b7c8e0ef55">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="d4cdbf9e-64fe-4574-9c16-71c3a5b813b4" fragment="5" gd:fragmentGUID="b7e0d5ed-9d24-4bab-a160-cd938a11516f">może żądać wglądu do wszystkich dokumentów Agencji.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2025/1643__art_28a" gd:GUID="03d32f6c-0103-4bb7-81e4-afd036f54653">
+            <nr>28a</nr>
+            <ustep eId="DU/2025/1643__art_28a__ust_1" gd:GUID="5effa924-480c-4be4-8812-f9e38fd320fb">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="8534199d-bdb6-435a-90b3-485e2ed64612" fragment="1" gd:fragmentGUID="f05fd4b1-ddda-4b7a-8109-0e4531dadfda">Działalność Agencji podlega audytowi zewnętrznemu w zakresie prawidłowości realizacji zadań, rocznego planu finansowego i sprawozdawczości, a także funkcjonowania kontroli zarządczej.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/1643__art_28a__ust_2" gd:GUID="04dac637-7495-4328-8164-fd91654522da">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="813efd21-3c7d-40f1-b382-31fac5c90849" fragment="1" gd:fragmentGUID="4935d8c4-7065-45b0-af27-f8690e7cc04c">Audyt przeprowadza się nie rzadziej niż co 4 lata.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/1643__art_28a__ust_3" gd:GUID="e9f77d73-969d-4b0c-9c76-98d2fa999afa">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="e73966c4-d791-4523-a743-80e3a01106a7" fragment="1" gd:fragmentGUID="0013da95-d245-44e8-b765-536fab62529d">Audyt obejmuje działalność Agencji w roku kalendarzowym z okresu, o którym mowa w ust. 2.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+        </oddzial-n>
+      </rozdzial>
+      <rozdzial eId="DU/2025/1643__rozdz_4" gd:GUID="b799e096-3c15-4d20-967e-945c3c4ed1b1">
+        <naglowek-rozdzialu>
+          <nr>4</nr>
+          <p>Gospodarka finansowa Agencji</p>
+        </naglowek-rozdzialu>
+        <oddzial-n brak-eid="jednostka-nieoznaczona" gd:GUID="9eee73b5-8ef0-4bc4-8034-f6e378de7914">
+          <artykul eId="DU/2025/1643__art_29" gd:GUID="15193f56-f444-41a9-b946-c55bf7cbe6b1">
+            <nr>29</nr>
+            <ustep eId="DU/2025/1643__art_29__ust_1" gd:GUID="c35aa0e5-100e-4b8e-b5ba-086a348bc86b">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="7bf593bf-b38a-4e75-be13-83e4ab00b3ea" fragment="1" gd:fragmentGUID="cb7cf5c8-1cd8-4288-92eb-a304c422c8f9">Agencja prowadzi samodzielną gospodarkę finansową na podstawie rocznego planu finansowego, o którym mowa w ustawie z dnia 27 sierpnia 2009 r. o finansach publicznych (Dz. U. z 2025 r. poz. 1483).</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/1643__art_29__ust_2" gd:GUID="e83bdae1-ca97-40d5-8474-d562e8e374f5">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="39740ed9-28ab-4535-8f53-d9fb166ebe6f" fragment="1" gd:fragmentGUID="ef495296-5eb3-4023-bbf3-3ca5c8f00097">Projekt rocznego planu finansowego Agencji, po zaopiniowaniu przez Radę i zatwierdzeniu przez ministra właściwego do spraw szkolnictwa wyższego i nauki, jest przekazywany ministrowi właściwemu do spraw finansów publicznych w trybie określonym w przepisach dotyczących prac nad projektem ustawy budżetowej.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/1643__art_29__ust_3" gd:GUID="2d0dfbcc-6c97-4213-97ef-d05f537d6634">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="e6405101-fce0-425c-a342-9315312034c8" fragment="1" gd:fragmentGUID="3c656c8e-1e4f-496a-a079-c5f25f2390a7">Do dnia zatwierdzenia rocznego planu finansowego Agencja działa na podstawie projektu tego planu.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/1643__art_29__ust_4" gd:GUID="a9aec6b5-fd2b-4f89-884f-f402ab4c21ea">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="778eea99-753b-41d1-b1ed-24041b089172" fragment="1" gd:fragmentGUID="d79956a4-1e37-43f7-8cfb-89f9c383e09d">Dyrektor, w terminie do dnia 31 marca, przedstawia ministrowi właściwemu do spraw szkolnictwa wyższego i nauki następujące dokumenty dotyczące poprzedniego roku obrotowego:</zdanie>
+              </p>
+              <punkt eId="DU/2025/1643__art_29__ust_4__pkt_1" gd:GUID="bd9e023e-7560-41db-bdfc-e2d7c356b66e">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="778eea99-753b-41d1-b1ed-24041b089172" fragment="2" gd:fragmentGUID="0b2911b1-df94-4187-b8c1-b3387c6bd271">roczne sprawozdanie finansowe Agencji wraz ze sprawozdaniem z badania;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/1643__art_29__ust_4__pkt_2" gd:GUID="35d96f30-ae20-4b15-841b-35f249bf2d3c">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="778eea99-753b-41d1-b1ed-24041b089172" fragment="3" gd:fragmentGUID="f3b312a6-9270-437f-9590-7b6496a900e0">roczne sprawozdanie z działalności Agencji;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/1643__art_29__ust_4__pkt_3" gd:GUID="5e2feba7-dd54-4f89-9bfe-f8f38b0bbd87">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="778eea99-753b-41d1-b1ed-24041b089172" fragment="4" gd:fragmentGUID="06667f6d-251c-4f14-ae21-6f360123bbb2">opinie Rady dotyczące rocznego sprawozdania finansowego Agencji i rocznego sprawozdania z działalności Agencji.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2025/1643__art_29__ust_5" gd:GUID="25bcb507-1410-4ed6-a416-b83d26a46677">
+              <nr>5</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="8fd974c1-a0ad-4350-a9c6-21ebdbd970e1" fragment="1" gd:fragmentGUID="a04fde7d-daf2-49e7-af9e-03ba8aabd533">Rokiem obrotowym Agencji jest rok kalendarzowy.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2025/1643__art_30" gd:GUID="d605d454-03bf-4246-9963-e6b3725643d1">
+            <nr>30</nr>
+            <ustep eId="DU/2025/1643__art_30__ust_1" gd:GUID="193b5df5-064e-46c1-b3fa-1bf0e48cd452">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="af51ab4c-2997-4ee3-a9c9-3338aea41a30" fragment="1" gd:fragmentGUID="6256a47b-7165-40f9-ba43-264da7aafe94">Przychodami Agencji są dotacje:</zdanie>
+              </p>
+              <punkt eId="DU/2025/1643__art_30__ust_1__pkt_1" gd:GUID="7b43ae03-39d6-4b96-afbd-07defa319808">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="af51ab4c-2997-4ee3-a9c9-3338aea41a30" fragment="2" gd:fragmentGUID="8bff20eb-fc6b-430c-85e5-3dedfa368564">podmiotowe z budżetu państwa przeznaczone na dofinansowanie bieżącej działalności Agencji;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/1643__art_30__ust_1__pkt_2" gd:GUID="6fd74c43-6e0c-4b1a-82c3-c963d4c2d8f9">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="af51ab4c-2997-4ee3-a9c9-3338aea41a30" fragment="3" gd:fragmentGUID="389ad287-57a7-40b1-9c8e-f743bce26b44">celowe przeznaczone na realizację zadań Agencji, w tym na współfinansowanie programów i projektów finansowanych z udziałem środków europejskich;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/1643__art_30__ust_1__pkt_3" gd:GUID="b29c1096-3bf2-4ce9-a029-88b4b30be9ea">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="af51ab4c-2997-4ee3-a9c9-3338aea41a30" fragment="4" gd:fragmentGUID="d5e05dd2-d7b5-41bc-9612-030df6f72e92">celowe na finansowanie lub dofinansowanie kosztów inwestycji dotyczących obsługi realizacji zadań Agencji.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2025/1643__art_30__ust_2" gd:GUID="0e98aa9a-3881-4b9a-9a29-7a2fcd54a50a">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="fc089775-2d70-43ff-9a33-9d33758531cd" fragment="1" gd:fragmentGUID="5af3e255-a699-40da-ae09-8eb6fde6ab40">Przychodami Agencji mogą być:</zdanie>
+              </p>
+              <punkt eId="DU/2025/1643__art_30__ust_2__pkt_1" gd:GUID="60e003ac-9e8d-4df7-9013-3a8ad963db71">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="fc089775-2d70-43ff-9a33-9d33758531cd" fragment="2" gd:fragmentGUID="d544ee1c-cac1-42f9-ab11-8719c30c7093">środki finansowe przekazane na realizację zadań, o których mowa w art. 2 ust. 5;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/1643__art_30__ust_2__pkt_2" gd:GUID="032c5836-d08e-4c54-92e5-1d173a38e933">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="fc089775-2d70-43ff-9a33-9d33758531cd" fragment="3" gd:fragmentGUID="84001580-2590-44ef-b878-dfb512b98a9e">środki finansowe pochodzące z budżetu Unii Europejskiej;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/1643__art_30__ust_2__pkt_3" gd:GUID="621acbbc-dd3c-486b-b2fc-63b582ddcc17">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="fc089775-2d70-43ff-9a33-9d33758531cd" fragment="4" gd:fragmentGUID="1eab7f90-9bc3-4e91-8502-1e2ec6a60fe4">środki finansowe pochodzące z krajowych i międzynarodowych projektów lub programów;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/1643__art_30__ust_2__pkt_4" gd:GUID="e60bff21-4dad-4130-8ff3-eeb952ff4017">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="fc089775-2d70-43ff-9a33-9d33758531cd" fragment="5" gd:fragmentGUID="ad98e604-ee65-43a5-b29b-a2e133543346">przychody z innych tytułów.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2025/1643__art_31" gd:GUID="834d6689-9f83-4355-a138-b1524c23b5c2">
+            <nr>31</nr>
+            <ustep eId="DU/2025/1643__art_31__ust_1" gd:GUID="a8609139-2268-44ba-a636-e3f30ed3afe8">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="3f4e5de8-35fc-48ae-86ce-e0f88841c87a" fragment="1" gd:fragmentGUID="c336fb72-e5e1-4a4f-b128-620bb5267952">Agencja może prowadzić działalność gospodarczą w zakresie:</zdanie>
+              </p>
+              <punkt eId="DU/2025/1643__art_31__ust_1__pkt_1" gd:GUID="1cdbb422-3052-4444-bf33-560c19d294df">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="3f4e5de8-35fc-48ae-86ce-e0f88841c87a" fragment="2" gd:fragmentGUID="f7acce34-6178-4026-9488-de329ce32bce">świadczenia usług doradczych i eksperckich;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/1643__art_31__ust_1__pkt_2" gd:GUID="f966f5bc-3f63-4ed9-897a-5fd8067c80f5">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="3f4e5de8-35fc-48ae-86ce-e0f88841c87a" fragment="3" gd:fragmentGUID="b01a0884-80a7-4a47-8011-8c77d35310e0">organizowania konferencji, zjazdów, sympozjów i innych przedsięwzięć o charakterze szkoleniowym lub informacyjnym;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/1643__art_31__ust_1__pkt_3" gd:GUID="ce7a2fbe-379d-4d0e-9bae-b456474cf3d5">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="3f4e5de8-35fc-48ae-86ce-e0f88841c87a" fragment="4" gd:fragmentGUID="b6d3fd36-b897-4cc2-8853-e53bf4baa3ae">działalności wydawniczej.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2025/1643__art_31__ust_2" gd:GUID="d6388b23-5040-4074-9c76-7931efe7b4fa">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="30b6d2a1-127e-472e-aa05-c293f560790a" fragment="1" gd:fragmentGUID="9da2d552-2e6b-4878-91aa-5e59761eb6a7">Działalność gospodarcza, o której mowa w ust. 1:</zdanie>
+              </p>
+              <punkt eId="DU/2025/1643__art_31__ust_2__pkt_1" gd:GUID="3d4123da-a398-4925-8e55-ff369c9fd5be">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="30b6d2a1-127e-472e-aa05-c293f560790a" fragment="2" gd:fragmentGUID="7aba46ac-fa52-4bd3-a4d5-0b1d449c92c9">jest wyodrębniona pod względem finansowym i rachunkowym z działalności, o której mowa w art. 2;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/1643__art_31__ust_2__pkt_2" gd:GUID="9cd3e3e6-1f11-4493-928d-1ad08471f6ce">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="30b6d2a1-127e-472e-aa05-c293f560790a" fragment="3" gd:fragmentGUID="80119639-37cf-45f5-92d5-70c677c35b38">nie może być finansowana ze środków pochodzących z budżetu państwa.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2025/1643__art_31__ust_3" gd:GUID="aa453e98-8d80-49f4-aea0-4050685a6e47">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="09a6fb1b-a1ca-4d70-bb01-e30d570d7bf9" fragment="1" gd:fragmentGUID="0f5103ab-2dc2-4156-b048-bf97167450e4">Przychody z działalności gospodarczej Agencji służą wyłącznie realizacji zadań, o których mowa w art. 2.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2025/1643__art_32" gd:GUID="0d686e3f-b58b-49be-9a11-63dc1884b284">
+            <nr>32</nr>
+            <ustep eId="DU/2025/1643__art_32__ust_1" gd:GUID="e14a2aea-e7c3-4c03-a2eb-20a13dac49e3">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="1fa981ef-6c09-4a7a-824c-1f875bf9716c" fragment="1" gd:fragmentGUID="1008d706-21cc-458d-88af-767a5172c154">Agencja posiada następujące fundusze własne:</zdanie>
+              </p>
+              <punkt eId="DU/2025/1643__art_32__ust_1__pkt_1" gd:GUID="82a5372b-3555-42f1-afc2-b2e7b4202f0e">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="1fa981ef-6c09-4a7a-824c-1f875bf9716c" fragment="2" gd:fragmentGUID="7233c10e-3628-428c-b17a-a55d378792c0">fundusz podstawowy;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/1643__art_32__ust_1__pkt_2" gd:GUID="ba94f004-e938-4f66-8fbf-32774fe99fff">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="1fa981ef-6c09-4a7a-824c-1f875bf9716c" fragment="3" gd:fragmentGUID="eab34825-9ea9-4cbb-ac1b-bfbddebad797">fundusz rezerwowy.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2025/1643__art_32__ust_2" gd:GUID="d9ea85f2-5ea7-45da-b2ac-50b49ee5c6f0">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ff3b1760-cd61-4303-9f50-c018c711eeec" fragment="1" gd:fragmentGUID="31e90379-2616-4061-8d49-da32fff25791">Fundusz podstawowy Agencji odzwierciedla równowartość netto środków trwałych, wartości niematerialnych i prawnych oraz innych składników aktywów stanowiących wyposażenie Agencji na dzień rozpoczęcia przez nią działalności.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/1643__art_32__ust_3" gd:GUID="82891e4a-d20f-4aaf-b28b-2af710c1af04">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="b8a48e22-c6aa-43db-a10d-25ae8afca9c2" fragment="1" gd:fragmentGUID="1d05f3bc-0703-4e2b-9365-b189cef43498">Fundusz rezerwowy zwiększa się o zysk netto i zmniejsza o stratę netto.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2025/1643__art_33" gd:GUID="15aa7248-1a14-4008-983a-10b46e46b465">
+            <nr>33</nr>
+            <ustep eId="DU/2025/1643__art_33__ust_1" gd:GUID="0de4adc0-c05c-44a7-922f-19dbc49ca2a4">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="b16dff3c-5a32-46a9-86af-e710584fcfaf" fragment="1" gd:fragmentGUID="2f644b34-94fd-4afd-a7f9-0748929fa120">Roczne sprawozdanie finansowe Agencji podlega badaniu przez firmę audytorską.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/1643__art_33__ust_2" gd:GUID="c83e06f5-f4a0-44f4-bf89-792ee454a139">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="45dff7e0-d030-494a-abfe-140b932e800b" fragment="1" gd:fragmentGUID="f9c9022f-a525-462b-8aad-9f10af329dbe">Minister właściwy do spraw szkolnictwa wyższego i nauki dokonuje wyboru firmy audytorskiej.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+        </oddzial-n>
+      </rozdzial>
+      <rozdzial eId="DU/2025/1643__rozdz_5" gd:GUID="67c9ffaa-aedc-4c75-91ce-e954b3905568">
+        <naglowek-rozdzialu>
+          <nr>5</nr>
+          <p>Zmiany w przepisach obowiązujących</p>
+        </naglowek-rozdzialu>
+        <oddzial-n brak-eid="jednostka-nieoznaczona" gd:GUID="8053e230-9c23-4b66-abcd-6f68bdb14692">
+          <artykul eId="DU/2025/1643__art_34" gd:GUID="8b724200-08e9-4177-815f-33bc06214c79">
+            <nr />
+            <nr-od>34</nr-od>
+            <nr-do>38</nr-do>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="491f176d-15cf-472e-8708-8c8b55a17a21">
+              <p>
+                <zdanie nr="1" gd:zdGUID="d61b9cab-4de8-4436-b9f6-b3e4157d3b11" fragment="1" gd:fragmentGUID="85dfa1e6-d110-4dc8-aba4-8d3ee0e74cbe">(pominięte)</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+        </oddzial-n>
+      </rozdzial>
+      <rozdzial eId="DU/2025/1643__rozdz_6" gd:GUID="77d94ae6-a5cc-4f57-bd9e-54e7374c7d2c">
+        <naglowek-rozdzialu>
+          <nr>6</nr>
+          <p>Przepisy dostosowujące, przejściowe i końcowe</p>
+        </naglowek-rozdzialu>
+        <oddzial-n brak-eid="jednostka-nieoznaczona" gd:GUID="80d99350-cc06-4fd6-8415-6e43649845fc">
+          <artykul eId="DU/2025/1643__art_39" gd:GUID="b368e829-b546-48d8-a29c-5a7e85209ec5">
+            <nr>39</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="63a7059f-ba90-43bf-80a1-330a957f0a46">
+              <p>
+                <zdanie nr="1" gd:zdGUID="8fc31a43-52e4-4d39-ba8e-12c50a445b6b" fragment="1" gd:fragmentGUID="d05fb178-df41-4393-a056-67dbbd9ba888">Tworzy się Narodową Agencję Wymiany Akademickiej.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2025/1643__art_40" gd:GUID="fea4b47e-f41f-4626-ae22-c7575b159429">
+            <nr>40</nr>
+            <ustep eId="DU/2025/1643__art_40__ust_1" gd:GUID="df5767c9-4695-4c79-83dd-04060a9c4f19">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="38931531-8c2c-4416-a453-c2991491413d" fragment="1" gd:fragmentGUID="7b4550ff-9f90-4275-948b-047419af35e4">Likwiduje się państwową jednostkę budżetową Biuro Uznawalności Wykształcenia i Wymiany Międzynarodowej.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/1643__art_40__ust_2" gd:GUID="fe18fd5f-a315-4a1e-a700-298530b53cc4">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="6b7bdc3b-7d27-4842-b007-8f7bbd66154e" fragment="1" gd:fragmentGUID="2c258b0a-46f0-4427-9bbc-51f7914e90aa">Czynności związane z likwidacją Biura Uznawalności Wykształcenia i Wymiany Międzynarodowej, w szczególności inwentaryzację składników majątkowych i niemajątkowych, zamknięcie rachunków bankowych i ksiąg rachunkowych oraz sporządzenie sprawozdań, wykonuje Dyrektor Narodowej Agencji Wymiany Akademickiej, w terminie 3 miesięcy od dnia wejścia w życie ustawy.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/1643__art_40__ust_3" gd:GUID="54189df2-6610-442c-9d01-f60a88455592">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="e453045f-3b6f-43cb-8c28-f825b6237ab4" fragment="1" gd:fragmentGUID="854b8dfb-02ab-40e2-9547-6bd7b2f701a1">Bilans zamknięcia Biura Uznawalności Wykształcenia i Wymiany Międzynarodowej staje się bilansem otwarcia Narodowej Agencji Wymiany Akademickiej.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2025/1643__art_41" gd:GUID="07f02c25-65f0-49ea-9509-152ee628d0b8">
+            <nr>41</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="a96cd795-8dd7-40a9-8b00-b524e738100c">
+              <p>
+                <zdanie nr="1" gd:zdGUID="07b6bec1-4a82-407d-8993-8d80de6b6b08" fragment="1" gd:fragmentGUID="55ff5968-9129-45bc-aaef-1bc632093c99">Z dniem wejścia w życie ustawy:</zdanie>
+              </p>
+              <punkt eId="DU/2025/1643__art_41__pkt_1" gd:GUID="646d19f4-c385-4c63-8e63-de07358967b0">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="07b6bec1-4a82-407d-8993-8d80de6b6b08" fragment="2" gd:fragmentGUID="de323d91-9561-4475-82a1-5b2e08824efc">składniki majątkowe i niemajątkowe Biura Uznawalności Wykształcenia i Wymiany Międzynarodowej stają się składnikami majątkowymi i niemajątkowymi Narodowej Agencji Wymiany Akademickiej;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/1643__art_41__pkt_2" gd:GUID="cc58d07d-53a1-495b-85bf-d6228e8411cf">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="07b6bec1-4a82-407d-8993-8d80de6b6b08" fragment="3" gd:fragmentGUID="0e5cd23d-4e2c-4692-a056-b2f4d8fd1a30">należności i zobowiązania Biura Uznawalności Wykształcenia i Wymiany Międzynarodowej stają się należnościami i zobowiązaniami Narodowej Agencji Wymiany Akademickiej;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/1643__art_41__pkt_3" gd:GUID="ff64fd16-3456-4f5d-89a2-09c8de4c3b3f">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="07b6bec1-4a82-407d-8993-8d80de6b6b08" fragment="4" gd:fragmentGUID="34491cc7-46a3-481a-b40c-45bd82108486">pracownicy Biura Uznawalności Wykształcenia i Wymiany Międzynarodowej stają się pracownikami Narodowej Agencji Wymiany Akademickiej.</zdanie>
+                  <zdanie nr="2" gd:zdGUID="4b22ddee-651f-4450-9448-b27ccfb4cc21" fragment="1" gd:fragmentGUID="897c64ec-f384-43ca-9648-cbe4ab4754d5">Stosunki pracy z tymi pracownikami wygasają po upływie 3 miesięcy od dnia wejścia w życie ustawy, jeżeli przed upływem tego terminu nie zostaną im zaproponowane nowe warunki pracy i płacy albo w razie nieprzyjęcia nowych warunków pracy i płacy.</zdanie>
+                </p>
+              </punkt>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2025/1643__art_42" gd:GUID="7cfcdf04-30b7-42a2-bf1b-5070d86fd965">
+            <nr>42</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="e5553904-b455-4894-8609-3775c4f0bb80">
+              <p>
+                <zdanie nr="1" gd:zdGUID="7a397adf-e25c-4b7a-ba26-989216dda7e7" fragment="1" gd:fragmentGUID="1b4991ae-314c-42be-8ddf-19cdde983517">Pracownicy zatrudnieni w urzędzie obsługującym ministra właściwego do spraw szkolnictwa wyższego przy realizacji zadań, które zostają przekazane niniejszą ustawą Narodowej Agencji Wymiany Akademickiej, mogą zostać przeniesieni za ich zgodą, w drodze porozumienia pracodawców, do Narodowej Agencji Wymiany Akademickiej.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2025/1643__art_43" gd:GUID="6d4baf62-4acf-476e-a002-51560df3e1b4">
+            <nr>43</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="28f994c6-eabf-44a7-b157-c864e2afd6ee">
+              <p>
+                <zdanie nr="1" gd:zdGUID="252a9c7e-7009-41e6-89e8-0e980cff7a88" fragment="1" gd:fragmentGUID="8b4e5698-8506-47a7-8fb7-e34f7ef2f86e">W celu wykonania przepisów ustawy Prezes Rady Ministrów może dokonać, w drodze rozporządzenia, przeniesienia planowanych wydatków budżetowych na rok 2018, w tym wynagrodzeń, między częściami, działami i rozdziałami budżetu państwa, których dysponentem jest minister właściwy do spraw szkolnictwa wyższego oraz minister właściwy do spraw nauki, z zachowaniem przeznaczenia środków publicznych wynikającego z ustawy budżetowej.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2025/1643__art_44" gd:GUID="a3a677ee-d7f3-4e18-95ef-00de4eee5813">
+            <nr>44</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="7a928911-6006-47f2-9851-5a637cc0431d">
+              <p>
+                <zdanie nr="1" gd:zdGUID="750fc389-953f-4f7c-9c1f-a058f84463af" fragment="1" gd:fragmentGUID="6f6bd537-bf6a-4548-982d-75dca42930bc">Plan finansowy Narodowej Agencji Wymiany Akademickiej na rok 2017 oraz na rok 2018 ustala minister właściwy do spraw szkolnictwa wyższego.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2025/1643__art_45" gd:GUID="45dd8b56-88da-42e3-b31e-63a5c7650478">
+            <nr>45</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="71cead9b-2e1b-468c-aae1-683a4c499d21">
+              <p>
+                <zdanie nr="1" gd:zdGUID="783b9c79-3315-4775-8261-4de33efc1aee" fragment="1" gd:fragmentGUID="1687756d-ec6f-4033-8790-81bc4c626e42">Prezes Rady Ministrów, na wniosek ministra właściwego do spraw szkolnictwa wyższego, powoła Dyrektora Narodowej Agencji Wymiany Akademickiej z dniem wejścia w życie niniejszej ustawy.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2025/1643__art_46" gd:GUID="d5705973-c20c-4b26-822b-d3ca82ce4569">
+            <nr>46</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="6533ecf1-f9de-4bd6-8192-705f248097b1">
+              <p>
+                <zdanie nr="1" gd:zdGUID="612a4e04-5eea-4aed-b439-a3e293ab77b0" fragment="1" gd:fragmentGUID="8eed9773-9efa-4c34-ab77-1ff780058a83">Podmioty, o których mowa w art. 10 ust. 1 pkt 3–10, wskażą ministrowi właściwemu do spraw szkolnictwa wyższego osoby, które wejdą w skład Rady Narodowej Agencji Wymiany Akademickiej, w terminie miesiąca od dnia wejścia w życie ustawy.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2025/1643__art_47" gd:GUID="c175853d-67bf-45fd-9794-127047caf068">
+            <nr>47</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="2486a106-ffe5-4720-82fc-38ae2ae5532d">
+              <p>
+                <zdanie nr="1" gd:zdGUID="a5c83865-e2c2-4018-8491-464a0cd1648e" fragment="1" gd:fragmentGUID="5becc43d-b8a4-4d4a-91dc-45f5b4bcba28">Dyrektor Narodowej Agencji Wymiany Akademickiej, w terminie miesiąca od dnia powołania Rady Narodowej Agencji Wymiany Akademickiej, przedstawi ministrowi właściwemu do spraw szkolnictwa wyższego plan działania Narodowej Agencji Wymiany Akademickiej na rok 2018.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2025/1643__art_48" gd:GUID="72620e14-296a-4557-9083-a84775f8196e">
+            <nr>48</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="197981ff-20cc-4832-8e3c-133a8d56ae83">
+              <p>
+                <zdanie nr="1" gd:zdGUID="174bdbd5-f989-4879-b20b-fb41e18ce10d" fragment="1" gd:fragmentGUID="e1fa173f-81fd-4fd5-ade7-bf85a7415869">Rektorzy uczelni, dyrektorzy instytutów badawczych i dyrektorzy instytutów naukowych Polskiej Akademii Nauk wprowadzą do Systemu Informacji o Szkolnictwie Wyższym, w zakresie dotyczącym kierowanych przez nich jednostek, wzory i wykazy, o których mowa w:</zdanie>
+              </p>
+              <punkt eId="DU/2025/1643__art_48__pkt_1" gd:GUID="8549f36a-1f52-4f56-ade2-d27ec0f0810a">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="174bdbd5-f989-4879-b20b-fb41e18ce10d" fragment="2" gd:fragmentGUID="1a58ca96-5e9a-4d96-aabb-e7a50cdc6420">art. 29c ust. 2a ustawy zmienianej w art. 35<odnosnik id-odnosnika="3" symbol="3" gd:GUID="54576d9e-9979-406b-86e9-e9d1d858cadd"><p><zdanie nr="1" gd:zdGUID="890b260e-8b91-4a4b-bcdc-9574f1e7cb32" fragment="1" gd:fragmentGUID="77bdca08-166b-4531-a9f8-15da83e3a9a7">Artykuł 35 zawiera zmiany do ustawy z dnia 14 marca 2003 r. o stopniach naukowych i tytule naukowym oraz o stopniach i tytule w zakresie sztuki.</zdanie></p></odnosnik>,</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/1643__art_48__pkt_2" gd:GUID="f85ad7b6-1c4a-4f87-9fe5-33da4ae066d0">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="174bdbd5-f989-4879-b20b-fb41e18ce10d" fragment="3" gd:fragmentGUID="58c18587-8e78-46b3-b262-36c8dc605b15">art. 191b ust. 3a ustawy zmienianej w art. 36<odnosnik id-odnosnika="4" symbol="4" gd:GUID="4c164ddf-dbba-4fae-9ad0-2f3fd0bb057d"><p><zdanie nr="1" gd:zdGUID="b23e5477-f725-486e-ac20-b95a44bc07c2" fragment="1" gd:fragmentGUID="601ce3d2-fb35-42e1-b4cf-3fae4361900d">Artykuł 36 zawiera zmiany do ustawy z dnia 27 lipca 2005 r. – Prawo o szkolnictwie wyższym.</zdanie></p></odnosnik></zdanie>
+                </p>
+              </punkt>
+              <czesc-wspolna-punkt eId="DU/2025/1643__art_48__czw" gd:GUID="ae720bbe-b48e-480b-87e5-6ef1624ae5dd">
+                <p>
+                  <zdanie nr="1" gd:zdGUID="174bdbd5-f989-4879-b20b-fb41e18ce10d" fragment="4" gd:fragmentGUID="1ff6a49f-875f-44cf-83f8-f9cf31ac821f">– w terminie do dnia 31 stycznia 2018 r.</zdanie>
+                </p>
+              </czesc-wspolna-punkt>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2025/1643__art_49" gd:GUID="b482cb96-9805-492f-8313-6778e8555b6d">
+            <nr>49</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="9696f2f1-e398-453a-9685-71820da5798e">
+              <p>
+                <zdanie nr="1" gd:zdGUID="fef7b9b7-3f7f-4b04-a7d9-75ddc2daeeac" fragment="1" gd:fragmentGUID="7880e19b-28ab-4434-9358-8e7835d237a8">Ministrowie, o których mowa w art. 33 ust. 2 ustawy zmienianej w art. 36<odsylacz-do-odnosnika id-odnosnika="4" symbol="4" />, przekażą Narodowej Agencji Wymiany Akademickiej, w terminie do dnia 31 stycznia 2018 r., przekazane do urzędów obsługujących tych ministrów przed dniem 1 stycznia 2018 r. wykazy osób upoważnionych do podpisywania dokumentów, o których mowa w art. 29c ust. 1 ustawy zmienianej w art. 35<odsylacz-do-odnosnika id-odnosnika="3" symbol="3" /> oraz w art. 191b ust. 3 ustawy zmienianej w art. 36<odsylacz-do-odnosnika id-odnosnika="4" symbol="4" />, a także wzory podpisów tych osób, pieczęci urzędowych oraz wzory dyplomów i świadectw.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2025/1643__art_50" gd:GUID="e2acb229-ed70-49a5-8683-29dd262dcda9">
+            <nr>50</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="0401ac82-d912-48e6-9021-a1c7e96ae6bb">
+              <p>
+                <zdanie nr="1" gd:zdGUID="fabc14d4-eefb-429d-83c0-058a45389c1a" fragment="1" gd:fragmentGUID="9536d8c0-6cc4-4ba4-8322-536a7e1706a1">Do postępowań w sprawach dotyczących wydania opinii lub zaświadczenia, o których mowa w art. 191a ust. 6 ustawy zmienianej w art. 36<odsylacz-do-odnosnika id-odnosnika="4" symbol="4" /> w brzmieniu dotychczasowym, wszczętych i niezakończonych przed dniem wejścia w życie art. 36<odsylacz-do-odnosnika id-odnosnika="4" symbol="4" /> pkt 7, stosuje się przepisy dotychczasowe.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2025/1643__art_51" gd:GUID="5f65d844-ea2d-468f-9cfb-be155cdb6928">
+            <nr>51</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="bb0913b7-435a-4d7c-af6c-d15b03830569">
+              <p>
+                <zdanie nr="1" gd:zdGUID="9c75a5e1-fa43-45b7-ba5b-414a875ceb1a" fragment="1" gd:fragmentGUID="4d909911-d620-40f8-a04b-26054aa6af17">Stypendia, które przed dniem wejścia w życie niniejszej ustawy zostały przyznane na podstawie art. 43 ust. 8 ustawy zmienianej w art. 36<odsylacz-do-odnosnika id-odnosnika="4" symbol="4" />, wypłaca Narodowa Agencja Wymiany Akademickiej.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2025/1643__art_52" gd:GUID="77222764-16b3-4b70-81a0-632044b45a87">
+            <nr>52</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="c81f0a19-e4ea-42bb-ad87-f6d4175e45d6">
+              <p>
+                <zdanie nr="1" gd:zdGUID="37a2bbae-966f-4083-96cc-1e885964263f" fragment="1" gd:fragmentGUID="d1207296-bb1e-457f-9bae-60b5e319bd62">Ustawa wchodzi w życie z dniem 1 października 2017 r., z wyjątkiem:</zdanie>
+              </p>
+              <punkt eId="DU/2025/1643__art_52__pkt_1" gd:GUID="16c5eb14-1c91-442b-9eb6-40403877d09b">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="37a2bbae-966f-4083-96cc-1e885964263f" fragment="2" gd:fragmentGUID="ab99ff21-c7ce-446e-ac27-4a7671e88e85">art. 35 pkt 2 lit. c oraz pkt 4, art. 36 pkt 1 lit. a, b i d, pkt 3 lit. b i c, pkt 8 lit. c oraz art. 48, które wchodzą w życie z dniem 1 stycznia 2018 r.;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/1643__art_52__pkt_2" gd:GUID="be7bc6b8-12c2-43b6-af99-5027e8782887">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="37a2bbae-966f-4083-96cc-1e885964263f" fragment="3" gd:fragmentGUID="33493dbd-ade4-48f0-89ac-eca82cef0aad">art. 2 ust. 3 pkt 5, art. 35 pkt 2 lit. a oraz pkt 3 i art. 36 pkt 7 i pkt 8 lit. b, które wchodzą w życie z dniem 1 lutego 2018 r.</zdanie>
+                </p>
+              </punkt>
+            </ustep-n>
+          </artykul>
+        </oddzial-n>
+      </rozdzial>
+    </ustawa>
+  </obwieszczenie>
+</akt-prawny>

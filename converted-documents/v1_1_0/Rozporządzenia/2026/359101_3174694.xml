@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <rozporzadzenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2026/98</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>f4183d5f-a4b8-4f82-8ca3-44942ac43024</gd:GUIDwersji>
+      <AdresISAP>WDU20260000098</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2026</Rok>
+      <Pozycja>98</Pozycja>
+      <AdresWyswietlany>Dz.U. 2026 poz. 98</AdresWyswietlany>
+      <Tytul>Rozporządzenie Ministra Rolnictwa i Rozwoju Wsi z dnia 26 stycznia 2026 r. zmieniające rozporządzenie w sprawie mieszanek materiału siewnego</Tytul>
+      <Rodzaj>ROZP</Rodzaj>
+      <DataOgloszenia>2026-01-29</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2026-01-26</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2026-01-30_DU-2026-98_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2026-01-30" warunek="z dniem następującym po dniu ogłoszenia" podstawa="§ 2" zrodlo="https://eli.gov.pl/eli/DU/2026/98" dowod="DU/2026/98__art_2" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2026-01-30_DU-2026-98_domyslne.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2026-01-30_DU-2026-98_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="56dbc70b-49b6-4573-94b6-72935ef10868" rola="wydajacy">
+          <Nazwa>Minister Rolnictwa i Rozwoju Wsi</Nazwa>
+          <OrganPodpisujacy>Minister Rolnictwa i Rozwoju Wsi</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>S.</imie> <nazwisko>Krajewski</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Rozporządzenie</rodzaj-aktu>
+    <autor-aktu>Ministra Rolnictwa i Rozwoju Wsi<odnosnik id-odnosnika="1" symbol="1" gd:GUID="1a6aeb24-bfea-4b68-bc6c-53a9b7961080"><p><zdanie nr="1" gd:zdGUID="81176afa-5e4d-4f50-b550-abf3bd745bf1" fragment="1" gd:fragmentGUID="9f79ceba-aaf2-40e0-b455-1a4e1aa0606f">Minister Rolnictwa i Rozwoju Wsi kieruje działem administracji rządowej – rolnictwo, na podstawie § 1 ust. 2 pkt 1 rozporządzenia Prezesa Rady Ministrów z dnia 25 lipca 2025 r. w sprawie szczegółowego zakresu działania Ministra Rolnictwa i Rozwoju Wsi (Dz. U. poz. 1000).</zdanie></p></odnosnik></autor-aktu>
+    <data>z dnia 26 stycznia 2026 r.</data>
+    <tytul>zmieniające rozporządzenie w sprawie mieszanek materiału siewnego</tytul>
+    <podstawa-prawna>Na podstawie art. 57 ust. 11 ustawy z dnia 9 listopada 2012 r. o nasiennictwie (Dz. U. z 2021 r. poz. 129 oraz z 2025 r. poz. 1709) zarządza się, co następuje:</podstawa-prawna>
+    <paragraf eId="DU/2026/98__art_1" gd:GUID="f76c699c-5d4a-4ecf-aba1-16c8e2c89478" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-30_DU-2026-98_domyslne.x" wejscie-w-zycie="2026-01-30">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="f03cd533-4006-4954-9473-956aeb40d273" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-30_DU-2026-98_domyslne.x" wejscie-w-zycie="2026-01-30">
+        <p>
+          <zdanie nr="1" gd:zdGUID="4fbce755-371d-44f2-b833-3e4f4cd11cb7" fragment="1" gd:fragmentGUID="01a188e1-9bd3-44ab-b4d4-2c43e9cfe699" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-30_DU-2026-98_domyslne.x" wejscie-w-zycie="2026-01-30"><now:uchyl akt="https://eli.gov.pl/eli/DU/2013/1553" element-eId="DU/2013/1553__art_3__ust_3" gd:nowGUID="0d0e9f50-9e31-49ac-a007-b64b2d92201a" />W rozporządzeniu Ministra Rolnictwa i Rozwoju Wsi z dnia 27 listopada 2013 r. w sprawie mieszanek materiału siewnego (Dz. U. poz. 1553) w § 3 uchyla się ust. 3.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2026/98__art_2" gd:GUID="7a8ca9ab-151e-4cb9-b0ed-57c0079f0360" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-30_DU-2026-98_domyslne.x" wejscie-w-zycie="2026-01-30">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="e5720d83-0ba0-4f2f-a16a-25d422b7bbb0" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-30_DU-2026-98_domyslne.x" wejscie-w-zycie="2026-01-30">
+        <p>
+          <zdanie nr="1" gd:zdGUID="0ba20dca-1407-4c0d-a649-1c8c8a9c33fc" fragment="1" gd:fragmentGUID="01d94ffd-284a-49cd-9e8d-a31b5e97b0e6" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-30_DU-2026-98_domyslne.x" wejscie-w-zycie="2026-01-30">Rozporządzenie wchodzi w życie z dniem następującym po dniu ogłoszenia.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <organ-podpisujacy>Minister Rolnictwa i Rozwoju Wsi: <i><osoba podpisujacy="true" gd:osobaGUID="72cf8a7b-f223-4590-a286-8ea7ad0edd65"><imie>S.</imie> <nazwisko>Krajewski</nazwisko></osoba></i></organ-podpisujacy>
+  </rozporzadzenie>
+</akt-prawny>

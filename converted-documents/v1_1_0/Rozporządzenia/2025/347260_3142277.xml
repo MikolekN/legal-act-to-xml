@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <rozporzadzenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/1873</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>e485dd3c-2e00-492a-b737-369571b9d133</gd:GUIDwersji>
+      <AdresISAP>WDU20250001873</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>1873</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 1873</AdresWyswietlany>
+      <Tytul>Rozporządzenie Ministra Finansów i Gospodarki z dnia 22 grudnia 2025 r. uchylające rozporządzenie w sprawie obowiązku badania sprawozdań finansowych organizacji pożytku publicznego</Tytul>
+      <Rodzaj>ROZP</Rodzaj>
+      <DataOgloszenia>2025-12-29</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-12-22</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2025-12-30_DU-2025-1873_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2025-12-30" warunek="z dniem następującym po dniu ogłoszenia" podstawa="§ 3" zrodlo="https://eli.gov.pl/eli/DU/2025/1873" dowod="DU/2025/1873__art_3" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2025-12-30_DU-2025-1873_domyslne.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2025-12-30_DU-2025-1873_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="2f021681-1d94-42e8-b672-59a62e96eea7" rola="wydajacy">
+          <Nazwa>Minister Finansów i Gospodarki</Nazwa>
+          <OrganPodpisujacy>Minister Finansów i Gospodarki</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>J.</imie> <nazwisko>Neneman</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Rozporządzenie</rodzaj-aktu>
+    <autor-aktu>Ministra Finansów i Gospodarki<odnosnik id-odnosnika="1" symbol="1" gd:GUID="6c6752b4-3070-4f51-accf-ccf76d39b4f9"><p><zdanie nr="1" gd:zdGUID="2c12b01c-e1b6-489c-ba2f-e4fa9d7a8b35" fragment="1" gd:fragmentGUID="dd43d748-02f5-4c48-91d9-27a9ddebebfb">Minister Finansów i Gospodarki kieruje działem administracji rządowej – finanse publiczne, na podstawie § 1 ust. 2 pkt 3 rozporządzenia Prezesa Rady Ministrów z dnia 25 lipca 2025 r. w sprawie szczegółowego zakresu działania Ministra Finansów i Gospodarki (Dz. U. poz. 997).</zdanie></p></odnosnik></autor-aktu>
+    <data>z dnia 22 grudnia 2025 r.</data>
+    <tytul>uchylające rozporządzenie w sprawie obowiązku badania sprawozdań finansowych organizacji pożytku publicznego</tytul>
+    <podstawa-prawna>Na podstawie art. 23 ust. 5 ustawy z dnia 24 kwietnia 2003 r. o działalności pożytku publicznego i o wolontariacie (Dz. U. z 2025 r. poz. 1338) zarządza się, co następuje:</podstawa-prawna>
+    <paragraf eId="DU/2025/1873__art_1" gd:GUID="1cdc04c5-7975-4cec-b11c-ed8d7e5dc148" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-30_DU-2025-1873_domyslne.x" wejscie-w-zycie="2025-12-30">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="ac7d1d8e-0efa-44fe-8128-6ae791f8a1bd" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-30_DU-2025-1873_domyslne.x" wejscie-w-zycie="2025-12-30">
+        <p>
+          <zdanie nr="1" gd:zdGUID="e5076f7c-e2ec-4bac-9b8b-8106c9242b2d" fragment="1" gd:fragmentGUID="be8f18c0-ee28-46ee-8890-67a17dcf2a77" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-30_DU-2025-1873_domyslne.x" wejscie-w-zycie="2025-12-30">Traci moc rozporządzenie Ministra Finansów z dnia 13 listopada 2018 r. w sprawie obowiązku badania sprawozdań finansowych organizacji pożytku publicznego (Dz. U. poz. 2148).</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2025/1873__art_2" gd:GUID="6b5ed498-b08b-47ce-b6d5-3024abd5c718" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-30_DU-2025-1873_domyslne.x" wejscie-w-zycie="2025-12-30">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="69e08961-c707-4d78-ac7f-dedaa0f9b510" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-30_DU-2025-1873_domyslne.x" wejscie-w-zycie="2025-12-30">
+        <p>
+          <zdanie nr="1" gd:zdGUID="f2273d79-fc24-42d3-98ce-5d053668d31a" fragment="1" gd:fragmentGUID="08b8d7fd-c3a8-4c47-977c-98adb539e87d" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-30_DU-2025-1873_domyslne.x" wejscie-w-zycie="2025-12-30">Do organizacji pożytku publicznego, które spełniły warunki określone w § 1 ust. 1 rozporządzenia uchylanego w § 1 w roku obrotowym poprzedzającym rok obrotowy, który rozpoczął się przed dniem 1 stycznia 2024 r., stosuje się przepisy dotychczasowe.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2025/1873__art_3" gd:GUID="037b786b-3188-4c2d-8fff-bfb91a2d6d42" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-30_DU-2025-1873_domyslne.x" wejscie-w-zycie="2025-12-30">
+      <nr>3</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="73c1ef1f-3217-471a-9214-a637a043a066" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-30_DU-2025-1873_domyslne.x" wejscie-w-zycie="2025-12-30">
+        <p>
+          <zdanie nr="1" gd:zdGUID="d31edfd8-831d-43e2-9a42-ab429ee07336" fragment="1" gd:fragmentGUID="3c148ef7-861e-4aff-8b6b-8f811ca2ea25" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-30_DU-2025-1873_domyslne.x" wejscie-w-zycie="2025-12-30">Rozporządzenie wchodzi w życie z dniem następującym po dniu ogłoszenia.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <organ-podpisujacy>Minister Finansów i Gospodarki: wz. <i><osoba podpisujacy="true" gd:osobaGUID="0ee890dc-e32e-4717-b9ed-dec64a968ac7"><imie>J.</imie> <nazwisko>Neneman</nazwisko></osoba></i></organ-podpisujacy>
+  </rozporzadzenie>
+</akt-prawny>

@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <ustawa>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2024/1965</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>f5b8b9cf-6969-4d2e-9baf-c1f8e4663343</gd:GUIDwersji>
+      <AdresISAP>WDU20240001965</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2024</Rok>
+      <Pozycja>1965</Pozycja>
+      <AdresWyswietlany>Dz.U. 2024 poz. 1965</AdresWyswietlany>
+      <Tytul>Ustawa z dnia 6 grudnia 2024 r. o zmianie ustawy o dniach wolnych od pracy oraz niektórych innych ustaw</Tytul>
+      <Rodzaj>USTAWA</Rodzaj>
+      <DataOgloszenia>2024-12-30</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2024-12-06</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2025-02-01_DU-2024-1965_odczytane" rodzaj="wejscie-w-zycie" pochodzenie="odczytane" data="2025-02-01" podstawa="art. 5" zrodlo="https://eli.gov.pl/eli/DU/2024/1965" dowod="DU/2024/1965__art_5" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2025-02-01_DU-2024-1965_odczytane.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2025-02-01_DU-2024-1965_odczytane" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="81ac0d81-0e05-4dbd-8b37-48a047d6fdbe" rola="wydajacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Sejm">
+          <Nazwa>SEJM</Nazwa>
+        </Organ>
+        <Organ gd:GUID="edb2a377-f175-44fd-907c-c7ab389d8cb6" rola="podpisujacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Prezydent">
+          <Nazwa>Prezydent Rzeczypospolitej Polskiej</Nazwa>
+          <OrganPodpisujacy>Prezydent Rzeczypospolitej Polskiej</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>A.</imie> <nazwisko>Duda</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Ustawa</rodzaj-aktu>
+    <data>z dnia 6 grudnia 2024 r.</data>
+    <tytul>o zmianie ustawy o dniach wolnych od pracy oraz niektórych innych ustaw<odnosnik id-odnosnika="1" symbol="1" gd:GUID="9e670a00-c8ee-4517-ac21-92ac67cec676"><p><zdanie nr="1" gd:zdGUID="3ef721b6-d625-48c3-a875-60bb909f451f" fragment="1" gd:fragmentGUID="eca56b90-0e30-4b8c-b47c-e897439985da">Niniejszą ustawą zmienia się ustawy: ustawę z dnia 26 czerwca 1974 r. – Kodeks pracy, ustawę z dnia 6 czerwca 1997 r. – Kodeks karny oraz ustawę z dnia 10 stycznia 2018 r. o ograniczeniu handlu w niedziele i święta oraz w niektóre inne dni.</zdanie></p></odnosnik></tytul>
+    <artykul eId="DU/2024/1965__art_1" gd:GUID="bd826045-aa45-4331-ad00-9570b63352fe" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-01_DU-2024-1965_odczytane.x" wejscie-w-zycie="2025-02-01">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="1999b6a0-8684-4273-b8c5-210b574a2c7e" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-01_DU-2024-1965_odczytane.x" wejscie-w-zycie="2025-02-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="5cf0c758-fec3-467e-9117-e0d884a80942" fragment="1" gd:fragmentGUID="1a12b6ae-fa1b-43b3-b363-030404c9f265" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-01_DU-2024-1965_odczytane.x" wejscie-w-zycie="2025-02-01">W ustawie z dnia 18 stycznia 1951 r. o dniach wolnych od pracy (Dz. U. z 2020 r. poz. 1920) w art. 1 w pkt 1 po lit. k dodaje się lit. ka w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2020/1920" cudzyslowy="oba" gd:nowGUID="52da0ee5-4151-42f8-8ce3-58748177cc10" element-eId="DU/2020/1920__art_1__pkt_1__lit_k" funkcja="dodaj-po"><litera eId="DU/2020/1920__art_1__pkt_1__lit_ka" gd:GUID="39063328-e8c8-4f17-9e49-0712f9c14737" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-01_DU-2024-1965_odczytane.x" wejscie-w-zycie="2025-02-01"><nr>ka</nr><p><zdanie nr="1" gd:zdGUID="9796a99b-e63f-4cdd-be8e-a16bdaac5aad" fragment="1" gd:fragmentGUID="a38fe559-ca74-4ac9-aede-e77af537dc55" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-01_DU-2024-1965_odczytane.x" wejscie-w-zycie="2025-02-01">24 grudnia – Wigilia Bożego Narodzenia,</zdanie></p></litera></cytat-strukt>.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2024/1965__art_2" gd:GUID="020a3234-a7fb-48ff-b119-5681ae2faa65" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-01_DU-2024-1965_odczytane.x" wejscie-w-zycie="2025-02-01">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="0c1e15be-5e01-4d9d-af2f-34812dda4cae" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-01_DU-2024-1965_odczytane.x" wejscie-w-zycie="2025-02-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="aec8d686-6c06-41f5-ae4e-453d8d983737" fragment="1" gd:fragmentGUID="dfad31c4-d7ff-4932-a5d0-62284360b981" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-01_DU-2024-1965_odczytane.x" wejscie-w-zycie="2025-02-01">W ustawie z dnia 26 czerwca 1974 r. – Kodeks pracy (Dz. U. z 2023 r. poz. 1465 oraz z 2024 r. poz. 878, 1222 i 1871) art. 151<sup>9b</sup> otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/1465" cudzyslowy="oba" gd:nowGUID="a89033f8-d885-469d-9a4e-8de5d7d1bea9" element-eId="DU/2023/1465__art_151[9b]" funkcja="zastap"><artykul eId="DU/2023/1465__art_151[9b]" gd:GUID="9a40e27a-7cd4-4073-bc6b-a9412d326662" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-01_DU-2024-1965_odczytane.x" wejscie-w-zycie="2025-02-01"><nr>151[9b]</nr><ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="efac0d9e-9600-4943-9587-29ebf922322b" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-01_DU-2024-1965_odczytane.x" wejscie-w-zycie="2025-02-01"><p><zdanie nr="1" gd:zdGUID="4703fa9e-fae5-4c2c-8cba-29c86b94c57e" fragment="1" gd:fragmentGUID="35aa837d-2aad-4c9a-9100-574273aa6da9" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-01_DU-2024-1965_odczytane.x" wejscie-w-zycie="2025-02-01">Ograniczenia w wykonywaniu pracy w placówkach handlowych w niedziele i święta oraz w sobotę bezpośrednio poprzedzającą pierwszy dzień Wielkiej Nocy określają przepisy ustawy z dnia 10 stycznia 2018 r. o ograniczeniu handlu w niedziele i święta oraz w niektóre inne dni (Dz. U. z 2024 r. poz. 449 i 1965).</zdanie></p></ustep-n></artykul></cytat-strukt>.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2024/1965__art_3" gd:GUID="e5d25b65-dd27-44da-b067-32b4d60a1a97" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-01_DU-2024-1965_odczytane.x" wejscie-w-zycie="2025-02-01">
+      <nr>3</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="638f7566-f9b0-4023-9022-2e8908237064" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-01_DU-2024-1965_odczytane.x" wejscie-w-zycie="2025-02-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="210a885f-ca92-4bcb-8f1b-0307f78b2bf4" fragment="1" gd:fragmentGUID="a5d3a719-dd19-4b7e-9fc7-63d1b2ce0ccd" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-01_DU-2024-1965_odczytane.x" wejscie-w-zycie="2025-02-01"><now:zamien-tekst stary-tekst="w dniu 24 grudnia lub" nowy-tekst="" element-eId="DU/2024/17__art_218a__pkt_2" akt="https://eli.gov.pl/eli/DU/2024/17" gd:nowGUID="220aeab5-1e9e-4099-adef-c5198a73d2ac" />W ustawie z dnia 6 czerwca 1997 r. – Kodeks karny (Dz. U. z 2024 r. poz. 17, 1228 i 1907) w art. 218a w pkt 2 skreśla się wyrazy „w dniu 24 grudnia lub”.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2024/1965__art_4" gd:GUID="85682d6c-2702-409f-90bd-0742d8e15fda" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-01_DU-2024-1965_odczytane.x" wejscie-w-zycie="2025-02-01">
+      <nr>4</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="35298302-058d-4c42-a5fc-ef7090e556fa" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-01_DU-2024-1965_odczytane.x" wejscie-w-zycie="2025-02-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="87288a17-145e-4978-a311-8d0655ea8277" fragment="1" gd:fragmentGUID="7709c69a-0852-449b-b7e8-d02c934f61aa" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-01_DU-2024-1965_odczytane.x" wejscie-w-zycie="2025-02-01">W ustawie z dnia 10 stycznia 2018 r. o ograniczeniu handlu w niedziele i święta oraz w niektóre inne dni (Dz. U. z 2024 r. poz. 449) wprowadza się następujące zmiany:</zdanie>
+        </p>
+        <punkt eId="DU/2024/1965__art_4__pkt_1" gd:GUID="21adf9ea-ef0f-4c7c-9774-32de7c68780a" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-01_DU-2024-1965_odczytane.x" wejscie-w-zycie="2025-02-01">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="87288a17-145e-4978-a311-8d0655ea8277" fragment="2" gd:fragmentGUID="99450c44-4679-4320-9af2-15c198395580" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-01_DU-2024-1965_odczytane.x" wejscie-w-zycie="2025-02-01">w art. 1 ust. 1 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/449" cudzyslowy="oba" gd:nowGUID="0e076b2d-6246-4889-b538-4360dd00e189" element-eId="DU/2024/449__art_1__ust_1" funkcja="zastap"><ustep eId="DU/2024/449__art_1__ust_1" gd:GUID="f87e5751-fab7-404f-8730-42c6c91ad8f3" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-01_DU-2024-1965_odczytane.x" wejscie-w-zycie="2025-02-01"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="eb5bddda-82cb-431f-b2bf-7f09a022e97d" fragment="1" gd:fragmentGUID="80ca28c2-ec40-4fa7-a989-ab841df76ef9" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-01_DU-2024-1965_odczytane.x" wejscie-w-zycie="2025-02-01">Ustawa określa zasady dotyczące ograniczenia handlu oraz wykonywania czynności związanych z handlem w placówkach handlowych w niedziele i święta oraz w sobotę bezpośrednio poprzedzającą pierwszy dzień Wielkiej Nocy.</zdanie></p></ustep></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2024/1965__art_4__pkt_2" gd:GUID="f706e7d3-f0fd-4287-99cd-12a6f881b9cf" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-01_DU-2024-1965_odczytane.x" wejscie-w-zycie="2025-02-01">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="87288a17-145e-4978-a311-8d0655ea8277" fragment="3" gd:fragmentGUID="f1598758-aff8-40c0-8e82-1147f63d244a" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-01_DU-2024-1965_odczytane.x" wejscie-w-zycie="2025-02-01">art. 4 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/449" cudzyslowy="oba" gd:nowGUID="e763aa6d-5554-4dfb-98d9-45dbde4ac1d7" element-eId="DU/2024/449__art_4" funkcja="zastap"><artykul eId="DU/2024/449__art_4" gd:GUID="07a754d8-21ad-4f20-8ace-e40c251803e6" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-01_DU-2024-1965_odczytane.x" wejscie-w-zycie="2025-02-01"><nr>4</nr><ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="90e9a02f-32a8-4700-9766-12beb4df6953" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-01_DU-2024-1965_odczytane.x" wejscie-w-zycie="2025-02-01"><p><zdanie nr="1" gd:zdGUID="f654530e-b01b-4696-b443-cf881bfd2d57" fragment="1" gd:fragmentGUID="16c824b8-8a98-4bf1-aedb-af489859ef34" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-01_DU-2024-1965_odczytane.x" wejscie-w-zycie="2025-02-01">Powierzanie wykonywania pracy w handlu lub wykonywania czynności związanych z handlem nieodpłatnie w placówkach handlowych w niedziele i święta, a także w sobotę bezpośrednio poprzedzającą pierwszy dzień Wielkiej Nocy – jest zakazane.</zdanie></p></ustep-n></artykul></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2024/1965__art_4__pkt_3" gd:GUID="2bb7177d-0128-43a3-bb31-7412a14ddfc0" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-01_DU-2024-1965_odczytane.x" wejscie-w-zycie="2025-02-01">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="87288a17-145e-4978-a311-8d0655ea8277" fragment="4" gd:fragmentGUID="e623bea5-d5da-4948-abeb-7f836c4eb7ab" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-01_DU-2024-1965_odczytane.x" wejscie-w-zycie="2025-02-01">w art. 7:</zdanie>
+          </p>
+          <litera eId="DU/2024/1965__art_4__pkt_3__lit_a" gd:GUID="66ec673a-554e-4d53-8e61-ec0b102939e3" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-01_DU-2024-1965_odczytane.x" wejscie-w-zycie="2025-02-01">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="87288a17-145e-4978-a311-8d0655ea8277" fragment="5" gd:fragmentGUID="43a181c9-4f96-41c6-a5c8-6d25df2e7526" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-01_DU-2024-1965_odczytane.x" wejscie-w-zycie="2025-02-01">ust. 1 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/449" cudzyslowy="oba" gd:nowGUID="4b2da213-0259-4d4b-9296-4d98773a863b" element-eId="DU/2024/449__art_7__ust_1" funkcja="zastap"><ustep eId="DU/2024/449__art_7__ust_1" gd:GUID="2295269d-940a-49d7-91a7-db32fba05370" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-01_DU-2024-1965_odczytane.x" wejscie-w-zycie="2025-02-01"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="9d1a506f-22e2-4ce2-afb4-182ff3dc3183" fragment="1" gd:fragmentGUID="bec07659-35fe-4710-87fb-69736983e48b" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-01_DU-2024-1965_odczytane.x" wejscie-w-zycie="2025-02-01">Zakaz, o którym mowa w art. 5, nie obowiązuje w:</zdanie></p><punkt eId="DU/2024/449__art_7__ust_1__pkt_1" gd:GUID="88ff2466-5513-4200-a399-8e6b43c10faf" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-01_DU-2024-1965_odczytane.x" wejscie-w-zycie="2025-02-01"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="9d1a506f-22e2-4ce2-afb4-182ff3dc3183" fragment="2" gd:fragmentGUID="2a4e0b74-ff4a-48be-b970-1841f7ec3c9c" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-01_DU-2024-1965_odczytane.x" wejscie-w-zycie="2025-02-01">kolejne trzy niedziele poprzedzające Wigilię Bożego Narodzenia;</zdanie></p></punkt><punkt eId="DU/2024/449__art_7__ust_1__pkt_2" gd:GUID="58434fa9-2c11-4a84-9431-3ab31b308797" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-01_DU-2024-1965_odczytane.x" wejscie-w-zycie="2025-02-01"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="9d1a506f-22e2-4ce2-afb4-182ff3dc3183" fragment="3" gd:fragmentGUID="cbb4e471-fdcd-4398-abb2-5e8cfac68f94" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-01_DU-2024-1965_odczytane.x" wejscie-w-zycie="2025-02-01">niedzielę bezpośrednio poprzedzającą pierwszy dzień Wielkiej Nocy;</zdanie></p></punkt><punkt eId="DU/2024/449__art_7__ust_1__pkt_3" gd:GUID="641ed158-ab70-47b4-88e4-05eb5d1be79c" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-01_DU-2024-1965_odczytane.x" wejscie-w-zycie="2025-02-01"><nr>3</nr><p><zdanie nr="1" gd:zdGUID="9d1a506f-22e2-4ce2-afb4-182ff3dc3183" fragment="4" gd:fragmentGUID="bce05fd6-7b6a-4683-adbf-8b3b70aa2640" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-01_DU-2024-1965_odczytane.x" wejscie-w-zycie="2025-02-01">ostatnią niedzielę przypadającą w styczniu, kwietniu, czerwcu i sierpniu.</zdanie></p></punkt></ustep></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2024/1965__art_4__pkt_3__lit_b" gd:GUID="1402c32e-75fe-43ce-8ad1-cbc619a67316" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-01_DU-2024-1965_odczytane.x" wejscie-w-zycie="2025-02-01">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="87288a17-145e-4978-a311-8d0655ea8277" fragment="6" gd:fragmentGUID="89abc5ce-bae9-4ea9-8297-9e248d9fa145" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-01_DU-2024-1965_odczytane.x" wejscie-w-zycie="2025-02-01"><now:uchyl akt="https://eli.gov.pl/eli/DU/2024/449" element-eId="DU/2024/449__art_7__ust_1a" gd:nowGUID="4e6c0143-c88e-49ca-9971-1750f103a091" />uchyla się ust. 1a,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2024/1965__art_4__pkt_3__lit_c" gd:GUID="671dfe3d-a237-4882-b14f-7001e3b1b3d6" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-01_DU-2024-1965_odczytane.x" wejscie-w-zycie="2025-02-01">
+            <nr>c</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="87288a17-145e-4978-a311-8d0655ea8277" fragment="7" gd:fragmentGUID="5345c01a-a223-4c4a-9e05-01c8682cbd18" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-01_DU-2024-1965_odczytane.x" wejscie-w-zycie="2025-02-01">po ust. 1a dodaje się ust. 1b w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/449" cudzyslowy="oba" gd:nowGUID="c38da8e0-57b7-4316-956d-39eb6055d40f" element-eId="DU/2024/449__art_7__ust_1a" funkcja="dodaj-po"><ustep eId="DU/2024/449__art_7__ust_1b" gd:GUID="2324b8fe-5c3d-4541-8c3b-8ae7dde91243" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-01_DU-2024-1965_odczytane.x" wejscie-w-zycie="2025-02-01"><nr>1b</nr><p><zdanie nr="1" gd:zdGUID="dcd6a011-213c-45f9-97a6-e58de951eda2" fragment="1" gd:fragmentGUID="cfe4df6a-a240-47ea-bb33-1fb9afcb7ae4" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-01_DU-2024-1965_odczytane.x" wejscie-w-zycie="2025-02-01">W przypadku, o którym mowa w ust. 1 pkt 1, pracownik lub zatrudniony może wykonywać pracę w handlu oraz wykonywać czynności związane z handlem nie więcej niż w dwie niedziele.</zdanie></p></ustep></cytat-strukt>;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2024/1965__art_4__pkt_4" gd:GUID="2e6bc823-e5ef-419f-85ac-4a5133a9a8f1" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-01_DU-2024-1965_odczytane.x" wejscie-w-zycie="2025-02-01">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="87288a17-145e-4978-a311-8d0655ea8277" fragment="8" gd:fragmentGUID="e78ad657-275c-4b16-be57-d856c6983b30" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-01_DU-2024-1965_odczytane.x" wejscie-w-zycie="2025-02-01"><now:zamien-tekst stary-tekst="w dniu 24 grudnia i" nowy-tekst="" element-eId="DU/2024/449__rozdz_3" akt="https://eli.gov.pl/eli/DU/2024/449" gd:nowGUID="14e4b9ea-eaca-42fd-a939-daf9b898d659" />w tytule rozdziału 3 skreśla się wyrazy „w dniu 24 grudnia i”;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2024/1965__art_4__pkt_5" gd:GUID="9cad20a9-f837-45ad-b8ab-f5fa0666ac68" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-01_DU-2024-1965_odczytane.x" wejscie-w-zycie="2025-02-01">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="87288a17-145e-4978-a311-8d0655ea8277" fragment="9" gd:fragmentGUID="88cc9566-c92e-4ace-80e1-428935cc6e19" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-01_DU-2024-1965_odczytane.x" wejscie-w-zycie="2025-02-01">w art. 8:</zdanie>
+          </p>
+          <litera eId="DU/2024/1965__art_4__pkt_5__lit_a" gd:GUID="6310cb6d-3db0-48f1-b6ef-a1468c09af27" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-01_DU-2024-1965_odczytane.x" wejscie-w-zycie="2025-02-01">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="87288a17-145e-4978-a311-8d0655ea8277" fragment="10" gd:fragmentGUID="f635582f-7080-44eb-a7f1-f82dee72128d" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-01_DU-2024-1965_odczytane.x" wejscie-w-zycie="2025-02-01">ust. 1 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/449" cudzyslowy="oba" gd:nowGUID="58ff1950-b18d-42c1-8489-0bcd82d5ad52" element-eId="DU/2024/449__art_8__ust_1" funkcja="zastap"><ustep eId="DU/2024/449__art_8__ust_1" gd:GUID="ac74bd9a-1fd1-490c-b19a-c0d92ae175db" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-01_DU-2024-1965_odczytane.x" wejscie-w-zycie="2025-02-01"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="41646b27-5365-472c-bd2a-c349ccd2a2d7" fragment="1" gd:fragmentGUID="c56385b3-3c57-4162-9276-695d5f415f2c" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-01_DU-2024-1965_odczytane.x" wejscie-w-zycie="2025-02-01">W sobotę bezpośrednio poprzedzającą pierwszy dzień Wielkiej Nocy w placówkach handlowych:</zdanie></p><punkt eId="DU/2024/449__art_8__ust_1__pkt_1" gd:GUID="7d38e245-c7e0-4a0e-a4fd-327e4de541d0" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-01_DU-2024-1965_odczytane.x" wejscie-w-zycie="2025-02-01"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="41646b27-5365-472c-bd2a-c349ccd2a2d7" fragment="2" gd:fragmentGUID="89412dff-2872-43a5-b3ba-168100a0999d" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-01_DU-2024-1965_odczytane.x" wejscie-w-zycie="2025-02-01">handel oraz wykonywanie czynności związanych z handlem,</zdanie></p></punkt><punkt eId="DU/2024/449__art_8__ust_1__pkt_2" gd:GUID="3591da70-1e7e-457a-9a03-10febfc1a1fa" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-01_DU-2024-1965_odczytane.x" wejscie-w-zycie="2025-02-01"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="41646b27-5365-472c-bd2a-c349ccd2a2d7" fragment="3" gd:fragmentGUID="1349725b-d634-49ee-acf7-05218ad4536c" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-01_DU-2024-1965_odczytane.x" wejscie-w-zycie="2025-02-01">powierzanie pracownikowi lub zatrudnionemu wykonywania pracy w handlu oraz wykonywania czynności związanych z handlem</zdanie></p></punkt><czesc-wspolna-punkt eId="DU/2024/449__art_8__ust_1__czw" gd:GUID="b492f8c4-1a67-42e5-b5fe-ec968daae2f9" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-01_DU-2024-1965_odczytane.x" wejscie-w-zycie="2025-02-01"><p><zdanie nr="1" gd:zdGUID="41646b27-5365-472c-bd2a-c349ccd2a2d7" fragment="4" gd:fragmentGUID="c37ef45e-32d8-4786-a881-54c68f57ddce" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-01_DU-2024-1965_odczytane.x" wejscie-w-zycie="2025-02-01">– po godzinie 14.00 są zakazane, z wyjątkiem przypadków określonych w art. 6.</zdanie></p></czesc-wspolna-punkt></ustep></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2024/1965__art_4__pkt_5__lit_b" gd:GUID="43eb15d1-372b-468c-b1ee-612d620b8754" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-01_DU-2024-1965_odczytane.x" wejscie-w-zycie="2025-02-01">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="87288a17-145e-4978-a311-8d0655ea8277" fragment="11" gd:fragmentGUID="657668fe-53e7-498a-a46b-8ff1bf05384e" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-01_DU-2024-1965_odczytane.x" wejscie-w-zycie="2025-02-01"><now:uchyl akt="https://eli.gov.pl/eli/DU/2024/449" element-eId="DU/2024/449__art_8__ust_3" gd:nowGUID="33f576d2-94a1-467b-9323-3f41922bbb23" />uchyla się ust. 3;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2024/1965__art_4__pkt_6" gd:GUID="9d3ba75e-a81f-4320-b8da-864c2415624e" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-01_DU-2024-1965_odczytane.x" wejscie-w-zycie="2025-02-01">
+          <nr>6</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="87288a17-145e-4978-a311-8d0655ea8277" fragment="12" gd:fragmentGUID="e4e8739d-03d6-40ad-a2b7-a58b5710eaa4" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-01_DU-2024-1965_odczytane.x" wejscie-w-zycie="2025-02-01">w art. 9 ust. 1 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/449" cudzyslowy="oba" gd:nowGUID="f5aea933-9136-4403-9d9f-cb7dd72d3811" element-eId="DU/2024/449__art_9__ust_1" funkcja="zastap"><ustep eId="DU/2024/449__art_9__ust_1" gd:GUID="376c2c0e-0636-4994-978b-742fe02847dd" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-01_DU-2024-1965_odczytane.x" wejscie-w-zycie="2025-02-01"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="15e82f21-b566-4bf3-a14f-1a71c1d807a4" fragment="1" gd:fragmentGUID="fb320f53-3e7d-4346-aed2-4a0ffc7c24c9" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-01_DU-2024-1965_odczytane.x" wejscie-w-zycie="2025-02-01">Pracownik zachowuje prawo do wynagrodzenia za czas nieprzepracowany w związku ze zmniejszeniem wymiaru jego czasu pracy z powodu wykonywania pracy w sobotę bezpośrednio poprzedzającą pierwszy dzień Wielkiej Nocy do godziny 14.00.</zdanie></p></ustep></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2024/1965__art_4__pkt_7" gd:GUID="1a3e891a-10b3-49de-b1a2-0e1571a525aa" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-01_DU-2024-1965_odczytane.x" wejscie-w-zycie="2025-02-01">
+          <nr>7</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="87288a17-145e-4978-a311-8d0655ea8277" fragment="13" gd:fragmentGUID="a2c23d0a-29ca-4209-bc87-f0b333964e94" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-01_DU-2024-1965_odczytane.x" wejscie-w-zycie="2025-02-01">w art. 10 w ust. 2 pkt 1 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/449" cudzyslowy="oba" gd:nowGUID="ed447416-06ad-4e5d-b542-204b38e01577" element-eId="DU/2024/449__art_10__ust_2__pkt_1" funkcja="zastap"><punkt eId="DU/2024/449__art_10__ust_2__pkt_1" gd:GUID="5f72ff92-8179-46d1-920e-e4f7b7408b01" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-01_DU-2024-1965_odczytane.x" wejscie-w-zycie="2025-02-01"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="0eb88d67-a4ae-42c3-b4a0-98fb1531f444" fragment="1" gd:fragmentGUID="8ca3cc13-5d40-40d7-ad6f-86e7eb2db03d" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-01_DU-2024-1965_odczytane.x" wejscie-w-zycie="2025-02-01">wbrew zakazowi handlu oraz wykonywania czynności związanych z handlem po godzinie 14.00 w sobotę bezpośrednio poprzedzającą pierwszy dzień Wielkiej Nocy, powierza pracownikowi lub zatrudnionemu wykonywanie pracy w handlu lub wykonywanie czynności związanych z handlem;</zdanie></p></punkt></cytat-strukt>.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2024/1965__art_5" gd:GUID="47822f44-dc9e-4f84-acbd-f749ca3a85f3" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-01_DU-2024-1965_odczytane.x" wejscie-w-zycie="2025-02-01">
+      <nr>5</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="8e7658ac-38b3-40d0-b989-eeeefa7f149a" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-01_DU-2024-1965_odczytane.x" wejscie-w-zycie="2025-02-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="bae0b237-425b-48cf-869b-f86e7cdfbe43" fragment="1" gd:fragmentGUID="6d9a4855-ca04-4b9b-98d0-474e40a8b152" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-01_DU-2024-1965_odczytane.x" wejscie-w-zycie="2025-02-01">Ustawa wchodzi w życie z dniem 1 lutego 2025 r.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <organ-podpisujacy>Prezydent Rzeczypospolitej Polskiej: <i><osoba podpisujacy="true" gd:osobaGUID="73369666-c0f1-4a13-b112-6bd76265aff2"><imie>A.</imie> <nazwisko>Duda</nazwisko></osoba></i></organ-podpisujacy>
+  </ustawa>
+</akt-prawny>

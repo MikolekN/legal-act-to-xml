@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <rozporzadzenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/1068</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>4a13510e-eea5-443b-a226-96a6b9761674</gd:GUIDwersji>
+      <AdresISAP>WDU20250001068</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>1068</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 1068</AdresWyswietlany>
+      <Tytul>Rozporządzenie Ministra Obrony Narodowej z dnia 4 sierpnia 2025 r. zmieniające rozporządzenie w sprawie dodatkowego wynagrodzenia żołnierzy zawodowych</Tytul>
+      <Rodzaj>ROZP</Rodzaj>
+      <DataOgloszenia>2025-08-05</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-08-04</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2025-09-01_DU-2025-1068_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2025-09-01" warunek="pierwszego dnia miesiąca następującego po miesiącu ogłoszenia" podstawa="§ 2" zrodlo="https://eli.gov.pl/eli/DU/2025/1068" dowod="DU/2025/1068__art_2" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1068_domyslne.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2025-09-01_DU-2025-1068_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="0e2e1e86-0492-4929-8e24-b121769601a9" rola="wydajacy">
+          <Nazwa>Minister Obrony Narodowej</Nazwa>
+          <OrganPodpisujacy>Minister Obrony Narodowej</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>P.</imie> <nazwisko>Bejda</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Rozporządzenie</rodzaj-aktu>
+    <autor-aktu>Ministra Obrony Narodowej</autor-aktu>
+    <data>z dnia 4 sierpnia 2025 r.</data>
+    <tytul>zmieniające rozporządzenie w sprawie dodatkowego wynagrodzenia żołnierzy zawodowych</tytul>
+    <podstawa-prawna>Na podstawie art. 447 ust. 3 ustawy z dnia 11 marca 2022 r. o obronie Ojczyzny (Dz. U. z 2025 r. poz. 825 i 1014) zarządza się, co następuje:</podstawa-prawna>
+    <paragraf eId="DU/2025/1068__art_1" gd:GUID="b9a919de-d91e-4f9f-a081-fc97bd57334b" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1068_domyslne.x" wejscie-w-zycie="2025-09-01">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="1efb0166-3f19-456e-8624-d0982f52cd5e" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1068_domyslne.x" wejscie-w-zycie="2025-09-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="b53c6c32-4b7e-4be8-b973-7eb7d3c5e8eb" fragment="1" gd:fragmentGUID="f0662149-5f97-43b7-9aba-6b3f154a8c00" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1068_domyslne.x" wejscie-w-zycie="2025-09-01">W rozporządzeniu Ministra Obrony Narodowej z dnia 5 grudnia 2023 r. w sprawie dodatkowego wynagrodzenia żołnierzy zawodowych (Dz. U. poz. 2677) wprowadza się następujące zmiany:</zdanie>
+        </p>
+        <punkt eId="DU/2025/1068__art_1__pkt_1" gd:GUID="53758aa4-cedb-4404-87cd-773777b10871" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1068_domyslne.x" wejscie-w-zycie="2025-09-01">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="b53c6c32-4b7e-4be8-b973-7eb7d3c5e8eb" fragment="2" gd:fragmentGUID="bd73e521-e8d9-44ab-85a2-e1e347e91e89" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1068_domyslne.x" wejscie-w-zycie="2025-09-01">§ 7 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/2677" cudzyslowy="oba" gd:nowGUID="77ff431f-32b4-4e9e-8a94-82cbfda9a620" element-eId="DU/2023/2677__art_7" funkcja="zastap"><paragraf eId="DU/2023/2677__art_7" gd:GUID="3208e3be-0a3c-41a2-93c3-198cdec3f453" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1068_domyslne.x" wejscie-w-zycie="2025-09-01"><nr>7</nr><ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="6d99aa49-0891-4ea8-98f5-89d46aef59ff" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1068_domyslne.x" wejscie-w-zycie="2025-09-01"><p><zdanie nr="1" gd:zdGUID="f6c48260-eeb9-4460-8b7f-4929f86b235a" fragment="1" gd:fragmentGUID="127df962-330f-4a9e-96a3-c577519879c0" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1068_domyslne.x" wejscie-w-zycie="2025-09-01">Żołnierzowi zawodowemu, któremu powierzono wykonywanie czynności, o których mowa w § 3 pkt 3, przysługuje dodatkowe wynagrodzenie w wysokości 200 zł za każdy całodobowy dyżur.</zdanie></p></ustep-n></paragraf></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1068__art_1__pkt_2" gd:GUID="40cb3e96-a111-43bb-bbe8-ac010600abd2" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1068_domyslne.x" wejscie-w-zycie="2025-09-01">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="b53c6c32-4b7e-4be8-b973-7eb7d3c5e8eb" fragment="3" gd:fragmentGUID="6f937f7f-b682-4ffc-8128-048da3853c95" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1068_domyslne.x" wejscie-w-zycie="2025-09-01"><now:dodaj-ustep element-eId="DU/2023/2677__art_8" akt="https://eli.gov.pl/eli/DU/2023/2677" gd:nowGUID="08f24419-c9e8-4942-831b-ae97941da2aa" />w § 8 dotychczasową treść oznacza się jako ust. 1 oraz dodaje się ust. 2 w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/2677" cudzyslowy="oba" gd:nowGUID="31018cd3-27f9-4514-97d9-0618f47430ee" element-eId="DU/2023/2677__art_8__ust_1" funkcja="dodaj-po"><ustep eId="DU/2023/2677__art_8__ust_2" gd:GUID="2f4bce00-38b6-4e24-9c19-4b9df804cfd0" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1068_domyslne.x" wejscie-w-zycie="2025-09-01"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="c45d4f07-27b8-44d0-b64d-0f50de0dfea8" fragment="1" gd:fragmentGUID="600106e4-1695-4783-bb87-03d1022e18c8" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1068_domyslne.x" wejscie-w-zycie="2025-09-01">Dodatkowe wynagrodzenie, o którym mowa w ust. 1, nie przysługuje w przypadku jednoczesnego powierzenia czynności, o których mowa w § 3 pkt 3.</zdanie></p></ustep></cytat-strukt>.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2025/1068__art_2" gd:GUID="70bb38f5-4cb9-412a-b261-a936ef6e0bc2" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1068_domyslne.x" wejscie-w-zycie="2025-09-01">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="d7b043d6-5c5d-496c-b6e9-5e494cba3023" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1068_domyslne.x" wejscie-w-zycie="2025-09-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="bc3766d5-aa1f-4ac2-bce4-8fbce4f3c410" fragment="1" gd:fragmentGUID="c8f84e97-2708-45cf-a910-f339609729fb" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1068_domyslne.x" wejscie-w-zycie="2025-09-01">Rozporządzenie wchodzi w życie pierwszego dnia miesiąca następującego po miesiącu ogłoszenia.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <organ-podpisujacy>Minister Obrony Narodowej: z up. <i><osoba podpisujacy="true" gd:osobaGUID="560c525e-c7eb-4ea6-bf51-d25296bddea5"><imie>P.</imie> <nazwisko>Bejda</nazwisko></osoba></i></organ-podpisujacy>
+  </rozporzadzenie>
+</akt-prawny>

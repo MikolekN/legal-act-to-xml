@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <rozporzadzenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/879</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>a8be6f4f-ae6f-4d2c-ad48-df7e6e706d35</gd:GUIDwersji>
+      <AdresISAP>WDU20250000879</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>879</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 879</AdresWyswietlany>
+      <Tytul>Rozporządzenie Ministra Zdrowia z dnia 2 lipca 2025 r. zmieniające rozporządzenie w sprawie specjalizacji i uzyskiwania tytułu specjalisty przez diagnostów laboratoryjnych</Tytul>
+      <Rodzaj>ROZP</Rodzaj>
+      <DataOgloszenia>2025-07-04</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-07-02</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2025-07-19_DU-2025-879_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2025-07-19" warunek="po upływie 14 dni od dnia ogłoszenia" podstawa="§ 2" zrodlo="https://eli.gov.pl/eli/DU/2025/879" dowod="DU/2025/879__art_2" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2025-07-19_DU-2025-879_domyslne.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2025-07-19_DU-2025-879_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="9aae889c-8327-4aec-896c-b214c6bfd824" rola="wydajacy">
+          <Nazwa>Minister Zdrowia</Nazwa>
+          <OrganPodpisujacy>Minister Zdrowia</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>I.</imie> <nazwisko>Leszczyna</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Rozporządzenie</rodzaj-aktu>
+    <autor-aktu>Ministra Zdrowia<odnosnik id-odnosnika="1" symbol="1" gd:GUID="17a4606d-bf85-4f0d-b229-8a15cd52396d"><p><zdanie nr="1" gd:zdGUID="8b3f864f-64bc-45f8-9edc-82f813f0fcdd" fragment="1" gd:fragmentGUID="c30bcc15-267c-43c7-aeca-05b744b24993">Minister Zdrowia kieruje działem administracji rządowej – zdrowie, na podstawie § 1 ust. 2 rozporządzenia Prezesa Rady Ministrów z dnia 18 grudnia 2023 r. w sprawie szczegółowego zakresu działania Ministra Zdrowia (Dz. U. poz. 2704).</zdanie></p></odnosnik></autor-aktu>
+    <data>z dnia 2 lipca 2025 r.</data>
+    <tytul>zmieniające rozporządzenie w sprawie specjalizacji i uzyskiwania tytułu specjalisty przez diagnostów laboratoryjnych</tytul>
+    <podstawa-prawna>Na podstawie art. 61 ustawy z dnia 15 września 2022 r. o medycynie laboratoryjnej (Dz. U. z 2023 r. poz. 2125 oraz z 2024 r. poz. 1897) zarządza się, co następuje:</podstawa-prawna>
+    <paragraf eId="DU/2025/879__art_1" gd:GUID="ec8f1b33-b385-4cb9-88d6-ed546859fadd" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-19_DU-2025-879_domyslne.x" wejscie-w-zycie="2025-07-19">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="7a967d97-1b5e-4eb0-b8c8-f243e0da74f5" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-19_DU-2025-879_domyslne.x" wejscie-w-zycie="2025-07-19">
+        <p>
+          <zdanie nr="1" gd:zdGUID="2d449fba-e9b1-4dfc-b63e-988ce79c9ef9" fragment="1" gd:fragmentGUID="c85b09b8-62c5-4e1f-ad84-de59887959d6" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-19_DU-2025-879_domyslne.x" wejscie-w-zycie="2025-07-19">W rozporządzeniu Ministra Zdrowia z dnia 26 czerwca 2023 r. w sprawie specjalizacji i uzyskiwania tytułu specjalisty przez diagnostów laboratoryjnych (Dz. U. poz. 1221) § 9 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/1221" cudzyslowy="oba" gd:nowGUID="027cf1b3-2891-4199-a183-57ee9d89f6ab" element-eId="DU/2023/1221__art_9" funkcja="zastap"><paragraf eId="DU/2023/1221__art_9" gd:GUID="ea3587e1-d6ba-463a-8ef3-6f5e81251a00" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-19_DU-2025-879_domyslne.x" wejscie-w-zycie="2025-07-19"><nr>9</nr><ustep eId="DU/2023/1221__art_9__ust_1" gd:GUID="c42bd525-cac9-4607-86a9-ef4bf923f865" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-19_DU-2025-879_domyslne.x" wejscie-w-zycie="2025-07-19"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="0bc0cce7-2af4-44dc-9d65-0096cd9d96db" fragment="1" gd:fragmentGUID="49d3b55b-5ab4-4331-a998-1107d6b30651" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-19_DU-2025-879_domyslne.x" wejscie-w-zycie="2025-07-19">Wysokość wynagrodzenia przewodniczącego Zespołu Egzaminacyjnego za udział w jego pracach wynosi 500 zł.</zdanie></p></ustep><ustep eId="DU/2023/1221__art_9__ust_2" gd:GUID="c1b3dc82-441f-4a22-8cbf-f2767afaba2c" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-19_DU-2025-879_domyslne.x" wejscie-w-zycie="2025-07-19"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="55135617-d3c3-4a7f-8dd8-57eb18b5bf5c" fragment="1" gd:fragmentGUID="dc3d0697-a5b5-472a-b2c3-9f18f7899f66" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-19_DU-2025-879_domyslne.x" wejscie-w-zycie="2025-07-19">Wysokość wynagrodzenia członka Zespołu Egzaminacyjnego za udział w jego pracach wynosi 300 zł.</zdanie></p></ustep></paragraf></cytat-strukt>.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2025/879__art_2" gd:GUID="70e5de2a-bb68-42a0-9d44-1df27e05a830" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-19_DU-2025-879_domyslne.x" wejscie-w-zycie="2025-07-19">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="0f26ca6f-c693-419b-8cfb-539c5aacdbe0" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-19_DU-2025-879_domyslne.x" wejscie-w-zycie="2025-07-19">
+        <p>
+          <zdanie nr="1" gd:zdGUID="2bec0622-97d1-43c8-97f3-a4dac3f508f1" fragment="1" gd:fragmentGUID="1bdecb59-64ed-41ae-b9c3-6e4227db4f41" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-19_DU-2025-879_domyslne.x" wejscie-w-zycie="2025-07-19">Rozporządzenie wchodzi w życie po upływie 14 dni od dnia ogłoszenia.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <organ-podpisujacy>Minister Zdrowia: <i><osoba podpisujacy="true" gd:osobaGUID="d80e886a-7943-4d11-afe5-f02b09340af2"><imie>I.</imie> <nazwisko>Leszczyna</nazwisko></osoba></i></organ-podpisujacy>
+  </rozporzadzenie>
+</akt-prawny>

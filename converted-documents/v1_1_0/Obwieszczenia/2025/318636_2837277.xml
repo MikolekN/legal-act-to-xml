@@ -1,0 +1,1963 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <obwieszczenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/310</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>92c5a026-beae-48f3-938c-178c1e3258dc</gd:GUIDwersji>
+      <AdresISAP>WDU20250000310</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>310</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 310</AdresWyswietlany>
+      <Tytul>Obwieszczenie Marszałka Sejmu Rzeczypospolitej Polskiej z dnia 6 marca 2025 r. w sprawie ogłoszenia jednolitego tekstu ustawy o kołach gospodyń wiejskich</Tytul>
+      <Rodzaj>OBW_TJ</Rodzaj>
+      <DataOgloszenia>2025-03-13</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-03-06</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_ujednolicenie_2025-03-13_DU-2025-310_domyslne" rodzaj="ujednolicenie" pochodzenie="domyslne-z-aktu" data="2025-03-13" />
+          <Zdarzenie id="zdarz_uchylenie_2026-01-01_DU-2024-1761_odczytane" rodzaj="uchylenie" pochodzenie="odczytane" data="2026-01-01" podstawa="art. 2 pkt 1 lit. a" zrodlo="https://eli.gov.pl/eli/DU/2024/1761" dowod="DU/2025/310__odn_4" />
+          <Zdarzenie id="zdarz_wejscie_2026-01-01_DU-2024-1761_odczytane" rodzaj="wejscie-w-zycie" pochodzenie="odczytane" data="2026-01-01" podstawa="art. 2 pkt 1 lit. b; art. 2 pkt 1 lit. c; art. 2 pkt 2; art. 2 pkt 3" zrodlo="https://eli.gov.pl/eli/DU/2024/1761" dowod="DU/2025/310__odn_4" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_ujednolicenie.zdarz_ujednolicenie_2025-03-13_DU-2025-310_domyslne" glowna="true">
+          <Przedzial rodzaj="ujednolicenie" od="zdarz_ujednolicenie_2025-03-13_DU-2025-310_domyslne" />
+        </GrupaCzasowa>
+        <GrupaCzasowa id="okr_obowiazywanie.x.zdarz_uchylenie_2026-01-01_DU-2024-1761_odczytane" glowna="false">
+          <Przedzial rodzaj="obowiazywanie" do="zdarz_uchylenie_2026-01-01_DU-2024-1761_odczytane" />
+        </GrupaCzasowa>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_uchylenie_2026-01-01_DU-2024-1761_odczytane.x" glowna="false">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_uchylenie_2026-01-01_DU-2024-1761_odczytane" />
+        </GrupaCzasowa>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2024-1761_odczytane.x" glowna="false">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2026-01-01_DU-2024-1761_odczytane" />
+        </GrupaCzasowa>
+        <GrupaCzasowa id="okr_obowiazywanie.x.zdarz_wejscie_2026-01-01_DU-2024-1761_odczytane" glowna="false">
+          <Przedzial rodzaj="obowiazywanie" do="zdarz_wejscie_2026-01-01_DU-2024-1761_odczytane" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <DataObowiazywaniaWersji>
+        <Od>zdarz_ujednolicenie_2025-03-13_DU-2025-310_domyslne</Od>
+      </DataObowiazywaniaWersji>
+      <Organy>
+        <Organ gd:GUID="66579117-f3d5-4e1c-90d3-787c8364b786" rola="wydajacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/MSEJMU">
+          <Nazwa>Marszałek Sejmu</Nazwa>
+          <OrganPodpisujacy>Marszałek Sejmu</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>S.</imie> <nazwisko>Hołownia</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Obwieszczenie</rodzaj-aktu>
+    <autor-aktu>Marszałka Sejmu Rzeczypospolitej Polskiej</autor-aktu>
+    <data>z dnia 6 marca 2025 r.</data>
+    <tytul>w sprawie ogłoszenia jednolitego tekstu ustawy o kołach gospodyń wiejskich</tytul>
+    <punkt-OTJ eId="DU/2025/310__pkt_1" gd:GUID="c64e438b-36b3-4b37-a547-269ba3f40ee3">
+      <nr>1</nr>
+      <p>
+        <zdanie nr="1" gd:zdGUID="1fed41ab-f0f1-4c85-a57e-9607f2e1a172" fragment="1" gd:fragmentGUID="18ce014b-177b-4104-90d6-2afb48f2b15f">Na podstawie art. 16 ust. 1 zdanie pierwsze ustawy z dnia 20 lipca 2000 r. o ogłaszaniu aktów normatywnych i niektórych innych aktów prawnych (Dz. U. z 2019 r. poz. 1461) ogłasza się w załączniku do niniejszego obwieszczenia jednolity tekst ustawy z dnia 9 listopada 2018 r. o kołach gospodyń wiejskich (Dz. U. z 2023 r. poz. 1179), z uwzględnieniem zmian wprowadzonych:</zdanie>
+      </p>
+      <podpunkt-OTJ eId="DU/2025/310__pkt_1__ppkt_1" gd:GUID="8b371062-3e71-455a-8cc9-9f5c4b40797c">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="1fed41ab-f0f1-4c85-a57e-9607f2e1a172" fragment="2" gd:fragmentGUID="db4d574f-2631-4e1c-81d0-103334559012">ustawą z dnia 11 października 2024 r. o zmianie ustawy o kołach gospodyń wiejskich oraz ustawy o społeczno-zawodowych organizacjach rolników (Dz. U. poz. 1560),</zdanie>
+        </p>
+      </podpunkt-OTJ>
+      <podpunkt-OTJ eId="DU/2025/310__pkt_1__ppkt_2" gd:GUID="88e632f9-117c-45a6-88c4-c2a5d7a6d7e1">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="1fed41ab-f0f1-4c85-a57e-9607f2e1a172" fragment="3" gd:fragmentGUID="74cc7d61-db21-4760-b098-11b609556eac">ustawą z dnia 8 listopada 2024 r. o zmianie ustawy o działalności pożytku publicznego i o wolontariacie oraz ustawy o kołach gospodyń wiejskich (Dz. U. poz. 1761)</zdanie>
+        </p>
+      </podpunkt-OTJ>
+      <czesc-wspolna-podpunkt-OTJ eId="DU/2025/310__pkt_1__czw" gd:GUID="a7cfbeb1-7654-475c-a833-7dd744cbabca">
+        <p>
+          <zdanie nr="1" gd:zdGUID="1fed41ab-f0f1-4c85-a57e-9607f2e1a172" fragment="4" gd:fragmentGUID="a70fbe12-e02d-4c9a-bcf7-c31f6a1311df">oraz zmian wynikających z przepisów ogłoszonych przed dniem 6 marca 2025 r.</zdanie>
+        </p>
+      </czesc-wspolna-podpunkt-OTJ>
+    </punkt-OTJ>
+    <punkt-OTJ eId="DU/2025/310__pkt_2" gd:GUID="4de10d91-975b-43e3-994a-d1b27d8b881c">
+      <nr>2</nr>
+      <p>
+        <zdanie nr="1" gd:zdGUID="4284d153-e357-4941-ac0d-6cb3c08ffeb6" fragment="1" gd:fragmentGUID="b7a45f43-b9f9-4a29-a3c0-cbceb34bfb99">Podany w załączniku do niniejszego obwieszczenia tekst jednolity ustawy nie obejmuje:</zdanie>
+      </p>
+      <podpunkt-OTJ eId="DU/2025/310__pkt_2__ppkt_1" gd:GUID="ab0446e0-32eb-42e2-b34b-68cf64dfcb2e">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="4284d153-e357-4941-ac0d-6cb3c08ffeb6" fragment="2" gd:fragmentGUID="21f9fd51-e384-42d6-b898-325863ad6f6a">art. 3–6 ustawy z dnia 11 października 2024 r. o zmianie ustawy o kołach gospodyń wiejskich oraz ustawy o społeczno-zawodowych organizacjach rolników (Dz. U. poz. 1560), które stanowią:<tresc-strukt cudzyslowy="oba" gd:GUID="477e22de-9ad6-47ad-828d-983baa5e390f"><artykul eId="DU/2024/1560__art_3" gd:GUID="9dc0f204-fd3d-402d-8fc9-a0e006fd9686"><nr>3</nr><ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="5e03c070-e0ae-47db-adc6-22e3bbf0010f"><p><zdanie nr="1" gd:zdGUID="15e88284-75ee-4789-b44c-e938a04c3f3d" fragment="1" gd:fragmentGUID="b2cbaf1f-4af9-4871-9086-3735db082c67">Do postępowań w sprawie wpisu do Krajowego Rejestru Kół Gospodyń Wiejskich wszczętych i niezakończonych ostateczną decyzją przed dniem wejścia w życie niniejszej ustawy stosuje się przepisy ustawy zmienianej w art. 1 w brzmieniu nadanym niniejszą ustawą.</zdanie></p></ustep-n></artykul><artykul eId="DU/2024/1560__art_4" gd:GUID="344aaed6-acc8-4bc7-9ca0-be44837c50c9"><nr>4</nr><ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="20164506-c993-4033-a55a-eef17bdf9a73"><p><zdanie nr="1" gd:zdGUID="bb9e6aa6-a85b-4967-b129-f0c94caadbd2" fragment="1" gd:fragmentGUID="d3f581fd-5939-4746-843b-6063654d46cb">Koło gospodyń wiejskich wpisane do Krajowego Rejestru Kół Gospodyń Wiejskich przed dniem wejścia w życie niniejszej ustawy, które jest zrzeszone w gminnym związku rolników, kółek i organizacji rolniczych, wojewódzkim związku rolników, kółek i organizacji rolniczych albo Krajowym Związku Rolników, Kółek i Organizacji Rolniczych, o których mowa w ustawie z dnia 8 października 1982 r. o społeczno-zawodowych organizacjach rolników (Dz. U. z 2024 r. poz. 263 i 1560), przekazuje kierownikowi biura powiatowego Agencji Restrukturyzacji i Modernizacji Rolnictwa właściwemu ze względu na siedzibę tego koła informację o zrzeszeniu w tym związku w terminie 3 miesięcy od dnia wejścia w życie niniejszej ustawy.</zdanie></p></ustep-n></artykul><artykul eId="DU/2024/1560__art_5" gd:GUID="327add00-aabe-44ff-9a2e-b4efa2f8cf97"><nr>5</nr><ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="d290d7d1-c036-4d13-b52b-a71e5b51ec54"><p><zdanie nr="1" gd:zdGUID="6c275ef9-5565-4702-b752-0b1dae382f5d" fragment="1" gd:fragmentGUID="a5be2302-a0a7-4bb5-8ae7-7144d2210c46">Przepisów art. 34 ust. 8 ustawy zmienianej w art. 1 nie stosuje się do kół gospodyń wiejskich wpisanych do Krajowego Rejestru Kół Gospodyń Wiejskich przed dniem wejścia w życie niniejszej ustawy.</zdanie></p></ustep-n></artykul><artykul eId="DU/2024/1560__art_6" gd:GUID="e12a0940-efb4-4cbc-9bac-19988547e12c"><nr>6</nr><ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="90693a4d-46a0-4c38-bbc7-ce1ab006706a"><p><zdanie nr="1" gd:zdGUID="5a2da276-50eb-42dc-81f6-b808514f5b6f" fragment="1" gd:fragmentGUID="71029c45-b816-4d81-90da-ca48256a1833">Ustawa wchodzi w życie z dniem następującym po dniu ogłoszenia.</zdanie></p></ustep-n></artykul></tresc-strukt>;</zdanie>
+        </p>
+      </podpunkt-OTJ>
+      <podpunkt-OTJ eId="DU/2025/310__pkt_2__ppkt_2" gd:GUID="f3957e07-dee5-4793-a2f3-98319e909bcb">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="4284d153-e357-4941-ac0d-6cb3c08ffeb6" fragment="3" gd:fragmentGUID="81960cf3-ff22-458e-87c4-c91ea11a1d3e">art. 3 i art. 4 ustawy z dnia 8 listopada 2024 r. o zmianie ustawy o działalności pożytku publicznego i o wolontariacie oraz ustawy o kołach gospodyń wiejskich (Dz. U. poz. 1761), które stanowią:<tresc-strukt cudzyslowy="oba" gd:GUID="0d209f4a-b0d6-42ae-a405-57c18f89ed13"><artykul eId="DU/2024/1761__art_3" gd:GUID="bfba0290-fabe-4b61-bf04-a8ce231eae11"><nr>3</nr><ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="89927a20-c63b-4eb5-93d4-5d69c884c84a"><p><zdanie nr="1" gd:zdGUID="9cfdfd8f-ae35-4305-92ad-4736d80807ed" fragment="1" gd:fragmentGUID="1b7449e5-cc3b-4c88-914c-5906aea11349">W roku 2025 wysokość limitu przychodów, o których mowa w art. 10a ust. 1 pkt 5 ustawy zmienianej w art. 1 oraz art. 24 ust. 1 pkt 3 ustawy zmienianej w art. 2, wynosi 1 000 000 zł.</zdanie></p></ustep-n></artykul><artykul eId="DU/2024/1761__art_4" gd:GUID="23b6208d-e0f9-43e3-b1fa-b300258832bb"><nr>4</nr><ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="7b66cee6-248a-4093-adba-7ab648541c74"><p><zdanie nr="1" gd:zdGUID="e3995e2d-dc7d-4544-83ea-b5747fe05994" fragment="1" gd:fragmentGUID="c941ec6d-2380-4040-844a-07178ae031de">Ustawa wchodzi w życie z dniem 1 stycznia 2026 r., z wyjątkiem art. 3, który wchodzi w życie z dniem 1 stycznia 2025 r.</zdanie></p></ustep-n></artykul></tresc-strukt>.</zdanie>
+        </p>
+      </podpunkt-OTJ>
+    </punkt-OTJ>
+    <organ-podpisujacy>Marszałek Sejmu: <i><osoba podpisujacy="true" gd:osobaGUID="b2d8f676-c5e1-4696-9b42-296ba2970a4a"><imie>S.</imie> <nazwisko>Hołownia</nazwisko></osoba></i></organ-podpisujacy>
+    <ustawa>
+      <zalacznik-do>Załącznik do obwieszczenia Marszałka Sejmu Rzeczypospolitej Polskiej z dnia 6 marca 2025 r. (Dz. U. poz. 310)</zalacznik-do>
+      <rodzaj-aktu>Ustawa</rodzaj-aktu>
+      <data>z dnia 9 listopada 2018 r.</data>
+      <tytul>o kołach gospodyń wiejskich</tytul>
+      <artykul eId="DU/2025/310__art_1" gd:GUID="33ca7e5e-2454-4f99-8643-5abe669d93fb">
+        <nr>1</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="1d7e4c72-e57a-4638-a708-bc4e37b22fb7">
+          <p>
+            <zdanie nr="1" gd:zdGUID="ee099c1b-727e-46ae-be7b-9477790b8f29" fragment="1" gd:fragmentGUID="dc12e582-0852-4eeb-968d-044b56c9dfa9">Ustawa określa formy i zasady dobrowolnego zrzeszania się w kołach gospodyń wiejskich, tryb ich zakładania oraz organizację kół gospodyń wiejskich działających na terytorium Rzeczypospolitej Polskiej.</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2025/310__art_2" gd:GUID="e73bb776-e09d-46c5-8c7b-4a08984f5aa4">
+        <nr>2</nr>
+        <ustep eId="DU/2025/310__art_2__ust_1" gd:GUID="91f9ec4a-fe3e-4e62-9308-c760eed4b9f1">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="20daa5fd-0062-411e-9550-c054a0f214b9" fragment="1" gd:fragmentGUID="732a16b8-d3f3-4601-addf-96af89ad643d">Koło gospodyń wiejskich jest dobrowolną, niezależną od administracji rządowej i jednostek samorządu terytorialnego, samorządną społeczną organizacją mieszkańców wsi, wspierającą rozwój przedsiębiorczości na wsi i aktywnie działającą na rzecz środowisk wiejskich.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_2__ust_2" gd:GUID="c09aa726-2449-4a3d-a076-6a7a8ed0339d">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="c32df64a-ded1-47a1-8354-581c21628a1d" fragment="1" gd:fragmentGUID="7cf50907-2b49-4b56-941e-c5e544e4d498">Koło gospodyń wiejskich reprezentuje interesy i działa na rzecz poprawy sytuacji społeczno-zawodowej kobiet wiejskich oraz ich rodzin, a także wspiera wszechstronny rozwój terenów wiejskich.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_2__ust_3" gd:GUID="07bbd9c6-8b1e-463f-842a-4601ca896a76">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="d1b9717d-d00f-4ef6-b17a-266c5bf9bd9b" fragment="1" gd:fragmentGUID="96cbdbf9-000b-4857-970d-4ae11767b673">Koło gospodyń wiejskich w szczególności:</zdanie>
+          </p>
+          <punkt eId="DU/2025/310__art_2__ust_3__pkt_1" gd:GUID="e9645785-277b-4df2-93fa-e67f0ec30c0b">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="d1b9717d-d00f-4ef6-b17a-266c5bf9bd9b" fragment="2" gd:fragmentGUID="5ac43d7c-9db3-4804-aabd-0db8fff0fdd3">prowadzi działalność społeczno-wychowawczą i oświatowo-kulturalną w środowiskach wiejskich;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/310__art_2__ust_3__pkt_2" gd:GUID="8dfca07e-5718-478b-a318-93aabdd1dd98">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="d1b9717d-d00f-4ef6-b17a-266c5bf9bd9b" fragment="3" gd:fragmentGUID="c3140740-530b-48c2-8b83-8e84d4c9d159">prowadzi działalność na rzecz wszechstronnego rozwoju obszarów wiejskich;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/310__art_2__ust_3__pkt_3" gd:GUID="fb273c99-e111-4419-bfae-6916ce3bf982">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="d1b9717d-d00f-4ef6-b17a-266c5bf9bd9b" fragment="4" gd:fragmentGUID="698375b8-5427-42d1-b224-e1a4552b6afb">wspiera rozwój przedsiębiorczości kobiet;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/310__art_2__ust_3__pkt_4" gd:GUID="d712fa09-6521-4f51-b196-8c8d225e7d9c">
+            <nr>4</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="d1b9717d-d00f-4ef6-b17a-266c5bf9bd9b" fragment="5" gd:fragmentGUID="4d23d5e2-0024-4763-8dcb-829359e4b4dd">inicjuje i prowadzi działania na rzecz poprawy warunków życia i pracy kobiet na wsi;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/310__art_2__ust_3__pkt_5" gd:GUID="738f0735-9c50-4e32-97e1-9c1724fb82dd">
+            <nr>5</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="d1b9717d-d00f-4ef6-b17a-266c5bf9bd9b" fragment="6" gd:fragmentGUID="208ccd06-9ed1-443e-9a51-50a76fdaa7ec">upowszechnia i rozwija formy współdziałania, gospodarowania i racjonalne metody prowadzenia gospodarstw domowych;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/310__art_2__ust_3__pkt_6" gd:GUID="ce6205d7-7f7a-40ae-93ba-2b0057d8e1e2">
+            <nr>6</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="d1b9717d-d00f-4ef6-b17a-266c5bf9bd9b" fragment="7" gd:fragmentGUID="7103e77a-45cb-4d8e-92f1-3ee03eb42cbb">reprezentuje interesy środowiska kobiet wiejskich wobec organów administracji publicznej;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/310__art_2__ust_3__pkt_7" gd:GUID="e534f89e-d206-4d44-a707-08c7bf552fc5">
+            <nr>7</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="d1b9717d-d00f-4ef6-b17a-266c5bf9bd9b" fragment="8" gd:fragmentGUID="deb6a5fd-fad6-4714-ba28-bd2874b877fb">rozwija kulturę ludową, w tym w szczególności kulturę lokalną i regionalną.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/310__art_3" gd:GUID="35fcaa12-7b60-44aa-badb-8008ea047ac7">
+        <nr>3</nr>
+        <ustep eId="DU/2025/310__art_3__ust_1" gd:GUID="f4a1f45e-5c16-42f9-9e29-69b46d6e627d">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="8c209da1-43d8-448f-91cb-b12997ed7fd3" fragment="1" gd:fragmentGUID="c31a1807-7d9f-48da-b080-150fcd395f01">Koła gospodyń wiejskich mogą współpracować i współdziałać ze sobą w zakresie realizacji zadań określonych w art. 2 ust. 3, w tym celu mogą na zasadzie dobrowolności zrzeszać się i tworzyć związki kół gospodyń wiejskich.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_3__ust_2" gd:GUID="f5a26ed4-e662-4fca-b53b-45810a3aba12">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="6bd43ae6-f536-405c-9516-e99e6874558c" fragment="1" gd:fragmentGUID="76bfcc47-b2a1-4193-8681-e3626d4977ee">Związek kół gospodyń wiejskich może być utworzony z inicjatywy co najmniej dwóch kół gospodyń wiejskich, które zadeklarują członkostwo w związku w drodze uchwały podjętej przez zebrania członków tych kół.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_3__ust_3" gd:GUID="5e1fe831-0ac1-4bdb-a432-4da7cb780f7d">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="85a9bb1e-d120-4333-8ea9-31b953cc4e50" fragment="1" gd:fragmentGUID="7d3f06c8-c7c7-4341-ad00-c7a39603f47b">Podstawowym zadaniem związku kół gospodyń wiejskich jest zapewnienie zrzeszonym w nim kołom pomocy w realizacji zadań statutowych, rozwijanie ich działalności oraz reprezentowanie interesów kół gospodyń wiejskich w kraju i za granicą.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_3__ust_4" gd:GUID="039d8f17-9190-40c7-bb0d-17bb4de54f41">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="ff82def8-9d2c-43b0-b8e3-d4fe311366f0" fragment="1" gd:fragmentGUID="1b12715b-fddc-4116-bfe5-270e7c6a53de">Szczegółowe zadania związków kół gospodyń wiejskich, ich ustrój, stosunki prawne członków są ustalane w statutach związków, uchwalanych przez reprezentację kół gospodyń wiejskich wchodzących w skład związku.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_3__ust_5" gd:GUID="4601f4c5-abcb-423d-94cd-3312bea03139">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="5337aca4-5dc6-4072-8a86-045977cf65cd" fragment="1" gd:fragmentGUID="418f068c-9e3a-40ef-af97-d5865375722e">W sprawach nieuregulowanych w ust. 1–4 do związku kół gospodyń wiejskich stosuje się odpowiednio przepisy art. 4 ust. 6, art. 5 ust. 2 i 3, art. 6, art. 7, art. 8 ust. 1 i 3, art. 9–10a, art. 12–21, art. 23b, art. 25, art. 26 oraz art. 27 ust. 1 pkt 1, 2 i 4 oraz ust. 2–5, z tym że we wniosku o wpis związku do Krajowego Rejestru Kół Gospodyń Wiejskich podaje się:</zdanie>
+          </p>
+          <punkt eId="DU/2025/310__art_3__ust_5__pkt_1" gd:GUID="d8605ff1-0d46-4c27-8b88-64bb9c855c58">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="5337aca4-5dc6-4072-8a86-045977cf65cd" fragment="2" gd:fragmentGUID="a327dedd-8886-467a-b278-bd68c0941359">nazwę i siedzibę kół będących założycielami związku;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/310__art_3__ust_5__pkt_2" gd:GUID="f4e1e6bf-365c-4949-b63a-6d1497bb9b0f">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="5337aca4-5dc6-4072-8a86-045977cf65cd" fragment="3" gd:fragmentGUID="a1ab5fa7-2f99-4232-a102-e265d3a3c7f5">adres do doręczeń;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/310__art_3__ust_5__pkt_3" gd:GUID="0cc32afb-48d2-4b76-a68a-1261837a9dbc">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="5337aca4-5dc6-4072-8a86-045977cf65cd" fragment="4" gd:fragmentGUID="7a3350d4-57c5-41e4-a105-d056a6efefab">własnoręczne podpisy osób uprawnionych do reprezentowania kół będących założycielami związku;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/310__art_3__ust_5__pkt_4" gd:GUID="d73d7ca8-9fb9-4dbd-8a25-e02002d27730">
+            <nr>4</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="5337aca4-5dc6-4072-8a86-045977cf65cd" fragment="5" gd:fragmentGUID="d9e18b84-66ee-467b-9042-41ee4bb58631">informacje o osobie lub osobach umocowanych do reprezentacji związku i sposobie tej reprezentacji;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/310__art_3__ust_5__pkt_5" gd:GUID="1f038b7c-7afd-48e7-bbc1-7f82ab4ef3d1">
+            <nr>5</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="5337aca4-5dc6-4072-8a86-045977cf65cd" fragment="6" gd:fragmentGUID="edd520a6-396f-4f8c-9422-4e5ca87ac798">własnoręczne podpisy osób uprawnionych do reprezentowania kół wybranych w skład komitetu założycielskiego związku.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/310__art_4" gd:GUID="8f687e4c-3418-4710-b113-7baf4068eedf">
+        <nr>4</nr>
+        <ustep eId="DU/2025/310__art_4__ust_1" gd:GUID="c1a0bfe5-3ea1-417f-b38d-561e490f59be">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="23fdded6-6d93-49bc-9247-423a321ef4a9" fragment="1" gd:fragmentGUID="b01d62dd-0a25-43db-a144-cd6b45238888">Na terenie jednej wsi może mieć siedzibę jedno koło gospodyń wiejskich.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_4__ust_1a" gd:GUID="b3e09070-b265-4b26-b981-c94237452c4f">
+          <nr>1a</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="4b075dd1-9a52-4397-8167-861e915ea91c" fragment="1" gd:fragmentGUID="3287d415-7a97-4347-b0df-393b7748aa7c">Koła gospodyń wiejskich mogą mieć siedzibę i działać także na terenach:</zdanie>
+          </p>
+          <punkt eId="DU/2025/310__art_4__ust_1a__pkt_1" gd:GUID="259370ee-7ddc-4915-97fe-8745fb1eab10">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="4b075dd1-9a52-4397-8167-861e915ea91c" fragment="2" gd:fragmentGUID="c03a82c7-ddf2-4c0d-9266-a9d3f626dc68">sołectw położonych w granicach administracyjnych miast;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/310__art_4__ust_1a__pkt_2" gd:GUID="68b81158-d03e-44d3-9bdb-c47bab0161ce">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="4b075dd1-9a52-4397-8167-861e915ea91c" fragment="3" gd:fragmentGUID="bbd85be7-e4b0-457a-be23-60c19eda37bd">miast do 5000 mieszkańców.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/310__art_4__ust_1b" gd:GUID="99f8ffea-da13-410c-ba2d-816e5181195e">
+          <nr>1b</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="4d50f280-5f6a-4b5d-b5bc-0583bf851897" fragment="1" gd:fragmentGUID="151de030-0d5e-4133-a78c-e841fc0c3687">Do kół gospodyń wiejskich, o których mowa w ust. 1a, przepisy ustawy stosuje się odpowiednio.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_4__ust_2" gd:GUID="06ffe237-fc1f-44d0-9725-5faad3b6257a">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="f371789b-2a57-4206-a2ce-61bee90ef692" fragment="1" gd:fragmentGUID="464d273c-e9fd-49ce-8ada-475b2dcbdd74">Terenem działalności koła gospodyń wiejskich może być jedna bądź więcej wsi.</zdanie>
+            <zdanie nr="2" gd:zdGUID="73041b69-0f40-4773-a07b-ed2d493be7a4" fragment="1" gd:fragmentGUID="986ee022-260a-4e3c-9998-208726b4cb0e">Koła mogą wykonywać zadania, o których mowa w art. 2 ust. 3, także poza terenem swojej działalności, w tym na terytorium Rzeczypospolitej Polskiej oraz poza jej granicami.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_4__ust_3" gd:GUID="eae4b9e2-5b74-4b4e-a18f-1e0655a8ebca">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="f127458a-aa46-4ea1-b1da-8e136a3424d3" fragment="1" gd:fragmentGUID="cae3be0b-5dbe-4754-b8c5-d08c83ce215e">Członkiem koła gospodyń wiejskich może być każda osoba, która ukończyła lat 18.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_4__ust_4" gd:GUID="9fa51558-5a40-48ef-ae71-e24750bea17c">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a2809f37-96db-497c-b497-7dff05ec2dd7" fragment="1" gd:fragmentGUID="0c00ae6e-c1c4-4a0e-be66-434f9e4eee47">Za zgodą przedstawicieli ustawowych w działalności koła mogą brać także udział osoby, które ukończyły lat 13.</zdanie>
+            <zdanie nr="2" gd:zdGUID="cf47c8c7-7957-4f19-a00d-fc8edc25b46d" fragment="1" gd:fragmentGUID="b370efb0-42cd-429d-9d6e-41e36e0d732d">Osoby te mogą również tworzyć młodzieżowe i dziecięce organizacje wspomagające realizację celów koła.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_4__ust_5" gd:GUID="8f7d41c1-cca0-4ff1-9005-4be445c9a606">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="9754a076-69c0-4c69-a90e-c1b61c8070e7" fragment="1" gd:fragmentGUID="e6d28d8f-24fc-4fc3-9c7a-165302053da8">Jednocześnie można być członkiem tylko jednego koła gospodyń wiejskich.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_4__ust_6" gd:GUID="ae8a7d8d-ac61-412c-8c26-891d3fa08e5d">
+          <nr>6</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="7406e864-69d8-4a2c-a2d2-a0066cd164d8" fragment="1" gd:fragmentGUID="4e5bfd79-d6b2-45cf-8588-8d44d691369e">Szczegółowe zasady i warunki wstępowania do i występowania z kół gospodyń wiejskich określają statuty kół.</zdanie>
+            <zdanie nr="2" gd:zdGUID="4837f59a-63b7-449e-a346-377542c5d220" fragment="1" gd:fragmentGUID="2e3aec4d-fd86-4fba-b089-f1b77b427065">Statut może przewidywać dodatkowe wymogi dla członków koła.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/310__art_5" gd:GUID="3aa779c8-37b5-4b76-bf2a-4106c90ac19d">
+        <nr>5</nr>
+        <ustep eId="DU/2025/310__art_5__ust_1" gd:GUID="c2fcb0aa-b069-4e3f-86df-2483a0e69bfd">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="d8d44d06-59e8-40b2-b315-95a8921a9716" fragment="1" gd:fragmentGUID="70c9fd40-8d8f-42d5-bc19-89ddca1b6924">Z inicjatywą założenia koła gospodyń wiejskich może wystąpić co najmniej 10 osób, o których mowa w art. 4 ust. 3, których miejscem zamieszkania jest wieś będąca terenem działalności koła, sołectwo położone w granicach administracyjnych miasta albo miasto do 5000 mieszkańców.</zdanie>
+            <zdanie nr="2" gd:zdGUID="14220107-fe7d-4564-831e-d27e92c5a4b8" fragment="1" gd:fragmentGUID="8e4b70c3-9c34-450b-9ce7-c736124c139c">Osoby te uchwalają statut koła gospodyń wiejskich oraz wybierają komitet założycielski.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_5__ust_2" gd:GUID="5181817f-4f1f-46e3-bfe2-867d897dd312">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="461f930e-5368-40c9-83fe-627de1ea0049" fragment="1" gd:fragmentGUID="5422aca5-57a5-4eea-81a3-74351d223f26">Koło gospodyń wiejskich działa na podstawie uchwalonego przez siebie statutu.</zdanie>
+            <zdanie nr="2" gd:zdGUID="0eb85d35-63a3-4c22-a8e7-70687f2a50b5" fragment="1" gd:fragmentGUID="16be80ee-6993-44a2-bdde-7da8beaf0c29">Statut określa w szczególności:</zdanie>
+          </p>
+          <punkt eId="DU/2025/310__art_5__ust_2__pkt_1" gd:GUID="5d946f4d-909a-416c-a361-8e8335bc804d">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="2" gd:zdGUID="0eb85d35-63a3-4c22-a8e7-70687f2a50b5" fragment="2" gd:fragmentGUID="78908f96-a391-42d5-a7b3-5396b4a61f35">nazwę i siedzibę koła;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/310__art_5__ust_2__pkt_2" gd:GUID="57b1b03b-4872-465f-a0dc-95d2dd81d128">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="2" gd:zdGUID="0eb85d35-63a3-4c22-a8e7-70687f2a50b5" fragment="3" gd:fragmentGUID="d4e695c1-7eab-4926-9f08-e4663159b2a7">podmiotowy i terytorialny zakres działania koła;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/310__art_5__ust_2__pkt_3" gd:GUID="7623597b-528f-4932-be66-97997fe51118">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="2" gd:zdGUID="0eb85d35-63a3-4c22-a8e7-70687f2a50b5" fragment="4" gd:fragmentGUID="a17b1030-b648-408f-9844-6842a4e24e14">cele i zadania koła oraz środki ich realizacji;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/310__art_5__ust_2__pkt_4" gd:GUID="32910935-b8cc-48c4-86ad-cccb094bbe72">
+            <nr>4</nr>
+            <p>
+              <zdanie nr="2" gd:zdGUID="0eb85d35-63a3-4c22-a8e7-70687f2a50b5" fragment="5" gd:fragmentGUID="c89311a9-199b-4eda-b25e-82e9e3ef8dba">zakres i przedmiot działalności zarobkowej prowadzonej przez koło;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/310__art_5__ust_2__pkt_5" gd:GUID="c77e15b3-ea34-4401-939f-0284d64b4ef3">
+            <nr>5</nr>
+            <p>
+              <zdanie nr="2" gd:zdGUID="0eb85d35-63a3-4c22-a8e7-70687f2a50b5" fragment="6" gd:fragmentGUID="6506cd0a-48c6-4f56-8681-70c55ae57900">sposób nabywania i utraty członkostwa oraz przyczyny utraty członkostwa w kole;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/310__art_5__ust_2__pkt_6" gd:GUID="58bfa6f7-51a2-40b6-a257-47ac809bd9d4">
+            <nr>6</nr>
+            <p>
+              <zdanie nr="2" gd:zdGUID="0eb85d35-63a3-4c22-a8e7-70687f2a50b5" fragment="7" gd:fragmentGUID="cf98ef06-9093-4847-bfce-1fbf8ca891d8">prawa i obowiązki członków koła;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/310__art_5__ust_2__pkt_7" gd:GUID="5a75b09f-6c11-4768-9886-7909a27fb930">
+            <nr>7</nr>
+            <p>
+              <zdanie nr="2" gd:zdGUID="0eb85d35-63a3-4c22-a8e7-70687f2a50b5" fragment="8" gd:fragmentGUID="ad44cfbb-0710-40c3-be59-ace85a69712f">sposób ustanawiania i regulowania składek członkowskich,</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/310__art_5__ust_2__pkt_8" gd:GUID="1d7ddd54-320f-4ac7-af97-df28b37f755c">
+            <nr>8</nr>
+            <p>
+              <zdanie nr="2" gd:zdGUID="0eb85d35-63a3-4c22-a8e7-70687f2a50b5" fragment="9" gd:fragmentGUID="9df25d5a-bbb5-49de-b18a-202d7b98b6c3">organy koła, ich kompetencje, okres kadencji oraz tryb ich wyboru i odwoływania przed upływem kadencji;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/310__art_5__ust_2__pkt_9" gd:GUID="634d09d9-32a1-4bbf-83d4-30817629d4c2">
+            <nr>9</nr>
+            <p>
+              <zdanie nr="2" gd:zdGUID="0eb85d35-63a3-4c22-a8e7-70687f2a50b5" fragment="10" gd:fragmentGUID="12b593de-490e-450c-8561-9f6b17ca63ac">warunki podejmowania i ważności uchwał organów koła;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/310__art_5__ust_2__pkt_10" gd:GUID="deabcd0b-6626-402d-96d5-7b84e7b5c0b3">
+            <nr>10</nr>
+            <p>
+              <zdanie nr="2" gd:zdGUID="0eb85d35-63a3-4c22-a8e7-70687f2a50b5" fragment="11" gd:fragmentGUID="f8020356-d8cf-4fac-b2f3-aee7eb9984bd">sposób reprezentowania koła na zewnątrz, w szczególności sposób zaciągania zobowiązań majątkowych;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/310__art_5__ust_2__pkt_11" gd:GUID="b8cb2d6e-61dd-40a8-adc5-374b995887a8">
+            <nr>11</nr>
+            <p>
+              <zdanie nr="2" gd:zdGUID="0eb85d35-63a3-4c22-a8e7-70687f2a50b5" fragment="12" gd:fragmentGUID="e2c0381c-f0ee-43c1-baf0-8bfc70164eb8">majątek koła oraz sposób dysponowania tym majątkiem;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/310__art_5__ust_2__pkt_12" gd:GUID="24107562-62b1-4373-a9fa-ed1715f83a42">
+            <nr>12</nr>
+            <p>
+              <zdanie nr="2" gd:zdGUID="0eb85d35-63a3-4c22-a8e7-70687f2a50b5" fragment="13" gd:fragmentGUID="0693fbae-8a03-4942-aa2c-f61ecd55c0d1">zasady tworzenia i wykorzystania kapitałów (funduszy) własnych;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/310__art_5__ust_2__pkt_13" gd:GUID="0d4d43e8-f8e1-4dd4-bedd-f833dc1c0ac8">
+            <nr>13</nr>
+            <p>
+              <zdanie nr="2" gd:zdGUID="0eb85d35-63a3-4c22-a8e7-70687f2a50b5" fragment="14" gd:fragmentGUID="d07e46d5-2c27-456c-a54b-83547f47d203">tryb zmiany statutu koła;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/310__art_5__ust_2__pkt_14" gd:GUID="8135aaad-1a58-43b9-ab8c-aa7159c456c2">
+            <nr>14</nr>
+            <p>
+              <zdanie nr="2" gd:zdGUID="0eb85d35-63a3-4c22-a8e7-70687f2a50b5" fragment="15" gd:fragmentGUID="75f87f9f-85f4-4c17-b2b7-db75f9b4c3dc">tryb likwidacji koła.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/310__art_5__ust_3" gd:GUID="77e904ca-b2c2-48f1-95d8-bf8e099b57fb">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="fc865c05-f665-4e5e-b50a-1a27dae53a85" fragment="1" gd:fragmentGUID="4a48c0da-fbd9-4a1b-b62a-10e024222d90">Koło gospodyń wiejskich może działać na podstawie wzorcowego statutu, którego treść określa załącznik do ustawy.</zdanie>
+            <zdanie nr="2" gd:zdGUID="88e6e427-a5e4-4e51-9c6f-6c7400180da5" fragment="1" gd:fragmentGUID="fdfae59a-97ac-455c-919b-5ad0dfa40462">W każdym czasie koło gospodyń wiejskich działające na podstawie wzorcowego statutu może przyjąć własny statut, zgodny z wymogami określonymi w ust. 2.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_5__ust_4" gd:GUID="825549df-74b6-49c4-b6ea-27fb3db22207">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="d0d2882e-c73c-42b7-bbf7-7649ef6ec4ba" fragment="1" gd:fragmentGUID="e3f3b995-6d04-4f86-ab9a-ff1cf376fa5e">Nazwa koła gospodyń wiejskich odróżnia tworzone koło od innych kół, w szczególności przez odniesienie się do terenu działalności koła.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/310__art_6" gd:GUID="3d76cc4a-e465-455c-92a7-5a169a4aed7f">
+        <nr>6</nr>
+        <ustep eId="DU/2025/310__art_6__ust_1" gd:GUID="ac9d717c-2681-4fa7-a282-4ca78cd4dfc3">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="b5a93fb8-e475-4999-84bb-bec9d983a526" fragment="1" gd:fragmentGUID="7506060b-e012-48cd-91f5-773245c38267">Koło gospodyń wiejskich podlega obowiązkowi wpisu do Krajowego Rejestru Kół Gospodyń Wiejskich, zwanego dalej „rejestrem”, prowadzonego przez Agencję Restrukturyzacji i Modernizacji Rolnictwa.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_6__ust_2" gd:GUID="a6ce795d-62cc-448b-b3cb-86698ab0fd0d">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="6cf02f10-a2ef-4484-8ef6-d7d3c93dabdf" fragment="1" gd:fragmentGUID="c3296f23-3fe0-41d1-8542-7fc84a9b77b6">Koło gospodyń wiejskich nabywa osobowość prawną z chwilą dokonania wpisu do rejestru.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_6__ust_3" gd:GUID="28014139-6821-48de-8be8-aaaa823a334b">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="7b4b89b3-913d-4339-b84a-574a6c5f4751" fragment="1" gd:fragmentGUID="6dbcd72a-f4dc-4863-908f-d0d8ea069999">Przepisu ust. 2 nie stosuje się do koła gospodyń wiejskich, które już posiada osobowość prawną.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/310__art_7" gd:GUID="0d675a23-9380-41fa-9b47-7564ea8df0b4">
+        <nr>7</nr>
+        <ustep eId="DU/2025/310__art_7__ust_1" gd:GUID="e7d8581f-5175-4f6c-9db2-a7459b43bb55">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="720a9e80-98d0-4848-9401-923150b85b26" fragment="1" gd:fragmentGUID="bce3ac7b-213d-4ad6-be8f-3436e169ec95">Do czasu rejestracji koła gospodyń wiejskich, a następnie do czasu wyboru zgodnie ze statutem jego organów, w imieniu koła działa komitet założycielski.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_7__ust_2" gd:GUID="97ab4b64-c297-4d42-bef1-834aadfa251b">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="fde10125-dd2a-4104-bea9-7846c8cc3cdb" fragment="1" gd:fragmentGUID="011fe6a4-b980-435d-bbfe-749695907533">Za czynności dokonane w imieniu koła gospodyń wiejskich przed jego rejestracją członkowie komitetu założycielskiego odpowiadają wobec osób trzecich solidarnie, zaś za zobowiązania wynikające z tych czynności po rejestracji koła – odpowiada koło tak, jak za zobowiązania zaciągnięte przez siebie, z tym że członkowie komitetu założycielskiego odpowiadają za nie wobec koła według przepisów prawa cywilnego.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_7__ust_3" gd:GUID="a0b85e5b-26d4-42c7-b1da-720ec5d8b97c">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="2dfc9a7a-26b5-4396-a1d7-6ba2b463561f" fragment="1" gd:fragmentGUID="7a115c01-c649-48d1-8d11-4fe91ddf2d7b">Koło gospodyń wiejskich jest obowiązane do wyboru zarządu koła gospodyń wiejskich, zwanego dalej „zarządem koła”, w terminie 3 miesięcy od dnia dokonania wpisu do rejestru.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_7__ust_4" gd:GUID="e5b46474-58b0-4ece-b86c-13e5fb77cd8d">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="bae23578-4176-40db-88a3-82394acfdded" fragment="1" gd:fragmentGUID="6106b276-583b-4ef2-b57d-56abe4d5f6d4">W przypadku niewywiązania się koła gospodyń wiejskich z obowiązku, o którym mowa w ust. 3, koło gospodyń wiejskich przechodzi w stan likwidacji.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_7__ust_5" gd:GUID="5023b0a5-cce4-4792-8915-0abe9abf8a81">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="90d94330-45b7-4b05-8a1e-f4ffbb78b837" fragment="1" gd:fragmentGUID="11c6ae7f-ed09-4482-b984-be0d0f84fb86">Przepisów ust. 1–4 nie stosuje się do koła gospodyń wiejskich, które już posiada osobowość prawną.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/310__art_8" gd:GUID="3c4ee6c2-0b43-41ea-b1ea-9cc6bad5dc3a">
+        <nr>8</nr>
+        <ustep eId="DU/2025/310__art_8__ust_1" gd:GUID="74ba48cb-c9c4-4fcf-9eb4-a2d33e25faac">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="63a72a96-8b87-4d78-864b-1d86792028cd" fragment="1" gd:fragmentGUID="148d3449-1176-45db-87fd-55e4395edfde">Zarząd koła, a w przypadku gdy zarząd koła nie został wybrany – komitet założycielski, składa do kierownika biura powiatowego Agencji Restrukturyzacji i Modernizacji Rolnictwa właściwego ze względu na siedzibę tego koła wniosek o wpis koła gospodyń wiejskich do rejestru, dołączając do tego wniosku:</zdanie>
+          </p>
+          <punkt eId="DU/2025/310__art_8__ust_1__pkt_1" gd:GUID="d8c5010c-3ed2-4f8e-b4a7-58ce437aee71">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="63a72a96-8b87-4d78-864b-1d86792028cd" fragment="2" gd:fragmentGUID="17d42d53-0c87-48ed-81e0-231db5f228af">statut koła lub oświadczenie o przyjęciu przez koło wzorcowego statutu;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/310__art_8__ust_1__pkt_2" gd:GUID="025aa227-a6a4-4a4e-858c-d9b78d396682">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="63a72a96-8b87-4d78-864b-1d86792028cd" fragment="3" gd:fragmentGUID="1610569d-3460-45f2-b0a9-99d43acc1cd6">uchwałę o wyborze zarządu koła, a w przypadku gdy zarząd koła nie został wybrany – uchwałę założycieli koła o wyborze komitetu założycielskiego;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/310__art_8__ust_1__pkt_3" gd:GUID="67b46ef0-f14b-41fa-8b90-fc5594c4d58b">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="63a72a96-8b87-4d78-864b-1d86792028cd" fragment="4" gd:fragmentGUID="42ceca58-5871-44a9-9fa1-be5f6827d8ec">uchwałę założycieli koła o przyjęciu statutu.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/310__art_8__ust_2" gd:GUID="bde37027-7434-4d12-84fe-b03edd545ab0">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="36ff3815-38e3-48f8-b4ba-240fe5bc974a" fragment="1" gd:fragmentGUID="24939f29-0f99-475e-a117-2bc87b129f55">Wniosek, o którym mowa w ust. 1, zawiera w szczególności:</zdanie>
+          </p>
+          <punkt eId="DU/2025/310__art_8__ust_2__pkt_1" gd:GUID="29d6b4e2-be9d-40ad-b273-6a743c58e31d">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="36ff3815-38e3-48f8-b4ba-240fe5bc974a" fragment="2" gd:fragmentGUID="b242e6b2-358b-4719-8a40-3584e1f05d8c">nazwę koła oraz jego siedzibę i adres;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/310__art_8__ust_2__pkt_2" gd:GUID="fe7d8b6e-3435-4d6e-9bc3-4cb57cb5f27f">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="36ff3815-38e3-48f8-b4ba-240fe5bc974a" fragment="3" gd:fragmentGUID="6ec743f9-9778-4dd9-8e23-6cf0c043fec4">listę założycieli koła z podaniem ich imion i nazwisk oraz miejsc zamieszkania;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/310__art_8__ust_2__pkt_3" gd:GUID="544c364b-ece0-4973-8b71-1c9cf5bdaede">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="36ff3815-38e3-48f8-b4ba-240fe5bc974a" fragment="4" gd:fragmentGUID="716acd32-5e7b-424a-9c7d-ec7a87cfc725">oświadczenia założycieli koła o woli wejścia w skład jego członków oraz o miejscu zamieszkania na terenie działalności koła;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/310__art_8__ust_2__pkt_4" gd:GUID="5e24081e-98d4-4067-b56d-4f30f2ac9871">
+            <nr>4</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="36ff3815-38e3-48f8-b4ba-240fe5bc974a" fragment="5" gd:fragmentGUID="2d54f9ef-1ef6-42fb-a48b-a3d8df97f2b9">adres do doręczeń;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/310__art_8__ust_2__pkt_5" gd:GUID="8a39afb5-0967-4ffa-8313-73bd18580863">
+            <nr>5</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="36ff3815-38e3-48f8-b4ba-240fe5bc974a" fragment="6" gd:fragmentGUID="0e154160-0408-4e2e-876d-c9799e621ba9">informacje o osobie albo osobach umocowanych do reprezentacji koła i sposobie tej reprezentacji;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/310__art_8__ust_2__pkt_6" gd:GUID="a727f4c6-5d79-4e44-a336-2789e6c58584">
+            <nr>6</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="36ff3815-38e3-48f8-b4ba-240fe5bc974a" fragment="7" gd:fragmentGUID="34e8ddbf-836a-44bd-9b1f-bb5c214f52c0">własnoręczne podpisy członków zarządu koła, a gdy zarząd koła nie został wybrany – osób wybranych w skład komitetu założycielskiego;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/310__art_8__ust_2__pkt_7" gd:GUID="acf41829-a473-4eb2-8ed8-8dbc6d89a3b2">
+            <nr>7</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="36ff3815-38e3-48f8-b4ba-240fe5bc974a" fragment="8" gd:fragmentGUID="c40c49fa-7f6b-4e18-a440-34da40860a60"><odnosnik id-odnosnika="1" symbol="1" gd:GUID="e92e1331-67b0-4c57-90c6-29a44ce06948"><p><zdanie nr="1" gd:zdGUID="76fc0be1-e97d-43c1-9ca3-fbfc8f85cd64" fragment="1" gd:fragmentGUID="79524dba-40ec-42fc-9e1c-747c0e371d08">Dodany przez art. 1 pkt 1 ustawy z dnia 11 października 2024 r. o zmianie ustawy o kołach gospodyń wiejskich oraz ustawy o społeczno-zawodowych organizacjach rolników (Dz. U. poz. 1560), która weszła w życie z dniem 22 października 2024 r.</zdanie></p></odnosnik> informację, czy koło jest zrzeszone w gminnym związku rolników, kółek i organizacji rolniczych, wojewódzkim związku rolników, kółek i organizacji rolniczych albo Krajowym Związku Rolników, Kółek i Organizacji Rolniczych, o których mowa w ustawie z dnia 8 października 1982 r. o społeczno-zawodowych organizacjach rolników (Dz. U. z 2024 r. poz. 263 i 1560).</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/310__art_8__ust_3" gd:GUID="b494ee47-449f-4d51-b281-01baf3c069b8">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="ddafaffa-6887-4b57-b834-059083ecb707" fragment="1" gd:fragmentGUID="fa32a4d6-e2b4-4fb1-9de4-4f4fc92b7d2e">Wniosek, o którym mowa w ust. 1, składa się na formularzu opracowanym i udostępnionym przez Agencję Restrukturyzacji i Modernizacji Rolnictwa.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/310__art_9" gd:GUID="9d911e20-9778-4724-83ae-920ff1afb1e1">
+        <nr>9</nr>
+        <ustep eId="DU/2025/310__art_9__ust_1" gd:GUID="220b00c5-84fa-4d5a-87fb-45556db91acc">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="eff03fa0-fa8c-4f6a-9ac9-84573174c37a" fragment="1" gd:fragmentGUID="48be94a3-8964-4a04-9bd1-3eabdb2ed688">Kierownik biura powiatowego Agencji Restrukturyzacji i Modernizacji Rolnictwa dokonuje, w drodze decyzji, wpisu koła gospodyń wiejskich do rejestru po stwierdzeniu, że statut koła jest zgodny z przepisami prawa, założyciele koła spełniają wymagania określone w ustawie oraz w rejestrze nie dokonano wpisu koła z siedzibą w tej samej wsi.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_9__ust_2" gd:GUID="a8855f70-c31a-4e2f-a79b-c5f73d3079bd">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="92748269-619e-4ee1-87fb-1167badba7ad" fragment="1" gd:fragmentGUID="d6e064f0-e3a2-4c72-80bd-108382f9add6">Kierownik biura powiatowego Agencji Restrukturyzacji i Modernizacji Rolnictwa, po dokonaniu wpisu, wydaje zaświadczenie o wpisaniu koła do rejestru.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_9__ust_3" gd:GUID="3533958c-64b0-408d-89fc-f4975dbbb85d">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="250aa737-c896-4db5-b76e-9528a6e92382" fragment="1" gd:fragmentGUID="e781e860-2566-4136-b0d0-05cd57ce8b87">W przypadku złożenia wniosku o wpis do rejestru przez więcej niż jedno koło gospodyń wiejskich utworzone na terenie tej samej wsi, kierownik biura powiatowego Agencji Restrukturyzacji i Modernizacji Rolnictwa dokonuje wpisu tego koła, które złożyło wniosek najwcześniej.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_9__ust_4" gd:GUID="1746ef56-38c2-4ca2-bb79-581441fc7909">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="faef8b92-27d7-475a-9cd7-e7c09b1aa82e" fragment="1" gd:fragmentGUID="3ab88a20-1d4a-4db4-a499-505da91b8b51">(uchylony)</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/310__art_10" gd:GUID="af5788f4-3483-43ba-9381-768a168821ed">
+        <nr>10</nr>
+        <ustep eId="DU/2025/310__art_10__ust_1" gd:GUID="5a4a49b3-a903-4338-b98d-0bbb08d2deaa">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="d9312e47-8728-4720-961b-b53d9ad5d4ae" fragment="1" gd:fragmentGUID="801f1dc7-6172-4b21-93ba-2e80af8c82c3">Obowiązkowemu wpisowi do rejestru podlegają zmiany danych wskazanych we wniosku o wpis koła gospodyń wiejskich do rejestru, a także zmiany statutu tego koła oraz listy jego członków.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_10__ust_2" gd:GUID="da20b306-4664-49fb-bdd5-ff2bb7607cfb">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a8178184-9930-4966-9c78-e51da4bed7ea" fragment="1" gd:fragmentGUID="c808df6e-7881-4d11-9532-af72b7999cd8">Przez zmianę statutu koła rozumie się również uchwalenie przez istniejące koło nowego statutu lub uchwalenie własnego statutu w miejsce stosowanego przez koło wzorcowego statutu.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_10__ust_3" gd:GUID="c37c242a-8804-490a-8b7d-9971d2e9cc9c">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="e826ade4-956f-4a24-9e9d-f813530c17a7" fragment="1" gd:fragmentGUID="d661ba88-1c92-4225-b336-53d345b10895">W sprawie wpisu zmian, o których mowa w ust. 1, do rejestru stosuje się odpowiednio zasady i tryb przewidziane dla wpisu koła gospodyń wiejskich do rejestru.</zdanie>
+            <zdanie nr="2" gd:zdGUID="65d547e8-dee7-419a-9563-1e828feb48c8" fragment="1" gd:fragmentGUID="7690de99-f69a-46b4-9881-11d5929bce82">Wniosek o wpis zmian do rejestru składa się w terminie 30 dni od dnia wystąpienia tych zmian.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_10__ust_3a" gd:GUID="1da93f0d-058a-4705-bd43-69bb3abe4ac6">
+          <nr>3a</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="efb0926b-bb0b-4e7d-a01e-0deab3438c6d" fragment="1" gd:fragmentGUID="76dbf5cc-ba70-4c37-a667-5d11e1827a02">W przypadku wystąpienia zmian, o których mowa w ust. 1, do wniosku o wpis zmian do rejestru dołącza się dokumenty potwierdzające ich wystąpienie.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_10__ust_4" gd:GUID="c56ff4d4-e68c-471f-8fbb-fb91e3513bb4">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="48609f97-e5d2-42e8-9058-38c55911ec4b" fragment="1" gd:fragmentGUID="e6dacc57-46ac-402b-b42f-494eabbdddea">W przypadku gdy kierownik biura powiatowego Agencji Restrukturyzacji i Modernizacji Rolnictwa stwierdzi, że statut koła gospodyń wiejskich lub jego zmiany nie spełniają wymogów określonych w art. 5 ust. 2, kierownik biura powiatowego Agencji Restrukturyzacji i Modernizacji Rolnictwa wyznaczy temu kołu termin na dokonanie odpowiednich poprawek, nie krótszy niż 14 dni, pod rygorem odmowy wpisu do rejestru.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/310__art_10a" gd:GUID="500254dc-07c1-4169-b5be-1de66ccb1395">
+        <nr>10a</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="d078e999-ab11-4cfb-a43a-32394e2d0283">
+          <p>
+            <zdanie nr="1" gd:zdGUID="7fb6f19d-1e7a-404f-afb1-e2a106bfab10" fragment="1" gd:fragmentGUID="33fd3456-7256-4b63-96a5-206c28b5dab0">Koło gospodyń wiejskich, które zostało wpisane do rejestru, utrzymuje swój status i może kontynuować działalność także po zmianach w podziale terytorialnym kraju lub zmianie liczby mieszkańców, o której mowa w art. 4 ust. 1a pkt 2.</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2025/310__art_11" gd:GUID="e03cc8c9-cd12-4e69-a05b-e0bfe9ae09ea">
+        <nr>11</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="ac7e7507-125e-45b8-8881-f8c2ef3b3012">
+          <p>
+            <zdanie nr="1" gd:zdGUID="760e8ed9-9b16-4264-956f-b239af312c9c" fragment="1" gd:fragmentGUID="beddcb53-e322-4c00-88ff-2c1f7035887f">(uchylony)</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2025/310__art_12" gd:GUID="0c339e65-f97d-4cbe-a413-462be916c8d1">
+        <nr>12</nr>
+        <ustep eId="DU/2025/310__art_12__ust_1" gd:GUID="72047dae-40ab-4138-a983-48c971e6f30c">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="6d36771e-57ef-46cb-8d8a-b4b37cf7d45a" fragment="1" gd:fragmentGUID="810259a3-5c91-4c95-b8c7-1a804bf48039">Postępowanie w sprawach o wpis lub zmianę wpisu koła gospodyń wiejskich do rejestru jest wolne od opłat.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_12__ust_2" gd:GUID="05decfb0-2d10-4d49-a81e-4d3f5393cfe5">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="958f4950-eb0e-420f-9333-8898615b4dec" fragment="1" gd:fragmentGUID="ca132088-0aaa-4bfb-99db-ebfef2ba3e4c">Rejestr jest jawny, z wyłączeniem danych członków koła gospodyń wiejskich wymienionych w art. 13 pkt 6.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_12__ust_3" gd:GUID="26130f0f-4111-4b46-afa8-b64907ede965">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="682e5642-d771-4ced-951b-840440cef3c9" fragment="1" gd:fragmentGUID="8731bdf4-648b-4c53-99c3-d008e71d2648">Każdy ma prawo dostępu do danych zawartych w rejestrze.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_12__ust_4" gd:GUID="bca80dfa-dc39-4d1f-8c8f-e8692176f70a">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="8842a02d-7aca-4a22-b08a-9980204624bb" fragment="1" gd:fragmentGUID="52fdb59f-6254-4181-ad54-fbc40627e675">Każdy ma prawo otrzymać nieodpłatnie, również drogą elektroniczną, poświadczone odpisy, wyciągi, zaświadczenia i informacje z rejestru.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/310__art_13" gd:GUID="dc1acfba-4ea8-4661-ba83-8292e7f91db0">
+        <nr>13</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="ba06d6f9-52cc-4799-b3af-5ed00fdb64ee">
+          <p>
+            <zdanie nr="1" gd:zdGUID="d6c3170b-ae45-42f4-a3bd-8f11ffcd8ac6" fragment="1" gd:fragmentGUID="240b5d16-e7f5-482a-8f6c-df68059f16ac">Rejestr zawiera dane i informacje zawarte we wniosku o wpis koła do rejestru oraz inne dane dotyczące koła zamieszczone według następującego porządku:</zdanie>
+          </p>
+          <punkt eId="DU/2025/310__art_13__pkt_1" gd:GUID="91c1929e-6545-4830-9da3-1d117337ed88">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="d6c3170b-ae45-42f4-a3bd-8f11ffcd8ac6" fragment="2" gd:fragmentGUID="addcd6c8-44e5-47fb-b7b3-f3a1b7e2c495">data wpisu do rejestru i daty wpisów późniejszych zmian danych zawartych we wniosku o wpis koła do rejestru, w tym zmian statutu koła;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/310__art_13__pkt_2" gd:GUID="fd3ac5f3-a297-4b11-9f77-56efed41c597">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="d6c3170b-ae45-42f4-a3bd-8f11ffcd8ac6" fragment="3" gd:fragmentGUID="d16b393b-bfa9-4143-bfd5-4c3e17375605">nazwa koła, adres siedziby koła, numer identyfikacyjny koła w krajowym rejestrze urzędowym podmiotów gospodarki narodowej (REGON), jeżeli numer taki został nadany, oraz numer identyfikacji podatkowej (NIP) koła;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/310__art_13__pkt_3" gd:GUID="7e5a80a8-05b3-451b-aaba-c04ee5403130">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="d6c3170b-ae45-42f4-a3bd-8f11ffcd8ac6" fragment="4" gd:fragmentGUID="11f919df-d61c-4458-a8b4-07a43ec4c7ff">lista założycieli koła;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/310__art_13__pkt_4" gd:GUID="7ed739f0-5002-421b-94bb-cac8989d19ef">
+            <nr>4</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="d6c3170b-ae45-42f4-a3bd-8f11ffcd8ac6" fragment="5" gd:fragmentGUID="5653f722-77b9-411e-a3f4-1746586714ee">informacja o osobie lub osobach umocowanych do reprezentacji koła oraz o sposobie tej reprezentacji;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/310__art_13__pkt_5" gd:GUID="d9e42315-874f-46f9-950e-f6e9bf2ffb09">
+            <nr>5</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="d6c3170b-ae45-42f4-a3bd-8f11ffcd8ac6" fragment="6" gd:fragmentGUID="669339da-9dc4-42ac-9781-5be2a61d04d0">informacja o oświadczeniach założycieli koła zawartych we wniosku o wpis koła do rejestru;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/310__art_13__pkt_6" gd:GUID="e891384a-b839-4715-8d51-30ed0dcad6db">
+            <nr>6</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="d6c3170b-ae45-42f4-a3bd-8f11ffcd8ac6" fragment="7" gd:fragmentGUID="513a4b91-9788-4a56-a96f-4821e1895090">lista członków koła zawierająca miejsce stałego zamieszkania oraz numer ewidencyjny powszechnego elektronicznego systemu ewidencji ludności (PESEL) członka, a w przypadku osoby nieposiadającej obywatelstwa polskiego – z kodem kraju tej osoby oraz numerem jej paszportu lub innego dokumentu stwierdzającego jej tożsamość;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/310__art_13__pkt_7" gd:GUID="6adbf4d2-e5e0-4a35-8d65-93a2814dc74a">
+            <nr>7</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="d6c3170b-ae45-42f4-a3bd-8f11ffcd8ac6" fragment="8" gd:fragmentGUID="ee189cd7-4e35-4708-9d0d-d2a492e8191c"><odnosnik id-odnosnika="2" symbol="2" gd:GUID="19dc7d41-fcbe-441f-af7f-b1fda86365e0"><p><zdanie nr="1" gd:zdGUID="18eef058-c8fa-4224-a342-9f0f96bbaa97" fragment="1" gd:fragmentGUID="d89451a0-af9f-4034-a85a-3d00e34d4226">Dodany przez art. 1 pkt 2 ustawy, o której mowa w odnośniku 1.</zdanie></p></odnosnik> informację o zrzeszeniu koła w gminnym związku rolników, kółek i organizacji rolniczych, wojewódzkim związku rolników, kółek i organizacji rolniczych albo Krajowym Związku Rolników, Kółek i Organizacji Rolniczych, o których mowa w ustawie z dnia 8 października 1982 r. o społeczno-zawodowych organizacjach rolników – o ile koło jest zrzeszone w takim związku.</zdanie>
+            </p>
+          </punkt>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2025/310__art_14" gd:GUID="6524c8a1-23ef-471a-903a-6d7b03808d05">
+        <nr>14</nr>
+        <ustep eId="DU/2025/310__art_14__ust_1" gd:GUID="ce5b199c-d60a-42b3-a633-af35115b047b">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="b2409cc0-1509-43a4-b4a3-b50f8e3f6b3a" fragment="1" gd:fragmentGUID="f4f7895a-bcca-4af9-948b-5fc91dca28d0">Zebranie członków jest najwyższym organem koła gospodyń wiejskich.</zdanie>
+            <zdanie nr="2" gd:zdGUID="129f0071-17d6-4c49-ad9c-888b20d1e5ec" fragment="1" gd:fragmentGUID="42a05d1b-9ef6-496b-a55d-74c8ecdef6e4">W sprawach, w których statut nie określa właściwości organów koła, podejmowanie uchwał należy do zebrania członków.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_14__ust_2" gd:GUID="fd5a25fd-55df-447c-b5ba-6909db8c75bb">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="4091cd89-42df-4348-b6d4-58c63a08ff16" fragment="1" gd:fragmentGUID="e6759661-1733-47bd-a115-1f7f0f931e62">Każdy członek ma jeden głos na zebraniu członków.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/310__art_15" gd:GUID="4d89a5be-c4c3-4d31-8276-18b4f640a35c">
+        <nr>15</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="7673af46-88fc-4a40-ae63-5abdfc0f6eed">
+          <p>
+            <zdanie nr="1" gd:zdGUID="57976e6d-9bbe-4499-92f9-eddd4a446998" fragment="1" gd:fragmentGUID="97936466-8c7e-4a5a-a809-4d5cef85ce26">Do wyłącznej właściwości zebrania członków koła gospodyń wiejskich należy:</zdanie>
+          </p>
+          <punkt eId="DU/2025/310__art_15__pkt_1" gd:GUID="9173bee3-d311-4592-919a-38b81ecf90ae">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="57976e6d-9bbe-4499-92f9-eddd4a446998" fragment="2" gd:fragmentGUID="61a70566-d8f3-453e-b0ae-7430ead7bd29">wybór zarządu koła;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/310__art_15__pkt_2" gd:GUID="8af073b3-77c0-43c4-b0a6-a92fac744ee8">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="57976e6d-9bbe-4499-92f9-eddd4a446998" fragment="3" gd:fragmentGUID="e2f37911-c75e-40ce-895a-1bb0d315368b">uchwalanie kierunków działalności koła;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/310__art_15__pkt_3" gd:GUID="2db20396-8ff0-4a33-b7b7-5448a76041de">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="57976e6d-9bbe-4499-92f9-eddd4a446998" fragment="4" gd:fragmentGUID="c88b4d95-42f7-4769-bdf4-0f657fec8885">rozpatrywanie i zatwierdzanie sprawozdań merytorycznych i finansowych oraz podejmowanie uchwał co do wniosków członków lub zarządu koła w tych sprawach i udzielanie absolutorium członkom zarządu koła;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/310__art_15__pkt_4" gd:GUID="418dd598-35da-41a9-af46-4c55af235df4">
+            <nr>4</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="57976e6d-9bbe-4499-92f9-eddd4a446998" fragment="5" gd:fragmentGUID="88bc7147-444c-4975-95a6-88e0cfb41546">podejmowanie uchwał w sprawie sposobu pokrycia strat netto;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/310__art_15__pkt_5" gd:GUID="3323e468-ae92-4361-b848-aa69f5e66dc5">
+            <nr>5</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="57976e6d-9bbe-4499-92f9-eddd4a446998" fragment="6" gd:fragmentGUID="f02d85ed-f8e7-4b5c-b346-88213a2ffc9f">podejmowanie uchwał w sprawie zbycia nieruchomości lub innej wyodrębnionej jednostki organizacyjnej;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/310__art_15__pkt_6" gd:GUID="f6e96f33-88bb-4a20-adaa-1c0af714fca7">
+            <nr>6</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="57976e6d-9bbe-4499-92f9-eddd4a446998" fragment="7" gd:fragmentGUID="81b93f34-9254-4b79-97ab-b5bea58ea602">podejmowanie uchwał w sprawie przystępowania do innych organizacji społecznych lub gospodarczych oraz występowania z nich;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/310__art_15__pkt_7" gd:GUID="41181036-26ca-4d3d-89a4-e0b3797e136b">
+            <nr>7</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="57976e6d-9bbe-4499-92f9-eddd4a446998" fragment="8" gd:fragmentGUID="282260ee-4772-4669-abd0-955bdf4f0260">oznaczanie najwyższej sumy zobowiązań, jaką koło może zaciągnąć;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/310__art_15__pkt_8" gd:GUID="3fbfe0de-25a4-4431-bef7-113ee4d65015">
+            <nr>8</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="57976e6d-9bbe-4499-92f9-eddd4a446998" fragment="9" gd:fragmentGUID="e76a1128-a66d-44b9-a455-ca7fb7b257a4">podejmowanie uchwał w sprawie zrzeszania się w związek, podziału oraz likwidacji koła;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/310__art_15__pkt_9" gd:GUID="118a5e70-dc8c-4f00-90d8-047e56485891">
+            <nr>9</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="57976e6d-9bbe-4499-92f9-eddd4a446998" fragment="10" gd:fragmentGUID="9e48e1c8-1104-49ae-9b13-bd59b84dd90b">uchwalanie zmian statutu koła;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/310__art_15__pkt_10" gd:GUID="44fe4b12-1235-416d-ad8a-9a9e22a3c773">
+            <nr>10</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="57976e6d-9bbe-4499-92f9-eddd4a446998" fragment="11" gd:fragmentGUID="6162bd3f-9c94-41ff-b0e4-3b00e71aa3b3">bieżący nadzór i kontrola działalności koła.</zdanie>
+            </p>
+          </punkt>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2025/310__art_16" gd:GUID="c47a295c-a894-473d-9e76-1ca430b29c74">
+        <nr>16</nr>
+        <ustep eId="DU/2025/310__art_16__ust_1" gd:GUID="88c01fd6-bbca-446c-848b-2fd262916074">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="236dc7ed-415b-40a4-a1f9-a95ffbb8739b" fragment="1" gd:fragmentGUID="1d24bf9d-28d8-47f8-ae34-8a2c973e57ea">Zarząd koła zwołuje zebranie członków koła gospodyń wiejskich przynajmniej raz w roku, w ciągu sześciu miesięcy po upływie roku obrotowego.</zdanie>
+            <zdanie nr="2" gd:zdGUID="74d8057f-7557-430a-b1ad-9a3337116be1" fragment="1" gd:fragmentGUID="57b73495-bf17-4fdb-b2be-79591381619d">Pierwsze zebranie członków koła zwołuje komitet założycielski.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_16__ust_2" gd:GUID="3c7bb972-63d5-46f8-9baa-88bd20580e2f">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="91d12d5d-69f5-4b6f-b6ff-5426700a7abe" fragment="1" gd:fragmentGUID="bd4488c1-d11a-4662-bcae-79913776ecb3">Zarząd koła zwołuje zebranie członków koła także na żądanie nie mniej niż trzech członków koła, jeżeli uprawnienia tego nie zastrzeżono w statucie dla większej liczby członków.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_16__ust_3" gd:GUID="292c0f54-547c-4e95-a10f-6c1351ef394f">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="507614a8-55e1-42fa-95d3-617cc32771d9" fragment="1" gd:fragmentGUID="7eb69b31-8dc8-47ce-9710-bbffc85295b1">Żądanie zwołania zebrania składa się pisemnie i zawiera cel jego zwołania.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_16__ust_4" gd:GUID="086e5629-2ed2-42ad-8fa3-bd171c86d74b">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="11506399-855e-4dbf-bbf5-30cb78d72ff1" fragment="1" gd:fragmentGUID="dc2f0d89-1656-4cf5-8fd7-ab23fc941dbe">W przypadku wskazanym w ust. 2, zebranie członków koła zwołuje się w takim terminie, aby mogło się ono odbyć w ciągu trzech tygodni od dnia wniesienia żądania.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_16__ust_5" gd:GUID="8a563bb3-856a-4f60-a785-f831ee8831b2">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="558ab9d2-7caf-4cc8-afa1-83778fc993c9" fragment="1" gd:fragmentGUID="90fd2980-ceef-4243-9a50-e680f7712ba7">O czasie, miejscu i porządku obrad zebrania członków koła zawiadamia się członków w sposób i w terminach określonych w statucie.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/310__art_17" gd:GUID="6c742856-6920-436b-8eb6-99836474c1ae">
+        <nr>17</nr>
+        <ustep eId="DU/2025/310__art_17__ust_1" gd:GUID="b744bf14-738a-46c1-9aaa-eb1fefc9de9e">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="0cac2871-9286-4444-9eee-9e5b5b1f3c4a" fragment="1" gd:fragmentGUID="0209d26e-6306-4ce7-88f9-2ca2b28e5101">Zebranie członków koła gospodyń wiejskich może podejmować uchwały jedynie w sprawach objętych porządkiem obrad, podanych do wiadomości członków koła w terminach i w sposób określony w statucie.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_17__ust_2" gd:GUID="1365245d-095f-443c-9dc9-49678ef02d0a">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="206eb6ea-1409-434d-a1c4-4f4d7b6a3d6b" fragment="1" gd:fragmentGUID="f3b8943f-ef54-4314-af18-5c8b0aa6337c">Uchwały są podejmowane zwykłą większością głosów w obecności co najmniej połowy uprawnionych do głosowania, chyba że ustawa lub statut stanowią inaczej.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_17__ust_3" gd:GUID="a8bc32ce-55ab-4585-8f76-3c13cb170e94">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="e79b5d68-b97e-44da-85c5-25fa00227f89" fragment="1" gd:fragmentGUID="a4ba942e-3e74-4ae4-a42a-eb225ddb905b">Z obrad zebrania członków koła sporządza się protokół, który podpisuje przewodniczący zebrania oraz inne osoby wskazane w statucie.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_17__ust_4" gd:GUID="83bc5a73-f56a-41e2-a5ee-ea6fe2ee3cea">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="e96f2c71-4e46-4081-b56b-b2b9d3c7e086" fragment="1" gd:fragmentGUID="54beca9f-55df-45aa-adb7-91cd27e10e7e">Protokoły są jawne dla członków koła.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_17__ust_5" gd:GUID="3c6e7eb3-f6ae-4f98-9a8e-48f65453afd1">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="c2ba4341-8ee8-4b2f-9554-56337e3268b8" fragment="1" gd:fragmentGUID="0909ce87-2880-49a2-adcc-bc9df1759a67">Protokoły przechowuje zarząd koła co najmniej przez dziesięć lat, o ile przepisy w sprawie przechowywania akt nie przewidują terminu dłuższego.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/310__art_18" gd:GUID="78483d40-d167-4f0c-86a5-6abe121fabb1">
+        <nr>18</nr>
+        <ustep eId="DU/2025/310__art_18__ust_1" gd:GUID="d342e05c-e51e-49fe-b4e2-8d1730c01d7c">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="218b8b6d-69d9-4129-910b-f91d09f8eea1" fragment="1" gd:fragmentGUID="cda5181d-1ad0-4c90-abd7-3d37d6c997d0">Uchwały zebrania członków koła gospodyń wiejskich obowiązują wszystkich członków koła oraz wszystkie jego organy.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_18__ust_2" gd:GUID="f4f7ba8a-798b-48fe-ab44-0e7a6ee2efb8">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="24e468d0-d360-4f8e-a584-219715e09a82" fragment="1" gd:fragmentGUID="93c6f0cf-397e-4b44-a365-6a1b427266e8">Uchwała sprzeczna z ustawą jest nieważna.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/310__art_19" gd:GUID="8dffc23e-8e6f-4f5b-beb8-04ee99fd1adf">
+        <nr>19</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="a6368773-c35f-4286-9f71-20cb99361db0">
+          <p>
+            <zdanie nr="1" gd:zdGUID="c309a318-3acc-4810-ada1-d9b32244d84c" fragment="1" gd:fragmentGUID="b7ea9b44-1944-4e3e-b7a9-e7fdd58e2271">Zarząd koła kieruje działalnością koła gospodyń wiejskich oraz reprezentuje je na zewnątrz.</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2025/310__art_20" gd:GUID="60c226fb-2e44-41d8-8243-92fd64bc4f34">
+        <nr>20</nr>
+        <ustep eId="DU/2025/310__art_20__ust_1" gd:GUID="08cee0e0-5e3d-4c55-8475-6c8f9c57cd5a">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="d19381be-8e03-494a-9a8d-9cb9ed6f6fdb" fragment="1" gd:fragmentGUID="1f9fc274-5de3-4deb-8d12-0ec11d161141">Skład i liczbę członków zarządu koła określa statut.</zdanie>
+            <zdanie nr="2" gd:zdGUID="d5dc05e2-5f22-4dce-9c01-428b25355675" fragment="1" gd:fragmentGUID="6bc01c50-87b6-4f14-9d74-c4191246ba04">Statut może przewidywać zarząd jednoosobowy, którym jest przewodniczący, i ustalać wymagania wobec osoby wchodzącej w skład zarządu koła lub przewodniczącego w zarządzie jednoosobowym.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_20__ust_2" gd:GUID="4c8c69dc-168e-4904-a75a-a95c549b70f6">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="f50647e6-c506-4be5-85d9-525d8a4ec815" fragment="1" gd:fragmentGUID="ffc7701d-df34-427a-ab5b-73e642ddcae7">Członków zarządu koła, w tym przewodniczącego i jego zastępców, wybiera i odwołuje zebranie członków.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_20__ust_3" gd:GUID="59159ed0-a53e-42c6-925c-8c67b1b3c216">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="43aa10e8-e4fc-4046-9180-10bc29452655" fragment="1" gd:fragmentGUID="790f6a8a-27f3-47c6-9b7e-d5158d9d5912">Zarząd jednoosobowy nie może dokonywać czynności w sprawach wynikających ze stosunku członkostwa.</zdanie>
+            <zdanie nr="2" gd:zdGUID="9552a475-77e4-4026-89d5-81202a3503ed" fragment="1" gd:fragmentGUID="d5f92dd2-478d-46c9-a2e8-5e422fc5501a">Czynności takie są dokonywane przez zebranie członków.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_20__ust_4" gd:GUID="39b826d7-94f2-4e38-9e15-3cd6d7880bff">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="91ef700c-b512-4306-bd73-0c679fef1f00" fragment="1" gd:fragmentGUID="81216d67-80ed-4c61-8358-e0d050211566">Jeżeli statut nie stanowi inaczej, członek zarządu koła może być zawieszony w czynnościach przez zebranie członków, o ile jego działalność jest sprzeczna z przepisami prawa lub statutu.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_20__ust_5" gd:GUID="63a6668f-c7d4-4b3d-9ea2-61b2794daa38">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="c8b428b0-393d-4038-9298-d3f72f011ba8" fragment="1" gd:fragmentGUID="6f441de6-8bb1-4d98-b8f2-48ea89313d1a">Zawieszonego członka zarządu koła powiadamia się niezwłocznie, w formie pisemnej, o fakcie i przyczynach zawieszenia.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/310__art_21" gd:GUID="a9f706ae-de91-4d4c-ac43-4c52a76c92d2">
+        <nr>21</nr>
+        <ustep eId="DU/2025/310__art_21__ust_1" gd:GUID="4f7701f6-5bcf-448c-8c20-85f09575607b">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="940667ae-6475-4ffc-90f9-e6cf0045f4cd" fragment="1" gd:fragmentGUID="c3990451-c97a-4641-aa81-d60b3c48d026">Majątek koła gospodyń wiejskich powstaje ze składek członkowskich, darowizn, spadków, zapisów, dochodów z własnej działalności, dochodów z majątku koła oraz z ofiarności publicznej.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_21__ust_2" gd:GUID="4b65846c-42ba-42b4-b462-71975ee888ef">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="691c8736-de72-4637-a507-66755c8e6d39" fragment="1" gd:fragmentGUID="d46f1f3d-d075-46f1-95fd-492edb373134">Koło gospodyń wiejskich, z zachowaniem obowiązujących przepisów, może przyjmować darowizny, spadki i zapisy oraz korzystać z ofiarności publicznej.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_21__ust_3" gd:GUID="a59d2772-3f5f-44f0-8631-214a288f3f3e">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="898d41b6-82dc-4f4c-8266-19487ab0bd7d" fragment="1" gd:fragmentGUID="eaad01f7-f9ab-4642-b2d7-0f9b76f5dc75">Dochód z działalności koła gospodyń wiejskich służy realizacji celów statutowych i nie może być przeznaczony do podziału między jego członków.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/310__art_22" gd:GUID="122f9202-1597-4ebf-be4e-fd4902edc5d9">
+        <nr>22</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="a8c43d2e-d68d-4c09-a7d6-3818204380b9">
+          <p>
+            <zdanie nr="1" gd:zdGUID="3305a6bb-463e-4296-aef1-d069a5578a15" fragment="1" gd:fragmentGUID="4d66ccfe-2e70-4f78-bf10-21dd3ab78d20">Koło gospodyń wiejskich może prowadzić działalność zarobkową, w tym działalność gospodarczą.</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2025/310__art_23" gd:GUID="870a6a56-86b7-4dff-b048-123fc8c55e05">
+        <nr>23</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="31f46f0b-7f93-4bb4-a544-f167febf0933">
+          <p>
+            <zdanie nr="1" gd:zdGUID="dd45d7ad-5310-48b2-859a-061fc4cd5f16" fragment="1" gd:fragmentGUID="e5ee5b91-fa29-41e1-9adb-262fe65b8da8">Koło gospodyń wiejskich może otrzymywać dotacje celowe na realizację zadań, o których mowa w art. 2 ust. 3, według zasad określonych w odrębnych przepisach.</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2025/310__art_23a" gd:GUID="9609dac0-73fb-45f6-8b4a-b166bf8c8cdc">
+        <nr>23a</nr>
+        <ustep eId="DU/2025/310__art_23a__ust_1" gd:GUID="c81d8e40-b981-4460-932d-9641401ade00">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="349a0b85-26ed-4cc2-b92c-228d26d41536" fragment="1" gd:fragmentGUID="47051426-609b-4ea4-9158-f13ff9a3f458">Koło gospodyń wiejskich może otrzymać z budżetu państwa pomoc finansową przeznaczoną na realizację zadań, o których mowa w art. 2 ust. 3.</zdanie>
+            <zdanie nr="2" gd:zdGUID="631c8256-5164-4c52-98cf-d7b4d9b2f0f5" fragment="1" gd:fragmentGUID="e7f090e8-4d23-4767-b1ea-39efe25388f4">Pomoc ta jest przyznawana kołu gospodyń wiejskich jeden raz w danym roku.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_23a__ust_2" gd:GUID="d1f73ff3-7dd9-4785-b143-0ec2d76832b1">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="c8f01dba-b453-4653-bc86-ed2d3666f824" fragment="1" gd:fragmentGUID="e78954bb-ec3d-4c41-a1bd-044d75775045">Pomoc finansowa, o której mowa w ust. 1, jest przyznawana na wniosek koła gospodyń wiejskich, w drodze decyzji, przez kierownika biura powiatowego Agencji Restrukturyzacji i Modernizacji Rolnictwa właściwego ze względu na siedzibę tego koła.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_23a__ust_3" gd:GUID="23ac4e78-c7bd-4d27-b600-849f631a2bde">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="d6fdd164-ac85-41a7-8b0b-c2dbe841f899" fragment="1" gd:fragmentGUID="6e74c720-d619-4bf5-884d-a21f8a4b470e">Wniosek o przyznanie pomocy finansowej, o której mowa w ust. 1, składa się na formularzu opracowanym i udostępnionym przez Agencję Restrukturyzacji i Modernizacji Rolnictwa, w terminie wskazanym w ogłoszeniu, o którym mowa w ust. 6.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_23a__ust_4" gd:GUID="83aa22ef-7ec3-4459-9410-7d599b570e6b">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="d9d319bc-e940-4926-a67e-4230ea54ad94" fragment="1" gd:fragmentGUID="a1b6eef7-0b2f-477b-bec3-b42252e8597e">Minister właściwy do spraw rozwoju wsi może udzielić Agencji Restrukturyzacji i Modernizacji Rolnictwa dotacji celowej na zasadach określonych w przepisach o finansach publicznych, z przeznaczeniem na realizację pomocy finansowej, o której mowa w ust. 1.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_23a__ust_5" gd:GUID="83f02d90-ce99-4cd7-874c-90a6159257e6">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="3c402587-3c8d-4870-8304-10b624f5b819" fragment="1" gd:fragmentGUID="a50af670-b219-4780-976f-ccc59554850f">Pomoc finansowa, o której mowa w ust. 1, jest przyznawana w danym roku do wyczerpania środków finansowych otrzymanych przez Agencję Restrukturyzacji i Modernizacji Rolnictwa na podstawie ust. 4.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_23a__ust_6" gd:GUID="bf256e5f-68b3-49e6-b583-a0c46c6c073f">
+          <nr>6</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="5833f3cd-db40-48e7-ba37-fbafe03c9382" fragment="1" gd:fragmentGUID="ff17150e-a5ee-40a7-b9a4-093d52e0d517">Prezes Agencji Restrukturyzacji i Modernizacji Rolnictwa, po otrzymaniu w danym roku środków finansowych na podstawie ust. 4, ogłasza na stronie internetowej Agencji Restrukturyzacji i Modernizacji Rolnictwa informację o naborze wniosków o przyznanie pomocy finansowej, o której mowa w ust. 1, zawierającą wskazanie kwoty środków finansowych przeznaczonych na ten cel oraz termin składania wniosków o przyznanie tej pomocy.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_23a__ust_7" gd:GUID="4631ed18-e423-40e2-a7a5-1110f84b6405">
+          <nr>7</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="6b0b0132-f555-462c-b7a4-2baac30caf3e" fragment="1" gd:fragmentGUID="f1d1f364-821b-4ab7-b734-e459013982fa">Prezes Agencji Restrukturyzacji i Modernizacji Rolnictwa ogłasza na stronie internetowej Agencji Restrukturyzacji i Modernizacji Rolnictwa, narastająco, począwszy od dnia rozpoczęcia w danym roku naboru wniosków o przyznanie pomocy finansowej, o której mowa w ust. 1, do 10. dnia każdego miesiąca według stanu za miesiąc poprzedni, informację o kwocie, na jaką zostały złożone wnioski o przyznanie tej pomocy w danym roku.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_23a__ust_8" gd:GUID="82d9e84b-c335-4197-9b4f-9e451379bfb2">
+          <nr>8</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="633481a6-aa25-4ecd-8e67-d6037a3d82ad" fragment="1" gd:fragmentGUID="c2f6ed08-6c78-4c74-96f5-95af283de3b9">Prezes Agencji Restrukturyzacji i Modernizacji Rolnictwa, po wyczerpaniu w danym roku środków finansowych otrzymanych na podstawie ust. 4, ogłasza na stronie internetowej Agencji Restrukturyzacji i Modernizacji Rolnictwa informację o zaprzestaniu przyjmowania wniosków o przyznanie pomocy finansowej, o której mowa w ust. 1.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_23a__ust_9" gd:GUID="1320d261-56bd-4b9d-81ef-e209e9986fdd">
+          <nr>9</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="dc0f9f65-2233-4ad1-bec1-6b7d6c8c0d0d" fragment="1" gd:fragmentGUID="09fdb2af-0b67-4d3c-8584-5495be6a103b">Minister właściwy do spraw rozwoju wsi określi, w drodze rozporządzenia, szczegółowe warunki i tryb przyznawania oraz rozliczania pomocy finansowej, o której mowa w ust. 1, a także jej wysokość, mając na uwadze zapewnienie wsparcia dla rozwoju społeczno-gospodarczego, w tym rozwoju przedsiębiorczości na terenach wiejskich, oraz zapewnienie przejrzystości i prawidłowości wydatkowania przyznanej pomocy finansowej, o której mowa w ust. 1, a także efektywnej realizacji zadań, o których mowa w art. 2 ust. 3.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/310__art_23b" gd:GUID="c32fb87a-163d-4438-a9af-beb2882b546f">
+        <nr>23b</nr>
+        <ustep eId="DU/2025/310__art_23b__ust_1" gd:GUID="48497a9f-32ec-4d4b-856b-d8ad44628b7f">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="061fd495-fe6b-41bf-8b58-df063828dccf" fragment="1" gd:fragmentGUID="f6831c91-b361-4a8b-916e-bb6bd8639c29">Wniosek o wpis koła gospodyń wiejskich do rejestru oraz wniosek o przyznanie pomocy finansowej, o której mowa w art. 23a ust. 1, mogą być złożone za pomocą systemu teleinformatycznego Agencji Restrukturyzacji i Modernizacji Rolnictwa w sposób określony w przepisach o Agencji Restrukturyzacji i Modernizacji Rolnictwa.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_23b__ust_2" gd:GUID="de1d6910-4c18-4570-a35d-120d32c8483d">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="ac2c42eb-19c5-417d-96a2-70d05bd0578b" fragment="1" gd:fragmentGUID="1b3dcf52-b711-46aa-965e-9d77d6e2b2c7">Wniosek o wpis koła gospodyń wiejskich do rejestru oraz wniosek o przyznanie pomocy finansowej, o której mowa w art. 23a ust. 1, za pomocą systemu teleinformatycznego Agencji Restrukturyzacji i Modernizacji Rolnictwa w sposób określony w przepisach o Agencji Restrukturyzacji i Modernizacji Rolnictwa składa osoba upoważniona odpowiednio przez zarząd koła albo komitet założycielski.</zdanie>
+            <zdanie nr="2" gd:zdGUID="0338fc11-4bfb-4951-8dc1-ebea4262d098" fragment="1" gd:fragmentGUID="9f708d76-1392-45ce-b31f-6cf8230d46ff">W takim przypadku nie stosuje się przepisu art. 8 ust. 2 pkt 6.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_23b__ust_3" gd:GUID="3aec6c4d-e73c-4cea-8caf-e26cc8df9f0f">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="7e1b4e1b-b149-4401-b37d-e2ecd5d2e3ab" fragment="1" gd:fragmentGUID="65a043f9-562a-4f03-ba3c-d22c6d40d093">(uchylony)</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_23b__ust_4" gd:GUID="69763196-301a-4028-9328-9da006b06c84">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="0ae6721e-ff80-4424-aa94-a5c5315c9642" fragment="1" gd:fragmentGUID="59d7d90d-51ec-40db-b410-3967b5c0bb11">(uchylony)</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_23b__ust_5" gd:GUID="a54a2052-63b2-4c60-bfcd-a73634d87c0d">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="bf43bcd7-3452-4e17-910c-bb5f4ba21a21" fragment="1" gd:fragmentGUID="c84383af-d481-4612-9584-0171a0b64132">(uchylony)</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/310__art_24" gd:GUID="7caca559-a8f5-4e29-b495-a56190bdf539">
+        <nr>24</nr>
+        <ustep eId="DU/2025/310__art_24__ust_1" gd:GUID="b702f98e-d98c-4219-80b9-5cc9c82ccfd6">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="dbe950b4-d4d4-4216-a22d-62b08eafd34a" fragment="1" gd:fragmentGUID="6de673c7-8038-438e-8cd7-30826f2596d5">Koła gospodyń wiejskich prowadzą uproszczoną ewidencję przychodów i kosztów, w przypadku gdy:</zdanie>
+          </p>
+          <punkt eId="DU/2025/310__art_24__ust_1__pkt_1" gd:GUID="3665326e-6841-44d1-afb7-e262e6b2b4fb" okres="okr_obowiazywanie.x.zdarz_uchylenie_2026-01-01_DU-2024-1761_odczytane" obowiazuje-do="2026-01-01">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="dbe950b4-d4d4-4216-a22d-62b08eafd34a" fragment="2" gd:fragmentGUID="8e0fd7ea-91d4-4a69-8a4b-da310130a2f4"><odnosnik id-odnosnika="3" symbol="3" gd:GUID="e83378f0-1266-4680-b356-befb55c32feb"><p><zdanie nr="1" gd:zdGUID="7d268e2e-448c-4eaa-a2d7-d6593a05dda9" fragment="1" gd:fragmentGUID="e8a2a338-5a4c-442a-937b-6e599f3d5099">Obowiązuje do wejścia w życie zmiany, o której mowa w odnośniku 4.</zdanie></p></odnosnik> osiągają przychody wyłącznie z:</zdanie>
+            </p>
+            <litera eId="DU/2025/310__art_24__ust_1__pkt_1__lit_a" gd:GUID="7d61b3cc-d676-4a76-ac2a-eca05c205ba4" okres="okr_obowiazywanie.x.zdarz_uchylenie_2026-01-01_DU-2024-1761_odczytane" obowiazuje-do="2026-01-01">
+              <nr>a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="dbe950b4-d4d4-4216-a22d-62b08eafd34a" fragment="3" gd:fragmentGUID="9799534d-40c5-4092-974c-51aca1979689">działalności statutowej z tytułu składek członkowskich, darowizn, zapisów, dotacji, pomocy finansowej, nagród,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/310__art_24__ust_1__pkt_1__lit_b" gd:GUID="fc18a701-12c6-4889-ab15-e9391b8ea0b6" okres="okr_obowiazywanie.x.zdarz_uchylenie_2026-01-01_DU-2024-1761_odczytane" obowiazuje-do="2026-01-01">
+              <nr>b</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="dbe950b4-d4d4-4216-a22d-62b08eafd34a" fragment="4" gd:fragmentGUID="93888e33-a5cc-41af-b6bc-ba71fb208d48">sprzedaży wyrobów sztuki ludowej, w tym rękodzieła i rzemiosła ludowego i artystycznego, żywności regionalnej oraz biletów wstępu na występy artystyczne koła,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/310__art_24__ust_1__pkt_1__lit_c" gd:GUID="0d702d50-b877-4ebf-99fa-6034ef9e1873" okres="okr_obowiazywanie.x.zdarz_uchylenie_2026-01-01_DU-2024-1761_odczytane" obowiazuje-do="2026-01-01">
+              <nr>c</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="dbe950b4-d4d4-4216-a22d-62b08eafd34a" fragment="5" gd:fragmentGUID="2694417f-bebd-4715-8cc1-52a17d0b621d">tytułu sprzedaży, najmu lub dzierżawy składników majątkowych,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/310__art_24__ust_1__pkt_1__lit_d" gd:GUID="c4a01542-5fe1-4d0d-ae4e-838d990b26f3" okres="okr_obowiazywanie.x.zdarz_uchylenie_2026-01-01_DU-2024-1761_odczytane" obowiazuje-do="2026-01-01">
+              <nr>d</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="dbe950b4-d4d4-4216-a22d-62b08eafd34a" fragment="6" gd:fragmentGUID="bf24584b-3055-47d9-99fa-efe1e593db7f">tytułu odsetek od środków pieniężnych na rachunkach bankowych lub rachunkach w spółdzielczych kasach oszczędnościowo-kredytowych, prowadzonych w związku z wykonywaną działalnością, w tym także odsetek od lokat terminowych oraz innych form oszczędzania, przechowywania lub inwestowania tworzonych na tych rachunkach;</zdanie>
+              </p>
+            </litera>
+          </punkt>
+          <punkt eId="DU/2025/310__art_24__ust_1__pkt_1" gd:GUID="4dd265a5-5655-44a9-9110-c77ec7644c3c" okres="okr_obowiazywanie.zdarz_uchylenie_2026-01-01_DU-2024-1761_odczytane.x" stan-jednostki="uchylony">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="dbe950b4-d4d4-4216-a22d-62b08eafd34a" fragment="7" gd:fragmentGUID="84beb21e-6f76-47a9-8976-4b46206a296d">(uchylony)<odnosnik id-odnosnika="4" symbol="4" gd:GUID="929dc656-c976-4f87-b373-8c3297997458"><p><zdanie nr="1" gd:zdGUID="fc2e51e4-fbd9-4155-98a8-d08c5a35bb46" fragment="1" gd:fragmentGUID="32bd4170-9a36-469d-b73b-71e3357786e1">Przez art. 2 pkt 1 lit. a ustawy z dnia 8 listopada 2024 r. o zmianie ustawy o działalności pożytku publicznego i o wolontariacie oraz ustawy o kołach gospodyń wiejskich (Dz. U. poz. 1761), która wejdzie w życie z dniem 1 stycznia 2026 r.</zdanie></p></odnosnik></zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/310__art_24__ust_1__pkt_2" gd:GUID="b0bbbfe3-7931-4f79-b45e-6730691f575b">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="dbe950b4-d4d4-4216-a22d-62b08eafd34a" fragment="8" gd:fragmentGUID="2d1dfe77-54f4-4bc4-b24d-020dda94fbf8">nie posiadają statusu organizacji pożytku publicznego;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/310__art_24__ust_1__pkt_2a" gd:GUID="cf662b2f-2886-44c5-b44c-9c2c0d1543db" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2024-1761_odczytane.x" wejscie-w-zycie="2026-01-01">
+            <nr>2a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="dbe950b4-d4d4-4216-a22d-62b08eafd34a" fragment="9" gd:fragmentGUID="8d41d781-810c-426e-aa79-a365035d3b45"><odnosnik id-odnosnika="5" symbol="5" gd:GUID="18401630-afb8-4091-8710-bb4f84dda469"><p><zdanie nr="1" gd:zdGUID="5a187098-608d-4880-b152-f23274754b5f" fragment="1" gd:fragmentGUID="52ecded4-5a0f-4b05-8f6e-d163cd187705">Dodany przez art. 2 pkt 1 lit. b ustawy, o której mowa w odnośniku 4.</zdanie></p></odnosnik> nie prowadzą działalności gospodarczej w rozumieniu przepisów ustawy z dnia 6 marca 2018 r. – Prawo przedsiębiorców (Dz. U. z 2024 r. poz. 236, 1222 i 1871 oraz z 2025 r. poz. 222);</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/310__art_24__ust_1__pkt_3" gd:GUID="578aca4c-d4bb-4a68-aeac-78e7d39b8d18" okres="okr_obowiazywanie.x.zdarz_wejscie_2026-01-01_DU-2024-1761_odczytane" obowiazuje-do="2026-01-01">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="dbe950b4-d4d4-4216-a22d-62b08eafd34a" fragment="10" gd:fragmentGUID="12f3b9b9-98c2-42d9-83ce-bdd2c2742cab"><odnosnik id-odnosnika="6" symbol="6" gd:GUID="d5e7dd59-ba08-4895-822f-18d0faa8b4e9"><p><zdanie nr="1" gd:zdGUID="12d9e397-06d1-43b8-b6f4-0d03f8a6b12e" fragment="1" gd:fragmentGUID="98975104-e940-4bca-8889-386a24d25ca5">W tym brzmieniu obowiązuje do wejścia w życie zmiany, o której mowa w odnośniku 7.</zdanie></p></odnosnik> w roku poprzedzającym rok podatkowy osiągnęły przychody wyłącznie z tytułów, o których mowa w pkt 1, w wysokości nieprzekraczającej 100 000 zł.</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/310__art_24__ust_1__pkt_3" gd:GUID="c506b286-39d0-4ef8-84f0-cb90b1d73db1" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2024-1761_odczytane.x" wejscie-w-zycie="2026-01-01">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="dbe950b4-d4d4-4216-a22d-62b08eafd34a" fragment="11" gd:fragmentGUID="e6cb8777-ca19-4262-b321-6d3e58ca8d9c"><odnosnik id-odnosnika="7" symbol="7" gd:GUID="a7d45935-7e6d-42e1-93eb-38396470f088"><p><zdanie nr="1" gd:zdGUID="e96f7645-c46d-49ca-9953-324a96c7769e" fragment="1" gd:fragmentGUID="15bdf94e-bfe6-494c-9654-ee1168f47328">W brzmieniu ustalonym przez art. 2 pkt 1 lit. c ustawy, o której mowa w odnośniku 4.</zdanie></p></odnosnik> w roku poprzedzającym rok podatkowy osiągnęły przychody w wysokości nieprzekraczającej 1 000 000 zł, nie wliczając wartości darowizn rzeczowych przeznaczonych na prowadzenie działalności statutowej.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/310__art_24__ust_2" gd:GUID="75518f3d-f28a-4bf2-9087-b2f492da20ff">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="611e5716-062c-4fb3-9af5-a8f2cf7122ea" fragment="1" gd:fragmentGUID="d3e52925-c60d-4bb1-89e4-197acf84dbdf">Przepisu ust. 1 pkt 3 w zakresie wielkości przychodów nie stosuje się w roku, w którym koło gospodyń wiejskich rozpoczęło działalność.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_24__ust_3" gd:GUID="ff7a3e22-a682-43f3-a3ca-fd100f2832cc" okres="okr_obowiazywanie.x.zdarz_wejscie_2026-01-01_DU-2024-1761_odczytane" obowiazuje-do="2026-01-01">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a2513390-765b-467e-93e6-34f92d86e277" fragment="1" gd:fragmentGUID="338b3881-89b8-4359-9472-e8362233346b"><odnosnik id-odnosnika="8" symbol="8" gd:GUID="a7b19bc3-b9af-4187-a67b-e0f22c9ebdd7"><p><zdanie nr="1" gd:zdGUID="7effc62d-1139-4a47-b6f1-59e091282187" fragment="1" gd:fragmentGUID="e6dd48e4-10b6-430f-bcd4-bf135b6a07f4">W tym brzmieniu obowiązuje do wejścia w życie zmiany, o której mowa w odnośniku 9.</zdanie></p></odnosnik> O wyborze prowadzenia uproszczonej ewidencji przychodów i kosztów koło gospodyń wiejskich, w terminie do końca pierwszego miesiąca roku podatkowego, w którym rozpoczyna prowadzenie ewidencji, a w przypadku jednostek rozpoczynających działalność, w terminie 30 dni od dnia rozpoczęcia działalności, zawiadamia naczelnika urzędu skarbowego właściwego w sprawach opodatkowania podatkiem dochodowym, za pośrednictwem powiatowego biura Agencji Restrukturyzacji i Modernizacji Rolnictwa.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_24__ust_3" gd:GUID="eb58403b-0fe2-4814-aae5-ee6a1ef35fda" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2024-1761_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="8f795adf-0bcc-4e70-8d24-915f8a75d87b" fragment="1" gd:fragmentGUID="689aecbb-8d24-423e-a685-24a4f25b7c51"><odnosnik id-odnosnika="9" symbol="9" gd:GUID="3dda272f-3646-432a-acd2-312841119a82"><p><zdanie nr="1" gd:zdGUID="9b4d8176-1056-4a23-8bcb-cb2c3d99e114" fragment="1" gd:fragmentGUID="4853f4a6-83a7-4e84-a47a-b7f29f0ef808">W brzmieniu ustalonym przez art. 2 pkt 2 ustawy, o której mowa w odnośniku 4.</zdanie></p></odnosnik> O wyborze prowadzenia uproszczonej ewidencji przychodów i kosztów koło gospodyń wiejskich, w terminie do końca trzeciego miesiąca roku podatkowego, w którym rozpoczyna prowadzenie ewidencji, a w przypadku koła gospodyń wiejskich rozpoczynającego działalność, w terminie 90 dni od dnia rozpoczęcia działalności, zawiadamia naczelnika urzędu skarbowego właściwego w sprawach opodatkowania podatkiem dochodowym, za pośrednictwem powiatowego biura Agencji Restrukturyzacji i Modernizacji Rolnictwa.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_24__ust_4" gd:GUID="5db45a9f-0bb5-40b1-aa0d-d0f9c30e5a34">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="79a752d6-752b-45a6-adbc-580b4b2571d5" fragment="1" gd:fragmentGUID="0d1a0ca7-1d89-42bd-bbcc-4d822b2942e7">Zawiadomienie, o którym mowa w ust. 3, jest skuteczne także w latach następnych.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_24__ust_5" gd:GUID="7c93c530-22cc-46ef-a57b-56b1ef3c3078" okres="okr_obowiazywanie.x.zdarz_wejscie_2026-01-01_DU-2024-1761_odczytane" obowiazuje-do="2026-01-01">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a848e78c-cbcf-4851-bbab-51233f89e466" fragment="1" gd:fragmentGUID="6cfe2852-6e2c-437a-8fba-f8e1e1a0673e"><odnosnik id-odnosnika="10" symbol="10" gd:GUID="0bfe359d-5647-408e-86e4-e54aa7b83322"><p><zdanie nr="1" gd:zdGUID="ecee4ad4-a2f9-4d28-84df-e2440f28c100" fragment="1" gd:fragmentGUID="12ea60ea-4e58-47d5-a019-3b54e800ef07">W tym brzmieniu obowiązuje do wejścia w życie zmiany, o której mowa w odnośniku 11.</zdanie></p></odnosnik> Koło gospodyń wiejskich zawiadamia naczelnika urzędu skarbowego właściwego w sprawach opodatkowania podatkiem dochodowym w terminie 14 dni od końca ostatniego miesiąca roku podatkowego, w którym prowadzi uproszczoną ewidencję przychodów i kosztów, o:</zdanie>
+          </p>
+          <punkt eId="DU/2025/310__art_24__ust_5__pkt_1" gd:GUID="65f5027d-8923-4f9a-ac24-ad1273d4f806" okres="okr_obowiazywanie.x.zdarz_wejscie_2026-01-01_DU-2024-1761_odczytane" obowiazuje-do="2026-01-01">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="a848e78c-cbcf-4851-bbab-51233f89e466" fragment="2" gd:fragmentGUID="3d72ebb9-dbb9-433d-8f62-c0c21259888b">rezygnacji z prowadzenia tej ewidencji;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/310__art_24__ust_5__pkt_2" gd:GUID="0572e9fb-7f99-4e7d-86c1-bef1d6599901" okres="okr_obowiazywanie.x.zdarz_wejscie_2026-01-01_DU-2024-1761_odczytane" obowiazuje-do="2026-01-01">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="a848e78c-cbcf-4851-bbab-51233f89e466" fragment="3" gd:fragmentGUID="a7314db7-ca08-4e6a-90a1-c2609b880b2c">niespełnieniu warunków, o których mowa w ust. 1.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/310__art_24__ust_5" gd:GUID="028c6f1c-cfa6-4a1a-b074-b1ce3e422c11" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2024-1761_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="df649564-87f0-448d-ab48-b213d291b950" fragment="1" gd:fragmentGUID="305a74a8-e612-470b-bd05-afe039493935"><odnosnik id-odnosnika="11" symbol="11" gd:GUID="fc381aa4-e1eb-4a08-a55d-b8d18b95e455"><p><zdanie nr="1" gd:zdGUID="91f2aa3f-0a64-4940-ad32-4ae00b368e9f" fragment="1" gd:fragmentGUID="df1cbecd-f7f8-4721-89a4-46e2cb4de8fd">W brzmieniu ustalonym przez art. 2 pkt 3 ustawy, o której mowa w odnośniku 4.</zdanie></p></odnosnik> Koło gospodyń wiejskich zawiadamia naczelnika urzędu skarbowego właściwego w sprawach opodatkowania podatkiem dochodowym o:</zdanie>
+          </p>
+          <punkt eId="DU/2025/310__art_24__ust_5__pkt_1" gd:GUID="1b3810f4-b1e1-4e9b-ab05-bb859b4aa936" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2024-1761_odczytane.x" wejscie-w-zycie="2026-01-01">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="df649564-87f0-448d-ab48-b213d291b950" fragment="2" gd:fragmentGUID="fcd0c753-b694-4c02-9d61-b1ce5fe366f8">rezygnacji z prowadzenia uproszczonej ewidencji przychodów i kosztów w terminie 90 dni od końca ostatniego miesiąca, w którym prowadzi tę ewidencję;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/310__art_24__ust_5__pkt_2" gd:GUID="f6e4769a-3a0c-4571-9abd-c70214ff2085" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2024-1761_odczytane.x" wejscie-w-zycie="2026-01-01">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="df649564-87f0-448d-ab48-b213d291b950" fragment="3" gd:fragmentGUID="06311461-b82a-4076-8bef-d4697b0309c8">niespełnianiu warunków, o których mowa w ust. 1, w terminie 90 dni od końca ostatniego miesiąca roku podatkowego, w którym prowadzi uproszczoną ewidencję przychodów i kosztów.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/310__art_24__ust_6" gd:GUID="9def35e0-fc0f-40d2-b4b3-03500be954a7">
+          <nr>6</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="47ee4487-0549-4eec-afa2-97489bb17670" fragment="1" gd:fragmentGUID="38d82598-8fd2-4a44-862b-55094995dd4f">Minister właściwy do spraw finansów publicznych określi, w drodze rozporządzenia, sposób prowadzenia uproszczonej ewidencji przychodów i kosztów, warunki, jakim powinna odpowiadać ta ewidencja w celu prawidłowego określenia zobowiązań podatkowych, mając na uwadze zakres oraz cel działania podmiotów prowadzących ewidencję.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/310__art_25" gd:GUID="14b48889-87ad-494b-b749-4948339e6a81">
+        <nr>25</nr>
+        <ustep eId="DU/2025/310__art_25__ust_1" gd:GUID="c5be1749-16fb-4608-a4e2-8462f5e95cdf">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="9d417a63-c3d7-434e-a5db-fda58e8de5e8" fragment="1" gd:fragmentGUID="f84c1061-2f19-411d-8b7d-4032feeaf30b">Nadzór nad działalnością kół gospodyń wiejskich sprawuje Prezes Agencji Restrukturyzacji i Modernizacji Rolnictwa.<odnosnik id-odnosnika="12" symbol="12" gd:GUID="04e75875-ec8d-428a-a007-eb66202b2e1b"><p><zdanie nr="1" gd:zdGUID="b3ddb3cf-a12e-4e25-9534-9dc6cc232bf1" fragment="1" gd:fragmentGUID="df4a3ce4-27ee-4f2d-80c6-da3ffb196092">Zdanie pierwsze ze zmianą wprowadzoną przez art. 1 pkt 3 lit. a ustawy, o której mowa w odnośniku 1.</zdanie></p></odnosnik></zdanie>
+            <zdanie nr="2" gd:zdGUID="9c1cc57f-36d0-4b9f-8253-bed1bed622fc" fragment="1" gd:fragmentGUID="7e157bec-8129-4d1e-83a7-9c59cad8deb7">Nadzór jest sprawowany wyłącznie w zakresie zgodności działania kół gospodyń wiejskich z przepisami ustawy oraz przepisami wydanymi na jej podstawie.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_25__ust_2" gd:GUID="679e257c-997e-4b1e-b839-65341406a249">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="3a4cb0b1-c5ca-4bdb-b7ef-a9c7b3798ab3" fragment="1" gd:fragmentGUID="5b715aa1-a7ae-4405-a9df-b86d50d99c12">Nadzór, o którym mowa w ust. 1, realizowany jest przy pomocy zastępców Prezesa Agencji Restrukturyzacji i Modernizacji Rolnictwa, dyrektorów oddziałów regionalnych oraz kierowników biur powiatowych.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_25__ust_3" gd:GUID="b8e90c4b-eeed-4887-a65c-ff7027f73f31">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="323727f7-8881-46bd-b4e6-5386922d7fd6" fragment="1" gd:fragmentGUID="507955f6-e3e6-4f28-8174-f8d4c7c54f92"><odnosnik id-odnosnika="13" symbol="13" gd:GUID="07677a46-9149-4e97-b3ab-d082603d0d36"><p><zdanie nr="1" gd:zdGUID="1588afbd-e8fe-4de4-9192-10aacdbc3008" fragment="1" gd:fragmentGUID="e097a6d4-673a-4cc2-a948-9322feca246a">W brzmieniu ustalonym przez art. 1 pkt 3 lit. b ustawy, o której mowa w odnośniku 1.</zdanie></p></odnosnik> Minister właściwy do spraw rozwoju wsi może powołać, w celu aktywizacji wspólnot i społeczności lokalnych na obszarach wiejskich, wojewódzkich koordynatorów wspierania kół gospodyń wiejskich będących przedstawicielami wojewódzkich ośrodków doradztwa rolniczego.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_25__ust_4" gd:GUID="35d9c65a-b2fb-47c1-a0ca-890279017f61">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="d4ea50c2-6f63-4d47-ba1e-19b9a173caf0" fragment="1" gd:fragmentGUID="92a20930-6314-4316-8c7b-56652cdd699e">W ramach sprawowanego nadzoru Prezes Agencji Restrukturyzacji i Modernizacji Rolnictwa może:</zdanie>
+          </p>
+          <punkt eId="DU/2025/310__art_25__ust_4__pkt_1" gd:GUID="0c904bd8-95ca-43e1-8420-5ac13004c559">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="d4ea50c2-6f63-4d47-ba1e-19b9a173caf0" fragment="2" gd:fragmentGUID="afb13310-9cf0-4233-9c9e-3b6b6f9e3249">(uchylony)</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/310__art_25__ust_4__pkt_2" gd:GUID="692e9a6f-7a50-4337-918f-b6d1d4a33394">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="d4ea50c2-6f63-4d47-ba1e-19b9a173caf0" fragment="3" gd:fragmentGUID="fb7ebc65-7433-4f48-8dd2-504915796d58">dokonywać kontroli działalności koła;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/310__art_25__ust_4__pkt_3" gd:GUID="a64c7e02-564c-4400-a1b3-ab0600d6619c">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="d4ea50c2-6f63-4d47-ba1e-19b9a173caf0" fragment="4" gd:fragmentGUID="320f4630-8b14-4eb1-b619-74dad9b21ae8">dokonywać innych przewidzianych prawem czynności w celu zapewnienia prawidłowego funkcjonowania koła.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/310__art_25__ust_5" gd:GUID="0ba697de-138e-4cc3-b24c-5d93ebe310ab">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="9c89a31a-f9a1-4b33-a988-d839380f56b2" fragment="1" gd:fragmentGUID="03c09138-4ddc-48df-8a7c-d964e49bf667">(uchylony)<odnosnik id-odnosnika="14" symbol="14" gd:GUID="102d0c55-e493-4551-88d3-35d6709a2b80"><p><zdanie nr="1" gd:zdGUID="4757420c-42aa-4f3b-a121-777f84f794ab" fragment="1" gd:fragmentGUID="1891256a-9f07-4bd0-92a4-0d0ec792e21e">Przez art. 1 pkt 3 lit. c ustawy, o której mowa w odnośniku 1.</zdanie></p></odnosnik></zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_25__ust_6" gd:GUID="7453fcba-f621-482e-9514-c3f99e2ec51a">
+          <nr>6</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="20420d41-e4b5-4c85-a8d3-d1d788291831" fragment="1" gd:fragmentGUID="cfe89646-4fb1-4e72-96b7-8151e2ebc02b">Z kontroli, o której mowa w ust. 4 pkt 2, Prezes Agencji Restrukturyzacji i Modernizacji Rolnictwa sporządza protokół, a w przypadku stwierdzenia uchybień w działalności koła wzywa koło do usunięcia tych uchybień w wyznaczonym terminie.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_25__ust_7" gd:GUID="6771f474-e786-4d66-9447-6dd7e5cd84dd">
+          <nr>7</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="0b632c43-a400-4e82-b0ac-9aed622fe85c" fragment="1" gd:fragmentGUID="4162d9d1-b4ca-4e61-b8de-3d523e88c4e3">Wyniki kontroli, o której mowa w ust. 4 pkt 2, w tym protokół z tej kontroli oraz wezwanie, o którym mowa w ust. 6, są przedstawiane przez zarząd koła na najbliższym zebraniu członków tego koła.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/310__art_25a" gd:GUID="2ccc46df-d206-4202-b776-c4dd02106afc">
+        <nr>25a</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="8f8d1d23-1b86-45d9-b5a8-5963bd6dfefd">
+          <p>
+            <zdanie nr="1" gd:zdGUID="3de13805-817e-4d9b-aed6-99650e8ab203" fragment="1" gd:fragmentGUID="9e7b2f4d-6dd2-4c09-a016-dc3b0d7322f1"><odnosnik id-odnosnika="15" symbol="15" gd:GUID="84238308-b8a7-4e2f-8a73-d16ea792fa31"><p><zdanie nr="1" gd:zdGUID="c1f68314-f59a-4eba-b566-bf9d09c0655a" fragment="1" gd:fragmentGUID="505c14e5-9290-4525-89a9-3cde76101e1e">Ze zmianą wprowadzoną przez art. 1 pkt 4 ustawy, o której mowa w odnośniku 1.</zdanie></p></odnosnik> Minister właściwy do spraw rozwoju wsi może realizować zadania związane z promowaniem i wspieraniem kół gospodyń wiejskich oraz ich związków, w szczególności w zakresie aktywizacji wspólnot i społeczności lokalnych na obszarach wiejskich.</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2025/310__art_26" gd:GUID="a16d9635-6921-4df2-bdc6-608518025f98">
+        <nr>26</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="b46d2dc9-c0ec-44b6-8594-f6fab37aaf62">
+          <p>
+            <zdanie nr="1" gd:zdGUID="42c9a478-e7dd-4b87-a68a-90716806742e" fragment="1" gd:fragmentGUID="ff13a14d-54ca-4829-b614-44e4696a0cc4">Kierownicy biur powiatowych Agencji Restrukturyzacji i Modernizacji Rolnictwa zapewniają wsparcie przy tworzeniu i prowadzeniu kół gospodyń wiejskich, w tym przez powołanie w ramach kierowanych przez siebie biur pełnomocników do spraw kół gospodyń wiejskich.</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2025/310__art_27" gd:GUID="2592be9d-e7a0-48a9-8688-4fc4c842b8bb">
+        <nr>27</nr>
+        <ustep eId="DU/2025/310__art_27__ust_1" gd:GUID="f22d16da-fd88-48d1-9296-938e66156e18">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="60c55c10-2f47-459f-a53b-14a8129881db" fragment="1" gd:fragmentGUID="48d1144f-a2d7-42ef-9783-3253a573fdee">Koło gospodyń wiejskich przechodzi w stan likwidacji:</zdanie>
+          </p>
+          <punkt eId="DU/2025/310__art_27__ust_1__pkt_1" gd:GUID="483a6848-2b5b-4ad0-9728-2b8bcda1b7e2">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="60c55c10-2f47-459f-a53b-14a8129881db" fragment="2" gd:fragmentGUID="6783d297-e3ce-4f68-91ad-8aa267127724">jeżeli podjęta zostanie uchwała o rozwiązaniu koła;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/310__art_27__ust_1__pkt_2" gd:GUID="428730be-7a42-48b5-acc8-5c6fd6ba2f79">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="60c55c10-2f47-459f-a53b-14a8129881db" fragment="3" gd:fragmentGUID="752426fc-abc6-4054-a8a1-51a80dddb36c">jeżeli uchwalona zmiana statutu koła nie odpowiada wymaganiom określonym w ustawie, a koło gospodyń wiejskich, mimo wskazania przez Agencję Restrukturyzacji i Modernizacji Rolnictwa na zaistniałe uchybienia, nie podejmie uchwały usuwającej te uchybienia bądź nie odstąpi od zmiany statutu koła;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/310__art_27__ust_1__pkt_3" gd:GUID="4fb6473c-654b-44b2-8586-2a1141a25b6b">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="60c55c10-2f47-459f-a53b-14a8129881db" fragment="4" gd:fragmentGUID="0265e1d8-048c-4663-b88c-b0f6632147a1">jeżeli liczba członków koła osiągnie stan poniżej liczby określonej w art. 5 ust. 1 i liczba ta nie zostanie uzupełniona do wymaganej ustawą liczby członków koła w terminie 90 dni;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/310__art_27__ust_1__pkt_4" gd:GUID="c20c7bad-4858-40f0-b4ce-b958d79fe091">
+            <nr>4</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="60c55c10-2f47-459f-a53b-14a8129881db" fragment="5" gd:fragmentGUID="2952765e-3a55-405b-b575-2b960ee68356">w innych przypadkach przewidzianych w ustawie.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/310__art_27__ust_2" gd:GUID="26ce6293-6cfe-4784-af15-8dec8fa6878f">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="c4be2a86-e416-4438-81b2-d41a6fe33de3" fragment="1" gd:fragmentGUID="9a304980-0f41-4cee-850a-27d4bcbdcec8">Likwidację przeprowadza się w sposób określony w statucie.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_27__ust_3" gd:GUID="f7385520-0596-4440-8ed0-7a1b00041b66">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="89886436-14fa-4215-873d-ec376a90abf9" fragment="1" gd:fragmentGUID="03d8d4a6-235f-44c4-8a1b-018d5afdef60">W przypadkach określonych w ust. 1, jeżeli statut nie przewiduje likwidacji koła gospodyń wiejskich lub jego postanowienia w tym przedmiocie nie są wykonywane, dyrektor oddziału regionalnego Agencji Restrukturyzacji i Modernizacji Rolnictwa właściwy ze względu na siedzibę koła może zwrócić się do sądu właściwego ze względu na siedzibę tego koła o likwidację tego koła.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_27__ust_4" gd:GUID="d0575389-8d91-44dd-a4fc-ea4a2a8a5876">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="6188fbfd-8c56-4e2a-9006-c6cff199e0bc" fragment="1" gd:fragmentGUID="88539a16-768f-4a28-a059-081281d7ca93">W przypadkach innych niż określone w ust. 1 likwidacja koła gospodyń wiejskich może nastąpić tylko na mocy przepisu ustawy.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_27__ust_5" gd:GUID="1a3d8ffd-cf94-4bb7-bd5e-926097cbd678">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="f2df7004-8db9-4d4c-aee4-ae207661a93b" fragment="1" gd:fragmentGUID="94b073b6-5026-4b72-af70-2c26757445a6">Jeżeli statut koła gospodyń wiejskich nie określa przeznaczenia środków majątkowych pozostających po jego likwidacji, sąd orzeka o przeznaczeniu tych środków z uwzględnieniem statutowych celów koła gospodyń wiejskich.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_27__ust_6" gd:GUID="72e21f00-fef1-485d-b8c1-0dbfe69cf14d">
+          <nr>6</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="1186f535-0eb8-42f5-a026-a00c2aa4beb4" fragment="1" gd:fragmentGUID="d06b46d3-687c-4650-901b-14aa3dbe21c7">Po zakończeniu likwidacji koła gospodyń wiejskich kierownik biura powiatowego Agencji Restrukturyzacji i Modernizacji Rolnictwa właściwy ze względu na siedzibę koła wykreśla, w drodze decyzji, koło gospodyń wiejskich z rejestru.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/310__art_27a" gd:GUID="4d74152e-4013-4b60-a9b0-eb66fe676fd8">
+        <nr>27a</nr>
+        <ustep eId="DU/2025/310__art_27a__ust_1" gd:GUID="ed231ded-6dd9-4d71-9285-eacb40c3d088">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="cf04fb0b-eabd-4267-b944-08788352098c" fragment="1" gd:fragmentGUID="955284b2-459f-4140-a692-4cc0c9b514d5">W razie przejścia koła gospodyń wiejskich w stan likwidacji, likwidatorami tego koła są członkowie zarządu koła, jeżeli statut lub, w razie braku odpowiednich postanowień statutu, uchwała ostatniego zebrania członków tego koła nie stanowi inaczej.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_27a__ust_2" gd:GUID="0cbe2251-0b93-4f23-ae06-c10d184c488e">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="312eb851-a5ad-4ae0-be80-a09ebec8943e" fragment="1" gd:fragmentGUID="7b0623a8-2ad7-4eb2-a2c1-8792b3955328">W razie braku możliwości wyznaczenia likwidatorów koła gospodyń wiejskich zgodnie z ust. 1, likwidatorów wyznacza sąd właściwy ze względu na siedzibę tego koła.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_27a__ust_3" gd:GUID="4d50127a-22b0-4a30-8a48-af7d8662830b">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="aeb2ff99-f305-408d-8d66-49a295b74817" fragment="1" gd:fragmentGUID="4a93c45d-25b9-4bcf-8c86-f641901ae916">Koło gospodyń wiejskich w likwidacji zachowuje dotychczasową swoją nazwę z dodaniem wyrazów: „w likwidacji”.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/310__art_27b" gd:GUID="5d4c11c5-f933-4e29-ab2f-138b30c3b508">
+        <nr>27b</nr>
+        <ustep eId="DU/2025/310__art_27b__ust_1" gd:GUID="ff5f030b-cabe-489e-b146-067f3268d0d3">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="744fab1f-486d-4c6f-96ce-58beafc9c4b7" fragment="1" gd:fragmentGUID="e584229a-39b9-45ad-88ff-522c7007963c">Obowiązkiem likwidatora jest przeprowadzenie likwidacji w możliwie najkrótszym czasie, w sposób zabezpieczający majątek likwidowanego koła gospodyń wiejskich przed nieuzasadnionym uszczupleniem.</zdanie>
+            <zdanie nr="2" gd:zdGUID="b5adc61b-5ddb-4eda-8848-356e2f88d41e" fragment="1" gd:fragmentGUID="751bec07-48b2-41a0-9040-e8d9ab51b528">W tych granicach likwidator jest uprawniony do kierowania działalnością koła gospodyń wiejskich i reprezentowania tego koła na zewnątrz.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_27b__ust_2" gd:GUID="e26e9461-ca8a-4b07-b571-64a252b98026">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="c298b345-6af2-428f-8501-08b16f6e7be5" fragment="1" gd:fragmentGUID="5ffad087-062d-4118-9033-4366f024f13d">Likwidator w szczególności powinien:</zdanie>
+          </p>
+          <punkt eId="DU/2025/310__art_27b__ust_2__pkt_1" gd:GUID="4b87a1f7-3828-48a4-beb9-276b9077065b">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="c298b345-6af2-428f-8501-08b16f6e7be5" fragment="2" gd:fragmentGUID="86cc9380-d673-4b24-b865-81c85b65424d">zawiadomić dyrektora oddziału regionalnego Agencji Restrukturyzacji i Modernizacji Rolnictwa właściwego ze względu na siedzibę koła gospodyń wiejskich o otwarciu likwidacji i wyznaczeniu likwidatora, z podaniem jego imienia, nazwiska i miejsca zamieszkania;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/310__art_27b__ust_2__pkt_2" gd:GUID="d2f4fc4c-0c5c-4871-8e65-ff6213c86733">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="c298b345-6af2-428f-8501-08b16f6e7be5" fragment="3" gd:fragmentGUID="d933a6ac-80eb-48bb-867c-0f38179a3eae">dokonywać czynności prawnych niezbędnych do przeprowadzenia likwidacji, w szczególności podać do publicznej wiadomości informację o otwarciu likwidacji oraz wezwać wierzycieli do przedstawienia wierzytelności, w terminie 3 miesięcy od dnia ogłoszenia;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/310__art_27b__ust_2__pkt_3" gd:GUID="0497356d-54ad-4edb-b126-4af1bf0c66d8">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="c298b345-6af2-428f-8501-08b16f6e7be5" fragment="4" gd:fragmentGUID="edb1815b-20bf-41d2-b6a1-deed6bbc8b64">po zakończeniu likwidacji zgłosić kierownikowi biura powiatowego Agencji Restrukturyzacji i Modernizacji Rolnictwa właściwemu ze względu na siedzibę koła gospodyń wiejskich, za pośrednictwem dyrektora oddziału regionalnego Agencji Restrukturyzacji i Modernizacji Rolnictwa właściwego ze względu na siedzibę tego koła, wniosek o wykreślenie tego koła z rejestru.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/310__art_27b__ust_3" gd:GUID="68e0db31-dbc3-4424-b374-f2ae921a3f84">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="882739f1-34cf-4cc1-9b8e-11c6912ea537" fragment="1" gd:fragmentGUID="86bf1207-7dab-4816-835c-169551438fd7">Wierzyciele, którzy zgłosili wierzytelności po upływie terminu, o którym mowa w ust. 2 pkt 2, mogą ich dochodzić z nierozdzielonego jeszcze majątku koła gospodyń wiejskich.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_27b__ust_4" gd:GUID="8778d0db-45b3-4bbe-9bcb-04bb6bb0cc38">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="0bbe0f71-cf2c-428c-91f0-fbcee1fee662" fragment="1" gd:fragmentGUID="7da2d61f-3946-4fd7-9ecc-ffd51e000720">Jeżeli likwidacja koła gospodyń wiejskich nie zostanie zakończona w terminie roku od dnia jej zarządzenia, likwidatorzy przedstawiają przyczyny niezakończenia likwidacji dyrektorowi oddziału regionalnego Agencji Restrukturyzacji i Modernizacji Rolnictwa właściwemu ze względu na siedzibę koła gospodyń wiejskich, który występuje do sądu właściwego ze względu na siedzibę tego koła o przedłużenie terminu likwidacji lub o zarządzenie zmiany likwidatorów.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_27b__ust_4a" gd:GUID="8aeb868d-3cfb-4b3b-8afd-61e6338e489e">
+          <nr>4a</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="0f3d9308-124d-4edf-9e53-3eb5e53f6896" fragment="1" gd:fragmentGUID="e741360e-3019-44ab-bf8b-d49e829a454d">Do postępowania sądowego w sprawach określonych w ust. 4, w art. 27 ust. 3 i 5 oraz w art. 27a ust. 2 stosuje się przepisy ustawy z dnia 17 listopada 1964 r. – Kodeks postępowania cywilnego (Dz. U. z 2024 r. poz. 1568 i 1841) o postępowaniu nieprocesowym.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_27b__ust_5" gd:GUID="843ffee9-40ae-4c1b-8113-c1b90eeb700d">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="52d830f4-a6be-4e98-b255-5e340bddca13" fragment="1" gd:fragmentGUID="cbd68f47-1285-4a58-af1f-f9a4a9471118">Likwidatorem nie może zostać pracownik Agencji Restrukturyzacji i Modernizacji Rolnictwa.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/310__art_27c" gd:GUID="df5892b7-cbc2-4a30-a225-feace244fdcf">
+        <nr>27c</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="db45b0ef-cef4-4c7e-af52-c972ee660787">
+          <p>
+            <zdanie nr="1" gd:zdGUID="3dd4c6cc-54d9-4005-a067-f2daddb58013" fragment="1" gd:fragmentGUID="d765a423-213d-4f41-b82e-4949574ad708">Koszty likwidacji pokrywa się z majątku likwidowanego koła gospodyń wiejskich.</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2025/310__art_27d" gd:GUID="31ecdfba-79f7-4ca9-bf63-f03ff877b24e">
+        <nr>27d</nr>
+        <ustep eId="DU/2025/310__art_27d__ust_1" gd:GUID="19863fc3-cd4b-4c64-a1c8-5cc3ced1b18c">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="35144639-3eb0-42e8-aa6c-428d31fe3991" fragment="1" gd:fragmentGUID="f5ed45a9-f7aa-4646-b938-1a8ec2feb312">Po wykreśleniu koła gospodyń wiejskich z rejestru likwidator odpowiada wobec wierzycieli koła gospodyń wiejskich za wyrządzone im szkody przez niedopełnienie swoich ustawowych obowiązków.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_27d__ust_2" gd:GUID="4799c36b-44ac-4631-90e7-2c37dbd1519c">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="0c94f8a4-4b3c-45c5-9852-479c2491bf90" fragment="1" gd:fragmentGUID="a439676e-c4fd-4835-9ccc-a83c203c9ab1">Przepis ust. 1 stosuje się odpowiednio do członków ostatniego zarządu koła wykreślonego z rejestru.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/310__art_28" gd:GUID="8320cc43-4e5a-40b1-a2a4-85f9e656694f">
+        <nr />
+        <nr-od>28</nr-od>
+        <nr-do>33</nr-do>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="380f8249-c4eb-4b84-b587-7aa9b5324e60">
+          <p>
+            <zdanie nr="1" gd:zdGUID="54bf6962-ac68-438e-85f2-e8288ae66f6a" fragment="1" gd:fragmentGUID="f5095089-21e6-4e77-a404-0d4ad62fa360">(pominięte)</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2025/310__art_34" gd:GUID="23bacbff-0081-4458-afbf-6f19f63d93bc">
+        <nr>34</nr>
+        <ustep eId="DU/2025/310__art_34__ust_1" gd:GUID="9906e7b9-5833-4990-a3e7-69af6c51a22a">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="24095b9c-1b67-43f2-b95c-e4e2482fa06a" fragment="1" gd:fragmentGUID="96052317-af7b-4a9d-be22-85018ad36c57">Działające w dniu wejścia w życie ustawy koła gospodyń wiejskich mogą dostosować statuty do wymagań ustalonych w ustawie i wystąpić z wnioskiem o dokonanie wpisu koła gospodyń wiejskich do rejestru zgodnie z przepisami ustawy.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_34__ust_2" gd:GUID="13ed45a9-31d2-4f75-91db-7adc2694db3f">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="5a6c6129-691b-45bb-ad5b-a9c488430318" fragment="1" gd:fragmentGUID="a64432b2-12a3-4909-a975-a99407502c14">W okresie miesiąca od dnia wejścia w życie niniejszej ustawy, koła gospodyń wiejskich działające na podstawie przepisów dotychczasowych, w szczególności na podstawie ustawy z dnia 8 października 1982 r. o społeczno-zawodowych organizacjach rolników oraz na podstawie ustawy z dnia 7 kwietnia 1989 r. – Prawo o stowarzyszeniach (Dz. U. z 2020 r. poz. 2261), przy rejestracji w oparciu o przepisy niniejszej ustawy mają prawo pierwszeństwa przed kołami, które miałyby zostać utworzone na podstawie przepisów niniejszej ustawy na terenie tych samych wsi.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_34__ust_3" gd:GUID="f45f4629-8d6b-4098-8103-6833d993f48c">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="e16860a5-7c2d-45d0-b403-0d531d5d96ea" fragment="1" gd:fragmentGUID="6a032c5c-9f65-4da4-83bd-efc50e877795">Jeżeli w okresie miesiąca od dnia wejścia w życie niniejszej ustawy zostanie złożony wniosek o wpis do rejestru koła gospodyń wiejskich, które miałoby zostać utworzone na podstawie przepisów niniejszej ustawy, a Prezes Agencji Restrukturyzacji i Modernizacji Rolnictwa ustali, że na terenie tej samej wsi utworzono już koło gospodyń wiejskich na podstawie przepisów dotychczasowych, wówczas postępowanie o wpis do rejestru koła, które miałoby zostać utworzone na podstawie przepisów niniejszej ustawy, zawiesza się do chwili złożenia wniosku o wpis do rejestru koła działającego na podstawie przepisów dotychczasowych albo złożenia oświadczenia przez to koło o rezygnacji z prawa pierwszeństwa, nie dłużej jednak niż do upływu miesiąca od dnia wejścia w życie niniejszej ustawy.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_34__ust_4" gd:GUID="faab37ca-08bc-4fd6-b12c-364ed2f99e9d">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="5d16852a-64d7-4cc3-9fe2-a7b723533992" fragment="1" gd:fragmentGUID="3b779d3c-63ad-46fd-9af7-b16f520c4757">Do kół gospodyń wiejskich działających na podstawie przepisów dotychczasowych, które wystąpią o rejestrację w terminie określonym w ust. 2, ograniczenia określonego w art. 4 ust. 1 nie stosuje się.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_34__ust_4a" gd:GUID="44bda6e0-8866-4cb7-b207-afc952bd3498">
+          <nr>4a</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="e9e0d9c2-7a1f-4bd0-ad42-1a3faae7f02e" fragment="1" gd:fragmentGUID="a0536b97-0575-4273-8a6e-643483478b68"><odnosnik id-odnosnika="16" symbol="16" gd:GUID="1a762212-2ddd-4c42-a7d6-878a4ce4a903"><p><zdanie nr="1" gd:zdGUID="8739deaf-9c16-4b3b-a93e-9206686aef28" fragment="1" gd:fragmentGUID="cb062314-edd5-4235-9a6f-e458278d18d0">Dodany przez art. 1 pkt 5 lit. a ustawy, o której mowa w odnośniku 1.</zdanie></p></odnosnik> Do kół gospodyń wiejskich działających na podstawie przepisów dotychczasowych, które wystąpią o rejestrację zgodnie z ust. 1, ograniczenia określonego w art. 4 ust. 1 nie stosuje się.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_34__ust_4b" gd:GUID="be505271-28c1-4d81-b408-99a25477daa0">
+          <nr>4b</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a7d1e443-7ab2-43d2-b8b1-67d8e03d7ae5" fragment="1" gd:fragmentGUID="04e31254-e0d0-43e2-be16-299487f4c9ce"><odsylacz-do-odnosnika id-odnosnika="16" symbol="16" /> Kierownik biura powiatowego Agencji Restrukturyzacji i Modernizacji Rolnictwa dokonuje, w drodze decyzji, wpisu koła gospodyń wiejskich, o którym mowa w ust. 4a, do rejestru po stwierdzeniu, że statut koła jest zgodny z przepisami prawa, a założyciele koła spełniają wymagania określone w ustawie.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_34__ust_4c" gd:GUID="d978dd8e-8628-44a9-bf09-1f00c8fe6bf5">
+          <nr>4c</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="b72dc8a0-2eac-4a7b-af15-5e2a63885ec7" fragment="1" gd:fragmentGUID="c6c08a8c-b8a5-4e21-9664-dee79d7e3544"><odsylacz-do-odnosnika id-odnosnika="16" symbol="16" /> Do wpisu do rejestru koła gospodyń wiejskich, o którym mowa w ust. 4a, przepisu art. 9 ust. 3 nie stosuje się.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_34__ust_5" gd:GUID="c0d8b87c-e229-4a03-83bd-dd2146a66a1f">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="509cccfd-fa0b-429e-900f-182f18dfaa14" fragment="1" gd:fragmentGUID="4addd596-86a5-4f21-8b8c-15ae3487c9aa">Do wniosku o wpis koła gospodyń wiejskich do rejestru koła działające przed wejściem w życie niniejszej ustawy mogą dołączyć dokumenty poświadczające ich dotychczasową działalność, w szczególności statuty, zaświadczenia z organów jednostek samorządu terytorialnego, samorządu sołeckiego lub innych instytucji albo osób godnych zaufania.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_34__ust_6" gd:GUID="528b5efd-4e50-4bcb-98fc-85c4d3b692e1">
+          <nr>6</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="d648fb93-b9ba-4d90-b0b7-010446a4e762" fragment="1" gd:fragmentGUID="f44ccea3-2161-43e9-a81e-5b07963ca0e4"><odnosnik id-odnosnika="17" symbol="17" gd:GUID="1a60d22d-b7f4-4797-87bd-908410760fc7"><p><zdanie nr="1" gd:zdGUID="7aa20c20-4f39-43a6-98a1-1a6914e98dbe" fragment="1" gd:fragmentGUID="f59f7caf-f9be-4874-a5fb-fa5bd5c90073">Ze zmianą wprowadzoną przez art. 1 pkt 5 lit. b ustawy, o której mowa w odnośniku 1.</zdanie></p></odnosnik> Koła gospodyń wiejskich, które nie wystąpią z wnioskiem o dokonanie wpisu koła gospodyń wiejskich do rejestru zgodnie z przepisami niniejszej ustawy, działają na podstawie przepisów dotychczasowych.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_34__ust_7" gd:GUID="7d77da78-3572-4303-b232-86fdf51ccbab">
+          <nr>7</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="ceb78503-5e3e-40b6-84f9-8c9df3ca52fd" fragment="1" gd:fragmentGUID="c1573bc4-9e33-4a6b-beb1-5e39bd2bf73c">Do czasu rejestracji w sposób, o którym mowa w ust. 1, koła gospodyń wiejskich istniejące w dniu wejścia w życie niniejszej ustawy działają na podstawie statutów dotychczasowych.</zdanie>
+            <zdanie nr="2" gd:zdGUID="012c5b37-f106-4900-91b1-b38d0c5e6b42" fragment="1" gd:fragmentGUID="733a461b-0a4e-4e41-8b99-1fd8cbd52d23">W razie sprzeczności między statutami dotychczasowymi a przepisami niniejszej ustawy, stosuje się przepisy niniejszej ustawy.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_34__ust_8" gd:GUID="af49c341-14ce-4aea-a464-cab8a909fc51">
+          <nr>8</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a26a315d-5769-4d0e-b94b-41326c69b856" fragment="1" gd:fragmentGUID="9e8dfdb7-306b-4991-9208-ce640661001f"><odnosnik id-odnosnika="18" symbol="18" gd:GUID="870b7153-142a-46ee-a65e-7b00a9477d48"><p><zdanie nr="1" gd:zdGUID="c8e09a38-f732-474d-91e1-7436c6c7346a" fragment="1" gd:fragmentGUID="0a48d7f9-9645-431d-b5e0-47eb41308cb5">Dodany przez art. 1 pkt 5 lit. c ustawy, o której mowa w odnośniku 1.</zdanie></p></odnosnik> Koło gospodyń wiejskich, o którym mowa w ust. 1, działające na podstawie przepisów ustawy z dnia 8 października 1982 r. o społeczno-zawodowych organizacjach rolników, z chwilą wpisu do rejestru nie traci statusu społeczno-zawodowej organizacji rolników i jest zrzeszone w:</zdanie>
+          </p>
+          <punkt eId="DU/2025/310__art_34__ust_8__pkt_1" gd:GUID="55927fcf-7133-47aa-8087-f5bdfedc2ef8">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="a26a315d-5769-4d0e-b94b-41326c69b856" fragment="2" gd:fragmentGUID="9787a336-3f97-45ea-b97c-711edc7c6ae8">gminnym związku rolników, kółek i organizacji rolniczych, jeżeli działało jako wyodrębniona jednostka organizacyjna kółka rolniczego zrzeszonego w takim związku;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/310__art_34__ust_8__pkt_2" gd:GUID="149eca79-c37f-4f2c-9c15-659c724959ed">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="a26a315d-5769-4d0e-b94b-41326c69b856" fragment="3" gd:fragmentGUID="975f60e6-63f9-4443-afe7-99f5e0aa1924">wojewódzkim związku rolników, kółek i organizacji rolniczych, jeżeli działało jako wyodrębniona jednostka organizacyjna kółka rolniczego zrzeszonego w takim związku albo działało jako samodzielne koło na podstawie regulaminu rejestrowanego w wojewódzkim związku rolników, kółek i organizacji rolniczych;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/310__art_34__ust_8__pkt_3" gd:GUID="4d760987-6a53-4f9b-9b5b-b84378519e0a">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="a26a315d-5769-4d0e-b94b-41326c69b856" fragment="4" gd:fragmentGUID="41ec4de5-6e4a-4df8-88f8-c4697df9bf60">Krajowym Związku Rolników, Kółek i Organizacji Rolniczych, jeżeli działało jako wyodrębniona jednostka organizacyjna kółka rolniczego zrzeszonego w takim związku.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/310__art_34a" gd:GUID="305228b2-ded7-4eb9-812d-14bd060be2e2">
+        <nr>34a</nr>
+        <ustep eId="DU/2025/310__art_34a__ust_1" gd:GUID="ceb28e4b-f2af-4bcd-80ed-f3134f4e1513">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="4661c4dd-c580-4a9e-8cb3-0233f151f476" fragment="1" gd:fragmentGUID="e1db5b93-64f7-4965-bec4-a8173dbb3da4"><odnosnik id-odnosnika="19" symbol="19" gd:GUID="4511bcc5-298e-466e-9207-202536d0824c"><p><zdanie nr="1" gd:zdGUID="4a7ab1bb-f1f9-4404-9f1e-abb44b9b5876" fragment="1" gd:fragmentGUID="7ec6c03f-3ff9-4d50-9763-3715674fd1f7">Ze zmianą wprowadzoną przez art. 1 pkt 6 ustawy, o której mowa w odnośniku 1.</zdanie></p></odnosnik> Przepisy art. 34 ust. 1, 5, 7 i 8 stosuje się również do kół gospodyń wiejskich działających na podstawie ustawy z dnia 8 października 1982 r. o społeczno-zawodowych organizacjach rolników, które w dniu wejścia w życie niniejszej ustawy działały w granicach administracyjnych miast.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_34a__ust_2" gd:GUID="0f2ff3e7-2f5a-46aa-803b-e49baa9b5a55">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="9466712c-a496-41db-863e-8a0f97c1258c" fragment="1" gd:fragmentGUID="6865087e-a1bf-45ae-ad99-cb3b5a57fcec">Do kół gospodyń wiejskich, o których mowa w ust. 1, przepisy art. 4 ust. 2–5 stosuje się odpowiednio.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/310__art_35" gd:GUID="0626628f-9e62-4dd1-8612-48d5331b2bec">
+        <nr>35</nr>
+        <ustep eId="DU/2025/310__art_35__ust_1" gd:GUID="fa1e9125-7b3a-45e9-9213-e9497e4d89c8">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="3986b219-7aad-4f7f-8ce3-250b8d176c11" fragment="1" gd:fragmentGUID="5441bfcb-ee17-48dc-aba9-9f01ae47ee82">W okresie 12 miesięcy od dnia wejścia w życie niniejszej ustawy koło gospodyń wiejskich może otrzymać z budżetu państwa pomoc finansową przeznaczoną na realizację zadań, o których mowa w art. 2 ust. 3.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_35__ust_2" gd:GUID="4924b80b-bf98-4c00-b5dc-7f0d0ff8cd5f">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="634bfe8f-334e-4c7f-9c72-b5b7ecf4f17e" fragment="1" gd:fragmentGUID="e4e7440c-315d-4f0c-bb3b-19b2037b2f4c">Pomoc finansowa, o której mowa w ust. 1, jest przyznawana w drodze decyzji Prezesa Agencji Restrukturyzacji i Modernizacji Rolnictwa na wniosek złożony przez koło gospodyń wiejskich.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_35__ust_3" gd:GUID="9f11339b-fdfa-418f-8755-778be11d0caf">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="bad04383-a401-494a-9e9b-118c70aec5fc" fragment="1" gd:fragmentGUID="37898fca-af7f-4788-bbdc-8b6be170a69c">Wniosek, o którym mowa w ust. 2, składa się do kierownika biura powiatowego Agencji Restrukturyzacji i Modernizacji Rolnictwa właściwego miejscowo ze względu na siedzibę koła, na formularzu opracowanym i udostępnionym przez Agencję Restrukturyzacji i Modernizacji Rolnictwa.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_35__ust_4" gd:GUID="7744a163-cc8f-4d37-86e8-018457b84878">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="63f42f01-7d1f-4bf6-b98f-c1115824f81c" fragment="1" gd:fragmentGUID="9a506320-9b4d-4aa4-bef7-adaf257a9189">Do wydania decyzji, o której mowa w ust. 2, Prezes Agencji Restrukturyzacji i Modernizacji Rolnictwa może upoważnić kierownika biura powiatowego Agencji Restrukturyzacji i Modernizacji Rolnictwa właściwego ze względu na siedzibę koła gospodyń wiejskich.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_35__ust_5" gd:GUID="223c2aaa-311e-467a-a7e7-91e4c3b4b65a">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="4cfb4ac7-df27-47a9-a6b2-cb2dafaef53e" fragment="1" gd:fragmentGUID="611a7f5b-d436-4671-b00b-cb253f87a913">Organem wyższego stopnia w stosunku do Prezesa Agencji Restrukturyzacji i Modernizacji Rolnictwa w sprawach o przyznanie pomocy finansowej, o której mowa w ust. 1, jest minister właściwy do spraw rozwoju wsi.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_35__ust_6" gd:GUID="ace4efd2-dadb-4fea-9267-bf89a2de13a6">
+          <nr>6</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="3118ee94-3a46-4c27-876c-63d25cf494e0" fragment="1" gd:fragmentGUID="be7a2033-6bc4-42b6-beb3-4d50732a2984">Minister właściwy do spraw rozwoju regionalnego może udzielić Agencji Restrukturyzacji i Modernizacji Rolnictwa dotacji celowej, na zasadach określonych w przepisach o finansach publicznych, z przeznaczeniem na realizację pomocy finansowej, o której mowa w ust. 1.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_35__ust_7" gd:GUID="7de92e9d-921c-44d5-adc2-3b0b1e2c1215">
+          <nr>7</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="12e9b969-9a64-4bbf-9f5a-d9f6cbda1fef" fragment="1" gd:fragmentGUID="cad16ce4-2a56-4647-98d6-0e9ac347ea28">Do środków otrzymanych przez Prezesa Agencji Restrukturyzacji i Modernizacji Rolnictwa na podstawie ust. 6 nie stosuje się art. 21 ust. 5 ustawy z dnia 27 sierpnia 2009 r. o finansach publicznych (Dz. U. z 2024 r. poz. 1530, 1572, 1717, 1756 i 1907 oraz z 2025 r. poz. 39).</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_35__ust_8" gd:GUID="bb2b4307-f5a4-48b7-9fac-bd42f763e1c8">
+          <nr>8</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a80ad5b0-d886-48cb-9dc2-7a5d29400582" fragment="1" gd:fragmentGUID="27a748fb-aa3d-46a4-8b72-11afcc11fd9f">Otrzymaną przez Prezesa Agencji Restrukturyzacji i Modernizacji Rolnictwa dotację, o której mowa w ust. 6, uznaje się za wykorzystaną w momencie przekazania pomocy przez Prezesa Agencji Restrukturyzacji i Modernizacji Rolnictwa na rachunek koła.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_35__ust_9" gd:GUID="795f3e61-88ab-4bfb-94f6-422a0226fe29">
+          <nr>9</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a9f6d41e-a25f-48b4-bb19-1e8b42e350bb" fragment="1" gd:fragmentGUID="868700fe-5b24-49af-a5b8-53b1afd86a2a">W celu realizacji zadania, o którym mowa w ust. 1, minister właściwy do spraw finansów publicznych może dokonać zmiany przeznaczenia rezerw celowych.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_35__ust_10" gd:GUID="34bbbb1e-85e8-4ec1-aade-474751f7b6c7">
+          <nr>10</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="16df3cfa-60c1-4ec8-9587-e23801bdfa79" fragment="1" gd:fragmentGUID="eb4e56b1-c25d-40d0-8b78-b6316f75117c">W 2018 r. podziału rezerw celowych, o których mowa w ust. 9, dokonuje minister właściwy do spraw finansów publicznych w terminie do dnia 15 grudnia 2018 r. na wniosek ministra właściwego do spraw rozwoju regionalnego.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_35__ust_11" gd:GUID="9daf1a87-dc1b-4727-8d64-d9273477965d">
+          <nr>11</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="67b3f822-eb46-43b6-862f-affe16be2df0" fragment="1" gd:fragmentGUID="d7b74dd1-2379-4db0-9dd8-a4085f2e0ad1">W 2018 r. do rezerw celowych, o których mowa w ust. 9, nie stosuje się terminów określonych w art. 154 ust. 1 ustawy z dnia 27 sierpnia 2009 r. o finansach publicznych.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_35__ust_12" gd:GUID="4bc298f7-f830-431d-8e78-01fdaf94c08a">
+          <nr>12</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="ef6705d1-9dca-4afb-88ff-06f64ef14035" fragment="1" gd:fragmentGUID="aefa8742-1842-4bdd-ae29-4c77442fd303">Minister właściwy do spraw rozwoju regionalnego określi, w drodze rozporządzenia, szczegółowe warunki i tryb przyznawania oraz rozliczania przez Prezesa Agencji Restrukturyzacji i Modernizacji Rolnictwa pomocy finansowej z budżetu państwa dla kół gospodyń wiejskich oraz jej wysokość, mając na uwadze zapewnienie wsparcia dla rozwoju społeczno-gospodarczego, w tym rozwoju przedsiębiorczości na terenach wiejskich.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/310__art_35a" gd:GUID="2ccd1a4a-8167-4b23-b534-559d7089ffbc">
+        <nr>35a</nr>
+        <ustep eId="DU/2025/310__art_35a__ust_1" gd:GUID="64a9ecd1-1bfd-41c0-9642-784daa74d079">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a8241c95-5503-4a6f-9085-0bda7c97f4f0" fragment="1" gd:fragmentGUID="38d5f291-29d8-4ee5-9eaa-9400fe743e90">W 2020 r. koło gospodyń wiejskich może otrzymać z budżetu państwa pomoc finansową przeznaczoną na realizację zadań, o których mowa w art. 2 ust. 3.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_35a__ust_2" gd:GUID="76d23d4e-4472-40d0-b3db-2f81e7a16121">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="eca7a699-8a04-43be-9f99-1bc0dc991e4a" fragment="1" gd:fragmentGUID="5ad37888-703f-42ef-a99f-20dfc0febc51">Pomoc finansowa, o której mowa w ust. 1, jest przyznawana w drodze decyzji Prezesa Agencji Restrukturyzacji i Modernizacji Rolnictwa na wniosek złożony przez koło gospodyń wiejskich.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_35a__ust_3" gd:GUID="f0d7a0ee-3f45-4ef4-98ff-835695e43a6e">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="b80cb8f7-a97a-4514-a9e0-1544fa4a56cd" fragment="1" gd:fragmentGUID="d884fabb-da7b-4c2f-a800-39c6a9aac99a">Wniosek, o którym mowa w ust. 2, składa się do kierownika biura powiatowego Agencji Restrukturyzacji i Modernizacji Rolnictwa właściwego miejscowo ze względu na siedzibę koła gospodyń wiejskich, na formularzu opracowanym i udostępnionym przez Agencję Restrukturyzacji i Modernizacji Rolnictwa.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_35a__ust_4" gd:GUID="b6c2fd06-93ea-4376-8f0d-f2d57193d93b">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="7c34e4ec-94f1-4459-bbe3-f902ea813e00" fragment="1" gd:fragmentGUID="7e3b15fa-d9c1-4c55-b816-a4ef05c65541">Do wydania decyzji, o której mowa w ust. 2, Prezes Agencji Restrukturyzacji i Modernizacji Rolnictwa może upoważnić kierownika biura powiatowego Agencji Restrukturyzacji i Modernizacji Rolnictwa właściwego ze względu na siedzibę koła gospodyń wiejskich.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_35a__ust_5" gd:GUID="775c5599-37cf-4f83-9ef2-ba486aa3ab7d">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="27346193-6ee9-4a12-9914-f3942f059484" fragment="1" gd:fragmentGUID="b837c836-5d59-4a4a-a10e-d8af98c5635b">Organem wyższego stopnia w stosunku do Prezesa Agencji Restrukturyzacji i Modernizacji Rolnictwa w sprawach o przyznanie pomocy finansowej, o której mowa w ust. 1, jest minister właściwy do spraw rozwoju wsi.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_35a__ust_6" gd:GUID="47507054-88fd-4b6b-a798-b548a11dae67">
+          <nr>6</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="154bb5b6-4326-4024-aac9-7c672ed64ea9" fragment="1" gd:fragmentGUID="557df6ed-8a0c-43bd-839a-12565169c57f">Minister właściwy do spraw rozwoju regionalnego może udzielić Agencji Restrukturyzacji i Modernizacji Rolnictwa dotacji celowej, na zasadach określonych w przepisach o finansach publicznych, z przeznaczeniem na realizację pomocy finansowej, o której mowa w ust. 1.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_35a__ust_7" gd:GUID="7195595f-8c94-42e0-9140-a424c0bbbe4a">
+          <nr>7</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="c520ac65-b2a2-4ef2-b2a1-da965c501a99" fragment="1" gd:fragmentGUID="f2f02a3d-d413-43b1-8643-6d8697cfa9b8">Do środków otrzymanych przez Agencję Restrukturyzacji i Modernizacji Rolnictwa na podstawie ust. 6 nie stosuje się art. 21 ust. 5 ustawy z dnia 27 sierpnia 2009 r. o finansach publicznych.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_35a__ust_8" gd:GUID="ef1a91a8-7094-4d44-8232-f9c2bdcd848c">
+          <nr>8</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="d89e8e47-0b7c-4764-ac57-51ad2e849601" fragment="1" gd:fragmentGUID="a90b8a1a-4ed2-4ed1-8c4b-6fc2129cf7f9">Otrzymaną przez Agencję Restrukturyzacji i Modernizacji Rolnictwa dotację celową, o której mowa w ust. 6, uznaje się za wykorzystaną w dniu przekazania pomocy przez Agencję Restrukturyzacji i Modernizacji Rolnictwa na rachunek bankowy koła gospodyń wiejskich.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_35a__ust_9" gd:GUID="0bb2b79a-f47f-4388-b389-890e2d699e0d">
+          <nr>9</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="15ad7b22-adec-470e-a6ad-8313e5b6d789" fragment="1" gd:fragmentGUID="f402837b-6dfa-4b39-a30a-b4a5f4ebc82d">Minister właściwy do spraw rozwoju regionalnego określi, w drodze rozporządzenia, szczegółowe warunki i tryb przyznawania oraz rozliczania przez Prezesa Agencji Restrukturyzacji i Modernizacji Rolnictwa pomocy finansowej, o której mowa w ust. 1, oraz jej wysokość, mając na uwadze zapewnienie wsparcia dla rozwoju społeczno-gospodarczego, w tym aktywizacji wspólnot i społeczności lokalnych na obszarach wiejskich.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/310__art_36" gd:GUID="a8e98df7-d3e5-460a-8914-f8e5ff636baf">
+        <nr>36</nr>
+        <ustep eId="DU/2025/310__art_36__ust_1" gd:GUID="8fbc28ac-40c7-4692-b3c2-526ed90c0149">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="5919da18-fde8-4f5d-98bb-8dc7722b992a" fragment="1" gd:fragmentGUID="f359f09a-1a3b-49b1-9e8e-c86426ad2a88">Maksymalny limit wydatków z budżetu państwa przeznaczonych na pomoc finansową dla kół gospodyń wiejskich na realizację zadań, o których mowa w art. 2 ust. 3, wynosi w 2018 r. 90 000 000 zł.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_36__ust_2" gd:GUID="b1236bbd-d97e-475f-b031-851a81377d27">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="fd1bc5b5-4a09-4e3d-a8cf-f168bcca9044" fragment="1" gd:fragmentGUID="9eebbc74-4328-4688-a5ac-f811b1f10693">W przypadku gdy wielkość wydatków w 2018 r., określona jako iloczyn liczby złożonych wniosków, o których mowa w art. 35 ust. 2, oraz wysokości jednostkowej pomocy finansowej dla koła gospodyń wiejskich, przekroczy kwotę maksymalnego limitu wydatków, o której mowa w ust. 1, minister właściwy do spraw rozwoju regionalnego, na podstawie informacji otrzymanych od Prezesa Agencji Restrukturyzacji i Modernizacji Rolnictwa o zapotrzebowaniu na środki finansowe wynikającym ze złożonych wniosków, ustala współczynnik procentowy udzielenia pomocy.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_36__ust_3" gd:GUID="e72c36a7-4ce7-4e23-9fdd-a9afe271f8b2">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="13d06522-205e-40cb-b874-0e843961a131" fragment="1" gd:fragmentGUID="a4c201a3-0350-464f-b1bb-513e432254d9">Współczynnik, o którym mowa w ust. 2, ogłaszany jest w Biuletynie Informacji Publicznej na stronie podmiotowej urzędu obsługującego ministra właściwego do spraw rozwoju regionalnego.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_36__ust_4" gd:GUID="fbfa3c64-734c-4454-8029-3409462238fc">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="d77ac3ab-fc18-4f35-807a-ac17fb25dec2" fragment="1" gd:fragmentGUID="55bced1e-a29c-4302-8789-08c464a7cafb">Wysokość pomocy, o której mowa w art. 35 ust. 1, oblicza się jako iloczyn stawki pomocy określonej w przepisach wydanych na podstawie art. 35 ust. 12 i współczynnika, o którym mowa w ust. 2.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_36__ust_5" gd:GUID="58a1fd2a-cf51-4fba-a62d-a348351416be">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="2f5d9b27-5b52-4793-9e7e-172b7e34a39c" fragment="1" gd:fragmentGUID="0c268a9e-90d0-4823-a367-3a83579bf0c6">Pomoc, o której mowa w ust. 1, jest przyznawana od dnia następującego po dniu ogłoszenia współczynnika, o którym mowa w ust. 2, nie później niż do dnia 31 grudnia 2018 r.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/310__art_36a" gd:GUID="c8dc5bcf-41d4-49d6-9f97-9cc32b98d018">
+        <nr>36a</nr>
+        <ustep eId="DU/2025/310__art_36a__ust_1" gd:GUID="d654892a-977a-41cb-9e6a-d035e429813a">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="7b20fdfc-3463-4bfc-91dc-42370146a5df" fragment="1" gd:fragmentGUID="3dce53e9-c2ed-41d2-9d33-df2fe580f851">Maksymalny limit wydatków z budżetu państwa przeznaczonych na pomoc finansową dla kół gospodyń wiejskich na realizację zadań, o których mowa w art. 2 ust. 3, wynosi w 2019 r. 40 000 000 zł.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_36a__ust_2" gd:GUID="0b593d64-8284-42a9-a836-8d7019536615">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="5edfadf5-8b11-493d-9a47-afe42f8067f9" fragment="1" gd:fragmentGUID="d6b0d9a8-ee3e-4d4e-904f-17e35f809b4e">Pomoc w ramach środków, o których mowa w ust. 1, jest przyznawana do wyczerpania środków finansowych, zgodnie z kolejnością złożenia prawidłowo wypełnionego wniosku o przyznanie pomocy.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_36a__ust_3" gd:GUID="1132df68-cee1-48e7-96e7-4f12cbd48d8d">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="57f4d47f-bd28-46d2-85f1-af48990286e4" fragment="1" gd:fragmentGUID="2e6dde0d-d7f9-4f4c-8727-bbf1db633d65">Prezes Agencji Restrukturyzacji i Modernizacji Rolnictwa ogłasza na stronie podmiotowej Agencji Restrukturyzacji i Modernizacji Rolnictwa, narastająco począwszy od dnia wejścia w życie ustawy, do 10 dnia każdego miesiąca według stanu za miesiąc poprzedni informację o kwocie, na jaką zostały założone wnioski o przyznanie pomocy.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_36a__ust_4" gd:GUID="51b8f1b1-7220-48b0-bd44-027db682a200">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="01f32919-4bbe-41b2-8381-3136c17e3fb6" fragment="1" gd:fragmentGUID="0e5eed2a-870f-406e-8ea9-1e66a896db90">Prezes Agencji Restrukturyzacji i Modernizacji Rolnictwa ogłasza na stronie podmiotowej Agencji Restrukturyzacji i Modernizacji Rolnictwa informację o zaprzestaniu przyjmowania wniosków.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_36a__ust_5" gd:GUID="5ab12a5a-65cc-4095-92b3-3a4fc74bff3b">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="89cd4a6f-c0cb-41c5-b00f-ae63978770d2" fragment="1" gd:fragmentGUID="4407eee4-c7c6-4cf8-8087-deb750123d82">Minister właściwy do spraw rozwoju regionalnego monitoruje poziom wykorzystania środków, o których mowa w ust. 1, na podstawie okresowych informacji o liczbie złożonych wniosków o przyznanie pomocy oraz kwotach wnioskowanej pomocy otrzymywanych od Prezesa Agencji Restrukturyzacji i Modernizacji Rolnictwa.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/310__art_36b" gd:GUID="db9fa77e-56ba-4b12-8f2d-ebf3c6f2cf45">
+        <nr>36b</nr>
+        <ustep eId="DU/2025/310__art_36b__ust_1" gd:GUID="67bcc2b3-445a-4d4a-8808-d347a2474df2">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="d3b6c79c-32bc-4807-ac5a-1738bad66063" fragment="1" gd:fragmentGUID="fceb8846-d21c-4225-a21e-ad65e7e34c52">Maksymalny limit wydatków z budżetu państwa przeznaczonych na pomoc finansową, o której mowa w art. 35a ust. 1, wynosi w 2020 r. 40 000 000 zł.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_36b__ust_2" gd:GUID="f676b9d2-0f8b-4213-accd-d2a5da18e4ab">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="c908e010-2cea-4b65-afc9-e9179117f66a" fragment="1" gd:fragmentGUID="fefa1710-aaee-4114-9483-bb5319f40ee0">Pomoc w ramach środków, o których mowa w ust. 1, jest przyznawana do wyczerpania środków finansowych, zgodnie z kolejnością złożenia prawidłowo wypełnionego wniosku o przyznanie pomocy.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_36b__ust_3" gd:GUID="be5bf533-977f-4f21-b9d1-82da6887e6e5">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="067d66db-a2c7-4f87-9091-c796e4dd9128" fragment="1" gd:fragmentGUID="17cdfbea-4e5c-4bef-8909-f0752ac51b92">Prezes Agencji Restrukturyzacji i Modernizacji Rolnictwa ogłasza na stronie podmiotowej Agencji Restrukturyzacji i Modernizacji Rolnictwa, narastająco, do 10. dnia każdego miesiąca, według stanu za miesiąc poprzedni, informację o kwocie, na jaką zostały złożone wnioski o przyznanie pomocy.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_36b__ust_4" gd:GUID="9707ed03-74b5-48ae-9dee-df09a96a3a7d">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="25256771-7226-48e8-b1fd-0eeab7679218" fragment="1" gd:fragmentGUID="be9b004f-5d3a-4447-acb3-2084d65afda7">Prezes Agencji Restrukturyzacji i Modernizacji Rolnictwa ogłasza na stronie podmiotowej Agencji Restrukturyzacji i Modernizacji Rolnictwa informację o zaprzestaniu przyjmowania wniosków.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/310__art_36b__ust_5" gd:GUID="43c2ed4b-83bc-4bb4-bd08-1c9c63b202c0">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="71b8040c-08d6-4f9a-9780-86d49e471d68" fragment="1" gd:fragmentGUID="21442d10-5826-471d-acea-d981c13b1c78">Minister właściwy do spraw rozwoju regionalnego monitoruje poziom wykorzystania środków, o których mowa w ust. 1, na podstawie okresowych informacji o liczbie złożonych wniosków o przyznanie pomocy oraz kwotach wnioskowanej pomocy otrzymywanych od Prezesa Agencji Restrukturyzacji i Modernizacji Rolnictwa.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/310__art_36c" gd:GUID="dc722bf1-36d3-46dd-bf0e-4aff187bb889">
+        <nr>36c</nr>
+        <ustep eId="DU/2025/310__art_36c__ust_1" gd:GUID="a1713681-15a7-47fa-829f-12c6823585fb">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="2e9c0c7b-8562-4a63-9c3b-54f47c02f78f" fragment="1" gd:fragmentGUID="0e2bbd54-8110-47db-92c2-34cb69817e84"><odnosnik id-odnosnika="20" symbol="20" gd:GUID="5e6114c2-fa50-49e7-be7c-a3dbbc57f6a4"><p><zdanie nr="1" gd:zdGUID="c3a813d4-f653-4383-b0df-5ac9d977fcb7" fragment="1" gd:fragmentGUID="b73b2e5d-b405-47a4-92d6-2ed18f456295">Dodany przez art. 1 pkt 7 ustawy, o której mowa w odnośniku 1.</zdanie></p></odnosnik> Maksymalny limit wydatków budżetu państwa będących skutkiem finansowym ustawy w latach 2024–2033 wynosi łącznie 1 750 000 000 zł, przy czym:</zdanie>
+          </p>
+          <punkt eId="DU/2025/310__art_36c__ust_1__pkt_1" gd:GUID="af03970a-5a5e-42ef-b746-0ac5386d25d6">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="2e9c0c7b-8562-4a63-9c3b-54f47c02f78f" fragment="2" gd:fragmentGUID="fd645afe-a554-45e6-86de-534f86395f34">w 2024 r. – 157 000 000 zł;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/310__art_36c__ust_1__pkt_2" gd:GUID="5c5ee33f-165e-4a32-9146-3d19d3c0a4ff">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="2e9c0c7b-8562-4a63-9c3b-54f47c02f78f" fragment="3" gd:fragmentGUID="2f9a71c2-7965-4718-9842-db5c17f0ee16">w 2025 r. – 177 000 000 zł;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/310__art_36c__ust_1__pkt_3" gd:GUID="85b053a8-a2d1-40aa-855f-b6f9f51f0a30">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="2e9c0c7b-8562-4a63-9c3b-54f47c02f78f" fragment="4" gd:fragmentGUID="1844c27b-ecf3-4859-8f6f-5847bd417f3e">w 2026 r. – 177 000 000 zł;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/310__art_36c__ust_1__pkt_4" gd:GUID="15bf1249-e1db-4f81-92da-f1439d201760">
+            <nr>4</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="2e9c0c7b-8562-4a63-9c3b-54f47c02f78f" fragment="5" gd:fragmentGUID="e5d5334a-61b8-4969-9230-02a763d841ca">w 2027 r. – 177 000 000 zł;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/310__art_36c__ust_1__pkt_5" gd:GUID="7c96a8ba-a7ec-45ba-8b72-ab7144576381">
+            <nr>5</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="2e9c0c7b-8562-4a63-9c3b-54f47c02f78f" fragment="6" gd:fragmentGUID="a72d2606-4ae3-42c6-a692-c5d13335bddd">w 2028 r. – 177 000 000 zł;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/310__art_36c__ust_1__pkt_6" gd:GUID="bf68b0a0-9e72-4350-bb01-72a893850ae1">
+            <nr>6</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="2e9c0c7b-8562-4a63-9c3b-54f47c02f78f" fragment="7" gd:fragmentGUID="4c57a9b0-0040-401b-907c-389df7ff1a00">w 2029 r. – 177 000 000 zł;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/310__art_36c__ust_1__pkt_7" gd:GUID="85f4ef7f-567c-46aa-8ac1-ff135408e3bc">
+            <nr>7</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="2e9c0c7b-8562-4a63-9c3b-54f47c02f78f" fragment="8" gd:fragmentGUID="95df1b83-aae3-407f-8cdd-0f30237a1f75">w 2030 r. – 177 000 000 zł;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/310__art_36c__ust_1__pkt_8" gd:GUID="b7f4f1af-7c03-42ab-bad8-9163bef802e9">
+            <nr>8</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="2e9c0c7b-8562-4a63-9c3b-54f47c02f78f" fragment="9" gd:fragmentGUID="ccc1f66b-be4b-4f57-a49d-f8a25b8a9f57">w 2031 r. – 177 000 000 zł;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/310__art_36c__ust_1__pkt_9" gd:GUID="08b5447f-3cf2-4f0c-9102-31002feab44f">
+            <nr>9</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="2e9c0c7b-8562-4a63-9c3b-54f47c02f78f" fragment="10" gd:fragmentGUID="a4cadd05-35db-403d-8012-4163c121c47e">w 2032 r. – 177 000 000 zł;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/310__art_36c__ust_1__pkt_10" gd:GUID="9ebc33ce-73f1-4e07-88b4-b7276beb6856">
+            <nr>10</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="2e9c0c7b-8562-4a63-9c3b-54f47c02f78f" fragment="11" gd:fragmentGUID="ceb9aa48-2b45-422b-bdd3-94d121999d63">w 2033 r. – 177 000 000 zł.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/310__art_36c__ust_2" gd:GUID="7ec91464-0e31-4148-8b98-01084521ffba">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="446cdbd6-2c8d-44bf-8b50-0de902b185f4" fragment="1" gd:fragmentGUID="8039d8e1-2915-4828-808c-dfd8af4837e6">Prezes Agencji Restrukturyzacji i Modernizacji Rolnictwa monitoruje wykorzystanie limitu wydatków, o których mowa w ust. 1, w danym roku oraz w przypadku zagrożenia przekroczenia tego limitu wdraża mechanizm korygujący określony w art. 23a ust. 5.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/310__art_37" gd:GUID="15756e31-7f3c-4138-b8a9-61886ed16ad3">
+        <nr>37</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="f36c8306-e379-4daf-95cd-d841daa353b4">
+          <p>
+            <zdanie nr="1" gd:zdGUID="50f2cfdf-bab4-4379-8262-0aefefc5b254" fragment="1" gd:fragmentGUID="6c98a901-9ea9-49c2-bf85-1884b583d53a">Ustawa wchodzi w życie z dniem następującym po dniu ogłoszenia<odnosnik id-odnosnika="21" symbol="21" gd:GUID="04d17fb2-1a39-4296-83a4-1310767db2f7"><p><zdanie nr="1" gd:zdGUID="148d70a4-e0af-40c3-b44c-3368366fcb56" fragment="1" gd:fragmentGUID="fa17e482-087a-4b83-97be-1c61b6eacbdc">Ustawa została ogłoszona w dniu 28 listopada 2018 r.</zdanie></p></odnosnik>.</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+      <zalacznik eId="DU/2025/310__zal_1" gd:GUID="c29855c2-d6c3-466f-a006-81d9fe9319e1">
+        <zalacznik-do gd:GUID="7341cdcd-acd0-497d-adc8-71c434e82997">Załącznik do ustawy z dnia 9 listopada 2018 r.</zalacznik-do>
+        <zalacznik-do gd:GUID="db78e173-2c95-40b8-a2fc-10a5c28414f5">(Dz. U. z 2025 r. poz. 310)</zalacznik-do>
+        <tytul-zalacznika gd:GUID="734d19d7-3326-4832-9997-47dcde0f2eed">Wzorcowy statut koła gospodyń wiejskich</tytul-zalacznika>
+        <segment-zalacznika gd:GUID="192cce41-b24c-4fc9-9625-6104f09a2c4e" orientacja="pionowa">
+          <tekst-zwykly gd:GUID="3b00383c-eda5-4e83-9040-20eb9520eac9"><b>§ 1.</b> Koło gospodyń wiejskich w [nazwa miejscowości] (dalej także: „Koło”) jest dobrowolną, niezależną od administracji rządowej i jednostek samorządu terytorialnego, samorządną, społeczną organizacją mieszkańców wsi, wspierającą rozwój przedsiębiorczości na wsi i aktywnie działającą na rzecz środowisk wiejskich.</tekst-zwykly>
+          <tekst-zwykly gd:GUID="f4db83a9-121e-40f7-860b-3ba8ed01fe4a"><b>§ 2.</b> 1. Siedzibą Koła jest [nazwa miejscowości].</tekst-zwykly>
+          <tekst-zwykly gd:GUID="bc99e5fc-b737-4b27-a572-7bb75ef08200">2. Koło może prowadzić działalność także poza swoją siedzibą, w tym na terytorium Rzeczypospolitej Polskiej oraz poza jej granicami.</tekst-zwykly>
+          <tekst-zwykly gd:GUID="4bd2f98e-7fc7-4e81-8ecb-f90ca7e3692d">3. Koło może zrzeszać się z innymi kołami gospodyń wiejskich i tworzyć związki kół gospodyń wiejskich.</tekst-zwykly>
+          <tekst-zwykly gd:GUID="bf692bb6-a456-4d35-baf5-91ebdd883a35">4. Koło może posługiwać się nazwą [„nazwa Koła”].</tekst-zwykly>
+          <tekst-zwykly gd:GUID="65639d90-a088-47b8-aea3-e0b460627862"><b>§ 3.</b> Celem Koła jest:</tekst-zwykly>
+          <tekst-zwykly gd:GUID="e502116a-a3f6-44aa-9e99-e15cf4052245">1) prowadzenie działalności społeczno-wychowawczej i oświatowo-kulturalnej w środowiskach wiejskich;</tekst-zwykly>
+          <tekst-zwykly gd:GUID="aab877eb-3d80-4ed1-9116-777cee3f0e05">2) prowadzenie działalności na rzecz wszechstronnego rozwoju obszarów wiejskich;</tekst-zwykly>
+          <tekst-zwykly gd:GUID="e9d13b21-0b21-4a13-a4a5-6231ddb0f7e6">3) wspieranie rozwoju przedsiębiorczości kobiet;</tekst-zwykly>
+          <tekst-zwykly gd:GUID="c9d01d0c-5607-475d-b7b3-aabd8f59f604">4) inicjowanie i prowadzenie działań na rzecz poprawy warunków życia i pracy kobiet na wsi;</tekst-zwykly>
+          <tekst-zwykly gd:GUID="1cd23976-2f52-4f17-8eaa-2f792fa07fde">5) upowszechnianie i rozwój form współdziałania, gospodarowania i racjonalnych metod prowadzenia gospodarstw domowych;</tekst-zwykly>
+          <tekst-zwykly gd:GUID="7ad460ea-8e09-4ae2-a556-afa6050f46d8">6) reprezentowanie interesów środowiska kobiet wiejskich wobec organów administracji publicznej;</tekst-zwykly>
+          <tekst-zwykly gd:GUID="b3157cc2-71e4-4095-b83d-654a3b8f5890">7) rozwój kultury ludowej, w tym w szczególności kultury lokalnej i regionalnej;</tekst-zwykly>
+          <tekst-zwykly gd:GUID="450f8495-8599-4dc1-b71b-18c7a5a7e443">8) wykonywanie innych zadań związanych ze wspieraniem rozwoju przedsiębiorczości na wsi i podejmowaniem działań na rzecz środowisk wiejskich.</tekst-zwykly>
+          <tekst-zwykly gd:GUID="1cc101bf-31ea-4742-aa7b-89e16448572a"><b>§ 4.</b> 1. Koło realizuje swoje cele ze środków pochodzących ze składek członkowskich, dotacji z budżetu państwa lub jednostek samorządu terytorialnego, darowizn, spadków, zapisów, dochodów z własnej działalności, dochodów z majątku koła oraz z ofiarności publicznej.</tekst-zwykly>
+          <tekst-zwykly gd:GUID="f079259d-8466-460d-a6ca-f5bbb7ca8a31">2. Koło może prowadzić działalność zarobkową i uzyskiwać przychody z tytułu:</tekst-zwykly>
+          <tekst-zwykly gd:GUID="29078952-4d73-4a73-b2cc-25c4f7acd524">1) sprzedaży wyrobów sztuki ludowej, w tym rękodzieła i rzemiosła ludowego i artystycznego, lub żywności regionalnej;</tekst-zwykly>
+          <tekst-zwykly gd:GUID="ea95649a-4f5d-4a81-9830-360f55c014b4">2) sprzedaży, najmu lub dzierżawy składników majątkowych;</tekst-zwykly>
+          <tekst-zwykly gd:GUID="83a1b5b2-1126-4920-b65c-277bf58b3519">3) tytułu odsetek od środków pieniężnych na rachunkach bankowych lub rachunkach w spółdzielczych kasach oszczędnościowo-kredytowych, prowadzonych w związku z wykonywaną działalnością, w tym także odsetek od lokat terminowych oraz innych form oszczędzania, przechowywania lub inwestowania tworzonych na tych rachunkach.</tekst-zwykly>
+          <tekst-zwykly gd:GUID="6294ed14-c72a-4df9-96f1-2b3ce94c362c"><b>§ 5.</b> 1. Członkami Koła mogą być osoby, których miejscem zamieszkania jest [nazwa miejscowości], które ukończyły 18 lat, jeśli zadeklarują czynny udział w realizacji celów Koła.</tekst-zwykly>
+          <tekst-zwykly gd:GUID="848fad58-bc19-4701-a19f-a7c27aa2206e">2. Za zgodą rodziców lub opiekunów ustawowych w działalności koła mogą brać także osoby, które ukończyły lat 13. Osoby te mogą również tworzyć młodzieżowe i dziecięce organizacje wspomagające realizację celów Koła.</tekst-zwykly>
+          <tekst-zwykly gd:GUID="0bdc5e61-9520-4822-8210-28928ace43df">3. Przyjęcie w poczet członków Koła następuje po złożeniu deklaracji członkowskiej oraz podjęciu uchwały Zarządu Koła.</tekst-zwykly>
+          <tekst-zwykly gd:GUID="41fd8499-5b42-48bd-bd6a-7cbc480b7009">4. Członkostwo w Kole ustaje wskutek:</tekst-zwykly>
+          <tekst-zwykly gd:GUID="f21a768e-a7f9-42a8-8e6b-a53b9eb101e2">1) śmierci członka;</tekst-zwykly>
+          <tekst-zwykly gd:GUID="c8207464-838a-41a9-ad90-587dda59fdd2">2) wystąpienia z Koła;</tekst-zwykly>
+          <tekst-zwykly gd:GUID="4146b86f-fa9f-4949-987d-5b3ea65e513b">3) wykluczenia członka Koła.</tekst-zwykly>
+          <tekst-zwykly gd:GUID="64c71bc5-17d7-4a06-beec-deb6701928dd">5. Każdy członek Koła ma prawo do:</tekst-zwykly>
+          <tekst-zwykly gd:GUID="95ee34ff-27db-45e3-abcf-4b3ced1b5c8e">1) udziału w pracach Koła;</tekst-zwykly>
+          <tekst-zwykly gd:GUID="1e103995-6288-4281-b9f0-8cbbbb373257">2) czynnego i biernego udziału w wyborach do organów Koła;</tekst-zwykly>
+          <tekst-zwykly gd:GUID="56d64f28-f42c-4e34-bd31-059384159dad">3) uczestnictwa w obradach kolegialnych organów Koła, w skład których wchodzi dany członek.</tekst-zwykly>
+          <tekst-zwykly gd:GUID="3c259f34-5b0f-404a-bd93-f80d94b6e957">6. Każdy członek Koła ma obowiązek:</tekst-zwykly>
+          <tekst-zwykly gd:GUID="e2230fb8-2156-4b58-965b-1f7996beefd0">1) udziału w pracach Koła;</tekst-zwykly>
+          <tekst-zwykly gd:GUID="9b15c720-7a4a-4709-a325-2cb711dfb82b">2) uiszczania składek członkowskich, w wysokości i terminach określonych uchwałą Zebrania Członków;</tekst-zwykly>
+          <tekst-zwykly gd:GUID="127830dd-b178-4d48-9aa2-fa5369d327eb">3) przestrzegania niniejszego statutu oraz uchwał organów Koła;</tekst-zwykly>
+          <tekst-zwykly gd:GUID="3353cbef-a8b0-4a6b-8626-304f2a5ae2a6">4) dbania o mienie Koła.</tekst-zwykly>
+          <tekst-zwykly gd:GUID="477952bc-2f67-4358-866e-8bba94cda47c"><b>§ 6.</b> Zebranie Członków Koła może ustanowić obowiązek ponoszenia przez członków Koła składki członkowskiej. Uchwała powinna określać wysokość składki oraz termin jej uiszczania.</tekst-zwykly>
+          <tekst-zwykly gd:GUID="f651356b-84de-4f7f-b570-ab72b8433482"><b>§ 7.</b> 1. Organami Koła są:</tekst-zwykly>
+          <tekst-zwykly gd:GUID="1dd63db8-b820-4646-9388-2983c873d286">1) Zebranie Członków;</tekst-zwykly>
+          <tekst-zwykly gd:GUID="67bf2755-ed8d-4e08-be8a-24513c8f322b">2) Zarząd Koła.</tekst-zwykly>
+          <tekst-zwykly gd:GUID="9f7f9e0b-69d3-40a3-b6ea-dde6786887cf">2. Zebranie Członków Koła może powołać Komisję Rewizyjną.</tekst-zwykly>
+          <tekst-zwykly gd:GUID="6c3b9841-3f95-4227-a71f-c43269707c00">3. Uchwały kolegialnych organów Koła odbywają się w głosowaniu jawnym i zapadają zwykłą większością głosów. Na wniosek każdego członka organu zarządza się głosowanie tajne.</tekst-zwykly>
+          <tekst-zwykly gd:GUID="13124da9-6eba-4959-a704-4e5b75e52917"><b>§ 8.</b> 1. Zebranie Członków Koła jest najwyższym organem Koła.</tekst-zwykly>
+          <tekst-zwykly gd:GUID="46dacb2d-63cb-4f5c-b1df-4acccb7f9a21">2. W skład Zebrania Członków Koła wchodzą wszyscy członkowie Koła, których nie zawieszono w prawach członka.</tekst-zwykly>
+          <tekst-zwykly gd:GUID="4e455cde-40c6-443e-83a1-8bb7b75a53c3">3. Do właściwości Zebrania Członków Koła należą:</tekst-zwykly>
+          <tekst-zwykly gd:GUID="40b97fd5-5534-4466-8640-08c9fd38a817">1) rozpatrywanie i zatwierdzanie sprawozdań Zarządu Koła;</tekst-zwykly>
+          <tekst-zwykly gd:GUID="74e65d77-1cd7-4f9d-9ac6-b66e940195a1">2) wysłuchanie sprawozdania Komisji Rewizyjnej, jeżeli została powołana;</tekst-zwykly>
+          <tekst-zwykly gd:GUID="64c10da8-eb86-4e0c-8570-c358388f18db">3) udzielanie absolutorium Zarządowi Koła;</tekst-zwykly>
+          <tekst-zwykly gd:GUID="d8c9e075-c629-4e9c-a076-e9d620eea541">4) uchwalanie kierunków działalności, programu działania i budżetu Koła;</tekst-zwykly>
+          <tekst-zwykly gd:GUID="0a679f24-8ce1-487c-8072-192b7dbc195d">5) wybór Zarządu Koła i Komisji Rewizyjnej;</tekst-zwykly>
+          <tekst-zwykly gd:GUID="a1cb2309-d3b9-4781-ae01-fc7fa7296734">6) uchwalenie statutu Koła lub jego zmiany;</tekst-zwykly>
+          <tekst-zwykly gd:GUID="c20902e1-8573-46f4-9ae9-db51afea87d0">7) ustalanie wysokości i terminów uiszczania składki członkowskiej;</tekst-zwykly>
+          <tekst-zwykly gd:GUID="8480146a-38c2-48d0-84be-6111da2807ae">8) podejmowanie uchwał w sprawach majątkowych przekraczających zakres zwykłego zarządu, w szczególności nabycia i zbycia nieruchomości lub innej wyodrębnionej jednostki organizacyjnej oraz ich obciążenia;</tekst-zwykly>
+          <tekst-zwykly gd:GUID="c0c47d71-c46b-4767-825e-ef614877d653">9) rozpatrywanie odwołań od decyzji Zarządu Koła oraz innych spraw i wniosków zgłoszonych przez członków Koła;</tekst-zwykly>
+          <tekst-zwykly gd:GUID="1eb05a79-78fc-440d-99ec-93d278f62163">10) podjęcie uchwały o zgodzie na zrzeszenie się w związek kół gospodyń wiejskich oraz w innych organizacjach społecznych lub gospodarczych;</tekst-zwykly>
+          <tekst-zwykly gd:GUID="8b11896f-0349-4146-9e8a-127f6bcd6e49">11) podjęcie uchwały o wystąpieniu ze związku kół gospodyń wiejskich lub z innych organizacji społecznych lub gospodarczych;</tekst-zwykly>
+          <tekst-zwykly gd:GUID="06f259ee-aff3-43aa-8157-e12ad7304df4">12) podejmowanie uchwał w sprawie sposobu pokrycia strat netto z prowadzonej przez koło działalności, w tym działalności zarobkowej;</tekst-zwykly>
+          <tekst-zwykly gd:GUID="eda51b5d-605c-458b-a1ba-7a43dc08d1cb">13) oznaczanie maksymalnej wysokości jednorazowego zobowiązania oraz najwyższej sumy zobowiązań, jaką Koło może zaciągnąć;</tekst-zwykly>
+          <tekst-zwykly gd:GUID="10d7413f-d301-420f-aa22-f07aa3585a17">14) podejmowanie uchwał w sprawie połączenia się, podziału oraz likwidacji Koła;</tekst-zwykly>
+          <tekst-zwykly gd:GUID="7b1678d3-ef03-469f-8e83-e34e5c26d368">15) bieżący nadzór i kontrola działalności Koła.</tekst-zwykly>
+          <tekst-zwykly gd:GUID="ba1b0439-60b3-4451-9593-921784fcac66">4. Uchwały w sprawach:</tekst-zwykly>
+          <tekst-zwykly gd:GUID="9b7c6a17-a31c-4c84-8098-174de82a0b6d">1) nabycia, zbycia lub obciążenia nieruchomości Koła,</tekst-zwykly>
+          <tekst-zwykly gd:GUID="5f054713-afd6-40c1-8e64-58699eda89ce">2) rozwiązania Koła</tekst-zwykly>
+          <tekst-zwykly gd:GUID="abcc7cba-9b3a-4051-8748-69e86b4f5e2c">– podejmowane są większością 2/3 głosów.</tekst-zwykly>
+          <tekst-zwykly gd:GUID="8ac6ac22-44fa-4cb7-b12b-ef4dd0add911"><b>§ 9.</b> 1. Zarząd Koła zwołuje Zwyczajne Zebranie Członków Koła co najmniej raz w roku, nie później niż na dzień 30 czerwca każdego roku kalendarzowego.</tekst-zwykly>
+          <tekst-zwykly gd:GUID="04008cb7-f435-47ed-90b4-a3a1c0d00276">2. Zarząd Koła zwołuje Nadzwyczajne Zebranie Członków Koła:</tekst-zwykly>
+          <tekst-zwykly gd:GUID="8e91b98c-131a-4bb1-bdbe-f097c1fd843d">1) z własnej inicjatywy;</tekst-zwykly>
+          <tekst-zwykly gd:GUID="203434fe-74be-4e57-b6e5-5584b2ce1262">2) na wniosek co najmniej trzech Członków Koła;</tekst-zwykly>
+          <tekst-zwykly gd:GUID="5f32cbdf-58ae-4a6f-bcd6-e5e511fce3cd">3) na wniosek Komisji Rewizyjnej.</tekst-zwykly>
+          <tekst-zwykly gd:GUID="e2b258c3-7b95-4458-b714-99f64a457df8">3. O zebraniu Zarząd Koła zawiadamia członków Koła najpóźniej na 14 dni przed terminem zebrania, przesyłając im proponowany porządek obrad. Jeżeli zebranie zwołane jest na wniosek, termin powinien zostać wyznaczony na dzień przypadający najpóźniej w ciągu trzech tygodni od daty wpłynięcia wniosku.</tekst-zwykly>
+          <tekst-zwykly gd:GUID="bec834e6-31a8-4f48-a6d6-2b3f060ea4b3">4. Dla ważności uchwał Zebrania konieczny jest udział co najmniej 1/2 członków Koła.</tekst-zwykly>
+          <tekst-zwykly gd:GUID="d4632841-d857-41f6-a491-6c96e7093c44">5. W razie nieodbycia się Zebrania w pierwszym terminie z powodu braku wymaganej liczby członków, Zarząd zwołuje ponowne Zebranie według tego samego porządku obrad. Zebranie zwołane w drugim terminie podejmuje uchwały bez względu na liczbę obecnych członków, z wyjątkiem uchwał w sprawach zmian w statucie oraz określonych w § 8 ust. 4.</tekst-zwykly>
+          <tekst-zwykly gd:GUID="690675f1-88fa-4976-893d-c3f9fb43ca61"><b>§ 10.</b> 1. W skład Zarządu Koła wchodzą trzy osoby wybierane przez Zebranie Członków na 3-letnią kadencję.</tekst-zwykly>
+          <tekst-zwykly gd:GUID="170474cf-692b-4e2d-a9a8-3c2b705513ec">2. W każdym czasie przed upływem kadencji członek Zarządu Koła może zostać odwołany ze składu Zarządu Koła przez Zebranie Członków.</tekst-zwykly>
+          <tekst-zwykly gd:GUID="6213c0a8-00ed-49e1-afe2-c0767660c881"><b>§ 11.</b> Do zadań Zarządu Koła należy:</tekst-zwykly>
+          <tekst-zwykly gd:GUID="e564f625-e27c-4bf2-b311-6d868c560feb">1) reprezentacja Koła na zewnątrz;</tekst-zwykly>
+          <tekst-zwykly gd:GUID="6fe84abe-bdc9-4c55-9d5d-3a902874fbdd">2) realizowanie celów i zadań Koła;</tekst-zwykly>
+          <tekst-zwykly gd:GUID="7c4ef714-04c8-415b-aff9-8ce8a8a07c7c">3) zwoływanie Zebrania Członków Koła;</tekst-zwykly>
+          <tekst-zwykly gd:GUID="ed4e6654-7c67-4865-a827-6d32dcda7f29">4) składanie corocznych sprawozdań merytorycznych i finansowych Zebraniu Członków Koła;</tekst-zwykly>
+          <tekst-zwykly gd:GUID="e21d21d8-751c-4884-832f-ea7b62353d4e">5) przyjmowanie w poczet członków Koła;</tekst-zwykly>
+          <tekst-zwykly gd:GUID="1504a479-722d-47aa-abe0-4ad8dfe61264">6) dbanie o terminowość wpłat składek członkowskich;</tekst-zwykly>
+          <tekst-zwykly gd:GUID="b261ade6-be6c-434b-97c4-97eda060f94a">7) prowadzenie listy członków Koła;</tekst-zwykly>
+          <tekst-zwykly gd:GUID="679e9129-4546-4db5-8c43-1d7a51375caf">8) zawieszanie w prawach członka Koła;</tekst-zwykly>
+          <tekst-zwykly gd:GUID="b8fd2661-85a5-4589-9098-7ac4eb09a6b1">9) wykluczanie z Koła;</tekst-zwykly>
+          <tekst-zwykly gd:GUID="ea300766-2700-4fbe-bf17-d320b5953509">10) zaciąganie w imieniu Koła bez zgody Zebrania Członków Koła zobowiązań do wysokości 10 000 zł lub innej wysokości określonej przez Zebranie Członków Koła;</tekst-zwykly>
+          <tekst-zwykly gd:GUID="b324fbe7-f3f1-4ec7-8367-bdf07a330cdf">11) zaciąganie w imieniu Koła za zgodą Zebrania Członków Koła innych zobowiązań;</tekst-zwykly>
+          <tekst-zwykly gd:GUID="a76abee3-f2de-46be-9be6-ca339b53fca8">12) dysponowanie majątkiem Koła.</tekst-zwykly>
+          <tekst-zwykly gd:GUID="115ad675-f31a-4ace-8293-32a172c7ff97"><b>§ 12.</b> 1. Uchwały Zarządu Koła są ostateczne, o ile nie przysługuje od nich odwołanie do Zebrania Członków Koła.</tekst-zwykly>
+          <tekst-zwykly gd:GUID="8a69ff43-aaf0-4805-8499-3caddb5d15fd">2. Odwołanie od uchwały Zarządu Koła zainteresowany członek Koła może wnieść najpóźniej na najbliższym Zebraniu Członków Koła. Do czasu rozpatrzenia odwołania uchwała Zarządu Koła nie wywiera skutków. Uchwała Zebrania Członków Koła jest ostateczna.</tekst-zwykly>
+          <tekst-zwykly gd:GUID="8b79326a-680d-40f9-bb22-ca733e29ebec"><b>§ 13.</b> 1. Członek Koła może zostać zawieszony w prawach członka, jeżeli:</tekst-zwykly>
+          <tekst-zwykly gd:GUID="bc2ae474-2eb0-4eae-a01e-61af7f7cb235">1) zalega z płatnością składek członkowskich za co najmniej dwa pełne okresy;</tekst-zwykly>
+          <tekst-zwykly gd:GUID="8c7ce7a6-ab54-4835-9b12-0737924eef26">2) nie przestrzega postanowień statutu lub uchwał organów Koła;</tekst-zwykly>
+          <tekst-zwykly gd:GUID="4c0dde0a-7e7b-4488-b85e-b979889f7219">3) nie bierze udziału w pracach Koła.</tekst-zwykly>
+          <tekst-zwykly gd:GUID="6f93806d-0d42-4184-b075-c8cb858426ea">2. Członek Koła może zostać wykluczony, jeżeli pomimo zawieszenia go w prawach członka i wezwania przez Zarząd Koła do realizacji obowiązków, w dalszym ciągu ich nie wykonuje – w terminie miesiąca od dnia wezwania.</tekst-zwykly>
+          <tekst-zwykly gd:GUID="1a0496fe-433a-416e-9e18-224f1802f166"><b>§ 14.</b> Koło reprezentuje na zewnątrz co najmniej dwóch członków Zarządu działających łącznie.</tekst-zwykly>
+          <tekst-zwykly gd:GUID="33f2bc28-53d6-4fed-8077-cea2508e38b3"><b>§ 15.</b> 1. Zysk netto z działalności zarobkowej Koła może zostać przeznaczony:</tekst-zwykly>
+          <tekst-zwykly gd:GUID="c4a05ce8-fbb7-42f9-806c-f558bf753de5">1) na cele statutowe Koła;</tekst-zwykly>
+          <tekst-zwykly gd:GUID="4fca0970-3e3b-4630-8bef-625a6870cd4f">2) na tworzenie kapitałów własnych Koła.</tekst-zwykly>
+          <tekst-zwykly gd:GUID="8234d506-554b-497b-83fa-0ddd3c78a348">2. Strata netto może zostać pokryta z kapitałów własnych Koła.</tekst-zwykly>
+          <tekst-zwykly gd:GUID="0c20896d-2874-476e-9fc1-4997c6149fbb"><b>§ 16.</b> 1. Koło może zostać zlikwidowane uchwałą Zebrania Członków Koła.</tekst-zwykly>
+          <tekst-zwykly gd:GUID="03b2b571-ef62-4da1-9943-c683ae7e569d">2. W razie podjęcia uchwały o likwidacji Koła, Zebranie Członków Koła wyznacza likwidatora Koła lub powierza tę funkcję jednemu z członków Zarządu Koła.</tekst-zwykly>
+          <tekst-zwykly gd:GUID="60f47538-b6d2-49aa-8abc-e6f9a55f5444">3. Majątek pozostały po likwidacji Koła staje się własnością Członków Koła w dniu likwidacji.</tekst-zwykly>
+        </segment-zalacznika>
+      </zalacznik>
+    </ustawa>
+  </obwieszczenie>
+</akt-prawny>

@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <rozporzadzenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2026/29</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>2b1ddca3-b259-4481-865d-46cca5a5e733</gd:GUIDwersji>
+      <AdresISAP>WDU20260000029</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2026</Rok>
+      <Pozycja>29</Pozycja>
+      <AdresWyswietlany>Dz.U. 2026 poz. 29</AdresWyswietlany>
+      <Tytul>Rozporządzenie Rady Ministrów z dnia 7 stycznia 2026 r. zmieniające rozporządzenie w sprawie śródlądowych dróg wodnych</Tytul>
+      <Rodzaj>ROZP</Rodzaj>
+      <DataOgloszenia>2026-01-12</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2026-01-07</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2026-01-27_DU-2026-29_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2026-01-27" warunek="po upływie 14 dni od dnia ogłoszenia" podstawa="§ 2" zrodlo="https://eli.gov.pl/eli/DU/2026/29" dowod="DU/2026/29__art_2" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-29_domyslne.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2026-01-27_DU-2026-29_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="6db03415-debd-42d7-a099-db3c8d43f231" rola="wydajacy">
+          <Nazwa>Rada Ministrów</Nazwa>
+        </Organ>
+        <Organ gd:GUID="515b1e43-f958-4074-b02b-fe8776738f34" rola="podpisujacy">
+          <Nazwa>Prezes Rady Ministrów</Nazwa>
+          <OrganPodpisujacy>Prezes Rady Ministrów</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>D.</imie> <nazwisko>Tusk</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Rozporządzenie</rodzaj-aktu>
+    <autor-aktu>Rady Ministrów</autor-aktu>
+    <data>z dnia 7 stycznia 2026 r.</data>
+    <tytul>zmieniające rozporządzenie w sprawie śródlądowych dróg wodnych</tytul>
+    <podstawa-prawna>Na podstawie art. 193 ust. 3 ustawy z dnia 20 lipca 2017 r. – Prawo wodne (Dz. U. z 2025 r. poz. 960 i 1535) zarządza się, co następuje:</podstawa-prawna>
+    <paragraf eId="DU/2026/29__art_1" gd:GUID="b4ae80e6-6b46-456b-9bac-13f016d63347" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-29_domyslne.x" wejscie-w-zycie="2026-01-27">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="813e7d19-fe7e-40df-adf0-2ef03062df26" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-29_domyslne.x" wejscie-w-zycie="2026-01-27">
+        <p>
+          <zdanie nr="1" gd:zdGUID="7cd4c6ca-c260-4363-801c-2cca40ab0736" fragment="1" gd:fragmentGUID="aeb208f6-bc10-4f9f-ad18-aa863d819c5f" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-29_domyslne.x" wejscie-w-zycie="2026-01-27">W rozporządzeniu Rady Ministrów z dnia 26 czerwca 2019 r. w sprawie śródlądowych dróg wodnych (Dz. U. poz. 1208) w załączniku do rozporządzenia:</zdanie>
+        </p>
+        <punkt eId="DU/2026/29__art_1__pkt_1" gd:GUID="1327a7e8-20b5-43d7-b919-604d2cf9d60e" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-29_domyslne.x" wejscie-w-zycie="2026-01-27">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="7cd4c6ca-c260-4363-801c-2cca40ab0736" fragment="2" gd:fragmentGUID="337cbf2f-31a9-47ff-ba16-e4af32974d26" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-29_domyslne.x" wejscie-w-zycie="2026-01-27">pkt 2 i 3 otrzymują brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2019/1208" cudzyslowy="otwierajacy" gd:nowGUID="d0b8884c-4697-42bf-ab12-5505df80a21a" element-eId="DU/2019/1208__zal_1__pkt_2" funkcja="zastap"><punkt eId="DU/2019/1208__zal_1__pkt_2" gd:GUID="a07aa12e-7dac-4ed7-b7f1-8765dca03253" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-29_domyslne.x" wejscie-w-zycie="2026-01-27"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="077ea6d3-f680-48ee-a1a3-ff68f50e5983" fragment="1" gd:fragmentGUID="9c227db4-4d29-40d0-9fb8-9906f45f6538" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-29_domyslne.x" wejscie-w-zycie="2026-01-27">rzeka Brda od połączenia z Kanałem Bydgoskim w miejscowości Bydgoszcz do ujścia do rzeki Wisły;</zdanie></p></punkt></cytat-strukt><cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2019/1208" cudzyslowy="zamykajacy" gd:nowGUID="4019c7ea-6543-4cff-92b3-65f348a7ea57" element-eId="DU/2019/1208__zal_1__pkt_3" funkcja="zastap"><punkt eId="DU/2019/1208__zal_1__pkt_3" gd:GUID="99518e4b-77bb-4ae3-9565-b0f0452a94f6" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-29_domyslne.x" wejscie-w-zycie="2026-01-27"><nr>3</nr><p><zdanie nr="1" gd:zdGUID="d37c62c3-44f0-4940-9af6-a07c6ba92511" fragment="1" gd:fragmentGUID="0e5b382e-f209-4242-9791-a38852cde115" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-29_domyslne.x" wejscie-w-zycie="2026-01-27">rzeka Bug od granicy Państwa w miejscowości Terespol do ujścia do rzeki Narwi;</zdanie></p></punkt></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/29__art_1__pkt_2" gd:GUID="aa577015-2845-47b4-b275-98244219535c" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-29_domyslne.x" wejscie-w-zycie="2026-01-27">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="7cd4c6ca-c260-4363-801c-2cca40ab0736" fragment="3" gd:fragmentGUID="a765dabc-078f-44c6-a86d-a4088e3dd550" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-29_domyslne.x" wejscie-w-zycie="2026-01-27">po pkt 4 dodaje się pkt 4a w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2019/1208" cudzyslowy="oba" gd:nowGUID="2177d9d6-8f7b-4646-8a1e-007acdf6ea0d" element-eId="DU/2019/1208__zal_1__pkt_4" funkcja="dodaj-po"><punkt eId="DU/2019/1208__zal_1__pkt_4a" gd:GUID="b8e1ad9a-01a0-42f9-911d-8769d01bb35d" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-29_domyslne.x" wejscie-w-zycie="2026-01-27"><nr>4a</nr><p><zdanie nr="1" gd:zdGUID="37dafc67-9023-4805-af3c-5f6c97127b1b" fragment="1" gd:fragmentGUID="79164317-48b4-4544-bc84-70fbbecd2697" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-29_domyslne.x" wejscie-w-zycie="2026-01-27">jezioro Gopło;</zdanie></p></punkt></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/29__art_1__pkt_3" gd:GUID="a70b9ca7-0def-4ece-9f47-db7ccf16fb13" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-29_domyslne.x" wejscie-w-zycie="2026-01-27">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="7cd4c6ca-c260-4363-801c-2cca40ab0736" fragment="4" gd:fragmentGUID="fd061a03-0e78-4455-a505-66e3d23cc81a" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-29_domyslne.x" wejscie-w-zycie="2026-01-27">pkt 12 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2019/1208" cudzyslowy="oba" gd:nowGUID="5308949c-4d80-4a47-ad01-c6007a4329aa" element-eId="DU/2019/1208__zal_1__pkt_12" funkcja="zastap"><punkt eId="DU/2019/1208__zal_1__pkt_12" gd:GUID="e7fabf68-ba5c-4165-a5b2-5af85ee8ca41" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-29_domyslne.x" wejscie-w-zycie="2026-01-27"><nr>12</nr><p><zdanie nr="1" gd:zdGUID="e1ec316f-d5e0-47ed-8e02-1e1ad435e064" fragment="1" gd:fragmentGUID="485e3166-c0a9-49bb-bc3c-7997dd8a1415" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-29_domyslne.x" wejscie-w-zycie="2026-01-27">Kanał Ślesiński od połączenia z rzeką Wartą do jeziora Gopło wraz z jeziorami na jego trasie;</zdanie></p></punkt></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/29__art_1__pkt_4" gd:GUID="df1736ab-548f-4109-a3e8-57d527cd0ced" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-29_domyslne.x" wejscie-w-zycie="2026-01-27">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="7cd4c6ca-c260-4363-801c-2cca40ab0736" fragment="5" gd:fragmentGUID="2f4b6811-090b-4306-882a-9644e522ed3c" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-29_domyslne.x" wejscie-w-zycie="2026-01-27">pkt 21 i 22 otrzymują brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2019/1208" cudzyslowy="otwierajacy" gd:nowGUID="3816ff64-51cc-4709-a4d6-7fcde90fe8dc" element-eId="DU/2019/1208__zal_1__pkt_21" funkcja="zastap"><punkt eId="DU/2019/1208__zal_1__pkt_21" gd:GUID="57251ee4-8ce2-4ddd-925d-0fa7c29b9a28" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-29_domyslne.x" wejscie-w-zycie="2026-01-27"><nr>21</nr><p><zdanie nr="1" gd:zdGUID="8422c610-5d6c-4fe8-9533-6c707df2513f" fragment="1" gd:fragmentGUID="61ca18f4-9d99-45ad-aff1-b059a7cd8f94" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-29_domyslne.x" wejscie-w-zycie="2026-01-27">rzeka Odra od miejscowości Racibórz wraz z kanałami śluz Krapkowice i Oława oraz systemem dróg wodnych we Wrocławiu, tj. Starą Odrą, Kanałem Miejskim i Kanałem Żeglugowym (Nawigacyjnym), do połączenia z rzeką Odrą Wschodnią, wraz z tą rzeką i bocznymi odgałęzieniami, która przechodzi od Przekopu Klucz-Ustowo w rzekę Regalicę, wraz z tą rzeką i bocznymi odgałęzieniami (Leśny Kanał, Ceglinka (Kanał Cegielinka), Kanał Klucki, Kanał Dąbska Struga, Dąbski Nurt, rzeka Święta, Czapina, Babina, Iński Nurt) do ujścia do jeziora Dąbie;</zdanie></p></punkt></cytat-strukt><cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2019/1208" cudzyslowy="zamykajacy" gd:nowGUID="36815f07-6b1b-45dc-a725-c88812a09992" element-eId="DU/2019/1208__zal_1__pkt_22" funkcja="zastap"><punkt eId="DU/2019/1208__zal_1__pkt_22" gd:GUID="096c5683-527a-439b-b0ec-a1cde5fe1f98" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-29_domyslne.x" wejscie-w-zycie="2026-01-27"><nr>22</nr><p><zdanie nr="1" gd:zdGUID="a1de00af-c5bd-479e-ab39-2057e3638d9f" fragment="1" gd:fragmentGUID="ea9a7f9a-1342-48ca-a2c8-d4db04e362de" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-29_domyslne.x" wejscie-w-zycie="2026-01-27">rzeka Odra Zachodnia od jazu w miejscowości Widuchowa do granicy z morskimi wodami wewnętrznymi wraz z bocznymi odgałęzieniami (Kanał Marwicki, Kanał Kurowski, Kanał Zielony), Duńczyca i Przekop Klucz-Ustowo łączący rzekę Odrę Wschodnią z rzeką Odrą Zachodnią;</zdanie></p></punkt></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/29__art_1__pkt_5" gd:GUID="5a8286cc-797e-4796-983e-1ea98fa48790" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-29_domyslne.x" wejscie-w-zycie="2026-01-27">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="7cd4c6ca-c260-4363-801c-2cca40ab0736" fragment="6" gd:fragmentGUID="1c6f6637-8fb8-4759-a6c2-314817e4469e" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-29_domyslne.x" wejscie-w-zycie="2026-01-27">po pkt 22 dodaje się pkt 22a w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2019/1208" cudzyslowy="oba" gd:nowGUID="b722b0e5-8874-413d-b3e6-d7f605a42ae4" element-eId="DU/2019/1208__zal_1__pkt_22" funkcja="dodaj-po"><punkt eId="DU/2019/1208__zal_1__pkt_22a" gd:GUID="3be9f0ad-8f66-4fc6-bbe9-0d9225db4ab9" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-29_domyslne.x" wejscie-w-zycie="2026-01-27"><nr>22a</nr><p><zdanie nr="1" gd:zdGUID="d7d959ee-2f43-42ab-9c17-00e87fca5700" fragment="1" gd:fragmentGUID="3f159941-eb56-468b-a60b-2011a625d8a8" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-29_domyslne.x" wejscie-w-zycie="2026-01-27">rzeka Pasłęka od miejscowości Braniewo do ujścia do Zalewu Wiślanego;</zdanie></p></punkt></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/29__art_1__pkt_6" gd:GUID="f8095939-63df-4ac7-8722-2bce14606ab3" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-29_domyslne.x" wejscie-w-zycie="2026-01-27">
+          <nr>6</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="7cd4c6ca-c260-4363-801c-2cca40ab0736" fragment="7" gd:fragmentGUID="51a2e139-3c3a-4f70-b990-ad14ec20d032" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-29_domyslne.x" wejscie-w-zycie="2026-01-27">pkt 23 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2019/1208" cudzyslowy="oba" gd:nowGUID="3e4f0bcc-ae53-4898-bb5a-8b80aa705f77" element-eId="DU/2019/1208__zal_1__pkt_23" funkcja="zastap"><punkt eId="DU/2019/1208__zal_1__pkt_23" gd:GUID="80110e53-b58d-458c-b318-5f71c9f58b63" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-29_domyslne.x" wejscie-w-zycie="2026-01-27"><nr>23</nr><p><zdanie nr="1" gd:zdGUID="cc70b588-8dd4-4e4c-b5ec-6cc29614cd34" fragment="1" gd:fragmentGUID="622d02f1-4dd8-438a-a4d8-56561b7d5ac5" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-29_domyslne.x" wejscie-w-zycie="2026-01-27">Parnica i Parnicki Przekop od rzeki Odry Zachodniej do granicy z morskimi wodami wewnętrznymi;</zdanie></p></punkt></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/29__art_1__pkt_7" gd:GUID="535717cd-0557-4584-8074-eb3f9e1e31c4" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-29_domyslne.x" wejscie-w-zycie="2026-01-27">
+          <nr>7</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="7cd4c6ca-c260-4363-801c-2cca40ab0736" fragment="8" gd:fragmentGUID="9d9cb973-0f78-4ca5-908f-496146efbcbf" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-29_domyslne.x" wejscie-w-zycie="2026-01-27">pkt 25 i 26 otrzymują brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2019/1208" cudzyslowy="otwierajacy" gd:nowGUID="751312dc-3421-4285-ac24-a61dc178deda" element-eId="DU/2019/1208__zal_1__pkt_25" funkcja="zastap"><punkt eId="DU/2019/1208__zal_1__pkt_25" gd:GUID="f49b5c1e-e25d-4356-ab60-c2ca812a1147" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-29_domyslne.x" wejscie-w-zycie="2026-01-27"><nr>25</nr><p><zdanie nr="1" gd:zdGUID="fb5bba9c-1976-4e3b-a1ad-508295af8561" fragment="1" gd:fragmentGUID="f61f80d6-3efb-46ae-ba4f-7863ef62c0f4" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-29_domyslne.x" wejscie-w-zycie="2026-01-27">rzeka Szkarpawa od rzeki Wisły do ujścia do Zalewu Wiślanego;</zdanie></p></punkt></cytat-strukt><cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2019/1208" cudzyslowy="zamykajacy" gd:nowGUID="82d376a1-02b8-4a2b-84b4-05edf509cb27" element-eId="DU/2019/1208__zal_1__pkt_26" funkcja="zastap"><punkt eId="DU/2019/1208__zal_1__pkt_26" gd:GUID="75fd20fb-19a7-4d6e-9a10-e877e2b2ed51" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-29_domyslne.x" wejscie-w-zycie="2026-01-27"><nr>26</nr><p><zdanie nr="1" gd:zdGUID="9678e360-649f-40fd-824a-222a06d10453" fragment="1" gd:fragmentGUID="f2282957-ae36-4d0d-a3d2-0c0a44777f0b" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-29_domyslne.x" wejscie-w-zycie="2026-01-27">rzeka Tuja (Tuga) od miejscowości Nowy Dwór Gdański do ujścia do rzeki Szkarpawy;</zdanie></p></punkt></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/29__art_1__pkt_8" gd:GUID="03d6a214-e4a5-4c6b-8db7-1758d5477202" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-29_domyslne.x" wejscie-w-zycie="2026-01-27">
+          <nr>8</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="7cd4c6ca-c260-4363-801c-2cca40ab0736" fragment="9" gd:fragmentGUID="d0438883-ecb4-44c1-ab35-057ebd299660" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-29_domyslne.x" wejscie-w-zycie="2026-01-27">w pkt 28 lit. a otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2019/1208" cudzyslowy="oba" gd:nowGUID="9b192e07-894f-43f2-84a8-fc9bbc1762b0" element-eId="DU/2019/1208__zal_1__pkt_28__lit_a" funkcja="zastap"><litera eId="DU/2019/1208__zal_1__pkt_28__lit_a" gd:GUID="cbe9d440-7c10-4777-bde1-69b0ab4c09ca" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-29_domyslne.x" wejscie-w-zycie="2026-01-27"><nr>a</nr><p><zdanie nr="1" gd:zdGUID="86803478-b9c3-4d87-9702-290c1aa5a65c" fragment="1" gd:fragmentGUID="34122125-1baf-4b41-b3f2-6949c2ad678c" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-29_domyslne.x" wejscie-w-zycie="2026-01-27">jeziora: Roś, Seksty, Śniardwy, Mikołajskie Jezioro, Tałty, Tałtowisko, Kotek Wielki, Szymon, Szymoneckie Jezioro, Jagodne Jezioro, Boczne Jezioro, Niegocin, Tajty, Kisajno, Dargin, Łabap, Kirsajty, Mamry,</zdanie></p></litera></cytat-strukt>.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2026/29__art_2" gd:GUID="9a0311e4-68ab-4eaa-89d9-7294bbd346a2" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-29_domyslne.x" wejscie-w-zycie="2026-01-27">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="b0e32bff-0ec4-4ace-8e8b-7c0d217aeef3" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-29_domyslne.x" wejscie-w-zycie="2026-01-27">
+        <p>
+          <zdanie nr="1" gd:zdGUID="53604d43-c2d5-4c48-bd47-5d7d5f51dc08" fragment="1" gd:fragmentGUID="32455972-c47b-42d1-8ad0-e274f73ddfc0" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-29_domyslne.x" wejscie-w-zycie="2026-01-27">Rozporządzenie wchodzi w życie po upływie 14 dni od dnia ogłoszenia.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <organ-podpisujacy>Prezes Rady Ministrów: <i><osoba podpisujacy="true" gd:osobaGUID="f8013520-bae9-478c-83b6-aa942f6c928b"><imie>D.</imie> <nazwisko>Tusk</nazwisko></osoba></i></organ-podpisujacy>
+  </rozporzadzenie>
+</akt-prawny>

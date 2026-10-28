@@ -1,0 +1,425 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <ustawa>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2024/1841</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>f3766237-7b77-4bc3-ad00-126270ad853b</gd:GUIDwersji>
+      <AdresISAP>WDU20240001841</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2024</Rok>
+      <Pozycja>1841</Pozycja>
+      <AdresWyswietlany>Dz.U. 2024 poz. 1841</AdresWyswietlany>
+      <Tytul>Ustawa z dnia 21 listopada 2024 r. o zmianie ustawy o doręczeniach elektronicznych</Tytul>
+      <Rodzaj>USTAWA</Rodzaj>
+      <DataOgloszenia>2024-12-12</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2024-11-21</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane" rodzaj="wejscie-w-zycie" pochodzenie="odczytane" data="2025-01-01" podstawa="art. 7" zrodlo="https://eli.gov.pl/eli/DU/2024/1841" dowod="DU/2024/1841__art_7" />
+          <Zdarzenie id="zdarz_wejscie_2025-03-01_DU-2024-1841_odczytane" rodzaj="wejscie-w-zycie" pochodzenie="odczytane" data="2025-03-01" podstawa="art. 7 pkt 2" zrodlo="https://eli.gov.pl/eli/DU/2024/1841" dowod="DU/2024/1841__art_7__pkt_2">
+            <JednostkaAktu eId="DU/2024/1841__art_1__pkt_9" />
+            <JednostkaAktu eId="DU/2024/1841__art_1__pkt_10" />
+          </Zdarzenie>
+          <Zdarzenie id="zdarz_wejscie_2025-06-01_DU-2024-1841_odczytane" rodzaj="wejscie-w-zycie" pochodzenie="odczytane" data="2025-06-01" podstawa="art. 7 pkt 1" zrodlo="https://eli.gov.pl/eli/DU/2024/1841" dowod="DU/2024/1841__art_7__pkt_1">
+            <JednostkaAktu eId="DU/2024/1841__art_1__pkt_2" />
+            <JednostkaAktu eId="DU/2024/1841__art_1__pkt_4" />
+            <JednostkaAktu eId="DU/2024/1841__art_1__pkt_5" />
+            <JednostkaAktu eId="DU/2024/1841__art_1__pkt_6" />
+            <JednostkaAktu eId="DU/2024/1841__art_1__pkt_7" />
+          </Zdarzenie>
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane" />
+        </GrupaCzasowa>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2025-03-01_DU-2024-1841_odczytane.x" glowna="false">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2025-03-01_DU-2024-1841_odczytane" />
+        </GrupaCzasowa>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2025-06-01_DU-2024-1841_odczytane.x" glowna="false">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2025-06-01_DU-2024-1841_odczytane" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="546c4b71-52a5-4a79-86b2-695b5c861c7a" rola="wydajacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Sejm">
+          <Nazwa>SEJM</Nazwa>
+        </Organ>
+        <Organ gd:GUID="6d372cb0-9132-48a0-81fd-088f6dcf2aeb" rola="podpisujacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Prezydent">
+          <Nazwa>Prezydent Rzeczypospolitej Polskiej</Nazwa>
+          <OrganPodpisujacy>Prezydent Rzeczypospolitej Polskiej</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>A.</imie> <nazwisko>Duda</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Ustawa</rodzaj-aktu>
+    <data>z dnia 21 listopada 2024 r.</data>
+    <tytul>o zmianie ustawy o doręczeniach elektronicznych</tytul>
+    <artykul eId="DU/2024/1841__art_1" gd:GUID="ded7bbba-e6b1-470f-8226-deebde0e03ef" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="72168f61-4a4f-48ec-bf4d-06b60b5bded7" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="92736cff-a635-4102-8d0f-8e1ff50e4031" fragment="1" gd:fragmentGUID="f3c536e7-9465-4531-9e4d-f03dbd30a177" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">W ustawie z dnia 18 listopada 2020 r. o doręczeniach elektronicznych (Dz. U. z 2024 r. poz. 1045) wprowadza się następujące zmiany:</zdanie>
+        </p>
+        <punkt eId="DU/2024/1841__art_1__pkt_1" gd:GUID="601bda0f-0e05-4c7a-8aae-92a99fd27ba4" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="92736cff-a635-4102-8d0f-8e1ff50e4031" fragment="2" gd:fragmentGUID="66f4cc3d-a9a9-4620-a76b-54bac00993ed" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01"><now:zamien-tekst stary-tekst=";" nowy-tekst="," element-eId="DU/2024/1045__art_2__pkt_6__lit_e" akt="https://eli.gov.pl/eli/DU/2024/1045" now:wystapienie="ostatnie" gd:nowGUID="f4d5861b-90a4-4375-8283-a53178556c05" />w art. 2 w pkt 6 w lit. e średnik zastępuje się przecinkiem i dodaje się lit. f oraz g w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/1045" cudzyslowy="oba" gd:nowGUID="a73d8737-66b4-4feb-a2c2-e2e25e2edbe0" element-eId="DU/2024/1045__art_2__pkt_6__lit_e" funkcja="dodaj-po"><litera eId="DU/2024/1045__art_2__pkt_6__lit_f" gd:GUID="58492ab8-42ef-4da9-9558-85c8f21f745d" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>f</nr><p><zdanie nr="1" gd:zdGUID="de243846-863e-4b0e-9da2-ad8f7e080916" fragment="1" gd:fragmentGUID="29d2053c-29b0-4d9f-b4c6-04fafbe31802" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">uczelnię niepubliczną,</zdanie></p></litera><litera eId="DU/2024/1045__art_2__pkt_6__lit_g" gd:GUID="759f6e03-8c43-4316-a461-64ea0bac77a4" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>g</nr><p><zdanie nr="1" gd:zdGUID="de243846-863e-4b0e-9da2-ad8f7e080916" fragment="2" gd:fragmentGUID="7ca29852-56bc-4733-bcce-139848d33495" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">federację podmiotów systemu szkolnictwa wyższego i nauki;</zdanie></p></litera></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2024/1841__art_1__pkt_2" gd:GUID="05e95df5-457c-49e7-be68-0650a0f9da7a" okres="okr_obowiazywanie.zdarz_wejscie_2025-06-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-06-01">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="92736cff-a635-4102-8d0f-8e1ff50e4031" fragment="3" gd:fragmentGUID="bfcd2d16-2a79-43be-b551-344014a75220" okres="okr_obowiazywanie.zdarz_wejscie_2025-06-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-06-01">w art. 11 pkt 2 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/1045" cudzyslowy="oba" gd:nowGUID="bc3d5329-aee4-4bf9-8ae6-27394c8dd017" element-eId="DU/2024/1045__art_11__pkt_2" funkcja="zastap"><punkt eId="DU/2024/1045__art_11__pkt_2" gd:GUID="0c06a601-aa14-4c0d-8bdd-bb544e9d306d" okres="okr_obowiazywanie.zdarz_wejscie_2025-06-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-06-01"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="52c93cd1-efbd-490b-973a-bd9fac9f09af" fragment="1" gd:fragmentGUID="59d7d455-7cac-494e-ace2-cd4f647aa909" okres="okr_obowiazywanie.zdarz_wejscie_2025-06-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-06-01">automatycznie po otrzymaniu przez ministra właściwego do spraw informatyzacji, za pośrednictwem systemu teleinformatycznego:</zdanie></p><litera eId="DU/2024/1045__art_11__pkt_2__lit_a" gd:GUID="f992c17b-6620-4cb3-938e-700a1103c323" okres="okr_obowiazywanie.zdarz_wejscie_2025-06-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-06-01"><nr>a</nr><p><zdanie nr="1" gd:zdGUID="52c93cd1-efbd-490b-973a-bd9fac9f09af" fragment="2" gd:fragmentGUID="94f7cefc-ae99-4d7b-a2f9-bdfb962e1342" okres="okr_obowiazywanie.zdarz_wejscie_2025-06-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-06-01">o którym mowa w art. 3a ust. 1 ustawy z dnia 20 sierpnia 1997 r. o Krajowym Rejestrze Sądowym albo w art. 3 ust. 1 ustawy z dnia 6 marca 2018 r. o Centralnej Ewidencji i Informacji o Działalności Gospodarczej i Punkcie Informacji dla Przedsiębiorcy – danych przekazanych w związku z wnioskiem o wpis do Krajowego Rejestru Sądowego albo do Centralnej Ewidencji i Informacji o Działalności Gospodarczej,</zdanie></p></litera><litera eId="DU/2024/1045__art_11__pkt_2__lit_b" gd:GUID="4d8d9e0f-bb4a-4d69-8ba4-4e095eeeb3eb" okres="okr_obowiazywanie.zdarz_wejscie_2025-06-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-06-01"><nr>b</nr><p><zdanie nr="1" gd:zdGUID="52c93cd1-efbd-490b-973a-bd9fac9f09af" fragment="3" gd:fragmentGUID="dd1ea030-5561-4596-82c0-4f3201b65eee" okres="okr_obowiazywanie.zdarz_wejscie_2025-06-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-06-01">operatora wyznaczonego – danych, o których mowa w art. 14 ust. 1 i 2, w przypadku podmiotów niepublicznych.</zdanie></p></litera></punkt></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2024/1841__art_1__pkt_3" gd:GUID="36b1e61f-63f7-4f47-ae21-828c003993fa" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="92736cff-a635-4102-8d0f-8e1ff50e4031" fragment="4" gd:fragmentGUID="cf7f04f2-2b08-4716-925f-1347818b9dee" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">w art. 12:</zdanie>
+          </p>
+          <litera eId="DU/2024/1841__art_1__pkt_3__lit_a" gd:GUID="4fa5f135-e464-483f-afcf-14a28743ebac" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="92736cff-a635-4102-8d0f-8e1ff50e4031" fragment="5" gd:fragmentGUID="e355b71d-8627-4d38-94da-470ce7244ba2" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01"><now:zamien-tekst stary-tekst="o którym mowa w art. 11 pkt 2" nowy-tekst="o którym mowa w art. 11 pkt 2 lit. a" element-eId="DU/2024/1045__art_12__ust_1" akt="https://eli.gov.pl/eli/DU/2024/1045" gd:nowGUID="9369dc7f-ba3b-40c9-a228-dae241efe542" />w ust. 1 wyrazy „o którym mowa w art. 11 pkt 2” zastępuje się wyrazami „o którym mowa w art. 11 pkt 2 lit. a”,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2024/1841__art_1__pkt_3__lit_b" gd:GUID="5779f3eb-15b7-4bed-b231-bffc51b4e204" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="92736cff-a635-4102-8d0f-8e1ff50e4031" fragment="6" gd:fragmentGUID="302aa37d-7efd-4450-9c78-0a2b9e491657" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">po ust. 1 dodaje się ust. 1a–1c w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/1045" cudzyslowy="oba" gd:nowGUID="20f8e64b-14c2-4797-ab6e-9d95245ea970" element-eId="DU/2024/1045__art_12__ust_1" funkcja="dodaj-po"><ustep eId="DU/2024/1045__art_12__ust_1a" gd:GUID="64d7a567-5e63-4c77-909b-61d9a611836b" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>1a</nr><p><zdanie nr="1" gd:zdGUID="7874f14a-5759-4063-8a8e-dc698c075453" fragment="1" gd:fragmentGUID="69bb61de-d2cd-44b6-aa05-9dfb2ccb435e" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">Minister właściwy do spraw informatyzacji tworzy, z uwzględnieniem ust. 1c, jeden adres do doręczeń elektronicznych powiązany z publiczną usługą rejestrowanego doręczenia elektronicznego dla:</zdanie></p><punkt eId="DU/2024/1045__art_12__ust_1a__pkt_1" gd:GUID="8d1ab4aa-7565-4de0-9d1c-6aabe47c138c" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="7874f14a-5759-4063-8a8e-dc698c075453" fragment="2" gd:fragmentGUID="cc94f4e4-07c0-479c-9f88-38301721f761" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">urzędu gminy;</zdanie></p></punkt><punkt eId="DU/2024/1045__art_12__ust_1a__pkt_2" gd:GUID="52bf872b-5205-4ec0-b9d2-1ac9260509a1" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="7874f14a-5759-4063-8a8e-dc698c075453" fragment="3" gd:fragmentGUID="c8ba9745-9e1b-42fd-84e6-c5982e9bf5ac" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">starostwa powiatowego;</zdanie></p></punkt><punkt eId="DU/2024/1045__art_12__ust_1a__pkt_3" gd:GUID="10f1151d-2eb6-4d51-8dca-dfa2873da93c" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>3</nr><p><zdanie nr="1" gd:zdGUID="7874f14a-5759-4063-8a8e-dc698c075453" fragment="4" gd:fragmentGUID="4fe4a4f2-38ab-4166-83f2-1f36486d1518" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">urzędu marszałkowskiego;</zdanie></p></punkt><punkt eId="DU/2024/1045__art_12__ust_1a__pkt_4" gd:GUID="c5376d52-2372-425c-8a09-673b5965641c" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>4</nr><p><zdanie nr="1" gd:zdGUID="7874f14a-5759-4063-8a8e-dc698c075453" fragment="5" gd:fragmentGUID="4d55cd6e-1486-477a-9867-21cd0f042674" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">podmiotu obsługującego związki międzygminne, związki powiatów, związki powiatowo-gminne albo związki metropolitalne.</zdanie></p></punkt></ustep><ustep eId="DU/2024/1045__art_12__ust_1b" gd:GUID="3133ab86-30cf-446a-8e04-4ef8919be0e7" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>1b</nr><p><zdanie nr="1" gd:zdGUID="ac00b381-1d21-4b7f-b477-b3f9d10988bc" fragment="1" gd:fragmentGUID="d2e9faee-1f26-4549-a880-0d3c90da6bae" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">Adres, o którym mowa w ust. 1a, jest adresem wspólnym dla:</zdanie></p><punkt eId="DU/2024/1045__art_12__ust_1b__pkt_1" gd:GUID="260550a8-5727-4ec4-91db-65e9064961d1" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="ac00b381-1d21-4b7f-b477-b3f9d10988bc" fragment="2" gd:fragmentGUID="8ce21e68-27e7-4a90-96f9-e05b869d5e86" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">jednostki samorządu terytorialnego oraz jej organów – w przypadku, o którym mowa w ust. 1a pkt 1–3;</zdanie></p></punkt><punkt eId="DU/2024/1045__art_12__ust_1b__pkt_2" gd:GUID="7190e1ef-56df-4081-8077-7e3da59f47dc" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="ac00b381-1d21-4b7f-b477-b3f9d10988bc" fragment="3" gd:fragmentGUID="39fdee25-cadd-477e-ad2f-35b08460be90" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">związku międzygminnego, związku powiatów, związku powiatowo-gminnego albo związku metropolitalnego oraz ich organów – w przypadku, o którym mowa w ust. 1a pkt 4.</zdanie></p></punkt></ustep><ustep eId="DU/2024/1045__art_12__ust_1c" gd:GUID="3c40c1e9-48c1-49ce-81dd-1d0d84be0639" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>1c</nr><p><zdanie nr="1" gd:zdGUID="70323045-806f-43c5-8552-03f36972f694" fragment="1" gd:fragmentGUID="e9923ed7-11e8-4c78-a9be-5cd8bb335a08" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">Dla każdej jednostki organizacyjnej jednostki samorządu terytorialnego, posiadającej numer identyfikacyjny REGON, tworzy się odrębny adres do doręczeń elektronicznych powiązany z publiczną usługą rejestrowanego doręczenia elektronicznego.</zdanie></p></ustep></cytat-strukt>;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2024/1841__art_1__pkt_4" gd:GUID="9b2e642a-6b94-4486-ab86-4a22300fcc11" okres="okr_obowiazywanie.zdarz_wejscie_2025-06-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-06-01">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="92736cff-a635-4102-8d0f-8e1ff50e4031" fragment="7" gd:fragmentGUID="ef25adee-be70-4c55-a571-1c82bd8702ff" okres="okr_obowiazywanie.zdarz_wejscie_2025-06-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-06-01">art. 13 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/1045" cudzyslowy="oba" gd:nowGUID="b50dab77-1c12-4974-b786-91a15e3f3555" element-eId="DU/2024/1045__art_13" funkcja="zastap"><artykul eId="DU/2024/1045__art_13" gd:GUID="281afdcb-a334-4223-a66e-32ce5b7d2fd0" okres="okr_obowiazywanie.zdarz_wejscie_2025-06-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-06-01"><nr>13</nr><ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="1ccdcf5d-f716-462f-b46e-9e62d5630780" okres="okr_obowiazywanie.zdarz_wejscie_2025-06-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-06-01"><p><zdanie nr="1" gd:zdGUID="1de72201-1f63-400f-9664-21293dd8dcc6" fragment="1" gd:fragmentGUID="3e8f51a3-de25-47e5-8f49-16a3b8425b8c" okres="okr_obowiazywanie.zdarz_wejscie_2025-06-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-06-01">Minister właściwy do spraw informatyzacji tworzy adres do doręczeń elektronicznych powiązany z publiczną usługą rejestrowanego doręczenia elektronicznego na wniosek podmiotu niepublicznego skierowany do tego ministra, a w przypadku podmiotów niepublicznych:</zdanie></p><punkt eId="DU/2024/1045__art_13__pkt_1" gd:GUID="41261193-ea52-4d8e-a3c6-b5c27d90acbb" okres="okr_obowiazywanie.zdarz_wejscie_2025-06-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-06-01"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="1de72201-1f63-400f-9664-21293dd8dcc6" fragment="2" gd:fragmentGUID="9973d87a-a801-408a-9e1d-1315f33a6aa4" okres="okr_obowiazywanie.zdarz_wejscie_2025-06-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-06-01">wpisanych do Krajowego Rejestru Sądowego albo do Centralnej Ewidencji i Informacji o Działalności Gospodarczej,</zdanie></p></punkt><punkt eId="DU/2024/1045__art_13__pkt_2" gd:GUID="2e53a5f2-9f67-4e01-8037-384ea802d5ed" okres="okr_obowiazywanie.zdarz_wejscie_2025-06-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-06-01"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="1de72201-1f63-400f-9664-21293dd8dcc6" fragment="3" gd:fragmentGUID="8afe189c-7903-4c8f-9b1e-b80dd4a5867c" okres="okr_obowiazywanie.zdarz_wejscie_2025-06-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-06-01">będących osobami fizycznymi</zdanie></p></punkt><czesc-wspolna-punkt eId="DU/2024/1045__art_13__czw" gd:GUID="290348ed-5a05-4aa6-a39d-f6d1d7191a39" okres="okr_obowiazywanie.zdarz_wejscie_2025-06-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-06-01"><p><zdanie nr="1" gd:zdGUID="1de72201-1f63-400f-9664-21293dd8dcc6" fragment="4" gd:fragmentGUID="abc3f02d-a3f8-40c3-bb32-b3cf9ba27fa2" okres="okr_obowiazywanie.zdarz_wejscie_2025-06-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-06-01">– także odpowiednio w trybie, o którym mowa w art. 11 pkt 2.</zdanie></p></czesc-wspolna-punkt></ustep-n></artykul></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2024/1841__art_1__pkt_5" gd:GUID="b4efe46e-dc9d-47fc-b2a0-e39994069e5d" okres="okr_obowiazywanie.zdarz_wejscie_2025-06-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-06-01">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="92736cff-a635-4102-8d0f-8e1ff50e4031" fragment="8" gd:fragmentGUID="d966645f-f1ed-4f59-b3dd-c34a1b2f2b89" okres="okr_obowiazywanie.zdarz_wejscie_2025-06-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-06-01">w art. 14 dodaje się ust. 4 w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/1045" cudzyslowy="oba" gd:nowGUID="d44d2f04-242b-404d-905f-cd48a37bea22" element-eId="DU/2024/1045__art_14" funkcja="dodaj-w"><ustep eId="DU/2024/1045__art_14__ust_4" gd:GUID="badc323c-b93e-42bc-8ad5-54acc757c2bb" okres="okr_obowiazywanie.zdarz_wejscie_2025-06-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-06-01"><nr>4</nr><p><zdanie nr="1" gd:zdGUID="abdef00a-6937-4904-bf68-bd91b96dee7b" fragment="1" gd:fragmentGUID="54edbdca-3c19-4e0c-9aa2-7c9d203842ab" okres="okr_obowiazywanie.zdarz_wejscie_2025-06-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-06-01">Minister właściwy do spraw informatyzacji udostępnia usługę sieciową umożliwiającą przekazanie przez operatora wyznaczonego danych, o których mowa w ust. 1 i 2, za pomocą bezpośredniej wymiany danych między systemem teleinformatycznym operatora wyznaczonego a bazą adresów elektronicznych.</zdanie></p></ustep></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2024/1841__art_1__pkt_6" gd:GUID="a1edc72c-f56e-4596-87c6-416f235d2a65" okres="okr_obowiazywanie.zdarz_wejscie_2025-06-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-06-01">
+          <nr>6</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="92736cff-a635-4102-8d0f-8e1ff50e4031" fragment="9" gd:fragmentGUID="017e7fb2-88ee-4e26-b247-3c2e77f23789" okres="okr_obowiazywanie.zdarz_wejscie_2025-06-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-06-01">w art. 15 po ust. 1 dodaje się ust. 1a w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/1045" cudzyslowy="oba" gd:nowGUID="2ae7abb6-44f0-403a-9907-b59ec6426e92" element-eId="DU/2024/1045__art_15__ust_1" funkcja="dodaj-po"><ustep eId="DU/2024/1045__art_15__ust_1a" gd:GUID="b289131f-2533-470c-b5ba-b023398acd7c" okres="okr_obowiazywanie.zdarz_wejscie_2025-06-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-06-01"><nr>1a</nr><p><zdanie nr="1" gd:zdGUID="74b74077-b347-4e04-9332-9c9a7ba68f9f" fragment="1" gd:fragmentGUID="9af1db6b-3c26-40eb-ae83-9af4601566e6" okres="okr_obowiazywanie.zdarz_wejscie_2025-06-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-06-01">Wniosek o utworzenie adresu do doręczeń elektronicznych powiązanego z publiczną usługą rejestrowanego doręczenia elektronicznego może być złożony z wykorzystaniem usługi online udostępnianej przez operatora wyznaczonego – dla podmiotów niepublicznych.</zdanie></p></ustep></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2024/1841__art_1__pkt_7" gd:GUID="f23e5839-0f23-48c9-9e32-6b9cf555688e" okres="okr_obowiazywanie.zdarz_wejscie_2025-06-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-06-01">
+          <nr>7</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="92736cff-a635-4102-8d0f-8e1ff50e4031" fragment="10" gd:fragmentGUID="c4471077-352d-403d-b1c6-ebe4c1794f83" okres="okr_obowiazywanie.zdarz_wejscie_2025-06-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-06-01"><now:zamien-tekst stary-tekst="." nowy-tekst=";" element-eId="DU/2024/1045__art_16__ust_1__pkt_2__lit_h" akt="https://eli.gov.pl/eli/DU/2024/1045" now:wystapienie="ostatnie" gd:nowGUID="d2399222-3a8a-4875-b361-1d1bcadcbe52" />w art. 16 w ust. 1 w pkt 2 w lit. h kropkę zastępuje się średnikiem i dodaje się pkt 3 w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/1045" cudzyslowy="oba" gd:nowGUID="e4fb2698-ad4c-49d6-9636-d3cb18b9cad7" element-eId="DU/2024/1045__art_16__ust_1__pkt_2__lit_h" funkcja="dodaj-po"><punkt eId="DU/2024/1045__art_16__ust_1__pkt_3" gd:GUID="c33eb048-38d0-4f44-af22-8b129a350dab" okres="okr_obowiazywanie.zdarz_wejscie_2025-06-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-06-01"><nr>3</nr><p><zdanie nr="1" gd:zdGUID="d3ee0dcb-59ea-4c45-853e-0daae50e5e26" fragment="1" gd:fragmentGUID="54dd9fce-754a-47ea-8f5f-720ce422b332" okres="okr_obowiazywanie.zdarz_wejscie_2025-06-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-06-01">operatora wyznaczonego – dane, o których mowa w art. 14 ust. 1 lub 2.</zdanie></p></punkt></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2024/1841__art_1__pkt_8" gd:GUID="e3f02bf6-54b8-4849-8e02-e13df05017ad" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">
+          <nr>8</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="92736cff-a635-4102-8d0f-8e1ff50e4031" fragment="11" gd:fragmentGUID="350eb59c-c55a-4c9f-9f1e-321d1b3891b8" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">w art. 26:</zdanie>
+          </p>
+          <litera eId="DU/2024/1841__art_1__pkt_8__lit_a" gd:GUID="199293d3-3098-4c4c-a9c7-a10ce656ca33" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="92736cff-a635-4102-8d0f-8e1ff50e4031" fragment="12" gd:fragmentGUID="b39c3590-5fd0-4ec5-9432-c23b856aad7a" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01"><now:zamien-tekst stary-tekst=";" nowy-tekst="," element-eId="DU/2024/1045__art_26__pkt_2__lit_p" akt="https://eli.gov.pl/eli/DU/2024/1045" now:wystapienie="ostatnie" gd:nowGUID="f02b478e-0148-43bf-b6d5-dedbb53ca629" />w pkt 2 w lit. p średnik zastępuje się przecinkiem i dodaje się lit. q w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/1045" cudzyslowy="oba" gd:nowGUID="5817d1d4-1d0d-4130-bd20-24c9f649ea7d" element-eId="DU/2024/1045__art_26__pkt_2__lit_p" funkcja="dodaj-po"><litera eId="DU/2024/1045__art_26__pkt_2__lit_q" gd:GUID="8f579673-167d-45d3-94f1-5957f569018e" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>q</nr><p><zdanie nr="1" gd:zdGUID="df687ad1-d609-49db-81ee-654737be45f7" fragment="1" gd:fragmentGUID="b7be5de9-bff6-414e-a759-4f3806ad115d" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">informację o korzystaniu z dodatkowych usług, o których mowa w art. 53 ust. 1, w zakresie wymiany korespondencji między podmiotami niepublicznymi;</zdanie></p></litera></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2024/1841__art_1__pkt_8__lit_b" gd:GUID="44ce4c24-fc6a-4714-88d7-cca6374428b2" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="92736cff-a635-4102-8d0f-8e1ff50e4031" fragment="13" gd:fragmentGUID="caa150f3-ba93-4124-9e2f-73c34c5c9673" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01"><now:zamien-tekst stary-tekst="." nowy-tekst="," element-eId="DU/2024/1045__art_26__pkt_3__lit_l" akt="https://eli.gov.pl/eli/DU/2024/1045" now:wystapienie="ostatnie" gd:nowGUID="85958a4a-5616-49d4-a464-d940c22c8799" />w pkt 3 w lit. l kropkę zastępuje się przecinkiem i dodaje się lit. m w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/1045" cudzyslowy="oba" gd:nowGUID="0bfeec42-c154-4fbb-a586-a7aa28f4f27e" element-eId="DU/2024/1045__art_26__pkt_3__lit_l" funkcja="dodaj-po"><litera eId="DU/2024/1045__art_26__pkt_3__lit_m" gd:GUID="3422b04b-1adf-437b-907a-723efedfd480" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>m</nr><p><zdanie nr="1" gd:zdGUID="3711bed6-de99-4f42-bac2-d683b216c3c9" fragment="1" gd:fragmentGUID="e7af90a3-3b9a-47d8-bec5-69827b12458b" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">informację o korzystaniu z dodatkowych usług, o których mowa w art. 53 ust. 1, w zakresie wymiany korespondencji między podmiotami niepublicznymi.</zdanie></p></litera></cytat-strukt>;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2024/1841__art_1__pkt_9" gd:GUID="bd52d928-cf43-4204-9221-22228de08aae" okres="okr_obowiazywanie.zdarz_wejscie_2025-03-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-03-01">
+          <nr>9</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="92736cff-a635-4102-8d0f-8e1ff50e4031" fragment="14" gd:fragmentGUID="400e049f-321a-4c1d-a5fe-106bc05f7a0b" okres="okr_obowiazywanie.zdarz_wejscie_2025-03-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-03-01">w art. 34:</zdanie>
+          </p>
+          <litera eId="DU/2024/1841__art_1__pkt_9__lit_a" gd:GUID="af1a2a4c-765f-4c66-b038-a5852602e739" okres="okr_obowiazywanie.zdarz_wejscie_2025-03-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-03-01">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="92736cff-a635-4102-8d0f-8e1ff50e4031" fragment="15" gd:fragmentGUID="5d5f1951-2d57-4c1f-af20-e2bfcb94d3ac" okres="okr_obowiazywanie.zdarz_wejscie_2025-03-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-03-01">ust. 1 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/1045" cudzyslowy="oba" gd:nowGUID="d230a551-7d48-46c6-8fcd-61dee48721d3" element-eId="DU/2024/1045__art_34__ust_1" funkcja="zastap"><ustep eId="DU/2024/1045__art_34__ust_1" gd:GUID="230547c3-c003-434b-89be-0638918ae143" okres="okr_obowiazywanie.zdarz_wejscie_2025-03-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-03-01"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="8eb6b021-8fdc-43ba-9fac-9fa68b7d929b" fragment="1" gd:fragmentGUID="35017a91-85bd-49f1-ae8c-609f69441c7d" okres="okr_obowiazywanie.zdarz_wejscie_2025-03-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-03-01">Wpisu adresu do doręczeń elektronicznych do bazy adresów elektronicznych dokonuje się bezterminowo.</zdanie></p></ustep></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2024/1841__art_1__pkt_9__lit_b" gd:GUID="cd568a69-e62a-47e2-8af6-b9888b8e30b3" okres="okr_obowiazywanie.zdarz_wejscie_2025-03-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-03-01">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="92736cff-a635-4102-8d0f-8e1ff50e4031" fragment="16" gd:fragmentGUID="edeb8b86-a032-470b-a14c-2b1ea907751f" okres="okr_obowiazywanie.zdarz_wejscie_2025-03-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-03-01"><now:uchyl akt="https://eli.gov.pl/eli/DU/2024/1045" element-eId="DU/2024/1045__art_34__ust_2" element-do-eId="DU/2024/1045__art_34__ust_4" gd:nowGUID="7421206b-e412-4d31-b67f-11f8d1dde810" />uchyla się ust. 2–4;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2024/1841__art_1__pkt_10" gd:GUID="0c5c89ee-8670-41c4-84f8-36989b064c43" okres="okr_obowiazywanie.zdarz_wejscie_2025-03-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-03-01">
+          <nr>10</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="92736cff-a635-4102-8d0f-8e1ff50e4031" fragment="17" gd:fragmentGUID="c84bf9a5-22fb-44e8-ac70-7926b7d7d456" okres="okr_obowiazywanie.zdarz_wejscie_2025-03-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-03-01"><now:zamien-tekst stary-tekst=";" nowy-tekst="." element-eId="DU/2024/1045__art_35__ust_4__pkt_6" akt="https://eli.gov.pl/eli/DU/2024/1045" now:wystapienie="ostatnie" gd:nowGUID="3b1549c5-e077-4c9e-ae9c-09d58ee110fb" /><now:uchyl akt="https://eli.gov.pl/eli/DU/2024/1045" element-eId="DU/2024/1045__art_35__ust_4__pkt_7" gd:nowGUID="33b5dc48-aa15-4efb-a889-799fbcdbccc5" />w art. 35 w ust. 4 w pkt 6 średnik zastępuje się kropką i uchyla się pkt 7;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2024/1841__art_1__pkt_11" gd:GUID="22336d5f-7667-4f5e-945a-fb07a9a4f521" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">
+          <nr>11</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="92736cff-a635-4102-8d0f-8e1ff50e4031" fragment="18" gd:fragmentGUID="f4bcbe69-c731-4ac4-b1df-11264ced30fe" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01"><now:dodaj-ustep element-eId="DU/2024/1045__art_53" akt="https://eli.gov.pl/eli/DU/2024/1045" gd:nowGUID="6c19124f-b953-4f1b-8a5d-45b02a4a09aa" />w art. 53 dotychczasową treść oznacza się jako ust. 1 i dodaje się ust. 2 w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/1045" cudzyslowy="oba" gd:nowGUID="ab5d7d8e-6742-4a06-b41c-b099f4c16b5a" element-eId="DU/2024/1045__art_53__ust_1" funkcja="dodaj-po"><ustep eId="DU/2024/1045__art_53__ust_2" gd:GUID="d0bd55f8-d5c0-4766-9363-83106981c38a" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="4409a9ec-c614-4e68-aeaf-80ec11c3b9df" fragment="1" gd:fragmentGUID="2bcaf4a3-3dd8-4a4c-ac36-453ddac92a8e" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">W przypadku świadczenia dodatkowych usług, o których mowa w ust. 1, w zakresie wymiany korespondencji między osobami fizycznymi lub podmiotami niebędącymi podmiotami publicznymi operator wyznaczony przekazuje informacje o korzystaniu z tych usług ministrowi właściwemu do spraw informatyzacji za pośrednictwem systemu teleinformatycznego.</zdanie></p></ustep></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2024/1841__art_1__pkt_12" gd:GUID="9dc73c18-8f1f-4ab2-987f-e4206dd8e2d1" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">
+          <nr>12</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="92736cff-a635-4102-8d0f-8e1ff50e4031" fragment="19" gd:fragmentGUID="623cfe64-9763-4cbf-a5c3-9432e9bfb39a" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">w art. 60 w ust. 1:</zdanie>
+          </p>
+          <litera eId="DU/2024/1841__art_1__pkt_12__lit_a" gd:GUID="a59ec639-bb1c-419d-8d68-887b8d0740ab" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="92736cff-a635-4102-8d0f-8e1ff50e4031" fragment="20" gd:fragmentGUID="f516e846-df3e-4ed7-a63d-ac1562c4574b" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">w pkt 1:</zdanie>
+            </p>
+            <tiret eId="DU/2024/1841__art_1__pkt_12__lit_a__tir_1" gd:GUID="6f85c46c-ff75-4e52-9ef0-102927d16c32" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">
+              <p>
+                <zdanie nr="1" gd:zdGUID="92736cff-a635-4102-8d0f-8e1ff50e4031" fragment="21" gd:fragmentGUID="c0328173-0da6-4a24-b0cf-9c750e47dc62" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">w lit. b dodaje się tiret dziesiąte w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/1045" cudzyslowy="oba" gd:nowGUID="9789836b-d1d1-44c8-8e22-eef51f374d73" element-eId="DU/2024/1045__art_60__ust_1__pkt_1__lit_b" funkcja="dodaj-w"><tiret eId="DU/2024/1045__art_60__ust_1__pkt_1__lit_b__tir_1" gd:GUID="1fa46072-be17-4509-b795-48bd924a3723" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01"><p><zdanie nr="1" gd:zdGUID="aec84703-6250-4da3-b5d0-8027688880dd" fragment="1" gd:fragmentGUID="7e8b71d3-00e1-462a-8d7d-e63ffa3fdbdd" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">informacji o korzystaniu z dodatkowych usług, o których mowa w art. 53 ust. 1, w zakresie wymiany korespondencji pomiędzy podmiotami niepublicznymi,</zdanie></p></tiret></cytat-strukt>,</zdanie>
+              </p>
+            </tiret>
+            <tiret eId="DU/2024/1841__art_1__pkt_12__lit_a__tir_2" gd:GUID="7a7e8ab5-2652-4af5-85e0-d270b65c9f1e" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">
+              <p>
+                <zdanie nr="1" gd:zdGUID="92736cff-a635-4102-8d0f-8e1ff50e4031" fragment="22" gd:fragmentGUID="5ed91fd0-5d13-45d6-8b09-696aa1a32b49" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01"><now:zamien-tekst stary-tekst=";" nowy-tekst="," element-eId="DU/2024/1045__art_60__ust_1__pkt_1__lit_c__tir_10" akt="https://eli.gov.pl/eli/DU/2024/1045" now:wystapienie="ostatnie" gd:nowGUID="41d0d6f7-2bf7-4d46-b21e-64405dd08408" />w lit. c w tiret dziesiątym średnik zastępuje się przecinkiem i dodaje się tiret jedenaste w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/1045" cudzyslowy="oba" gd:nowGUID="9cb1135d-d1e9-4b31-b132-c9170fdaed7f" element-eId="DU/2024/1045__art_60__ust_1__pkt_1__lit_c__tir_10" funkcja="dodaj-po"><tiret eId="DU/2024/1045__art_60__ust_1__pkt_1__lit_c__tir_1" gd:GUID="ebf8d462-7b97-4a54-a4dd-c04cec4cdf36" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01"><p><zdanie nr="1" gd:zdGUID="ec6f0892-596a-4964-9cdc-a88e6211b431" fragment="1" gd:fragmentGUID="7171940e-7d1f-4915-a014-494bb0b5c748" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">informacji o korzystaniu z dodatkowych usług, o których mowa w art. 53 ust. 1, w zakresie wymiany korespondencji pomiędzy podmiotami niepublicznymi;</zdanie></p></tiret></cytat-strukt>,</zdanie>
+              </p>
+            </tiret>
+          </litera>
+          <litera eId="DU/2024/1841__art_1__pkt_12__lit_b" gd:GUID="0696340c-22b4-42b7-bc0e-4b1fa9575a8e" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="92736cff-a635-4102-8d0f-8e1ff50e4031" fragment="23" gd:fragmentGUID="28a8fd57-a397-467a-a928-593176b3c2fe" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01"><now:zamien-tekst stary-tekst="." nowy-tekst="," element-eId="DU/2024/1045__art_60__ust_1__pkt_2__lit_i" akt="https://eli.gov.pl/eli/DU/2024/1045" now:wystapienie="ostatnie" gd:nowGUID="8f3f468a-915a-46d5-87f3-59297c05abba" />w pkt 2 w lit. i kropkę zastępuje się przecinkiem i dodaje się lit. j w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/1045" cudzyslowy="oba" gd:nowGUID="6e29ad9e-fb38-478c-a569-692bf4ab4be0" element-eId="DU/2024/1045__art_60__ust_1__pkt_2__lit_i" funkcja="dodaj-po"><litera eId="DU/2024/1045__art_60__ust_1__pkt_2__lit_j" gd:GUID="022e6ea3-b722-4e0c-b468-31c726a747ba" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>j</nr><p><zdanie nr="1" gd:zdGUID="0b7e9f9e-bf71-4e7e-aeff-563c57cf2a6b" fragment="1" gd:fragmentGUID="b0456552-bd08-4cc0-b2dd-c12ad99c361d" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">informacji o korzystaniu z dodatkowych usług, o których mowa w art. 53 ust. 1, w zakresie wymiany korespondencji pomiędzy podmiotami niepublicznymi.</zdanie></p></litera></cytat-strukt>;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2024/1841__art_1__pkt_13" gd:GUID="63d3f7e8-cffe-4c44-bd6c-09215c0c803b" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">
+          <nr>13</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="92736cff-a635-4102-8d0f-8e1ff50e4031" fragment="24" gd:fragmentGUID="8c0df7f7-8c4f-45d7-ac2c-462518ef14a2" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01"><now:uchyl akt="https://eli.gov.pl/eli/DU/2024/1045" element-eId="DU/2024/1045__art_63__pkt_2" gd:nowGUID="89bfc75a-57a1-48b2-965f-d20e7f63f057" />w art. 63 w pkt 2 w art. 131<sup>2</sup> uchyla się § 3;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2024/1841__art_1__pkt_14" gd:GUID="d9a28b8d-4577-438e-b613-d05682b060ed" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">
+          <nr>14</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="92736cff-a635-4102-8d0f-8e1ff50e4031" fragment="25" gd:fragmentGUID="00c4160b-c09f-475b-b6c6-c1529c835fc2" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">w art. 141 w pkt 2 w art. 6a w ust. 2 skreśla się zdanie drugie;<cytat-w-tekscie now:akt="https://eli.gov.pl/eli/DU/2024/1045" cudzyslowy="brak" gd:nowGUID="e7a6ab79-0c0b-4174-aabe-3a3a4b6a623d" element-eId="DU/2024/1045__art_141__pkt_2" funkcja="uchyl-recznie"><tekst>zdanie drugie</tekst></cytat-w-tekscie></zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2024/1841__art_1__pkt_15" gd:GUID="c8202407-370b-49bb-911a-05067bb8144f" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">
+          <nr>15</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="92736cff-a635-4102-8d0f-8e1ff50e4031" fragment="26" gd:fragmentGUID="f0723367-5130-4b9d-b346-93cdeb18cabf" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">w art. 147:</zdanie>
+          </p>
+          <litera eId="DU/2024/1841__art_1__pkt_15__lit_a" gd:GUID="84541f9f-68c5-443e-93ff-a51dcb953bcb" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="92736cff-a635-4102-8d0f-8e1ff50e4031" fragment="27" gd:fragmentGUID="4e1475b7-8868-4986-937b-14df27ea93f3" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">ust. 2 i 3 otrzymują brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/1045" cudzyslowy="otwierajacy" gd:nowGUID="2c2656ef-1cf1-4da1-877d-aeb18eab8a79" element-eId="DU/2024/1045__art_147__ust_2" funkcja="zastap"><ustep eId="DU/2024/1045__art_147__ust_2" gd:GUID="efff23fd-1ec9-4172-b54c-1720ae275210" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="115396e6-a200-46d0-908b-3c475213f98c" fragment="1" gd:fragmentGUID="d7b15e6e-f29e-4e35-b18e-2af505b0894a" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">Doręczenie korespondencji nadanej przez osobę fizyczną lub podmiot niebędący podmiotem publicznym, będące użytkownikami konta w ePUAP, do podmiotu publicznego posiadającego elektroniczną skrzynkę podawczą w ePUAP, w ramach usługi udostępnianej w ePUAP, jest równoważne w skutkach prawnych z doręczeniem przy wykorzystaniu publicznej usługi rejestrowanego doręczenia elektronicznego do dnia 31 grudnia 2025 r.</zdanie></p></ustep></cytat-strukt><cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/1045" cudzyslowy="zamykajacy" gd:nowGUID="3d426242-6bcd-40b4-bbb5-3ccc01b5fd95" element-eId="DU/2024/1045__art_147__ust_3" funkcja="zastap"><ustep eId="DU/2024/1045__art_147__ust_3" gd:GUID="818687cf-cb44-4b81-aa0d-b5a12661e117" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>3</nr><p><zdanie nr="1" gd:zdGUID="6adb5b96-367c-4dea-b645-c29eb2935c4b" fragment="1" gd:fragmentGUID="b5ab48f0-e62a-43e5-b09b-c0e92c1e8f45" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">Doręczenie korespondencji nadanej przez podmiot publiczny posiadający elektroniczną skrzynkę podawczą w ePUAP do osoby fizycznej lub podmiotu niebędącego podmiotem publicznym, o których mowa w ust. 2, nieposiadających adresu do doręczeń elektronicznych, jeżeli:</zdanie></p><punkt eId="DU/2024/1045__art_147__ust_3__pkt_1" gd:GUID="d320f7ae-d475-461b-be2c-462aa6132b1e" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="6adb5b96-367c-4dea-b645-c29eb2935c4b" fragment="2" gd:fragmentGUID="486874ad-59a7-42d2-8e8a-e8682de4e1fd" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">korespondencja ta stanowi odpowiedź na podanie albo wniosek złożone w ramach usługi udostępnionej w ePUAP, albo</zdanie></p></punkt><punkt eId="DU/2024/1045__art_147__ust_3__pkt_2" gd:GUID="80dc135f-189d-478e-8414-0f4da918608c" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="6adb5b96-367c-4dea-b645-c29eb2935c4b" fragment="3" gd:fragmentGUID="696271ff-40d1-4aae-aed3-08ecb50c6d61" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">ta osoba fizyczna lub ten podmiot wystąpiły do organu administracji publicznej o doręczenie korespondencji na konto w ePUAP</zdanie></p></punkt><czesc-wspolna-punkt eId="DU/2024/1045__art_147__ust_3__czw" gd:GUID="745541b6-b2b3-4f3f-a4e4-11e5dc1773de" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01"><p><zdanie nr="1" gd:zdGUID="6adb5b96-367c-4dea-b645-c29eb2935c4b" fragment="4" gd:fragmentGUID="9ca42ca7-2df2-48c0-94bf-64aedd56fbb2" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">– jest równoważne w skutkach prawnych z doręczeniem przy wykorzystaniu publicznej usługi rejestrowanego doręczenia elektronicznego do dnia 31 grudnia 2025 r.</zdanie></p></czesc-wspolna-punkt></ustep></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2024/1841__art_1__pkt_15__lit_b" gd:GUID="60e51441-128b-4297-ad37-f31a429f4dff" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="92736cff-a635-4102-8d0f-8e1ff50e4031" fragment="28" gd:fragmentGUID="6e0ae978-d353-4899-9680-4aa34558ce10" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">dodaje się ust. 5 i 6 w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/1045" cudzyslowy="oba" gd:nowGUID="d9959653-e292-45e5-bcf8-b385186d8210" element-eId="DU/2024/1045__art_147" funkcja="dodaj-w"><ustep eId="DU/2024/1045__art_147__ust_5" gd:GUID="5eb52cdd-f234-4763-bb8e-7cd16a4ec53a" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>5</nr><p><zdanie nr="1" gd:zdGUID="60471276-cca0-4114-9064-6c8b5738406c" fragment="1" gd:fragmentGUID="f1d4bc42-84a6-4924-9ccf-af933c3684d3" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">Do dnia 31 grudnia 2025 r. przepisów art. 4 i art. 5 nie stosuje się w przypadku gdy korespondencja nie może być doręczona na adres do doręczeń elektronicznych albo z wykorzystaniem publicznej usługi hybrydowej ze względu na przesłanki organizacyjne.</zdanie><zdanie nr="2" gd:zdGUID="f465275e-d20f-44ee-b839-166ed9cf7c51" fragment="1" gd:fragmentGUID="757131ac-7883-4945-8037-f8087814c61b" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">Istnienie przesłanek organizacyjnych ocenia nadawca.</zdanie></p></ustep><ustep eId="DU/2024/1045__art_147__ust_6" gd:GUID="487c06c3-f2f3-440d-acff-da0a604a85b4" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>6</nr><p><zdanie nr="1" gd:zdGUID="858a1e37-4942-4dc4-a24a-f7cc008e3c3d" fragment="1" gd:fragmentGUID="c0de516e-10c5-4f12-b32f-808aa11ecc5c" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">Do doręczeń, o których mowa w ust. 1–3 i 5, przepis art. 41 stosuje się odpowiednio.</zdanie></p></ustep></cytat-strukt>;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2024/1841__art_1__pkt_16" gd:GUID="9cde4f28-b985-463d-8db5-b4a7a97d812b" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">
+          <nr>16</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="92736cff-a635-4102-8d0f-8e1ff50e4031" fragment="29" gd:fragmentGUID="04e3f695-38ac-4fa2-a5d7-39f01ade11f9" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">w art. 152 dodaje się ust. 5 w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/1045" cudzyslowy="oba" gd:nowGUID="a4d7454d-87c4-44e5-88dd-091698adf562" element-eId="DU/2024/1045__art_152" funkcja="dodaj-w"><ustep eId="DU/2024/1045__art_152__ust_5" gd:GUID="9793a2db-5e2d-401e-a340-98dc8429999f" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>5</nr><p><zdanie nr="1" gd:zdGUID="58373cac-b8b2-4985-8c12-dbb49a7fcf68" fragment="1" gd:fragmentGUID="6fc8e138-26a7-4a14-9d11-86a0ba80f367" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">W przypadku adresów do doręczeń elektronicznych podmiotów wpisanych do Centralnej Ewidencji i Informacji o Działalności Gospodarczej, które zostały wpisane do bazy adresów elektronicznych od dnia 5 lipca 2022 r., informacja w przedmiocie tych adresów zostanie przekazana automatycznie za pośrednictwem systemu teleinformatycznego z bazy adresów elektronicznych do Centralnej Ewidencji i Informacji o Działalności Gospodarczej albo w innej ustrukturyzowanej formie elektronicznej, nie później niż do dnia określonego w komunikacie wydanym na podstawie art. 155 ust. 10.</zdanie></p></ustep></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2024/1841__art_1__pkt_17" gd:GUID="268ab4c1-24f4-48ad-8c04-bcdd1c58bc1f" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">
+          <nr>17</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="92736cff-a635-4102-8d0f-8e1ff50e4031" fragment="30" gd:fragmentGUID="53e3e7e3-225c-4c6c-8ab5-e19eabb422b1" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">w art. 155:</zdanie>
+          </p>
+          <litera eId="DU/2024/1841__art_1__pkt_17__lit_a" gd:GUID="4aa3d5f8-363a-4632-9581-d8e67a778121" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="92736cff-a635-4102-8d0f-8e1ff50e4031" fragment="31" gd:fragmentGUID="a0cbd6dd-3d4d-4981-abfe-4bcf0189549e" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">ust. 5 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/1045" cudzyslowy="oba" gd:nowGUID="e1a01a2d-b35b-4eb2-987a-aee648f0484a" element-eId="DU/2024/1045__art_155__ust_5" funkcja="zastap"><ustep eId="DU/2024/1045__art_155__ust_5" gd:GUID="c48cac72-7860-456b-af49-1c8da3832643" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>5</nr><p><zdanie nr="1" gd:zdGUID="78fb63e6-592a-4603-b118-0ae5da96de50" fragment="1" gd:fragmentGUID="7ac5b96d-cdb6-4802-b3f2-9e2ed066ab21" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">Agencje wykonawcze, instytucje gospodarki budżetowej, państwowe fundusze celowe, samodzielne publiczne zakłady opieki zdrowotnej, uczelnie publiczne, uczelnie niepubliczne, federacje podmiotów systemu szkolnictwa wyższego i nauki, Polska Akademia Nauk i tworzone przez nią jednostki organizacyjne, państwowe instytucje kultury oraz inne państwowe osoby prawne utworzone na podstawie odrębnych ustaw w celu wykonywania zadań publicznych są obowiązane stosować przepisy ustawy w zakresie doręczania korespondencji z wykorzystaniem publicznej usługi rejestrowanego doręczenia elektronicznego lub publicznej usługi hybrydowej od dnia określonego w komunikacie wydanym na podstawie ust. 10.</zdanie></p></ustep></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2024/1841__art_1__pkt_17__lit_b" gd:GUID="7ca74712-fd22-4b58-abde-2c46b885bb8d" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="92736cff-a635-4102-8d0f-8e1ff50e4031" fragment="32" gd:fragmentGUID="38ace388-1358-4232-b79b-c15396dd87c8" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">po ust. 5 dodaje się ust. 5a w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/1045" cudzyslowy="oba" gd:nowGUID="d5b9d32d-7f8d-47d4-8327-bf4899565e31" element-eId="DU/2024/1045__art_155__ust_5" funkcja="dodaj-po"><ustep eId="DU/2024/1045__art_155__ust_5a" gd:GUID="e3d92acc-a62f-4a88-854b-50abf2f82a0a" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>5a</nr><p><zdanie nr="1" gd:zdGUID="cdedef8f-a7a8-409d-b4f6-13dde7bad1af" fragment="1" gd:fragmentGUID="4c287eb7-a8a8-412f-958e-dccf236755f1" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">Agencja Bezpieczeństwa Wewnętrznego, Agencja Wywiadu, Służba Kontrwywiadu Wojskowego, Służba Wywiadu Wojskowego, Centralne Biuro Antykorupcyjne i resort obrony narodowej są obowiązane stosować przepisy ustawy w zakresie doręczania korespondencji z wykorzystaniem publicznej usługi rejestrowanego doręczenia elektronicznego lub publicznej usługi hybrydowej od dnia 31 grudnia 2026 r.</zdanie></p></ustep></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2024/1841__art_1__pkt_17__lit_c" gd:GUID="2dfad697-712e-4242-af31-fd0851256e82" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">
+            <nr>c</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="92736cff-a635-4102-8d0f-8e1ff50e4031" fragment="33" gd:fragmentGUID="2c586cc3-bbe8-4d0a-9fe6-9643f3c5eb3d" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">ust. 6 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/1045" cudzyslowy="oba" gd:nowGUID="b4d73a15-b9c4-4d75-8049-bb14bfd695fe" element-eId="DU/2024/1045__art_155__ust_6" funkcja="zastap"><ustep eId="DU/2024/1045__art_155__ust_6" gd:GUID="56d09ff1-2b92-4a6d-9c52-62784d9291ab" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>6</nr><p><zdanie nr="1" gd:zdGUID="385b3ee2-d853-41f3-b547-cb700224c8ac" fragment="1" gd:fragmentGUID="3f421b14-5079-4ea0-8c49-4ddbbde1fc49" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">Jednostki samorządu terytorialnego i ich związki oraz związki metropolitalne, samorządowe instytucje kultury, samorządowe osoby prawne oraz samorządowe zakłady budżetowe są obowiązane stosować przepisy ustawy w zakresie doręczania korespondencji z wykorzystaniem publicznej usługi rejestrowanego doręczenia elektronicznego od dnia określonego w komunikacie wydanym na podstawie ust. 10, a w zakresie doręczania korespondencji z wykorzystaniem publicznej usługi hybrydowej od dnia 1 października 2029 r.</zdanie></p></ustep></cytat-strukt>;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2024/1841__art_1__pkt_18" gd:GUID="ed4f0a5c-b0c6-4598-b98b-af189c1f9b61" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">
+          <nr>18</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="92736cff-a635-4102-8d0f-8e1ff50e4031" fragment="34" gd:fragmentGUID="4789c1b6-2ad7-43dc-a38d-0528c5f6eb77" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">art. 156 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/1045" cudzyslowy="oba" gd:nowGUID="4b86f5b8-b4bd-421a-bfe1-e14f4c404179" element-eId="DU/2024/1045__art_156" funkcja="zastap"><artykul eId="DU/2024/1045__art_156" gd:GUID="f3a99bf6-2119-4148-8e7e-d599793e4497" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>156</nr><ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="cea3b301-6672-424a-8a9d-6e6fa7b55970" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01"><p><zdanie nr="1" gd:zdGUID="8deb6a64-52ff-445c-bb89-f160851f1b03" fragment="1" gd:fragmentGUID="4178ad41-ef55-4695-8526-2a4a7249afee" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">Do podmiotów publicznych w rozumieniu ustawy zmienianej w art. 105 udostępniających elektroniczną skrzynkę podawczą w systemie innym niż ePUAP w okresie od dnia wejścia w życie niniejszej ustawy do dnia 31 grudnia 2025 r. stosuje się art. 157 i art. 158.</zdanie></p></ustep-n></artykul></cytat-strukt>.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2024/1841__art_2" gd:GUID="481ab413-3e1e-4c80-80ed-02ab5df0ebd2" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="4ba8489d-8051-435c-848f-a04e005d5534" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="cd41f6ae-d6b2-49e3-b117-5da4a3502c67" fragment="1" gd:fragmentGUID="204512f5-ec27-4888-94f4-6cd5552641a4" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">Do korespondencji, o której mowa w art. 147 ust. 2 i 3 ustawy zmienianej w art. 1, nadanej przed dniem wejścia w życie niniejszej ustawy i niedoręczonej przed tym dniem stosuje się przepisy ustawy zmienianej w art. 1, w brzmieniu nadanym niniejszą ustawą.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2024/1841__art_3" gd:GUID="c1012b71-58b4-489f-8003-19ba74ef0139" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">
+      <nr>3</nr>
+      <ustep eId="DU/2024/1841__art_3__ust_1" gd:GUID="06cb76b7-d1c6-4c1b-92ef-374039b54365" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="4ddd7e38-af38-44b4-ad15-0e8c528b6f2a" fragment="1" gd:fragmentGUID="0ebf834b-49b9-4589-9cfd-4abd7a68b33f" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">Do wniosków o utworzenie adresów do doręczeń elektronicznych złożonych przez jednostki samorządu terytorialnego, związki międzygminne, związki powiatów, związki powiatowo-gminne, związki metropolitalne albo jednostki organizacyjne jednostki samorządu terytorialnego i nierozpatrzonych do dnia wejścia w życie niniejszej ustawy stosuje się przepisy art. 12 ust. 1a–1c ustawy zmienianej w art. 1.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2024/1841__art_3__ust_2" gd:GUID="7b23e674-eb3d-4667-b71e-06bd457bad85" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="07f64764-cd73-41fe-bcbf-d78fa64fddae" fragment="1" gd:fragmentGUID="8b4213d7-5e4a-4a55-a5cd-759d8265b809" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">Wnioski o utworzenie adresów do doręczeń elektronicznych innych niż adresy, o których mowa w art. 12 ust. 1a–1c ustawy zmienianej w art. 1, złożone przez jednostki i związki, o których mowa w ust. 1, i nierozpatrzone do dnia wejścia w życie niniejszej ustawy, pozostawia się bez rozpatrzenia.</zdanie>
+        </p>
+      </ustep>
+    </artykul>
+    <artykul eId="DU/2024/1841__art_4" gd:GUID="bca18403-688b-400a-b55a-7d41de59b55d" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">
+      <nr>4</nr>
+      <ustep eId="DU/2024/1841__art_4__ust_1" gd:GUID="353b4436-5546-4437-a041-273475dbae86" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="411652f1-be67-4928-af67-1c849a418d8c" fragment="1" gd:fragmentGUID="6b421890-d37b-450e-bfd0-01eb9c6a3d00" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">W przypadku gdy dla jednostki samorządu terytorialnego, związku międzygminnego, związku powiatów, związku powiatowo-gminnego albo związku metropolitalnego utworzono adres do doręczeń elektronicznych inny niż ten, o którym mowa w art. 12 ust. 1a i 1b ustawy zmienianej w art. 1, wpisany do bazy adresów elektronicznych, minister właściwy do spraw informatyzacji wykreśla ten adres z urzędu w terminie roku od dnia wejścia w życie niniejszej ustawy.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2024/1841__art_4__ust_2" gd:GUID="50669fa7-bda5-45a2-a56b-d4b08f4a2f56" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="75b872f5-748e-4e45-a2d8-912c50039854" fragment="1" gd:fragmentGUID="57e6e39f-cee5-4bbb-a91f-0166a2861f7f" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">Przed wykreśleniem adresu do doręczeń elektronicznych innego niż ten, o którym mowa w art. 12 ust. 1a i 1b ustawy zmienianej w art. 1, z bazy adresów elektronicznych minister właściwy do spraw informatyzacji informuje jednostki i związki, o których mowa w ust. 1, o konieczności pobrania zasobów znajdujących się w skrzynce doręczeń powiązanej z adresem do doręczeń elektronicznych, który podlega wykreśleniu, i wyznacza termin wykreślania tego adresu z bazy adresów elektronicznych.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2024/1841__art_4__ust_3" gd:GUID="c0cc7ae3-f7b5-4e10-8c60-7d9f07b62257" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">
+        <nr>3</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="e8808856-06f3-46e8-bedd-47dd500332b4" fragment="1" gd:fragmentGUID="b027ae47-3ca5-4407-89f0-be48a56102df" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">Wykreślenie, o którym mowa w ust. 1, stanowi czynność materialno-techniczną.</zdanie>
+        </p>
+      </ustep>
+    </artykul>
+    <artykul eId="DU/2024/1841__art_5" gd:GUID="29e2dfe4-7bc3-4b8c-9c50-842f67ce2a3f" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">
+      <nr>5</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="240c5ed5-6a29-4512-8d70-c566d1fd4c3e" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="21b45224-be15-46cb-bc33-0ea9d116be15" fragment="1" gd:fragmentGUID="84cf8d63-785d-49c4-a19f-563001a650a0" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">Adresy do doręczeń elektronicznych wpisane przed dniem 1 marca 2025 r. do bazy adresów elektronicznych na podstawie art. 34 ust. 1 pkt 1 ustawy zmienianej w art. 1, w brzmieniu dotychczasowym, i niewykreślone z bazy adresów elektronicznych do tego dnia stają się adresami, o których mowa w art. 34 ust. 1 ustawy zmienianej w art. 1, w brzmieniu nadanym niniejszą ustawą.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2024/1841__art_6" gd:GUID="ed1606d3-3585-4c0f-a2e6-7f93853a14d6" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">
+      <nr>6</nr>
+      <ustep eId="DU/2024/1841__art_6__ust_1" gd:GUID="27ad7a5f-768c-41ea-8382-1184cb2ecfd4" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="2be251e2-623e-4019-9cdb-a4bd0d32d916" fragment="1" gd:fragmentGUID="452ad74d-2ac6-4b81-a254-9ad11e3f1868" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">Operatorowi wyznaczonemu mogą być zrefundowane z budżetu państwa, w wysokości nieprzekraczającej 100 mln zł, koszty inwestycyjne poniesione przez tego operatora w latach 2020–2024 na budowę i modernizację infrastruktury oraz koszty oprogramowania systemu teleinformatycznego, o którym mowa w art. 58 ust. 3 ustawy zmienianej w art. 1, służących do realizacji publicznej usługi rejestrowanego doręczenia elektronicznego i publicznej usługi hybrydowej.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2024/1841__art_6__ust_2" gd:GUID="9c5e9e91-6bfe-47c3-ad6c-4d8cc4ae3c75" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="649f6a4a-578c-439f-829c-7fcf10c1e69c" fragment="1" gd:fragmentGUID="8d82a5fc-7cf4-41e1-9691-7fb9258b3358" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">Refundacja nie może przekroczyć kwoty stanowiącej różnicę pomiędzy sumą kosztów inwestycyjnych poniesionych przez operatora wyznaczonego w latach 2020–2024 na budowę i modernizację infrastruktury oraz koszty oprogramowania systemu teleinformatycznego, o którym mowa w art. 58 ust. 3 ustawy zmienianej w art. 1, służących do realizacji publicznej usługi rejestrowanego doręczenia elektronicznego i publicznej usługi hybrydowej a kwotą przekazaną operatorowi wyznaczonemu z budżetu państwa na sfinansowanie tych kosztów w formie dotacji przedmiotowej, o której mowa w art. 52 ust. 9 ustawy zmienianej w art. 1.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2024/1841__art_6__ust_3" gd:GUID="88ed4e79-303c-48ca-9e64-130549a1628c" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">
+        <nr>3</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="ad24d809-e22a-4c37-8a67-11ba6aa5ce9c" fragment="1" gd:fragmentGUID="c4032b95-118c-4225-91d8-d726d4a226fe" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">Refundacja kosztów, o których mowa w ust. 1, jest przyznawana na wniosek operatora wyznaczonego złożony do ministra właściwego do spraw łączności, zawierający w szczególności:</zdanie>
+        </p>
+        <punkt eId="DU/2024/1841__art_6__ust_3__pkt_1" gd:GUID="c63a360b-0979-44d6-9053-ab415cbf80fa" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="ad24d809-e22a-4c37-8a67-11ba6aa5ce9c" fragment="2" gd:fragmentGUID="c2634f6f-e285-4c1c-a6a4-3c046b576be0" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">oznaczenie podmiotu, do którego jest kierowany wniosek;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2024/1841__art_6__ust_3__pkt_2" gd:GUID="2f9f58fb-de0a-4f5b-8a86-5cf5d15118d9" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="ad24d809-e22a-4c37-8a67-11ba6aa5ce9c" fragment="3" gd:fragmentGUID="0259a306-6160-4bb8-981c-4922eb5beb57" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">oznaczenie wnioskodawcy i jego siedziby oraz adres do korespondencji;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2024/1841__art_6__ust_3__pkt_3" gd:GUID="60682e12-35bc-48ff-8bf9-bcd26d0b3176" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="ad24d809-e22a-4c37-8a67-11ba6aa5ce9c" fragment="4" gd:fragmentGUID="be0582b2-8bbf-414f-ac02-5b8df660358b" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">numer identyfikacji podatkowej (NIP) wnioskodawcy;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2024/1841__art_6__ust_3__pkt_4" gd:GUID="94febb3d-77da-4b89-ae13-295a0253ef0b" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="ad24d809-e22a-4c37-8a67-11ba6aa5ce9c" fragment="5" gd:fragmentGUID="ffa347fe-ab26-48cb-ad65-c1939a84c0e3" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">adres poczty elektronicznej wnioskodawcy;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2024/1841__art_6__ust_3__pkt_5" gd:GUID="d9283e20-253f-4e5a-b572-a2f822c5d115" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="ad24d809-e22a-4c37-8a67-11ba6aa5ce9c" fragment="6" gd:fragmentGUID="a9c6283b-9171-4179-a557-c54d5df4ca5e" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">wnioskowaną wysokość refundacji wynikającą z oszacowania kosztów, o których mowa w ust. 1;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2024/1841__art_6__ust_3__pkt_6" gd:GUID="a1b9d891-5bef-488c-88e1-a4c179b60e05" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">
+          <nr>6</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="ad24d809-e22a-4c37-8a67-11ba6aa5ce9c" fragment="7" gd:fragmentGUID="205fcf20-1f2a-43f1-849f-9087122162d0" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">numer rachunku bankowego, na który ma zostać dokonany zwrot kosztów.</zdanie>
+          </p>
+        </punkt>
+      </ustep>
+      <ustep eId="DU/2024/1841__art_6__ust_4" gd:GUID="0989c7ce-7bce-4963-81ad-23f1cae9db70" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">
+        <nr>4</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="2fe79e9c-bac9-47ca-9a96-2a6d28631d82" fragment="1" gd:fragmentGUID="a4787043-2340-4400-a9a7-2be433220bd4" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">Do wniosku, o którym mowa w ust. 3, operator wyznaczony dołącza rozliczenie kosztów inwestycyjnych, o których mowa w ust. 1, wraz z dokumentami potwierdzającymi poniesienie tych kosztów, zweryfikowane przez niezależnego biegłego rewidenta.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2024/1841__art_6__ust_5" gd:GUID="9bcd7733-e824-49f7-90ae-e10e4f4d53ef" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">
+        <nr>5</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="f3e74790-2bff-4037-9d33-501e6164fbec" fragment="1" gd:fragmentGUID="28101570-64cd-4933-8298-40825f4faecc" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">Refundacja kosztów, o których mowa w ust. 1, jest przyznawana na podstawie umowy zawartej między Skarbem Państwem reprezentowanym przez ministra właściwego do spraw łączności a operatorem wyznaczonym, która określa w szczególności rodzaje kosztów objętych refundacją, zestawienie tych kosztów oraz wysokość i termin udzielania refundacji.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2024/1841__art_6__ust_6" gd:GUID="05696e98-58d7-4ce8-889e-4915a3923c54" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">
+        <nr>6</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="fbec71d8-5aea-4e62-b40f-f5f7c2fc8c6b" fragment="1" gd:fragmentGUID="cc7ac680-4032-4ce9-add8-07a1b5a052dd" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">Zawarcie umowy, o której mowa w ust. 5, jest równoznaczne ze zrzeczeniem się przez operatora wyznaczonego z wszelkich roszczeń wobec Skarbu Państwa związanych z kosztami inwestycyjnymi poniesionymi w latach 2020–2024 na budowę i modernizację infrastruktury oraz kosztami oprogramowania systemu teleinformatycznego, o którym mowa w art. 58 ust. 3 ustawy zmienianej w art. 1, służących do realizacji publicznej usługi rejestrowanego doręczenia elektronicznego i publicznej usługi hybrydowej.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2024/1841__art_6__ust_7" gd:GUID="2b830a62-8fcb-4fbe-a4c8-5f9bc2d2e3f2" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">
+        <nr>7</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="d1b414bf-3fff-4a8b-930a-18118e5779f4" fragment="1" gd:fragmentGUID="8549490b-f12b-4cba-8ae8-2392d6a81424" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">Refundacja jest przyznawana w ramach maksymalnego limitu określonego w art. 163 ust. 2 pkt 5 ustawy zmienianej w art. 1.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2024/1841__art_6__ust_8" gd:GUID="b0164e68-ed27-4d64-baa0-04d6afaacadd" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">
+        <nr>8</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="76a404c0-108d-4eca-b60e-762352acd8bf" fragment="1" gd:fragmentGUID="ffb29c4a-ce4f-410b-822c-bb61055a24d4" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">Refundacja kosztów, o których mowa w ust. 1, stanowi pomoc publiczną udzielaną na podstawie decyzji Komisji z dnia 20 grudnia 2011 r. w sprawie stosowania art. 106 ust. 2 Traktatu o funkcjonowaniu Unii Europejskiej do pomocy państwa w formie rekompensaty z tytułu świadczenia usług publicznych, przyznawanej przedsiębiorstwom zobowiązanym do wykonywania usług świadczonych w ogólnym interesie gospodarczym (Dz. Urz. UE L 7 z 11.01.2012, str. 3).</zdanie>
+        </p>
+      </ustep>
+    </artykul>
+    <artykul eId="DU/2024/1841__art_7" gd:GUID="4f9b77c3-61e3-40bf-9fd8-0d7d0ec7cd80" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">
+      <nr>7</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="5d0135f9-5b84-4434-b933-fbda7c4302c1" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="75e912c1-eb45-40b8-ae6d-0d7bdf05dbf6" fragment="1" gd:fragmentGUID="2a3a3107-fcb2-4e6b-b4f5-47a8b97ec4fc" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">Ustawa wchodzi w życie z dniem 1 stycznia 2025 r., z wyjątkiem:</zdanie>
+        </p>
+        <punkt eId="DU/2024/1841__art_7__pkt_1" gd:GUID="d7412401-2ee9-4c6a-8ad4-3b7a23f7d9c2" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="75e912c1-eb45-40b8-ae6d-0d7bdf05dbf6" fragment="2" gd:fragmentGUID="7eda2e7b-f907-4aa7-aa2f-bd0188d06112" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">art. 1 pkt 2 i 4–7, które wchodzą w życie z dniem 1 czerwca 2025 r.;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2024/1841__art_7__pkt_2" gd:GUID="2279191f-4a8c-4377-86df-f30eb98bdd25" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="75e912c1-eb45-40b8-ae6d-0d7bdf05dbf6" fragment="3" gd:fragmentGUID="48fc1c9e-28c1-44a3-8e8d-2a6e2c010afa" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1841_odczytane.x" wejscie-w-zycie="2025-01-01">art. 1 pkt 9 i 10, które wchodzą w życie z dniem 1 marca 2025 r.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </artykul>
+    <organ-podpisujacy>Prezydent Rzeczypospolitej Polskiej: <i><osoba podpisujacy="true" gd:osobaGUID="8af96558-964c-44bf-8ab3-36c239014584"><imie>A.</imie> <nazwisko>Duda</nazwisko></osoba></i></organ-podpisujacy>
+  </ustawa>
+</akt-prawny>

@@ -1,0 +1,402 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <ustawa>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2026/180</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>37dea43c-0a9d-4a1e-9e68-7f8d29f36cc9</gd:GUIDwersji>
+      <AdresISAP>WDU20260000180</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2026</Rok>
+      <Pozycja>180</Pozycja>
+      <AdresWyswietlany>Dz.U. 2026 poz. 180</AdresWyswietlany>
+      <Tytul>Ustawa z dnia 23 stycznia 2026 r. o zmianie ustawy – Prawo o ruchu drogowym oraz niektórych innych ustaw</Tytul>
+      <Rodzaj>USTAWA</Rodzaj>
+      <DataOgloszenia>2026-02-17</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2026-01-23</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2026-02-18_DU-2026-180_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2026-02-18" warunek="z dniem następującym po dniu ogłoszenia" podstawa="art. 6 pkt 2" zrodlo="https://eli.gov.pl/eli/DU/2026/180" dowod="DU/2026/180__art_6__pkt_2">
+            <JednostkaAktu eId="DU/2026/180__art_2__pkt_3" />
+            <JednostkaAktu eId="DU/2026/180__art_4__pkt_1__lit_a" />
+          </Zdarzenie>
+          <Zdarzenie id="zdarz_wejscie_2026-03-03_DU-2026-180_odczytane" rodzaj="wejscie-w-zycie" pochodzenie="odczytane" data="2026-03-03" podstawa="art. 6 pkt 1" zrodlo="https://eli.gov.pl/eli/DU/2026/180" dowod="DU/2026/180__art_6__pkt_1">
+            <JednostkaAktu eId="DU/2026/180__art_2__pkt_1" />
+            <JednostkaAktu eId="DU/2026/180__art_2__pkt_2" />
+            <JednostkaAktu eId="DU/2026/180__art_4__pkt_1__lit_b" />
+            <JednostkaAktu eId="DU/2026/180__art_4__pkt_1__lit_c" />
+            <JednostkaAktu eId="DU/2026/180__art_4__pkt_1__lit_d" />
+            <JednostkaAktu eId="DU/2026/180__art_4__pkt_1__lit_e" />
+            <JednostkaAktu eId="DU/2026/180__art_4__pkt_2" />
+            <JednostkaAktu eId="DU/2026/180__art_4__pkt_3" />
+            <JednostkaAktu eId="DU/2026/180__art_4__pkt_4" />
+          </Zdarzenie>
+          <Zdarzenie id="zdarz_wejscie_2026-05-18_DU-2026-180_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2026-05-18" warunek="po upływie 3 miesięcy od dnia ogłoszenia" podstawa="art. 6" zrodlo="https://eli.gov.pl/eli/DU/2026/180" dowod="DU/2026/180__art_6" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2026-02-18_DU-2026-180_domyslne.x" glowna="false">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2026-02-18_DU-2026-180_domyslne" />
+        </GrupaCzasowa>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2026-03-03_DU-2026-180_odczytane.x" glowna="false">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2026-03-03_DU-2026-180_odczytane" />
+        </GrupaCzasowa>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2026-05-18_DU-2026-180_domyslne.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2026-05-18_DU-2026-180_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="eb4925b8-7def-44c1-a8d1-65075fb9aef5" rola="wydajacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Sejm">
+          <Nazwa>SEJM</Nazwa>
+        </Organ>
+        <Organ gd:GUID="7610e08a-9096-46ab-920a-66d7f865e954" rola="podpisujacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Prezydent">
+          <Nazwa>Prezydent Rzeczypospolitej Polskiej</Nazwa>
+          <OrganPodpisujacy>Prezydent Rzeczypospolitej Polskiej</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>K.</imie> <nazwisko>Nawrocki</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Ustawa</rodzaj-aktu>
+    <data>z dnia 23 stycznia 2026 r.</data>
+    <tytul>o zmianie ustawy – Prawo o ruchu drogowym oraz niektórych innych ustaw<odnosnik id-odnosnika="1" symbol="1" gd:GUID="8364b89c-7dc4-4220-9fc5-3249ef381f78"><p><zdanie nr="1" gd:zdGUID="267218d5-698b-41dd-9d73-57a8865b2988" fragment="1" gd:fragmentGUID="aef05131-a0de-4dbe-bc53-c13f89d27330">Niniejszą ustawą zmienia się ustawy: ustawę z dnia 5 stycznia 2011 r. o kierujących pojazdami, ustawę z dnia 17 grudnia 2021 r. o ochotniczych strażach pożarnych oraz ustawę z dnia 17 października 2025 r. o zmianie ustawy – Prawo o ruchu drogowym oraz niektórych innych ustaw.</zdanie></p></odnosnik></tytul>
+    <artykul eId="DU/2026/180__art_1" gd:GUID="80eb47b8-804e-487c-b47a-47e04128f890" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-18_DU-2026-180_domyslne.x" wejscie-w-zycie="2026-05-18">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="1f16e253-2ddf-49ba-b0cd-7e04bcad7339" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-18_DU-2026-180_domyslne.x" wejscie-w-zycie="2026-05-18">
+        <p>
+          <zdanie nr="1" gd:zdGUID="12f3e3f7-2855-4ad8-853f-fed7d40de653" fragment="1" gd:fragmentGUID="da4128ad-4c8e-4b31-8809-f66a18a431d3" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-18_DU-2026-180_domyslne.x" wejscie-w-zycie="2026-05-18">W ustawie z dnia 20 czerwca 1997 r. – Prawo o ruchu drogowym (Dz. U. z 2024 r. poz. 1251, z późn. zm.<odnosnik id-odnosnika="2" symbol="2" gd:GUID="71b72ab8-066f-4107-9a96-0e2242c15f4e"><p><zdanie nr="1" gd:zdGUID="0c2401e0-f717-415c-a1b9-637afaa1242b" fragment="1" gd:fragmentGUID="783f1e4f-782f-4804-90db-7e1c469413cd">Zmiany tekstu jednolitego wymienionej ustawy zostały ogłoszone w Dz. U. z 2025 r. poz. 820, 1006, 1676, 1734, 1843 i 1872.</zdanie></p></odnosnik>) wprowadza się następujące zmiany:</zdanie>
+        </p>
+        <punkt eId="DU/2026/180__art_1__pkt_1" gd:GUID="1514b136-1dcd-4ef5-b149-285f21bad9b9" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-18_DU-2026-180_domyslne.x" wejscie-w-zycie="2026-05-18">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="12f3e3f7-2855-4ad8-853f-fed7d40de653" fragment="2" gd:fragmentGUID="7314bd54-210f-4c46-af9a-0f616920ab6b" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-18_DU-2026-180_domyslne.x" wejscie-w-zycie="2026-05-18">w art. 2 w pkt 37:</zdanie>
+          </p>
+          <litera eId="DU/2026/180__art_1__pkt_1__lit_a" gd:GUID="4ed4beb8-8346-4604-a4ab-679543dc1f45" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-18_DU-2026-180_domyslne.x" wejscie-w-zycie="2026-05-18">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="12f3e3f7-2855-4ad8-853f-fed7d40de653" fragment="3" gd:fragmentGUID="57450e16-b9fe-4e32-b69c-1dc7f20c41e1" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-18_DU-2026-180_domyslne.x" wejscie-w-zycie="2026-05-18"><now:zamien-tekst stary-tekst="pojazd samochodowy" nowy-tekst="pojazd samochodowy lub ciągnik rolniczy" element-eId="DU/2024/1251__art_2__pkt_37" akt="https://eli.gov.pl/eli/DU/2024/1251" gd:nowGUID="de1159f3-df90-4600-9cb8-78e0fb08ab8e" />po wyrazach „pojazd samochodowy” dodaje się wyrazy „lub ciągnik rolniczy”,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2026/180__art_1__pkt_1__lit_b" gd:GUID="ac3d2d9e-63bd-48bb-9df4-dc88f480a658" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-18_DU-2026-180_domyslne.x" wejscie-w-zycie="2026-05-18">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="12f3e3f7-2855-4ad8-853f-fed7d40de653" fragment="4" gd:fragmentGUID="cce6526c-d369-4de7-962e-0d6c4dcf1dc0" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-18_DU-2026-180_domyslne.x" wejscie-w-zycie="2026-05-18"><now:zamien-tekst stary-tekst="jednostki ochrony przeciwpożarowej" nowy-tekst="jednostki ochrony przeciwpożarowej, podmioty uprawnione do wykonywania ratownictwa wodnego, podmioty uprawnione do wykonywania ratownictwa górskiego, Morską Służbę Poszukiwania i Ratownictwa" element-eId="DU/2024/1251__art_2__pkt_37" akt="https://eli.gov.pl/eli/DU/2024/1251" gd:nowGUID="69575b25-086e-48a7-abf9-71f9c01e04bf" />po wyrazach „jednostki ochrony przeciwpożarowej” dodaje się wyrazy „ , podmioty uprawnione do wykonywania ratownictwa wodnego, podmioty uprawnione do wykonywania ratownictwa górskiego, Morską Służbę Poszukiwania i Ratownictwa”;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2026/180__art_1__pkt_2" gd:GUID="d2a7c549-c70f-4585-a793-e1755be8b516" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-18_DU-2026-180_domyslne.x" wejscie-w-zycie="2026-05-18">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="12f3e3f7-2855-4ad8-853f-fed7d40de653" fragment="5" gd:fragmentGUID="fe82416a-03ea-4970-ab05-3ed667c16053" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-18_DU-2026-180_domyslne.x" wejscie-w-zycie="2026-05-18">w art. 6:</zdanie>
+          </p>
+          <litera eId="DU/2026/180__art_1__pkt_2__lit_a" gd:GUID="7e2229d1-75f5-40ab-a82f-c227f15bfe68" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-18_DU-2026-180_domyslne.x" wejscie-w-zycie="2026-05-18">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="12f3e3f7-2855-4ad8-853f-fed7d40de653" fragment="6" gd:fragmentGUID="7f92ae33-6d5d-4498-8c71-ed5add367c48" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-18_DU-2026-180_domyslne.x" wejscie-w-zycie="2026-05-18">w ust. 1:</zdanie>
+            </p>
+            <tiret eId="DU/2026/180__art_1__pkt_2__lit_a__tir_1" gd:GUID="965bd90d-d0af-4db3-9e7b-74d1629bcaa3" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-18_DU-2026-180_domyslne.x" wejscie-w-zycie="2026-05-18">
+              <p>
+                <zdanie nr="1" gd:zdGUID="12f3e3f7-2855-4ad8-853f-fed7d40de653" fragment="7" gd:fragmentGUID="7f0b39c8-2c9f-4cad-9cab-54f760d409db" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-18_DU-2026-180_domyslne.x" wejscie-w-zycie="2026-05-18">po pkt 7a dodaje się pkt 7b w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/1251" cudzyslowy="oba" gd:nowGUID="5e85c881-9811-49d7-a5ee-3198073fa06f" element-eId="DU/2024/1251__art_6__ust_1__pkt_7a" funkcja="dodaj-po"><punkt eId="DU/2024/1251__art_6__ust_1__pkt_7b" gd:GUID="2c40c112-7603-4ce1-8eba-07a2e703a36a" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-18_DU-2026-180_domyslne.x" wejscie-w-zycie="2026-05-18"><nr>7b</nr><p><zdanie nr="1" gd:zdGUID="dd132da7-d675-4165-ba54-73cec6a98f89" fragment="1" gd:fragmentGUID="1b822a4d-00aa-42b8-a915-b4f244401805" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-18_DU-2026-180_domyslne.x" wejscie-w-zycie="2026-05-18">ratownik wodny podczas wykonywania czynności związanych z prowadzeniem akcji ratowniczej;</zdanie></p></punkt></cytat-strukt>,</zdanie>
+              </p>
+            </tiret>
+            <tiret eId="DU/2026/180__art_1__pkt_2__lit_a__tir_2" gd:GUID="9a19b898-5d92-4925-bac9-9e3e690db442" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-18_DU-2026-180_domyslne.x" wejscie-w-zycie="2026-05-18">
+              <p>
+                <zdanie nr="1" gd:zdGUID="12f3e3f7-2855-4ad8-853f-fed7d40de653" fragment="8" gd:fragmentGUID="523ace27-70c2-4835-af64-5a319f86bc83" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-18_DU-2026-180_domyslne.x" wejscie-w-zycie="2026-05-18">pkt 9 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/1251" cudzyslowy="oba" gd:nowGUID="d81e9167-9b9e-4099-9ada-458e4f7fd378" element-eId="DU/2024/1251__art_6__ust_1__pkt_9" funkcja="zastap"><punkt eId="DU/2024/1251__art_6__ust_1__pkt_9" gd:GUID="788ccc19-a895-487a-91a2-308fd96d75a4" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-18_DU-2026-180_domyslne.x" wejscie-w-zycie="2026-05-18"><nr>9</nr><p><zdanie nr="1" gd:zdGUID="3c3878e7-bffc-40ed-9d8d-819c01940d75" fragment="1" gd:fragmentGUID="7408500b-501f-4012-9692-d8038c07b3a2" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-18_DU-2026-180_domyslne.x" wejscie-w-zycie="2026-05-18">strażak Państwowej Straży Pożarnej, jeżeli wykonuje zadania określone w art. 1 ust. 2 ustawy z dnia 24 sierpnia 1991 r. o Państwowej Straży Pożarnej (Dz. U. z 2025 r. poz. 1312 i 1366);</zdanie></p></punkt></cytat-strukt>,</zdanie>
+              </p>
+            </tiret>
+            <tiret eId="DU/2026/180__art_1__pkt_2__lit_a__tir_3" gd:GUID="a3be480b-bed5-498c-93a0-a89af1a085bc" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-18_DU-2026-180_domyslne.x" wejscie-w-zycie="2026-05-18">
+              <p>
+                <zdanie nr="1" gd:zdGUID="12f3e3f7-2855-4ad8-853f-fed7d40de653" fragment="9" gd:fragmentGUID="fe487294-4a8b-4aa0-9d48-6f81d098e1f1" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-18_DU-2026-180_domyslne.x" wejscie-w-zycie="2026-05-18">po pkt 9 dodaje się pkt 9a w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/1251" cudzyslowy="oba" gd:nowGUID="3f22c69a-c887-4d4f-a8f8-c8223b35f4fc" element-eId="DU/2024/1251__art_6__ust_1__pkt_9" funkcja="dodaj-po"><punkt eId="DU/2024/1251__art_6__ust_1__pkt_9a" gd:GUID="2accc9c3-bd8a-4e80-9ab5-165b0374070c" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-18_DU-2026-180_domyslne.x" wejscie-w-zycie="2026-05-18"><nr>9a</nr><p><zdanie nr="1" gd:zdGUID="9ca9e7ba-ba42-4b3f-8974-f93f0e9297cb" fragment="1" gd:fragmentGUID="e659104d-d6d1-42c5-9fa5-c61fe7d77ab6" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-18_DU-2026-180_domyslne.x" wejscie-w-zycie="2026-05-18">strażak ratownik ochotniczej straży pożarnej, jeżeli wykonuje zadania ochotniczych straży pożarnych określone w art. 3 ustawy z dnia 17 grudnia 2021 r. o ochotniczych strażach pożarnych (Dz. U. z 2025 r. poz. 244 i 900);</zdanie></p></punkt></cytat-strukt>,</zdanie>
+              </p>
+            </tiret>
+            <tiret eId="DU/2026/180__art_1__pkt_2__lit_a__tir_4" gd:GUID="1af804e8-59c9-4982-b782-49b74ad7afee" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-18_DU-2026-180_domyslne.x" wejscie-w-zycie="2026-05-18">
+              <p>
+                <zdanie nr="1" gd:zdGUID="12f3e3f7-2855-4ad8-853f-fed7d40de653" fragment="10" gd:fragmentGUID="1f0a4f8c-beba-4090-b458-09ff9fd0280b" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-18_DU-2026-180_domyslne.x" wejscie-w-zycie="2026-05-18">pkt 10 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/1251" cudzyslowy="oba" gd:nowGUID="5800a0a9-7382-4d8d-98e8-ee29cf71850c" element-eId="DU/2024/1251__art_6__ust_1__pkt_10" funkcja="zastap"><punkt eId="DU/2024/1251__art_6__ust_1__pkt_10" gd:GUID="52fd2c38-b8dd-4162-b4a6-7bafb3b9d40f" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-18_DU-2026-180_domyslne.x" wejscie-w-zycie="2026-05-18"><nr>10</nr><p><zdanie nr="1" gd:zdGUID="ed119e99-eaaa-4330-a7a1-7f2c1236a4d9" fragment="1" gd:fragmentGUID="b5deecf6-ce04-404d-b552-fae62a25d534" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-18_DU-2026-180_domyslne.x" wejscie-w-zycie="2026-05-18">strażak ochotniczej straży pożarnej, jeżeli wykonuje zadania ochotniczych straży pożarnych określone w art. 3 ustawy z dnia 17 grudnia 2021 r. o ochotniczych strażach pożarnych;</zdanie></p></punkt></cytat-strukt>,</zdanie>
+              </p>
+            </tiret>
+          </litera>
+          <litera eId="DU/2026/180__art_1__pkt_2__lit_b" gd:GUID="c88bf739-14e3-4388-a7e3-06138ba3f2c7" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-18_DU-2026-180_domyslne.x" wejscie-w-zycie="2026-05-18">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="12f3e3f7-2855-4ad8-853f-fed7d40de653" fragment="11" gd:fragmentGUID="3b59c561-1cf5-4706-a94e-e0144a2c82c4" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-18_DU-2026-180_domyslne.x" wejscie-w-zycie="2026-05-18">w ust. 3a zdanie pierwsze otrzymuje brzmienie:<cytat-w-tekscie now:akt="https://eli.gov.pl/eli/DU/2024/1251" cudzyslowy="oba" gd:nowGUID="aafd627a-3248-464d-9cd8-47185d694951" element-eId="DU/2024/1251__art_6__ust_3a__zdn_1" funkcja="zastap-tekst"><zdanie nr="1" gd:zdGUID="d3b5f904-c8fc-434e-a818-5fdc673391f2" fragment="1" gd:fragmentGUID="9ff29b43-9826-4f19-8c6e-7fd19130576f" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-18_DU-2026-180_domyslne.x" wejscie-w-zycie="2026-05-18">Osoby, o których mowa w ust. 1 pkt 4–8, 10 i 12 oraz ust. 4 pkt 2, mogą dawać polecenia lub sygnały uczestnikowi ruchu lub innej osobie znajdującej się na drodze pod warunkiem ukończenia szkolenia organizowanego przez wojewódzki ośrodek ruchu drogowego lub szkolenia, o którym mowa w art. 8 pkt 5 ustawy z dnia 17 grudnia 2021 r. o ochotniczych strażach pożarnych.</zdanie></cytat-w-tekscie>;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2026/180__art_1__pkt_3" gd:GUID="4ae22209-5648-48d0-bc7d-3d2035127949" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-18_DU-2026-180_domyslne.x" wejscie-w-zycie="2026-05-18">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="12f3e3f7-2855-4ad8-853f-fed7d40de653" fragment="12" gd:fragmentGUID="77212763-75bf-4ab0-9882-17837a7068c9" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-18_DU-2026-180_domyslne.x" wejscie-w-zycie="2026-05-18">w art. 53 w ust. 1:</zdanie>
+          </p>
+          <litera eId="DU/2026/180__art_1__pkt_3__lit_a" gd:GUID="9744c8fc-0ac3-4efa-906d-6da7f0e5faa3" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-18_DU-2026-180_domyslne.x" wejscie-w-zycie="2026-05-18">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="12f3e3f7-2855-4ad8-853f-fed7d40de653" fragment="13" gd:fragmentGUID="f7af9a5d-39b1-4d7c-ba3e-1f8a44f22e96" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-18_DU-2026-180_domyslne.x" wejscie-w-zycie="2026-05-18"><now:zamien-tekst stary-tekst="pojazd samochodowy" nowy-tekst="pojazd samochodowy, lub ciągnik rolniczy" element-eId="DU/2024/1251__art_53__ust_1" akt="https://eli.gov.pl/eli/DU/2024/1251" gd:nowGUID="9bf2c451-9dc6-49b8-a74e-dd2ee4912a4f" />we wprowadzeniu do wyliczenia po wyrazach „pojazd samochodowy” dodaje się przecinek oraz wyrazy „lub ciągnik rolniczy”,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2026/180__art_1__pkt_3__lit_b" gd:GUID="d21ae492-54af-4e65-8f6e-3f9c05f19207" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-18_DU-2026-180_domyslne.x" wejscie-w-zycie="2026-05-18">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="12f3e3f7-2855-4ad8-853f-fed7d40de653" fragment="14" gd:fragmentGUID="c6751e22-bdf3-4f9d-bd9b-75f23a0af62a" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-18_DU-2026-180_domyslne.x" wejscie-w-zycie="2026-05-18"><now:zamien-tekst stary-tekst="zadań z zakresu" nowy-tekst="" element-eId="DU/2024/1251__art_53__ust_1__pkt_10d" akt="https://eli.gov.pl/eli/DU/2024/1251" gd:nowGUID="bd337067-6973-41ec-9301-cdaac2214cde" />w pkt 10d skreśla się wyrazy „zadań z zakresu”,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2026/180__art_1__pkt_3__lit_c" gd:GUID="7d15fb66-2dff-4369-8192-7ef2878a6217" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-18_DU-2026-180_domyslne.x" wejscie-w-zycie="2026-05-18">
+            <nr>c</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="12f3e3f7-2855-4ad8-853f-fed7d40de653" fragment="15" gd:fragmentGUID="dd58ab42-b0d5-45f6-a527-5ee70b2af882" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-18_DU-2026-180_domyslne.x" wejscie-w-zycie="2026-05-18"><now:zamien-tekst stary-tekst="zadań z zakresu" nowy-tekst="" element-eId="DU/2024/1251__art_53__ust_1__pkt_10f" akt="https://eli.gov.pl/eli/DU/2024/1251" gd:nowGUID="46be1fdd-eb4b-4e73-8dcc-a19b17f82530" />w pkt 10f skreśla się wyrazy „zadań z zakresu”;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2026/180__art_1__pkt_4" gd:GUID="72a3c295-b38c-45ef-9351-cb27e858b71f" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-18_DU-2026-180_domyslne.x" wejscie-w-zycie="2026-05-18">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="12f3e3f7-2855-4ad8-853f-fed7d40de653" fragment="16" gd:fragmentGUID="daba4ad3-1e70-4f23-a013-34725bc8d0e9" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-18_DU-2026-180_domyslne.x" wejscie-w-zycie="2026-05-18"><now:zamien-tekst stary-tekst="i straży pożarnej" nowy-tekst=", jednostek ochrony przeciwpożarowej, podmiotów uprawnionych do wykonywania ratownictwa wodnego, podmiotów uprawnionych do wykonywania ratownictwa górskiego i Morskiej Służby Poszukiwania i Ratownictwa" element-eId="DU/2024/1251__art_66__ust_7" akt="https://eli.gov.pl/eli/DU/2024/1251" gd:nowGUID="0869965b-960d-4378-ab34-1eccb966ab21" />w art. 66 w ust. 7 wyrazy „i straży pożarnej” zastępuje się wyrazami „ , jednostek ochrony przeciwpożarowej, podmiotów uprawnionych do wykonywania ratownictwa wodnego, podmiotów uprawnionych do wykonywania ratownictwa górskiego i Morskiej Służby Poszukiwania i Ratownictwa”.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2026/180__art_2" gd:GUID="71799430-4953-4366-8f6c-467baca64ed5" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-18_DU-2026-180_domyslne.x" wejscie-w-zycie="2026-05-18">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="a01d8cf0-ba3f-4787-b5b0-ae964d1fd90b" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-18_DU-2026-180_domyslne.x" wejscie-w-zycie="2026-05-18">
+        <p>
+          <zdanie nr="1" gd:zdGUID="0c5be9cf-fabe-4b51-861c-80657ce636ed" fragment="1" gd:fragmentGUID="ece5f9de-900a-4c40-bc6e-7a38de1c77a0" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-18_DU-2026-180_domyslne.x" wejscie-w-zycie="2026-05-18">W ustawie z dnia 5 stycznia 2011 r. o kierujących pojazdami (Dz. U. z 2025 r. poz. 1226, 1676 i 1872) wprowadza się następujące zmiany:</zdanie>
+        </p>
+        <punkt eId="DU/2026/180__art_2__pkt_1" gd:GUID="18f82abd-a76a-4bb7-aaa5-10aed2fd5380" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-03_DU-2026-180_odczytane.x" wejscie-w-zycie="2026-03-03">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="0c5be9cf-fabe-4b51-861c-80657ce636ed" fragment="2" gd:fragmentGUID="17d74579-475b-4816-b000-7ec09b87e84f" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-03_DU-2026-180_odczytane.x" wejscie-w-zycie="2026-03-03">w art. 5b:</zdanie>
+          </p>
+          <litera eId="DU/2026/180__art_2__pkt_1__lit_a" gd:GUID="451ee5d7-8e77-4464-a070-76363c7fd68d" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-03_DU-2026-180_odczytane.x" wejscie-w-zycie="2026-03-03">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="0c5be9cf-fabe-4b51-861c-80657ce636ed" fragment="3" gd:fragmentGUID="1842d421-b2d0-490e-a775-3a166bb838f9" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-03_DU-2026-180_odczytane.x" wejscie-w-zycie="2026-03-03"><now:zamien-tekst stary-tekst="art. 49 ust. 1 pkt 1" nowy-tekst="art. 49 ust. 1 pkt 1 albo odpowiednio od daty wygenerowania tymczasowego elektronicznego prawa jazdy, jeżeli data uzyskania pozytywnego wyniku egzaminu państwowego jest wcześniejsza niż data osiągnięcia minimalnego wieku wymaganego do kierowania pojazdami odpowiedniej kategorii" element-eId="DU/2025/1226__art_5b__ust_2" akt="https://eli.gov.pl/eli/DU/2025/1226" gd:nowGUID="936f869a-c894-4814-b6d0-803d0b664f6b" />w ust. 2 po wyrazach „art. 49 ust. 1 pkt 1” dodaje się wyrazy „albo odpowiednio od daty wygenerowania tymczasowego elektronicznego prawa jazdy, jeżeli data uzyskania pozytywnego wyniku egzaminu państwowego jest wcześniejsza niż data osiągnięcia minimalnego wieku wymaganego do kierowania pojazdami odpowiedniej kategorii”,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2026/180__art_2__pkt_1__lit_b" gd:GUID="7da26b9a-0109-4bcd-a0f3-9f192bd1599a" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-03_DU-2026-180_odczytane.x" wejscie-w-zycie="2026-03-03">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="0c5be9cf-fabe-4b51-861c-80657ce636ed" fragment="4" gd:fragmentGUID="5ae6553e-80cd-4e0b-bfbc-393ab6e0cfca" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-03_DU-2026-180_odczytane.x" wejscie-w-zycie="2026-03-03"><now:zamien-tekst stary-tekst="art. 49 ust. 1 pkt 1" nowy-tekst="art. 49 ust. 1 pkt 1, albo odpowiednio dzień wygenerowania tymczasowego elektronicznego prawa jazdy, jeżeli data uzyskania pozytywnego wyniku egzaminu państwowego jest wcześniejsza niż data osiągnięcia minimalnego wieku wymaganego do kierowania pojazdami odpowiedniej kategorii" element-eId="DU/2025/1226__art_5b__ust_5" akt="https://eli.gov.pl/eli/DU/2025/1226" gd:nowGUID="1c359d71-7a77-4418-95e2-7c349dadb75b" />w ust. 5 po wyrazach „art. 49 ust. 1 pkt 1” dodaje się wyrazy „ , albo odpowiednio dzień wygenerowania tymczasowego elektronicznego prawa jazdy, jeżeli data uzyskania pozytywnego wyniku egzaminu państwowego jest wcześniejsza niż data osiągnięcia minimalnego wieku wymaganego do kierowania pojazdami odpowiedniej kategorii”;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2026/180__art_2__pkt_2" gd:GUID="885d8b78-28d9-40f1-b66b-ead1769d1de7" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-03_DU-2026-180_odczytane.x" wejscie-w-zycie="2026-03-03">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="0c5be9cf-fabe-4b51-861c-80657ce636ed" fragment="5" gd:fragmentGUID="937549e8-550e-4d58-ad07-98f47750ade7" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-03_DU-2026-180_odczytane.x" wejscie-w-zycie="2026-03-03">w art. 10a pkt 2 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2025/1226" cudzyslowy="oba" gd:nowGUID="11aa4224-a866-41b8-9899-6c441e982c74" element-eId="DU/2025/1226__art_10a__pkt_2" funkcja="zastap"><punkt eId="DU/2025/1226__art_10a__pkt_2" gd:GUID="403266af-3ec7-4a99-893f-b021983bd6cc" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-03_DU-2026-180_odczytane.x" wejscie-w-zycie="2026-03-03"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="be40c392-a984-43f5-8fcc-6320a34093e6" fragment="1" gd:fragmentGUID="4a151bbe-8a6a-46b2-a908-5759f3ce7af3" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-03_DU-2026-180_odczytane.x" wejscie-w-zycie="2026-03-03">uzyskał pozytywny wynik egzaminu państwowego, o którym mowa w art. 49 ust. 1 pkt 1, albo osiągnął minimalny wiek wymagany do kierowania pojazdami odpowiedniej kategorii, jeżeli data uzyskania pozytywnego wyniku egzaminu państwowego jest wcześniejsza niż data osiągnięcia minimalnego wieku wymaganego do kierowania pojazdami odpowiedniej kategorii.</zdanie></p></punkt></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/180__art_2__pkt_3" gd:GUID="de869c81-0773-49a5-961d-140e9ea211fc" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-18_DU-2026-180_domyslne.x" wejscie-w-zycie="2026-02-18">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="0c5be9cf-fabe-4b51-861c-80657ce636ed" fragment="6" gd:fragmentGUID="abecbd80-a2de-4c7f-84eb-9e7716d9ef51" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-18_DU-2026-180_domyslne.x" wejscie-w-zycie="2026-02-18"><now:zamien-tekst stary-tekst="," nowy-tekst="– nie dotyczy osoby ubiegającej się o wymianę ważnego krajowego prawa jazdy wydanego za zagranicą," element-eId="DU/2025/1226__art_50__ust_2__pkt_4__lit_a" akt="https://eli.gov.pl/eli/DU/2025/1226" now:wystapienie="ostatnie" gd:nowGUID="a9a50082-1aad-4916-843a-a854916c11d3" />w art. 50 w ust. 2 w pkt 4 w lit. a skreśla się przecinek i dodaje się wyrazy „– nie dotyczy osoby ubiegającej się o wymianę ważnego krajowego prawa jazdy wydanego za zagranicą,”;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/180__art_2__pkt_4" gd:GUID="a4903678-3c0c-4687-976d-967e2ab2a956" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-18_DU-2026-180_domyslne.x" wejscie-w-zycie="2026-05-18">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="0c5be9cf-fabe-4b51-861c-80657ce636ed" fragment="7" gd:fragmentGUID="3dfbeebf-904d-4be1-b680-f266d8b3af11" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-18_DU-2026-180_domyslne.x" wejscie-w-zycie="2026-05-18">w art. 100 ust. 4 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2025/1226" cudzyslowy="oba" gd:nowGUID="340bd038-ee34-45d7-b8e7-bb38df6577dd" element-eId="DU/2025/1226__art_100__ust_4" funkcja="zastap"><ustep eId="DU/2025/1226__art_100__ust_4" gd:GUID="293d24f6-731c-46d0-ac0b-1b9d49a97236" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-18_DU-2026-180_domyslne.x" wejscie-w-zycie="2026-05-18"><nr>4</nr><p><zdanie nr="1" gd:zdGUID="c2dd1b9b-33f4-4147-a04f-386dda41717a" fragment="1" gd:fragmentGUID="5060a608-1e95-44f2-8d18-f90aaf2f296a" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-18_DU-2026-180_domyslne.x" wejscie-w-zycie="2026-05-18">Kursy reedukacyjne, o których mowa w ust. 2 i 3, są prowadzone, z wyłączeniem możliwości odbycia szkolenia z wykorzystaniem środków porozumiewania się na odległość, przez osoby posiadające odpowiednią specjalistyczną wiedzę w tym zakresie.</zdanie></p></ustep></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/180__art_2__pkt_5" gd:GUID="bcc7d727-309a-47cb-a6a5-d37a95c4b0e6" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-18_DU-2026-180_domyslne.x" wejscie-w-zycie="2026-05-18">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="0c5be9cf-fabe-4b51-861c-80657ce636ed" fragment="8" gd:fragmentGUID="f997a9b6-e1ca-435c-b271-67c4f630e4a6" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-18_DU-2026-180_domyslne.x" wejscie-w-zycie="2026-05-18">w art. 109:</zdanie>
+          </p>
+          <litera eId="DU/2026/180__art_2__pkt_5__lit_a" gd:GUID="37cab901-a7b8-4727-911c-d284e46da6ac" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-18_DU-2026-180_domyslne.x" wejscie-w-zycie="2026-05-18">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="0c5be9cf-fabe-4b51-861c-80657ce636ed" fragment="9" gd:fragmentGUID="850cdad8-da11-4bb8-82fd-efa0d784030a" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-18_DU-2026-180_domyslne.x" wejscie-w-zycie="2026-05-18"><now:zamien-tekst stary-tekst="za opłatą," nowy-tekst="za opłatą, z wyjątkiem ust. 6," element-eId="DU/2025/1226__art_109__ust_1" akt="https://eli.gov.pl/eli/DU/2025/1226" gd:nowGUID="c593e2e9-343e-43f6-8d96-3a2d6915c345" />w ust. 1 we wprowadzeniu do wyliczenia po wyrazach „za opłatą,” dodaje się wyrazy „z wyjątkiem ust. 6,”,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2026/180__art_2__pkt_5__lit_b" gd:GUID="3c1ba38d-f775-422d-9536-7658c219f92d" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-18_DU-2026-180_domyslne.x" wejscie-w-zycie="2026-05-18">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="0c5be9cf-fabe-4b51-861c-80657ce636ed" fragment="10" gd:fragmentGUID="c9c0d0fc-1197-4b6b-84e7-d527ea594442" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-18_DU-2026-180_domyslne.x" wejscie-w-zycie="2026-05-18">po ust. 2a dodaje się ust. 2b–2d w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2025/1226" cudzyslowy="oba" gd:nowGUID="4193d320-45de-4ae2-919d-783f252facca" element-eId="DU/2025/1226__art_109__ust_2a" funkcja="dodaj-po"><ustep eId="DU/2025/1226__art_109__ust_2b" gd:GUID="0aeb346b-ded7-4af9-a8fe-3aae66ec0e24" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-18_DU-2026-180_domyslne.x" wejscie-w-zycie="2026-05-18"><nr>2b</nr><p><zdanie nr="1" gd:zdGUID="4b2756fd-74e6-4b26-bf22-168626441845" fragment="1" gd:fragmentGUID="f3ae687e-0bd2-41dc-8222-aca1af00aebd" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-18_DU-2026-180_domyslne.x" wejscie-w-zycie="2026-05-18">Zakres zezwolenia na kierowanie pojazdem uprzywilejowanym, o którym mowa w ust. 2 pkt 1, określa się w zezwoleniu poprzez wpisanie kategorii prawa jazdy odpowiadających pojazdom uprzywilejowanym, na które wydawane jest zezwolenie, o których mowa odpowiednio w art. 108 ust. 1.</zdanie></p></ustep><ustep eId="DU/2025/1226__art_109__ust_2c" gd:GUID="5f42c585-6d3e-40eb-b5d2-3bac0b2152a1" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-18_DU-2026-180_domyslne.x" wejscie-w-zycie="2026-05-18"><nr>2c</nr><p><zdanie nr="1" gd:zdGUID="e712bbf0-093e-4f66-a2c0-832db6a09aa0" fragment="1" gd:fragmentGUID="e437e3e9-d58d-4f46-93ba-a62286c73ba5" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-18_DU-2026-180_domyslne.x" wejscie-w-zycie="2026-05-18">Zakres zezwolenia na kierowanie pojazdem uprzywilejowanym wydawanego funkcjonariuszom i kierującym, o których mowa w art. 106 ust. 3, określa się na podstawie:</zdanie></p><punkt eId="DU/2025/1226__art_109__ust_2c__pkt_1" gd:GUID="ab1d6f1e-70e7-46e5-b560-a8e7a5cbc496" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-18_DU-2026-180_domyslne.x" wejscie-w-zycie="2026-05-18"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="e712bbf0-093e-4f66-a2c0-832db6a09aa0" fragment="2" gd:fragmentGUID="4bb59c53-d64a-4c76-a20e-2165003fc33a" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-18_DU-2026-180_domyslne.x" wejscie-w-zycie="2026-05-18">kategorii prawa jazdy posiadanego przez tę osobę, oraz</zdanie></p></punkt><punkt eId="DU/2025/1226__art_109__ust_2c__pkt_2" gd:GUID="2c42a7c2-19bd-4717-88fb-3c6f352bc73d" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-18_DU-2026-180_domyslne.x" wejscie-w-zycie="2026-05-18"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="e712bbf0-093e-4f66-a2c0-832db6a09aa0" fragment="3" gd:fragmentGUID="b72accfa-c037-4d15-b03c-0bcf93ea82a6" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-18_DU-2026-180_domyslne.x" wejscie-w-zycie="2026-05-18">zakresu badań lekarskich i psychologicznych.</zdanie></p></punkt></ustep><ustep eId="DU/2025/1226__art_109__ust_2d" gd:GUID="29fecfff-b444-4098-9beb-35e6ad951150" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-18_DU-2026-180_domyslne.x" wejscie-w-zycie="2026-05-18"><nr>2d</nr><p><zdanie nr="1" gd:zdGUID="d660bd19-fbfc-4b9d-aeed-8e0e5755ba2a" fragment="1" gd:fragmentGUID="ea0daa04-bf06-471d-a7d9-f9791e50ad2a" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-18_DU-2026-180_domyslne.x" wejscie-w-zycie="2026-05-18">Zakres zezwolenia na kierowanie pojazdem uprzywilejowanym, o którym mowa w ust. 2c, określa się w zezwoleniu poprzez wpisanie kategorii prawa jazdy odpowiadających pojazdom uprzywilejowanym, na które wydawane jest zezwolenie, o których mowa odpowiednio w art. 108 ust. 1.</zdanie></p></ustep></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2026/180__art_2__pkt_5__lit_c" gd:GUID="933181bd-3812-40a1-a504-d8254e087ace" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-18_DU-2026-180_domyslne.x" wejscie-w-zycie="2026-05-18">
+            <nr>c</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="0c5be9cf-fabe-4b51-861c-80657ce636ed" fragment="11" gd:fragmentGUID="43f94f46-abfa-444d-8e8e-f9a0129be1cd" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-18_DU-2026-180_domyslne.x" wejscie-w-zycie="2026-05-18">ust. 6 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2025/1226" cudzyslowy="oba" gd:nowGUID="8adc9d08-e827-4523-80c3-64db0f06f031" element-eId="DU/2025/1226__art_109__ust_6" funkcja="zastap"><ustep eId="DU/2025/1226__art_109__ust_6" gd:GUID="6e488540-82f9-4a7c-ae29-ce116be93f9d" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-18_DU-2026-180_domyslne.x" wejscie-w-zycie="2026-05-18"><nr>6</nr><p><zdanie nr="1" gd:zdGUID="676a2d81-80e2-4ee9-b809-a946d6b89dfb" fragment="1" gd:fragmentGUID="56918a68-0eea-4505-bc9c-7c07deb2a14a" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-18_DU-2026-180_domyslne.x" wejscie-w-zycie="2026-05-18">Wydanie zezwolenia na kierowanie pojazdami uprzywilejowanymi ochotniczych straży pożarnych, podmiotów uprawnionych do wykonywania ratownictwa wodnego, podmiotów uprawnionych do wykonywania ratownictwa górskiego i Morskiej Służby Poszukiwania i Ratownictwa jest zwolnione z opłaty.</zdanie></p></ustep></cytat-strukt>;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2026/180__art_2__pkt_6" gd:GUID="d8c1bdb3-915f-48cb-9582-90efeb4bd646" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-18_DU-2026-180_domyslne.x" wejscie-w-zycie="2026-05-18">
+          <nr>6</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="0c5be9cf-fabe-4b51-861c-80657ce636ed" fragment="12" gd:fragmentGUID="da800ef7-5e49-4c54-bead-f439d63ac8d1" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-18_DU-2026-180_domyslne.x" wejscie-w-zycie="2026-05-18">po art. 109 dodaje się art. 109a w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2025/1226" cudzyslowy="oba" gd:nowGUID="2161fb35-262b-4d9b-90db-8e66a2a4ebd5" element-eId="DU/2025/1226__art_109" funkcja="dodaj-po"><artykul eId="DU/2025/1226__art_109a" gd:GUID="566178f9-61da-4a78-8741-35556defb35e" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-18_DU-2026-180_domyslne.x" wejscie-w-zycie="2026-05-18"><nr>109a</nr><ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="067e0103-be31-4b34-a934-c714b869dca1" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-18_DU-2026-180_domyslne.x" wejscie-w-zycie="2026-05-18"><p><zdanie nr="1" gd:zdGUID="1fcae130-43ed-41e4-beea-ab8c2d314e09" fragment="1" gd:fragmentGUID="b92cb9f0-4c8d-4a9d-b819-97840548bad6" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-18_DU-2026-180_domyslne.x" wejscie-w-zycie="2026-05-18">Zezwolenie na kierowanie pojazdem uprzywilejowanym wydane w trybie art. 109 ust. 1, 5 lub 5a, uprawnia do kierowania dowolnym pojazdem uprzywilejowanym w zakresie kategorii prawa jazdy określonych w zezwoleniu.</zdanie></p></ustep-n></artykul></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/180__art_2__pkt_7" gd:GUID="7e21dff8-8007-4203-97af-ed5af07e92e3" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-18_DU-2026-180_domyslne.x" wejscie-w-zycie="2026-05-18">
+          <nr>7</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="0c5be9cf-fabe-4b51-861c-80657ce636ed" fragment="13" gd:fragmentGUID="c3150e93-460a-4a3c-97f5-ef5d4273a21b" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-18_DU-2026-180_domyslne.x" wejscie-w-zycie="2026-05-18"><now:zamien-tekst stary-tekst="art. 106–109" nowy-tekst="art. 106–109a" element-eId="DU/2025/1226__art_110__ust_1__zdn_2" akt="https://eli.gov.pl/eli/DU/2025/1226" gd:nowGUID="4590a948-fb36-4195-88d3-cfea2f70c805" />w art. 110 w ust. 1 w zdaniu drugim wyrazy „art. 106–109” zastępuje się wyrazami „art. 106–109a”.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2026/180__art_3" gd:GUID="4017821d-b1d8-45be-a75c-e86de37ec8fa" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-18_DU-2026-180_domyslne.x" wejscie-w-zycie="2026-05-18">
+      <nr>3</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="a38cb4ce-6927-48b8-9d60-f6c26540dab3" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-18_DU-2026-180_domyslne.x" wejscie-w-zycie="2026-05-18">
+        <p>
+          <zdanie nr="1" gd:zdGUID="352495b6-12d7-4524-8060-66a1bc0df8c7" fragment="1" gd:fragmentGUID="e7a9b67e-9989-44bf-9bf9-bdfb5598eb5d" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-18_DU-2026-180_domyslne.x" wejscie-w-zycie="2026-05-18">W ustawie z dnia 17 grudnia 2021 r. o ochotniczych strażach pożarnych (Dz. U. z 2025 r. poz. 244 i 900) w art. 11:</zdanie>
+        </p>
+        <punkt eId="DU/2026/180__art_3__pkt_1" gd:GUID="3a07ad93-8702-4fd6-a179-7dccfd075a4e" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-18_DU-2026-180_domyslne.x" wejscie-w-zycie="2026-05-18">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="352495b6-12d7-4524-8060-66a1bc0df8c7" fragment="2" gd:fragmentGUID="c0450720-80b1-43e4-82a5-5eb834085866" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-18_DU-2026-180_domyslne.x" wejscie-w-zycie="2026-05-18">ust. 2 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2025/244" cudzyslowy="oba" gd:nowGUID="ce613ea8-9d87-4bc4-b67d-cddbd312f21d" element-eId="DU/2025/244__art_11__ust_2" funkcja="zastap"><ustep eId="DU/2025/244__art_11__ust_2" gd:GUID="b5333bea-8282-4c78-9883-401e52c14df1" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-18_DU-2026-180_domyslne.x" wejscie-w-zycie="2026-05-18"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="6e2e7c17-b856-408e-a3ed-e863e1de256b" fragment="1" gd:fragmentGUID="a45c3071-9cb9-47db-af99-1dc8889b65b5" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-18_DU-2026-180_domyslne.x" wejscie-w-zycie="2026-05-18">W ramach szkolenia, o którym mowa w art. 8 pkt 5, są realizowane treści kształcenia przygotowujące do nabycia umiejętności prowadzenia pojazdów uprzywilejowanych oraz kierowania ruchem drogowym.</zdanie></p></ustep></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/180__art_3__pkt_2" gd:GUID="7bb74c82-48fa-4592-92f8-1a1b50c2a8b4" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-18_DU-2026-180_domyslne.x" wejscie-w-zycie="2026-05-18">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="352495b6-12d7-4524-8060-66a1bc0df8c7" fragment="3" gd:fragmentGUID="5a5cbf52-d4a3-4e30-8b34-7c1611c3aa60" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-18_DU-2026-180_domyslne.x" wejscie-w-zycie="2026-05-18"><now:uchyl akt="https://eli.gov.pl/eli/DU/2025/244" element-eId="DU/2025/244__art_11__ust_3" gd:nowGUID="63403332-a1d3-4208-93ba-d4869882931f" />uchyla się ust. 3.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2026/180__art_4" gd:GUID="b051f6a6-8e99-470a-b96c-719cfb2f59f6" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-18_DU-2026-180_domyslne.x" wejscie-w-zycie="2026-05-18">
+      <nr>4</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="0f120bf1-872c-4161-bd96-ac4d3ebcb3af" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-18_DU-2026-180_domyslne.x" wejscie-w-zycie="2026-05-18">
+        <p>
+          <zdanie nr="1" gd:zdGUID="fe32bb3c-e30b-4032-b6a4-1df359fbafcf" fragment="1" gd:fragmentGUID="a456cd0c-fdee-47db-be2b-ee4c2b3c4316" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-18_DU-2026-180_domyslne.x" wejscie-w-zycie="2026-05-18">W ustawie z dnia 17 października 2025 r. o zmianie ustawy – Prawo o ruchu drogowym oraz niektórych innych ustaw (Dz. U. poz. 1676) wprowadza się następujące zmiany:</zdanie>
+        </p>
+        <punkt eId="DU/2026/180__art_4__pkt_1" gd:GUID="a51cd1ca-eccc-449c-97e1-01eb0962e19a" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-18_DU-2026-180_domyslne.x" wejscie-w-zycie="2026-05-18">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="fe32bb3c-e30b-4032-b6a4-1df359fbafcf" fragment="2" gd:fragmentGUID="2a88ddf0-fe84-46c3-8f7a-2719f479bd06" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-18_DU-2026-180_domyslne.x" wejscie-w-zycie="2026-05-18">w art. 4:</zdanie>
+          </p>
+          <litera eId="DU/2026/180__art_4__pkt_1__lit_a" gd:GUID="453f54c9-b940-4503-9b58-cd192a94a164" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-18_DU-2026-180_domyslne.x" wejscie-w-zycie="2026-02-18">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="fe32bb3c-e30b-4032-b6a4-1df359fbafcf" fragment="3" gd:fragmentGUID="43a81516-3895-40d3-badf-972857980363" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-18_DU-2026-180_domyslne.x" wejscie-w-zycie="2026-02-18"><now:zamien-tekst stary-tekst="ust. 3 pkt 1b" nowy-tekst="ust. 3" element-eId="DU/2025/1676__art_4__pkt_11" akt="https://eli.gov.pl/eli/DU/2025/1676" gd:nowGUID="0d49f616-55e3-462d-a431-5f469a34b064" />w pkt 11 w art. 51 w ust. 4b wyrazy „ust. 3 pkt 1b” zastępuje się wyrazami „ust. 3”,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2026/180__art_4__pkt_1__lit_b" gd:GUID="55e4883b-5119-4311-84ba-92a378d9e545" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-03_DU-2026-180_odczytane.x" wejscie-w-zycie="2026-03-03">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="fe32bb3c-e30b-4032-b6a4-1df359fbafcf" fragment="4" gd:fragmentGUID="f8027e9a-d626-4181-9ad6-520a4f8af6c8" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-03_DU-2026-180_odczytane.x" wejscie-w-zycie="2026-03-03">w pkt 20 w art. 91 ust. 2 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2025/1676" cudzyslowy="oba" gd:nowGUID="4677bf21-e186-488f-8d89-08ac368eeed5" element-eId="DU/2025/1676__art_4__pkt_20" funkcja="zastap"><ustep eId="DU/2025/1676__art_4__ust_2" gd:GUID="52efd34e-0136-4ebc-a10d-2f1f642944f0" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-03_DU-2026-180_odczytane.x" wejscie-w-zycie="2026-03-03"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="00f7898e-0d84-46b7-b600-cc8754d5fbe6" fragment="1" gd:fragmentGUID="c63b4efc-1958-4607-a591-f502c8ff40aa" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-03_DU-2026-180_odczytane.x" wejscie-w-zycie="2026-03-03">W przypadku uzyskania tymczasowego elektronicznego prawa jazdy okres próbny trwa począwszy od daty uzyskania uprawnienia do kierowania pojazdami zgodnie z art. 5b ust. 5.</zdanie></p></ustep></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2026/180__art_4__pkt_1__lit_c" gd:GUID="d1e33db2-9fd0-4bb6-8eae-5bf9b1356ed5" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-03_DU-2026-180_odczytane.x" wejscie-w-zycie="2026-03-03">
+            <nr>c</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="fe32bb3c-e30b-4032-b6a4-1df359fbafcf" fragment="5" gd:fragmentGUID="58f4e37f-c459-4449-83c5-7bdf8a8f2c03" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-03_DU-2026-180_odczytane.x" wejscie-w-zycie="2026-03-03">w pkt 22:</zdanie>
+            </p>
+            <tiret eId="DU/2026/180__art_4__pkt_1__lit_c__tir_1" gd:GUID="8b7f78c7-8bee-4f6c-a1ff-6a79eb3dad15" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-03_DU-2026-180_odczytane.x" wejscie-w-zycie="2026-03-03">
+              <p>
+                <zdanie nr="1" gd:zdGUID="fe32bb3c-e30b-4032-b6a4-1df359fbafcf" fragment="6" gd:fragmentGUID="532a9e86-8709-44c8-a182-05f2caf002d6" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-03_DU-2026-180_odczytane.x" wejscie-w-zycie="2026-03-03"><now:zamien-tekst stary-tekst="art. 91 ust. 3 pkt 2 lit. a" nowy-tekst="art. 91 ust. 3 pkt 3 lit. a" element-eId="DU/2025/1676__art_93a__ust_1" akt="https://eli.gov.pl/eli/DU/2025/1676" gd:nowGUID="dff9bd44-bb71-465b-beef-babd8b822d98" />w art. 93a w ust. 1 wyrazy „art. 91 ust. 3 pkt 2 lit. a” zastępuje się wyrazami „art. 91 ust. 3 pkt 3 lit. a”,</zdanie>
+              </p>
+            </tiret>
+            <tiret eId="DU/2026/180__art_4__pkt_1__lit_c__tir_2" gd:GUID="b3b70030-be68-46cb-a15a-82b76aead3a5" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-03_DU-2026-180_odczytane.x" wejscie-w-zycie="2026-03-03">
+              <p>
+                <zdanie nr="1" gd:zdGUID="fe32bb3c-e30b-4032-b6a4-1df359fbafcf" fragment="7" gd:fragmentGUID="d8d28a63-5603-4307-83a6-c61bc33801d3" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-03_DU-2026-180_odczytane.x" wejscie-w-zycie="2026-03-03">w art. 93b w ust. 1:</zdanie>
+              </p>
+              <podw-tiret eId="DU/2026/180__art_4__pkt_1__lit_c__tir_2__dwtir_1" gd:GUID="7f4c5799-2113-4b21-9754-bb25960c33ad" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-03_DU-2026-180_odczytane.x" wejscie-w-zycie="2026-03-03">
+                <p>
+                  <zdanie nr="1" gd:zdGUID="fe32bb3c-e30b-4032-b6a4-1df359fbafcf" fragment="8" gd:fragmentGUID="0bf9a3db-384a-40c7-941c-62eba0c9d4c4" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-03_DU-2026-180_odczytane.x" wejscie-w-zycie="2026-03-03"><now:zamien-tekst stary-tekst="art. 91 ust. 3 pkt 2 lit. a" nowy-tekst="art. 91 ust. 3 pkt 3 lit. a" element-eId="DU/2025/1676__art_93b__ust_1" akt="https://eli.gov.pl/eli/DU/2025/1676" gd:nowGUID="44429d79-2336-4372-b866-e8da886b97ad" />wyrazy „art. 91 ust. 3 pkt 2 lit. a” zastępuje się wyrazami „art. 91 ust. 3 pkt 3 lit. a”,</zdanie>
+                </p>
+              </podw-tiret>
+              <podw-tiret eId="DU/2026/180__art_4__pkt_1__lit_c__tir_2__dwtir_2" gd:GUID="a007cd24-df72-41bf-a6cf-ed8cf6749a2c" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-03_DU-2026-180_odczytane.x" wejscie-w-zycie="2026-03-03">
+                <p>
+                  <zdanie nr="1" gd:zdGUID="fe32bb3c-e30b-4032-b6a4-1df359fbafcf" fragment="9" gd:fragmentGUID="4e45791b-6c8c-466d-a834-404be1eb0ebc" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-03_DU-2026-180_odczytane.x" wejscie-w-zycie="2026-03-03"><now:zamien-tekst stary-tekst="dwa wykroczenia przeciwko bezpieczeństwu w komunikacji" nowy-tekst="dwa wykroczenia przeciwko bezpieczeństwu w komunikacji, o których mowa w art. 92 ust. 5" element-eId="DU/2025/1676__art_93b__ust_1" akt="https://eli.gov.pl/eli/DU/2025/1676" gd:nowGUID="ede0f59c-0b7a-4af2-8616-1a042cb68b78" />wyrazy „dwa wykroczenia przeciwko bezpieczeństwu w komunikacji” zastępuje się wyrazami „dwa wykroczenia przeciwko bezpieczeństwu w komunikacji, o których mowa w art. 92 ust. 5”,</zdanie>
+                </p>
+              </podw-tiret>
+            </tiret>
+          </litera>
+          <litera eId="DU/2026/180__art_4__pkt_1__lit_d" gd:GUID="c98c9c9b-1d3a-4416-a9b4-24b139585b1b" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-03_DU-2026-180_odczytane.x" wejscie-w-zycie="2026-03-03">
+            <nr>d</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="fe32bb3c-e30b-4032-b6a4-1df359fbafcf" fragment="10" gd:fragmentGUID="4a7878a4-6176-4383-808e-50cc91479f28" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-03_DU-2026-180_odczytane.x" wejscie-w-zycie="2026-03-03">w pkt 23 w art. 94 w ust. 5:</zdanie>
+            </p>
+            <tiret eId="DU/2026/180__art_4__pkt_1__lit_d__tir_1" gd:GUID="cc64a93e-36d8-47fd-9ab6-fbd7c2c1c1f3" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-03_DU-2026-180_odczytane.x" wejscie-w-zycie="2026-03-03">
+              <p>
+                <zdanie nr="1" gd:zdGUID="fe32bb3c-e30b-4032-b6a4-1df359fbafcf" fragment="11" gd:fragmentGUID="90322c8b-15f7-4228-a8b3-efe80d051793" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-03_DU-2026-180_odczytane.x" wejscie-w-zycie="2026-03-03"><now:zamien-tekst stary-tekst="nauki" nowy-tekst="techniki" element-eId="DU/2025/1676__art_4__pkt_2__lit_b" akt="https://eli.gov.pl/eli/DU/2025/1676" gd:nowGUID="22c1a6b6-274a-4bf7-b551-0df00ee2c572" />w pkt 2 w lit. b wyraz „nauki” zastępuje się wyrazem „techniki”,</zdanie>
+              </p>
+            </tiret>
+            <tiret eId="DU/2026/180__art_4__pkt_1__lit_d__tir_2" gd:GUID="4292970d-5d7f-484d-8dca-82ceeec1ec89" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-03_DU-2026-180_odczytane.x" wejscie-w-zycie="2026-03-03">
+              <p>
+                <zdanie nr="1" gd:zdGUID="fe32bb3c-e30b-4032-b6a4-1df359fbafcf" fragment="12" gd:fragmentGUID="fa7c3571-b133-4899-a64a-12932440e047" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-03_DU-2026-180_odczytane.x" wejscie-w-zycie="2026-03-03"><now:zamien-tekst stary-tekst="techniki" nowy-tekst="techniki jazdy" element-eId="DU/2025/1676__art_4__pkt_3" akt="https://eli.gov.pl/eli/DU/2025/1676" gd:nowGUID="901ce763-a7d3-470e-b95d-c607713afaef" />w pkt 3 po wyrazie „techniki” dodaje się wyraz „jazdy”,</zdanie>
+              </p>
+            </tiret>
+          </litera>
+          <litera eId="DU/2026/180__art_4__pkt_1__lit_e" gd:GUID="7f5136d9-76c3-4880-bb75-809b37d596eb" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-03_DU-2026-180_odczytane.x" wejscie-w-zycie="2026-03-03">
+            <nr>e</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="fe32bb3c-e30b-4032-b6a4-1df359fbafcf" fragment="13" gd:fragmentGUID="543b0b14-48cc-44e4-85a0-3eb6cba268ff" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-03_DU-2026-180_odczytane.x" wejscie-w-zycie="2026-03-03"><now:zamien-tekst stary-tekst="art. 102 ust. 1 pkt 1a, 2, 4, 5 lub 7" nowy-tekst="art. 102 ust. 1 pkt 1a–5 lub 7" element-eId="DU/2025/1676__art_4__pkt_29" akt="https://eli.gov.pl/eli/DU/2025/1676" gd:nowGUID="7a4f8c0a-86b5-4492-97a4-a48c2a06c2df" />w pkt 29 w art. 104a w ust. 1 w pkt 2 wyrazy „art. 102 ust. 1 pkt 1a, 2, 4, 5 lub 7” zastępuje się wyrazami „art. 102 ust. 1 pkt 1a–5 lub 7”;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2026/180__art_4__pkt_2" gd:GUID="0b6a6821-6076-411f-b483-b34b054f8215" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-03_DU-2026-180_odczytane.x" wejscie-w-zycie="2026-03-03">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="fe32bb3c-e30b-4032-b6a4-1df359fbafcf" fragment="14" gd:fragmentGUID="5804d424-72e6-4f20-8460-162b573c4219" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-03_DU-2026-180_odczytane.x" wejscie-w-zycie="2026-03-03">w art. 9:</zdanie>
+          </p>
+          <litera eId="DU/2026/180__art_4__pkt_2__lit_a" gd:GUID="6018056e-fb2f-4ab4-a677-2177c008af0e" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-03_DU-2026-180_odczytane.x" wejscie-w-zycie="2026-03-03">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="fe32bb3c-e30b-4032-b6a4-1df359fbafcf" fragment="15" gd:fragmentGUID="de11aad4-dfff-4d3b-9387-a9177e4fe1b6" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-03_DU-2026-180_odczytane.x" wejscie-w-zycie="2026-03-03">w ust. 1:</zdanie>
+            </p>
+            <tiret eId="DU/2026/180__art_4__pkt_2__lit_a__tir_1" gd:GUID="e394ebb8-8911-41ab-8599-9b0cc6a35b7c" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-03_DU-2026-180_odczytane.x" wejscie-w-zycie="2026-03-03">
+              <p>
+                <zdanie nr="1" gd:zdGUID="fe32bb3c-e30b-4032-b6a4-1df359fbafcf" fragment="16" gd:fragmentGUID="9981f94d-8bb2-433f-8666-505742bf367e" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-03_DU-2026-180_odczytane.x" wejscie-w-zycie="2026-03-03"><now:zamien-tekst stary-tekst="art. 102 ust. 1 pkt 1a lit. b oraz ust. 1b i ust. 3" nowy-tekst="art. 102 ust. 1 pkt 1a oraz ust. 1b, ust. 1cb i ust. 3" element-eId="DU/2025/1676__art_9__ust_1" akt="https://eli.gov.pl/eli/DU/2025/1676" gd:nowGUID="f0601fc2-226a-4467-9993-09a33f3b978e" />wyrazy „art. 102 ust. 1 pkt 1a lit. b oraz ust. 1b i ust. 3” zastępuje się wyrazami „art. 102 ust. 1 pkt 1a oraz ust. 1b, ust. 1cb i ust. 3”,</zdanie>
+              </p>
+            </tiret>
+            <tiret eId="DU/2026/180__art_4__pkt_2__lit_a__tir_2" gd:GUID="a048e46e-ea8e-4b44-b9f8-1d1a65fe0ec1" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-03_DU-2026-180_odczytane.x" wejscie-w-zycie="2026-03-03">
+              <p>
+                <zdanie nr="1" gd:zdGUID="fe32bb3c-e30b-4032-b6a4-1df359fbafcf" fragment="17" gd:fragmentGUID="f16752af-56f5-4cd2-9f91-371ab3c19256" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-03_DU-2026-180_odczytane.x" wejscie-w-zycie="2026-03-03"><now:zamien-tekst stary-tekst="art. 103 ust. 1 pkt 3, 5 i 6" nowy-tekst="art. 103 ust. 1 pkt 3 i 6" element-eId="DU/2025/1676__art_9__ust_1" akt="https://eli.gov.pl/eli/DU/2025/1676" gd:nowGUID="1e947de9-0fa5-4a52-952f-a1a1eb1c5a20" />wyrazy „art. 103 ust. 1 pkt 3, 5 i 6” zastępuje się wyrazami „art. 103 ust. 1 pkt 3 i 6”,</zdanie>
+              </p>
+            </tiret>
+          </litera>
+          <litera eId="DU/2026/180__art_4__pkt_2__lit_b" gd:GUID="39e4b459-f570-4b18-9dbb-613f04ab592c" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-03_DU-2026-180_odczytane.x" wejscie-w-zycie="2026-03-03">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="fe32bb3c-e30b-4032-b6a4-1df359fbafcf" fragment="18" gd:fragmentGUID="93e7a8b9-3d32-4966-9f86-c0ed08ab4be7" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-03_DU-2026-180_odczytane.x" wejscie-w-zycie="2026-03-03"><now:zamien-tekst stary-tekst="art. 103 ust. 1 pkt 3, 5 i 6" nowy-tekst="art. 103 ust. 1 pkt 3 i 6" element-eId="DU/2025/1676__art_9__ust_2" akt="https://eli.gov.pl/eli/DU/2025/1676" gd:nowGUID="93652321-d171-42e2-b05f-8a0819332df2" />w ust. 2 wyrazy „art. 103 ust. 1 pkt 3, 5 i 6” zastępuje się wyrazami „art. 103 ust. 1 pkt 3 i 6”;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2026/180__art_4__pkt_3" gd:GUID="02e056af-4d96-49d0-8e0a-fdb79d9da1df" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-03_DU-2026-180_odczytane.x" wejscie-w-zycie="2026-03-03">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="fe32bb3c-e30b-4032-b6a4-1df359fbafcf" fragment="19" gd:fragmentGUID="fe4f0e80-0754-4bb7-bea9-4d121c82f1a2" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-03_DU-2026-180_odczytane.x" wejscie-w-zycie="2026-03-03"><now:zamien-tekst stary-tekst="art. 11 ust. 5" nowy-tekst="art. 11 ust. 1 pkt 5" element-eId="DU/2025/1676__art_12" akt="https://eli.gov.pl/eli/DU/2025/1676" gd:nowGUID="99743571-2e99-4fc7-87dd-0862631c8022" />w art. 12 wyrazy „art. 11 ust. 5” zastępuje się wyrazami „art. 11 ust. 1 pkt 5”;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/180__art_4__pkt_4" gd:GUID="1d8b2846-aab2-437f-8ebe-1e8bf31d7050" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-03_DU-2026-180_odczytane.x" wejscie-w-zycie="2026-03-03">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="fe32bb3c-e30b-4032-b6a4-1df359fbafcf" fragment="20" gd:fragmentGUID="d77dd5cb-bfbf-4d43-82bd-506f4dfc67c9" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-03_DU-2026-180_odczytane.x" wejscie-w-zycie="2026-03-03">art. 16 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2025/1676" cudzyslowy="oba" gd:nowGUID="6062b357-501d-40c4-a5c7-ceb71e8e1f0e" element-eId="DU/2025/1676__art_16" funkcja="zastap"><artykul eId="DU/2025/1676__art_16" gd:GUID="da0e0858-bc32-4473-a9c9-a7e260e05ed6" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-03_DU-2026-180_odczytane.x" wejscie-w-zycie="2026-03-03"><nr>16</nr><ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="ff7f14b6-084b-4427-95f7-55342ee274a1" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-03_DU-2026-180_odczytane.x" wejscie-w-zycie="2026-03-03"><p><zdanie nr="1" gd:zdGUID="0609ee49-96b6-47d6-8266-1fd50c674920" fragment="1" gd:fragmentGUID="204cb339-5df4-4caa-8561-fb49817e5b13" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-03_DU-2026-180_odczytane.x" wejscie-w-zycie="2026-03-03">Do osób, które uzyskały uprawnienia do kierowania pojazdami przed dniem wejścia w życie niniejszej ustawy, nie stosuje się przepisów rozdziału 14 ustawy zmienianej w art. 4 w brzmieniu nadanym niniejszą ustawą.</zdanie></p></ustep-n></artykul></cytat-strukt>.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2026/180__art_5" gd:GUID="dab855f8-8280-40a9-86bf-37c353b067ef" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-18_DU-2026-180_domyslne.x" wejscie-w-zycie="2026-05-18">
+      <nr>5</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="b07524a0-825e-4490-b56f-f1c313ca3481" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-18_DU-2026-180_domyslne.x" wejscie-w-zycie="2026-05-18">
+        <p>
+          <zdanie nr="1" gd:zdGUID="804f7e10-a9c1-4ee6-8ce7-7998ab7749bf" fragment="1" gd:fragmentGUID="b488ad72-124d-49b8-98fc-009258e48d5e" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-18_DU-2026-180_domyslne.x" wejscie-w-zycie="2026-05-18">Dotychczasowe przepisy wykonawcze wydane na podstawie art. 66 ust. 7 ustawy zmienianej w art. 1 zachowują moc do dnia wejścia w życie przepisów wykonawczych wydanych na podstawie art. 66 ust. 7 ustawy zmienianej w art. 1 w brzmieniu nadanym niniejszą ustawą i mogą być zmieniane na podstawie tych przepisów, jednak niedłużej niż przez 24 miesiące od dnia wejścia w życie niniejszej ustawy.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2026/180__art_6" gd:GUID="79638437-2d65-423d-90f9-bfa7fa460efe" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-18_DU-2026-180_domyslne.x" wejscie-w-zycie="2026-05-18">
+      <nr>6</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="1fc7d67f-21fd-4902-9c12-28057c7491c1" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-18_DU-2026-180_domyslne.x" wejscie-w-zycie="2026-05-18">
+        <p>
+          <zdanie nr="1" gd:zdGUID="64440b00-272e-4dd2-be3e-93b2fad4adeb" fragment="1" gd:fragmentGUID="0077a8ca-0703-49f7-8947-5d861040e675" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-18_DU-2026-180_domyslne.x" wejscie-w-zycie="2026-05-18">Ustawa wchodzi w życie po upływie 3 miesięcy od dnia ogłoszenia, z wyjątkiem:</zdanie>
+        </p>
+        <punkt eId="DU/2026/180__art_6__pkt_1" gd:GUID="9f9ea281-33e8-465d-a6fb-18510a647a49" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-18_DU-2026-180_domyslne.x" wejscie-w-zycie="2026-05-18">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="64440b00-272e-4dd2-be3e-93b2fad4adeb" fragment="2" gd:fragmentGUID="3d875cbb-db30-4e92-98ee-55b319bd89e3" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-18_DU-2026-180_domyslne.x" wejscie-w-zycie="2026-05-18">art. 2 pkt 1 i 2, art. 4 pkt 1 lit. b–e i pkt 2–4, które wchodzą w życie z dniem 3 marca 2026 r.;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/180__art_6__pkt_2" gd:GUID="1ffa759c-dbf5-4193-af23-4dcdb6adae25" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-18_DU-2026-180_domyslne.x" wejscie-w-zycie="2026-05-18">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="64440b00-272e-4dd2-be3e-93b2fad4adeb" fragment="3" gd:fragmentGUID="8471dbe8-2ddb-4ada-a90d-ddad2702d803" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-18_DU-2026-180_domyslne.x" wejscie-w-zycie="2026-05-18">art. 2 pkt 3 i art. 4 pkt 1 lit. a, które wchodzą w życie z dniem następującym po dniu ogłoszenia.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </artykul>
+    <organ-podpisujacy>Prezydent Rzeczypospolitej Polskiej: <i><osoba podpisujacy="true" gd:osobaGUID="50504d55-ce7f-47f8-9a0e-e5c72add5f64"><imie>K.</imie> <nazwisko>Nawrocki</nazwisko></osoba></i></organ-podpisujacy>
+  </ustawa>
+</akt-prawny>

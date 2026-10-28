@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <rozporzadzenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/1853</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>ad0cc578-beb1-43ae-81b6-f9e0f5d4c675</gd:GUIDwersji>
+      <AdresISAP>WDU20250001853</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>1853</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 1853</AdresWyswietlany>
+      <Tytul>Rozporządzenie Ministra Zdrowia z dnia 19 grudnia 2025 r. zmieniające rozporządzenie w sprawie rodzajów, zakresu i wzorów dokumentacji medycznej oraz sposobu jej przetwarzania</Tytul>
+      <Rodzaj>ROZP</Rodzaj>
+      <DataOgloszenia>2025-12-23</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-12-19</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2026-01-01_DU-2025-1853_odczytane" rodzaj="wejscie-w-zycie" pochodzenie="odczytane" data="2026-01-01" podstawa="§ 4" zrodlo="https://eli.gov.pl/eli/DU/2025/1853" dowod="DU/2025/1853__art_4" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1853_odczytane.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2026-01-01_DU-2025-1853_odczytane" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="7880d8ef-21a9-4ece-aab0-56f89cc6e431" rola="wydajacy">
+          <Nazwa>Minister Zdrowia</Nazwa>
+          <OrganPodpisujacy>Minister Zdrowia</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>T.</imie> <nazwisko>Maciejewski</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Rozporządzenie</rodzaj-aktu>
+    <autor-aktu>Ministra Zdrowia<odnosnik id-odnosnika="1" symbol="1" gd:GUID="7036696f-2540-4310-8aab-d72cb36ce25c"><p><zdanie nr="1" gd:zdGUID="a3b1a9e7-834f-4f9d-ab8a-484e38ca18d5" fragment="1" gd:fragmentGUID="82f55fb9-8d07-4a82-b64f-2b288b66c86d">Minister Zdrowia kieruje działem administracji rządowej – zdrowie, na podstawie § 1 ust. 2 rozporządzenia Prezesa Rady Ministrów z dnia 25 lipca 2025 r. w sprawie szczegółowego zakresu działania Ministra Zdrowia (Dz. U. poz. 1004).</zdanie></p></odnosnik></autor-aktu>
+    <data>z dnia 19 grudnia 2025 r.</data>
+    <tytul>zmieniające rozporządzenie w sprawie rodzajów, zakresu i wzorów dokumentacji medycznej oraz sposobu jej przetwarzania</tytul>
+    <podstawa-prawna>Na podstawie art. 30 ust. 1 ustawy z dnia 6 listopada 2008 r. o prawach pacjenta i Rzeczniku Praw Pacjenta (Dz. U. z 2024 r. poz. 581) zarządza się, co następuje:</podstawa-prawna>
+    <paragraf eId="DU/2025/1853__art_1" gd:GUID="34835804-9f4c-4863-a182-a52f53a320ad" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1853_odczytane.x" wejscie-w-zycie="2026-01-01">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="c0ac754b-3229-45ee-9016-5e33b9d0ae44" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1853_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="fac79386-2b82-49b3-92db-901d91d6f4c5" fragment="1" gd:fragmentGUID="40aee266-3fd4-4de2-b5de-29c1fa0d6f89" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1853_odczytane.x" wejscie-w-zycie="2026-01-01">W rozporządzeniu Ministra Zdrowia z dnia 6 kwietnia 2020 r. w sprawie rodzajów, zakresu i wzorów dokumentacji medycznej oraz sposobu jej przetwarzania (Dz. U. z 2024 r. poz. 798 oraz z 2025 r. poz. 931) wprowadza się następujące zmiany:</zdanie>
+        </p>
+        <punkt eId="DU/2025/1853__art_1__pkt_1" gd:GUID="8473668e-08bf-4edd-b7c9-2d10106f7ccd" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1853_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="fac79386-2b82-49b3-92db-901d91d6f4c5" fragment="2" gd:fragmentGUID="42ce3180-a2a3-4ba1-a3d2-9ecaafd3b94b" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1853_odczytane.x" wejscie-w-zycie="2026-01-01">w § 7 ust. 1 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/798" cudzyslowy="oba" gd:nowGUID="fe146e7f-42c2-4492-8086-b8bf7b2055d3" element-eId="DU/2024/798__art_7__ust_1" funkcja="zastap"><ustep eId="DU/2024/798__art_7__ust_1" gd:GUID="42a4e745-fd51-4333-bddb-b2f5ecbaff78" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1853_odczytane.x" wejscie-w-zycie="2026-01-01"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="5b9d82ee-115e-4495-8415-a4310d76774b" fragment="1" gd:fragmentGUID="cb9c27ac-d037-4b93-8dd4-edf8b4cfaafc" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1853_odczytane.x" wejscie-w-zycie="2026-01-01">W dokumentacji wpisuje się nazwę i numer statystyczny rozpoznania choroby, problemu zdrowotnego lub urazu, według obowiązującej Międzynarodowej Klasyfikacji Chorób i Problemów Zdrowotnych.</zdanie></p></ustep></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1853__art_1__pkt_2" gd:GUID="c807cfdf-e20d-4bf4-8e6c-4d81a15a7b4e" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1853_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="fac79386-2b82-49b3-92db-901d91d6f4c5" fragment="3" gd:fragmentGUID="3e0c6111-e972-4031-9426-d46347ae0d82" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1853_odczytane.x" wejscie-w-zycie="2026-01-01">w § 9 w ust. 2:</zdanie>
+          </p>
+          <litera eId="DU/2025/1853__art_1__pkt_2__lit_a" gd:GUID="2bfc588d-87b7-4c63-b1cd-8cd792b8b53f" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1853_odczytane.x" wejscie-w-zycie="2026-01-01">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="fac79386-2b82-49b3-92db-901d91d6f4c5" fragment="4" gd:fragmentGUID="bc34a2b4-e4df-4578-a673-00f2af541051" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1853_odczytane.x" wejscie-w-zycie="2026-01-01">pkt 1 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/798" cudzyslowy="oba" gd:nowGUID="2839e067-2636-42c4-bdf8-f8093550b013" element-eId="DU/2024/798__art_9__ust_2__pkt_1" funkcja="zastap"><punkt eId="DU/2024/798__art_9__ust_2__pkt_1" gd:GUID="34cabdc1-f9b4-432b-b73f-8566702a2d98" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1853_odczytane.x" wejscie-w-zycie="2026-01-01"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="4f64d6bc-ce00-473b-8d9c-44a2ffe6c09e" fragment="1" gd:fragmentGUID="f09702a1-90a8-421f-8f39-9c442ea99e66" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1853_odczytane.x" wejscie-w-zycie="2026-01-01">oznaczenie podmiotu wystawiającego skierowanie, zgodnie z § 10 pkt 1, i adres miejsca wystawienia skierowania;</zdanie></p></punkt></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1853__art_1__pkt_2__lit_b" gd:GUID="d56064c4-5def-44dd-8187-35d2dc36124c" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1853_odczytane.x" wejscie-w-zycie="2026-01-01">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="fac79386-2b82-49b3-92db-901d91d6f4c5" fragment="5" gd:fragmentGUID="2fc56cf2-0381-472e-8479-4c728a93bcd1" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1853_odczytane.x" wejscie-w-zycie="2026-01-01">pkt 3 i 4 otrzymują brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/798" cudzyslowy="otwierajacy" gd:nowGUID="ea6a5d2c-beb3-4b30-a997-97dd0aedc4bd" element-eId="DU/2024/798__art_9__ust_2__pkt_3" funkcja="zastap"><punkt eId="DU/2024/798__art_9__ust_2__pkt_3" gd:GUID="dbfb83df-72dd-4153-a3c7-6cc6d44dee87" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1853_odczytane.x" wejscie-w-zycie="2026-01-01"><nr>3</nr><p><zdanie nr="1" gd:zdGUID="6b52c26a-e5c5-436d-a00e-694cbee052ad" fragment="1" gd:fragmentGUID="297fcbd6-1f8c-4af7-8a7f-873d21445de4" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1853_odczytane.x" wejscie-w-zycie="2026-01-01">oznaczenie rodzaju badania, konsultacji lub leczenia, na które kieruje się pacjenta, zgodnie z obowiązującą Międzynarodową Klasyfikacją Procedur Medycznych;</zdanie></p></punkt></cytat-strukt><cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/798" cudzyslowy="zamykajacy" gd:nowGUID="2fa8968c-ca42-4cea-95a0-884eebb6044d" element-eId="DU/2024/798__art_9__ust_2__pkt_4" funkcja="zastap"><punkt eId="DU/2024/798__art_9__ust_2__pkt_4" gd:GUID="6d17b335-3172-4b84-aa91-67729f5a9fbf" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1853_odczytane.x" wejscie-w-zycie="2026-01-01"><nr>4</nr><p><zdanie nr="1" gd:zdGUID="094ee48e-718e-4c8b-a8c7-e09eac3c1885" fragment="1" gd:fragmentGUID="f1f9230c-13c1-4516-ab6b-699bbb564007" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1853_odczytane.x" wejscie-w-zycie="2026-01-01">rozpoznanie kliniczne dotyczące problemu zdrowotnego, stanowiące przyczynę wystawienia skierowania oraz rozpoznania współistniejące, z zastosowaniem obowiązującej Międzynarodowej Klasyfikacji Chorób i Problemów Zdrowotnych;</zdanie></p></punkt></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1853__art_1__pkt_2__lit_c" gd:GUID="e886382f-b1fd-4f8e-9510-b9cc2594067b" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1853_odczytane.x" wejscie-w-zycie="2026-01-01">
+            <nr>c</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="fac79386-2b82-49b3-92db-901d91d6f4c5" fragment="6" gd:fragmentGUID="d7aba812-3137-4940-9159-7b1e7308b1fd" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1853_odczytane.x" wejscie-w-zycie="2026-01-01"><now:zamien-tekst stary-tekst="." nowy-tekst=";" element-eId="DU/2024/798__art_9__ust_2__pkt_8" akt="https://eli.gov.pl/eli/DU/2024/798" now:wystapienie="ostatnie" gd:nowGUID="c60d6e81-54e4-4e6b-b935-85055db8c201" />w pkt 8 kropkę zastępuje się średnikiem i dodaje się pkt 9 w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/798" cudzyslowy="oba" gd:nowGUID="94d14ade-6be6-414f-830f-f1f23f5fe8ca" element-eId="DU/2024/798__art_9__ust_2__pkt_8" funkcja="dodaj-po"><punkt eId="DU/2024/798__art_9__ust_2__pkt_9" gd:GUID="c95f89ff-4d1b-4d7c-9e65-1b672c6a9dc9" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1853_odczytane.x" wejscie-w-zycie="2026-01-01"><nr>9</nr><p><zdanie nr="1" gd:zdGUID="ee38d5df-3281-43e3-8ae3-236e938b1da5" fragment="1" gd:fragmentGUID="a5dc6066-d2b2-4cca-8ed8-c3e6c6779705" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1853_odczytane.x" wejscie-w-zycie="2026-01-01">numer umowy o udzielanie świadczeń opieki zdrowotnej zawartej z Narodowym Funduszem Zdrowia, w ramach wykonania której zostało wystawione skierowanie.</zdanie></p></punkt></cytat-strukt>;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2025/1853__art_1__pkt_3" gd:GUID="488e2e36-353f-4839-9996-40596d630d8d" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1853_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="fac79386-2b82-49b3-92db-901d91d6f4c5" fragment="7" gd:fragmentGUID="1abe2edf-c396-4a8c-8bb3-4c6c4dc7218d" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1853_odczytane.x" wejscie-w-zycie="2026-01-01">w § 10 pkt 1 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/798" cudzyslowy="oba" gd:nowGUID="ea33ffac-03f2-487b-ad84-0a7e283df2e7" element-eId="DU/2024/798__art_10__pkt_1" funkcja="zastap"><punkt eId="DU/2024/798__art_10__pkt_1" gd:GUID="879edd41-b233-4d0f-bda7-7f0d784248bd" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1853_odczytane.x" wejscie-w-zycie="2026-01-01"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="ae6ca93d-8a79-4c28-ae66-fa0ac333aac9" fragment="1" gd:fragmentGUID="d81ecf5c-d325-4d64-aaae-a4319c288355" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1853_odczytane.x" wejscie-w-zycie="2026-01-01">oznaczenie podmiotu:</zdanie></p><litera eId="DU/2024/798__art_10__pkt_1__lit_a" gd:GUID="03a14bd9-cf7d-444e-8c45-5cd80b560030" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1853_odczytane.x" wejscie-w-zycie="2026-01-01"><nr>a</nr><p><zdanie nr="1" gd:zdGUID="ae6ca93d-8a79-4c28-ae66-fa0ac333aac9" fragment="2" gd:fragmentGUID="6f48b482-ff39-434c-a912-d94bcf8eb4a6" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1853_odczytane.x" wejscie-w-zycie="2026-01-01">nazwę i adres podmiotu,</zdanie></p></litera><litera eId="DU/2024/798__art_10__pkt_1__lit_b" gd:GUID="5b1c3481-5142-4947-a534-46111ac3d2c6" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1853_odczytane.x" wejscie-w-zycie="2026-01-01"><nr>b</nr><p><zdanie nr="1" gd:zdGUID="ae6ca93d-8a79-4c28-ae66-fa0ac333aac9" fragment="3" gd:fragmentGUID="691e9401-e384-4ffb-a534-198f7df6ba37" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1853_odczytane.x" wejscie-w-zycie="2026-01-01">kod resortowy, stanowiący część I systemu resortowych kodów identyfikacyjnych, o którym mowa w przepisach wydanych na podstawie art. 105 ust. 5 ustawy z dnia 15 kwietnia 2011 r. o działalności leczniczej (Dz. U. z 2025 r. poz. 450, 620, 637 i 1211), jeżeli dotyczy,</zdanie></p></litera><litera eId="DU/2024/798__art_10__pkt_1__lit_c" gd:GUID="f7489a44-7126-4f3f-b966-5cf79c395f2a" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1853_odczytane.x" wejscie-w-zycie="2026-01-01"><nr>c</nr><p><zdanie nr="1" gd:zdGUID="ae6ca93d-8a79-4c28-ae66-fa0ac333aac9" fragment="4" gd:fragmentGUID="58443125-5271-471b-8e30-a018d3850ee9" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1853_odczytane.x" wejscie-w-zycie="2026-01-01">nazwę zakładu leczniczego podmiotu leczniczego oraz 14-cyfrowy numer REGON usługodawcy w rozumieniu art. 2 pkt 15 ustawy z dnia 28 kwietnia 2011 r. o systemie informacji w ochronie zdrowia, jeżeli dotyczy,</zdanie></p></litera><litera eId="DU/2024/798__art_10__pkt_1__lit_d" gd:GUID="e63073ff-851c-4f71-86d6-e9f6331906fb" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1853_odczytane.x" wejscie-w-zycie="2026-01-01"><nr>d</nr><p><zdanie nr="1" gd:zdGUID="ae6ca93d-8a79-4c28-ae66-fa0ac333aac9" fragment="5" gd:fragmentGUID="afa0d500-c2a7-44fe-9eaa-66e5952ac8f8" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1853_odczytane.x" wejscie-w-zycie="2026-01-01">nazwę i niepowtarzalny kod identyfikujący jednostkę organizacyjną zakładu leczniczego w strukturze organizacyjnej podmiotu leczniczego stanowiący część V systemu resortowych kodów identyfikacyjnych, o którym mowa w przepisach wydanych na podstawie art. 105 ust. 5 ustawy z dnia 15 kwietnia 2011 r. o działalności leczniczej, jeżeli dotyczy,</zdanie></p></litera><litera eId="DU/2024/798__art_10__pkt_1__lit_e" gd:GUID="4a2ac29d-bbca-4cc9-b16d-16a89b5c2021" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1853_odczytane.x" wejscie-w-zycie="2026-01-01"><nr>e</nr><p><zdanie nr="1" gd:zdGUID="ae6ca93d-8a79-4c28-ae66-fa0ac333aac9" fragment="6" gd:fragmentGUID="65cc9422-79a4-42b2-881d-a1706e8c2c81" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1853_odczytane.x" wejscie-w-zycie="2026-01-01">nazwę i niepowtarzalny kod identyfikujący jednostkę organizacyjną zakładu leczniczego podmiotu leczniczego w strukturze organizacyjnej podmiotu leczniczego stanowiący część VII systemu resortowych kodów identyfikacyjnych, o którym mowa w przepisach wydanych na podstawie art. 105 ust. 5 ustawy z dnia 15 kwiet- nia 2011 r. o działalności leczniczej, jeżeli dotyczy,</zdanie></p></litera><litera eId="DU/2024/798__art_10__pkt_1__lit_f" gd:GUID="0525dec9-2c64-4408-87ff-9a6bb275fe65" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1853_odczytane.x" wejscie-w-zycie="2026-01-01"><nr>f</nr><p><zdanie nr="1" gd:zdGUID="ae6ca93d-8a79-4c28-ae66-fa0ac333aac9" fragment="7" gd:fragmentGUID="c04e0c95-c76e-40bc-8a19-1ce1253f9297" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1853_odczytane.x" wejscie-w-zycie="2026-01-01">kod charakteryzujący specjalność komórki organizacyjnej zakładu leczniczego podmiotu leczniczego stanowiący część VIII systemu resortowych kodów identyfikacyjnych, o którym mowa w przepisach wydanych na podstawie art. 105 ust. 5 ustawy z dnia 15 kwietnia 2011 r. o działalności leczniczej, jeżeli dotyczy,</zdanie></p></litera><litera eId="DU/2024/798__art_10__pkt_1__lit_g" gd:GUID="cdf25f04-07a7-4465-9d00-f0139da35d32" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1853_odczytane.x" wejscie-w-zycie="2026-01-01"><nr>g</nr><p><zdanie nr="1" gd:zdGUID="ae6ca93d-8a79-4c28-ae66-fa0ac333aac9" fragment="8" gd:fragmentGUID="bcca839f-fccf-4a59-acbf-f054b888c3db" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1853_odczytane.x" wejscie-w-zycie="2026-01-01">numer telefonu lub adres poczty elektronicznej podmiotu.</zdanie></p></litera></punkt></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1853__art_1__pkt_4" gd:GUID="aa594f7d-f22d-4bce-be00-ef18f34809e1" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1853_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="fac79386-2b82-49b3-92db-901d91d6f4c5" fragment="8" gd:fragmentGUID="a54af323-9726-4761-acd0-893e30373974" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1853_odczytane.x" wejscie-w-zycie="2026-01-01"><now:zamien-tekst stary-tekst="(Dz. U. z 2023 r. poz. 991, 1675 i 1972)" nowy-tekst="" element-eId="DU/2024/798__art_16__ust_3__pkt_4" akt="https://eli.gov.pl/eli/DU/2024/798" gd:nowGUID="d85a7f89-7ce7-4ae7-be76-59511d83a63d" />w § 16 w ust. 3 w pkt 4 skreśla się wyrazy „(Dz. U. z 2023 r. poz. 991, 1675 i 1972)”;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1853__art_1__pkt_5" gd:GUID="426d8b3a-451e-4282-ac18-bd06c1e2b003" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1853_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="fac79386-2b82-49b3-92db-901d91d6f4c5" fragment="9" gd:fragmentGUID="c406368f-2656-4aa1-97ae-cd39fe703c0b" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1853_odczytane.x" wejscie-w-zycie="2026-01-01">w § 21 po ust. 6 dodaje się ust. 6a w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/798" cudzyslowy="oba" gd:nowGUID="111d4eb2-a1af-4c8e-aba7-1c2ce4dedf18" element-eId="DU/2024/798__art_21__ust_6" funkcja="dodaj-po"><ustep eId="DU/2024/798__art_21__ust_6a" gd:GUID="7c62bfa5-20ef-4373-be1b-06dfa17f9ac9" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1853_odczytane.x" wejscie-w-zycie="2026-01-01"><nr>6a</nr><p><zdanie nr="1" gd:zdGUID="2c77b8b0-9bf9-4174-912a-7328cd5e8386" fragment="1" gd:fragmentGUID="fdce1602-24ea-4714-81ec-27904363cf40" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1853_odczytane.x" wejscie-w-zycie="2026-01-01">Karta informacyjna z leczenia szpitalnego powstała w wyniku digitalizacji dokumentacji medycznej, o której mowa w art. 13b ustawy z dnia 28 kwietnia 2011 r. o systemie informacji w ochronie zdrowia, może być przechowywana w systemie teleinformatycznym, o którym mowa w art. 7 ust. 1 ustawy z dnia 28 kwietnia 2011 r. o systemie informacji w ochronie zdrowia.</zdanie></p></ustep></cytat-strukt>.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2025/1853__art_2" gd:GUID="4d91a86b-7167-4d66-a98b-af06e12d2c57" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1853_odczytane.x" wejscie-w-zycie="2026-01-01">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="b8e03aa9-1669-4e30-b11d-2d3eb7ff24eb" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1853_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="79f4f025-507b-49b8-9748-43bc73b64f76" fragment="1" gd:fragmentGUID="d0c09f2d-68f8-4fa9-9473-1fd1243b9c91" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1853_odczytane.x" wejscie-w-zycie="2026-01-01">Skierowania, o których mowa w § 9 rozporządzenia zmienianego w § 1, wystawione przed dniem wejścia w życie niniejszego rozporządzenia zachowują ważność.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2025/1853__art_3" gd:GUID="b1f3a934-a2df-48ab-80e9-afa8aa7b6d47" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1853_odczytane.x" wejscie-w-zycie="2026-01-01">
+      <nr>3</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="5c95dd3c-2fd8-43ec-85be-03a1e6080284" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1853_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="c7e8e49a-fcfd-4b41-90da-421777a31237" fragment="1" gd:fragmentGUID="c1ffe458-6d86-4acf-835a-ad029fe8e740" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1853_odczytane.x" wejscie-w-zycie="2026-01-01">Do dnia 30 czerwca 2026 r. skierowania, o których mowa w § 9 rozporządzenia zmienianego w § 1, mogą być wystawiane na dotychczasowych zasadach.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2025/1853__art_4" gd:GUID="ca73f81c-d747-4f1b-8e8b-de78b20c89ce" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1853_odczytane.x" wejscie-w-zycie="2026-01-01">
+      <nr>4</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="f1ba1925-284a-40f3-9b08-b605dd3c8457" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1853_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="a6d57934-e6a0-48b3-8f9a-943084dd7ff7" fragment="1" gd:fragmentGUID="c298fb4f-c1f1-45e7-8d36-b95737dc2754" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1853_odczytane.x" wejscie-w-zycie="2026-01-01">Rozporządzenie wchodzi w życie z dniem 1 stycznia 2026 r.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <organ-podpisujacy>Minister Zdrowia: wz. <i><osoba podpisujacy="true" gd:osobaGUID="b10c8ca8-a66b-423b-b144-a2fb82757b1a"><imie>T.</imie> <nazwisko>Maciejewski</nazwisko></osoba></i></organ-podpisujacy>
+  </rozporzadzenie>
+</akt-prawny>

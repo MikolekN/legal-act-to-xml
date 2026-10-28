@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <ustawa>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/1518</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>9ef73038-2271-4ba1-a7bb-e98d2a0d8c41</gd:GUIDwersji>
+      <AdresISAP>WDU20250001518</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>1518</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 1518</AdresWyswietlany>
+      <Tytul>Ustawa z dnia 9 października 2025 r. o zmianie ustawy – Kodeks postępowania cywilnego</Tytul>
+      <Rodzaj>USTAWA</Rodzaj>
+      <DataOgloszenia>2025-11-04</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-10-09</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2025-12-05_DU-2025-1518_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2025-12-05" warunek="po upływie miesiąca od dnia ogłoszenia" podstawa="art. 3" zrodlo="https://eli.gov.pl/eli/DU/2025/1518" dowod="DU/2025/1518__art_3" />
+          <Zdarzenie id="zdarz_wejscie_2026-02-05_DU-2025-1518_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2026-02-05" warunek="po upływie 3 miesięcy od dnia ogłoszenia" podstawa="art. 3" zrodlo="https://eli.gov.pl/eli/DU/2025/1518" dowod="DU/2025/1518__art_3">
+            <JednostkaAktu eId="DU/2025/1518__art_1__pkt_4" />
+          </Zdarzenie>
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2025-12-05_DU-2025-1518_domyslne.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2025-12-05_DU-2025-1518_domyslne" />
+        </GrupaCzasowa>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2026-02-05_DU-2025-1518_domyslne.x" glowna="false">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2026-02-05_DU-2025-1518_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="828d72ee-f1e3-48c6-bab4-f8654f1106e0" rola="wydajacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Sejm">
+          <Nazwa>SEJM</Nazwa>
+        </Organ>
+        <Organ gd:GUID="3d895eb0-90af-406a-83fe-ba80c15ae007" rola="podpisujacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Prezydent">
+          <Nazwa>Prezydent Rzeczypospolitej Polskiej</Nazwa>
+          <OrganPodpisujacy>Prezydent Rzeczypospolitej Polskiej</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>K.</imie> <nazwisko>Nawrocki</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Ustawa</rodzaj-aktu>
+    <data>z dnia 9 października 2025 r.</data>
+    <tytul>o zmianie ustawy – Kodeks postępowania cywilnego</tytul>
+    <artykul eId="DU/2025/1518__art_1" gd:GUID="303e73e6-bf8f-4f09-b80e-8646186517c9" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-05_DU-2025-1518_domyslne.x" wejscie-w-zycie="2025-12-05">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="18dcb60f-0c9c-4cd5-b172-df659b6cc255" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-05_DU-2025-1518_domyslne.x" wejscie-w-zycie="2025-12-05">
+        <p>
+          <zdanie nr="1" gd:zdGUID="a340fc6f-d228-44da-9b1f-7e58a5dec4e9" fragment="1" gd:fragmentGUID="0632f627-5549-40e6-b762-b0d3672c14bc" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-05_DU-2025-1518_domyslne.x" wejscie-w-zycie="2025-12-05">W ustawie z dnia 17 listopada 1964 r. – Kodeks postępowania cywilnego (Dz. U. z 2024 r. poz. 1568 i 1841 oraz z 2025 r. poz. 620, 1172 i 1302) wprowadza się następujące zmiany:</zdanie>
+        </p>
+        <punkt eId="DU/2025/1518__art_1__pkt_1" gd:GUID="b23f51e7-2dfc-4976-9a87-86bf4fcd991b" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-05_DU-2025-1518_domyslne.x" wejscie-w-zycie="2025-12-05">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a340fc6f-d228-44da-9b1f-7e58a5dec4e9" fragment="2" gd:fragmentGUID="f8c1eb0d-e4d9-4785-be91-405aa49e4178" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-05_DU-2025-1518_domyslne.x" wejscie-w-zycie="2025-12-05">art. 952 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/1568" cudzyslowy="oba" gd:nowGUID="84c257d7-5740-4463-99d9-99883b4e807a" element-eId="DU/2024/1568__art_952" funkcja="zastap"><artykul eId="DU/2024/1568__art_952" gd:GUID="d34a545a-410f-41ee-9be2-bea61a05d2d8" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-05_DU-2025-1518_domyslne.x" wejscie-w-zycie="2025-12-05"><nr>952</nr><paragraf-kodeksu eId="DU/2024/1568__art_952__par_1" gd:GUID="a35b019f-e18f-404e-a6e8-02a04aeda22f" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-05_DU-2025-1518_domyslne.x" wejscie-w-zycie="2025-12-05"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="27dd650c-84ad-4d92-b9d8-9a9acadc3fc5" fragment="1" gd:fragmentGUID="2422ad18-8eb1-48b5-90d9-de3419211f9c" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-05_DU-2025-1518_domyslne.x" wejscie-w-zycie="2025-12-05">Zajęta nieruchomość ulega sprzedaży w drodze licytacji elektronicznej albo licytacji publicznej.</zdanie><zdanie nr="2" gd:zdGUID="cc1c1662-5c75-477e-8bef-429c9acc63f5" fragment="1" gd:fragmentGUID="a97b5898-8d79-4686-9870-6f08aa2f6773" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-05_DU-2025-1518_domyslne.x" wejscie-w-zycie="2025-12-05">Termin licytacji nie może być wyznaczony wcześniej niż po upływie dwóch tygodni po uprawomocnieniu się opisu i oszacowania ani też przed uprawomocnieniem się wyroku, na podstawie którego wszczęto egzekucję.</zdanie></p></paragraf-kodeksu><paragraf-kodeksu eId="DU/2024/1568__art_952__par_2" gd:GUID="ff661b05-4501-47f5-8379-3f23b7711b74" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-05_DU-2025-1518_domyslne.x" wejscie-w-zycie="2025-12-05"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="2e2d95ed-f5b9-4bb1-8ad1-c6e7e413608f" fragment="1" gd:fragmentGUID="ecdd57cd-cc26-4b20-a1cb-8d68ccc539eb" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-05_DU-2025-1518_domyslne.x" wejscie-w-zycie="2025-12-05">Komornik dokonuje sprzedaży nieruchomości w drodze licytacji elektronicznej, chyba że przed uprawomocnieniem się opisu i oszacowania wierzyciel zażąda sprzedaży w drodze licytacji publicznej.</zdanie><zdanie nr="2" gd:zdGUID="7113873a-24ac-4bf2-9cbc-0ad77ed92c62" fragment="1" gd:fragmentGUID="1ec86cc5-bd48-4536-985c-0e26141aa692" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-05_DU-2025-1518_domyslne.x" wejscie-w-zycie="2025-12-05">Jeżeli nieruchomość została zajęta na zaspokojenie kilku wierzytelności dochodzonych przez różnych wierzycieli, żądanie takie może zgłosić którykolwiek z wierzycieli.</zdanie></p></paragraf-kodeksu></artykul></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1518__art_1__pkt_2" gd:GUID="53792c3b-be1e-4f2b-a7e9-ee066f68d392" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-05_DU-2025-1518_domyslne.x" wejscie-w-zycie="2025-12-05">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a340fc6f-d228-44da-9b1f-7e58a5dec4e9" fragment="3" gd:fragmentGUID="6e08cd58-d4f5-4ff0-ae9e-0d6eeef32ee3" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-05_DU-2025-1518_domyslne.x" wejscie-w-zycie="2025-12-05"><now:uchyl akt="https://eli.gov.pl/eli/DU/2024/1568" element-eId="DU/2024/1568__art_986[2]" gd:nowGUID="19da30e3-d4f3-4270-9fe0-07caafa63c75" />uchyla się art. 986<sup>2</sup>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1518__art_1__pkt_3" gd:GUID="2f26363c-a410-4448-9d92-823b92f72714" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-05_DU-2025-1518_domyslne.x" wejscie-w-zycie="2025-12-05">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a340fc6f-d228-44da-9b1f-7e58a5dec4e9" fragment="4" gd:fragmentGUID="1fb5b4cc-54c7-4df3-a5ea-e3a7eff9b2bc" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-05_DU-2025-1518_domyslne.x" wejscie-w-zycie="2025-12-05">w art. 986<sup>3</sup> § 1 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/1568" cudzyslowy="oba" gd:nowGUID="7fb58545-d5f6-41aa-b9e5-0244da7bf57e" element-eId="DU/2024/1568__art_986[3]__par_1" funkcja="zastap"><paragraf-kodeksu eId="DU/2024/1568__art_986[3]__par_1" gd:GUID="e7427b32-3b11-4468-97ee-1d6ec5287b3b" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-05_DU-2025-1518_domyslne.x" wejscie-w-zycie="2025-12-05"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="d0a21d6d-6cb4-4647-bb78-c1d85fccb60e" fragment="1" gd:fragmentGUID="040e8350-e413-4fb7-817a-ec5a294f1ed5" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-05_DU-2025-1518_domyslne.x" wejscie-w-zycie="2025-12-05">Jeżeli ma być sprzedanych kilka nieruchomości lub kilka części jednej nieruchomości, komornik zawiadamia o tym fakcie dłużnika oraz poucza go o treści art. 975 i terminie realizacji uprawnienia wynikającego z tego przepisu.</zdanie></p></paragraf-kodeksu></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1518__art_1__pkt_4" gd:GUID="26079526-be96-4148-bb77-912908c312f9" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-05_DU-2025-1518_domyslne.x" wejscie-w-zycie="2026-02-05">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a340fc6f-d228-44da-9b1f-7e58a5dec4e9" fragment="5" gd:fragmentGUID="aba9983d-f21d-4b33-ba5d-c0a82e3603f9" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-05_DU-2025-1518_domyslne.x" wejscie-w-zycie="2026-02-05"><now:uchyl akt="https://eli.gov.pl/eli/DU/2024/1568" element-eId="DU/2024/1568__art_986[5]__par_1__zdn_3" gd:nowGUID="f0e36fe6-56d0-4a83-9399-bdc2155ffb69" />w art. 986<sup>5</sup> w § 1 skreśla się zdanie trzecie;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1518__art_1__pkt_5" gd:GUID="da938733-39bd-4f1b-8fdf-023fcd3037bf" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-05_DU-2025-1518_domyslne.x" wejscie-w-zycie="2025-12-05">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a340fc6f-d228-44da-9b1f-7e58a5dec4e9" fragment="6" gd:fragmentGUID="cd739d48-4af1-430b-8aa2-016b3c1d3f93" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-05_DU-2025-1518_domyslne.x" wejscie-w-zycie="2025-12-05">w art. 1013<sup>6</sup> § 1 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/1568" cudzyslowy="oba" gd:nowGUID="9f02abc0-04fb-4247-b406-39900225c025" element-eId="DU/2024/1568__art_1013[6]__par_1" funkcja="zastap"><paragraf-kodeksu eId="DU/2024/1568__art_1013[6]__par_1" gd:GUID="0ee326a6-d4cb-4ec6-bbfa-46e319d510be" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-05_DU-2025-1518_domyslne.x" wejscie-w-zycie="2025-12-05"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="093c15f4-f6f3-445d-8c1a-da8cae6ad3d2" fragment="1" gd:fragmentGUID="07c92d68-1b1b-4109-8fb1-68a2e7133744" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-05_DU-2025-1518_domyslne.x" wejscie-w-zycie="2025-12-05">Jeżeli sprzedaż nieruchomości nie nastąpi w trybie sprzedaży z wolnej ręki, nieruchomość podlega sprzedaży w drodze licytacji, do której stosuje się przepisy o licytacji w egzekucji z ruchomości, z tym że licytację przeprowadza się w drodze licytacji elektronicznej, chyba że przed uprawomocnieniem się opisu i oszacowania wierzyciel zażąda sprzedaży w drodze licytacji publicznej.</zdanie><zdanie nr="2" gd:zdGUID="c1d76658-051d-4517-9fb6-36784925ae0c" fragment="1" gd:fragmentGUID="052f03ae-b85a-44a9-b06a-e691ffbf708c" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-05_DU-2025-1518_domyslne.x" wejscie-w-zycie="2025-12-05">Jeżeli nieruchomość została zajęta na zaspokojenie kilku wierzytelności dochodzonych przez różnych wierzycieli, żądanie takie może zgłosić którykolwiek z wierzycieli.</zdanie><zdanie nr="3" gd:zdGUID="482ba28f-9d02-4fd1-881d-0f2ab9966d42" fragment="1" gd:fragmentGUID="523aa972-590f-4898-962a-34da20890290" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-05_DU-2025-1518_domyslne.x" wejscie-w-zycie="2025-12-05">O terminie licytacji komornik zawiadamia uczestników postępowania stosownie do art. 954.</zdanie><zdanie nr="4" gd:zdGUID="6ed3f05e-8d8b-407c-977a-c28fb29a1fe3" fragment="1" gd:fragmentGUID="21bc8f1c-e872-48fd-9c43-13caba6e0b94" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-05_DU-2025-1518_domyslne.x" wejscie-w-zycie="2025-12-05">W obwieszczeniu o licytacji podaje się także informacje, o których mowa w art. 953 § 1 pkt 1, 3, 6 i 7.</zdanie></p></paragraf-kodeksu></cytat-strukt>.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2025/1518__art_2" gd:GUID="e882c1a1-dbde-4025-8dd2-0d2d76a25616" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-05_DU-2025-1518_domyslne.x" wejscie-w-zycie="2025-12-05">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="a681ccdb-029e-477d-b766-afb8245b44a0" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-05_DU-2025-1518_domyslne.x" wejscie-w-zycie="2025-12-05">
+        <p>
+          <zdanie nr="1" gd:zdGUID="a0debfb2-d7ed-464c-bcbc-ff15cb323046" fragment="1" gd:fragmentGUID="f80aee72-e6fa-418b-82ca-286effce81a7" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-05_DU-2025-1518_domyslne.x" wejscie-w-zycie="2025-12-05">Do egzekucji z nieruchomości wszczętych i niezakończonych przed dniem wejścia w życie niniejszej ustawy stosuje się przepisy dotychczasowe.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2025/1518__art_3" gd:GUID="9df96cb6-c279-4882-bcf5-d21a5497341c" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-05_DU-2025-1518_domyslne.x" wejscie-w-zycie="2025-12-05">
+      <nr>3</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="8128fe71-2db1-4a97-b46e-d434bd841bb8" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-05_DU-2025-1518_domyslne.x" wejscie-w-zycie="2025-12-05">
+        <p>
+          <zdanie nr="1" gd:zdGUID="e6d7b3e4-5825-4b13-b5ee-e7a06a6d8f81" fragment="1" gd:fragmentGUID="cac8eac8-5cb1-4293-b173-1cdd2443e07d" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-05_DU-2025-1518_domyslne.x" wejscie-w-zycie="2025-12-05">Ustawa wchodzi w życie po upływie miesiąca od dnia ogłoszenia, z wyjątkiem art. 1 pkt 4, który wchodzi w życie po upływie 3 miesięcy od dnia ogłoszenia.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <organ-podpisujacy>Prezydent Rzeczypospolitej Polskiej: <i><osoba podpisujacy="true" gd:osobaGUID="41ae09cb-db4e-4184-bf9c-ccf5dfec4b1d"><imie>K.</imie> <nazwisko>Nawrocki</nazwisko></osoba></i></organ-podpisujacy>
+  </ustawa>
+</akt-prawny>

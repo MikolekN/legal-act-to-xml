@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <rozporzadzenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/1717</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>5bddc805-802d-40ce-b485-30dd5a245594</gd:GUIDwersji>
+      <AdresISAP>WDU20250001717</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>1717</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 1717</AdresWyswietlany>
+      <Tytul>Rozporządzenie Ministra Finansów i Gospodarki z dnia 1 grudnia 2025 r. zmieniające rozporządzenie w sprawie zaliczenia gmin oraz miast do jednego z czterech okręgów podatkowych</Tytul>
+      <Rodzaj>ROZP</Rodzaj>
+      <DataOgloszenia>2025-12-05</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-12-01</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2026-01-01_DU-2025-1717_odczytane" rodzaj="wejscie-w-zycie" pochodzenie="odczytane" data="2026-01-01" podstawa="§ 2" zrodlo="https://eli.gov.pl/eli/DU/2025/1717" dowod="DU/2025/1717__art_2" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1717_odczytane.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2026-01-01_DU-2025-1717_odczytane" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="065f9597-690a-4bf2-9b7b-90302f6b955c" rola="wydajacy">
+          <Nazwa>Minister Finansów i Gospodarki</Nazwa>
+          <OrganPodpisujacy>Minister Finansów i Gospodarki</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>J.</imie> <nazwisko>Drop</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Rozporządzenie</rodzaj-aktu>
+    <autor-aktu>Ministra Finansów i Gospodarki<odnosnik id-odnosnika="1" symbol="1" gd:GUID="db6a1a89-78ab-478c-839f-a14c7f031d64"><p><zdanie nr="1" gd:zdGUID="c5bd3f7a-b645-4049-a34e-9b9e3ad44369" fragment="1" gd:fragmentGUID="47a84bf2-8526-4d45-b3d7-eb5187b4d208">Minister Finansów i Gospodarki kieruje działem administracji rządowej – finanse publiczne, na podstawie § 1 ust. 2 pkt 3 rozporządzenia Prezesa Rady Ministrów z dnia 25 lipca 2025 r. w sprawie szczegółowego zakresu działania Ministra Finansów i Gospodarki (Dz. U. poz. 997).</zdanie></p></odnosnik></autor-aktu>
+    <data>z dnia 1 grudnia 2025 r.</data>
+    <tytul>zmieniające rozporządzenie w sprawie zaliczenia gmin oraz miast do jednego z czterech okręgów podatkowych</tytul>
+    <podstawa-prawna>Na podstawie art. 5 ust. 1 ustawy z dnia 15 listopada 1984 r. o podatku rolnym (Dz. U. z 2025 r. poz. 1344) zarządza się, co następuje:</podstawa-prawna>
+    <paragraf eId="DU/2025/1717__art_1" gd:GUID="8c2e5615-5585-43dd-8b9e-a86cecc1ea14" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1717_odczytane.x" wejscie-w-zycie="2026-01-01">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="3b0965ba-8885-46a1-9d98-2d9a69db9209" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1717_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="a61305df-98e0-4780-8c49-659685c7a571" fragment="1" gd:fragmentGUID="55e271bc-0c96-4e44-8746-2f716b60957f" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1717_odczytane.x" wejscie-w-zycie="2026-01-01">W rozporządzeniu Ministra Finansów z dnia 10 grudnia 2001 r. w sprawie zaliczenia gmin oraz miast do jednego z czterech okręgów podatkowych (Dz. U. poz. 1614 oraz z 2024 r. poz. 1958) w załączniku pozycja 468 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2001/1614" cudzyslowy="brak" gd:nowGUID="ba0b8114-6a2d-4e22-b720-9545b16760f9" element-eId="DU/2001/1614__zal_1" funkcja="zastap-recznie"><tabela gd:GUID="3cd27155-db44-4225-b26e-0431e7cfeb4f"><tbody><tr gd:GUID="5ebc78ca-fca2-4d03-a082-eff109587cc4"><td gd:GUID="8aff3be6-d227-4730-97a8-afcd3a89b750"><tekst-zwykly gd:GUID="5ac5e205-82e9-4106-912b-7e24e7f100c1">468.</tekst-zwykly></td><td gd:GUID="b72df832-437a-453f-98ef-43d9bf979bc3"><tekst-zwykly gd:GUID="bcaa0359-ac08-41c3-bce5-ee2b5eaf86ac" /></td><td gd:GUID="0e2a026e-9886-44e0-aecc-41c8d50f0bee"><tekst-zwykly gd:GUID="cb0c54e9-2fce-4ba7-a7f8-039dd014324a">nowomiejski</tekst-zwykly></td><td gd:GUID="e85e70b5-5a33-461b-9e0d-7dcb2d99bb02"><tekst-zwykly gd:GUID="447cc33c-27e8-4149-b088-2f60806f2d02">II</tekst-zwykly></td><td gd:GUID="cc6bd6c6-0d2a-4105-a60e-a0cdec135d70"><tekst-zwykly gd:GUID="98d0dff8-e538-448c-a69d-e76933a0a260">Nowe Miasto Lubawskie (m.), Biskupiec, Kurzętnik, Bratian</tekst-zwykly></td></tr></tbody></tabela></cytat-strukt></zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2025/1717__art_2" gd:GUID="d9b3dc16-23ad-4224-97a4-c34c52aa01ef" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1717_odczytane.x" wejscie-w-zycie="2026-01-01">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="b41b9fe1-c908-490a-89a4-bac0e4e6d574" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1717_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="833c17ae-59b6-4d9d-b856-5ddf75ae7f90" fragment="1" gd:fragmentGUID="8c65f5e6-6bf5-460e-90b7-da426795e411" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1717_odczytane.x" wejscie-w-zycie="2026-01-01">Rozporządzenie wchodzi w życie z dniem 1 stycznia 2026 r.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <organ-podpisujacy>Minister Finansów i Gospodarki: wz. <i><osoba podpisujacy="true" gd:osobaGUID="267f3d2e-38ba-4e3e-8ac4-96e0b838d294"><imie>J.</imie> <nazwisko>Drop</nazwisko></osoba></i></organ-podpisujacy>
+  </rozporzadzenie>
+</akt-prawny>

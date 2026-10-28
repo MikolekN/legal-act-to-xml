@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <ustawa>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/1021</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>7766fb57-5210-4ca9-9017-0190fdec929b</gd:GUIDwersji>
+      <AdresISAP>WDU20250001021</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>1021</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 1021</AdresWyswietlany>
+      <Tytul>Ustawa z dnia 9 lipca 2025 r. o zmianie ustawy o mniejszościach narodowych i etnicznych oraz o języku regionalnym</Tytul>
+      <Rodzaj>USTAWA</Rodzaj>
+      <DataOgloszenia>2025-07-28</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-07-09</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2025-11-01_DU-2025-1021_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2025-11-01" warunek="pierwszego dnia miesiąca następującego po upływie 3 miesięcy od dnia ogłoszenia" podstawa="art. 2" zrodlo="https://eli.gov.pl/eli/DU/2025/1021" dowod="DU/2025/1021__art_2" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2025-11-01_DU-2025-1021_domyslne.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2025-11-01_DU-2025-1021_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="912a8c83-881f-47f6-9894-1ef4ed3aa3c9" rola="wydajacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Sejm">
+          <Nazwa>SEJM</Nazwa>
+        </Organ>
+        <Organ gd:GUID="775a8eb2-872e-4002-992e-5e4a14d91bca" rola="podpisujacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Prezydent">
+          <Nazwa>Prezydent Rzeczypospolitej Polskiej</Nazwa>
+          <OrganPodpisujacy>Prezydent Rzeczypospolitej Polskiej</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>A.</imie> <nazwisko>Duda</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Ustawa</rodzaj-aktu>
+    <data>z dnia 9 lipca 2025 r.</data>
+    <tytul>o zmianie ustawy o mniejszościach narodowych i etnicznych oraz o języku regionalnym</tytul>
+    <artykul eId="DU/2025/1021__art_1" gd:GUID="706ab73b-3b30-46ef-9fbd-f0ae74543712" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-01_DU-2025-1021_domyslne.x" wejscie-w-zycie="2025-11-01">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="c7b6405d-4b6d-419f-beba-541f2657e7c6" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-01_DU-2025-1021_domyslne.x" wejscie-w-zycie="2025-11-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="22d93d0f-1f32-4b16-8223-572417f2e8e7" fragment="1" gd:fragmentGUID="707fe3ee-1c75-47ad-8a5f-89f7340077bd" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-01_DU-2025-1021_domyslne.x" wejscie-w-zycie="2025-11-01">W ustawie z dnia 6 stycznia 2005 r. o mniejszościach narodowych i etnicznych oraz o języku regionalnym (Dz. U. z 2017 r. poz. 823) po art. 30 dodaje się art. 30a w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2017/823" cudzyslowy="oba" gd:nowGUID="141c2f34-ce2b-456d-b37e-4d65ed711c38" element-eId="DU/2017/823__art_30" funkcja="dodaj-po"><artykul eId="DU/2017/823__art_30a" gd:GUID="02ecacb8-069a-4127-a6f1-97d646e629d3" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-01_DU-2025-1021_domyslne.x" wejscie-w-zycie="2025-11-01"><nr>30a</nr><ustep eId="DU/2017/823__art_30a__ust_1" gd:GUID="e5ee53fc-8a00-4dc1-97f4-68ee2c814c5a" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-01_DU-2025-1021_domyslne.x" wejscie-w-zycie="2025-11-01"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="9668df00-b2d5-4d4c-93c3-c79f1f70434d" fragment="1" gd:fragmentGUID="ef4a74c8-2044-4afe-a440-d0b9a69eb4e7" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-01_DU-2025-1021_domyslne.x" wejscie-w-zycie="2025-11-01">Obsługę merytoryczną i administracyjną wchodzących w skład Komisji Wspólnej przedstawicieli mniejszości oraz przedstawicieli społeczności posługującej się językiem, o którym mowa w art. 19, w tym współprzewodniczącego Komisji Wspólnej, będącego przedstawicielem tych mniejszości i społeczności, zapewnia Kancelaria Sejmu.</zdanie></p></ustep><ustep eId="DU/2017/823__art_30a__ust_2" gd:GUID="aa256186-b33e-417e-8223-fe0a49ff3ad7" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-01_DU-2025-1021_domyslne.x" wejscie-w-zycie="2025-11-01"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="9357190b-3a83-45fb-81a7-03c53d908037" fragment="1" gd:fragmentGUID="7e0d9994-2490-4ab8-8e0b-276682e61048" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-01_DU-2025-1021_domyslne.x" wejscie-w-zycie="2025-11-01">Koszty związane z obsługą, o której mowa w ust. 1, są pokrywane z budżetu państwa ze środków, których dysponentem jest Szef Kancelarii Sejmu.</zdanie></p></ustep></artykul></cytat-strukt>.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2025/1021__art_2" gd:GUID="d1d73199-19b2-40ac-bb56-1a5c0671439d" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-01_DU-2025-1021_domyslne.x" wejscie-w-zycie="2025-11-01">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="136d3b13-c4ab-4e3f-b9a9-ab776afe6080" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-01_DU-2025-1021_domyslne.x" wejscie-w-zycie="2025-11-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="ae37305f-dfe2-4b2a-897d-81eb2749cb90" fragment="1" gd:fragmentGUID="15e0ef78-7f8c-4fcd-8537-d4c4bd0a4212" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-01_DU-2025-1021_domyslne.x" wejscie-w-zycie="2025-11-01">Ustawa wchodzi w życie pierwszego dnia miesiąca następującego po upływie 3 miesięcy od dnia ogłoszenia.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <organ-podpisujacy>Prezydent Rzeczypospolitej Polskiej: <i><osoba podpisujacy="true" gd:osobaGUID="c8913814-aa0a-49a1-9265-7b298b618722"><imie>A.</imie> <nazwisko>Duda</nazwisko></osoba></i></organ-podpisujacy>
+  </ustawa>
+</akt-prawny>

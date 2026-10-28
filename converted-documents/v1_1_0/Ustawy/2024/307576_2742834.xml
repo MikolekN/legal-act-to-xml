@@ -1,0 +1,559 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <ustawa>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2024/1757</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>4409f282-05d8-43b4-8daa-02513d11bf9f</gd:GUIDwersji>
+      <AdresISAP>WDU20240001757</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2024</Rok>
+      <Pozycja>1757</Pozycja>
+      <AdresWyswietlany>Dz.U. 2024 poz. 1757</AdresWyswietlany>
+      <Tytul>Ustawa z dnia 19 listopada 2024 r. o zmianie ustawy o podatku rolnym, ustawy o podatkach i opłatach lokalnych oraz ustawy o opłacie skarbowej</Tytul>
+      <Rodzaj>USTAWA</Rodzaj>
+      <DataOgloszenia>2024-11-29</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2024-11-19</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane" rodzaj="wejscie-w-zycie" pochodzenie="odczytane" data="2025-01-01" podstawa="art. 9" zrodlo="https://eli.gov.pl/eli/DU/2024/1757" dowod="DU/2024/1757__art_9" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="7a6c4896-b2bb-455f-8635-d990436fcd74" rola="wydajacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Sejm">
+          <Nazwa>SEJM</Nazwa>
+        </Organ>
+        <Organ gd:GUID="6a8e9b23-bfd0-4ef6-9ded-682111d00d31" rola="podpisujacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Prezydent">
+          <Nazwa>Prezydent Rzeczypospolitej Polskiej</Nazwa>
+          <OrganPodpisujacy>Prezydent Rzeczypospolitej Polskiej</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>A.</imie> <nazwisko>Duda</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Ustawa</rodzaj-aktu>
+    <data>z dnia 19 listopada 2024 r.</data>
+    <tytul>o zmianie ustawy o podatku rolnym, ustawy o podatkach i opłatach lokalnych oraz ustawy o opłacie skarbowej</tytul>
+    <artykul eId="DU/2024/1757__art_1" gd:GUID="b493a50b-f2e3-4922-9600-e8d5e1a2cd8d" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="87f50e84-55bd-4208-babb-10065939926d" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="912538b9-129d-4208-b9db-427694c00b0d" fragment="1" gd:fragmentGUID="db4c57fa-afc7-43a4-aa45-f9e4ba467297" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">W ustawie z dnia 15 listopada 1984 r. o podatku rolnym (Dz. U. z 2024 r. poz. 1176 i 1635) wprowadza się następujące zmiany:</zdanie>
+        </p>
+        <punkt eId="DU/2024/1757__art_1__pkt_1" gd:GUID="c7735328-0b40-4430-91ea-0b34c8ba915b" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="912538b9-129d-4208-b9db-427694c00b0d" fragment="2" gd:fragmentGUID="17752392-37df-451a-8000-e50ecd2ec65f" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">w art. 13d ust. 1 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/1176" cudzyslowy="oba" gd:nowGUID="9ef2a098-9614-46b9-bb07-023eba723831" element-eId="DU/2024/1176__art_13d__ust_1" funkcja="zastap"><ustep eId="DU/2024/1176__art_13d__ust_1" gd:GUID="553d88b1-f982-406c-ad48-f63859a6264f" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="01cb7317-04ad-4553-83d4-dcfbaada9e93" fragment="1" gd:fragmentGUID="e0637f18-a5c6-433f-8905-1008daa5e559" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">Zwolnienia i ulgi podatkowe określone w art. 12 ust. 1 pkt 3–7 i ust. 6, art. 13 i art. 13c stosuje się na wniosek podatnika w drodze decyzji.</zdanie></p></ustep></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2024/1757__art_1__pkt_2" gd:GUID="47f0d8e5-6a9a-4daa-899d-9d55114b754e" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="912538b9-129d-4208-b9db-427694c00b0d" fragment="3" gd:fragmentGUID="def23900-c217-4986-8e2a-de5f708bed45" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01"><now:zamien-tekst stary-tekst="rozporządzeniu Komisji (UE) nr 702/2014 z dnia 25 czerwca 2014 r. uznającym niektóre kategorie pomocy w sektorach rolnym i leśnym oraz na obszarach wiejskich za zgodne z rynkiem wewnętrznym w zastosowaniu art. 107 i 108 Traktatu o funkcjonowaniu Unii Europejskiej (Dz. Urz. UE L 193 z 01.07.2014, str. 1)" nowy-tekst="rozporządzeniu Komisji (UE) 2022/2472 z dnia 14 grudnia 2022 r. uznającym niektóre kategorie pomocy w sektorach rolnym i leśnym oraz na obszarach wiejskich za zgodne z rynkiem wewnętrznym w zastosowaniu art. 107 i 108 Traktatu o funkcjonowaniu Unii Europejskiej (Dz. Urz. UE L 327 z 21.12.2022, str. 1)" element-eId="DU/2024/1176__art_13f__ust_1__pkt_1" akt="https://eli.gov.pl/eli/DU/2024/1176" gd:nowGUID="ae4813d4-bc82-4c5e-9ffb-b54f5142d804" />w art. 13f w ust. 1 w pkt 1 wyrazy „rozporządzeniu Komisji (UE) nr 702/2014 z dnia 25 czerwca 2014 r. uznającym niektóre kategorie pomocy w sektorach rolnym i leśnym oraz na obszarach wiejskich za zgodne z rynkiem wewnętrznym w zastosowaniu art. 107 i 108 Traktatu o funkcjonowaniu Unii Europejskiej (Dz. Urz. UE L 193 z 01.07.2014, str. 1)” zastępuje się wyrazami „rozporządzeniu Komisji (UE) 2022/2472 z dnia 14 grudnia 2022 r. uznającym niektóre kategorie pomocy w sektorach rolnym i leśnym oraz na obszarach wiejskich za zgodne z rynkiem wewnętrznym w zastosowaniu art. 107 i 108 Traktatu o funkcjonowaniu Unii Europejskiej (Dz. Urz. UE L 327 z 21.12.2022, str. 1)”.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2024/1757__art_2" gd:GUID="942f3d48-98f3-473f-a303-2582aec638f9" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="a1f39122-6cac-4cf5-b790-0318777bbac3" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="944ffd1b-07e6-44f4-8cef-0fc5e82517a9" fragment="1" gd:fragmentGUID="39b8ca2d-792e-4b4c-b83f-63dca287d2f9" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">W ustawie z dnia 12 stycznia 1991 r. o podatkach i opłatach lokalnych (Dz. U. z 2023 r. poz. 70, 1313 i 2291 oraz z 2024 r. poz. 1572 i 1635) wprowadza się następujące zmiany:</zdanie>
+        </p>
+        <punkt eId="DU/2024/1757__art_2__pkt_1" gd:GUID="3c7b871f-17b8-4859-a2a6-eddaaaa568ce" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="944ffd1b-07e6-44f4-8cef-0fc5e82517a9" fragment="2" gd:fragmentGUID="90e11d4a-bdb6-44de-b120-48e4e3b3f771" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">w art. 1a:</zdanie>
+          </p>
+          <litera eId="DU/2024/1757__art_2__pkt_1__lit_a" gd:GUID="e87285d5-e998-4ad1-b0cb-271e068cccf9" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="944ffd1b-07e6-44f4-8cef-0fc5e82517a9" fragment="3" gd:fragmentGUID="ab13dfbb-15d8-4c4f-bdee-4299b2b924a6" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">w ust. 1:</zdanie>
+            </p>
+            <tiret eId="DU/2024/1757__art_2__pkt_1__lit_a__tir_1" gd:GUID="c38c0f99-1975-465e-89e1-262b7a1aa326" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">
+              <p>
+                <zdanie nr="1" gd:zdGUID="944ffd1b-07e6-44f4-8cef-0fc5e82517a9" fragment="4" gd:fragmentGUID="fef299f6-e74a-4bad-aa30-4661af5e1cb3" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">pkt 1 i 2 otrzymują brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/70" cudzyslowy="otwierajacy" gd:nowGUID="576530f6-e2a9-4e8e-a21d-40b90d18bc29" element-eId="DU/2023/70__art_1a__ust_1__pkt_1" funkcja="zastap"><punkt eId="DU/2023/70__art_1a__ust_1__pkt_1" gd:GUID="dde72a99-f86a-48dc-b1a4-c63ba05ba332" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="3f2325ba-21fb-49bf-ab02-3e8c3da6b5c3" fragment="1" gd:fragmentGUID="f022d0ff-934e-4a87-a23c-7706b4d2178c" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">budynek – obiekt wzniesiony w wyniku robót budowlanych, wraz z instalacjami zapewniającymi możliwość jego użytkowania zgodnie z przeznaczeniem, trwale związany z gruntem, wydzielony z przestrzeni za pomocą przegród budowlanych oraz który posiada fundamenty i dach, z wyłączeniem obiektu, w którym są lub mogą być gromadzone materiały sypkie, materiały występujące w kawałkach albo materiały w postaci ciekłej lub gazowej, którego podstawowym parametrem technicznym wyznaczającym jego przeznaczenie jest pojemność;</zdanie></p></punkt></cytat-strukt><cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/70" cudzyslowy="zamykajacy" gd:nowGUID="27455cc1-3690-4d75-a06c-1ec9308c5753" element-eId="DU/2023/70__art_1a__ust_1__pkt_2" funkcja="zastap"><punkt eId="DU/2023/70__art_1a__ust_1__pkt_2" gd:GUID="41a6ae2e-a464-4421-a7d8-098f9439a64b" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="5ff1c60a-0b5a-49be-b3ed-be03a098144d" fragment="1" gd:fragmentGUID="e0a076f9-9698-4f29-9ecc-c23d8b884857" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">budowla:</zdanie></p><litera eId="DU/2023/70__art_1a__ust_1__pkt_2__lit_a" gd:GUID="b7f569c7-764f-4dec-8bc0-f2cf1309afad" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>a</nr><p><zdanie nr="1" gd:zdGUID="5ff1c60a-0b5a-49be-b3ed-be03a098144d" fragment="2" gd:fragmentGUID="b3bb1a56-bdb2-4df7-83b8-10bfa46b28ad" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">obiekt niebędący budynkiem, wymieniony w załączniku nr 4 do ustawy, wraz z instalacjami zapewniającymi możliwość jego użytkowania zgodnie z przeznaczeniem,</zdanie></p></litera><litera eId="DU/2023/70__art_1a__ust_1__pkt_2__lit_b" gd:GUID="f0a2cbec-cfa2-44be-8d90-e401e2c8f45f" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>b</nr><p><zdanie nr="1" gd:zdGUID="5ff1c60a-0b5a-49be-b3ed-be03a098144d" fragment="3" gd:fragmentGUID="cef1f22f-79a6-41d1-9107-ecc1ab3f4764" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">elektrownię wiatrową, elektrownię jądrową i elektrownię fotowoltaiczną, biogazownię, biogazownię rolniczą, magazyn energii, kocioł, piec przemysłowy, kolej linową, wyciąg narciarski oraz skocznię, w części niebędącej budynkiem – wyłącznie w zakresie ich części budowlanych,</zdanie></p></litera><litera eId="DU/2023/70__art_1a__ust_1__pkt_2__lit_c" gd:GUID="e9f338fd-6e9e-4914-b1d3-195651698781" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>c</nr><p><zdanie nr="1" gd:zdGUID="5ff1c60a-0b5a-49be-b3ed-be03a098144d" fragment="4" gd:fragmentGUID="2a66de75-636a-4a90-a4b2-138727f94fac" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">urządzenie budowlane – przyłącze oraz urządzenie instalacyjne, w tym służące oczyszczaniu lub gromadzeniu ścieków, oraz inne urządzenie techniczne, bezpośrednio związane z budynkiem lub obiektem, o którym mowa w lit. a, niezbędne do ich użytkowania zgodnie z przeznaczeniem,</zdanie></p></litera><litera eId="DU/2023/70__art_1a__ust_1__pkt_2__lit_d" gd:GUID="b2ac056b-3460-4265-903f-c2bb52646dc8" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>d</nr><p><zdanie nr="1" gd:zdGUID="5ff1c60a-0b5a-49be-b3ed-be03a098144d" fragment="5" gd:fragmentGUID="bdce445d-b6b9-4a33-8827-13570cf6a487" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">urządzenie techniczne inne niż wymienione w lit. a–c – wyłącznie w zakresie jego części budowlanych,</zdanie></p></litera><litera eId="DU/2023/70__art_1a__ust_1__pkt_2__lit_e" gd:GUID="b7fa7749-aea5-49ee-8b11-7ebe92164f13" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>e</nr><p><zdanie nr="1" gd:zdGUID="5ff1c60a-0b5a-49be-b3ed-be03a098144d" fragment="6" gd:fragmentGUID="70097d6d-578d-46fa-833a-99c92125e4a2" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">fundamenty pod maszyny oraz pod urządzenia techniczne, jako odrębne pod względem technicznym części przedmiotów składających się na całość użytkową</zdanie></p></litera><czesc-wspolna-litera eId="DU/2023/70__art_1a__ust_1__pkt_2__czw" gd:GUID="4d0e33c7-5796-44a1-90f1-5ca3f04e0ee5" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01"><p><zdanie nr="1" gd:zdGUID="5ff1c60a-0b5a-49be-b3ed-be03a098144d" fragment="7" gd:fragmentGUID="9be278c0-869e-4a32-8503-f8829537155e" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">– wzniesione w wyniku robót budowlanych, także w przypadku, gdy stanowią część obiektu niewymienionego w ustawie;</zdanie></p></czesc-wspolna-litera></punkt></cytat-strukt>,</zdanie>
+              </p>
+            </tiret>
+            <tiret eId="DU/2024/1757__art_2__pkt_1__lit_a__tir_2" gd:GUID="93f5a323-8874-42bd-a6c3-104bcbcc0693" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">
+              <p>
+                <zdanie nr="1" gd:zdGUID="944ffd1b-07e6-44f4-8cef-0fc5e82517a9" fragment="5" gd:fragmentGUID="d26f8cf0-cc7a-4edf-b828-69a277eaf7b2" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">po pkt 2 dodaje się pkt 2a–2c w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/70" cudzyslowy="oba" gd:nowGUID="a9e0f3cc-185b-4c4f-be35-b950cdc95e99" element-eId="DU/2023/70__art_1a__ust_1__pkt_2" funkcja="dodaj-po"><punkt eId="DU/2023/70__art_1a__ust_1__pkt_2a" gd:GUID="558c986f-a643-416f-9b4a-946a9f237af1" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>2a</nr><p><zdanie nr="1" gd:zdGUID="1bc0d4e6-97d8-4761-ae29-abea741c184e" fragment="1" gd:fragmentGUID="cdd4ae4c-0f94-4aed-b41c-d98544cf68c3" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">obiekt budowlany – budynek lub budowlę, z wyłączeniem wyrobisk górniczych, a także niewielkich obiektów stanowiących:</zdanie></p><litera eId="DU/2023/70__art_1a__ust_1__pkt_2a__lit_a" gd:GUID="9965ae86-a503-45b2-b7f1-e487175f883e" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>a</nr><p><zdanie nr="1" gd:zdGUID="1bc0d4e6-97d8-4761-ae29-abea741c184e" fragment="2" gd:fragmentGUID="88fb76ff-80ee-46f8-85c3-c639f4f090c9" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">obiekty kultu religijnego – w szczególności kapliczki, krzyże przydrożne i figury,</zdanie></p></litera><litera eId="DU/2023/70__art_1a__ust_1__pkt_2a__lit_b" gd:GUID="b7a4c3c3-954e-4c49-9af5-f5d3859cb52a" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>b</nr><p><zdanie nr="1" gd:zdGUID="1bc0d4e6-97d8-4761-ae29-abea741c184e" fragment="3" gd:fragmentGUID="69dba065-1b65-4637-8ef2-cc23d16bed77" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">obiekty architektury ogrodowej – w szczególności posągi i figurki ogrodowe, wodotryski, mostki, pergole, murowane grille i oczka wodne,</zdanie></p></litera><litera eId="DU/2023/70__art_1a__ust_1__pkt_2a__lit_c" gd:GUID="50a5d1a0-7efa-4ae7-8ad2-c1ed63c214da" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>c</nr><p><zdanie nr="1" gd:zdGUID="1bc0d4e6-97d8-4761-ae29-abea741c184e" fragment="4" gd:fragmentGUID="a4ae6d6e-e885-4eec-a8de-4ae8e13022b6" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">obiekty użytkowe służące rekreacji codziennej i utrzymaniu porządku – w szczególności śmietniki, wiaty na wózki dziecięce i rowery oraz obiekty stanowiące wyposażenie placów zabaw dla dzieci;</zdanie></p></litera></punkt><punkt eId="DU/2023/70__art_1a__ust_1__pkt_2b" gd:GUID="4d35b481-2722-4010-8765-332642e8abdb" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>2b</nr><p><zdanie nr="1" gd:zdGUID="1bc0d4e6-97d8-4761-ae29-abea741c184e" fragment="5" gd:fragmentGUID="3d96c6ed-33d5-4311-8f27-91989c8d9847" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">roboty budowlane – prace polegające na budowie, odbudowie, rozbudowie, nadbudowie, przebudowie lub montażu, do których stosuje się przepisy ustawy z dnia 7 lipca 1994 r. – Prawo budowlane (Dz. U. z 2024 r. poz. 725, 834 i 1222);</zdanie></p></punkt><punkt eId="DU/2023/70__art_1a__ust_1__pkt_2c" gd:GUID="7259eac3-f4e5-473f-859d-98794ec66d7a" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>2c</nr><p><zdanie nr="1" gd:zdGUID="1bc0d4e6-97d8-4761-ae29-abea741c184e" fragment="6" gd:fragmentGUID="780e9b51-f8a6-4125-a36f-3ea2a7f1b8d5" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">trwałe związanie z gruntem – takie połączenie obiektu budowlanego z gruntem, które zapewnia temu obiektowi stabilność i możliwość przeciwdziałania czynnikom zewnętrznym niezależnym od działania człowieka, mogącym zniszczyć lub spowodować przemieszczenie lub przesunięcie się obiektu budowlanego na inne miejsce;</zdanie></p></punkt></cytat-strukt>,</zdanie>
+              </p>
+            </tiret>
+          </litera>
+          <litera eId="DU/2024/1757__art_2__pkt_1__lit_b" gd:GUID="70df0ba4-710e-4451-b6c6-f0e6d194212a" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="944ffd1b-07e6-44f4-8cef-0fc5e82517a9" fragment="6" gd:fragmentGUID="84a7bb0f-044c-4983-a2a4-456d209abed7" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">po ust. 2b dodaje się ust. 2c w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/70" cudzyslowy="oba" gd:nowGUID="b7649087-2437-4dcc-baf4-c1bae422b620" element-eId="DU/2023/70__art_1a__ust_2b" funkcja="dodaj-po"><ustep eId="DU/2023/70__art_1a__ust_2c" gd:GUID="86bb232f-d5fc-46f6-b5e7-4a1177458398" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>2c</nr><p><zdanie nr="1" gd:zdGUID="6ef0e786-ea0c-45a2-9785-0fd4724b1c03" fragment="1" gd:fragmentGUID="931f89d1-c8f2-40b9-b15c-226ee19e523c" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">Za część mieszkalną budynku mieszkalnego uznaje się także pomieszczenie przeznaczone do przechowywania pojazdów w tym budynku.</zdanie></p></ustep></cytat-strukt>;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2024/1757__art_2__pkt_2" gd:GUID="f79aee6a-f31c-4f94-b3ff-9f0e0397adf2" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="944ffd1b-07e6-44f4-8cef-0fc5e82517a9" fragment="7" gd:fragmentGUID="886693a1-713e-4619-965b-8ddc7faae9a9" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">w art. 7:</zdanie>
+          </p>
+          <litera eId="DU/2024/1757__art_2__pkt_2__lit_a" gd:GUID="5c28e57b-11dd-45e8-b19b-9e7bca5dff29" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="944ffd1b-07e6-44f4-8cef-0fc5e82517a9" fragment="8" gd:fragmentGUID="148daf63-a788-4dd4-8b7e-d9a4f17c364e" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">w ust. 1 pkt 2 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/70" cudzyslowy="oba" gd:nowGUID="bcdddeb9-861a-44b4-b00f-2637e1713255" element-eId="DU/2023/70__art_7__ust_1__pkt_2" funkcja="zastap"><punkt eId="DU/2023/70__art_7__ust_1__pkt_2" gd:GUID="d06a6b7a-4cc4-4930-afdf-dd9b02a99f54" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="c3fc2ac0-fc51-4067-9a50-90e8a92a1ed8" fragment="1" gd:fragmentGUID="7f02fb2d-6e91-4f9c-a4c6-c0c2ea2a776c" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">budowle infrastruktury portowej w portach morskich lub przystaniach morskich oraz zajęte pod nie grunty, a także budowle infrastruktury zapewniającej dostęp do portów morskich lub przystani morskich oraz zajęte pod nie grunty;</zdanie></p></punkt></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2024/1757__art_2__pkt_2__lit_b" gd:GUID="01a22480-9750-4417-8e46-01266152be4d" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="944ffd1b-07e6-44f4-8cef-0fc5e82517a9" fragment="9" gd:fragmentGUID="5e767994-071d-4014-aede-5ea65dc9d52c" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">po ust. 1 dodaje się ust. 1a w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/70" cudzyslowy="oba" gd:nowGUID="cbfa8279-5dd8-4822-8058-05dd4e8c1f3a" element-eId="DU/2023/70__art_7__ust_1" funkcja="dodaj-po"><ustep eId="DU/2023/70__art_7__ust_1a" gd:GUID="0a2e8ad9-761a-4b65-8a40-3a10872520dd" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>1a</nr><p><zdanie nr="1" gd:zdGUID="ff70b38f-fd8a-4679-9453-6c08d260e4c3" fragment="1" gd:fragmentGUID="ce481932-ce57-46c3-a6db-b26320b58445" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">Zwolnieniu, o którym mowa w ust. 1 pkt 1 lit. a tiret pierwsze i pkt 1c, nie podlegają grunty, budynki i budowle wchodzące w skład obiektu infrastruktury usługowej, o którym mowa w ust. 2 pkt 2 załącznika nr 2 do ustawy z dnia 28 marca 2003 r. o transporcie kolejowym.</zdanie></p></ustep></cytat-strukt>;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2024/1757__art_2__pkt_3" gd:GUID="1fe8c0d6-935c-46d4-be3d-3e3eaa705439" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="944ffd1b-07e6-44f4-8cef-0fc5e82517a9" fragment="10" gd:fragmentGUID="c790ebf7-d38f-4e46-8fb2-fce3c09f81d2" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">w art. 19 pkt 2 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/70" cudzyslowy="oba" gd:nowGUID="4edb0fde-d4d9-43f6-ad30-79a871870477" element-eId="DU/2023/70__art_19__pkt_2" funkcja="zastap"><punkt eId="DU/2023/70__art_19__pkt_2" gd:GUID="e0647127-f6be-49a6-851b-6ea9ddc79bf2" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="ddaf7edb-078c-4baa-9ce0-33850906f566" fragment="1" gd:fragmentGUID="70b4c8d8-2bde-4906-983e-9d5be678006d" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">może zarządzić pobór tych opłat w drodze inkasa oraz określić inkasentów i wysokość wynagrodzenia za inkaso, a także może wprowadzić obowiązek prowadzenia przez inkasentów ewidencji osób zobowiązanych do uiszczania opłaty miejscowej lub opłaty uzdrowiskowej oraz określić szczegółowy zakres danych zawartych w tych ewidencjach, uwzględniając konieczność zapewnienia prawidłowego poboru tych opłat;</zdanie></p></punkt></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2024/1757__art_2__pkt_4" gd:GUID="e3af6924-5553-416b-b891-714102d68b4d" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="944ffd1b-07e6-44f4-8cef-0fc5e82517a9" fragment="11" gd:fragmentGUID="c769db19-3051-46a1-aab2-ece253877250" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01"><now:dodaj-po akt="https://eli.gov.pl/eli/DU/2023/70" element-eId="DU/2023/70__zal_3" akt-nowelizujacy="https://eli.gov.pl/eli/DU/2024/1757" nowelizujacy-element-eId="DU/2024/1757__zal_1" gd:nowGUID="6b5ce2ec-4f92-4da5-807e-70b7546e79fa" />dodaje się załącznik nr 4 do ustawy w brzmieniu określonym w załączniku do niniejszej ustawy.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2024/1757__art_3" gd:GUID="75ff93d3-7a20-4b46-acb9-65b89bb88f2c" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">
+      <nr>3</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="e2d96947-e2bc-4c3b-bd6d-e1939137a380" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="e14cccf7-f5b7-47cd-963d-baaa17b8cc26" fragment="1" gd:fragmentGUID="2652e742-a904-4e69-9a94-d3564d659f7d" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">W ustawie z dnia 16 listopada 2006 r. o opłacie skarbowej (Dz. U. z 2023 r. poz. 2111 oraz z 2024 r. poz. 1222) wprowadza się następujące zmiany:</zdanie>
+        </p>
+        <punkt eId="DU/2024/1757__art_3__pkt_1" gd:GUID="d19818d1-688a-4b4e-ad7b-0aa7d195178a" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="e14cccf7-f5b7-47cd-963d-baaa17b8cc26" fragment="2" gd:fragmentGUID="17118b36-29e6-4fff-afb2-70077598a9ae" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">w art. 11 po ust. 1 dodaje się ust. 1a–1d w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/2111" cudzyslowy="oba" gd:nowGUID="37d824f0-9b55-44b0-add7-47d3bb04bcdd" element-eId="DU/2023/2111__art_11__ust_1" funkcja="dodaj-po"><ustep eId="DU/2023/2111__art_11__ust_1a" gd:GUID="1ff70663-efde-4305-829a-74b24a6a5391" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>1a</nr><p><zdanie nr="1" gd:zdGUID="32885569-8b22-4d9e-8ec9-3b2548304210" fragment="1" gd:fragmentGUID="bc0abab0-c4a9-48b3-9045-911855e353cd" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">W przypadku gdy wskutek zmiany organu administracji rządowej lub samorządowej lub podmiotu, o którym mowa w art. 1 ust. 2, właściwego do dokonania czynności urzędowej lub wydania zaświadczenia lub zezwolenia (pozwolenia, koncesji) podlegającego opłacie skarbowej, czynność ta została dokonana lub zaświadczenie lub zezwolenie (pozwolenie, koncesja) zostało wydane przez organ lub podmiot inny niż ten, do którego złożono zgłoszenie lub wniosek o ich dokonanie lub wydanie, ten organ lub podmiot jest zobowiązany przekazać:</zdanie></p><punkt eId="DU/2023/2111__art_11__ust_1a__pkt_1" gd:GUID="8841c7b9-ae3f-4ae0-a96b-e42c1432aef4" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="32885569-8b22-4d9e-8ec9-3b2548304210" fragment="2" gd:fragmentGUID="816ec3b1-5a5b-4551-9c2f-9c25fc50d687" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">organowi podatkowemu właściwemu ze względu na złożenie zgłoszenia lub wniosku oraz</zdanie></p></punkt><punkt eId="DU/2023/2111__art_11__ust_1a__pkt_2" gd:GUID="1ff9d78f-fecd-4a06-8cf1-67dae554c3d7" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="32885569-8b22-4d9e-8ec9-3b2548304210" fragment="3" gd:fragmentGUID="c58b9e36-d3da-4bbf-ba16-869a23e6978b" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">organowi podatkowemu właściwemu ze względu na siedzibę organu administracji publicznej lub podmiotu, który dokonał czynności urzędowej lub wydał zaświadczenie lub zezwolenie (pozwolenie, koncesję)</zdanie></p></punkt><czesc-wspolna-punkt eId="DU/2023/2111__art_11__ust_1a__czw" gd:GUID="9d6bfd4d-4de0-44c3-887a-bf14bb89b47a" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01"><p><zdanie nr="1" gd:zdGUID="32885569-8b22-4d9e-8ec9-3b2548304210" fragment="4" gd:fragmentGUID="d063e76c-999e-460a-8d4b-6d7a97b9b07e" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">– informację o zmianie organu lub podmiotu właściwego do dokonania czynności urzędowej lub wydania zaświadczenia lub zezwolenia (pozwolenia, koncesji), przy czym informacja taka powinna być przekazana niezwłocznie po dokonaniu czynności urzędowej lub wydaniu zaświadczenia lub zezwolenia (pozwolenia, koncesji).</zdanie></p></czesc-wspolna-punkt></ustep><ustep eId="DU/2023/2111__art_11__ust_1b" gd:GUID="cf5705d3-d2af-40b8-b2c7-25932f544786" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>1b</nr><p><zdanie nr="1" gd:zdGUID="20e304ab-0aad-47ff-a918-a0810f443d0c" fragment="1" gd:fragmentGUID="d8071a0e-5114-4c95-abf6-f57392d65718" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">Do informacji, o której mowa w ust. 1a, należy dołączyć kopię dowodu zapłaty opłaty skarbowej, a jeżeli w aktach sprawy nie pozostał ten dowód lub jego kopia, w informacji należy wskazać dodatkowo: imię i nazwisko (nazwę lub firmę) podmiotu, który dokonał zapłaty opłaty skarbowej, jego adres, przedmiot tej opłaty, kwotę zapłaconej opłaty skarbowej, datę wpłaty oraz numer pokwitowania lub numer rachunku bankowego, na który dokonano wpłaty.</zdanie></p></ustep><ustep eId="DU/2023/2111__art_11__ust_1c" gd:GUID="ad4e39c3-4aff-4371-8651-be81ffd61a7f" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>1c</nr><p><zdanie nr="1" gd:zdGUID="dc742da4-21fc-45cf-aae2-c44aa4678988" fragment="1" gd:fragmentGUID="15ae1b5b-108b-4cbe-9b06-46990682b3a5" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">Organ podatkowy, o którym mowa w ust. 1a pkt 1, jest zobowiązany przekazać kwotę zapłaconej opłaty skarbowej od dokonania czynności urzędowej lub wydania zaświadczenia lub zezwolenia (pozwolenia, koncesji) na rachunek właściwego organu podatkowego w terminie 30 dni od dnia otrzymania informacji, o której mowa w ust. 1a.</zdanie></p></ustep><ustep eId="DU/2023/2111__art_11__ust_1d" gd:GUID="d58089bc-b4f7-465d-9391-237272a3fed1" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>1d</nr><p><zdanie nr="1" gd:zdGUID="919c2beb-35b9-4fcb-9ccc-e52c8926148e" fragment="1" gd:fragmentGUID="d412dcdb-890e-415c-9891-696f160bc0c6" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">Jeżeli kwota zapłaconej opłaty skarbowej nie zostanie przekazana w terminie, o którym mowa w ust. 1c, naliczane są odsetki za zwłokę w wysokości ustalonej jak dla zaległości podatkowych, począwszy od dnia następującego po dniu upływu tego terminu.</zdanie></p></ustep></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2024/1757__art_3__pkt_2" gd:GUID="5ac03185-40af-456e-ae34-bcef9b24173b" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="e14cccf7-f5b7-47cd-963d-baaa17b8cc26" fragment="3" gd:fragmentGUID="b3a478d7-3097-4932-b974-de7c8adadd20" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01"><now:zamien-tekst stary-tekst="." nowy-tekst=";" element-eId="DU/2023/2111__art_12__ust_2__pkt_2" akt="https://eli.gov.pl/eli/DU/2023/2111" now:wystapienie="ostatnie" gd:nowGUID="9f164f31-d4eb-4af6-a661-159d5efb755f" />w art. 12 w ust. 2 w pkt 2 kropkę zastępuje się średnikiem i dodaje się pkt 3 w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/2111" cudzyslowy="oba" gd:nowGUID="c1cdc853-24c2-4b92-8797-c47110604729" element-eId="DU/2023/2111__art_12__ust_2__pkt_2" funkcja="dodaj-po"><punkt eId="DU/2023/2111__art_12__ust_2__pkt_3" gd:GUID="4b0ea436-d41c-41f3-b475-2150c2cd7f2c" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>3</nr><p><zdanie nr="1" gd:zdGUID="ba30d115-3445-42c3-a7c1-d438ebcb656e" fragment="1" gd:fragmentGUID="0d5ef912-19a2-45c7-a923-65c18e4d517e" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">od złożenia dokumentu, o którym mowa w pkt 2, w formie elektronicznej za pośrednictwem systemu teleinformatycznego:</zdanie></p><litera eId="DU/2023/2111__art_12__ust_2__pkt_3__lit_a" gd:GUID="2f94076d-3049-4cbe-83d5-ff5c6eb5e100" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>a</nr><p><zdanie nr="1" gd:zdGUID="ba30d115-3445-42c3-a7c1-d438ebcb656e" fragment="2" gd:fragmentGUID="a152e1dc-ce60-4b1e-8ae7-8dd7f45737ef" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">organ podatkowy właściwy ze względu na miejsce zamieszkania albo siedzibę mocodawcy, a w przypadku udzielenia pełnomocnictwa lub prokury przez więcej niż jednego mocodawcę w jednym dokumencie – organ podatkowy właściwy ze względu na miejsce zamieszkania albo siedzibę mocodawcy wskazanego w tym dokumencie jako pierwszy, który ma miejsce zamieszkania albo siedzibę na terytorium Rzeczypospolitej Polskiej,</zdanie></p></litera><litera eId="DU/2023/2111__art_12__ust_2__pkt_3__lit_b" gd:GUID="3689952d-2896-4f94-a15d-789f1e437b70" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>b</nr><p><zdanie nr="1" gd:zdGUID="ba30d115-3445-42c3-a7c1-d438ebcb656e" fragment="3" gd:fragmentGUID="d51b351a-321c-46cc-838d-63c4bd555570" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">Prezydent miasta stołecznego Warszawy, jeżeli mocodawca albo żaden z mocodawców ustanawiających pełnomocnictwo lub prokurę w jednym dokumencie nie ma miejsca zamieszkania albo siedziby na terytorium Rzeczypospolitej Polskiej.</zdanie></p></litera></punkt></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2024/1757__art_3__pkt_3" gd:GUID="38c47bb4-af32-45f4-9931-c494e098c740" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="e14cccf7-f5b7-47cd-963d-baaa17b8cc26" fragment="4" gd:fragmentGUID="71def33d-031a-4262-993f-814eaee08bf6" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">w załączniku do ustawy w części I:</zdanie>
+          </p>
+          <litera eId="DU/2024/1757__art_3__pkt_3__lit_a" gd:GUID="999d25af-7be8-4341-b49f-45b749607477" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="e14cccf7-f5b7-47cd-963d-baaa17b8cc26" fragment="5" gd:fragmentGUID="e906eb7d-d9cb-46ca-88ad-02223b605ae3" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">w ust. 41 w kolumnie 2 wyrazy „programu szkolenia” zastępuje się wyrazami „szczegółowego programu kursu specjalistycznego dla”,<cytat-w-tekscie now:akt="https://eli.gov.pl/eli/DU/2023/2111" cudzyslowy="oba" gd:nowGUID="2f97a0be-69ef-4134-82c3-a2ec6764eccc" element-eId="DU/2023/2111__zal_1" funkcja="zastap-recznie"><tekst>szczegółowego programu kursu specjalistycznego dla</tekst></cytat-w-tekscie></zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2024/1757__art_3__pkt_3__lit_b" gd:GUID="d4b7f8da-a807-492e-9ba9-5da0d2ce9212" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="e14cccf7-f5b7-47cd-963d-baaa17b8cc26" fragment="6" gd:fragmentGUID="59739b83-8903-4c3e-b929-29b68fdd4631" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">po ust. 41 dodaje się ust. 41a w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/2111" cudzyslowy="brak" gd:nowGUID="0ab1a081-b2e3-416e-b3d4-061bb83c7b7e" element-eId="DU/2023/2111__zal_1" funkcja="dodaj-recznie"><tabela gd:GUID="961e6bba-87a1-44be-8a4b-a0d78e0abf5b"><tbody><tr gd:GUID="2180998d-1a4e-4d82-9e39-f4ce79dec8fb"><td gd:GUID="e48a2a83-b12f-4875-b707-bc33c40cdc1a"><tekst-zwykly gd:GUID="c601fe5d-66ab-4ffa-b3dd-827784e73459" /></td><td gd:GUID="ad4716bf-87cf-4693-a6e8-741ab08a8b15"><tekst-zwykly gd:GUID="5e8b0e67-1993-4019-ba89-8cc73aae07c9">41a. Stwierdzenie posiadania kadry oraz środków umożliwiających prowadzenie szkoleń osób wykonujących czynności w ruchu zakładu górniczego</tekst-zwykly></td><td gd:GUID="f618ae7d-b412-450d-9e6e-1b09865e9ba8"><tekst-zwykly gd:GUID="5f460df1-aae2-4eba-83ae-53fe743b6377">105 zł</tekst-zwykly></td><td gd:GUID="328e5c03-8fd3-4bfd-8f76-1ddeb34d114c"><tekst-zwykly gd:GUID="0891d4a9-98b1-4855-b37b-28bc18ff61f3" /></td></tr></tbody></tabela></cytat-strukt></zdanie>
+            </p>
+          </litera>
+        </punkt>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2024/1757__art_4" gd:GUID="b93f02ff-0402-4e74-9757-e1bc0e8f1256" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">
+      <nr>4</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="56a47bd1-4d8d-496a-aea6-7533b4b2c91a" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="51418f2b-101d-4b4a-a666-da5d2b6d1640" fragment="1" gd:fragmentGUID="537d0565-d72b-4f22-b9ed-3a3a51b30fb1" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">Jeżeli przed dniem wejścia w życie niniejszej ustawy wszczęto na wniosek i nie zakończono postępowania o zastosowanie w 2025 r. zwolnienia, o którym mowa w art. 12 ust. 2 ustawy zmienianej w art. 1, to postępowanie umarza się, a zwolnienie stosuje się z urzędu.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2024/1757__art_5" gd:GUID="afc65f8b-b09a-4f5e-8332-e7e92c897439" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">
+      <nr>5</nr>
+      <ustep eId="DU/2024/1757__art_5__ust_1" gd:GUID="4d9de75a-6856-49dc-8d74-8a1a3b9064d5" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="c329f3e4-362e-4f80-a92a-5d36de1d1c84" fragment="1" gd:fragmentGUID="1f0bba5d-eb74-49b4-a266-2701f83ea1fb" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">Osoby fizyczne, z wyłączeniem osób fizycznych, o których mowa w art. 6 ust. 11 ustawy zmienianej w art. 2, które przed dniem wejścia w życie niniejszej ustawy złożyły informację, o której mowa w art. 6 ust. 6 ustawy zmienianej w art. 2, z tytułu przysługującej im odrębnej własności lub współwłasności lokalu stanowiącego pomieszczenie przeznaczone do przechowywania pojazdów w budynku mieszkalnym, nie mają obowiązku złożenia takiej informacji z tego tytułu w 2025 r.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2024/1757__art_5__ust_2" gd:GUID="62fd65ef-1647-4321-8a8d-eb2e3af55daa" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="eeff217e-c515-42a5-b2fd-f77fea59cfb3" fragment="1" gd:fragmentGUID="52a16914-e215-4ad2-b5c9-a7ceca8d2e9a" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">W przypadkach, o których mowa w ust. 1, do postępowania w sprawie ustalenia wysokości zobowiązania podatkowego w podatku od nieruchomości przepisy art. 165 § 5 pkt 1 i art. 200 § 2 pkt 1 ustawy z dnia 29 sierpnia 1997 r. – Ordynacja podatkowa (Dz. U. z 2023 r. poz. 2383 i 2760 oraz z 2024 r. poz. 879 i 1685) stosuje się odpowiednio.</zdanie>
+        </p>
+      </ustep>
+    </artykul>
+    <artykul eId="DU/2024/1757__art_6" gd:GUID="d6d47d9f-384d-45b8-adbe-74f82f1e245a" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">
+      <nr>6</nr>
+      <ustep eId="DU/2024/1757__art_6__ust_1" gd:GUID="886f302c-9196-488d-8b4b-13b497233d0d" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="447c3982-4ddf-47b4-9115-29730b9bbf30" fragment="1" gd:fragmentGUID="f0a18077-d4ba-4af7-b90b-acdd9af01da5" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">W 2025 r. podatnicy, o których mowa w art. 6 ust. 9 ustawy zmienianej w art. 2, mogą składać deklaracje na podatek od nieruchomości na rok 2025 w terminie do dnia 31 marca 2025 r., jeżeli spełnią warunki określone w ust. 2.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2024/1757__art_6__ust_2" gd:GUID="817bcca1-de4d-4ccf-8411-83552dea6ead" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="a5d306cf-2826-4088-8fb1-9831bda04455" fragment="1" gd:fragmentGUID="28b62ea2-1977-4a78-9ac6-3b54ab1fb69a" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">W celu skorzystania z uprawnienia, o którym mowa w ust. 1, podatnicy są obowiązani:</zdanie>
+        </p>
+        <punkt eId="DU/2024/1757__art_6__ust_2__pkt_1" gd:GUID="201cc5f6-6621-47b0-8f9b-6a5a9fea0b8d" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a5d306cf-2826-4088-8fb1-9831bda04455" fragment="2" gd:fragmentGUID="2d9046c4-58da-4b2d-b795-c28dd016dd6a" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">złożyć do właściwego organu podatkowego w terminie do dnia 31 stycznia 2025 r. pisemne zawiadomienie o skorzystaniu z tego uprawnienia, zawierające:</zdanie>
+          </p>
+          <litera eId="DU/2024/1757__art_6__ust_2__pkt_1__lit_a" gd:GUID="7dab63fa-04c2-44bc-9420-6e9dba133cb9" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="a5d306cf-2826-4088-8fb1-9831bda04455" fragment="3" gd:fragmentGUID="bab02650-3cc3-41da-88cd-c886424e8fe0" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">nazwę organu podatkowego, do którego zawiadomienie jest kierowane,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2024/1757__art_6__ust_2__pkt_1__lit_b" gd:GUID="7d443311-1e2d-4b49-aa32-3826ea8d8f73" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="a5d306cf-2826-4088-8fb1-9831bda04455" fragment="4" gd:fragmentGUID="55e80975-6d0d-4f89-a6f4-234532b73d6c" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">nazwę podatnika składającego zawiadomienie, adres jego siedziby oraz jego identyfikator podatkowy,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2024/1757__art_6__ust_2__pkt_1__lit_c" gd:GUID="5806b545-4289-44f2-80c9-124257b54045" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">
+            <nr>c</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="a5d306cf-2826-4088-8fb1-9831bda04455" fragment="5" gd:fragmentGUID="f81c64ed-f185-465a-aa42-c8c176b5ba68" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">oświadczenie o skorzystaniu z uprawnienia do złożenia deklaracji na podatek od nieruchomości na rok 2025 w terminie do dnia 31 marca 2025 r.;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2024/1757__art_6__ust_2__pkt_2" gd:GUID="6d4d0aeb-16c3-4e7b-9402-8bbe68be47a2" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a5d306cf-2826-4088-8fb1-9831bda04455" fragment="6" gd:fragmentGUID="b4ab01c8-c48f-44e0-8d3f-f3ec71d7e564" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">bez wezwania organu podatkowego, wpłacić na rachunek właściwej gminy miesięczne raty podatku od nieruchomości:</zdanie>
+          </p>
+          <litera eId="DU/2024/1757__art_6__ust_2__pkt_2__lit_a" gd:GUID="5295a0e2-ce49-4858-b149-908b5806ecc9" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="a5d306cf-2826-4088-8fb1-9831bda04455" fragment="7" gd:fragmentGUID="a98117a5-b50e-44c7-9f53-41314d446acf" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">za styczeń – w terminie do dnia 31 stycznia 2025 r.,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2024/1757__art_6__ust_2__pkt_2__lit_b" gd:GUID="485ef6d9-a6f0-4bf1-a563-03dfe67334e5" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="a5d306cf-2826-4088-8fb1-9831bda04455" fragment="8" gd:fragmentGUID="4af5739d-7292-4ff4-b672-001b7fe958ba" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">za luty – w terminie do dnia 15 lutego 2025 r.,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2024/1757__art_6__ust_2__pkt_2__lit_c" gd:GUID="d3e8d36a-103d-448e-b807-582c35512bc8" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">
+            <nr>c</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="a5d306cf-2826-4088-8fb1-9831bda04455" fragment="9" gd:fragmentGUID="2b59a6b0-1e47-4123-a00c-3fadc2d02e1c" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">za marzec – w terminie do dnia 15 marca 2025 r.</zdanie>
+            </p>
+          </litera>
+          <czesc-wspolna-litera eId="DU/2024/1757__art_6__ust_2__pkt_2__czw" gd:GUID="1c2bb53c-faa3-4cf4-97d5-d181c5f15702" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">
+            <p>
+              <zdanie nr="1" gd:zdGUID="a5d306cf-2826-4088-8fb1-9831bda04455" fragment="10" gd:fragmentGUID="5ef61549-0377-4e80-9e20-e8788487e0b6" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">– w wysokości odpowiadającej średniej miesięcznej kwocie należnego podatku za 2024 r.</zdanie>
+            </p>
+          </czesc-wspolna-litera>
+        </punkt>
+      </ustep>
+      <ustep eId="DU/2024/1757__art_6__ust_3" gd:GUID="e222222b-8e38-4e6e-a03e-c6e903e42d50" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">
+        <nr>3</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="d37fabee-c939-49fb-90e6-a88f9b032bc0" fragment="1" gd:fragmentGUID="65feb9a3-7b2d-4f85-b3ed-eadd57f0416e" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">W przypadku gdy uiszczone raty, o których mowa w ust. 2, są:</zdanie>
+        </p>
+        <punkt eId="DU/2024/1757__art_6__ust_3__pkt_1" gd:GUID="eae6a8a0-60e1-437b-9cda-7975345161c5" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="d37fabee-c939-49fb-90e6-a88f9b032bc0" fragment="2" gd:fragmentGUID="f7492c8a-382a-410f-b32b-3b3be8eb0f24" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">niższe niż raty podatku od nieruchomości wynikające ze złożonej deklaracji na podatek od nieruchomości na rok 2025 za miesiące, za które zostały uiszczone, brakująca kwota podatku pozostała do zapłaty podlega, bez wezwania organu podatkowego, wpłacie na rachunek właściwej gminy w terminie do dnia 31 marca 2025 r., przy czym kwota wpłacona w tym terminie nie stanowi zaległości podatkowej w rozumieniu przepisów ustawy z dnia 29 sierpnia 1997 r. – Ordynacja podatkowa;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2024/1757__art_6__ust_3__pkt_2" gd:GUID="49f82c21-c233-4617-95e7-680e7bdd3950" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="d37fabee-c939-49fb-90e6-a88f9b032bc0" fragment="3" gd:fragmentGUID="1ccd5d12-b962-4cbd-b460-acb6549bea20" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">wyższe niż raty podatku od nieruchomości wynikające ze złożonej deklaracji na podatek od nieruchomości na rok 2025 za miesiące, za które zostały uiszczone, kwota powstałej różnicy nie stanowi nadpłaty w rozumieniu przepisów ustawy z dnia 29 sierpnia 1997 r. – Ordynacja podatkowa, a do jej zaliczenia lub zwrotu przepis art. 76 tej ustawy stosuje się odpowiednio.</zdanie>
+          </p>
+        </punkt>
+      </ustep>
+    </artykul>
+    <artykul eId="DU/2024/1757__art_7" gd:GUID="42cff199-9e39-4a61-9d30-0730fb223f07" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">
+      <nr>7</nr>
+      <ustep eId="DU/2024/1757__art_7__ust_1" gd:GUID="dca4759e-cc7a-496c-b302-4f9fe8223ec4" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="8fbc63c0-5174-4461-a9a3-ebba5bd750be" fragment="1" gd:fragmentGUID="ad3f8adc-dd4d-4cca-af34-62b139c3adc2" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">W sprawach indywidualnych z zakresu administracji publicznej o dokonanie czynności urzędowej lub wydanie zaświadczenia lub zezwolenia (pozwolenia, koncesji), wszczętych i niezakończonych przed dniem wejścia w życie niniejszej ustawy, stosuje się przepisy art. 11 ust. 1a–1d ustawy zmienianej w art. 3.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2024/1757__art_7__ust_2" gd:GUID="a49d4714-a640-4695-9fb6-60057e717da8" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="813c298a-e2d3-4f59-b49d-bc0d0992304a" fragment="1" gd:fragmentGUID="f0dc0c5d-b12e-4721-b3b5-1f8e5c605f87" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">Jeżeli przed dniem wejścia w życie niniejszej ustawy złożono dokument stwierdzający udzielenie pełnomocnictwa lub prokury, jego odpis, wypis lub kopię, do ustalania właściwości organu podatkowego w sprawie opłaty skarbowej stosuje się przepisy dotychczasowe.</zdanie>
+        </p>
+      </ustep>
+    </artykul>
+    <artykul eId="DU/2024/1757__art_8" gd:GUID="dc3c0738-166c-4fcf-8f62-45bc4d1c8c78" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">
+      <nr>8</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="3cf8c66f-c5e5-4ed0-8c94-0003eb807a5c" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="bf63e251-5583-4ea5-a10e-15c498556b5a" fragment="1" gd:fragmentGUID="403e1bff-5888-4a01-807a-48b8ae2df41b" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">Dotychczasowe akty prawa miejscowego wydane na podstawie art. 19 pkt 2 ustawy zmienianej w art. 2 zachowują moc do dnia wejścia w życie aktów prawa miejscowego wydanych na podstawie art. 19 pkt 2 ustawy zmienianej w art. 2, w brzmieniu nadanym niniejszą ustawą.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2024/1757__art_9" gd:GUID="e0494d48-04cc-4010-b1fb-d7e7a90b675c" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">
+      <nr>9</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="5b300f2d-ae84-4eee-84ce-9c96650b7be2" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="e5528782-f545-408f-8c42-2d6e599eb8df" fragment="1" gd:fragmentGUID="b92ed609-b23a-4f21-8c79-97b72db6f7de" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1757_odczytane.x" wejscie-w-zycie="2025-01-01">Ustawa wchodzi w życie z dniem 1 stycznia 2025 r.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <organ-podpisujacy>Prezydent Rzeczypospolitej Polskiej: <i><osoba podpisujacy="true" gd:osobaGUID="f98baba1-edda-458e-a026-0afbbfb08654"><imie>A.</imie> <nazwisko>Duda</nazwisko></osoba></i></organ-podpisujacy>
+    <zalacznik eId="DU/2024/1757__zal_1" gd:GUID="602fbf52-9bd6-4184-a9ec-ab742a12cc37">
+      <zalacznik-do gd:GUID="e05b0eeb-77ae-4ee6-9bc0-7b398a226417">Załącznik do ustawy z dnia 19 listopada 2024 r.</zalacznik-do>
+      <zalacznik-do gd:GUID="d5c8c221-4479-4d55-9fff-aaa5b9c51d57">(Dz. U. poz. 1757)</zalacznik-do>
+      <tytul-zalacznika gd:GUID="128140cb-6d45-431a-bfc8-35a08116cfec">WYKAZ OBIEKTÓW, O KTÓRYCH MOWA W ART. 1A UST. 1 PKT 2 LIT. A USTAWY</tytul-zalacznika>
+      <segment-zalacznika gd:GUID="f0bd4fbd-27a2-4c7c-aea5-316e3043f861" orientacja="pionowa">
+        <tabela gd:GUID="8cc4cf5b-ce37-40d6-a06e-e93ff9900c15">
+          <tbody>
+            <tr gd:GUID="d43d10db-fa15-4f45-814f-f16f617a65bd">
+              <td gd:GUID="5345a622-acda-4913-a149-60c7629ed859">
+                <tekst-zwykly gd:GUID="58444a3b-55da-4f92-b1fc-ef8090d3ec86">Pozycja</tekst-zwykly>
+              </td>
+              <td gd:GUID="11dc2b72-9d21-4dbe-a379-948285720918">
+                <tekst-zwykly gd:GUID="445f09b6-8bb3-45f8-b994-5e65e85c7878">Obiekt</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="47f99cb5-db13-4a79-b29d-47850cdd1cd9">
+              <td gd:GUID="53e034db-8eba-454e-afdb-356bfd4f86fd">
+                <liczba gd:GUID="fd5fc739-674f-4927-af12-1667d07bfc81">1</liczba>
+              </td>
+              <td gd:GUID="601235de-e875-44e3-8fe1-f21a96ef7cc5">
+                <tekst-zwykly gd:GUID="5609f2a3-c991-4647-aadb-4bac293290fe">odkryty obiekt sportowy inny niż wymieniony w poz. 2</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="d5cf77c3-9555-4794-b433-2c8cb177ecbd">
+              <td gd:GUID="6cfcd4cb-4f79-47f8-91c7-64c699936722">
+                <liczba gd:GUID="ee674163-01d9-4cde-b00a-152ac589f04b">2</liczba>
+              </td>
+              <td gd:GUID="68b963d5-fca0-4235-921a-c05c9b030a9d">
+                <tekst-zwykly gd:GUID="3311e9d3-72a2-4b8f-9f71-dac4f43e429d">płyta stadionu, tunel dla zawodników, trybuny – wchodzące w skład stadionu</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="e9553237-b9fb-4f99-bdb8-830ea30e1a0d">
+              <td gd:GUID="6d615aca-24e4-4bce-9f84-3a0a7062c028">
+                <liczba gd:GUID="467038dd-2372-48ff-acb8-325a8e1426f8">3</liczba>
+              </td>
+              <td gd:GUID="f4b0922d-0ac6-411f-87f6-1748833a35f3">
+                <tekst-zwykly gd:GUID="4512c692-b804-4d98-ae0b-b34252fdf9dd">amfiteatr</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="b5f54e1e-3529-4345-9a51-534f8fb97a1b">
+              <td gd:GUID="f5b70b36-fd4f-471f-9fb4-340f11dde5b1">
+                <liczba gd:GUID="59f6d205-d370-4d01-984c-f666938754ae">4</liczba>
+              </td>
+              <td gd:GUID="4b0b0d04-c39b-44ee-8e03-c923353b9fcc">
+                <tekst-zwykly gd:GUID="9a8f9b3c-6dd3-4cea-bd4a-e1c814f88218">zbiornik wody surowej, hala technologiczna, zbiornik retencyjny wody uzdatnionej, odstojnik wód popłucznych – wchodzące w skład stacji uzdatniania wody</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="e957acbd-be07-4a2a-8299-18a3ff940263">
+              <td gd:GUID="294372d5-be5c-4e21-9cfb-dcb448a161a8">
+                <liczba gd:GUID="4eb2d0e2-05d5-4e32-8fa1-f0c3e2906f7d">5</liczba>
+              </td>
+              <td gd:GUID="9e4277c3-2e76-4e88-aa76-7839feb56621">
+                <tekst-zwykly gd:GUID="42c73a13-2fbc-4b2f-b76e-8b183ffed908">stacja zlewna, przepompownia ścieków oczyszczonych, osadnik wstępny, osadnik wtórny, reaktor biologiczny, komora tlenowa, komora rozdziału, komora niedotleniona, komora beztlenowa, zagęszczacz grawitacyjny, instalacja do odwadniania osadów, instalacja do odgazowywania, stacja zagęszczania osadu nadmiernego, stacja dozowania kwasu octowego, zbiornik wyrównawczy cieczy nadosadowej, przepompownia osadu recyrkulowanego i nadmiernego, komora predenitryfikacji – wchodzące w skład oczyszczalni ścieków</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="d577b3d6-0a8d-4209-88ef-274847de4b07">
+              <td gd:GUID="77ff550a-2646-48fe-a22c-944e6f44bb9c">
+                <liczba gd:GUID="1037cb62-6e1d-4ffa-b926-824b027dd34f">6</liczba>
+              </td>
+              <td gd:GUID="aa56970b-0265-4429-b22a-9349e9f581ac">
+                <tekst-zwykly gd:GUID="6df47602-afc1-4957-b420-0acaa2ebc8a4">obiekt, w którym są lub mogą być gromadzone materiały sypkie, materiały występujące w kawałkach albo materiały w postaci ciekłej lub gazowej, którego podstawowym parametrem technicznym wyznaczającym jego przeznaczenie jest pojemność, inny niż wymieniony w poz. 4 i poz. 5</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="87a23a50-dca5-4654-bd59-0820e839292a">
+              <td gd:GUID="9fd16a90-70b7-4544-9b87-814836c51948">
+                <liczba gd:GUID="bbf7fbf6-bce1-420c-a1e1-7fca417fe15f">7</liczba>
+              </td>
+              <td gd:GUID="85d80f77-9c24-483e-8d50-b4d009cdbfec">
+                <tekst-zwykly gd:GUID="d5ac72e8-7a03-4647-959b-2e8603a46985">obiekt ochronny</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="7b76ab1c-4ddd-458f-bf76-c6c1f2e47911">
+              <td gd:GUID="acd32fd6-8986-4928-88e1-4d4cf888376c">
+                <liczba gd:GUID="11db4db0-357c-463b-a88e-81a51e26fc83">8</liczba>
+              </td>
+              <td gd:GUID="6def9268-0a33-4752-9af3-b36f6c57e738">
+                <tekst-zwykly gd:GUID="2bd365df-eefb-4a8c-96fc-9c4b26816ae5">nadziemne i podziemne przejście dla pieszych, ciąg pieszy</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="44d4dd9d-45ce-4fd9-bbf2-f5a16b391af0">
+              <td gd:GUID="31462ab9-bd6b-404e-85a4-e32e7f6469d2">
+                <liczba gd:GUID="46d391c7-fd0d-4fb9-b41f-9de1263f7716">9</liczba>
+              </td>
+              <td gd:GUID="89efba29-6d28-4bd0-adda-2fd2b20b92df">
+                <tekst-zwykly gd:GUID="df410765-e8e9-4bf8-80c3-e7f5e9a9dbcf">obiekt hydrotechniczny: zapora, próg, stopień wodny, jaz, śluza wałowa, syfon, brama przeciwpowodziowa, kanał, śluza żeglowna, opaska brzegowa, ostroga brzegowa, rów melioracyjny inny niż ziemny, obiekt zrzutu wody, obiekt zrzutu ścieków, obudowa ujęć wód podziemnych</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="e580dba3-d08d-4d2b-af5f-40263fafb2ed">
+              <td gd:GUID="21cc0e3c-99e1-488e-a5b1-9ad7d4f8ce00">
+                <liczba gd:GUID="39b18162-1b99-4994-8827-53029eb062b0">10</liczba>
+              </td>
+              <td gd:GUID="66d36d42-1d6a-4c45-82eb-dfab6e35cd7e">
+                <tekst-zwykly gd:GUID="dcf56f16-a822-4566-ba53-b5da41b2b5ab">obiekt kontenerowy trwale związany z gruntem</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="b57f5415-c83f-451e-bf12-abfe19e71a11">
+              <td gd:GUID="c900fcc1-8dec-4328-82b7-9f6fc84d1a52">
+                <liczba gd:GUID="53f49142-3010-4a79-9ae4-41495bdd2176">11</liczba>
+              </td>
+              <td gd:GUID="b2cad6e6-fea9-467e-adb8-7f226c8854f0">
+                <tekst-zwykly gd:GUID="5401e93d-696e-4817-84e1-5a5d1f8d1ff6">wiata, z wyłączeniem wiaty wymienionej w art. 1a ust. 1 pkt 2a lit. c</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="f30e4fda-56d0-41b0-864c-ebd15feb1e3d">
+              <td gd:GUID="f146d98f-e1fc-4a32-b03e-c7a64b545f3b">
+                <liczba gd:GUID="d2e4e909-33f8-47b1-997d-178087a00de3">12</liczba>
+              </td>
+              <td gd:GUID="e20dcde7-c6a6-4c13-88e3-10cc63ff658b">
+                <tekst-zwykly gd:GUID="665e8e2f-82fe-4839-9719-31f1e93af5dd">podbudowa słupowa dla linii kablowej, fundament, konstrukcja wsporcza, wolno stojący maszt antenowy, wolno stojąca wieża, szafa telekomunikacyjna, słupek telekomunikacyjny – wchodzące w skład sieci telekomunikacyjnej</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="2afbed62-48d5-42de-be17-955cfe7906de">
+              <td gd:GUID="b5befd12-1777-45f3-b138-51f4f181e7bd">
+                <liczba gd:GUID="9c632d5d-953e-400f-91df-575f3f6a74fa">13</liczba>
+              </td>
+              <td gd:GUID="089d0edb-ce27-4892-bce2-55aa7a41dcf3">
+                <tekst-zwykly gd:GUID="91a1575b-6ad6-4e1f-9af1-b9e1ac5aee78">występujące samodzielnie lub stanowiące element sieci obiekty, których charakterystycznym parametrem jest długość:</tekst-zwykly>
+                <wyliczenie-1 gd:GUID="95caf2d1-d36b-4f6d-88f3-1679f3b01279">a) wodociąg, gazociąg, ciepłociąg oraz inny rurociąg,</wyliczenie-1>
+                <wyliczenie-1 gd:GUID="89e27b59-7cda-430c-982c-637ecece94e9">b) trakcja elektroenergetyczna, linia elektroenergetyczna,</wyliczenie-1>
+                <wyliczenie-1 gd:GUID="243cc015-5925-4ef9-aafc-52a97bc4716b">c) linia kablowa podziemna, umieszczona bezpośrednio w ziemi lub nadziemna, z wyłączeniem kabli telekomunikacyjnych dowieszonych do już istniejącej linii kablowej nadziemnej,</wyliczenie-1>
+                <wyliczenie-1 gd:GUID="ba23890f-e7ca-44db-8b3d-c531cfbb4d54">d) kanalizacja kablowa, z wyłączeniem zainstalowanych w niej kabli,</wyliczenie-1>
+                <wyliczenie-1 gd:GUID="08af7223-3e0f-4c72-923f-d7bf03a6adb8">e) kanał technologiczny, z wyłączeniem zainstalowanych w nim kabli,</wyliczenie-1>
+                <wyliczenie-1 gd:GUID="de706e28-9ff1-4154-8161-12b16c8dc319">f) kanał inny niż wymieniony w załączniku</wyliczenie-1>
+                <wyliczenie-2 gd:GUID="23cbea7c-bea5-4833-94e2-21b303b4ca78">– wraz z przewodami, fundamentem, podbudową słupową oraz konstrukcją wsporczą, o ile je posiadają</wyliczenie-2>
+              </td>
+            </tr>
+            <tr gd:GUID="fa1be51c-501a-4696-8d90-30e917bc233e">
+              <td gd:GUID="fcf20873-3811-4a33-95d4-b6140c8826c8">
+                <liczba gd:GUID="2be5c1a1-adee-4cb5-997c-11bef67af738">14</liczba>
+              </td>
+              <td gd:GUID="8348c398-2055-4eea-bdde-953029a1532b">
+                <tekst-zwykly gd:GUID="41b6c5f6-cb37-402a-91a4-c6a348b5d76b">przystań, sztuczna wyspa, basen portowy, dok, falochron, nabrzeże, molo, pirs, pomost, pochylnia, dalba, stawa</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="f957be2c-05ca-461b-87ba-ce571f3c4b29">
+              <td gd:GUID="0c3810ef-c222-4dbc-a8a2-21929512de65">
+                <liczba gd:GUID="20e92ab1-324e-4eed-b29f-4b84d7fc6a6d">15</liczba>
+              </td>
+              <td gd:GUID="8cf3f4fe-2eda-40eb-aff2-265d2e489728">
+                <tekst-zwykly gd:GUID="09bcd990-154b-4019-8807-fafab8f6749a">pas startowy, droga kołowania, płyta lotniskowa, plac postojowy, plac manewrowy – znajdujące się na terenach lotnisk oraz lądowisko</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="468922cf-ec38-46f9-93f0-f845d1b24a11">
+              <td gd:GUID="82f4083b-2240-4a23-9311-b00a1be6013f">
+                <liczba gd:GUID="5dee7de2-5fa5-41d2-8c87-3920865cfe12">16</liczba>
+              </td>
+              <td gd:GUID="27ddc003-35fc-4ca5-aac3-7066aefbb274">
+                <tekst-zwykly gd:GUID="d25eacda-2941-4504-9604-8a4d6bbd385a">droga, wjazd, zjazd i wyjazd z drogi, zatoka parkingowa</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="4b9f4898-dd81-45b7-b69e-411e8cf7a5aa">
+              <td gd:GUID="575585f4-6837-4c7b-9065-38e912125b31">
+                <liczba gd:GUID="b11309e8-a2be-460d-b37d-25a6ce4dc4a7">17</liczba>
+              </td>
+              <td gd:GUID="bca117e0-a87a-48ea-ada7-b77dcf28d454">
+                <tekst-zwykly gd:GUID="d457ed47-a70e-407c-b720-4126e60c9920">droga kolejowa, tj. tory kolejowe, w tym rozjazdy i skrzyżowania torów, wchodzące w ich skład szyny, szyny żłobkowe, kierownice, odbojnice, prowadnice, zwrotnice, krzyżownice i inne elementy rozjazdów, podkłady kolejowe i przytwierdzenia, drobne elementy nawierzchni kolejowej, podsypka, w tym tłuczeń i piasek, wraz z elementami wymienionymi w pkt 2–11 załącznika nr 1 do ustawy z dnia 28 marca 2003 r. o transporcie kolejowym</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="f2d2123d-952e-42fa-936f-ac636d6cb614">
+              <td gd:GUID="8665e3ec-b9b3-4542-bc04-ae13120be6af">
+                <liczba gd:GUID="aa3b9684-7578-4f3c-9c4f-109cdeb408bd">18</liczba>
+              </td>
+              <td gd:GUID="f46cc612-7e8c-465f-b945-dea88ab18cc7">
+                <tekst-zwykly gd:GUID="b9d82796-0707-47bc-a7e9-dc3e0cf40188">most, wiadukt, estakada, przepust, przejazd</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="f6a97214-7ec5-4f29-9f77-30b61127051e">
+              <td gd:GUID="3a58e57c-521c-4037-88b8-adc087897ac7">
+                <liczba gd:GUID="d933f692-d474-4149-8474-d5a54d644203">19</liczba>
+              </td>
+              <td gd:GUID="564ae34d-a92b-461c-b033-bb2dfdd34358">
+                <tekst-zwykly gd:GUID="28d43323-bd55-4c5f-95b2-4e3ae1bab0c1">ujęcie wód morskich, ujęcie wód śródlądowych</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="a2b4a0d2-1b05-4503-b733-468bf53b4482">
+              <td gd:GUID="c4a8f2ef-c791-421c-ae45-e66188a75558">
+                <liczba gd:GUID="980fe1c3-45e8-422e-beb2-4c6df9f0cad0">20</liczba>
+              </td>
+              <td gd:GUID="5e226096-b37e-4f7c-ad0a-471b3f19616f">
+                <tekst-zwykly gd:GUID="c7590157-f1a1-457a-81d4-5e69b5aa6d73">konstrukcja oporowa, konstrukcja wsporcza inna niż wymieniona w załączniku</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="ad2d6093-5964-41e0-a36a-bb08a55ac1d9">
+              <td gd:GUID="f63c9867-e208-4edd-86cd-b671a4c6836c">
+                <liczba gd:GUID="bf70b6eb-d15b-4775-ba41-20ac19c6e850">21</liczba>
+              </td>
+              <td gd:GUID="51632311-3078-4686-8125-06be0258d04f">
+                <tekst-zwykly gd:GUID="904dd192-867d-485c-858d-6c1cd012069d">tunel</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="023d7bc3-4e44-47d1-a4ce-527f7709a12d">
+              <td gd:GUID="6e357e5b-c0cb-4517-ad39-0feaf5fd0203">
+                <liczba gd:GUID="c53c7cd8-bc27-450d-9a5b-9da89b1ca6c6">22</liczba>
+              </td>
+              <td gd:GUID="94b268ac-5e56-4fb7-9115-fd1fd69265eb">
+                <tekst-zwykly gd:GUID="3da9893a-5f62-4400-8153-95d91a5d423d">ogrodzenie</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="17f1d933-a679-465b-a69d-12143ec99456">
+              <td gd:GUID="d9e27070-365e-4219-aa5d-76d783764641">
+                <liczba gd:GUID="07a233d5-a320-4724-9467-c58f94c43ee3">23</liczba>
+              </td>
+              <td gd:GUID="786c0561-7302-4f03-81a8-a83b6fbce0fc">
+                <tekst-zwykly gd:GUID="6281e59d-fb77-4cfd-835a-d68ad297a8e1">składowisko odpadów</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="34e2714f-01ad-487d-94cc-fd45b7641388">
+              <td gd:GUID="a1be7347-4792-4cfc-b056-79f6626ea5dc">
+                <liczba gd:GUID="08c217b3-7e93-462e-825b-3a73685ca39a">24</liczba>
+              </td>
+              <td gd:GUID="cdfe5140-a58e-4a0c-a2b4-c43f67c967bc">
+                <tekst-zwykly gd:GUID="857d92a0-ba2e-4e94-9404-dbce01b49449">parking znajdujący się poza budynkiem, plac postojowy, plac składowy, plac pod śmietnik, podjazd, zadaszenie</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="f24b7e1e-a2c9-44a5-bae1-fafb3d5b0d3e">
+              <td gd:GUID="4c2c6846-295d-4195-84bb-df5a96cd0b3b">
+                <liczba gd:GUID="3104d906-9402-4b7f-9b49-acc73f6ef406">25</liczba>
+              </td>
+              <td gd:GUID="6b2a7472-620b-43aa-9432-c21ffb980285">
+                <tekst-zwykly gd:GUID="f3196a04-3f13-42db-a351-083ced969122">wolno stojące: wieża, maszt, oświetlenie zewnętrzne oraz wolno stojące trwale związane z gruntem: instalacja przemysłowa inna niż wymieniona w załączniku, tablica reklamowa, urządzenie reklamowe</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="91b36d07-bb69-455a-a23a-89af97f9ee03">
+              <td gd:GUID="ba8d73e6-a926-42ee-b49d-44f1075f094e">
+                <liczba gd:GUID="009e3cff-f126-43ec-8c7c-f8e71cb515b1">26</liczba>
+              </td>
+              <td gd:GUID="1945c0ff-7b0e-4ebd-a4ff-aae512b3400b">
+                <tekst-zwykly gd:GUID="b58c25a9-1460-4ecc-92b7-6d26e44d8630">wolno stojący komin, chłodnia kominowa</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="d23db3fa-2ca4-4d0d-9f57-51675fddd125">
+              <td gd:GUID="97468db6-4607-4390-b2be-e1b139133bcf">
+                <liczba gd:GUID="a8bf8508-12ab-40d6-b5db-6182b94f0048">27</liczba>
+              </td>
+              <td gd:GUID="dd736c9b-4d48-41b6-aa00-826598c9b240">
+                <tekst-zwykly gd:GUID="2394b540-555f-41e8-b607-0241a2cacd33">waga samochodowa, waga kolejowa</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="3ad53600-e573-411d-bed7-7a80f7c3bc42">
+              <td gd:GUID="7908e62c-5aee-4e9c-9af2-07ca105e8235">
+                <liczba gd:GUID="2d1a7fd4-fed0-41f6-83b6-5e0fc3ad87cc">28</liczba>
+              </td>
+              <td gd:GUID="9f776366-895e-4ba3-87c8-3e0db9031de5">
+                <tekst-zwykly gd:GUID="10a2e1a1-607e-4861-96a4-033e2f74ea0e">przekrycie namiotowe, powłoka pneumatyczna, strzelnica, kiosk uliczny, pawilon sprzedaży ulicznej, pawilon wystawowy – trwale związane z gruntem</tekst-zwykly>
+              </td>
+            </tr>
+          </tbody>
+        </tabela>
+      </segment-zalacznika>
+    </zalacznik>
+  </ustawa>
+</akt-prawny>

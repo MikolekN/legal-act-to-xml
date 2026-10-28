@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <rozporzadzenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2026/164</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>8148098c-646e-4a34-b326-d97a80744b9e</gd:GUIDwersji>
+      <AdresISAP>WDU20260000164</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2026</Rok>
+      <Pozycja>164</Pozycja>
+      <AdresWyswietlany>Dz.U. 2026 poz. 164</AdresWyswietlany>
+      <Tytul>Rozporządzenie Ministra Infrastruktury z dnia 10 lutego 2026 r. zmieniające rozporządzenie w sprawie zakresu, warunków, terminów i sposobu przeprowadzania badań technicznych tramwajów i trolejbusów oraz jednostek wykonujących te badania</Tytul>
+      <Rodzaj>ROZP</Rodzaj>
+      <DataOgloszenia>2026-02-12</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2026-02-10</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2026-02-27_DU-2026-164_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2026-02-27" warunek="po upływie 14 dni od dnia ogłoszenia" podstawa="§ 4" zrodlo="https://eli.gov.pl/eli/DU/2026/164" dowod="DU/2026/164__art_4" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2026-02-27_DU-2026-164_domyslne.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2026-02-27_DU-2026-164_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="01419bfe-0655-4c82-a414-d58ebfd4284f" rola="wydajacy">
+          <Nazwa>Minister Infrastruktury</Nazwa>
+          <OrganPodpisujacy>Minister Infrastruktury</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>D.</imie> <nazwisko>Klimczak</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Rozporządzenie</rodzaj-aktu>
+    <autor-aktu>Ministra Infrastruktury<odnosnik id-odnosnika="1" symbol="1" gd:GUID="0d1be9c7-4a04-4946-ba64-9e8d757dabe3"><p><zdanie nr="1" gd:zdGUID="9decfa27-4cad-4c09-91e0-8af8f3f9e666" fragment="1" gd:fragmentGUID="6d1b9068-ebbd-4ce2-a067-74f75222768e">Minister Infrastruktury kieruje działem administracji rządowej – transport, na podstawie § 1 ust. 2 pkt 3 rozporządzenia Prezesa Rady Ministrów z dnia 18 grudnia 2023 r. w sprawie szczegółowego zakresu działania Ministra Infrastruktury (Dz. U. poz. 2725).</zdanie></p></odnosnik></autor-aktu>
+    <data>z dnia 10 lutego 2026 r.</data>
+    <tytul>zmieniające rozporządzenie w sprawie zakresu, warunków, terminów i sposobu przeprowadzania badań technicznych tramwajów i trolejbusów oraz jednostek wykonujących te badania</tytul>
+    <podstawa-prawna>Na podstawie art. 85 ust. 2 ustawy z dnia 20 czerwca 1997 r. – Prawo o ruchu drogowym (Dz. U. z 2024 r. poz. 1251, z późn. zm.<odnosnik id-odnosnika="2" symbol="2" gd:GUID="a9203024-b598-41ab-80b2-07e30a28ceef"><p><zdanie nr="1" gd:zdGUID="b89ad5c5-e283-4d85-b3b2-4722c7fe3094" fragment="1" gd:fragmentGUID="fdb67786-30e3-4686-91cd-967ea2992afd">Zmiany tekstu jednolitego wymienionej ustawy zostały ogłoszone w Dz. U. z 2025 r. poz. 820, 1006, 1676, 1734, 1843 i 1872.</zdanie></p></odnosnik>) zarządza się, co następuje:</podstawa-prawna>
+    <paragraf eId="DU/2026/164__art_1" gd:GUID="f289eb2d-a595-40ce-8ff8-41b80aa48cad" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-27_DU-2026-164_domyslne.x" wejscie-w-zycie="2026-02-27">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="e42a9aac-f557-451e-92e6-c550511ae30f" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-27_DU-2026-164_domyslne.x" wejscie-w-zycie="2026-02-27">
+        <p>
+          <zdanie nr="1" gd:zdGUID="97d3be73-abad-4d22-9330-5c8e9434bf76" fragment="1" gd:fragmentGUID="a98418e7-1dd4-4fa6-af5b-3215a36af403" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-27_DU-2026-164_domyslne.x" wejscie-w-zycie="2026-02-27">W rozporządzeniu Ministra Infrastruktury z dnia 28 stycznia 2011 r. w sprawie zakresu, warunków, terminów i sposobu przeprowadzania badań technicznych tramwajów i trolejbusów oraz jednostek wykonujących te badania (Dz. U. z 2024 r. poz. 1736) w § 1 w ust. 4 pkt 2 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/1736" cudzyslowy="oba" gd:nowGUID="7af2b548-9269-43ab-8d80-79f2c569ffac" element-eId="DU/2024/1736__art_1__ust_4__pkt_2" funkcja="zastap"><punkt eId="DU/2024/1736__art_1__ust_4__pkt_2" gd:GUID="bf906924-b7b0-4412-9abe-9007a52772ae" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-27_DU-2026-164_domyslne.x" wejscie-w-zycie="2026-02-27"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="f1cd28d3-fd06-4c02-b84a-ba958968a0e5" fragment="1" gd:fragmentGUID="367e685a-98bf-423d-87c0-e853a307bf1a" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-27_DU-2026-164_domyslne.x" wejscie-w-zycie="2026-02-27">PIT Certification spółka z ograniczoną odpowiedzialnością,</zdanie></p></punkt></cytat-strukt>.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2026/164__art_2" gd:GUID="a2c0bfea-db7a-407c-8377-9174ff169763" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-27_DU-2026-164_domyslne.x" wejscie-w-zycie="2026-02-27">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="512a1b94-a34a-462a-bcf8-662acec57f6c" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-27_DU-2026-164_domyslne.x" wejscie-w-zycie="2026-02-27">
+        <p>
+          <zdanie nr="1" gd:zdGUID="0af24755-a028-4181-ae79-0940b5086554" fragment="1" gd:fragmentGUID="a1402858-45a5-4504-a68b-0224c0d2df48" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-27_DU-2026-164_domyslne.x" wejscie-w-zycie="2026-02-27">Badania techniczne tramwajów oraz badania techniczne trolejbusów w części elektrycznej rozpoczęte i niezakończone przed dniem wejścia w życie niniejszego rozporządzenia są kontynuowane przez jednostkę badawczą, o której mowa w § 1 ust. 4 pkt 2 rozporządzenia zmienianego w § 1, w brzmieniu nadanym niniejszym rozporządzeniem.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2026/164__art_3" gd:GUID="9d78d309-d411-47ba-9f19-7118067bc8f1" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-27_DU-2026-164_domyslne.x" wejscie-w-zycie="2026-02-27">
+      <nr>3</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="1406a21b-d8de-488b-9c55-21eefef268a0" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-27_DU-2026-164_domyslne.x" wejscie-w-zycie="2026-02-27">
+        <p>
+          <zdanie nr="1" gd:zdGUID="df6f0e58-c9ed-4e8e-bb76-a552ac5b9668" fragment="1" gd:fragmentGUID="8c49bb04-75d0-45fb-ad5d-bc335f020bde" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-27_DU-2026-164_domyslne.x" wejscie-w-zycie="2026-02-27">Wpisy w zaświadczeniu o przeprowadzonym badaniu technicznym dotyczące badań technicznych tramwajów oraz badań technicznych trolejbusów w części elektrycznej dokonane przed dniem wejścia w życie niniejszego rozporządzenia zachowują ważność.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2026/164__art_4" gd:GUID="f534955e-ef09-4e00-993b-27d84cef0fdd" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-27_DU-2026-164_domyslne.x" wejscie-w-zycie="2026-02-27">
+      <nr>4</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="49b35976-4a6c-4071-852e-c953c75ae137" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-27_DU-2026-164_domyslne.x" wejscie-w-zycie="2026-02-27">
+        <p>
+          <zdanie nr="1" gd:zdGUID="619951c2-28c6-4c9d-81b4-fcaaea6c78ca" fragment="1" gd:fragmentGUID="c66f7cc9-574b-44e3-960b-7c08c5214538" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-27_DU-2026-164_domyslne.x" wejscie-w-zycie="2026-02-27">Rozporządzenie wchodzi w życie po upływie 14 dni od dnia ogłoszenia.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <organ-podpisujacy>Minister Infrastruktury: <i><osoba podpisujacy="true" gd:osobaGUID="03cfdbe8-58c1-484a-aaa7-c770b1a20de1"><imie>D.</imie> <nazwisko>Klimczak</nazwisko></osoba></i></organ-podpisujacy>
+  </rozporzadzenie>
+</akt-prawny>

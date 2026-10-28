@@ -1,0 +1,1306 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <obwieszczenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/865</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>ed391f12-a38f-4c31-bb57-d4ed96507a2e</gd:GUIDwersji>
+      <AdresISAP>WDU20250000865</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>865</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 865</AdresWyswietlany>
+      <Tytul>Obwieszczenie Marszałka Sejmu Rzeczypospolitej Polskiej z dnia 26 czerwca 2025 r. w sprawie ogłoszenia jednolitego tekstu ustawy o krajowym systemie ewidencji producentów, ewidencji gospodarstw rolnych oraz ewidencji wniosków o przyznanie płatności</Tytul>
+      <Rodzaj>OBW_TJ</Rodzaj>
+      <DataOgloszenia>2025-07-01</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-06-26</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_ujednolicenie_2025-07-01_DU-2025-865_domyslne" rodzaj="ujednolicenie" pochodzenie="domyslne-z-aktu" data="2025-07-01" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_ujednolicenie.zdarz_ujednolicenie_2025-07-01_DU-2025-865_domyslne" glowna="true">
+          <Przedzial rodzaj="ujednolicenie" od="zdarz_ujednolicenie_2025-07-01_DU-2025-865_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <DataObowiazywaniaWersji>
+        <Od>zdarz_ujednolicenie_2025-07-01_DU-2025-865_domyslne</Od>
+      </DataObowiazywaniaWersji>
+      <Organy>
+        <Organ gd:GUID="7125fe4e-55ba-4c02-9bbd-5d488ee960fe" rola="wydajacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/MSEJMU">
+          <Nazwa>Marszałek Sejmu</Nazwa>
+          <OrganPodpisujacy>Marszałek Sejmu</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>S.</imie> <nazwisko>Hołownia</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Obwieszczenie</rodzaj-aktu>
+    <autor-aktu>Marszałka Sejmu Rzeczypospolitej Polskiej</autor-aktu>
+    <data>z dnia 26 czerwca 2025 r.</data>
+    <tytul>w sprawie ogłoszenia jednolitego tekstu ustawy o krajowym systemie ewidencji producentów, ewidencji gospodarstw rolnych oraz ewidencji wniosków o przyznanie płatności</tytul>
+    <punkt-OTJ eId="DU/2025/865__pkt_1" gd:GUID="3a4184da-ab6d-42a7-afca-9bf2f6ab3f5b">
+      <nr>1</nr>
+      <p>
+        <zdanie nr="1" gd:zdGUID="7c03e9cb-1c70-4297-8498-7ec393991c12" fragment="1" gd:fragmentGUID="32271789-28bd-455e-96a0-060c1048c95f">Na podstawie art. 16 ust. 1 zdanie pierwsze ustawy z dnia 20 lipca 2000 r. o ogłaszaniu aktów normatywnych i niektórych innych aktów prawnych (Dz. U. z 2019 r. poz. 1461) ogłasza się w załączniku do niniejszego obwieszczenia jednolity tekst ustawy z dnia 18 grudnia 2003 r. o krajowym systemie ewidencji producentów, ewidencji gospodarstw rolnych oraz ewidencji wniosków o przyznanie płatności (Dz. U. z 2023 r. poz. 885), z uwzględnieniem zmiany wprowadzonej ustawą z dnia 7 marca 2025 r. o unijnej sieci danych dotyczących poziomu zrównoważenia gospodarstw rolnych (FSDN) (Dz. U. poz. 368) oraz zmian wynikających z przepisów ogłoszonych przed dniem 26 czerwca 2025 r.</zdanie>
+      </p>
+    </punkt-OTJ>
+    <punkt-OTJ eId="DU/2025/865__pkt_2" gd:GUID="a39ce46a-6192-4152-aea1-851cb0cd2675">
+      <nr>2</nr>
+      <p>
+        <zdanie nr="1" gd:zdGUID="c18cf65b-9c95-48f9-bd78-794cda572a9a" fragment="1" gd:fragmentGUID="f4959151-24bb-4600-8129-7c175ce16c52">Podany w załączniku do niniejszego obwieszczenia tekst jednolity ustawy nie obejmuje art. 30 ustawy z dnia 7 marca 2025 r. o unijnej sieci danych dotyczących poziomu zrównoważenia gospodarstw rolnych (FSDN) (Dz. U. poz. 368), który stanowi:<tresc-strukt cudzyslowy="oba" gd:GUID="f82c1437-d4ea-46a8-aa6d-e2e76dbae81b"><artykul eId="DU/2025/368__art_30" gd:GUID="976caea2-b935-4319-a16e-ca0358dcaf66"><nr>30</nr><ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="177a549f-88a2-481e-9f7c-212a9205df58"><p><zdanie nr="1" gd:zdGUID="e2332869-21ce-4f31-9399-0d6c3d1e7750" fragment="1" gd:fragmentGUID="7393106e-8921-45e9-be2a-c04469780c8f">Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.</zdanie></p></ustep-n></artykul></tresc-strukt>.</zdanie>
+      </p>
+    </punkt-OTJ>
+    <organ-podpisujacy>Marszałek Sejmu: <i><osoba podpisujacy="true" gd:osobaGUID="f47de15a-2277-4858-b7ef-2df58c15b0e8"><imie>S.</imie> <nazwisko>Hołownia</nazwisko></osoba></i></organ-podpisujacy>
+    <ustawa>
+      <zalacznik-do>Załącznik do obwieszczenia Marszałka Sejmu Rzeczypospolitej Polskiej z dnia 26 czerwca 2025 r. (Dz. U. poz. 865)</zalacznik-do>
+      <rodzaj-aktu>Ustawa</rodzaj-aktu>
+      <data>z dnia 18 grudnia 2003 r.</data>
+      <tytul>o krajowym systemie ewidencji producentów, ewidencji gospodarstw rolnych oraz ewidencji wniosków o przyznanie płatności</tytul>
+      <artykul eId="DU/2025/865__art_1" gd:GUID="71302def-d82d-41bf-9b67-9f2279a331ed">
+        <nr>1</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="b076d0af-e0d7-49bd-8de1-0d660694eba0">
+          <p>
+            <zdanie nr="1" gd:zdGUID="91c0ad2b-78ec-4723-bdc7-13b6e9171e03" fragment="1" gd:fragmentGUID="a39c48f2-6ab1-4ae1-8ab9-ad63da78172a">Ustawa określa zasady tworzenia i prowadzenia, zakres oraz przeznaczenie krajowego systemu ewidencji producentów, ewidencji gospodarstw rolnych oraz ewidencji wniosków o przyznanie płatności.</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2025/865__art_2" gd:GUID="2e64b81f-dcfa-451e-892d-f861a4925da2">
+        <nr>2</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="ce06888f-46db-4059-bb4f-7cde42846d40">
+          <p>
+            <zdanie nr="1" gd:zdGUID="053874e2-1ee7-4bf3-be70-49a212baa32a" fragment="1" gd:fragmentGUID="88d24aaf-66a8-4420-be64-b1689bf73702">Agencja Restrukturyzacji i Modernizacji Rolnictwa, zwana dalej „Agencją”, tworzy i prowadzi krajowy system ewidencji producentów, ewidencji gospodarstw rolnych oraz ewidencji wniosków o przyznanie płatności, zwany dalej „systemem”.</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2025/865__art_3" gd:GUID="5bd10b48-54f1-459b-a1ac-a436d88db419">
+        <nr>3</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="820770e9-426f-48b9-8045-d3facde86a7b">
+          <p>
+            <zdanie nr="1" gd:zdGUID="bc43686d-e724-4fbd-98fb-17228ab82481" fragment="1" gd:fragmentGUID="a34ce477-5270-4267-8c6c-af6d7a95e887">Użyte w ustawie określenia oznaczają:</zdanie>
+          </p>
+          <punkt eId="DU/2025/865__art_3__pkt_1" gd:GUID="7999bd97-c273-47a6-801d-bd28418214d6">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="bc43686d-e724-4fbd-98fb-17228ab82481" fragment="2" gd:fragmentGUID="812aebd1-1739-4788-bb1c-b8a9f340158f">gospodarstwo rolne – gospodarstwo w rozumieniu art. 3 pkt 2 rozporządzenia Parlamentu Europejskiego i Rady (UE) 2021/2115 z dnia 2 grudnia 2021 r. ustanawiającego przepisy dotyczące wsparcia planów strategicznych sporządzanych przez państwa członkowskie w ramach wspólnej polityki rolnej (planów strategicznych WPR) i finansowanych z Europejskiego Funduszu Rolniczego Gwarancji (EFRG) i z Europejskiego Funduszu Rolnego na rzecz Rozwoju Obszarów Wiejskich (EFRROW) oraz uchylającego rozporządzenia (UE) nr 1305/2013 i (UE) nr 1307/2013 (Dz. Urz. UE L 435 z 06.12.2021, str. 1, z późn. zm.<odnosnik id-odnosnika="1" symbol="1" gd:GUID="c5d75880-ae8d-4de0-b7af-41aa58afe6b4"><p><zdanie nr="1" gd:zdGUID="a433bcde-a3ea-4daa-9254-e0c59d6f8c13" fragment="1" gd:fragmentGUID="9b2c8b05-4ddf-48bf-800a-02d665154005">Zmiany wymienionego rozporządzenia zostały ogłoszone w Dz. Urz. UE L 119 z 21.04.2022, str. 1, Dz. Urz. UE L 181 z 07.07.2022, str. 35 oraz Dz. Urz. UE L 227 z 01.09.2022, str. 136.</zdanie></p></odnosnik>), zwanego dalej „rozporządzeniem 2021/2115”;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/865__art_3__pkt_2" gd:GUID="03d48fcd-a746-4731-855a-d0146c5ba351">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="bc43686d-e724-4fbd-98fb-17228ab82481" fragment="3" gd:fragmentGUID="42c29487-f2f3-478e-999e-e821d00f88e0">producent – producenta rolnego, beneficjenta programów rybackich, posiadacza zwierzęcia, organizację producentów, podmiot prowadzący zakład utylizacyjny oraz potencjalnego beneficjenta;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/865__art_3__pkt_3" gd:GUID="c82c10aa-02bc-4cbb-87e3-15173b26277b">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="bc43686d-e724-4fbd-98fb-17228ab82481" fragment="4" gd:fragmentGUID="4557183c-4667-455c-afa1-cca4b2b0a3bc">producent rolny – osobę fizyczną, osobę prawną lub jednostkę organizacyjną nieposiadającą osobowości prawnej, będącą:</zdanie>
+            </p>
+            <litera eId="DU/2025/865__art_3__pkt_3__lit_a" gd:GUID="0ecbe103-1697-4942-a4c6-e9f4e98784f6">
+              <nr>a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="bc43686d-e724-4fbd-98fb-17228ab82481" fragment="5" gd:fragmentGUID="c51aba07-3a35-4687-a88d-1c685363a6bd">(uchylona)</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/865__art_3__pkt_3__lit_b" gd:GUID="54d6465d-28e8-402e-a0c7-fd81cdd7b86b">
+              <nr>b</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="bc43686d-e724-4fbd-98fb-17228ab82481" fragment="6" gd:fragmentGUID="5e355c52-af11-429a-a335-70126aeedab7">rolnikiem w rozumieniu art. 3 pkt 1 rozporządzenia 2021/2115;</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/865__art_3__pkt_3__lit_c" gd:GUID="5c70024b-9d82-45d8-b621-0966ccfaa143">
+              <nr>c</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="bc43686d-e724-4fbd-98fb-17228ab82481" fragment="7" gd:fragmentGUID="921ab3c8-2d6a-4ef5-9e0a-419c92ca88d4">(uchylona)</zdanie>
+              </p>
+            </litera>
+          </punkt>
+          <punkt eId="DU/2025/865__art_3__pkt_3a" gd:GUID="8fd29ca3-e6f4-4c62-9efd-5518c68f44ed">
+            <nr>3a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="bc43686d-e724-4fbd-98fb-17228ab82481" fragment="8" gd:fragmentGUID="d622a1b3-882d-426a-9d3c-40d71435cfd4">(uchylony)</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/865__art_3__pkt_3b" gd:GUID="03943edc-237e-4f8c-9216-69403db1c417">
+            <nr>3b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="bc43686d-e724-4fbd-98fb-17228ab82481" fragment="9" gd:fragmentGUID="2eef37f1-b451-4a85-b4fa-23aa7226a34b">beneficjent programów rybackich – beneficjenta programów rybackich finansowanych ze środków europejskich i wdrażanych przez Agencję;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/865__art_3__pkt_3c" gd:GUID="c7df4d6d-c219-45d2-b34b-8101b9fe79da">
+            <nr>3c</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="bc43686d-e724-4fbd-98fb-17228ab82481" fragment="10" gd:fragmentGUID="98333140-e602-423c-bfdb-c85b2d45c7ca">posiadacz zwierzęcia:</zdanie>
+            </p>
+            <litera eId="DU/2025/865__art_3__pkt_3c__lit_a" gd:GUID="ef318999-a435-4b9e-b6a0-18f71a4b8f8d">
+              <nr>a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="bc43686d-e724-4fbd-98fb-17228ab82481" fragment="11" gd:fragmentGUID="a4d91df7-ee96-46bc-af28-51ed60f763a3">podmiot w rozumieniu:</zdanie>
+              </p>
+              <tiret eId="DU/2025/865__art_3__pkt_3c__lit_a__tir_1" gd:GUID="f54e2640-0974-46c6-b23a-4317ac6ab091">
+                <p>
+                  <zdanie nr="1" gd:zdGUID="bc43686d-e724-4fbd-98fb-17228ab82481" fragment="12" gd:fragmentGUID="fb8fb847-c106-4276-93d3-a19656e6f0ef">art. 4 pkt 24 rozporządzenia Parlamentu Europejskiego i Rady (UE) 2016/429 z dnia 9 marca 2016 r. w sprawie przenośnych chorób zwierząt oraz zmieniającego i uchylającego niektóre akty w dziedzinie zdrowia zwierząt („Prawo o zdrowiu zwierząt”) (Dz. Urz. UE L 84 z 31.03.2016, str. 1, z późn. zm.<odnosnik id-odnosnika="2" symbol="2" gd:GUID="f4b65e73-ebef-41f4-8102-6d3f0bced80b"><p><zdanie nr="1" gd:zdGUID="cf864393-38f8-44e5-809d-ad49ce4ea3b1" fragment="1" gd:fragmentGUID="8f4abf02-8b90-4313-a60d-0b6deb29b711">Zmiany wymienionego rozporządzenia zostały ogłoszone w Dz. Urz. UE L 57 z 03.03.2017, str. 65, Dz. Urz. UE L 95 z 07.04.2017, str. 1, Dz. Urz. UE L 137 z 24.05.2017, str. 40, Dz. Urz. UE L 272 z 31.10.2018, str. 11 oraz Dz. Urz. UE L 48 z 11.02.2021, str. 3.</zdanie></p></odnosnik>), zwanego dalej „rozporządzeniem 2016/429” – w odniesieniu do bydła, wielbłądowatych, jeleniowatych, owiec, kóz i świń,</zdanie>
+                </p>
+              </tiret>
+              <tiret eId="DU/2025/865__art_3__pkt_3c__lit_a__tir_2" gd:GUID="fec3f709-8ac3-4f26-bc3c-270f425c0b6b">
+                <p>
+                  <zdanie nr="1" gd:zdGUID="bc43686d-e724-4fbd-98fb-17228ab82481" fragment="13" gd:fragmentGUID="8fb50cd6-5657-4b7d-adf3-628b30233bff">art. 2 pkt 3 rozporządzenia wykonawczego Komisji (UE) 2021/963 z dnia 10 czerwca 2021 r. ustanawiającego zasady stosowania rozporządzeń Parlamentu Europejskiego i Rady (UE) 2016/429, (UE) 2016/1012 i (UE) 2019/6 w odniesieniu do identyfikacji i rejestracji koniowatych oraz określającego wzory dokumentów identyfikacyjnych dla tych zwierząt (Dz. Urz. UE L 213 z 16.06.2021, str. 3) – w odniesieniu do koniowatych</zdanie>
+                </p>
+              </tiret>
+              <czesc-wspolna-tiret eId="DU/2025/865__art_3__pkt_3c__lit_a__czw" gd:GUID="bf1f1b15-2836-4969-bc82-953eb7b0ee5f">
+                <p>
+                  <zdanie nr="1" gd:zdGUID="bc43686d-e724-4fbd-98fb-17228ab82481" fragment="14" gd:fragmentGUID="ec3b0daa-c508-4108-89e2-e43e63f4c78a">– z wyłączeniem przewoźnika w rozumieniu art. 4 pkt 25 rozporządzenia 2016/429,</zdanie>
+                </p>
+              </czesc-wspolna-tiret>
+            </litera>
+            <litera eId="DU/2025/865__art_3__pkt_3c__lit_b" gd:GUID="407a2478-b387-4376-89e1-1a7eb79dac37">
+              <nr>b</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="bc43686d-e724-4fbd-98fb-17228ab82481" fragment="15" gd:fragmentGUID="fe4cf353-6dab-491d-b20b-914becffd2a6">zakład w rozumieniu art. 4 pkt 27 rozporządzenia 2016/429 – w odniesieniu do ptaków z gatunków: kura (<i>Gallus gallus</i>), kaczka (<i>Anas platyrhynchos</i>), kaczka piżmowa (<i>Cairina moschata</i>), gęś (<i>Anser anser</i>), gęś garbonosa (<i>Anser cygnoides</i>), indyk (<i>Meleagris gallopavo</i>), przepiórka japońska (<i>Coturnix japonica</i>), perlica (<i>Numida meleagris</i>) oraz struś (<i>Struthio camelus</i>), w tym wylęgarnię w rozumieniu art. 4 pkt 47 rozporządzenia 2016/429,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/865__art_3__pkt_3c__lit_c" gd:GUID="37b448ab-073e-47f2-aac4-75879286cbb3">
+              <nr>c</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="bc43686d-e724-4fbd-98fb-17228ab82481" fragment="16" gd:fragmentGUID="9521af57-6bfb-4e2b-a904-8ce82e1f3880">rzeźnię w rozumieniu ust. 1 pkt 1.16 załącznika I do rozporządzenia (WE) nr 853/2004 Parlamentu Europejskiego i Rady z dnia 29 kwietnia 2004 r. ustanawiającego szczególne przepisy dotyczące higieny w odniesieniu do żywności pochodzenia zwierzęcego (Dz. Urz. UE L 139 z 30.04.2004, str. 55, z późn. zm.<odnosnik id-odnosnika="3" symbol="3" gd:GUID="3dc8e881-78ac-42f5-a52d-01f516cedfae"><p><zdanie nr="1" gd:zdGUID="a1116020-7f40-47d5-85a1-99288f95591d" fragment="1" gd:fragmentGUID="59a3edf7-3f95-4149-82fd-a450a53a8cfc">Zmiany wymienionego rozporządzenia zostały ogłoszone w Dz. Urz. UE L 338 z 22.12.2005, str. 27, Dz. Urz. UE L 338 z 22.12.2005, str. 83, Dz. Urz. UE L 320 z 18.11.2006, str. 1, Dz. Urz. UE L 363 z 20.12.2006, str. 1, Dz. Urz. UE L 281 z 25.10.2007, str. 8, Dz. Urz. UE L 277 z 18.10.2008, str. 8, Dz. Urz. UE L 87 z 31.03.2009, str. 109, Dz. Urz. UE L 178 z 09.07.2009, str. 25, Dz. Urz. UE L 314 z 01.12.2009, str. 8, Dz. Urz. UE L 159 z 25.06.2010, str. 18, Dz. Urz. UE L 46 z 19.02.2011, str. 14, Dz. Urz. UE L 327 z 09.12.2011, str. 39, Dz. Urz. UE L 8 z 12.01.2012, str. 29, Dz. Urz. UE L 158 z 10.06.2013, str. 1, Dz. Urz. UE L 160 z 12.06.2013, str. 15, Dz. Urz. UE L 220 z 17.08.2013, str. 14, Dz. Urz. UE L 69 z 08.03.2014, str. 95, Dz. Urz. UE L 175 z 14.06.2014, str. 6, Dz. Urz. UE L 307 z 28.10.2014, str. 28, Dz. Urz. UE L 67 z 12.03.2016, str. 22, Dz. Urz. UE L 144 z 07.06.2017, str. 37, Dz. Urz. UE L 285 z 01.11.2017, str. 3, Dz. Urz. UE L 285 z 01.11.2017, str. 10, Dz. Urz. UE L 45 z 17.02.2018, str. 47, Dz. Urz. UE L 197 z 03.08.2018, str. 15, Dz. Urz. UE L 239 z 24.09.2018, str. 41, Dz. Urz. UE L 42 z 13.02.2019, str. 35, Dz. Urz. UE L 43 z 14.02.2019, str. 39, 40, 42, 43, 44, 45 i 46, Dz. Urz. UE L 198 z 25.07.2019, str. 241, Dz. Urz. UE L 434 z 23.12.2020, str. 10, Dz. Urz. UE L 297 z 20.08.2020, str. 1 oraz Dz. Urz. UE L 357 z 08.10.2021, str. 27.</zdanie></p></odnosnik> – Dz. Urz. UE Polskie wydanie specjalne, rozdz. 3, t. 45, str. 14),</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/865__art_3__pkt_3c__lit_d" gd:GUID="b1998a4c-bcbb-4765-a4a6-5061a3d9ca56">
+              <nr>d</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="bc43686d-e724-4fbd-98fb-17228ab82481" fragment="17" gd:fragmentGUID="c9ae99f2-aba4-4f51-a40a-21bde821779f">właściciela koniowatego;</zdanie>
+              </p>
+            </litera>
+          </punkt>
+          <punkt eId="DU/2025/865__art_3__pkt_4" gd:GUID="2f1de6e4-d5b1-414a-a38d-4a4615808b40">
+            <nr>4</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="bc43686d-e724-4fbd-98fb-17228ab82481" fragment="18" gd:fragmentGUID="10725ad7-a620-4e3c-a939-1a2c889dcc5a">organizacja producentów – grupę producentów rolnych i związek grup producentów rolnych uznane na podstawie przepisów ustawy z dnia 15 września 2000 r. o grupach producentów rolnych i ich związkach oraz o zmianie innych ustaw (Dz. U. z 2023 r. poz. 1145) oraz organizację producentów, zrzeszenie organizacji producentów, organizację międzybranżową, międzynarodową organizację producentów, międzynarodowe zrzeszenie organizacji producentów i międzynarodową organizację międzybranżową uznane na podstawie rozporządzenia Parlamentu Europejskiego i Rady (UE) nr 1308/2013 z dnia 17 grudnia 2013 r. ustanawiającego wspólną organizację rynków produktów rolnych oraz uchylającego rozporządzenia Rady (EWG) nr 922/72, (EWG) nr 234/79, (WE) nr 1037/2001 i (WE) nr 1234/2007 (Dz. Urz. UE L 347 z 20.12.2013, str. 671, z późn. zm.<odnosnik id-odnosnika="4" symbol="4" gd:GUID="262d4498-7206-4b56-b6bc-e9a644c78630"><p><zdanie nr="1" gd:zdGUID="bd289d85-b08e-4871-ae0c-944020a4fe51" fragment="1" gd:fragmentGUID="66da5045-2465-4465-b696-aa46ab29c396">Zmiany wymienionego rozporządzenia zostały ogłoszone w Dz. Urz. UE L 347 z 20.12.2013, str. 865, Dz. Urz. UE L 189 z 27.06.2014, str. 261, Dz. Urz. UE L 130 z 19.05.2016, str. 20, Dz. Urz. UE L 135 z 24.05.2016, str. 1, Dz. Urz. UE L 193 z 19.07.2016, str. 17, Dz. Urz. UE L 202 z 28.07.2016, str. 5, Dz. Urz. UE L 91 z 05.04.2017, str. 44, Dz. Urz. UE L 350 z 29.12.2017, str. 350, Dz. Urz. UE L 114 z 04.05.2018, str. 39, Dz. Urz. UE L 437 z 28.12.2020, str. 437 oraz Dz. Urz. UE L 435 z 06.12.2021, str. 435.</zdanie></p></odnosnik>);</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/865__art_3__pkt_5" gd:GUID="f217569c-0ac7-43fd-92fe-59f42382b0f7">
+            <nr>5</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="bc43686d-e724-4fbd-98fb-17228ab82481" fragment="19" gd:fragmentGUID="78205707-3e5f-4c11-991d-dcc4f25ae1e7">(uchylony)</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/865__art_3__pkt_6" gd:GUID="4c03d00f-7e94-474d-b8e9-fc199e0e6817">
+            <nr>6</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="bc43686d-e724-4fbd-98fb-17228ab82481" fragment="20" gd:fragmentGUID="4d5d66fa-f02e-4da3-8ba1-d24f047bc1be">podmiot prowadzący zakład utylizacyjny – podmiot prowadzący zakład przetwórczy lub spalarnię w rozumieniu przepisów o systemie identyfikacji i rejestracji zwierząt;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/865__art_3__pkt_6a" gd:GUID="2e3e157b-e141-4ddb-84a0-438e16e3800f">
+            <nr>6a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="bc43686d-e724-4fbd-98fb-17228ab82481" fragment="21" gd:fragmentGUID="56a92c60-63eb-4cf2-a017-155e8e0c9df4">potencjalny beneficjent – osobę fizyczną, osobę prawną lub jednostkę organizacyjną nieposiadającą osobowości prawnej, która może:</zdanie>
+            </p>
+            <litera eId="DU/2025/865__art_3__pkt_6a__lit_a" gd:GUID="528eac61-101e-4426-b091-22cf4ab90cd8">
+              <nr>a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="bc43686d-e724-4fbd-98fb-17228ab82481" fragment="22" gd:fragmentGUID="7a96c412-88d9-4328-bb66-edde6282dd63">ubiegać się o przyznanie pomocy w ramach działań objętych programem rozwoju obszarów wiejskich,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/865__art_3__pkt_6a__lit_b" gd:GUID="47b2133e-6077-4a8f-93d1-a05e9d5e3f6a">
+              <nr>b</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="bc43686d-e724-4fbd-98fb-17228ab82481" fragment="23" gd:fragmentGUID="e5d9e3a8-3ded-4d06-b7e7-904020b9f979">uczestniczyć w innych niefinansowych, współfinansowanych lub finansowanych ze środków Unii Europejskiej mechanizmach administrowanych przez Agencję lub Krajowy Ośrodek Wsparcia Rolnictwa, w ramach których odpowiednio Agencja lub Krajowy Ośrodek Wsparcia Rolnictwa realizuje swoje zadania</zdanie>
+              </p>
+            </litera>
+            <czesc-wspolna-litera eId="DU/2025/865__art_3__pkt_6a__czw" gd:GUID="61fb3db5-48ff-4970-a57c-ec05e8ee8840">
+              <p>
+                <zdanie nr="1" gd:zdGUID="bc43686d-e724-4fbd-98fb-17228ab82481" fragment="24" gd:fragmentGUID="d3ce7fe7-da66-4dbb-a643-6bae30d60a4e">– niebędącą producentem rolnym, beneficjentem programów rybackich, posiadaczem zwierzęcia, organizacją producentów lub podmiotem prowadzącym zakład utylizacyjny;</zdanie>
+              </p>
+            </czesc-wspolna-litera>
+          </punkt>
+          <punkt eId="DU/2025/865__art_3__pkt_6b" gd:GUID="1e4d6838-3f2b-49b8-8de8-35c77feb451d">
+            <nr>6b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="bc43686d-e724-4fbd-98fb-17228ab82481" fragment="25" gd:fragmentGUID="197afe93-9efb-4d1a-a28d-f14e0ba7e2da">jednostka gruntu nierolniczego – jednostkę gruntu nierolniczego w rozumieniu art. 2 pkt 12 ustawy z dnia 8 lutego 2023 r. o Planie Strategicznym dla Wspólnej Polityki Rolnej na lata 2023–2027 (Dz. U. z 2024 r. poz. 1741 oraz z 2025 r. poz. 321);</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/865__art_3__pkt_7" gd:GUID="01b79cdc-bb22-462c-87dc-1595921eb3c2">
+            <nr>7</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="bc43686d-e724-4fbd-98fb-17228ab82481" fragment="26" gd:fragmentGUID="7b3d0c58-25ad-4a71-bd32-d4d5e454da89">działka rolna – działkę rolną w rozumieniu art. 2 pkt 4 ustawy z dnia 8 lutego 2023 r. o Planie Strategicznym dla Wspólnej Polityki Rolnej na lata 2023–2027;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/865__art_3__pkt_7a" gd:GUID="e33dffaf-fb33-419d-9415-d0036db558be">
+            <nr>7a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="bc43686d-e724-4fbd-98fb-17228ab82481" fragment="27" gd:fragmentGUID="617c095a-8b84-4851-928d-bf0ae5bd187a">właściciel koniowatego – właściciela w rozumieniu art. 2 pkt 4 rozporządzenia wykonawczego Komisji (UE) 2021/963 z dnia 10 czerwca 2021 r. ustanawiającego zasady stosowania rozporządzeń Parlamentu Europejskiego i Rady (UE) 2016/429, (UE) 2016/1012 i (UE) 2019/6 w odniesieniu do identyfikacji i rejestracji koniowatych oraz określającego wzory dokumentów identyfikacyjnych dla tych zwierząt;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/865__art_3__pkt_8" gd:GUID="f1f8ffbc-91bc-4035-a9c2-a20317df99c9">
+            <nr>8</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="bc43686d-e724-4fbd-98fb-17228ab82481" fragment="28" gd:fragmentGUID="5d759c40-3e7c-41ae-af83-d9c9744a0a78">zwierzęta – bydło, wielbłądowate, jeleniowate, owce, kozy, świnie i koniowate, o których mowa w przepisach o systemie identyfikacji i rejestracji zwierząt, oraz ptaki z gatunków: kura (<i>Gallus gallus</i>), kaczka (<i>Anas platyrhynchos</i>), kaczka piżmowa (<i>Cairina moschata</i>), gęś (<i>Anser anser</i>), gęś garbonosa (<i>Anser cygnoides</i>), indyk (<i>Meleagris gallopavo</i>), przepiórka japońska (<i>Coturnix japonica</i>), perlica (<i>Numida meleagris</i>) oraz struś (<i>Struthio camelus</i>);</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/865__art_3__pkt_9" gd:GUID="a668f44d-4736-485d-9299-a22b78013c7a">
+            <nr>9</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="bc43686d-e724-4fbd-98fb-17228ab82481" fragment="29" gd:fragmentGUID="5e4a592a-aeed-4897-ab66-b3e38f557878">płatności – pomoc finansową dla producentów rolnych, organizacji producentów i potencjalnych beneficjentów udzielaną w całości lub w części ze środków Europejskiego Funduszu Orientacji i Gwarancji Rolnej, Europejskiego Funduszu Rolniczego Gwarancji lub Europejskiego Funduszu Rolnego na rzecz Rozwoju Obszarów Wiejskich oraz przejściowe wsparcie krajowe, o którym mowa w przepisach o Planie Strategicznym dla Wspólnej Polityki Rolnej na lata 2023–2027.</zdanie>
+            </p>
+          </punkt>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2025/865__art_3a" gd:GUID="85d9cfbd-3dae-4709-ac78-2d24c5615cc8">
+        <nr>3a</nr>
+        <ustep eId="DU/2025/865__art_3a__ust_1" gd:GUID="892f96cc-5a68-4a4a-8cb2-ba3b4ec3552d">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="bf2d877a-8b09-40d9-b53c-52556e7807d5" fragment="1" gd:fragmentGUID="e5634bb3-7da1-47f4-9ddd-bccc20a5c301">Do postępowań w sprawach indywidualnych rozstrzyganych w drodze decyzji stosuje się przepisy Kodeksu postępowania administracyjnego, chyba że przepisy ustawy stanowią inaczej.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/865__art_3a__ust_2" gd:GUID="4bb73244-6875-4cb8-b566-9f752e6fdad1">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="15e0de31-8153-47a3-a9a0-d05c8bbdd14a" fragment="1" gd:fragmentGUID="21e5f837-2a80-4970-a0d1-c7ea53953a2b">W postępowaniach, o których mowa w ust. 1, organ administracji publicznej:</zdanie>
+          </p>
+          <punkt eId="DU/2025/865__art_3a__ust_2__pkt_1" gd:GUID="f3b1e0be-cdf6-45c0-aa71-b2f38eca5daf">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="15e0de31-8153-47a3-a9a0-d05c8bbdd14a" fragment="2" gd:fragmentGUID="7eb8f6d0-1ef2-49f3-ab94-416c6419bb77">stoi na straży praworządności;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/865__art_3a__ust_2__pkt_2" gd:GUID="8260c7fe-aa09-4ce0-a405-dc9d7a8628b2">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="15e0de31-8153-47a3-a9a0-d05c8bbdd14a" fragment="3" gd:fragmentGUID="e34735bb-4ef6-453d-a482-2f20d5b0a510">jest obowiązany w sposób wyczerpujący rozpatrzyć cały materiał dowodowy;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/865__art_3a__ust_2__pkt_3" gd:GUID="4d32c6ce-b559-4251-bbb8-b62362906b32">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="15e0de31-8153-47a3-a9a0-d05c8bbdd14a" fragment="4" gd:fragmentGUID="cfdd6c51-ece5-40cc-96fa-8b6f23b54fbc">udziela stronom, na ich żądanie, niezbędnych pouczeń, co do okoliczności faktycznych i prawnych, które mogą mieć wpływ na ustalenie ich praw i obowiązków będących przedmiotem postępowania;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/865__art_3a__ust_2__pkt_4" gd:GUID="5438a843-a465-4aec-8b1d-df46d9c211d1">
+            <nr>4</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="15e0de31-8153-47a3-a9a0-d05c8bbdd14a" fragment="5" gd:fragmentGUID="563a0d1d-edac-4e32-9b5a-e34da8da3f56">zapewnia stronom, na ich żądanie, czynny udział w każdym stadium postępowania i na ich żądanie, przed wydaniem decyzji, umożliwia im wypowiedzenie się co do zebranych dowodów i materiałów oraz zgłoszonych żądań; przepisu art. 81 Kodeksu postępowania administracyjnego nie stosuje się.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/865__art_3a__ust_3" gd:GUID="9c3b91b1-37aa-4a2e-b77a-c5bba68b08ed">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="2f58c9c5-7f8a-4f0f-a37c-0ac5775afbd2" fragment="1" gd:fragmentGUID="ac7d0c5b-831a-40f9-968b-44dd57a6563c">Strony oraz inne osoby uczestniczące w postępowaniu, o którym mowa w ust. 1, są obowiązane przedstawiać dowody oraz dawać wyjaśnienia co do okoliczności sprawy zgodnie z prawdą i bez zatajania czegokolwiek; ciężar udowodnienia faktu spoczywa na osobie, która z tego faktu wywodzi skutki prawne.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/865__art_4" gd:GUID="a3719dce-34ee-4867-9840-dfcd95b130ad">
+        <nr>4</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="b2a441cb-b1d0-4d01-98c9-d2b3cc0fbe50">
+          <p>
+            <zdanie nr="1" gd:zdGUID="36f3b961-6628-43c3-a412-3badef178413" fragment="1" gd:fragmentGUID="98893c37-b403-48c3-b808-3f98f047fc4f">System składa się z:</zdanie>
+          </p>
+          <punkt eId="DU/2025/865__art_4__pkt_1" gd:GUID="166ce323-66b9-4de1-90d9-7c3557708921">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="36f3b961-6628-43c3-a412-3badef178413" fragment="2" gd:fragmentGUID="ca727008-5c99-4fda-9b27-21089f641781">ewidencji producentów;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/865__art_4__pkt_2" gd:GUID="7ccb89b2-a4cf-422d-b58d-1fbe936d831c">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="36f3b961-6628-43c3-a412-3badef178413" fragment="3" gd:fragmentGUID="fad6755e-5cb0-4fad-852f-cdefcb8e629b">ewidencji gospodarstw rolnych;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/865__art_4__pkt_3" gd:GUID="6d9b5ced-84a2-4ffc-b012-27dde1a4957d">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="36f3b961-6628-43c3-a412-3badef178413" fragment="4" gd:fragmentGUID="09ca3005-ed5a-407e-85d5-83e0fd1687bc">ewidencji wniosków o przyznanie płatności;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/865__art_4__pkt_3a" gd:GUID="e99870bb-0e11-49f3-bdc1-cdc71592f1b1">
+            <nr>3a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="36f3b961-6628-43c3-a412-3badef178413" fragment="5" gd:fragmentGUID="e52cb188-a14a-4aa6-8229-81626eb7a306">systemu identyfikacji działek rolnych, o którym mowa w art. 68 ust. 1 rozporządzenia Parlamentu Europejskiego i Rady (UE) 2021/2116 z dnia 2 grudnia 2021 r. w sprawie finansowania wspólnej polityki rolnej, zarządzania nią i monitorowania jej oraz uchylenia rozporządzenia (UE) nr 1306/2013 (Dz. Urz. UE L 435 z 06.12.2021, str. 187, z późn. zm.<odnosnik id-odnosnika="5" symbol="5" gd:GUID="f553217a-430f-49b4-bdd2-4944117988aa"><p><zdanie nr="1" gd:zdGUID="c5fef113-0f0e-43f1-b2cd-c839d89cb3c6" fragment="1" gd:fragmentGUID="7a80c281-18a8-49aa-9ec8-5ccdc7915269">Zmiany wymienionego rozporządzenia zostały ogłoszone w Dz. Urz. UE L 29 z 10.02.2022, str. 45 oraz Dz. Urz. UE L 216 z 19.08.2022, str. 1.</zdanie></p></odnosnik>), zwanego dalej „rozporządzeniem 2021/2116”;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/865__art_4__pkt_3b" gd:GUID="cb70b425-85ac-4d6e-9f2f-3e77444a4892">
+            <nr>3b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="36f3b961-6628-43c3-a412-3badef178413" fragment="6" gd:fragmentGUID="bc91a9d6-6c48-48ad-b0cc-55ead7ad0aff">systemu monitorowania obszarów w rozumieniu art. 65 ust. 4 lit. b rozporządzenia 2021/2116;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/865__art_4__pkt_4" gd:GUID="78ac5400-6be6-4731-9fb4-88c72a3cc64a">
+            <nr>4</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="36f3b961-6628-43c3-a412-3badef178413" fragment="7" gd:fragmentGUID="6fba1f6b-8c87-4b20-a045-ce92b7827ad4">dokumentacji związanej z prowadzeniem ewidencji i systemów, o których mowa w pkt 1–3b.</zdanie>
+            </p>
+          </punkt>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2025/865__art_5" gd:GUID="5a0c147c-335d-4169-a952-fd1508a598ff">
+        <nr>5</nr>
+        <ustep eId="DU/2025/865__art_5__ust_1" gd:GUID="c4f4d556-5ba5-432c-832a-4f1fe0409d66">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="dd225bd1-4f07-4edf-aea3-41632d79856a" fragment="1" gd:fragmentGUID="11a45e96-4e3e-4cd5-ac3a-fcffc9e2b5cc">System wykorzystuje się w zakresie:</zdanie>
+          </p>
+          <punkt eId="DU/2025/865__art_5__ust_1__pkt_1" gd:GUID="6f3df92a-480c-445b-b1fc-a72e68d9b933">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="dd225bd1-4f07-4edf-aea3-41632d79856a" fragment="2" gd:fragmentGUID="59c13d65-1072-48c8-8d68-4c1fbc8f0875">przyznawania i wypłaty płatności;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/865__art_5__ust_1__pkt_2" gd:GUID="a9b04166-280e-4934-aac8-de7161ba8aa1">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="dd225bd1-4f07-4edf-aea3-41632d79856a" fragment="3" gd:fragmentGUID="11f9a0ea-5f19-4e16-823a-0f3de01c6a33">nadzoru nad przestrzeganiem przepisów dotyczących płatności realizowanych przez Agencję;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/865__art_5__ust_1__pkt_3" gd:GUID="16d1db42-9b7e-4ac1-801d-ab17e5ec8072">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="dd225bd1-4f07-4edf-aea3-41632d79856a" fragment="4" gd:fragmentGUID="9be4626e-8346-434c-8ff9-e27c3cb476dc">postępowania w sprawie zwrotu nienależnie wypłaconych płatności;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/865__art_5__ust_1__pkt_4" gd:GUID="84d9d117-6ed9-4085-8926-63edad932604">
+            <nr>4</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="dd225bd1-4f07-4edf-aea3-41632d79856a" fragment="5" gd:fragmentGUID="b7ef066c-62c0-4214-9788-69a7e665b26e">postępowania w sprawie wymierzania kar pieniężnych lub zastosowania innych sankcji;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/865__art_5__ust_1__pkt_5" gd:GUID="4b4d749e-23b0-429f-a5e9-cd1a9d806fb1">
+            <nr>5</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="dd225bd1-4f07-4edf-aea3-41632d79856a" fragment="6" gd:fragmentGUID="6ba703b2-c4f9-47c7-a1f3-a797a36d985e">identyfikacji producentów;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/865__art_5__ust_1__pkt_6" gd:GUID="64c439d0-56bb-41cd-bdcc-07537e0910d0">
+            <nr>6</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="dd225bd1-4f07-4edf-aea3-41632d79856a" fragment="7" gd:fragmentGUID="30915010-9599-41f8-b22c-ca4999f9bf9c"><odnosnik id-odnosnika="6" symbol="6" gd:GUID="a50525b1-449d-4c1e-8cfa-ccb5df476871"><p><zdanie nr="1" gd:zdGUID="55b98cc3-baa5-47c5-888f-4dbe499ce601" fragment="1" gd:fragmentGUID="14ebb408-6d9e-4c97-91ea-b848952c2044">Dodany przez art. 21 ustawy z dnia 7 marca 2025 r. o unijnej sieci danych dotyczących poziomu zrównoważenia gospodarstw rolnych (FSDN) (Dz. U. poz. 368), która weszła w życie z dniem 9 kwietnia 2025 r.</zdanie></p></odnosnik> zbierania danych w ramach unijnej sieci danych dotyczących poziomu zrównoważenia gospodarstw rolnych, o której mowa w ustawie z dnia 7 marca 2025 r. o unijnej sieci danych dotyczących poziomu zrównoważenia gospodarstw rolnych (FSDN) (Dz. U. poz. 368).</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/865__art_5__ust_2" gd:GUID="ea685caf-cc52-4592-a45f-2d610e7008c5">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="d79e70d2-236f-4c55-9064-5639e5a8e584" fragment="1" gd:fragmentGUID="0e832653-2b1a-44a2-b58e-dc17016135bc">(uchylony)</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/865__art_5__ust_3" gd:GUID="8552d097-70a2-433b-938a-cecdd559558b">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="34424e6c-5e3e-419d-bced-b860e33005b3" fragment="1" gd:fragmentGUID="a99673bb-d7fb-4c72-be19-1c730350d09d">(uchylony)</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/865__art_5__ust_3a" gd:GUID="253489c7-f080-4d8c-ad94-4bac42ea15fb">
+          <nr>3a</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="49519827-5cc1-4f8c-874c-14326c0bbf37" fragment="1" gd:fragmentGUID="3b18c055-811d-488a-82ab-0b941f91646f">(uchylony)</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/865__art_5__ust_4" gd:GUID="2b7db7cf-6b14-4152-b33c-e9f77020e073">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="34fedb5d-deed-44cc-bc39-572b030bf78e" fragment="1" gd:fragmentGUID="2b9d8142-73cf-43b3-92a1-5f4faf5ed910">Dane zawarte w systemie, określające przebieg granic działek rolnych w państwowym systemie odniesień przestrzennych, o którym mowa w przepisach Prawa geodezyjnego i kartograficznego, mogą być nieodpłatnie udostępniane organowi prowadzącemu ewidencję gruntów i budynków.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/865__art_5__ust_5" gd:GUID="5792d9c2-6748-4357-a371-1cf9b8447ab1">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="69cd82f3-e439-46f1-9e57-5b6bde622d88" fragment="1" gd:fragmentGUID="135e3972-9af4-49c5-9e3d-f32d2288c594">W niefinansowych, we współfinansowanych lub w finansowanych ze środków Unii Europejskiej mechanizmach administrowanych przez Agencję lub Krajowy Ośrodek Wsparcia Rolnictwa mogą uczestniczyć podmioty wpisane do ewidencji producentów.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/865__art_6" gd:GUID="84f85de8-9c65-4e40-84ac-724764e75598">
+        <nr>6</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="5bbd3648-0769-4e4a-8ecd-486afb050568">
+          <p>
+            <zdanie nr="1" gd:zdGUID="a6cacef7-edec-4cc8-8fd5-04a6905e0e67" fragment="1" gd:fragmentGUID="7885d527-c0b0-4732-a02a-84edaace2855">Ewidencję producentów, ewidencję gospodarstw rolnych, ewidencję wniosków o przyznanie płatności oraz system identyfikacji działek rolnych Agencja prowadzi w formie elektronicznej, zapewniając ochronę i zabezpieczenie danych przed ich utratą oraz nieuprawnionym do nich dostępem.</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2025/865__art_7" gd:GUID="f92805ca-a652-474b-ae72-a635babd6454">
+        <nr>7</nr>
+        <ustep eId="DU/2025/865__art_7__ust_1" gd:GUID="49cdae58-0cb4-46f2-ae3b-849b31688e0e">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="4f5e2f38-f77e-43ea-be69-167de453b684" fragment="1" gd:fragmentGUID="289ed386-0e90-4aff-bc52-c9478f5ea57e">Ewidencja producentów zawiera:</zdanie>
+          </p>
+          <punkt eId="DU/2025/865__art_7__ust_1__pkt_1" gd:GUID="3f4b129e-182a-42bf-8e61-a9b6a51a3ab3">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="4f5e2f38-f77e-43ea-be69-167de453b684" fragment="2" gd:fragmentGUID="07bd412b-3249-4488-9943-c64091408838">imię i nazwisko albo nazwę producenta, określenie jego miejsca zamieszkania i adres albo określenie siedziby i adres, a w przypadku osoby fizycznej również numer ewidencyjny powszechnego elektronicznego systemu ewidencji ludności (PESEL), z zastrzeżeniem ust. 3;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/865__art_7__ust_1__pkt_2" gd:GUID="2bc111b9-0b7a-49e0-b845-9699a00a4431">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="4f5e2f38-f77e-43ea-be69-167de453b684" fragment="3" gd:fragmentGUID="de057a8e-49df-48ab-9bf2-18630aab62ec">numer identyfikacyjny, o którym mowa w art. 12;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/865__art_7__ust_1__pkt_3" gd:GUID="6ebc00d0-04cf-45cb-8f2a-28416e445ad0">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="4f5e2f38-f77e-43ea-be69-167de453b684" fragment="4" gd:fragmentGUID="2219229f-c2b3-4ef9-8992-89d5b16cd542">numer identyfikacyjny w krajowym rejestrze urzędowym podmiotów gospodarki narodowej (REGON), jeżeli numer taki został nadany;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/865__art_7__ust_1__pkt_4" gd:GUID="09a4bb99-9b16-43d9-ae33-28ec19e1e04c">
+            <nr>4</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="4f5e2f38-f77e-43ea-be69-167de453b684" fragment="5" gd:fragmentGUID="051a340a-43cb-4ac6-b8ce-4f45de323e4d">numer identyfikacji podatkowej (NIP);</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/865__art_7__ust_1__pkt_5" gd:GUID="6a14e712-3446-44b7-bef2-db235a9f4fe9">
+            <nr>5</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="4f5e2f38-f77e-43ea-be69-167de453b684" fragment="6" gd:fragmentGUID="22a3ce8d-4857-492b-b61b-982170389c55">imię i nazwisko oraz określenie miejsca zamieszkania i adres pełnomocnika, jeżeli został ustanowiony, albo osoby uprawnionej do reprezentacji, wraz z numerem identyfikacji podatkowej (NIP) oraz numerem ewidencyjnym powszechnego elektronicznego systemu ewidencji ludności (PESEL), z zastrzeżeniem ust. 3;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/865__art_7__ust_1__pkt_6" gd:GUID="56885528-fd1b-4650-9e46-48e94d84f8e5">
+            <nr>6</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="4f5e2f38-f77e-43ea-be69-167de453b684" fragment="7" gd:fragmentGUID="a6f2469b-0dbf-427b-bad1-b5b68a4ac3d7">numer rachunku bankowego producenta lub numer rachunku producenta prowadzonego w spółdzielczej kasie oszczędnościowo-kredytowej;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/865__art_7__ust_1__pkt_7" gd:GUID="de66bc80-b72e-4cc8-854c-539d7db46e66">
+            <nr>7</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="4f5e2f38-f77e-43ea-be69-167de453b684" fragment="8" gd:fragmentGUID="a85390af-56e5-48e3-be2c-770e00a9ffb1">numer telefonu i adres poczty elektronicznej, jeżeli zostały podane na podstawie art. 10c ust. 6 ustawy z dnia 9 maja 2008 r. o Agencji Restrukturyzacji i Modernizacji Rolnictwa (Dz. U. z 2023 r. poz. 1199 oraz z 2025 r. poz. 39, 321 i 620) lub we wniosku o wpis producenta do ewidencji producentów.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/865__art_7__ust_1a" gd:GUID="196142e4-2d3a-449f-b2b1-1fe701f0bb38">
+          <nr>1a</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="57e8c7bb-ad1d-4c23-b958-3e91ac8df180" fragment="1" gd:fragmentGUID="92737279-d570-4b32-8cf7-1382c7925b56">W przypadku producenta będącego w związku małżeńskim oraz w przypadku producenta będącego współposiadaczem gospodarstwa rolnego ewidencja producentów zawiera ponadto:</zdanie>
+          </p>
+          <punkt eId="DU/2025/865__art_7__ust_1a__pkt_1" gd:GUID="0a049adc-696e-44b2-af05-260cd46526a7">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="57e8c7bb-ad1d-4c23-b958-3e91ac8df180" fragment="2" gd:fragmentGUID="85d5abd6-285f-4e53-bb35-3d5ce8485a01">imię i nazwisko oraz numer ewidencyjny powszechnego elektronicznego systemu ewidencji ludności (PESEL) małżonka producenta, z zastrzeżeniem ust. 3;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/865__art_7__ust_1a__pkt_2" gd:GUID="03b160ed-8c9a-4b14-a82e-fb7f6b682e2d">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="57e8c7bb-ad1d-4c23-b958-3e91ac8df180" fragment="3" gd:fragmentGUID="6fa6a72a-9bc9-4b89-b7c6-16a255957928">imiona i nazwiska oraz numer ewidencyjny powszechnego elektronicznego systemu ewidencji ludności (PESEL) współposiadaczy gospodarstwa rolnego będących osobami fizycznymi, z zastrzeżeniem ust. 3;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/865__art_7__ust_1a__pkt_3" gd:GUID="fd318a2b-ba7e-4384-a8b5-9c63f78beac8">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="57e8c7bb-ad1d-4c23-b958-3e91ac8df180" fragment="4" gd:fragmentGUID="6a271f70-9ec7-4db1-8fbb-ed9b098e2f53">nazwę oraz numer identyfikacyjny w krajowym rejestrze urzędowym podmiotów gospodarki narodowej (REGON) współposiadaczy gospodarstwa rolnego niebędących osobami fizycznymi, jeżeli numer taki został nadany.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/865__art_7__ust_1b" gd:GUID="dfde3423-39b4-4436-80e5-eab86611b0ee">
+          <nr>1b</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="e27946fb-be46-48e5-bbd2-69173b15438b" fragment="1" gd:fragmentGUID="4f07deae-d9fb-4094-822c-cfa522296a27">W przypadku producenta będącego spółką cywilną ewidencja producentów zawiera ponadto:</zdanie>
+          </p>
+          <punkt eId="DU/2025/865__art_7__ust_1b__pkt_1" gd:GUID="8989c001-4b1b-47ca-ada5-874f63501277">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="e27946fb-be46-48e5-bbd2-69173b15438b" fragment="2" gd:fragmentGUID="0773877c-f9f8-4f4d-8414-c74112907c34">imiona i nazwiska oraz numer ewidencyjny powszechnego elektronicznego systemu ewidencji ludności (PESEL) wspólników będących osobami fizycznymi, z zastrzeżeniem ust. 3;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/865__art_7__ust_1b__pkt_2" gd:GUID="9d0dde81-198d-4db9-959c-cc739d3e220c">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="e27946fb-be46-48e5-bbd2-69173b15438b" fragment="3" gd:fragmentGUID="7863d796-0d3c-4e56-87ed-3cafa7dee843">nazwę oraz numer identyfikacyjny w krajowym rejestrze urzędowym podmiotów gospodarki narodowej (REGON) wspólników niebędących osobami fizycznymi, jeżeli numer taki został nadany.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/865__art_7__ust_2" gd:GUID="96cc9ba3-9cc7-45fd-a527-eb404b6ec101">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a2412548-6838-4df1-9cbf-b00bc2f5ff23" fragment="1" gd:fragmentGUID="521c622c-c256-4563-ae96-d55edda61143">W przypadku organizacji producentów ewidencja producentów, oprócz danych, o których mowa w ust. 1, zawiera ponadto:</zdanie>
+          </p>
+          <punkt eId="DU/2025/865__art_7__ust_2__pkt_1" gd:GUID="f1d52ec2-f72a-44d8-be22-098a0e24f974">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="a2412548-6838-4df1-9cbf-b00bc2f5ff23" fragment="2" gd:fragmentGUID="d46201ac-df00-40c9-8f03-eea791a93912">wskazanie produktu lub grupy produktów, ze względu na które organizacja producentów została uznana;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/865__art_7__ust_2__pkt_2" gd:GUID="6134e15f-438d-4ba8-ba39-5a9faba9e562">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="a2412548-6838-4df1-9cbf-b00bc2f5ff23" fragment="3" gd:fragmentGUID="4a6321fb-f228-45ee-9a58-875191db2e4f">wykaz członków organizacji producentów, z podaniem imienia i nazwiska albo nazwy, numeru identyfikacyjnego, o którym mowa w art. 12, oraz numeru identyfikacyjnego w krajowym rejestrze urzędowym podmiotów gospodarki narodowej (REGON), jeżeli numer taki został nadany, a w przypadku osoby fizycznej również numeru ewidencyjnego powszechnego elektronicznego systemu ewidencji ludności (PESEL), z zastrzeżeniem ust. 3.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/865__art_7__ust_3" gd:GUID="bbf7f7ae-cb64-46a5-93f1-55b0299c1011">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="fbc0794c-127c-486e-b0c0-11efebb09622" fragment="1" gd:fragmentGUID="52e3f6e8-1b07-4425-ae76-cc6077006ae3">Jeżeli producentem, pełnomocnikiem lub członkiem organizacji producentów jest osoba fizyczna nieposiadająca obywatelstwa polskiego, ewidencja producentów zamiast numeru ewidencyjnego powszechnego elektronicznego systemu ewidencji ludności (PESEL) zawiera numer paszportu tej osoby lub innego dokumentu stwierdzającego jej tożsamość.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/865__art_8" gd:GUID="696ecaee-2ca7-441f-8cef-b3e4ad884fc3">
+        <nr>8</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="6bbc0812-b864-42fd-8dc7-5d5f2fcfdf17">
+          <p>
+            <zdanie nr="1" gd:zdGUID="59c58489-6f44-4fab-ab6b-c96a1b4d8380" fragment="1" gd:fragmentGUID="0e84d96f-4f39-4c0e-bf57-1acb6cfc0c9f">Ewidencja gospodarstw rolnych zawiera:</zdanie>
+          </p>
+          <punkt eId="DU/2025/865__art_8__pkt_1" gd:GUID="812f7c26-cbb0-4733-a88b-943181e96bdd">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="59c58489-6f44-4fab-ab6b-c96a1b4d8380" fragment="2" gd:fragmentGUID="240588ae-2d7b-44ce-836b-3b44d1434c5a">numer identyfikacyjny, o którym mowa w art. 12;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/865__art_8__pkt_2" gd:GUID="fb76952b-3da3-4ef2-9a94-6d429cc2be05">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="59c58489-6f44-4fab-ab6b-c96a1b4d8380" fragment="3" gd:fragmentGUID="5b9b105e-46e1-4189-94cf-c412a49c1788">numer identyfikacyjny w krajowym rejestrze urzędowym podmiotów gospodarki narodowej (REGON), jeżeli numer taki został nadany;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/865__art_8__pkt_3" gd:GUID="84ab38b2-70f5-4fee-bf63-eaf705f40b7d">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="59c58489-6f44-4fab-ab6b-c96a1b4d8380" fragment="4" gd:fragmentGUID="ad0a2139-7e3b-4598-ab64-2f45dd411b44">dane dotyczące powierzchni gospodarstwa rolnego, z podaniem identyfikatorów oraz powierzchni wchodzących w jego skład działek ewidencyjnych, na których są położone działki rolne;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/865__art_8__pkt_4" gd:GUID="fb5839eb-571c-4c2f-9017-ed62eb3372ca">
+            <nr>4</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="59c58489-6f44-4fab-ab6b-c96a1b4d8380" fragment="5" gd:fragmentGUID="1028a459-cb4c-4885-9d38-d5ceae1c3f26">dane umożliwiające identyfikację działek rolnych wchodzących w skład gospodarstwa rolnego, dotyczące w szczególności:</zdanie>
+            </p>
+            <litera eId="DU/2025/865__art_8__pkt_4__lit_a" gd:GUID="689ccdfa-3fc7-476d-9cb9-bf555222fe41">
+              <nr>a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="59c58489-6f44-4fab-ab6b-c96a1b4d8380" fragment="6" gd:fragmentGUID="8f89a56e-fd76-4707-a280-3096b222ab0b">powierzchni działek rolnych wykazanej w hektarach, z dokładnością do drugiego miejsca po przecinku,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/865__art_8__pkt_4__lit_b" gd:GUID="22ce9e75-02ac-4f1e-ae6c-6135d41a8629">
+              <nr>b</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="59c58489-6f44-4fab-ab6b-c96a1b4d8380" fragment="7" gd:fragmentGUID="1d6adf73-7aee-4a7c-9348-e9aaf3fd749c">lokalizacji działek rolnych, z podaniem numerów działek ewidencyjnych, na których są one położone,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/865__art_8__pkt_4__lit_c" gd:GUID="5f3acd19-c9cc-4f95-b703-9643a4679487">
+              <nr>c</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="59c58489-6f44-4fab-ab6b-c96a1b4d8380" fragment="8" gd:fragmentGUID="077dfe86-43bb-4d4d-892b-e179c1ca4fa8">sposobu wykorzystywania działek rolnych.</zdanie>
+              </p>
+            </litera>
+          </punkt>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2025/865__art_9" gd:GUID="184ab163-88a5-4ab0-9d25-5b5458d6b17f">
+        <nr>9</nr>
+        <ustep eId="DU/2025/865__art_9__ust_1" gd:GUID="6dc1de07-4cc7-4848-8de7-c23816f77c9a">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="f2b4fd53-0abb-45f0-9aaa-4816a4d0ebd7" fragment="1" gd:fragmentGUID="67880deb-6701-46b0-9687-df50b9834121">W ewidencji wniosków o przyznanie płatności zamieszcza się, w odniesieniu do każdego wnioskodawcy ubiegającego się o przyznanie płatności, dane dotyczące:</zdanie>
+          </p>
+          <punkt eId="DU/2025/865__art_9__ust_1__pkt_1" gd:GUID="5ad4b533-6b61-485e-8809-9a89a34b43d2">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="f2b4fd53-0abb-45f0-9aaa-4816a4d0ebd7" fragment="2" gd:fragmentGUID="e3578cc4-8e89-4a4e-8b49-693110bbd16f">terminów złożenia wniosków o przyznanie płatności;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/865__art_9__ust_1__pkt_2" gd:GUID="d2e1d94c-2839-4e18-8be1-dd838a6720b0">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="f2b4fd53-0abb-45f0-9aaa-4816a4d0ebd7" fragment="3" gd:fragmentGUID="2aca835d-66dd-4d05-a06c-44fed277cac5">tytułów, na podstawie których wnioskodawca ubiega się o przyznanie płatności, a także powierzchni działek rolnych objętych jego wnioskiem;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/865__art_9__ust_1__pkt_3" gd:GUID="2235bcca-134c-4bab-9245-68574ddc86e6">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="f2b4fd53-0abb-45f0-9aaa-4816a4d0ebd7" fragment="4" gd:fragmentGUID="99be1055-9c6f-47f5-9338-25d9c01268e8">liczby zwierząt, z podaniem ich gatunku, jeżeli wnioskodawca je posiada;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/865__art_9__ust_1__pkt_4" gd:GUID="dd1a0032-ef44-411c-a68c-2435b44924bb">
+            <nr>4</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="f2b4fd53-0abb-45f0-9aaa-4816a4d0ebd7" fragment="5" gd:fragmentGUID="1fc28877-cc3a-4a10-81cc-9032d8c97af9">sposobu rozpatrzenia wniosku o przyznanie płatności, ze wskazaniem przyczyn ewentualnej odmowy przyznania płatności, zastosowania redukcji lub sankcji;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/865__art_9__ust_1__pkt_5" gd:GUID="176279b8-9226-435c-b918-86129d7ac698">
+            <nr>5</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="f2b4fd53-0abb-45f0-9aaa-4816a4d0ebd7" fragment="6" gd:fragmentGUID="34ff9717-5e3d-416c-baa8-2dcad3f2770e">przeprowadzonych kontroli, w tym wyników tych kontroli;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/865__art_9__ust_1__pkt_6" gd:GUID="75352dd6-c231-46cd-869f-6d80c9a7ad0b">
+            <nr>6</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="f2b4fd53-0abb-45f0-9aaa-4816a4d0ebd7" fragment="7" gd:fragmentGUID="a7bdb99f-8ce5-46f6-8d71-25a2d1bc154d">wysokości przyznanych płatności, z podaniem dat ich przyznania;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/865__art_9__ust_1__pkt_7" gd:GUID="29ea220c-e575-433d-9690-692f22b7c274">
+            <nr>7</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="f2b4fd53-0abb-45f0-9aaa-4816a4d0ebd7" fragment="8" gd:fragmentGUID="cf76b820-9b89-469d-bf27-323f37358f57">wysokości wypłaconych płatności, z podaniem dat ich wypłacenia;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/865__art_9__ust_1__pkt_8" gd:GUID="30f83d04-db42-4d5b-902d-3d1b7fa7ed34">
+            <nr>8</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="f2b4fd53-0abb-45f0-9aaa-4816a4d0ebd7" fragment="9" gd:fragmentGUID="7661f07f-ffa5-415e-abb1-5cce80a1c120">okresów, za które przyznano i wypłacono płatności.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/865__art_9__ust_2" gd:GUID="fedf4e0b-c7ca-4c9b-9c7b-403022f75325">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="2d98c8a0-3e3e-49df-b3b0-15d3d43db903" fragment="1" gd:fragmentGUID="bbd2a979-a6d8-44df-a14b-776d5f6dbeec">Do ustalenia liczby zwierząt, o których mowa w ust. 1 pkt 3, wykorzystuje się informacje zawarte w komputerowej bazie danych prowadzonej na podstawie ustawy z dnia 4 listopada 2022 r. o systemie identyfikacji i rejestracji zwierząt (Dz. U. z 2023 r. poz. 1815).</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/865__art_9a" gd:GUID="b82c6b2a-b434-421a-90d0-ed5ff2e3359d">
+        <nr>9a</nr>
+        <ustep eId="DU/2025/865__art_9a__ust_1" gd:GUID="096ffc88-fc10-4279-a9f1-1d55068ce351">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a35342c6-5b17-4ae9-afad-fd15613755cb" fragment="1" gd:fragmentGUID="ddf1219d-63fe-4bcc-b7e5-15963f52f61d">System identyfikacji działek rolnych zawiera:</zdanie>
+          </p>
+          <punkt eId="DU/2025/865__art_9a__ust_1__pkt_1" gd:GUID="697c805b-d4e1-45cf-a7cb-21c578cf3d92">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="a35342c6-5b17-4ae9-afad-fd15613755cb" fragment="2" gd:fragmentGUID="ec620497-c112-47bb-8162-65fd36899c90">wektorowe granice oraz powierzchnię:</zdanie>
+            </p>
+            <litera eId="DU/2025/865__art_9a__ust_1__pkt_1__lit_a" gd:GUID="258d9725-0ac1-42c9-96e2-e349e852ab92">
+              <nr>a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="a35342c6-5b17-4ae9-afad-fd15613755cb" fragment="3" gd:fragmentGUID="9807a609-07c0-4b55-893f-6420521ed08e">maksymalnego kwalifikującego się obszaru, o którym mowa w art. 2 ust. 7 lit. a rozporządzenia delegowanego Komisji (UE) 2022/1172 z dnia 4 maja 2022 r. uzupełniającego rozporządzenie Parlamentu Europejskiego i Rady (UE) 2021/2116 w odniesieniu do zintegrowanego systemu zarządzania i kontroli we wspólnej polityce rolnej oraz stosowania i obliczania wysokości kar administracyjnych w związku z warunkowością (Dz. Urz. UE L 183 z 08.07.2022, str. 12), zwanego dalej „rozporządzeniem 2022/1172”,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/865__art_9a__ust_1__pkt_1__lit_b" gd:GUID="5a5db2e5-bf74-4b60-828e-43849d7dd166">
+              <nr>b</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="a35342c6-5b17-4ae9-afad-fd15613755cb" fragment="4" gd:fragmentGUID="154cb7b1-7487-447b-9f6c-4d5824fb0999">użytków rolnych, o których mowa w art. 2 ust. 7 lit. b rozporządzenia 2022/1172,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/865__art_9a__ust_1__pkt_1__lit_c" gd:GUID="7d42ec5b-7d2c-4e62-a862-95af26b0d26c">
+              <nr>c</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="a35342c6-5b17-4ae9-afad-fd15613755cb" fragment="5" gd:fragmentGUID="2aa5a10d-1cc4-46ff-b0b6-c21a110f4dcf">elementów krajobrazu, o których mowa w art. 2 ust. 7 lit. e rozporządzenia 2022/1172,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/865__art_9a__ust_1__pkt_1__lit_d" gd:GUID="a5750e40-659f-4528-b37f-0881e958b08c">
+              <nr>d</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="a35342c6-5b17-4ae9-afad-fd15613755cb" fragment="6" gd:fragmentGUID="0128d9b8-44e8-4293-8870-0d61f19e9c43">działek rolnych i jednostek gruntów nierolniczych;</zdanie>
+              </p>
+            </litera>
+          </punkt>
+          <punkt eId="DU/2025/865__art_9a__ust_1__pkt_1a" gd:GUID="ee331094-015a-4b29-88f7-9029aab1f848">
+            <nr>1a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="a35342c6-5b17-4ae9-afad-fd15613755cb" fragment="7" gd:fragmentGUID="60b85d3c-cab5-4413-b550-7d3e520c0ff4">informacje wymienione w art. 2 ust. 7 lit. d, f oraz g rozporządzenia 2022/1172;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/865__art_9a__ust_1__pkt_2" gd:GUID="7a18a126-2a60-40e4-8d31-ab16066d0942">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="a35342c6-5b17-4ae9-afad-fd15613755cb" fragment="8" gd:fragmentGUID="87dc2865-3d5f-46ff-993a-ff20acc1249f">identyfikatory działek ewidencyjnych zawarte w ewidencji gruntów i budynków prowadzonej na podstawie przepisów Prawa geodezyjnego i kartograficznego.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/865__art_9a__ust_2" gd:GUID="9570e980-51b2-47a0-b710-65095f83ca5f">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="cc78e029-985e-48bd-96e7-d19d19eee151" fragment="1" gd:fragmentGUID="97f662de-53e9-46b1-b563-6f0312549ccb">Do prowadzenia systemu, o którym mowa w ust. 1, wykorzystuje się w szczególności:</zdanie>
+          </p>
+          <punkt eId="DU/2025/865__art_9a__ust_2__pkt_1" gd:GUID="c5170d44-0855-4799-ae36-41f00e7c275e">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="cc78e029-985e-48bd-96e7-d19d19eee151" fragment="2" gd:fragmentGUID="86abb18b-f9d8-4607-9e10-0670daa9ca33">ortofotomapy cyfrowe sporządzane zgodnie z przepisami Prawa geodezyjnego i kartograficznego;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/865__art_9a__ust_2__pkt_2" gd:GUID="c72d8fce-fa53-4e70-b2af-ddf35c61cce7">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="cc78e029-985e-48bd-96e7-d19d19eee151" fragment="3" gd:fragmentGUID="ad3cbb40-d688-40b7-92d9-621058733706">dane z ewidencji gruntów i budynków prowadzonej na podstawie przepisów Prawa geodezyjnego i kartograficznego;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/865__art_9a__ust_2__pkt_3" gd:GUID="bf127ea0-37ee-48ea-b65d-835a92095468">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="cc78e029-985e-48bd-96e7-d19d19eee151" fragment="4" gd:fragmentGUID="08806504-c9c1-48f9-adf8-408e2297e034">dane z wniosków o przyznanie płatności;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/865__art_9a__ust_2__pkt_4" gd:GUID="1118673f-e7fb-47bb-8963-873831036303">
+            <nr>4</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="cc78e029-985e-48bd-96e7-d19d19eee151" fragment="5" gd:fragmentGUID="13bb1349-11c1-4a78-a761-f96d2a03d8f4">wyniki kontroli, o których mowa w rozporządzeniu 2022/1172 i rozporządzeniu wykonawczym Komisji (UE) 2022/1173 z dnia 31 maja 2022 r. ustanawiającym zasady stosowania rozporządzenia Parlamentu Europejskiego i Rady (UE) 2021/2116 w odniesieniu do zintegrowanego systemu zarządzania i kontroli we wspólnej polityce rolnej (Dz. Urz. UE L 183 z 08.07.2022, str. 23) oraz w przepisach ustawy z dnia 8 lutego 2023 r. o Planie Strategicznym dla Wspólnej Polityki Rolnej na lata 2023–2027.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/865__art_10" gd:GUID="1ff4b97e-a8a5-481d-baa6-6c87e0ebde99">
+        <nr>10</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="0ed8ed4a-78b6-4f80-adae-1aaa022ffd0b">
+          <p>
+            <zdanie nr="1" gd:zdGUID="8cbac3b1-2d85-4af0-91af-dc1db05bcb0f" fragment="1" gd:fragmentGUID="6ddaa16d-5c79-4095-814f-c0bf7aa8c6c2">Dane zawarte w systemie oraz dokumentację, o której mowa w art. 4 pkt 4, przechowuje się przez okres 5 lat, licząc od dnia 1 stycznia roku następującego po roku, w którym wniosek został zarejestrowany w systemie.</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2025/865__art_10a" gd:GUID="701bbf8e-a62b-43f6-9357-11b9c9ba9fb0">
+        <nr>10a</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="7846cbea-4417-4c2d-8883-228e10104dd3">
+          <p>
+            <zdanie nr="1" gd:zdGUID="c7720dc9-494e-45f3-8b91-769bf70f46b7" fragment="1" gd:fragmentGUID="231d708f-ecdc-446c-9f2c-e95f74f97673">Właściwy w sprawach dotyczących wpisu do ewidencji producentów i wykreślenia z tej ewidencji jest kierownik biura powiatowego Agencji, właściwy ze względu na miejsce zamieszkania lub siedzibę wnioskodawcy.</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2025/865__art_11" gd:GUID="378f518f-d03f-4854-9350-d3d1dd43454c">
+        <nr>11</nr>
+        <ustep eId="DU/2025/865__art_11__ust_1" gd:GUID="7b182ff4-d34d-40f3-94f0-b9c790b5f830">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="2545e953-6fd4-4dc3-882f-0df2b7446d4f" fragment="1" gd:fragmentGUID="b42ed4ee-cba9-4713-8fa9-157a79ab97c8">Wpisu producenta do ewidencji producentów dokonuje się, w drodze decyzji administracyjnej, na jego wniosek złożony do kierownika biura powiatowego Agencji właściwego miejscowo, na formularzu opracowanym i udostępnionym przez Agencję.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/865__art_11__ust_1a" gd:GUID="b1d7aa30-4b10-4de9-9854-df3592ccafc2">
+          <nr>1a</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="07dd6818-8168-4a7f-9657-4d76cc7b7ca3" fragment="1" gd:fragmentGUID="304b51c1-73f3-4960-8751-83e2eb1a44de">Wniosek, o którym mowa w ust. 1, może być złożony za pomocą systemu teleinformatycznego Agencji w sposób określony w przepisach o Agencji Restrukturyzacji i Modernizacji Rolnictwa.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/865__art_11__ust_1b" gd:GUID="ac8493b2-dea5-4fc1-b7f6-afe36b07ce36">
+          <nr>1b</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a389777d-4329-4c01-811b-2bbc476f0eaa" fragment="1" gd:fragmentGUID="aa911a8c-bfba-4e1a-85cc-38d9a54ea3e0">(uchylony)</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/865__art_11__ust_1c" gd:GUID="e53b3373-071f-4459-8b7b-1cdde7b0a791">
+          <nr>1c</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="5c108c7f-8413-44d2-b680-ed723eec0cb0" fragment="1" gd:fragmentGUID="3ae1a307-edd9-4e9a-aa95-51e03d9a5f71">(uchylony)</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/865__art_11__ust_1d" gd:GUID="58022f93-9aff-4a11-9fd3-8e46bd5980b9">
+          <nr>1d</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="9fee454f-01e8-42b0-800e-0d866a96630a" fragment="1" gd:fragmentGUID="a0022cfa-ca65-42b8-8f83-43e76432b920">(uchylony)</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/865__art_11__ust_2" gd:GUID="8d31ea20-c335-4d25-bd53-b85027bde515">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="02c7186a-3e20-4020-9edd-21dfc9009be5" fragment="1" gd:fragmentGUID="e6f29144-eb5f-485e-984a-6a5b73c2e6a7">(uchylony)</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/865__art_11__ust_3" gd:GUID="737f9d44-dc34-46a2-b688-3c4548342542">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="5d43c035-9684-4297-a06d-3cba06148d63" fragment="1" gd:fragmentGUID="bbf5f56e-7ef4-4e26-b47f-134187673997">Wniosek, o którym mowa w ust. 1, składa się nie później niż w dniu złożenia wniosku o przyznanie płatności, z tym że:</zdanie>
+          </p>
+          <punkt eId="DU/2025/865__art_11__ust_3__pkt_1" gd:GUID="1ea8833c-38ef-44bc-b9c4-e6a50a33fa74">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="5d43c035-9684-4297-a06d-3cba06148d63" fragment="2" gd:fragmentGUID="de607aac-4eae-4518-bca2-fdf2f4d46096">posiadacze zwierząt składają wniosek nie później niż w dniu złożenia wniosku o nadanie numeru siedzibie stada, rzeźni lub zakładowi drobiu zgodnie z przepisami o systemie identyfikacji i rejestracji zwierząt, a w przypadku właściciela koniowatego – w dniu zgłoszenia informacji o koniowatym do komputerowej bazy danych prowadzonej na podstawie ustawy z dnia 4 listopada 2022 r. o systemie identyfikacji i rejestracji zwierząt;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/865__art_11__ust_3__pkt_2" gd:GUID="ddf46817-50ba-4cdd-8825-c025e6823e38">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="5d43c035-9684-4297-a06d-3cba06148d63" fragment="3" gd:fragmentGUID="d565794b-d937-46e3-a3a5-18adcdc4c51a">podmioty prowadzące zakłady utylizacyjne składają wniosek nie później niż w dniu złożenia wniosku o nadanie temu zakładowi numeru zgodnie z przepisami o systemie identyfikacji i rejestracji zwierząt;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/865__art_11__ust_3__pkt_3" gd:GUID="6a0a5e7d-6c26-48c5-b838-586c9a28949e">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="5d43c035-9684-4297-a06d-3cba06148d63" fragment="4" gd:fragmentGUID="cf9a6162-4dd8-45b7-b2b2-5425f5abb05e">(uchylony)</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/865__art_11__ust_3__pkt_4" gd:GUID="1085e4ae-f3f0-4813-985a-77a0cbebbff2">
+            <nr>4</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="5d43c035-9684-4297-a06d-3cba06148d63" fragment="5" gd:fragmentGUID="b89e35bc-f671-4a56-a928-646bda3b4c51">(uchylony)</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/865__art_11__ust_3__pkt_5" gd:GUID="3c48bf31-9bcb-401d-88e0-cd9dab664b55">
+            <nr>5</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="5d43c035-9684-4297-a06d-3cba06148d63" fragment="6" gd:fragmentGUID="9455e906-a2de-4689-ac78-e31217c713a6">producenci rolni lub potencjalni beneficjenci niewpisani do ewidencji producentów rolnych mogą złożyć wniosek łącznie z wnioskiem o przyznanie pomocy w ramach działań, o których mowa w art. 5 ust. 1 pkt 2–5, 7 oraz 10–18 ustawy z dnia 7 marca 2007 r. o wspieraniu rozwoju obszarów wiejskich z udziałem środków Europejskiego Funduszu Rolnego na rzecz Rozwoju Obszarów Wiejskich w ramach Programu Rozwoju Obszarów Wiejskich na lata 2007–2013 (Dz. U. z 2023 r. poz. 1105), za pośrednictwem organu właściwego do przyznania pomocy w ramach tych działań;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/865__art_11__ust_3__pkt_6" gd:GUID="d3986951-093d-40a5-9f8d-b38d1200558c">
+            <nr>6</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="5d43c035-9684-4297-a06d-3cba06148d63" fragment="7" gd:fragmentGUID="30ad545f-c187-427f-b7e0-cff702a1d295">producenci rolni lub potencjalni beneficjenci niewpisani do ewidencji producentów rolnych mogą złożyć wniosek łącznie z wnioskiem o przyznanie pomocy w ramach działań, o których mowa w art. 3 ust. 1 pkt 4–6, 8–12a i 13a ustawy z dnia 20 lutego 2015 r. o wspieraniu rozwoju obszarów wiejskich z udziałem środków Europejskiego Funduszu Rolnego na rzecz Rozwoju Obszarów Wiejskich w ramach Programu Rozwoju Obszarów Wiejskich na lata 2014–2020 (Dz. U. z 2023 r. poz. 2298), za pośrednictwem organu właściwego do przyznania pomocy w ramach tych działań;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/865__art_11__ust_3__pkt_7" gd:GUID="04b1d8f9-182d-4cd7-85a0-2e83e18cd287">
+            <nr>7</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="5d43c035-9684-4297-a06d-3cba06148d63" fragment="8" gd:fragmentGUID="edeb0de8-bbd9-48e1-a1c3-6730e3bd8b3f">potencjalni beneficjenci niewpisani do ewidencji producentów mogą złożyć wniosek łącznie z wnioskiem o udział w mechanizmach administrowanych przez Krajowy Ośrodek Wsparcia Rolnictwa niefinansowych, współfinansowanych lub finansowanych ze środków Unii Europejskiej, za pośrednictwem organu właściwego do rozstrzygnięcia sprawy objętej postępowaniem wszczętym na ten wniosek.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/865__art_12" gd:GUID="dc44fa5d-286e-4c26-9817-bbc5ddfc7af1">
+        <nr>12</nr>
+        <ustep eId="DU/2025/865__art_12__ust_1" gd:GUID="9c991541-dffb-442a-a221-e404f9153d30">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="8738cefe-aa95-4de1-8e17-0d36ed60603f" fragment="1" gd:fragmentGUID="25d8f94f-ba2a-497d-9b54-8409ed9c3dc2">W decyzji, o której mowa w art. 11 ust. 1, producentowi nadaje się numer identyfikacyjny.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/865__art_12__ust_2" gd:GUID="d2021f00-8f86-4671-8da0-96304af7264b">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a591c7a2-e813-4384-8331-32b7bf220fb8" fragment="1" gd:fragmentGUID="f0249c7e-3a37-4100-9747-62c07800eb24">Numer identyfikacyjny, o którym mowa w ust. 1, jest niepowtarzalny i nie przechodzi na następcę prawnego.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/865__art_12__ust_3" gd:GUID="c4e6b7b8-199e-42f9-803c-a4d84e72a455">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="857b70d3-a427-41f5-85c4-92d933c790ed" fragment="1" gd:fragmentGUID="b5d66a7b-b41a-4884-a9d7-57cae4533e46">Wnioskodawcy podlegającemu wpisowi do ewidencji producentów na podstawie kilku tytułów nadaje się jeden numer identyfikacyjny.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/865__art_12__ust_4" gd:GUID="9e28a9ac-4cbc-42b7-897a-92e776b92f3a">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="8d561697-edfd-4923-88e1-795619291233" fragment="1" gd:fragmentGUID="ca68be17-e989-47d7-8b29-2a7edf58ee59">W przypadku małżonków oraz podmiotów będących współposiadaczami gospodarstwa rolnego nadaje się:</zdanie>
+          </p>
+          <punkt eId="DU/2025/865__art_12__ust_4__pkt_1" gd:GUID="df2b88d1-1401-4254-ba15-67ab4b635e2c">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="8d561697-edfd-4923-88e1-795619291233" fragment="2" gd:fragmentGUID="6d1fbaba-b235-4f80-a122-2fb39adc7ab9">jeden numer identyfikacyjny temu z małżonków lub współposiadaczy, co do którego współmałżonek lub współposiadacz wyrazili pisemną zgodę;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/865__art_12__ust_4__pkt_2" gd:GUID="3cb9c4cc-2109-4745-a8ba-c8a875434bdf">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="8d561697-edfd-4923-88e1-795619291233" fragment="3" gd:fragmentGUID="31231b50-df81-4e91-9b5c-65ccc2d04b42">odrębny numer identyfikacyjny od numeru, o którym mowa w pkt 1, jeżeli wnioskodawca:</zdanie>
+            </p>
+            <litera eId="DU/2025/865__art_12__ust_4__pkt_2__lit_a" gd:GUID="3ae4c96f-f9bc-413b-a326-1a6c2e700768">
+              <nr>a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="8d561697-edfd-4923-88e1-795619291233" fragment="4" gd:fragmentGUID="22c21065-5bf0-4bff-9098-a05a3ec29e3d">jest producentem rolnym i prowadzi samodzielnie odrębne gospodarstwo rolne stanowiące zorganizowaną całość gospodarczą lub</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/865__art_12__ust_4__pkt_2__lit_b" gd:GUID="b4d0930b-15d7-4c4b-8d3f-d26cca36f99b">
+              <nr>b</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="8d561697-edfd-4923-88e1-795619291233" fragment="5" gd:fragmentGUID="9d681569-29bf-4fb0-879a-efe0a5736e51">zamierza uczestniczyć w mechanizmach innych niż wymienione w ust. 4b, lub</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/865__art_12__ust_4__pkt_2__lit_c" gd:GUID="f476f11a-0d28-4292-a68e-ac27a8bc24d6">
+              <nr>c</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="8d561697-edfd-4923-88e1-795619291233" fragment="6" gd:fragmentGUID="b603937a-de29-4b70-a4bf-fb0d2f3fa7e7">jest posiadaczem zwierzęcia lub podmiotem prowadzącym zakład utylizacyjny.</zdanie>
+              </p>
+            </litera>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/865__art_12__ust_4a" gd:GUID="5bf4caee-0567-4fdc-a621-201d4b3a48fb">
+          <nr>4a</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="234373e6-1d0f-4962-9564-4dfe1ef1ae36" fragment="1" gd:fragmentGUID="cc74db7f-aade-42bf-9635-d84a4b7c993b">Wnioskodawcę, o którym mowa w ust. 4 pkt 2, wpisuje się do ewidencji producentów i nadaje mu się odrębny numer identyfikacyjny.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/865__art_12__ust_4b" gd:GUID="e6c014b5-cae6-498a-b7ba-7ac18be618e5">
+          <nr>4b</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="cb56c895-d2e5-4c7b-bddf-3b8a9261efaa" fragment="1" gd:fragmentGUID="7c6004ba-3c0a-46a1-81c6-54eb56da2445">Numer identyfikacyjny nadany w trybie ust. 4 pkt 2 lit. b i c nie może być wykorzystywany do ubiegania się o:</zdanie>
+          </p>
+          <punkt eId="DU/2025/865__art_12__ust_4b__pkt_1" gd:GUID="0dfe854a-63da-412c-a15b-c4390a020d35">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="cb56c895-d2e5-4c7b-bddf-3b8a9261efaa" fragment="2" gd:fragmentGUID="dd40b170-2257-42e2-891d-b14b770ae7c9">(uchylony)</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/865__art_12__ust_4b__pkt_2" gd:GUID="9b29e2fb-d5e7-4b75-b56a-d2a39e81b8fd">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="cb56c895-d2e5-4c7b-bddf-3b8a9261efaa" fragment="3" gd:fragmentGUID="f8db5a88-4131-4a4a-ac7f-1dfcc9d43711">przyznanie pomocy w ramach działań, o których mowa w art. 3 ust. 1 pkt 8 i 10–12a ustawy z dnia 20 lutego 2015 r. o wspieraniu rozwoju obszarów wiejskich z udziałem środków Europejskiego Funduszu Rolnego na rzecz Rozwoju Obszarów Wiejskich w ramach Programu Rozwoju Obszarów Wiejskich na lata 2014–2020;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/865__art_12__ust_4b__pkt_2a" gd:GUID="4ee3787a-aa8a-408d-ae81-953f689b626f">
+            <nr>2a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="cb56c895-d2e5-4c7b-bddf-3b8a9261efaa" fragment="4" gd:fragmentGUID="1cf2ba31-a2c3-4aa9-be9f-c1d89197482d">przyznanie pomocy, o której mowa w art. 20 pkt 1–5 ustawy z dnia 8 lutego 2023 r. o Planie Strategicznym dla Wspólnej Polityki Rolnej na lata 2023–2027;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/865__art_12__ust_4b__pkt_3" gd:GUID="8a8e2cd2-d0af-434f-a98f-72aa627bd58e">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="cb56c895-d2e5-4c7b-bddf-3b8a9261efaa" fragment="5" gd:fragmentGUID="8e11d463-4edb-491c-9bf8-27a4662088e6">wypłatę pomocy w ramach działania, o którym mowa w art. 5 ust. 1 pkt 15 ustawy z dnia 7 marca 2007 r. o wspieraniu rozwoju obszarów wiejskich z udziałem środków Europejskiego Funduszu Rolnego na rzecz Rozwoju Obszarów Wiejskich w ramach Programu Rozwoju Obszarów Wiejskich na lata 2007–2013;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/865__art_12__ust_4b__pkt_4" gd:GUID="f82722b6-4401-4ce5-9afb-edbc02a435cf">
+            <nr>4</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="cb56c895-d2e5-4c7b-bddf-3b8a9261efaa" fragment="6" gd:fragmentGUID="50326780-e61a-4aca-9bcc-b595215b24ff">wypłatę płatności w ramach działania, o którym mowa w art. 1 ust. 1 pkt 4 ustawy z dnia 28 listopada 2003 r. o wspieraniu rozwoju obszarów wiejskich ze środków pochodzących z Sekcji Gwarancji Europejskiego Funduszu Orientacji i Gwarancji Rolnej (Dz. U. z 2023 r. poz. 922).</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/865__art_12__ust_5" gd:GUID="7a793051-4732-43c3-ab8e-a7228d03b4ac">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="17f470cf-a2b6-4117-8366-ef79bd65f780" fragment="1" gd:fragmentGUID="a5269bf1-41e2-439f-963f-78916e9aac1d">W przypadku producentów działających w formie spółki cywilnej nadaje się jeden numer identyfikacyjny.</zdanie>
+            <zdanie nr="2" gd:zdGUID="e585d860-6a9c-4be8-a196-48eb140b752e" fragment="1" gd:fragmentGUID="4b82c104-b396-4f14-bdd4-0c493cab475b">Numer identyfikacyjny nadaje się spółce.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/865__art_12__ust_6" gd:GUID="28a6fe31-8376-4f1c-8c29-253a809979bb">
+          <nr>6</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="18f5d214-3d54-4490-b901-b2322b637c31" fragment="1" gd:fragmentGUID="83419bde-4823-4e70-aa92-35bac5e595bc">W przypadku, o którym mowa w ust. 4 pkt 1, do wniosku o wpis do ewidencji producentów dołącza się pisemną zgodę odpowiednio współmałżonka lub współposiadaczy gospodarstwa rolnego.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/865__art_13" gd:GUID="4cb1205b-c2aa-4906-8a4e-90cd5acb8762">
+        <nr>13</nr>
+        <ustep eId="DU/2025/865__art_13__ust_1" gd:GUID="886c4ae7-0414-4761-901b-1a79ac7003d1">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="fd9422c0-16dc-4903-b415-f82d38f3e29c" fragment="1" gd:fragmentGUID="3e49b049-d3c9-4b32-9774-89742a7739e0">(uchylony)</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/865__art_13__ust_2" gd:GUID="a19e3a53-7266-4243-9a94-5bc968c2c7e7">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="10cb862c-0ab1-41f1-9535-f88a99de1cb5" fragment="1" gd:fragmentGUID="fd8217e8-0e6e-4aa3-9104-53be3a8c323c">(uchylony)</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/865__art_13__ust_3" gd:GUID="aba430b0-30d2-46f2-99f6-414f02e8edcd">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="c61e221d-dd85-4be8-b6ec-3b088cbe014f" fragment="1" gd:fragmentGUID="db7121b5-31f8-4e87-9492-ab2680b073a1">(uchylony)</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/865__art_13__ust_4" gd:GUID="208aa972-659b-4a73-a420-1748f3b1916c">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="1905f4fb-cd48-4edd-83bd-1cce116160cb" fragment="1" gd:fragmentGUID="afb4b6ac-5f42-45b7-a397-01e0944e6bb0">Podmioty wpisane do ewidencji producentów w kontaktach z Agencją są obowiązane do posługiwania się numerem identyfikacyjnym, o którym mowa w art. 12.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/865__art_14" gd:GUID="13da4b90-7d9b-4fa3-a10e-a90936382c32">
+        <nr>14</nr>
+        <ustep eId="DU/2025/865__art_14__ust_1" gd:GUID="b879faf1-0514-40da-a83d-80653442eded">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="9e14f76b-6ba8-4483-b831-2658ee161cde" fragment="1" gd:fragmentGUID="d89b9967-1a7e-4322-b2b6-fd41e37dc084">Producent jest obowiązany do zgłoszenia kierownikowi biura powiatowego Agencji każdej zmiany danych zawartych we wniosku, o którym mowa w art. 11 ust. 1, w terminie 14 dni od dnia zaistnienia zmiany.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/865__art_14__ust_2" gd:GUID="acce381b-cfe5-45b7-9c1b-d639281001f9">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="e1ed916e-90a8-45ad-ae8e-6830ae6ac5b6" fragment="1" gd:fragmentGUID="a4ec1d2b-c4ba-4e47-9274-ed7368e1dc95">Zgłoszenia, o którym mowa w ust. 1, dokonuje się na formularzu wniosku o wpis do ewidencji producentów.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/865__art_14__ust_2a" gd:GUID="66062f75-508b-45fb-8dfa-ab4433b1a21a">
+          <nr>2a</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="2c4ed60e-c33e-4e4a-a92a-8acb544741ed" fragment="1" gd:fragmentGUID="6ff2920e-38fb-4b2e-8450-038739d9c8e2">Podanie za pomocą systemu teleinformatycznego Agencji numeru telefonu lub adresu poczty elektronicznej na podstawie art. 10c ust. 6 ustawy z dnia 9 maja 2008 r. o Agencji Restrukturyzacji i Modernizacji Rolnictwa lub zgodnie z ust. 2 uznaje się za zmianę danych w ewidencji producentów niewymagającą rozstrzygnięcia w drodze decyzji administracyjnej.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/865__art_14__ust_3" gd:GUID="6da314e4-ed6f-400c-9938-45fbf33a3e3b">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="1a05a222-4e29-4f06-9493-d54a4eb3e169" fragment="1" gd:fragmentGUID="a7158f23-7953-46b9-8e44-3771bbb4d38d">Zmiana danych w ewidencji producentów może być dokonywana również z urzędu na podstawie informacji pochodzących z innych ewidencji lub rejestrów publicznych prowadzonych przez organy lub podmioty wykonujące zadania publiczne, do których Agencja ma dostęp z mocy prawa, i nie wymaga rozstrzygnięcia w drodze decyzji administracyjnej.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/865__art_14a" gd:GUID="c2a231d1-87fe-40cd-af7a-285077644aee">
+        <nr>14a</nr>
+        <ustep eId="DU/2025/865__art_14a__ust_1" gd:GUID="adb9efc8-f759-4dfb-98d9-7662eca4e435">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="43910438-8f44-415d-b200-a2e0c9c8ced2" fragment="1" gd:fragmentGUID="0f78b2a0-a451-45cc-8517-b4976427d42b">Po zakończeniu postępowań w sprawach dotyczących wpisu do ewidencji producentów oraz wykreślenia z tej ewidencji ostatecznymi decyzjami administracyjnymi, a w przypadku gdy na te decyzje przysługuje skarga do sądu administracyjnego:</zdanie>
+          </p>
+          <punkt eId="DU/2025/865__art_14a__ust_1__pkt_1" gd:GUID="b88a7351-2328-4fce-afea-afc600722310">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="43910438-8f44-415d-b200-a2e0c9c8ced2" fragment="2" gd:fragmentGUID="efebd3ae-9311-433e-a242-6db5ce8be7ee">po bezskutecznym upływie terminu na wniesienie tej skargi albo</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/865__art_14a__ust_1__pkt_2" gd:GUID="e3b9bec4-179b-4070-b5a7-52981e9f59cc">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="43910438-8f44-415d-b200-a2e0c9c8ced2" fragment="3" gd:fragmentGUID="fb8a5f05-2ad4-4d76-8938-278cb2d4e132">po prawomocnym odrzuceniu albo oddaleniu tej skargi albo po prawomocnym umorzeniu postępowania sądowo-administracyjnego</zdanie>
+            </p>
+          </punkt>
+          <czesc-wspolna-punkt eId="DU/2025/865__art_14a__ust_1__czw" gd:GUID="27533783-c19c-457e-b595-da49d4f1dbbd">
+            <p>
+              <zdanie nr="1" gd:zdGUID="43910438-8f44-415d-b200-a2e0c9c8ced2" fragment="4" gd:fragmentGUID="d402d550-fd80-44f5-ba84-d38725649769">– w aktach sprawy pozostawia się elektroniczną kopię dokumentów powstałych w postaci papierowej, a uprzednio skopiowane elektronicznie dokumenty w postaci papierowej poddaje się brakowaniu.</zdanie>
+            </p>
+          </czesc-wspolna-punkt>
+        </ustep>
+        <ustep eId="DU/2025/865__art_14a__ust_2" gd:GUID="187429af-3a89-4051-a317-8d4d47e23519">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="28579198-d578-4ac2-ae1d-12819db0a44c" fragment="1" gd:fragmentGUID="1c0f405c-9b7c-4067-901e-c41106febb07">Przepis ust. 1 stosuje się również do dokumentów składających się na akta sprawy o:</zdanie>
+          </p>
+          <punkt eId="DU/2025/865__art_14a__ust_2__pkt_1" gd:GUID="34ddf701-0f3d-4dc0-a374-8342ed58aa0f">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="28579198-d578-4ac2-ae1d-12819db0a44c" fragment="2" gd:fragmentGUID="bb6aa397-1aca-4ebd-ad4c-5e1efe894e63">wznowienie postępowania,</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/865__art_14a__ust_2__pkt_2" gd:GUID="76ec80e5-efb4-485a-bb4e-76e7ff70d4f8">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="28579198-d578-4ac2-ae1d-12819db0a44c" fragment="3" gd:fragmentGUID="58461bd3-e039-451a-b940-15589a6afbe7">stwierdzenie nieważności, zmianę lub uchylenie decyzji,</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/865__art_14a__ust_2__pkt_3" gd:GUID="86c48630-29b9-4282-af03-9f7437583c7f">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="28579198-d578-4ac2-ae1d-12819db0a44c" fragment="4" gd:fragmentGUID="28c3f57a-9339-4f2f-8019-e9bf585308b1">stwierdzenie wygaśnięcia decyzji</zdanie>
+            </p>
+          </punkt>
+          <czesc-wspolna-punkt eId="DU/2025/865__art_14a__ust_2__czw" gd:GUID="493ae024-a9fa-4514-a7d9-f3acbfb53e13">
+            <p>
+              <zdanie nr="1" gd:zdGUID="28579198-d578-4ac2-ae1d-12819db0a44c" fragment="5" gd:fragmentGUID="e31d4873-e873-4ba9-b9fc-69e4214fc0a0">– w sprawach dotyczących wpisu do ewidencji producentów oraz wykreślenia z tej ewidencji, w postępowaniach przed kierownikiem biura powiatowego Agencji, dyrektorem oddziału regionalnego Agencji oraz Prezesem Agencji.</zdanie>
+            </p>
+          </czesc-wspolna-punkt>
+        </ustep>
+        <ustep eId="DU/2025/865__art_14a__ust_3" gd:GUID="18b98b1e-26ed-44c0-8c9a-b219c03b5ac5">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="2df7fc16-1c52-4b10-ae71-024a81df0cb0" fragment="1" gd:fragmentGUID="fbdbb87a-3964-4f9a-8200-c68278c3bd7a">Elektroniczną kopię dokumentów, o których mowa w ust. 1 i 2, zapisuje się:</zdanie>
+          </p>
+          <punkt eId="DU/2025/865__art_14a__ust_3__pkt_1" gd:GUID="acf9a46b-d3f3-4197-9ea1-0c435f59f5eb">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="2df7fc16-1c52-4b10-ae71-024a81df0cb0" fragment="2" gd:fragmentGUID="cbb6a81d-3d64-4ea7-a5c3-4e4178114cee">w formatach danych określonych w przepisach wydanych na podstawie art. 18 pkt 1 ustawy z dnia 17 lutego 2005 r. o informatyzacji działalności podmiotów realizujących zadania publiczne;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/865__art_14a__ust_3__pkt_2" gd:GUID="9fbbeee7-517e-4a47-8298-37a70844f438">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="2df7fc16-1c52-4b10-ae71-024a81df0cb0" fragment="3" gd:fragmentGUID="c053e8f0-0abc-476d-b185-6e781e347057">na informatycznym nośniku danych w rozumieniu art. 3 pkt 1 ustawy z dnia 17 lutego 2005 r. o informatyzacji działalności podmiotów realizujących zadania publiczne.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/865__art_14a__ust_4" gd:GUID="8d0fe057-0d5a-424a-b521-54fc433763cb">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="1f6bb8ee-12df-4b38-a6a3-9214516555a9" fragment="1" gd:fragmentGUID="e20214f9-18e7-4b51-9ce7-13fbc7bcbbcd">Organ właściwy w sprawach, o których mowa w ust. 1 i 2, albo osoba przez niego upoważniona potwierdzają kwalifikowaną pieczęcią elektroniczną organu lub kwalifikowanym podpisem elektronicznym zgodność z oryginałem elektronicznej kopii dokumentów, o których mowa w ust. 1 i 2.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/865__art_14a__ust_5" gd:GUID="b6e05e23-624d-4321-a803-50142f481387">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="4af79ad6-91bc-49c0-b393-11fc3575a319" fragment="1" gd:fragmentGUID="b6e83777-ab8a-4c18-ad42-defde98742d0">Do postępowania:</zdanie>
+          </p>
+          <punkt eId="DU/2025/865__art_14a__ust_5__pkt_1" gd:GUID="1edcd6d7-519a-4a9b-aa4f-eaa2143f4d80">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="4af79ad6-91bc-49c0-b393-11fc3575a319" fragment="2" gd:fragmentGUID="ba5213a3-07f7-40b2-be77-6e06c4dd4ad8">ze skopiowanymi elektronicznie dokumentami, o których mowa w ust. 1 i 2, nie stosuje się przepisów o narodowym zasobie archiwalnym i archiwach;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/865__art_14a__ust_5__pkt_2" gd:GUID="7def38d8-8b26-4226-a774-665b87938a6e">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="4af79ad6-91bc-49c0-b393-11fc3575a319" fragment="3" gd:fragmentGUID="2bf17597-41cb-454d-befd-a76dd49b0204">z elektroniczną kopią dokumentów, o których mowa w ust. 1 i 2, stosuje się odpowiednio przepisy o narodowym zasobie archiwalnym i archiwach określające sposób postępowania z dokumentami elektronicznymi.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/865__art_14a__ust_6" gd:GUID="debfc3ba-e417-4be9-a788-b19e70447ad2">
+          <nr>6</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="049940c8-1dff-4f85-8b78-2757f3b15910" fragment="1" gd:fragmentGUID="48ad6c16-b34d-48ab-891b-22cffdef8ea6">W przypadku gdy z przepisów prawa wynika obowiązek wydania, przekazania lub dostarczenia akt spraw, o których mowa w ust. 1 lub 2, lub dokumentów składających się na te akta, lub odpisów, wyciągów lub kopii tych dokumentów, do spełnienia tego obowiązku wystarczające jest wydanie, przekazanie lub dostarczenie uwierzytelnionego wydruku elektronicznej kopii dokumentów, o których mowa w ust. 1 i 2.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/865__art_15" gd:GUID="0f85ae4f-ca1f-4276-b895-47c911cea632">
+        <nr>15</nr>
+        <ustep eId="DU/2025/865__art_15__ust_1" gd:GUID="59e87968-c6ee-4f10-9c8d-6bbf8e43e1ef">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="aa1eaa9d-f4b2-4e8f-89cc-ac66aecb06d0" fragment="1" gd:fragmentGUID="f441a4ea-b538-4b5d-bcb0-8ebf36f4b028">Agencja może powierzać, na podstawie umowy, wykonywanie czynności technicznych związanych z prowadzeniem systemu wyspecjalizowanym podmiotom.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/865__art_15__ust_2" gd:GUID="ec125de4-7642-47e2-9e58-6f7b741bca2d">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="b96b85d1-a30f-48cb-a221-b7ae31cd5f5f" fragment="1" gd:fragmentGUID="88fc8dcf-4ab8-43e3-a633-66cffbafd67b">Rada Ministrów określi, w drodze rozporządzenia, rodzaje czynności technicznych, o których mowa w ust. 1, oraz warunki organizacyjne, techniczne i kadrowe, jakie powinny spełniać podmioty, którym mogą być powierzone do wykonania te czynności, mając na względzie zapewnienie wykonywania ich w jednolity sposób na obszarze całego kraju oraz sprawne funkcjonowanie systemu.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/865__art_16" gd:GUID="6332caa3-2cf2-4d80-ba60-10157b1f854d">
+        <nr>16</nr>
+        <ustep eId="DU/2025/865__art_16__ust_1" gd:GUID="738cd737-06cb-46be-bba4-e2812450b875">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="09394eac-7c48-476a-9d25-3d2d6a0cae46" fragment="1" gd:fragmentGUID="7591d900-4678-49bb-8420-0b2a293e331a">Prezes Głównego Urzędu Statystycznego udostępnia nieodpłatnie Agencji wykazy gospodarstw rolnych wpisanych do krajowego rejestru urzędowego podmiotów gospodarki narodowej wraz z nadanym w tym rejestrze numerem identyfikacyjnym (REGON) i zakodowanym opisem informacji objętych tym rejestrem.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/865__art_16__ust_2" gd:GUID="d04354b8-bcf3-4f8a-b009-1d8401809d91">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="c14d9bd4-b532-40f1-a833-dc92f3dfd882" fragment="1" gd:fragmentGUID="b524d7d5-cd71-4104-a998-e0a60de30416">Minister właściwy do spraw rolnictwa, minister właściwy do spraw rynków rolnych, minister właściwy do spraw rozwoju wsi, Dyrektor Generalny Krajowego Ośrodka Wsparcia Rolnictwa, Prezes Kasy Rolniczego Ubezpieczenia Społecznego, wojewodowie, Główny Inspektor Jakości Handlowej Artykułów Rolno-Spożywczych i wojewódzcy inspektorzy jakości handlowej artykułów rolno-spożywczych udostępniają nieodpłatnie Agencji dane zawarte w rejestrach oraz ewidencjach prowadzonych na podstawie odrębnych przepisów, niezbędne do dokonania płatności.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/865__art_16__ust_3" gd:GUID="3f12333b-6f19-448f-9e19-5672b8fdd7fb">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="1e2d1ceb-3f3d-4b97-8ee7-b1681d2f9c80" fragment="1" gd:fragmentGUID="1b9ea767-91a0-465f-8615-b9b18ca3ba70">Minister właściwy do spraw rozwoju wsi określi, w drodze rozporządzenia, warunki oraz tryb udostępniania danych przechowywanych w prowadzonych rejestrach i ewidencjach, o których mowa w ust. 2, mając na względzie ochronę danych osobowych, zapewnienie jednolitości danych o podmiotach ubiegających się o przyznanie płatności oraz bezpieczeństwo tych rejestrów i ewidencji oraz przechowywanych w nich danych, a także sprawne funkcjonowanie systemu.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/865__art_16a" gd:GUID="f821c8b1-9abd-4c7b-8dbf-1aca884eac04">
+        <nr>16a</nr>
+        <ustep eId="DU/2025/865__art_16a__ust_1" gd:GUID="070e543b-29eb-46bd-bbaf-9bd9c267b702">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="90d4b8fa-b496-4166-9929-fb6ee7e293ab" fragment="1" gd:fragmentGUID="0bcf3016-af17-44d1-8f6a-695bf2b5e243">Prezes Agencji może nieodpłatnie udostępnić dane przestrzenne zawarte w systemie identyfikacji działek rolnych, o którym mowa w art. 66 ust. 1 lit. a rozporządzenia 2021/2116, oraz w systemie kontroli i kar, o którym mowa w art. 66 ust. 1 lit. e rozporządzenia 2021/2116, dotyczące wektorowych granic i powierzchni:</zdanie>
+          </p>
+          <punkt eId="DU/2025/865__art_16a__ust_1__pkt_1" gd:GUID="16ddd29d-fe0c-4d65-b128-b8b646957e54">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="90d4b8fa-b496-4166-9929-fb6ee7e293ab" fragment="2" gd:fragmentGUID="183cf383-c412-4697-99e0-cd6585992e64">działek referencyjnych w rozumieniu art. 2 ust. 2 rozporządzenia 2022/1172, wraz z ich identyfikatorami,</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/865__art_16a__ust_1__pkt_2" gd:GUID="0eb38b90-3b64-4b34-95fe-24a71a0798a9">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="90d4b8fa-b496-4166-9929-fb6ee7e293ab" fragment="3" gd:fragmentGUID="8194e737-e41f-4ae1-86f7-aff4ab8c4465">maksymalnego kwalifikującego się obszaru, o którym mowa w art. 2 ust. 7 lit. a rozporządzenia 2022/1172,</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/865__art_16a__ust_1__pkt_3" gd:GUID="c28f8c08-067c-4eaa-95da-9a169f798101">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="90d4b8fa-b496-4166-9929-fb6ee7e293ab" fragment="4" gd:fragmentGUID="2c634116-2650-4c9f-a129-42c2bc8f3d1d">elementów, obszarów i gruntów wymienionych w art. 2 ust. 7 lit. e–g rozporządzenia 2022/1172,</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/865__art_16a__ust_1__pkt_4" gd:GUID="0474d95f-ff94-4356-a9fe-f5b34c85c7f5">
+            <nr>4</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="90d4b8fa-b496-4166-9929-fb6ee7e293ab" fragment="5" gd:fragmentGUID="fa05f208-81ca-4362-a98a-85beabe11d0b">upraw rolnych, elementów wymienionych w art. 2 ust. 7 lit. e rozporządzenia 2022/1172 oraz trwałych użytków zielonych w rozumieniu art. 2 pkt 29 ustawy z dnia 8 lutego 2023 r. o Planie Strategicznym dla Wspólnej Polityki Rolnej na lata 2023–2027, deklarowanych przez rolnika we wniosku o przyznanie płatności</zdanie>
+            </p>
+          </punkt>
+          <czesc-wspolna-punkt eId="DU/2025/865__art_16a__ust_1__czw" gd:GUID="eaeff791-52fb-4881-9165-699c0c29885f">
+            <p>
+              <zdanie nr="1" gd:zdGUID="90d4b8fa-b496-4166-9929-fb6ee7e293ab" fragment="6" gd:fragmentGUID="12db5f55-3935-4dfb-a525-782818feba69">– jeżeli te dane będą wykorzystywane do celów naukowych, badawczych, statystycznych lub środowiskowych, na wniosek podmiotów realizujących ustawowe zadania dotyczące tych celów, a także na wniosek instytucji i organów Unii Europejskiej.</zdanie>
+            </p>
+          </czesc-wspolna-punkt>
+        </ustep>
+        <ustep eId="DU/2025/865__art_16a__ust_2" gd:GUID="f6979b43-29b6-4c4d-a9b0-15f35350e8c4">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="c39b3761-e5d2-4159-8411-c88290576513" fragment="1" gd:fragmentGUID="5763a840-bfbb-48bf-92da-0de475478166">Wniosek o udostępnienie danych przestrzennych, o którym mowa w ust. 1:</zdanie>
+          </p>
+          <punkt eId="DU/2025/865__art_16a__ust_2__pkt_1" gd:GUID="9486c651-cfa8-4274-87c6-d2510c652fdd">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="c39b3761-e5d2-4159-8411-c88290576513" fragment="2" gd:fragmentGUID="55d329dc-5b5c-492f-9d12-539023ed7115">jest składany na piśmie utrwalonym w postaci papierowej lub elektronicznej, opatrzonym odpowiednio podpisem własnoręcznym, kwalifikowanym podpisem elektronicznym, podpisem zaufanym albo podpisem osobistym lub kwalifikowaną pieczęcią elektroniczną wnioskodawcy ze wskazaniem w treści pisma osoby opatrującej pismo pieczęcią;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/865__art_16a__ust_2__pkt_2" gd:GUID="729f2425-04d6-4d6c-ada7-2ec100850521">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="c39b3761-e5d2-4159-8411-c88290576513" fragment="3" gd:fragmentGUID="999da9c7-252e-4bc9-8486-c92e33aa2767">zawiera:</zdanie>
+            </p>
+            <litera eId="DU/2025/865__art_16a__ust_2__pkt_2__lit_a" gd:GUID="43d5ff1a-27ae-49f5-9844-035e2cb00c83">
+              <nr>a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="c39b3761-e5d2-4159-8411-c88290576513" fragment="4" gd:fragmentGUID="f762725f-ac73-4918-bf64-da60c264a7e8">nazwę i adres wnioskodawcy,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/865__art_16a__ust_2__pkt_2__lit_b" gd:GUID="6833c494-278d-4bcf-817d-dff62e99dbf3">
+              <nr>b</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="c39b3761-e5d2-4159-8411-c88290576513" fragment="5" gd:fragmentGUID="d789b7cd-2c5b-41c7-82f3-1ed69520f8f9">zakres danych przestrzennych, jakie miałyby zostać udostępnione wnioskodawcy,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/865__art_16a__ust_2__pkt_2__lit_c" gd:GUID="15949ce4-5182-43e4-9c0a-944ac0f4612b">
+              <nr>c</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="c39b3761-e5d2-4159-8411-c88290576513" fragment="6" gd:fragmentGUID="e5ca6b70-ca95-4629-9fba-b720016e3783">informacje niezbędne do ustalenia, czy wnioskodawca spełnia warunki określone w ust. 1, w tym zakres zadań realizowanych przez wnioskodawcę oraz cel, w jakim wnioskodawca zamierza wykorzystać udostępnione dane przestrzenne.</zdanie>
+              </p>
+            </litera>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/865__art_16a__ust_3" gd:GUID="5b97899a-2398-4754-8af4-eb8b13130e6d">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="dc0cb48d-6fde-4f77-b571-acefda632bab" fragment="1" gd:fragmentGUID="5a39da3f-cdeb-42b9-a0c8-d21be5b5c6e0">Jeżeli warunki udostępnienia danych przestrzennych określone w ust. 1 są spełnione, Prezes Agencji udostępnia te dane:</zdanie>
+          </p>
+          <punkt eId="DU/2025/865__art_16a__ust_3__pkt_1" gd:GUID="fb72b777-007f-48c9-9f78-3ef364d8a913">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="dc0cb48d-6fde-4f77-b571-acefda632bab" fragment="2" gd:fragmentGUID="957da4ed-c709-4aa2-a0b7-ad23436cade9">z zapewnieniem ochrony wynikającej z przepisów o ochronie danych osobowych;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/865__art_16a__ust_3__pkt_2" gd:GUID="eddfb627-3678-4f60-91d0-45b02f2cc7dd">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="dc0cb48d-6fde-4f77-b571-acefda632bab" fragment="3" gd:fragmentGUID="ea9a6bf5-e459-4d92-b912-a3a262c806fb">w postaci elektronicznej przy wykorzystaniu udostępnionych przez Agencję usług danych przestrzennych, o których mowa w art. 9 ust. 1 pkt 1–3 ustawy z dnia 4 marca 2010 r. o infrastrukturze informacji przestrzennej (Dz. U. z 2025 r. poz. 242).</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/865__art_17" gd:GUID="f4b394b3-f6da-4e90-8c3e-83323d017181">
+        <nr>17</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="a18c8bca-dfaf-4df5-be88-3a01512d64ed">
+          <p>
+            <zdanie nr="1" gd:zdGUID="3080b31b-60e5-40bc-9aa6-fd4480e187ff" fragment="1" gd:fragmentGUID="23e76aca-4737-4edb-a9ad-b474d657b2bb">Minister właściwy do spraw rozwoju wsi określi, w drodze rozporządzenia, szczegółowe wymagania, jakie powinien spełniać wniosek o wpis do ewidencji producentów, uwzględniając dane, o których mowa w art. 7, oraz biorąc pod uwagę zapewnienie prawidłowego funkcjonowania systemu.</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2025/865__art_18" gd:GUID="ffabf7d8-0b4b-47a5-ad13-b84eb468b458">
+        <nr>18</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="8eb6d172-b073-4187-a273-74c883ad50f4">
+          <p>
+            <zdanie nr="1" gd:zdGUID="b826f7c7-6651-451a-804a-e39276a0190f" fragment="1" gd:fragmentGUID="bcca4514-8d07-44f6-b1f3-78bafb9191d3">(pominięty)</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2025/865__art_19" gd:GUID="6ed968c1-359c-4df4-b382-fbcc92954b76">
+        <nr>19</nr>
+        <ustep eId="DU/2025/865__art_19__ust_1" gd:GUID="e1b50dad-2076-444b-b6fd-4bd425a2ad65">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="37a28e28-a17a-4b84-8726-52fb70e12b15" fragment="1" gd:fragmentGUID="97a2fee1-f16e-4989-86e4-fe57cfcda90e">Posiadacze zwierząt oznakowanych, których zwierzęta zostały zarejestrowane przed dniem wejścia w życie ustawy w rejestrze zwierząt prowadzonym na podstawie przepisów o zwalczaniu chorób zakaźnych zwierząt, badaniu zwierząt rzeźnych i mięsa oraz o Inspekcji Weterynaryjnej, są obowiązani do złożenia wniosku o wpis do ewidencji producentów w terminie 14 dni od dnia otrzymania formularza takiego wniosku od Agencji.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/865__art_19__ust_2" gd:GUID="6689db23-8929-48d2-b8cd-be009fa033e5">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="1fae8e74-aabd-40a0-80a0-9a9a1ec575a7" fragment="1" gd:fragmentGUID="1dc586d4-a5f0-4b88-878d-34a9342917d9">Podmioty prowadzące zakłady utylizacyjne w dniu wejścia w życie ustawy są obowiązane do złożenia wniosków o wpis do ewidencji producentów w terminie 21 dni od dnia jej wejścia w życie.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/865__art_20" gd:GUID="83329d2c-99b8-4285-b403-958846414466">
+        <nr>20</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="949ea52d-8b8e-408b-a8c0-0a8e911bd0c0">
+          <p>
+            <zdanie nr="1" gd:zdGUID="e9bb23bb-31c8-4e3c-bc95-a3d95702a0db" fragment="1" gd:fragmentGUID="4dc1113b-d17e-4ddb-8524-2e452e2679c2">Ilekroć w odrębnych przepisach jest mowa o krajowym systemie ewidencji gospodarstw rolnych i zwierząt gospodarskich, rozumie się przez to krajowy system ewidencji producentów, ewidencji gospodarstw rolnych oraz ewidencji wniosków o przyznanie płatności.</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2025/865__art_21" gd:GUID="7922ecda-bba6-438c-bbf1-fc1d225b7181">
+        <nr>21</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="c6b817eb-c64b-4a7e-b818-67f334bccf14">
+          <p>
+            <zdanie nr="1" gd:zdGUID="c8b94795-d738-47ce-a7c5-788779e94fd8" fragment="1" gd:fragmentGUID="b34d2ebd-64e8-4517-a0b6-7c5754280024">Dane pozyskane w celu utworzenia ewidencji gospodarstw rolnych, o której mowa w ustawie wymienionej w art. 23, Agencja wykorzystuje w celu utworzenia ewidencji gospodarstw rolnych, o której mowa w art. 4 pkt 2.</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2025/865__art_22" gd:GUID="fb7aae40-a5d3-438a-b71c-c30215ad8034">
+        <nr>22</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="d56b4a89-79de-4289-903b-ca9cad247e33">
+          <p>
+            <zdanie nr="1" gd:zdGUID="04709ae2-2296-476b-b374-3bb257d23216" fragment="1" gd:fragmentGUID="4758c240-2015-420f-922b-a2f98d1db1e5">Do czasu wydania przepisów wykonawczych na podstawie art. 15 ust. 2 pozostają w mocy przepisy wykonawcze wydane na podstawie art. 13 ust. 2 ustawy, o której mowa w art. 23.</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2025/865__art_23" gd:GUID="d025c7de-bf42-4f8d-bf48-d98f16395c4b">
+        <nr>23</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="932d7166-36b8-41ce-a899-229f2e63866a">
+          <p>
+            <zdanie nr="1" gd:zdGUID="cccc78d2-f783-4e60-9c80-86e73d133eab" fragment="1" gd:fragmentGUID="dc29dfa5-26f9-40df-a75d-3ef84a2dc9bd">Traci moc ustawa z dnia 25 lipca 2001 r. o krajowym systemie ewidencji gospodarstw rolnych i zwierząt gospodarskich oraz o zmianie niektórych ustaw (Dz. U. poz. 1363).</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2025/865__art_24" gd:GUID="29eb5e96-b301-4a5e-9956-869bbd45420d">
+        <nr>24</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="16379354-8e89-4c97-9287-98539616de93">
+          <p>
+            <zdanie nr="1" gd:zdGUID="48d83b30-e8ef-4ebb-b6cd-0baa8d8906a5" fragment="1" gd:fragmentGUID="f49fccab-c5f6-440f-bdb1-4a9ee12096d5">Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia<odnosnik id-odnosnika="7" symbol="7" gd:GUID="79a9dfbc-aeee-424f-ab75-f36347e696bb"><p><zdanie nr="1" gd:zdGUID="d66e61f4-2584-426e-9b74-2b314ca5c6f7" fragment="1" gd:fragmentGUID="210222cf-e300-4baa-8733-e530453bcdb1">Ustawa została ogłoszona w dniu 23 stycznia 2004 r.</zdanie></p></odnosnik>.</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+    </ustawa>
+  </obwieszczenie>
+</akt-prawny>

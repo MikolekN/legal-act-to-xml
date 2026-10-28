@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <rozporzadzenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/1096</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>9b8bb820-c364-4bac-bfa6-df9bffb1f1f1</gd:GUIDwersji>
+      <AdresISAP>WDU20250001096</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>1096</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 1096</AdresWyswietlany>
+      <Tytul>Rozporządzenie Ministra Finansów i Gospodarki z dnia 1 sierpnia 2025 r. zmieniające rozporządzenie w sprawie pobierania i zwrotu podatku od czynności cywilnoprawnych</Tytul>
+      <Rodzaj>ROZP</Rodzaj>
+      <DataOgloszenia>2025-08-11</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-08-01</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2025-08-12_DU-2025-1096_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2025-08-12" warunek="z dniem następującym po dniu ogłoszenia" podstawa="§ 2" zrodlo="https://eli.gov.pl/eli/DU/2025/1096" dowod="DU/2025/1096__art_2" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2025-08-12_DU-2025-1096_domyslne.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2025-08-12_DU-2025-1096_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="6b1d49d5-cb62-4bb2-a069-454bb518f4a5" rola="wydajacy">
+          <Nazwa>Minister Finansów i Gospodarki</Nazwa>
+          <OrganPodpisujacy>Minister Finansów i Gospodarki</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>J.</imie> <nazwisko>Drop</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Rozporządzenie</rodzaj-aktu>
+    <autor-aktu>Ministra Finansów i Gospodarki<odnosnik id-odnosnika="1" symbol="1" gd:GUID="11f64004-f7f9-4455-9c21-f95d165d9a75"><p><zdanie nr="1" gd:zdGUID="0bef3976-e19c-4cc6-8e6c-6d7b9c593603" fragment="1" gd:fragmentGUID="2ed7aa4c-9c6e-4477-bf7c-1bffe07a5cd9">Minister Finansów i Gospodarki kieruje działem administracji rządowej – finanse publiczne, na podstawie § 1 ust. 2 pkt 3 rozporządzenia Prezesa Rady Ministrów z dnia 25 lipca 2025 r. w sprawie szczegółowego zakresu działania Ministra Finansów i Gospodarki (Dz. U. poz. 997).</zdanie></p></odnosnik></autor-aktu>
+    <data>z dnia 1 sierpnia 2025 r.</data>
+    <tytul>zmieniające rozporządzenie w sprawie pobierania i zwrotu podatku od czynności cywilnoprawnych</tytul>
+    <podstawa-prawna>Na podstawie art. 10 ust. 4 ustawy z dnia 9 września 2000 r. o podatku od czynności cywilnoprawnych (Dz. U. z 2024 r. poz. 295 oraz z 2025 r. poz. 680) zarządza się, co następuje:</podstawa-prawna>
+    <paragraf eId="DU/2025/1096__art_1" gd:GUID="820686c1-eb63-4e6c-81dc-d1022e4ac796" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-12_DU-2025-1096_domyslne.x" wejscie-w-zycie="2025-08-12">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="0a2e76a5-a056-4462-beca-2043303da1a4" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-12_DU-2025-1096_domyslne.x" wejscie-w-zycie="2025-08-12">
+        <p>
+          <zdanie nr="1" gd:zdGUID="7cceea84-96fa-4234-84d8-9ef80c2edd15" fragment="1" gd:fragmentGUID="7613a630-5dfe-4ab7-99d3-adf716108860" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-12_DU-2025-1096_domyslne.x" wejscie-w-zycie="2025-08-12"><now:zamien-tekst stary-tekst="art. 16 ustawy z dnia 13 listopada 2003 r. o dochodach jednostek samorządu terytorialnego (Dz. U. z 2022 r. poz. 2267 oraz z 2023 r. poz. 1586 i 2005)" nowy-tekst="art. 20 ustawy z dnia 1 października 2024 r. o dochodach jednostek samorządu terytorialnego (Dz. U. poz. 1572 i 1717)" element-eId="DU/2023/2542__art_6__pkt_7" akt="https://eli.gov.pl/eli/DU/2023/2542" gd:nowGUID="0242afe2-948e-4729-a150-783f511172bd" />W rozporządzeniu Ministra Finansów z dnia 17 listopada 2023 r. w sprawie pobierania i zwrotu podatku od czynności cywilnoprawnych (Dz. U. poz. 2542) w § 6 w pkt 7 we wprowadzeniu do wyliczenia wyrazy „art. 16 ustawy z dnia 13 listopada 2003 r. o dochodach jednostek samorządu terytorialnego (Dz. U. z 2022 r. poz. 2267 oraz z 2023 r. poz. 1586 i 2005)” zastępuje się wyrazami „art. 20 ustawy z dnia 1 października 2024 r. o dochodach jednostek samorządu terytorialnego (Dz. U. poz. 1572 i 1717)”.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2025/1096__art_2" gd:GUID="50a75f6c-95e6-477a-ad3e-e6bda83e41d1" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-12_DU-2025-1096_domyslne.x" wejscie-w-zycie="2025-08-12">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="28e0687c-89cb-4472-be1e-76d958335739" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-12_DU-2025-1096_domyslne.x" wejscie-w-zycie="2025-08-12">
+        <p>
+          <zdanie nr="1" gd:zdGUID="d24c65a8-54f4-43ac-8825-e293b1edcba6" fragment="1" gd:fragmentGUID="0d8e8edb-5a24-4c45-b447-12d05a41c1fa" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-12_DU-2025-1096_domyslne.x" wejscie-w-zycie="2025-08-12">Rozporządzenie wchodzi w życie z dniem następującym po dniu ogłoszenia.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <organ-podpisujacy>Minister Finansów i Gospodarki: wz. <i><osoba podpisujacy="true" gd:osobaGUID="c1d33e89-5343-41c0-9a39-a7279be7994a"><imie>J.</imie> <nazwisko>Drop</nazwisko></osoba></i></organ-podpisujacy>
+  </rozporzadzenie>
+</akt-prawny>

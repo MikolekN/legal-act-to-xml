@@ -1,0 +1,2022 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <obwieszczenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2026/91</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>ab9ea8db-c489-465a-a95c-021cd66ee2aa</gd:GUIDwersji>
+      <AdresISAP>WDU20260000091</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2026</Rok>
+      <Pozycja>91</Pozycja>
+      <AdresWyswietlany>Dz.U. 2026 poz. 91</AdresWyswietlany>
+      <Tytul>Obwieszczenie Marszałka Sejmu Rzeczypospolitej Polskiej z dnia 21 stycznia 2026 r. w sprawie ogłoszenia jednolitego tekstu ustawy o indywidualnych kontach emerytalnych oraz indywidualnych kontach zabezpieczenia emerytalnego</Tytul>
+      <Rodzaj>OBW_TJ</Rodzaj>
+      <DataOgloszenia>2026-01-28</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2026-01-21</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_ujednolicenie_2026-01-28_DU-2026-91_domyslne" rodzaj="ujednolicenie" pochodzenie="domyslne-z-aktu" data="2026-01-28" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_ujednolicenie.zdarz_ujednolicenie_2026-01-28_DU-2026-91_domyslne" glowna="true">
+          <Przedzial rodzaj="ujednolicenie" od="zdarz_ujednolicenie_2026-01-28_DU-2026-91_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <DataObowiazywaniaWersji>
+        <Od>zdarz_ujednolicenie_2026-01-28_DU-2026-91_domyslne</Od>
+      </DataObowiazywaniaWersji>
+      <Organy>
+        <Organ gd:GUID="b9cf9a90-c999-47e0-903b-04b9175f1129" rola="wydajacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/MSEJMU">
+          <Nazwa>Marszałek Sejmu</Nazwa>
+          <OrganPodpisujacy>Marszałek Sejmu</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>W.</imie> <nazwisko>Czarzasty</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Obwieszczenie</rodzaj-aktu>
+    <autor-aktu>Marszałka Sejmu Rzeczypospolitej Polskiej</autor-aktu>
+    <data>z dnia 21 stycznia 2026 r.</data>
+    <tytul>w sprawie ogłoszenia jednolitego tekstu ustawy o indywidualnych kontach emerytalnych oraz indywidualnych kontach zabezpieczenia emerytalnego</tytul>
+    <punkt-OTJ eId="DU/2026/91__pkt_1" gd:GUID="6d960796-f49c-4e73-ac4e-8e68b4a34c4a">
+      <nr>1</nr>
+      <p>
+        <zdanie nr="1" gd:zdGUID="ebbe937f-51e0-43c0-a7a8-85a98b8764e1" fragment="1" gd:fragmentGUID="fd2353c2-ed07-4884-909f-1607cbe114d9">Na podstawie art. 16 ust. 1 zdanie pierwsze ustawy z dnia 20 lipca 2000 r. o ogłaszaniu aktów normatywnych i niektórych innych aktów prawnych (Dz. U. z 2019 r. poz. 1461) ogłasza się w załączniku do niniejszego obwieszczenia jednolity tekst ustawy z dnia 20 kwietnia 2004 r. o indywidualnych kontach emerytalnych oraz indywidualnych kontach zabezpieczenia emerytalnego (Dz. U. z 2024 r. poz. 707), z uwzględnieniem zmian wprowadzonych ustawą z dnia 5 sierpnia 2025 r. o uchyleniu ustawy o Centralnej Informacji Emerytalnej (Dz. U. poz. 1216) oraz zmian wynikających z przepisów ogłoszonych przed dniem 16 stycznia 2026 r.</zdanie>
+      </p>
+    </punkt-OTJ>
+    <punkt-OTJ eId="DU/2026/91__pkt_2" gd:GUID="02b07aa8-98e7-494e-8a66-c5a2959c1dfc">
+      <nr>2</nr>
+      <p>
+        <zdanie nr="1" gd:zdGUID="b690fa62-48bf-451d-8442-106c6f431d03" fragment="1" gd:fragmentGUID="c4099b18-bb38-4663-ac9c-a31b87c32695">Podany w załączniku do niniejszego obwieszczenia tekst jednolity ustawy nie obejmuje art. 15 ustawy z dnia 5 sierpnia 2025 r. o uchyleniu ustawy o Centralnej Informacji Emerytalnej (Dz. U. poz. 1216), który stanowi:<tresc-strukt cudzyslowy="oba" gd:GUID="f71653e4-fdde-426d-b07b-10ec5b2efd3a"><artykul eId="DU/2025/1216__art_15" gd:GUID="fc0fc6c8-c47b-4f30-a6dd-cb7812f9d871"><nr>15</nr><ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="b2dc4cb4-de3f-4679-be6d-1c9b618b633e"><p><zdanie nr="1" gd:zdGUID="dd8ffee6-f786-4258-99c7-0b2c3f1e8ec0" fragment="1" gd:fragmentGUID="64d155e2-ea51-4028-9e63-8ada3139098f">Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia, z wyjątkiem art. 2 pkt 6, art. 3 pkt 2, art. 4 pkt 2 lit. c i pkt 3, art. 6 pkt 4, art. 7 pkt 5 i art. 12 pkt 2 lit. b, które wchodzą w życie z dniem 1 stycznia 2026 r.</zdanie></p></ustep-n></artykul></tresc-strukt>.</zdanie>
+      </p>
+    </punkt-OTJ>
+    <organ-podpisujacy>Marszałek Sejmu: <i><osoba podpisujacy="true" gd:osobaGUID="397fd52f-7202-4331-a401-7521f4cb6ba9"><imie>W.</imie> <nazwisko>Czarzasty</nazwisko></osoba></i></organ-podpisujacy>
+    <ustawa>
+      <zalacznik-do>Załącznik do obwieszczenia Marszałka Sejmu Rzeczypospolitej Polskiej z dnia 21 stycznia 2026 r. (Dz. U. poz. 91)</zalacznik-do>
+      <rodzaj-aktu>Ustawa</rodzaj-aktu>
+      <data>z dnia 20 kwietnia 2004 r.</data>
+      <tytul>o indywidualnych kontach emerytalnych oraz indywidualnych kontach zabezpieczenia emerytalnego</tytul>
+      <rozdzial eId="DU/2026/91__rozdz_1" gd:GUID="58b459ff-3fb0-4ed1-91fe-cfc97b293502">
+        <naglowek-rozdzialu>
+          <nr>1</nr>
+          <p>Przepisy ogólne</p>
+        </naglowek-rozdzialu>
+        <oddzial-n brak-eid="jednostka-nieoznaczona" gd:GUID="aa469b39-bda9-4829-9cbf-3ba7bb3671d3">
+          <artykul eId="DU/2026/91__art_1" gd:GUID="4db59c31-8f44-4f38-9e49-d479e25e7e9b">
+            <nr>1</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="24362947-1ae2-40da-acc7-cb414abb51eb">
+              <p>
+                <zdanie nr="1" gd:zdGUID="0f4b1528-2726-42fe-a93c-38d63bed00c7" fragment="1" gd:fragmentGUID="dcaa5400-0002-42e2-9396-0eb64fa86667">Ustawa określa zasady gromadzenia oszczędności na indywidualnych kontach emerytalnych, zwanych dalej „IKE”, oraz na indywidualnych kontach zabezpieczenia emerytalnego, zwanych dalej „IKZE”, oraz dokonywania wpłat, wypłat transferowych, wypłat, częściowego zwrotu i zwrotu środków zgromadzonych na tych kontach.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2026/91__art_2" gd:GUID="d6f2f20f-516c-4483-8512-ac0c1ce24049">
+            <nr>2</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="3f682c02-4c9c-4b59-b12e-8bf8f1f9ca09">
+              <p>
+                <zdanie nr="1" gd:zdGUID="44046f08-a5f4-4a79-9e12-9f2dc4ad9a3c" fragment="1" gd:fragmentGUID="a5dd45e7-3e03-4571-b051-abf8f5ccd25b">Użyte w ustawie określenia oznaczają:</zdanie>
+              </p>
+              <punkt eId="DU/2026/91__art_2__pkt_1" gd:GUID="f550cd5a-5b32-4636-9d4d-620c4a4ad9d4">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="44046f08-a5f4-4a79-9e12-9f2dc4ad9a3c" fragment="2" gd:fragmentGUID="eb953319-4672-42a8-aa58-b3bd149a495e">IKE – wyodrębniony zapis w rejestrze uczestników funduszu inwestycyjnego, wyodrębniony rachunek papierów wartościowych lub inny rachunek, na którym zapisywane są instrumenty finansowe niebędące papierami wartościowymi oraz rachunek pieniężny służący do obsługi takich rachunków w podmiocie prowadzącym działalność maklerską, lub wyodrębniony rachunek w ubezpieczeniowym funduszu kapitałowym, wyodrębniony rachunek bankowy w banku, wyodrębniony rachunek IKE w dobrowolnym funduszu emerytalnym, prowadzone na zasadach określonych ustawą, a w zakresie w niej nieuregulowanym – na zasadach określonych w przepisach właściwych dla tych rachunków i rejestrów;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/91__art_2__pkt_1a" gd:GUID="f51f56e8-84ad-409c-854c-1bb82948433a">
+                <nr>1a</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="44046f08-a5f4-4a79-9e12-9f2dc4ad9a3c" fragment="3" gd:fragmentGUID="06d99582-a955-4555-8c8f-5b4ed4045a66">IKZE – wyodrębniony zapis w rejestrze uczestników funduszu inwestycyjnego, wyodrębniony rachunek papierów wartościowych lub inny rachunek, na którym zapisywane są instrumenty finansowe niebędące papierami wartościowymi oraz rachunek pieniężny służący do obsługi takich rachunków w podmiocie prowadzącym działalność maklerską, lub wyodrębniony rachunek w ubezpieczeniowym funduszu kapitałowym, wyodrębniony rachunek bankowy w banku, wyodrębniony rachunek IKZE w dobrowolnym funduszu emerytalnym, prowadzone na zasadach określonych ustawą, a w zakresie w niej nieuregulowanym – na zasadach określonych w przepisach właściwych dla tych rachunków i rejestrów;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/91__art_2__pkt_2" gd:GUID="0c439019-d913-4aee-9014-6318aa7a33a9">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="44046f08-a5f4-4a79-9e12-9f2dc4ad9a3c" fragment="4" gd:fragmentGUID="25e77913-8c53-49d3-8d7b-075eb22b320c">gromadzenie oszczędności – dokonywanie wpłat, wypłat transferowych oraz przyjmowanie wypłat transferowych, a także inwestowanie środków znajdujących się na IKE lub IKZE;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/91__art_2__pkt_3" gd:GUID="b8a57bb0-b00a-4a6b-8f02-f4471e8f0fa5">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="44046f08-a5f4-4a79-9e12-9f2dc4ad9a3c" fragment="5" gd:fragmentGUID="5ba7bb2c-d875-41b3-8188-669e71816f73">oszczędzający – osobę fizyczną, która gromadzi środki na IKE lub IKZE;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/91__art_2__pkt_4" gd:GUID="fa71b1ad-dfac-41f8-afb9-dc862950471e">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="44046f08-a5f4-4a79-9e12-9f2dc4ad9a3c" fragment="6" gd:fragmentGUID="3e276722-14e5-4480-a6f4-a026cdee5770">wpłata – wpłatę środków pieniężnych dokonywaną przez oszczędzającego na IKE lub IKZE lub przekazanie pożytków z papierów wartościowych zgromadzonych na IKE lub IKZE oszczędzającego;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/91__art_2__pkt_5" gd:GUID="8aa4e0f5-bf87-48b2-9313-af40fa34387b">
+                <nr>5</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="44046f08-a5f4-4a79-9e12-9f2dc4ad9a3c" fragment="7" gd:fragmentGUID="5facaa54-0650-4db3-8359-e0240ab95fa6">środki – środki pieniężne, jednostki ubezpieczeniowego funduszu kapitałowego, jednostki uczestnictwa funduszy inwestycyjnych, jednostki rozrachunkowe dobrowolnego funduszu emerytalnego, papiery wartościowe oraz niebędące papierami wartościowymi instrumenty finansowe, o których mowa w art. 2 ust. 1 pkt 2 lit. c i d ustawy z dnia 29 lipca 2005 r. o obrocie instrumentami finansowymi (Dz. U. z 2024 r. poz. 722, z późn. zm.<odnosnik id-odnosnika="1" symbol="1" gd:GUID="6db161cd-4dc9-441f-add6-1dbdb2b7d606"><p><zdanie nr="1" gd:zdGUID="4359177a-b326-4e7d-bdea-5902ced53792" fragment="1" gd:fragmentGUID="f429cfc1-f977-42b4-990a-63daf34a6660">Zmiany tekstu jednolitego wymienionej ustawy zostały ogłoszone w Dz. U. z 2024 r. poz. 1863 oraz z 2025 r. poz. 146, 820, 923, 1014, 1069, 1216 i 1556.</zdanie></p></odnosnik>), zapisane na IKE lub IKZE;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/91__art_2__pkt_6" gd:GUID="03579e61-7b56-4a4d-a256-e83da08b1a8d">
+                <nr>6</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="44046f08-a5f4-4a79-9e12-9f2dc4ad9a3c" fragment="8" gd:fragmentGUID="b13e8905-b1de-4356-8eaf-806c9f7a7ae3">fundusz inwestycyjny – fundusz inwestycyjny otwarty lub specjalistyczny fundusz inwestycyjny otwarty w rozumieniu ustawy z dnia 27 maja 2004 r. o funduszach inwestycyjnych i zarządzaniu alternatywnymi funduszami inwestycyjnymi (Dz. U. z 2024 r. poz. 1034, z późn. zm.<odnosnik id-odnosnika="2" symbol="2" gd:GUID="c0b8d1fe-e7c9-4238-8428-9d4f029b4142"><p><zdanie nr="1" gd:zdGUID="698549c8-05f4-4ae4-af67-e9fdea0e912b" fragment="1" gd:fragmentGUID="38ad73a6-511a-486f-ad5b-9f655ba539ca">Zmiany tekstu jednolitego wymienionej ustawy zostały ogłoszone w Dz. U. z 2024 r. poz. 1863 oraz z 2025 r. poz. 146, 820, 935, 1069, 1161, 1216 i 1408.</zdanie></p></odnosnik>);</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/91__art_2__pkt_7" gd:GUID="038ea727-08d9-4993-af34-b363539fe9a6">
+                <nr>7</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="44046f08-a5f4-4a79-9e12-9f2dc4ad9a3c" fragment="9" gd:fragmentGUID="66160374-f542-4e27-9519-b3713666957f">podmiot prowadzący działalność maklerską – dom maklerski lub bank prowadzący działalność maklerską w rozumieniu ustawy z dnia 29 lipca 2005 r. o obrocie instrumentami finansowymi;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/91__art_2__pkt_8" gd:GUID="8b0430e2-c9cc-48b6-9a21-7747642ed543">
+                <nr>8</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="44046f08-a5f4-4a79-9e12-9f2dc4ad9a3c" fragment="10" gd:fragmentGUID="7751aa24-47e8-45d1-8b5b-7c5be8dc0f89">zakład ubezpieczeń – zakład ubezpieczeń prowadzący działalność ubezpieczeniową w zakresie ubezpieczeń, o których mowa w dziale I w grupie 3 załącznika do ustawy z dnia 11 września 2015 r. o działalności ubezpieczeniowej i reasekuracyjnej (Dz. U. z 2025 r. poz. 1526);</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/91__art_2__pkt_9" gd:GUID="d206328e-0635-40dd-89f4-d1a75f46e748">
+                <nr>9</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="44046f08-a5f4-4a79-9e12-9f2dc4ad9a3c" fragment="11" gd:fragmentGUID="42029911-607e-49dc-beb5-0ab49413aaab">bank – bank krajowy w rozumieniu ustawy z dnia 29 sierpnia 1997 r. – Prawo bankowe (Dz. U. z 2026 r. poz. 38);</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/91__art_2__pkt_9a" gd:GUID="90f27433-f69b-4790-9997-1b578b59ba88">
+                <nr>9a</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="44046f08-a5f4-4a79-9e12-9f2dc4ad9a3c" fragment="12" gd:fragmentGUID="062588e5-760e-4c8e-a1b1-fc174940ad49">dobrowolny fundusz emerytalny – dobrowolny fundusz emerytalny utworzony przez powszechne towarzystwo emerytalne, zgodnie z przepisami ustawy z dnia 28 sierpnia 1997 r. o organizacji i funkcjonowaniu funduszy emerytalnych (Dz. U. z 2024 r. poz. 1113 oraz z 2025 r. poz. 1069, 1216 i 1425);</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/91__art_2__pkt_10" gd:GUID="0139996c-9ebc-40df-bb9f-de6d090fb2bc">
+                <nr>10</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="44046f08-a5f4-4a79-9e12-9f2dc4ad9a3c" fragment="13" gd:fragmentGUID="688b9182-a7c3-4eb3-a0f2-4565811906f4">instytucja finansowa – fundusz inwestycyjny, podmiot prowadzący działalność maklerską, zakład ubezpieczeń, bank, dobrowolny fundusz emerytalny, prowadzące IKE lub IKZE;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/91__art_2__pkt_11" gd:GUID="9d829e90-7c69-480b-8576-1a51619a58df">
+                <nr>11</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="44046f08-a5f4-4a79-9e12-9f2dc4ad9a3c" fragment="14" gd:fragmentGUID="5ee29aa9-c643-489b-a940-ea8e698142cc">program emerytalny – pracowniczy program emerytalny w rozumieniu ustawy z dnia 20 kwietnia 2004 r. o pracowniczych programach emerytalnych (Dz. U. z 2024 r. poz. 556 oraz z 2025 r. poz. 1216);</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/91__art_2__pkt_12" gd:GUID="4e64d18f-ee2e-4687-8a44-2c0c36ef6eb3">
+                <nr>12</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="44046f08-a5f4-4a79-9e12-9f2dc4ad9a3c" fragment="15" gd:fragmentGUID="38ec1842-7791-42d9-bb37-16ecba392402">osoby uprawnione – osoby wskazane przez oszczędzającego w umowie o IKE lub IKZE, które otrzymają środki z IKE lub IKZE w przypadku jego śmierci, osoby, o których mowa w art. 832 § 2 ustawy z dnia 23 kwietnia 1964 r. – Kodeks cywilny (Dz. U. z 2025 r. poz. 1071, 1172 i 1508), oraz spadkobierców oszczędzającego;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/91__art_2__pkt_13" gd:GUID="f4221c79-167b-40d5-93e7-96088ee359ee">
+                <nr>13</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="44046f08-a5f4-4a79-9e12-9f2dc4ad9a3c" fragment="16" gd:fragmentGUID="57a5d769-36cd-43ed-b2ce-762805297dee">wypłata – wypłatę jednorazową albo wypłatę w ratach środków zgromadzonych na IKE lub IKZE dokonywaną na rzecz:</zdanie>
+                </p>
+                <litera eId="DU/2026/91__art_2__pkt_13__lit_a" gd:GUID="fb1bdb37-18e1-4ae9-b3c9-328b7f65c6f2">
+                  <nr>a</nr>
+                  <p>
+                    <zdanie nr="1" gd:zdGUID="44046f08-a5f4-4a79-9e12-9f2dc4ad9a3c" fragment="17" gd:fragmentGUID="19943e31-af07-4177-b136-44e45f19f98a">oszczędzającego, po spełnieniu warunków określonych w art. 34 ust. 1 pkt 1 lub art. 34a ust. 1 pkt 1, albo</zdanie>
+                  </p>
+                </litera>
+                <litera eId="DU/2026/91__art_2__pkt_13__lit_b" gd:GUID="4e8934c4-9e05-4569-8cbf-e58b24fd7b43">
+                  <nr>b</nr>
+                  <p>
+                    <zdanie nr="1" gd:zdGUID="44046f08-a5f4-4a79-9e12-9f2dc4ad9a3c" fragment="18" gd:fragmentGUID="4a4db442-35b1-49e5-8bf3-732fa1387deb">osób uprawnionych, w przypadku śmierci oszczędzającego;</zdanie>
+                  </p>
+                </litera>
+              </punkt>
+              <punkt eId="DU/2026/91__art_2__pkt_14" gd:GUID="2058eec3-144c-4dc5-9493-3a59c7afa75e">
+                <nr>14</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="44046f08-a5f4-4a79-9e12-9f2dc4ad9a3c" fragment="19" gd:fragmentGUID="c8825857-9ccd-4f73-929c-e50605f724ce">wypłata transferowa – wypłatę polegającą na:</zdanie>
+                </p>
+                <litera eId="DU/2026/91__art_2__pkt_14__lit_a" gd:GUID="9259017c-0e92-44f1-bb71-037cfe0031ba">
+                  <nr>a</nr>
+                  <p>
+                    <zdanie nr="1" gd:zdGUID="44046f08-a5f4-4a79-9e12-9f2dc4ad9a3c" fragment="20" gd:fragmentGUID="5a260079-832f-43da-a294-58655250ab5b">przeniesieniu środków zgromadzonych przez oszczędzającego na IKE do innej instytucji finansowej prowadzącej IKE,</zdanie>
+                  </p>
+                </litera>
+                <litera eId="DU/2026/91__art_2__pkt_14__lit_b" gd:GUID="51f44bb9-43fa-49e2-8e20-6cb50b45d7e1">
+                  <nr>b</nr>
+                  <p>
+                    <zdanie nr="1" gd:zdGUID="44046f08-a5f4-4a79-9e12-9f2dc4ad9a3c" fragment="21" gd:fragmentGUID="3faa0c85-31fa-49b3-8445-034248f77bab">przeniesieniu środków zgromadzonych przez oszczędzającego na IKZE do innej instytucji finansowej prowadzącej IKZE,</zdanie>
+                  </p>
+                </litera>
+                <litera eId="DU/2026/91__art_2__pkt_14__lit_c" gd:GUID="bb626c10-6b26-49d0-aefb-5fceb8cdc1d1">
+                  <nr>c</nr>
+                  <p>
+                    <zdanie nr="1" gd:zdGUID="44046f08-a5f4-4a79-9e12-9f2dc4ad9a3c" fragment="22" gd:fragmentGUID="d8770c8b-5014-491d-94e5-d260fe68593a">przeniesieniu środków zgromadzonych na IKE z IKE zmarłego na IKE osoby uprawnionej lub do programu emerytalnego, do którego uprawniony przystąpił,</zdanie>
+                  </p>
+                </litera>
+                <litera eId="DU/2026/91__art_2__pkt_14__lit_d" gd:GUID="2f0bfd0d-45e1-4e17-9829-d01fedb64095">
+                  <nr>d</nr>
+                  <p>
+                    <zdanie nr="1" gd:zdGUID="44046f08-a5f4-4a79-9e12-9f2dc4ad9a3c" fragment="23" gd:fragmentGUID="b7ebe159-5394-46bb-8bf5-93cf2a72da1c">przeniesieniu środków zgromadzonych na IKZE z IKZE zmarłego na IKZE osoby uprawnionej,</zdanie>
+                  </p>
+                </litera>
+                <litera eId="DU/2026/91__art_2__pkt_14__lit_e" gd:GUID="9ada10e0-0d43-482d-ad08-6f9ea299aa12">
+                  <nr>e</nr>
+                  <p>
+                    <zdanie nr="1" gd:zdGUID="44046f08-a5f4-4a79-9e12-9f2dc4ad9a3c" fragment="24" gd:fragmentGUID="3ed28311-56f9-477a-a1fe-e98122c782a3">jednoczesnym odkupieniu jednostek uczestnictwa w jednym funduszu inwestycyjnym i nabyciu jednostek uczestnictwa w innym funduszu inwestycyjnym zarządzanym przez to samo towarzystwo za środki pieniężne uzyskane z odkupienia jednostek uczestnictwa (konwersja), pod warunkiem że jednostki odkupywane, jak i nabywane są rejestrowane na IKE albo IKZE oszczędzającego,</zdanie>
+                  </p>
+                </litera>
+                <litera eId="DU/2026/91__art_2__pkt_14__lit_f" gd:GUID="0f09879a-5ad3-4636-9e10-854f37e91b28">
+                  <nr>f</nr>
+                  <p>
+                    <zdanie nr="1" gd:zdGUID="44046f08-a5f4-4a79-9e12-9f2dc4ad9a3c" fragment="25" gd:fragmentGUID="d5e1762a-228a-435b-8706-844836957df7">przeniesieniu środków zgromadzonych przez oszczędzającego na IKE do programu emerytalnego, do którego przystąpił oszczędzający, lub przeniesieniu środków z programu emerytalnego na IKE, w przypadkach określonych w ustawie z dnia 20 kwietnia 2004 r. o pracowniczych programach emerytalnych,</zdanie>
+                  </p>
+                </litera>
+                <litera eId="DU/2026/91__art_2__pkt_14__lit_g" gd:GUID="80fa0a16-ed28-4b45-b9a3-f66f4848b619">
+                  <nr>g</nr>
+                  <p>
+                    <zdanie nr="1" gd:zdGUID="44046f08-a5f4-4a79-9e12-9f2dc4ad9a3c" fragment="26" gd:fragmentGUID="e4dac883-7652-4f37-b249-2cba384e99ef">przeniesieniu środków z PPK na IKE, w przypadkach określonych w ustawie z dnia 4 października 2018 r. o pracowniczych planach kapitałowych (Dz. U. z 2024 r. poz. 427 oraz z 2025 r. poz. 1216 i 1822),</zdanie>
+                  </p>
+                </litera>
+                <litera eId="DU/2026/91__art_2__pkt_14__lit_h" gd:GUID="7c740d99-9f5c-44ea-b8a9-dacf9404b817">
+                  <nr>h</nr>
+                  <p>
+                    <zdanie nr="1" gd:zdGUID="44046f08-a5f4-4a79-9e12-9f2dc4ad9a3c" fragment="27" gd:fragmentGUID="b14dc89f-38ca-4d8a-a23d-0e13caf3f5b7">przeniesieniu środków zgromadzonych przez oszczędzającego na OIPE z subkonta OIPE na IKE, w przypadkach określonych w przepisach ustawy o OIPE,</zdanie>
+                  </p>
+                </litera>
+                <litera eId="DU/2026/91__art_2__pkt_14__lit_i" gd:GUID="751db78b-9a3f-4911-9281-a8f127dc420e">
+                  <nr>i</nr>
+                  <p>
+                    <zdanie nr="1" gd:zdGUID="44046f08-a5f4-4a79-9e12-9f2dc4ad9a3c" fragment="28" gd:fragmentGUID="7eeaa76c-04b4-4560-95f5-4db64c578802">przeniesieniu środków zgromadzonych przez oszczędzającego z IKE na subkonto OIPE, w przypadku określonym w przepisach ustawy o OIPE;</zdanie>
+                  </p>
+                </litera>
+              </punkt>
+              <punkt eId="DU/2026/91__art_2__pkt_15" gd:GUID="c811b335-27a7-4ed6-b5c3-c989a1a03358">
+                <nr>15</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="44046f08-a5f4-4a79-9e12-9f2dc4ad9a3c" fragment="29" gd:fragmentGUID="cff8b722-ab04-4562-bd79-718ec4cec082">zwrot – wycofanie całości środków zgromadzonych na IKE lub IKZE, jeżeli nie zachodzą przesłanki wypłaty bądź wypłaty transferowej;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/91__art_2__pkt_15a" gd:GUID="2942bf5b-ade2-47eb-a726-d304e292ae7c">
+                <nr>15a</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="44046f08-a5f4-4a79-9e12-9f2dc4ad9a3c" fragment="30" gd:fragmentGUID="356012dc-1bf2-4abb-ac65-ff6a4925b2e2">częściowy zwrot – wycofanie części środków zgromadzonych na IKE, jeżeli nie zachodzą przesłanki do wypłaty bądź wypłaty transferowej;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/91__art_2__pkt_16" gd:GUID="d4a7462f-c82c-4b70-aea6-a3050c4ce5f6">
+                <nr>16</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="44046f08-a5f4-4a79-9e12-9f2dc4ad9a3c" fragment="31" gd:fragmentGUID="20a36454-617a-435f-8a67-e57545fb1fbf">organ nadzoru – Komisję Nadzoru Finansowego, o której mowa w ustawie z dnia 21 lipca 2006 r. o nadzorze nad rynkiem finansowym (Dz. U. z 2025 r. poz. 640 i 1069);</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/91__art_2__pkt_16a" gd:GUID="997bcca9-007d-4700-8856-e4dc077f4251">
+                <nr>16a</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="44046f08-a5f4-4a79-9e12-9f2dc4ad9a3c" fragment="32" gd:fragmentGUID="f4d4ac8a-c432-49d0-8bcc-453c942da0bd">(uchylony)<odnosnik id-odnosnika="3" symbol="3" gd:GUID="5c924ea2-6462-4816-a083-0e2902af37bd"><p><zdanie nr="1" gd:zdGUID="a167d84f-a857-4101-a81c-748ea486682b" fragment="1" gd:fragmentGUID="c0a4464a-4927-4773-866d-b9598020e658">Przez art. 6 pkt 1 ustawy z dnia 5 sierpnia 2025 r. o uchyleniu ustawy o Centralnej Informacji Emerytalnej (Dz. U. poz. 1216), która weszła w życie z dniem 18 września 2025 r.</zdanie></p></odnosnik></zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/91__art_2__pkt_17" gd:GUID="79091630-6d8a-4c62-b2b6-366d6704913f">
+                <nr>17</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="44046f08-a5f4-4a79-9e12-9f2dc4ad9a3c" fragment="33" gd:fragmentGUID="a4e7e480-8808-47a1-b16b-51c30275d6b7">składka podstawowa – składkę wnoszoną przez pracodawcę do programu emerytalnego;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/91__art_2__pkt_18" gd:GUID="7c768912-e5ca-486c-b31a-b678d1affb90">
+                <nr>18</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="44046f08-a5f4-4a79-9e12-9f2dc4ad9a3c" fragment="34" gd:fragmentGUID="f261278f-29fc-47ac-9506-266989fad4e0">dane osobowe – imię (imiona) i nazwisko, datę urodzenia, numer PESEL, serię i numer dowodu osobistego lub serię i numer paszportu, lub innego dokumentu potwierdzającego tożsamość w przypadku osób nieposiadających obywatelstwa polskiego oraz adres miejsca zamieszkania, adres korespondencyjny, adres poczty elektronicznej lub numer telefonu kontaktowego;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/91__art_2__pkt_19" gd:GUID="32befb69-f68e-45fb-9e7d-9e5b18d3e17b">
+                <nr>19</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="44046f08-a5f4-4a79-9e12-9f2dc4ad9a3c" fragment="35" gd:fragmentGUID="d871ebde-ac55-4603-abdd-d49068322e7b">syndyk – syndyka w rozumieniu ustawy z dnia 28 lutego 2003 r. – Prawo upadłościowe (Dz. U. z 2025 r. poz. 614, 1085, 1170 i 1172) oraz nadzorcę sądowego lub zarządcę w rozumieniu ustawy z dnia 15 maja 2015 r. – Prawo restrukturyzacyjne (Dz. U. z 2024 r. poz. 1428 oraz z 2025 r. poz. 1085, 1170 i 1172);</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/91__art_2__pkt_20" gd:GUID="b33c0266-a0e9-448f-8f1b-d826b0edc4ab">
+                <nr>20</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="44046f08-a5f4-4a79-9e12-9f2dc4ad9a3c" fragment="36" gd:fragmentGUID="afde6337-4b0a-4740-8918-beebbadaeaf5">trwały nośnik – trwały nośnik informacji, o którym mowa w art. 2 pkt 41 ustawy z dnia 27 maja 2004 r. o funduszach inwestycyjnych i zarządzaniu alternatywnymi funduszami inwestycyjnymi;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/91__art_2__pkt_21" gd:GUID="632840e1-31f9-43e0-b24f-7146015a0f3e">
+                <nr>21</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="44046f08-a5f4-4a79-9e12-9f2dc4ad9a3c" fragment="37" gd:fragmentGUID="75eac5fe-e482-414b-aba3-590ace9232ec">PPK – pracowniczy plan kapitałowy w rozumieniu ustawy z dnia 4 października 2018 r. o pracowniczych planach kapitałowych;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/91__art_2__pkt_22" gd:GUID="dbf20199-5588-4cd5-afa8-044bd58caea8">
+                <nr>22</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="44046f08-a5f4-4a79-9e12-9f2dc4ad9a3c" fragment="38" gd:fragmentGUID="10a29e21-bb3c-43bd-9908-346d533f141d">dostawca OIPE – dostawcę OIPE w rozumieniu art. 2 pkt 15 rozporządzenia Parlamentu Europejskiego i Rady (UE) 2019/1238 z dnia 20 czerwca 2019 r. w sprawie ogólnoeuropejskiego indywidualnego produktu emerytalnego (OIPE) (Dz. Urz. UE L 198 z 25.07.2019, str. 1);</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/91__art_2__pkt_23" gd:GUID="26cbb3bf-a5b4-4752-9115-19e40a53b05f">
+                <nr>23</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="44046f08-a5f4-4a79-9e12-9f2dc4ad9a3c" fragment="39" gd:fragmentGUID="aa5e9e56-6c09-4ea1-9483-f4c320528ca1">oszczędzający na OIPE – oszczędzającego w rozumieniu art. 2 pkt 7 ustawy o OIPE;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/91__art_2__pkt_24" gd:GUID="2c109773-3055-429a-98a2-da9dba910a22">
+                <nr>24</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="44046f08-a5f4-4a79-9e12-9f2dc4ad9a3c" fragment="40" gd:fragmentGUID="fbf76e2c-9b20-42af-b484-5bab7c78e15d">ustawa o OIPE – ustawę z dnia 7 lipca 2023 r. o ogólnoeuropejskim indywidualnym produkcie emerytalnym (Dz. U. poz. 1843);</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/91__art_2__pkt_25" gd:GUID="192d532f-fec5-4d19-a337-c08ddeca49e7">
+                <nr>25</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="44046f08-a5f4-4a79-9e12-9f2dc4ad9a3c" fragment="41" gd:fragmentGUID="ca0ac080-e052-4519-91e7-328e77395888">subkonto OIPE – subkonto OIPE w rozumieniu art. 2 pkt 9 ustawy o OIPE.</zdanie>
+                </p>
+              </punkt>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2026/91__art_3" gd:GUID="250468bf-f299-4311-933c-28f7477bd9f6">
+            <nr>3</nr>
+            <ustep eId="DU/2026/91__art_3__ust_1" gd:GUID="415dab9f-3594-43f1-9039-38584bb0e906">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="c4fd1cd7-1997-4ac2-b4ec-2551f7b94705" fragment="1" gd:fragmentGUID="5813cb55-f40c-469d-8b0f-0da458d812bf">Prawo do wpłat na IKE lub IKZE przysługuje osobie fizycznej, która ukończyła 16 lat.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/91__art_3__ust_2" gd:GUID="7e4102e4-4308-43c2-b0a7-43c2ed8ba6cc">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="47f51089-5fe4-427b-838e-70c6ee23d1ee" fragment="1" gd:fragmentGUID="8e1fc8f7-79a7-41b0-a302-6574762d8ec1">Małoletni ma prawo do dokonywania wpłat na IKE lub IKZE tylko w roku kalendarzowym, w którym uzyskuje dochody z pracy wykonywanej na podstawie umowy o pracę.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/91__art_4" gd:GUID="37317910-40c9-499c-b651-b524f198e0c7">
+            <nr>4</nr>
+            <ustep eId="DU/2026/91__art_4__ust_1" gd:GUID="efc0d6f8-9fcc-4d20-9f5e-e89a22bd66cf">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="cade6211-29a2-46de-a4d7-eea7dcdbcad6" fragment="1" gd:fragmentGUID="c8ad12ef-e7d2-48db-a1ef-a173e590e259">Oszczędzający na IKE ma prawo do zwolnienia podatkowego na zasadach i w trybie określonych w przepisach o podatku dochodowym od osób fizycznych, jeżeli na podstawie umowy o prowadzenie IKE, zawartej w formie, o której mowa w art. 8 ust. 1, gromadzi oszczędności tylko na jednym IKE, z zastrzeżeniem art. 14 i art. 23.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/91__art_4__ust_2" gd:GUID="72019d4d-6429-4ae8-a97a-3528311d347b">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ffcc2f75-8129-4425-bb32-3606c4e33c3f" fragment="1" gd:fragmentGUID="9e359374-2040-45db-aad4-b3bffb83901b">Oszczędzający na IKZE ma prawo do odliczenia od dochodu wpłat na IKZE na zasadach i w trybie określonych w przepisach o podatku dochodowym od osób fizycznych, jeżeli na podstawie umowy o prowadzenie IKZE gromadzi oszczędności tylko na jednym IKZE, z zastrzeżeniem art. 14 i 23.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/91__art_5" gd:GUID="f01e8bdb-c2a2-49e2-88e6-8291abc1c1a8">
+            <nr>5</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="1b283e9b-5fdf-4e27-a07d-f2d38ebb2d06">
+              <p>
+                <zdanie nr="1" gd:zdGUID="496be5c8-00fe-439f-be0f-ea6f98e980dc" fragment="1" gd:fragmentGUID="2048927e-eb64-4e36-adde-61bd3daf6826">Na IKE lub IKZE może gromadzić oszczędności wyłącznie jeden oszczędzający.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2026/91__art_6" gd:GUID="9e231321-a9b4-49bb-869e-80b247a9f530">
+            <nr>6</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="8fce599c-e83c-4fc4-9d6e-49d0d05e1e03">
+              <p>
+                <zdanie nr="1" gd:zdGUID="40249be9-ad1a-4e5c-96e4-4192e8ae8401" fragment="1" gd:fragmentGUID="b69609a1-d7db-4e15-be4a-1612142a02e5">Osoba fizyczna, która dokonała w danym roku kalendarzowym wypłaty transferowej z IKE do programu emerytalnego, nie może w tym roku zawrzeć umowy o prowadzenie IKE.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2026/91__art_7" gd:GUID="2e607088-9384-45d0-9389-f4e473138f29">
+            <nr>7</nr>
+            <ustep eId="DU/2026/91__art_7__ust_1" gd:GUID="98ecd022-e7cf-45ef-9204-1fb98b26857b">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="a50eb472-2895-4b59-abd1-d2d9f3b4ffcf" fragment="1" gd:fragmentGUID="24454245-30a0-4b06-93fb-d9c3a419b1cd">Osoba fizyczna składa przed zawarciem umowy o prowadzenie IKE oświadczenie, że:</zdanie>
+              </p>
+              <punkt eId="DU/2026/91__art_7__ust_1__pkt_1" gd:GUID="8a09c7d7-53e6-4ecb-864a-c234056f4554">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="a50eb472-2895-4b59-abd1-d2d9f3b4ffcf" fragment="2" gd:fragmentGUID="bcdca42d-b196-4cf6-adac-8f3fe71b1b88">nie gromadzi środków na IKE prowadzonym przez inną instytucję finansową, z zastrzeżeniem art. 23, oraz że w danym roku kalendarzowym nie dokonała wypłaty transferowej z uprzednio posiadanego IKE do programu emerytalnego albo</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/91__art_7__ust_1__pkt_2" gd:GUID="cdcc45d1-77cf-4834-b3c6-41b4d1d4597d">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="a50eb472-2895-4b59-abd1-d2d9f3b4ffcf" fragment="3" gd:fragmentGUID="b40ee8b8-32d3-431e-949a-d9dfaf522239">posiada IKE prowadzone przez inną instytucję finansową, podając równocześnie nazwę tej instytucji i potwierdzając, że dokona ona wypłaty transferowej.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2026/91__art_7__ust_2" gd:GUID="fae7932e-3dd3-410b-a2d4-927a6aa1bbca">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="391b2e02-f844-4055-a719-d5a1ad829ac4" fragment="1" gd:fragmentGUID="20e062ce-edbd-490a-a71e-5f9b4d9b27d2">W przypadku, o którym mowa w ust. 1 pkt 1, jeżeli osoba składająca oświadczenie osiągnęła wiek 55 lat, w oświadczeniu potwierdza również, że nie dokonała w przeszłości wypłaty środków zgromadzonych na IKE.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/91__art_7__ust_3" gd:GUID="a3dbc9db-f5d5-454e-a12d-7941cf060bc7">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="e92269f0-bde3-4386-b90e-3a1659bac781" fragment="1" gd:fragmentGUID="d074ca8c-c545-423f-a753-366c3fa780ae">Przed złożeniem oświadczenia, o którym mowa w ust. 1, instytucja finansowa odbierająca takie oświadczenie jest obowiązana pouczyć oszczędzającego, że w przypadku podania nieprawdy lub zatajenia prawdy podlega on odpowiedzialności przewidzianej w art. 233 ustawy z dnia 6 czerwca 1997 r. – Kodeks karny (Dz. U. z 2025 r. poz. 383, 1818 i 1872) oraz że w przypadku gromadzenia oszczędności na więcej niż jednym IKE, z zastrzeżeniem art. 14 i 23, opodatkowaniu, na zasadach i w trybie określonych w przepisach o podatku dochodowym od osób fizycznych, podlegają dochody uzyskane z tytułu gromadzenia oszczędności na wszystkich IKE.</zdanie>
+                <zdanie nr="2" gd:zdGUID="bda2b5a9-aa45-40ba-b067-c4ace5993010" fragment="1" gd:fragmentGUID="58b43792-8759-4755-b31a-217c5878d041">W oświadczeniu, o którym mowa w ust. 1, oszczędzający potwierdza, że został pouczony o odpowiedzialności karnej za złożenie fałszywego oświadczenia.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/91__art_7__ust_4" gd:GUID="99e97059-bd58-47f1-b2d6-e60b653b12b5">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="836f6b86-75f6-4491-aa93-fda47a3825b4" fragment="1" gd:fragmentGUID="d4b36387-c941-4fac-9284-9e2d793cdf4a">W oświadczeniu, o którym mowa w ust. 1, oszczędzający potwierdza, że został pouczony o konsekwencjach:</zdanie>
+              </p>
+              <punkt eId="DU/2026/91__art_7__ust_4__pkt_1" gd:GUID="d312f851-e89d-440a-8d7e-17107563f9a1">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="836f6b86-75f6-4491-aa93-fda47a3825b4" fragment="2" gd:fragmentGUID="339f502d-bd71-433e-bb8f-0e2e2ed052cd">gromadzenia oszczędności na więcej niż jednym IKE oraz</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/91__art_7__ust_4__pkt_2" gd:GUID="742eec70-00af-4901-8524-2d5d06347e2f">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="836f6b86-75f6-4491-aa93-fda47a3825b4" fragment="3" gd:fragmentGUID="f55f22c3-1f55-46ba-838c-d62a6bcf2107">podpisania umowy o prowadzenie IKE w roku kalendarzowym, w którym dokonano wypłaty transferowej z uprzednio posiadanego IKE do programu emerytalnego.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/91__art_7a" gd:GUID="a21a4862-0f6f-48a6-8270-fa7890cb6009">
+            <nr>7a</nr>
+            <ustep eId="DU/2026/91__art_7a__ust_1" gd:GUID="ca87ccd0-d46c-4789-b883-fc0a7eff47e8">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="6c5d495e-0c6f-4a19-a19e-f546e613125a" fragment="1" gd:fragmentGUID="d700e5f1-46eb-4aa9-a0a2-6fd99e544f91">Przed zawarciem umowy o prowadzenie IKZE osoba fizyczna składa oświadczenie, że:</zdanie>
+              </p>
+              <punkt eId="DU/2026/91__art_7a__ust_1__pkt_1" gd:GUID="fceb960b-92a3-4b69-807d-d7dec6166da5">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="6c5d495e-0c6f-4a19-a19e-f546e613125a" fragment="2" gd:fragmentGUID="4722e568-5c2f-48a1-b796-1f843e2c1dea">nie gromadzi środków na IKZE w innej instytucji finansowej albo</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/91__art_7a__ust_1__pkt_2" gd:GUID="335ab6b7-d969-47e6-8b43-b52196947637">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="6c5d495e-0c6f-4a19-a19e-f546e613125a" fragment="3" gd:fragmentGUID="29239f8b-b715-4d66-a727-7bb2c747f078">gromadzi środki na IKZE w innej instytucji finansowej, podając równocześnie nazwę tej instytucji i potwierdzając, że dokona ona wypłaty transferowej.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2026/91__art_7a__ust_2" gd:GUID="dc80d927-5f7d-4fca-95ef-c0dd1e7ad294">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="c158f8a8-17f6-41fe-aa2d-3b223a023b8f" fragment="1" gd:fragmentGUID="3c6dbc00-d7e3-4ee6-a03e-1d1bbda66b9b">Przed złożeniem oświadczenia, o którym mowa w ust. 1, instytucja finansowa odbierająca takie oświadczenie jest obowiązana pouczyć oszczędzającego, że w przypadku podania nieprawdy lub zatajenia prawdy podlega on odpowiedzialności przewidzianej w art. 233 ustawy z dnia 6 czerwca 1997 r. – Kodeks karny.</zdanie>
+                <zdanie nr="2" gd:zdGUID="82344450-6755-4309-8ee3-423d173c11e8" fragment="1" gd:fragmentGUID="488cc294-c1c1-4c1b-a99b-a29865044231">W oświadczeniu, o którym mowa w ust. 1, oszczędzający potwierdza, że został pouczony o odpowiedzialności karnej za złożenie fałszywego oświadczenia.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/91__art_8" gd:GUID="d2eed048-61f9-45bc-9f27-22b967098a26">
+            <nr>8</nr>
+            <ustep eId="DU/2026/91__art_8__ust_1" gd:GUID="94c37265-16e5-4e90-b822-b89bc4c171db">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="735f6cc6-d24e-4446-a425-a89bc61515f4" fragment="1" gd:fragmentGUID="f60790a6-f641-47b3-9bde-be89f5d284bc">IKE lub IKZE jest prowadzone na podstawie umowy zawartej przez oszczędzającego w formie elektronicznej pozwalającej na utrwalenie jej treści na trwałym nośniku, w formie dokumentowej pozwalającej na utrwalenie jej treści na trwałym nośniku lub w formie pisemnej, zwanej dalej „umową o prowadzenie IKE lub IKZE”:</zdanie>
+              </p>
+              <punkt eId="DU/2026/91__art_8__ust_1__pkt_1" gd:GUID="e84c19f7-0655-47a6-a8aa-aa183e2e4600">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="735f6cc6-d24e-4446-a425-a89bc61515f4" fragment="2" gd:fragmentGUID="95bfebed-c471-4052-b275-b29da87d2ccd">z funduszem inwestycyjnym albo</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/91__art_8__ust_1__pkt_1a" gd:GUID="bc003a3a-2c3b-4eb3-9af2-a96980af98eb">
+                <nr>1a</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="735f6cc6-d24e-4446-a425-a89bc61515f4" fragment="3" gd:fragmentGUID="590e1e88-9859-4c2e-b8e0-3bf76c1a5fbf">z dobrowolnym funduszem emerytalnym, albo</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/91__art_8__ust_1__pkt_2" gd:GUID="a1c17a22-c76a-4924-9cd3-e3c485b9b443">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="735f6cc6-d24e-4446-a425-a89bc61515f4" fragment="4" gd:fragmentGUID="3253be08-561a-4796-b7ad-32375a0e9d30">z podmiotem prowadzącym działalność maklerską o świadczenie usług polegających na wykonywaniu zleceń nabycia lub zbycia instrumentów finansowych i prowadzenie rachunku papierów wartościowych oraz rachunku pieniężnego, albo</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/91__art_8__ust_1__pkt_3" gd:GUID="35c4f1dd-77ba-4c20-893c-3acb2ce45f92">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="735f6cc6-d24e-4446-a425-a89bc61515f4" fragment="5" gd:fragmentGUID="77992b7c-10be-4d5f-b8bd-e013387c552e">z zakładem ubezpieczeń – ubezpieczenia na życie z ubezpieczeniowym funduszem kapitałowym, albo</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/91__art_8__ust_1__pkt_4" gd:GUID="a3312ca0-95d3-46b8-9dc0-4c62e26e454c">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="735f6cc6-d24e-4446-a425-a89bc61515f4" fragment="6" gd:fragmentGUID="6613f0d4-9e5f-4071-94c6-580b1ed236ed">z bankiem o prowadzenie rachunku bankowego.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2026/91__art_8__ust_2" gd:GUID="f6116a25-0ab5-4e8a-8095-fa174f7bb81c">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="8a38a0ff-d5d6-4ef7-a912-ca00807d0186" fragment="1" gd:fragmentGUID="a5cddfd3-4887-495c-beb2-fd9f80ff3af2">Oszczędzający ma prawo do zmiany instytucji finansowej prowadzącej jego IKE lub IKZE, dokonując wypłaty transferowej.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/91__art_8__ust_3" gd:GUID="ac94d429-32cf-4e67-a25f-141e15f3d4a5">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="95843716-50c1-448a-a1d4-16356b5b988b" fragment="1" gd:fragmentGUID="d46e29cc-e7e6-420d-a106-26997e1369cf">Oszczędzający może gromadzić środki na IKE lub IKZE w ubezpieczeniowym funduszu kapitałowym gromadzonym w ramach umowy ubezpieczenia na życie z ubezpieczeniowym funduszem kapitałowym, zawartej przed dniem podpisania umowy o prowadzenie IKE lub IKZE, pod warunkiem że środki gromadzone na IKE lub IKZE są odrębnie ewidencjonowane, a zakład ubezpieczeń gwarantuje możliwość dokonania wypłaty transferowej środków zgromadzonych na IKE lub IKZE do innej instytucji finansowej, z uwzględnieniem zasad określonych w art. 29.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/91__art_8__ust_4" gd:GUID="45321a61-96a0-4455-9b72-e62f7d9bb093">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="d93c1667-ac36-4b02-90fa-71b26e1fc449" fragment="1" gd:fragmentGUID="4d87d466-22ad-42f7-ba99-9db5e94fbb6b">Oszczędzający może gromadzić środki na IKE lub IKZE w ramach umowy o świadczenie usług polegających na wykonywaniu zleceń nabycia lub zbycia instrumentów finansowych i prowadzenie rachunku papierów wartościowych i rachunku pieniężnego zawartej przed dniem podpisania umowy o prowadzenie IKE lub IKZE, pod warunkiem że środki gromadzone na IKE lub IKZE są odrębnie ewidencjonowane.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/91__art_8a" gd:GUID="c5c17289-82d1-4908-83b5-5c3e759247d9">
+            <nr>8a</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="deb24382-cc98-475e-8ca9-adcfcc677ff3">
+              <p>
+                <zdanie nr="1" gd:zdGUID="253d3074-0492-4a7f-96b8-7ea25e39a1f4" fragment="1" gd:fragmentGUID="eb4dd490-d992-44d7-9474-c120a20a17b8">Podmioty wymienione w art. 8 ust. 1 są obowiązane udostępniać dane zawarte w umowach, o których mowa w art. 9, na wniosek administracyjnego organu egzekucyjnego, wymienionego w art. 19 ustawy z dnia 17 czerwca 1966 r. o postępowaniu egzekucyjnym w administracji (Dz. U. z 2025 r. poz. 132, 620 i 1302) oraz centralnego biura łącznikowego, o którym mowa w art. 9 ustawy z dnia 11 października 2013 r. o wzajemnej pomocy przy dochodzeniu podatków, należności celnych i innych należności pieniężnych (Dz. U. z 2023 r. poz. 2009).</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2026/91__art_9" gd:GUID="526a1634-02d2-4b6f-beb8-a44b06c5f60a">
+            <nr>9</nr>
+            <ustep eId="DU/2026/91__art_9__ust_1" gd:GUID="2d503710-f586-4197-bc03-fa7e6a84ff1f">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="1eda774b-85d7-4552-b823-4f605ef5d29d" fragment="1" gd:fragmentGUID="152a5013-89b7-41ba-8ec3-8b6a32f5aca8">Umowa o prowadzenie IKE lub IKZE określa w szczególności:</zdanie>
+              </p>
+              <punkt eId="DU/2026/91__art_9__ust_1__pkt_1" gd:GUID="b2e956e7-3212-4a3b-a4fb-2d26a5f66af0">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="1eda774b-85d7-4552-b823-4f605ef5d29d" fragment="2" gd:fragmentGUID="92a47079-cc43-481a-b6ee-5f567e8882bc">oznaczenie IKE lub IKZE umożliwiające jego identyfikację;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/91__art_9__ust_1__pkt_2" gd:GUID="f858a5a5-13a7-4473-ae05-b414a5f4a6b8">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="1eda774b-85d7-4552-b823-4f605ef5d29d" fragment="3" gd:fragmentGUID="2d0b547f-adaf-499e-b506-fb8b43b2072b">sposób oznaczenia dyspozycji dotyczących środków gromadzonych na IKE lub IKZE;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/91__art_9__ust_1__pkt_3" gd:GUID="37b731f3-a0de-4f82-ae20-a090470396fd">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="1eda774b-85d7-4552-b823-4f605ef5d29d" fragment="4" gd:fragmentGUID="f269a085-8b26-41a1-9408-23fccc89efab">sposób postępowania instytucji finansowej w przypadku, gdy suma wpłat dokonanych przez oszczędzającego na IKE lub IKZE w danym roku kalendarzowym przekroczy maksymalną wysokość wpłat ustaloną zgodnie z art. 13 albo art. 13a;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/91__art_9__ust_1__pkt_4" gd:GUID="8bbdd0c9-6aff-4f62-98ac-172be0b81f85">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="1eda774b-85d7-4552-b823-4f605ef5d29d" fragment="5" gd:fragmentGUID="8f0c2c3b-9be7-47ec-b6f5-0e3d1e46809b">zakres, częstotliwość i formę informowania oszczędzającego o środkach zgromadzonych na IKE lub IKZE;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/91__art_9__ust_1__pkt_5" gd:GUID="3c09521d-b977-4677-843a-c0ca7b13aa3f">
+                <nr>5</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="1eda774b-85d7-4552-b823-4f605ef5d29d" fragment="6" gd:fragmentGUID="4ded108f-2310-477e-8b17-398ee2747858">koszty i opłaty obciążające oszczędzającego w związku z prowadzeniem IKE lub IKZE, w zakresie nieuregulowanym przepisami, o których mowa w art. 12;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/91__art_9__ust_1__pkt_6" gd:GUID="158abd3a-2c44-400b-933c-1b74ad436b62">
+                <nr>6</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="1eda774b-85d7-4552-b823-4f605ef5d29d" fragment="7" gd:fragmentGUID="ff8c2f90-9a63-4706-950c-6d9581b33c7c">okres wypowiedzenia umowy;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/91__art_9__ust_1__pkt_7" gd:GUID="6bc2c320-addd-43c9-9399-a878836af293">
+                <nr>7</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="1eda774b-85d7-4552-b823-4f605ef5d29d" fragment="8" gd:fragmentGUID="77812967-0d6b-47b8-8139-f2cedfb37987">termin dokonania wypłaty, wypłaty transferowej, częściowego zwrotu oraz zwrotu;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/91__art_9__ust_1__pkt_7a" gd:GUID="e6e38889-b383-4717-820e-eb478f16dc32">
+                <nr>7a</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="1eda774b-85d7-4552-b823-4f605ef5d29d" fragment="9" gd:fragmentGUID="04bbe0e0-ef11-418f-afc7-fb5ad53df22a">warunki wypłaty w ratach, w tym liczbę rat, w przypadku dokonywania wypłaty w ratach;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/91__art_9__ust_1__pkt_8" gd:GUID="7adb8e1a-b31b-48d6-bb14-d63dbf4d9345">
+                <nr>8</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="1eda774b-85d7-4552-b823-4f605ef5d29d" fragment="10" gd:fragmentGUID="679e32f5-0914-402e-99d6-ba3c92623eab">sposób postępowania z pożytkami z papierów wartościowych zgromadzonych na IKE lub IKZE oszczędzającego.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2026/91__art_9__ust_2" gd:GUID="b057e104-fa88-41ab-9b90-8ec7a94c2f25">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="c9994f77-8600-4548-8aa8-4f7ef066d62a" fragment="1" gd:fragmentGUID="ce293d8f-1327-4992-a873-461e64154abe">W przypadku podpisania umowy o prowadzenie IKE lub IKZE z zakładem ubezpieczeń, umowa ta zawiera ponadto:</zdanie>
+              </p>
+              <punkt eId="DU/2026/91__art_9__ust_2__pkt_1" gd:GUID="fa93eb35-9374-45c2-ad4b-7498941f1f7f">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="c9994f77-8600-4548-8aa8-4f7ef066d62a" fragment="2" gd:fragmentGUID="66f7bee0-b024-4570-b1ce-fee20c1e0b69">określenie zasad, na jakich zakład ubezpieczeń wyodrębnia z płaconej składki część przeznaczoną na rachunek IKE lub IKZE w ubezpieczeniowym funduszu kapitałowym oraz wskazuje cel, na który przeznaczona jest pozostała część składki ubezpieczeniowej;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/91__art_9__ust_2__pkt_2" gd:GUID="fe488d2c-fe14-48c4-930a-69982714f81a">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="c9994f77-8600-4548-8aa8-4f7ef066d62a" fragment="3" gd:fragmentGUID="ef98caed-00d8-4e04-a7e7-d130f522d1e8">określenie, jaka część składki jest potrącana na cel, o którym mowa w pkt 1, i nie jest przekazywana na rachunek, o którym mowa w art. 19 pkt 3.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/91__art_10" gd:GUID="f6288165-c8f8-41fa-abf6-275304eb05ea">
+            <nr>10</nr>
+            <ustep eId="DU/2026/91__art_10__ust_1" gd:GUID="baf81867-5b9d-4f66-9228-f1486a40f2d6">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="c450c456-9835-48de-b2c8-8f41a5165416" fragment="1" gd:fragmentGUID="66198244-4c14-4ace-b2bb-810a0e389124">Instytucja finansowa przyjmująca oświadczenie, o którym mowa w art. 7 ust. 1 pkt 2, wydaje oszczędzającemu na IKE potwierdzenie zawarcia umowy o prowadzenie IKE, zwane dalej „potwierdzeniem zawarcia umowy IKE”.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/91__art_10__ust_2" gd:GUID="b8465b0e-f65c-4fb9-b292-4ec0c990806e">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="24fda5e7-1276-464b-8aba-be4f7bf7fbe3" fragment="1" gd:fragmentGUID="ecac2790-4509-4462-90b4-4553ca63d122">Instytucja finansowa wydaje oszczędzającemu potwierdzenie zawarcia umowy IKE także w przypadku zamiaru dokonania transferu środków zgromadzonych w programie emerytalnym na IKE oszczędzającego.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/91__art_10__ust_3" gd:GUID="37c8a5bc-c882-4b74-905a-fb876261ce14">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="d2e0b66e-d98c-43aa-ad9b-6d1b0a685931" fragment="1" gd:fragmentGUID="ea968541-7b1e-4adc-9993-047ed4a8afe3">Potwierdzenie zawarcia umowy IKE powinno zawierać dane osobowe oszczędzającego oraz nazwę instytucji finansowej, z którą oszczędzający zawarł umowę, i numer rachunku, na który należy dokonać wypłaty transferowej.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/91__art_10__ust_4" gd:GUID="87939845-568a-4c4e-b172-682d0f5f01c5">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="1c02e310-8610-486d-9272-ac77cf0ddd38" fragment="1" gd:fragmentGUID="7d09c749-9977-42af-b65b-cc84c3c1209a">W przypadku dokonania wypłaty transferowej oszczędzający może dokonywać wpłat dopiero po wpływie środków będących przedmiotem wypłaty transferowej z dotychczasowej instytucji prowadzącej IKE, chyba że występuje sytuacja, o której mowa w art. 14 ust. 1, a oszczędzający podpisał umowę o prowadzenie IKE z inną instytucją finansową.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/91__art_10a" gd:GUID="a17defda-d8c0-433b-8b86-fdce54c9b744">
+            <nr>10a</nr>
+            <ustep eId="DU/2026/91__art_10a__ust_1" gd:GUID="1232f89e-0307-4e1b-872b-e291a1863b17">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="5392f047-3a4c-47cc-a837-aac599d47f61" fragment="1" gd:fragmentGUID="d053a44f-04b9-4dfc-bcfc-55100a0a4705">Instytucja finansowa przyjmująca oświadczenie, o którym mowa w art. 7a ust. 1 pkt 2, wydaje oszczędzającemu na IKZE potwierdzenie zawarcia umowy o prowadzenie IKZE, zwane dalej „potwierdzeniem zawarcia umowy IKZE”.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/91__art_10a__ust_2" gd:GUID="fae17004-e6b9-4f2d-b3fd-962ed700f5c8">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="fff42d91-0fe3-4ffb-afde-13ff8c0470e4" fragment="1" gd:fragmentGUID="fe2d5100-59a7-424c-bfa9-5f0d004ae37b">Potwierdzenie zawarcia umowy IKZE powinno zawierać dane osobowe oszczędzającego oraz nazwę instytucji finansowej, z którą oszczędzający zawarł umowę, i numer rachunku, na który należy dokonać wypłaty transferowej.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/91__art_10a__ust_3" gd:GUID="129d643f-8a5c-4c33-8b00-98219d5161e1">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="2015656d-0e9f-409a-818b-df7dc9862360" fragment="1" gd:fragmentGUID="bca98f91-b9cc-4f8e-92c4-7bc078be6f74">W przypadku dokonania wypłaty transferowej oszczędzający może dokonywać wpłat dopiero po wpływie środków będących przedmiotem wypłaty transferowej z dotychczasowej instytucji prowadzącej IKZE, chyba że występuje sytuacja, o której mowa w art. 14 ust. 1, a oszczędzający zawarł umowę o prowadzenie IKZE z inną instytucją finansową.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/91__art_11" gd:GUID="f2b5775d-94c1-4fa8-aa2e-9fbafba802a2">
+            <nr>11</nr>
+            <ustep eId="DU/2026/91__art_11__ust_1" gd:GUID="ce54d012-e372-4769-a7ef-f2f2ed7372f7">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="2a0a7b91-5a5a-4072-bb05-4c0da6d0e4b8" fragment="1" gd:fragmentGUID="aadb7ac8-e5a4-4026-a43a-28febb6afac0">W umowie o prowadzenie IKE lub IKZE oszczędzający może wskazać jedną lub więcej osób, którym zostaną wypłacone środki zgromadzone na IKE lub IKZE w przypadku jego śmierci.</zdanie>
+                <zdanie nr="2" gd:zdGUID="3c6824be-5bc8-411c-b09b-283af33b368b" fragment="1" gd:fragmentGUID="741e40c1-4f69-43ea-961a-dd4a8809414f">Wskazanie, o którym mowa w zdaniu pierwszym, zawiera imię (imiona) i nazwisko oraz numer PESEL, o ile został nadany, oraz informację o udziale w środkach, które przypadają tej osobie po śmierci oszczędzającego.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/91__art_11__ust_2" gd:GUID="7d77ecba-26c7-4a3c-92c0-462181154ac0">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="700e2e1a-f2eb-4890-8745-2264c630b469" fragment="1" gd:fragmentGUID="286e0515-f501-44d4-b55f-eb60229b9bc1">Dyspozycja, o której mowa w ust. 1, może być w każdym czasie zmieniona.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/91__art_11__ust_2a" gd:GUID="1843fa15-9496-4f46-87fb-8d8445892bc5">
+              <nr>2a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="b313a4eb-2d7c-4035-8670-55dbb9f15a8b" fragment="1" gd:fragmentGUID="77235222-fafd-4537-9095-7e70a5150806">(uchylony)<odnosnik id-odnosnika="4" symbol="4" gd:GUID="a36acaf9-c4fd-4050-b88a-cd619d9c0904"><p><zdanie nr="1" gd:zdGUID="7f2f6ee9-d6f0-4ad5-8d2c-0362c5670cba" fragment="1" gd:fragmentGUID="6baa6811-45c9-4a40-be9d-b92f318863cd">Przez art. 6 pkt 2 ustawy, o której mowa w odnośniku 3.</zdanie></p></odnosnik></zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/91__art_11__ust_3" gd:GUID="4244d87f-ce96-4e0a-b889-8903d4a13aec">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="40745b77-afdf-47c7-8ca9-e73373537e23" fragment="1" gd:fragmentGUID="ba2b63ed-dfa6-4064-9f45-482db25f53f0">Jeżeli oszczędzający wskazał kilka osób uprawnionych do otrzymania środków po jego śmierci, a nie oznaczył ich udziału w tych środkach lub suma oznaczonych udziałów nie jest równa 1, uważa się, że udziały tych osób są równe.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/91__art_11__ust_4" gd:GUID="75c97cf1-4c79-4891-9cd9-18253f7cb698">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="57e2f3e5-1b29-482c-ba35-4a8bdbeefddc" fragment="1" gd:fragmentGUID="aefbdf07-195b-4b1f-a642-25ac9c07f9ec">Wskazanie osoby uprawnionej do otrzymania środków po śmierci oszczędzającego staje się bezskuteczne, jeżeli osoba ta zmarła przed śmiercią oszczędzającego.</zdanie>
+                <zdanie nr="2" gd:zdGUID="b98eb13c-48fc-4298-9311-03cde83ee7db" fragment="1" gd:fragmentGUID="f59b74fb-69e4-4ee1-af42-373ecbebabed">W takim przypadku udział, który był przeznaczony dla zmarłego, przypada w częściach równych pozostałym osobom wskazanym, chyba że oszczędzający zadysponuje tym udziałem w inny sposób.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/91__art_11__ust_5" gd:GUID="8e8ce485-ac61-4d3e-88d0-19bf8d294fbb">
+              <nr>5</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="d4e97a2f-9607-443f-8ffb-03989adea38b" fragment="1" gd:fragmentGUID="824dbc4f-6e4c-48e2-8409-514767b3064e">W przypadku braku osób wskazanych przez oszczędzającego środki zgromadzone na IKE lub IKZE wchodzą do spadku, z wyjątkiem gdy umowa o prowadzenie IKE lub IKZE została zawarta z zakładem ubezpieczeń.</zdanie>
+                <zdanie nr="2" gd:zdGUID="8dd7e5c0-9f73-4748-822b-87404a381529" fragment="1" gd:fragmentGUID="4dfc45c8-97e7-4a54-b0c3-bf36d3912174">W takim przypadku stosuje się odpowiednio art. 831 i 832 ustawy z dnia 23 kwietnia 1964 r. – Kodeks cywilny.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/91__art_12" gd:GUID="e221b184-6a53-413f-9024-2b97e6eb521c">
+            <nr>12</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="07c1edb6-9afc-42c5-bee4-038a198c6a6b">
+              <p>
+                <zdanie nr="1" gd:zdGUID="4b88459a-4b5c-49a2-bbd2-17f7acb6e19b" fragment="1" gd:fragmentGUID="20c5cdac-9c89-47cf-9236-bab11ba1ae22">Zasady prowadzenia IKE lub IKZE, a także tryb oraz warunki zawarcia i rozwiązania umowy o prowadzenie IKE lub IKZE określa:</zdanie>
+              </p>
+              <punkt eId="DU/2026/91__art_12__pkt_1" gd:GUID="4a189ade-0319-484f-afdc-4569c7be85fc">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="4b88459a-4b5c-49a2-bbd2-17f7acb6e19b" fragment="2" gd:fragmentGUID="9fbb868a-142c-4675-9417-76f7f759e7b0">statut funduszu inwestycyjnego – w przypadku funduszu inwestycyjnego;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/91__art_12__pkt_1a" gd:GUID="33e6d6fc-c458-4dc5-a8c6-b4f01178c182">
+                <nr>1a</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="4b88459a-4b5c-49a2-bbd2-17f7acb6e19b" fragment="3" gd:fragmentGUID="383cc35b-df74-480b-838e-6161eb3863cb">statut dobrowolnego funduszu emerytalnego – w przypadku dobrowolnego funduszu emerytalnego;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/91__art_12__pkt_2" gd:GUID="c88e006e-d76e-4673-9857-bc60b8e93a48">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="4b88459a-4b5c-49a2-bbd2-17f7acb6e19b" fragment="4" gd:fragmentGUID="d38f3482-43e0-4c5f-a945-2f852c8bed8d">regulamin prowadzenia rachunku papierów wartościowych i rachunku pieniężnego – w przypadku podmiotu prowadzącego działalność maklerską;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/91__art_12__pkt_3" gd:GUID="f0a6983c-d20c-4156-ac8c-4e981e6653ae">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="4b88459a-4b5c-49a2-bbd2-17f7acb6e19b" fragment="5" gd:fragmentGUID="02b3326f-306b-4938-9fbf-82e27c322e35">ogólne warunki ubezpieczenia oraz regulaminy ubezpieczeniowych funduszy kapitałowych – w przypadku zakładu ubezpieczeń;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/91__art_12__pkt_4" gd:GUID="60b6fae2-f620-4e0e-a29b-b8c9cf3af1d8">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="4b88459a-4b5c-49a2-bbd2-17f7acb6e19b" fragment="6" gd:fragmentGUID="e76b1226-1f6c-40bc-9706-d7a067f782d7">umowa rachunku bankowego – w przypadku banku.</zdanie>
+                </p>
+              </punkt>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2026/91__art_13" gd:GUID="66316ad2-cf92-4801-85e7-925e413fb99b">
+            <nr>13</nr>
+            <ustep eId="DU/2026/91__art_13__ust_1" gd:GUID="07bbe8e3-1c52-4467-b1ed-518b83629d9a">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="d0664818-c43e-45e9-9f75-baaa28f592b0" fragment="1" gd:fragmentGUID="01752b08-3c50-4879-8279-108dddc220e4">Wpłaty dokonywane na IKE w roku kalendarzowym nie mogą przekroczyć kwoty odpowiadającej trzykrotności przeciętnego prognozowanego wynagrodzenia miesięcznego w gospodarce narodowej na dany rok, określonego w ustawie budżetowej lub ustawie o prowizorium budżetowym lub w ich projektach, jeżeli odpowiednie ustawy nie zostały uchwalone.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/91__art_13__ust_1a" gd:GUID="13074076-9389-4bae-89c7-c012fb8adf8e">
+              <nr>1a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="46c0690e-5255-4f2e-8d45-d6ab4d63a78a" fragment="1" gd:fragmentGUID="62315320-51d0-45ca-9186-0bb1209fc99b">W przypadku gdy kwota ustalona w sposób określony w ust. 1 będzie niższa od kwoty ogłoszonej w poprzednim roku kalendarzowym, wówczas obowiązuje kwota wpłat dokonywanych na IKE ogłoszona w poprzednim roku kalendarzowym.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/91__art_13__ust_2" gd:GUID="ddcdc062-a77e-40b5-8715-4c5a4b980b1f">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="caeb5cc3-96ed-4329-8ecb-55b4e64dbc03" fragment="1" gd:fragmentGUID="dea391b0-ff7b-4de7-9f0d-99756c3b2eb3">W przypadku IKE prowadzonego w ramach umowy ubezpieczenia na życie z ubezpieczeniowym funduszem kapitałowym ograniczenie, o którym mowa w ust. 1, dotyczy części składki ubezpieczeniowej stanowiącej wpłatę na IKE.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/91__art_13__ust_3" gd:GUID="a051a3d6-3d2d-426e-b5b6-4e339faa115a">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="49aaa9dd-1a90-4b8f-af15-80c219999ef4" fragment="1" gd:fragmentGUID="14f213d9-80c1-4612-b6f9-e67111403b1f">Jeżeli do końca roku kalendarzowego poprzedzającego rok, w którym będą dokonywane wpłaty na IKE, brak jest podstaw, o których mowa w ust. 1, do ustalenia przeciętnego prognozowanego wynagrodzenia miesięcznego w gospodarce narodowej, jako podstawę do ustalenia kwoty, o której mowa w ust. 1, przyjmuje się przeciętne miesięczne wynagrodzenie z trzeciego kwartału roku poprzedniego.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/91__art_13__ust_4" gd:GUID="844a43dd-23f6-46ca-aaf2-9b664d6b6b94">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="b84393cd-102f-4ac4-8a86-08ffc82788b6" fragment="1" gd:fragmentGUID="7061ceb2-23ef-443d-9661-727b915eb05d">Minister właściwy do spraw zabezpieczenia społecznego ogłasza w Dzienniku Urzędowym Rzeczypospolitej Polskiej „Monitor Polski” do końca roku kalendarzowego poprzedzającego rok, w którym będą dokonywane wpłaty na IKE, w drodze obwieszczenia, wysokość kwoty, o której mowa w ust. 1.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/91__art_13__ust_5" gd:GUID="f2ebedb2-4ee9-41fe-9b3b-bf93b624559e">
+              <nr>5</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="4767299b-e3da-42c5-a9aa-7139fbc02d73" fragment="1" gd:fragmentGUID="eed6a90a-5ae6-4702-91d8-615e136ca3f2">Po przekroczeniu kwoty określonej w obwieszczeniu, o którym mowa w ust. 4, instytucja finansowa jest obowiązana do przekazania nadpłaconej kwoty w sposób określony w umowie o prowadzenie IKE.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/91__art_13__ust_6" gd:GUID="825b9e8a-a7ff-49d1-a48f-38c8b90c419a">
+              <nr>6</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="6db04fd2-6b87-4140-a4fe-48816ba26261" fragment="1" gd:fragmentGUID="5cf7ca1d-a520-4af3-8efe-327507a0eb4b">Przepisy ust. 1 nie mają zastosowania do przyjmowanych wypłat transferowych.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/91__art_13__ust_7" gd:GUID="3328ddb6-ee6d-4e0f-802f-3b6e6aa56d1d">
+              <nr>7</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="39942f50-19d7-42d3-bc8a-b4cbe33ff549" fragment="1" gd:fragmentGUID="fd117319-ed93-47ae-99dc-6ba6d66e1763">Wpłaty dokonywane przez małoletniego na IKE nie mogą przekroczyć dochodów uzyskanych przez niego w danym roku, z pracy wykonywanej na podstawie umowy o pracę, i nie mogą być wyższe od kwoty, o której mowa w ust. 1.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/91__art_13a" gd:GUID="d9c0b98b-8e5d-4997-aa2c-c35e784ad564">
+            <nr>13a</nr>
+            <ustep eId="DU/2026/91__art_13a__ust_1" gd:GUID="2aae2131-1d63-4532-b5be-c5b49fa44384">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="5198f5c5-1509-461c-843b-a126b57d3bdb" fragment="1" gd:fragmentGUID="9ff82875-6b88-48a1-977c-890dd82e11a0">Wpłaty dokonywane na IKZE w roku kalendarzowym nie mogą przekroczyć kwoty odpowiadającej 1,2-krotności przeciętnego prognozowanego wynagrodzenia miesięcznego w gospodarce narodowej na dany rok określonego w ustawie budżetowej lub ustawie o prowizorium budżetowym lub w ich projektach, jeżeli odpowiednie ustawy nie zostały uchwalone, z zastrzeżeniem ust. 1a.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/91__art_13a__ust_1a" gd:GUID="8a89702e-9a1e-4796-a267-e1a357770b5f">
+              <nr>1a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="03a0810b-0568-41d6-8406-5f61b10a4bf3" fragment="1" gd:fragmentGUID="537acd96-35e4-42b1-aeb5-40d91961392c">Wpłaty dokonywane na IKZE w roku kalendarzowym przez osobę prowadzącą pozarolniczą działalność, w rozumieniu art. 8 ust. 6 ustawy z dnia 13 października 1998 r. o systemie ubezpieczeń społecznych (Dz. U. z 2025 r. poz. 350, z późn. zm.<odnosnik id-odnosnika="5" symbol="5" gd:GUID="ab238b66-74ff-461c-a8b7-36a37d334ff5"><p><zdanie nr="1" gd:zdGUID="ff607529-6389-451b-bbf2-0f452680061a" fragment="1" gd:fragmentGUID="e7e3ad2c-281c-4fc4-9916-0d5e28cdd27b">Zmiany tekstu jednolitego wymienionej ustawy zostały ogłoszone w Dz. U. z 2025 r. poz. 620, 622, 769, 820, 1083, 1160, 1216, 1409, 1413 i 1423 oraz z 2026 r. poz. 26.</zdanie></p></odnosnik>), nie mogą przekroczyć kwoty odpowiadającej 1,8-krotności przeciętnego prognozowanego wynagrodzenia miesięcznego, o którym mowa w ust. 1.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/91__art_13a__ust_2" gd:GUID="5b8141b2-5538-4397-9c5a-82dad2574476">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="a08a5bba-ee0d-4541-8afb-8febe8e3b1f6" fragment="1" gd:fragmentGUID="3d81a86b-5474-4a69-8b98-bfe9adac1002">W przypadku gdy kwoty ustalone w sposób określony w ust. 1 albo 1a będą niższe od kwot ogłoszonych w poprzednim roku kalendarzowym, obowiązują kwoty wpłat dokonywanych na IKZE ogłoszone w poprzednim roku kalendarzowym.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/91__art_13a__ust_3" gd:GUID="879d8ada-ca49-43ed-9ceb-4d7fd283e5da">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="9fe81a6e-c3b8-432d-a4ef-a4794243ae2a" fragment="1" gd:fragmentGUID="e40d86fe-f80d-4689-966e-0def1a126ca0">W przypadku IKZE prowadzonego w ramach umowy ubezpieczenia na życie z ubezpieczeniowym funduszem kapitałowym ograniczenia, o których mowa w ust. 1 i 1a, dotyczą części składki ubezpieczeniowej stanowiącej wpłatę na IKZE.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/91__art_13a__ust_4" gd:GUID="cb96a545-c078-45ef-b4b8-94d8a68f3cb5">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="3c2f9c7f-b2a7-4e3a-976e-2677325b1280" fragment="1" gd:fragmentGUID="20db9451-35b3-4194-a187-86d6796de537">Jeżeli do końca roku kalendarzowego poprzedzającego rok, w którym będą dokonywane wpłaty na IKZE, brak jest podstaw, o których mowa w ust. 1 i 1a, do ustalenia przeciętnego prognozowanego wynagrodzenia miesięcznego w gospodarce narodowej, jako podstawę do ustalenia kwot, o których mowa w ust. 1 i 1a, przyjmuje się przeciętne miesięczne wynagrodzenie z trzeciego kwartału roku poprzedniego.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/91__art_13a__ust_5" gd:GUID="dfa9d4de-e0d0-46a5-99b6-225145b619a3">
+              <nr>5</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ff46e0fb-2d22-476a-8406-97147353c119" fragment="1" gd:fragmentGUID="2c24dca6-2712-4ad9-ad4d-989d4b7625b4">Po przekroczeniu odpowiednio jednej z kwot określonych w obwieszczeniu, o którym mowa w ust. 8, instytucja finansowa jest obowiązana do przekazania nadpłaconej kwoty w sposób określony w umowie o prowadzenie IKZE.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/91__art_13a__ust_6" gd:GUID="f9ef0db9-74bc-40d0-b8d6-cf77636435d5">
+              <nr>6</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="beb2fd0e-774c-4536-96da-65e4dae87b10" fragment="1" gd:fragmentGUID="11d7a9b5-613c-470b-81e4-948833d9e44f">Przepisy ust. 1 i 1a nie mają zastosowania do przyjmowanych wypłat transferowych.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/91__art_13a__ust_7" gd:GUID="a9108379-883a-408e-aa2e-8f43aadf30ac">
+              <nr>7</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="49625412-4987-4ed9-8d5c-96c77ec69241" fragment="1" gd:fragmentGUID="5ac94646-63a1-44b1-9a8e-9c11e95e4cc5">Wpłaty dokonywane przez małoletniego na IKZE nie mogą przekroczyć dochodów uzyskanych przez niego w danym roku z pracy wykonywanej na podstawie umowy o pracę i nie mogą być wyższe od kwoty, o której mowa w ust. 1.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/91__art_13a__ust_8" gd:GUID="28e8ee74-7803-4627-afc6-7268de037434">
+              <nr>8</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="a1468788-92e0-4138-a9f9-8e927903661d" fragment="1" gd:fragmentGUID="cf419b94-bd5d-4dad-b961-29fbae07291a">Minister właściwy do spraw zabezpieczenia społecznego ogłasza, w drodze obwieszczenia, w Dzienniku Urzędowym Rzeczypospolitej Polskiej „Monitor Polski” do końca roku kalendarzowego poprzedzającego rok, w którym będą dokonywane wpłaty na IKZE, wysokość kwot, o których mowa w ust. 1 i 1a.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/91__art_14" gd:GUID="f6262772-5e6e-4e1c-985d-3e939cb21b66">
+            <nr>14</nr>
+            <ustep eId="DU/2026/91__art_14__ust_1" gd:GUID="b4aeab61-9967-4fcd-82b2-e28a45190b27">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ba61825a-651b-4d78-a3ac-42864efe038c" fragment="1" gd:fragmentGUID="6cfabb22-199a-471e-bfc6-18a9c0449bad">W przypadku:</zdanie>
+              </p>
+              <punkt eId="DU/2026/91__art_14__ust_1__pkt_1" gd:GUID="029fd541-858b-4f6c-bba4-270c7ffaaf60">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="ba61825a-651b-4d78-a3ac-42864efe038c" fragment="2" gd:fragmentGUID="a9a60c57-577c-4f55-9aae-2b2db82c7913">otwarcia likwidacji instytucji finansowej,</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/91__art_14__ust_1__pkt_2" gd:GUID="7df3382c-49da-47c4-b9a9-20fa3c1cabd4">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="ba61825a-651b-4d78-a3ac-42864efe038c" fragment="3" gd:fragmentGUID="487edf44-028d-470f-b70f-6f1d92e5b392">ogłoszenia upadłości albo prawomocnego oddalenia wniosku o ogłoszenie upadłości lub umorzenia postępowania upadłościowego instytucji finansowej, jeżeli jej majątek nie wystarcza na zaspokojenie kosztów postępowania albo otwarcia postępowania restrukturyzacyjnego,</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/91__art_14__ust_1__pkt_3" gd:GUID="7066a583-d8b6-487b-8d2e-b466d5d35e5a">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="ba61825a-651b-4d78-a3ac-42864efe038c" fragment="4" gd:fragmentGUID="6cfa0f01-22eb-49b3-95dd-bb647c3a7c05">ostatecznej decyzji organu nadzoru o cofnięciu zezwolenia albo w przypadku wygaśnięcia zezwolenia na prowadzenie działalności instytucji finansowej prowadzącej IKE lub IKZE,</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/91__art_14__ust_1__pkt_4" gd:GUID="3cd26f86-eba8-4e1d-9587-6f291c88fac5">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="ba61825a-651b-4d78-a3ac-42864efe038c" fragment="5" gd:fragmentGUID="0fadc276-f643-4ef9-9e8e-b462036b833e">wydania przez Komisję Nadzoru Finansowego decyzji o zawieszeniu działalności banku i ustanowieniu zarządu komisarycznego, o ile nie został on ustanowiony wcześniej, oraz wystąpienia do właściwego sądu z wnioskiem o ogłoszenie upadłości lub otwarcie postępowania restrukturyzacyjnego</zdanie>
+                </p>
+              </punkt>
+              <czesc-wspolna-punkt eId="DU/2026/91__art_14__ust_1__czw" gd:GUID="7b2a04a5-be67-4544-889c-dc27f2ddd9b8">
+                <p>
+                  <zdanie nr="1" gd:zdGUID="ba61825a-651b-4d78-a3ac-42864efe038c" fragment="6" gd:fragmentGUID="e8091f8d-2637-4c2e-abb3-b56aa48e5ac0">– instytucja ta, zarząd komisaryczny lub syndyk są obowiązane, w terminie 30 dni od dnia wystąpienia zdarzenia, powiadomić o tym oszczędzającego, z zastrzeżeniem art. 28.</zdanie>
+                </p>
+              </czesc-wspolna-punkt>
+            </ustep>
+            <ustep eId="DU/2026/91__art_14__ust_2" gd:GUID="c974d8ee-ea2d-4fbe-b795-eaaa27a1e817">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="b40bba32-9c42-4d2d-b412-7c6af0d47b20" fragment="1" gd:fragmentGUID="e0116c29-c341-445d-bd03-9bd0999a77bf">Powiadomienie, o którym mowa w ust. 1, powinno ponadto zawierać co najmniej informację o:</zdanie>
+              </p>
+              <punkt eId="DU/2026/91__art_14__ust_2__pkt_1" gd:GUID="e3964f32-86d7-4e10-a7eb-134c2fa7783b">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="b40bba32-9c42-4d2d-b412-7c6af0d47b20" fragment="2" gd:fragmentGUID="961977c2-812b-4703-8c12-888267e939ed">terminie, w którym oszczędzający jest obowiązany do dostarczenia potwierdzenia zawarcia umowy albo potwierdzenia przystąpienia do programu emerytalnego podmiotom wymienionym w ust. 3, w celu dokonania wypłaty transferowej, oraz</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/91__art_14__ust_2__pkt_2" gd:GUID="271287c4-45fc-4acb-8a8e-ef3123bb622b">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="b40bba32-9c42-4d2d-b412-7c6af0d47b20" fragment="3" gd:fragmentGUID="f93cb9ad-ba93-44f1-a479-5e99d04b497b">skutkach niedostarczenia potwierdzeń, o których mowa w pkt 1, w terminie 45 dni od dnia otrzymania powiadomienia.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2026/91__art_14__ust_3" gd:GUID="8fee781c-50cb-4671-96dc-6c2c6d6ba5ad">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="3c24fd4d-eeea-4fbf-b894-004f98d54440" fragment="1" gd:fragmentGUID="16488241-df2f-47c7-9f17-f120f14884f7">W celu dokonania wypłaty transferowej oszczędzający, w terminie 45 dni od dnia otrzymania powiadomienia, o którym mowa w ust. 1, jest obowiązany do zawarcia umowy o prowadzenie IKE albo IKZE z inną instytucją finansową i do dostarczenia potwierdzenia zawarcia umowy lub, w przypadku przystąpienia do programu emerytalnego, do dostarczenia potwierdzenia przystąpienia do programu emerytalnego odpowiednio instytucji dotychczas prowadzącej IKE lub IKZE oszczędzającego lub syndykowi.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/91__art_14__ust_4" gd:GUID="51cd4e88-ac2e-4e9b-aa40-b71a14e4c0cc">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="34298652-f703-41a4-923c-032612ee7771" fragment="1" gd:fragmentGUID="ecbe2742-6a96-48c6-933c-94b25b22f091">W przypadku niedopełnienia któregokolwiek z obowiązków, o których mowa w ust. 3, przez oszczędzającego, jeżeli nie spełnia on warunków do wypłaty, o których mowa w art. 34 ust. 1 pkt 1 lub w art. 46 albo w art. 34a ust. 1 pkt 1, następuje zwrot środków przyznanych w postępowaniu likwidacyjnym, upadłościowym lub postępowaniu określającym sposób przeprowadzania wypłat środków gwarantowanych, o którym mowa w ustawie z dnia 10 czerwca 2016 r. o Bankowym Funduszu Gwarancyjnym, systemie gwarantowania depozytów oraz przymusowej restrukturyzacji (Dz. U. z 2025 r. poz. 643, 1069 i 1844), na podstawie przepisów właściwych dla danych instytucji finansowych prowadzących IKE lub IKZE.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/91__art_14__ust_5" gd:GUID="da6b1fce-c31a-49ba-9147-fd26bf4ea356">
+              <nr>5</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="49054a97-2f11-4e8b-b8ff-26d2e06cf15c" fragment="1" gd:fragmentGUID="647d01ba-6e6f-4ea3-a411-c4572163f680">W przypadku spełnienia przez oszczędzającego warunków, o których mowa w ust. 3, odpowiednio instytucja finansowa, zarząd komisaryczny, syndyk lub Ubezpieczeniowy Fundusz Gwarancyjny, o którym mowa w ustawie z dnia 22 maja 2003 r. o ubezpieczeniach obowiązkowych, Ubezpieczeniowym Funduszu Gwarancyjnym i Polskim Biurze Ubezpieczycieli Komunikacyjnych (Dz. U. z 2025 r. poz. 367, z późn. zm.<odnosnik id-odnosnika="6" symbol="6" gd:GUID="4d2b5e61-599e-4204-a407-12c3170eab1b"><p><zdanie nr="1" gd:zdGUID="33f1598b-73a4-4cbb-8af7-0f73c7b1d7a5" fragment="1" gd:fragmentGUID="f96d5b2f-7531-4a8f-b9c9-ea361db6a234">Zmiany tekstu jednolitego wymienionej ustawy zostały ogłoszone w Dz. U. z 2025 r. poz. 1019, 1174, 1175, 1176, 1669, 1809 i 1843.</zdanie></p></odnosnik>), w przypadku zaspokajania roszczeń z umów, o których mowa w art. 8 ust. 1 pkt 3, lub Bankowy Fundusz Gwarancyjny, o którym mowa w ustawie z dnia 10 czerwca 2016 r. o Bankowym Funduszu Gwarancyjnym, systemie gwarantowania depozytów oraz przymusowej restrukturyzacji, w przypadku zaspokajania roszczeń z umów, o których mowa w art. 8 ust. 1 pkt 4, są obowiązani do dokonania wypłaty transferowej środków przyznanych oszczędzającemu w postępowaniu likwidacyjnym, upadłościowym lub postępowaniu określającym sposób przeprowadzania wypłat środków gwarantowanych, o którym mowa w ustawie z dnia 10 czerwca 2016 r. o Bankowym Funduszu Gwarancyjnym, systemie gwarantowania depozytów oraz przymusowej restrukturyzacji, na IKE lub IKZE wskazane w potwierdzeniu zawarcia umowy.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/91__art_14__ust_6" gd:GUID="dc01af8a-eb02-4b16-a2e2-f5d16a68807e">
+              <nr>6</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="a3028842-d042-4d0d-ac73-6bca3835d92c" fragment="1" gd:fragmentGUID="1a1bb81e-e96c-494f-96c9-8f0d2fbfccd6">Po dostarczeniu potwierdzenia zawarcia umowy albo potwierdzenia przystąpienia do programu emerytalnego odpowiednio instytucja dotychczas prowadząca IKE lub IKZE oszczędzającego, zarząd komisaryczny lub syndyk przesyła, w ciągu 14 dni, liczonych od dnia dostarczenia potwierdzenia, do:</zdanie>
+              </p>
+              <punkt eId="DU/2026/91__art_14__ust_6__pkt_1" gd:GUID="362fc038-247d-4947-ad0c-831932839075">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="a3028842-d042-4d0d-ac73-6bca3835d92c" fragment="2" gd:fragmentGUID="f643ccc7-2fae-40a7-8f38-514987fcf48d">instytucji finansowej, z którą oszczędzający zawarł umowę o prowadzenie IKE lub IKZE, lub</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/91__art_14__ust_6__pkt_2" gd:GUID="c81fd4fe-21bf-4c52-aba8-ea14f34042ce">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="a3028842-d042-4d0d-ac73-6bca3835d92c" fragment="3" gd:fragmentGUID="cce925ff-1008-4835-9d64-4db4e48ca9de">zarządzającego programem emerytalnym w rozumieniu przepisów o pracowniczych programach emerytalnych, do którego oszczędzający przystąpił, zwanego dalej „zarządzającym”</zdanie>
+                </p>
+              </punkt>
+              <czesc-wspolna-punkt eId="DU/2026/91__art_14__ust_6__czw" gd:GUID="26e9c387-65f4-4e5e-893c-4a09cb1929e6">
+                <p>
+                  <zdanie nr="1" gd:zdGUID="a3028842-d042-4d0d-ac73-6bca3835d92c" fragment="4" gd:fragmentGUID="db92e6e3-5286-4942-be87-8e22244832a0">– informacje, o których mowa w art. 21 ust. 2.</zdanie>
+                </p>
+              </czesc-wspolna-punkt>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/91__art_15" gd:GUID="d3b9f365-f512-4d96-9a87-14d688ad9841">
+            <nr>15</nr>
+            <ustep eId="DU/2026/91__art_15__ust_1" gd:GUID="06124e15-cf1c-49d8-83b1-4b7250097499">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="0aa00dab-be0a-4cbd-97ba-37d213710366" fragment="1" gd:fragmentGUID="8b6faf02-b038-49eb-9969-01d554178ef7">Środki zgromadzone na IKE lub IKZE mogą być obciążone zastawem.</zdanie>
+                <zdanie nr="2" gd:zdGUID="cd756c68-738f-43f1-9bdb-e66b70ddfdaa" fragment="1" gd:fragmentGUID="8efbdcb4-47e2-4fac-995a-afc5912f33fa">Zaspokojenie wierzytelności zabezpieczonej zastawem z IKE jest traktowane jako częściowy zwrot albo zwrot.</zdanie>
+                <zdanie nr="3" gd:zdGUID="4af846c1-85c8-4aff-bc89-106981cdecea" fragment="1" gd:fragmentGUID="7764047c-44b6-41a6-8f69-2cebc91e7230">Zaspokojenie wierzytelności zabezpieczonej zastawem z IKZE jest traktowane jako zwrot.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/91__art_15__ust_2" gd:GUID="bdd53b19-fcaa-4f80-af66-9372253febe0">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="3ec020f6-0af1-423f-a2ba-d3699ff4778b" fragment="1" gd:fragmentGUID="2b88def2-ce8c-435b-8d41-9d45c7cdcf7f">(uchylony)</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/91__art_16" gd:GUID="39f2f9a1-6e2f-4c36-a04f-59af2576ae22">
+            <nr>16</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="14951aef-c82c-4888-bbc7-d939556181a6">
+              <p>
+                <zdanie nr="1" gd:zdGUID="6d42d834-a39d-486f-bf2b-c83e02ba7d9c" fragment="1" gd:fragmentGUID="b70a6c9e-88ed-4d19-9234-f69a4234f855">Nadzór nad prowadzeniem IKE oraz IKZE przez instytucje finansowe sprawuje organ nadzoru.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2026/91__art_17" gd:GUID="31920dea-ba06-4b0e-9b44-ce8fe2a0d194">
+            <nr>17</nr>
+            <ustep eId="DU/2026/91__art_17__ust_1" gd:GUID="24a843ef-68f0-4b6f-81e0-6c825c7f6568">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="825bd0d0-ec40-44f9-95ab-635793a9b321" fragment="1" gd:fragmentGUID="720f87c5-7d62-4dc2-b745-f7227d19987b">Instytucje finansowe są obowiązane do przekazywania półrocznych i rocznych informacji o prowadzonych IKE lub IKZE organowi nadzoru, w terminie do końca lipca za ostatnie półrocze i do końca stycznia za rok poprzedni.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/91__art_17__ust_2" gd:GUID="6d885db1-f81e-45b8-ad76-596b113d01a5">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="87c73b87-69c0-468e-be17-efeb9c755f02" fragment="1" gd:fragmentGUID="ad04d54f-28d3-43c2-bb4a-3395bf40f0e0">Organ nadzoru jest obowiązany do sporządzenia i przekazania ministrowi właściwemu do spraw zabezpieczenia społecznego półrocznej i rocznej informacji zbiorczej o IKE lub IKZE prowadzonych przez nadzorowane instytucje finansowe, w terminie do dnia 31 sierpnia za ostatnie półrocze i do ostatniego dnia lutego za rok poprzedni.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/91__art_17__ust_3" gd:GUID="6186a8cc-3af4-4106-86a5-c5a8e89c4434">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="5bc9be03-e216-458d-92e6-d2103d8bce96" fragment="1" gd:fragmentGUID="7409680c-40e7-4812-8563-f7f89ec56f7c">Rada Ministrów określi, w drodze rozporządzenia, zakres informacji, o których mowa w ust. 1 i 2, oraz tryb ich przekazywania, kierując się koniecznością dostarczenia ministrowi właściwemu do spraw zabezpieczenia społecznego informacji niezbędnych do wykonywania zadań związanych z rozwojem dobrowolnych form oszczędzania, uzupełniających dochody emerytalne z powszechnego systemu emerytalnego.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/91__art_17a" gd:GUID="1f0333f0-49c8-4c86-b0e6-59f9e8032e19">
+            <nr>17a</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="2761be82-1505-4d02-8a6b-a4ce3996bec3">
+              <p>
+                <zdanie nr="1" gd:zdGUID="18804506-d829-4c17-98b5-0f1d502cfd9e" fragment="1" gd:fragmentGUID="761a586c-4add-4825-84db-9312ae3d2aaf">(uchylony)<odnosnik id-odnosnika="7" symbol="7" gd:GUID="6e222178-0861-42e0-af2c-7bce18a0a166"><p><zdanie nr="1" gd:zdGUID="182e3c5e-f903-4ad7-ae99-e2d8705bfaba" fragment="1" gd:fragmentGUID="7dd68941-eea9-4898-a6b8-2ad88bc27221">Przez art. 6 pkt 3 ustawy, o której mowa w odnośniku 3.</zdanie></p></odnosnik></zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2026/91__art_17b" gd:GUID="d6b3f234-835d-4ec5-8e86-23500d631abe">
+            <nr>17b</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="fee7f73b-0032-491f-977e-266376d48999">
+              <p>
+                <zdanie nr="1" gd:zdGUID="3866ffe7-cf99-4d83-b7fd-5b03fd8d8b36" fragment="1" gd:fragmentGUID="90bcbbc1-4145-4237-91d9-17a0595bd8d2"><odnosnik id-odnosnika="8" symbol="8" gd:GUID="842175a3-ba8d-4fa9-b673-30109591571c"><p><zdanie nr="1" gd:zdGUID="7f728565-3b85-4acd-845e-e3e620831e54" fragment="1" gd:fragmentGUID="08223ca1-f89a-4940-a358-de93c746f10c">Dodany przez art. 6 pkt 4 ustawy, o której mowa w odnośniku 3; wszedł w życie z dniem 1 stycznia 2026 r.</zdanie></p></odnosnik> Instytucja finansowa może przekazywać do Zakładu Ubezpieczeń Społecznych w postaci elektronicznej dane i informacje, o których mowa w art. 50b ustawy z dnia 13 października 1998 r. o systemie ubezpieczeń społecznych, w celu realizacji zadania, o którym mowa w tym przepisie.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2026/91__art_18" gd:GUID="3f87ea2b-e1ae-4c44-8dec-f9eefc451334">
+            <nr>18</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="1a6f7cfc-36a3-4f7a-94cb-0dec7f4f1f57">
+              <p>
+                <zdanie nr="1" gd:zdGUID="39452d1e-a7ac-4389-9f15-0eac0a1f6578" fragment="1" gd:fragmentGUID="e2b11b7d-3763-4645-ad3f-1575001bf3e1">Wyłącznie instytucje finansowe prowadzące IKE lub IKZE zgodnie z ustawą są uprawnione do określenia prowadzonej przez siebie działalności albo do używania w reklamie określenia „indywidualne konto emerytalne” lub „indywidualne konto zabezpieczenia emerytalnego” oraz skrótu „IKE” lub „IKZE”.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+        </oddzial-n>
+      </rozdzial>
+      <rozdzial eId="DU/2026/91__rozdz_2" gd:GUID="92338f6a-aebc-45ee-b951-2acad6448c5c">
+        <naglowek-rozdzialu>
+          <nr>2</nr>
+          <p>Oznakowanie IKE lub IKZE i kontrola systemu</p>
+        </naglowek-rozdzialu>
+        <oddzial-n brak-eid="jednostka-nieoznaczona" gd:GUID="365180ae-b1b7-42c4-ba22-897a9d04143a">
+          <artykul eId="DU/2026/91__art_19" gd:GUID="29f8a541-fe5a-43c8-8454-5458070000e6">
+            <nr>19</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="19078b3c-b0e9-4587-a78b-bd3577832e97">
+              <p>
+                <zdanie nr="1" gd:zdGUID="a2d8bfd7-622a-469d-a9a2-48340db94a66" fragment="1" gd:fragmentGUID="319f277e-8fb9-4af0-b1d4-f59e51df6d9c">Środki gromadzone przez oszczędzającego na IKE lub IKZE są rejestrowane na wyodrębnionym:</zdanie>
+              </p>
+              <punkt eId="DU/2026/91__art_19__pkt_1" gd:GUID="58175124-a4e1-4f29-b1ef-167465c26dc6">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="a2d8bfd7-622a-469d-a9a2-48340db94a66" fragment="2" gd:fragmentGUID="9ecf4910-0e63-4668-9224-919e48d55979">zapisie w rejestrze uczestników funduszu inwestycyjnego;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/91__art_19__pkt_1a" gd:GUID="2cdda059-6819-417f-8e31-78b1faf3a9bd">
+                <nr>1a</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="a2d8bfd7-622a-469d-a9a2-48340db94a66" fragment="3" gd:fragmentGUID="36386326-cebd-4c32-a64b-4b4f8146d7d0">rachunku w dobrowolnym funduszu emerytalnym;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/91__art_19__pkt_2" gd:GUID="e495452f-f4b8-43e0-b166-1400a906e66f">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="a2d8bfd7-622a-469d-a9a2-48340db94a66" fragment="4" gd:fragmentGUID="ebf27864-4ca4-4a60-b231-ce0d1aca95e9">rachunku papierów wartościowych i rachunku pieniężnym służącym do jego obsługi w podmiocie prowadzącym działalność maklerską;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/91__art_19__pkt_3" gd:GUID="ac72369d-39ec-487e-99de-c4a4326ab45f">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="a2d8bfd7-622a-469d-a9a2-48340db94a66" fragment="5" gd:fragmentGUID="dec9e647-3958-4b03-8e64-0fbcd174ba54">rachunku w ubezpieczeniowym funduszu kapitałowym;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/91__art_19__pkt_4" gd:GUID="3a0a7710-2dcd-4304-908b-82c33ddf32f6">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="a2d8bfd7-622a-469d-a9a2-48340db94a66" fragment="6" gd:fragmentGUID="fa645229-5882-4377-82ae-7459fa75cf2d">rachunku bankowym w banku.</zdanie>
+                </p>
+              </punkt>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2026/91__art_20" gd:GUID="02181bd1-4770-4f33-b640-e4612973fe7e">
+            <nr>20</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="8ed3f5a0-738f-42ca-969b-5cebb1ed42f0">
+              <p>
+                <zdanie nr="1" gd:zdGUID="a421b2ca-fde2-4a9c-8954-10cf4806c48c" fragment="1" gd:fragmentGUID="64f47c73-1c1a-4fda-8bd8-35fd3c7410af">Wszystkie dyspozycje oszczędzającego dotyczące środków gromadzonych na IKE lub IKZE należy oznakować w sposób umożliwiający ich identyfikację.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2026/91__art_21" gd:GUID="3069fa1c-02b0-4135-9b44-f067ea13b045">
+            <nr>21</nr>
+            <ustep eId="DU/2026/91__art_21__ust_1" gd:GUID="0ac9c9be-4fe4-4ecb-ae44-c3e8ec4b5cda">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="1fd40acc-bcbd-493e-b791-f02006c6e812" fragment="1" gd:fragmentGUID="d4ec36bf-3097-412b-b07f-bf3b4f6219bd">Instytucja finansowa rejestruje wszystkie operacje na IKE lub IKZE, które zostały dokonane w okresie, w którym instytucja ta prowadziła IKE lub IKZE.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/91__art_21__ust_2" gd:GUID="2f117b02-8199-4e36-be43-e65218f838b2">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="162c4ce2-f644-4b78-9b42-e7c826654d19" fragment="1" gd:fragmentGUID="95ac2529-4603-4b31-9120-0bb828ea6dc4">W razie złożenia przez oszczędzającego dyspozycji wypłaty transferowej do innej instytucji finansowej albo do programu emerytalnego, dotychczasowa instytucja finansowa przekazuje tej instytucji finansowej albo zarządzającemu, wraz z dokonaniem wypłaty transferowej, następujące informacje:</zdanie>
+              </p>
+              <punkt eId="DU/2026/91__art_21__ust_2__pkt_1" gd:GUID="dd210c1f-4f50-4f35-9cde-2e6cedc2bc17">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="162c4ce2-f644-4b78-9b42-e7c826654d19" fragment="2" gd:fragmentGUID="cdecb9b2-0671-4156-94b1-99a035d171fc">dane osobowe oszczędzającego;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/91__art_21__ust_2__pkt_2" gd:GUID="d5f860dd-421e-4532-b98b-ff09da8ae92c">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="162c4ce2-f644-4b78-9b42-e7c826654d19" fragment="3" gd:fragmentGUID="132b6f41-354f-4f87-b4e3-b9b068045773">o dacie pierwszej wpłaty albo o dacie przyjęcia pierwszej wypłaty transferowej, w zależności od tego, które ze zdarzeń nastąpiło wcześniej;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/91__art_21__ust_2__pkt_3" gd:GUID="035fe166-d4cd-4057-87d3-df8def1694c3">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="162c4ce2-f644-4b78-9b42-e7c826654d19" fragment="4" gd:fragmentGUID="802cf69d-77e4-4a6f-a207-bf448adb2bd7">o sumie wpłat w każdym roku kalendarzowym oraz nazwę instytucji finansowej przyjmującej wpłatę;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/91__art_21__ust_2__pkt_4" gd:GUID="429dc692-88f1-4f8b-9874-c213a0e5f2e5">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="162c4ce2-f644-4b78-9b42-e7c826654d19" fragment="5" gd:fragmentGUID="b09f1e4e-ddb9-4c6a-b9d5-5e9dd52588b6">o wysokości i datach wypłat transferowych przyjętych na IKE lub IKZE oszczędzającego oraz o nazwie instytucji finansowej lub o danych zarządzającego i o danych pracodawcy prowadzącego program emerytalny, w rozumieniu przepisów o pracowniczych programach emerytalnych, dokonujących tych wypłat;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/91__art_21__ust_2__pkt_5" gd:GUID="2bffbf4c-b033-4763-b0d2-18c0181296c4">
+                <nr>5</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="162c4ce2-f644-4b78-9b42-e7c826654d19" fragment="6" gd:fragmentGUID="b579d734-951e-49b2-8f03-63104351ae84">o wysokości i datach dokonywanych wypłat transferowych, a w przypadku transferu papierów wartościowych lub środków pieniężnych zgromadzonych w podmiocie prowadzącym działalność maklerską również o rodzaju i ilości tych papierów, oraz o nazwie instytucji finansowej albo o danych zarządzającego i o danych pracodawcy prowadzącego program emerytalny, do których dokonywana jest wypłata transferowa;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/91__art_21__ust_2__pkt_5a" gd:GUID="732144ea-857c-4b75-8fdb-ef3896b494e3">
+                <nr>5a</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="162c4ce2-f644-4b78-9b42-e7c826654d19" fragment="7" gd:fragmentGUID="703e2b43-4ab7-4b98-9d79-00342d7b47fd">o wysokości i datach częściowych zwrotów oraz o nazwie instytucji finansowej dokonującej częściowego zwrotu;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/91__art_21__ust_2__pkt_5b" gd:GUID="097b1dc4-4502-4ab2-bdf1-ae66055585bd">
+                <nr>5b</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="162c4ce2-f644-4b78-9b42-e7c826654d19" fragment="8" gd:fragmentGUID="52232e1a-b313-45c0-b6d4-157660fa8abe">o aktualnej wartości środków pochodzących z wpłat na IKE lub IKZE;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/91__art_21__ust_2__pkt_6" gd:GUID="0e87a2af-7a6e-495c-8882-15b33bf61402">
+                <nr>6</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="162c4ce2-f644-4b78-9b42-e7c826654d19" fragment="9" gd:fragmentGUID="56a22599-a4aa-46ca-a5a0-b56ce5061590">o sumie wpłaconych składek podstawowych, w przypadku gdy na IKE oszczędzającego dokonano wypłaty transferowej z programu emerytalnego.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2026/91__art_21__ust_3" gd:GUID="c5f82fbc-92fc-4e21-bbb6-2f93467eb106">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="85e48fdf-1181-4096-b03f-a52e86efa86f" fragment="1" gd:fragmentGUID="fa285cfd-c521-4c27-b565-717c4d7d1ba5">Informacje, o których mowa w ust. 2, obejmują także dane przekazane przez wszystkie poprzednie instytucje finansowe prowadzące IKE lub IKZE oszczędzającego.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/91__art_21__ust_4" gd:GUID="b60787e5-9c41-43ce-9980-d58c1277aacf">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="9a844761-f38e-4278-b4b0-c1de4ead53cf" fragment="1" gd:fragmentGUID="4e973c76-6d4e-41e6-b2fa-3385c88befb5">Instytucja finansowa, dokonując wypłaty transferowej środków zgromadzonych na IKE lub IKZE zmarłego na IKE lub IKZE osoby uprawnionej albo do programu emerytalnego, do którego uprawniony przystąpił, przekazuje odpowiednio instytucji finansowej prowadzącej IKE lub IKZE uprawnionego albo zarządzającemu informację określoną w ust. 2 pkt 5 wraz z podaniem tytułu transferu.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/91__art_21__ust_5" gd:GUID="a44d392c-e88e-40d1-b08b-4c2ed49e424f">
+              <nr>5</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="4b0dcbbe-924b-4d59-9e3b-4ea6e63ed1d0" fragment="1" gd:fragmentGUID="c1b74764-5623-491e-a32a-c198776dd623">Minister właściwy do spraw finansów publicznych w porozumieniu z ministrem właściwym do spraw zabezpieczenia społecznego określi, w drodze rozporządzenia, wzór informacji, o której mowa w ust. 2, a także termin oraz tryb jej przekazywania, uwzględniając konieczność zapewnienia prawidłowości przesyłanych danych o IKE lub IKZE oszczędzającego pomiędzy instytucjami finansowymi lub z instytucji finansowej do programu emerytalnego.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/91__art_22" gd:GUID="141cd918-e4a3-484a-8e6e-88c559db88a2">
+            <nr>22</nr>
+            <ustep eId="DU/2026/91__art_22__ust_1" gd:GUID="939d32de-aa8d-4097-8f86-9181da82acc9">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="b5d73aca-44ce-46dd-9ab5-ba686eb5cd40" fragment="1" gd:fragmentGUID="f39c73a7-0144-4730-8428-05e44f4eeb63">Instytucja finansowa lub syndyk, dokonując wypłaty, o której mowa w art. 34 ust. 1 pkt 1, art. 34a ust. 1 pkt 1 lub art. 46, są obowiązani do sporządzenia i przekazania informacji o dokonaniu wypłaty jednorazowej albo o dokonaniu wypłaty pierwszej raty do naczelnika urzędu skarbowego właściwego dla oszczędzającego w sprawach opodatkowania podatkiem dochodowym od osób fizycznych, w terminie do 7. dnia miesiąca następującego po miesiącu, w którym nastąpiła wypłata.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/91__art_22__ust_2" gd:GUID="3f93bf8d-bcb9-4547-a070-6fcd58458ade">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="6a6668f5-66f2-47fd-bcd7-ccbad37077b7" fragment="1" gd:fragmentGUID="3f96825c-e421-4d6a-a225-c1cc93f1a996">Oszczędzający, przed dokonaniem wypłaty, jest obowiązany do poinformowania instytucji finansowej lub syndyka o właściwym dla podatku dochodowego od osób fizycznych oszczędzającego naczelniku urzędu skarbowego oraz – w przypadku gdy wypłata następuje na rzecz oszczędzającego na IKE – do przedstawienia decyzji organu rentowego o przyznaniu prawa do emerytury, jeżeli oszczędzający nie ukończył 60. roku życia.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/91__art_22__ust_3" gd:GUID="633acdba-7caf-4ee2-92fd-6a85fbbfa3d2">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="689d4020-81bc-486a-b0a6-288358039b0d" fragment="1" gd:fragmentGUID="0d29255d-af75-482e-80ce-66674477c237">Informacja, o której mowa w ust. 1, zawiera:</zdanie>
+              </p>
+              <punkt eId="DU/2026/91__art_22__ust_3__pkt_1" gd:GUID="df58a7f7-77ec-4d2a-9ee7-4d3cf3489c16">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="689d4020-81bc-486a-b0a6-288358039b0d" fragment="2" gd:fragmentGUID="f3d67243-f740-42ce-8acf-fe83ec3fb64b">dane identyfikujące IKE lub IKZE;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/91__art_22__ust_3__pkt_2" gd:GUID="d072a1bc-118a-4292-b7c0-5c440b1802f1">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="689d4020-81bc-486a-b0a6-288358039b0d" fragment="3" gd:fragmentGUID="c84ead37-2fb8-47af-a30c-e09dc6fa995f">dane osobowe oszczędzającego;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/91__art_22__ust_3__pkt_3" gd:GUID="440257bc-a6e9-4ca0-b48d-2d49ecf59eb3">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="689d4020-81bc-486a-b0a6-288358039b0d" fragment="4" gd:fragmentGUID="4446e745-8a8e-42e1-bedf-237132d8b7d6">datę pierwszej wpłaty albo datę przyjęcia pierwszej wypłaty transferowej, w zależności od tego, które z tych zdarzeń nastąpiło wcześniej;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/91__art_22__ust_3__pkt_4" gd:GUID="52202cc7-8ae4-428c-b44d-86660c7cd475">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="689d4020-81bc-486a-b0a6-288358039b0d" fragment="5" gd:fragmentGUID="c83f5231-8e44-488e-9ae3-5a5b36359a4b">sumę wpłat w każdym roku kalendarzowym;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/91__art_22__ust_3__pkt_5" gd:GUID="6a6b24d0-e70f-47fe-a645-8a875fe345e7">
+                <nr>5</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="689d4020-81bc-486a-b0a6-288358039b0d" fragment="6" gd:fragmentGUID="e3877049-259f-4331-abb3-8033a067738e">wysokości i daty wypłat transferowych przyjętych na IKE lub IKZE oszczędzającego oraz informacje o nazwie instytucji finansowej lub o danych zarządzającego i o danych pracodawcy prowadzącego program emerytalny, dokonujących tych wypłat;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/91__art_22__ust_3__pkt_5a" gd:GUID="1c5e7780-9c7c-4048-803f-280e7baa282c">
+                <nr>5a</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="689d4020-81bc-486a-b0a6-288358039b0d" fragment="7" gd:fragmentGUID="6b666cce-c0fc-425a-842a-593ad8d43683">wysokości i daty częściowych zwrotów oraz informacje o nazwie instytucji finansowej dokonującej częściowego zwrotu;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/91__art_22__ust_3__pkt_6" gd:GUID="3038bfc9-2027-408d-ab61-2e01fd3b6626">
+                <nr>6</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="689d4020-81bc-486a-b0a6-288358039b0d" fragment="8" gd:fragmentGUID="87e57cfd-1373-4bfd-93be-d94624b4dc39">sumę wpłaconych składek podstawowych, w przypadku gdy na IKE oszczędzającego dokonano wypłaty transferowej z programu emerytalnego;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/91__art_22__ust_3__pkt_7" gd:GUID="88279e14-8272-4c36-8cf8-03ce985059e5">
+                <nr>7</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="689d4020-81bc-486a-b0a6-288358039b0d" fragment="9" gd:fragmentGUID="d896455f-f02e-4056-a051-e4ed17b0b5a4">wysokość i datę wypłaty;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/91__art_22__ust_3__pkt_8" gd:GUID="42547879-ecbb-4838-b248-df4ec11a7c64">
+                <nr>8</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="689d4020-81bc-486a-b0a6-288358039b0d" fragment="10" gd:fragmentGUID="26c6ede6-d55a-44eb-afb8-2c6d75a8e975">kopię decyzji organu rentowego o przyznaniu uprawnień emerytalnych, jeżeli oszczędzający na IKE nie ukończył 60. roku życia.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2026/91__art_22__ust_4" gd:GUID="07509fc9-3410-48f2-9b59-7c698df97e31">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="85818437-17ef-4818-bd47-0f59792be796" fragment="1" gd:fragmentGUID="4ea403bc-5a8e-4a42-a3fb-c437c4996152">Niedopełnienie przez oszczędzającego obowiązku, o którym mowa w ust. 2, spowoduje, że instytucja finansowa nie dokona wypłaty.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/91__art_22__ust_5" gd:GUID="554a54b9-6060-410c-a819-d95b28a1e97e">
+              <nr>5</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="513e9840-0aa7-44be-b764-143ba16d96ac" fragment="1" gd:fragmentGUID="c0463b99-fc69-4fbf-a923-5c44ce352ce8">Minister właściwy do spraw finansów publicznych w porozumieniu z ministrem właściwym do spraw zabezpieczenia społecznego określi, w drodze rozporządzenia, wzór informacji, o której mowa w ust. 3, a także sposób jej przekazywania, uwzględniając konieczność zapewnienia możliwości weryfikacji uprawnień oszczędzającego do zwolnienia podatkowego.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+        </oddzial-n>
+      </rozdzial>
+      <rozdzial eId="DU/2026/91__rozdz_3" gd:GUID="d5fa21b4-62bf-48a6-b684-aa5cc0bb1f34">
+        <naglowek-rozdzialu>
+          <nr>3</nr>
+          <p>IKE lub IKZE w funduszach inwestycyjnych</p>
+        </naglowek-rozdzialu>
+        <oddzial-n brak-eid="jednostka-nieoznaczona" gd:GUID="e901ba72-8259-4c64-9fc6-00919a6b5f13">
+          <artykul eId="DU/2026/91__art_23" gd:GUID="1e9e9d7e-beaf-451c-8a1c-93a299522967">
+            <nr>23</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="fd4f7653-70ec-41a4-b5bb-b51b87cb2e3b">
+              <p>
+                <zdanie nr="1" gd:zdGUID="90410965-e9d9-48ae-aaa8-f8e87fbe0288" fragment="1" gd:fragmentGUID="eed1db50-dd54-4fa2-8818-76061a659c25">W przypadku określonym w art. 8 ust. 1 pkt 1 oszczędzający może zawierać umowy o prowadzenie IKE lub IKZE z różnymi funduszami inwestycyjnymi zarządzanymi przez to samo towarzystwo funduszy inwestycyjnych, z zastrzeżeniem że łączna suma wpłat do funduszy w roku kalendarzowym nie przekroczy kwot, o których mowa w art. 13 lub art. 13a.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2026/91__art_24" gd:GUID="9c2c3500-fc93-4dc2-911b-0af440ced70c">
+            <nr>24</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="e95ab884-4259-4603-97ed-c801b558c499">
+              <p>
+                <zdanie nr="1" gd:zdGUID="c8be298e-b595-4640-a922-d85e460a5f50" fragment="1" gd:fragmentGUID="76210670-cf04-409d-9de4-1e3c641a5143">Oszczędzający może dokonać konwersji jednostek uczestnictwa funduszu na jednostki uczestnictwa innych funduszy inwestycyjnych prowadzących IKE lub IKZE zarządzanych przez to samo towarzystwo.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2026/91__art_25" gd:GUID="78c0eec9-32ac-4ef0-b44b-d2e1887eb585">
+            <nr>25</nr>
+            <ustep eId="DU/2026/91__art_25__ust_1" gd:GUID="572b0387-5e13-45f3-ac18-b5fd0fa5af42">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="a4911c0f-f09c-4ff4-bc30-97d49be4300b" fragment="1" gd:fragmentGUID="25612301-03d5-45b9-8897-a054d6934551">W przypadku połączenia funduszy inwestycyjnych, fundusz przejmujący fundusz inwestycyjny, w którym oszczędzający gromadził środki na IKE lub IKZE, powiadamia oszczędzającego, w formie określonej w umowie o prowadzenie IKE lub IKZE, w terminie 14 dni od dnia dokonania połączenia o zajściu tego zdarzenia oraz o liczbie jednostek uczestnictwa przydzielonych oszczędzającemu i o ich wartości.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/91__art_25__ust_2" gd:GUID="6cd16f58-f375-4806-b3f1-0699368d2aec">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="dbf88a13-7bba-4f71-9a05-5342deb9af78" fragment="1" gd:fragmentGUID="a5d16fed-bcd1-42f0-99fa-454f52e9730a">Powiadomienie, o którym mowa w ust. 1, zawiera informacje określone w art. 14 ust. 2 wyłącznie w przypadku, gdy fundusz inwestycyjny przejmujący IKE lub IKZE oszczędzającego nie prowadzi IKE lub IKZE.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/91__art_26" gd:GUID="b56beae7-ef4c-4174-af0c-d484b574ee3a">
+            <nr>26</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="70c0d808-b559-425a-8a8d-3b4145169350">
+              <p>
+                <zdanie nr="1" gd:zdGUID="40558a8a-4759-4821-8dbd-a6ec1397b9ec" fragment="1" gd:fragmentGUID="deff83cb-9a63-4bb7-9d2d-dd3cf16ee1b2">W przypadku gdy przejęcie zarządzania funduszem inwestycyjnym przez inne towarzystwo funduszy inwestycyjnych powoduje, że oszczędzający będzie posiadał jednostki uczestnictwa zapisane na IKE lub IKZE w funduszach inwestycyjnych zarządzanych przez różne towarzystwa funduszy inwestycyjnych, stosuje się odpowiednio art. 14.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+        </oddzial-n>
+      </rozdzial>
+      <rozdzial eId="DU/2026/91__rozdz_4" gd:GUID="5602cfd3-231f-4818-8009-fac68f5a27f8">
+        <naglowek-rozdzialu>
+          <nr>4</nr>
+          <p>IKE lub IKZE w instytucjach prowadzących działalność maklerską</p>
+        </naglowek-rozdzialu>
+        <oddzial-n brak-eid="jednostka-nieoznaczona" gd:GUID="eba7966e-e7d6-48ed-a3f7-3cb7f06e5d14">
+          <artykul eId="DU/2026/91__art_27" gd:GUID="8af981f3-dcad-4298-9b72-ef9ad58f84b2">
+            <nr>27</nr>
+            <ustep eId="DU/2026/91__art_27__ust_1" gd:GUID="5bf75f37-bac6-4b74-b0e2-e27184e55117">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ae556868-a3dc-472a-b212-cdc1fbc9a0ce" fragment="1" gd:fragmentGUID="7b930e7e-aa8c-4043-a3d9-b350080701a0">Umowy, o których mowa w art. 8 ust. 1 pkt 2, przewidują lokowanie środków w papiery wartościowe zdematerializowane zgodnie z przepisami ustawy z dnia 29 lipca 2005 r. o obrocie instrumentami finansowymi, z zastrzeżeniem ust. 2.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/91__art_27__ust_2" gd:GUID="d5e06b1e-e6ef-4e55-bc41-b318a492ef03">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="6798c254-8970-4d9f-8694-c0a20b84310c" fragment="1" gd:fragmentGUID="c6f13022-eb92-4bca-9767-65d10e25d25e">Umowy, o których mowa w art. 8 ust. 1 pkt 2, mogą dopuszczać możliwość składania, wyłącznie w celu ograniczenia ryzyka inwestycyjnego, zleceń mających za przedmiot niebędące papierami wartościowymi instrumenty finansowe, o których mowa w art. 2 ust. 1 pkt 2 lit. c i d ustawy, o której mowa w ust. 1, jeżeli ich cena zależy od ceny papierów wartościowych zapisanych na IKE lub IKZE oszczędzającego, i pod warunkiem że są one przedmiotem obrotu na rynku regulowanym.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/91__art_27__ust_3" gd:GUID="27d9e1fe-ca97-4cc5-b44a-096d36c16921">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="bd3a786f-7881-44e2-b2ea-cab5ac31baf2" fragment="1" gd:fragmentGUID="86e4ff13-d38a-42d7-bd6f-db0a5eb0704c">W przypadku, o którym mowa w ust. 2, umowa powinna także określać sposób postępowania podmiotu prowadzącego działalność maklerską w sytuacji, gdy składane zlecenie jest niezgodne z celem wskazanym w ust. 2.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/91__art_28" gd:GUID="3777801f-4711-4011-94d5-df8fb242773e">
+            <nr>28</nr>
+            <ustep eId="DU/2026/91__art_28__ust_1" gd:GUID="7bf94035-b5f3-43f0-a60c-aa1c2dc0f947">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="d1bb8d72-afb2-4216-aece-ce306ab7f79e" fragment="1" gd:fragmentGUID="6698c29f-f1e8-4dd3-a421-bcc41c82b38c">W przypadku wydania przez organ nadzoru decyzji nakazującej przeniesienie papierów wartościowych, instrumentów finansowych niebędących papierami wartościowymi i środków pieniężnych oraz dokumentów związanych z prowadzeniem rachunków papierów wartościowych, innych rachunków, na których zapisywane są takie instrumenty finansowe i rachunków pieniężnych do innego podmiotu prowadzącego działalność maklerską, w sytuacji wygaśnięcia lub cofnięcia zezwolenia na prowadzenie działalności maklerskiej, podmiot prowadzący działalność maklerską, do którego przenoszone są te papiery wartościowe, instrumenty finansowe i środki pieniężne, jest obowiązany zachować identyfikację środków zgromadzonych na IKE lub IKZE.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/91__art_28__ust_2" gd:GUID="b0301f67-6b77-4e03-9f7b-148ecc856db8">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="37708d8e-ebd6-4d65-8e3e-5c56faae0a80" fragment="1" gd:fragmentGUID="012c7f45-dd69-4b32-8c16-9d15567af326">Podmiot prowadzący działalność maklerską wraz z dokonaniem przeniesienia środków zgromadzonych na IKE lub IKZE, o którym mowa w ust. 1, przekazuje podmiotowi prowadzącemu działalność maklerską wskazanemu przez organ nadzoru informacje, o których mowa w art. 21 ust. 2.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/91__art_28__ust_3" gd:GUID="543676c2-0c7a-401f-a141-5f0fc2e8ce31">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="7611afec-a003-402e-bf0b-9eabd88b29bf" fragment="1" gd:fragmentGUID="0b9f7994-f026-4a3d-91a5-01aaef66ce0e">Podmiot prowadzący działalność maklerską, do którego zostały przeniesione środki zgromadzone na IKE lub IKZE, o których mowa w ust. 1, jest obowiązany, w terminie 14 dni od dnia ich przeniesienia, wezwać oszczędzającego do zawarcia umowy o prowadzenie IKE lub IKZE lub dokonania wypłaty transferowej.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/91__art_28__ust_4" gd:GUID="669240a2-2c67-47ea-b9cb-5ee245286277">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="6468331e-e1f5-483d-88cd-61cd80f76fb7" fragment="1" gd:fragmentGUID="d6536baa-d971-4e35-a02b-8ba0f742df08">Oszczędzający w przypadku, o którym mowa w ust. 1, jest obowiązany w terminie 45 dni od daty otrzymania wezwania zawrzeć umowę o prowadzenie IKE lub IKZE z podmiotem, do którego zostały przeniesione jego papiery wartościowe, instrumenty finansowe niebędące papierami wartościowymi i środki pieniężne, albo dokonać wypłaty transferowej do innej instytucji finansowej lub do programu emerytalnego, do którego oszczędzający przystąpił.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/91__art_28__ust_5" gd:GUID="fa3ed28b-0630-4a5e-beca-3a6f2fa1d50b">
+              <nr>5</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="269f79a1-9241-4de0-8a60-89b43a7d82d5" fragment="1" gd:fragmentGUID="a2e1cf88-9a87-4211-8d24-f9d6f3d0f1e6">W przypadku gdy podmiot prowadzący działalność maklerską, do którego zostały przeniesione papiery wartościowe, instrumenty finansowe niebędące papierami wartościowymi i środki pieniężne oraz dokumenty związane z prowadzeniem rachunków papierów wartościowych, innych rachunków, na których zapisywane są takie instrumenty finansowe i rachunków pieniężnych, nie prowadzi IKE lub IKZE, przeniesienie tych środków do innej instytucji finansowej traktuje się jak dokonanie wypłaty transferowej.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/91__art_28__ust_6" gd:GUID="a4f2f37a-373c-4a42-aa25-0ff9d810a2a1">
+              <nr>6</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="560728a2-819f-4261-8106-998d6c33d4e9" fragment="1" gd:fragmentGUID="31e00ba4-ab51-4191-a6cf-e29c15b3ef16">W przypadku niedotrzymania przez oszczędzającego terminu, o którym mowa w ust. 4, środki zgromadzone na IKE lub IKZE podlegają zwrotowi.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+        </oddzial-n>
+      </rozdzial>
+      <rozdzial eId="DU/2026/91__rozdz_5" gd:GUID="ecc966e2-7f7f-4e5d-9615-377e1277e53b">
+        <naglowek-rozdzialu>
+          <nr>5</nr>
+          <p>IKE lub IKZE w zakładzie ubezpieczeń</p>
+        </naglowek-rozdzialu>
+        <oddzial-n brak-eid="jednostka-nieoznaczona" gd:GUID="f8b90dd4-f95c-43aa-a234-d9c00c26119c">
+          <artykul eId="DU/2026/91__art_29" gd:GUID="40bfc073-1034-4ec3-ae2d-89ed3de2a07d">
+            <nr>29</nr>
+            <ustep eId="DU/2026/91__art_29__ust_1" gd:GUID="a734bfef-01a7-4bb6-92e8-d365bc0f0656">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="9adac57a-8300-4971-b8c9-9a68aa882dc6" fragment="1" gd:fragmentGUID="3e0b2bf5-e254-40fd-b39e-eec0d9fdec1e">Zakład ubezpieczeń nie może pokrywać kosztów ochrony ubezpieczeniowej z części składki ubezpieczeniowej, stanowiącej wpłatę na IKE lub IKZE.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/91__art_29__ust_2" gd:GUID="8e5933ef-d4a7-435f-9276-b9d102774808">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="81dcfcea-4778-485c-abae-97b3f1dbcbb1" fragment="1" gd:fragmentGUID="1759eb4d-3f65-46e5-85cd-7d730d9872e3">Z aktywów ubezpieczeniowego funduszu kapitałowego zakład ubezpieczeń pobiera wyłącznie koszty związane z realizacją nabywania lub zbywania aktywów funduszu, stanowiące równowartość opłat ponoszonych na rzecz osób trzecich, z których pośrednictwa zakład ubezpieczeń jest obowiązany korzystać na mocy odrębnych przepisów, i opłatę z tytułu zarządzania ubezpieczeniowym funduszem kapitałowym.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/91__art_29__ust_3" gd:GUID="15cd8727-9d7a-470b-ad60-75468bf7595c">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="b5764e01-5dac-4056-995f-7a5be0fe04fc" fragment="1" gd:fragmentGUID="31651e96-0751-4523-be0f-027a8d4deb45">Po dokonaniu wypłaty transferowej strony umowy ubezpieczenia na życie z ubezpieczeniowym funduszem kapitałowym, w ramach której było prowadzone IKE lub IKZE, mogą kontynuować tę umowę na zasadach w niej określonych.</zdanie>
+                <zdanie nr="2" gd:zdGUID="d661df7d-685f-49b8-98cd-7aa77e32a6a9" fragment="1" gd:fragmentGUID="55ca6688-3f88-45f8-96b3-090f546a0059">Dokonanie wypłaty transferowej nie może stanowić podstawy do wypowiedzenia przez zakład ubezpieczeń umowy ubezpieczenia na życie.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/91__art_30" gd:GUID="2a75a105-9a67-4294-b369-75c6705f83dc">
+            <nr>30</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="b0efa799-c9ef-440c-aab3-da5c2b9a16b9">
+              <p>
+                <zdanie nr="1" gd:zdGUID="11c3a96a-cde6-4e88-a5b4-5e52bd2f35d3" fragment="1" gd:fragmentGUID="a98b7474-0aef-46e4-8959-b44264c67290">W przypadku dokonania wypłaty transferowej do zakładu ubezpieczeń środki transferowane zasilają w całości rachunek oszczędzającego w ubezpieczeniowym funduszu kapitałowym.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2026/91__art_31" gd:GUID="f4799baa-fea8-4e6c-8928-ef85b5b0a426">
+            <nr>31</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="c3e6119e-4905-4997-84bf-d562d90bfa9c">
+              <p>
+                <zdanie nr="1" gd:zdGUID="16843058-7101-449b-b3f8-726e61ee41c8" fragment="1" gd:fragmentGUID="d1ab4042-1442-4996-b197-70b415c76497">W przypadku gdy środki oszczędzającego na IKE lub IKZE są gromadzone w więcej niż jednym ubezpieczeniowym funduszu kapitałowym, zakład ubezpieczeń ma obowiązek wyodrębniania informacji o łącznej wartości wszystkich jednostek uczestnictwa posiadanych w zakładzie ubezpieczeń, nabytych z tytułu wpłat na IKE lub IKZE.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+        </oddzial-n>
+      </rozdzial>
+      <rozdzial eId="DU/2026/91__rozdz_6" gd:GUID="822ba073-96c6-4787-b407-2ed04be7e957">
+        <naglowek-rozdzialu>
+          <nr>6</nr>
+          <p>IKE lub IKZE w banku</p>
+        </naglowek-rozdzialu>
+        <oddzial-n brak-eid="jednostka-nieoznaczona" gd:GUID="a383edb4-4614-4f85-9dcc-420aca85aa9d">
+          <artykul eId="DU/2026/91__art_32" gd:GUID="e855a5a2-777e-4a10-b0e5-749647d1c206">
+            <nr>32</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="886d796f-2a33-464a-822c-d89a6a7e3cdc">
+              <p>
+                <zdanie nr="1" gd:zdGUID="5d1ac0f0-4545-4438-88d1-0780d2fd40dc" fragment="1" gd:fragmentGUID="0789130d-8977-4693-9b87-1d1aca5adb59">Bank zawiera umowę o prowadzenie IKE lub IKZE w formie rachunku oszczędnościowego, zgodnie z zasadami określonymi w ustawie z dnia 29 sierpnia 1997 r. – Prawo bankowe, o ile przepisy niniejszej ustawy nie stanowią inaczej.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2026/91__art_33" gd:GUID="8482b181-d55a-4ea1-b1dd-4140381da656">
+            <nr>33</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="e2293cbb-2062-4f83-9837-272240b708fa">
+              <p>
+                <zdanie nr="1" gd:zdGUID="69fbd355-6464-46f1-bd54-71971ec7dfbc" fragment="1" gd:fragmentGUID="073d057b-2b55-4df0-9325-782f727c84bc">W przypadku wypłaty transferowej, częściowego zwrotu albo zwrotu środków zgromadzonych na IKE lub IKZE bank przekazuje zgromadzone oszczędności wraz z należnym na dzień wypłaty transferowej, częściowego zwrotu albo zwrotu, oprocentowaniem naliczonym według zasad, jakie obowiązywałyby w przypadku kontynuacji umowy o prowadzenie IKE lub IKZE.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+        </oddzial-n>
+      </rozdzial>
+      <rozdzial eId="DU/2026/91__rozdz_6a" gd:GUID="24b898e1-6821-4473-8f56-4e199c34783d">
+        <naglowek-rozdzialu>
+          <nr>6a</nr>
+          <p>IKE lub IKZE w dobrowolnym funduszu emerytalnym</p>
+        </naglowek-rozdzialu>
+        <oddzial-n brak-eid="jednostka-nieoznaczona" gd:GUID="f6b48278-29af-40d6-a66f-8b3ef1e6d5f8">
+          <artykul eId="DU/2026/91__art_33a" gd:GUID="74231f75-4150-4c3f-b5b1-559712d076b1">
+            <nr>33a</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="bb5aa526-d659-4ff5-aa29-48758ae68a71">
+              <p>
+                <zdanie nr="1" gd:zdGUID="ea91f77a-01c1-44d1-b9ce-56bce57d3a65" fragment="1" gd:fragmentGUID="edd190e1-65ad-4bcc-91ed-5fdc23f40b8c">Do IKE lub IKZE w dobrowolnym funduszu emerytalnym mają zastosowanie przepisy ustawy z dnia 28 sierpnia 1997 r. o organizacji i funkcjonowaniu funduszy emerytalnych, o ile przepisy niniejszej ustawy nie stanowią inaczej.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+        </oddzial-n>
+      </rozdzial>
+      <rozdzial eId="DU/2026/91__rozdz_7" gd:GUID="8fe9f688-706b-451b-b60e-8f78b96b5cec">
+        <naglowek-rozdzialu>
+          <nr>7</nr>
+          <p>Wypłata, wypłata transferowa, częściowy zwrot i zwrot środków zgromadzonych na IKE lub IKZE</p>
+        </naglowek-rozdzialu>
+        <oddzial-n brak-eid="jednostka-nieoznaczona" gd:GUID="ff3ea1bb-3b08-40db-9173-bdacc3dfe8c5">
+          <artykul eId="DU/2026/91__art_34" gd:GUID="5bde0126-8b13-427c-9aae-9d517b114945">
+            <nr>34</nr>
+            <ustep eId="DU/2026/91__art_34__ust_1" gd:GUID="770f70a2-3229-4bb4-86d4-d910c55d1795">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="29c1e2a9-f4b7-4b9b-b5cf-57c961b20a09" fragment="1" gd:fragmentGUID="e6b02f66-2268-4d2d-bd5a-4caa5a26aea1">Wypłata środków zgromadzonych na IKE następuje wyłącznie:</zdanie>
+              </p>
+              <punkt eId="DU/2026/91__art_34__ust_1__pkt_1" gd:GUID="c7f9a5bb-8646-484f-a617-b947bf40b1ed">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="29c1e2a9-f4b7-4b9b-b5cf-57c961b20a09" fragment="2" gd:fragmentGUID="d055e00a-b184-430a-954e-41215b3d2693">na wniosek oszczędzającego po osiągnięciu przez niego wieku 60 lat lub nabyciu uprawnień emerytalnych i ukończeniu 55 roku życia oraz spełnieniu warunku:</zdanie>
+                </p>
+                <litera eId="DU/2026/91__art_34__ust_1__pkt_1__lit_a" gd:GUID="7f52d02d-cf8b-48ec-a197-094dfa4b09e2">
+                  <nr>a</nr>
+                  <p>
+                    <zdanie nr="1" gd:zdGUID="29c1e2a9-f4b7-4b9b-b5cf-57c961b20a09" fragment="3" gd:fragmentGUID="de38cbb2-e91e-4bfc-9b0e-b2dcee5fd84e">dokonywania wpłat na IKE co najmniej w 5 dowolnych latach kalendarzowych albo</zdanie>
+                  </p>
+                </litera>
+                <litera eId="DU/2026/91__art_34__ust_1__pkt_1__lit_b" gd:GUID="f54674dc-087c-420c-aa5e-1adf8e0dab40">
+                  <nr>b</nr>
+                  <p>
+                    <zdanie nr="1" gd:zdGUID="29c1e2a9-f4b7-4b9b-b5cf-57c961b20a09" fragment="4" gd:fragmentGUID="f7ef90b8-b493-4019-baab-4ba93ef4785e">dokonania ponad połowy wartości wpłat niepóźniej niż na 5 lat przed dniem złożenia przez oszczędzającego wniosku o dokonanie wypłaty;</zdanie>
+                  </p>
+                </litera>
+              </punkt>
+              <punkt eId="DU/2026/91__art_34__ust_1__pkt_2" gd:GUID="569465e8-f2a8-4635-ba97-3bd7d197555c">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="29c1e2a9-f4b7-4b9b-b5cf-57c961b20a09" fragment="5" gd:fragmentGUID="880e2127-fd75-401a-ac9e-c3399dc26a1e">w przypadku śmierci oszczędzającego – na wniosek osoby uprawnionej.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2026/91__art_34__ust_1a" gd:GUID="4ff13201-dbe8-4c7c-b288-28f107f73fc5">
+              <nr>1a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="36b68851-24c2-41e6-b1a9-43084479eb4d" fragment="1" gd:fragmentGUID="0853e3b2-b238-4b7b-94d1-9bfe7ab9e759">Warunków, o których mowa w ust. 1 pkt 1 lit. a i b, nie stosuje się w stosunku do środków przeniesionych z programu emerytalnego na IKE.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/91__art_34__ust_2" gd:GUID="c9d54787-d50d-49e5-b504-dc9ef9942916">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="5eb02a3a-deb2-4c4c-80e2-854bd65ce5eb" fragment="1" gd:fragmentGUID="280bc3f0-1232-40bb-b561-20d3e33283f5">Wypłata może być, w zależności od wniosku oszczędzającego albo osoby uprawnionej, dokonywana jednorazowo albo w ratach.</zdanie>
+                <zdanie nr="2" gd:zdGUID="3dc370ed-f5af-41e1-bd28-8e6d629f29f6" fragment="1" gd:fragmentGUID="d7990ee4-2b56-4e2b-a006-4a25878a0868">Wypłata jednorazowa, a w przypadku wypłaty w ratach pierwsza rata, powinny być, z wyłączeniem przypadków, o których mowa w art. 14 ust. 1 pkt 1 i 2, dokonane w terminie niedłuższym niż 14 dni od dnia:</zdanie>
+              </p>
+              <punkt eId="DU/2026/91__art_34__ust_2__pkt_1" gd:GUID="6e46c53f-1ed5-4218-9604-ad4825c515cf">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="2" gd:zdGUID="3dc370ed-f5af-41e1-bd28-8e6d629f29f6" fragment="2" gd:fragmentGUID="c1ff2e84-4c14-4a76-9ed3-25b64cb0e727">złożenia przez oszczędzającego wniosku o dokonanie wypłaty,</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/91__art_34__ust_2__pkt_2" gd:GUID="a21ded95-f100-4634-be3c-b535297bab57">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="2" gd:zdGUID="3dc370ed-f5af-41e1-bd28-8e6d629f29f6" fragment="3" gd:fragmentGUID="ef01d1c5-c2ab-4b93-a76a-04c1a834799a">złożenia przez osobę, o której mowa w ust. 1 pkt 2, wniosku o dokonanie wypłaty oraz przedłożenia:</zdanie>
+                </p>
+                <litera eId="DU/2026/91__art_34__ust_2__pkt_2__lit_a" gd:GUID="0a99c088-c44d-49b4-84c4-6ba287995b3b">
+                  <nr>a</nr>
+                  <p>
+                    <zdanie nr="2" gd:zdGUID="3dc370ed-f5af-41e1-bd28-8e6d629f29f6" fragment="4" gd:fragmentGUID="fc6fe906-9c3d-42ad-a833-e4092acad424">aktu zgonu oszczędzającego i dokumentu stwierdzającego tożsamość osoby uprawnionej albo</zdanie>
+                  </p>
+                </litera>
+                <litera eId="DU/2026/91__art_34__ust_2__pkt_2__lit_b" gd:GUID="4722177c-6d02-46e5-aaa9-3810a1dfd92c">
+                  <nr>b</nr>
+                  <p>
+                    <zdanie nr="2" gd:zdGUID="3dc370ed-f5af-41e1-bd28-8e6d629f29f6" fragment="5" gd:fragmentGUID="ac4f1e46-0ad5-4357-92cf-dc17abe9d291">prawomocnego postanowienia sądu o stwierdzeniu nabycia spadku oraz zgodnego oświadczenia wszystkich spadkobierców o sposobie podziału środków zgromadzonych przez oszczędzającego bądź prawomocnego postanowienia sądu o dziale spadku oraz dokumentów stwierdzających tożsamość spadkobierców</zdanie>
+                  </p>
+                </litera>
+              </punkt>
+              <czesc-wspolna-punkt eId="DU/2026/91__art_34__ust_2__czw" gd:GUID="51fddef0-d924-4e90-bc9b-bb58eea76ec1">
+                <p>
+                  <zdanie nr="2" gd:zdGUID="3dc370ed-f5af-41e1-bd28-8e6d629f29f6" fragment="6" gd:fragmentGUID="ce999e9b-ee72-41c2-a038-bd313b0b7c8e">– chyba że oszczędzający albo osoby uprawnione zażądają wypłaty w terminie późniejszym.</zdanie>
+                </p>
+              </czesc-wspolna-punkt>
+            </ustep>
+            <ustep eId="DU/2026/91__art_34__ust_3" gd:GUID="510d315c-2b3e-4f23-bff7-6b12f1a9806c">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="e3da0385-793c-49eb-bcb4-b06633dab2d9" fragment="1" gd:fragmentGUID="5b037d5c-7343-4641-bc02-65684ef44a6d">W przypadku gdy fundusz inwestycyjny zawiesił odkupywanie jednostek uczestnictwa, a zostały spełnione warunki, o których mowa w ust. 2, wypłata następuje w terminie 14 dni od dnia wznowienia odkupywania jednostek uczestnictwa.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/91__art_34__ust_4" gd:GUID="1b5616ab-4d9a-4899-b8ef-34a8e1db23a5">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="2fbb28ce-4960-4da0-9b40-c343cbc2c7a9" fragment="1" gd:fragmentGUID="330c5757-7534-4379-aede-fb7c59bf6716">Oszczędzający, który dokonał wypłaty jednorazowej albo wypłaty pierwszej raty, nie może ponownie założyć IKE.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/91__art_34__ust_5" gd:GUID="32f39d55-19f2-4d9f-bbb5-4f11e5093070">
+              <nr>5</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="e1eb0ac2-cdf4-428b-88f0-2a659013dfcd" fragment="1" gd:fragmentGUID="f8dd3809-49cf-4a93-b449-f8dd114fb699">Oszczędzający nie może dokonywać wpłat na IKE, z którego dokonał wypłaty pierwszej raty.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/91__art_34a" gd:GUID="672087e4-8f5f-4083-b376-5ca059071e10">
+            <nr>34a</nr>
+            <ustep eId="DU/2026/91__art_34a__ust_1" gd:GUID="baf6a8a6-38a5-4105-85bc-c8a63a7db27f">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="eb9d7d95-081e-4e07-8629-3732b1c2ee99" fragment="1" gd:fragmentGUID="65a519b6-056f-4e86-b8c2-c5bb8fb550ca">Wypłata środków zgromadzonych na IKZE następuje wyłącznie:</zdanie>
+              </p>
+              <punkt eId="DU/2026/91__art_34a__ust_1__pkt_1" gd:GUID="e529cfec-59a6-42d7-a1ca-746ffa7cbdc1">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="eb9d7d95-081e-4e07-8629-3732b1c2ee99" fragment="2" gd:fragmentGUID="5fa311bd-a252-4416-b9f7-d52831cdad95">na wniosek oszczędzającego, po osiągnięciu przez niego wieku 65 lat oraz pod warunkiem dokonywania wpłat na IKZE co najmniej w 5 latach kalendarzowych;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/91__art_34a__ust_1__pkt_2" gd:GUID="d7675f32-323e-44a0-a151-5a227a75070a">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="eb9d7d95-081e-4e07-8629-3732b1c2ee99" fragment="3" gd:fragmentGUID="066d3328-cb37-4421-ae28-c13952e15c57">w przypadku śmierci oszczędzającego – na wniosek osoby uprawnionej.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2026/91__art_34a__ust_2" gd:GUID="97859f06-68c8-41d0-b647-fddc8d316191">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="c318e87a-18c4-4a3a-a4ad-1d25be7a6a9b" fragment="1" gd:fragmentGUID="3ef3e598-db7f-415e-838e-31d9fa50473e">Wypłata może być, w zależności od wniosku oszczędzającego albo osoby uprawnionej, dokonywana jednorazowo albo w ratach.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/91__art_34a__ust_2a" gd:GUID="3eee2b50-2cd4-460a-8a53-e55544a3ae62">
+              <nr>2a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="01857294-2af0-4e33-8553-ecac018a3f28" fragment="1" gd:fragmentGUID="c799f73a-c779-4478-9279-927bdfc2b994">Oszczędzający lub osoba uprawniona może w każdym czasie zmienić wniosek o dokonanie wypłaty w ratach i żądać wypłaty jednorazowej, o ile nie zostały wypłacone wszystkie środki zgromadzone na IKZE.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/91__art_34a__ust_3" gd:GUID="f7e475d4-0fb8-4af3-a7ef-1cb7b3072d76">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="52f6b6c5-39ad-4284-831c-0ddc79e552b0" fragment="1" gd:fragmentGUID="8e80170c-4737-4068-9bbf-1776651654e9">W przypadku wypłaty w ratach środki zgromadzone przez oszczędzającego na IKZE są wypłacane przez instytucje finansowe prowadzące IKZE zgodnie z regulacjami dotyczącymi działania tych instytucji.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/91__art_34a__ust_4" gd:GUID="3c51f6eb-b62f-40e5-aa20-11387a0b4208">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="1099b761-6e79-4549-a8d3-40c1eea0b1d7" fragment="1" gd:fragmentGUID="4edef018-2016-4d98-a686-292ee5c57f57">Wypłata w ratach środków zgromadzonych przez oszczędzającego następuje przez co najmniej 10 lat.</zdanie>
+                <zdanie nr="2" gd:zdGUID="139ada6f-de08-4181-ba30-0aa6e7095004" fragment="1" gd:fragmentGUID="db1898f0-0998-4ffe-9f9d-1a673fd710d3">Jeżeli wpłaty na IKZE były dokonywane przez mniej niż 10 lat, wypłata w ratach może być rozłożona na okres równy okresowi, w jakim dokonywane były wpłaty.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/91__art_34a__ust_5" gd:GUID="82dde3f0-9e1c-4451-b1e9-276e6d54f6c2">
+              <nr>5</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="77883710-7b29-4599-a710-9817b6e57ec7" fragment="1" gd:fragmentGUID="d5d0290c-8973-4e48-930a-dc387a576687">Wypłata jednorazowa oraz pierwsza rata, w przypadku wypłaty w ratach, powinny być, z wyłączeniem przypadków, o których mowa w art. 14 ust. 1 pkt 1 i 2, dokonane w terminie niedłuższym niż 14 dni od dnia:</zdanie>
+              </p>
+              <punkt eId="DU/2026/91__art_34a__ust_5__pkt_1" gd:GUID="dde7a256-5bc4-4006-98b7-015d38443191">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="77883710-7b29-4599-a710-9817b6e57ec7" fragment="2" gd:fragmentGUID="43b0c33f-9ba5-42a5-8578-60dc32c2cb0c">złożenia przez oszczędzającego wniosku o dokonanie wypłaty,</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/91__art_34a__ust_5__pkt_2" gd:GUID="f7a858fe-be67-4f19-aedd-b562e1ec4bee">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="77883710-7b29-4599-a710-9817b6e57ec7" fragment="3" gd:fragmentGUID="c1fc3650-c6a8-4bec-a9a6-088191c19d56">złożenia przez osobę uprawnioną, o której mowa w ust. 1 pkt 2, wniosku o dokonanie wypłaty oraz przedłożenia:</zdanie>
+                </p>
+                <litera eId="DU/2026/91__art_34a__ust_5__pkt_2__lit_a" gd:GUID="84190c99-2f81-43a1-8cb6-53c1e78f99bc">
+                  <nr>a</nr>
+                  <p>
+                    <zdanie nr="1" gd:zdGUID="77883710-7b29-4599-a710-9817b6e57ec7" fragment="4" gd:fragmentGUID="01a31f86-d15d-4b7d-89ae-05c2f6b3d8ed">aktu zgonu oszczędzającego i dokumentu stwierdzającego tożsamość osoby uprawnionej albo</zdanie>
+                  </p>
+                </litera>
+                <litera eId="DU/2026/91__art_34a__ust_5__pkt_2__lit_b" gd:GUID="6700eba7-bec6-4ae5-9b8d-2fc913e8badd">
+                  <nr>b</nr>
+                  <p>
+                    <zdanie nr="1" gd:zdGUID="77883710-7b29-4599-a710-9817b6e57ec7" fragment="5" gd:fragmentGUID="39d0cca4-19ea-45a0-bd70-cc52aa9b9bd5">prawomocnego postanowienia sądu o stwierdzeniu nabycia spadku oraz zgodnego oświadczenia wszystkich spadkobierców o sposobie podziału środków zgromadzonych przez oszczędzającego bądź prawomocnego postanowienia sądu o dziale spadku oraz dokumentów stwierdzających tożsamość spadkobierców</zdanie>
+                  </p>
+                </litera>
+              </punkt>
+              <czesc-wspolna-punkt eId="DU/2026/91__art_34a__ust_5__czw" gd:GUID="3a299c1c-c209-4f1f-aa37-0fb5505c2cf3">
+                <p>
+                  <zdanie nr="1" gd:zdGUID="77883710-7b29-4599-a710-9817b6e57ec7" fragment="6" gd:fragmentGUID="1926fcef-9456-403d-a974-fbe98bf60c94">– chyba że oszczędzający albo osoby uprawnione zażądają wypłaty w terminie późniejszym.</zdanie>
+                </p>
+              </czesc-wspolna-punkt>
+            </ustep>
+            <ustep eId="DU/2026/91__art_34a__ust_6" gd:GUID="c9eff4ed-26b6-4491-8c0a-0bda2776b2d2">
+              <nr>6</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="3012b5ee-467d-49b5-acce-04cf81fe521c" fragment="1" gd:fragmentGUID="ff9fc2c1-62c7-4cd5-91b7-5676c72d8777">W przypadku gdy fundusz inwestycyjny zawiesił odkupywanie jednostek uczestnictwa, a zostały spełnione warunki, o których mowa w ust. 5, wypłata następuje w terminie do 14 dni od dnia wznowienia umarzania przez fundusz jednostek uczestnictwa.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/91__art_34a__ust_7" gd:GUID="19224e81-cd84-43b9-b17c-395dbd4b560a">
+              <nr>7</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="05770a61-e2ce-4796-b843-485ce5c4165c" fragment="1" gd:fragmentGUID="e3394809-202f-43f1-ac88-c19986e61069">Oszczędzający, który dokonał wypłaty jednorazowej albo wypłaty pierwszej raty, nie może ponownie rozpocząć gromadzenia oszczędności na IKZE.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/91__art_34a__ust_8" gd:GUID="549dfc8b-4c6f-4e22-982a-7cd1739047db">
+              <nr>8</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="22f83cac-c4de-43b4-89f6-557e528b588a" fragment="1" gd:fragmentGUID="7c9d4c84-f454-4ba3-b4d4-d3aca5f1f22d">Oszczędzający nie może dokonywać wpłat na IKZE, jeżeli została dokonana wypłata pierwszej raty.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/91__art_35" gd:GUID="ed8ede59-9b33-4e2a-b946-5ffe83eacdee">
+            <nr>35</nr>
+            <ustep eId="DU/2026/91__art_35__ust_1" gd:GUID="982bd454-d9d0-4194-8cdc-2c70ae01cecb">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="f5d44e32-74c7-418e-a723-1761ec241cc3" fragment="1" gd:fragmentGUID="42b0f6e5-9f26-4521-bcc2-f509bb5bfb14">Wypłata transferowa jest dokonywana:</zdanie>
+              </p>
+              <punkt eId="DU/2026/91__art_35__ust_1__pkt_1" gd:GUID="a6224957-84c6-4ccb-8e59-fcd87ece3deb">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="f5d44e32-74c7-418e-a723-1761ec241cc3" fragment="2" gd:fragmentGUID="b83acc77-275d-4391-af74-6a383bcd19c5">z instytucji finansowej prowadzącej IKE lub IKZE do innej instytucji finansowej, z którą oszczędzający zawarł umowę o prowadzenie IKE lub IKZE, albo</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/91__art_35__ust_1__pkt_2" gd:GUID="23015d0b-7884-4bf6-825c-7207aa7aa759">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="f5d44e32-74c7-418e-a723-1761ec241cc3" fragment="3" gd:fragmentGUID="5b0b1564-b0f6-4ebe-b527-9acdcc87dea8">z instytucji finansowej prowadzącej IKE do programu emerytalnego, do którego przystąpił oszczędzający, albo</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/91__art_35__ust_1__pkt_3" gd:GUID="406e5292-0080-4967-b74a-edeffbb78abb">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="f5d44e32-74c7-418e-a723-1761ec241cc3" fragment="4" gd:fragmentGUID="525c36bc-c4f8-4aa0-9b3b-48aee8ff58b5">z programu emerytalnego, w przypadkach, o których mowa w przepisach o pracowniczych programach emerytalnych, do instytucji finansowej, z którą oszczędzający zawarł umowę o prowadzenie IKE, albo</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/91__art_35__ust_1__pkt_4" gd:GUID="97894b7d-1c3d-4bee-8569-a6ca19fd138b">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="f5d44e32-74c7-418e-a723-1761ec241cc3" fragment="5" gd:fragmentGUID="34c75ef6-8d5d-46fd-b6de-77342ab50444">z IKE zmarłego oszczędzającego na IKE osoby uprawnionej albo do programu emerytalnego, do którego uprawniony przystąpił, albo</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/91__art_35__ust_1__pkt_5" gd:GUID="33881c47-d025-4988-b6f0-204988f9ecec">
+                <nr>5</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="f5d44e32-74c7-418e-a723-1761ec241cc3" fragment="6" gd:fragmentGUID="57698a57-af63-401d-a619-56006e7350aa">z IKZE zmarłego oszczędzającego na IKZE osoby uprawnionej, albo</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/91__art_35__ust_1__pkt_6" gd:GUID="92f08da0-8d07-4666-a809-f07a8bf9fab6">
+                <nr>6</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="f5d44e32-74c7-418e-a723-1761ec241cc3" fragment="7" gd:fragmentGUID="2bbabc54-ae6a-4a66-a39d-842c859b361a">z PPK zmarłego uczestnika PPK na IKE małżonka zmarłego uczestnika PPK lub osoby uprawnionej, albo</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/91__art_35__ust_1__pkt_7" gd:GUID="eb0fa3dd-e16a-42c3-90e5-e97fba96a3a7">
+                <nr>7</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="f5d44e32-74c7-418e-a723-1761ec241cc3" fragment="8" gd:fragmentGUID="fb7826df-3418-4a37-8ecc-f9d5856f1755">z subkonta OIPE na IKE w przypadkach określonych w przepisach ustawy o OIPE, albo</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/91__art_35__ust_1__pkt_8" gd:GUID="13478a9b-f0d4-43c0-b354-c54211757908">
+                <nr>8</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="f5d44e32-74c7-418e-a723-1761ec241cc3" fragment="9" gd:fragmentGUID="2a727042-d053-468d-930a-2b5142576652">z IKE oszczędzającego na subkonto OIPE, z zastrzeżeniem że z IKE nie były dokonywane częściowe zwroty oraz nie była dokonana wypłata transferowa z programu emerytalnego.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2026/91__art_35__ust_2" gd:GUID="3685079d-0fe5-4f34-9247-0b1b1e38ec85">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="973c6746-fe5a-4b41-8ca2-ad79463a9854" fragment="1" gd:fragmentGUID="336996ca-6321-45d0-bbec-b944fb51282e">Wypłata transferowa jest dokonywana na podstawie dyspozycji oszczędzającego albo osoby uprawnionej po uprzednim zawarciu umowy o prowadzenie IKE lub IKZE z inną instytucją finansową albo po przystąpieniu do programu emerytalnego i okazaniu instytucji dokonującej wypłaty transferowej odpowiednio potwierdzenia zawarcia umowy albo potwierdzenia przystąpienia do programu emerytalnego.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/91__art_35__ust_3" gd:GUID="726f97b8-5b07-4d27-83b9-b8237b6e2dd4">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="fbba961d-4c44-46d8-9f4b-611a7860186b" fragment="1" gd:fragmentGUID="8be061df-c1db-4cf4-9fa8-07e4887719a0">W przypadku wypłaty transferowej z IKE do programu emerytalnego wypłata transferowa dokonywana jest na rachunek programu emerytalnego.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/91__art_35__ust_3a" gd:GUID="0d0c483d-3a00-4fe1-9fc2-c5cd4e626a18">
+              <nr>3a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="b7f5c6ed-01db-4e19-82dc-25b9486f7e12" fragment="1" gd:fragmentGUID="ae8665f6-ce1f-4561-9448-bb4a0a216836">W przypadku wypłaty transferowej z IKE na subkonto OIPE wypłata transferowa jest dokonywana na podstawie dyspozycji oszczędzającego, po uprzednim zawarciu umowy o prowadzenie OIPE, o której mowa w art. 2 pkt 12 ustawy o OIPE, z dostawcą OIPE i okazaniu instytucji dokonującej wypłaty transferowej dokumentu wydanego przez dostawcę OIPE potwierdzającego, że oszczędzający posiada subkonto OIPE u tego dostawcy.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/91__art_35__ust_4" gd:GUID="bd9dc0f2-a7ce-4ad1-b2ca-1f2e3db40bb1">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="1f2b8d63-8eff-4283-ad3d-c614b74324a3" fragment="1" gd:fragmentGUID="87efeb7a-a03a-44c6-97fa-239edb620317">Z wyłączeniem przypadków, o których mowa w art. 14 ust. 1 pkt 1 i 2, wypłata transferowa powinna być dokonana w terminie niedłuższym niż 14 dni od dnia:</zdanie>
+              </p>
+              <punkt eId="DU/2026/91__art_35__ust_4__pkt_1" gd:GUID="b1e98c27-5fec-4939-a4aa-61435b911213">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="1f2b8d63-8eff-4283-ad3d-c614b74324a3" fragment="2" gd:fragmentGUID="1a35ede0-9e2e-4013-8ed7-ab31263fe64f">złożenia dyspozycji wypłaty transferowej przez oszczędzającego albo</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/91__art_35__ust_4__pkt_2" gd:GUID="8ed2662e-faa2-419d-880c-7a7916fa8e97">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="1f2b8d63-8eff-4283-ad3d-c614b74324a3" fragment="3" gd:fragmentGUID="7bc3fd50-804d-43a1-a682-a708d1161bc1">przedstawienia przez osoby uprawnione dokumentów wymienionych w art. 34 ust. 2 pkt 2 lub art. 34a ust. 5 pkt 2 oraz złożenia dyspozycji wypłaty transferowej</zdanie>
+                </p>
+              </punkt>
+              <czesc-wspolna-punkt eId="DU/2026/91__art_35__ust_4__czw" gd:GUID="b0fec97a-34dd-45c3-914e-fd0a77a902ea">
+                <p>
+                  <zdanie nr="1" gd:zdGUID="1f2b8d63-8eff-4283-ad3d-c614b74324a3" fragment="4" gd:fragmentGUID="db2980e9-7cce-4342-9650-187628cf3e6d">– pod warunkiem że nie zachodzą przesłanki do zawieszenia odkupywania jednostek uczestnictwa określonych w przepisach dotyczących funduszy inwestycyjnych.</zdanie>
+                </p>
+              </czesc-wspolna-punkt>
+            </ustep>
+            <ustep eId="DU/2026/91__art_35__ust_5" gd:GUID="660095a2-5b65-49cc-a973-80a3e43f95bb">
+              <nr>5</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="916b81cd-9d0d-4783-a1df-86d8518ef3ce" fragment="1" gd:fragmentGUID="aa16e2c7-6955-4787-bde0-10c2e41bb125">Z chwilą przekazania środków, zgodnie z ust. 2, umowa o prowadzenie IKE lub IKZE zawarta z instytucją finansową dokonującą wypłaty transferowej ulega rozwiązaniu, z wyłączeniem przypadku, gdy oszczędzający dokonuje wypłaty transferowej części środków zgromadzonych na IKE lub IKZE pomiędzy funduszami inwestycyjnymi zarządzanymi przez to samo towarzystwo.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/91__art_36" gd:GUID="a6609e10-548c-436e-aaae-00ab92e0ba9a">
+            <nr>36</nr>
+            <ustep eId="DU/2026/91__art_36__ust_1" gd:GUID="9b6a02b1-2bd3-4cfa-876e-bd20188108aa">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="875a6c93-5b13-4646-80df-0c7d7f74181c" fragment="1" gd:fragmentGUID="a3f11c17-bdf8-44c4-9c28-1643a22dbef0">Przedmiotem wypłaty transferowej może być wyłącznie całość środków zgromadzonych na IKE lub IKZE, z wyłączeniem przypadku, gdy oszczędzający dokonuje wypłaty transferowej pomiędzy funduszami inwestycyjnymi zarządzanymi przez to samo towarzystwo, oraz przypadków, o których mowa w art. 14 ust. 1 pkt 1 i 2.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/91__art_36__ust_2" gd:GUID="e9cecb0d-1ecd-4b0c-8789-211073857c47">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="bd1d587a-32dd-403b-8ad6-a55b5d965c4d" fragment="1" gd:fragmentGUID="c414b330-97af-48dc-b534-f7a17babcda3">Każda z osób uprawnionych do środków zgromadzonych:</zdanie>
+              </p>
+              <punkt eId="DU/2026/91__art_36__ust_2__pkt_1" gd:GUID="4af2c7f3-33a9-4f88-a6ad-5404b48fb1d2">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="bd1d587a-32dd-403b-8ad6-a55b5d965c4d" fragment="2" gd:fragmentGUID="fcb53b7b-4c15-4556-9433-8978ead6e854">na IKE zmarłego może dokonać wypłaty transferowej na swoje IKE lub do programu emerytalnego, do którego przystąpiła, wyłącznie całości przysługujących jej środków;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/91__art_36__ust_2__pkt_2" gd:GUID="ebbf911d-89c1-47ca-864d-88a730ff56bf">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="bd1d587a-32dd-403b-8ad6-a55b5d965c4d" fragment="3" gd:fragmentGUID="3ba4d89a-54b8-4f40-a050-f50a424ee669">na IKZE zmarłego może dokonać wypłaty transferowej całości przysługujących jej środków wyłącznie na swoje IKZE.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/91__art_37" gd:GUID="7312b2ad-009c-4a45-b426-f0ade4353172">
+            <nr>37</nr>
+            <ustep eId="DU/2026/91__art_37__ust_1" gd:GUID="72f9d447-8d8e-4533-990f-165550c40759">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="07e72e29-51e5-4b72-bff5-c07157063e46" fragment="1" gd:fragmentGUID="b01212ba-2859-40ea-9ca8-658c1bf1f911">Zwrot środków zgromadzonych na IKE lub IKZE następuje w razie wypowiedzenia umowy o prowadzenie IKE lub IKZE przez którąkolwiek ze stron, jeżeli nie zachodzą przesłanki do wypłaty lub wypłaty transferowej.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/91__art_37__ust_1a" gd:GUID="9e5b4dd9-98ef-49b1-91bc-00bc42ecf943">
+              <nr>1a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="d38357b1-7eef-4baf-8797-fb516da7c60d" fragment="1" gd:fragmentGUID="41b7b4f6-64d2-4a59-b10b-38fe7425ed44">Oszczędzający może wystąpić z wnioskiem o częściowy zwrot pod warunkiem, że środki te pochodziły z wpłat na IKE.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/91__art_37__ust_2" gd:GUID="bfa88a34-1646-4568-a536-9fda11e29299">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="3417a3de-55e6-4e2f-927b-0a3c4652afb6" fragment="1" gd:fragmentGUID="84364d41-63b7-4305-b68d-8b9fc2ab0cd7">Na równi ze zwrotem, w tym także do celów podatkowych, traktuje się pozostawienie środków zgromadzonych na IKE lub IKZE na rachunku oszczędzającego, jeżeli umowa o prowadzenie IKE lub IKZE wygasła, a nie zachodzą przesłanki do wypłaty lub wypłaty transferowej.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/91__art_37__ust_3" gd:GUID="2efe8fa6-f059-420a-89b3-058749c67d8c">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="9274a142-07d2-4c9c-bd79-d58635a8fc43" fragment="1" gd:fragmentGUID="51dacf79-f8dd-4003-bec5-6c0f2eb283da">W przypadku gdy na IKE oszczędzającego przyjęto wypłatę transferową z programu emerytalnego, instytucja finansowa przed dokonaniem zwrotu, w ciągu 7 dni, licząc od dnia złożenia przez oszczędzającego wypowiedzenia, przekazuje na rachunek bankowy wskazany przez Zakład Ubezpieczeń Społecznych kwotę w wysokości 30 % sumy składek podstawowych wpłaconych do programu emerytalnego.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/91__art_37__ust_4" gd:GUID="d96f8f60-9571-4481-818a-deadfdbffaef">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ab4e73aa-62b7-4d3d-b2cc-48a26b6630ca" fragment="1" gd:fragmentGUID="18c5f99a-f370-4645-b263-6426fabb2f63">Kwota, o której mowa w ust. 3, stanowi przychody Funduszu Ubezpieczeń Społecznych.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/91__art_37__ust_5" gd:GUID="95ca5d69-a369-41b5-9d03-3f127b36c4e5">
+              <nr>5</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="34cd83a0-822c-4cca-b82e-feb87481ade3" fragment="1" gd:fragmentGUID="1235661e-ac4e-4843-b0aa-06f55102f830">Informacja o kwocie, o której mowa w ust. 3, ewidencjonowana jest na koncie ubezpieczonego, o którym mowa w art. 40 ust. 1 ustawy z dnia 13 października 1998 r. o systemie ubezpieczeń społecznych, jako składka na ubezpieczenie emerytalne należna za miesiąc, w którym kwota ta została przekazana do Zakładu Ubezpieczeń Społecznych.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/91__art_37__ust_6" gd:GUID="2900c6be-44cf-4201-a228-5704c98253bf">
+              <nr>6</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="01e131f5-5893-4ca8-972e-fe9f9a8eb857" fragment="1" gd:fragmentGUID="c366cb6b-93a2-41ad-a4d0-2b64d86cd588">Minister właściwy do spraw zabezpieczenia społecznego, uwzględniając konieczność zapewnienia prawidłowego zewidencjonowania danych na koncie ubezpieczonego, określi w drodze rozporządzenia:</zdanie>
+              </p>
+              <punkt eId="DU/2026/91__art_37__ust_6__pkt_1" gd:GUID="3775a68e-457c-4092-a39c-17994e7effa5">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="01e131f5-5893-4ca8-972e-fe9f9a8eb857" fragment="2" gd:fragmentGUID="3b95d6ab-5620-4f4e-8ff0-f2cc707aa1f3">szczegółowy zakres danych, w tym w szczególności dotyczących instytucji finansowej i oszczędzającego, podawanych przez instytucję finansową na dokumencie płatniczym, za pomocą którego przekazywana jest kwota, o której mowa w ust. 3;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/91__art_37__ust_6__pkt_2" gd:GUID="20fcaca8-e21c-4e79-9a3f-7085c71c44c4">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="01e131f5-5893-4ca8-972e-fe9f9a8eb857" fragment="3" gd:fragmentGUID="3eea8a48-4c18-41e3-9fcc-7cf8d04790d3">sposób i tryb przeliczania kwoty, o której mowa w ust. 3, na podstawę wymiaru świadczenia.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2026/91__art_37__ust_7" gd:GUID="01208034-0300-4857-9c08-8a99ec33aa6d">
+              <nr>7</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="95b3115e-a08e-48ef-a1f0-3c2876319480" fragment="1" gd:fragmentGUID="a539d6d2-66b7-4e30-9f38-7542493448e6">Instytucja finansowa, w przypadku wypowiedzenia umowy o prowadzenie IKE przez którąkolwiek ze stron, jest obowiązana pouczyć oszczędzającego, że zwrotowi podlegają środki zgromadzone na IKE pomniejszone o należny podatek, a w przypadku, o którym mowa w ust. 3, również o kwotę stanowiącą 30 % sumy składek podstawowych wpłaconych do programu emerytalnego.</zdanie>
+                <zdanie nr="2" gd:zdGUID="24478143-38ad-4b3f-ba04-be46ba7f5ffe" fragment="1" gd:fragmentGUID="bfe24859-6f47-4efa-aeb2-462a82576296">Ponadto instytucja finansowa dokonując wypowiedzenia umowy, informuje oszczędzającego o możliwości dokonania wypłaty transferowej.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/91__art_37__ust_8" gd:GUID="16aa323d-8be5-4cec-a980-b06ab588c923">
+              <nr>8</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="93f1d86a-bb89-45c3-bbf8-539568b422d0" fragment="1" gd:fragmentGUID="4ced9de0-81b4-4563-a278-4c0db0a5b5d4">W przypadku wypowiedzenia umowy o prowadzenie IKE przez oszczędzającego jest on obowiązany do złożenia oświadczenia o zapoznaniu się z konsekwencjami zwrotu, o których mowa w ust. 7.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/91__art_37__ust_9" gd:GUID="3fce1aa9-9f28-43b9-9261-72457007615e">
+              <nr>9</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="a23296d7-1d33-4792-976e-cadb4864e6a4" fragment="1" gd:fragmentGUID="79039dfa-9042-432a-8473-0a656b28d4e3">(uchylony)</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/91__art_37__ust_10" gd:GUID="6d2e1a26-c001-4bcd-b883-fd4978aad1f5">
+              <nr>10</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="6294e00e-cdb6-424a-8e34-de738a787534" fragment="1" gd:fragmentGUID="2bae9054-1ec9-4743-83bd-273aaca23644">Zwrot środków zgromadzonych na IKE lub IKZE powinien nastąpić przed upływem terminu wypowiedzenia umowy.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/91__art_37__ust_11" gd:GUID="6e9e154c-61f2-4f06-9a6d-62f16f119742">
+              <nr>11</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="9b978b79-f3c7-41bd-a029-e1d7f272cf16" fragment="1" gd:fragmentGUID="ba1baf84-14c1-4839-a9a0-6d93a584437f">Częściowy zwrot następuje w ciągu 30 dni, licząc od dnia złożenia przez oszczędzającego wniosku.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/91__art_38" gd:GUID="0d389ff5-fe43-4a88-b490-ab3f269278db">
+            <nr>38</nr>
+            <ustep eId="DU/2026/91__art_38__ust_1" gd:GUID="789bd417-6cfb-4636-a0ec-78b5c9682fe1">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="54bfdc3f-c0b1-470e-b2ba-8ac276d8ad64" fragment="1" gd:fragmentGUID="08bb66e8-78a2-454e-806e-62488f2b59ad">Wypłata, wypłata transferowa, częściowy zwrot oraz zwrot środków zgromadzonych na IKE lub IKZE są dokonywane w formie pieniężnej.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/91__art_38__ust_2" gd:GUID="c8bbbfd5-45bf-44a3-b21f-1498cc13290d">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="fdd3e8ae-034e-47a6-b0dc-05ca3cc1779e" fragment="1" gd:fragmentGUID="c262205a-671d-4a75-ab18-e72524202883">Przepisu ust. 1 nie stosuje się do zgromadzonych na IKE lub IKZE papierów wartościowych:</zdanie>
+              </p>
+              <punkt eId="DU/2026/91__art_38__ust_2__pkt_1" gd:GUID="ee104b97-c3d9-4676-ab89-bb57ee2b56ab">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="fdd3e8ae-034e-47a6-b0dc-05ca3cc1779e" fragment="2" gd:fragmentGUID="ffd1c245-d98c-4fe3-b8d8-608b8e893d01">w przypadku wypłaty transferowej z jednego podmiotu prowadzącego działalność maklerską do innego podmiotu prowadzącego taką działalność;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/91__art_38__ust_2__pkt_2" gd:GUID="7adf3f50-6712-4087-bc11-6f0dd871f296">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="fdd3e8ae-034e-47a6-b0dc-05ca3cc1779e" fragment="3" gd:fragmentGUID="7d3cc5af-054a-4601-a68b-f29341946167">obciążonych zastawem, w przypadku ich przeniesienia na wierzyciela uprawnionego do zaspokojenia w drodze przeniesienia własności rzeczy będących przedmiotem zastawu;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/91__art_38__ust_2__pkt_3" gd:GUID="461e5906-6622-40e4-81e3-f94732e4433b">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="fdd3e8ae-034e-47a6-b0dc-05ca3cc1779e" fragment="4" gd:fragmentGUID="56ca223f-e681-4d57-a4d2-b3ec3664ecff">które przestały być przedmiotem notowań na rynku regulowanym lub notowania ich są zawieszone od co najmniej 30 dni.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/91__art_39" gd:GUID="2f34c17c-8c9c-44a3-b0ba-9f1638b6c126">
+            <nr>39</nr>
+            <ustep eId="DU/2026/91__art_39__ust_1" gd:GUID="1a60817e-59a5-45ac-893a-57ec3b4418b8">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ed7fc4d1-a9a2-4a59-8d14-385acc2446d3" fragment="1" gd:fragmentGUID="ae21db9b-62c3-41ab-a388-c4fe98c1c259">Umowa zawarta z instytucją finansową może ustanawiać termin, niedłuższy niż 12 miesięcy, licząc od dnia zawarcia umowy, w którym dokonanie wypłaty, wypłaty transferowej lub zwrotu wiąże się z koniecznością poniesienia przez oszczędzającego dodatkowej opłaty, której wysokość instytucja finansowa określi w umowie.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/91__art_39__ust_2" gd:GUID="b372494c-8899-4326-a0e3-0ed72eef8745">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="d7aff654-9a49-4278-a181-b89891783c84" fragment="1" gd:fragmentGUID="7bb9240b-720f-4a43-8dbb-cda9ae1451d5">W przypadku gdy oszczędzający dokonuje wypłaty, wypłaty transferowej lub zwrotu przed upływem terminu, o którym mowa w ust. 1, instytucja finansowa ma prawo do potrącenia dodatkowej opłaty z wypłacanych, transferowanych lub zwracanych środków zgromadzonych na IKE lub IKZE.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/91__art_39__ust_3" gd:GUID="85317afb-292e-4bf4-bcf1-90247f571749">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="9c395c0b-8000-41d7-bfb1-88da10509b3f" fragment="1" gd:fragmentGUID="88a087b2-1ba1-4707-88b5-8ab6278d0b35">Po upływie okresu, o którym mowa w ust. 1, podmiot prowadzący działalność maklerską, dokonując wypłaty transferowej środków zgromadzonych na IKE lub IKZE, może pobrać opłatę z tytułu przeniesienia papierów wartościowych, instrumentów finansowych niebędących papierami wartościowymi i środków pieniężnych, jednak niewyższą niż opłata pobierana od tego podmiotu przez Krajowy Depozyt Papierów Wartościowych S.A., określona w regulaminie, o którym mowa w art. 50 ustawy z dnia 29 lipca 2005 r. o obrocie instrumentami finansowymi.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/91__art_39__ust_4" gd:GUID="fbe334e8-f918-40ee-8e78-155b4b461976">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="5bde44b7-5276-4f5a-bc0d-b2a0de9b621d" fragment="1" gd:fragmentGUID="f0381b47-5852-4cef-9766-4cd1b63dd3a6">Przepisów ust. 1 nie stosuje się w przypadku konwersji.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+        </oddzial-n>
+      </rozdzial>
+      <rozdzial eId="DU/2026/91__rozdz_8" gd:GUID="444c343b-c9db-4731-b002-3096a26bc5a7">
+        <naglowek-rozdzialu>
+          <nr>8</nr>
+          <p>Przepisy karne</p>
+        </naglowek-rozdzialu>
+        <oddzial-n brak-eid="jednostka-nieoznaczona" gd:GUID="f85277a3-df8c-495c-b9b1-831cdc7ebbcc">
+          <artykul eId="DU/2026/91__art_40" gd:GUID="0de13222-2721-4d1c-8ad7-1b8483dd7e09">
+            <nr>40</nr>
+            <ustep eId="DU/2026/91__art_40__ust_1" gd:GUID="0a807f04-c128-4865-bf25-934bd8c1d06d">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="3f61c26a-524d-4e46-b503-11e16fb34e50" fragment="1" gd:fragmentGUID="00ad0f0c-ef3c-4c6b-a285-5eb6c1b50af5">Kto, nie będąc do tego uprawnionym, używa do określenia prowadzonej działalności lub reklamy określeń „indywidualne konto emerytalne” lub „indywidualne konto zabezpieczenia emerytalnego” albo skrótów „IKE” lub „IKZE”, <sankcja-karna>podlega grzywnie do 1 000 000 zł lub karze pozbawienia wolności do lat 3</sankcja-karna>.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/91__art_40__ust_2" gd:GUID="d0012d80-f79d-4e14-ac0d-3cc23c64cc5b">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="31d967e5-4c80-4877-903a-a355b136850e" fragment="1" gd:fragmentGUID="2342d181-c38a-435b-a0a0-48a2e41cb1e6">Tej samej karze podlega, kto dopuszcza się czynu określonego w ust. 1, działając w imieniu lub interesie innej osoby fizycznej, osoby prawnej lub jednostki organizacyjnej nieposiadającej osobowości prawnej.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+        </oddzial-n>
+      </rozdzial>
+      <rozdzial eId="DU/2026/91__rozdz_9" gd:GUID="aa97dac4-beb8-4c65-9c0d-149dfe3e1e9e">
+        <naglowek-rozdzialu>
+          <nr>9</nr>
+          <p>Zmiany w przepisach obowiązujących</p>
+        </naglowek-rozdzialu>
+        <oddzial-n brak-eid="jednostka-nieoznaczona" gd:GUID="86b539b3-3fbe-4cb0-a544-9575ead6c7ee">
+          <artykul eId="DU/2026/91__art_41" gd:GUID="cac481c9-84e0-4160-99b1-daec65ea2a34">
+            <nr />
+            <nr-od>41</nr-od>
+            <nr-do>45</nr-do>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="257841f7-9b26-476f-8b0a-7a0b7d69cfcd">
+              <p>
+                <zdanie nr="1" gd:zdGUID="b6e70f27-424e-4e39-9530-947cfdf54c5d" fragment="1" gd:fragmentGUID="651c9a6d-015e-4be9-8b69-4ac79e31b4f9">(pominięte)</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+        </oddzial-n>
+      </rozdzial>
+      <rozdzial eId="DU/2026/91__rozdz_10" gd:GUID="c321f464-347f-478b-a9e8-d10771d506b7">
+        <naglowek-rozdzialu>
+          <nr>10</nr>
+          <p>Przepisy przejściowe i końcowe</p>
+        </naglowek-rozdzialu>
+        <oddzial-n brak-eid="jednostka-nieoznaczona" gd:GUID="5e0cc53a-6402-408d-ad31-ea78c13674d3">
+          <artykul eId="DU/2026/91__art_46" gd:GUID="cf528e38-e619-4841-8d93-0ec699710ea3">
+            <nr>46</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="9c59f2ef-7fdb-4356-97e0-5d4ba534c71b">
+              <p>
+                <zdanie nr="1" gd:zdGUID="1331d302-53ef-4e92-8c65-af1ec8b5eba5" fragment="1" gd:fragmentGUID="9be386c5-3628-46fd-b878-45247b3e8b55">Wypłata środków zgromadzonych na IKE:</zdanie>
+              </p>
+              <punkt eId="DU/2026/91__art_46__pkt_1" gd:GUID="5322d407-7f0d-4fc4-9eb2-4048ca539afe">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="1331d302-53ef-4e92-8c65-af1ec8b5eba5" fragment="2" gd:fragmentGUID="d679f033-2cd2-4477-b1e5-a5dad6349ec1">oszczędzającym urodzonym do dnia 31 grudnia 1945 r. następuje na wniosek oszczędzającego po spełnieniu warunku:</zdanie>
+                </p>
+                <litera eId="DU/2026/91__art_46__pkt_1__lit_a" gd:GUID="8907a50b-91a5-475a-a68f-b0b7cdc37042">
+                  <nr>a</nr>
+                  <p>
+                    <zdanie nr="1" gd:zdGUID="1331d302-53ef-4e92-8c65-af1ec8b5eba5" fragment="3" gd:fragmentGUID="9d663412-b264-410c-80dc-799bc1dc290a">dokonywania wpłat na IKE co najmniej w 3 dowolnych latach kalendarzowych albo</zdanie>
+                  </p>
+                </litera>
+                <litera eId="DU/2026/91__art_46__pkt_1__lit_b" gd:GUID="f1f30a6a-9a6e-438f-9cf8-bd7ab19e83d4">
+                  <nr>b</nr>
+                  <p>
+                    <zdanie nr="1" gd:zdGUID="1331d302-53ef-4e92-8c65-af1ec8b5eba5" fragment="4" gd:fragmentGUID="ea435f08-92b2-4933-885f-9e8ad7847d0a">dokonania ponad połowy wartości wpłat niepóźniej niż na 3 lata przed dniem złożenia przez oszczędzającego wniosku o dokonanie wypłaty;</zdanie>
+                  </p>
+                </litera>
+              </punkt>
+              <punkt eId="DU/2026/91__art_46__pkt_2" gd:GUID="fb0a25a2-0dd5-40dc-871d-6703adf28378">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="1331d302-53ef-4e92-8c65-af1ec8b5eba5" fragment="5" gd:fragmentGUID="efc85f55-3550-41f4-b6be-b326855ffb9c">oszczędzającym urodzonym w okresie między 1 stycznia 1946 r. a 31 grudnia 1948 r. następuje na wniosek oszczędzającego po osiągnięciu przez niego wieku 60 lat bądź nabyciu wcześniejszych uprawnień emerytalnych oraz spełnieniu warunku:</zdanie>
+                </p>
+                <litera eId="DU/2026/91__art_46__pkt_2__lit_a" gd:GUID="80b5e5d3-532a-4c70-91e7-8fdee3f7e7c8">
+                  <nr>a</nr>
+                  <p>
+                    <zdanie nr="1" gd:zdGUID="1331d302-53ef-4e92-8c65-af1ec8b5eba5" fragment="6" gd:fragmentGUID="09ebfbf8-0f8b-4a03-a241-1b195cccd64f">dokonywania wpłat na IKE co najmniej w 4 dowolnych latach kalendarzowych albo</zdanie>
+                  </p>
+                </litera>
+                <litera eId="DU/2026/91__art_46__pkt_2__lit_b" gd:GUID="876ce197-5a2e-4d63-92b0-bd35cbd1bde3">
+                  <nr>b</nr>
+                  <p>
+                    <zdanie nr="1" gd:zdGUID="1331d302-53ef-4e92-8c65-af1ec8b5eba5" fragment="7" gd:fragmentGUID="1707284d-0ab2-4e36-86cb-957b9cd7763b">dokonania ponad połowy wartości wpłat niepóźniej niż na 4 lata przed dniem złożenia przez oszczędzającego wniosku o dokonanie wypłaty.</zdanie>
+                  </p>
+                </litera>
+              </punkt>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2026/91__art_47" gd:GUID="f8ec90e3-dd28-428f-87a8-976d19056d6e">
+            <nr>47</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="0076e9a8-984b-47c1-bdff-22ab0edec0ed">
+              <p>
+                <zdanie nr="1" gd:zdGUID="4efef892-0964-494b-9d2e-13c9b310f60e" fragment="1" gd:fragmentGUID="6ab81863-1f5a-4b9a-990f-ddf51f5485e2">Przepis art. 37 ust. 3 stosuje się do składek podstawowych wpłaconych do programu emerytalnego po dniu wejścia w życie ustawy z dnia 20 kwietnia 2004 r. o pracowniczych programach emerytalnych.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2026/91__art_48" gd:GUID="4c969b37-d54e-4bf4-a280-51fe76261ad9">
+            <nr>48</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="a3604c42-f188-40a5-81b4-86a75505ec72">
+              <p>
+                <zdanie nr="1" gd:zdGUID="e9856684-1fb5-4941-9030-668938877bd8" fragment="1" gd:fragmentGUID="ec2dc235-83ca-4878-a6b4-75e4b8586eee">(pominięty)</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2026/91__art_49" gd:GUID="c8393b5d-f032-4fa9-83f9-ac2be6340e0f">
+            <nr>49</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="6040ff7e-780b-4de7-bff1-5084e2c753ba">
+              <p>
+                <zdanie nr="1" gd:zdGUID="58f98f23-a04e-410d-9d30-2cfb76504261" fragment="1" gd:fragmentGUID="8296a186-1759-4602-8615-97359b32ca80">Ustawa wchodzi w życie z dniem 1 września 2004 r., z wyjątkiem art. 13 ust. 4 i art. 48, które wchodzą w życie z dniem ogłoszenia<odnosnik id-odnosnika="9" symbol="9" gd:GUID="0e5fa5b7-4c25-426a-a220-8e175c17151c"><p><zdanie nr="1" gd:zdGUID="cb92ce1d-6f7e-45cf-8c34-30ee2ab25894" fragment="1" gd:fragmentGUID="b0602dbf-15a4-4ebb-b775-53cff61b044c">Ustawa została ogłoszona w dniu 24 maja 2004 r.</zdanie></p></odnosnik>.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+        </oddzial-n>
+      </rozdzial>
+    </ustawa>
+  </obwieszczenie>
+</akt-prawny>

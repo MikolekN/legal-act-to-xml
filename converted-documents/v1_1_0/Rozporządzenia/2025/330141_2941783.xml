@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <rozporzadzenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/853</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>f3edd955-237b-43e1-b722-73d10b4fa348</gd:GUIDwersji>
+      <AdresISAP>WDU20250000853</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>853</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 853</AdresWyswietlany>
+      <Tytul>Rozporządzenie Ministra Finansów z dnia 26 czerwca 2025 r. zmieniające rozporządzenie w sprawie szczegółowego zakresu danych, które powinny być zawarte w dokumentach związanych z rejestracją w zakresie podatku akcyzowego</Tytul>
+      <Rodzaj>ROZP</Rodzaj>
+      <DataOgloszenia>2025-06-30</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-06-26</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2025-07-01_DU-2025-853_odczytane" rodzaj="wejscie-w-zycie" pochodzenie="odczytane" data="2025-07-01" podstawa="§ 2" zrodlo="https://eli.gov.pl/eli/DU/2025/853" dowod="DU/2025/853__art_2" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2025-07-01_DU-2025-853_odczytane.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2025-07-01_DU-2025-853_odczytane" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="712d0f42-ae9d-47b3-8021-5a63727023b1" rola="wydajacy">
+          <Nazwa>Minister Finansów</Nazwa>
+          <OrganPodpisujacy>Minister Finansów</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>A.</imie> <nazwisko>Domański</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Rozporządzenie</rodzaj-aktu>
+    <autor-aktu>Ministra Finansów<odnosnik id-odnosnika="1" symbol="1" gd:GUID="4554583c-9923-408d-9b73-20aa348e902b"><p><zdanie nr="1" gd:zdGUID="cc0c37a3-a97a-4e02-ba5b-b1f5fc4c03de" fragment="1" gd:fragmentGUID="4bc2ec1a-70bc-4c14-8ed8-c8810f9b3e3f">Minister Finansów kieruje działem administracji rządowej – finanse publiczne, na podstawie § 1 ust. 2 pkt 2 rozporządzenia Prezesa Rady Ministrów z dnia 18 grudnia 2023 r. w sprawie szczegółowego zakresu działania Ministra Finansów (Dz. U. poz. 2710).</zdanie></p></odnosnik></autor-aktu>
+    <data>z dnia 26 czerwca 2025 r.</data>
+    <tytul>zmieniające rozporządzenie w sprawie szczegółowego zakresu danych, które powinny być zawarte w dokumentach związanych z rejestracją w zakresie podatku akcyzowego</tytul>
+    <podstawa-prawna>Na podstawie art. 20 ustawy z dnia 6 grudnia 2008 r. o podatku akcyzowym (Dz. U. z 2025 r. poz. 126, 222 i 340) zarządza się, co następuje:</podstawa-prawna>
+    <paragraf eId="DU/2025/853__art_1" gd:GUID="7a1a849f-b5a0-4816-988e-ece87f547d86" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-01_DU-2025-853_odczytane.x" wejscie-w-zycie="2025-07-01">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="ebb28590-3f48-4dce-b7c4-9bad651b8ae1" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-01_DU-2025-853_odczytane.x" wejscie-w-zycie="2025-07-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="da7ca2c7-5731-4729-91b4-84d9e2676e34" fragment="1" gd:fragmentGUID="d9c42e40-0f68-4791-b957-4ef4caf86197" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-01_DU-2025-853_odczytane.x" wejscie-w-zycie="2025-07-01">W rozporządzeniu Ministra Finansów z dnia 13 grudnia 2024 r. w sprawie szczegółowego zakresu danych, które powinny być zawarte w dokumentach związanych z rejestracją w zakresie podatku akcyzowego (Dz. U. poz. 1879 oraz z 2025 r. poz. 404) w § 3 w pkt 6 lit. d otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/1879" cudzyslowy="oba" gd:nowGUID="ba7576b6-baca-4e00-8dde-3d0b9b7b67e7" element-eId="DU/2024/1879__art_3__pkt_6__lit_d" funkcja="zastap"><litera eId="DU/2024/1879__art_3__pkt_6__lit_d" gd:GUID="a96a9ee3-c8d2-44d0-a9ae-6c509094288a" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-01_DU-2025-853_odczytane.x" wejscie-w-zycie="2025-07-01"><nr>d</nr><p><zdanie nr="1" gd:zdGUID="70cf3c40-84af-4971-be7d-1648434ee009" fragment="1" gd:fragmentGUID="d4f677c0-6445-4c02-857a-7ec6c22c4e97" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-01_DU-2025-853_odczytane.x" wejscie-w-zycie="2025-07-01">§ 6 pkt 1 lit. b lub pkt 2 rozporządzenia Ministra Finansów z dnia 25 czerwca 2025 r. w sprawie zwolnień od podatku akcyzowego (Dz. U. poz. 851)</zdanie></p></litera></cytat-strukt>.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2025/853__art_2" gd:GUID="e84fafa7-e602-4a91-9e52-1adaa604770f" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-01_DU-2025-853_odczytane.x" wejscie-w-zycie="2025-07-01">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="97bdc6c5-a767-41cf-b7a7-c3ecd0aaf219" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-01_DU-2025-853_odczytane.x" wejscie-w-zycie="2025-07-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="4aad4a0a-dfcc-4ed8-bd34-78a9c9850800" fragment="1" gd:fragmentGUID="5397df00-759e-4d88-9119-58aeb9658339" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-01_DU-2025-853_odczytane.x" wejscie-w-zycie="2025-07-01">Rozporządzenie wchodzi w życie z dniem 1 lipca 2025 r.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <organ-podpisujacy>Minister Finansów: <i><osoba podpisujacy="true" gd:osobaGUID="697f4ac9-fcfd-4aab-92cc-ba80a4d47f25"><imie>A.</imie> <nazwisko>Domański</nazwisko></osoba></i></organ-podpisujacy>
+  </rozporzadzenie>
+</akt-prawny>

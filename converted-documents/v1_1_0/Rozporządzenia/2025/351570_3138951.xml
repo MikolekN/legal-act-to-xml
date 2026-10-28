@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <rozporzadzenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/1845</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>2207e088-7f66-4775-801b-4d863ed7a374</gd:GUIDwersji>
+      <AdresISAP>WDU20250001845</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>1845</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 1845</AdresWyswietlany>
+      <Tytul>Rozporządzenie Ministra Zdrowia z dnia 22 grudnia 2025 r. zmieniające rozporządzenie w sprawie wojewódzkiego planu działania systemu Państwowe Ratownictwo Medyczne</Tytul>
+      <Rodzaj>ROZP</Rodzaj>
+      <DataOgloszenia>2025-12-23</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-12-22</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2025-12-24_DU-2025-1845_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2025-12-24" warunek="z dniem następującym po dniu ogłoszenia" podstawa="§ 2" zrodlo="https://eli.gov.pl/eli/DU/2025/1845" dowod="DU/2025/1845__art_2" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2025-12-24_DU-2025-1845_domyslne.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2025-12-24_DU-2025-1845_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="0b426db1-cb2d-46c7-a7d9-bdfe815352be" rola="wydajacy">
+          <Nazwa>Minister Zdrowia</Nazwa>
+          <OrganPodpisujacy>Minister Zdrowia</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>K.</imie> <nazwisko>Kacperczyk</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Rozporządzenie</rodzaj-aktu>
+    <autor-aktu>Ministra Zdrowia<odnosnik id-odnosnika="1" symbol="1" gd:GUID="4b39c04e-5335-4193-91d4-0b5a3f6ca9b4"><p><zdanie nr="1" gd:zdGUID="c485f28c-694f-49a7-bdf4-f0b937f9a3dd" fragment="1" gd:fragmentGUID="a12bc840-123d-4423-83f9-7eb57f3225b3">Minister Zdrowia kieruje działem administracji rządowej – zdrowie, na podstawie § 1 ust. 2 rozporządzenia Prezesa Rady Ministrów z dnia 25 lipca 2025 r. w sprawie szczegółowego zakresu działania Ministra Zdrowia (Dz. U. poz. 1004).</zdanie></p></odnosnik></autor-aktu>
+    <data>z dnia 22 grudnia 2025 r.</data>
+    <tytul>zmieniające rozporządzenie w sprawie wojewódzkiego planu działania systemu Państwowe Ratownictwo Medyczne</tytul>
+    <podstawa-prawna>Na podstawie art. 21 ust. 17 ustawy z dnia 8 września 2006 r. o Państwowym Ratownictwie Medycznym (Dz. U. z 2025 r. poz. 91 i 637) zarządza się, co następuje:</podstawa-prawna>
+    <paragraf eId="DU/2025/1845__art_1" gd:GUID="95e9fe7a-9d5c-4e30-80cc-8611658acdc3" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-24_DU-2025-1845_domyslne.x" wejscie-w-zycie="2025-12-24">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="7d6e85ff-be26-49d9-a16e-9d8e29f6ce00" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-24_DU-2025-1845_domyslne.x" wejscie-w-zycie="2025-12-24">
+        <p>
+          <zdanie nr="1" gd:zdGUID="17b1233a-2be6-4f6a-8407-abf865bfff26" fragment="1" gd:fragmentGUID="242a0ee2-d0f6-4fae-8ad4-4b8d43139b0e" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-24_DU-2025-1845_domyslne.x" wejscie-w-zycie="2025-12-24">W rozporządzeniu Ministra Zdrowia z dnia 29 lipca 2025 r. w sprawie wojewódzkiego planu działania systemu Państwowe Ratownictwo Medyczne (Dz. U. poz. 1057) § 5 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2025/1057" cudzyslowy="oba" gd:nowGUID="43c6c9b6-22d4-48c3-871f-ec361da703db" element-eId="DU/2025/1057__art_5" funkcja="zastap"><paragraf eId="DU/2025/1057__art_5" gd:GUID="1325aaca-e4db-4869-9670-decb1d3860ab" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-24_DU-2025-1845_domyslne.x" wejscie-w-zycie="2025-12-24"><nr>5</nr><ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="55e54bfc-1f21-485a-9b3a-c2ac0aa0cbdc" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-24_DU-2025-1845_domyslne.x" wejscie-w-zycie="2025-12-24"><p><zdanie nr="1" gd:zdGUID="b7b33807-2af3-43f3-9948-845dbd119fe2" fragment="1" gd:fragmentGUID="c57787a9-4a84-45d7-8c30-ee35aaf9503a" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-24_DU-2025-1845_domyslne.x" wejscie-w-zycie="2025-12-24">Dane, o których mowa w § 2 pkt 1–3, pkt 4 lit. b, c oraz e–g i pkt 6, podlegają upublicznieniu w Biuletynie Informacji Publicznej.</zdanie></p></ustep-n></paragraf></cytat-strukt>.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2025/1845__art_2" gd:GUID="4728c339-a65a-4626-a360-bdbeabb47e0d" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-24_DU-2025-1845_domyslne.x" wejscie-w-zycie="2025-12-24">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="ffb71088-9f3a-4285-a489-47175ca90751" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-24_DU-2025-1845_domyslne.x" wejscie-w-zycie="2025-12-24">
+        <p>
+          <zdanie nr="1" gd:zdGUID="2932f676-1d13-4e8f-91bf-a76ca3726b6a" fragment="1" gd:fragmentGUID="4e7ba4e2-47b4-4e85-8e16-df3a594bd1ab" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-24_DU-2025-1845_domyslne.x" wejscie-w-zycie="2025-12-24">Rozporządzenie wchodzi w życie z dniem następującym po dniu ogłoszenia.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <organ-podpisujacy>Minister Zdrowia: wz. <i><osoba podpisujacy="true" gd:osobaGUID="8758b7dc-7522-4e3b-abd9-85bbc2260c71"><imie>K.</imie> <nazwisko>Kacperczyk</nazwisko></osoba></i></organ-podpisujacy>
+  </rozporzadzenie>
+</akt-prawny>

@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <ustawa>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/1811</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>c26c79f3-50ef-4b6a-b53b-06d7f28ba13c</gd:GUIDwersji>
+      <AdresISAP>WDU20250001811</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>1811</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 1811</AdresWyswietlany>
+      <Tytul>Ustawa z dnia 7 listopada 2025 r. o zmianie ustawy o podatku od towarów i usług</Tytul>
+      <Rodzaj>USTAWA</Rodzaj>
+      <DataOgloszenia>2025-12-18</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-11-07</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2026-01-02_DU-2025-1811_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2026-01-02" warunek="po upływie 14 dni od dnia ogłoszenia" podstawa="art. 3" zrodlo="https://eli.gov.pl/eli/DU/2025/1811" dowod="DU/2025/1811__art_3" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2026-01-02_DU-2025-1811_domyslne.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2026-01-02_DU-2025-1811_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="56d45bd5-cfe5-4ba2-a96f-2f08098f779d" rola="wydajacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Sejm">
+          <Nazwa>SEJM</Nazwa>
+        </Organ>
+        <Organ gd:GUID="76b6b776-22de-4b0c-ab1f-871162d6253e" rola="podpisujacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Prezydent">
+          <Nazwa>Prezydent Rzeczypospolitej Polskiej</Nazwa>
+          <OrganPodpisujacy>Prezydent Rzeczypospolitej Polskiej</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>K.</imie> <nazwisko>Nawrocki</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Ustawa</rodzaj-aktu>
+    <data>z dnia 7 listopada 2025 r.</data>
+    <tytul>o zmianie ustawy o podatku od towarów i usług</tytul>
+    <artykul eId="DU/2025/1811__art_1" gd:GUID="5768ad9f-a6f4-488a-bffe-e72d83c78f05" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-02_DU-2025-1811_domyslne.x" wejscie-w-zycie="2026-01-02">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="8411f39b-1731-4a7f-99b0-9043655f4b06" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-02_DU-2025-1811_domyslne.x" wejscie-w-zycie="2026-01-02">
+        <p>
+          <zdanie nr="1" gd:zdGUID="712a29f8-78d8-49dd-9f6f-75e29c26bc89" fragment="1" gd:fragmentGUID="f9de9c8b-c803-4eb9-a792-7428ba85a42f" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-02_DU-2025-1811_domyslne.x" wejscie-w-zycie="2026-01-02">W ustawie z dnia 11 marca 2004 r. o podatku od towarów i usług (Dz. U. z 2025 r. poz. 775, 894, 896, 1203 i 1541) w art. 33a ust. 6a otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2025/775" cudzyslowy="oba" gd:nowGUID="ad99c1c0-ff94-4c10-b53c-2cd41377e8ff" element-eId="DU/2025/775__art_33a__ust_6a" funkcja="zastap"><ustep eId="DU/2025/775__art_33a__ust_6a" gd:GUID="c3270ef2-a610-431e-bbd4-6a4b25c4b902" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-02_DU-2025-1811_domyslne.x" wejscie-w-zycie="2026-01-02"><nr>6a</nr><p><zdanie nr="1" gd:zdGUID="74524dab-e357-47de-8904-76c6cb79a62b" fragment="1" gd:fragmentGUID="59994449-c72f-49b5-a395-0686bf65b24b" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-02_DU-2025-1811_domyslne.x" wejscie-w-zycie="2026-01-02">W przypadku gdy podatnik nie rozliczył w całości lub w części podatku należnego z tytułu importu towarów na zasadach określonych w ust. 1, może dokonać korekty deklaracji podatkowej:</zdanie></p><punkt eId="DU/2025/775__art_33a__ust_6a__pkt_1" gd:GUID="10295a26-8304-4418-be66-29f95cabd30a" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-02_DU-2025-1811_domyslne.x" wejscie-w-zycie="2026-01-02"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="74524dab-e357-47de-8904-76c6cb79a62b" fragment="2" gd:fragmentGUID="64195343-4205-4c06-a682-a0a94693316d" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-02_DU-2025-1811_domyslne.x" wejscie-w-zycie="2026-01-02">w terminie 4 miesięcy, licząc od miesiąca następującego po miesiącu, w którym powstał obowiązek podatkowy z tytułu importu tych towarów;</zdanie></p></punkt><punkt eId="DU/2025/775__art_33a__ust_6a__pkt_2" gd:GUID="558b086b-288e-4316-85d8-b1c8ea4e4036" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-02_DU-2025-1811_domyslne.x" wejscie-w-zycie="2026-01-02"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="74524dab-e357-47de-8904-76c6cb79a62b" fragment="3" gd:fragmentGUID="6328f706-19a0-42a0-a558-0a9bd632444d" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-02_DU-2025-1811_domyslne.x" wejscie-w-zycie="2026-01-02">w terminie późniejszym niż określony w pkt 1, jednak nie później niż w terminie miesiąca po upływie terminu na złożenie zgłoszenia uzupełniającego – w przypadku gdy podatnik stosuje uproszczenie, o którym mowa w art. 166 unijnego kodeksu celnego, i posiada status upoważnionego przedsiębiorcy w rozumieniu art. 38 unijnego kodeksu celnego.</zdanie></p></punkt></ustep></cytat-strukt>.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2025/1811__art_2" gd:GUID="bb18c023-d693-449b-ae67-0d0b93399220" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-02_DU-2025-1811_domyslne.x" wejscie-w-zycie="2026-01-02">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="93f933d0-e10c-4e61-9ca0-d0bc03a2214b" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-02_DU-2025-1811_domyslne.x" wejscie-w-zycie="2026-01-02">
+        <p>
+          <zdanie nr="1" gd:zdGUID="91bb2d8d-b7e0-471a-8195-4de06e1b7e83" fragment="1" gd:fragmentGUID="1a4c39c1-4017-4512-a9c1-c1c8984954c1" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-02_DU-2025-1811_domyslne.x" wejscie-w-zycie="2026-01-02">Przepis art. 33a ust. 6a ustawy zmienianej w art. 1, w brzmieniu nadanym niniejszą ustawą, stosuje się do importu towarów, dla których zgłoszenie uproszczone zostało złożone po dniu 18 czerwca 2025 r.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2025/1811__art_3" gd:GUID="25ac2a2c-5be0-4f8a-8024-f0af1730f345" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-02_DU-2025-1811_domyslne.x" wejscie-w-zycie="2026-01-02">
+      <nr>3</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="90bbaebf-2803-471c-9967-850e0e71b589" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-02_DU-2025-1811_domyslne.x" wejscie-w-zycie="2026-01-02">
+        <p>
+          <zdanie nr="1" gd:zdGUID="5ebdca21-f48e-4c13-9898-7843e5994185" fragment="1" gd:fragmentGUID="c14cc2e1-efac-4f73-8be7-93493ed91480" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-02_DU-2025-1811_domyslne.x" wejscie-w-zycie="2026-01-02">Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <organ-podpisujacy>Prezydent Rzeczypospolitej Polskiej: <i><osoba podpisujacy="true" gd:osobaGUID="53bfa384-a46c-4688-a9f4-7574b115b372"><imie>K.</imie> <nazwisko>Nawrocki</nazwisko></osoba></i></organ-podpisujacy>
+  </ustawa>
+</akt-prawny>

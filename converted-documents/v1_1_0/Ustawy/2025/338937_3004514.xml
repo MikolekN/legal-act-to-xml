@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <ustawa>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/1189</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>6b126e9d-255a-4c62-aede-5ad96cd1fe7b</gd:GUIDwersji>
+      <AdresISAP>WDU20250001189</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>1189</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 1189</AdresWyswietlany>
+      <Tytul>Ustawa z dnia 25 lipca 2025 r. o zmianie ustawy – Karta Nauczyciela</Tytul>
+      <Rodzaj>USTAWA</Rodzaj>
+      <DataOgloszenia>2025-08-28</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-07-25</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2025-09-01_DU-2025-1189_odczytane" rodzaj="wejscie-w-zycie" pochodzenie="odczytane" data="2025-09-01" podstawa="art. 2" zrodlo="https://eli.gov.pl/eli/DU/2025/1189" dowod="DU/2025/1189__art_2" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1189_odczytane.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2025-09-01_DU-2025-1189_odczytane" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="6404eb13-dc0d-4411-83c3-e48c86b84cd1" rola="wydajacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Sejm">
+          <Nazwa>SEJM</Nazwa>
+        </Organ>
+        <Organ gd:GUID="73e5f41c-094e-4fbe-9296-8fdf023e6959" rola="podpisujacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Prezydent">
+          <Nazwa>Prezydent Rzeczypospolitej Polskiej</Nazwa>
+          <OrganPodpisujacy>Prezydent Rzeczypospolitej Polskiej</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>K.</imie> <nazwisko>Nawrocki</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Ustawa</rodzaj-aktu>
+    <data>z dnia 25 lipca 2025 r.</data>
+    <tytul>o zmianie ustawy – Karta Nauczyciela</tytul>
+    <artykul eId="DU/2025/1189__art_1" gd:GUID="7a3ea08f-0a17-4906-8015-4cedbf9f4da5" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1189_odczytane.x" wejscie-w-zycie="2025-09-01">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="c62473b6-5b12-4e21-a240-1c4632f9d586" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1189_odczytane.x" wejscie-w-zycie="2025-09-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="bcadef8a-b290-4cfc-8256-7dc96ea6cf1a" fragment="1" gd:fragmentGUID="73ddf756-fdb4-4129-a6d1-8c519f3d9361" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1189_odczytane.x" wejscie-w-zycie="2025-09-01"><now:uchyl akt="https://eli.gov.pl/eli/DU/2024/986" element-eId="DU/2024/986__art_42__ust_2f" gd:nowGUID="b7608398-2470-4c76-beb9-a96785265c6a" /><now:uchyl akt="https://eli.gov.pl/eli/DU/2024/986" element-eId="DU/2024/986__art_42__ust_2g" gd:nowGUID="97b0bffe-bb9c-407a-b8e4-3493454b6c89" />W ustawie z dnia 26 stycznia 1982 r. – Karta Nauczyciela (Dz. U. z 2024 r. poz. 986 i 1871 oraz z 2025 r. poz. 620, 1019, 1160 i 1188) w art. 42 uchyla się ust. 2f i 2g.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2025/1189__art_2" gd:GUID="29a2682d-44ae-442f-abeb-4642fe0861b8" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1189_odczytane.x" wejscie-w-zycie="2025-09-01">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="c7f61ccf-7331-42af-a37d-ded7fbdb8231" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1189_odczytane.x" wejscie-w-zycie="2025-09-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="4718be5a-02d1-426c-b772-a42d43ba260d" fragment="1" gd:fragmentGUID="d7cdde57-88f7-44ad-b527-e7192c836ce8" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-01_DU-2025-1189_odczytane.x" wejscie-w-zycie="2025-09-01">Ustawa wchodzi w życie z dniem 1 września 2025 r.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <organ-podpisujacy>Prezydent Rzeczypospolitej Polskiej: <i><osoba podpisujacy="true" gd:osobaGUID="fcdb8e4b-6cf9-4197-9f6d-c632f5e97a30"><imie>K.</imie> <nazwisko>Nawrocki</nazwisko></osoba></i></organ-podpisujacy>
+  </ustawa>
+</akt-prawny>

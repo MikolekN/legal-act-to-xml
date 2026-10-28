@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <rozporzadzenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/1775</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>355cc57e-caac-4a49-a273-665eeaf179c7</gd:GUIDwersji>
+      <AdresISAP>WDU20250001775</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>1775</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 1775</AdresWyswietlany>
+      <Tytul>Rozporządzenie Ministra Zdrowia z dnia 12 grudnia 2025 r. zmieniające rozporządzenie w sprawie ogólnych warunków umów o udzielanie świadczeń opieki zdrowotnej</Tytul>
+      <Rodzaj>ROZP</Rodzaj>
+      <DataOgloszenia>2025-12-15</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-12-12</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2025-12-30_DU-2025-1775_odczytane" rodzaj="wejscie-w-zycie" pochodzenie="odczytane" data="2025-12-30" podstawa="§ 2" zrodlo="https://eli.gov.pl/eli/DU/2025/1775" dowod="DU/2025/1775__art_2" />
+          <Zdarzenie id="zdarz_wejscie_2026-02-01_DU-2025-1775_odczytane" rodzaj="wejscie-w-zycie" pochodzenie="odczytane" data="2026-02-01" podstawa="§ 2" zrodlo="https://eli.gov.pl/eli/DU/2025/1775" dowod="DU/2025/1775__art_2">
+            <JednostkaAktu eId="DU/2025/1775__art_1__pkt_2__lit_b" />
+          </Zdarzenie>
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2025-12-30_DU-2025-1775_odczytane.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2025-12-30_DU-2025-1775_odczytane" />
+        </GrupaCzasowa>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2026-02-01_DU-2025-1775_odczytane.x" glowna="false">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2026-02-01_DU-2025-1775_odczytane" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="f52a2dbd-b69a-49c4-84bb-a0c08f139d1c" rola="wydajacy">
+          <Nazwa>Minister Zdrowia</Nazwa>
+          <OrganPodpisujacy>Minister Zdrowia</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>T.</imie> <nazwisko>Maciejewski</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Rozporządzenie</rodzaj-aktu>
+    <autor-aktu>Ministra Zdrowia<odnosnik id-odnosnika="1" symbol="1" gd:GUID="c8891723-7214-46c9-af17-d9951184f78b"><p><zdanie nr="1" gd:zdGUID="275f4cc9-c254-443d-9a68-b179c55798ae" fragment="1" gd:fragmentGUID="c9b8a629-3447-486c-b996-5eab499fd834">Minister Zdrowia kieruje działem administracji rządowej – zdrowie, na podstawie § 1 ust. 2 rozporządzenia Prezesa Rady Ministrów z dnia 25 lipca 2025 r. w sprawie szczegółowego zakresu działania Ministra Zdrowia (Dz. U. poz. 1004).</zdanie></p></odnosnik></autor-aktu>
+    <data>z dnia 12 grudnia 2025 r.</data>
+    <tytul>zmieniające rozporządzenie w sprawie ogólnych warunków umów o udzielanie świadczeń opieki zdrowotnej</tytul>
+    <podstawa-prawna>Na podstawie art. 137 ust. 2 ustawy z dnia 27 sierpnia 2004 r. o świadczeniach opieki zdrowotnej finansowanych ze środków publicznych (Dz. U. z 2025 r. poz. 1461, 1537 i 1739) zarządza się, co następuje:</podstawa-prawna>
+    <paragraf eId="DU/2025/1775__art_1" gd:GUID="d5b377cc-3a17-4e8d-91f0-14b5a021ca08" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-30_DU-2025-1775_odczytane.x" wejscie-w-zycie="2025-12-30">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="9cdbaa60-cc2e-4867-9136-1a3428d7d558" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-30_DU-2025-1775_odczytane.x" wejscie-w-zycie="2025-12-30">
+        <p>
+          <zdanie nr="1" gd:zdGUID="d09bff9d-db49-41c3-b2f1-6c4084fc7457" fragment="1" gd:fragmentGUID="53b2f329-6b11-49ce-8f8e-3a2425e1f702" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-30_DU-2025-1775_odczytane.x" wejscie-w-zycie="2025-12-30">W rozporządzeniu Ministra Zdrowia z dnia 8 września 2015 r. w sprawie ogólnych warunków umów o udzielanie świadczeń opieki zdrowotnej (Dz. U. z 2025 r. poz. 400, 562 i 768) wprowadza się następujące zmiany:</zdanie>
+        </p>
+        <punkt eId="DU/2025/1775__art_1__pkt_1" gd:GUID="a33dc673-a3bf-421b-842b-0ab377385c1c" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-30_DU-2025-1775_odczytane.x" wejscie-w-zycie="2025-12-30">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="d09bff9d-db49-41c3-b2f1-6c4084fc7457" fragment="2" gd:fragmentGUID="69e4fddb-5161-4117-ad3c-d5884b15083d" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-30_DU-2025-1775_odczytane.x" wejscie-w-zycie="2025-12-30"><now:zamien-tekst stary-tekst="31 grudnia 2025 r." nowy-tekst="31 grudnia 2026 r." element-eId="DU/2025/400__art_3c__pkt_2" akt="https://eli.gov.pl/eli/DU/2025/400" gd:nowGUID="4cd0a386-afe1-44f5-9c28-5c48a61b55c5" />w § 3c w pkt 2 wyrazy „31 grudnia 2025 r.” zastępuje się wyrazami „31 grudnia 2026 r.”;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1775__art_1__pkt_2" gd:GUID="7d21a31e-9b1f-4b9c-9a58-58cc6289183c" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-30_DU-2025-1775_odczytane.x" wejscie-w-zycie="2025-12-30">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="d09bff9d-db49-41c3-b2f1-6c4084fc7457" fragment="3" gd:fragmentGUID="4eb314fb-1f4c-451e-86c9-54c21addc83d" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-30_DU-2025-1775_odczytane.x" wejscie-w-zycie="2025-12-30">w załączniku do rozporządzenia:</zdanie>
+          </p>
+          <litera eId="DU/2025/1775__art_1__pkt_2__lit_a" gd:GUID="ca0e5aed-03f2-42a9-ad04-53bc24523fab" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-30_DU-2025-1775_odczytane.x" wejscie-w-zycie="2025-12-30">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="d09bff9d-db49-41c3-b2f1-6c4084fc7457" fragment="4" gd:fragmentGUID="bbf658e2-59a5-4371-ac9c-4042a366611e" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-30_DU-2025-1775_odczytane.x" wejscie-w-zycie="2025-12-30">w § 10 po ust. 2 dodaje się ust. 2a w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2025/400" cudzyslowy="oba" gd:nowGUID="6c041aef-2413-4e08-b829-41a727740bf9" element-eId="DU/2025/400__zal_1" funkcja="dodaj-recznie"><ustep eId="DU/2025/400__zal_1__art_10__ust_2a" gd:GUID="25eb05ee-18b4-49cc-92d4-c690877f5555" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-30_DU-2025-1775_odczytane.x" wejscie-w-zycie="2025-12-30"><nr>2a</nr><p><zdanie nr="1" gd:zdGUID="986ab1b5-b610-4fe2-b9f8-c1bf3b46785f" fragment="1" gd:fragmentGUID="2cb36c8f-dde7-40d6-a02c-5287dcaac960" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-30_DU-2025-1775_odczytane.x" wejscie-w-zycie="2025-12-30">W przypadku dokonywania zmian umowy, o których mowa w § 6 ust. 2 i § 7 ust. 3, na podstawie zaakceptowanych przez dyrektora oddziału wojewódzkiego Funduszu zgłoszeń lub wniosków, dopuszcza się podpisywanie zbiorczych aneksów dotyczących okresów sprawozdawczych, w czasie których dokonano zgłoszeń lub złożono wnioski.</zdanie></p></ustep></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1775__art_1__pkt_2__lit_b" gd:GUID="7bec86be-b974-4119-aba3-f31b7a43a50e" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-01_DU-2025-1775_odczytane.x" wejscie-w-zycie="2026-02-01">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="d09bff9d-db49-41c3-b2f1-6c4084fc7457" fragment="5" gd:fragmentGUID="337105f8-14c7-486e-8c96-6b14c44bf4ba" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-01_DU-2025-1775_odczytane.x" wejscie-w-zycie="2026-02-01">w § 23 po ust. 8 dodaje się ust. 8a w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2025/400" cudzyslowy="oba" gd:nowGUID="d8586909-4838-4013-9976-a4aecd1aedb8" element-eId="DU/2025/400__zal_1" funkcja="dodaj-recznie"><ustep eId="DU/2025/400__zal_1__art_23__ust_8a" gd:GUID="c1c0f240-a284-4991-87b1-35dc1984cf51" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-01_DU-2025-1775_odczytane.x" wejscie-w-zycie="2026-02-01"><nr>8a</nr><p><zdanie nr="1" gd:zdGUID="378641f4-0923-44b5-a272-78306bc05e10" fragment="1" gd:fragmentGUID="03a72e94-0a98-4241-bb59-33a420b1044a" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-01_DU-2025-1775_odczytane.x" wejscie-w-zycie="2026-02-01">Rachunek wystawiony przy użyciu Krajowego Systemu e-Faktur, o którym mowa w art. 106ga ust. 1 ustawy z dnia 11 marca 2004 r. o podatku od towarów i usług (Dz. U. z 2025 r. poz. 775, 894, 896, 1203 i 1541), w postaci elektronicznej i zgodnie ze wzorem dokumentu elektronicznego w rozumieniu ustawy z dnia 17 lutego 2005 r. o informatyzacji działalności podmiotów realizujących zadania publiczne (Dz. U. z 2025 r. poz. 1703) zawiera dane pozwalające na identyfikację oddziału wojewódzkiego Funduszu, umowy i szablonu rachunku.</zdanie></p></ustep></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1775__art_1__pkt_2__lit_c" gd:GUID="5b8d5ec2-7284-4ec8-ad42-b52906de592c" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-30_DU-2025-1775_odczytane.x" wejscie-w-zycie="2025-12-30">
+            <nr>c</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="d09bff9d-db49-41c3-b2f1-6c4084fc7457" fragment="6" gd:fragmentGUID="fb53e2d2-10d4-4e0f-ae95-28c3d2c68359" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-30_DU-2025-1775_odczytane.x" wejscie-w-zycie="2025-12-30">w § 24:</zdanie>
+            </p>
+            <tiret eId="DU/2025/1775__art_1__pkt_2__lit_c__tir_1" gd:GUID="eef05285-9d3f-4eb8-b08e-5f188fd99842" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-30_DU-2025-1775_odczytane.x" wejscie-w-zycie="2025-12-30">
+              <p>
+                <zdanie nr="1" gd:zdGUID="d09bff9d-db49-41c3-b2f1-6c4084fc7457" fragment="7" gd:fragmentGUID="c384f3a4-2123-441e-b3e7-d13ec5f299b4" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-30_DU-2025-1775_odczytane.x" wejscie-w-zycie="2025-12-30">ust. 3a otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2025/400" cudzyslowy="oba" gd:nowGUID="83dbfa3a-e54f-4011-9a95-120d4c3d41f2" element-eId="DU/2025/400__zal_1" funkcja="zastap-recznie"><ustep eId="DU/2025/400__zal_1__art_24__ust_3a" gd:GUID="e6be1b8c-e97c-4e8c-9b2b-bab86e928877" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-30_DU-2025-1775_odczytane.x" wejscie-w-zycie="2025-12-30"><nr>3a</nr><p><zdanie nr="1" gd:zdGUID="78ceb8c7-48cf-4787-89cb-f695cd599340" fragment="1" gd:fragmentGUID="5b618fed-8e75-43b3-ac94-bc3d0c7aa588" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-30_DU-2025-1775_odczytane.x" wejscie-w-zycie="2025-12-30">W przypadku leków stosowanych w świadczeniach z zakresu ratunkowego dostępu do technologii lekowej, o którym mowa w art. 15 ust. 2 pkt 17a ustawy, finansowanych z Funduszu Medycznego, o którym mowa w ustawie z dnia 7 października 2020 r. o Funduszu Medycznym (Dz. U. z 2024 r. poz. 889 oraz z 2025 r. poz. 1739), dopuszcza się możliwość wypłacenia należności za miesiąc grudzień w tym samym miesiącu, na wniosek świadczeniodawcy złożony do dnia 7 grudnia i na podstawie prognozy wydatków na te świadczenia, ustalonej przez Fundusz w oparciu o harmonogram realizacji umowy świadczeniodawcy.</zdanie><zdanie nr="2" gd:zdGUID="bf0d8d8e-3b01-4c01-bf60-ad4e2509284d" fragment="1" gd:fragmentGUID="7da83f32-a813-40d3-9295-ba87b9fa9238" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-30_DU-2025-1775_odczytane.x" wejscie-w-zycie="2025-12-30">Fundusz dokonuje płatności w terminie 5 dni roboczych od dnia otrzymania wniosku.</zdanie><zdanie nr="3" gd:zdGUID="eb2ac288-443a-4170-931d-68a5436e7851" fragment="1" gd:fragmentGUID="4602008a-d8cb-4fdd-b530-041edfde350d" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-30_DU-2025-1775_odczytane.x" wejscie-w-zycie="2025-12-30">Pozostałe dokumenty rozliczeniowe powinny zostać dostarczone przez świadczeniodawcę w terminie określonym w § 23 ust. 3.</zdanie></p></ustep></cytat-strukt>,</zdanie>
+              </p>
+            </tiret>
+            <tiret eId="DU/2025/1775__art_1__pkt_2__lit_c__tir_2" gd:GUID="a8322791-f440-4b04-8302-403f7bf909a5" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-30_DU-2025-1775_odczytane.x" wejscie-w-zycie="2025-12-30">
+              <p>
+                <zdanie nr="1" gd:zdGUID="d09bff9d-db49-41c3-b2f1-6c4084fc7457" fragment="8" gd:fragmentGUID="bb14f9b7-e35c-43bc-8c64-25cd8a5c11d5" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-30_DU-2025-1775_odczytane.x" wejscie-w-zycie="2025-12-30">po ust. 3a dodaje się ust. 3b w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2025/400" cudzyslowy="oba" gd:nowGUID="7a87f96a-0b2c-4d62-9285-57917869cb66" element-eId="DU/2025/400__zal_1" funkcja="dodaj-recznie"><ustep eId="DU/2025/400__zal_1__art_24__ust_3b" gd:GUID="f6668d0c-e597-4572-8e01-ea657ed8271b" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-30_DU-2025-1775_odczytane.x" wejscie-w-zycie="2025-12-30"><nr>3b</nr><p><zdanie nr="1" gd:zdGUID="d379cfb1-4d68-4207-9c35-599a00cf1886" fragment="1" gd:fragmentGUID="a5bbe32a-63e0-4231-8d88-17570b2bf019" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-30_DU-2025-1775_odczytane.x" wejscie-w-zycie="2025-12-30">W przypadku technologii lekowej o wysokiej wartości klinicznej, o której mowa w art. 2 pkt 24a ustawy z dnia 12 maja 2011 r. o refundacji leków, środków spożywczych specjalnego przeznaczenia żywieniowego oraz wyrobów medycznych, lub technologii lekowej o wysokim poziomie innowacyjności, o której mowa w art. 2 pkt 24b tej ustawy, finansowanych z Funduszu Medycznego, o którym mowa w ustawie z dnia 7 października 2020 r. o Funduszu Medycznym, dopuszcza się możliwość wypłacenia należności za miesiąc grudzień w tym samym miesiącu, na wniosek świadczeniodawcy złożony do dnia 7 grudnia i na podstawie prognozy wydatków na te świadczenia, ustalonej przez Fundusz w oparciu o harmonogram realizacji umowy świadczeniodawcy.</zdanie><zdanie nr="2" gd:zdGUID="03b1efe4-4a6d-48e9-81d2-0d334e786da0" fragment="1" gd:fragmentGUID="2a1c1dae-c192-4a43-af72-c4485c404c6c" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-30_DU-2025-1775_odczytane.x" wejscie-w-zycie="2025-12-30">Fundusz dokonuje płatności w terminie 5 dni roboczych od dnia otrzymania wniosku.</zdanie><zdanie nr="3" gd:zdGUID="db1cbe66-38cf-4607-82fc-1537c741fcdd" fragment="1" gd:fragmentGUID="bc6c1dfc-860c-44b5-80a6-447c2a286b76" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-30_DU-2025-1775_odczytane.x" wejscie-w-zycie="2025-12-30">Pozostałe dokumenty rozliczeniowe powinny zostać dostarczone przez świadczeniodawcę w terminie określonym w § 23 ust. 3.</zdanie></p></ustep></cytat-strukt>,</zdanie>
+              </p>
+            </tiret>
+            <tiret eId="DU/2025/1775__art_1__pkt_2__lit_c__tir_3" gd:GUID="0f72dca9-29d3-4227-a0ba-e56fc74526d6" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-30_DU-2025-1775_odczytane.x" wejscie-w-zycie="2025-12-30">
+              <p>
+                <zdanie nr="1" gd:zdGUID="d09bff9d-db49-41c3-b2f1-6c4084fc7457" fragment="9" gd:fragmentGUID="b2adf28c-1df1-4e22-b214-243d42a5efe8" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-30_DU-2025-1775_odczytane.x" wejscie-w-zycie="2025-12-30">ust. 5 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2025/400" cudzyslowy="oba" gd:nowGUID="ecd32111-e700-4d5a-b0a9-d7601af0b1bf" element-eId="DU/2025/400__zal_1" funkcja="zastap-recznie"><ustep eId="DU/2025/400__zal_1__art_24__ust_5" gd:GUID="54e76454-a4d2-4299-9b4c-c6794afd0bb8" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-30_DU-2025-1775_odczytane.x" wejscie-w-zycie="2025-12-30"><nr>5</nr><p><zdanie nr="1" gd:zdGUID="6364a6f2-8997-40fb-9109-b5552cc4dd2d" fragment="1" gd:fragmentGUID="7762498a-b9c2-4180-8f32-97c820a7e5c0" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-30_DU-2025-1775_odczytane.x" wejscie-w-zycie="2025-12-30">Jeżeli Fundusz nie dokona płatności należności w terminie, o którym mowa w ust. 1, 3a i 3b, świadczeniodawcy przysługują odsetki ustawowe.</zdanie></p></ustep></cytat-strukt>.</zdanie>
+              </p>
+            </tiret>
+          </litera>
+        </punkt>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2025/1775__art_2" gd:GUID="7b03df8b-944d-4dc7-b869-11fbc9d9eff3" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-30_DU-2025-1775_odczytane.x" wejscie-w-zycie="2025-12-30">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="4e1495cd-2453-4008-a742-e39d4661feac" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-30_DU-2025-1775_odczytane.x" wejscie-w-zycie="2025-12-30">
+        <p>
+          <zdanie nr="1" gd:zdGUID="39620f99-90b9-4602-834d-03855ac6f926" fragment="1" gd:fragmentGUID="d81e3bc6-9f58-4ddb-a2e1-a92a310622e0" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-30_DU-2025-1775_odczytane.x" wejscie-w-zycie="2025-12-30">Rozporządzenie wchodzi w życie z dniem 30 grudnia 2025 r., z wyjątkiem § 1 pkt 2 lit. b, który wchodzi w życie z dniem 1 lutego 2026 r.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <organ-podpisujacy>Minister Zdrowia: wz. <i><osoba podpisujacy="true" gd:osobaGUID="d960d203-2059-434c-8cc6-338356c2fb80"><imie>T.</imie> <nazwisko>Maciejewski</nazwisko></osoba></i></organ-podpisujacy>
+  </rozporzadzenie>
+</akt-prawny>

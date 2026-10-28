@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <rozporzadzenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2026/117</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>6224a61d-0acb-4c51-97a5-ac7bb9a9647c</gd:GUIDwersji>
+      <AdresISAP>WDU20260000117</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2026</Rok>
+      <Pozycja>117</Pozycja>
+      <AdresWyswietlany>Dz.U. 2026 poz. 117</AdresWyswietlany>
+      <Tytul>Rozporządzenie Ministra Obrony Narodowej z dnia 26 stycznia 2026 r. zmieniające rozporządzenie w sprawie organizacji oraz działania Komisji Badania Wypadków Lotniczych Lotnictwa Państwowego</Tytul>
+      <Rodzaj>ROZP</Rodzaj>
+      <DataOgloszenia>2026-02-02</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2026-01-26</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2026-02-17_DU-2026-117_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2026-02-17" warunek="po upływie 14 dni od dnia ogłoszenia" podstawa="§ 2" zrodlo="https://eli.gov.pl/eli/DU/2026/117" dowod="DU/2026/117__art_2" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2026-02-17_DU-2026-117_domyslne.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2026-02-17_DU-2026-117_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="71936547-65e5-4363-bd4b-4062db8d3758" rola="wydajacy">
+          <Nazwa>Minister Obrony Narodowej</Nazwa>
+          <OrganPodpisujacy>Minister Obrony Narodowej</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>P.</imie> <nazwisko>Bejda</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Rozporządzenie</rodzaj-aktu>
+    <autor-aktu>Ministra Obrony Narodowej</autor-aktu>
+    <data>z dnia 26 stycznia 2026 r.</data>
+    <tytul>zmieniające rozporządzenie w sprawie organizacji oraz działania Komisji Badania Wypadków Lotniczych Lotnictwa Państwowego</tytul>
+    <podstawa-prawna>Na podstawie art. 140 ust. 4 ustawy z dnia 3 lipca 2002 r. – Prawo lotnicze (Dz. U. z 2025 r. poz. 1431 i 1668) zarządza się, co następuje:</podstawa-prawna>
+    <paragraf eId="DU/2026/117__art_1" gd:GUID="a446cb93-bd88-4abb-ba6a-dbc73ccb6941" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-17_DU-2026-117_domyslne.x" wejscie-w-zycie="2026-02-17">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="335e2318-c6a1-4974-b38a-a450b31e0f39" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-17_DU-2026-117_domyslne.x" wejscie-w-zycie="2026-02-17">
+        <p>
+          <zdanie nr="1" gd:zdGUID="cdc7b46d-4a12-4572-a599-4b67398cf874" fragment="1" gd:fragmentGUID="6d0f0dc4-d0b4-4929-a6b1-1cdd6e407b81" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-17_DU-2026-117_domyslne.x" wejscie-w-zycie="2026-02-17">W rozporządzeniu Ministra Obrony Narodowej z dnia 14 czerwca 2012 r. w sprawie organizacji oraz działania Komisji Badania Wypadków Lotniczych Lotnictwa Państwowego (Dz. U. z 2017 r. poz. 717) wprowadza się następujące zmiany:</zdanie>
+        </p>
+        <punkt eId="DU/2026/117__art_1__pkt_1" gd:GUID="34eb68b1-148a-460f-a5b1-56a13f223cad" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-17_DU-2026-117_domyslne.x" wejscie-w-zycie="2026-02-17">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="cdc7b46d-4a12-4572-a599-4b67398cf874" fragment="2" gd:fragmentGUID="cead091a-e69b-4801-9b8c-8b8c3234a30f" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-17_DU-2026-117_domyslne.x" wejscie-w-zycie="2026-02-17"><now:uchyl akt="https://eli.gov.pl/eli/DU/2017/717" element-eId="DU/2017/717__art_19" gd:nowGUID="27351672-c156-479e-bd9f-10148ab999f5" />uchyla się § 19;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/117__art_1__pkt_2" gd:GUID="a6cb2717-bb19-4ab2-9bf8-dd6c85b1239e" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-17_DU-2026-117_domyslne.x" wejscie-w-zycie="2026-02-17">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="cdc7b46d-4a12-4572-a599-4b67398cf874" fragment="3" gd:fragmentGUID="0b4d0120-df36-49e2-9820-c79fa8bd45be" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-17_DU-2026-117_domyslne.x" wejscie-w-zycie="2026-02-17">§ 28 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2017/717" cudzyslowy="oba" gd:nowGUID="2e18b65a-6f52-4121-a049-fd658e82aa1c" element-eId="DU/2017/717__art_28" funkcja="zastap"><paragraf eId="DU/2017/717__art_28" gd:GUID="91dc506a-34ac-4d72-ae18-b63bee1504d1" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-17_DU-2026-117_domyslne.x" wejscie-w-zycie="2026-02-17"><nr>28</nr><ustep eId="DU/2017/717__art_28__ust_1" gd:GUID="f7002a1a-6efb-494a-a239-ae4689a236c9" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-17_DU-2026-117_domyslne.x" wejscie-w-zycie="2026-02-17"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="04de313f-024b-49ec-8a68-c670ffb83f52" fragment="1" gd:fragmentGUID="5701fa55-84aa-4957-97e3-1a564ba70fb1" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-17_DU-2026-117_domyslne.x" wejscie-w-zycie="2026-02-17">Przewodniczący Komisji Lotnictwa Państwowego może wznowić badanie wypadku lub incydentu lotniczego, gdy zostaną ujawnione nowe okoliczności lub dowody istotne dla sprawy.</zdanie></p></ustep><ustep eId="DU/2017/717__art_28__ust_2" gd:GUID="965c8c2b-362d-4ed9-af6e-b32867304626" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-17_DU-2026-117_domyslne.x" wejscie-w-zycie="2026-02-17"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="f7c6743b-4f81-420f-854d-637c7de65998" fragment="1" gd:fragmentGUID="40cd519f-eddf-4e97-a1c4-e161506a689c" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-17_DU-2026-117_domyslne.x" wejscie-w-zycie="2026-02-17">Przewodniczący Komisji Lotnictwa Państwowego informuje o wznowieniu badania wypadku lub incydentu lotniczego Ministra Obrony Narodowej, a w przypadku wypadków i incydentów lotniczych zaistniałych w lotnictwie służb porządku publicznego – ministra właściwego do spraw wewnętrznych.</zdanie></p></ustep><ustep eId="DU/2017/717__art_28__ust_3" gd:GUID="b0c7eec5-2db0-4bea-95b5-e1898deff1d2" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-17_DU-2026-117_domyslne.x" wejscie-w-zycie="2026-02-17"><nr>3</nr><p><zdanie nr="1" gd:zdGUID="4159a239-2779-4a36-8d00-0f243461c6d2" fragment="1" gd:fragmentGUID="126c7d74-8e12-49f7-a7e2-615c49925fa4" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-17_DU-2026-117_domyslne.x" wejscie-w-zycie="2026-02-17">W przypadku wznowienia badania wypadku lub incydentu lotniczego dotychczas obowiązujący raport końcowy stanowi integralną część dokumentacji niezbędnej do podjęcia przez Komisję Lotnictwa Państwowego uchwały w sprawie wznowionego badania.</zdanie></p></ustep><ustep eId="DU/2017/717__art_28__ust_4" gd:GUID="8a874565-2384-4bb6-89eb-4d3b5c73a098" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-17_DU-2026-117_domyslne.x" wejscie-w-zycie="2026-02-17"><nr>4</nr><p><zdanie nr="1" gd:zdGUID="103e1fba-b3d1-4569-a4c6-c1363a8dcaeb" fragment="1" gd:fragmentGUID="c8e24cf7-e111-48a8-86db-826b1a6d1b04" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-17_DU-2026-117_domyslne.x" wejscie-w-zycie="2026-02-17">Po podjęciu przez Komisję Lotnictwa Państwowego uchwały o zakończeniu wznowionego badania wypadku lub incydentu lotniczego raport końcowy z tego badania staje się dokumentem wyłącznie obowiązującym w zakresie ustaleń i zaleceń dotyczących tego zdarzenia, a traci moc obowiązującą dotychczasowy raport końcowy.</zdanie></p></ustep><ustep eId="DU/2017/717__art_28__ust_5" gd:GUID="8f58700b-c020-4d8c-a060-9e7d8cb43c28" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-17_DU-2026-117_domyslne.x" wejscie-w-zycie="2026-02-17"><nr>5</nr><p><zdanie nr="1" gd:zdGUID="5ba59c10-3cb4-46aa-a678-42e0e0e89384" fragment="1" gd:fragmentGUID="1cbcc25c-87ad-419a-af3b-4d3cfb85b76b" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-17_DU-2026-117_domyslne.x" wejscie-w-zycie="2026-02-17">W przypadku wznowienia badania wypadku lub incydentu lotniczego przepisy rozdziału 3 oraz przepisy § 7–27 rozdziału 4 stosuje się odpowiednio.</zdanie></p></ustep></paragraf></cytat-strukt>.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2026/117__art_2" gd:GUID="780bf7d5-1a83-4bb7-9a07-2e44f68f2bee" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-17_DU-2026-117_domyslne.x" wejscie-w-zycie="2026-02-17">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="e1d46b1b-e079-46f8-b61a-bbcc2ed12fd5" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-17_DU-2026-117_domyslne.x" wejscie-w-zycie="2026-02-17">
+        <p>
+          <zdanie nr="1" gd:zdGUID="fa3cda60-c40f-4db4-99e2-769777f43fa6" fragment="1" gd:fragmentGUID="3737b542-31b2-482d-89fc-f2e226d50c8c" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-17_DU-2026-117_domyslne.x" wejscie-w-zycie="2026-02-17">Rozporządzenie wchodzi w życie po upływie 14 dni od dnia ogłoszenia.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <organ-podpisujacy>Minister Obrony Narodowej: z up. <i><osoba podpisujacy="true" gd:osobaGUID="3af7f2e6-e7e9-4a96-b3e4-677d7ced3779"><imie>P.</imie> <nazwisko>Bejda</nazwisko></osoba></i></organ-podpisujacy>
+  </rozporzadzenie>
+</akt-prawny>

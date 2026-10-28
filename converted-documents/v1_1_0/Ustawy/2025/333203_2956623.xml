@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <ustawa>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/935</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>da606cd0-4708-45f4-a2ca-963fcb1fa279</gd:GUIDwersji>
+      <AdresISAP>WDU20250000935</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>935</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 935</AdresWyswietlany>
+      <Tytul>Ustawa z dnia 24 czerwca 2025 r. o zmianie ustawy o funduszach inwestycyjnych i zarządzaniu alternatywnymi funduszami inwestycyjnymi</Tytul>
+      <Rodzaj>USTAWA</Rodzaj>
+      <DataOgloszenia>2025-07-14</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-06-24</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2025-07-29_DU-2025-935_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2025-07-29" warunek="po upływie 14 dni od dnia ogłoszenia" podstawa="art. 2" zrodlo="https://eli.gov.pl/eli/DU/2025/935" dowod="DU/2025/935__art_2" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2025-07-29_DU-2025-935_domyslne.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2025-07-29_DU-2025-935_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="b598f1b2-9f87-4cf8-8f9f-88d6ee52cd26" rola="wydajacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Sejm">
+          <Nazwa>SEJM</Nazwa>
+        </Organ>
+        <Organ gd:GUID="e4a49e79-8a20-4f9d-8a14-a23b1a2e30de" rola="podpisujacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Prezydent">
+          <Nazwa>Prezydent Rzeczypospolitej Polskiej</Nazwa>
+          <OrganPodpisujacy>Prezydent Rzeczypospolitej Polskiej</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>A.</imie> <nazwisko>Duda</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Ustawa</rodzaj-aktu>
+    <data>z dnia 24 czerwca 2025 r.</data>
+    <tytul>o zmianie ustawy o funduszach inwestycyjnych i zarządzaniu alternatywnymi funduszami inwestycyjnymi</tytul>
+    <artykul eId="DU/2025/935__art_1" gd:GUID="aa4360ee-39d9-4de0-a556-cf4a1fd959f8" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-29_DU-2025-935_domyslne.x" wejscie-w-zycie="2025-07-29">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="b8dc2ee5-4ac4-4371-acce-06e7beb2e759" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-29_DU-2025-935_domyslne.x" wejscie-w-zycie="2025-07-29">
+        <p>
+          <zdanie nr="1" gd:zdGUID="4ff452a6-940d-46cb-aec4-2d645835efe0" fragment="1" gd:fragmentGUID="cfa85395-1d81-4e4b-a11f-fbb1d1806c28" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-29_DU-2025-935_domyslne.x" wejscie-w-zycie="2025-07-29">W ustawie z dnia 27 maja 2004 r. o funduszach inwestycyjnych i zarządzaniu alternatywnymi funduszami inwestycyjnymi (Dz. U. z 2024 r. poz. 1034 i 1863 oraz z 2025 r. poz. 146 i 820) wprowadza się następujące zmiany:</zdanie>
+        </p>
+        <punkt eId="DU/2025/935__art_1__pkt_1" gd:GUID="6fdb4704-150e-4707-b67b-70ed48e4522e" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-29_DU-2025-935_domyslne.x" wejscie-w-zycie="2025-07-29">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="4ff452a6-940d-46cb-aec4-2d645835efe0" fragment="2" gd:fragmentGUID="73d460c0-b341-4990-93b8-7086ff90cd32" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-29_DU-2025-935_domyslne.x" wejscie-w-zycie="2025-07-29"><now:uchyl akt="https://eli.gov.pl/eli/DU/2024/1034" element-eId="DU/2024/1034__art_72__ust_1__pkt_10" gd:nowGUID="3aeb5e5a-fc9e-453d-a60b-60dfadb26db4" />w art. 72 w ust. 1 uchyla się pkt 10;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/935__art_1__pkt_2" gd:GUID="372d2eb9-b5df-45bd-b8d8-c4aa89ebf7ac" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-29_DU-2025-935_domyslne.x" wejscie-w-zycie="2025-07-29">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="4ff452a6-940d-46cb-aec4-2d645835efe0" fragment="3" gd:fragmentGUID="d8c92355-0cc3-407b-9225-a6997f5a803a" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-29_DU-2025-935_domyslne.x" wejscie-w-zycie="2025-07-29">w art. 81c:</zdanie>
+          </p>
+          <litera eId="DU/2025/935__art_1__pkt_2__lit_a" gd:GUID="e4cce18c-d771-41b1-a0f3-39499f452a3b" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-29_DU-2025-935_domyslne.x" wejscie-w-zycie="2025-07-29">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="4ff452a6-940d-46cb-aec4-2d645835efe0" fragment="4" gd:fragmentGUID="1532f0f5-d08b-4004-b333-e896c5bb131e" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-29_DU-2025-935_domyslne.x" wejscie-w-zycie="2025-07-29"><now:uchyl akt="https://eli.gov.pl/eli/DU/2024/1034" element-eId="DU/2024/1034__art_81c__ust_1__pkt_10" gd:nowGUID="b8215b0a-3f11-4504-8612-7873d6672434" />w ust. 1 uchyla się pkt 10,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/935__art_1__pkt_2__lit_b" gd:GUID="5aad33f0-eb3a-459f-a590-006c77639d59" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-29_DU-2025-935_domyslne.x" wejscie-w-zycie="2025-07-29">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="4ff452a6-940d-46cb-aec4-2d645835efe0" fragment="5" gd:fragmentGUID="26b08bfb-472a-4453-8f41-ab9ca166272e" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-29_DU-2025-935_domyslne.x" wejscie-w-zycie="2025-07-29"><now:zamien-tekst stary-tekst="i 10" nowy-tekst="" element-eId="DU/2024/1034__art_81c__ust_2" akt="https://eli.gov.pl/eli/DU/2024/1034" gd:nowGUID="d0fc4425-a316-429a-8f76-6d24319598c6" />w ust. 2 skreśla się wyrazy „i 10”.</zdanie>
+            </p>
+          </litera>
+        </punkt>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2025/935__art_2" gd:GUID="a5be9d1a-0cf3-4327-b3e8-7d3e89417ca4" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-29_DU-2025-935_domyslne.x" wejscie-w-zycie="2025-07-29">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="cc261e61-9026-4e0d-a0e7-b9f1c3834bd0" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-29_DU-2025-935_domyslne.x" wejscie-w-zycie="2025-07-29">
+        <p>
+          <zdanie nr="1" gd:zdGUID="d7b4565c-1cc5-4602-84d8-8ce23aac413d" fragment="1" gd:fragmentGUID="5de704a0-fe27-425d-9be7-d58f9735e106" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-29_DU-2025-935_domyslne.x" wejscie-w-zycie="2025-07-29">Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <organ-podpisujacy>Prezydent Rzeczypospolitej Polskiej: <i><osoba podpisujacy="true" gd:osobaGUID="daa21954-46ed-467d-9df8-3c7fde513b34"><imie>A.</imie> <nazwisko>Duda</nazwisko></osoba></i></organ-podpisujacy>
+  </ustawa>
+</akt-prawny>

@@ -1,0 +1,567 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <obwieszczenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2026/77</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>604f9bbd-4d54-4e0c-811a-1fa14581ef8e</gd:GUIDwersji>
+      <AdresISAP>WDU20260000077</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2026</Rok>
+      <Pozycja>77</Pozycja>
+      <AdresWyswietlany>Dz.U. 2026 poz. 77</AdresWyswietlany>
+      <Tytul>Obwieszczenie Marszałka Sejmu Rzeczypospolitej Polskiej z dnia 21 stycznia 2026 r. w sprawie ogłoszenia jednolitego tekstu ustawy o dodatku osłonowym</Tytul>
+      <Rodzaj>OBW_TJ</Rodzaj>
+      <DataOgloszenia>2026-01-23</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2026-01-21</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_ujednolicenie_2026-01-23_DU-2026-77_domyslne" rodzaj="ujednolicenie" pochodzenie="domyslne-z-aktu" data="2026-01-23" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_ujednolicenie.zdarz_ujednolicenie_2026-01-23_DU-2026-77_domyslne" glowna="true">
+          <Przedzial rodzaj="ujednolicenie" od="zdarz_ujednolicenie_2026-01-23_DU-2026-77_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <DataObowiazywaniaWersji>
+        <Od>zdarz_ujednolicenie_2026-01-23_DU-2026-77_domyslne</Od>
+      </DataObowiazywaniaWersji>
+      <Organy>
+        <Organ gd:GUID="d0f160ed-7b8f-4a08-83d9-d644c1b685a4" rola="wydajacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/MSEJMU">
+          <Nazwa>Marszałek Sejmu</Nazwa>
+          <OrganPodpisujacy>Marszałek Sejmu</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>W.</imie> <nazwisko>Czarzasty</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Obwieszczenie</rodzaj-aktu>
+    <autor-aktu>Marszałka Sejmu Rzeczypospolitej Polskiej</autor-aktu>
+    <data>z dnia 21 stycznia 2026 r.</data>
+    <tytul>w sprawie ogłoszenia jednolitego tekstu ustawy o dodatku osłonowym</tytul>
+    <punkt-OTJ eId="DU/2026/77__pkt_1" gd:GUID="6c391dff-aeaa-493c-aa02-135cb066b9c4">
+      <nr>1</nr>
+      <p>
+        <zdanie nr="1" gd:zdGUID="d3fa034c-8ff2-4cd4-b53b-265e61141c7b" fragment="1" gd:fragmentGUID="6d8f64a7-8a9a-4e62-b6a7-6ca39e530c2e">Na podstawie art. 16 ust. 1 zdanie pierwsze ustawy z dnia 20 lipca 2000 r. o ogłaszaniu aktów normatywnych i niektórych innych aktów prawnych (Dz. U. z 2019 r. poz. 1461) ogłasza się w załączniku do niniejszego obwieszczenia jednolity tekst ustawy z dnia 17 grudnia 2021 r. o dodatku osłonowym (Dz. U. z 2024 r. poz. 953), z uwzględnieniem zmiany wprowadzonej ustawą z dnia 12 września 2025 r. o bonie ciepłowniczym oraz o zmianie niektórych ustaw w celu ograniczenia wysokości cen energii elektrycznej (Dz. U. poz. 1302) oraz zmian wynikających z przepisów ogłoszonych przed dniem 13 stycznia 2026 r.</zdanie>
+      </p>
+    </punkt-OTJ>
+    <punkt-OTJ eId="DU/2026/77__pkt_2" gd:GUID="b7f1c20b-fd3c-4a9f-959d-14c900d7b326">
+      <nr>2</nr>
+      <p>
+        <zdanie nr="1" gd:zdGUID="2f6406cd-cfcc-44a4-a5f4-cdd58c63f848" fragment="1" gd:fragmentGUID="1a25ea5d-4b4e-4ede-b3ee-b9f14aeef5f3">Podany w załączniku do niniejszego obwieszczenia tekst jednolity ustawy nie obejmuje art. 20 ustawy z dnia 12 września 2025 r. o bonie ciepłowniczym oraz o zmianie niektórych ustaw w celu ograniczenia wysokości cen energii elektrycznej (Dz. U. poz. 1302), który stanowi:<tresc-strukt cudzyslowy="oba" gd:GUID="c32b5ae0-2f18-4dbf-b6be-dc088e013944"><artykul eId="DU/2025/1302__art_20" gd:GUID="fd14617b-6107-48a9-810b-213ac96eb4ac"><nr>20</nr><ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="f1047d2d-08f5-4539-8854-e7e1126330c5"><p><zdanie nr="1" gd:zdGUID="4cab438f-2982-44b0-8709-029006465977" fragment="1" gd:fragmentGUID="69e794f6-6776-44e2-8e4a-bde28b776249">Ustawa wchodzi w życie z dniem następującym po dniu ogłoszenia, z wyjątkiem art. 15, który wchodzi w życie z dniem ogłoszenia, z mocą od dnia 30 września 2025 r.</zdanie></p></ustep-n></artykul></tresc-strukt>.</zdanie>
+      </p>
+    </punkt-OTJ>
+    <organ-podpisujacy>Marszałek Sejmu: <i><osoba podpisujacy="true" gd:osobaGUID="8ba23ca8-64f3-4f8b-8c17-c6048f97fe03"><imie>W.</imie> <nazwisko>Czarzasty</nazwisko></osoba></i></organ-podpisujacy>
+    <ustawa>
+      <zalacznik-do>Załącznik do obwieszczenia Marszałka Sejmu Rzeczypospolitej Polskiej z dnia 21 stycznia 2026 r. (Dz. U. poz. 77)</zalacznik-do>
+      <rodzaj-aktu>Ustawa</rodzaj-aktu>
+      <data>z dnia 17 grudnia 2021 r.</data>
+      <tytul>o dodatku osłonowym</tytul>
+      <artykul eId="DU/2026/77__art_1" gd:GUID="90767057-379c-4573-9315-99ed2bcf56d5">
+        <nr>1</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="a86953cb-a170-4b8f-a121-c7ddbe65ae2b">
+          <p>
+            <zdanie nr="1" gd:zdGUID="4754462b-0ec7-48d2-aef9-7f9d78e3ea46" fragment="1" gd:fragmentGUID="1a324d18-a123-4b96-89e5-0a7441f2b73c">Ustawa reguluje zasady i tryb przyznawania, ustalania wysokości i wypłacania dodatku osłonowego oraz właściwość organów w tych sprawach.</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2026/77__art_2" gd:GUID="09ff3327-f150-495f-9084-080c7a4a8e6a">
+        <nr>2</nr>
+        <ustep eId="DU/2026/77__art_2__ust_1" gd:GUID="c00ff7a0-8888-42a9-a4a4-7c98886e624c">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="5bf84619-16f5-4e65-85fe-1edf091a3018" fragment="1" gd:fragmentGUID="31406f69-02a9-4e01-8382-bf68c97ac1e0">Dodatek osłonowy przysługuje:</zdanie>
+          </p>
+          <punkt eId="DU/2026/77__art_2__ust_1__pkt_1" gd:GUID="85112d53-a23f-4030-99a5-a6410e88858f">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="5bf84619-16f5-4e65-85fe-1edf091a3018" fragment="2" gd:fragmentGUID="e05bc7b2-fd96-402f-a69e-4def577f6f9e">osobie w gospodarstwie domowym jednoosobowym, w którym wysokość przeciętnego miesięcznego dochodu w rozumieniu art. 3 pkt 1 ustawy z dnia 28 listopada 2003 r. o świadczeniach rodzinnych (Dz. U. z 2025 r. poz. 1208) nie przekracza kwoty 2100 zł, oraz osobie w gospodarstwie domowym wieloosobowym, w którym wysokość przeciętnego miesięcznego dochodu w rozumieniu art. 3 pkt 1 ustawy z dnia 28 listopada 2003 r. o świadczeniach rodzinnych nie przekracza kwoty 1500 zł na osobę;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2026/77__art_2__ust_1__pkt_2" gd:GUID="c746464b-abfd-480f-b1c7-4c58ab86ec3d">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="5bf84619-16f5-4e65-85fe-1edf091a3018" fragment="3" gd:fragmentGUID="9f77b5cf-9423-4c65-a232-920ad088f91e">osobie, o której mowa w pkt 1, w przypadku gdy wysokość jej przeciętnego miesięcznego dochodu w rozumieniu art. 3 pkt 1 ustawy z dnia 28 listopada 2003 r. o świadczeniach rodzinnych na osobę przekracza kwotę, o której mowa w pkt 1, w wysokości różnicy między kwotą dodatku osłonowego a kwotą, o którą został przekroczony przeciętny miesięczny dochód w rozumieniu art. 3 pkt 1 ustawy z dnia 28 listopada 2003 r. o świadczeniach rodzinnych na osobę.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2026/77__art_2__ust_2" gd:GUID="fd44a26e-91db-43da-975e-0921743bbd1d">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="c09c045c-9098-4e37-ab17-f4cd38951750" fragment="1" gd:fragmentGUID="2e892117-f4fd-4ab4-a28b-dbbcfb4bdce7">W przypadku gdy wniosek o wypłatę dodatku osłonowego dla gospodarstwa domowego wieloosobowego, o którym mowa w ust. 1, złożyła więcej niż jedna osoba, dodatek ten przyznawany jest wnioskodawcy, który złożył taki wniosek jako pierwszy.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/77__art_2__ust_3" gd:GUID="9c0c7d9d-ec22-45a8-9c37-7d88aed02a48">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="c44e3754-db5f-4709-909b-84505a4a9a6d" fragment="1" gd:fragmentGUID="5c3cb34d-c340-470c-bdbf-79ec19612cc5">Na potrzeby składania wniosków o wypłatę dodatku osłonowego przyjmuje się, że jedna osoba może wchodzić w skład tylko jednego gospodarstwa domowego.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/77__art_2__ust_4" gd:GUID="0b8263c9-1aa7-41a5-9438-c7a989e28da5">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="759dccd3-3c83-4837-a296-99bc3c0dbb9e" fragment="1" gd:fragmentGUID="c298ab69-9bf2-4898-8e54-8d6cd1cd6d79">Jeżeli umowy międzynarodowe nie stanowią inaczej, dodatek osłonowy przysługuje:</zdanie>
+          </p>
+          <punkt eId="DU/2026/77__art_2__ust_4__pkt_1" gd:GUID="72f65660-f3eb-4fe9-8420-26832bf22562">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="759dccd3-3c83-4837-a296-99bc3c0dbb9e" fragment="2" gd:fragmentGUID="3b91236e-8c94-4ec1-a7df-ecb3b13f29b5">osobom posiadającym obywatelstwo polskie mającym miejsce zamieszkania i przebywającym na terytorium Rzeczypospolitej Polskiej;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2026/77__art_2__ust_4__pkt_2" gd:GUID="3d258c90-3d55-45bc-ab4d-83f763627a34">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="759dccd3-3c83-4837-a296-99bc3c0dbb9e" fragment="3" gd:fragmentGUID="e4595f36-69b9-41fa-a7ef-5959d9318210">cudzoziemcom mającym miejsce zamieszkania i przebywającym na terytorium Rzeczypospolitej Polskiej:</zdanie>
+            </p>
+            <litera eId="DU/2026/77__art_2__ust_4__pkt_2__lit_a" gd:GUID="1e769e68-cc8a-456f-b6a1-9c8b33a09bd3">
+              <nr>a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="759dccd3-3c83-4837-a296-99bc3c0dbb9e" fragment="4" gd:fragmentGUID="42966adc-3890-487d-8f81-73cb24fe8b55">na podstawie zezwolenia na pobyt stały, zezwolenia na pobyt rezydenta długoterminowego Unii Europejskiej, zezwolenia na pobyt czasowy udzielonego w związku z okolicznością, o której mowa w art. 159 ust. 1 pkt 1 lit. c lub d lub w art. 186 ust. 1 pkt 3 ustawy z dnia 12 grudnia 2013 r. o cudzoziemcach (Dz. U. z 2025 r. poz. 1079 i 1794), lub w związku z uzyskaniem w Rzeczypospolitej Polskiej statusu uchodźcy lub ochrony uzupełniającej,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2026/77__art_2__ust_4__pkt_2__lit_b" gd:GUID="b8242f22-5343-410c-94e7-0f58229a208d">
+              <nr>b</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="759dccd3-3c83-4837-a296-99bc3c0dbb9e" fragment="5" gd:fragmentGUID="df895f74-e0da-435e-85d9-00bea021094e">w związku z uzyskaniem w Rzeczypospolitej Polskiej zgody na pobyt ze względów humanitarnych lub zgody na pobyt tolerowany – w formie schronienia, posiłku, niezbędnego ubrania oraz zasiłku celowego;</zdanie>
+              </p>
+            </litera>
+          </punkt>
+          <punkt eId="DU/2026/77__art_2__ust_4__pkt_3" gd:GUID="72faee83-bc59-4215-81dc-2fd2b077a472">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="759dccd3-3c83-4837-a296-99bc3c0dbb9e" fragment="6" gd:fragmentGUID="6c23d8f4-3ae6-41ed-8bc4-20668d21fbfb">mającym miejsce zamieszkania i przebywającym na terytorium Rzeczypospolitej Polskiej obywatelom państw członkowskich Unii Europejskiej, państw członkowskich Europejskiego Porozumienia o Wolnym Handlu (EFTA) – stron umowy o Europejskim Obszarze Gospodarczym lub Konfederacji Szwajcarskiej oraz członkom ich rodzin w rozumieniu art. 2 pkt 4 ustawy z dnia 14 lipca 2006 r. o wjeździe na terytorium Rzeczypospolitej Polskiej, pobycie oraz wyjeździe z tego terytorium obywateli państw członkowskich Unii Europejskiej i członków ich rodzin (Dz. U. z 2025 r. poz. 1164 i 1794), posiadającym prawo pobytu lub prawo stałego pobytu na terytorium Rzeczypospolitej Polskiej.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2026/77__art_2__ust_5" gd:GUID="782c76e8-b348-4056-a9bb-17d82149b92c">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="e97b745d-850c-4388-b017-c3092db85cf6" fragment="1" gd:fragmentGUID="432760cb-0067-4096-a536-d14b09302ed2">Dodatek osłonowy wynosi rocznie:</zdanie>
+          </p>
+          <punkt eId="DU/2026/77__art_2__ust_5__pkt_1" gd:GUID="c126cef8-75d9-4bd4-9044-90f5331c2d61">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="e97b745d-850c-4388-b017-c3092db85cf6" fragment="2" gd:fragmentGUID="6ce38c28-bebb-4727-bb59-1dcf746c68dd">400 zł dla gospodarstwa domowego jednoosobowego;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2026/77__art_2__ust_5__pkt_2" gd:GUID="b083cea6-b07a-4f08-b7ab-febd712af99e">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="e97b745d-850c-4388-b017-c3092db85cf6" fragment="3" gd:fragmentGUID="9cdccecc-002e-4930-aeb1-e74806322f19">600 zł dla gospodarstwa domowego składającego się z 2 do 3 osób;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2026/77__art_2__ust_5__pkt_3" gd:GUID="a6c113d8-9c3b-4c95-8cc1-5fdc2dcc2697">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="e97b745d-850c-4388-b017-c3092db85cf6" fragment="4" gd:fragmentGUID="ed5098c3-c14f-40e7-92b2-e8e3d9072476">850 zł dla gospodarstwa domowego składającego się z 4 do 5 osób;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2026/77__art_2__ust_5__pkt_4" gd:GUID="328fc866-0f8e-40d2-b0a6-83df3e1904d3">
+            <nr>4</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="e97b745d-850c-4388-b017-c3092db85cf6" fragment="5" gd:fragmentGUID="e0c8b366-dc21-4b84-9f70-31852ad1071f">1150 zł dla gospodarstwa domowego składającego się z co najmniej 6 osób.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2026/77__art_2__ust_6" gd:GUID="ab714e2f-ddf5-4210-a88f-091235304b3c">
+          <nr>6</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="4e2a8172-1986-4675-8cf9-e33594d5e0b4" fragment="1" gd:fragmentGUID="7ad9696b-ab71-4f70-a87b-56a3d93c6cde">Dodatek osłonowy, w przypadku gdy głównym źródłem ogrzewania gospodarstwa domowego jest kocioł na paliwo stałe, kominek, koza, ogrzewacz powietrza, trzon kuchenny, piecokuchnia, kuchnia węglowa lub piec kaflowy na paliwo stałe, zasilane węglem lub paliwami węglopochodnymi, zgłoszone do centralnej ewidencji emisyjności budynków, o której mowa w art. 27a ust. 1 ustawy z dnia 21 listopada 2008 r. o wspieraniu termomodernizacji i remontów oraz o centralnej ewidencji emisyjności budynków (Dz. U. z 2025 r. poz. 1419 i 1847), wynosi rocznie:</zdanie>
+          </p>
+          <punkt eId="DU/2026/77__art_2__ust_6__pkt_1" gd:GUID="393601a2-7e0b-4634-8d86-0a8515549934">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="4e2a8172-1986-4675-8cf9-e33594d5e0b4" fragment="2" gd:fragmentGUID="16cc4d90-2f69-4071-a517-f3b5fca05a4a">500 zł dla gospodarstwa domowego jednoosobowego;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2026/77__art_2__ust_6__pkt_2" gd:GUID="92732e95-3532-43e5-9f32-51dba113423a">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="4e2a8172-1986-4675-8cf9-e33594d5e0b4" fragment="3" gd:fragmentGUID="006f0770-0c24-44d9-bc82-cc938fc1a483">750 zł dla gospodarstwa domowego składającego się z 2 do 3 osób;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2026/77__art_2__ust_6__pkt_3" gd:GUID="7412c738-a5ec-4932-b445-fd5dab23cb1e">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="4e2a8172-1986-4675-8cf9-e33594d5e0b4" fragment="4" gd:fragmentGUID="0b92db87-2de6-480a-b370-fa671e1e1c07">1062,50 zł dla gospodarstwa domowego składającego się z 4 do 5 osób;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2026/77__art_2__ust_6__pkt_4" gd:GUID="9bedbbbe-ff2c-4b3b-ae24-8eaeca2c65f6">
+            <nr>4</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="4e2a8172-1986-4675-8cf9-e33594d5e0b4" fragment="5" gd:fragmentGUID="c84ba9db-85b4-4839-860e-23755f40b118">1437,50 zł dla gospodarstwa domowego składającego się z co najmniej 6 osób.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2026/77__art_2__ust_6a" gd:GUID="0e644924-1bd7-405c-b56e-1c500c8eeaeb">
+          <nr>6a</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="b165a478-08f9-4ec9-acae-4641d859730a" fragment="1" gd:fragmentGUID="a9e151c9-14a6-439f-821a-616c7f57de4e">Dodatek osłonowy za okres od dnia 1 stycznia 2024 r. do dnia 30 czerwca 2024 r. wynosi 50 % kwot wskazanych odpowiednio w ust. 5 albo 6 po ich waloryzacji średniorocznym wskaźnikiem cen towarów i usług konsumpcyjnych ogółem w 2022 r. w stosunku do 2021 r., określonym w komunikacie Prezesa Głównego Urzędu Statystycznego z dnia 13 stycznia 2023 r. w sprawie średniorocznego wskaźnika cen towarów i usług konsumpcyjnych ogółem w 2022 r. (M.P. poz. 68).</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/77__art_2__ust_7" gd:GUID="211722b4-3321-4064-9c9a-0c5ed9082586">
+          <nr>7</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="32db1381-a1ea-4531-8917-4d6b54ac2e4d" fragment="1" gd:fragmentGUID="c3efef6f-7e1d-40ff-ae91-3bbaa6b920d9">W przypadku gdy wysokość dodatku osłonowego, ustalona zgodnie z ust. 1 pkt 2, jest niższa niż 20 zł, dodatek ten nie przysługuje.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/77__art_2__ust_8" gd:GUID="693014b9-4b9d-4b93-b2c3-1969ac5df90b">
+          <nr>8</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="71dfb5d7-ebc2-4990-845e-205457b2bdbb" fragment="1" gd:fragmentGUID="d397cf95-19bc-481d-95a6-6ceaa608ca2d">Dodatek osłonowy przysługuje osobom, o których mowa w ust. 1, za okres od dnia 1 stycznia 2022 r. do dnia 31 grudnia 2022 r. i jest wypłacany w dwóch równych ratach w terminie do dnia 31 marca 2022 r. oraz do dnia 31 grudnia 2023 r.</zdanie>
+            <zdanie nr="2" gd:zdGUID="011ec3f5-a973-4c27-b438-d3974e5cdfb5" fragment="1" gd:fragmentGUID="379677c1-bdba-4eb3-8213-1b7179187fe3">W przypadku gdy osoba, o której mowa w ust. 1, złoży wniosek o wypłatę dodatku osłonowego później niż na 2 miesiące przed upływem tych terminów, dodatek osłonowy jest wypłacany jednorazowo, niezwłocznie po przyznaniu tego dodatku.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/77__art_2__ust_8a" gd:GUID="a855e249-6d72-4aeb-80d6-b0ab250cbd98">
+          <nr>8a</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="f00069f5-fa4f-4dd6-805d-1879c5c90403" fragment="1" gd:fragmentGUID="8a8a2646-8e4b-431d-8e33-cd83d0ca93c4">Dodatek osłonowy przysługuje osobom, o których mowa w ust. 1, za okres od dnia 1 stycznia 2024 r. do dnia 30 czerwca 2024 r. i jest wypłacany jednorazowo w terminie do dnia 30 czerwca 2024 r.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/77__art_2__ust_9" gd:GUID="390f1f98-f3c3-4f23-bec8-32bbeb6a5a26">
+          <nr>9</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="5b9f7a72-f166-431c-a39e-461369998298" fragment="1" gd:fragmentGUID="c5cb6184-ef59-423d-909c-e6184c4f03e8">Wnioski o wypłatę dodatku osłonowego za okres od dnia 1 stycznia 2022 r. do dnia 31 grudnia 2022 r. złożone po dniu 31 października 2022 r. pozostawia się bez rozpoznania.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/77__art_2__ust_9a" gd:GUID="76cdcd85-a956-430a-9ef9-328a00396fb5">
+          <nr>9a</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="023b5a8c-fc63-4ca5-902f-68c5fa8c8e82" fragment="1" gd:fragmentGUID="3516da5e-feac-4d60-8b8c-97d3d3a7af16">Wnioski o wypłatę dodatku osłonowego za okres od dnia 1 stycznia 2024 r. do dnia 30 czerwca 2024 r. złożone po dniu 30 kwietnia 2024 r. pozostawia się bez rozpoznania.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/77__art_2__ust_10" gd:GUID="31502c71-de92-40ec-8a40-ddecbb3fc8ea">
+          <nr>10</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="95089a19-0ec5-44f4-b251-9aa9f4b4144f" fragment="1" gd:fragmentGUID="b7cf6373-6895-4b4d-b5fb-91855df68f3d">Wniosek o wypłatę dodatku osłonowego składa się w gminie właściwej ze względu na miejsce zamieszkania osoby składającej ten wniosek.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/77__art_2__ust_11" gd:GUID="673cce11-bafc-4890-b2cb-8168823a26d1">
+          <nr>11</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="acce5b25-9be5-4da7-9b29-1a902321a6b5" fragment="1" gd:fragmentGUID="30f827a0-5b59-43d2-a370-c6db545871bf">Przyznanie przez wójta, burmistrza lub prezydenta miasta dodatku osłonowego nie wymaga wydania decyzji.</zdanie>
+            <zdanie nr="2" gd:zdGUID="62850216-82a7-4695-85f4-d51be681479e" fragment="1" gd:fragmentGUID="1150c81a-e1b1-483f-95c0-53c9ab3aa7a7">Odmowa przyznania dodatku osłonowego, uchylenie lub zmiana prawa do tego dodatku oraz rozstrzygnięcie w sprawie nienależnie pobranego dodatku osłonowego wymagają wydania decyzji.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/77__art_2__ust_12" gd:GUID="c3aa5d8b-2f4d-4dfb-aa6c-dab68285507e">
+          <nr>12</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a3afbd3b-a8be-4967-9c70-2977984025a9" fragment="1" gd:fragmentGUID="7bac3ba9-d863-45e4-95c9-4931b34b8bb8">Wójt, burmistrz lub prezydent miasta przesyła wnioskodawcy informację o przyznaniu dodatku osłonowego na wskazany przez niego adres poczty elektronicznej – o ile wnioskodawca wskazał adres poczty elektronicznej we wniosku o wypłatę dodatku osłonowego.</zdanie>
+            <zdanie nr="2" gd:zdGUID="8cfbf5f8-18b5-49b0-9f6b-3ed0d498f6d2" fragment="1" gd:fragmentGUID="de95954b-6864-4395-829b-509da1f4d758">W przypadku gdy wnioskodawca nie wskazał adresu poczty elektronicznej we wniosku o wypłatę dodatku osłonowego, wójt, burmistrz lub prezydent miasta, odbierając ten wniosek od wnioskodawcy, informuje go o możliwości odebrania od tego organu informacji o przyznaniu dodatku osłonowego.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/77__art_2__ust_13" gd:GUID="258869ef-eb90-4498-9166-2a45032dffc6">
+          <nr>13</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="9d3021d9-1ed5-434a-bf96-558cc4190cc9" fragment="1" gd:fragmentGUID="57150f4a-99c3-418c-8cf1-24bfb855eb38">Nieodebranie informacji o przyznaniu dodatku osłonowego nie wstrzymuje wypłaty tego dodatku.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/77__art_2__ust_14" gd:GUID="710690ee-8971-418a-a4d6-894651369309">
+          <nr>14</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="8935d083-6335-4de8-805a-94b29cdb4208" fragment="1" gd:fragmentGUID="cb2b21b1-fdb1-440c-a2f1-7179a64633d8">Do ustalenia przez wójta, burmistrza lub prezydenta miasta prawa do dodatku osłonowego, o którym mowa w ust. 1, stosuje się odpowiednio art. 411 ust. 10j–10o oraz 10r ustawy z dnia 27 kwietnia 2001 r. – Prawo ochrony środowiska (Dz. U. z 2025 r. poz. 647, 1080, 1812 i 1863).</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/77__art_2__ust_15" gd:GUID="68323408-5d95-4322-83c7-a440f26b046b">
+          <nr>15</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="b263a572-8900-4a88-866d-e885f86df5d4" fragment="1" gd:fragmentGUID="13c5eeac-b0d5-4fc2-9c2c-90ce5d82501c">Do spraw związanych z wypłatą dodatku osłonowego stosuje się odpowiednio art. 23 ust. 12 i 13, art. 30 oraz art. 32 ust. 1–1d ustawy z dnia 28 listopada 2003 r. o świadczeniach rodzinnych.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/77__art_2__ust_16" gd:GUID="b658f767-e4b4-405f-a342-91b0574303c2">
+          <nr>16</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="485b719c-3338-474c-b970-62119a18e79e" fragment="1" gd:fragmentGUID="3001623b-a349-4a38-947e-56174ae5d6c3">Wniosek o wypłatę dodatku osłonowego składa się na piśmie lub za pomocą środków komunikacji elektronicznej w rozumieniu ustawy z dnia 18 lipca 2002 r. o świadczeniu usług drogą elektroniczną (Dz. U. z 2024 r. poz. 1513).</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/77__art_2__ust_17" gd:GUID="e263e2ed-a662-4f40-85e6-881b654bf5d0">
+          <nr>17</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="1e360c4d-fe2d-4f21-a875-f656998a17b6" fragment="1" gd:fragmentGUID="d4fb5a09-61b7-4706-ae0c-24a68c3bb630">W przypadku złożenia wniosku o wypłatę dodatku osłonowego za pomocą środków komunikacji elektronicznej wniosek ten opatruje się kwalifikowanym podpisem elektronicznym lub uwierzytelnia z wykorzystaniem profilu zaufanego.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/77__art_2__ust_17a" gd:GUID="a909e0fa-06e2-4034-a629-8fef4234a072">
+          <nr>17a</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="6b101494-ef3d-417f-921e-df8b97d05d57" fragment="1" gd:fragmentGUID="474fe8cd-7460-4642-ad1d-4747b24c3519">Wójt, burmistrz albo prezydent miasta dokonuje weryfikacji wniosku o wypłatę dodatku osłonowego, w szczególności w zakresie zgłoszenia lub wpisania głównego źródła ogrzewania w centralnej ewidencji emisyjności budynków, o której mowa w art. 27a ust. 1 ustawy z dnia 21 listopada 2008 r. o wspieraniu termomodernizacji i remontów oraz o centralnej ewidencji emisyjności budynków.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/77__art_2__ust_18" gd:GUID="4979219c-a2d8-4a30-a4de-34104a17ca47">
+          <nr>18</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="07f6bd2b-1606-4661-b8b3-c1997d3518b4" fragment="1" gd:fragmentGUID="b71539ec-c34c-4151-9d47-0c855bf234f2">Minister właściwy do spraw energii określi, w drodze rozporządzenia, wzór wniosku o wypłatę dodatku osłonowego, mając na względzie zapewnienie przejrzystości i komunikatywności tego wniosku.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2026/77__art_3" gd:GUID="07c0428c-3626-451d-a248-b39ae11c81ed">
+        <nr>3</nr>
+        <ustep eId="DU/2026/77__art_3__ust_1" gd:GUID="3f81f80c-bec2-48f0-afd1-c2e2cb92de92">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="1d5451d7-ac12-4086-a49a-9629aadf007e" fragment="1" gd:fragmentGUID="c73dad31-b20e-4b25-be64-82e5366be40f">Wypłata dodatku osłonowego jest zadaniem z zakresu administracji rządowej.</zdanie>
+            <zdanie nr="2" gd:zdGUID="bed77e15-f3f8-459c-88f1-bdd61872a8ac" fragment="1" gd:fragmentGUID="34cbaec5-496f-4f08-9fce-34e5fa17c7d5">Dodatek osłonowy wypłacają gminy.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/77__art_3__ust_2" gd:GUID="1512c259-364b-44b5-82a4-a5137400fe21">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="3f6bcac5-79aa-4e8e-9f4e-82f9ff210e9e" fragment="1" gd:fragmentGUID="951dbb84-79ad-4581-aa65-a1af13184c86">Wojewodowie przekazują dotacje gminom w granicach kwot określonych na ten cel w budżecie państwa.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/77__art_3__ust_3" gd:GUID="9fe9efbe-4c2d-40b6-b7d3-252eb30e42a1">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="b318ba10-b4f2-43dd-a0cb-93c76f57b60d" fragment="1" gd:fragmentGUID="acae8d40-5612-40da-9b7e-562a8c8d01e5">Gmina składa wojewodzie wniosek o przyznanie dotacji co kwartał, w terminie do 15. dnia miesiąca poprzedzającego dany kwartał, z zastrzeżeniem ust. 4.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/77__art_3__ust_4" gd:GUID="36de69a3-cc03-4026-a78b-fd68be0bcd5f">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="18031360-d314-4344-8517-00c4b6e75140" fragment="1" gd:fragmentGUID="a277ed6b-9806-422b-8e0a-3d1997fa2475">Gmina składa wojewodzie wniosek o przyznanie dotacji na pierwszy kwartał:</zdanie>
+          </p>
+          <punkt eId="DU/2026/77__art_3__ust_4__pkt_1" gd:GUID="449ef895-db02-49e1-9297-dd4d02d160db">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="18031360-d314-4344-8517-00c4b6e75140" fragment="2" gd:fragmentGUID="bfbdb1f4-d9a0-4759-900f-5834089e24d5">2022 r. – w terminie do dnia 15 lutego 2022 r.;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2026/77__art_3__ust_4__pkt_2" gd:GUID="2ba5514c-e78b-4dc9-87ce-1ba3dae06267">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="18031360-d314-4344-8517-00c4b6e75140" fragment="3" gd:fragmentGUID="f4ecdc57-489c-4558-aecd-031718ea7c57">2024 r. – w terminie do dnia 15 lutego 2024 r.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2026/77__art_3__ust_5" gd:GUID="4d4e45fe-bb6f-463d-9ad6-2f7c264ac8bb">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="cf9eda19-6b2d-4030-a724-3f640dbaba5c" fragment="1" gd:fragmentGUID="01d4fcba-0df5-4a0b-a8d8-66fba971c21d">Dotacje na dany kwartał są przekazywane gminom przez wojewodę, na podstawie wniosku, o którym mowa w ust. 3, w miesięcznych ratach.</zdanie>
+            <zdanie nr="2" gd:zdGUID="d75f7d77-ce16-42c6-8c00-f0c2220a3c8f" fragment="1" gd:fragmentGUID="2c6cb073-2bdd-4ba0-b2d7-8e124d188b91">Nadpłata dotacji za kwartał może być zaliczana na poczet dotacji należnej w kwartale następnym, z wyjątkiem nadpłaty za dany rok, która podlega przekazaniu na rachunek właściwego urzędu wojewódzkiego w terminie do dnia 20 stycznia następnego roku.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/77__art_3__ust_6" gd:GUID="dfcc42e0-f176-4277-9151-9d256a40dd6e">
+          <nr>6</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="cf1ee39c-a9c2-4482-b86d-cedae9d2d5fe" fragment="1" gd:fragmentGUID="7058ca27-f2be-4e27-bd07-3ab30e650985">Jeżeli w wyniku połączenia lub podziału gmin nastąpiły zmiany w podstawie obliczania kwoty dotacji, wojewoda uwzględnia te zmiany od pierwszego dnia następnego miesiąca po ich wejściu w życie.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2026/77__art_4" gd:GUID="90dcfc58-972d-4d1a-9620-9157e21f357e">
+        <nr>4</nr>
+        <ustep eId="DU/2026/77__art_4__ust_1" gd:GUID="d9186ea0-dc90-46af-a7fd-5c3dc989fe48">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="1e14bff5-8714-4379-8f6e-737bd070896a" fragment="1" gd:fragmentGUID="ba23c6ec-d53d-4f50-90df-e03660a93ac5">Gminy otrzymują dotacje celowe z budżetu państwa na finansowanie wypłat dodatku osłonowego, w granicach kwot określonych na ten cel w ustawie budżetowej.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/77__art_4__ust_2" gd:GUID="f1d39382-6d10-4726-8ac0-bf42bd93f461">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="ccfbda6a-e914-4202-b542-ef6dc7a41f63" fragment="1" gd:fragmentGUID="aa88adaf-0c93-4524-9669-1d08a2adde23">Przy ustalaniu wysokości dotacji celowej na realizację wypłat dodatku osłonowego uwzględnia się koszty wypłacania odbiorcom dodatku osłonowego, w wysokości 2 % łącznej kwoty dotacji wypłaconych w gminie.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/77__art_4__ust_3" gd:GUID="b135abaf-83d1-4e7f-a7cb-47d83fd949b8">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="bc7c5409-719c-4e58-9087-41d1a6d7a2c6" fragment="1" gd:fragmentGUID="cf03d32e-bb09-44dc-843b-b1b675e34e72">Wójt, burmistrz lub prezydent miasta przedstawia wojewodzie, w terminie do 15. dnia miesiąca następującego po kwartale, rozliczenie dotacji z wyodrębnieniem liczby i kwoty wypłaconych dodatków osłonowych, sporządzone narastająco za okres od dnia 1 stycznia do dnia kończącego dany kwartał, z tym że zapotrzebowanie na dotację ustala się jako sumę tego zapotrzebowania obliczonego odrębnie dla każdego kwartału.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/77__art_4__ust_4" gd:GUID="8772326e-0e2d-40d4-b009-dc832b8a948b">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="7d9d8cc7-5505-4e8e-8b68-1c241c7576c6" fragment="1" gd:fragmentGUID="9de7bc3d-6006-44cf-8558-7ce3b718d3f4">Wojewodowie przedstawiają ministrowi właściwemu do spraw finansów publicznych zbiorcze rozliczenie dotacji do końca miesiąca następującego po każdym kwartale.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2026/77__art_4a" gd:GUID="73a8f370-a6ef-43fd-91ad-5883e222483a">
+        <nr>4a</nr>
+        <ustep eId="DU/2026/77__art_4a__ust_1" gd:GUID="bee2d27a-67ab-4995-aa85-d4d4ca2c7d0b">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="bbad7ea2-5576-4bf0-9ee4-375b47469116" fragment="1" gd:fragmentGUID="1184377d-4852-4d56-9df1-bc2ec9276372">Wójt, burmistrz albo prezydent miasta przedstawia wojewodzie informację o liczbie toczących się postępowań w sprawie wypłaty dodatku osłonowego, w których w związku z wniesieniem odwołania nie zapadło prawomocne rozstrzygnięcie organu administracji publicznej lub sądu administracyjnego, którego skutkiem jest przyznanie dodatku, oraz o łącznej wysokości dodatków osłonowych będącej przedmiotem tych postępowań, odpowiednio w terminie do dnia 30 czerwca w latach 2023–2025 dla dodatku osłonowego za 2022 r., a w przypadku dodatku osłonowego za 2024 r. w terminach:</zdanie>
+          </p>
+          <punkt eId="DU/2026/77__art_4a__ust_1__pkt_1" gd:GUID="38e42d43-ffb8-4792-a59c-322615dbd124">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="bbad7ea2-5576-4bf0-9ee4-375b47469116" fragment="2" gd:fragmentGUID="fedf96ed-7255-42d9-8fa1-993a96f7807f">do dnia 15 lipca – w 2024 r.;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2026/77__art_4a__ust_1__pkt_2" gd:GUID="958c7e64-e41e-4c51-8d4a-a99ee77af462">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="bbad7ea2-5576-4bf0-9ee4-375b47469116" fragment="3" gd:fragmentGUID="fbe687cb-8237-43f9-bb89-e70b66e2144d">do dnia 15 czerwca – w latach 2025–2026 r.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2026/77__art_4a__ust_2" gd:GUID="96057249-7904-488d-8207-7bc8a741de74">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="894b5737-cdd2-4a45-8c04-3625df221403" fragment="1" gd:fragmentGUID="cdbb5990-774c-40a5-87b3-73dad4e4bee1">Wojewodowie przedstawiają ministrowi właściwemu do spraw energii oraz ministrowi właściwemu do spraw finansów publicznych zbiorczą informację o liczbie toczących się postępowań w sprawie wypłaty dodatku osłonowego, w których w związku z wniesieniem odwołania nie zapadło prawomocne rozstrzygnięcie organu administracji publicznej lub sądu administracyjnego, którego skutkiem jest przyznanie dodatku, oraz o łącznej wysokości dodatków osłonowych będącej przedmiotem tych postępowań, odpowiednio w terminie do dnia 30 czerwca w latach 2023–2025 dla dodatku osłonowego za 2022 r., a w przypadku dodatku osłonowego za 2024 r. w terminach:</zdanie>
+          </p>
+          <punkt eId="DU/2026/77__art_4a__ust_2__pkt_1" gd:GUID="1822b4de-7bed-401e-89ac-cedaf59aa480">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="894b5737-cdd2-4a45-8c04-3625df221403" fragment="2" gd:fragmentGUID="d6ce7a65-9a6d-45ce-b0f7-e5eca4331d03">do dnia 31 lipca – w 2024 r.;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2026/77__art_4a__ust_2__pkt_2" gd:GUID="e6be2730-854e-4550-8e05-826093b4f0fc">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="894b5737-cdd2-4a45-8c04-3625df221403" fragment="3" gd:fragmentGUID="eeedb493-c80d-4fca-99ae-727107bfe40e">do dnia 30 czerwca – w latach 2025–2026 r.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2026/77__art_5" gd:GUID="d9b709c6-b412-44cc-b7cd-91abcb450f43">
+        <nr>5</nr>
+        <ustep eId="DU/2026/77__art_5__ust_1" gd:GUID="13a822a6-1f02-408a-916f-5e7594ee13e2">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="617c1dd1-ad08-4aa7-9fe7-6e0c8c86744e" fragment="1" gd:fragmentGUID="940914b4-9c6b-4634-8b4e-87eb3be98aec">Sprzedawca energii elektrycznej lub sprzedawca paliw gazowych jest obowiązany do dołączenia do faktury informacji o dodatku osłonowym oraz o prawie do złożenia wniosku o jego wypłatę, każdorazowo do dnia 31 października 2022 r. lub oddzielnie, w przypadku gdy ta faktura jest wysyłana później niż w terminie 2 miesięcy od dnia wejścia w życie ustawy.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/77__art_5__ust_2" gd:GUID="26c043b6-5cc2-4348-8175-da37f93cfe3e">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="5c9f6a69-4fab-41ec-8b5a-f3ef9dd00420" fragment="1" gd:fragmentGUID="f4e14c42-27f0-454b-b9b3-ffd0019e019a">Minister właściwy do spraw energii określi, w drodze rozporządzenia, sposób przekazywania oraz wzór informacji załączanej do faktury, o której mowa w ust. 1, kierując się potrzebą zapewnienia przejrzystości i komunikatywności informacji.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2026/77__art_6" gd:GUID="f0d8a098-fdc1-40ec-8f13-8630459be68d">
+        <nr />
+        <nr-od>6</nr-od>
+        <nr-do>13</nr-do>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="4ea5bcaf-f693-4872-8a60-2e8dea257e89">
+          <p>
+            <zdanie nr="1" gd:zdGUID="19538a1c-864f-4214-a479-1b2109a931a8" fragment="1" gd:fragmentGUID="23a19ef6-d4ca-41f1-bc7a-9ccc40c35c67">(pominięte)</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2026/77__art_14" gd:GUID="8b577923-ff43-4070-9e66-1d17c519d06a">
+        <nr>14</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="e728d81e-60ae-4493-b4b4-152fae5d2f36">
+          <p>
+            <zdanie nr="1" gd:zdGUID="42e0f81b-f6df-439f-b084-c629568bccad" fragment="1" gd:fragmentGUID="4656cc7b-9321-4282-8d86-f093680c0664">Do spraw dotyczących przyznania dodatku energetycznego, o którym mowa w art. 5c ustawy zmienianej w art. 9<odnosnik id-odnosnika="1" symbol="1" gd:GUID="587c97e6-f515-4d06-a755-f72f9476d1ac"><p><zdanie nr="1" gd:zdGUID="292e8d4f-0e8f-49c4-be38-6ad1b18f738e" fragment="1" gd:fragmentGUID="8984eae5-7a8e-4fb1-a92a-1eafa01e264c">Artykuł 9 zawiera zmiany do ustawy z dnia 10 kwietnia 1997 r. ‒ Prawo energetyczne.</zdanie></p></odnosnik>, wszczętych i niezakończonych przed dniem wejścia w życie niniejszej ustawy, stosuje się przepisy ustawy zmienianej w art. 9<odsylacz-do-odnosnika id-odnosnika="1" symbol="1" />, w brzmieniu dotychczasowym.</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2026/77__art_15" gd:GUID="26698eb9-9b49-41a9-9321-ade28876cdad">
+        <nr>15</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="c3d51730-12be-4b93-b0b9-acc1538f5391">
+          <p>
+            <zdanie nr="1" gd:zdGUID="602a01e6-9a9c-433e-a2cc-abd8e3d7db4e" fragment="1" gd:fragmentGUID="ebae8c51-dcbd-4c33-bfba-34e6f0a3e3af"><odnosnik id-odnosnika="2" symbol="2" gd:GUID="dcd6f8fa-4e4c-4717-855a-1ff6bf136ae7"><p><zdanie nr="1" gd:zdGUID="685a2877-4242-4b6e-9686-d0d085118dea" fragment="1" gd:fragmentGUID="6ffec6fc-bb32-4a0d-8a00-514fdce9c894">Ze zmianą wprowadzoną przez art. 14 ustawy z dnia 12 września 2025 r. o bonie ciepłowniczym oraz o zmianie niektórych ustaw w celu ograniczenia wysokości cen energii elektrycznej (Dz. U. poz. 1302), która weszła w życie z dniem 30 września 2025 r.</zdanie></p></odnosnik> Wnioski o wypłatę dodatku energetycznego, o którym mowa w art. 5c ustawy zmienianej w art. 9<odsylacz-do-odnosnika id-odnosnika="1" symbol="1" />, złożone w okresie od dnia wejścia w życie niniejszej ustawy do dnia 31 grudnia 2027 r. pozostawia się bez rozpoznania.</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2026/77__art_16" gd:GUID="aa1f2450-773b-4db5-83f9-827da938f6e6">
+        <nr>16</nr>
+        <ustep eId="DU/2026/77__art_16__ust_1" gd:GUID="20716c5c-44ac-48d7-bd63-8db73689cdec">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="b4d6322d-8193-4baf-b076-0a361dbfa7da" fragment="1" gd:fragmentGUID="86db17b9-4fd9-4372-aca3-3f8b2577c998">Maksymalny limit wydatków z budżetu państwa przeznaczonych na dodatki osłonowe wynosi:</zdanie>
+          </p>
+          <punkt eId="DU/2026/77__art_16__ust_1__pkt_1" gd:GUID="2deaef6e-de75-4866-bead-adca7f23c40c">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="b4d6322d-8193-4baf-b076-0a361dbfa7da" fragment="2" gd:fragmentGUID="bb1a4225-ea3c-4789-b131-f6fe8c28615e">w 2022 r. – 4 700 000 000 zł;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2026/77__art_16__ust_1__pkt_2" gd:GUID="12c18ff7-7df3-4d69-8a22-c6084e25bfff">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="b4d6322d-8193-4baf-b076-0a361dbfa7da" fragment="3" gd:fragmentGUID="2a50ca3b-183e-4d10-bda7-6170d5d75a16">w 2023 r. – 500 000 000 zł;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2026/77__art_16__ust_1__pkt_3" gd:GUID="c1bc2ddc-44ad-43ac-94eb-fecc089e042c">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="b4d6322d-8193-4baf-b076-0a361dbfa7da" fragment="4" gd:fragmentGUID="57292d2f-e9c0-4d03-a84d-3af0949492ee">w 2024 r. – 2 300 000 000 zł;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2026/77__art_16__ust_1__pkt_4" gd:GUID="0cc2d096-f09a-4de6-b565-bfae0e978be2">
+            <nr>4</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="b4d6322d-8193-4baf-b076-0a361dbfa7da" fragment="5" gd:fragmentGUID="1f2f857c-50e9-4556-9174-16337c14f424">w 2025 r. – 195 000 000 zł;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2026/77__art_16__ust_1__pkt_5" gd:GUID="bd68917f-daf8-4bdc-be87-55c59dc733bf">
+            <nr>5</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="b4d6322d-8193-4baf-b076-0a361dbfa7da" fragment="6" gd:fragmentGUID="13cffbd4-fb51-4db2-8020-4386730e4e88">w 2026 r. – 2 000 000 zł;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2026/77__art_16__ust_1__pkt_6" gd:GUID="69f89063-cbf8-488e-a434-5a009bdcc3a2">
+            <nr>6</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="b4d6322d-8193-4baf-b076-0a361dbfa7da" fragment="7" gd:fragmentGUID="bb043283-c38e-4d18-b55d-c26d578878dc">w 2027 r. – 1 000 000 zł;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2026/77__art_16__ust_1__pkt_7" gd:GUID="889415ea-23eb-4ad1-b342-fd5149ec4735">
+            <nr>7</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="b4d6322d-8193-4baf-b076-0a361dbfa7da" fragment="8" gd:fragmentGUID="645286a6-67e6-45c1-8128-017f184ebce6">w 2028 r. – 1 000 000 zł;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2026/77__art_16__ust_1__pkt_8" gd:GUID="3196ca0d-7f66-4373-bb4e-de45267c5e43">
+            <nr>8</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="b4d6322d-8193-4baf-b076-0a361dbfa7da" fragment="9" gd:fragmentGUID="4e191a1e-16f6-4847-adee-c2eac7aa31f2">w 2029 r. – 1 000 000 zł;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2026/77__art_16__ust_1__pkt_9" gd:GUID="0824161b-207f-4a3b-b05b-c32d74419612">
+            <nr>9</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="b4d6322d-8193-4baf-b076-0a361dbfa7da" fragment="10" gd:fragmentGUID="dbca4f2c-f740-4da8-bf24-cf2bc0fd68c4">w 2030 r. – 0 zł;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2026/77__art_16__ust_1__pkt_10" gd:GUID="33281acf-1b35-4a96-a994-b9baeaa7022c">
+            <nr>10</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="b4d6322d-8193-4baf-b076-0a361dbfa7da" fragment="11" gd:fragmentGUID="0295396e-5d52-499c-bb2d-5eee20448b25">w 2031 r. – 0 zł.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2026/77__art_16__ust_1a" gd:GUID="55d33825-e1bd-4afe-b5ad-d04e1d37a372">
+          <nr>1a</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="973906dc-7fbc-464c-8fb0-62fed7164129" fragment="1" gd:fragmentGUID="ac2f6a1d-1466-425f-98f7-ce483af35a7d">(uchylony)</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/77__art_16__ust_2" gd:GUID="2c3e3306-214e-46a4-8d66-e3b5a2c25420">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="01073ce4-d3ae-4f50-bf15-a9b852766372" fragment="1" gd:fragmentGUID="ff8341d8-f0c8-48ee-a7af-1a24b3b6ad22">Minister właściwy do spraw finansów publicznych monitoruje wykorzystanie limitu wydatków, o którym mowa w ust. 1.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/77__art_16__ust_3" gd:GUID="3b4915f8-c241-419f-8a06-f5d4ef8cc476">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="f104abb3-a965-495a-b7d7-b3a8c3dc4f25" fragment="1" gd:fragmentGUID="9736fb9a-ad2c-4d68-a8ba-6dc41cc3c71d">W przypadku gdy wykorzystanie środków w pierwszym półroczu roku budżetowego wyniesie więcej niż 65 % środków, o których mowa w ust. 1, wysokość wskaźnika procentowego ulega obniżeniu w drugiej połowie tego roku budżetowego zgodnie z ust. 4.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/77__art_16__ust_4" gd:GUID="32e37c44-78b3-47e6-bfc9-d75028e5c926">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="1bd4e1f3-b24d-44ea-be04-6d92e75ad603" fragment="1" gd:fragmentGUID="190fb949-a23f-4383-971e-2ccf23a05d48">Poziom obniżenia wskaźnika procentowego, o którym mowa w ust. 3, oblicza się jako połowę różnicy między faktycznym wykorzystaniem środków, wyrażonym w procentach, w pierwszym półroczu roku budżetowego, a wielkością 65 %.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/77__art_16__ust_5" gd:GUID="4b5b3a1f-739e-4b36-804d-564b0f27e989">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="ceb30940-15a4-472a-9d7e-7a48f68bf59d" fragment="1" gd:fragmentGUID="f45836af-f399-4d0b-b2e9-8663aff5da75">Jeżeli poziom wskaźnika procentowego, o którym mowa w ust. 3, ulegnie obniżeniu, minister właściwy do spraw finansów publicznych ogłosi, w drodze obwieszczenia, w Dzienniku Urzędowym Rzeczypospolitej Polskiej „Monitor Polski”, wysokość dodatku osłonowego.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2026/77__art_17" gd:GUID="af38129d-148e-4c6d-97b6-5cafc399e6e8">
+        <nr>17</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="d4b64117-200e-4534-b8e1-3f2be55e34cb">
+          <p>
+            <zdanie nr="1" gd:zdGUID="20ef2e65-3a6d-4147-a362-951c24b18acd" fragment="1" gd:fragmentGUID="765db374-e927-407a-bcc7-a1aefd2c0e95">Ustawa wchodzi w życie z dniem następującym po dniu ogłoszenia<odnosnik id-odnosnika="3" symbol="3" gd:GUID="a53c20f0-5f0d-4f46-87a2-5ec6a397d07e"><p><zdanie nr="1" gd:zdGUID="6cb87cb8-a7d2-4dae-a530-8ca57982cfc4" fragment="1" gd:fragmentGUID="0ee3800a-9f19-43cd-8e85-a73600a0b9f2">Ustawa została ogłoszona w dniu 3 stycznia 2022 r.</zdanie></p></odnosnik>, z wyjątkiem art. 5 i art. 9 pkt 1 w zakresie dodawanego art. 5ga oraz pkt 2, które wchodzą w życie po upływie miesiąca od dnia ogłoszenia.</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+    </ustawa>
+  </obwieszczenie>
+</akt-prawny>

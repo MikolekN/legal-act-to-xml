@@ -1,0 +1,1101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <obwieszczenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2026/232</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>b44e185e-55da-490d-a86c-cd6b2e2aacec</gd:GUIDwersji>
+      <AdresISAP>WDU20260000232</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2026</Rok>
+      <Pozycja>232</Pozycja>
+      <AdresWyswietlany>Dz.U. 2026 poz. 232</AdresWyswietlany>
+      <Tytul>Obwieszczenie Marszałka Sejmu Rzeczypospolitej Polskiej z dnia 20 lutego 2026 r. w sprawie ogłoszenia jednolitego tekstu ustawy o własności lokali</Tytul>
+      <Rodzaj>OBW_TJ</Rodzaj>
+      <DataOgloszenia>2026-02-27</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2026-02-20</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_ujednolicenie_2026-02-27_DU-2026-232_domyslne" rodzaj="ujednolicenie" pochodzenie="domyslne-z-aktu" data="2026-02-27" />
+          <Zdarzenie id="zdarz_wejscie_2026-07-01_DU-2023-1688_odczytane" rodzaj="wejscie-w-zycie" pochodzenie="odczytane" data="2026-07-01" podstawa="art. 11" zrodlo="https://eli.gov.pl/eli/DU/2023/1688" dowod="DU/2026/232__odn_2" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_ujednolicenie.zdarz_ujednolicenie_2026-02-27_DU-2026-232_domyslne" glowna="true">
+          <Przedzial rodzaj="ujednolicenie" od="zdarz_ujednolicenie_2026-02-27_DU-2026-232_domyslne" />
+        </GrupaCzasowa>
+        <GrupaCzasowa id="okr_obowiazywanie.x.zdarz_wejscie_2026-07-01_DU-2023-1688_odczytane" glowna="false">
+          <Przedzial rodzaj="obowiazywanie" do="zdarz_wejscie_2026-07-01_DU-2023-1688_odczytane" />
+        </GrupaCzasowa>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2026-07-01_DU-2023-1688_odczytane.x" glowna="false">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2026-07-01_DU-2023-1688_odczytane" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <DataObowiazywaniaWersji>
+        <Od>zdarz_ujednolicenie_2026-02-27_DU-2026-232_domyslne</Od>
+      </DataObowiazywaniaWersji>
+      <Organy>
+        <Organ gd:GUID="f6b02212-40ac-48b7-8281-267827e50d1c" rola="wydajacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/MSEJMU">
+          <Nazwa>Marszałek Sejmu</Nazwa>
+          <OrganPodpisujacy>Marszałek Sejmu</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>W.</imie> <nazwisko>Czarzasty</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Obwieszczenie</rodzaj-aktu>
+    <autor-aktu>Marszałka Sejmu Rzeczypospolitej Polskiej</autor-aktu>
+    <data>z dnia 20 lutego 2026 r.</data>
+    <tytul>w sprawie ogłoszenia jednolitego tekstu ustawy o własności lokali</tytul>
+    <punkt-OTJ eId="DU/2026/232__pkt_1" gd:GUID="d05d9325-a933-4220-bdc0-92d0af8dfa71">
+      <nr>1</nr>
+      <p>
+        <zdanie nr="1" gd:zdGUID="1427b8d2-4899-4181-8af3-9fb569459a2d" fragment="1" gd:fragmentGUID="9a2c8de0-60c1-476a-a5d0-044d6243fb83">Na podstawie art. 16 ust. 1 zdanie pierwsze ustawy z dnia 20 lipca 2000 r. o ogłaszaniu aktów normatywnych i niektórych innych aktów prawnych (Dz. U. z 2019 r. poz. 1461) ogłasza się w załączniku do niniejszego obwieszczenia jednolity tekst ustawy z dnia 24 czerwca 1994 r. o własności lokali (Dz. U. z 2021 r. poz. 1048), z uwzględnieniem zmian wprowadzonych:</zdanie>
+      </p>
+      <podpunkt-OTJ eId="DU/2026/232__pkt_1__ppkt_1" gd:GUID="f2033e73-0c40-4419-b677-c42c77a15db3">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="1427b8d2-4899-4181-8af3-9fb569459a2d" fragment="2" gd:fragmentGUID="381b2b5e-68d3-4afa-ab42-8fcd6c9a9f65">ustawą z dnia 7 lipca 2023 r. o zmianie ustawy o planowaniu i zagospodarowaniu przestrzennym oraz niektórych innych ustaw (Dz. U. poz. 1688, z 2024 r. poz. 1824 oraz z 2025 r. poz. 527),</zdanie>
+        </p>
+      </podpunkt-OTJ>
+      <podpunkt-OTJ eId="DU/2026/232__pkt_1__ppkt_2" gd:GUID="d1b89d11-e8c7-4548-b9d8-966b59234ff4">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="1427b8d2-4899-4181-8af3-9fb569459a2d" fragment="3" gd:fragmentGUID="862ac940-79f5-49c2-9ad8-d7ca73726738">ustawą z dnia 4 grudnia 2025 r. o zmianie ustawy o spółdzielniach mieszkaniowych oraz niektórych innych ustaw (Dz. U. z 2026 r. poz. 39)</zdanie>
+        </p>
+      </podpunkt-OTJ>
+      <czesc-wspolna-podpunkt-OTJ eId="DU/2026/232__pkt_1__czw" gd:GUID="47fa3bcd-9177-430d-b704-47b8bb2334d3">
+        <p>
+          <zdanie nr="1" gd:zdGUID="1427b8d2-4899-4181-8af3-9fb569459a2d" fragment="4" gd:fragmentGUID="ff3c1c2a-fa20-4172-a628-fba6e416ed60">oraz zmian wynikających z przepisów ogłoszonych przed dniem 17 lutego 2026 r.</zdanie>
+        </p>
+      </czesc-wspolna-podpunkt-OTJ>
+    </punkt-OTJ>
+    <punkt-OTJ eId="DU/2026/232__pkt_2" gd:GUID="a83793fd-a749-4b2d-abe4-1afc3ab4eac8">
+      <nr>2</nr>
+      <p>
+        <zdanie nr="1" gd:zdGUID="c3be5725-7082-486b-bf7d-035022e90e30" fragment="1" gd:fragmentGUID="8aee25ae-3118-4e40-a4a7-b32f67366ff3">Podany w załączniku do niniejszego obwieszczenia tekst jednolity ustawy nie obejmuje:</zdanie>
+      </p>
+      <podpunkt-OTJ eId="DU/2026/232__pkt_2__ppkt_1" gd:GUID="66dcfbf6-b718-4299-9056-5a3a39672faf">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="c3be5725-7082-486b-bf7d-035022e90e30" fragment="2" gd:fragmentGUID="7bc85175-e296-4c6e-a206-611a99f23983">art. 78 ustawy z dnia 7 lipca 2023 r. o zmianie ustawy o planowaniu i zagospodarowaniu przestrzennym oraz niektórych innych ustaw (Dz. U. poz. 1688, z 2024 r. poz. 1824 oraz z 2025 r. poz. 527), który stanowi:<tresc-strukt cudzyslowy="oba" gd:GUID="f67055c1-5475-4a16-9325-6eab5997ca08"><artykul eId="DU/2023/1688__art_78" gd:GUID="916ab7e9-cbe9-4daf-9881-6a0a2cbf6c9a"><nr>78</nr><ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="4ac5c681-1163-49e5-9534-3327ceac79d7"><p><zdanie nr="1" gd:zdGUID="31491ce6-775a-4bd7-997b-2f018bcaead7" fragment="1" gd:fragmentGUID="28967b7e-1b4b-4181-90cf-0b82596eb814">Ustawa wchodzi w życie po upływie 30 dni od dnia ogłoszenia, z wyjątkiem:</zdanie></p><punkt eId="DU/2023/1688__art_78__pkt_1" gd:GUID="7f98546d-c9e5-42f3-acf7-1da251410823"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="31491ce6-775a-4bd7-997b-2f018bcaead7" fragment="2" gd:fragmentGUID="f1062719-32ce-491b-93b6-d56e1542f0ac">(uchylony);</zdanie></p></punkt><punkt eId="DU/2023/1688__art_78__pkt_2" gd:GUID="85dd9c3e-5f4e-4293-86a3-2b5080499eb2"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="31491ce6-775a-4bd7-997b-2f018bcaead7" fragment="3" gd:fragmentGUID="2b6332ac-93c5-4dd1-aa9f-466600ca8981">art. 1 pkt 60 i art. 62, które wchodzą w życie z dniem 1 stycznia 2026 r.;</zdanie></p></punkt><punkt eId="DU/2023/1688__art_78__pkt_3" gd:GUID="86c8ae30-7073-4cbb-862f-d7935df813f7"><nr>3</nr><p><zdanie nr="1" gd:zdGUID="31491ce6-775a-4bd7-997b-2f018bcaead7" fragment="4" gd:fragmentGUID="9186b697-17b7-4747-9aba-859f38b0d5c3">art. 1 pkt 10 w zakresie art. 8f i art. 8g ust. 3 i 4, pkt 12 w zakresie art. 13b pkt 1 i art. 13i ust. 3 pkt 4, 7 i 11, pkt 17 lit. d, g i lit. k w zakresie pkt 13c, pkt 25 w zakresie art. 27b ust. 4 pkt 3 i 7, pkt 29 lit. b, pkt 38 lit. b tiret drugie, tiret trzecie w zakresie pkt 7b i tiret piąte w zakresie pkt 11, pkt 39 w zakresie art. 37eb ust. 4 pkt 1 i art. 37ec ust. 2 pkt 3 i 8, pkt 45 lit. a tiret drugie i trzecie oraz tiret szóste w zakresie pkt 7, pkt 47 lit. a tiret czwarte i szóste, pkt 53, pkt 62 lit. b, lit. e w zakresie ust. 3b i lit. f, pkt 63 i 64, art. 6 pkt 1 lit. a i b, art. 11–13, art. 14 pkt 2 lit. b, art. 16 pkt 3, art. 22 pkt 1 i 3, art. 27 pkt 4–9, art. 37 pkt 2 lit. d w zakresie ust. 8 i 9, art. 39 pkt 2, art. 41 pkt 1 w zakresie pkt 4a, art. 43 pkt 1, 3, 5 i 10, pkt 11 lit. b i pkt 13 lit. a w zakresie ust. 1, art. 54, art. 56 ust. 2, art. 67 ust. 3 pkt 3 i art. 75–77, które wchodzą w życie z dniem 1 lipca 2026 r.</zdanie></p></punkt></ustep-n></artykul></tresc-strukt>;</zdanie>
+        </p>
+      </podpunkt-OTJ>
+      <podpunkt-OTJ eId="DU/2026/232__pkt_2__ppkt_2" gd:GUID="9327d4c4-8372-4f78-b91d-5bb716922413">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="c3be5725-7082-486b-bf7d-035022e90e30" fragment="3" gd:fragmentGUID="07ee7615-bc3f-4b03-80c5-8f372ab68503">art. 8 ustawy z dnia 4 grudnia 2025 r. o zmianie ustawy o spółdzielniach mieszkaniowych oraz niektórych innych ustaw (Dz. U. z 2026 r. poz. 39), który stanowi:<tresc-strukt cudzyslowy="oba" gd:GUID="51f5b56c-cfd5-4d87-b6a7-c10afb60061c"><artykul eId="DU/2026/39__art_8" gd:GUID="4e8bef58-fa6a-4d2e-b30b-a9b052b7c04c"><nr>8</nr><ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="0da4a2e9-f436-4f94-bb80-c269ec9e0772"><p><zdanie nr="1" gd:zdGUID="6448f856-e22b-41f7-8895-e4f3636754bd" fragment="1" gd:fragmentGUID="5ef21f7b-4a47-4dab-98fc-440e1ec11a6a">Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.</zdanie></p></ustep-n></artykul></tresc-strukt>.</zdanie>
+        </p>
+      </podpunkt-OTJ>
+    </punkt-OTJ>
+    <organ-podpisujacy>Marszałek Sejmu: <i><osoba podpisujacy="true" gd:osobaGUID="e111a9ef-5ca1-4857-b798-88cddb25ea5d"><imie>W.</imie> <nazwisko>Czarzasty</nazwisko></osoba></i></organ-podpisujacy>
+    <ustawa>
+      <zalacznik-do>Załącznik do obwieszczenia Marszałka Sejmu Rzeczypospolitej Polskiej z dnia 20 lutego 2026 r. (Dz. U. poz. 232)</zalacznik-do>
+      <rodzaj-aktu>Ustawa</rodzaj-aktu>
+      <data>z dnia 24 czerwca 1994 r.</data>
+      <tytul>o własności lokali</tytul>
+      <rozdzial eId="DU/2026/232__rozdz_1" gd:GUID="df938aa4-d65a-42c1-a87c-64dafc978d05">
+        <naglowek-rozdzialu>
+          <nr>1</nr>
+          <p>Przepisy ogólne</p>
+        </naglowek-rozdzialu>
+        <oddzial-n brak-eid="jednostka-nieoznaczona" gd:GUID="b2a6f498-5416-401a-9049-b8f34936c953">
+          <artykul eId="DU/2026/232__art_1" gd:GUID="80c0c0e6-acc0-4325-ae56-ecdae8722f82">
+            <nr>1</nr>
+            <ustep eId="DU/2026/232__art_1__ust_1" gd:GUID="2e34ae07-a9e9-4973-b22b-4e673fdb7eec">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="73b62917-653b-4154-96ec-a720bef9a086" fragment="1" gd:fragmentGUID="1e584519-863b-4e2f-9322-fa112b72086c">Ustawa określa sposób ustanawiania odrębnej własności samodzielnych lokali mieszkalnych, lokali o innym przeznaczeniu, prawa i obowiązki właścicieli tych lokali oraz zarząd nieruchomością wspólną.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/232__art_1__ust_2" gd:GUID="130166ba-4795-40ff-b9e6-d79155181373">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="447da153-5807-4db7-be9e-c1294df19d35" fragment="1" gd:fragmentGUID="8619db2c-85e1-45c1-86e1-373752db7950">W zakresie nieuregulowanym ustawą do własności lokali stosuje się przepisy Kodeksu cywilnego.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/232__art_1a" gd:GUID="e5bcc111-1d1f-44ab-9f16-404105001fc4">
+            <nr>1a</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="029a5e27-d20f-4f7c-9be5-c765f116e185">
+              <p>
+                <zdanie nr="1" gd:zdGUID="5c7223cc-551e-4b0d-b0e5-975302e5d9de" fragment="1" gd:fragmentGUID="7c7dd26e-50d2-4595-aff3-f06bdefc0cf7">Ilekroć w ustawie jest mowa o właścicielu lokalu, należy przez to rozumieć także współwłaściciela lokalu w częściach ułamkowych, z wyjątkiem art. 16.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2026/232__art_2" gd:GUID="3bd4e564-cd4a-400f-8838-0155c18b472d">
+            <nr>2</nr>
+            <ustep eId="DU/2026/232__art_2__ust_1" gd:GUID="0f50ed82-bdae-46b3-bb8c-890230827aef">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="d65f2b03-777a-45f7-8a58-daa44ec1b9c9" fragment="1" gd:fragmentGUID="894f42a7-2d4b-44f3-97d5-8325e02b91f5">Samodzielny lokal mieszkalny, a także lokal o innym przeznaczeniu, zwane dalej „lokalami”, mogą stanowić odrębne nieruchomości.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/232__art_2__ust_1a" gd:GUID="4dd44fef-7e7b-406b-b3e6-f5e9e3e9b425" okres="okr_obowiazywanie.x.zdarz_wejscie_2026-07-01_DU-2023-1688_odczytane" obowiazuje-do="2026-07-01">
+              <nr>1a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="317a9212-94d0-491a-af83-d8ccdd32fbd6" fragment="1" gd:fragmentGUID="15d1c842-5638-4017-a635-45f94f1f102b"><odnosnik id-odnosnika="1" symbol="1" gd:GUID="a238ea72-4b20-47e5-96ca-5ac5318c8ca8"><p><zdanie nr="1" gd:zdGUID="ecd4a27e-8c4d-4d76-906d-c0a0837cad42" fragment="1" gd:fragmentGUID="b33984ea-56d8-46dc-a5b9-eaa5f8aae26c">W tym brzmieniu obowiązuje do wejścia w życie zmiany, o której mowa w odnośniku 2.</zdanie></p></odnosnik> Ustanowienie odrębnej własności samodzielnego lokalu następuje zgodnie z ustaleniami miejscowego planu zagospodarowania przestrzennego albo treścią decyzji o warunkach zabudowy i zagospodarowania terenu albo uchwały o ustaleniu lokalizacji inwestycji mieszkaniowej oraz zgodnie z pozwoleniem na budowę albo skutecznie dokonanym zgłoszeniem, i zgodnie z pozwoleniem na użytkowanie albo skutecznie dokonanym zawiadomieniem o zakończeniu budowy.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/232__art_2__ust_1a" gd:GUID="246df13c-3d02-4fa2-a799-2aa1b54fe05a" okres="okr_obowiazywanie.zdarz_wejscie_2026-07-01_DU-2023-1688_odczytane.x" wejscie-w-zycie="2026-07-01">
+              <nr>1a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="1f303a15-ecb7-4d63-a11c-5f591b89a5c0" fragment="1" gd:fragmentGUID="01d526a1-d414-4d36-b8c9-7c3e38d69152"><odnosnik id-odnosnika="2" symbol="2" gd:GUID="bc18ba86-7085-49ef-8895-7463c1120d92"><p><zdanie nr="1" gd:zdGUID="589a5ce6-ce09-4820-bbd6-510e169386f6" fragment="1" gd:fragmentGUID="3f8bd0fc-c7d0-4c50-abfd-a4f0da2e9a72">Ze zmianą wprowadzoną przez art. 11 ustawy z dnia 7 lipca 2023 r. o zmianie ustawy o planowaniu i zagospodarowaniu przestrzennym oraz niektórych innych ustaw (Dz. U. poz. 1688, z 2024 r. poz. 1824 oraz z 2025 r. poz. 527); wejdzie w życie z dniem 1 lipca 2026 r.</zdanie></p></odnosnik> Ustanowienie odrębnej własności samodzielnego lokalu następuje zgodnie z ustaleniami miejscowego planu zagospodarowania przestrzennego albo treścią decyzji o warunkach zabudowy i zagospodarowania terenu oraz zgodnie z pozwoleniem na budowę albo skutecznie dokonanym zgłoszeniem, i zgodnie z pozwoleniem na użytkowanie albo skutecznie dokonanym zawiadomieniem o zakończeniu budowy.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/232__art_2__ust_1b" gd:GUID="cbbe4000-3d9d-479f-af94-88cec7ca362f">
+              <nr>1b</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="cdd49834-4573-487d-ad00-c0c66bddcc30" fragment="1" gd:fragmentGUID="8cfb3cb6-14f2-4a72-935b-7ab5ed8e0440">Przepisu ust. 1a nie stosuje się do budynków istniejących przed dniem 1 stycznia 1995 r. lub wybudowanych na podstawie pozwolenia na budowę wydanego przed tą datą.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/232__art_2__ust_1c" gd:GUID="17f3c279-b4ab-475b-9f0f-4572de6726c0">
+              <nr>1c</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ae081bc6-6881-45eb-976e-bf10644f3b8a" fragment="1" gd:fragmentGUID="2443c05f-5d0e-4018-8d22-4208a8677d08">Odrębną nieruchomość w budynku mieszkalnym jednorodzinnym mogą stanowić co najwyżej dwa samodzielne lokale mieszkalne.</zdanie>
+                <zdanie nr="2" gd:zdGUID="ab36e561-b5e2-469c-8f67-ee23c77b0bf3" fragment="1" gd:fragmentGUID="96f58e14-58b6-4a5c-996a-26a11159aa18">Ograniczenie to nie ma zastosowania do budynków, które zostały wybudowane na podstawie pozwolenia na budowę wydanego przed dniem 11 lipca 2003 r.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/232__art_2__ust_2" gd:GUID="e883ec84-cd54-4eb5-a0af-714baa9474bb">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="8e8242e8-7013-4f50-a457-0380ba1a69a7" fragment="1" gd:fragmentGUID="8e512a60-3388-4fe1-bcd0-e09709b79eb0">Samodzielnym lokalem mieszkalnym, w rozumieniu ustawy, jest wydzielona trwałymi ścianami w obrębie budynku izba lub zespół izb przeznaczonych na stały pobyt ludzi, które wraz z pomieszczeniami pomocniczymi służą zaspokajaniu ich potrzeb mieszkaniowych.</zdanie>
+                <zdanie nr="2" gd:zdGUID="fe3a6f32-8bd8-4863-8553-d5203e022246" fragment="1" gd:fragmentGUID="e02e8b5a-1e43-4b81-b8d8-b7b05e8095fd">Przepis ten stosuje się odpowiednio również do samodzielnych lokali wykorzystywanych zgodnie z przeznaczeniem na cele inne niż mieszkalne.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/232__art_2__ust_3" gd:GUID="a489b40b-ade4-462b-a2a4-ef822d0c05b3">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="b7bf6a43-735b-40b8-9498-196be50c1c68" fragment="1" gd:fragmentGUID="89745baa-6f17-4b10-840b-0e9556237ca2">Spełnienie wymagań, o których mowa w ust. 1a–2, stwierdza starosta w formie zaświadczenia.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/232__art_2__ust_4" gd:GUID="f0df0229-ac35-4887-9329-c8b76fbdec39">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="24cb692a-bfd1-417a-869c-4c12f96906ea" fragment="1" gd:fragmentGUID="3072963f-f030-4eca-a022-db2be5b5b70a">Do lokalu mogą przynależeć, jako jego części składowe, pomieszczenia, choćby nawet do niego bezpośrednio nie przylegały lub były położone w granicach nieruchomości gruntowej poza budynkiem, w którym wyodrębniono dany lokal, a w szczególności: piwnica, strych, komórka, garaż, zwane dalej „pomieszczeniami przynależnymi”.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/232__art_2__ust_5" gd:GUID="e5c76117-0f1f-4116-905b-7eb82e357d82">
+              <nr>5</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="99e14f64-bf8a-49a9-801f-fdec83697927" fragment="1" gd:fragmentGUID="e02d0346-f892-44bb-b279-0a7e966734c3">Lokale wraz z pomieszczeniami do nich przynależnymi zaznacza się na rzucie odpowiednich kondygnacji budynku, a w razie położenia pomieszczeń przynależnych poza budynkiem mieszkalnym – także na wyrysie z operatu ewidencyjnego; dokumenty te stanowią załącznik do aktu ustanawiającego odrębną własność lokalu.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/232__art_2__ust_6" gd:GUID="9cc62e6a-bed7-4ec5-acf9-5a5a7d8b2ec8">
+              <nr>6</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="3352efdf-c370-4b82-87f2-eeb384d7997c" fragment="1" gd:fragmentGUID="ff5c3b84-6501-4833-a768-3361cb68ee14">W razie braku dokumentacji technicznej budynku, zaznaczeń, o których mowa w ust. 5, dokonuje się, zgodnie z wymogami przepisów prawa budowlanego, na koszt dotychczasowego właściciela nieruchomości, o ile strony umowy o ustanowienie odrębnej własności lokalu nie postanowiły inaczej.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/232__art_3" gd:GUID="3f810bd0-9900-4355-be10-7f34b159e19a">
+            <nr>3</nr>
+            <ustep eId="DU/2026/232__art_3__ust_1" gd:GUID="65f52389-5907-4c24-bdab-1acae452d944">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="4e392a32-3788-4ed3-b831-821085268986" fragment="1" gd:fragmentGUID="cef645cc-87a6-4781-840e-98cdde7e40f0">W razie wyodrębnienia własności lokali właścicielowi lokalu przysługuje udział w nieruchomości wspólnej jako prawo związane z własnością lokali.</zdanie>
+                <zdanie nr="2" gd:zdGUID="1c54967c-769d-47b5-bf5b-26029f787ba3" fragment="1" gd:fragmentGUID="bd270b84-e40a-4930-8908-a06ed481312f">Nie można żądać zniesienia współwłasności nieruchomości wspólnej, dopóki trwa odrębna własność lokali.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/232__art_3__ust_2" gd:GUID="b205598c-3c3b-4835-94ca-eafe6750ca85">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="735d54a2-1807-46fe-ae2b-7614ce3c327c" fragment="1" gd:fragmentGUID="543dc5ec-8ab6-435c-8573-8bc3c4a17bc7">Nieruchomość wspólną stanowi grunt oraz części budynku i urządzenia, które nie służą wyłącznie do użytku właścicieli lokali.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/232__art_3__ust_3" gd:GUID="82538d3c-0a69-4e8e-abe1-30345edafe4d">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="cbf7d453-57bd-4921-b813-10ff44bf53cb" fragment="1" gd:fragmentGUID="c927be31-fd8b-48dd-ae76-b2a5dd6b22c2">Udział właściciela lokalu wyodrębnionego w nieruchomości wspólnej odpowiada stosunkowi powierzchni użytkowej lokalu wraz z powierzchnią pomieszczeń przynależnych do łącznej powierzchni użytkowej wszystkich lokali wraz z pomieszczeniami do nich przynależnymi.</zdanie>
+                <zdanie nr="2" gd:zdGUID="a779aabe-1cda-4e7c-bab5-4f429a708499" fragment="1" gd:fragmentGUID="9f3d238e-d0d6-4713-8d9e-7f1610b4f99b">Udział właściciela samodzielnych lokali niewyodrębnionych w nieruchomości wspólnej odpowiada stosunkowi powierzchni użytkowej tych lokali wraz z powierzchnią pomieszczeń przynależnych do łącznej powierzchni użytkowej wszystkich lokali wraz z pomieszczeniami do nich przynależnymi.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/232__art_3__ust_3a" gd:GUID="6ffc90b6-2de1-48bd-a52a-1463425ff866">
+              <nr>3a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="b0b341de-2303-43d2-b18e-89daf4c54b2a" fragment="1" gd:fragmentGUID="84d4f9ee-1e5d-4a60-92bb-0159f0c19026">Na potrzeby stosowania ustawy przyjmuje się, że udział w nieruchomości wspólnej współwłaściciela lokalu w częściach ułamkowych odpowiada iloczynowi wielkości jego udziału we współwłasności lokalu i wielkości udziału we współwłasności nieruchomości wspólnej przypadającej na ten lokal.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/232__art_3__ust_4" gd:GUID="ca4bd168-9c8f-4be3-8403-63227c213548">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="9785546a-a341-4c5d-bd0b-d66b7196be9a" fragment="1" gd:fragmentGUID="34e53a00-8bda-4aa7-a6a8-1e442284f5fa">Do wyznaczenia stosunku, o którym mowa w ust. 3, niezbędne jest określenie, oddzielnie dla każdego samodzielnego lokalu, jego powierzchni użytkowej wraz z powierzchnią pomieszczeń do niego przynależnych.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/232__art_3__ust_5" gd:GUID="d9ff86f3-3fa1-452a-ba48-1a41c53aad97">
+              <nr>5</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="55c061a4-5d1d-4570-a752-a5a764273241" fragment="1" gd:fragmentGUID="87ba8493-8e63-4c54-9b82-866702588466">Jeżeli nieruchomość, z której wyodrębnia się własność lokali, stanowi grunt zabudowany kilkoma budynkami, udział właściciela lokalu wyodrębnionego w nieruchomości wspólnej odpowiada stosunkowi powierzchni użytkowej lokalu wraz z powierzchnią pomieszczeń przynależnych do łącznej powierzchni użytkowej wszystkich lokali wraz z pomieszczeniami do nich przynależnymi.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/232__art_3__ust_6" gd:GUID="d0ad27e9-c582-4b93-aa80-058a5746b907">
+              <nr>6</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="7421af23-97a1-430a-80ae-798d58b68673" fragment="1" gd:fragmentGUID="88ece43e-59c1-4665-aa43-e52cd116c5e5">W wypadku gdy na podstawie jednej czynności prawnej dokonanej przez właściciela lub przez wszystkich współwłaścicieli nieruchomości następuje wyodrębnienie wszystkich lokali, wysokość udziałów, o których mowa w ust. 1, określają odpowiednio w umowie właściciel lub współwłaściciele.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/232__art_3__ust_7" gd:GUID="55979051-9cd8-493e-90fe-243e5ec73500">
+              <nr>7</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="4d83496d-9b68-4aae-82ce-2066c3d6cc46" fragment="1" gd:fragmentGUID="d1da9d5d-8258-4aea-87b9-ffd13c31da2e">W budynkach, w których nastąpiło wyodrębnienie własności co najmniej jednego lokalu i ustalenie wysokości udziałów w nieruchomości wspólnej bez uwzględnienia powierzchni pomieszczeń przynależnych lub w sposób inny niż określony w ust. 3, a przy wyodrębnianiu kolejnych lokali ustalano wysokość udziałów w nieruchomości wspólnej w taki sam sposób, do czasu wyodrębnienia ostatniego lokalu stosuje się zasady obliczania udziału w nieruchomości wspólnej takie, jak przy wyodrębnieniu pierwszego lokalu.</zdanie>
+                <zdanie nr="2" gd:zdGUID="af841a2c-b2d4-4bf8-b4ab-e0d7ab0dd4ef" fragment="1" gd:fragmentGUID="520f21e4-d7c3-4b43-a576-a1d78e320f12">Przepisu zdania poprzedzającego nie stosuje się, jeżeli wszyscy właściciele lokali wyodrębnionych i dotychczasowy właściciel nieruchomości dokonają w umowie nowego ustalenia wysokości udziałów w nieruchomości wspólnej.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/232__art_3a" gd:GUID="1a4306ef-de23-4eda-8975-0b533512b77b">
+            <nr>3a</nr>
+            <ustep eId="DU/2026/232__art_3a__ust_1" gd:GUID="470cb167-0167-4002-b03e-ac4ad2c57690">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="e7a4fdda-94f5-426a-8ce3-aa311cbe6d00" fragment="1" gd:fragmentGUID="fedb4132-403c-4a9a-acc9-d37a8517e088">Przy oddawaniu w użytkowanie wieczyste ułamkowej części gruntu, jako prawa związanego z odrębną własnością lokali, stosuje się następujące zasady:</zdanie>
+              </p>
+              <punkt eId="DU/2026/232__art_3a__ust_1__pkt_1" gd:GUID="aa2a19b6-119c-4b0f-9840-32d55b290d73">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="e7a4fdda-94f5-426a-8ce3-aa311cbe6d00" fragment="2" gd:fragmentGUID="2fc7f130-77b1-4869-a93a-2cbb6d249ad4">nie oddaje się gruntu we współużytkowanie wieczyste, jeżeli stanowi on przedmiot współwłasności związanej z własnością uprzednio wyodrębnionych lokali;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/232__art_3a__ust_1__pkt_2" gd:GUID="bcfc138f-dcbd-4071-ad98-db8fc442d03b">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="e7a4fdda-94f5-426a-8ce3-aa311cbe6d00" fragment="3" gd:fragmentGUID="b84acbb7-ccc2-4f1e-bd07-c386f4822f4d">nie sprzedaje się udziału we współwłasności gruntu, jeżeli grunt ten stanowi przedmiot współużytkowania wieczystego związanego z własnością uprzednio wyodrębnionych lokali;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/232__art_3a__ust_1__pkt_3" gd:GUID="29ea562d-9b0a-4d3c-9ba9-91cdb270cf18">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="e7a4fdda-94f5-426a-8ce3-aa311cbe6d00" fragment="4" gd:fragmentGUID="38b16087-90a9-4dee-890d-6e9a1f91a4d1">ustala się jeden termin trwania prawa użytkowania wieczystego w odniesieniu do wszystkich udziałów we współużytkowaniu wieczystym, niezależnie od daty wyodrębnienia lokalu, z którym jest związany udział w tym prawie.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2026/232__art_3a__ust_2" gd:GUID="9f4b3561-af37-4596-b357-3433fe0415c0">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="4a790c1e-95b5-41fe-887e-8b2feff6dfd5" fragment="1" gd:fragmentGUID="bba34d1a-6976-4d43-a7dd-fd9f0997ff5b">Jeżeli przy ustanowieniu odrębnej własności lokali ustanowiono różne terminy trwania prawa współużytkowania wieczystego przynależnej do tych lokali działki budowlanej, właściciele wyodrębnionych lokali mogą żądać zmiany terminów przez przyjęcie jednego terminu dla wszystkich udziałów we współużytkowaniu wieczystym tej działki.</zdanie>
+                <zdanie nr="2" gd:zdGUID="04e73fd9-12b9-4e88-bc82-577a8c301624" fragment="1" gd:fragmentGUID="6d76c65f-f876-4a4a-9833-a724d86d0ab4">Z żądaniem takim może wystąpić także właściwy organ.</zdanie>
+                <zdanie nr="3" gd:zdGUID="158dfb1d-a5a0-4911-b917-0023a570d151" fragment="1" gd:fragmentGUID="e7a34194-953f-4b4b-93eb-53d708eb1a40">Termin ten ustanawia się stosownie do najdalszego terminu ustalonego dla pozostałych udziałów.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/232__art_4" gd:GUID="eb6a0782-ed59-435e-acd9-34de2f5e1a07">
+            <nr>4</nr>
+            <ustep eId="DU/2026/232__art_4__ust_1" gd:GUID="447d68db-53fb-4b03-aba6-f9110cc4981f">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="56235c78-bcac-4aa8-a24d-bafc7dcf2b03" fragment="1" gd:fragmentGUID="b1174163-8105-4589-b049-676fce985434">Dotychczasowemu właścicielowi nieruchomości przysługują co do niewyodrębnionych lokali oraz co do nieruchomości wspólnej takie same uprawnienia, jakie przysługują właścicielom lokali wyodrębnionych; odnosi się to także do jego obowiązków.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/232__art_4__ust_2" gd:GUID="50514769-9c24-4449-8623-d45d88c580e4">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="c6658094-6e61-48db-bb20-436341dd38b1" fragment="1" gd:fragmentGUID="bac0958e-0766-4352-9414-5de23658d330">Jeżeli do wyodrębniania własności lokali dochodzi sukcesywnie, właściciele lokali już wyodrębnionych nie są stronami umów o wyodrębnieniu dalszych lokali.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/232__art_4__ust_3" gd:GUID="91e7af88-edc1-4695-8641-bcfacf4d4268">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="427af8e8-1ec7-4fd8-9c8c-213973273a28" fragment="1" gd:fragmentGUID="8c2c0610-0fed-48e7-8ea0-2ce17a3a935d">Jeżeli budynek został wzniesiony na gruncie oddanym w użytkowanie wieczyste, przedmiotem wspólności jest to prawo, a dalsze przepisy o własności lub współwłasności gruntu stosuje się odpowiednio do prawa użytkowania wieczystego.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/232__art_5" gd:GUID="f244f54a-cc6a-4da1-943f-82e3abe8eb88">
+            <nr>5</nr>
+            <ustep eId="DU/2026/232__art_5__ust_1" gd:GUID="15a1600d-ad91-49cc-b6de-a5f58403d2b8">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="55d6b67b-e747-46d2-a874-e0da387887ea" fragment="1" gd:fragmentGUID="2c9345db-fb54-4a2a-9086-7164ef96432e">Jeżeli powierzchnia nieruchomości gruntowej zabudowanej budynkiem, w którym wyodrębniono własność lokali, jest większa niż powierzchnia działki budowlanej, w rozumieniu przepisów o gospodarce nieruchomościami, niezbędnej do korzystania z niego, współwłaściciele mogą dokonać podziału tej nieruchomości.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/232__art_5__ust_2" gd:GUID="4a377d66-6843-47ab-a790-1858211d2ba8">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="4d844f19-2def-441c-aeaf-bdedeef48840" fragment="1" gd:fragmentGUID="da27d101-5bfb-4f6c-a6a2-e0c5efcb3bb0">Jeżeli na nieruchomości gruntowej jest położony więcej niż jeden budynek, a przynajmniej w jednym z nich wyodrębniono własność lokalu, współwłaściciele mogą dokonać podziału tej nieruchomości polegającego na wydzieleniu z dotychczasowej nieruchomości dwóch lub więcej działek budowlanych.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/232__art_5__ust_3" gd:GUID="ee59f014-0c9a-4fee-ba31-33232a4c6114">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="8ea4fc72-cfa0-404d-91ff-e314647612d0" fragment="1" gd:fragmentGUID="7c661f6a-8d98-4299-a8db-2cb819345ac8">Przy dokonywaniu podziału, o którym mowa w ust. 1 i 2, stosuje się przepisy o gospodarce nieruchomościami.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/232__art_6" gd:GUID="35b008e5-e36d-4ebb-8dad-448eb2c3ff52">
+            <nr>6</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="4d30328a-9d46-4310-8c77-63ba5e3b8c2a">
+              <p>
+                <zdanie nr="1" gd:zdGUID="a9346b64-d469-4eba-b985-274fef5709c7" fragment="1" gd:fragmentGUID="af8a2af0-a192-442a-9480-3ab8fdec4c50">Ogół właścicieli, których lokale wchodzą w skład określonej nieruchomości, tworzy wspólnotę mieszkaniową.</zdanie>
+                <zdanie nr="2" gd:zdGUID="ad678a82-9845-4559-a2f5-5f1cc8086928" fragment="1" gd:fragmentGUID="abe0a3e0-7ff1-4b94-869a-c3e2ba2364a4">Wspólnota mieszkaniowa może nabywać prawa i zaciągać zobowiązania, pozywać i być pozwana.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+        </oddzial-n>
+      </rozdzial>
+      <rozdzial eId="DU/2026/232__rozdz_2" gd:GUID="bb4fd3c7-5f53-409f-beb5-29d52a2cd227">
+        <naglowek-rozdzialu>
+          <nr>2</nr>
+          <p>Ustanowienie własności lokalu</p>
+        </naglowek-rozdzialu>
+        <oddzial-n brak-eid="jednostka-nieoznaczona" gd:GUID="77c6b1dc-0e21-4b08-91dd-5d5e98fddd15">
+          <artykul eId="DU/2026/232__art_7" gd:GUID="f021066d-943b-4748-9925-e2c567a7687c">
+            <nr>7</nr>
+            <ustep eId="DU/2026/232__art_7__ust_1" gd:GUID="bc65c2f0-d443-44e7-bbca-7619e9326f54">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="53e7a365-ef70-467a-b99a-dd5231c3982c" fragment="1" gd:fragmentGUID="ddc49c60-eff6-4f16-8d9a-a5d7197f8fc3">Odrębną własność lokalu można ustanowić w drodze umowy, a także jednostronnej czynności prawnej właściciela nieruchomości albo orzeczenia sądu znoszącego współwłasność.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/232__art_7__ust_2" gd:GUID="24aec565-20fe-45a5-866f-5e7d180ff0a6">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="f42440a5-d8fb-4a09-8ee2-947ac14de884" fragment="1" gd:fragmentGUID="a66b20c5-63d4-4c7b-a573-8fa15d684b8f">Umowa o ustanowieniu odrębnej własności lokalu powinna być dokonana w formie aktu notarialnego; do powstania tej własności niezbędny jest wpis do księgi wieczystej.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/232__art_7__ust_3" gd:GUID="8c2cd1fc-f4f5-486a-8e74-bc1acbf0fdad">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="241a245f-aa03-4885-873a-2515fd896cae" fragment="1" gd:fragmentGUID="29752728-8bc6-43af-a186-3559ea87d80a">W razie ustanowienia odrębnej własności lokalu bez zaświadczenia, o którym mowa w art. 2 ust. 3, powództwo o stwierdzenie nieważności takiego ustanowienia może wnieść również właściwy z uwagi na położenie nieruchomości wójt, burmistrz albo prezydent miasta, starosta.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/232__art_8" gd:GUID="77875f67-b600-4a73-97de-62d5b04075d1">
+            <nr>8</nr>
+            <ustep eId="DU/2026/232__art_8__ust_1" gd:GUID="f4f0ecb0-e1fe-456c-b4bf-da0fba0d7c5d">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="65988165-914d-4240-9419-8c8f209465df" fragment="1" gd:fragmentGUID="61ae9e0a-17bc-4596-9e99-8547f70269eb">Umowa o ustanowieniu odrębnej własności lokalu powinna określać w szczególności:</zdanie>
+              </p>
+              <punkt eId="DU/2026/232__art_8__ust_1__pkt_1" gd:GUID="37574863-b0a2-482f-b966-77ed75a659e9">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="65988165-914d-4240-9419-8c8f209465df" fragment="2" gd:fragmentGUID="95b02d4c-5717-4049-be83-7d45c00e50d2">rodzaj, położenie i powierzchnię lokalu oraz pomieszczeń do niego przynależnych;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/232__art_8__ust_1__pkt_2" gd:GUID="94652887-15b8-43db-aaa6-b95eac567c4d">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="65988165-914d-4240-9419-8c8f209465df" fragment="3" gd:fragmentGUID="96150539-f28a-458e-85f4-db86ae132132">wielkość udziałów przypadających właścicielom poszczególnych lokali w nieruchomości wspólnej.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2026/232__art_8__ust_2" gd:GUID="50e3c2eb-5b7a-4e4d-b569-d6f90e12a32a">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="c3c3ab95-d486-4eff-a9d1-dabe5408d226" fragment="1" gd:fragmentGUID="ed16199d-805a-42d3-8b1c-4e4137d2336a">Współwłaściciele mogą w umowie określić także sposób zarządu nieruchomością wspólną.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/232__art_8__ust_3" gd:GUID="ca639e7a-a3d3-4f57-8e4c-a0a403541849">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="f91050f4-9485-414e-a45f-f7a876b4d872" fragment="1" gd:fragmentGUID="14be1d43-6136-42dd-9270-f449ce87cafc">Umowa o ustanowieniu odrębnej własności lokalu może być zawarta albo przez współwłaścicieli nieruchomości, albo przez właściciela nieruchomości i nabywcę lokalu.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/232__art_9" gd:GUID="986ac3aa-1736-462f-8949-dd4a99e67f89">
+            <nr>9</nr>
+            <ustep eId="DU/2026/232__art_9__ust_1" gd:GUID="720bd7c8-319b-4be2-9339-f37d26c20376">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="44ad37e0-ac46-44a1-b317-ed286723111b" fragment="1" gd:fragmentGUID="88e4bc9d-b3d2-41b5-9268-620fdc4e6e44">Odrębna własność lokalu może powstać także w wykonaniu umowy zobowiązującej właściciela gruntu do wybudowania na tym gruncie domu oraz do ustanowienia – po zakończeniu budowy – odrębnej własności lokali i przeniesienia tego prawa na drugą stronę umowy lub na inną wskazaną w umowie osobę.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/232__art_9__ust_2" gd:GUID="40be9431-b8ca-4fbe-9297-5d0a79ce263d">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="0287b12e-69d9-4699-ac2e-6bc97c666be6" fragment="1" gd:fragmentGUID="f049eba3-b96b-4b41-90b3-fba31bc2b19e">Do ważności umowy, o której mowa w ust. 1, niezbędne jest, aby strona podejmująca się budowy była właścicielem gruntu, na którym dom ma być wzniesiony, oraz aby uzyskała pozwolenie na budowę, a roszczenie o ustanowienie odrębnej własności lokalu i o przeniesienie tego prawa zostało ujawnione w księdze wieczystej.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/232__art_9__ust_3" gd:GUID="44f411ab-6e3e-4340-8ecb-0beb05f3364e">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="649a26a4-8d7f-4d26-bfab-b17f9229074e" fragment="1" gd:fragmentGUID="c5a062f9-1908-4ef4-a116-f6c3d3e6fb74">W wypadku wykonywania umowy w sposób wadliwy albo sprzeczny z umową, na wniosek każdego nabywcy, sąd może powierzyć, w trybie postępowania nieprocesowego, dalsze wykonywanie umowy innemu wykonawcy na koszt i niebezpieczeństwo właściciela gruntu.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/232__art_10" gd:GUID="f85e6693-80ea-4b9c-80b7-4779ce04975e">
+            <nr>10</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="a9bd1017-517d-417c-a3fb-0edd0c8b12df">
+              <p>
+                <zdanie nr="1" gd:zdGUID="6fcb1c0b-6a46-4ba2-ab27-348181622379" fragment="1" gd:fragmentGUID="73a31cd8-ef27-4827-9217-796a26c7a831">Właściciel nieruchomości może ustanawiać odrębną własność lokali dla siebie, na mocy jednostronnej czynności prawnej.</zdanie>
+                <zdanie nr="2" gd:zdGUID="b165d609-9640-40bb-afb4-251641f43bde" fragment="1" gd:fragmentGUID="0813a5e6-adde-469f-aa60-f0edd985234c">W takim wypadku stosuje się odpowiednio przepisy o ustanowieniu odrębnej własności w drodze umowy.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2026/232__art_11" gd:GUID="57da6f87-39a7-4533-a8da-5ce025056e35">
+            <nr>11</nr>
+            <ustep eId="DU/2026/232__art_11__ust_1" gd:GUID="fcde94b9-1194-4b36-8195-372c144782f5">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="8eb86ee7-99d9-4c1f-9ee5-d04e0ef1420d" fragment="1" gd:fragmentGUID="fb109a06-a758-49b5-b43c-1f3f5ae74546">Przepisy o ustanowieniu odrębnej własności lokali w drodze umowy stosuje się również odpowiednio do wyodrębnienia własności lokalu z mocy orzeczenia sądu znoszącego współwłasność nieruchomości.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/232__art_11__ust_2" gd:GUID="348dd160-bceb-49ca-8273-34ef467b2ebc">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="82348659-1dfb-48a5-a9dc-25e17177d2cd" fragment="1" gd:fragmentGUID="2cddaac7-2254-4de6-b370-38d09755e165">Jeżeli uczynienie zadość przesłance samodzielności lokali wymaga wykonania robót adaptacyjnych, sąd może w postanowieniu wstępnym, uznającym żądanie ustanowienia odrębnej własności lokali w zasadzie za usprawiedliwione, upoważnić zainteresowanego uczestnika postępowania do ich wykonania – tymczasowo na jego koszt.</zdanie>
+                <zdanie nr="2" gd:zdGUID="fe045446-3fb6-47b3-8f64-eb4674458bbd" fragment="1" gd:fragmentGUID="097d0d74-ccac-48f6-8a48-d288d0ef45a6">W razie przeszkód stawianych przez innych uczestników, sąd – w postanowieniu wstępnym lub w postanowieniu oddzielnym – może wydać stosowne nakazy lub zakazy.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/232__art_11__ust_3" gd:GUID="93e9cc2b-9158-4d82-9b16-0047e6e98f08">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="8bca9838-6ad7-4540-b4da-dd06a0606365" fragment="1" gd:fragmentGUID="304a0b2d-fc17-4148-b304-6bdc01dbafc2">Jeżeli wydzielenie lokalu byłoby sprzeczne z art. 2 ust. 1a–2, sąd, znosząc współwłasność nieruchomości, nie orzeka o jej podziale przez wydzielenie lokalu, a ustala udziały współwłaścicieli w nieruchomości.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+        </oddzial-n>
+      </rozdzial>
+      <rozdzial eId="DU/2026/232__rozdz_3" gd:GUID="bbca01b3-b5a0-4e9d-b1a4-5f883bbfd472">
+        <naglowek-rozdzialu>
+          <nr>3</nr>
+          <p>Prawa i obowiązki właścicieli lokali</p>
+        </naglowek-rozdzialu>
+        <oddzial-n brak-eid="jednostka-nieoznaczona" gd:GUID="9704c706-08ae-4801-b729-184c12b3dc3e">
+          <artykul eId="DU/2026/232__art_12" gd:GUID="9df422a1-7759-428d-9de4-4d2b181c9664">
+            <nr>12</nr>
+            <ustep eId="DU/2026/232__art_12__ust_1" gd:GUID="3ff354ea-2d39-42f7-8341-bc762be1bd0e">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="4e0c5cc5-60cd-453b-b0f6-a6dd46d01234" fragment="1" gd:fragmentGUID="db6e1720-8644-495e-a291-a33bc07fdb95">Właściciel lokalu ma prawo do współkorzystania z nieruchomości wspólnej zgodnie z jej przeznaczeniem.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/232__art_12__ust_2" gd:GUID="1bd703df-1055-4d7b-8c3b-8d40f021ef56">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="af5daaf9-b95d-4f4e-9d3a-5dbd716913da" fragment="1" gd:fragmentGUID="67a8287b-831e-4378-9fe4-da13e6d553d0">Pożytki i inne przychody z nieruchomości wspólnej służą pokrywaniu wydatków związanych z jej utrzymaniem, a w części przekraczającej te potrzeby przypadają właścicielom lokali w stosunku do ich udziałów.</zdanie>
+                <zdanie nr="2" gd:zdGUID="6e7494f5-de4e-4689-970d-ed165a8bb3a2" fragment="1" gd:fragmentGUID="372fd40a-5e13-493d-8d52-9d0fdde7e2d1">W takim samym stosunku właściciele lokali ponoszą wydatki i ciężary związane z utrzymaniem nieruchomości wspólnej w części nieznajdującej pokrycia w pożytkach i innych przychodach.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/232__art_12__ust_3" gd:GUID="d750e582-579a-482f-a6b0-1d2905d56574">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="5e90c394-d20b-4008-97e1-e310fab79dc2" fragment="1" gd:fragmentGUID="4324c037-6c4f-4b0d-bedc-67dc00cee229">Uchwała właścicieli lokali może ustalić zwiększenie obciążenia z tego tytułu właścicieli lokali użytkowych, jeżeli uzasadnia to sposób korzystania z tych lokali.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/232__art_13" gd:GUID="08d3feb4-39a1-46d5-9725-38a2e654ac58">
+            <nr>13</nr>
+            <ustep eId="DU/2026/232__art_13__ust_1" gd:GUID="5fb59352-c482-4eab-bb37-c139d59cb717">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="a0f1cb86-8152-47e2-80cc-c1bc146f9a1d" fragment="1" gd:fragmentGUID="8cc77489-4e32-46d3-a673-73711d293156">Właściciel ponosi wydatki związane z utrzymaniem jego lokalu, jest obowiązany utrzymywać swój lokal w należytym stanie, przestrzegać porządku domowego, uczestniczyć w kosztach zarządu związanych z utrzymaniem nieruchomości wspólnej, korzystać z niej w sposób nieutrudniający korzystania przez innych współwłaścicieli oraz współdziałać z nimi w ochronie wspólnego dobra.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/232__art_13__ust_2" gd:GUID="45035394-7663-4169-87ae-4157666b6d83">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="b34d02a0-b86b-47cd-b0ce-adc2488c0c6a" fragment="1" gd:fragmentGUID="40151db2-32b7-4826-a707-c7139951ccc2">Na żądanie zarządu właściciel lokalu jest obowiązany zezwalać na wstęp do lokalu, ilekroć jest to niezbędne do przeprowadzenia konserwacji, remontu albo usunięcia awarii w nieruchomości wspólnej, a także w celu wyposażenia budynku, jego części lub innych lokali w dodatkowe instalacje.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/232__art_14" gd:GUID="57a8c423-1001-4ef1-bff2-dbf57160c522">
+            <nr>14</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="e14c66de-e3ba-47dd-9d01-8feaa8af4f02">
+              <p>
+                <zdanie nr="1" gd:zdGUID="6b89b55a-432e-4ed9-b012-e2e717e9281e" fragment="1" gd:fragmentGUID="5772e2d2-5593-45fc-a5bc-d695d8eea350">Na koszty zarządu nieruchomością wspólną składają się w szczególności:</zdanie>
+              </p>
+              <punkt eId="DU/2026/232__art_14__pkt_1" gd:GUID="c01f47b9-2202-475b-9f73-0a9b7b340828">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="6b89b55a-432e-4ed9-b012-e2e717e9281e" fragment="2" gd:fragmentGUID="52a301bd-0234-4fc8-bfec-b9852e921155">wydatki na remonty i bieżącą konserwację;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/232__art_14__pkt_2" gd:GUID="d2ff2a3f-5dab-424f-bdd6-2bfa7c3591b5">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="6b89b55a-432e-4ed9-b012-e2e717e9281e" fragment="3" gd:fragmentGUID="38c0e02c-7010-4141-a2f4-53df879cd7ea">opłaty za dostawę energii elektrycznej i cieplnej, gazu i wody, w części dotyczącej nieruchomości wspólnej, oraz opłaty za antenę zbiorczą i windę;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/232__art_14__pkt_3" gd:GUID="b98c5893-c65d-454f-b69c-b89118297fd7">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="6b89b55a-432e-4ed9-b012-e2e717e9281e" fragment="4" gd:fragmentGUID="6bb5b8e4-661c-4a70-86d5-f394c505755b">ubezpieczenia, podatki i inne opłaty publicznoprawne, chyba że są pokrywane bezpośrednio przez właścicieli poszczególnych lokali;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/232__art_14__pkt_4" gd:GUID="5bb9870e-06af-479f-a088-350ca34336f2">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="6b89b55a-432e-4ed9-b012-e2e717e9281e" fragment="5" gd:fragmentGUID="ae91ef26-cf58-4b18-bd83-e11f92ec30ae">wydatki na utrzymanie porządku i czystości;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/232__art_14__pkt_5" gd:GUID="6d1c7845-782f-49c5-a6a2-0c6736453b77">
+                <nr>5</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="6b89b55a-432e-4ed9-b012-e2e717e9281e" fragment="6" gd:fragmentGUID="caae223a-2ce4-4231-bcae-458dcd367cd6">wynagrodzenie członków zarządu lub zarządcy.</zdanie>
+                </p>
+              </punkt>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2026/232__art_15" gd:GUID="197cfc6a-36df-4df5-b34a-84c05e6948f3">
+            <nr>15</nr>
+            <ustep eId="DU/2026/232__art_15__ust_1" gd:GUID="db89a8ab-0ce0-47dc-b907-58ab0ecee2e4">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="32a94ce0-4a6c-4228-91df-38992b78d950" fragment="1" gd:fragmentGUID="b208844a-9ec6-48f5-a222-c1cd83b8dc6a">Na pokrycie kosztów zarządu właściciele lokali uiszczają zaliczki w formie bieżących opłat, płatne z góry do dnia 10 każdego miesiąca.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/232__art_15__ust_2" gd:GUID="d7bbdbe2-42c2-4406-b01a-5086c5d38303">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="6e82b38b-4840-496e-9236-25659a0d135a" fragment="1" gd:fragmentGUID="753c7aa8-104d-4fd2-b128-32a8c9928588">(uchylony)</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/232__art_16" gd:GUID="00bd255b-43a7-49fa-9f14-5d6b1fac3427">
+            <nr>16</nr>
+            <ustep eId="DU/2026/232__art_16__ust_1" gd:GUID="b8b303b1-3b44-43cb-b7a4-b7b6f26956dd">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="6eb4e248-161c-4368-84be-ede4d1c9d475" fragment="1" gd:fragmentGUID="1b2e0573-b9b8-4108-be87-9ff33b7ea2a7">Jeżeli właściciel lokalu zalega długotrwale z zapłatą należnych od niego opłat lub wykracza w sposób rażący lub uporczywy przeciwko obowiązującemu porządkowi domowemu albo przez swoje niewłaściwe zachowanie czyni korzystanie z innych lokali lub nieruchomości wspólnej uciążliwym, wspólnota mieszkaniowa może w trybie procesu żądać sprzedaży lokalu w drodze licytacji na podstawie przepisów Kodeksu postępowania cywilnego o egzekucji z nieruchomości.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/232__art_16__ust_2" gd:GUID="d168c658-8244-4efb-ba89-9832070d3011">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="461075e5-21fe-4968-a76a-cf900447903e" fragment="1" gd:fragmentGUID="fd97327d-5cd6-431d-b715-65a76e2f38ed">Właścicielowi, którego lokal został sprzedany, nie przysługuje prawo do lokalu zamiennego.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/232__art_17" gd:GUID="442e5a7c-daaf-4be0-821e-9fb8f88f9dbb">
+            <nr>17</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="08090cf1-287d-4d27-b3aa-cfb788632cf3">
+              <p>
+                <zdanie nr="1" gd:zdGUID="07c0c242-27a5-4c9d-8420-b82e400154d4" fragment="1" gd:fragmentGUID="ad08250c-6c3a-477c-b701-7323676b0f15">Za zobowiązania dotyczące nieruchomości wspólnej odpowiada wspólnota mieszkaniowa bez ograniczeń, a każdy właściciel lokalu – w części odpowiadającej jego udziałowi w tej nieruchomości.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+        </oddzial-n>
+      </rozdzial>
+      <rozdzial eId="DU/2026/232__rozdz_4" gd:GUID="6a69bd3a-b704-4dc5-8d3f-94f2a7145a67">
+        <naglowek-rozdzialu>
+          <nr>4</nr>
+          <p>Zarząd nieruchomością wspólną</p>
+        </naglowek-rozdzialu>
+        <oddzial-n brak-eid="jednostka-nieoznaczona" gd:GUID="c2c58958-d96a-4192-9e6f-b55cf17e01ee">
+          <artykul eId="DU/2026/232__art_18" gd:GUID="55b00b7a-08a8-4692-922d-017f88b51c2f">
+            <nr>18</nr>
+            <ustep eId="DU/2026/232__art_18__ust_1" gd:GUID="0a09cc75-19e6-4bab-9c0c-aed2a51f11a1">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="2777e9ef-f1b2-4b80-8019-54a05c7670b6" fragment="1" gd:fragmentGUID="eb963917-0af3-42a6-9076-053f4438c1f0">Właściciele lokali mogą w umowie o ustanowieniu odrębnej własności lokali albo w umowie zawartej później w formie aktu notarialnego określić sposób zarządu nieruchomością wspólną, a w szczególności mogą powierzyć zarząd osobie fizycznej albo prawnej.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/232__art_18__ust_2" gd:GUID="3b801a36-1e0e-4e89-b44f-9b2c2e5bb146">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="c08a7960-a0dc-45df-b7bf-40cc0b4875e2" fragment="1" gd:fragmentGUID="19d674fb-c111-419f-85ce-dbc154a89a72">W razie sukcesywnego wyodrębniania lokali przyjęty przez dotychczasowych współwłaścicieli sposób zarządu nieruchomością wspólną odnosi skutek także do każdego kolejnego nabywcy lokalu.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/232__art_18__ust_2a" gd:GUID="e1f56227-0a8d-4348-ad20-3405a6c1f133">
+              <nr>2a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="782d911a-f8c4-49cf-8bf6-a75aa8853aa1" fragment="1" gd:fragmentGUID="0d37150e-16b3-4218-925b-1781ed4165b4">Zmiana ustalonego w trybie ust. 1 sposobu zarządu nieruchomością wspólną może nastąpić na podstawie uchwały właścicieli lokali zaprotokołowanej przez notariusza.</zdanie>
+                <zdanie nr="2" gd:zdGUID="cd0d96ba-6889-4925-b3ec-45d1b9cfed1b" fragment="1" gd:fragmentGUID="2e53e8c5-a737-4b7a-b55c-b04c6e8391f6">Uchwała ta stanowi podstawę wpisu do księgi wieczystej.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/232__art_18__ust_3" gd:GUID="82f9166d-8d60-4603-b996-a66efa3a1056">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="0eaf17b6-ef11-48db-bb3c-22a1ddc233b6" fragment="1" gd:fragmentGUID="b06852c7-5524-4e5c-a729-e7bdbabdf882">Jeżeli sposobu zarządu nie określono w umowie, o której mowa w ust. 1, lub w uchwale zaprotokołowanej przez notariusza, obowiązują zasady określone w niniejszym rozdziale.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/232__art_19" gd:GUID="20c75a8e-90f5-4ead-9549-8c1352f057c7">
+            <nr>19</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="cd9b1b4b-5d15-4b42-8780-4f015f82cdeb">
+              <p>
+                <zdanie nr="1" gd:zdGUID="86f574bc-e92a-465f-be9d-1ea043a873f6" fragment="1" gd:fragmentGUID="698071d1-ea21-4368-bf4f-b7d03961bb8b">Jeżeli liczba lokali wyodrębnionych i lokali niewyodrębnionych, należących nadal do dotychczasowego właściciela, nie jest większa niż trzy, do zarządu nieruchomością wspólną mają odpowiednie zastosowanie przepisy Kodeksu cywilnego i Kodeksu postępowania cywilnego o współwłasności.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2026/232__art_20" gd:GUID="b0f4c714-fb51-4506-a6c8-9a3c79eeec13">
+            <nr>20</nr>
+            <ustep eId="DU/2026/232__art_20__ust_1" gd:GUID="35a5f077-d2f5-460e-84a8-7766be2ae3d7">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="bf654841-30e4-44b4-a395-57bb7e898f2c" fragment="1" gd:fragmentGUID="13102a7c-31ce-42e1-94be-a9782b007afb">Jeżeli liczba lokali wyodrębnionych i lokali niewyodrębnionych jest większa niż trzy, właściciele lokali są obowiązani podjąć uchwałę o wyborze jednoosobowego lub kilkuosobowego zarządu.</zdanie>
+                <zdanie nr="2" gd:zdGUID="b5fddb9d-67c5-4458-b5bf-951e3e464660" fragment="1" gd:fragmentGUID="c26646de-4849-444d-929c-7ad61567dd69">Członkiem zarządu może być wyłącznie osoba fizyczna.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/232__art_20__ust_2" gd:GUID="d783099d-8021-40ef-8683-72bd468cd523">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="d8855f73-ac0d-4eec-91f5-fd595098d588" fragment="1" gd:fragmentGUID="afa97a31-bd89-4fe5-addf-3b878f30f373">Zarząd lub poszczególni jego członkowie mogą być w każdej chwili na mocy uchwały właścicieli lokali zawieszeni w czynnościach lub odwołani.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/232__art_21" gd:GUID="92cbd3f5-b2a7-4fca-bb55-b773c87323ec">
+            <nr>21</nr>
+            <ustep eId="DU/2026/232__art_21__ust_1" gd:GUID="2bfa5be6-de7f-4e10-8028-e78d8e58a414">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="64ee8286-5676-4425-8a68-2d96c8df062c" fragment="1" gd:fragmentGUID="b2ed473e-280c-4ce4-86ce-e0a9c789b6dc">Zarząd kieruje sprawami wspólnoty mieszkaniowej i reprezentuje ją na zewnątrz oraz w stosunkach między wspólnotą a poszczególnymi właścicielami lokali.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/232__art_21__ust_2" gd:GUID="00482062-5ea8-47cd-926b-1143bcc93175">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="a73f71c7-9af5-4395-b2df-50f5abfe6c48" fragment="1" gd:fragmentGUID="f66b315e-a156-46f5-adf3-53d7a0ae7b0f">Gdy zarząd jest kilkuosobowy, oświadczenia woli za wspólnotę mieszkaniową składają przynajmniej dwaj jego członkowie.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/232__art_21__ust_3" gd:GUID="7b2d1a54-89f4-4211-aac9-cf31d38b16d6">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="cebc1b28-7af5-4de7-8c99-0211752190d1" fragment="1" gd:fragmentGUID="66f7e0b4-224d-48cd-9e90-524beb7f11b3"><odnosnik id-odnosnika="3" symbol="3" gd:GUID="aabe7330-268b-4d47-84b9-0383820dea56"><p><zdanie nr="1" gd:zdGUID="df49ef65-b334-4a4d-8895-fe1e3e63b0ab" fragment="1" gd:fragmentGUID="5d760187-a629-46f7-acb4-446d9256becb">Ze zmianą wprowadzoną przez art. 2 pkt 1 ustawy z dnia 4 grudnia 2025 r. o zmianie ustawy o spółdzielniach mieszkaniowych oraz niektórych innych ustaw (Dz. U. z 2026 r. poz. 39), która weszła w życie z dniem 28 stycznia 2026 r.</zdanie></p></odnosnik> Zarząd na podstawie pełnomocnictwa, o którym mowa w art. 22 ust. 2, składa oświadczenia w celu wykonania uchwał w sprawach, o których mowa w art. 22 ust. 3 pkt 5, 5a i 6 oraz w art. 32a, ze skutkiem w stosunku do właścicieli wszystkich lokali.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/232__art_21__ust_4" gd:GUID="c0a569bd-5cdb-486c-9efa-eeb7c789573c">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="8bdf24ce-2b3b-48f0-b4ba-2142cbc0a869" fragment="1" gd:fragmentGUID="b3f5ef14-3d10-43c7-93e8-077d7c46160c">(uchylony)</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/232__art_21__ust_5" gd:GUID="f0604564-bd9b-4641-8041-51b56c1bdb40">
+              <nr>5</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="70561685-a190-4b19-8a30-e61d1502605b" fragment="1" gd:fragmentGUID="23c59fab-8953-40c3-b57f-5ddb262539bc">(uchylony)</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/232__art_22" gd:GUID="299bb82f-e9c0-4473-9781-91e4c427ef25">
+            <nr>22</nr>
+            <ustep eId="DU/2026/232__art_22__ust_1" gd:GUID="f9282380-d211-4a77-84e9-49ac88141280">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="7c96e3db-7911-442e-9a3d-17383869f890" fragment="1" gd:fragmentGUID="7469a1a3-facb-47c9-98a0-1312284e3c87">Czynności zwykłego zarządu podejmuje zarząd samodzielnie.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/232__art_22__ust_2" gd:GUID="24f9bc67-0b8b-40b5-be37-1b4879702530">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="78a4414e-e0da-4f46-b664-fff24c09c601" fragment="1" gd:fragmentGUID="862db562-6a99-4af5-99fd-a994cb547c4b">Do podjęcia przez zarząd czynności przekraczającej zakres zwykłego zarządu potrzebna jest uchwała właścicieli lokali wyrażająca zgodę na dokonanie tej czynności oraz udzielająca zarządowi pełnomocnictwa do zawierania umów stanowiących czynności przekraczające zakres zwykłego zarządu w formie prawem przewidzianej.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/232__art_22__ust_3" gd:GUID="2228f71b-5c1b-470e-b54c-3356205751b8">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="42efdfe6-c4a5-4bcf-b469-e55d253d61de" fragment="1" gd:fragmentGUID="9144adad-aec0-45e5-9ced-ab7defa6df7a">Czynnościami przekraczającymi zakres zwykłego zarządu są w szczególności:</zdanie>
+              </p>
+              <punkt eId="DU/2026/232__art_22__ust_3__pkt_1" gd:GUID="e337a104-1e81-458a-af8f-07b19580a638">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="42efdfe6-c4a5-4bcf-b469-e55d253d61de" fragment="2" gd:fragmentGUID="92437051-10ba-4ff4-88de-04f614da9600">ustalenie wynagrodzenia zarządu lub zarządcy nieruchomości wspólnej;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/232__art_22__ust_3__pkt_2" gd:GUID="0b7906fc-ccba-4a24-b160-01a921ec3784">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="42efdfe6-c4a5-4bcf-b469-e55d253d61de" fragment="3" gd:fragmentGUID="72d20d7e-e768-41d3-8c13-0552b1903435">przyjęcie rocznego planu gospodarczego;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/232__art_22__ust_3__pkt_3" gd:GUID="ad94f798-aa0b-4d18-a32f-705af7f58c73">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="42efdfe6-c4a5-4bcf-b469-e55d253d61de" fragment="4" gd:fragmentGUID="4be65cfb-d48f-43ec-92a8-dc2f7b6c7c2b">ustalenie wysokości opłat na pokrycie kosztów zarządu;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/232__art_22__ust_3__pkt_4" gd:GUID="4e76ccdb-386a-403c-bbb1-cc49fdf35272">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="42efdfe6-c4a5-4bcf-b469-e55d253d61de" fragment="5" gd:fragmentGUID="960ad4f1-4b65-471d-98ea-1be84e95f97a">zmiana przeznaczenia części nieruchomości wspólnej;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/232__art_22__ust_3__pkt_5" gd:GUID="4added74-451f-47b6-a715-c88364959f5c">
+                <nr>5</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="42efdfe6-c4a5-4bcf-b469-e55d253d61de" fragment="6" gd:fragmentGUID="1b68eca9-8221-4fb7-bbc4-30a8665bd483">udzielenie zgody na nadbudowę lub przebudowę nieruchomości wspólnej, na ustanowienie odrębnej własności lokalu powstałego w następstwie nadbudowy lub przebudowy i rozporządzenie tym lokalem oraz na zmianę wysokości udziałów w następstwie powstania odrębnej własności lokalu nadbudowanego lub przebudowanego;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/232__art_22__ust_3__pkt_5a" gd:GUID="5d777238-1998-44b4-902c-ff9f42fe3185">
+                <nr>5a</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="42efdfe6-c4a5-4bcf-b469-e55d253d61de" fragment="7" gd:fragmentGUID="9d4bdaa2-11df-4eab-9c01-edd78ca7be7e">udzielenie zgody na zmianę wysokości udziałów we współwłasności nieruchomości wspólnej;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/232__art_22__ust_3__pkt_6" gd:GUID="16a1ceac-c1e2-4527-b3ab-837c12ea083d">
+                <nr>6</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="42efdfe6-c4a5-4bcf-b469-e55d253d61de" fragment="8" gd:fragmentGUID="4cc6a11e-18b8-4d06-b50f-2e18bd2d181a">dokonanie podziału nieruchomości wspólnej;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/232__art_22__ust_3__pkt_6a" gd:GUID="40a7afa3-78b8-4996-baf4-05f1ac8f343e">
+                <nr>6a</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="42efdfe6-c4a5-4bcf-b469-e55d253d61de" fragment="9" gd:fragmentGUID="bf36f44a-fb99-44bc-98f4-99d867672911">nabycie nieruchomości;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/232__art_22__ust_3__pkt_7" gd:GUID="6e880e47-90fe-4978-bae2-ca64c3c40e5d">
+                <nr>7</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="42efdfe6-c4a5-4bcf-b469-e55d253d61de" fragment="10" gd:fragmentGUID="0715a6a9-baf9-484f-8f61-bcf065fb1f08">wytoczenie powództwa, o którym mowa w art. 16;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/232__art_22__ust_3__pkt_8" gd:GUID="ac84fdef-ce89-49b3-92f0-ca8bf23db8b0">
+                <nr>8</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="42efdfe6-c4a5-4bcf-b469-e55d253d61de" fragment="11" gd:fragmentGUID="4e9e1151-263f-40d8-b4a0-8230c2545f82">ustalenie, w wypadkach nieuregulowanych przepisami, części kosztów związanych z eksploatacją urządzeń lub części budynku służących zarówno do użytku poszczególnych właścicieli lokali, jak i do wspólnego użytku właścicieli co najmniej dwóch lokali, które zaliczane będą do kosztów zarządu nieruchomością wspólną;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/232__art_22__ust_3__pkt_9" gd:GUID="916eaaf9-a2af-4f31-943a-e8248b30a3a7">
+                <nr>9</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="42efdfe6-c4a5-4bcf-b469-e55d253d61de" fragment="12" gd:fragmentGUID="72608678-47ad-4d5d-aab0-1fcf5a9a8667">udzielenie zgody na podział nieruchomości gruntowej zabudowanej więcej niż jednym budynkiem mieszkalnym i związane z tym zmiany udziałów w nieruchomości wspólnej oraz ustalenie wysokości udziałów w nowo powstałych, odrębnych nieruchomościach wspólnych;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/232__art_22__ust_3__pkt_10" gd:GUID="d5cbd933-59bd-4eb9-b5de-346ab3b4ee6d">
+                <nr>10</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="42efdfe6-c4a5-4bcf-b469-e55d253d61de" fragment="13" gd:fragmentGUID="3cea479f-246d-4068-9a4e-d9fea9df3c5f">określenie zakresu i sposobu prowadzenia przez zarząd lub zarządcę, któremu zarząd nieruchomością wspólną powierzono w sposób określony w art. 18 ust. 1, ewidencji pozaksięgowej kosztów zarządu nieruchomością wspólną, zaliczek uiszczanych na pokrycie tych kosztów, a także rozliczeń z innych tytułów na rzecz nieruchomości wspólnej.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2026/232__art_22__ust_4" gd:GUID="95b5c96f-acf3-431b-b035-51c54ed69e2f">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="b7e3de52-f7f5-42cc-a7f2-869eb3599045" fragment="1" gd:fragmentGUID="b5d58246-3d51-4b7f-baee-a5510285c7b9">Połączenie dwóch lokali stanowiących odrębne nieruchomości w jedną nieruchomość lub podział lokalu wymaga zgody właścicieli lokali wyrażonej w uchwale.</zdanie>
+                <zdanie nr="2" gd:zdGUID="1de375f3-f1dc-4eee-8006-1e0d58f4104c" fragment="1" gd:fragmentGUID="6b529681-2839-4727-b37a-3630c5ff593b">W razie odmowy zainteresowany właściciel lokalu może żądać rozstrzygnięcia przez sąd.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/232__art_23" gd:GUID="9cf99368-0876-4afa-afef-6bd9bdd21b34">
+            <nr>23</nr>
+            <ustep eId="DU/2026/232__art_23__ust_1" gd:GUID="fb23a7db-0c1e-4882-a2da-bfb781ba0c4a">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="112a8f06-a9d1-4abd-9497-9791dad796a8" fragment="1" gd:fragmentGUID="50c09e2e-abb3-46a5-8a7a-c601d4912a85">Uchwały właścicieli lokali są podejmowane bądź na zebraniu, bądź w drodze indywidualnego zbierania głosów przez zarząd; uchwała może być wynikiem głosów oddanych częściowo na zebraniu, częściowo w drodze indywidualnego ich zbierania.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/232__art_23__ust_2" gd:GUID="7d426d4e-a0c5-4ec5-9060-8bc3ea309cc3">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="cb9eea5a-1df3-46ca-84e6-fef1b1138472" fragment="1" gd:fragmentGUID="fd14fce8-9fdb-4071-bad7-8db8a248f81a">Uchwały zapadają większością głosów właścicieli lokali, liczoną według wielkości udziałów, chyba że w umowie lub w uchwale podjętej w tym trybie postanowiono, że w określonej sprawie na każdego właściciela przypada jeden głos.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/232__art_23__ust_2a" gd:GUID="58c78955-f6c1-4fd0-af5e-43b1f931d477">
+              <nr>2a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="03cbc1af-d034-42da-8992-6050364753a5" fragment="1" gd:fragmentGUID="57c49441-b136-4cfa-973a-be43fce4ea98">Jeżeli suma udziałów w nieruchomości wspólnej nie jest równa 1 albo większość udziałów należy do jednego właściciela bądź gdy obydwa te warunki spełnione są łącznie, głosowanie według zasady, że na każdego właściciela przypada jeden głos, wprowadza się na każde żądanie właścicieli lokali posiadających łącznie co najmniej 1/5 udziałów w nieruchomości wspólnej.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/232__art_23__ust_2b" gd:GUID="592eb8da-7db5-40b4-ac10-67507d1e905b">
+              <nr>2b</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="778e64d5-6ef1-4751-9a5a-c3150697941c" fragment="1" gd:fragmentGUID="2c16eb94-e2bb-475f-b12f-77c57096cad6">Jeżeli lokal jest przedmiotem współwłasności w częściach ułamkowych, współwłaściciele celem oddania głosu przypadającego na ich lokal w głosowaniu prowadzonym według zasady, że na każdego właściciela przypada jeden głos, obowiązani są ustanowić w formie pisemnej pełnomocnika.</zdanie>
+                <zdanie nr="2" gd:zdGUID="6429694d-37c5-4bfe-acc0-3ebfed0ea268" fragment="1" gd:fragmentGUID="ae44e3c7-a750-4696-94e2-3e4d0620212a">Ustanowienia pełnomocnika współwłaściciele lokalu dokonują większością głosów liczoną według wielkości udziałów we współwłasności lokalu.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/232__art_23__ust_3" gd:GUID="c624ba4b-5520-4840-be54-4d989528558d">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="beec4c69-a30a-4b53-865a-19d8142ad50b" fragment="1" gd:fragmentGUID="d98eee88-8167-4d71-b0fd-8817eabe96f8">O treści uchwały, która została podjęta z udziałem głosów zebranych indywidualnie, każdy właściciel lokalu powinien zostać powiadomiony na piśmie.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/232__art_24" gd:GUID="8e7b667c-db90-4f62-b203-cf3d9b6d1eae">
+            <nr>24</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="9325fe60-998f-40e9-bd07-989a04d4b811">
+              <p>
+                <zdanie nr="1" gd:zdGUID="f1760f73-778c-414a-bf64-9ed0c7921a48" fragment="1" gd:fragmentGUID="da4e8d72-51ea-42f2-8284-bca705c46ef6">W razie braku zgody wymaganej większości właścicieli lokali zarząd lub zarządca, któremu zarząd nieruchomością wspólną powierzono w sposób określony w art. 18 ust. 1, może żądać rozstrzygnięcia przez sąd, który orzeknie mając na względzie cel zamierzonej czynności oraz interesy wszystkich właścicieli.</zdanie>
+                <zdanie nr="2" gd:zdGUID="f76a2f76-f9ff-4040-921d-828a05ca7a2b" fragment="1" gd:fragmentGUID="811e8584-4945-4927-8761-11f9100650c6">Sprawę sąd rozpoznaje w postępowaniu nieprocesowym.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2026/232__art_25" gd:GUID="2477b230-7558-4ad5-a6bc-ca9a31a982e3">
+            <nr>25</nr>
+            <ustep eId="DU/2026/232__art_25__ust_1" gd:GUID="6912db77-68f4-45bb-946d-4e2aa71cb613">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="085a7eda-21fc-4ba2-a8a3-912f01916201" fragment="1" gd:fragmentGUID="c757645f-c2ea-49b6-9fd9-2b9062b7c9bb">Właściciel lokalu może zaskarżyć uchwałę do sądu z powodu jej niezgodności z przepisami prawa lub z umową właścicieli lokali albo jeśli narusza ona zasady prawidłowego zarządzania nieruchomością wspólną lub w inny sposób narusza jego interesy.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/232__art_25__ust_1a" gd:GUID="85e459f7-ac34-491c-af68-9303a165b57c">
+              <nr>1a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="d560adab-5907-476c-b999-4f2eaea582ae" fragment="1" gd:fragmentGUID="5b071ed5-0a2f-45bf-a933-defe60df3919">Powództwo, o którym mowa w ust. 1, może być wytoczone przeciwko wspólnocie mieszkaniowej w terminie 6 tygodni od dnia podjęcia uchwały na zebraniu ogółu właścicieli lokali albo od dnia powiadomienia wytaczającego powództwo o treści uchwały podjętej w trybie indywidualnego zbierania głosów.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/232__art_25__ust_2" gd:GUID="9763a305-8239-4c25-a2d3-3b39552ce68c">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="5c99fdad-576e-4c65-b66a-9a4ac81f2c6f" fragment="1" gd:fragmentGUID="6fbf4c70-ef9e-4c72-8b56-4b3435cfd25b">Zaskarżona uchwała podlega wykonaniu, chyba że sąd wstrzyma jej wykonanie do czasu zakończenia sprawy.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/232__art_26" gd:GUID="8613b6d2-c6f1-4635-8225-8fbebdfb2063">
+            <nr>26</nr>
+            <ustep eId="DU/2026/232__art_26__ust_1" gd:GUID="9b871854-f302-4347-bb80-93c19a9fb22a">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="f89738c8-a30e-433d-84bd-cec487e67d36" fragment="1" gd:fragmentGUID="13c0b496-225e-4fe4-905e-e4f3d98c0672">Jeżeli zarząd nie został powołany lub pomimo powołania nie wypełnia swoich obowiązków albo narusza zasady prawidłowej gospodarki, każdy właściciel lokalu może żądać ustanowienia zarządcy przymusowego przez sąd, który określi zakres jego uprawnień oraz należne mu wynagrodzenie.</zdanie>
+                <zdanie nr="2" gd:zdGUID="64e4e7a1-2bc5-4537-b3de-c11ded0d1b1e" fragment="1" gd:fragmentGUID="d7dc01f6-d7b3-4229-bcb3-0c4cbc63f0ab">Sąd odwoła zarządcę, gdy ustaną przyczyny jego powołania.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/232__art_26__ust_2" gd:GUID="aaef0a2c-293a-4d94-b131-0731fe3da801">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="fa332518-2f31-4438-a812-2e37f37a9f68" fragment="1" gd:fragmentGUID="482efbd1-170d-4f98-97cf-5edde4f77de8">Jeżeli w terminie dwóch lat od dnia wyodrębnienia własności pierwszego lokalu w nieruchomości, w której liczba lokali wyodrębnionych i lokali niewyodrębnionych jest większa niż trzy, właściciele lokali nie dokonają wyboru zarządu ani nie powierzą zarządu nieruchomością wspólną w umowie zawartej w formie aktu notarialnego, ustanowienia zarządcy przymusowego przez sąd może żądać także dotychczasowy zarządca nieruchomości, który sprawował zarząd nieruchomością w dniu, w którym wyodrębniono własność pierwszego lokalu, i kontynuował zarząd tą nieruchomością przez okres co najmniej dwóch lat.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/232__art_27" gd:GUID="7e57082b-7118-4213-b7c6-cd0bcffcd31f">
+            <nr>27</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="f53fb8c5-2bb2-4723-9fc4-7ac26240e4bc">
+              <p>
+                <zdanie nr="1" gd:zdGUID="ebab6394-bb80-4e5e-85bf-548df9260f0f" fragment="1" gd:fragmentGUID="6c552d62-7c20-42a2-9586-1fe6c7ec2899">Każdy właściciel lokalu ma prawo i obowiązek współdziałania w zarządzie nieruchomością wspólną.</zdanie>
+                <zdanie nr="2" gd:zdGUID="63c6344c-a755-42eb-b85e-6b4343f7a639" fragment="1" gd:fragmentGUID="873c808f-873d-4865-bf70-a4d276e8e966">Nie uchybia to jednak przepisom art. 21 ust. 1 i art. 22 ust. 1.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2026/232__art_28" gd:GUID="b1dc8581-a506-4f7a-9a14-beb8464a0da5">
+            <nr>28</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="e7d6d1e6-176d-446c-a942-ebe851fbece4">
+              <p>
+                <zdanie nr="1" gd:zdGUID="5c09fc6d-2309-4cf8-b996-823e6351fa34" fragment="1" gd:fragmentGUID="f2230b56-67c4-44fa-b88b-86659e9642af">Właściciel lokalu pełniący obowiązki członka zarządu może żądać od wspólnoty wynagrodzenia odpowiadającego uzasadnionemu nakładowi pracy.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2026/232__art_29" gd:GUID="29ba280a-7ea9-44b7-a59a-4e1227872a29">
+            <nr>29</nr>
+            <ustep eId="DU/2026/232__art_29__ust_1" gd:GUID="96849741-ab9e-41ae-9069-061b867ae917">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="9aac69fb-dc47-4f5e-ab90-a4ca27243dc2" fragment="1" gd:fragmentGUID="07070b70-e13d-4202-b2aa-8344d8ea25d0">Zarząd lub zarządca, któremu zarząd nieruchomością wspólną powierzono w sposób określony w art. 18 ust. 1, jest obowiązany prowadzić dla każdej nieruchomości wspólnej, określoną przez wspólnotę mieszkaniową, ewidencję pozaksięgową kosztów zarządu nieruchomością wspólną oraz zaliczek uiszczanych na pokrycie tych kosztów, a także rozliczeń z innych tytułów na rzecz nieruchomości wspólnej.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/232__art_29__ust_1a" gd:GUID="d9dee592-7a57-4741-a48e-b9e6a002a9bc">
+              <nr>1a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="c01b2ba7-4cc4-4e7c-8f92-6e322091a3e7" fragment="1" gd:fragmentGUID="b991a607-225a-4b74-98de-58662ed1b93d">Okresem rozliczeniowym wspólnoty mieszkaniowej jest rok kalendarzowy.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/232__art_29__ust_1b" gd:GUID="7823a726-152b-47fa-9d90-0e32cf4e7b47">
+              <nr>1b</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="8b45c2a6-61d5-4005-a452-a2d35e54a032" fragment="1" gd:fragmentGUID="cdcb6b0d-12cf-48fd-8d28-d252c3ae9d79">Zarząd lub zarządca, któremu zarząd nieruchomością wspólną powierzono w sposób określony w art. 18 ust. 1, jest obowiązany sporządzić protokół przejęcia nieruchomości i jej dokumentacji technicznej (budowlanej, powykonawczej i książki obiektu budowlanego) w imieniu wspólnoty mieszkaniowej, przechowywać dokumentację techniczną budynku oraz prowadzić i aktualizować spis właścicieli lokali i przypadających im udziałów w nieruchomości wspólnej.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/232__art_29__ust_1c" gd:GUID="9960eed2-0cf5-49b8-95e9-29b37b19104e">
+              <nr>1c</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="9692e67a-4a7d-467c-b3ef-079395a39dc2" fragment="1" gd:fragmentGUID="0c417761-8905-423e-9520-0517f908597b">Zarząd lub zarządca, któremu zarząd nieruchomością wspólną powierzono w sposób określony w art. 18 ust. 1, jest obowiązany do podjęcia czynności zmierzających do opracowania lub aktualizacji dokumentacji technicznej budynku i rozliczenia kosztów związanych z opracowaniem lub aktualizacją tej dokumentacji.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/232__art_29__ust_1d" gd:GUID="b362dd6d-0e3d-405d-8576-ee55af8d7851">
+              <nr>1d</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="26e330f9-a1fc-4948-b291-49d759e75ddc" fragment="1" gd:fragmentGUID="a7da37ce-893f-4f98-ba26-cbdf8ca9d4a2">Jeżeli uchwała właścicieli lokali nie stanowi inaczej, koszty opracowania lub aktualizacji dokumentacji technicznej budynku obciążają:</zdanie>
+              </p>
+              <punkt eId="DU/2026/232__art_29__ust_1d__pkt_1" gd:GUID="d2f5b699-9907-450f-83c8-cad7dc046afb">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="26e330f9-a1fc-4948-b291-49d759e75ddc" fragment="2" gd:fragmentGUID="ecdd26e7-0822-4291-a477-4c2d3085cd66">do czasu wyodrębnienia własności ostatniego lokalu – dotychczasowego właściciela nieruchomości;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/232__art_29__ust_1d__pkt_2" gd:GUID="7de7b936-1a31-46e0-8be3-7443e7d4c97f">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="26e330f9-a1fc-4948-b291-49d759e75ddc" fragment="3" gd:fragmentGUID="63d87359-c452-4737-b9cd-8fdbe4bdddf2">po wyodrębnieniu własności ostatniego lokalu – wszystkich właścicieli lokali w częściach odpowiadających ich udziałom w nieruchomości wspólnej.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2026/232__art_29__ust_1e" gd:GUID="fc6b5f59-58d2-434a-b5be-d7c735588891">
+              <nr>1e</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="8471c87d-4955-49aa-b5ad-45de26a0536d" fragment="1" gd:fragmentGUID="db96be63-1636-4218-b64f-08713a624767">Zarząd lub zarządca, któremu zarząd nieruchomością wspólną powierzono w sposób określony w art. 18 ust. 1, może żądać od właścicieli lokali okazania dokumentów potwierdzających prawo własności lokali.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/232__art_29__ust_2" gd:GUID="82bb9c1d-eb60-4b9b-b276-600d6de895f4">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="b7550d9f-3635-4965-9c4b-308b8f1bc507" fragment="1" gd:fragmentGUID="3e63920c-c0a3-4ef9-8100-7021fb33d538">Właściciele lokali podejmują uchwałę w przedmiocie udzielenia absolutorium zarządowi lub zarządcy, któremu zarząd nieruchomością wspólną powierzono w sposób określony w art. 18 ust. 1, z prowadzonej przez niego działalności.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/232__art_29__ust_3" gd:GUID="53f40d57-93ef-46e6-86ef-e1b2ad823d53">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="f2d2d8c1-7955-4420-a6c6-a4949d981232" fragment="1" gd:fragmentGUID="c4faae3a-6e43-407c-b166-cb62bca1811b">Prawo kontroli działalności zarządu służy każdemu właścicielowi lokalu.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/232__art_30" gd:GUID="3a0b23ea-83ad-4f7f-b690-31a43017ed73">
+            <nr>30</nr>
+            <ustep eId="DU/2026/232__art_30__ust_1" gd:GUID="f8a5a988-c337-408a-b344-8593f26fcb19">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="b5a566c4-a395-4f58-ad59-1406d6fb2d66" fragment="1" gd:fragmentGUID="1120acb8-d947-47ad-b4f8-ff9806f2a319">Zarząd lub zarządca, któremu zarząd nieruchomością wspólną powierzono w sposób określony w art. 18 ust. 1, jest obowiązany:</zdanie>
+              </p>
+              <punkt eId="DU/2026/232__art_30__ust_1__pkt_1" gd:GUID="756745c2-572d-4c7d-bd87-b860f3db0924">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="b5a566c4-a395-4f58-ad59-1406d6fb2d66" fragment="2" gd:fragmentGUID="fc1fc8dd-921a-4e3d-af67-e60dd34f908d">dokonywać rozliczeń przez rachunek bankowy;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/232__art_30__ust_1__pkt_2" gd:GUID="ced4425d-75b9-4cdc-a9f7-627775928bcd">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="b5a566c4-a395-4f58-ad59-1406d6fb2d66" fragment="3" gd:fragmentGUID="1a38b584-f1d3-4b37-b0a8-b42f8060fe40">składać właścicielom lokali roczne sprawozdanie ze swojej działalności;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/232__art_30__ust_1__pkt_3" gd:GUID="f2c66f8b-0e66-41ea-a462-ffee3f4595cd">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="b5a566c4-a395-4f58-ad59-1406d6fb2d66" fragment="4" gd:fragmentGUID="3886d3d6-e6f7-4548-ad43-a8731a8c3850">zwoływać zebranie ogółu właścicieli lokali co najmniej raz w roku, niepóźniej niż w pierwszym kwartale każdego roku.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2026/232__art_30__ust_1a" gd:GUID="fc41efcd-355b-4dd6-880d-25b6bdc67df1">
+              <nr>1a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="33904d86-e213-4d2a-ac6c-68effa2f3411" fragment="1" gd:fragmentGUID="92f72385-15bd-4aae-9b0d-95701a44ea31">W wypadku gdy zarząd lub zarządca, któremu zarząd nieruchomością wspólną powierzono w sposób określony w art. 18 ust. 1, nie zwoła zebrania ogółu właścicieli lokali w terminie, o którym mowa w ust. 1 pkt 3, zebranie coroczne może zwołać każdy z właścicieli.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/232__art_30__ust_2" gd:GUID="72a049e0-c457-441f-bccd-1e112f036e9f">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="85f35594-18d5-4ca5-877d-2a02d8162b16" fragment="1" gd:fragmentGUID="2dad7063-696f-4858-b0f3-898462c99b4f">Przedmiotem zebrania, o którym mowa w ust. 1, powinny być w szczególności:</zdanie>
+              </p>
+              <punkt eId="DU/2026/232__art_30__ust_2__pkt_1" gd:GUID="04843dc9-35bf-4ce4-a789-e801364cd2f9">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="85f35594-18d5-4ca5-877d-2a02d8162b16" fragment="2" gd:fragmentGUID="c03aca60-0d77-4185-94f1-b088eab2e223">uchwalenie rocznego planu gospodarczego zarządu nieruchomością wspólną i opłat na pokrycie kosztów zarządu;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/232__art_30__ust_2__pkt_2" gd:GUID="a7893fd8-f6c3-47a3-b883-ad7a79ee5c23">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="85f35594-18d5-4ca5-877d-2a02d8162b16" fragment="3" gd:fragmentGUID="3290cb1c-e5ef-47bc-851b-f583ebe1de22">ocena pracy zarządu lub zarządcy, któremu zarząd nieruchomością wspólną powierzono w sposób określony w art. 18 ust. 1;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/232__art_30__ust_2__pkt_3" gd:GUID="3aad854f-982b-416c-9690-0178a65bbd2c">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="85f35594-18d5-4ca5-877d-2a02d8162b16" fragment="4" gd:fragmentGUID="4feed448-be0a-466e-80c1-3457ccb9c40b">sprawozdanie zarządu i podjęcie uchwały w przedmiocie udzielenia mu absolutorium.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/232__art_31" gd:GUID="ce5d874e-f981-47f4-abcd-d2a59cc62a92">
+            <nr>31</nr>
+            <nie-ztp-ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="95d9103c-abec-457e-83b0-8a32415910c2">
+              <p>
+                <zdanie nr="1" gd:zdGUID="61728d90-2d9e-40a8-b905-d77ab70a6382" fragment="1" gd:fragmentGUID="c344dbc9-5abf-41f4-b9cc-2b5e2fc09dbf">Zebrania ogółu właścicieli lokali:</zdanie>
+              </p>
+              <nie-ztp-litera eId="DU/2026/232__art_31__lit_a" gd:GUID="15085e67-6bbf-4a1c-a54a-18ee30680718">
+                <nr>a</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="61728d90-2d9e-40a8-b905-d77ab70a6382" fragment="2" gd:fragmentGUID="f2fa7f4e-4874-4190-8b6e-4a8ae833e0cb">mogą być także, w razie potrzeby, zwoływane przez zarząd lub zarządcę, któremu zarząd nieruchomością wspólną powierzono w sposób określony w art. 18 ust. 1,</zdanie>
+                </p>
+              </nie-ztp-litera>
+              <nie-ztp-litera eId="DU/2026/232__art_31__lit_b" gd:GUID="dffc2aea-6e3b-45bc-955e-f6e1310b8127">
+                <nr>b</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="61728d90-2d9e-40a8-b905-d77ab70a6382" fragment="3" gd:fragmentGUID="762f6304-d870-4e24-839e-c131876b93b1">zwoływane są na wniosek właścicieli lokali dysponujących co najmniej 1/10 udziałów w nieruchomości wspólnej przez zarząd lub zarządcę, któremu zarząd nieruchomością wspólną powierzono w sposób określony w art. 18 ust. 1.</zdanie>
+                </p>
+              </nie-ztp-litera>
+            </nie-ztp-ustep-n>
+          </artykul>
+          <artykul eId="DU/2026/232__art_32" gd:GUID="7f16dc5d-c556-4a23-90ab-049bc309937e">
+            <nr>32</nr>
+            <ustep eId="DU/2026/232__art_32__ust_1" gd:GUID="54d7f51f-f847-4f09-8002-1238c8cc1b8d">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="2f74c014-e310-431e-922c-33f645dfbeb4" fragment="1" gd:fragmentGUID="5dd36f0c-3b69-4aef-9828-def4f7e99fa6">O zebraniu ogółu właścicieli lokali zarząd lub zarządca, któremu zarząd nieruchomością wspólną powierzono w sposób określony w art. 18 ust. 1, zawiadamia każdego właściciela lokalu na piśmie przynajmniej na tydzień przed terminem zebrania.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/232__art_32__ust_2" gd:GUID="e9e65406-cc96-4fe9-8377-297030b9ca1a">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="fd3fc3f8-4c30-4fd4-9691-d7ed61f751e0" fragment="1" gd:fragmentGUID="f307532a-5637-47a5-afc0-3da3b36c7f64">W zawiadomieniu należy podać dzień, godzinę, miejsce i porządek obrad.</zdanie>
+                <zdanie nr="2" gd:zdGUID="1ab0bc72-e3d1-4ace-98dc-1542980eb207" fragment="1" gd:fragmentGUID="b1960d72-d1f4-4ccd-b840-7ab8f1ef5ffc">W wypadku zamierzonej zmiany we wzajemnych prawach i obowiązkach właścicieli lokali należy wskazać treść tej zmiany.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/232__art_32a" gd:GUID="f725414e-2003-4e4b-9109-c2a8e66e6f49">
+            <nr>32a</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="e309b099-0942-4b07-9539-44fa76de5534">
+              <p>
+                <zdanie nr="1" gd:zdGUID="3487f38e-e123-41b5-b50c-afbf38690c5e" fragment="1" gd:fragmentGUID="9a25b31f-3b05-4524-8b61-2c2871f2d604">Jeżeli grunt wchodzący w skład nieruchomości wspólnej nie spełnia wymogów przewidzianych dla działki budowlanej, uniemożliwiając prawidłowe i racjonalne korzystanie z budynków i urządzeń z nimi związanych, zarząd lub zarządca, któremu zarząd nieruchomością wspólną powierzono w sposób określony w art. 18 ust. 1, jest obowiązany przedstawić właścicielom lokali projekty uchwał w sprawie:</zdanie>
+              </p>
+              <punkt eId="DU/2026/232__art_32a__pkt_1" gd:GUID="ddb3c9fe-7253-4360-a16d-ea343b5992d4">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="3487f38e-e123-41b5-b50c-afbf38690c5e" fragment="2" gd:fragmentGUID="29ba8d39-1de4-4c33-8dee-6afc02eb591d">wyrażenia zgody na nabycie przyległych nieruchomości gruntowych umożliwiających spełnienie wymogów przewidzianych dla działek budowlanych;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/232__art_32a__pkt_2" gd:GUID="27210d20-ff60-4dda-a31c-1ae6766410ab">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="3487f38e-e123-41b5-b50c-afbf38690c5e" fragment="3" gd:fragmentGUID="2b8707c0-b846-424c-a03b-27955b8475f4"><odnosnik id-odnosnika="4" symbol="4" gd:GUID="6de3b346-1af8-40a5-9579-e0686fcd2723"><p><zdanie nr="1" gd:zdGUID="5c79b71d-3561-4a26-9149-59a623a418ff" fragment="1" gd:fragmentGUID="3f41f7d8-a6b1-41f5-b67b-b329437a6602">Ze zmianą wprowadzoną przez art. 2 pkt 2 ustawy, o której mowa w odnośniku 3.</zdanie></p></odnosnik> udzielenia zarządowi lub zarządcy, któremu zarząd nieruchomością wspólną powierzono w sposób określony w art. 18 ust. 1, pełnomocnictwa do wykonania odpowiednich, prawem przewidzianych, czynności zmierzających do nabycia przyległych nieruchomości gruntowych na rzecz właścicieli lokali.</zdanie>
+                </p>
+              </punkt>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2026/232__art_33" gd:GUID="90518971-0053-44f2-a36e-76a892680eee">
+            <nr>33</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="3051df1d-8b74-4f22-8d56-7e58220ffe72">
+              <p>
+                <zdanie nr="1" gd:zdGUID="e05348ac-9f63-408a-9b4a-11552ca770f4" fragment="1" gd:fragmentGUID="e749f889-5752-4a88-8990-dc6829cbcc6c">W razie powierzenia zarządu osobie fizycznej lub prawnej, w trybie przewidzianym w art. 18 ust. 1, w braku odmiennych postanowień umowy, stosuje się odpowiednio przepisy niniejszego rozdziału.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+        </oddzial-n>
+      </rozdzial>
+      <rozdzial eId="DU/2026/232__rozdz_5" gd:GUID="9311ddf9-5c71-444f-8b09-83f06048ffc0">
+        <naglowek-rozdzialu>
+          <nr>5</nr>
+          <p>Zmiany w przepisach obowiązujących, przepisy przejściowe i końcowe</p>
+        </naglowek-rozdzialu>
+        <oddzial-n brak-eid="jednostka-nieoznaczona" gd:GUID="1b7d7e9c-a38e-4a0e-843e-7f4c7f9bdbec">
+          <artykul eId="DU/2026/232__art_34" gd:GUID="5a772073-9103-4bbc-a35e-5f921bbeb5c5">
+            <nr />
+            <nr-od>34</nr-od>
+            <nr-do>38</nr-do>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="b98cd5aa-9770-4b67-9469-224f56658bdc">
+              <p>
+                <zdanie nr="1" gd:zdGUID="ef151f58-ba27-4d9c-aa40-ec7199e6f279" fragment="1" gd:fragmentGUID="c8c67152-23f3-4749-986e-c8c4f81e908b">(pominięte)</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2026/232__art_39" gd:GUID="7fe668d7-8479-4ec3-b0b1-7c777096c228">
+            <nr>39</nr>
+            <ustep eId="DU/2026/232__art_39__ust_1" gd:GUID="c19b8fe4-d8db-408b-9a68-69ba9feb9b0e">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="6d502a68-75bd-4968-b3f0-d11e6f303383" fragment="1" gd:fragmentGUID="30628af0-ab8d-463a-a186-728f51260c7b">(pominięty)</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/232__art_39__ust_2" gd:GUID="89f1e544-3fca-4217-92ae-d0703bfd4361">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="13d935c8-b14d-4884-b80d-87c93e107f76" fragment="1" gd:fragmentGUID="9d376263-c9d4-4453-9f8a-e2c994b6035f">Minister Sprawiedliwości, w drodze rozporządzenia, określa tryb egzekucji z lokali stanowiących odrębne nieruchomości.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/232__art_40" gd:GUID="e5f99a09-c676-46c0-8fee-4e6b60c50d66">
+            <nr>40</nr>
+            <ustep eId="DU/2026/232__art_40__ust_1" gd:GUID="416fadf7-76db-4cbd-8f6d-6ea1630c4c84">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="a4daaaeb-074b-40c6-b2e5-81827ca554db" fragment="1" gd:fragmentGUID="041e3c3a-f558-4b40-912e-ba75a8fac699">Państwowe lub komunalne jednostki organizacyjne, sprawujące na podstawie przepisów dotychczasowych zarząd nieruchomościami wspólnymi, są obowiązane zapewnić dla każdej z zarządzanych nieruchomości wspólnych ewidencję umożliwiającą najpóźniej od dnia 1 października 1994 r. ustalenie kosztów i przychodów dla każdej wspólnej nieruchomości oraz powiadomić współwłaścicieli, niepóźniej niż do dnia 30 listopada 1994 r., o zmianach, jakie wprowadza niniejsza ustawa co do sposobu zarządzania nieruchomością wspólną oraz co do ponoszenia jego kosztów.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/232__art_40__ust_2" gd:GUID="2e494b1c-8a9a-4a58-ae35-d6b6c9eedfb8">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="de908377-2b03-41c0-8b05-9a7b52ff9380" fragment="1" gd:fragmentGUID="909f4e61-fc0e-4655-abef-1b287e562518">Do czasu uregulowania tych spraw przez właścicieli do zarządu, o którym mowa w ust. 1, stosuje się odpowiednio przepisy niniejszej ustawy dotyczące zarządu zleconego przez właścicieli osobie fizycznej lub prawnej.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/232__art_41" gd:GUID="a8585832-a0cd-494d-a0d3-10a9ccf187fd">
+            <nr>41</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="983428ab-feb9-4033-85ee-3dbbf6134884">
+              <p>
+                <zdanie nr="1" gd:zdGUID="e1b459e8-6153-4cad-a220-e24208c9453b" fragment="1" gd:fragmentGUID="a58fcb45-42ff-4c5c-9d06-5cb8ada3d3fa">Ustawa wchodzi w życie z dniem 1 stycznia 1995 r., z wyjątkiem przepisu art. 40 ust. 1, który wchodzi w życie z dniem ogłoszenia<odnosnik id-odnosnika="5" symbol="5" gd:GUID="55db0632-c006-47ed-8179-5221a1bf3e98"><p><zdanie nr="1" gd:zdGUID="c12085a7-7454-4692-b112-ccddd7901367" fragment="1" gd:fragmentGUID="5db8cf9f-350c-46e6-b007-6b938cce6ea7">Ustawa została ogłoszona w dniu 27 lipca 1994 r.</zdanie></p></odnosnik>.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+        </oddzial-n>
+      </rozdzial>
+    </ustawa>
+  </obwieszczenie>
+</akt-prawny>

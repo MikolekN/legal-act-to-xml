@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <ustawa>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/1191</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>f2452fa9-191e-4dca-9e2c-86acec7730b7</gd:GUIDwersji>
+      <AdresISAP>WDU20250001191</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>1191</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 1191</AdresWyswietlany>
+      <Tytul>Ustawa z dnia 25 lipca 2025 r. o zmianie ustawy – Prawo bankowe oraz niektórych innych ustaw</Tytul>
+      <Rodzaj>USTAWA</Rodzaj>
+      <DataOgloszenia>2025-08-28</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-07-25</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2025-11-29_DU-2025-1191_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2025-11-29" warunek="po upływie 3 miesięcy od dnia ogłoszenia" podstawa="art. 6" zrodlo="https://eli.gov.pl/eli/DU/2025/1191" dowod="DU/2025/1191__art_6" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1191_domyslne.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2025-11-29_DU-2025-1191_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="d3d505d1-3e5b-4114-aae2-b412cf4390c2" rola="wydajacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Sejm">
+          <Nazwa>SEJM</Nazwa>
+        </Organ>
+        <Organ gd:GUID="1c6f81ac-ec9f-4d2d-b4ed-ddd81901b8e3" rola="podpisujacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Prezydent">
+          <Nazwa>Prezydent Rzeczypospolitej Polskiej</Nazwa>
+          <OrganPodpisujacy>Prezydent Rzeczypospolitej Polskiej</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>K.</imie> <nazwisko>Nawrocki</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Ustawa</rodzaj-aktu>
+    <data>z dnia 25 lipca 2025 r.</data>
+    <tytul>o zmianie ustawy – Prawo bankowe oraz niektórych innych ustaw<odnosnik id-odnosnika="1" symbol="1" gd:GUID="84e3d956-6648-4bff-96fb-5cc3629f6ef2"><p><zdanie nr="1" gd:zdGUID="ef98c206-622e-4cd4-a8d4-79309aaa66b0" fragment="1" gd:fragmentGUID="3d024a97-bff8-4ad2-84cd-b087788e12d8">Niniejszą ustawą zmienia się ustawy: ustawę z dnia 7 grudnia 2000 r. o funkcjonowaniu banków spółdzielczych, ich zrzeszaniu się i bankach zrzeszających, ustawę z dnia 5 listopada 2009 r. o spółdzielczych kasach oszczędnościowo-kredytowych oraz ustawę z dnia 24 września 2010 r. o ewidencji ludności.</zdanie></p></odnosnik></tytul>
+    <artykul eId="DU/2025/1191__art_1" gd:GUID="6b6ac34b-742d-4a55-83ee-90cf1276f102" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1191_domyslne.x" wejscie-w-zycie="2025-11-29">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="a7e6973a-ca00-4219-926a-bdcb6e4e82ec" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1191_domyslne.x" wejscie-w-zycie="2025-11-29">
+        <p>
+          <zdanie nr="1" gd:zdGUID="d09312cf-c66f-4f18-aee3-a45f5d0cd836" fragment="1" gd:fragmentGUID="0b28a070-2aaf-4531-859e-b20fed79f2b9" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1191_domyslne.x" wejscie-w-zycie="2025-11-29">W ustawie z dnia 29 sierpnia 1997 r. – Prawo bankowe (Dz. U. z 2024 r. poz. 1646, z późn. zm.<odnosnik id-odnosnika="2" symbol="2" gd:GUID="daddf72d-c269-491c-87ff-167240d19460"><p><zdanie nr="1" gd:zdGUID="a9707c55-da42-4208-9f9b-68024660999d" fragment="1" gd:fragmentGUID="a6b4c86b-40ff-4ff4-9894-f325aaefeb8e">Zmiany tekstu jednolitego wymienionej ustawy zostały ogłoszone w Dz. U. z 2024 r. poz. 1685 i 1863 oraz z 2025 r. poz. 146, 222, 525, 769, 820, 1069 i 1170.</zdanie></p></odnosnik>) wprowadza się następujące zmiany:</zdanie>
+        </p>
+        <punkt eId="DU/2025/1191__art_1__pkt_1" gd:GUID="c3a54da1-405a-4b6a-a5bc-1bd8e8e88bef" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1191_domyslne.x" wejscie-w-zycie="2025-11-29">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="d09312cf-c66f-4f18-aee3-a45f5d0cd836" fragment="2" gd:fragmentGUID="63e8bcb7-5c91-4618-a8d4-1e47f6309105" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1191_domyslne.x" wejscie-w-zycie="2025-11-29">w art. 59a ust. 6 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/1646" cudzyslowy="oba" gd:nowGUID="6bbb9714-29cf-47d7-b636-c9decdb65963" element-eId="DU/2024/1646__art_59a__ust_6" funkcja="zastap"><ustep eId="DU/2024/1646__art_59a__ust_6" gd:GUID="59bec05f-17d7-4882-9a60-7cbbf13ef2aa" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1191_domyslne.x" wejscie-w-zycie="2025-11-29"><nr>6</nr><p><zdanie nr="1" gd:zdGUID="14ba3d24-76e0-4a89-8cbb-00fcf7faa22a" fragment="1" gd:fragmentGUID="2ba4dbb9-05ab-4a7f-8f80-c57f6f83ee9a" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1191_domyslne.x" wejscie-w-zycie="2025-11-29">Z upływem 5 lat od dnia wydania ostatniej dyspozycji dotyczącej rachunku prowadzonego na podstawie umowy, o której mowa w ust. 1, bank jest obowiązany wystąpić o udostępnienie danych z rejestru Powszechnego Elektronicznego Systemu Ewidencji Ludności (PESEL) umożliwiających ustalenie, czy posiadacz rachunku żyje, a w przypadku jego śmierci bank może wystąpić do rejestru PESEL o udostępnienie informacji o dacie zgonu albo dacie znalezienia zwłok.</zdanie><zdanie nr="2" gd:zdGUID="c0745069-8c68-433a-bf4e-3b918cf0d8c4" fragment="1" gd:fragmentGUID="2cac60f4-0407-4cd8-a9d7-15af1d30e44e" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1191_domyslne.x" wejscie-w-zycie="2025-11-29">W przypadku gdy umowa przewiduje prowadzenie więcej niż jednego rachunku, termin, o którym mowa w zdaniu pierwszym, liczy się od dnia wydania ostatniej dyspozycji dotyczącej tych rachunków.</zdanie></p></ustep></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1191__art_1__pkt_2" gd:GUID="c65db3e3-50a0-46b8-a9fb-c61599bba50f" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1191_domyslne.x" wejscie-w-zycie="2025-11-29">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="d09312cf-c66f-4f18-aee3-a45f5d0cd836" fragment="3" gd:fragmentGUID="507a1650-3654-44bc-8cdb-8628c6dfd80f" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1191_domyslne.x" wejscie-w-zycie="2025-11-29">art. 59b otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/1646" cudzyslowy="oba" gd:nowGUID="8a1e3c22-fe0b-4b7d-87e7-52025989fdb9" element-eId="DU/2024/1646__art_59b" funkcja="zastap"><artykul eId="DU/2024/1646__art_59b" gd:GUID="16948552-9e3c-45f1-a6b4-41f693f49a9e" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1191_domyslne.x" wejscie-w-zycie="2025-11-29"><nr>59b</nr><ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="fefeaff9-b22e-4caa-8a97-191bfa63a7ad" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1191_domyslne.x" wejscie-w-zycie="2025-11-29"><p><zdanie nr="1" gd:zdGUID="d255778e-6e4d-4835-9ca3-026fe859171d" fragment="1" gd:fragmentGUID="c3c168a2-6f81-4497-b360-a480cf37cbc3" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1191_domyslne.x" wejscie-w-zycie="2025-11-29">Z upływem 3 miesięcy od dnia wygaśnięcia umowy rachunku bankowego, o której mowa w art. 59a, zawartej na czas oznaczony, w razie braku wcześniejszej dyspozycji wypłaty środków pieniężnych, bank jest obowiązany wystąpić o udostępnienie danych z rejestru PESEL umożliwiających ustalenie, czy posiadacz rachunku żyje, a w przypadku jego śmierci bank może wystąpić do rejestru PESEL o udostępnienie informacji o dacie zgonu albo dacie znalezienia zwłok.</zdanie><zdanie nr="2" gd:zdGUID="6583e906-0b21-495c-94fb-9f0ee4416b19" fragment="1" gd:fragmentGUID="7913269b-b295-489d-a72d-7a9449f53565" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1191_domyslne.x" wejscie-w-zycie="2025-11-29">Bank nie ma obowiązku wystąpienia o udostępnienie danych, jeżeli umowa przewiduje prowadzenie więcej niż jednego rachunku i posiadacz tych rachunków wydał w terminie, o którym mowa w zdaniu pierwszym, dyspozycję dotyczącą tych rachunków.</zdanie></p></ustep-n></artykul></cytat-strukt>.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2025/1191__art_2" gd:GUID="3fab74ff-7b00-43d6-8147-3bcb7f0fe72b" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1191_domyslne.x" wejscie-w-zycie="2025-11-29">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="d4d8289f-f240-4304-8972-e62cef03c90c" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1191_domyslne.x" wejscie-w-zycie="2025-11-29">
+        <p>
+          <zdanie nr="1" gd:zdGUID="54831210-44cf-4c52-8132-170336972b87" fragment="1" gd:fragmentGUID="2627bd2e-d44c-4fb9-b4f7-5fec3bd0c16f" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1191_domyslne.x" wejscie-w-zycie="2025-11-29">W ustawie z dnia 7 grudnia 2000 r. o funkcjonowaniu banków spółdzielczych, ich zrzeszaniu się i bankach zrzeszających (Dz. U. z 2025 r. poz. 265) po art. 10d dodaje się art. 10da w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2025/265" cudzyslowy="oba" gd:nowGUID="9a377649-37b5-42ef-a016-89580e0bcd11" element-eId="DU/2025/265__art_10d" funkcja="dodaj-po"><artykul eId="DU/2025/265__art_10da" gd:GUID="b1cd0c6e-314c-4b30-bcca-283a4a35bdba" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1191_domyslne.x" wejscie-w-zycie="2025-11-29"><nr>10da</nr><ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="bbff4ccb-c578-4a7a-9843-1d6e31cdf8e3" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1191_domyslne.x" wejscie-w-zycie="2025-11-29"><p><zdanie nr="1" gd:zdGUID="00bcde67-4639-4d72-b57c-dcec8dd8aa2a" fragment="1" gd:fragmentGUID="b5093d32-9361-45b5-b6d1-b287f89a0178" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1191_domyslne.x" wejscie-w-zycie="2025-11-29">Z upływem 5 lat od dnia dokonania przez członka banku spółdzielczego ostatniej czynności prawnej lub czynności faktycznej związanej z udziałem członkowskim bank spółdzielczy jest obowiązany wystąpić o udostępnienie danych z rejestru Powszechnego Elektronicznego Systemu Ewidencji Ludności (PESEL) umożliwiających ustalenie, czy członek banku spółdzielczego żyje, a w przypadku jego śmierci bank może wystąpić do rejestru PESEL o udostępnienie informacji o dacie zgonu albo dacie znalezienia zwłok.</zdanie></p></ustep-n></artykul></cytat-strukt>.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2025/1191__art_3" gd:GUID="3f197e54-2dad-42b6-a910-f2d5167b5626" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1191_domyslne.x" wejscie-w-zycie="2025-11-29">
+      <nr>3</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="b98fe133-ffff-4d22-b99a-902c07ce4b2a" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1191_domyslne.x" wejscie-w-zycie="2025-11-29">
+        <p>
+          <zdanie nr="1" gd:zdGUID="589c0951-b8dd-4305-a39d-50a8cdfc9e4f" fragment="1" gd:fragmentGUID="a2584bf1-8391-4ed1-b077-925e8dd97b2f" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1191_domyslne.x" wejscie-w-zycie="2025-11-29">W ustawie z dnia 5 listopada 2009 r. o spółdzielczych kasach oszczędnościowo-kredytowych (Dz. U. z 2025 r. poz. 379, 820, 1069 i 1170) wprowadza się następujące zmiany:</zdanie>
+        </p>
+        <punkt eId="DU/2025/1191__art_3__pkt_1" gd:GUID="8580e689-fc07-41fe-8801-a2345960037f" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1191_domyslne.x" wejscie-w-zycie="2025-11-29">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="589c0951-b8dd-4305-a39d-50a8cdfc9e4f" fragment="2" gd:fragmentGUID="1790d712-8ba9-41e8-8e39-1075a78e6740" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1191_domyslne.x" wejscie-w-zycie="2025-11-29">w art. 13a ust. 6 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2025/379" cudzyslowy="oba" gd:nowGUID="98df39ca-fca9-40e2-9bdd-5ccbc7d27aa4" element-eId="DU/2025/379__art_13a__ust_6" funkcja="zastap"><ustep eId="DU/2025/379__art_13a__ust_6" gd:GUID="c692313c-c8e0-4216-b3e3-b29f1d6522d8" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1191_domyslne.x" wejscie-w-zycie="2025-11-29"><nr>6</nr><p><zdanie nr="1" gd:zdGUID="7fb7a495-5bca-4b46-a1be-8845ff12b2f1" fragment="1" gd:fragmentGUID="f2b4ed2c-ee14-4e72-be41-95a1dd69de80" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1191_domyslne.x" wejscie-w-zycie="2025-11-29">Z upływem 5 lat od dnia wydania przez członka kasy ostatniej dyspozycji dotyczącej rachunku kasa jest obowiązana wystąpić o udostępnienie danych z rejestru Powszechnego Elektronicznego Systemu Ewidencji Ludności (PESEL) umożliwiających ustalenie, czy członek kasy żyje, a w przypadku jego śmierci kasa może wystąpić do rejestru PESEL o udostępnienie informacji o dacie zgonu albo dacie znalezienia zwłok.</zdanie></p></ustep></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1191__art_3__pkt_2" gd:GUID="28ac6355-961c-476b-93dc-da95b34d8242" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1191_domyslne.x" wejscie-w-zycie="2025-11-29">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="589c0951-b8dd-4305-a39d-50a8cdfc9e4f" fragment="3" gd:fragmentGUID="e0468323-26c1-442f-abf6-fe8ba55256d8" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1191_domyslne.x" wejscie-w-zycie="2025-11-29">art. 13b otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2025/379" cudzyslowy="oba" gd:nowGUID="ec5d5f16-3b05-4579-aa44-55cd46d38420" element-eId="DU/2025/379__art_13b" funkcja="zastap"><artykul eId="DU/2025/379__art_13b" gd:GUID="53c1faba-17b3-4af6-8c26-cb8ab513c504" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1191_domyslne.x" wejscie-w-zycie="2025-11-29"><nr>13b</nr><ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="6a114103-5005-4fc1-b4d6-5ce9b5763e69" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1191_domyslne.x" wejscie-w-zycie="2025-11-29"><p><zdanie nr="1" gd:zdGUID="35c354cc-d3e2-41be-90bd-284c0b44d469" fragment="1" gd:fragmentGUID="52841068-1c87-4ee9-9c5f-e52608f47b81" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1191_domyslne.x" wejscie-w-zycie="2025-11-29">Z upływem 3 miesięcy od dnia wygaśnięcia umowy imiennego rachunku członka kasy, o którym mowa w art. 28, zawartej na czas oznaczony, w razie braku wcześniejszej dyspozycji wypłaty środków pieniężnych, kasa jest obowiązana wystąpić o udostępnienie danych z rejestru PESEL umożliwiających ustalenie, czy członek kasy żyje, a w przypadku jego śmierci kasa może wystąpić do rejestru PESEL o udostępnienie informacji o dacie zgonu albo dacie znalezienia zwłok.</zdanie></p></ustep-n></artykul></cytat-strukt>.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2025/1191__art_4" gd:GUID="fc575dba-1d02-4085-9a5d-fe26429f2090" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1191_domyslne.x" wejscie-w-zycie="2025-11-29">
+      <nr>4</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="c39e68b9-a6fa-4b57-b915-97992e1d36bf" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1191_domyslne.x" wejscie-w-zycie="2025-11-29">
+        <p>
+          <zdanie nr="1" gd:zdGUID="1e152943-8627-4b21-9447-4e71e6dcdb37" fragment="1" gd:fragmentGUID="06fe8371-be52-417b-8881-13dca8d19f70" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1191_domyslne.x" wejscie-w-zycie="2025-11-29">W ustawie z dnia 24 września 2010 r. o ewidencji ludności (Dz. U. z 2025 r. poz. 274, 1006 i 1176) wprowadza się następujące zmiany:</zdanie>
+        </p>
+        <punkt eId="DU/2025/1191__art_4__pkt_1" gd:GUID="877df2cc-7601-4a8f-af8c-6d05267cbacb" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1191_domyslne.x" wejscie-w-zycie="2025-11-29">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="1e152943-8627-4b21-9447-4e71e6dcdb37" fragment="2" gd:fragmentGUID="6f5bbb00-7c34-4626-adef-a2e193aa8755" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1191_domyslne.x" wejscie-w-zycie="2025-11-29">w art. 49 po ust. 2a dodaje się ust. 2aa w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2025/274" cudzyslowy="oba" gd:nowGUID="1b4087d9-ade0-433f-a84f-bcc4f07f911a" element-eId="DU/2025/274__art_49__ust_2a" funkcja="dodaj-po"><ustep eId="DU/2025/274__art_49__ust_2aa" gd:GUID="49084b67-0d61-43f8-9fda-965c73a87525" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1191_domyslne.x" wejscie-w-zycie="2025-11-29"><nr>2aa</nr><p><zdanie nr="1" gd:zdGUID="3d2dc1b2-b5f5-440c-8f77-f84af58b5581" fragment="1" gd:fragmentGUID="7e9a16d1-d601-45b1-977c-459a103f9f90" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1191_domyslne.x" wejscie-w-zycie="2025-11-29">Podmiotom, o których mowa w art. 46 ust. 2 pkt 1, będącym bankami albo spółdzielczymi kasami oszczędnościowo-kredytowymi, po wykazaniu interesu faktycznego, udostępnia się, w sposób i na warunkach określonych w ust. 1, dane potwierdzające datę zgonu albo datę znalezienia zwłok.</zdanie></p></ustep></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1191__art_4__pkt_2" gd:GUID="88568f62-4b21-47e6-a656-0fa203e587f8" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1191_domyslne.x" wejscie-w-zycie="2025-11-29">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="1e152943-8627-4b21-9447-4e71e6dcdb37" fragment="3" gd:fragmentGUID="930ece6e-fe1f-4972-9db1-be9481f31c55" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1191_domyslne.x" wejscie-w-zycie="2025-11-29">w art. 51 w ust. 2:</zdanie>
+          </p>
+          <litera eId="DU/2025/1191__art_4__pkt_2__lit_a" gd:GUID="95f6b53f-5961-45cd-8447-dbd2a92d3488" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1191_domyslne.x" wejscie-w-zycie="2025-11-29">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="1e152943-8627-4b21-9447-4e71e6dcdb37" fragment="4" gd:fragmentGUID="49c2909d-676f-463b-b64b-cfa7611eda3d" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1191_domyslne.x" wejscie-w-zycie="2025-11-29"><now:zamien-tekst stary-tekst="art. 49 ust. 2 i 2a" nowy-tekst="art. 49 ust. 2–2aa" element-eId="DU/2025/274__art_51__ust_2__pkt_1" akt="https://eli.gov.pl/eli/DU/2025/274" gd:nowGUID="c282eb4b-0bef-44f9-939f-326aac93b437" />w pkt 1 wyrazy „art. 49 ust. 2 i 2a” zastępuje się wyrazami „art. 49 ust. 2–2aa”,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1191__art_4__pkt_2__lit_b" gd:GUID="748c3326-7779-4eb9-8145-0af1c8528d00" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1191_domyslne.x" wejscie-w-zycie="2025-11-29">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="1e152943-8627-4b21-9447-4e71e6dcdb37" fragment="5" gd:fragmentGUID="e332d0ab-2470-4bdb-92fb-0c79ff907099" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1191_domyslne.x" wejscie-w-zycie="2025-11-29"><now:zamien-tekst stary-tekst="art. 49 ust. 2 i 2a" nowy-tekst="art. 49 ust. 2–2aa" element-eId="DU/2025/274__art_51__ust_2__pkt_2" akt="https://eli.gov.pl/eli/DU/2025/274" gd:nowGUID="fb2812fd-9d56-4be4-afc7-34915c860841" />w pkt 2 wyrazy „art. 49 ust. 2 i 2a” zastępuje się wyrazami „art. 49 ust. 2–2aa”;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2025/1191__art_4__pkt_3" gd:GUID="e14e4e26-efdf-4353-ac97-61fe357e2daa" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1191_domyslne.x" wejscie-w-zycie="2025-11-29">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="1e152943-8627-4b21-9447-4e71e6dcdb37" fragment="6" gd:fragmentGUID="2680427d-9405-4f63-a47d-5f4844e0d832" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1191_domyslne.x" wejscie-w-zycie="2025-11-29"><now:zamien-tekst stary-tekst="o których mowa w art. 49 ust. 2 i 2a" nowy-tekst="o których mowa w art. 49 ust. 2–2aa" element-eId="DU/2025/274__art_52__czw" akt="https://eli.gov.pl/eli/DU/2025/274" gd:nowGUID="bfe0b46c-fb4d-4388-8dd2-03cd0b49c104" />w art. 52 w części wspólnej wyrazy „o których mowa w art. 49 ust. 2 i 2a” zastępuje się wyrazami „o których mowa w art. 49 ust. 2–2aa”.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2025/1191__art_5" gd:GUID="afd9d55f-ba1c-4d39-bacf-37d73b3fa6d4" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1191_domyslne.x" wejscie-w-zycie="2025-11-29">
+      <nr>5</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="1e3db4cb-c68c-4daa-b24a-2a3248a9dccb" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1191_domyslne.x" wejscie-w-zycie="2025-11-29">
+        <p>
+          <zdanie nr="1" gd:zdGUID="3e4ebef7-f9a4-4354-a1a7-c7a06ae7b174" fragment="1" gd:fragmentGUID="016fc19a-0ad5-41e3-b078-eacca57ddfae" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1191_domyslne.x" wejscie-w-zycie="2025-11-29">Bank i spółdzielcza kasa oszczędnościowo-kredytowa posiadające w dniu wejścia w życie niniejszej ustawy dostęp do danych na podstawie decyzji, o której mowa w art. 51 ust. 2 pkt 1 ustawy zmienianej w art. 4, w brzmieniu dotychczasowym, uzyskują dostęp do danych określonych w art. 49 ust. 2aa ustawy zmienianej w art. 4 bez konieczności składania pisemnego wniosku do ministra właściwego do spraw informatyzacji.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2025/1191__art_6" gd:GUID="083b8fc8-dfb8-4392-a419-600badad89ff" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1191_domyslne.x" wejscie-w-zycie="2025-11-29">
+      <nr>6</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="4feb624d-6aa1-486d-aadf-0dfcaac127d8" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1191_domyslne.x" wejscie-w-zycie="2025-11-29">
+        <p>
+          <zdanie nr="1" gd:zdGUID="5f37f82e-0b48-4bb7-a210-417e6fd00790" fragment="1" gd:fragmentGUID="9ec8eedd-dcb8-474b-b96f-1b3b97e472fa" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1191_domyslne.x" wejscie-w-zycie="2025-11-29">Ustawa wchodzi w życie po upływie 3 miesięcy od dnia ogłoszenia.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <organ-podpisujacy>Prezydent Rzeczypospolitej Polskiej: <i><osoba podpisujacy="true" gd:osobaGUID="a5e3bcbd-f2ea-45ec-aa1d-906b4fd2cda6"><imie>K.</imie> <nazwisko>Nawrocki</nazwisko></osoba></i></organ-podpisujacy>
+  </ustawa>
+</akt-prawny>

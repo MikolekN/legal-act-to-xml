@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <rozporzadzenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/1404</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>20f7637e-43e6-44a6-8f4d-a36893bcf265</gd:GUIDwersji>
+      <AdresISAP>WDU20250001404</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>1404</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 1404</AdresWyswietlany>
+      <Tytul>Rozporządzenie Ministra Finansów i Gospodarki z dnia 12 października 2025 r. w sprawie ustalenia oraz przekazania dotacji z budżetu państwa gminie uzdrowiskowej</Tytul>
+      <Rodzaj>ROZP</Rodzaj>
+      <DataOgloszenia>2025-10-17</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-10-12</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2025-11-01_DU-2025-1404_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2025-11-01" warunek="po upływie 14 dni od dnia ogłoszenia" podstawa="§ 6" zrodlo="https://eli.gov.pl/eli/DU/2025/1404" dowod="DU/2025/1404__art_6" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2025-11-01_DU-2025-1404_domyslne.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2025-11-01_DU-2025-1404_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="17726301-aa3f-4a4b-927f-078fa733a77c" rola="wydajacy">
+          <Nazwa>Minister Finansów i Gospodarki</Nazwa>
+          <OrganPodpisujacy>Minister Finansów i Gospodarki</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>A.</imie> <nazwisko>Domański</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Rozporządzenie</rodzaj-aktu>
+    <autor-aktu>Ministra Finansów i Gospodarki<odnosnik id-odnosnika="1" symbol="1" gd:GUID="ca91d90d-cc5f-4b84-9cf3-c5c0456309e0"><p><zdanie nr="1" gd:zdGUID="a0c04401-c012-483e-8583-9d0c58763b6f" fragment="1" gd:fragmentGUID="cbb65480-0182-4ee2-a6b3-3e5866d68036">Minister Finansów i Gospodarki kieruje działem administracji rządowej – finanse publiczne, na podstawie § 1 ust. 2 pkt 3 rozporządzenia Prezesa Rady Ministrów z dnia 25 lipca 2025 r. w sprawie szczegółowego zakresu działania Ministra Finansów i Gospodarki (Dz. U. poz. 997).</zdanie></p></odnosnik></autor-aktu>
+    <data>z dnia 12 października 2025 r.</data>
+    <tytul>w sprawie ustalenia oraz przekazania dotacji z budżetu państwa gminie uzdrowiskowej</tytul>
+    <podstawa-prawna>Na podstawie art. 49 ust. 2 ustawy z dnia 28 lipca 2005 r. o lecznictwie uzdrowiskowym, uzdrowiskach i obszarach ochrony uzdrowiskowej oraz o gminach uzdrowiskowych (Dz. U. z 2025 r. poz. 1135) zarządza się, co następuje:</podstawa-prawna>
+    <paragraf eId="DU/2025/1404__art_1" gd:GUID="2a42e3c9-f248-4afb-b187-cdd89d68c804" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-01_DU-2025-1404_domyslne.x" wejscie-w-zycie="2025-11-01">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="25a6b51d-89de-4106-b6a9-ac6404e25c50" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-01_DU-2025-1404_domyslne.x" wejscie-w-zycie="2025-11-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="d1f4fd3a-028c-4c82-ab51-8970b6b5343e" fragment="1" gd:fragmentGUID="43d689ae-7267-4688-a982-d64367b40f0f" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-01_DU-2025-1404_domyslne.x" wejscie-w-zycie="2025-11-01">Rozporządzenie określa tryb i terminy ustalenia oraz przekazania dotacji z budżetu państwa gminie uzdrowiskowej realizującej zadania własne związane z zachowaniem funkcji leczniczych uzdrowiska, o których mowa w art. 46 ustawy z dnia 28 lipca 2005 r. o lecznictwie uzdrowiskowym, uzdrowiskach i obszarach ochrony uzdrowiskowej oraz o gminach uzdrowiskowych, zwanej dalej „gminą uzdrowiskową”.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2025/1404__art_2" gd:GUID="0b9d72db-4f0d-449c-84f3-c2f24b5696d5" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-01_DU-2025-1404_domyslne.x" wejscie-w-zycie="2025-11-01">
+      <nr>2</nr>
+      <ustep eId="DU/2025/1404__art_2__ust_1" gd:GUID="0fa6efd1-b1d6-4f4b-8a15-58198adb5a0c" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-01_DU-2025-1404_domyslne.x" wejscie-w-zycie="2025-11-01">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="a7116362-f701-4243-88ee-a3aa502dc796" fragment="1" gd:fragmentGUID="41bdb8eb-8d39-4bcf-9e93-4fa6d86aa06e" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-01_DU-2025-1404_domyslne.x" wejscie-w-zycie="2025-11-01">Gmina uzdrowiskowa składa wniosek o dotację z budżetu państwa na realizację zadań własnych związanych z zachowaniem funkcji leczniczych uzdrowiska, o których mowa w art. 46 ustawy z dnia 28 lipca 2005 r. o lecznictwie uzdrowiskowym, uzdrowiskach i obszarach ochrony uzdrowiskowej oraz o gminach uzdrowiskowych, zwany dalej „wnios- kiem”, do właściwego wojewody, w terminie do dnia 31 marca roku budżetowego.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/1404__art_2__ust_2" gd:GUID="a49cdab7-ab71-40d9-9c2e-50b993739f59" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-01_DU-2025-1404_domyslne.x" wejscie-w-zycie="2025-11-01">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="3ca32a19-5f64-471e-9164-c1863b73ef11" fragment="1" gd:fragmentGUID="2ba7a971-e1db-4f4c-b9ad-5786a234c0d4" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-01_DU-2025-1404_domyslne.x" wejscie-w-zycie="2025-11-01">Wniosek zawiera:</zdanie>
+        </p>
+        <punkt eId="DU/2025/1404__art_2__ust_2__pkt_1" gd:GUID="12141498-1fb3-41f0-a41f-471c72a566d5" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-01_DU-2025-1404_domyslne.x" wejscie-w-zycie="2025-11-01">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="3ca32a19-5f64-471e-9164-c1863b73ef11" fragment="2" gd:fragmentGUID="82ff0562-1eeb-4344-99a9-465f84810156" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-01_DU-2025-1404_domyslne.x" wejscie-w-zycie="2025-11-01">nazwę i lokalizację gminy uzdrowiskowej oraz kod TERYT;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1404__art_2__ust_2__pkt_2" gd:GUID="8bad7c6c-6f16-4edb-a8b1-882081bc1de5" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-01_DU-2025-1404_domyslne.x" wejscie-w-zycie="2025-11-01">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="3ca32a19-5f64-471e-9164-c1863b73ef11" fragment="3" gd:fragmentGUID="bd2bdd1a-9bf5-440a-a929-f675ba833908" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-01_DU-2025-1404_domyslne.x" wejscie-w-zycie="2025-11-01">stawkę opłaty uzdrowiskowej, obowiązującą w roku bazowym;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1404__art_2__ust_2__pkt_3" gd:GUID="a9904a4b-0819-4e7e-97c2-5ca65517d8b3" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-01_DU-2025-1404_domyslne.x" wejscie-w-zycie="2025-11-01">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="3ca32a19-5f64-471e-9164-c1863b73ef11" fragment="4" gd:fragmentGUID="825f79e6-2ee3-4a6b-8298-2795179569b5" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-01_DU-2025-1404_domyslne.x" wejscie-w-zycie="2025-11-01">liczbę osobodni, za które pobrano opłatę uzdrowiskową w roku bazowym;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1404__art_2__ust_2__pkt_4" gd:GUID="376a65e8-3243-4ed5-a459-7ac001488ac0" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-01_DU-2025-1404_domyslne.x" wejscie-w-zycie="2025-11-01">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="3ca32a19-5f64-471e-9164-c1863b73ef11" fragment="5" gd:fragmentGUID="86f808a7-7685-4492-9e4a-d48733eac8ca" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-01_DU-2025-1404_domyslne.x" wejscie-w-zycie="2025-11-01">wysokość wpływów z tytułu opłaty uzdrowiskowej pobranej w roku bazowym według stanu na dzień 31 grudnia roku bazowego;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1404__art_2__ust_2__pkt_5" gd:GUID="10c2e852-f73e-4922-b063-340cddc8eed4" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-01_DU-2025-1404_domyslne.x" wejscie-w-zycie="2025-11-01">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="3ca32a19-5f64-471e-9164-c1863b73ef11" fragment="6" gd:fragmentGUID="9b5167cc-cc18-493f-b5b8-ef64233894c3" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-01_DU-2025-1404_domyslne.x" wejscie-w-zycie="2025-11-01">podpis wójta (burmistrza, prezydenta miasta) oraz skarbnika (głównego księgowego).</zdanie>
+          </p>
+        </punkt>
+      </ustep>
+      <ustep eId="DU/2025/1404__art_2__ust_3" gd:GUID="99942a03-a292-4b19-b028-af7f34ae9286" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-01_DU-2025-1404_domyslne.x" wejscie-w-zycie="2025-11-01">
+        <nr>3</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="72e4f961-eff6-413b-9c21-a74fe29b2c83" fragment="1" gd:fragmentGUID="1fff5406-eff2-41a2-8d1c-ddfdd784e34d" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-01_DU-2025-1404_domyslne.x" wejscie-w-zycie="2025-11-01">Wzór wniosku określa załącznik do rozporządzenia.</zdanie>
+        </p>
+      </ustep>
+    </paragraf>
+    <paragraf eId="DU/2025/1404__art_3" gd:GUID="470e9498-c7d8-48b4-8117-a206b92e1ceb" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-01_DU-2025-1404_domyslne.x" wejscie-w-zycie="2025-11-01">
+      <nr>3</nr>
+      <ustep eId="DU/2025/1404__art_3__ust_1" gd:GUID="476ec484-3746-4e40-b51d-e47117b89e0b" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-01_DU-2025-1404_domyslne.x" wejscie-w-zycie="2025-11-01">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="5940dfae-5c96-4875-97b6-162804e34f64" fragment="1" gd:fragmentGUID="306ea879-55de-490f-89df-bb6d6e9666ea" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-01_DU-2025-1404_domyslne.x" wejscie-w-zycie="2025-11-01">Wojewoda sprawdza poprawność wniosku złożonego przez gminę uzdrowiskową.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/1404__art_3__ust_2" gd:GUID="ebb9dbdb-948d-476d-a2ad-651b9e6f39de" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-01_DU-2025-1404_domyslne.x" wejscie-w-zycie="2025-11-01">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="83680b0c-09b6-4094-8b5d-2ac4a648a74b" fragment="1" gd:fragmentGUID="a2ad5bee-3342-486f-b4a5-0ac37af18d3d" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-01_DU-2025-1404_domyslne.x" wejscie-w-zycie="2025-11-01">W przypadku stwierdzenia we wniosku braków formalnych lub błędów, w tym błędów rachunkowych, wojewoda wzywa gminę uzdrowiskową do ich usunięcia w wyznaczonym terminie, nie krótszym niż 7 dni od dnia otrzymania wezwania.</zdanie>
+        </p>
+      </ustep>
+    </paragraf>
+    <paragraf eId="DU/2025/1404__art_4" gd:GUID="3965e16b-501a-4e03-9ecf-97f8f69deb4b" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-01_DU-2025-1404_domyslne.x" wejscie-w-zycie="2025-11-01">
+      <nr>4</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="7bf7df54-756d-4fab-afa8-b786dd73c3c9" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-01_DU-2025-1404_domyslne.x" wejscie-w-zycie="2025-11-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="cbf4b7ec-b9b9-46cd-8a95-7e1bdcce4f43" fragment="1" gd:fragmentGUID="b94bc2e7-7ad4-46a8-9015-4074f6e92ffb" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-01_DU-2025-1404_domyslne.x" wejscie-w-zycie="2025-11-01">W terminie do dnia 31 sierpnia roku budżetowego wojewoda, na podstawie wniosku złożonego w terminie, o którym mowa w § 2 ust. 1, ustala kwotę dotacji z budżetu państwa i przekazuje ją w tym terminie na rachunek budżetu gminy uzdrowiskowej.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2025/1404__art_5" gd:GUID="d7011702-baeb-4bb6-96ce-c7bb2d0b3ac0" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-01_DU-2025-1404_domyslne.x" wejscie-w-zycie="2025-11-01">
+      <nr>5</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="d80cffcb-5a01-4f2c-a19c-7e2c65e2b61e" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-01_DU-2025-1404_domyslne.x" wejscie-w-zycie="2025-11-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="7340d980-d6b1-4a4d-a107-7e78e951c2af" fragment="1" gd:fragmentGUID="8b4c69ab-131c-40ce-a676-75fccafc5e60" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-01_DU-2025-1404_domyslne.x" wejscie-w-zycie="2025-11-01">Traci moc rozporządzenie Ministra Finansów z dnia 9 czerwca 2006 r. w sprawie trybu i terminów ustalenia oraz przekazania dotacji z budżetu państwa gminie uzdrowiskowej (Dz. U. poz. 705).</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2025/1404__art_6" gd:GUID="4b2b7940-a25b-4287-8aab-97db1476d1a1" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-01_DU-2025-1404_domyslne.x" wejscie-w-zycie="2025-11-01">
+      <nr>6</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="b7828114-23ff-4ac7-ae46-171714b43e42" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-01_DU-2025-1404_domyslne.x" wejscie-w-zycie="2025-11-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="3252634b-e3d8-46c4-883c-0d3d883cca4b" fragment="1" gd:fragmentGUID="fe752e2b-b18b-4f6d-8ed8-39f379ba015f" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-01_DU-2025-1404_domyslne.x" wejscie-w-zycie="2025-11-01">Rozporządzenie wchodzi w życie po upływie 14 dni od dnia ogłoszenia.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <organ-podpisujacy>Minister Finansów i Gospodarki: <i><osoba podpisujacy="true" gd:osobaGUID="dd5c949f-c0fa-42c3-97a0-c6182933b2c7"><imie>A.</imie> <nazwisko>Domański</nazwisko></osoba></i></organ-podpisujacy>
+    <zalacznik eId="DU/2025/1404__zal_1" gd:GUID="fdb93964-60ca-4288-baf7-0ab2ef326fa7">
+      <zalacznik-do gd:GUID="2b919619-4479-4816-9d54-73a94ee271d6">Załącznik do rozporządzenia Ministra Finansów i Gospodarki z dnia 12 października 2025 r. (Dz. U. poz. 1404)</zalacznik-do>
+      <tytul-zalacznika gd:GUID="cc41e3d9-4c42-4942-89a2-a86256755db2">WZÓR wniosek o dotację z budżetu państwa na realizację zadań własnych związanych z zachowaniem funkcji leczniczych uzdrowiska, o których mowa w art. 46 ustawy z dnia 28 lipca 2005 r. o lecznictwie uzdrowiskowym, uzdrowiskach i obszarach ochrony uzdrowiskowej oraz o gminach uzdrowiskowych</tytul-zalacznika>
+      <segment-zalacznika gd:GUID="ce6d76dc-c3cb-4a09-a8d0-d95509d87ee6" orientacja="pionowa">
+        <tabela gd:GUID="a4ab867c-09cf-4fd9-a520-330a4f630d5d">
+          <tbody>
+            <tr gd:GUID="3854f420-4ad0-4450-9c65-4d753c45024a">
+              <td colspan="2" gd:GUID="8a224d83-b26c-4f14-87ab-5a803ff6c604">
+                <tekst-zwykly gd:GUID="7e8a802f-7413-432e-8e06-05d4bca301c0">Pieczęć nagłówkowa organu gminy uzdrowiskowej składającej wniosek (wójta / burmistrza / prezydenta miasta)</tekst-zwykly>
+              </td>
+              <td colspan="2" gd:GUID="2055f45f-242f-491c-a2c3-d05768ca4014">
+                <tekst-zwykly gd:GUID="f94fac19-ccf3-4e71-bd25-67f1c43feb5f">Adresat:</tekst-zwykly>
+                <tekst-zwykly gd:GUID="ddaa2458-37d1-42c7-8b66-4ce97ba13c85">Wojewoda .......................................................</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="c2b34c6e-a425-4ee2-b349-9f547a4ced38">
+              <td colspan="3" gd:GUID="1219f6f6-fcb9-41b5-9d89-5ae5e1e245db">
+                <tekst-zwykly gd:GUID="7e93ead7-cf9c-43ae-994e-94eecbf364e0">Nazwa i lokalizacja gminy uzdrowiskowej</tekst-zwykly>
+              </td>
+              <td gd:GUID="6256a71c-2820-492f-a4bb-b32f0d1f61f3">
+                <tekst-zwykly gd:GUID="985612a5-c98c-4eaf-80db-c4176826e7b6">Kod TERYT</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="f47d6c7a-6cc6-4b9f-a2bc-202c7bf6bc3c">
+              <td gd:GUID="fe76194c-647d-4d34-9e01-de8795659fc5">
+                <tekst-zwykly gd:GUID="6cf9e769-ba63-45bf-87c9-9db58b30ca32">Gmina</tekst-zwykly>
+              </td>
+              <td colspan="2" gd:GUID="7a58aa06-4179-4986-8c2a-23217d7f3b77">
+                <tekst-zwykly gd:GUID="5e269108-feaa-4f3b-a634-723ac1278afc" />
+              </td>
+              <td rowspan="3" gd:GUID="a2ef2928-07e6-4c5f-a6e5-9756d5e1d258">
+                <tekst-zwykly gd:GUID="8cd49565-aa5a-4a25-9e37-0e4364168fdb" />
+              </td>
+            </tr>
+            <tr gd:GUID="774c7ba8-6841-4d38-b411-227ebd87fb4f">
+              <td gd:GUID="9d067de7-4a04-4cc3-b037-22f732a50e1f">
+                <tekst-zwykly gd:GUID="7fed2d6d-025f-4e42-8806-1db4e3e76ad0">Powiat</tekst-zwykly>
+              </td>
+              <td colspan="2" gd:GUID="49c120ea-17ac-4ffa-8ea8-3a5c30e7f227">
+                <tekst-zwykly gd:GUID="be515a88-c72b-4055-b054-742f6b2ef45e" />
+              </td>
+            </tr>
+            <tr gd:GUID="6b4ef7cc-9b63-4979-8e1f-74e7997b3a25">
+              <td gd:GUID="36e0f862-6862-449e-a2c7-4a79ba9ec56f">
+                <tekst-zwykly gd:GUID="7fa94b56-fd68-4b0f-a8ab-10add6ae7ec8">Województwo</tekst-zwykly>
+              </td>
+              <td colspan="2" gd:GUID="13379a82-fd8c-4c39-a033-43de35f1fc45">
+                <tekst-zwykly gd:GUID="c076cbd6-989b-418d-b772-950c4637666c" />
+              </td>
+            </tr>
+            <tr gd:GUID="ca66241b-c0a2-4b1d-98dd-d7f4267558ad">
+              <td colspan="3" gd:GUID="4587629f-e47e-4fb3-a6d2-1784236b3670">
+                <tekst-zwykly gd:GUID="b560aba4-540e-4739-9b17-9f3b7d95baf7">A. Stawka opłaty uzdrowiskowej obowiązująca w roku .............*</tekst-zwykly>
+              </td>
+              <td gd:GUID="590b971e-b10f-456c-a068-f641acc193da">
+                <tekst-zwykly gd:GUID="3a0dc7b7-8a21-4865-89ba-66f484b6c55d">................... zł**</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="613fdc06-da82-453f-b868-e23f14cfbccc">
+              <td colspan="3" gd:GUID="28dde38e-d3d2-4bd5-8752-883286fec597">
+                <tekst-zwykly gd:GUID="58a0305e-00ec-42b4-a763-fd1820f11b2e">B. Liczba osobodni, za które pobrano opłatę uzdrowiskową w roku .............*</tekst-zwykly>
+              </td>
+              <td gd:GUID="8e80127c-c1b1-4e35-b0ab-f6ed448d791d">
+                <tekst-zwykly gd:GUID="3ce1ba70-11e2-4930-ab3a-babf00fbb8fa">......................***</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="70c1812c-55b6-4eb1-a964-9ebdaf50342a">
+              <td colspan="3" gd:GUID="543017f1-b4d6-4ac3-80d3-6870934d5931">
+                <tekst-zwykly gd:GUID="217441e9-7369-4c78-8741-d9da8134bee4">Wysokość wpływów z tytułu opłaty uzdrowiskowej pobranej w roku .............* według stanu na dzień 31 grudnia ............. r.* (AxB)</tekst-zwykly>
+              </td>
+              <td gd:GUID="86fe39e2-914d-4b6e-9d90-ece092ed5126">
+                <tekst-zwykly gd:GUID="6d456586-e080-4f48-9a7b-ec001d678e6e">................... zł</tekst-zwykly>
+              </td>
+            </tr>
+          </tbody>
+        </tabela>
+        <tekst-zwykly gd:GUID="e9624d8a-a4b2-4034-8fdf-8ce30cd67211">..................................................... ......................................................</tekst-zwykly>
+        <tekst-zwykly gd:GUID="d43514b6-5332-45af-a68a-93120f878dcc">data i podpis data i podpis</tekst-zwykly>
+        <tekst-zwykly gd:GUID="958e10e1-fb3e-4dfb-99a4-d2439b73ac7d">(skarbnika / głównego księgowego) (wójta / burmistrza / prezydenta miasta)</tekst-zwykly>
+        <tekst-zwykly gd:GUID="c9d6a036-2c40-4431-999a-a43bbcb2cb32">* Należy wskazać rok bazowy w rozumieniu ustawy z dnia 1 października 2024 r. o dochodach jednostek samorządu terytorialnego (Dz. U. poz. 1572, z późn. zm.).</tekst-zwykly>
+        <tekst-zwykly gd:GUID="1787edd4-be27-47dd-970e-a19c9a1428af">** W przypadku zmiany stawki opłaty uzdrowiskowej w danym roku należy wskazać odrębnie każdą stawkę.</tekst-zwykly>
+        <tekst-zwykly gd:GUID="e404b79b-52be-4aed-8360-81846183e5bb">*** W przypadku zmiany stawki opłaty uzdrowiskowej w danym roku należy wskazać liczbę osobodni odrębnie dla każdej stawki.</tekst-zwykly>
+      </segment-zalacznika>
+    </zalacznik>
+  </rozporzadzenie>
+</akt-prawny>

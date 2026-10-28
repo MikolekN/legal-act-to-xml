@@ -1,0 +1,811 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0" xmlns:mml="http://www.w3.org/1998/Math/MathML">
+  <ustawa>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/159</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>20dae0d0-bf60-44a3-9803-50390cba9d89</gd:GUIDwersji>
+      <AdresISAP>WDU20250000159</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>159</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 159</AdresWyswietlany>
+      <Tytul>Ustawa z dnia 24 stycznia 2025 r. o zmianie ustawy o rynku mocy</Tytul>
+      <Rodzaj>USTAWA</Rodzaj>
+      <DataOgloszenia>2025-02-06</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-01-24</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2025-02-14_DU-2025-159_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2025-02-14" warunek="po upływie 7 dni od dnia ogłoszenia" podstawa="art. 7" zrodlo="https://eli.gov.pl/eli/DU/2025/159" dowod="DU/2025/159__art_7" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2025-02-14_DU-2025-159_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="2ca5f904-cfa3-4f18-9bac-031124af4581" rola="wydajacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Sejm">
+          <Nazwa>SEJM</Nazwa>
+        </Organ>
+        <Organ gd:GUID="81c7a5ef-f915-44f9-85ed-64225b6a7926" rola="podpisujacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Prezydent">
+          <Nazwa>Prezydent Rzeczypospolitej Polskiej</Nazwa>
+          <OrganPodpisujacy>Prezydent Rzeczypospolitej Polskiej</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>A.</imie> <nazwisko>Duda</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Ustawa</rodzaj-aktu>
+    <data>z dnia 24 stycznia 2025 r.</data>
+    <tytul>o zmianie ustawy o rynku mocy<odnosnik id-odnosnika="1" symbol="1" gd:GUID="75990643-3e3b-47e6-80c9-ce3d8feaf6a8"><p><zdanie nr="1" gd:zdGUID="7109eb3b-c50e-44d3-80be-d709880391b1" fragment="1" gd:fragmentGUID="aaf2f24f-9b07-41bd-94ae-c894f3816998">Niniejsza ustawa służy stosowaniu rozporządzenia Parlamentu Europejskiego i Rady (UE) 2024/1747 z dnia 13 czerwca 2024 r. zmieniającego rozporządzenia (UE) 2019/942 i (UE) 2019/943 w odniesieniu do poprawy struktury unijnego rynku energii elektrycznej (Dz. Urz. UE L 2024/1747 z 26.06.2024).</zdanie></p></odnosnik></tytul>
+    <artykul eId="DU/2025/159__art_1" gd:GUID="d55cb645-5522-4e51-aadf-b83daa16cab7" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="a3291de1-b905-41a1-b045-dbb15f8f5889" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">
+        <p>
+          <zdanie nr="1" gd:zdGUID="df4069c4-de2c-4017-b5c6-90becd30d8cf" fragment="1" gd:fragmentGUID="7844b94e-48f8-4fc5-b5f2-268e2410e9c1" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">W ustawie z dnia 8 grudnia 2017 r. o rynku mocy (Dz. U. z 2023 r. poz. 2131) wprowadza się następujące zmiany:</zdanie>
+        </p>
+        <punkt eId="DU/2025/159__art_1__pkt_1" gd:GUID="a2208e3a-f5b8-4eb6-bfdc-b8da0a7a2386" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="df4069c4-de2c-4017-b5c6-90becd30d8cf" fragment="2" gd:fragmentGUID="5d20fd5e-8517-4587-9689-f546d7b0abdf" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">dodaje się odnośnik nr 1 do tytułu ustawy w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/2131" cudzyslowy="oba" gd:nowGUID="3aea0498-f3b0-46b8-a3a1-e039728c5357" element-eId="DU/2023/2131" funkcja="dodaj-recznie"><odnosnik-cyt eId="DU/2023/2131__odn_1" gd:GUID="3db0275c-af8c-4e7a-b617-e73bc3db0b37"><p><zdanie nr="1" gd:zdGUID="8c325731-a7c9-4490-ae99-ef74cf92c4dd" fragment="1" gd:fragmentGUID="ec444d15-7850-412b-a649-75342f4941fc"><sup>1)</sup> Niniejsza ustawa w zakresie swojej regulacji służy stosowaniu rozporządzenia Parlamentu Europejskiego i Rady (UE) 2024/1747 z dnia 13 czerwca 2024 r. zmieniającego rozporządzenia (UE) 2019/942 i (UE) 2019/943 w odniesieniu do poprawy struktury unijnego rynku energii elektrycznej (Dz. Urz. UE L 2024/1747 z 26.06.2024).</zdanie></p></odnosnik-cyt></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/159__art_1__pkt_2" gd:GUID="d07d7fa8-3698-4f5f-a797-b5ad8d44da3a" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="df4069c4-de2c-4017-b5c6-90becd30d8cf" fragment="3" gd:fragmentGUID="e7bc97c3-3e30-4a46-a3ce-86ebda18d950" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">w art. 2 w ust. 1:</zdanie>
+          </p>
+          <litera eId="DU/2025/159__art_1__pkt_2__lit_a" gd:GUID="d8ac2f9f-041f-4c2d-8797-3ee39c9fd040" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="df4069c4-de2c-4017-b5c6-90becd30d8cf" fragment="4" gd:fragmentGUID="1a3be4bb-b52a-496b-a069-91c56562786d" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">po pkt 3 dodaje się pkt 3a w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/2131" cudzyslowy="oba" gd:nowGUID="c5e7381f-2291-4f16-845e-04fc9d5664df" element-eId="DU/2023/2131__art_2__ust_1__pkt_3" funkcja="dodaj-po"><punkt eId="DU/2023/2131__art_2__ust_1__pkt_3a" gd:GUID="8fc9e823-a0a6-4901-879c-ea701ff62caf" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>3a</nr><p><zdanie nr="1" gd:zdGUID="fccc8765-44a5-4eb8-a7e7-f35800d0fc0b" fragment="1" gd:fragmentGUID="b8b1a42c-2eba-4075-8d76-0f608c19e157" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">aukcja uzupełniająca – aukcję mocy przeprowadzaną na okresy dostaw:</zdanie></p><litera eId="DU/2023/2131__art_2__ust_1__pkt_3a__lit_a" gd:GUID="862dfcc4-80e0-41a7-908f-f105cc279d63" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>a</nr><p><zdanie nr="1" gd:zdGUID="fccc8765-44a5-4eb8-a7e7-f35800d0fc0b" fragment="2" gd:fragmentGUID="5f17bf93-b5c7-4803-a7f1-ade7e2542be8" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">od dnia 1 lipca 2025 r. do dnia 31 grudnia 2025 r.,</zdanie></p></litera><litera eId="DU/2023/2131__art_2__ust_1__pkt_3a__lit_b" gd:GUID="3501d3e9-d24d-45d3-8426-7058209919e3" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>b</nr><p><zdanie nr="1" gd:zdGUID="fccc8765-44a5-4eb8-a7e7-f35800d0fc0b" fragment="3" gd:fragmentGUID="3858f499-751a-40a6-9bf2-bea2c14b36d5" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">od dnia 1 stycznia 2026 r. do dnia 31 grudnia 2026 r.,</zdanie></p></litera><litera eId="DU/2023/2131__art_2__ust_1__pkt_3a__lit_c" gd:GUID="e49be7de-e0da-41f1-8936-739fc1317066" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>c</nr><p><zdanie nr="1" gd:zdGUID="fccc8765-44a5-4eb8-a7e7-f35800d0fc0b" fragment="4" gd:fragmentGUID="05fe44fd-32e4-4f21-b1d3-13cdcc465f6d" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">od dnia 1 stycznia 2027 r. do dnia 31 grudnia 2027 r.,</zdanie></p></litera><litera eId="DU/2023/2131__art_2__ust_1__pkt_3a__lit_d" gd:GUID="49058c79-f0d8-4d23-97a4-ab27e3c1cc24" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>d</nr><p><zdanie nr="1" gd:zdGUID="fccc8765-44a5-4eb8-a7e7-f35800d0fc0b" fragment="5" gd:fragmentGUID="b1229be1-7fbb-487c-b347-96cb1e59041c" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">od dnia 1 stycznia 2028 r. do dnia 31 grudnia 2028 r.;</zdanie></p></litera></punkt></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/159__art_1__pkt_2__lit_b" gd:GUID="5875faaa-8668-47b3-bbf3-5cf5213baac6" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="df4069c4-de2c-4017-b5c6-90becd30d8cf" fragment="5" gd:fragmentGUID="ecd64a3f-4134-45ce-970a-f43324f29f04" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">pkt 25 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/2131" cudzyslowy="oba" gd:nowGUID="78ee2e97-829e-4c92-89e7-ee156e022c85" element-eId="DU/2023/2131__art_2__ust_1__pkt_25" funkcja="zastap"><punkt eId="DU/2023/2131__art_2__ust_1__pkt_25" gd:GUID="3fc4a335-67de-4852-a783-858858128356" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>25</nr><p><zdanie nr="1" gd:zdGUID="1284d99a-b489-44fb-9e4c-bb9e9f9b1614" fragment="1" gd:fragmentGUID="a39e4453-2811-42a9-8b14-819e986b942c" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">okres dostaw – rok kalendarzowy albo kwartał, albo okresy, o których mowa w pkt 3a;</zdanie></p></punkt></cytat-strukt>;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2025/159__art_1__pkt_3" gd:GUID="836bd861-5c89-4980-aec6-3d34de9956ed" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="df4069c4-de2c-4017-b5c6-90becd30d8cf" fragment="6" gd:fragmentGUID="ea062b75-ee20-4f6a-b765-29efb8d606f7" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">w art. 3:</zdanie>
+          </p>
+          <litera eId="DU/2025/159__art_1__pkt_3__lit_a" gd:GUID="b9804796-7f0b-4a12-bec9-94d85461fb70" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="df4069c4-de2c-4017-b5c6-90becd30d8cf" fragment="7" gd:fragmentGUID="3a891acd-a2bc-41f3-8747-22f3f530f3eb" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><now:zamien-tekst stary-tekst="." nowy-tekst=";" element-eId="DU/2023/2131__art_3__ust_1__pkt_3" akt="https://eli.gov.pl/eli/DU/2023/2131" now:wystapienie="ostatnie" gd:nowGUID="ed5672a3-ee64-4869-bc20-159eb67fd959" />w ust. 1 w pkt 3 kropkę zastępuje się średnikiem i dodaje się pkt 4 w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/2131" cudzyslowy="oba" gd:nowGUID="8be762de-0946-42d9-8f10-65be65a08aa9" element-eId="DU/2023/2131__art_3__ust_1__pkt_3" funkcja="dodaj-po"><punkt eId="DU/2023/2131__art_3__ust_1__pkt_4" gd:GUID="87a45c1c-7d04-44d9-913a-3c483d9f531e" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>4</nr><p><zdanie nr="1" gd:zdGUID="91660835-8578-4d48-871c-33a89ff611ae" fragment="1" gd:fragmentGUID="7826ad2a-240d-4b38-89c4-51a72070e5af" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">certyfikację do aukcji uzupełniającej – w celu utworzenia jednostek rynku mocy i dopuszczenia ich do aukcji uzupełniającej.</zdanie></p></punkt></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/159__art_1__pkt_3__lit_b" gd:GUID="cb36b351-4cb0-40f2-a59f-604eb1f39d75" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="df4069c4-de2c-4017-b5c6-90becd30d8cf" fragment="8" gd:fragmentGUID="0e4ffb2b-8c33-46b3-aabb-0b54996efbb0" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">po ust. 4 dodaje się ust. 4a w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/2131" cudzyslowy="oba" gd:nowGUID="ef10f814-b76e-4225-9ca7-107ab6ffc0e5" element-eId="DU/2023/2131__art_3__ust_4" funkcja="dodaj-po"><ustep eId="DU/2023/2131__art_3__ust_4a" gd:GUID="737a4322-e06b-4183-9210-78a10cfa3dd2" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>4a</nr><p><zdanie nr="1" gd:zdGUID="15119c10-cf98-4e47-8784-7422390a6d8c" fragment="1" gd:fragmentGUID="ed20deba-3b5b-411b-85e1-db0fe84ddfb8" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">Certyfikacja do aukcji uzupełniającej trwa nie krócej niż 4 tygodnie i rozpoczyna się nie wcześniej niż po ogłoszeniu ostatecznych wyników aukcji dodatkowych na dany rok dostaw, a kończy nie później niż 10 dni przed rozpoczęciem aukcji uzupełniającej.</zdanie></p></ustep></cytat-strukt>;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2025/159__art_1__pkt_4" gd:GUID="40786632-4bdd-4db2-a0c4-37e42bfaa44e" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="df4069c4-de2c-4017-b5c6-90becd30d8cf" fragment="9" gd:fragmentGUID="a8d13e3b-6b54-4733-a731-e6ab21b0a1e4" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">w art. 4:</zdanie>
+          </p>
+          <litera eId="DU/2025/159__art_1__pkt_4__lit_a" gd:GUID="a0057c3f-cca6-47a9-86e6-d65414b9fb13" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="df4069c4-de2c-4017-b5c6-90becd30d8cf" fragment="10" gd:fragmentGUID="e865c06d-c807-4e2c-9f9f-534138b22a2a" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">ust. 2 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/2131" cudzyslowy="oba" gd:nowGUID="6eeb8606-436e-4488-bd4d-9ef03de7b658" element-eId="DU/2023/2131__art_4__ust_2" funkcja="zastap"><ustep eId="DU/2023/2131__art_4__ust_2" gd:GUID="563404a2-5ffb-4c63-aef3-2d95c31bc223" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="d4be8c62-5d1a-478b-8f45-d842eb1321aa" fragment="1" gd:fragmentGUID="fbadefd4-d80f-457d-b065-2d8fadd8f7a0" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">Operator przeprowadza aukcje wstępne:</zdanie></p><punkt eId="DU/2023/2131__art_4__ust_2__pkt_1" gd:GUID="54fa9ac8-8913-454d-aaf1-1efa73143dfd" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="d4be8c62-5d1a-478b-8f45-d842eb1321aa" fragment="2" gd:fragmentGUID="692d9f43-99ad-4206-99fc-466e329c2ef2" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">do aukcji głównej i aukcji dodatkowych – po wejściu w życie rozporządzenia, o którym mowa w art. 34 ust. 1, nie później jednak niż 2 tygodnie przed certyfikacją do aukcji głównej;</zdanie></p></punkt><punkt eId="DU/2023/2131__art_4__ust_2__pkt_2" gd:GUID="007d925e-4829-4f2f-a082-c5fa7ee8ddf0" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="d4be8c62-5d1a-478b-8f45-d842eb1321aa" fragment="3" gd:fragmentGUID="f7f2b254-d1d7-4b5b-9463-387ed5cb30c8" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">do aukcji uzupełniającej – po ogłoszeniu parametrów aukcji uzupełniającej, o którym mowa w art. 34b ust. 2 albo art. 3 ust. 2 ustawy z dnia 24 stycznia 2025 r. o zmianie ustawy o rynku mocy (Dz. U. poz. 159), nie później jednak niż przed rozpoczęciem certyfikacji do aukcji uzupełniającej.</zdanie></p></punkt></ustep></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/159__art_1__pkt_4__lit_b" gd:GUID="d561f6a4-40e0-41d8-8734-958677349c32" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="df4069c4-de2c-4017-b5c6-90becd30d8cf" fragment="11" gd:fragmentGUID="9b0e4fd4-9835-4462-935c-9f0262aa631f" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><now:zamien-tekst stary-tekst="oraz aukcje dodatkowe" nowy-tekst=", aukcje dodatkowe oraz aukcję uzupełniającą" element-eId="DU/2023/2131__art_4__ust_3" akt="https://eli.gov.pl/eli/DU/2023/2131" gd:nowGUID="aca165b4-d4e3-4106-a1d3-2bc89c8488e6" />w ust. 3 wyrazy „oraz aukcje dodatkowe” zastępuje się wyrazami „ , aukcje dodatkowe oraz aukcję uzupełniającą”,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/159__art_1__pkt_4__lit_c" gd:GUID="a4715041-8540-42f2-9a8b-380fca9dd2e8" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">
+            <nr>c</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="df4069c4-de2c-4017-b5c6-90becd30d8cf" fragment="12" gd:fragmentGUID="eb0a5df3-d937-4ab0-8736-b5175b2dbad6" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><now:zamien-tekst stary-tekst="oraz aukcji dodatkowych" nowy-tekst=", aukcji dodatkowych oraz aukcji uzupełniającej" element-eId="DU/2023/2131__art_4__ust_4" akt="https://eli.gov.pl/eli/DU/2023/2131" gd:nowGUID="89912c71-1f1c-460f-9722-55a1242610d4" />w ust. 4 wyrazy „oraz aukcji dodatkowych” zastępuje się wyrazami „ , aukcji dodatkowych oraz aukcji uzupełniającej”,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/159__art_1__pkt_4__lit_d" gd:GUID="8e40329a-6959-469b-8738-e309b0b0b766" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">
+            <nr>d</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="df4069c4-de2c-4017-b5c6-90becd30d8cf" fragment="13" gd:fragmentGUID="b65d1778-96c5-4b12-800a-1fc2af5edee5" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><now:zamien-tekst stary-tekst="oraz aukcji dodatkowych" nowy-tekst=", aukcji dodatkowych oraz aukcji uzupełniającej" element-eId="DU/2023/2131__art_4__ust_5" akt="https://eli.gov.pl/eli/DU/2023/2131" gd:nowGUID="61fffc96-07e6-4622-9a7d-16aa6f3a7a65" />w ust. 5 wyrazy „oraz aukcji dodatkowych” zastępuje się wyrazami „ , aukcji dodatkowych oraz aukcji uzupełniającej”;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2025/159__art_1__pkt_5" gd:GUID="f7597f32-86e3-430d-b85d-4bb73b61674b" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="df4069c4-de2c-4017-b5c6-90becd30d8cf" fragment="14" gd:fragmentGUID="d52cfccd-d614-4fec-88cf-e5bcb7db0145" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">w art. 7:</zdanie>
+          </p>
+          <litera eId="DU/2025/159__art_1__pkt_5__lit_a" gd:GUID="fdf3c07a-33a6-4e9b-912c-b4d3862bc6bc" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="df4069c4-de2c-4017-b5c6-90becd30d8cf" fragment="15" gd:fragmentGUID="515fe2ca-97ab-4871-9a7e-724bf14e074b" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">w ust. 2 pkt 2 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/2131" cudzyslowy="oba" gd:nowGUID="2f6e2125-5645-4c9a-b865-a35b44a73177" element-eId="DU/2023/2131__art_7__ust_2__pkt_2" funkcja="zastap"><punkt eId="DU/2023/2131__art_7__ust_2__pkt_2" gd:GUID="bf66d461-517a-4aae-9192-f3dd1459bc71" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="52e563d9-789e-4b8a-80a6-a56149e6cf4e" fragment="1" gd:fragmentGUID="d3950e99-f33e-4b5d-a05d-8fb9a3edf51e" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">dokonuje się wyboru ofert, o którym mowa w art. 9 ust. 4, na aukcji wstępnej do aukcji głównej i aukcji dodatkowych – w przypadku rozwiązania określonego w art. 6 ust. 1 pkt 2.</zdanie></p></punkt></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/159__art_1__pkt_5__lit_b" gd:GUID="1a0ebf93-2ca1-44fa-b4ab-4517bfad861c" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="df4069c4-de2c-4017-b5c6-90becd30d8cf" fragment="16" gd:fragmentGUID="1055c635-3ffc-4aa5-9828-19384fd6fe80" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">dodaje się ust. 3 w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/2131" cudzyslowy="oba" gd:nowGUID="74533ec5-9299-48a9-baa2-f552a10086e8" element-eId="DU/2023/2131__art_7" funkcja="dodaj-w"><ustep eId="DU/2023/2131__art_7__ust_3" gd:GUID="7dffe78c-da43-49ef-88ec-0269c69433b1" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>3</nr><p><zdanie nr="1" gd:zdGUID="c9fecb9e-0309-4b8d-a16e-0f95255d0cd9" fragment="1" gd:fragmentGUID="be761d8b-cb76-403d-9cef-44dcadc49b20" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">Na podstawie parametru, o którym mowa w art. 34a ust. 1 pkt 4, dokonuje się wyboru ofert, o którym mowa w art. 9 ust. 4, na aukcji wstępnej do aukcji uzupełniającej.</zdanie></p></ustep></cytat-strukt>;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2025/159__art_1__pkt_6" gd:GUID="0e09a525-2bd0-4daf-a739-4fb397c63725" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">
+          <nr>6</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="df4069c4-de2c-4017-b5c6-90becd30d8cf" fragment="17" gd:fragmentGUID="fcdb48ff-9787-4fd7-ad61-2a3eae31471e" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">w art. 9:</zdanie>
+          </p>
+          <litera eId="DU/2025/159__art_1__pkt_6__lit_a" gd:GUID="b5934cf8-3d02-4431-a736-1d7873ce6a0a" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="df4069c4-de2c-4017-b5c6-90becd30d8cf" fragment="18" gd:fragmentGUID="0fbfe11d-f109-4c7d-adfe-ef6f9f10563e" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><now:zamien-tekst stary-tekst="o którym mowa w art. 32 ust. 1 pkt 7" nowy-tekst="o którym mowa w art. 32 ust. 1 pkt 7, dla aukcji głównej lub aukcji dodatkowej albo wielkość parametru, o którym mowa w art. 34a ust. 1 pkt 4, dla aukcji uzupełniającej" element-eId="DU/2023/2131__art_9__ust_4" akt="https://eli.gov.pl/eli/DU/2023/2131" gd:nowGUID="562368e8-b196-4dc4-aea6-21d5137c1fc7" />w ust. 4 wyrazy „o którym mowa w art. 32 ust. 1 pkt 7” zastępuje się wyrazami „o którym mowa w art. 32 ust. 1 pkt 7, dla aukcji głównej lub aukcji dodatkowej albo wielkość parametru, o którym mowa w art. 34a ust. 1 pkt 4, dla aukcji uzupełniającej”,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/159__art_1__pkt_6__lit_b" gd:GUID="ae8f2c10-d04d-4f34-ae75-46e36be9dc60" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="df4069c4-de2c-4017-b5c6-90becd30d8cf" fragment="19" gd:fragmentGUID="eca7c081-679b-48f2-be89-64209e02a4b4" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">ust. 5 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/2131" cudzyslowy="oba" gd:nowGUID="14d4a95d-1962-44ba-a436-c35aed3cea75" element-eId="DU/2023/2131__art_9__ust_5" funkcja="zastap"><ustep eId="DU/2023/2131__art_9__ust_5" gd:GUID="60a13599-b420-42e8-8430-53289fe9b9fd" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>5</nr><p><zdanie nr="1" gd:zdGUID="2d206565-08e9-4a8b-bdf1-3a7ada61dc69" fragment="1" gd:fragmentGUID="65175bec-468d-47ef-a1e8-7bce92419a49" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">Jeżeli ostatnia oferta, której wybranie wraz z ofertami, o których mowa w ust. 4, spowodowałoby, że łączna wielkość mocy byłaby większa niż wielkość parametru, o którym mowa w art. 32 ust. 1 pkt 7, dla aukcji głównej lub aukcji dodatkowej albo wielkość parametru, o którym mowa w art. 34a ust. 1 pkt 4, dla aukcji uzupełniającej, a oferta ta jest:</zdanie></p><punkt eId="DU/2023/2131__art_9__ust_5__pkt_1" gd:GUID="3ddbf552-b76c-4bff-8c21-22e78c7819ac" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="2d206565-08e9-4a8b-bdf1-3a7ada61dc69" fragment="2" gd:fragmentGUID="8f09b877-ca0b-4a1f-9914-b02ed38cb9cf" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">podzielna – ofertę przyjmuje się w części odpowiadającej różnicy między wielkością parametru, o którym mowa w art. 32 ust. 1 pkt 7, dla aukcji głównej lub aukcji dodatkowej albo wielkością parametru, o którym mowa w art. 34a ust. 1 pkt 4, dla aukcji uzupełniającej a sumą wielkości mocy w pozostałych wybranych ofertach;</zdanie></p></punkt><punkt eId="DU/2023/2131__art_9__ust_5__pkt_2" gd:GUID="a7fa0819-0e82-41bf-b6ec-2e14020c72e6" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="2d206565-08e9-4a8b-bdf1-3a7ada61dc69" fragment="3" gd:fragmentGUID="24dc45f8-0b38-4a21-b7d5-b2cd21975c4c" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">niepodzielna – ofertę odrzuca się.</zdanie></p></punkt></ustep></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/159__art_1__pkt_6__lit_c" gd:GUID="593d8a54-e8d9-4ac6-b242-1f63e67ba7d5" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">
+            <nr>c</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="df4069c4-de2c-4017-b5c6-90becd30d8cf" fragment="20" gd:fragmentGUID="08ccd859-003a-4042-b193-eb473ba60056" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">w ust. 7:</zdanie>
+            </p>
+            <tiret eId="DU/2025/159__art_1__pkt_6__lit_c__tir_1" gd:GUID="f4478dbb-988a-4de4-a891-dbbf024ed6f0" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">
+              <p>
+                <zdanie nr="1" gd:zdGUID="df4069c4-de2c-4017-b5c6-90becd30d8cf" fragment="21" gd:fragmentGUID="36e3f301-cb12-4939-a33c-d9a2e6c8d2ca" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><now:zamien-tekst stary-tekst="rynku mocy" nowy-tekst="" element-eId="DU/2023/2131__art_9__ust_7__zdn_1" akt="https://eli.gov.pl/eli/DU/2023/2131" gd:nowGUID="d8677e02-b37b-48f3-9e7d-b4eb542572a0" />w zdaniu pierwszym skreśla się wyrazy „rynku mocy”,</zdanie>
+              </p>
+            </tiret>
+            <tiret eId="DU/2025/159__art_1__pkt_6__lit_c__tir_2" gd:GUID="56ba54df-d2af-48e2-9c8e-023fc82e8591" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">
+              <p>
+                <zdanie nr="1" gd:zdGUID="df4069c4-de2c-4017-b5c6-90becd30d8cf" fragment="22" gd:fragmentGUID="e535daf1-b346-47cb-a5fe-991da478f229" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><now:zamien-tekst stary-tekst="rynku mocy" nowy-tekst="" element-eId="DU/2023/2131__art_9__ust_7__zdn_2" akt="https://eli.gov.pl/eli/DU/2023/2131" gd:nowGUID="e4958141-017b-4110-b162-20a88c6317bf" /><now:zamien-tekst stary-tekst="aukcjach dodatkowych" nowy-tekst="aukcjach dodatkowych, aukcji uzupełniającej" element-eId="DU/2023/2131__art_9__ust_7__zdn_2" akt="https://eli.gov.pl/eli/DU/2023/2131" gd:nowGUID="523432b5-6357-4a70-9fae-9b8d9a428efc" />w zdaniu drugim skreśla się wyrazy „rynku mocy” oraz po wyrazach „aukcjach dodatkowych” dodaje się wyrazy „ , aukcji uzupełniającej”;</zdanie>
+              </p>
+            </tiret>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2025/159__art_1__pkt_7" gd:GUID="0f29835e-4dae-426e-ae71-c407356af113" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">
+          <nr>7</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="df4069c4-de2c-4017-b5c6-90becd30d8cf" fragment="23" gd:fragmentGUID="41b873ca-267e-456f-bef3-e723fea582bb" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">w art. 12:</zdanie>
+          </p>
+          <litera eId="DU/2025/159__art_1__pkt_7__lit_a" gd:GUID="9518c48b-4379-4dce-94d2-6f04aae8fa4c" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="df4069c4-de2c-4017-b5c6-90becd30d8cf" fragment="24" gd:fragmentGUID="590548f4-a5b6-4a98-bb24-07831b0de1e5" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><now:uchyl akt="https://eli.gov.pl/eli/DU/2023/2131" element-eId="DU/2023/2131__art_12__ust_2__pkt_5" element-do-eId="DU/2023/2131__art_12__ust_2__pkt_7" gd:nowGUID="0e3f55fc-0ff5-40c5-ab9d-fefe3ce39409" />w ust. 2 uchyla się pkt 5–7,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/159__art_1__pkt_7__lit_b" gd:GUID="90ed1b4e-b3d3-490f-9432-11a3eb586aae" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="df4069c4-de2c-4017-b5c6-90becd30d8cf" fragment="25" gd:fragmentGUID="b2eed1c4-47d6-45eb-a94d-fb4aa959be31" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><now:zamien-tekst stary-tekst="przekazanych w poprzedniej certyfikacji ogólnej" nowy-tekst="zawartych w rejestrze" element-eId="DU/2023/2131__art_12__ust_3" akt="https://eli.gov.pl/eli/DU/2023/2131" gd:nowGUID="07609cbd-05d5-4d18-ac7f-9b3a6005a08f" />w ust. 3 wyrazy „przekazanych w poprzedniej certyfikacji ogólnej” zastępuje się wyrazami „zawartych w rejestrze”,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/159__art_1__pkt_7__lit_c" gd:GUID="7f005787-c739-4fc1-9457-4f6cf6b58ef9" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">
+            <nr>c</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="df4069c4-de2c-4017-b5c6-90becd30d8cf" fragment="26" gd:fragmentGUID="2a96652d-fa85-4ebe-a1c9-e00d4883b49a" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">ust. 5 i 6 otrzymują brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/2131" cudzyslowy="otwierajacy" gd:nowGUID="a4114e97-564b-4f2c-9292-42a53c5fcbac" element-eId="DU/2023/2131__art_12__ust_5" funkcja="zastap"><ustep eId="DU/2023/2131__art_12__ust_5" gd:GUID="3580178b-1e4a-4127-81aa-499824ac6daf" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>5</nr><p><zdanie nr="1" gd:zdGUID="dfa892f5-a3ad-4026-abba-74d42accb284" fragment="1" gd:fragmentGUID="d5e8946f-d2eb-4097-8565-0207df11ffab" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">W przypadku składania wniosku o rejestrację jednostki redukcji zapotrzebowania planowanej wniosek o rejestrację zawiera:</zdanie></p><punkt eId="DU/2023/2131__art_12__ust_5__pkt_1" gd:GUID="51c8d6cf-ea49-41e0-8684-c2d08bdd8fad" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="dfa892f5-a3ad-4026-abba-74d42accb284" fragment="2" gd:fragmentGUID="96496bbd-5fa2-408d-a482-bf1455f26ae8" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">informacje, o których mowa w ust. 2 pkt 8;</zdanie></p></punkt><punkt eId="DU/2023/2131__art_12__ust_5__pkt_2" gd:GUID="f0b671eb-748c-4df3-a65f-7025c2b1957e" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="dfa892f5-a3ad-4026-abba-74d42accb284" fragment="3" gd:fragmentGUID="bb0af3c1-f9b9-4f30-b165-f033f5b3ad8b" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">dane identyfikacyjne podmiotu, który będzie pełnił funkcję dostawcy mocy;</zdanie></p></punkt><punkt eId="DU/2023/2131__art_12__ust_5__pkt_3" gd:GUID="1e34dcbb-32eb-42e1-9e29-10e41ff3cbe3" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>3</nr><p><zdanie nr="1" gd:zdGUID="dfa892f5-a3ad-4026-abba-74d42accb284" fragment="4" gd:fragmentGUID="dc8449f8-2591-477a-bf0e-7f3e07a7bde9" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">planowaną łączną moc osiągalną wszystkich jednostek fizycznych redukcji zapotrzebowania, które wejdą w skład danej jednostki redukcji zapotrzebowania planowanej.</zdanie></p></punkt></ustep></cytat-strukt><cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/2131" cudzyslowy="zamykajacy" gd:nowGUID="1fc1174d-3ee6-4895-b472-fe8f49c8689a" element-eId="DU/2023/2131__art_12__ust_6" funkcja="zastap"><ustep eId="DU/2023/2131__art_12__ust_6" gd:GUID="da814dc1-f79d-4132-9fb5-e4b594e261ba" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>6</nr><p><zdanie nr="1" gd:zdGUID="4a94fe14-7f54-4b5e-b040-f2dfe064449d" fragment="1" gd:fragmentGUID="efe49519-d3a7-4635-a7bd-c9988d5b104e" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">Wpis do rejestru jednostki fizycznej lub jednostki redukcji zapotrzebowania planowanej uprawnia tę jednostkę do udziału w najbliższej certyfikacji do aukcji głównej, najbliższej certyfikacji do aukcji dodatkowych oraz najbliższej certyfikacji do aukcji uzupełniającej.</zdanie></p></ustep></cytat-strukt>;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2025/159__art_1__pkt_8" gd:GUID="03bdbd1a-8039-461b-b781-8fb533d1de51" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">
+          <nr>8</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="df4069c4-de2c-4017-b5c6-90becd30d8cf" fragment="27" gd:fragmentGUID="c165e993-49f7-4b64-9556-6bdcfe1c3960" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">w art. 14 w ust. 1:</zdanie>
+          </p>
+          <litera eId="DU/2025/159__art_1__pkt_8__lit_a" gd:GUID="0e526ca8-bc02-43e7-af4f-524bb0c166c6" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="df4069c4-de2c-4017-b5c6-90becd30d8cf" fragment="28" gd:fragmentGUID="41c9316b-c066-4e2d-9632-abb30322bd2e" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">pkt 1 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/2131" cudzyslowy="oba" gd:nowGUID="5ce65274-a060-4303-9abb-b1ce95b78b0c" element-eId="DU/2023/2131__art_14__ust_1__pkt_1" funkcja="zastap"><punkt eId="DU/2023/2131__art_14__ust_1__pkt_1" gd:GUID="00f8d4d8-1fcc-4a85-92fe-ff79defaf1f7" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="1408d348-8626-4f0f-aa6e-7351070ec185" fragment="1" gd:fragmentGUID="0747f2f4-15b4-4837-9a76-80871bcedb72" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">sumę mocy osiągalnej netto wszystkich jednostek fizycznych zgłoszonych do certyfikacji ogólnej w podziale na: jednostki fizyczne wytwórcze planowane i istniejące, jednostki fizyczne redukcji zapotrzebowania, jednostki redukcji zapotrzebowania planowane oraz jednostki fizyczne wytwórcze będące magazynem energii elektrycznej;</zdanie></p></punkt></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/159__art_1__pkt_8__lit_b" gd:GUID="e9947556-c2e4-4a21-b615-a07e1012bf52" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="df4069c4-de2c-4017-b5c6-90becd30d8cf" fragment="29" gd:fragmentGUID="5760784c-d67c-4981-b04e-a6767725d099" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><now:uchyl akt="https://eli.gov.pl/eli/DU/2023/2131" element-eId="DU/2023/2131__art_14__ust_1__pkt_2" gd:nowGUID="62b39450-bad4-4efc-80ae-05af653b2df7" /><now:uchyl akt="https://eli.gov.pl/eli/DU/2023/2131" element-eId="DU/2023/2131__art_14__ust_1__pkt_3" gd:nowGUID="ccabd98f-9fa9-44c8-94bf-3371517833f0" />uchyla się pkt 2 i 3;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2025/159__art_1__pkt_9" gd:GUID="3a88093e-31fb-40fa-9394-2b6228f433d9" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">
+          <nr>9</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="df4069c4-de2c-4017-b5c6-90becd30d8cf" fragment="30" gd:fragmentGUID="2dfc3aaa-1214-4765-a38b-bd2d46141884" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">tytuł rozdziału 4 otrzymuje brzmienie:<cytat-w-tekscie now:akt="https://eli.gov.pl/eli/DU/2023/2131" cudzyslowy="oba" gd:nowGUID="90d48efc-086f-408d-acda-0f65a102e290" element-eId="DU/2023/2131__rozdz_4" funkcja="zastap-tekst"><tekst>Certyfikacja do aukcji głównej, aukcji dodatkowych i aukcji uzupełniającej</tekst></cytat-w-tekscie>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/159__art_1__pkt_10" gd:GUID="b1a5ac74-8466-46b8-90d0-367c52a04bfe" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">
+          <nr>10</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="df4069c4-de2c-4017-b5c6-90becd30d8cf" fragment="31" gd:fragmentGUID="a0b3b7f6-5482-4ecc-94b5-21da6b484abb" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">w art. 15:</zdanie>
+          </p>
+          <litera eId="DU/2025/159__art_1__pkt_10__lit_a" gd:GUID="5fa87609-4878-40ac-b45d-54568bdda287" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="df4069c4-de2c-4017-b5c6-90becd30d8cf" fragment="32" gd:fragmentGUID="dd33d35d-655c-4c37-82c0-2cc0ba9f4da6" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">w ust. 1:</zdanie>
+            </p>
+            <tiret eId="DU/2025/159__art_1__pkt_10__lit_a__tir_1" gd:GUID="14b7b061-01c3-4566-a5c1-06ddafacf294" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">
+              <p>
+                <zdanie nr="1" gd:zdGUID="df4069c4-de2c-4017-b5c6-90becd30d8cf" fragment="33" gd:fragmentGUID="29732027-c01d-449b-b4e6-9e636285ca73" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><now:zamien-tekst stary-tekst="do aukcji dodatkowych" nowy-tekst="do aukcji dodatkowych lub do aukcji uzupełniającej" element-eId="DU/2023/2131__art_15__ust_1" akt="https://eli.gov.pl/eli/DU/2023/2131" gd:nowGUID="d93c79b0-a639-40ac-a6a1-6ad9203d5dc4" />we wprowadzeniu do wyliczenia po wyrazach „do aukcji dodatkowych” dodaje się wyrazy „lub do aukcji uzupełniającej”,</zdanie>
+              </p>
+            </tiret>
+            <tiret eId="DU/2025/159__art_1__pkt_10__lit_a__tir_2" gd:GUID="1e3c149d-a2e5-4617-b4c5-8b9b030019cd" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">
+              <p>
+                <zdanie nr="1" gd:zdGUID="df4069c4-de2c-4017-b5c6-90becd30d8cf" fragment="34" gd:fragmentGUID="6cb877d7-01ad-4c8c-8920-4048803a7b5c" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><now:zamien-tekst stary-tekst="do aukcji dodatkowych" nowy-tekst="do aukcji dodatkowych lub do aukcji uzupełniającej" element-eId="DU/2023/2131__art_15__ust_1__pkt_1" akt="https://eli.gov.pl/eli/DU/2023/2131" gd:nowGUID="ecab4a02-44a7-4e80-b293-0b632eea5a40" />w pkt 1 po wyrazach „do aukcji dodatkowych” dodaje się wyrazy „lub do aukcji uzupełniającej”,</zdanie>
+              </p>
+            </tiret>
+            <tiret eId="DU/2025/159__art_1__pkt_10__lit_a__tir_3" gd:GUID="5c6b135c-65c1-4d8a-b966-681c02fae7cf" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">
+              <p>
+                <zdanie nr="1" gd:zdGUID="df4069c4-de2c-4017-b5c6-90becd30d8cf" fragment="35" gd:fragmentGUID="fb64f71a-b71e-4163-85ca-70fa2578aa6e" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">w pkt 2 na końcu dodaje się przecinek i dodaje się pkt 3 w brzmieniu:<cytat-w-tekscie now:akt="https://eli.gov.pl/eli/DU/2023/2131" cudzyslowy="oba" gd:nowGUID="3024ea5e-83e7-4287-a87f-7ec11636058c" element-eId="DU/2023/2131__art_15__ust_1__pkt_2" funkcja="dodaj-recznie"><tekst>,</tekst></cytat-w-tekscie><cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/2131" cudzyslowy="oba" gd:nowGUID="b81abb5c-3c43-48ba-8d07-8660a667b78e" element-eId="DU/2023/2131__art_15__ust_1__pkt_2" funkcja="dodaj-po"><punkt eId="DU/2023/2131__art_15__ust_1__pkt_3" gd:GUID="c57fbfcc-1059-4d3a-ac28-5f5ec3c009d3" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>3</nr><p><zdanie nr="1" gd:zdGUID="83f75b21-508f-4e74-9696-c28bffae717c" fragment="1" gd:fragmentGUID="d26700be-3a02-45d4-9193-0ab5317da193" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">dopuszczenie do aukcji uzupełniającej jednostki rynku mocy utworzonej w certyfikacji do aukcji głównej lub do aukcji dodatkowych na ten sam rok dostaw</zdanie></p></punkt></cytat-strukt>,</zdanie>
+              </p>
+            </tiret>
+          </litera>
+          <litera eId="DU/2025/159__art_1__pkt_10__lit_b" gd:GUID="22ebf10a-ecc6-4a19-a9aa-4fa7632deb12" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="df4069c4-de2c-4017-b5c6-90becd30d8cf" fragment="36" gd:fragmentGUID="48065a9d-a20b-4d76-9d64-cacf00334021" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><now:zamien-tekst stary-tekst="do aukcji dodatkowych" nowy-tekst="do aukcji dodatkowych lub do aukcji uzupełniającej" element-eId="DU/2023/2131__art_15__ust_2" akt="https://eli.gov.pl/eli/DU/2023/2131" gd:nowGUID="a98dfa24-8ffd-490f-81cf-6cb93869084a" />w ust. 2 po wyrazach „do aukcji dodatkowych” dodaje się wyrazy „lub do aukcji uzupełniającej”,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/159__art_1__pkt_10__lit_c" gd:GUID="90e97d4d-2411-4ca2-b466-c617d0c26686" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">
+            <nr>c</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="df4069c4-de2c-4017-b5c6-90becd30d8cf" fragment="37" gd:fragmentGUID="fae360fb-7c56-45b2-ae4c-191189caf4e7" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">ust. 4 i 5 otrzymują brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/2131" cudzyslowy="otwierajacy" gd:nowGUID="c8fc773c-5dc0-459e-ae39-36e5aab85a2e" element-eId="DU/2023/2131__art_15__ust_4" funkcja="zastap"><ustep eId="DU/2023/2131__art_15__ust_4" gd:GUID="3d1093ab-505e-46fa-86a3-1ba7b2d42069" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>4</nr><p><zdanie nr="1" gd:zdGUID="068a5028-220a-4e6d-b906-1914e6dfb4a8" fragment="1" gd:fragmentGUID="f5cade92-cd9c-4ae8-9511-720863000cb8" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">Jednostka rynku mocy objęta obowiązkiem mocowym na dany rok dostaw lub jednostka fizyczna, wchodząca w skład takiej jednostki rynku mocy, nie może zostać zgłoszona do certyfikacji do aukcji dodatkowych lub do aukcji uzupełniającej dotyczących tego samego okresu dostaw.</zdanie></p></ustep></cytat-strukt><cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/2131" cudzyslowy="zamykajacy" gd:nowGUID="049a25df-dfed-416e-93ff-02304959a5e8" element-eId="DU/2023/2131__art_15__ust_5" funkcja="zastap"><ustep eId="DU/2023/2131__art_15__ust_5" gd:GUID="5cd42baf-0124-4a10-b9c4-707966906e53" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>5</nr><p><zdanie nr="1" gd:zdGUID="569eea9d-6463-45d3-9f34-fd180a8b7aaf" fragment="1" gd:fragmentGUID="ff0f6959-1070-432f-be73-a0e4b1d4d46c" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">Jednostka rynku mocy, składająca się z jednostek fizycznych wytwarzających rocznie więcej niż 30 % energii elektrycznej w wysokosprawnej kogeneracji, może wziąć udział zarówno w aukcji głównej, aukcji dodatkowej, jak i aukcji uzupełniającej na ten sam rok dostaw, z zastrzeżeniem że suma obowiązków mocowych oferowanych przez tę jednostkę nie może być wyższa niż iloczyn mocy osiągalnej netto i korekcyjnego współczynnika dyspozycyjności dla tej jednostki.</zdanie></p></ustep></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/159__art_1__pkt_10__lit_e" gd:GUID="bab56186-5c90-4379-8226-473fd23f3c3f" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">
+            <nr>e</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="df4069c4-de2c-4017-b5c6-90becd30d8cf" fragment="38" gd:fragmentGUID="b386c91a-c403-45c5-adf9-46b9b24781e4" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><now:zamien-tekst stary-tekst="ust. 7" nowy-tekst="ust. 7 i 7a" element-eId="DU/2023/2131__art_15__ust_6" akt="https://eli.gov.pl/eli/DU/2023/2131" gd:nowGUID="47d35f10-f3e1-4f09-8b3d-edcdf740d403" />w ust. 6 wyrazy „ust. 7” zastępuje się wyrazami „ust. 7 i 7a”,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/159__art_1__pkt_10__lit_f" gd:GUID="272cecd7-501e-4a0e-9527-9b7ac0feeb50" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">
+            <nr>f</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="df4069c4-de2c-4017-b5c6-90becd30d8cf" fragment="39" gd:fragmentGUID="b3757299-5b99-49dc-92b7-63d12163a5ac" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">ust. 7 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/2131" cudzyslowy="oba" gd:nowGUID="e760aa3d-ff44-4ef9-8682-ed4ef672b186" element-eId="DU/2023/2131__art_15__ust_7" funkcja="zastap"><ustep eId="DU/2023/2131__art_15__ust_7" gd:GUID="b7896b62-df4f-4d3c-8ac1-006d85cd8ac7" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>7</nr><p><zdanie nr="1" gd:zdGUID="98706423-6dcd-4127-8678-2055a0bde4f3" fragment="1" gd:fragmentGUID="5f3e27d2-07ff-417d-800c-89e8ce2479f7" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">W przypadku jednostki rynku mocy, o której mowa w ust. 6, w skład której wchodzą wyłącznie jednostki wytwórcze, które rozpoczęły produkcję komercyjną przed dniem 4 lipca 2019 r., dostawca mocy może złożyć wniosek o certyfikację do aukcji głównej lub o certyfikację do aukcji dodatkowych wyłącznie w zakresie utworzenia jednostki rynku mocy i dopuszczenia jej do udziału w rynku wtórnym.</zdanie></p></ustep></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/159__art_1__pkt_10__lit_g" gd:GUID="0fd4d6e0-a856-4ae4-9699-93e2d2300f57" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">
+            <nr>g</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="df4069c4-de2c-4017-b5c6-90becd30d8cf" fragment="40" gd:fragmentGUID="0106edab-8c06-4913-bef6-56d4704aa772" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">po ust. 7 dodaje się ust. 7a w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/2131" cudzyslowy="oba" gd:nowGUID="723879fb-8833-4d89-acf4-a5caa319a60a" element-eId="DU/2023/2131__art_15__ust_7" funkcja="dodaj-po"><ustep eId="DU/2023/2131__art_15__ust_7a" gd:GUID="87f73de1-2f9d-43e2-8b97-4a9346edf490" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>7a</nr><p><zdanie nr="1" gd:zdGUID="7202b3a2-4268-4e54-940f-27ebf3464197" fragment="1" gd:fragmentGUID="c60643ac-bb2f-4509-9d0f-07102dc73e95" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">W przypadku jednostki rynku mocy, o której mowa w ust. 7, dostawca mocy może złożyć wniosek o certyfikację do aukcji uzupełniającej.</zdanie></p></ustep></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/159__art_1__pkt_10__lit_h" gd:GUID="fcf4f571-33fa-497d-a3ba-680778f87176" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">
+            <nr>h</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="df4069c4-de2c-4017-b5c6-90becd30d8cf" fragment="41" gd:fragmentGUID="768a528b-e51b-445d-b6c3-40c8ae3c4238" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><now:zamien-tekst stary-tekst="aukcji dodatkowych" nowy-tekst="aukcji dodatkowych lub do aukcji uzupełniającej" element-eId="DU/2023/2131__art_15__ust_8" akt="https://eli.gov.pl/eli/DU/2023/2131" gd:nowGUID="7e5ffc68-a90d-4705-84a1-303e63368087" />w ust. 8 po wyrazach „aukcji dodatkowych” dodaje się wyrazy „lub do aukcji uzupełniającej”;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2025/159__art_1__pkt_11" gd:GUID="d5c0a7b6-de81-45d5-ab20-262285737a55" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">
+          <nr>11</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="df4069c4-de2c-4017-b5c6-90becd30d8cf" fragment="42" gd:fragmentGUID="53646d06-80af-41a8-816f-2a0e7cf2b76a" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">w art. 16 w ust. 2 pkt 4a otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/2131" cudzyslowy="oba" gd:nowGUID="04dfb8a4-5310-41f0-8a9d-bbcd2125b632" element-eId="DU/2023/2131__art_16__ust_2__pkt_4a" funkcja="zastap"><punkt eId="DU/2023/2131__art_16__ust_2__pkt_4a" gd:GUID="b022e340-ec33-4a32-a104-5356985480f3" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>4a</nr><p><zdanie nr="1" gd:zdGUID="f6a8eb7d-7351-44b7-a734-b6c8fe9b58cc" fragment="1" gd:fragmentGUID="8fe6b0f2-c5ef-43a2-bfcf-aaa90e76d8dc" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">w skład której wchodzi jednostka wytwórcza, która w roku dostaw nie będzie spełniała limitu emisji i rozpoczęła produkcję komercyjną nie wcześniej niż w dniu 4 lipca 2019 r. – w przypadku certyfikacji do aukcji głównej oraz do aukcji dodatkowych;</zdanie></p></punkt></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/159__art_1__pkt_12" gd:GUID="5b3d4449-e5d2-40ef-8788-4395926f0f6c" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">
+          <nr>12</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="df4069c4-de2c-4017-b5c6-90becd30d8cf" fragment="43" gd:fragmentGUID="d48e7a42-2a63-4fa0-bc53-fe6e684afa76" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">w art. 19 w ust. 1:</zdanie>
+          </p>
+          <litera eId="DU/2025/159__art_1__pkt_12__lit_a" gd:GUID="6f99817e-242c-4782-89d5-ef2fb444a2b2" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="df4069c4-de2c-4017-b5c6-90becd30d8cf" fragment="44" gd:fragmentGUID="d6b6aa18-7e48-42e2-8eac-9335ef6a6a15" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">w pkt 6:</zdanie>
+            </p>
+            <tiret eId="DU/2025/159__art_1__pkt_12__lit_a__tir_1" gd:GUID="f65b9208-f33c-46a8-87b9-4bde82c0703c" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">
+              <p>
+                <zdanie nr="1" gd:zdGUID="df4069c4-de2c-4017-b5c6-90becd30d8cf" fragment="45" gd:fragmentGUID="53bab69e-efff-403a-a53b-6dd82ab3b663" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><now:uchyl akt="https://eli.gov.pl/eli/DU/2023/2131" element-eId="DU/2023/2131__art_19__ust_1__pkt_6__lit_a" element-do-eId="DU/2023/2131__art_19__ust_1__pkt_6__lit_c" gd:nowGUID="fd31f1c9-aa83-4f26-852c-20fdd0a9309e" />uchyla się lit. a–c,</zdanie>
+              </p>
+            </tiret>
+            <tiret eId="DU/2025/159__art_1__pkt_12__lit_a__tir_2" gd:GUID="34027849-2800-4e07-aa1b-6d2afa549888" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">
+              <p>
+                <zdanie nr="1" gd:zdGUID="df4069c4-de2c-4017-b5c6-90becd30d8cf" fragment="46" gd:fragmentGUID="8425a606-2642-405a-a3c4-522c81da27a7" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">lit. d otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/2131" cudzyslowy="oba" gd:nowGUID="a85c7947-697b-4173-b7e6-4d88dd3f1887" element-eId="DU/2023/2131__art_19__ust_1__pkt_6__lit_d" funkcja="zastap"><litera eId="DU/2023/2131__art_19__ust_1__pkt_6__lit_d" gd:GUID="e1cf778a-f2ec-408e-a4f9-7f3df121d69b" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>d</nr><p><zdanie nr="1" gd:zdGUID="2e1991d4-ad03-460a-acb0-1a3aacd23f3f" fragment="1" gd:fragmentGUID="093033d8-364a-44df-a604-a1fa494a2ead" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">jednostkowe wskaźniki emisji dwutlenku węgla;</zdanie></p></litera></cytat-strukt>,</zdanie>
+              </p>
+            </tiret>
+            <tiret eId="DU/2025/159__art_1__pkt_12__lit_a__tir_3" gd:GUID="9448c742-1d14-48a3-9755-a1302fe83ca8" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">
+              <p>
+                <zdanie nr="1" gd:zdGUID="df4069c4-de2c-4017-b5c6-90becd30d8cf" fragment="47" gd:fragmentGUID="3ae922c9-7187-4df0-8433-6b1e3bfc4a18" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><now:uchyl akt="https://eli.gov.pl/eli/DU/2023/2131" element-eId="DU/2023/2131__art_19__ust_1__pkt_6__lit_e" gd:nowGUID="d7c7a45a-1312-49cb-82de-d3415e3722b1" />uchyla się lit. e,</zdanie>
+              </p>
+            </tiret>
+          </litera>
+          <litera eId="DU/2025/159__art_1__pkt_12__lit_b" gd:GUID="710c03d1-4ce0-4d85-997c-1da04151ea9d" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="df4069c4-de2c-4017-b5c6-90becd30d8cf" fragment="48" gd:fragmentGUID="3e5e3fe5-ec03-4e98-9c9f-6fe4dec88378" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><now:zamien-tekst stary-tekst="art. 15 ust. 7" nowy-tekst="art. 15 ust. 7 lub 7a" element-eId="DU/2023/2131__art_19__ust_1__pkt_9" akt="https://eli.gov.pl/eli/DU/2023/2131" gd:nowGUID="547c6c5e-2c7f-45a9-a83f-6adef5671074" />w pkt 9 wyrazy „art. 15 ust. 7” zastępuje się wyrazami „art. 15 ust. 7 lub 7a”;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2025/159__art_1__pkt_13" gd:GUID="85fe8557-835c-47c1-9f2a-25c2e2d39541" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">
+          <nr>13</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="df4069c4-de2c-4017-b5c6-90becd30d8cf" fragment="49" gd:fragmentGUID="bf52045b-74cd-4e37-bd96-519ee0173e9a" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">art. 21 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/2131" cudzyslowy="oba" gd:nowGUID="dde5127e-9f30-4661-b457-9442b454e4ff" element-eId="DU/2023/2131__art_21" funkcja="zastap"><artykul eId="DU/2023/2131__art_21" gd:GUID="6a843610-cdcd-4fe5-a1d8-d20c14f11eb3" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>21</nr><ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="b5162f93-8afa-4bc9-aa65-f066b5a4e6ab" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><p><zdanie nr="1" gd:zdGUID="aa96ac94-8db4-4036-a4b7-0ae9e1f847dc" fragment="1" gd:fragmentGUID="9efcdd3f-ac27-414c-b880-9b2919d54531" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">Przedkładając w certyfikacji do aukcji głównej, do aukcji dodatkowych lub do aukcji uzupełniającej wniosek o utworzenie jednostki rynku mocy uprzednio certyfikowanej, dostawca mocy może złożyć wniosek o certyfikację zawierający tylko uzupełnienie lub zmianę informacji przekazanych w poprzedniej certyfikacji do aukcji głównej, do aukcji dodatkowych lub do aukcji uzupełniającej.</zdanie></p></ustep-n></artykul></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/159__art_1__pkt_14" gd:GUID="3393f4cb-aca8-4a8b-8e2d-9570c4670454" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">
+          <nr>14</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="df4069c4-de2c-4017-b5c6-90becd30d8cf" fragment="50" gd:fragmentGUID="0c612d04-3827-4f3c-be11-ef014020556d" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">w art. 23 pkt 1 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/2131" cudzyslowy="oba" gd:nowGUID="c4926aa2-08fa-4630-aa34-daa92cc427f0" element-eId="DU/2023/2131__art_23__pkt_1" funkcja="zastap"><punkt eId="DU/2023/2131__art_23__pkt_1" gd:GUID="c88d0f31-360c-4284-aff1-cb6d4232d6d2" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="41976f67-9910-4637-8c45-53ba702c6c10" fragment="1" gd:fragmentGUID="c20395b0-183c-4e16-aec0-ca9c7f478a4c" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">aukcji głównej lub aukcji uzupełniającej, lub jednej lub większej liczbie aukcji dodatkowych następujących bezpośrednio po tej certyfikacji;</zdanie></p></punkt></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/159__art_1__pkt_15" gd:GUID="5bffbc11-c8b1-4f24-a3ce-abc6bbd60f24" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">
+          <nr>15</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="df4069c4-de2c-4017-b5c6-90becd30d8cf" fragment="51" gd:fragmentGUID="fdcf7755-9ab1-480c-b447-9cb6cbd1e32c" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">w art. 25:</zdanie>
+          </p>
+          <litera eId="DU/2025/159__art_1__pkt_15__lit_a" gd:GUID="df46afba-5cee-4026-9521-e7de78aea42c" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="df4069c4-de2c-4017-b5c6-90becd30d8cf" fragment="52" gd:fragmentGUID="243040bd-02ed-49ba-a9ac-f7a0ae30019f" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><now:zamien-tekst stary-tekst="aukcji dodatkowych" nowy-tekst="aukcji dodatkowych lub do aukcji uzupełniającej" element-eId="DU/2023/2131__art_25__ust_2" akt="https://eli.gov.pl/eli/DU/2023/2131" gd:nowGUID="2dc11eea-b915-449e-a51d-55182c77a5cd" />w ust. 2 po wyrazach „aukcji dodatkowych” dodaje się wyrazy „lub do aukcji uzupełniającej”,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/159__art_1__pkt_15__lit_b" gd:GUID="7a829bff-f902-4295-bee7-ca5a892e810a" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="df4069c4-de2c-4017-b5c6-90becd30d8cf" fragment="53" gd:fragmentGUID="39a084dc-037f-49a7-9f9f-4f091736967f" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><now:zamien-tekst stary-tekst="aukcji dodatkowych" nowy-tekst="aukcji dodatkowych lub do aukcji uzupełniającej" element-eId="DU/2023/2131__art_25__ust_3" akt="https://eli.gov.pl/eli/DU/2023/2131" gd:nowGUID="4ab2263d-5326-4207-a012-8ae9404af44a" />w ust. 3 we wprowadzeniu do wyliczenia po wyrazach „aukcji dodatkowych” dodaje się wyrazy „lub do aukcji uzupełniającej”,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/159__art_1__pkt_15__lit_c" gd:GUID="ba3990c7-7a08-46d7-be92-086590623818" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">
+            <nr>c</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="df4069c4-de2c-4017-b5c6-90becd30d8cf" fragment="54" gd:fragmentGUID="23953b0d-ca70-4694-a482-e2b701d23cee" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><now:zamien-tekst stary-tekst="aukcji dodatkowej" nowy-tekst="aukcji dodatkowej lub aukcji uzupełniającej" element-eId="DU/2023/2131__art_25__ust_4__pkt_4" akt="https://eli.gov.pl/eli/DU/2023/2131" gd:nowGUID="0ca91ac4-46eb-4c88-ab49-41730627b45c" />w ust. 4 w pkt 4 po wyrazach „aukcji dodatkowej” dodaje się wyrazy „lub aukcji uzupełniającej”,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/159__art_1__pkt_15__lit_d" gd:GUID="2c16676b-c2f1-4345-93bf-7e8850f5712e" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">
+            <nr>d</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="df4069c4-de2c-4017-b5c6-90becd30d8cf" fragment="55" gd:fragmentGUID="aadfad88-b21c-451e-936b-3eda31b34b12" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">dodaje się ust. 8 w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/2131" cudzyslowy="oba" gd:nowGUID="13474dbc-b46b-4b7f-90a0-db635e47b112" element-eId="DU/2023/2131__art_25" funkcja="dodaj-w"><ustep eId="DU/2023/2131__art_25__ust_8" gd:GUID="fea3d5da-586c-4399-a1c3-b32bd4c0ce11" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>8</nr><p><zdanie nr="1" gd:zdGUID="60ff053a-1ae3-430e-a301-3dd278406e61" fragment="1" gd:fragmentGUID="9b279445-3df9-41ec-a496-9b5b61ca9c3f" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">Jednostka rynku mocy w aukcji uzupełniającej posiada status:</zdanie></p><punkt eId="DU/2023/2131__art_25__ust_8__pkt_1" gd:GUID="b73971db-a6a7-4bf7-b9e8-76bae3436b91" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="60ff053a-1ae3-430e-a301-3dd278406e61" fragment="2" gd:fragmentGUID="e72bf88d-4307-42e9-9646-1ba580b2f0d0" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">cenotwórcy – w przypadku:</zdanie></p><litera eId="DU/2023/2131__art_25__ust_8__pkt_1__lit_a" gd:GUID="dbf248e6-ace4-4ab1-bac5-9e841df058e6" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>a</nr><p><zdanie nr="1" gd:zdGUID="60ff053a-1ae3-430e-a301-3dd278406e61" fragment="3" gd:fragmentGUID="1260f521-1267-4911-8a6e-90c42ce9c742" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">jednostki rynku mocy redukcji zapotrzebowania,</zdanie></p></litera><litera eId="DU/2023/2131__art_25__ust_8__pkt_1__lit_b" gd:GUID="98c626a1-d09b-45f0-9f98-f1c78aa9f46c" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>b</nr><p><zdanie nr="1" gd:zdGUID="60ff053a-1ae3-430e-a301-3dd278406e61" fragment="4" gd:fragmentGUID="adfa6b06-5b10-42ae-890f-b889013bf838" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">jednostki rynku mocy składającej się z jednostki fizycznej zagranicznej,</zdanie></p></litera><litera eId="DU/2023/2131__art_25__ust_8__pkt_1__lit_c" gd:GUID="29b3c0f7-0556-41e7-88d0-c7d3e8f12a0d" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>c</nr><p><zdanie nr="1" gd:zdGUID="60ff053a-1ae3-430e-a301-3dd278406e61" fragment="5" gd:fragmentGUID="6b04a9a9-93ca-4479-b6f4-73e87fac9308" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">jednostki fizycznej połączenia międzysystemowego;</zdanie></p></litera></punkt><punkt eId="DU/2023/2131__art_25__ust_8__pkt_2" gd:GUID="73b7c713-30e1-4d2e-bad4-3ebb6372dd5f" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="60ff053a-1ae3-430e-a301-3dd278406e61" fragment="6" gd:fragmentGUID="dc78cf80-f246-474d-a3af-49adaebabeae" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">cenobiorcy – w przypadku istniejącej jednostki rynku mocy wytwórczej.</zdanie></p></punkt></ustep></cytat-strukt>;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2025/159__art_1__pkt_16" gd:GUID="df944a00-adcf-48a5-9437-e14314374575" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">
+          <nr>16</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="df4069c4-de2c-4017-b5c6-90becd30d8cf" fragment="56" gd:fragmentGUID="6be534db-74c2-4beb-89f2-6adf2c542690" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><now:zamien-tekst stary-tekst="aukcji dodatkowych" nowy-tekst="aukcji dodatkowych lub do aukcji uzupełniającej" element-eId="DU/2023/2131__art_26__ust_3" akt="https://eli.gov.pl/eli/DU/2023/2131" gd:nowGUID="ce73706d-4b93-492c-96f1-fa09f0ad7ff1" />w art. 26 w ust. 3 po wyrazach „aukcji dodatkowych” dodaje się wyrazy „lub do aukcji uzupełniającej”;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/159__art_1__pkt_17" gd:GUID="ed5ea579-9c55-450d-851a-17328d88e8da" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">
+          <nr>17</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="df4069c4-de2c-4017-b5c6-90becd30d8cf" fragment="57" gd:fragmentGUID="017f76a7-4a2b-4129-bc37-9627a85ae3b8" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><now:uchyl akt="https://eli.gov.pl/eli/DU/2023/2131" element-eId="DU/2023/2131__art_27__pkt_2" gd:nowGUID="ac6946c7-a48a-4fd9-af72-2e7377a8a29b" /><now:uchyl akt="https://eli.gov.pl/eli/DU/2023/2131" element-eId="DU/2023/2131__art_27__pkt_4" gd:nowGUID="97205b09-92da-464d-8158-b909991cf49c" /><now:uchyl akt="https://eli.gov.pl/eli/DU/2023/2131" element-eId="DU/2023/2131__art_27__pkt_5" gd:nowGUID="8db38c90-5ca8-4b08-bc86-45cbf2a5d540" />w art. 27 uchyla się pkt 2, 4 i 5;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/159__art_1__pkt_18" gd:GUID="0934f356-f36f-45f1-a566-b147ce1fb882" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">
+          <nr>18</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="df4069c4-de2c-4017-b5c6-90becd30d8cf" fragment="58" gd:fragmentGUID="bb8f9ba5-c380-45d9-a949-4cc25f1f75f6" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><now:uchyl akt="https://eli.gov.pl/eli/DU/2023/2131" element-eId="DU/2023/2131__art_28__pkt_3" gd:nowGUID="25121168-bc80-4877-a2e3-d33f18defd2b" />w art. 28 uchyla się pkt 3;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/159__art_1__pkt_19" gd:GUID="c4559b01-457a-419a-9b81-4c27b2e6517f" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">
+          <nr>19</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="df4069c4-de2c-4017-b5c6-90becd30d8cf" fragment="59" gd:fragmentGUID="079343be-55e2-4c04-81c5-16bd882d2a27" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">po art. 28 dodaje się art. 28a w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/2131" cudzyslowy="oba" gd:nowGUID="6a41e0cf-19ab-4eab-8b3e-1852b3fa13ad" element-eId="DU/2023/2131__art_28" funkcja="dodaj-po"><artykul eId="DU/2023/2131__art_28a" gd:GUID="6e4087d7-ed44-4b65-b25b-e368465395a0" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>28a</nr><ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="b7db924f-6d6b-4741-99f8-8b9e01275c85" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><p><zdanie nr="1" gd:zdGUID="ede96e3d-a3d1-45f8-9188-c80413c654ec" fragment="1" gd:fragmentGUID="07e400ff-b07b-44ee-8d78-a395df8132ed" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">Operator, w terminie 10 dni od zakończenia certyfikacji do aukcji uzupełniającej, przedkłada Prezesowi URE oraz ministrowi właściwemu do spraw energii informację o przebiegu tej certyfikacji zawierającą w szczególności:</zdanie></p><punkt eId="DU/2023/2131__art_28a__pkt_1" gd:GUID="2e56adc0-3093-4155-81ed-da36c0f8c5bd" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="ede96e3d-a3d1-45f8-9188-c80413c654ec" fragment="2" gd:fragmentGUID="24796664-c0a6-4058-a1f6-1af56ac16424" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">liczbę utworzonych i dopuszczonych do udziału w aukcji uzupełniającej jednostek rynku mocy oraz sumę iloczynów ich mocy osiągalnej netto i korekcyjnych współczynników dyspozycyjności;</zdanie></p></punkt><punkt eId="DU/2023/2131__art_28a__pkt_2" gd:GUID="22264af7-ca3e-478a-a128-b1004d05b7bc" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="ede96e3d-a3d1-45f8-9188-c80413c654ec" fragment="3" gd:fragmentGUID="8da703e7-89bf-4e5b-8d50-2c142dc41990" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">sumaryczną wielkość obowiązków mocowych, które będą oferowali dostawcy mocy w aukcji uzupełniającej w podziale na cenotwórców i cenobiorców;</zdanie></p></punkt><punkt eId="DU/2023/2131__art_28a__pkt_3" gd:GUID="95d2b2ee-7227-41c7-a38c-7fe1a53d115a" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>3</nr><p><zdanie nr="1" gd:zdGUID="ede96e3d-a3d1-45f8-9188-c80413c654ec" fragment="4" gd:fragmentGUID="04dd9ac5-e696-48ef-abe5-e94fe0e48c71" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">wykaz podmiotów, którym odmówiono wydania certyfikatu, zgodnie z art. 22 ust. 2.</zdanie></p></punkt></ustep-n></artykul></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/159__art_1__pkt_20" gd:GUID="c088d48b-e452-4cd9-a926-b0afe3a84b4a" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">
+          <nr>20</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="df4069c4-de2c-4017-b5c6-90becd30d8cf" fragment="60" gd:fragmentGUID="406be965-14cc-43e9-bcca-034f4f0ac5f2" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">w art. 29:</zdanie>
+          </p>
+          <litera eId="DU/2025/159__art_1__pkt_20__lit_a" gd:GUID="2152406e-d5f9-4444-9f98-93022aa9e853" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="df4069c4-de2c-4017-b5c6-90becd30d8cf" fragment="61" gd:fragmentGUID="87c29d41-d0cb-4130-be89-5f4130d04d23" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">po ust. 2 dodaje się ust. 2a w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/2131" cudzyslowy="oba" gd:nowGUID="ec5478f9-939f-4621-87da-5f37269e00fa" element-eId="DU/2023/2131__art_29__ust_2" funkcja="dodaj-po"><ustep eId="DU/2023/2131__art_29__ust_2a" gd:GUID="bf31062e-d09d-4191-9361-18e55acadbdb" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>2a</nr><p><zdanie nr="1" gd:zdGUID="8ecb41c6-e622-4599-9e37-508426e89fe5" fragment="1" gd:fragmentGUID="285dde91-6c18-4ac5-b8f5-4d0a866e0576" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">Operator do dnia 30 kwietnia roku poprzedzającego okres dostaw, na który jest przeprowadzana aukcja uzupełniająca, ogłasza:</zdanie></p><punkt eId="DU/2023/2131__art_29__ust_2a__pkt_1" gd:GUID="8032aac5-b18b-4aa4-9b38-60af234fbe48" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="8ecb41c6-e622-4599-9e37-508426e89fe5" fragment="2" gd:fragmentGUID="02f03648-5430-472f-a4fb-43ff45d73b2b" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">datę aukcji uzupełniającej albo</zdanie></p></punkt><punkt eId="DU/2023/2131__art_29__ust_2a__pkt_2" gd:GUID="7398a0f1-d948-43f5-b413-1711733a05f6" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="8ecb41c6-e622-4599-9e37-508426e89fe5" fragment="3" gd:fragmentGUID="4f7bded0-7d19-40e8-a4da-06da10245a7f" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">informację o nieprzeprowadzaniu aukcji uzupełniającej na dany okres dostaw w przypadku braku potwierdzenia wystąpienia przesłanki, o której mowa w ust. 5 pkt 2.</zdanie></p></punkt></ustep></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/159__art_1__pkt_20__lit_b" gd:GUID="60923029-93b6-4179-a1ca-818eb7069de9" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="df4069c4-de2c-4017-b5c6-90becd30d8cf" fragment="62" gd:fragmentGUID="78d3ea63-5116-489d-9ab3-a97a1beb4401" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">dodaje się ust. 5 i 6 w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/2131" cudzyslowy="oba" gd:nowGUID="97746178-bd64-4073-9200-bff70ac388e0" element-eId="DU/2023/2131__art_29" funkcja="dodaj-w"><ustep eId="DU/2023/2131__art_29__ust_5" gd:GUID="68fc7fea-7071-4966-95b1-fdc583592dba" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>5</nr><p><zdanie nr="1" gd:zdGUID="bea9ccac-b815-46c2-a5ce-663e4c4cebeb" fragment="1" gd:fragmentGUID="e95c8d5b-7596-4130-9488-f93d587d1529" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">Aukcję uzupełniającą przeprowadza się na dany okres dostaw:</zdanie></p><punkt eId="DU/2023/2131__art_29__ust_5__pkt_1" gd:GUID="e8a7e040-3bc9-4a80-8d73-4863583a6b2b" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="bea9ccac-b815-46c2-a5ce-663e4c4cebeb" fragment="2" gd:fragmentGUID="c4b3005f-a6e4-4493-b83d-4206e2d71cbb" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">po zakończeniu aukcji dodatkowych na dany rok dostaw oraz</zdanie></p></punkt><punkt eId="DU/2023/2131__art_29__ust_5__pkt_2" gd:GUID="a0ced6e4-6cec-4075-b7fd-a391bf08441b" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="bea9ccac-b815-46c2-a5ce-663e4c4cebeb" fragment="3" gd:fragmentGUID="00c17aa3-1ab4-4834-a7d0-7d3ded755e9b" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">w przypadku gdy ilość zdolności wytwórczych oferowanych w aukcji głównej oraz aukcjach dodatkowych na dany rok dostaw nie jest wystarczająca, aby rozwiązać problem związany z wystarczalnością, stwierdzony na podstawie art. 20 ust. 1 rozporządzenia 2019/943, w danym okresie dostaw.</zdanie></p></punkt></ustep><ustep eId="DU/2023/2131__art_29__ust_6" gd:GUID="fc02bc20-d66b-47ef-8471-34c9a17e46e7" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>6</nr><p><zdanie nr="1" gd:zdGUID="edc9a526-c562-4664-ac23-eab54f636498" fragment="1" gd:fragmentGUID="98f757e6-ebff-48b2-bb17-273b96ee0739" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">W celu potwierdzenia wystąpienia przesłanki, o której mowa w ust. 5 pkt 2, operator opracowuje ocenę wystarczalności zasobów na poziomie krajowym, o której mowa w art. 24 rozporządzenia 2019/943, albo jej aktualizację.</zdanie></p></ustep></cytat-strukt>;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2025/159__art_1__pkt_21" gd:GUID="c91a6202-a2bd-4e2c-a4d4-ceab1233087f" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">
+          <nr>21</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="df4069c4-de2c-4017-b5c6-90becd30d8cf" fragment="63" gd:fragmentGUID="9467410c-f1d5-450e-b0d8-4bcd4eec31d9" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">w art. 32:</zdanie>
+          </p>
+          <litera eId="DU/2025/159__art_1__pkt_21__lit_a" gd:GUID="72a0391b-046c-46bf-bfc3-99e10e6e1206" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="df4069c4-de2c-4017-b5c6-90becd30d8cf" fragment="64" gd:fragmentGUID="cc5bde7e-213c-4b7f-9e3b-f4420b63410d" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><now:zamien-tekst stary-tekst="dla tego samego roku dostaw" nowy-tekst="dla tego samego roku dostaw, z zastrzeżeniem że na potrzeby aukcji wstępnych do tych aukcji dodatkowych parametry, o których mowa w ust. 1 pkt 7, pomniejsza się o sumę obowiązków mocowych zakontraktowanych w toku aukcji głównej na dany rok dostaw" element-eId="DU/2023/2131__art_32__ust_3" akt="https://eli.gov.pl/eli/DU/2023/2131" gd:nowGUID="f09eb904-2d6e-4489-ab12-30e914213cbe" />w ust. 3 po wyrazach „dla tego samego roku dostaw” dodaje się wyrazy „ , z zastrzeżeniem że na potrzeby aukcji wstępnych do tych aukcji dodatkowych parametry, o których mowa w ust. 1 pkt 7, pomniejsza się o sumę obowiązków mocowych zakontraktowanych w toku aukcji głównej na dany rok dostaw”,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/159__art_1__pkt_21__lit_b" gd:GUID="cb79a3e8-7f74-467c-a83e-d9bda9362f10" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="df4069c4-de2c-4017-b5c6-90becd30d8cf" fragment="65" gd:fragmentGUID="5681bd31-b4ea-4d82-8e5c-34702fb79bfe" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">dodaje się ust. 4 w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/2131" cudzyslowy="oba" gd:nowGUID="2609d045-1623-4a9b-b8d5-48e68e3d93ae" element-eId="DU/2023/2131__art_32" funkcja="dodaj-w"><ustep eId="DU/2023/2131__art_32__ust_4" gd:GUID="f27948df-9c06-4861-84b8-4de9596dee52" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>4</nr><p><zdanie nr="1" gd:zdGUID="80c04fe8-046d-473e-969d-09f542f8339e" fragment="1" gd:fragmentGUID="e95c7228-4d80-4c9b-ac51-a3c116419cab" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">Parametrami aukcji uzupełniającej są parametry, o których mowa w ust. 1 pkt 1, 2 i 7, wyznaczane dla okresu dostaw oraz parametry, o których mowa w ust. 1 pkt 3 i 6, które zostały określone w przepisach wydanych na podstawie art. 34 ust. 1 dla aukcji dodatkowych dla tego samego okresu dostaw.</zdanie></p></ustep></cytat-strukt>;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2025/159__art_1__pkt_22" gd:GUID="dc0ea9f8-fa73-465a-9eef-2a97f8853c3e" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">
+          <nr>22</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="df4069c4-de2c-4017-b5c6-90becd30d8cf" fragment="66" gd:fragmentGUID="6dacae3a-dbb1-48d6-b720-eeb73acc5450" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">po art. 34 dodaje się art. 34a i art. 34b w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/2131" cudzyslowy="oba" gd:nowGUID="ba8a97e9-6b2f-452b-acec-632440699bf1" element-eId="DU/2023/2131__art_34" funkcja="dodaj-po"><artykul eId="DU/2023/2131__art_34a" gd:GUID="de3d6bf3-804f-4f94-8f9b-e433d11531aa" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>34a</nr><ustep eId="DU/2023/2131__art_34a__ust_1" gd:GUID="2d2199b3-41af-43a8-bc5e-289ea7accd0c" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="6c7f2ff6-557c-449f-9bde-13d1ed3902cb" fragment="1" gd:fragmentGUID="39d0cd88-f69f-418f-9a99-d0f5e3770232" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">Parametrami aukcji uzupełniającej są:</zdanie></p><punkt eId="DU/2023/2131__art_34a__ust_1__pkt_1" gd:GUID="5c3a6855-88a5-4f73-a57b-c113a32e4c72" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="6c7f2ff6-557c-449f-9bde-13d1ed3902cb" fragment="2" gd:fragmentGUID="9eeee741-96a1-40c1-a4d0-e6a8613bc489" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">zapotrzebowanie na moc wyznaczone zgodnie z wzorem:</zdanie></p><wzor-mat xmlns:mml="http://www.w3.org/1998/Math/MathML" gd:GUID="6bdd9216-50b6-425d-940c-07556ddb54a7"><wzor><mml:math display="block"><mml:msub><mml:mi>PZM</mml:mi><mml:mi>AU</mml:mi></mml:msub><mml:mo>=</mml:mo><mml:msub><mml:mi mathvariant="normal">P</mml:mi><mml:mi>OM</mml:mi></mml:msub><mml:mo>+</mml:mo><mml:mrow><mml:munderover><mml:mo>∑</mml:mo><mml:mrow><mml:mi mathvariant="normal">s</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn></mml:mrow><mml:mn>3</mml:mn></mml:munderover><mml:mi>max</mml:mi><mml:mrow><mml:mo fence="true">(</mml:mo><mml:mrow><mml:munder><mml:mi>min</mml:mi><mml:mi mathvariant="normal">q</mml:mi></mml:munder><mml:mo>⁡</mml:mo><mml:mrow><mml:mo fence="true">(</mml:mo><mml:mi mathvariant="normal">W</mml:mi><mml:msub><mml:mi mathvariant="normal">Z</mml:mi><mml:mi>ADqs</mml:mi></mml:msub><mml:mo>-</mml:mo><mml:mrow><mml:mo>∑</mml:mo><mml:mi mathvariant="normal">O</mml:mi><mml:msub><mml:mi mathvariant="normal">M</mml:mi><mml:mi>qs</mml:mi></mml:msub></mml:mrow><mml:mo fence="true">)</mml:mo></mml:mrow><mml:mo>;</mml:mo><mml:mn>0</mml:mn></mml:mrow><mml:mo fence="true">)</mml:mo></mml:mrow></mml:mrow><mml:mo>-</mml:mo><mml:mrow><mml:mo>∑</mml:mo><mml:msub><mml:mi>OM</mml:mi><mml:mi>AG</mml:mi></mml:msub></mml:mrow><mml:mo>-</mml:mo><mml:mrow><mml:munder><mml:mi>min</mml:mi><mml:mi mathvariant="normal">q</mml:mi></mml:munder><mml:mo>⁡</mml:mo><mml:mrow><mml:mo fence="true">(</mml:mo><mml:mrow><mml:mo>∑</mml:mo><mml:msub><mml:mi>OM</mml:mi><mml:mi>ADq</mml:mi></mml:msub></mml:mrow><mml:mo fence="true">)</mml:mo></mml:mrow></mml:mrow></mml:math></wzor><wprowadzenie-do-opisu>gdzie poszczególne symbole oznaczają:</wprowadzenie-do-opisu><opis><symbol-mat><mml:math><mml:msub><mml:mi>PZM</mml:mi><mml:mi>AU</mml:mi></mml:msub></mml:math></symbol-mat><objasnienie><p><zdanie nr="1" gd:zdGUID="be6078b2-ec38-4e27-a119-f7778aee5a78" fragment="1" gd:fragmentGUID="fe8bb7eb-430a-4a9f-b80b-6bf5119b3a91">zapotrzebowanie na moc w danej aukcji uzupełniającej,</zdanie></p></objasnienie></opis><opis><symbol-mat><mml:math><mml:msub><mml:mi mathvariant="normal">P</mml:mi><mml:mi>OM</mml:mi></mml:msub></mml:math></symbol-mat><objasnienie><p><zdanie nr="1" gd:zdGUID="c6f70f7f-2529-42b1-aa01-1e564c0c45ab" fragment="1" gd:fragmentGUID="584acb72-8880-4656-9ec1-776325267179">wymaganą wielkość obowiązków mocowych dla zapewnienia spełnienia standardu bezpieczeństwa dostaw energii elektrycznej do odbiorców końcowych, określonego w przepisach wydanych na podstawie art. 68, określoną w ocenie wystarczalności zasobów na poziomie krajowym, o której mowa w art. 24 rozporządzenia 2019/943,</zdanie></p></objasnienie></opis><opis><symbol-mat><mml:math><mml:mi mathvariant="normal">s</mml:mi></mml:math></symbol-mat><objasnienie><p><zdanie nr="1" gd:zdGUID="70b8fb3a-6b81-43cb-a5fa-eb5f02d4acfd" fragment="1" gd:fragmentGUID="80a7c5d7-8829-4ea7-b105-c38c3cb8e2e3">strefy, o których mowa w art. 6 ust. 6,</zdanie></p></objasnienie></opis><opis><symbol-mat><mml:math><mml:mi mathvariant="normal">q</mml:mi></mml:math></symbol-mat><objasnienie><p><zdanie nr="1" gd:zdGUID="14eea903-695d-4a01-be22-63f3aa60e481" fragment="1" gd:fragmentGUID="5d531257-026f-4a02-877f-360e70d536e3">poszczególne kwartały pokrywające się z okresem dostaw, którego dotyczy dana aukcja uzupełniająca,</zdanie></p></objasnienie></opis><opis><symbol-mat><mml:math><mml:mi mathvariant="normal">W</mml:mi><mml:msub><mml:mi mathvariant="normal">Z</mml:mi><mml:mi>ADqs</mml:mi></mml:msub></mml:math></symbol-mat><objasnienie><p><zdanie nr="1" gd:zdGUID="b5df1be6-1913-4041-a54a-22ff0c568d85" fragment="1" gd:fragmentGUID="fe21feef-21cb-489d-9467-ba4555a0e78d">maksymalny wolumen obowiązków mocowych dla kwartału q i strefy s określony na potrzeby aukcji dodatkowych w przepisach wydanych na podstawie art. 34 ust. 1,</zdanie></p></objasnienie></opis><opis><symbol-mat><mml:math><mml:mrow><mml:mo>∑</mml:mo><mml:mi mathvariant="normal">O</mml:mi><mml:msub><mml:mi mathvariant="normal">M</mml:mi><mml:mi>qs</mml:mi></mml:msub></mml:mrow></mml:math></symbol-mat><objasnienie><p><zdanie nr="1" gd:zdGUID="d13067f9-d7f6-469c-af56-6960d6a3a32a" fragment="1" gd:fragmentGUID="bd769390-6e78-4dc8-a4ae-e8c8505714de">sumę aktywnych obowiązków mocowych, zakontraktowanych w toku aukcji głównej i aukcji dodatkowej, obejmujących kwartał q i strefę s,</zdanie></p></objasnienie></opis><opis><symbol-mat><mml:math><mml:mrow><mml:mo>∑</mml:mo><mml:msub><mml:mi>OM</mml:mi><mml:mi>AG</mml:mi></mml:msub></mml:mrow></mml:math></symbol-mat><objasnienie><p><zdanie nr="1" gd:zdGUID="c5d19277-ccf2-4b18-8975-46a95ca06c62" fragment="1" gd:fragmentGUID="b68b8527-8466-44e7-bf69-2d9f5ec88d8c">sumę aktywnych obowiązków mocowych dotyczących danego roku dostaw, które zostały zakontraktowane w toku aukcji głównej na ten rok dostaw oraz w aukcjach głównych na wcześniejsze okresy dostaw,</zdanie></p></objasnienie></opis><opis><symbol-mat><mml:math><mml:mrow><mml:mo>∑</mml:mo><mml:msub><mml:mi>OM</mml:mi><mml:mi>ADq</mml:mi></mml:msub></mml:mrow></mml:math></symbol-mat><objasnienie><p><zdanie nr="1" gd:zdGUID="7ac5535d-7fa7-4e47-87bd-20a793dce94a" fragment="1" gd:fragmentGUID="9d75f70a-9788-4b06-b714-91aca3f278df">sumę aktywnych obowiązków mocowych zakontraktowanych w toku aukcji dodatkowej, obejmujących kwartał q;</zdanie></p></objasnienie></opis></wzor-mat></punkt><punkt eId="DU/2023/2131__art_34a__ust_1__pkt_2" gd:GUID="783b32a4-5192-44bd-8540-3958ee030fa6" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="6c7f2ff6-557c-449f-9bde-13d1ed3902cb" fragment="3" gd:fragmentGUID="79d7b18c-c39a-4a77-b215-cbf84a0ad69c" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">parametr wyznaczający wielkość mocy poniżej zapotrzebowania na moc w aukcji uzupełniającej, dla której cena osiąga wartość maksymalną, wynoszący 0 %;</zdanie></p></punkt><punkt eId="DU/2023/2131__art_34a__ust_1__pkt_3" gd:GUID="8b238086-9a81-4e71-8ee7-14d0ccfb6740" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>3</nr><p><zdanie nr="1" gd:zdGUID="6c7f2ff6-557c-449f-9bde-13d1ed3902cb" fragment="4" gd:fragmentGUID="9deb6563-28b4-40b8-8be2-7c69b8edfad4" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">parametr wyznaczający wielkość mocy ponad zapotrzebowanie na moc w aukcji uzupełniającej, dla której cena osiąga wartość minimalną równą 0,01 zł/kW/miesiąc, wynoszący 30 %;</zdanie></p></punkt><punkt eId="DU/2023/2131__art_34a__ust_1__pkt_4" gd:GUID="6a6d05b2-cae1-44e2-8d82-c1d73977469c" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>4</nr><p><zdanie nr="1" gd:zdGUID="6c7f2ff6-557c-449f-9bde-13d1ed3902cb" fragment="5" gd:fragmentGUID="734ee4ec-f665-4f8f-acd5-268bfb9d8054" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">maksymalne wolumeny obowiązków mocowych w aukcjach wstępnych do aukcji uzupełniającej dla stref, o których mowa w art. 6 ust. 6, wyznaczone zgodnie ze wzorem:</zdanie></p><wzor-mat xmlns:mml="http://www.w3.org/1998/Math/MathML" gd:GUID="369a1e55-221c-4f1e-b62a-6c11334f4bbd"><wzor><mml:math display="block"><mml:msub><mml:mi>WZ</mml:mi><mml:mi>AUs</mml:mi></mml:msub><mml:mo>=</mml:mo><mml:mi>max</mml:mi><mml:mrow><mml:mo fence="true">(</mml:mo><mml:mrow><mml:munder><mml:mi>min</mml:mi><mml:mi mathvariant="normal">q</mml:mi></mml:munder><mml:mo>⁡</mml:mo><mml:mrow><mml:mo fence="true">(</mml:mo><mml:msub><mml:mi>WZ</mml:mi><mml:mi>ADqs</mml:mi></mml:msub><mml:mo>-</mml:mo><mml:mrow><mml:mo>∑</mml:mo><mml:msub><mml:mi>OM</mml:mi><mml:mi>qs</mml:mi></mml:msub></mml:mrow><mml:mo fence="true">)</mml:mo></mml:mrow></mml:mrow><mml:mo>;</mml:mo><mml:mn>0</mml:mn><mml:mo fence="true">)</mml:mo></mml:mrow></mml:math></wzor><wprowadzenie-do-opisu>gdzie poszczególne symbole oznaczają:</wprowadzenie-do-opisu><opis><symbol-mat><mml:math><mml:msub><mml:mi>WZ</mml:mi><mml:mi>AUs</mml:mi></mml:msub></mml:math></symbol-mat><objasnienie><p><zdanie nr="1" gd:zdGUID="2a43be71-fa71-4bd0-ab00-abab58b1bbfb" fragment="1" gd:fragmentGUID="df586f8e-ec07-403c-9adc-d28a225d9d59">maksymalny wolumen obowiązków mocowych w aukcji wstępnej do aukcji uzupełniającej dla danej strefy s,</zdanie></p></objasnienie></opis><opis><symbol-mat><mml:math><mml:mi mathvariant="normal">s</mml:mi></mml:math></symbol-mat><objasnienie><p><zdanie nr="1" gd:zdGUID="cec9db29-7a28-4839-b583-ef0f33e3e159" fragment="1" gd:fragmentGUID="111109bc-0e6d-45b6-8d40-fcae9eb8bd21">strefy, o których mowa w art. 6 ust. 6,</zdanie></p></objasnienie></opis><opis><symbol-mat><mml:math><mml:mi mathvariant="normal">q</mml:mi></mml:math></symbol-mat><objasnienie><p><zdanie nr="1" gd:zdGUID="8faee951-1944-4d9f-8a03-6f5de0298925" fragment="1" gd:fragmentGUID="a470ed9b-2713-4f2b-8656-15ab52ee7516">poszczególne kwartały pokrywające się z okresem dostaw, którego dotyczy dana aukcja uzupełniająca,</zdanie></p></objasnienie></opis><opis><symbol-mat><mml:math><mml:msub><mml:mi>WZ</mml:mi><mml:mi>ADqs</mml:mi></mml:msub></mml:math></symbol-mat><objasnienie><p><zdanie nr="1" gd:zdGUID="3dbaab82-71f0-4f0d-8a22-6a034fab544b" fragment="1" gd:fragmentGUID="baa15d24-9ba2-4c40-9088-c9a2777903bf">maksymalny wolumen obowiązków mocowych dla kwartału q i strefy s określony na potrzeby aukcji dodatkowej w przepisach wydanych na podstawie art. 34 ust. 1,</zdanie></p></objasnienie></opis><opis><symbol-mat><mml:math><mml:mrow><mml:mo>∑</mml:mo><mml:msub><mml:mi>OM</mml:mi><mml:mi>qs</mml:mi></mml:msub></mml:mrow></mml:math></symbol-mat><objasnienie><p><zdanie nr="1" gd:zdGUID="763e2bb8-adc1-45b1-8975-495b994ad590" fragment="1" gd:fragmentGUID="415e4091-ab19-4f41-92f1-595a767e07aa">sumę aktywnych obowiązków mocowych, zakontraktowanych w toku aukcji głównej i aukcji dodatkowej, obejmujących kwartał q i strefę s;</zdanie></p></objasnienie></opis></wzor-mat></punkt><punkt eId="DU/2023/2131__art_34a__ust_1__pkt_5" gd:GUID="09301cf9-c367-4f2e-8805-873975d5cf36" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>5</nr><p><zdanie nr="1" gd:zdGUID="6c7f2ff6-557c-449f-9bde-13d1ed3902cb" fragment="6" gd:fragmentGUID="f6cd63fd-8c6b-4e52-b140-bc775af263aa" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">cena maksymalna określona dla cenobiorcy, wyznaczona na podstawie kapitałowych i operacyjnych kosztów stałych, z wyłączeniem jednostek objętych obowiązkiem mocowym w okresie dostaw pokrywającym się z okresem dostaw, na który jest przeprowadzana aukcja uzupełniająca, przy czym cena ta nie może być wyższa niż 72 euro/kW;</zdanie></p></punkt><punkt eId="DU/2023/2131__art_34a__ust_1__pkt_6" gd:GUID="506c77a2-36fa-41d9-a073-957483dd54ec" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>6</nr><p><zdanie nr="1" gd:zdGUID="6c7f2ff6-557c-449f-9bde-13d1ed3902cb" fragment="7" gd:fragmentGUID="f0bb4962-fb07-4669-9092-b19d8833c9f9" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">pozostałe parametry aukcji, o których mowa w art. 31 pkt 2 i 3 oraz art. 32 ust. 1 pkt 3 i 6, określone w przepisach wydanych na podstawie art. 34 ust. 1 dla aukcji dodatkowych obejmujących okresy dostaw pokrywające się z okresem dostaw, na który jest przeprowadzana aukcja uzupełniająca.</zdanie></p></punkt></ustep><ustep eId="DU/2023/2131__art_34a__ust_2" gd:GUID="155c0155-e414-4c34-a1b9-7d6947b6e898" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="02089932-43fc-498e-95e0-79b2a6a0e788" fragment="1" gd:fragmentGUID="0d5a65de-45c8-45ee-8193-c743d1c6e28a" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">Przez aktywne obowiązki mocowe, o których mowa w ust. 1 pkt 1 i 4, rozumie się obowiązki mocowe ujęte w umowach mocowych, które nie zostały rozwiązane.</zdanie></p></ustep><ustep eId="DU/2023/2131__art_34a__ust_3" gd:GUID="e0bc78fa-ed2a-4bc7-98c3-dbd535bae83f" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>3</nr><p><zdanie nr="1" gd:zdGUID="01e4578a-04fd-4ceb-b5be-431275258cd1" fragment="1" gd:fragmentGUID="efd37f6e-a803-4535-bdd3-4a4ba12305ed" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">Na potrzeby wyznaczenia parametru, o którym mowa w ust. 1 pkt 1, po zakończeniu aukcji dodatkowych na dany okres dostaw i nie później niż 30 dni przed terminem, o którym mowa w art. 34b ust. 2, operator opracowuje ocenę wystarczalności zasobów na poziomie krajowym, o której mowa w art. 24 rozporządzenia 2019/943, albo jej aktualizację, z uwzględnieniem wyników przeprowadzonych aukcji dodatkowych na dany rok dostaw.</zdanie></p></ustep><ustep eId="DU/2023/2131__art_34a__ust_4" gd:GUID="4ed7c939-bd72-4a4e-b695-f712812a976a" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>4</nr><p><zdanie nr="1" gd:zdGUID="5c5f13cb-ac56-4cd7-aa3d-4c9d8e854d24" fragment="1" gd:fragmentGUID="e4573604-7e7d-4483-95ab-36db9e86ac55" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">Operator publikuje na swojej stronie internetowej ocenę wystarczalności zasobów na poziomie krajowym, o której mowa w ust. 3, albo jej aktualizację, niezwłocznie po zasięgnięciu opinii ministra właściwego do spraw energii oraz Prezesa URE.</zdanie><zdanie nr="2" gd:zdGUID="f7549c24-0b3a-4ec7-b8b7-23c5f15163ee" fragment="1" gd:fragmentGUID="77e7bdb1-5dd5-410f-88d3-ddf223a8b2d4" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">Minister właściwy do spraw energii oraz Prezes URE przedstawiają opinie w terminie 7 dni od dnia przedłożenia przez operatora oceny wystarczalności zasobów na poziomie krajowym albo jej aktualizacji.</zdanie></p></ustep><ustep eId="DU/2023/2131__art_34a__ust_5" gd:GUID="d778fccd-26a0-4f47-b2b1-5b58af5209d2" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>5</nr><p><zdanie nr="1" gd:zdGUID="2be4097d-97bc-4524-bf46-c7972bcf6887" fragment="1" gd:fragmentGUID="5ba6fa2c-54de-402f-a878-a8297b9690aa" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">Równowartość wyrażonej w euro ceny, o której mowa w ust. 1 pkt 5, oblicza się w złotych według średniego kursu euro ogłaszanego przez Narodowy Bank Polski w tabeli kursów w dniu przedłożenia przez operatora proponowanych parametrów aukcji uzupełniającej na dany okres dostaw.</zdanie></p></ustep></artykul><artykul eId="DU/2023/2131__art_34b" gd:GUID="e6a49c1a-ccbf-4095-bd77-fae9e0a54807" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>34b</nr><ustep eId="DU/2023/2131__art_34b__ust_1" gd:GUID="b04d8020-0f39-49b4-8791-1b40f54c6a65" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="021ab44f-20db-4873-98df-c25a0b575546" fragment="1" gd:fragmentGUID="782eb89a-bb31-4f1f-bce0-108de2c7362b" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">Operator, w terminie 7 dni od dnia publikacji oceny wystarczalności zasobów na poziomie krajowym, o której mowa w art. 34a ust. 4, albo jej aktualizacji, przedkłada ministrowi właściwemu do spraw energii proponowane parametry aukcji uzupełniającej na dany okres dostaw, o których mowa w art. 34a ust. 1.</zdanie></p></ustep><ustep eId="DU/2023/2131__art_34b__ust_2" gd:GUID="d8af80c8-840e-406f-abb0-d360eff8ff41" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="904eb29f-5e49-4b6f-86b3-75132ecc0025" fragment="1" gd:fragmentGUID="6e0c4c31-6cda-4613-8f24-9ea35bca6d4f" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">Minister właściwy do spraw energii na podstawie proponowanych parametrów aukcji uzupełniającej na dany okres dostaw, o których mowa w ust. 1, ogłasza w drodze obwieszczenia, w Dzienniku Urzędowym Rzeczypospolitej Polskiej „Monitor Polski”, parametry aukcji uzupełniającej w terminie do dnia:</zdanie></p><punkt eId="DU/2023/2131__art_34b__ust_2__pkt_1" gd:GUID="bdc0eb68-fa92-4018-944f-4036fc4ac29b" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="904eb29f-5e49-4b6f-86b3-75132ecc0025" fragment="2" gd:fragmentGUID="5226959f-a7eb-48a1-a3be-5fc66a83fbf2" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">30 maja 2025 r. – na okres dostaw przypadający na rok 2026,</zdanie></p></punkt><punkt eId="DU/2023/2131__art_34b__ust_2__pkt_2" gd:GUID="84b17ee3-a233-46e9-9245-76367dc08b47" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="904eb29f-5e49-4b6f-86b3-75132ecc0025" fragment="3" gd:fragmentGUID="a1088ff8-6faa-4ee4-a410-111e52b5e34b" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">30 maja 2026 r. – na okres dostaw przypadający na rok 2027,</zdanie></p></punkt><punkt eId="DU/2023/2131__art_34b__ust_2__pkt_3" gd:GUID="84f26f7c-18b3-4185-8f34-63dc17ed54ef" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>3</nr><p><zdanie nr="1" gd:zdGUID="904eb29f-5e49-4b6f-86b3-75132ecc0025" fragment="4" gd:fragmentGUID="63ad6222-7aae-4cc8-9696-0aee664e5b79" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">30 maja 2027 r. – na okres dostaw przypadający na rok 2028</zdanie></p></punkt><czesc-wspolna-punkt eId="DU/2023/2131__art_34b__ust_2__czw" gd:GUID="b0215a80-0573-4c36-a5e8-c4612f15c311" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><p><zdanie nr="1" gd:zdGUID="904eb29f-5e49-4b6f-86b3-75132ecc0025" fragment="5" gd:fragmentGUID="fa7ea1bc-c373-428d-9147-74b9bb1be66d" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">– biorąc pod uwagę wyniki oceny wystarczalności zasobów na poziomie krajowym albo jej aktualizacji, opublikowanej przez operatora zgodnie z art. 34a ust. 4.</zdanie></p></czesc-wspolna-punkt></ustep></artykul></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/159__art_1__pkt_23" gd:GUID="77986586-4281-4524-93fa-01e3ff461491" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">
+          <nr>23</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="df4069c4-de2c-4017-b5c6-90becd30d8cf" fragment="67" gd:fragmentGUID="2d7578a1-f711-4d00-8947-5bc6fbbb0790" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><now:zamien-tekst stary-tekst="." nowy-tekst=";" element-eId="DU/2023/2131__art_49a__pkt_2" akt="https://eli.gov.pl/eli/DU/2023/2131" now:wystapienie="ostatnie" gd:nowGUID="c36c65a1-313c-41b1-974f-719c67f8c6af" />w art. 49a w pkt 2 kropkę zastępuje się średnikiem i dodaje się pkt 3 w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/2131" cudzyslowy="oba" gd:nowGUID="bbe47ea7-9729-4af3-a079-be03a8559cfe" element-eId="DU/2023/2131__art_49a__pkt_2" funkcja="dodaj-po"><punkt eId="DU/2023/2131__art_49a__pkt_3" gd:GUID="6dc640c9-93d4-428e-925a-31493e3ca849" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>3</nr><p><zdanie nr="1" gd:zdGUID="60e74f56-b07b-4ae8-bcd7-474a3d39fa16" fragment="1" gd:fragmentGUID="c9616dbd-2e5c-4cab-b03d-468efeacd470" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">obowiązku mocowego, który powstał w wyniku zawarcia umowy mocowej w ramach aukcji uzupełniającej, również w przypadku, gdy ten obowiązek mocowy został przeniesiony, w całości lub w części, na inną jednostkę rynku mocy w wyniku transakcji na rynku wtórnym, niezależnie od liczby transakcji, którym podlegał.</zdanie></p></punkt></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/159__art_1__pkt_24" gd:GUID="a1c9c916-b0be-4a1a-a5fd-42e5648930ec" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">
+          <nr>24</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="df4069c4-de2c-4017-b5c6-90becd30d8cf" fragment="68" gd:fragmentGUID="dcc50731-8ca8-4329-b572-16dc60ffed1c" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><now:dodaj-ustep element-eId="DU/2023/2131__art_53a" akt="https://eli.gov.pl/eli/DU/2023/2131" gd:nowGUID="4229807b-fbc5-4730-b671-7f09b8811052" />w art. 53a dotychczasową treść oznacza się jako ust. 1 i dodaje się ust. 2 w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/2131" cudzyslowy="oba" gd:nowGUID="e6e01373-ea10-483d-bcb8-0ba6e04043c2" element-eId="DU/2023/2131__art_53a__ust_1" funkcja="dodaj-po"><ustep eId="DU/2023/2131__art_53a__ust_2" gd:GUID="f128b6a6-ee41-41c4-bb85-c36fa8774d82" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="f6e4f1ac-7a0e-424a-b665-43bd5e1b8ad3" fragment="1" gd:fragmentGUID="2c876f18-d896-4b64-b541-b93db98b86b6" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">Jednostka redukcji zapotrzebowania planowana wchodząca w skład jednostki rynku mocy redukcji zapotrzebowania może zostać zastąpiona jedną lub większą liczbą jednostek fizycznych redukcji zapotrzebowania, jeżeli spowoduje to, że jednostka rynku mocy redukcji zapotrzebowania, w skład której wchodzą te jednostki, w okresie dostaw, nie będzie spełniała limitu emisji, jedynie w odniesieniu do jednostki rynku mocy objętej certyfikatem wydanym w toku certyfikacji do aukcji uzupełniającej.</zdanie></p></ustep></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/159__art_1__pkt_25" gd:GUID="193e9a74-d86c-47ee-8c8c-d40773fb51e5" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">
+          <nr>25</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="df4069c4-de2c-4017-b5c6-90becd30d8cf" fragment="69" gd:fragmentGUID="9ff98b72-d18b-40d9-9496-8c966b0afa0a" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">w art. 55 ust. 4 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/2131" cudzyslowy="oba" gd:nowGUID="f3907dc3-84fc-4816-9464-fafbf48b820d" element-eId="DU/2023/2131__art_55__ust_4" funkcja="zastap"><ustep eId="DU/2023/2131__art_55__ust_4" gd:GUID="cf0ad30c-b76e-4499-a4eb-5de44aceb12b" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>4</nr><p><zdanie nr="1" gd:zdGUID="0d053d3a-6bf8-4bde-9ff6-aa0854377254" fragment="1" gd:fragmentGUID="1e82c248-c115-4464-b13e-f915db072364" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">Wpis do rejestru zachowuje ważność do rozpoczęcia certyfikacji ogólnej w kolejnym roku.</zdanie></p></ustep></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/159__art_1__pkt_26" gd:GUID="ee90123e-572b-4ba8-8c76-eec807cf32a9" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">
+          <nr>26</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="df4069c4-de2c-4017-b5c6-90becd30d8cf" fragment="70" gd:fragmentGUID="ff0d8fbb-05c1-4341-8a98-c2005ca53f1c" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><now:zamien-tekst stary-tekst="aukcji dodatkowej" nowy-tekst="aukcji dodatkowej, albo aukcji uzupełniającej" element-eId="DU/2023/2131__art_60__ust_3" akt="https://eli.gov.pl/eli/DU/2023/2131" gd:nowGUID="d3531f0a-e87a-4425-ab93-f33c5f632ace" />w art. 60 w ust. 3 po wyrazach „aukcji dodatkowej” dodaje się wyrazy „ , albo aukcji uzupełniającej”;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/159__art_1__pkt_27" gd:GUID="3403c3ee-80fd-4727-bb69-c85fb3231b5e" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">
+          <nr>27</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="df4069c4-de2c-4017-b5c6-90becd30d8cf" fragment="71" gd:fragmentGUID="bea6deda-3a71-4d16-ad52-0a1f0abf65ef" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><now:zamien-tekst stary-tekst="dokonania rozliczeń" nowy-tekst="dokonania rozliczeń w przypadku, o którym mowa w art. 57 ust. 7 pkt 1" element-eId="DU/2023/2131__art_64__pkt_1" akt="https://eli.gov.pl/eli/DU/2023/2131" gd:nowGUID="21e7c32d-237c-4838-a691-599f2578c1af" />w art. 64 w pkt 1 po wyrazach „dokonania rozliczeń” dodaje się wyrazy „w przypadku, o którym mowa w art. 57 ust. 7 pkt 1”;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/159__art_1__pkt_28" gd:GUID="265831b4-ed16-4eae-89b5-d0c37acddd69" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">
+          <nr>28</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="df4069c4-de2c-4017-b5c6-90becd30d8cf" fragment="72" gd:fragmentGUID="401bcb8c-1d08-4d0b-832d-525c5f3ee7b3" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">w art. 67 w ust. 5 pkt 1 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/2131" cudzyslowy="oba" gd:nowGUID="ecb281b4-479d-4fea-9839-17ad02817fcf" element-eId="DU/2023/2131__art_67__ust_5__pkt_1" funkcja="zastap"><punkt eId="DU/2023/2131__art_67__ust_5__pkt_1" gd:GUID="5b0e2168-4d34-46d9-8c5e-d7642187199f" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="f48ee4db-d02a-4eb3-bbea-9fa3f87a842f" fragment="1" gd:fragmentGUID="286031d9-9e5e-4b75-8d08-045cf911a7b7" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">wynosi równowartość wynagrodzenia dostawcy mocy należnego w odniesieniu do tej jednostki rynku mocy za dzień, w którym odbył się testowy okres przywołania, albo, w przypadku wykazania poniesienia uzasadnionych kosztów w wyższej wysokości, nie może być wyższa niż równowartość tygodniowego wynagrodzenia dostawcy mocy w odniesieniu do tej jednostki rynku mocy – w przypadku jednostki rynku mocy wytwórczej albo</zdanie></p></punkt></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/159__art_1__pkt_29" gd:GUID="ccefa3ff-cbc9-4ee8-bf70-873463f582aa" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">
+          <nr>29</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="df4069c4-de2c-4017-b5c6-90becd30d8cf" fragment="73" gd:fragmentGUID="efec0774-e271-4da7-99e7-e650bdd37854" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">w art. 67a ust. 9 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/2131" cudzyslowy="oba" gd:nowGUID="59cb98b2-4eff-4acd-a08e-320eb8974af2" element-eId="DU/2023/2131__art_67a__ust_9" funkcja="zastap"><ustep eId="DU/2023/2131__art_67a__ust_9" gd:GUID="7b1a0f57-5230-4402-956a-a446afc6ce23" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>9</nr><p><zdanie nr="1" gd:zdGUID="d6eb0d5e-a556-46d5-84ca-cdf6b8f1ebf7" fragment="1" gd:fragmentGUID="af32a8da-b7e5-4513-b17c-6bc3c5031168" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">Przepisów ust. 8 pkt 3 i 4 nie stosuje się w odniesieniu do wynagrodzenia należnego za wykonywanie obowiązku mocowego, który powstał nie później niż w dniu 31 grudnia 2019 r. w wyniku aukcji mocy lub który powstał w wyniku aukcji uzupełniającej, również w przypadku, gdy ten obowiązek mocowy, w całości lub w części, został przeniesiony na inną jednostkę rynku mocy w wyniku transakcji na rynku wtórnym, niezależnie od liczby transakcji, którym podlegał.</zdanie></p></ustep></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/159__art_1__pkt_30" gd:GUID="97d01159-4e54-4f44-b1aa-3a5157c2a173" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">
+          <nr>30</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="df4069c4-de2c-4017-b5c6-90becd30d8cf" fragment="74" gd:fragmentGUID="b6312d59-ac7d-43ad-a8a9-98f019c35982" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">w art. 74:</zdanie>
+          </p>
+          <litera eId="DU/2025/159__art_1__pkt_30__lit_a" gd:GUID="33d9957c-585e-4409-bdba-6f201d83d06d" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="df4069c4-de2c-4017-b5c6-90becd30d8cf" fragment="75" gd:fragmentGUID="ef86eef4-76b3-43c5-9c5f-71015cb6e26d" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">ust. 1 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/2131" cudzyslowy="oba" gd:nowGUID="69ef34e8-c9aa-4998-a9aa-27cc1f697d2b" element-eId="DU/2023/2131__art_74__ust_1" funkcja="zastap"><ustep eId="DU/2023/2131__art_74__ust_1" gd:GUID="c1ca88ef-85c4-4cec-8ed1-b6f8099500ce" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="084b67b5-a5d6-4444-a08a-c768db3abbea" fragment="1" gd:fragmentGUID="99ac3fdf-170f-4527-aa31-b0c2bb9c0275" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">Całkowity koszt rynku mocy w danym roku, na potrzeby kalkulacji stawek opłaty mocowej, oblicza się zgodnie ze wzorem:</zdanie></p><wzor-mat xmlns:mml="http://www.w3.org/1998/Math/MathML" gd:GUID="b1b65863-1176-48f2-98f4-7cd3963ac793"><wzor><mml:math display="block"><mml:msub><mml:mi mathvariant="normal">K</mml:mi><mml:mi mathvariant="normal">C</mml:mi></mml:msub><mml:mo>=</mml:mo><mml:msub><mml:mi mathvariant="normal">K</mml:mi><mml:mi>AG</mml:mi></mml:msub><mml:mo>+</mml:mo><mml:msub><mml:mi mathvariant="normal">K</mml:mi><mml:mi>AD</mml:mi></mml:msub><mml:mo>+</mml:mo><mml:msub><mml:mi mathvariant="normal">K</mml:mi><mml:mi mathvariant="normal">R</mml:mi></mml:msub><mml:mo>-</mml:mo><mml:mi mathvariant="normal">B</mml:mi></mml:math></wzor><wprowadzenie-do-opisu>gdzie poszczególne symbole oznaczają:</wprowadzenie-do-opisu><opis><symbol-mat><mml:math><mml:msub><mml:mi mathvariant="normal">K</mml:mi><mml:mi mathvariant="normal">C</mml:mi></mml:msub></mml:math></symbol-mat><objasnienie><p><zdanie nr="1" gd:zdGUID="9e4e86cd-25b2-4d9c-bc48-385567f1603f" fragment="1" gd:fragmentGUID="ec91a670-855e-4f42-96c8-f66fd057d026">całkowity koszt rynku mocy w danym roku,</zdanie></p></objasnienie></opis><opis><symbol-mat><mml:math><mml:msub><mml:mi mathvariant="normal">K</mml:mi><mml:mi>AG</mml:mi></mml:msub></mml:math></symbol-mat><objasnienie><p><zdanie nr="1" gd:zdGUID="3d2d7f5f-6335-4d22-bd63-3fa5334c22a5" fragment="1" gd:fragmentGUID="96b7f76a-2b29-4ddb-96a7-bbce3d3bc9b8">sumę iloczynów obowiązków mocowych wynikających z umów mocowych zawartych w toku aukcji głównych obejmujących dany rok i ich cen, uwzględniających coroczne waloryzacje tych cen obowiązku mocowego dla wieloletnich umów mocowych, o których mowa w art. 60 ust. 4, oraz pomniejszenia wynagrodzeń, o których mowa w art. 62 ust. 1,</zdanie></p></objasnienie></opis><opis><symbol-mat><mml:math><mml:msub><mml:mi mathvariant="normal">K</mml:mi><mml:mi>AD</mml:mi></mml:msub></mml:math></symbol-mat><objasnienie><p><zdanie nr="1" gd:zdGUID="99c3d122-5887-42eb-8ffc-6faacc8c4169" fragment="1" gd:fragmentGUID="81bd6dc2-7a9c-4c54-90c2-14d9542f3412">sumę iloczynów obowiązków mocowych i odpowiednich cen zamknięcia aukcji dodatkowych na dany rok,</zdanie></p></objasnienie></opis><opis><symbol-mat><mml:math><mml:msub><mml:mi mathvariant="normal">K</mml:mi><mml:mi mathvariant="normal">R</mml:mi></mml:msub></mml:math></symbol-mat><objasnienie><p><zdanie nr="1" gd:zdGUID="07863b0d-e48f-4036-b7e0-d58fa95b6f78" fragment="1" gd:fragmentGUID="2d67edda-d01e-44a5-b189-38bb65ce2d7d">koszty, o których mowa w art. 77 ust. 3 i 4,</zdanie></p></objasnienie></opis><opis><symbol-mat><mml:math><mml:mi mathvariant="normal">B</mml:mi></mml:math></symbol-mat><objasnienie><p><zdanie nr="1" gd:zdGUID="1ae68f73-7b9e-4d00-89fd-4b75d42183bd" fragment="1" gd:fragmentGUID="152d9b2c-de61-49fe-ac98-2437bf6e09e3">prognozowany stan środków pieniężnych na rachunku opłaty mocowej na dzień 31 grudnia roku ustalania stawek opłaty mocowej, bez uwzględniania wpływów z kar za niewykonanie obowiązku mocowego w danym roku.</zdanie></p></objasnienie></opis></wzor-mat></ustep></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/159__art_1__pkt_30__lit_b" gd:GUID="720b5490-e608-4aa7-8bc7-839c62d47b2b" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="df4069c4-de2c-4017-b5c6-90becd30d8cf" fragment="76" gd:fragmentGUID="99c0b54b-ad58-4d89-8f6d-5d8a5b82e602" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">po ust. 1 dodaje się ust. 1a–1c w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/2131" cudzyslowy="oba" gd:nowGUID="15e82c10-7525-4d34-9532-be9f6962359a" element-eId="DU/2023/2131__art_74__ust_1" funkcja="dodaj-po"><ustep eId="DU/2023/2131__art_74__ust_1a" gd:GUID="a8e99862-452b-4666-95eb-39e19a7df8e7" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>1a</nr><p><zdanie nr="1" gd:zdGUID="dcfd5fe2-d5f1-4fba-955d-5f0ed5e54cc5" fragment="1" gd:fragmentGUID="f37e9e65-403c-41dd-9089-04263b822845" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">W kalkulacji całkowitego kosztu rynku mocy w danym roku, o której mowa w ust. 1, uwzględnia się dotychczas dokonane waloryzacje cen obowiązków mocowych oraz waloryzację cen obowiązków mocowych dla wieloletnich umów mocowych, która zostanie dokonana w odniesieniu do obowiązków mocowych obejmujących rok, na który są wyznaczane stawki opłaty mocowej, z wykorzystaniem średniorocznego wskaźnika cen towarów i usług konsumpcyjnych ogółem, określonego w komunikacie Prezesa Głównego Urzędu Statystycznego, ogłoszonym w Dzienniku Urzędowym Rzeczypospolitej Polskiej „Monitor Polski”, dla roku poprzedzającego rok ustalania stawek opłaty mocowej.</zdanie></p></ustep><ustep eId="DU/2023/2131__art_74__ust_1b" gd:GUID="7babf0c7-56d2-4bf5-bebe-0af7c3f014ed" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>1b</nr><p><zdanie nr="1" gd:zdGUID="a116bdf3-652e-4166-8e16-e351800d0651" fragment="1" gd:fragmentGUID="aa15ee52-3860-4457-b7c4-885d8a057e8d" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">Prezes URE kalkuluje stawki opłaty mocowej na lata przypadające po zakończeniu ostatniego okresu dostaw wynikającego z umów mocowych, nie dłużej niż przez okres trzech lat, w celu pełnego pokrycia całkowitego kosztu rynku mocy.</zdanie></p></ustep><ustep eId="DU/2023/2131__art_74__ust_1c" gd:GUID="53c88e28-3531-4218-91e5-59a2c1aff89e" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>1c</nr><p><zdanie nr="1" gd:zdGUID="dae8fe3d-699e-4995-9d99-29f0172b99f3" fragment="1" gd:fragmentGUID="3adacc60-e644-495a-9371-67325c18a6ac" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">Nadwyżka środków zgromadzonych na rachunku opłaty mocowej ponad całkowity koszt rynku mocy po zakończeniu okresu pobierania tej opłaty, po pokryciu wszystkich zobowiązań wynikających z umów mocowych oraz kosztów, o których mowa w art. 77 ust. 3 i 4, stanowi przychód operatora.</zdanie></p></ustep></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/159__art_1__pkt_30__lit_c" gd:GUID="eab051c2-59dd-48a6-8c64-a14e43de796e" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">
+            <nr>c</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="df4069c4-de2c-4017-b5c6-90becd30d8cf" fragment="77" gd:fragmentGUID="13c64cb3-d376-4705-9d87-0a0b482839d5" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">po ust. 2 dodaje się ust. 2a w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/2131" cudzyslowy="oba" gd:nowGUID="c0d062e6-59f8-48ae-aecd-df555b4cf156" element-eId="DU/2023/2131__art_74__ust_2" funkcja="dodaj-po"><ustep eId="DU/2023/2131__art_74__ust_2a" gd:GUID="1ac1300f-0c90-46dd-8e74-712827ac891b" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>2a</nr><p><zdanie nr="1" gd:zdGUID="4423bf0d-8a37-4b6f-8778-5df2f0cfdd49" fragment="1" gd:fragmentGUID="b4089533-7de0-4c28-a4ec-7734581763c9" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">Operator przekazuje Prezesowi URE, do dnia 31 sierpnia każdego roku, informacje o sumie iloczynów obowiązków mocowych wynikających z umów mocowych, zawartych w toku aukcji głównych, obejmujących kolejny rok, i ich cen, uwzględniających coroczne waloryzacje tych cen obowiązku mocowego dla wieloletnich umów mocowych, o których mowa w art. 60 ust. 4, oraz pomniejszenia wynagrodzeń, o których mowa w art. 62 ust. 1.</zdanie></p></ustep></cytat-strukt>;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2025/159__art_1__pkt_31" gd:GUID="7700172a-6a97-432d-a986-eb2cc6e31cc6" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">
+          <nr>31</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="df4069c4-de2c-4017-b5c6-90becd30d8cf" fragment="78" gd:fragmentGUID="e3820bfe-5b0e-47ef-bb0c-fb7208035087" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">w art. 85 w ust. 2:</zdanie>
+          </p>
+          <litera eId="DU/2025/159__art_1__pkt_31__lit_a" gd:GUID="feb6fbc9-f1a3-46e1-83dc-a7cf5b3ba447" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="df4069c4-de2c-4017-b5c6-90becd30d8cf" fragment="79" gd:fragmentGUID="a5749f03-918e-4e94-b0a2-2a6e840a9b30" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><now:zamien-tekst stary-tekst="art. 3 ust. 2–4" nowy-tekst="art. 3 ust. 2–4a" element-eId="DU/2023/2131__art_85__ust_2__pkt_1" akt="https://eli.gov.pl/eli/DU/2023/2131" gd:nowGUID="f84dd5c8-2576-44f0-a579-9cb4a7f46708" />w pkt 1 wyrazy „art. 3 ust. 2–4” zastępuje się wyrazami „art. 3 ust. 2–4a”,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/159__art_1__pkt_31__lit_b" gd:GUID="e31ffb59-4a33-42bc-a004-ed13965f06d0" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="df4069c4-de2c-4017-b5c6-90becd30d8cf" fragment="80" gd:fragmentGUID="fdbffd35-c761-4be6-9811-b24aa763284e" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">pkt 8 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/2131" cudzyslowy="oba" gd:nowGUID="8b1140cf-a886-44d1-ab9d-3b7c98bd4101" element-eId="DU/2023/2131__art_85__ust_2__pkt_8" funkcja="zastap"><punkt eId="DU/2023/2131__art_85__ust_2__pkt_8" gd:GUID="c42a6036-7f31-42d8-b380-ab295a1774dd" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>8</nr><p><zdanie nr="1" gd:zdGUID="4e071c1d-157b-4502-8b3a-27e82d55edb6" fragment="1" gd:fragmentGUID="f8e2822f-a6f3-498d-870e-8065a5e4d562" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">nieprzedłożenia w terminie informacji, o których mowa w art. 10, art. 14, art. 27, art. 28 lub art. 28a;</zdanie></p></punkt></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/159__art_1__pkt_31__lit_c" gd:GUID="4c8f7cb2-f2a6-4aa4-b80b-e2515b55db50" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">
+            <nr>c</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="df4069c4-de2c-4017-b5c6-90becd30d8cf" fragment="81" gd:fragmentGUID="9cf43f78-501f-445f-8a47-979d3d6e4632" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">po pkt 11 dodaje się pkt 11a w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/2131" cudzyslowy="oba" gd:nowGUID="3435cacd-07a3-4257-825c-118b3624265c" element-eId="DU/2023/2131__art_85__ust_2__pkt_11" funkcja="dodaj-po"><punkt eId="DU/2023/2131__art_85__ust_2__pkt_11a" gd:GUID="d9b804c1-2711-4aef-8a38-7e0f110577d0" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>11a</nr><p><zdanie nr="1" gd:zdGUID="2336fc11-a7d1-4ce0-b573-c8fb66e9dc91" fragment="1" gd:fragmentGUID="7802ddf3-b520-4771-8e25-3c251a889f2d" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">nieogłoszenia daty aukcji uzupełniającej w terminie, o którym mowa w art. 29 ust. 2a lub art. 3 ust. 3 ustawy z dnia 24 stycznia 2025 r. o zmianie ustawy o rynku mocy;</zdanie></p></punkt></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/159__art_1__pkt_31__lit_d" gd:GUID="fd14202b-6a77-4007-9bcc-5ca727d921a0" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">
+            <nr>d</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="df4069c4-de2c-4017-b5c6-90becd30d8cf" fragment="82" gd:fragmentGUID="57cba996-5126-4340-b877-186c41f030d2" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">po pkt 12 dodaje się pkt 12a w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/2131" cudzyslowy="oba" gd:nowGUID="8fd5c283-5f1c-491d-9855-8489e7657500" element-eId="DU/2023/2131__art_85__ust_2__pkt_12" funkcja="dodaj-po"><punkt eId="DU/2023/2131__art_85__ust_2__pkt_12a" gd:GUID="2a72e5a6-fe6d-4b90-bcc8-f5a1bc565afd" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>12a</nr><p><zdanie nr="1" gd:zdGUID="02a989ea-3ece-4397-919b-b1105f82ef7a" fragment="1" gd:fragmentGUID="5dff06d5-4010-4897-a49c-ccd90b3354b1" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">niezorganizowania aukcji uzupełniającej w terminie określonym zgodnie z art. 29 ust. 2a pkt 1 lub art. 3 ust. 3 pkt 1 ustawy z dnia 24 stycznia 2025 r. o zmianie ustawy o rynku mocy, z przyczyn leżących po stronie operatora;</zdanie></p></punkt></cytat-strukt>.</zdanie>
+            </p>
+          </litera>
+        </punkt>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2025/159__art_2" gd:GUID="461976b6-9bea-44fa-9bd4-4cbdffa7b0e1" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="94b5222a-19d3-4e6e-ad8c-fa141ca572e1" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">
+        <p>
+          <zdanie nr="1" gd:zdGUID="5db9a3fb-ceb8-4718-82ae-d308341c64da" fragment="1" gd:fragmentGUID="a311557d-f9b1-4f74-b5b8-a96a104dabeb" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">Dla okresów dostaw przypadających na lata 2026–2028 dostawca mocy w rozumieniu art. 2 ust. 1 pkt 4 ustawy zmienianej w art. 1, w ramach transakcji na rynku wtórnym, o których mowa w ustawie zmienianej w art. 1, może dokonywać transakcji obrotu wtórnego obowiązkiem mocowym, o których mowa w art. 48 ust. 1 pkt 1 ustawy zmienianej w art. 1, po zakończeniu aukcji uzupełniającej w rozumieniu art. 2 ust. 1 pkt 3a ustawy zmienianej w art. 1, zwanej dalej „aukcją uzupełniającą”, lub, w przypadku braku ogłoszenia daty aukcji uzupełniającej, po ogłoszeniu informacji o nieprzeprowadzaniu aukcji uzupełniającej na dany okres dostaw.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2025/159__art_3" gd:GUID="29c4e82f-8723-4960-ba85-72d1a120fd2f" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">
+      <nr>3</nr>
+      <ustep eId="DU/2025/159__art_3__ust_1" gd:GUID="dfd35ed2-74ae-4970-8d3e-45829527ce4f" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="d3a8d248-8607-4545-90d3-0d1adaee702e" fragment="1" gd:fragmentGUID="014ea0de-2468-4523-a1b5-b0a88288136d" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">Operator w rozumieniu art. 2 ust. 1 pkt 27 ustawy zmienianej w art. 1, w terminie 2 dni od dnia wejścia w życie niniejszej ustawy, przedkłada ministrowi właściwemu do spraw energii proponowane parametry aukcji uzupełniającej na drugą połowę 2025 r. obejmującą okres od dnia 1 lipca do dnia 31 grudnia, o których mowa w art. 34a ust. 1 ustawy zmienianej w art. 1.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/159__art_3__ust_2" gd:GUID="2abfdf6f-cf9b-4b0d-ad57-33c8c06b90c2" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="4c481c62-6d6d-4b3b-9442-ed37e4b81051" fragment="1" gd:fragmentGUID="514c00fd-433a-4f2c-a905-57f6aaf36cb5" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">Minister właściwy do spraw energii w terminie 10 dni od dnia wejścia w życie niniejszej ustawy ogłasza w drodze obwieszczenia w Dzienniku Urzędowym Rzeczypospolitej Polskiej „Monitor Polski”, na podstawie proponowanych parametrów aukcji uzupełniającej, o których mowa w ust. 1, parametry aukcji uzupełniającej na drugą połowę 2025 r. obejmującą okres od dnia 1 lipca do dnia 31 grudnia, biorąc pod uwagę wyniki oceny wystarczalności zasobów na poziomie krajowym opublikowanej przez operatora na jego stronie internetowej.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/159__art_3__ust_3" gd:GUID="9135bd90-d40e-46b7-ae0f-cb3c7809bd99" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">
+        <nr>3</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="68294f71-d0d1-492c-b2ec-be38c732f706" fragment="1" gd:fragmentGUID="8fad8337-8fed-442f-ba58-f814655e9c9e" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">Operator w rozumieniu art. 2 ust. 1 pkt 27 ustawy zmienianej w art. 1 do dnia 31 marca 2025 r. ogłasza:</zdanie>
+        </p>
+        <punkt eId="DU/2025/159__art_3__ust_3__pkt_1" gd:GUID="1d244c13-a188-4d85-9672-72d090aacbec" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="68294f71-d0d1-492c-b2ec-be38c732f706" fragment="2" gd:fragmentGUID="c350767b-73a1-4918-9b68-a4d3e2fe3d21" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">datę aukcji uzupełniającej na drugą połowę 2025 r. obejmującą okres od dnia 1 lipca do dnia 31 grudnia albo</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/159__art_3__ust_3__pkt_2" gd:GUID="9184bc5b-787b-4b4a-b992-6a859be25c1b" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="68294f71-d0d1-492c-b2ec-be38c732f706" fragment="3" gd:fragmentGUID="397ab102-a71c-498e-9856-0a58b3d951d4" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">informację o nieprzeprowadzaniu aukcji uzupełniającej na drugą połowę 2025 r. obejmującą okres od dnia 1 lipca do dnia 31 grudnia w przypadku braku potwierdzenia wystąpienia przesłanki, o której mowa w art. 29 ust. 5 pkt 2 ustawy zmienianej w art. 1.</zdanie>
+          </p>
+        </punkt>
+      </ustep>
+    </artykul>
+    <artykul eId="DU/2025/159__art_4" gd:GUID="faed9b0d-189e-4dda-a280-f181e5127fcc" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">
+      <nr>4</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="691e2260-ec4b-48ee-a5bc-ed1be5964af5" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">
+        <p>
+          <zdanie nr="1" gd:zdGUID="faff2897-d6e4-4fd0-b65d-24ac6f224e6c" fragment="1" gd:fragmentGUID="5f0bf18a-6c2b-42b5-97cb-e71ab4e71971" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">Wpis do rejestru rynku mocy, o którym mowa w art. 55 ustawy zmienianej w art. 1, jednostki fizycznej w rozumieniu art. 2 ust. 1 pkt 5 ustawy zmienianej w art. 1 lub jednostki redukcji zapotrzebowania planowanej w rozumieniu art. 2 ust. 1 pkt 11 ustawy zmienianej w art. 1, uzyskany w 2025 r., uprawnia tę jednostkę do udziału w certyfikacjach do aukcji uzupełniającej na drugą połowę 2025 r. obejmującą okres od dnia 1 lipca do dnia 31 grudnia oraz do aukcji uzupełniającej na 2026 r.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2025/159__art_5" gd:GUID="9cac14c3-7cdc-474b-b9d2-2af2cab1645b" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">
+      <nr>5</nr>
+      <ustep eId="DU/2025/159__art_5__ust_1" gd:GUID="dbb32a1b-586c-471d-964e-6e53f0c18db3" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="8d71f981-cbbf-435f-a058-ecb7c211a756" fragment="1" gd:fragmentGUID="5b945e75-bc6d-4fb9-896c-04e007d73562" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">Całkowity koszt rynku mocy, o którym mowa w art. 74 ustawy zmienianej w art. 1, na drugą połowę 2025 r. obejmującą okres od dnia 1 lipca do dnia 31 grudnia, na potrzeby kalkulacji stawek opłaty mocowej, o której mowa w art. 69 ust. 1 ustawy zmienianej w art. 1, wyznacza się jako:</zdanie>
+        </p>
+        <wzor-mat xmlns:mml="http://www.w3.org/1998/Math/MathML" gd:GUID="9a348227-3b6f-46f9-9aa3-6fc629645e1e">
+          <wzor>
+            <mml:math display="block">
+              <mml:msub>
+                <mml:mi mathvariant="normal">K</mml:mi>
+                <mml:mi mathvariant="normal">C</mml:mi>
+              </mml:msub>
+              <mml:mo>=</mml:mo>
+              <mml:mn>0,5</mml:mn>
+              <mml:mo>⋅</mml:mo>
+              <mml:msub>
+                <mml:mi mathvariant="normal">K</mml:mi>
+                <mml:msub>
+                  <mml:mi mathvariant="normal">C</mml:mi>
+                  <mml:mn>2025</mml:mn>
+                </mml:msub>
+              </mml:msub>
+              <mml:mo>+</mml:mo>
+              <mml:msub>
+                <mml:mi mathvariant="normal">K</mml:mi>
+                <mml:mi>AU</mml:mi>
+              </mml:msub>
+            </mml:math>
+          </wzor>
+          <wprowadzenie-do-opisu>gdzie poszczególne symbole oznaczają:</wprowadzenie-do-opisu>
+          <opis>
+            <symbol-mat>
+              <mml:math>
+                <mml:msub>
+                  <mml:mi mathvariant="normal">K</mml:mi>
+                  <mml:mi mathvariant="normal">C</mml:mi>
+                </mml:msub>
+              </mml:math>
+            </symbol-mat>
+            <objasnienie>
+              <p>
+                <zdanie nr="1" gd:zdGUID="84b54a02-8730-4603-af62-a198daefcb8e" fragment="1" gd:fragmentGUID="599aadac-4a20-488b-a290-a35aeb935c64">całkowity koszt rynku mocy w drugiej połowie 2025 r. obejmującej okres od dnia 1 lipca do dnia 31 grudnia,</zdanie>
+              </p>
+            </objasnienie>
+          </opis>
+          <opis>
+            <symbol-mat>
+              <mml:math>
+                <mml:msub>
+                  <mml:mi mathvariant="normal">K</mml:mi>
+                  <mml:msub>
+                    <mml:mi mathvariant="normal">C</mml:mi>
+                    <mml:mn>2025</mml:mn>
+                  </mml:msub>
+                </mml:msub>
+              </mml:math>
+            </symbol-mat>
+            <objasnienie>
+              <p>
+                <zdanie nr="1" gd:zdGUID="4ef5bb38-d012-4ff2-a588-e8fc04de6373" fragment="1" gd:fragmentGUID="f1cbad14-3959-4702-844f-284f996e1fb8">całkowity koszt rynku mocy na rok dostaw 2025 wyznaczony przez Prezesa Urzędu Regulacji Energetyki i wykorzystany do obliczenia stawek opłaty mocowej na 2025 r., opublikowanych do dnia 30 września 2024 r.,</zdanie>
+              </p>
+            </objasnienie>
+          </opis>
+          <opis>
+            <symbol-mat>
+              <mml:math>
+                <mml:msub>
+                  <mml:mi mathvariant="normal">K</mml:mi>
+                  <mml:mi>AU</mml:mi>
+                </mml:msub>
+              </mml:math>
+            </symbol-mat>
+            <objasnienie>
+              <p>
+                <zdanie nr="1" gd:zdGUID="504f8ef6-2018-4538-8e26-5aecb7448fad" fragment="1" gd:fragmentGUID="214013b7-47af-498f-9771-b2e9dafa24b7">sumę iloczynów obowiązków mocowych i cen zamknięcia aukcji uzupełniającej na drugą połowę 2025 r. obejmującą okres od dnia 1 lipca do dnia 31 grudnia.</zdanie>
+              </p>
+            </objasnienie>
+          </opis>
+        </wzor-mat>
+      </ustep>
+      <ustep eId="DU/2025/159__art_5__ust_2" gd:GUID="63fb13df-a38d-4e46-9308-7a3803fd596a" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="61cd149c-4f0b-4e5d-aac8-31dead1b19ac" fragment="1" gd:fragmentGUID="dfa32168-54e0-40bd-b891-fff537d09586" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">W terminie do dnia 30 maja 2025 r. Prezes Urzędu Regulacji Energetyki kalkuluje stawki opłaty mocowej na drugą połowę 2025 r. obejmującą okres od dnia 1 lipca do dnia 31 grudnia, pomniejszone o należny podatek od towarów i usług w rozumieniu ustawy z dnia 11 marca 2004 r. o podatku od towarów i usług (Dz. U. z 2024 r. poz. 361, 852, 1473, 1721 i 1911), z kosztu obowiązków mocowych zawartych w ramach aukcji uzupełniającej na drugą połowę 2025 r. obejmującą ten okres.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/159__art_5__ust_3" gd:GUID="582e695c-eb9f-4341-8e8f-30d274788b9d" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">
+        <nr>3</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="33272269-f282-41a6-9263-b8ef026c683a" fragment="1" gd:fragmentGUID="0f69d74d-c20d-4efc-b1cd-c3c7b8e1255e" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">Całkowity koszt rynku mocy, o którym mowa w art. 74 ustawy zmienianej w art. 1, na lata dostaw 2026–2028, na potrzeby kalkulacji stawek opłaty mocowej, wyznacza się jako:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2025/159" cudzyslowy="brak" gd:nowGUID="d531220b-c467-4c96-890d-9e69cdb837e3" element-eId="DU/2025/159__art_74" funkcja="zastap"><litera eId="DU/2025/159__art_74__lit_a" gd:GUID="a818ca75-5a2d-4524-b1ac-ae82e725f8c0" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>a</nr><p><zdanie nr="1" gd:zdGUID="fefefb99-7cb8-4174-ab6c-dcb8b6b2a10a" fragment="1" gd:fragmentGUID="d2e5c9b4-6b0b-4a6d-ae24-277fa6fdf773" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">w przypadku gdy składnik B przyjmuje wartość ujemną:</zdanie></p><tiret eId="DU/2025/159__art_74__lit_a__tir_1" gd:GUID="97825838-bc62-49ef-994a-b7a8f17c9fab" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><p><zdanie nr="1" gd:zdGUID="fefefb99-7cb8-4174-ab6c-dcb8b6b2a10a" fragment="2" gd:fragmentGUID="ae2d4e17-815b-4834-8a47-6b42e7c2456e" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">dla roku 2026: 0,25⋅B,</zdanie></p></tiret><tiret eId="DU/2025/159__art_74__lit_a__tir_2" gd:GUID="284f08e2-569a-4f13-8c16-e99aa880b1b2" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><p><zdanie nr="1" gd:zdGUID="fefefb99-7cb8-4174-ab6c-dcb8b6b2a10a" fragment="3" gd:fragmentGUID="4d55f13f-bfa2-4798-a6d1-70524c061a85" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">dla roku 2027: 0,35⋅B,</zdanie></p></tiret><tiret eId="DU/2025/159__art_74__lit_a__tir_3" gd:GUID="99ffb45a-18ef-47c5-9ebd-9e35a21c0d2b" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><p><zdanie nr="1" gd:zdGUID="fefefb99-7cb8-4174-ab6c-dcb8b6b2a10a" fragment="4" gd:fragmentGUID="0284de8e-4cb1-4f53-a1f2-e30725740a5b" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">dla roku 2028: 0,5⋅B, albo</zdanie></p></tiret></litera><litera eId="DU/2025/159__art_74__lit_b" gd:GUID="9b461e14-6f87-413d-928e-e2b5af09b1b2" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>b</nr><p><zdanie nr="1" gd:zdGUID="fefefb99-7cb8-4174-ab6c-dcb8b6b2a10a" fragment="5" gd:fragmentGUID="563bcd4c-23a6-4173-a610-7f6ee87857ae" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">w przypadku gdy B jest nieujemne: 1⋅B</zdanie></p></litera></cytat-strukt><cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2025/159" cudzyslowy="brak" gd:nowGUID="5c4063f2-ceee-4754-9c86-dd214827180d" element-eId="DU/2025/159__art_74__czw" funkcja="zastap"><czesc-wspolna-litera eId="DU/2025/159__art_74__czw" gd:GUID="8ebc334f-5601-47df-a77f-7b4c24b80845" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14"><p><zdanie nr="1" gd:zdGUID="d7bff3f2-487e-41eb-b6e3-1e6a3486e842" fragment="1" gd:fragmentGUID="0865a8d8-aadb-4fee-9f73-b699da6aff0e" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">– gdzie B oznacza prognozowany stan środków pieniężnych na rachunku opłaty mocowej na dzień 31 grudnia roku ustalania stawek opłaty mocowej, bez uwzględniania wpływów z kar za niewykonanie obowiązku mocowego w danym roku.</zdanie></p></czesc-wspolna-litera></cytat-strukt></zdanie>
+        </p>
+        <wzor-mat xmlns:mml="http://www.w3.org/1998/Math/MathML" gd:GUID="5bf250be-0967-4206-968f-46af5fbf151f">
+          <wzor>
+            <mml:math display="block">
+              <mml:msub>
+                <mml:mi mathvariant="normal">K</mml:mi>
+                <mml:mi mathvariant="normal">C</mml:mi>
+              </mml:msub>
+              <mml:mo>=</mml:mo>
+              <mml:msub>
+                <mml:mi mathvariant="normal">K</mml:mi>
+                <mml:mi>AG</mml:mi>
+              </mml:msub>
+              <mml:mo>+</mml:mo>
+              <mml:msub>
+                <mml:mi mathvariant="normal">K</mml:mi>
+                <mml:mi>AD</mml:mi>
+              </mml:msub>
+              <mml:mo>+</mml:mo>
+              <mml:msub>
+                <mml:mi mathvariant="normal">K</mml:mi>
+                <mml:mi>AU</mml:mi>
+              </mml:msub>
+              <mml:mo>+</mml:mo>
+              <mml:msub>
+                <mml:mi mathvariant="normal">K</mml:mi>
+                <mml:mi mathvariant="normal">R</mml:mi>
+              </mml:msub>
+              <mml:mo>-</mml:mo>
+              <mml:mi mathvariant="normal">D</mml:mi>
+            </mml:math>
+          </wzor>
+          <wprowadzenie-do-opisu>gdzie poszczególne symbole oznaczają:</wprowadzenie-do-opisu>
+          <opis>
+            <symbol-mat>
+              <mml:math>
+                <mml:msub>
+                  <mml:mi mathvariant="normal">K</mml:mi>
+                  <mml:mi mathvariant="normal">C</mml:mi>
+                </mml:msub>
+              </mml:math>
+            </symbol-mat>
+            <objasnienie>
+              <p>
+                <zdanie nr="1" gd:zdGUID="969a2835-c1ee-4db7-a66a-15e41bbcb9b0" fragment="1" gd:fragmentGUID="7d84d30e-9a60-47fb-ab37-d40f7fd36e3b">całkowity koszt rynku mocy w danym roku dostaw,</zdanie>
+              </p>
+            </objasnienie>
+          </opis>
+          <opis>
+            <symbol-mat>
+              <mml:math>
+                <mml:msub>
+                  <mml:mi mathvariant="normal">K</mml:mi>
+                  <mml:mi>AG</mml:mi>
+                </mml:msub>
+              </mml:math>
+            </symbol-mat>
+            <objasnienie>
+              <p>
+                <zdanie nr="1" gd:zdGUID="255cef7c-4b3e-492b-9708-f2fac68bbc72" fragment="1" gd:fragmentGUID="30b59a2f-9524-4070-9e76-3cd5cdc80296">sumę iloczynów obowiązków mocowych wynikających z umów mocowych zawartych w toku aukcji głównej obejmujących dany rok i ich cen, uwzględniających coroczne waloryzacje tych cen obowiązku mocowego dla wieloletnich umów mocowych, o których mowa w art. 60 ust. 4 ustawy zmienianej w art. 1, oraz pomniejszenia wynagrodzeń, o których mowa w art. 62 ust. 1 ustawy zmienianej w art. 1,</zdanie>
+              </p>
+            </objasnienie>
+          </opis>
+          <opis>
+            <symbol-mat>
+              <mml:math>
+                <mml:msub>
+                  <mml:mi mathvariant="normal">K</mml:mi>
+                  <mml:mi>AD</mml:mi>
+                </mml:msub>
+              </mml:math>
+            </symbol-mat>
+            <objasnienie>
+              <p>
+                <zdanie nr="1" gd:zdGUID="4a9402f4-2154-4c07-8e3a-3868530ca0a1" fragment="1" gd:fragmentGUID="ff8a103c-1b3e-4267-98fc-4186a61df1ae">sumę iloczynów obowiązków mocowych i odpowiednich cen zamknięcia aukcji dodatkowych na dany rok dostaw,</zdanie>
+              </p>
+            </objasnienie>
+          </opis>
+          <opis>
+            <symbol-mat>
+              <mml:math>
+                <mml:msub>
+                  <mml:mi mathvariant="normal">K</mml:mi>
+                  <mml:mi>AU</mml:mi>
+                </mml:msub>
+              </mml:math>
+            </symbol-mat>
+            <objasnienie>
+              <p>
+                <zdanie nr="1" gd:zdGUID="19f0e8ae-31f6-4d8d-aa7a-778ec3f2f5c5" fragment="1" gd:fragmentGUID="9627ca7d-0c10-4625-85e4-0e8c0d9f56a0">sumę iloczynów obowiązków mocowych i cen zamknięcia aukcji uzupełniającej na dany rok dostaw,</zdanie>
+              </p>
+            </objasnienie>
+          </opis>
+          <opis>
+            <symbol-mat>
+              <mml:math>
+                <mml:msub>
+                  <mml:mi mathvariant="normal">K</mml:mi>
+                  <mml:mi mathvariant="normal">R</mml:mi>
+                </mml:msub>
+              </mml:math>
+            </symbol-mat>
+            <objasnienie>
+              <p>
+                <zdanie nr="1" gd:zdGUID="d9170c57-3cd6-4529-a430-a45688f2d96c" fragment="1" gd:fragmentGUID="cd1e93b8-7e2f-423e-b1ae-353f14087d89">koszty, o których mowa w art. 77 ust. 3 i 4 ustawy zmienianej w art. 1,</zdanie>
+              </p>
+            </objasnienie>
+          </opis>
+          <opis>
+            <symbol-mat>
+              <mml:math>
+                <mml:mi mathvariant="normal">D</mml:mi>
+              </mml:math>
+            </symbol-mat>
+            <objasnienie>
+              <p>
+                <zdanie nr="1" gd:zdGUID="2b2f6c54-b759-4810-981d-52fd5b715e9b" fragment="1" gd:fragmentGUID="f5888906-c40c-4f5a-aa69-be94865be51b">skorygowany prognozowany koszt rynku mocy na dany rok dostaw, wynoszący odpowiednio:</zdanie>
+              </p>
+            </objasnienie>
+          </opis>
+        </wzor-mat>
+      </ustep>
+    </artykul>
+    <artykul eId="DU/2025/159__art_6" gd:GUID="5eda7a7f-7b65-4b63-8fe3-2d87b6424513" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">
+      <nr>6</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="c9242b84-e069-40a4-9a87-43eb2e4d0521" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">
+        <p>
+          <zdanie nr="1" gd:zdGUID="e8e349ec-4c3f-40ce-a5ef-44af039aac87" fragment="1" gd:fragmentGUID="c788992e-1e31-4b5d-85e5-df2282061322" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">Do dnia przyznania przez Komisję Europejską odstępstwa, o którym mowa w art. 64 ust. 2c rozporządzenia Parlamentu Europejskiego i Rady (UE) 2019/943 z dnia 5 czerwca 2019 r. w sprawie rynku wewnętrznego energii elektrycznej (Dz. Urz. UE L 158 z 14.06.2019, str. 54, z późn. zm.<odnosnik id-odnosnika="2" symbol="2" gd:GUID="a3dc81f4-1617-42b0-8f6d-47c92b291b4c"><p><zdanie nr="1" gd:zdGUID="cb0b3306-b68b-4f52-8c31-345fb95733b3" fragment="1" gd:fragmentGUID="893dcfd1-18d6-42dc-922f-be364acec381">Zmiany wymienionego rozporządzenia zostały ogłoszone w Dz. Urz. UE L 152 z 03.06.2022, str. 45 oraz Dz. Urz. UE L 2024/1747 z 26.06.2024.</zdanie></p></odnosnik>), umowy mocowe zawarte w toku aukcji uzupełniających nie podlegają wykonaniu.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2025/159__art_7" gd:GUID="996c7096-cee3-41a8-b17b-778333730e23" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">
+      <nr>7</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="7c765cc9-27c4-41d2-ba49-a4bc1819d130" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">
+        <p>
+          <zdanie nr="1" gd:zdGUID="1b2ce595-162b-4b97-b4ac-f5231722b04d" fragment="1" gd:fragmentGUID="aa077832-f4f6-4656-8a02-d0c889787dd2" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-159_domyslne.x" wejscie-w-zycie="2025-02-14">Ustawa wchodzi w życie po upływie 7 dni od dnia ogłoszenia.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <organ-podpisujacy>Prezydent Rzeczypospolitej Polskiej: <i><osoba podpisujacy="true" gd:osobaGUID="e93f3898-f4e3-427d-9384-e1f354ba5a8f"><imie>A.</imie> <nazwisko>Duda</nazwisko></osoba></i></organ-podpisujacy>
+  </ustawa>
+</akt-prawny>

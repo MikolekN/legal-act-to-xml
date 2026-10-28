@@ -1,0 +1,781 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <rozporzadzenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/1059</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>b9621ae9-695b-4ada-bb57-8d560cf1bdaa</gd:GUIDwersji>
+      <AdresISAP>WDU20250001059</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>1059</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 1059</AdresWyswietlany>
+      <Tytul>Rozporządzenie Ministra Rodziny, Pracy i Polityki Społecznej z dnia 28 lipca 2025 r. zmieniające rozporządzenie w sprawie minimalnych standardów noclegowni, schronisk dla osób bezdomnych, schronisk dla osób bezdomnych z usługami opiekuńczymi i ogrzewalni</Tytul>
+      <Rodzaj>ROZP</Rodzaj>
+      <DataOgloszenia>2025-08-04</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-07-28</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2025-08-19_DU-2025-1059_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2025-08-19" warunek="po upływie 14 dni od dnia ogłoszenia" podstawa="§ 2" zrodlo="https://eli.gov.pl/eli/DU/2025/1059" dowod="DU/2025/1059__art_2" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2025-08-19_DU-2025-1059_domyslne.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2025-08-19_DU-2025-1059_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="1993859e-31ac-4915-b106-39d48242908d" rola="wydajacy">
+          <Nazwa>Minister Rodziny, Pracy i Polityki Społecznej</Nazwa>
+          <OrganPodpisujacy>Minister Rodziny, Pracy i Polityki Społecznej</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>A.</imie> <nazwisko>Dziemianowicz-Bąk</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Rozporządzenie</rodzaj-aktu>
+    <autor-aktu>Ministra Rodziny, Pracy i Polityki Społecznej<odnosnik id-odnosnika="1" symbol="1" gd:GUID="4b7eb934-7c68-4b63-b41e-c0d52cf96c38"><p><zdanie nr="1" gd:zdGUID="9d8396f3-f33a-4892-a8ad-86e11a5e7c78" fragment="1" gd:fragmentGUID="5a7d31bb-3655-41a1-8957-c6cba91b64d1">Minister Rodziny, Pracy i Polityki Społecznej kieruje działem administracji rządowej – zabezpieczenie społeczne, na podstawie § 1 ust. 2 pkt 3 rozporządzenia Prezesa Rady Ministrów z dnia 18 grudnia 2023 r. w sprawie szczegółowego zakresu działania Ministra Rodziny, Pracy i Polityki Społecznej (Dz. U. poz. 2715).</zdanie></p></odnosnik></autor-aktu>
+    <data>z dnia 28 lipca 2025 r.</data>
+    <tytul>zmieniające rozporządzenie w sprawie minimalnych standardów noclegowni, schronisk dla osób bezdomnych, schronisk dla osób bezdomnych z usługami opiekuńczymi i ogrzewalni</tytul>
+    <podstawa-prawna>Na podstawie art. 48a ust. 14 ustawy z dnia 12 marca 2004 r. o pomocy społecznej (Dz. U. z 2024 r. poz. 1283 i 1572 oraz z 2025 r. poz. 620 i 718) zarządza się, co następuje:</podstawa-prawna>
+    <paragraf eId="DU/2025/1059__art_1" gd:GUID="6eb4d9b6-01c8-46aa-998b-890e0ef88903" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-19_DU-2025-1059_domyslne.x" wejscie-w-zycie="2025-08-19">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="7be2b851-2a06-4f69-8dd1-c11d9735ab83" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-19_DU-2025-1059_domyslne.x" wejscie-w-zycie="2025-08-19">
+        <p>
+          <zdanie nr="1" gd:zdGUID="013e0dca-56c4-489d-876e-e04695febaba" fragment="1" gd:fragmentGUID="0b3ca6ce-b73c-4e8a-aa36-211e0c442946" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-19_DU-2025-1059_domyslne.x" wejscie-w-zycie="2025-08-19"><now:zastap akt="https://eli.gov.pl/eli/DU/2018/896" element-eId="DU/2018/896__zal_1" akt-nowelizujacy="https://eli.gov.pl/eli/DU/2025/1059" nowelizujacy-element-eId="DU/2025/1059__zal_1" gd:nowGUID="d5f044cf-4b2b-465f-93c6-a2a1db1384f1" /><now:zastap akt="https://eli.gov.pl/eli/DU/2018/896" element-eId="DU/2018/896__zal_2" akt-nowelizujacy="https://eli.gov.pl/eli/DU/2025/1059" nowelizujacy-element-eId="DU/2025/1059__zal_2" gd:nowGUID="20c42be0-8299-40a2-8a72-acd4abb264c7" /><now:zastap akt="https://eli.gov.pl/eli/DU/2018/896" element-eId="DU/2018/896__zal_3" akt-nowelizujacy="https://eli.gov.pl/eli/DU/2025/1059" nowelizujacy-element-eId="DU/2025/1059__zal_3" gd:nowGUID="0414e2ce-5b9a-4380-8f4d-fbc5d3cbbede" /><now:zastap akt="https://eli.gov.pl/eli/DU/2018/896" element-eId="DU/2018/896__zal_4" akt-nowelizujacy="https://eli.gov.pl/eli/DU/2025/1059" nowelizujacy-element-eId="DU/2025/1059__zal_4" gd:nowGUID="f2915fca-0463-4b7a-9b93-0c8eb9b01ceb" />W rozporządzeniu Ministra Rodziny, Pracy i Polityki Społecznej z dnia 27 kwietnia 2018 r. w sprawie minimalnych standardów noclegowni, schronisk dla osób bezdomnych, schronisk dla osób bezdomnych z usługami opiekuńczymi i ogrzewalni (Dz. U. poz. 896) załączniki nr 1–4 do rozporządzenia otrzymują brzmienie określone odpowiednio w załącznikach nr 1–4 do niniejszego rozporządzenia.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2025/1059__art_2" gd:GUID="3eb4a2c0-b2c9-420d-adb8-80c9edecc6f0" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-19_DU-2025-1059_domyslne.x" wejscie-w-zycie="2025-08-19">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="144c0ff8-0fcd-47f5-993a-cbeacf0ad8f1" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-19_DU-2025-1059_domyslne.x" wejscie-w-zycie="2025-08-19">
+        <p>
+          <zdanie nr="1" gd:zdGUID="3be4cd1d-890a-4954-9ac4-1e9f1437342c" fragment="1" gd:fragmentGUID="e82fd318-3329-40b0-92be-b4e5d4cb3392" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-19_DU-2025-1059_domyslne.x" wejscie-w-zycie="2025-08-19">Rozporządzenie wchodzi w życie po upływie 14 dni od dnia ogłoszenia.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <organ-podpisujacy>Minister Rodziny, Pracy i Polityki Społecznej: <i><osoba podpisujacy="true" gd:osobaGUID="437233d8-4d53-4c9d-8d70-71b841ca94cf"><imie>A.</imie> <nazwisko>Dziemianowicz-Bąk</nazwisko></osoba></i></organ-podpisujacy>
+    <zalacznik eId="DU/2025/1059__zal_1" gd:GUID="37bdda38-bfde-42e2-bf5b-cc3db0a46f85">
+      <zalacznik-do gd:GUID="889ffcc7-fa8a-46e3-9d16-f30c3ba5e36f">Załączniki do rozporządzenia Ministra Rodziny, Pracy i Polityki Społecznej z dnia 28 lipca 2025 r. (Dz. U. poz. 1059)</zalacznik-do>
+      <zalacznik-nr gd:GUID="bff6a246-459c-48e3-a4cd-3517547355fd">
+        <nr>1</nr>
+      </zalacznik-nr>
+      <tytul-zalacznika gd:GUID="8a0b63e1-e397-4c38-907a-25f4babc2bdf">MINIMALNY STANDARD PODSTAWOWYCH USŁUG ŚWIADCZONYCH W NOCLEGOWNIACH ORAZ MINIMALNY STANDARD OBIEKTÓW, W KTÓRYCH MIESZCZĄ SIĘ NOCLEGOWNIE</tytul-zalacznika>
+      <segment-zalacznika gd:GUID="d39b2321-f883-4956-ac5e-b50db77eb030" orientacja="pionowa">
+        <tabela gd:GUID="e2aec2ff-8345-45dc-ad25-c8a762d1c866">
+          <tbody>
+            <tr gd:GUID="9c9e9d02-b6d4-44a4-9c33-7ffb2985d9ae">
+              <td gd:GUID="ce23b710-d915-4ce2-93a3-af8bfcc368b3">
+                <tekst-zwykly gd:GUID="65a3ca03-4cd1-4c9a-bfac-f1038b94f010">KRYTERIA STANDARDU</tekst-zwykly>
+              </td>
+              <td gd:GUID="a712b5ce-ff76-4280-8ea4-cfd0a9e36234">
+                <tekst-zwykly gd:GUID="941ff6af-0f7d-4c2b-ae42-306aeb1bb72b">NORMY</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="e953eed6-8518-4d01-8ded-7d87b106ce18">
+              <td colspan="2" gd:GUID="461de4f3-b551-4c52-8714-ec2da60f375b">
+                <tekst-zwykly gd:GUID="3807168e-1454-4a16-83a7-54252ce8d494">STANDARD ŚWIADCZONYCH USŁUG</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="40b47b27-54a2-42aa-b80c-63db074d71d8">
+              <td gd:GUID="c12b4f77-6770-4e15-82b6-cf0c8e8d37cc">
+                <tekst-zwykly gd:GUID="0539d428-ee4b-4b93-ae66-19133b901bc4">Okres świadczenia usług</tekst-zwykly>
+              </td>
+              <td gd:GUID="8fb69a1d-732f-4de6-a54b-e9ff67c2512c">
+                <tekst-zwykly gd:GUID="1545b53d-83de-4c5d-9819-431998c03ea6">Noclegownia jest czynna cały rok, przez 7 dni w tygodniu, w godzinach:</tekst-zwykly>
+                <wyliczenie-1 gd:GUID="58315f23-4205-4d51-975b-4165968bafa0">– od 1 października do 31 marca: od 18.00 do 8.00,</wyliczenie-1>
+                <wyliczenie-1 gd:GUID="e6cfd94b-e843-4da2-95d8-0d2efe8f181c">– od 1 kwietnia do 30 września: od 19.00 do 7.00.</wyliczenie-1>
+              </td>
+            </tr>
+            <tr gd:GUID="e740e373-1955-468e-9054-81eec5633fe1">
+              <td gd:GUID="09e42c75-ff68-4c20-a9db-4b96d32d1799">
+                <tekst-zwykly gd:GUID="95d0d148-24d7-44b0-ab4c-17271d4aa63c">Forma świadczonej usługi</tekst-zwykly>
+              </td>
+              <td gd:GUID="91479d64-49c6-4a04-8cbc-0ef9383eb6db">
+                <tekst-zwykly gd:GUID="1351fe18-01f3-4cfa-b8b5-abd4c4301896">Tymczasowe schronienie w postaci miejsca do spania w ogrzewanym pomieszczeniu, którego temperatura nie jest niższa niż 20 °C.</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="019acf33-28bf-4e30-aea0-aa8c8650c328">
+              <td rowspan="5" gd:GUID="ee9bd688-2883-41db-8934-720cca704891">
+                <tekst-zwykly gd:GUID="a5ef1e47-f2b2-4b10-bab5-4fcb3e17c91e">Zakres usług</tekst-zwykly>
+              </td>
+              <td gd:GUID="7be204f9-c80a-43a5-8bdc-6585a737bb24">
+                <tekst-zwykly gd:GUID="5d2f6b80-58af-4a79-86a1-79c8f353a151">Umożliwienie spożycia posiłku i zapewnienie gorącego napoju.</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="d1cdddc2-53af-44b4-8036-4b3ba999cd97">
+              <td gd:GUID="c3045ae3-2b52-4b68-bf63-3821c3994c21">
+                <tekst-zwykly gd:GUID="d72b2c57-ff12-4fb5-9b37-2a6efc2b5b04">Umożliwienie skorzystania z prysznica oraz wymiany odzieży.</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="24172b12-e6fb-4d4f-8495-26fa74175d5d">
+              <td gd:GUID="ca9217f5-946f-4bee-828c-9571cdbc6387">
+                <tekst-zwykly gd:GUID="ef4d1573-2849-40ca-a2fa-d5a8cd16e3cd">Zapewnienie dezynfekcji i dezynsekcji odzieży w przypadku braku możliwości jej wymiany.</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="7d07be2e-fe38-4f22-ac61-2df3290a6ee7">
+              <td gd:GUID="74d40ee0-c7a4-4d2f-a9c9-fbdacda82972">
+                <tekst-zwykly gd:GUID="6064c8d7-b905-4ceb-b464-687178a1c5be">Zapewnienie informacji o dostępnych formach pomocy, rozmowy wspierające i motywujące.</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="6b7198df-c222-43df-b892-7d124447d1a2">
+              <td gd:GUID="de59a918-6882-475b-b68c-24251e210960">
+                <tekst-zwykly gd:GUID="128e08e4-c6a4-4354-a4f0-a2e645c0b400">Zapewnienie opieki przez co najmniej 1 osobę, o której mowa w art. 48a ust. 3a ustawy z dnia 12 marca 2004 r. o pomocy społecznej, na nie więcej niż 50 osób przebywających w placówce.</tekst-zwykly>
+                <tekst-zwykly gd:GUID="74fb9f48-d15b-4b7e-acdf-0931ebc14e58">W uzasadnionych przypadkach dopuszcza się krótkotrwałe, nie dłuższe niż 7 dni, przekroczenie powyższej normy o nie więcej niż 10 %.</tekst-zwykly>
+                <tekst-zwykly gd:GUID="71c6a145-9c56-4e6a-a3b7-c223b091e9fe">Dopuszcza się wykonywanie świadczeń przez wolontariuszy w obecności osoby zatrudnionej w placówce. Wolontariusz musi mieć ukończone szkolenie z zakresu udzielania pierwszej pomocy.</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="368a02cc-9f36-4550-9c7d-d241e341e463">
+              <td colspan="2" gd:GUID="0e78cd92-1c12-4c5d-899e-7524d308607c">
+                <tekst-zwykly gd:GUID="9c21c2e1-26f5-48b7-882b-673a50fcb6d3">STANDARD OBIEKTU</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="463f28ee-d323-435d-b98a-88167dc0b935">
+              <td gd:GUID="739ba009-ee5c-463f-a972-2a2da9905ac5">
+                <tekst-zwykly gd:GUID="cb0ac83d-730f-44c6-a200-10d815aa2879">Liczba miejsc w placówce</tekst-zwykly>
+              </td>
+              <td gd:GUID="44200bfd-e6bc-4357-b3c1-122a0e0e5472">
+                <tekst-zwykly gd:GUID="c92f6dc0-f27f-48da-982d-47e90b7ce0de">Liczba miejsc nie większa niż 100.</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="a75ced12-287d-4bef-94f7-4c0bd9df14e0">
+              <td gd:GUID="1198d053-e8ac-49b3-a579-41701e46fad0">
+                <tekst-zwykly gd:GUID="7930560e-6da9-405a-bf7e-0f2cc246a890">Liczba osób w pomieszczeniach noclegowych</tekst-zwykly>
+              </td>
+              <td gd:GUID="ae98dd45-f2ef-4f24-ab90-4f1825999970">
+                <tekst-zwykly gd:GUID="5abe0afe-059b-4ff1-bf86-5c7aef82f668">Nie więcej niż 20 osób w pomieszczeniu.</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="d4f5afe5-3431-4b27-94e2-cdf514d2d7f6">
+              <td gd:GUID="e8e0ece2-1885-43b5-9e57-ae8e7318dd40">
+                <tekst-zwykly gd:GUID="a36a7d3f-16d9-4b85-a01b-063143be119a">Powierzchnia przypadająca na osobę w pomieszczeniu noclegowym</tekst-zwykly>
+              </td>
+              <td gd:GUID="3105bc4a-ac90-4744-990c-80378132b3d6">
+                <tekst-zwykly gd:GUID="084738dc-485c-44cc-a75b-63155775669e">Nie mniej niż 3 m<sup>2</sup>/osobę.</tekst-zwykly>
+                <tekst-zwykly gd:GUID="28a7495f-496c-40e9-a3df-797e1169432a">W pomieszczeniach z łóżkami piętrowymi nie mniej niż 2 m<sup>2</sup>/osobę.</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="05530b90-1730-45a7-bc0f-6feb66002ff6">
+              <td gd:GUID="5bcba294-a3c0-4299-b230-ff67ecd4ebcf">
+                <tekst-zwykly gd:GUID="d668d381-6374-48fd-b2ba-3d9dba7ec8b7">Wyposażenie pomieszczeń noclegowych</tekst-zwykly>
+              </td>
+              <td gd:GUID="efd89df6-f000-45da-8969-bee5866a0e49">
+                <tekst-zwykly gd:GUID="b3d65305-8ab9-4fa1-a622-7db5454dba6d">Pomieszczenia noclegowe z co najmniej 1 otwieranym oknem na pomieszczenie lub wentylacją przewidzianą dla pomieszczeń mieszkalnych bez otwieranych okien.</tekst-zwykly>
+                <tekst-zwykly gd:GUID="47f2a87f-b1e5-4706-a55b-900fe93086fc">Pomieszczenia noclegowe ze swobodnym dostępem do łóżek.</tekst-zwykly>
+                <tekst-zwykly gd:GUID="be979ee2-bb25-4364-81e9-0d44a19764f3">Miejsca do spania wyposażone w materac i komplet pościeli (tj. poduszkę, koc, prześcieradło i pokrycie na koc).</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="e8a89625-a3d0-48bc-93f9-1ac16f7aaf1b">
+              <td gd:GUID="13fe8b19-b81e-41b9-b048-63693cb9ae42">
+                <tekst-zwykly gd:GUID="0fef1ae8-c0e4-4926-b636-741eb9d49c02">Pomieszczenia higienicznosanitarne</tekst-zwykly>
+              </td>
+              <td gd:GUID="4c1ed871-524c-4681-9b6c-628b7be39a6e">
+                <tekst-zwykly gd:GUID="4b745e99-0352-4fe1-be5c-e53ef32a4b28">Urządzenie natryskowe – 1 dla 15 osób.</tekst-zwykly>
+                <tekst-zwykly gd:GUID="49671bdb-b660-4292-9a5a-4c23278bcb5e">Umywalka – 1 dla 5 osób.</tekst-zwykly>
+                <tekst-zwykly gd:GUID="30d0823e-5d22-4c03-8941-cab6fa1fe96d">Miska ustępowa – 1 dla 10 osób; w przypadku placówek, w których zamieszkują wyłącznie mężczyźni, oraz w przypadku wydzielonych toalet męskich w placówkach koedukacyjnych dopuszcza się zastąpienie nie więcej niż połowy misek ustępowych pisuarami.</tekst-zwykly>
+                <tekst-zwykly gd:GUID="7632137a-a3e5-41fd-a52f-603b61ec0e33">W uzasadnionych przypadkach (np. remont, uszkodzenie) dopuszcza się krótkotrwałe, do 30 dni, odstępstwo od norm o nie więcej niż 10 %.</tekst-zwykly>
+                <tekst-zwykly gd:GUID="ce2a87c9-8ba4-4fd5-ab55-a2e2c9c6b122">Pomieszczenia higienicznosanitarne zapewniające stały dostęp do bieżącej ciepłej i zimnej wody oraz gwarantujące możliwość przeprowadzenia zabiegów higienicznych.</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="69c78039-a613-4f0d-a725-a4258be8b24a">
+              <td gd:GUID="f5e0aa23-f271-4e53-b2db-e4e20b96ac65">
+                <tekst-zwykly gd:GUID="b40f9940-50fc-4037-95cf-fc73a63a409c">Jadalnia/świetlica</tekst-zwykly>
+              </td>
+              <td gd:GUID="3e62bcc0-b97a-40d1-a421-f07effdf5f7b">
+                <tekst-zwykly gd:GUID="82d65aee-48a6-42aa-8ec9-5a635abe40d7">Pomieszczenie do spożywania posiłków, które poza porami posiłków może pełnić funkcję świetlicy lub sali spotkań grupowych.</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="fca01c9b-df5c-490c-a77d-aa938f807dd1">
+              <td gd:GUID="a1b03853-a8fd-44d5-9191-96d021880e39">
+                <tekst-zwykly gd:GUID="14ceadfd-e3f9-4f06-a51d-21abb911fbfa">Pomieszczenie biurowe</tekst-zwykly>
+              </td>
+              <td gd:GUID="d9da9477-64a1-4e41-a536-21e8575503ac">
+                <tekst-zwykly gd:GUID="f3e64c19-16ae-479f-880d-dff2c6e56e19">Wydzielone pomieszczenie z dostępem do Internetu do prac biurowych oraz indywidualnych rozmów z osobami bezdomnymi.</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="aacc4bd7-5d36-46e3-995f-ff17d30d81d8">
+              <td gd:GUID="71267e23-d1af-4a2d-8083-8f60f130f262">
+                <tekst-zwykly gd:GUID="5e0d9605-5c20-4659-ac6e-aef8a49e6c97">Magazyn odzieży, bielizny, pościeli</tekst-zwykly>
+              </td>
+              <td gd:GUID="9b6b5b9d-fe7d-4990-aa05-c28f33113a0b">
+                <tekst-zwykly gd:GUID="33b5ae86-e825-40e6-9c5f-03074e933ce1">Pomieszczenia wyposażone w regały, szafy zapewniające odpowiednią indywidualną przestrzeń i inne meble umożliwiające wymianę ubrań.</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="128f9719-1282-45c5-b5dc-84f9a23105bd">
+              <td gd:GUID="1020b672-7e07-4f70-9df1-aa9862b12afb">
+                <tekst-zwykly gd:GUID="cad2b1e5-1c2b-45eb-bedd-034535fdcd53">Magazyn środków chemicznych</tekst-zwykly>
+              </td>
+              <td gd:GUID="0f5f1eb3-3f70-4e82-b53e-955ae3041bc6">
+                <tekst-zwykly gd:GUID="f4a0ffaf-5267-44b4-981f-a794d231dbfd">Wydzielone pomieszczenie na środki higieny osobistej, środki czystości, przybory toaletowe i inne przedmioty niezbędne do higieny osobistej.</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="1938f6a9-ffc1-463e-b562-8b7b7f351201">
+              <td gd:GUID="687f3061-9714-4442-8935-5b1217552b0f">
+                <tekst-zwykly gd:GUID="5e2b67bb-1829-4395-b9ec-23c9425d3fda">Pralnia i suszarnia</tekst-zwykly>
+              </td>
+              <td gd:GUID="1911a296-137e-4fb9-8ff1-7d4f0f6ab59f">
+                <tekst-zwykly gd:GUID="52583146-b418-4c8c-96ee-ce2bd47e2445">Wydzielone pomieszczenie wyposażone w co najmniej 1 pralkę dla 30 osób i 1 suszarkę dla 30 osób.</tekst-zwykly>
+                <tekst-zwykly gd:GUID="afd2b6eb-7c5f-4050-ad9f-6e752b5398ee">W przypadku gdy noclegownia nie posiada suszarni, zapewnia dostęp do co najmniej 1 suszarki elektrycznej na 30 osób.</tekst-zwykly>
+              </td>
+            </tr>
+          </tbody>
+        </tabela>
+      </segment-zalacznika>
+    </zalacznik>
+    <zalacznik eId="DU/2025/1059__zal_2" gd:GUID="20515b9f-0e98-4483-9f67-3d6d23596f3c">
+      <zalacznik-nr gd:GUID="c9b9c45c-bf49-482b-b312-db523f55c04b">
+        <nr>2</nr>
+      </zalacznik-nr>
+      <tytul-zalacznika gd:GUID="a6aaa6d6-a381-4af4-8110-a9a7703f1c11">MINIMALNY STANDARD PODSTAWOWYCH USŁUG ŚWIADCZONYCH W SCHRONISKACH DLA OSÓB BEZDOMNYCH ORAZ MINIMALNY STANDARD OBIEKTÓW, W KTÓRYCH MIESZCZĄ SIĘ SCHRONISKA DLA OSÓB BEZDOMNYCH</tytul-zalacznika>
+      <segment-zalacznika gd:GUID="aa2bd227-9f7a-4886-9b78-fbf61034a156" orientacja="pionowa">
+        <tabela gd:GUID="5b227656-6d01-4038-baf7-e7bcc9e1cf18">
+          <tbody>
+            <tr gd:GUID="ddbb51a0-d3a8-41aa-a6be-823de3838430">
+              <td gd:GUID="2b2568ca-b83f-4491-a129-a03eb889defc">
+                <tekst-zwykly gd:GUID="f5c302f3-ea44-4fbd-930c-a9c09573c3b4">KRYTERIA STANDARDU</tekst-zwykly>
+              </td>
+              <td gd:GUID="6583897b-a26f-4016-bb82-712e21e479d9">
+                <tekst-zwykly gd:GUID="39a8dbfd-e144-4ca9-8ce3-dc7eb2c4cd49">NORMY</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="b874feee-5f55-40bd-a7b0-f7025b00ced0">
+              <td colspan="2" gd:GUID="117b8adc-3b10-4759-92e6-26f1df20cb07">
+                <tekst-zwykly gd:GUID="d1ad4e54-810d-40be-847b-0fffc155a915">STANDARD ŚWIADCZONYCH USŁUG</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="e87096b0-704e-4e73-90df-daf2b9bb81f3">
+              <td gd:GUID="f21c6100-5a6a-4e69-99ed-e2e5dd5db854">
+                <tekst-zwykly gd:GUID="387644f6-9905-4211-b6c6-b4ae3c48ee26">Okres świadczenia usług</tekst-zwykly>
+              </td>
+              <td gd:GUID="c62ac920-42c4-48e6-8128-cd72ac51c8c7">
+                <tekst-zwykly gd:GUID="b42c7487-c42a-4026-aa8f-41c3b3466877">Schronisko świadczy usługi przez cały rok, przez 7 dni w tygodniu.</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="31b68c18-af2a-4008-8b58-005eec806df0">
+              <td gd:GUID="b8107732-9c73-4c5a-8b9f-801dda84fd6b">
+                <tekst-zwykly gd:GUID="bb64174c-5e33-4dbb-bd6f-05ae85af6ee9">Forma świadczonej usługi</tekst-zwykly>
+              </td>
+              <td gd:GUID="c1da3b3c-cd19-4fa9-9002-c6804aeda88c">
+                <tekst-zwykly gd:GUID="8976150b-3875-455d-af64-90d015cba482">Możliwość całodobowego przebywania w schronisku, w tym zapewnienie miejsca do spania w ogrzewanym pomieszczeniu, którego temperatura nie jest niższa niż 20 °C.</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="2e67a630-6717-47aa-98cb-ea420ded35d4">
+              <td rowspan="7" gd:GUID="6fa04a50-c32f-4936-85a4-c1c7b26489d5">
+                <tekst-zwykly gd:GUID="1bc720f3-ebd0-48b5-b13a-b37ea7e77d02">Zakres usług</tekst-zwykly>
+              </td>
+              <td gd:GUID="fce7333c-5ae0-40d6-b84b-5c87e19feba3">
+                <tekst-zwykly gd:GUID="ab592fc4-b9f8-4729-9dab-8eaa6a03ee38">Umożliwienie spożycia posiłku oraz dostęp do pomieszczenia kuchennego umożliwiającego samodzielne przygotowanie posiłku i gorącego napoju.</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="a46bbe98-a293-46a5-8f56-eac9c2795199">
+              <td gd:GUID="890c7228-24c9-413b-a15d-6c616972f068">
+                <tekst-zwykly gd:GUID="11a8f757-513c-4412-a57b-dc4d313fd31d">Umożliwienie skorzystania z prysznica, wymiany odzieży. Umożliwienie prania i suszenia odzieży.</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="9b5b70cb-37d3-4065-ae50-bbd13ad4c73e">
+              <td gd:GUID="6bc2443c-9492-4928-8db2-aee323086621">
+                <tekst-zwykly gd:GUID="0766b3be-ef5e-458a-8019-cf2e2fdb59e3">Zapewnienie dezynfekcji i dezynsekcji odzieży w przypadku braku możliwości jej wymiany.</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="dbf488b0-0b11-4abb-843a-20d9ce1edab7">
+              <td gd:GUID="9319e355-11d8-4a39-b33a-6c077082b236">
+                <tekst-zwykly gd:GUID="d18515cd-3186-4d39-913c-2c804187d2d9">Zapewnienie informacji o dostępnych formach pomocy, a w razie potrzeby – wsparcie w jej zorganizowaniu.</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="08f06ab9-169f-4a99-821f-f21331cdafc2">
+              <td gd:GUID="9c0b0cf9-4b9f-4b9f-98eb-76134ccb612a">
+                <tekst-zwykly gd:GUID="3636fff9-20e2-4ee7-bf0a-e1acdf73279a">Zapewnienie pomocy w korzystaniu ze świadczeń zdrowotnych przysługujących na podstawie odrębnych przepisów.</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="4a379ac7-e113-4b67-9d93-ed1bbac9ccad">
+              <td gd:GUID="ad2b4e2d-5d47-43e3-b1da-8ba0f4ea2d1a">
+                <tekst-zwykly gd:GUID="4708c189-7fbc-49b7-a276-f740bf1d766b">Zapewnienie usług aktywizacyjnych ukierunkowanych na wzmacnianie aktywności społecznej, uzyskanie samodzielności życiowej i wyjście z bezdomności.</tekst-zwykly>
+                <tekst-zwykly gd:GUID="ce953a25-a5bf-40ed-8eee-863b6f0b9dcf">Wzmacnianie aktywności społecznej może być realizowane m.in. przez:</tekst-zwykly>
+                <wyliczenie-1 gd:GUID="025fed92-1c92-4354-8626-cb2f366dce42">– trening umiejętności samodzielnego wypełniania ról społecznych,</wyliczenie-1>
+                <wyliczenie-1 gd:GUID="83ea8ac3-e7db-488c-a9fd-cd90028aec75">– trening umiejętności interpersonalnych i umiejętności rozwiązywania problemów,</wyliczenie-1>
+                <wyliczenie-1 gd:GUID="e8d60799-71c0-4f5a-8b52-1f29c695de13">– uczestnictwo w grupach wsparcia.</wyliczenie-1>
+                <tekst-zwykly gd:GUID="841f5396-7615-42e5-ad6a-86c84447aa38">Uzyskanie samodzielności życiowej i wyjście z bezdomności może być realizowane m.in. przez:</tekst-zwykly>
+                <wyliczenie-1 gd:GUID="573ac8b3-0313-4872-a951-36d083bd0496">– zajęcia przygotowujące do podjęcia zatrudnienia,</wyliczenie-1>
+                <wyliczenie-1 gd:GUID="96abdec4-b667-43d4-9844-3148b58a4c2e">– trening gospodarowania własnym budżetem,</wyliczenie-1>
+                <wyliczenie-1 gd:GUID="c97b7ec1-2cc7-4a81-ad50-5f2c4a53561d">– trening prowadzenia gospodarstwa domowego,</wyliczenie-1>
+                <wyliczenie-1 gd:GUID="e3dc7550-1f4b-44cf-83fc-4881a92e4c8d">– uczestnictwo w zajęciach centrum lub klubu integracji społecznej.</wyliczenie-1>
+              </td>
+            </tr>
+            <tr gd:GUID="8a09e2a7-2244-44b5-b3b7-381d553e960b">
+              <td gd:GUID="bf40a7d1-e74b-43df-9636-73dac16c8ef9">
+                <tekst-zwykly gd:GUID="6f77cd35-ab68-4e15-8008-ab3e06327a40">Zapewnienie opieki przez co najmniej 1 opiekuna na nie więcej niż 50 osób przebywających w schronisku.</tekst-zwykly>
+                <tekst-zwykly gd:GUID="642490e0-8de0-4252-9687-da4f25965d00">Ponadto w schronisku zatrudnia się nie mniej niż 1 pracownika socjalnego na nie więcej niż 50 osób przebywających w schronisku.</tekst-zwykly>
+                <tekst-zwykly gd:GUID="33631775-220b-474f-b4fb-f0dd775e6bb4">W porze nocnej w schronisku powinna być zapewniona opieka przez co najmniej 1 opiekuna.</tekst-zwykly>
+                <tekst-zwykly gd:GUID="9997350d-a970-46c7-9e1d-cd814f832d2c">W uzasadnionych przypadkach dopuszcza się krótkotrwałe, nie dłuższe niż 7 dni, przekroczenie powyższej normy o nie więcej niż 10 %.</tekst-zwykly>
+                <tekst-zwykly gd:GUID="ef8fa153-afe7-43cd-aaef-6e720f5fa6fe">Dopuszcza się wykonywanie świadczeń przez wolontariuszy w placówce. Wolontariat musi być świadczony w obecności pracownika i/lub opiekuna w placówce. Wolontariusz musi mieć ukończone szkolenie z zakresu udzielania pierwszej pomocy.</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="aef27dd7-2345-4eb3-8b31-c77d32e6541d">
+              <td colspan="2" gd:GUID="9313137f-2c6a-460e-bb98-7b0add2b4396">
+                <tekst-zwykly gd:GUID="a26ddc09-756d-43b9-9f21-f5e8e60593ed">STANDARD OBIEKTU</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="0e6ba588-671d-48cc-bba1-4963b96823a8">
+              <td gd:GUID="5bba8af7-7175-487f-a653-14e12bbca928">
+                <tekst-zwykly gd:GUID="9eca1496-0fa1-4f7d-b9f3-dd3ee48c670f">Liczba miejsc w schronisku</tekst-zwykly>
+              </td>
+              <td gd:GUID="0ff3d2d6-7e57-484e-8538-a32121daede8">
+                <tekst-zwykly gd:GUID="a319ebd8-be7f-4b67-aaff-dc0e9c9c2cb9">Liczba miejsc nie większa niż 80.</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="26ab234a-5aaa-40af-8e4b-3a9d2dcd1785">
+              <td gd:GUID="f694c596-942b-450e-b3aa-191754664a15">
+                <tekst-zwykly gd:GUID="ffe90d45-f9f4-4fc1-8374-35cd821b8e3e">Liczba osób w pomieszczeniach mieszkalnych</tekst-zwykly>
+              </td>
+              <td gd:GUID="d581a725-9359-4024-ac52-e9ffed3413c9">
+                <tekst-zwykly gd:GUID="1641d8f4-612f-431d-ab7d-f58401bb7f63">Nie więcej niż 10 osób w 1 pomieszczeniu.</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="34dada7e-c6e8-47a7-b681-2f1edab93db5">
+              <td gd:GUID="1955462b-9c7e-4bde-bc08-07c1d79a3171">
+                <tekst-zwykly gd:GUID="4eac6750-be6b-4408-a23b-c810675e0901">Powierzchnia przypadająca na osobę w pomieszczeniu mieszkalnym</tekst-zwykly>
+              </td>
+              <td gd:GUID="8a50b44e-bfef-4e7b-8330-547d5e8e92d5">
+                <tekst-zwykly gd:GUID="5d35ea55-89e8-4255-8dbd-9f1a3574d851">Nie mniej niż 4 m<sup>2</sup>/osobę.</tekst-zwykly>
+                <tekst-zwykly gd:GUID="8ce448b8-8b1d-4cca-b59a-23eeb1389358">W pomieszczeniach z łóżkami piętrowymi nie mniej niż 3 m<sup>2</sup>/osobę.</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="7f9dfede-de07-4f7d-8d83-da9770191bd4">
+              <td gd:GUID="8b5ea07c-ce25-46e4-98df-1a299f59c581">
+                <tekst-zwykly gd:GUID="237879a9-cf4c-49b4-a666-7a64d017c9c1">Wyposażenie pomieszczeń mieszkalnych</tekst-zwykly>
+              </td>
+              <td gd:GUID="7310bffe-dbb5-41a6-8d14-3f969298ca01">
+                <tekst-zwykly gd:GUID="8ebc5e33-02a2-4b91-9f7a-1d0373276d9f">Pomieszczenia mieszkalne mają co najmniej 1 okno, zapewniają swobodny dostęp do łóżek wyposażonych w materac i komplet pościeli (tj. poduszkę, koc, prześcieradło i pokrycie na koc) oraz dostęp do szafy zapewniającej odpowiednią indywidualną przestrzeń.</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="e972eecf-b7ae-45f8-b3af-1ae35b4fd931">
+              <td gd:GUID="33547e42-bfc5-4028-ba70-7335daabd1d7">
+                <tekst-zwykly gd:GUID="89cd266b-efd0-413e-b324-e707282015a0">Pomieszczenia higienicznosanitarne</tekst-zwykly>
+              </td>
+              <td gd:GUID="3cd65251-886a-404c-ac2c-4e6bf170fb32">
+                <tekst-zwykly gd:GUID="2a65ee20-72ab-49ff-acf7-7005c62667e8">Urządzenie natryskowe – 1 dla 15 osób.</tekst-zwykly>
+                <tekst-zwykly gd:GUID="b6f47a46-d419-47dd-9532-aec30ddab3c2">Umywalka – 1 dla 5 osób.</tekst-zwykly>
+                <tekst-zwykly gd:GUID="75b9cad5-5969-4b84-8195-d2d8b9594a3a">Miska ustępowa – 1 dla 10 osób; w przypadku placówek, w których zamieszkują wyłącznie mężczyźni, oraz w przypadku wydzielonych toalet męskich w placówkach koedukacyjnych dopuszcza się zastąpienie nie więcej niż połowy misek ustępowych pisuarami.</tekst-zwykly>
+                <tekst-zwykly gd:GUID="d0a4b5a4-cc28-4f59-8a14-6d9b60457278">W uzasadnionych przypadkach (np. remont, uszkodzenie) dopuszcza się krótkotrwałe, do 30 dni, odstępstwo od norm o nie więcej niż 10 %.</tekst-zwykly>
+                <tekst-zwykly gd:GUID="1290c383-b972-4490-ab5b-12de08e4d58a">Pomieszczenia higienicznosanitarne zapewniające stały dostęp do bieżącej ciepłej i zimnej wody oraz gwarantujące możliwość przeprowadzenia zabiegów higienicznych.</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="59e0542c-effb-4277-8063-504ba8cb199a">
+              <td gd:GUID="75dddd12-b4cf-4f3f-a46f-b2e400320877">
+                <tekst-zwykly gd:GUID="b6d834c9-7bba-441c-a373-158613fd3825">Kuchnia do sporządzania indywidualnych posiłków</tekst-zwykly>
+              </td>
+              <td gd:GUID="15858128-e8d4-4600-9309-780041fd6cc8">
+                <tekst-zwykly gd:GUID="29362db3-926e-479a-8cfa-afb221c1aae9">Wydzielone pomieszczenie do samodzielnego przygotowywania posiłków wyposażone w co najmniej 1 kuchenkę i 1 lodówkę oraz szafki kuchenne.</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="95d2f727-6a3a-440e-a29d-22f38fb8a261">
+              <td gd:GUID="b8749b74-de79-4e2d-a628-c8bccbe42a99">
+                <tekst-zwykly gd:GUID="d71a0895-cf28-453c-89d9-ed883af40673">Jadalnia/świetlica</tekst-zwykly>
+              </td>
+              <td gd:GUID="c3603b09-bbf9-42a7-a9a1-4e90955e3263">
+                <tekst-zwykly gd:GUID="8d630708-fa0d-4d22-a097-b533bb231121">Pomieszczenie do spożywania posiłków, które poza porami posiłków może pełnić funkcję świetlicy lub sali spotkań grupowych.</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="3b1680f5-f5b4-4bac-b54e-da6c656382d0">
+              <td gd:GUID="2fce3624-727a-40cc-a25e-ec819674c9a8">
+                <tekst-zwykly gd:GUID="1965ea19-1ec2-4f27-b50e-17e0052f3e04">Pralnia i suszarnia</tekst-zwykly>
+              </td>
+              <td gd:GUID="c9625069-c70d-4e1e-bf0e-7475dd0e30bd">
+                <tekst-zwykly gd:GUID="8217a03f-0a42-452d-9bd2-6974bed89292">Pomieszczenie na pralnię i suszarnię wyposażone w co najmniej 1 pralkę na 30 osób.</tekst-zwykly>
+                <tekst-zwykly gd:GUID="2f0c1528-fa3f-4417-952f-5387368bed0a">W przypadku gdy schronisko nie posiada suszarni, zapewnia dostęp do co najmniej 1 suszarki elektrycznej na 30 osób.</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="5caaf0d3-13e9-4b5a-ab5f-61572768b315">
+              <td gd:GUID="c41e2431-fdee-41f9-8e5f-fb42a60775eb">
+                <tekst-zwykly gd:GUID="6ad09dfb-8afd-49ff-89fd-a876072e9531">Pomieszczenie biurowe</tekst-zwykly>
+              </td>
+              <td gd:GUID="7cbcb7dd-7781-4352-92ba-d8ed25130360">
+                <tekst-zwykly gd:GUID="54feaa9c-b538-458b-a3f0-f8dc6300722b">Wydzielone pomieszczenie do prac biurowych.</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="3150072e-b209-42f1-8534-84bdad223759">
+              <td gd:GUID="091156c1-2f7f-4a18-b53d-c5cc34fa443e">
+                <tekst-zwykly gd:GUID="d481067d-e9a6-4d3e-a28d-f46b6e8db8ad">Magazyn odzieży, bielizny, pościeli</tekst-zwykly>
+              </td>
+              <td gd:GUID="6b7bb389-59c5-4ebf-bcb4-80eed92a6b21">
+                <tekst-zwykly gd:GUID="c1f5b300-e2c6-4984-b693-a4358112b223">Pomieszczenia wyposażone w regały, szafy i inne meble umożliwiające wymianę ubrań.</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="1426f672-f30f-4eae-a6b7-6566ae557d77">
+              <td gd:GUID="2cbc2867-9fea-4694-8a0b-4b6422365ee3">
+                <tekst-zwykly gd:GUID="a5eaa7c3-4c1e-4ee8-85dd-4d8e4054e4cd">Magazyn środków chemicznych</tekst-zwykly>
+              </td>
+              <td gd:GUID="7d979f2e-f8fd-45a8-b78c-15ec306a75b9">
+                <tekst-zwykly gd:GUID="a83ba2f6-7a3f-4fc0-aa6e-99ee7cc002cd">Wydzielone pomieszczenie na środki higieny osobistej, środki czystości, przybory toaletowe i inne przedmioty niezbędne do higieny osobistej.</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="6a04780b-d1e4-4c7f-91e3-de1315bbb8c9">
+              <td gd:GUID="9fa3574b-b81b-444c-9c49-a7b299e17a1b">
+                <tekst-zwykly gd:GUID="beca8fdc-b3e3-4e02-b5f3-d7b5bb8ce5b4">Pokój spotkań indywidualnych</tekst-zwykly>
+              </td>
+              <td gd:GUID="21bb84a4-bc9e-42ca-818f-ee6b54262567">
+                <tekst-zwykly gd:GUID="f9d30d76-c82b-49e4-ad59-268cd37ccf89">Wydzielone pomieszczenie do spotkań indywidualnych.</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="5aa47329-dccf-4712-b8d5-2845e6a85574">
+              <td gd:GUID="5dacc3af-ef99-4fdd-9ca1-bf98c02ac1d5">
+                <tekst-zwykly gd:GUID="0980146c-1eb8-4707-b812-4cf90e2152b3">Pracownia komputerowa</tekst-zwykly>
+              </td>
+              <td gd:GUID="84574610-fe8d-4bc3-8223-c2b6979578f7">
+                <tekst-zwykly gd:GUID="eef4466d-4e8a-4526-9647-5bb10eaf3d7f">Wydzielone pomieszczenie lub jego część, wyposażone w komputer z dostępem do Internetu.</tekst-zwykly>
+              </td>
+            </tr>
+          </tbody>
+        </tabela>
+      </segment-zalacznika>
+    </zalacznik>
+    <zalacznik eId="DU/2025/1059__zal_3" gd:GUID="05825e7f-714a-4cdb-a934-1b605815e302">
+      <zalacznik-nr gd:GUID="44c83791-2b8b-439f-89c3-16938dfc045e">
+        <nr>3</nr>
+      </zalacznik-nr>
+      <tytul-zalacznika gd:GUID="2b0c7553-ba22-47b2-89b5-6af73f0c0966">MINIMALNY STANDARD PODSTAWOWYCH USŁUG ŚWIADCZONYCH W SCHRONISKACH DLA OSÓB BEZDOMNYCH Z USŁUGAMI OPIEKUŃCZYMI ORAZ MINIMALNY STANDARD OBIEKTÓW, W KTÓRYCH MIESZCZĄ SIĘ SCHRONISKA DLA OSÓB BEZDOMNYCH Z USŁUGAMI OPIEKUŃCZYMI</tytul-zalacznika>
+      <segment-zalacznika gd:GUID="792cd8fb-9f2f-40b1-9bd8-2c61a3cb948b" orientacja="pionowa">
+        <tabela gd:GUID="b96fdf76-9df8-4f5b-91cb-ced8e631246b">
+          <tbody>
+            <tr gd:GUID="9d24ff56-5183-4f12-ad2d-466a8d3d06bd">
+              <td gd:GUID="9bb6d6ed-3f74-4f7e-9d9d-9329522950cd">
+                <tekst-zwykly gd:GUID="0e196aa3-e64d-4c6a-b818-46bcd5c12e45">KRYTERIA STANDARDU</tekst-zwykly>
+              </td>
+              <td gd:GUID="832a84dd-f553-485e-8d66-d439c434d88a">
+                <tekst-zwykly gd:GUID="fdfddb3b-e6ff-4ddd-bd21-6289be3dd834">NORMY</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="24db1bd2-e49f-48c6-95f2-41c18721906c">
+              <td colspan="2" gd:GUID="51dd0850-2f30-4747-a8ee-1fde6cc845c3">
+                <tekst-zwykly gd:GUID="7c9e5c7c-911b-4357-9813-7fa8a51904ca">STANDARD ŚWIADCZONYCH USŁUG</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="3a56aabe-1c1e-446a-92a9-febc341b7c02">
+              <td gd:GUID="d19047d7-3f79-4784-81a6-a34a6aafe27b">
+                <tekst-zwykly gd:GUID="ac38ef5f-f151-4067-a1de-166cc637a16f">Okres świadczenia usług</tekst-zwykly>
+              </td>
+              <td gd:GUID="4a5d513e-fa57-4b61-acc8-bfcba9f60058">
+                <tekst-zwykly gd:GUID="25d1f0ef-9ea3-46b6-ab5d-9fab045c8ba1">Schronisko świadczy usługi przez cały rok, przez 7 dni w tygodniu.</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="d6529380-59fe-4cc1-94dd-110defbf80f2">
+              <td gd:GUID="ffd96915-7c52-40b6-a212-bf7dc412ffe3">
+                <tekst-zwykly gd:GUID="a2f66d76-fc4a-4bca-b94c-35dc6de77594">Forma świadczonej usługi</tekst-zwykly>
+              </td>
+              <td gd:GUID="054c0a36-f5aa-465b-8e84-a19686c2a5b8">
+                <tekst-zwykly gd:GUID="fa056a48-1f6a-4afc-9707-2586faeab2bd">Możliwość całodobowego przebywania w schronisku, w tym zapewnienie miejsca do spania w ogrzewanym pomieszczeniu, którego temperatura nie jest niższa niż 20 °C.</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="df2ea9b5-0e33-40d0-bc0d-eb9c0d0545a1">
+              <td rowspan="9" gd:GUID="0e6d63e4-9be6-4e0d-aa59-e966a62c77f5">
+                <tekst-zwykly gd:GUID="ea92421a-32e1-4a76-9b3d-c45ab647df3c">Zakres usług</tekst-zwykly>
+              </td>
+              <td gd:GUID="fb8c139b-e4a8-46fd-b487-2ede39ac54b0">
+                <tekst-zwykly gd:GUID="23a2c856-d759-467a-b443-033951e8a131">Umożliwienie spożycia posiłku w pokoju mieszkalnym, a w razie potrzeby – karmienie.</tekst-zwykly>
+                <tekst-zwykly gd:GUID="b99adc50-bb22-4bae-b3f3-ddd55ea0c1c4">Dostęp do pomieszczenia umożliwiającego samodzielne przygotowanie posiłku i gorącego napoju.</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="11010e6e-f70e-47c2-bbb0-eac658b6bf6a">
+              <td gd:GUID="7d1b16b2-1011-4181-88b6-b859e84b2d4b">
+                <tekst-zwykly gd:GUID="c6c65cde-ad06-4234-9c33-dc828f464d3c">Umożliwienie skorzystania z prysznica, wymiany odzieży. W miarę potrzeby pomoc w myciu, kąpaniu i ubieraniu.</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="e55e2440-4c54-4452-92f5-e8f73506b2d8">
+              <td gd:GUID="d5c2cada-a1a5-4b00-bf7f-e59934ae4d9c">
+                <tekst-zwykly gd:GUID="c6d1f82e-879f-40e5-9c8b-6b11738f9e62">Opieka higieniczna.</tekst-zwykly>
+                <tekst-zwykly gd:GUID="dbc3bbf8-3198-495b-9864-057e7a0e427b">Zapewnienie usług opiekuńczych w wydzielonym pomieszczeniu lub w pokoju mieszkalnym, jeżeli łóżko jest oddzielone zasłoną.</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="e58af326-a11a-46f8-89d6-3b269a814238">
+              <td gd:GUID="34546479-ffe1-4c60-ab41-34fd782a2d88">
+                <tekst-zwykly gd:GUID="a935f1fc-bcd9-452d-939b-8c6af9d8ac69">Umożliwienie prania i suszenia odzieży.</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="68403fc6-cef9-47fb-8ec6-78ce3cdd2354">
+              <td gd:GUID="3763e28f-94e0-40fc-a36f-dc3664b80ed7">
+                <tekst-zwykly gd:GUID="b1404b50-abea-4851-847c-47d5619fa29f">Zapewnienie dezynfekcji i dezynsekcji odzieży w przypadku braku możliwości jej wymiany.</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="b575d32b-be31-4f57-a5de-e635d4376f8b">
+              <td gd:GUID="18830bb5-3bc8-434e-a7fb-94813bb7e7d0">
+                <tekst-zwykly gd:GUID="6e2450ca-98eb-4559-9c6f-ea27fc54d78f">Niezbędna pomoc w załatwianiu spraw osobistych.</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="584fd931-6e86-4bcd-ab84-6e5c4652e491">
+              <td gd:GUID="43749c7c-8b9e-4447-9565-620700dec91a">
+                <tekst-zwykly gd:GUID="1eaf3c06-8208-4d92-9ace-dd2550fee1ad">Zapewnienie pomocy w korzystaniu ze świadczeń zdrowotnych przysługujących na podstawie odrębnych przepisów.</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="f3a482c7-4937-477b-8cfa-78d0c3a572db">
+              <td gd:GUID="7b2d022a-9f7d-4eca-959c-416e9b4c2483">
+                <tekst-zwykly gd:GUID="f2a0e468-f0f5-43c2-9841-dac06a1f4f62">Zapewnienie usług aktywizacyjnych ukierunkowanych na wzmacnianie aktywności społecznej.</tekst-zwykly>
+                <tekst-zwykly gd:GUID="8264c569-43c0-4f4c-8e01-a195c1a327dc">Wzmacnianie aktywności społecznej może być realizowane m.in. przez:</tekst-zwykly>
+                <wyliczenie-1 gd:GUID="c237eb08-992f-42ad-845e-cc145cbb0ee9">– trening umiejętności samodzielnego wypełniania ról społecznych,</wyliczenie-1>
+                <wyliczenie-1 gd:GUID="4044e981-d8aa-489f-ac44-7735f7d7bc4b">– trening umiejętności interpersonalnych i umiejętności rozwiązywania problemów,</wyliczenie-1>
+                <wyliczenie-1 gd:GUID="f9b30c06-fb28-41b0-a58b-beef187d74e7">– uczestnictwo w grupach wsparcia.</wyliczenie-1>
+              </td>
+            </tr>
+            <tr gd:GUID="aaf7e107-bb6d-4840-858e-5d9d366a48ac">
+              <td gd:GUID="92a89b17-8df4-4fe9-924a-0719381a6269">
+                <tekst-zwykly gd:GUID="8209fdce-d8de-4f2c-9499-909f7e1fb8d3">Zapewnienie opieki przez co najmniej 1 opiekuna na nie więcej niż 15 osób przebywających w schronisku.</tekst-zwykly>
+                <tekst-zwykly gd:GUID="22271ea7-ecd8-46a4-8edb-e4b207c4586e">Ponadto w schronisku zatrudnia się nie mniej niż 1 pracownika socjalnego na nie więcej niż 50 osób przebywających w schronisku.</tekst-zwykly>
+                <tekst-zwykly gd:GUID="39c08a42-0296-47ca-9623-2bc0291b8d01">Dopuszcza się wykonywanie świadczeń przez wolontariuszy w placówce. Wolontariat musi być świadczony w obecności pracownika i/lub opiekuna w placówce. Wolontariusz musi mieć ukończone szkolenie z zakresu udzielania pierwszej pomocy.</tekst-zwykly>
+                <tekst-zwykly gd:GUID="f96c58fc-c3e9-4c61-b579-082dd71bde04">W porze nocnej powinna być w schronisku zapewniona opieka przez co najmniej 1 opiekuna na nie więcej niż 40 osób.</tekst-zwykly>
+                <tekst-zwykly gd:GUID="c52a90df-2e40-4fc2-8b4b-f305addf5291">W uzasadnionych przypadkach dopuszcza się krótkotrwałe, nie dłuższe niż 7 dni, przekroczenie powyższej normy o nie więcej niż 10 %.</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="e41cb4e1-da58-42d9-8405-8b53fde0648b">
+              <td colspan="2" gd:GUID="11ee01c6-72e9-4c1f-aecd-7bdb06520964">
+                <tekst-zwykly gd:GUID="dd0ed14a-ff47-40ee-aa1d-12e1feb13144">STANDARD OBIEKTU</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="4ca82d64-aab7-49d3-94d4-81f3f82cdf84">
+              <td gd:GUID="d01f109e-5cf6-4937-836b-d6440c9cfdb6">
+                <tekst-zwykly gd:GUID="267fa3e6-1812-42bb-a60b-dc621ec0e980">Warunki techniczne obiektu</tekst-zwykly>
+              </td>
+              <td gd:GUID="fab2f2df-53f8-4149-9a97-0d21873b26f4">
+                <tekst-zwykly gd:GUID="18ddacdf-687c-4c31-a76d-3513f167a39c">W schronisku zapewnia się:</tekst-zwykly>
+                <wyliczenie-1 gd:GUID="99ece70a-a8fe-4db3-befa-b36bef0ef340">– dostęp do budynku dla osób niepełnosprawnych,</wyliczenie-1>
+                <wyliczenie-1 gd:GUID="587e559b-5da4-4612-b0dc-375f65653ecd">– w budynkach wielokondygnacyjnych bez dźwigów osobowych – pokoje mieszkalne oraz inne pomieszczenia (sanitariaty, jadalnia/świetlica) usytuowane na parterze.</wyliczenie-1>
+              </td>
+            </tr>
+            <tr gd:GUID="7f940a9e-edc0-4ae1-a17f-d2fc7dc21fb5">
+              <td gd:GUID="5c4379cc-7df2-44dc-94f4-1dc361dce7b4">
+                <tekst-zwykly gd:GUID="3ff6c319-eeb5-4236-80b3-32f141d9dc6e">Liczba miejsc w schronisku</tekst-zwykly>
+              </td>
+              <td gd:GUID="7ce9d6e8-82f3-48b1-8dfc-03d9af435302">
+                <tekst-zwykly gd:GUID="1e21892d-1c11-48c0-a756-43f8c1f017a7">Liczba miejsc nie większa niż 80.</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="5207a6b1-be32-4fa3-8437-c2ed8ccf13f3">
+              <td gd:GUID="0e251d24-72d5-4d2a-ba47-9285adf506e2">
+                <tekst-zwykly gd:GUID="aafc2e98-0ab6-45d3-9261-fb431c4a86bb">Liczba osób w pomieszczeniach mieszkalnych</tekst-zwykly>
+              </td>
+              <td gd:GUID="96d1cc46-f98a-448b-a757-063a5d4c121c">
+                <tekst-zwykly gd:GUID="0e6e42ca-7a57-4bcd-8676-dcf6c50e6e7a">Nie więcej niż 6 osób wymagających usług opiekuńczych w 1 pomieszczeniu.</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="9d1a0dd4-6812-4d17-90b3-e61f8c6ef16b">
+              <td gd:GUID="eef13263-4bbb-4d7d-815b-d679de473572">
+                <tekst-zwykly gd:GUID="c6ec430c-69b4-4d07-8e6e-a0f98591ac91">Powierzchnia przypadająca na osobę w pomieszczeniu mieszkalnym</tekst-zwykly>
+              </td>
+              <td gd:GUID="5272a684-4698-4c1b-8ce0-2bc349e42df6">
+                <tekst-zwykly gd:GUID="be0c78d4-2df8-4adb-8330-e9db568032d1">Nie mniej niż 5 m<sup>2</sup>/osobę.</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="2ca3e944-be9e-4e8f-a880-f40818ec3c10">
+              <td gd:GUID="b8651893-4abd-4bf5-b774-0888169b9197">
+                <tekst-zwykly gd:GUID="1879dd68-809a-44c4-a056-f2306faeec99">Wyposażenie pomieszczeń mieszkalnych</tekst-zwykly>
+              </td>
+              <td gd:GUID="98aa3cc4-f2c2-4e0a-911e-054a643187e0">
+                <tekst-zwykly gd:GUID="55477543-f320-41a2-87a4-f1163f43ad9b">Pomieszczenia mieszkalne mają co najmniej 1 okno, zapewniają swobodny dostęp do łóżek wyposażonych w materac i komplet pościeli (tj. poduszkę, koc, prześcieradło i pokrycie na koc) oraz dostęp do szafy.</tekst-zwykly>
+                <tekst-zwykly gd:GUID="f0def2c8-3791-47b6-81c8-9d5ffa4c0d9c">Pomieszczenia mieszkalne wyposażone w:</tekst-zwykly>
+                <wyliczenie-1 gd:GUID="99b08226-71a8-4a51-af6c-2b38f7858a05">– łóżko parterowe, krzesło, szafkę nocną – po 1 sztuce dla każdej osoby,</wyliczenie-1>
+                <wyliczenie-1 gd:GUID="7e04260a-c1fd-4bb3-966f-b167586e175b">– stół, szafę – co najmniej 1 sztuka na każdy pokój, szafa zapewniająca odpowiednią indywidualną przestrzeń.</wyliczenie-1>
+              </td>
+            </tr>
+            <tr gd:GUID="65f9ab0e-7a5e-4128-ae70-54d41f3e4ff3">
+              <td gd:GUID="3bae8537-be71-45f5-9a1e-c79002be15b8">
+                <tekst-zwykly gd:GUID="d2db14a4-f68b-4c1f-a170-aa23cdb0e8b1">Pomieszczenia higienicznosanitarne</tekst-zwykly>
+              </td>
+              <td gd:GUID="c1a85920-69c2-4a07-af1e-92f627408bf4">
+                <tekst-zwykly gd:GUID="1c52e003-6c47-48c0-89e3-3f78e4ec22d7">Pomieszczenia higienicznosanitarne wyposażone stosownie do potrzeb osób korzystających z tych pomieszczeń m.in. w:</tekst-zwykly>
+                <wyliczenie-1 gd:GUID="d3a646e7-e1b0-4e48-b452-037e3561d31a">– urządzenie natryskowe – 1 dla 15 osób,</wyliczenie-1>
+                <wyliczenie-1 gd:GUID="379273ae-50e4-468a-8e97-9532caee52d3">– umywalkę – 1 dla 5 osób,</wyliczenie-1>
+                <wyliczenie-1 gd:GUID="5cd28b75-3c6a-4569-bf36-2462a5bec214">– miskę ustępową – 1 dla 10 osób; w przypadku placówek, w których zamieszkują wyłącznie mężczyźni, oraz w przypadku wydzielonych toalet męskich w placówkach koedukacyjnych dopuszcza się zastąpienie nie więcej niż połowy misek ustępowych pisuarami.</wyliczenie-1>
+                <tekst-zwykly gd:GUID="fa3a4d49-6a55-4aa3-8db4-ef60faa82da7">W uzasadnionych przypadkach (np. remont, uszkodzenie) dopuszcza się krótkotrwałe, do 30 dni, odstępstwo od norm o nie więcej niż 10 %.</tekst-zwykly>
+                <tekst-zwykly gd:GUID="1b22e163-0243-4d38-90ec-d7fb48a8239e">Przynajmniej 1 sanitariat (lub jego część) wyposażony w urządzenie natryskowe, umywalkę i miskę ustępową dostosowany do potrzeb osób niepełnosprawnych.</tekst-zwykly>
+                <tekst-zwykly gd:GUID="73e2a6ef-99bf-468c-b7ee-4022d46b4246">Pomieszczenie higienicznosanitarne zapewniające stały dostęp do bieżącej ciepłej i zimnej wody oraz gwarantujące możliwość przeprowadzenia zabiegów higienicznych.</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="7f46cf6b-ee1c-4a1a-9666-ded104b4b268">
+              <td gd:GUID="7a891d90-9c9f-4bd4-b55d-13a3cc409e13">
+                <tekst-zwykly gd:GUID="3a5fd140-aa35-48eb-a8df-0c1dc9086709">Kuchnia</tekst-zwykly>
+              </td>
+              <td gd:GUID="ed638779-7ac3-4400-a1c2-204b7e097b13">
+                <tekst-zwykly gd:GUID="4f35e21d-fe20-41df-ad4b-8331eb57c6eb">Pomieszczenie do przygotowywania posiłków lub porcjowania i wydawania.</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="c12f6f3f-bf1e-4432-b7ce-947ee8e30a6c">
+              <td gd:GUID="138e641b-f1ad-4308-be42-a08cd02f3bfb">
+                <tekst-zwykly gd:GUID="f8a6d45a-b460-40d1-9bb8-7a63ac528eaf">Jadalnia/świetlica</tekst-zwykly>
+              </td>
+              <td gd:GUID="31aff2d6-4e85-45a3-89af-c47865fbbcb1">
+                <tekst-zwykly gd:GUID="fb7a8be7-bdec-439e-bb74-38458858a436">Pomieszczenie do spożywania posiłków, które poza porami posiłków może pełnić funkcję świetlicy lub sali spotkań grupowych.</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="32508b5e-b525-4fa9-a43c-f80485db1c1e">
+              <td gd:GUID="0add56ab-e968-4552-9ad7-93f56e1f95a2">
+                <tekst-zwykly gd:GUID="7b516373-726b-4b8f-8485-0ea1ad58235e">Pralnia i suszarnia</tekst-zwykly>
+              </td>
+              <td gd:GUID="7f715f73-7b0c-491a-89c4-f4db3c9caa2c">
+                <tekst-zwykly gd:GUID="1e805a1e-a87c-4163-a6fb-78b0bf99f688">Pomieszczenie na pralnię i suszarnię wyposażone w co najmniej 1 pralkę na 30 osób.</tekst-zwykly>
+                <tekst-zwykly gd:GUID="2ad86f45-7ae3-406d-8831-258d8c42e3c8">W przypadku gdy schronisko nie posiada suszarni, zapewnia dostęp do co najmniej 1 suszarki elektrycznej na 30 osób.</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="eaff7450-c6c9-4774-b6c3-826d509d106b">
+              <td gd:GUID="f7211915-0e41-400f-8006-f535f0bc04ca">
+                <tekst-zwykly gd:GUID="91d44047-c1f8-4c28-a431-5548251b76a1">Pomieszczenie biurowe</tekst-zwykly>
+              </td>
+              <td gd:GUID="768bf773-232c-4d60-8929-0ca778df855b">
+                <tekst-zwykly gd:GUID="f8290e01-f7ab-4e0e-bbf8-5e6699749dc8">Wydzielone pomieszczenie do prac biurowych z dostępem do Internetu.</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="751fc8b7-5e8b-4597-be97-eaea2e0f6277">
+              <td gd:GUID="abbe0b00-2359-4a13-8899-4b2049d5243f">
+                <tekst-zwykly gd:GUID="2f60d6b1-1497-445a-b745-5cb5ba485e03">Magazyn odzieży, bielizny, pościeli</tekst-zwykly>
+              </td>
+              <td gd:GUID="8f07c5f9-1846-420c-8c79-c73ea76458b3">
+                <tekst-zwykly gd:GUID="064cc2e0-92b8-46b0-90f6-8acd4ae3c1d9">Pomieszczenia wyposażone w regały, szafy i inne meble umożliwiające wymianę ubrań.</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="577393d0-2933-488b-949a-0aff444e9a55">
+              <td gd:GUID="3accaf6d-761e-4b0b-8322-3002c928698f">
+                <tekst-zwykly gd:GUID="c7d1bbb7-f3f6-4cec-bb0d-7ddce822cdc7">Magazyn środków chemicznych</tekst-zwykly>
+              </td>
+              <td gd:GUID="1754fa06-1c30-4a9b-bc71-6197bbda4be6">
+                <tekst-zwykly gd:GUID="3ee3196c-ced8-4194-b067-daaf39417c9e">Wydzielone pomieszczenie na środki higieny osobistej, środki czystości, przybory toaletowe i inne przedmioty niezbędne do higieny osobistej.</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="638f756c-6b50-400f-8fdc-7c7a93547927">
+              <td gd:GUID="929a79eb-56c9-4409-a430-aa848caa3022">
+                <tekst-zwykly gd:GUID="c2e53823-c848-4dc6-92bf-76a0f0304291">Pokój spotkań indywidualnych</tekst-zwykly>
+              </td>
+              <td gd:GUID="077f57b5-3558-41f2-872d-9044b111426f">
+                <tekst-zwykly gd:GUID="2dde64af-0d7c-41d3-b181-8a5dcf75ad9d">Wydzielone pomieszczenie z dostępem do Internetu do spotkań indywidualnych, które również może pełnić rolę pracowni komputerowej.</tekst-zwykly>
+              </td>
+            </tr>
+          </tbody>
+        </tabela>
+      </segment-zalacznika>
+    </zalacznik>
+    <zalacznik eId="DU/2025/1059__zal_4" gd:GUID="350cbffb-9011-42d5-b68d-eac599145fbd">
+      <zalacznik-nr gd:GUID="ef93a16b-5d05-4477-b5fe-1c15e9943469">
+        <nr>4</nr>
+      </zalacznik-nr>
+      <tytul-zalacznika gd:GUID="9a64ad9c-e8a7-4441-939a-1882e045237e">MINIMALNY STANDARD PODSTAWOWYCH USŁUG ŚWIADCZONYCH W OGRZEWALNIACH ORAZ MINIMALNY STANDARD OBIEKTÓW, W KTÓRYCH MIESZCZĄ SIĘ OGRZEWALNIE</tytul-zalacznika>
+      <segment-zalacznika gd:GUID="7a265312-9bbf-45f8-a1f1-6f4fd6797133" orientacja="pionowa">
+        <tabela gd:GUID="17cd5da4-5601-454c-8d49-bfe0f1fc8b29">
+          <tbody>
+            <tr gd:GUID="88137ef1-252a-4705-a02e-9a51d78cae47">
+              <td gd:GUID="7928aa95-1bbd-4756-911b-d61eaa6b1c05">
+                <tekst-zwykly gd:GUID="d0b17344-55bc-45c3-b96f-aa51592dbfe2">KRYTERIA STANDARDU</tekst-zwykly>
+              </td>
+              <td gd:GUID="24677139-efd4-4e3a-a734-3e89f07aee94">
+                <tekst-zwykly gd:GUID="3650714d-75c6-4d49-bf05-3dd25ddbfdcd">NORMY</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="7bb2fb41-8486-4abd-93ba-84af4a7b4c50">
+              <td colspan="2" gd:GUID="a30b7f88-8cfc-41fd-8226-bdd1bf4e0c6c">
+                <tekst-zwykly gd:GUID="4bd84b1a-32c0-4b07-b973-37f349993e09">STANDARD ŚWIADCZONYCH USŁUG</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="ffce7df6-afc9-451b-9fa1-3feba838de67">
+              <td gd:GUID="6b6445e8-aa37-46f4-862d-1d2e2b708c7a">
+                <tekst-zwykly gd:GUID="e64356d3-bf57-4820-95ef-a5f8337fa1f6">Okres świadczenia usług</tekst-zwykly>
+              </td>
+              <td gd:GUID="4bfc459b-977b-4a08-9dba-24a8215359bd">
+                <tekst-zwykly gd:GUID="6ab66733-1cc1-4d04-9d4d-69aa1725f744">Ogrzewalnia świadczy usługi w okresie od 1 października do 30 kwietnia, przez 7 dni w tygodniu, w godzinach od 16.00 do 8.00. W okresie zimy, a szczególnie podczas niskich temperatur zewnętrznych, tj. gdy najniższa temperatura zmierzona w przedziale godzin 8.00–19.00 jest niższa niż 0 °C, lub sytuacji kryzysowych, ogrzewalnia powinna być czynna przez 24 godziny na dobę.</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="b8bafb5d-6bf8-4127-b36f-065b657ffb46">
+              <td gd:GUID="07ff0650-d92a-4d1e-b9cc-7872137539f0">
+                <tekst-zwykly gd:GUID="87036d0a-b4e2-44b1-9b9e-c13c183e0cab">Forma świadczonej usługi</tekst-zwykly>
+              </td>
+              <td gd:GUID="0c82134b-38cc-4846-8dea-19412efc1f83">
+                <tekst-zwykly gd:GUID="f581c6dc-c7bc-423d-9b07-13b39889a0e0">Możliwość ogrzania się w pomieszczeniu, którego temperatura nie jest niższa niż 18 °C.</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="c35152a0-8373-469a-8c48-618c400eb3c5">
+              <td rowspan="5" gd:GUID="3e418a53-b2bf-4d48-8980-69ff25e2e226">
+                <tekst-zwykly gd:GUID="88fa22c1-25de-4d66-8072-3e084cbcbad1">Zakres usług</tekst-zwykly>
+              </td>
+              <td gd:GUID="249032fe-15fe-4d8e-ae5f-3e915a90f1e5">
+                <tekst-zwykly gd:GUID="1748bee4-544a-4776-b475-cbb73df2fbcc">Umożliwienie spożycia posiłku i zapewnienie gorącego napoju.</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="71647ef4-86d8-46b8-8517-26b937868e06">
+              <td gd:GUID="bd7c3721-6cb7-43b3-b8bc-ba18692c617c">
+                <tekst-zwykly gd:GUID="8e25b2d7-8bc9-4969-a328-2c2cdea79a9e">Umożliwienie wymiany odzieży.</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="102531fa-015b-4f7a-b954-f7bb285bd1d1">
+              <td gd:GUID="885f1137-a2bf-45c7-9c75-af3ed422311e">
+                <tekst-zwykly gd:GUID="5673f733-b52d-4ab0-ae12-14e8bf6ef32e">Zapewnienie dezynfekcji i dezynsekcji odzieży w przypadku braku możliwości jej wymiany.</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="cb24b31b-4628-4132-9c65-b6e549b5fcc0">
+              <td gd:GUID="44d43e80-488c-4d99-8bb2-a76b0087bbab">
+                <tekst-zwykly gd:GUID="279ba0db-8fac-4027-9beb-e7ab0ada0f84">Zapewnienie informacji o dostępnych formach pomocy, rozmowy wspierające i motywujące.</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="da7e63c6-6d17-4f13-95b7-fe7487a3ef07">
+              <td gd:GUID="9af20ddb-2ade-4660-a419-1774a1667070">
+                <tekst-zwykly gd:GUID="42b33444-1b39-4ad4-95e6-d8e4f191a020">Zapewnienie opieki przez co najmniej 1 osobę, o której mowa w art. 48a ust. 4a ustawy z dnia 12 marca 2004 r. o pomocy społecznej, na nie więcej niż 50 osób przebywających w ogrzewalni.</tekst-zwykly>
+                <tekst-zwykly gd:GUID="df87829f-33ca-4b30-9878-f63301e88847">W uzasadnionych przypadkach dopuszcza się krótkotrwałe, nie dłuższe niż 7 dni, przekroczenie powyższej normy o nie więcej niż 10 %.</tekst-zwykly>
+                <tekst-zwykly gd:GUID="a5bdf9db-b83e-44ec-97c0-8c7b305f7182">Dopuszcza się wykonywanie świadczeń przez wolontariuszy w obecności osoby zatrudnionej w placówce. Wolontariusz musi mieć ukończone szkolenie z zakresu udzielania pierwszej pomocy.</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="c8a9dcb3-2118-4bd6-8852-822996a4595a">
+              <td colspan="2" gd:GUID="56b52487-496a-4fe2-97ad-b6ca394cf450">
+                <tekst-zwykly gd:GUID="d82a120a-f67e-4f21-89d4-6f9c6a3de9f0">STANDARD OBIEKTU</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="61cf5779-e55f-4bd4-b75f-6a146226e43e">
+              <td gd:GUID="fd429d0a-2d96-4c51-9134-20801978c2a4">
+                <tekst-zwykly gd:GUID="2939af04-5ce7-4a4c-a719-1fbbd9b6ba5f">Liczba miejsc w ogrzewalni</tekst-zwykly>
+              </td>
+              <td gd:GUID="cf712150-cd4e-4898-b3c8-63d925e1b520">
+                <tekst-zwykly gd:GUID="bdbf3c95-e4b5-4729-b594-663d13005aab">Liczba miejsc nie większa niż 50.</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="c3845818-09d6-4109-ac44-5b7f9fc29e09">
+              <td gd:GUID="3e487aa6-f30e-4725-a394-87ac4d70d60c">
+                <tekst-zwykly gd:GUID="1ac3f81e-e2cf-4c07-b108-df52e764817a">Liczba miejsc siedzących w pomieszczeniach pobytowych</tekst-zwykly>
+              </td>
+              <td gd:GUID="391e0ca7-8382-4ee5-9b49-59339e497370">
+                <tekst-zwykly gd:GUID="53750662-1c10-47a5-97d1-05ea229f8656">Nie więcej niż dla 25 osób w 1 pomieszczeniu.</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="0958a383-38a9-41ab-aa16-8f3af8c56e3f">
+              <td gd:GUID="44922a9d-8d3c-4c39-8751-e5ff6297bbee">
+                <tekst-zwykly gd:GUID="dcd065df-9b7b-4739-b15e-30af132a043c">Powierzchnia przypadająca na osobę w pomieszczeniu pobytowym</tekst-zwykly>
+              </td>
+              <td gd:GUID="5e463c33-5b9b-4e60-a0f1-e07542466ef8">
+                <tekst-zwykly gd:GUID="2a50b64a-1d93-43b8-8cad-30ef80ed769a">Nie mniej niż 2 m<sup>2</sup>/osobę.</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="605895d1-4509-429a-a191-0ec3c5d608bc">
+              <td gd:GUID="ae9cd668-668a-4b31-9d0e-61d49a731c57">
+                <tekst-zwykly gd:GUID="36dcb615-5c4e-41d0-9e22-57bb89f0cd2c">Wyposażenie pomieszczeń pobytowych</tekst-zwykly>
+              </td>
+              <td gd:GUID="f910033b-428b-422c-a5c1-07ceec5647c5">
+                <tekst-zwykly gd:GUID="ac248483-6f19-4d1c-9203-c6aeb0b703ff">Osoba przebywająca w ogrzewalni ma zapewnione miejsce siedzące w postaci krzesła o łatwo zmywalnej powierzchni.</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="735af8aa-fb44-4fc4-b3e2-f7b463edc581">
+              <td gd:GUID="801e10de-9e84-42d0-98af-4c452a8c6db2">
+                <tekst-zwykly gd:GUID="31cc197e-88eb-4bf3-b789-a6f017b59046">Pomieszczenia higienicznosanitarne</tekst-zwykly>
+              </td>
+              <td gd:GUID="f450d6ef-c732-44b6-8302-206a036ab31f">
+                <tekst-zwykly gd:GUID="7e5f0168-752e-4c19-8b6a-e9961fcbf25c">Co najmniej 1 umywalka dla 20 osób.</tekst-zwykly>
+                <tekst-zwykly gd:GUID="45a9b496-2ee2-487e-af3f-53bf373152fe">Miska ustępowa – 1 dla 20 osób; w przypadku placówek przeznaczonych wyłącznie dla mężczyzn oraz w przypadku wydzielonych toalet męskich w placówkach koedukacyjnych dopuszcza się zastąpienie nie więcej niż połowy misek ustępowych pisuarami.</tekst-zwykly>
+                <tekst-zwykly gd:GUID="59fb83da-5eef-46ff-b75c-03e0fe0c400c">Pomieszczenia higienicznosanitarne zapewniające stały dostęp do bieżącej ciepłej i zimnej wody oraz gwarantujące możliwość przeprowadzenia zabiegów higienicznych.</tekst-zwykly>
+                <tekst-zwykly gd:GUID="21670fee-5e7a-441f-91db-d10b2b34eea4">W uzasadnionych przypadkach (np. remont, uszkodzenie) dopuszcza się krótkotrwałe, do 30 dni, odstępstwo od norm o nie więcej niż 10 %.</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="efec3899-eb1e-447d-8a63-074920809db6">
+              <td gd:GUID="422be01b-d2b3-4a3c-8aa7-c021df0b7489">
+                <tekst-zwykly gd:GUID="e186db81-5b33-4cd4-91ce-ac8150f31847">Pomieszczenie biurowe</tekst-zwykly>
+              </td>
+              <td gd:GUID="70430158-0495-4b82-a836-3383d798b6e5">
+                <tekst-zwykly gd:GUID="9aa0f8b8-e724-4980-93b8-7a578115e6ce">Wydzielone pomieszczenie do prac biurowych z dostępem do Internetu oraz indywidualnych rozmów.</tekst-zwykly>
+              </td>
+            </tr>
+          </tbody>
+        </tabela>
+      </segment-zalacznika>
+    </zalacznik>
+  </rozporzadzenie>
+</akt-prawny>

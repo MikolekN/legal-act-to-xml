@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <ustawa>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/1159</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>c71db245-5eb6-41a4-b855-1c39e8f3c992</gd:GUIDwersji>
+      <AdresISAP>WDU20250001159</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>1159</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 1159</AdresWyswietlany>
+      <Tytul>Ustawa z dnia 5 sierpnia 2025 r. o zmianie ustawy o emeryturach i rentach z Funduszu Ubezpieczeń Społecznych</Tytul>
+      <Rodzaj>USTAWA</Rodzaj>
+      <DataOgloszenia>2025-08-22</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-08-05</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2026-01-01_DU-2025-1159_odczytane" rodzaj="wejscie-w-zycie" pochodzenie="odczytane" data="2026-01-01" podstawa="art. 3" zrodlo="https://eli.gov.pl/eli/DU/2025/1159" dowod="DU/2025/1159__art_3" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1159_odczytane.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2026-01-01_DU-2025-1159_odczytane" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="dc21dbd7-4388-4853-ae87-70267831e33b" rola="wydajacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Sejm">
+          <Nazwa>SEJM</Nazwa>
+        </Organ>
+        <Organ gd:GUID="374bbbeb-0c4d-4186-a5c8-e8b77f45f513" rola="podpisujacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Prezydent">
+          <Nazwa>Prezydent Rzeczypospolitej Polskiej</Nazwa>
+          <OrganPodpisujacy>Prezydent Rzeczypospolitej Polskiej</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>K.</imie> <nazwisko>Nawrocki</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Ustawa</rodzaj-aktu>
+    <data>z dnia 5 sierpnia 2025 r.</data>
+    <tytul>o zmianie ustawy o emeryturach i rentach z Funduszu Ubezpieczeń Społecznych</tytul>
+    <artykul eId="DU/2025/1159__art_1" gd:GUID="9ffb7dc2-1eee-4e0e-8328-4c830a3ced17" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1159_odczytane.x" wejscie-w-zycie="2026-01-01">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="3119a020-c1f9-4679-8aee-2ff6f27bf3ed" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1159_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="8247b22e-aae3-40cc-baf3-bf4489526a54" fragment="1" gd:fragmentGUID="3b6fc660-b286-4ee2-aa2f-3645e6a50c70" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1159_odczytane.x" wejscie-w-zycie="2026-01-01">W ustawie z dnia 17 grudnia 1998 r. o emeryturach i rentach z Funduszu Ubezpieczeń Społecznych (Dz. U. z 2024 r. poz. 1631 i 1674 oraz z 2025 r. poz. 718 i 769) wprowadza się następujące zmiany:</zdanie>
+        </p>
+        <punkt eId="DU/2025/1159__art_1__pkt_1" gd:GUID="4f7164b5-9ff6-48cb-8e6e-ae01fd8b926c" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1159_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="8247b22e-aae3-40cc-baf3-bf4489526a54" fragment="2" gd:fragmentGUID="bb16aefc-200e-4718-bb69-9220df7c10a9" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1159_odczytane.x" wejscie-w-zycie="2026-01-01">w art. 115:</zdanie>
+          </p>
+          <litera eId="DU/2025/1159__art_1__pkt_1__lit_a" gd:GUID="c18f4828-19e4-40be-91bd-a1564f343752" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1159_odczytane.x" wejscie-w-zycie="2026-01-01">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="8247b22e-aae3-40cc-baf3-bf4489526a54" fragment="3" gd:fragmentGUID="f1714229-f45d-475e-9a8e-86018cfdf5d0" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1159_odczytane.x" wejscie-w-zycie="2026-01-01"><now:zamien-tekst stary-tekst="ust. 2–4" nowy-tekst="ust. 2–3a" element-eId="DU/2024/1631__art_115__ust_1" akt="https://eli.gov.pl/eli/DU/2024/1631" gd:nowGUID="23d79d06-ad25-40b9-8412-783e6538eaed" />w ust. 1 wyrazy „ust. 2–4” zastępuje się wyrazami „ust. 2–3a”,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1159__art_1__pkt_1__lit_b" gd:GUID="2a83b777-d4b4-46e3-b437-8a0767c52c8d" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1159_odczytane.x" wejscie-w-zycie="2026-01-01">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="8247b22e-aae3-40cc-baf3-bf4489526a54" fragment="4" gd:fragmentGUID="5932ac2b-fe82-42d8-99e3-b25e48729fef" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1159_odczytane.x" wejscie-w-zycie="2026-01-01">po ust. 3 dodaje się ust. 3a w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/1631" cudzyslowy="oba" gd:nowGUID="3a8525d9-901e-48c1-b295-ffa3b87fe220" element-eId="DU/2024/1631__art_115__ust_3" funkcja="dodaj-po"><ustep eId="DU/2024/1631__art_115__ust_3a" gd:GUID="9d538873-fcd4-491d-b145-eeca53ebc139" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1159_odczytane.x" wejscie-w-zycie="2026-01-01"><nr>3a</nr><p><zdanie nr="1" gd:zdGUID="a63e883a-2980-4f9b-9132-98112ba627f8" fragment="1" gd:fragmentGUID="84693078-b136-4f47-b4c5-1748f13e5de4" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1159_odczytane.x" wejscie-w-zycie="2026-01-01">Ustalenie prawa do zasiłku pogrzebowego oraz jego wysokości nie wymaga wydania decyzji, z wyjątkiem przypadków, o których mowa w art. 78 ust. 3 oraz art. 79 ust. 1.</zdanie><zdanie nr="2" gd:zdGUID="bb8df4f8-752b-4951-a4a0-a37380e0f766" fragment="1" gd:fragmentGUID="a1374192-cf28-4079-b5b0-87732e6933ce" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1159_odczytane.x" wejscie-w-zycie="2026-01-01">Przepis art. 114 stosuje się odpowiednio.</zdanie></p></ustep></cytat-strukt>;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2025/1159__art_1__pkt_2" gd:GUID="ef5849d0-9ef8-4dab-b5e0-39a706a71e52" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1159_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="8247b22e-aae3-40cc-baf3-bf4489526a54" fragment="5" gd:fragmentGUID="892ea564-15d5-4ae7-8e5d-75047a3bb66c" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1159_odczytane.x" wejscie-w-zycie="2026-01-01">w art. 116 po ust. 3 dodaje się ust. 3a w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/1631" cudzyslowy="oba" gd:nowGUID="887765d8-1114-49d7-8ff7-51bbaf4bf9b8" element-eId="DU/2024/1631__art_116__ust_3" funkcja="dodaj-po"><ustep eId="DU/2024/1631__art_116__ust_3a" gd:GUID="3236b9ec-b429-41ec-9e63-026b679b7ccc" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1159_odczytane.x" wejscie-w-zycie="2026-01-01"><nr>3a</nr><p><zdanie nr="1" gd:zdGUID="94c0d8fa-e58c-4325-8546-8d095d6b6909" fragment="1" gd:fragmentGUID="66b052b8-e3da-4e3b-840d-90c6b7797823" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1159_odczytane.x" wejscie-w-zycie="2026-01-01">Wniosek w sprawie przyznania zasiłku pogrzebowego zgłasza się w organie rentowym bezpośrednio lub za pośrednictwem zakładu pogrzebowego.</zdanie></p></ustep></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1159__art_1__pkt_3" gd:GUID="18f557e7-6fe7-4cd4-b235-27f7674c61f4" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1159_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="8247b22e-aae3-40cc-baf3-bf4489526a54" fragment="6" gd:fragmentGUID="f32679fe-de44-4407-a28f-86f31a90c70e" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1159_odczytane.x" wejscie-w-zycie="2026-01-01">w art. 118:</zdanie>
+          </p>
+          <litera eId="DU/2025/1159__art_1__pkt_3__lit_a" gd:GUID="70c3e8a7-638f-44ce-9e1e-06543e642ddf" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1159_odczytane.x" wejscie-w-zycie="2026-01-01">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="8247b22e-aae3-40cc-baf3-bf4489526a54" fragment="7" gd:fragmentGUID="440bd43f-7960-4c1f-99ed-17409a6ca854" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1159_odczytane.x" wejscie-w-zycie="2026-01-01">ust. 1 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/1631" cudzyslowy="oba" gd:nowGUID="39e3ef4f-a54f-49ce-b6ec-05f576abf10f" element-eId="DU/2024/1631__art_118__ust_1" funkcja="zastap"><ustep eId="DU/2024/1631__art_118__ust_1" gd:GUID="0d898e12-c6d2-4f8e-836a-495fa3cfe88e" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1159_odczytane.x" wejscie-w-zycie="2026-01-01"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="12158943-f0be-44a6-ae81-d9ee534652ab" fragment="1" gd:fragmentGUID="ebac6950-a36b-44c8-94c3-03aafdd7095c" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1159_odczytane.x" wejscie-w-zycie="2026-01-01">Organ rentowy wydaje decyzję w sprawie prawa do świadczenia lub ustalenia jego wysokości po raz pierwszy w ciągu 30 dni od dnia wyjaśnienia ostatniej okoliczności niezbędnej do wydania tej decyzji, z uwzględnieniem ust. 1a–3 oraz art. 120.</zdanie></p></ustep></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1159__art_1__pkt_3__lit_b" gd:GUID="6b522acc-3208-4fff-8407-88938014d8f1" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1159_odczytane.x" wejscie-w-zycie="2026-01-01">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="8247b22e-aae3-40cc-baf3-bf4489526a54" fragment="8" gd:fragmentGUID="b4253d68-89f3-4e63-983d-cdd5d4329a0b" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1159_odczytane.x" wejscie-w-zycie="2026-01-01">po ust. 1a dodaje się ust. 1b w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/1631" cudzyslowy="oba" gd:nowGUID="801465bd-89f2-47f7-b191-d0954202274b" element-eId="DU/2024/1631__art_118__ust_1a" funkcja="dodaj-po"><ustep eId="DU/2024/1631__art_118__ust_1b" gd:GUID="306ae40b-2681-45a1-aa13-565f39ae5ccd" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1159_odczytane.x" wejscie-w-zycie="2026-01-01"><nr>1b</nr><p><zdanie nr="1" gd:zdGUID="c77ee6ce-25ea-4bad-a2c7-7ce21fd92dbb" fragment="1" gd:fragmentGUID="ee58bf56-d2b7-4df7-b479-01a7506ac7a5" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1159_odczytane.x" wejscie-w-zycie="2026-01-01">W przypadku gdy ustalenie prawa do zasiłku pogrzebowego oraz jego wysokości wymaga wydania decyzji, decyzja ta jest wydawana w ciągu 14 dni od dnia wyjaśnienia ostatniej okoliczności niezbędnej do wydania tej decyzji.</zdanie></p></ustep></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1159__art_1__pkt_3__lit_c" gd:GUID="a2665613-bde7-40b3-81d9-5294401319b7" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1159_odczytane.x" wejscie-w-zycie="2026-01-01">
+            <nr>c</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="8247b22e-aae3-40cc-baf3-bf4489526a54" fragment="9" gd:fragmentGUID="d731a8ad-a790-431a-b9b2-595ab4c5c9de" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1159_odczytane.x" wejscie-w-zycie="2026-01-01">ust. 2 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/1631" cudzyslowy="oba" gd:nowGUID="19569409-b85c-4bf8-843c-2b28dac904f5" element-eId="DU/2024/1631__art_118__ust_2" funkcja="zastap"><ustep eId="DU/2024/1631__art_118__ust_2" gd:GUID="cb151b42-4c9e-405b-9cfe-3363cb183b9d" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1159_odczytane.x" wejscie-w-zycie="2026-01-01"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="740f2fc2-b93c-4d6a-a76a-4a8ab560636a" fragment="1" gd:fragmentGUID="52a98695-4562-476d-bb8e-cc1a4aeff458" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1159_odczytane.x" wejscie-w-zycie="2026-01-01">Jeżeli w wyniku decyzji zostało ustalone prawo do świadczenia oraz jego wysokość, organ rentowy dokonuje wypłaty świadczenia w terminie określonym w ust. 1, a w przypadku zasiłku pogrzebowego w terminie określonym w ust. 1b.</zdanie></p></ustep></cytat-strukt>;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2025/1159__art_1__pkt_4" gd:GUID="62029d67-67bd-4b38-8050-e65048b0befc" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1159_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="8247b22e-aae3-40cc-baf3-bf4489526a54" fragment="10" gd:fragmentGUID="98e04b5d-e256-4198-a088-923e4488383c" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1159_odczytane.x" wejscie-w-zycie="2026-01-01">w art. 129 po ust. 2 dodaje się ust. 2a w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/1631" cudzyslowy="oba" gd:nowGUID="99f9e6a4-5224-4606-8e23-5473cbe9ac22" element-eId="DU/2024/1631__art_129__ust_2" funkcja="dodaj-po"><ustep eId="DU/2024/1631__art_129__ust_2a" gd:GUID="fc603f5e-0b08-45a9-9bbd-228a7afdeeca" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1159_odczytane.x" wejscie-w-zycie="2026-01-01"><nr>2a</nr><p><zdanie nr="1" gd:zdGUID="d895de13-09d3-4180-8015-16f265d7ed8b" fragment="1" gd:fragmentGUID="8dea3871-7112-49d0-a2b5-2d12bebd37e5" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1159_odczytane.x" wejscie-w-zycie="2026-01-01">W przypadku gdy ustalenie prawa do zasiłku pogrzebowego oraz jego wysokości nie wymaga wydania decyzji, zasiłek ten wypłaca się w ciągu 14 dni od dnia wyjaśnienia ostatniej okoliczności niezbędnej do ustalenia prawa do zasiłku.</zdanie></p></ustep></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1159__art_1__pkt_5" gd:GUID="82d9e76b-3b81-448a-afc4-67c048a38fc7" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1159_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="8247b22e-aae3-40cc-baf3-bf4489526a54" fragment="11" gd:fragmentGUID="5a2646f0-1a5c-44ef-bfd0-16207f77443c" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1159_odczytane.x" wejscie-w-zycie="2026-01-01">w art. 130:</zdanie>
+          </p>
+          <litera eId="DU/2025/1159__art_1__pkt_5__lit_a" gd:GUID="3762a618-af8f-48d5-b9ed-da636ab58a16" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1159_odczytane.x" wejscie-w-zycie="2026-01-01">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="8247b22e-aae3-40cc-baf3-bf4489526a54" fragment="12" gd:fragmentGUID="7a83e861-9e0b-41e9-8bd1-e0df60b0e243" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1159_odczytane.x" wejscie-w-zycie="2026-01-01"><now:zamien-tekst stary-tekst="z uwzględnieniem ust. 3" nowy-tekst="z uwzględnieniem ust. 2c i 3" element-eId="DU/2024/1631__art_130__ust_2" akt="https://eli.gov.pl/eli/DU/2024/1631" gd:nowGUID="4ffc6d21-9f1d-4c77-a407-d5dabe27dea2" />w ust. 2 wyrazy „z uwzględnieniem ust. 3” zastępuje się wyrazami „z uwzględnieniem ust. 2c i 3”,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1159__art_1__pkt_5__lit_b" gd:GUID="60eba08f-bbba-4534-b12b-90aac31680b1" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1159_odczytane.x" wejscie-w-zycie="2026-01-01">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="8247b22e-aae3-40cc-baf3-bf4489526a54" fragment="13" gd:fragmentGUID="0ca1f686-ea1a-41ad-8008-7c13a5915709" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1159_odczytane.x" wejscie-w-zycie="2026-01-01">po ust. 2b dodaje się ust. 2c w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/1631" cudzyslowy="oba" gd:nowGUID="f11fe554-a807-440d-b15a-fbea39625d4f" element-eId="DU/2024/1631__art_130__ust_2b" funkcja="dodaj-po"><ustep eId="DU/2024/1631__art_130__ust_2c" gd:GUID="1b6310dc-f528-4f93-b5d7-5dba6ca2606a" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1159_odczytane.x" wejscie-w-zycie="2026-01-01"><nr>2c</nr><p><zdanie nr="1" gd:zdGUID="05701e68-01aa-4d0f-8768-5b87863109f6" fragment="1" gd:fragmentGUID="7bc7fd87-24f8-4025-a009-37ed41c32c74" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1159_odczytane.x" wejscie-w-zycie="2026-01-01">Zasiłek pogrzebowy wypłaca się w całości lub w części, zgodnie z wnioskiem, upoważnionemu przez osobę uprawnioną zakładowi pogrzebowemu, o którym mowa w art. 116 ust. 3a, w formie bezgotówkowej na wskazany w upoważnieniu rachunek płatniczy tego zakładu pogrzebowego prowadzony w kraju lub wydany w kraju zakładowi pogrzebowemu instrument płatniczy w rozumieniu ustawy z dnia 19 sierpnia 2011 r. o usługach płatniczych.</zdanie></p></ustep></cytat-strukt>;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2025/1159__art_1__pkt_6" gd:GUID="456377c0-706d-447a-a40e-fc9cf21e1028" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1159_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>6</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="8247b22e-aae3-40cc-baf3-bf4489526a54" fragment="14" gd:fragmentGUID="84e6474a-d8ac-49a6-ba32-e75bb932d31c" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1159_odczytane.x" wejscie-w-zycie="2026-01-01">w art. 138 po ust. 3 dodaje się ust. 3a w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/1631" cudzyslowy="oba" gd:nowGUID="31d8337a-ba3f-4edd-9f44-ba2c0798fb40" element-eId="DU/2024/1631__art_138__ust_3" funkcja="dodaj-po"><ustep eId="DU/2024/1631__art_138__ust_3a" gd:GUID="a52fb8ba-6224-416d-a9e3-f45cbba3fff1" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1159_odczytane.x" wejscie-w-zycie="2026-01-01"><nr>3a</nr><p><zdanie nr="1" gd:zdGUID="beafb99b-d43a-46d3-8bb5-f41500261971" fragment="1" gd:fragmentGUID="c147a2e0-2fef-4c05-ad94-d6d6a45da2d1" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1159_odczytane.x" wejscie-w-zycie="2026-01-01">Za nienależnie pobrane świadczenia w rozumieniu ust. 1 uważa się również zasiłek pogrzebowy wypłacony z przyczyn niezależnych od organu rentowego osobie nieuprawnionej.</zdanie></p></ustep></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1159__art_1__pkt_7" gd:GUID="4365fbba-91f6-490f-82d4-eaa7ee3ddcf8" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1159_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>7</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="8247b22e-aae3-40cc-baf3-bf4489526a54" fragment="15" gd:fragmentGUID="b50b8c7d-d084-4c5c-9bf5-7f37d0bfe860" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1159_odczytane.x" wejscie-w-zycie="2026-01-01">w art. 144 ust. 1 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/1631" cudzyslowy="oba" gd:nowGUID="7c43b239-92ca-44d0-823a-8a6a7d0ddb06" element-eId="DU/2024/1631__art_144__ust_1" funkcja="zastap"><ustep eId="DU/2024/1631__art_144__ust_1" gd:GUID="509fa3b1-b9d5-41c2-b177-9344c7b77fa0" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1159_odczytane.x" wejscie-w-zycie="2026-01-01"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="12ff4883-ebb2-4162-bb9d-1038ad3f1c5a" fragment="1" gd:fragmentGUID="81b675db-6487-4b95-9f25-70d6e6e8e0fa" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1159_odczytane.x" wejscie-w-zycie="2026-01-01">Od osób nieuprawnionych do pobierania świadczeń określonych w ustawie kwoty nienależnie pobranych świadczeń, o których mowa w:</zdanie></p><punkt eId="DU/2024/1631__art_144__ust_1__pkt_1" gd:GUID="4936af82-144d-4f9e-a19a-0786f1c5870d" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1159_odczytane.x" wejscie-w-zycie="2026-01-01"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="12ff4883-ebb2-4162-bb9d-1038ad3f1c5a" fragment="2" gd:fragmentGUID="6216cb26-0165-4790-aab1-cd28593ba017" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1159_odczytane.x" wejscie-w-zycie="2026-01-01">art. 138 ust. 2 i 3, ustalone prawomocną decyzją organu rentowego,</zdanie></p></punkt><punkt eId="DU/2024/1631__art_144__ust_1__pkt_2" gd:GUID="dc747ef3-d605-4864-ad2a-157c80b3a721" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1159_odczytane.x" wejscie-w-zycie="2026-01-01"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="12ff4883-ebb2-4162-bb9d-1038ad3f1c5a" fragment="3" gd:fragmentGUID="bc65efee-abd8-4795-b503-b10f2a47e2a5" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1159_odczytane.x" wejscie-w-zycie="2026-01-01">art. 138 ust. 3a</zdanie></p></punkt><czesc-wspolna-punkt eId="DU/2024/1631__art_144__ust_1__czw" gd:GUID="b4cdc912-36dd-489b-b10a-8647bfa2c994" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1159_odczytane.x" wejscie-w-zycie="2026-01-01"><p><zdanie nr="1" gd:zdGUID="12ff4883-ebb2-4162-bb9d-1038ad3f1c5a" fragment="4" gd:fragmentGUID="aabf63e5-9acb-4b46-a2f6-c3b637083aa6" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1159_odczytane.x" wejscie-w-zycie="2026-01-01">– podlegają potrąceniu z innych świadczeń wypłacanych przez Zakład, a jeżeli prawo do świadczeń nie istnieje, zostało zawieszone bądź dokonanie potrącenia ze świadczenia nie jest możliwe – ściągnięciu w trybie przepisów o postępowaniu egzekucyjnym w administracji lub egzekucji sądowej.</zdanie></p></czesc-wspolna-punkt></ustep></cytat-strukt>.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2025/1159__art_2" gd:GUID="d041eb8a-5fc1-4fc6-a954-2ee7e9e90293" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1159_odczytane.x" wejscie-w-zycie="2026-01-01">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="458dac56-a4ad-4c02-a5c9-b0dbc6eddb72" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1159_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="6fea8954-b230-4516-b6ac-4c8f6af1feaa" fragment="1" gd:fragmentGUID="b7d05878-5be5-4025-a8e0-30889ed629cd" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1159_odczytane.x" wejscie-w-zycie="2026-01-01">Do postępowań w sprawie zasiłku pogrzebowego wszczętych i niezakończonych przed dniem wejścia w życie niniejszej ustawy stosuje się przepisy dotychczasowe.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2025/1159__art_3" gd:GUID="f03507b3-a788-4f22-9cea-5da7775f64f7" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1159_odczytane.x" wejscie-w-zycie="2026-01-01">
+      <nr>3</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="ab12cf1d-2fb5-4d4f-9972-09f0cac331f6" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1159_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="5d6affbb-2357-4258-99fe-05605324dfed" fragment="1" gd:fragmentGUID="34083320-77a3-49f4-bb44-38851d28071c" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1159_odczytane.x" wejscie-w-zycie="2026-01-01">Ustawa wchodzi w życie z dniem 1 stycznia 2026 r.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <organ-podpisujacy>Prezydent Rzeczypospolitej Polskiej: <i><osoba podpisujacy="true" gd:osobaGUID="b0929e21-dffc-40ac-8f21-5cab49f89208"><imie>K.</imie> <nazwisko>Nawrocki</nazwisko></osoba></i></organ-podpisujacy>
+  </ustawa>
+</akt-prawny>

@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <rozporzadzenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/1791</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>f2a6ebd9-0fcd-4ff2-9840-ec6903dde27e</gd:GUIDwersji>
+      <AdresISAP>WDU20250001791</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>1791</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 1791</AdresWyswietlany>
+      <Tytul>Rozporządzenie Ministra Zdrowia z dnia 12 grudnia 2025 r. zmieniające rozporządzenie w sprawie standardu organizacyjnego opieki zdrowotnej w dziedzinie anestezjologii i intensywnej terapii</Tytul>
+      <Rodzaj>ROZP</Rodzaj>
+      <DataOgloszenia>2025-12-16</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-12-12</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2025-12-30_DU-2025-1791_odczytane" rodzaj="wejscie-w-zycie" pochodzenie="odczytane" data="2025-12-30" podstawa="§ 2" zrodlo="https://eli.gov.pl/eli/DU/2025/1791" dowod="DU/2025/1791__art_2" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2025-12-30_DU-2025-1791_odczytane.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2025-12-30_DU-2025-1791_odczytane" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="ac6459b0-d716-4790-a567-36b6866aa8e4" rola="wydajacy">
+          <Nazwa>Minister Zdrowia</Nazwa>
+          <OrganPodpisujacy>Minister Zdrowia</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>T.</imie> <nazwisko>Maciejewski</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Rozporządzenie</rodzaj-aktu>
+    <autor-aktu>Ministra Zdrowia<odnosnik id-odnosnika="1" symbol="1" gd:GUID="22f56669-9591-43de-8101-dbf06115ad83"><p><zdanie nr="1" gd:zdGUID="30ddb156-cb7b-4a44-a58f-1cda60da8c5c" fragment="1" gd:fragmentGUID="843c46c1-2107-43df-880a-b28ddef54bae">Minister Zdrowia kieruje działem administracji rządowej – zdrowie, na podstawie § 1 ust. 2 rozporządzenia Prezesa Rady Ministrów z dnia 25 lipca 2025 r. w sprawie szczegółowego zakresu działania Ministra Zdrowia (Dz. U. poz. 1004).</zdanie></p></odnosnik></autor-aktu>
+    <data>z dnia 12 grudnia 2025 r.</data>
+    <tytul>zmieniające rozporządzenie w sprawie standardu organizacyjnego opieki zdrowotnej w dziedzinie anestezjologii i intensywnej terapii</tytul>
+    <podstawa-prawna>Na podstawie art. 22 ust. 5 ustawy z dnia 15 kwietnia 2011 r. o działalności leczniczej (Dz. U. z 2025 r. poz. 450, 620, 637 i 1211) zarządza się, co następuje:</podstawa-prawna>
+    <paragraf eId="DU/2025/1791__art_1" gd:GUID="ea8e05b4-f56a-45b9-b17a-acfb84877677" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-30_DU-2025-1791_odczytane.x" wejscie-w-zycie="2025-12-30">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="be1f7cb6-8ca1-47ce-9ecb-28c69b5498c6" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-30_DU-2025-1791_odczytane.x" wejscie-w-zycie="2025-12-30">
+        <p>
+          <zdanie nr="1" gd:zdGUID="7bbc0ebb-cb7e-4df0-9e1b-02e1dcdc4210" fragment="1" gd:fragmentGUID="aed4e9c3-a7a2-4e25-89c3-f50a8c371746" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-30_DU-2025-1791_odczytane.x" wejscie-w-zycie="2025-12-30"><now:zamien-tekst stary-tekst="31 grudnia 2025 r." nowy-tekst="31 grudnia 2026 r." element-eId="DU/2024/332__art_16__ust_2" akt="https://eli.gov.pl/eli/DU/2024/332" gd:nowGUID="c98a59c3-0b26-4441-82ef-a8ed9b74beb6" /><now:zamien-tekst stary-tekst="31 grudnia 2025 r." nowy-tekst="31 grudnia 2026 r." element-eId="DU/2024/332__art_17" akt="https://eli.gov.pl/eli/DU/2024/332" gd:nowGUID="d7a4bb03-d9c8-44fd-a4c1-ded9baa413a4" />W rozporządzeniu Ministra Zdrowia z dnia 16 grudnia 2016 r. w sprawie standardu organizacyjnego opieki zdrowotnej w dziedzinie anestezjologii i intensywnej terapii (Dz. U. z 2024 r. poz. 332 i 1886) użyte w § 16 ust. 2 i w § 17 wyrazy „31 grudnia 2025 r.” zastępuje się wyrazami „31 grudnia 2026 r.”.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2025/1791__art_2" gd:GUID="c70a5239-c3af-4b37-9872-0367dcaccf4f" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-30_DU-2025-1791_odczytane.x" wejscie-w-zycie="2025-12-30">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="e11c93f5-f2b7-4ce5-9557-9bc30b88c738" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-30_DU-2025-1791_odczytane.x" wejscie-w-zycie="2025-12-30">
+        <p>
+          <zdanie nr="1" gd:zdGUID="4fbc5e77-5faf-4d0d-9092-4627c323bf43" fragment="1" gd:fragmentGUID="8bf36848-6021-4e36-8ee4-4a6f4f0ea6bc" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-30_DU-2025-1791_odczytane.x" wejscie-w-zycie="2025-12-30">Rozporządzenie wchodzi w życie z dniem 30 grudnia 2025 r.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <organ-podpisujacy>Minister Zdrowia: wz. <i><osoba podpisujacy="true" gd:osobaGUID="5d50e2d0-92f1-4ed5-9954-852925250b6e"><imie>T.</imie> <nazwisko>Maciejewski</nazwisko></osoba></i></organ-podpisujacy>
+  </rozporzadzenie>
+</akt-prawny>

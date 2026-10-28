@@ -1,0 +1,1583 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <obwieszczenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2026/158</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>2f6a0f83-10c1-4a00-8d92-60ff22e142d0</gd:GUIDwersji>
+      <AdresISAP>WDU20260000158</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2026</Rok>
+      <Pozycja>158</Pozycja>
+      <AdresWyswietlany>Dz.U. 2026 poz. 158</AdresWyswietlany>
+      <Tytul>Obwieszczenie Marszałka Sejmu Rzeczypospolitej Polskiej z dnia 9 lutego 2026 r. w sprawie ogłoszenia jednolitego tekstu ustawy o kontroli w administracji rządowej</Tytul>
+      <Rodzaj>OBW_TJ</Rodzaj>
+      <DataOgloszenia>2026-02-12</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2026-02-09</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_ujednolicenie_2026-02-12_DU-2026-158_domyslne" rodzaj="ujednolicenie" pochodzenie="domyslne-z-aktu" data="2026-02-12" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_ujednolicenie.zdarz_ujednolicenie_2026-02-12_DU-2026-158_domyslne" glowna="true">
+          <Przedzial rodzaj="ujednolicenie" od="zdarz_ujednolicenie_2026-02-12_DU-2026-158_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <DataObowiazywaniaWersji>
+        <Od>zdarz_ujednolicenie_2026-02-12_DU-2026-158_domyslne</Od>
+      </DataObowiazywaniaWersji>
+      <Organy>
+        <Organ gd:GUID="509cec40-1df2-42cd-9cf4-f4b6c1f674ad" rola="wydajacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/MSEJMU">
+          <Nazwa>Marszałek Sejmu</Nazwa>
+          <OrganPodpisujacy>Marszałek Sejmu</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>W.</imie> <nazwisko>Czarzasty</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Obwieszczenie</rodzaj-aktu>
+    <autor-aktu>Marszałka Sejmu Rzeczypospolitej Polskiej</autor-aktu>
+    <data>z dnia 9 lutego 2026 r.</data>
+    <tytul>w sprawie ogłoszenia jednolitego tekstu ustawy o kontroli w administracji rządowej</tytul>
+    <punkt-OTJ eId="DU/2026/158__pkt_1" gd:GUID="8855d48e-1aaa-4d2b-9c0d-ed95c3597aa3">
+      <nr>1</nr>
+      <p>
+        <zdanie nr="1" gd:zdGUID="af1ee105-efcb-457f-a9ee-2ff2c7293b00" fragment="1" gd:fragmentGUID="4dbbca20-e9e7-4664-8b44-f3aa6c866c3d">Na podstawie art. 16 ust. 1 zdanie pierwsze ustawy z dnia 20 lipca 2000 r. o ogłaszaniu aktów normatywnych i niektórych innych aktów prawnych (Dz. U. z 2019 r. poz. 1461) ogłasza się w załączniku do niniejszego obwieszczenia jednolity tekst ustawy z dnia 15 lipca 2011 r. o kontroli w administracji rządowej (Dz. U. z 2020 r. poz. 224), z uwzględnieniem zmian wprowadzonych ustawą z dnia 25 lipca 2025 r. o zmianie ustawy o informatyzacji działalności podmiotów realizujących zadania publiczne oraz niektórych innych ustaw (Dz. U. poz. 1158) oraz zmian wynikających z przepisów ogłoszonych przed dniem 6 lutego 2026 r.</zdanie>
+      </p>
+    </punkt-OTJ>
+    <punkt-OTJ eId="DU/2026/158__pkt_2" gd:GUID="62a1e1ef-816a-49cf-bb2e-ea063b6059e5">
+      <nr>2</nr>
+      <p>
+        <zdanie nr="1" gd:zdGUID="4242737a-8424-4cf9-94a9-6eba66cb1675" fragment="1" gd:fragmentGUID="6301a4a3-9850-4b46-8529-d78eed4a8dec">Podany w załączniku do niniejszego obwieszczenia tekst jednolity ustawy nie obejmuje art. 11 i art. 17 ustawy z dnia 25 lipca 2025 r. o zmianie ustawy o informatyzacji działalności podmiotów realizujących zadania publiczne oraz niektórych innych ustaw (Dz. U. poz. 1158), które stanowią:<tresc-strukt cudzyslowy="oba" gd:GUID="40312ea6-0628-4af2-a6fd-110566130d03"><artykul eId="DU/2025/1158__art_11" gd:GUID="053bfb66-3d78-48f7-9970-c24ca18af788"><nr>11</nr><ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="1ef10979-e19a-4c2a-9beb-959493dab60a"><p><zdanie nr="1" gd:zdGUID="5a2e3f0d-9269-467c-b51b-440831d48d87" fragment="1" gd:fragmentGUID="27c33d24-d277-4275-9135-96402747a4e7">Do kontroli prowadzonych na podstawie ustawy zmienianej w art. 2, wszczętych i niezakończonych przed dniem wejścia w życie ustawy, stosuje się przepisy dotychczasowe.</zdanie></p></ustep-n></artykul></tresc-strukt><tresc-strukt cudzyslowy="oba" gd:GUID="8c3ae697-1be1-473c-8929-feeddc56d8d8"><artykul eId="DU/2025/1158__art_17" gd:GUID="113f8ea8-e8e9-403d-b893-cbf3e5ffdce8"><nr>17</nr><ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="afba60fc-6e44-452e-8590-909cc1afbc2b"><p><zdanie nr="1" gd:zdGUID="6d890140-e096-4fb2-8d18-e1f47dbff17c" fragment="1" gd:fragmentGUID="6e0c5ba4-e052-49a8-9ab8-8c26535043a2">Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia, z wyjątkiem art. 1 pkt 10 w zakresie art. 12k–12n, pkt 11 lit. a i e, pkt 12, 13 lit. b i c, pkt 14, 15, 19–21 oraz 27, które wchodzą w życie po upływie 18 miesięcy od dnia ogłoszenia.</zdanie></p></ustep-n></artykul></tresc-strukt>.</zdanie>
+      </p>
+    </punkt-OTJ>
+    <organ-podpisujacy>Marszałek Sejmu: <i><osoba podpisujacy="true" gd:osobaGUID="0d57541d-c1dc-4bef-8577-706946a29139"><imie>W.</imie> <nazwisko>Czarzasty</nazwisko></osoba></i></organ-podpisujacy>
+    <ustawa>
+      <zalacznik-do>Załącznik do obwieszczenia Marszałka Sejmu Rzeczypospolitej Polskiej z dnia 9 lutego 2026 r. (Dz. U. poz. 158)</zalacznik-do>
+      <rodzaj-aktu>Ustawa</rodzaj-aktu>
+      <data>z dnia 15 lipca 2011 r.</data>
+      <tytul>o kontroli w administracji rządowej</tytul>
+      <rozdzial eId="DU/2026/158__rozdz_1" gd:GUID="200ea7ee-852b-4ec0-9593-49e906a92bcc">
+        <naglowek-rozdzialu>
+          <nr>1</nr>
+          <p>Przepisy ogólne</p>
+        </naglowek-rozdzialu>
+        <oddzial-n brak-eid="jednostka-nieoznaczona" gd:GUID="040635db-0550-4754-a61d-56bb0b8554fa">
+          <artykul eId="DU/2026/158__art_1" gd:GUID="cc920f20-2e86-45eb-b5c2-612d838df8de">
+            <nr>1</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="82f627ba-5712-4dda-bf56-c6cb926cee73">
+              <p>
+                <zdanie nr="1" gd:zdGUID="d7140eef-7cb7-40d5-9405-ab32e99f38d4" fragment="1" gd:fragmentGUID="864959c7-538a-4bcf-a691-2bf17f9f53a6">Ustawa określa:</zdanie>
+              </p>
+              <punkt eId="DU/2026/158__art_1__pkt_1" gd:GUID="6e475538-a44d-4586-b38b-af8381739d9d">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="d7140eef-7cb7-40d5-9405-ab32e99f38d4" fragment="2" gd:fragmentGUID="72d08136-7e38-4dd1-ab55-5d620cc3e2d6">zasady i tryb przeprowadzania kontroli działalności organów administracji rządowej, urzędów je obsługujących lub stanowiących ich aparat pomocniczy oraz jednostek organizacyjnych podległych tym organom lub przez nie nadzorowanych, zwanych dalej „jednostkami kontrolowanymi”;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/158__art_1__pkt_2" gd:GUID="f8f24b72-fc05-43aa-a3c1-1d5307c88135">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="d7140eef-7cb7-40d5-9405-ab32e99f38d4" fragment="3" gd:fragmentGUID="205f1f66-8147-4821-bce9-eaddaa00c9c5">organy właściwe w sprawach kontroli.</zdanie>
+                </p>
+              </punkt>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2026/158__art_2" gd:GUID="77e5372e-bef7-4201-b9af-e0a05f5e9a13">
+            <nr>2</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="c354317c-223e-48b4-86c6-a0397e0c4fb1">
+              <p>
+                <zdanie nr="1" gd:zdGUID="af187933-bb45-40f1-b6ab-7ffd85f793e3" fragment="1" gd:fragmentGUID="fc7cbed6-248f-4593-9a2b-e2af7eefedb3">Przepisy ustawy stosuje się również do kontroli:</zdanie>
+              </p>
+              <punkt eId="DU/2026/158__art_2__pkt_1" gd:GUID="fb03dca2-93ad-4e2f-8f1e-33bbafe0ac34">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="af187933-bb45-40f1-b6ab-7ffd85f793e3" fragment="2" gd:fragmentGUID="e09c4b27-53a3-4470-9e60-ffa72f491381">działalności organów samorządu terytorialnego w sprawach dotyczących wykonywania zadań z zakresu administracji rządowej;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/158__art_2__pkt_2" gd:GUID="06dd6363-11f3-44c6-9668-84a8d8f58881">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="af187933-bb45-40f1-b6ab-7ffd85f793e3" fragment="3" gd:fragmentGUID="e342676b-2d8c-46b0-9fba-6b7703e4b9ae">wykonywania przez inne podmioty zadań z zakresu administracji rządowej w zakresie, w jakim zadania te są finansowane z budżetu państwa.</zdanie>
+                </p>
+              </punkt>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2026/158__art_3" gd:GUID="a41670d9-668a-4dca-9286-0b73177b7155">
+            <nr>3</nr>
+            <ustep eId="DU/2026/158__art_3__ust_1" gd:GUID="dd7f7cde-f2f1-4a9f-bb25-da464a133f6c">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="32ce8a06-f6c1-41a5-89b0-be20b0e2b2c6" fragment="1" gd:fragmentGUID="c1f8ec36-7da2-4a6b-9c37-d85d4e1a0631">Przeprowadzenie kontroli ma na celu ocenę działalności jednostki kontrolowanej dokonaną na podstawie ustalonego stanu faktycznego przy zastosowaniu przyjętych kryteriów kontroli.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/158__art_3__ust_2" gd:GUID="7faace49-93b8-435d-a0bc-7e09dccba9e9">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="82b960c1-2a97-4e7d-8a88-fe1ec76754ce" fragment="1" gd:fragmentGUID="aa533778-d9cd-4032-9312-4f48423567bf">W przypadku stwierdzenia nieprawidłowości celem kontroli jest również ustalenie ich zakresu, przyczyn i skutków oraz osób za nie odpowiedzialnych, a także sformułowanie zaleceń zmierzających do usunięcia nieprawidłowości.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/158__art_4" gd:GUID="44dc9d2d-b794-48eb-bd2b-c412dd55bda9">
+            <nr>4</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="ec021dab-7651-4bdc-b3e1-80e130cc6d61">
+              <p>
+                <zdanie nr="1" gd:zdGUID="f620a174-0d07-4ce3-b012-03717e33f0ff" fragment="1" gd:fragmentGUID="7639ea33-e6da-4107-b7ee-b903d24b6906">Jeżeli przepisy szczególne nie stanowią inaczej, kontrolę przeprowadza się pod względem legalności, gospodarności, celowości i rzetelności.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2026/158__art_5" gd:GUID="a95112c0-d5ea-4cb4-a1ac-5e25dbc5a57d">
+            <nr>5</nr>
+            <ustep eId="DU/2026/158__art_5__ust_1" gd:GUID="7c475183-0426-48d3-b978-8250b28abaa3">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="1b783b7c-45d8-48ce-a15e-f2a52c346b7e" fragment="1" gd:fragmentGUID="0a048401-25fd-46d0-ac26-3e8a93b02735">W rozumieniu ustawy za pracownika uważa się także funkcjonariusza, żołnierza zawodowego, członka organu kolegialnego, a także osobę, która wykonuje pracę w jednostce kontrolowanej na podstawie innej umowy niż umowa o pracę.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/158__art_5__ust_2" gd:GUID="2404d695-1ae7-4ec0-b766-cb344c55905d">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="b8926ac2-890d-433c-9eaf-ae2891d1f500" fragment="1" gd:fragmentGUID="16c9a399-dff6-4500-bc04-98faf27b62f4">Kierownikiem jednostki kontrolowanej jest osoba, która zgodnie z przepisami określającymi ustrój jednostki jest odpowiedzialna za działalność tej jednostki i jest uprawniona do jej reprezentowania.</zdanie>
+                <zdanie nr="2" gd:zdGUID="6359087e-1593-4612-9f68-c111bf35f406" fragment="1" gd:fragmentGUID="190916f7-288a-4965-8e36-e82b10e018a2">W przypadku jednostki zarządzanej przez organ kolegialny za kierownika tej jednostki uznaje się przewodniczącego organu kolegialnego.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/158__art_5__ust_3" gd:GUID="e5c99438-c194-4897-805f-247fe0eb4f58">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="a79525f7-f769-41bb-933e-863f4cdfaee1" fragment="1" gd:fragmentGUID="1ad60fb2-90c6-4ae2-a029-4011f1c40531">Kierownikiem jednostki kontrolującej jest Prezes Rady Ministrów, Szef Kancelarii Prezesa Rady Ministrów, minister, kierownik urzędu centralnego, przewodniczący komitetu wchodzącego w skład Rady Ministrów, wojewoda albo osoba, która zgodnie z przepisami określającymi ustrój jednostki jest odpowiedzialna za działalność tej jednostki i jest uprawniona do jej reprezentowania.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/158__art_6" gd:GUID="59355c04-7fad-49d6-8cdf-531f5ffaf517">
+            <nr>6</nr>
+            <ustep eId="DU/2026/158__art_6__ust_1" gd:GUID="7ce83139-5c02-4844-91fe-3a33443b6fd5">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="4a24d08b-9618-4e75-8444-cedb5c843698" fragment="1" gd:fragmentGUID="76851c57-9c5d-4fab-9a58-25b94cf791da">Prezes Rady Ministrów kontroluje organy lub jednostki administracji rządowej, a także jednostki im podległe lub przez nie nadzorowane.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/158__art_6__ust_2" gd:GUID="dcf94c50-f489-42a1-8fcf-5ce8c014db11">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="b22250b4-c720-4063-ae0f-17bb8eec711d" fragment="1" gd:fragmentGUID="85546ec4-e3d7-47e3-a8ce-a50ff3cc6112">Szef Kancelarii Prezesa Rady Ministrów kontroluje instytucje gospodarki budżetowej przez niego utworzone oraz podmioty, które otrzymały dotację z części budżetu państwa, której dysponentem jest Kancelaria Prezesa Rady Ministrów.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/158__art_6__ust_3" gd:GUID="87a7aedd-84d4-4828-b175-581cab4f5358">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="fc907b80-2000-4934-8083-4fe2ebddf975" fragment="1" gd:fragmentGUID="84bd8af3-9cf3-4cc5-9474-00b2a8388a90">Minister, kierownik urzędu centralnego lub przewodniczący komitetu wchodzącego w skład Rady Ministrów kontroluje:</zdanie>
+              </p>
+              <punkt eId="DU/2026/158__art_6__ust_3__pkt_1" gd:GUID="bfdb6bc2-c726-4065-b314-1f7f7b9361b9">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="fc907b80-2000-4934-8083-4fe2ebddf975" fragment="2" gd:fragmentGUID="6da4cb25-eece-4136-8fb5-6601abbb2220">podległe mu lub przez niego nadzorowane organy lub jednostki organizacyjne;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/158__art_6__ust_3__pkt_2" gd:GUID="20f40032-0c0b-4eaf-a91f-8f170c251c7d">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="fc907b80-2000-4934-8083-4fe2ebddf975" fragment="3" gd:fragmentGUID="b8911eb0-ef69-4766-8949-40f6bfd7a454">jednostki podległe organom, o których mowa w pkt 1, lub przez nie nadzorowane;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/158__art_6__ust_3__pkt_3" gd:GUID="814339bb-4e95-4a4e-a570-715d3dc9eb79">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="fc907b80-2000-4934-8083-4fe2ebddf975" fragment="4" gd:fragmentGUID="421d6c30-6d4b-4aa4-8754-157f40d64fcf">podmioty, które otrzymały środki budżetowe z części budżetu państwa, której jest dysponentem.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2026/158__art_6__ust_4" gd:GUID="49cfc547-6c0d-4cb1-a9ab-b64c7f506ddc">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="55bcd796-cef3-4322-be4f-d542f41b1901" fragment="1" gd:fragmentGUID="98935d46-e8bc-4570-af67-1a0fbb0487d2">Wojewoda kontroluje:</zdanie>
+              </p>
+              <punkt eId="DU/2026/158__art_6__ust_4__pkt_1" gd:GUID="668e0e46-8aa3-4620-b2be-e151a8965976">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="55bcd796-cef3-4322-be4f-d542f41b1901" fragment="2" gd:fragmentGUID="5b60c406-ce8d-49de-8e57-a6cbd7fcfd11">organy rządowej administracji zespolonej w województwie;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/158__art_6__ust_4__pkt_2" gd:GUID="48ea9958-a040-47e1-bebd-8cea20d6ceb1">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="55bcd796-cef3-4322-be4f-d542f41b1901" fragment="3" gd:fragmentGUID="05686663-4dd6-4b4a-a1cd-a789344e3804">jednostki podległe organom, o których mowa w pkt 1, lub przez nie nadzorowane;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/158__art_6__ust_4__pkt_3" gd:GUID="3183be1e-7aa7-432c-9c62-45e5e3929dc1">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="55bcd796-cef3-4322-be4f-d542f41b1901" fragment="4" gd:fragmentGUID="6a0ee058-b3e2-48cd-b40c-35557c1ba331">organy samorządu terytorialnego;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/158__art_6__ust_4__pkt_4" gd:GUID="583ce721-9949-45c4-a1e6-e07a3a4dfc8e">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="55bcd796-cef3-4322-be4f-d542f41b1901" fragment="5" gd:fragmentGUID="d33aa7da-3eea-443e-97b7-396592041940">podmioty, które otrzymały dotację z części budżetu państwa, której dysponentem jest wojewoda.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2026/158__art_6__ust_5" gd:GUID="36d426b9-4a1a-4f82-b0ac-cbdb89e46a3d">
+              <nr>5</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="8d523290-f3ee-471b-ac56-1995e98d195e" fragment="1" gd:fragmentGUID="b765c9a9-5659-427c-b89a-83f1a9022231">Organy administracji zespolonej i niezespolonej kontrolują:</zdanie>
+              </p>
+              <punkt eId="DU/2026/158__art_6__ust_5__pkt_1" gd:GUID="3e3bca19-0df6-49db-a18c-6a8d0aeabdbd">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="8d523290-f3ee-471b-ac56-1995e98d195e" fragment="2" gd:fragmentGUID="b8ee0755-9a95-4525-b939-3e1ace92c30b">podległe im lub przez nie nadzorowane organy lub jednostki organizacyjne;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/158__art_6__ust_5__pkt_2" gd:GUID="d782e463-173c-4177-b947-c9291c92af31">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="8d523290-f3ee-471b-ac56-1995e98d195e" fragment="3" gd:fragmentGUID="05475f46-ba59-4a9e-8961-a430e81c867b">jednostki podległe organom, o których mowa w pkt 1, lub przez nie nadzorowane.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/158__art_7" gd:GUID="1c8cfd47-8054-4d2c-bf2c-7d7c4317fbb4">
+            <nr>7</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="9daa28fb-a585-45b3-a696-119543847991">
+              <p>
+                <zdanie nr="1" gd:zdGUID="dd271f6f-bc45-4a1e-8507-e81e61115996" fragment="1" gd:fragmentGUID="3a9b8d2e-28d5-4a21-bee1-fa0c7179d43d">Szef Kancelarii Prezesa Rady Ministrów wykonuje zadania Prezesa Rady Ministrów wynikające z ustawy, z jego upoważnienia.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2026/158__art_8" gd:GUID="ecc86539-3bbb-4bff-a93d-74e8599207da">
+            <nr>8</nr>
+            <ustep eId="DU/2026/158__art_8__ust_1" gd:GUID="10bc0cd1-2e7e-4522-889a-90c5b4100d58">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="d0b3bf3e-94c1-4f47-af82-f67afcb6f2db" fragment="1" gd:fragmentGUID="a0293eb5-eaf4-4d91-98d6-8ce7451d33e7">Prezes Rady Ministrów jest organem właściwym w sprawach koordynowania kontroli, w tym zarządzanej przez inne organy administracji rządowej.</zdanie>
+                <zdanie nr="2" gd:zdGUID="dd2662f6-526d-4fcf-b1b8-2f6c6075df75" fragment="1" gd:fragmentGUID="1b5c950e-806f-40d2-ae8d-772d30957bb1">Prezes Rady Ministrów może w szczególności:</zdanie>
+              </p>
+              <punkt eId="DU/2026/158__art_8__ust_1__pkt_1" gd:GUID="8d5d45e7-7094-43a1-82fd-8c2996055df6">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="2" gd:zdGUID="dd2662f6-526d-4fcf-b1b8-2f6c6075df75" fragment="2" gd:fragmentGUID="b66e449d-a69b-41e2-9cdc-c2432139e4a6">zlecić kierownikowi jednostki kontrolującej przeprowadzenie kontroli wskazanych podmiotów lub obszarów działalności i żądać przedstawiania informacji o wynikach kontroli;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/158__art_8__ust_1__pkt_2" gd:GUID="490ed251-1147-433e-bba7-444aca86c4de">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="2" gd:zdGUID="dd2662f6-526d-4fcf-b1b8-2f6c6075df75" fragment="3" gd:fragmentGUID="9e6033c4-d9c5-490d-bd96-14e82acdc234">delegować kontrolera Kancelarii Prezesa Rady Ministrów do uczestniczenia w kontroli;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/158__art_8__ust_1__pkt_3" gd:GUID="6e328a55-2cbf-48e2-a51f-9bda55d55ce8">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="2" gd:zdGUID="dd2662f6-526d-4fcf-b1b8-2f6c6075df75" fragment="4" gd:fragmentGUID="933aa218-865a-4bed-8404-6d1b9509fc75">określić standardy kontroli w administracji rządowej, które udostępnia się w Biuletynie Informacji Publicznej Kancelarii Prezesa Rady Ministrów.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2026/158__art_8__ust_2" gd:GUID="77175b0b-d458-4041-832c-3c34c3b94269">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="d435cbab-4728-4881-a3d1-57307799c02b" fragment="1" gd:fragmentGUID="c717e3e2-9782-4560-8f1d-f668076a72a0">Prezes Rady Ministrów może zlecić przeprowadzenie kontroli wskazanego obszaru działalności administracji rządowej przez więcej niż jednego kierownika jednostki kontrolującej.</zdanie>
+                <zdanie nr="2" gd:zdGUID="596f9585-6a8a-40cf-88e8-2c69fe8b9757" fragment="1" gd:fragmentGUID="a91fd8ed-1292-4f59-a205-d2141e26a5f7">W takim przypadku Prezes Rady Ministrów koordynuje kontrolę w szczególności przez:</zdanie>
+              </p>
+              <punkt eId="DU/2026/158__art_8__ust_2__pkt_1" gd:GUID="3658c02c-9934-4dac-8fe8-848841d6ae32">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="2" gd:zdGUID="596f9585-6a8a-40cf-88e8-2c69fe8b9757" fragment="2" gd:fragmentGUID="d4b377cd-170f-4f5b-9b17-e987ae31846b">wydanie wskazówek metodycznych wiążących dla tej kontroli;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/158__art_8__ust_2__pkt_2" gd:GUID="4e723b76-af16-42b5-95d6-9195a1b1c26a">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="2" gd:zdGUID="596f9585-6a8a-40cf-88e8-2c69fe8b9757" fragment="3" gd:fragmentGUID="79a7fa62-12ee-4220-8ffe-86f9ff28f2db">opracowanie lub zlecenie opracowania programu kontroli;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/158__art_8__ust_2__pkt_3" gd:GUID="f2739e60-c78c-48bc-a98c-37207d532edc">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="2" gd:zdGUID="596f9585-6a8a-40cf-88e8-2c69fe8b9757" fragment="4" gd:fragmentGUID="ea746aa9-7cf2-4eba-9320-ae99930f3d80">czuwanie nad przebiegiem kontroli;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/158__art_8__ust_2__pkt_4" gd:GUID="596cacb4-7a75-45bb-b422-baec730e204b">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="2" gd:zdGUID="596f9585-6a8a-40cf-88e8-2c69fe8b9757" fragment="5" gd:fragmentGUID="766f4070-2ef6-49c7-8117-897f827322fb">sporządzenie lub zlecenie sporządzenia informacji zbiorczych o wynikach kontroli.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2026/158__art_8__ust_3" gd:GUID="1443564a-f22c-4372-9e8b-83c026dd0bdc">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="23a4351e-e137-4a6a-933f-159f54570033" fragment="1" gd:fragmentGUID="2b52101a-00b8-432d-8a75-ad9f510d218b">W przypadku kontroli, o której mowa w ust. 2, zadania kierownika jednostki kontrolującej wynikające z ustawy wykonuje Prezes Rady Ministrów.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/158__art_9" gd:GUID="987450a6-7986-4328-b20b-6969507dfc74">
+            <nr>9</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="76bcbd7e-83bf-43d5-a62c-d642a13add46">
+              <p>
+                <zdanie nr="1" gd:zdGUID="7c983f83-eef6-4250-be5b-fcae81c04989" fragment="1" gd:fragmentGUID="e1d53357-bc7c-46a2-bfef-16813f10e67c">Jednostki administracji rządowej przekazują Prezesowi Rady Ministrów, na jego wniosek, informacje lub dokumenty dotyczące działalności kontrolnej jednostki kontrolującej, w tym plany kontroli, dokumentację kontroli, informację o realizowanych kontrolach i ich wynikach, o wystosowanych zaleceniach i wnioskach, a także sposobach ich realizacji, oraz zbiorcze informacje z wybranych kontroli bądź z działalności kontrolnej tej jednostki.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2026/158__art_10" gd:GUID="6819e9f3-195d-4683-8029-90bb7a76485a">
+            <nr>10</nr>
+            <ustep eId="DU/2026/158__art_10__ust_1" gd:GUID="9cb913ff-caba-4ea0-a6d1-c3ece97e767a">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="3b05056e-5be3-4aa7-98a2-cdfbfb7bb6e9" fragment="1" gd:fragmentGUID="b3cfaf10-6689-4b74-be5e-d3b08dafd3fa">Kierownicy jednostek kontrolujących mogą zarządzić kontrolę wspólną, jeżeli przedmiot kontroli dotyczy zadań będących we właściwości tych kierowników.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/158__art_10__ust_2" gd:GUID="43b2f49d-fa5f-4d19-a397-ecf38d773b01">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="2b053ed1-a80b-4d8e-bc9e-847069db253f" fragment="1" gd:fragmentGUID="b82d7a87-d410-4cdf-96ce-dcf9fd5c78ac">Zarządzając kontrolę wspólną, kierownicy jednostek kontrolujących określają, w porozumieniu, skład zespołu kontrolującego oraz wskazują organ, który wykonuje zadania kierownika jednostki kontrolującej wynikające z ustawy.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/158__art_10__ust_3" gd:GUID="337361fe-f38c-4ff8-bd50-ff84a14f706e">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="c1a928b4-ea82-4cd5-97ee-35b75ce11172" fragment="1" gd:fragmentGUID="e5396ba7-f0ac-48e4-a170-cab63eed3ad4">W przypadku prowadzenia kontroli wspólnej program kontroli obejmuje wszystkie jednostki kontrolowane i jest zatwierdzany przez kierownika komórki do spraw kontroli w urzędzie obsługującym organ wykonujący zadania kierownika jednostki kontrolującej wynikające z ustawy.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/158__art_11" gd:GUID="cf20e903-9e44-4b33-bae5-0740fa7aa4c0">
+            <nr>11</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="ff262168-9f36-4ba4-a0f6-d578aeb1745f">
+              <p>
+                <zdanie nr="1" gd:zdGUID="8fd230c8-f58b-435f-aeee-52ca8e39d431" fragment="1" gd:fragmentGUID="f51965aa-42c0-4c38-948b-faf586ac0bdc">Kontrolę przeprowadza się w trybie zwykłym lub uproszczonym.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2026/158__art_12" gd:GUID="c060b70d-3f36-436f-8596-c9a799fb52c9">
+            <nr>12</nr>
+            <ustep eId="DU/2026/158__art_12__ust_1" gd:GUID="5168bb2d-d73d-4199-8429-31903fb9db75">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="9de5ae72-eb60-4466-b0e8-48ef45e42d6e" fragment="1" gd:fragmentGUID="1d980da0-dfb2-484b-a296-baa529487d1a">Kontrolę prowadzi się zgodnie z okresowym planem kontroli, opracowanym przez kierownika komórki do spraw kontroli i zatwierdzonym przez kierownika jednostki kontrolującej.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/158__art_12__ust_2" gd:GUID="119daad6-4f7f-4bb9-926b-46292086818d">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="0b665d37-a9f2-4508-9dc2-523883720edb" fragment="1" gd:fragmentGUID="1c529cde-1ab4-492f-b8a1-5a9a551d8a69">Kierownik jednostki kontrolującej może zarządzić przeprowadzenie kontroli nieprzewidzianej okresowym planem kontroli.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/158__art_13" gd:GUID="f0fdb324-76e3-4cc9-9748-c23f2cc54c6e">
+            <nr>13</nr>
+            <ustep eId="DU/2026/158__art_13__ust_1" gd:GUID="f0b7284a-fe6b-4b64-938d-a81053341c30">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="9502ccb4-b928-43d8-b000-c3c6eae46e53" fragment="1" gd:fragmentGUID="5322d43e-2c7e-4afc-9584-6f866a1ea691"><odnosnik id-odnosnika="1" symbol="1" gd:GUID="2ff3a2bd-18c9-41af-9337-2b1a398ed494"><p><zdanie nr="1" gd:zdGUID="34c7b2e8-64d4-4d6b-8ca7-26cfc1f2176e" fragment="1" gd:fragmentGUID="b19b9a17-e71e-44f8-a066-9c9122f61c31">Oznaczenie ust. 1 nadane przez art. 2 pkt 1 ustawy z dnia 25 lipca 2025 r. o zmianie ustawy o informatyzacji działalności podmiotów realizujących zadania publiczne oraz niektórych innych ustaw (Dz. U. poz. 1158), która weszła w życie z dniem 6 września 2025 r.</zdanie></p></odnosnik> W sprawach doręczeń, obliczania terminów oraz protokołu, w zakresie nieuregulowanym w niniejszej ustawie, przepisy ustawy z dnia 14 czerwca 1960 r. – Kodeks postępowania administracyjnego (Dz. U. z 2025 r. poz. 1691) stosuje się odpowiednio.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/158__art_13__ust_2" gd:GUID="c49b11b9-91fb-48e5-ae7f-68128a8c2bdc">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="2f9a7a7e-9880-4797-8613-b287b1b681c8" fragment="1" gd:fragmentGUID="9ffc36ae-6126-4dfd-990e-8a02141217b7"><odnosnik id-odnosnika="2" symbol="2" gd:GUID="23539e5f-4f33-455d-b55a-5b40bc26e2b5"><p><zdanie nr="1" gd:zdGUID="b255fbe4-da3b-4aba-8683-ad862e74668f" fragment="1" gd:fragmentGUID="1d3e76ef-2768-49f2-a976-c374f92455ee">Dodany przez art. 2 pkt 1 ustawy, o której mowa w odnośniku 1.</zdanie></p></odnosnik> W przypadku gdy ustawa przewiduje dla danej czynności formę pisemną, czynność tę utrwala się w postaci papierowej lub elektronicznej oraz opatruje podpisem osób, które tej czynności dokonały.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/158__art_13__ust_3" gd:GUID="ef45a5bf-cca2-406e-8b2b-ec42628428d9">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="a153b408-c904-4515-a8ec-6fb5cbf405b7" fragment="1" gd:fragmentGUID="ca8e7d0a-7d35-48bd-a07c-67005474324a"><odsylacz-do-odnosnika id-odnosnika="2" symbol="2" /> Pisma utrwalane w postaci papierowej opatruje się podpisem własnoręcznym, a pisma utrwalane w postaci elektronicznej opatruje się kwalifikowanym podpisem elektronicznym, podpisem zaufanym albo podpisem osobistym lub kwalifikowaną pieczęcią elektroniczną organu administracji publicznej, ze wskazaniem w treści pisma osoby opatrującej pismo pieczęcią.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+        </oddzial-n>
+      </rozdzial>
+      <rozdzial eId="DU/2026/158__rozdz_2" gd:GUID="18d6f333-f5e6-4401-87f6-9160407ca89b">
+        <naglowek-rozdzialu>
+          <nr>2</nr>
+          <p>Kontrola w trybie zwykłym</p>
+        </naglowek-rozdzialu>
+        <oddzial-n brak-eid="jednostka-nieoznaczona" gd:GUID="1e0f15c9-6954-42b5-bef4-3045834837c8">
+          <artykul eId="DU/2026/158__art_14" gd:GUID="a50d8e26-b91b-48cf-a5cd-f8625346a4f6">
+            <nr>14</nr>
+            <ustep eId="DU/2026/158__art_14__ust_1" gd:GUID="eb4ea0d5-4af0-4965-a5d8-6df1f64d0e19">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="828fc942-5dd7-4dd1-b0d3-2f639e06f070" fragment="1" gd:fragmentGUID="74fe6df1-8b13-4024-b22a-1938da9bf4a1">Przeprowadzenie kontroli poprzedza opracowanie programu kontroli, który zatwierdza kierownik komórki do spraw kontroli.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/158__art_14__ust_2" gd:GUID="f4244b8c-71fb-4d32-b7d5-e04fb1ccfc15">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="d7fcb0ad-7bca-4624-a73a-5954327be9a6" fragment="1" gd:fragmentGUID="e76e63ff-88ab-4032-ac75-673f39a7a5be">Przy opracowywaniu programu kontroli uwzględnia się w szczególności:</zdanie>
+              </p>
+              <punkt eId="DU/2026/158__art_14__ust_2__pkt_1" gd:GUID="1aff5764-2cfd-455e-9ac2-c278d90e900a">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="d7fcb0ad-7bca-4624-a73a-5954327be9a6" fragment="2" gd:fragmentGUID="6003e667-3696-4651-9352-e544562c42b6">wyniki wcześniejszych kontroli;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/158__art_14__ust_2__pkt_2" gd:GUID="7466ac1a-ae2e-4144-ac36-ee8f431a26eb">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="d7fcb0ad-7bca-4624-a73a-5954327be9a6" fragment="3" gd:fragmentGUID="bf5d5301-5f96-4582-ab78-8e72ae005310">wyniki badań i analiz oraz skargi i wnioski dotyczące przygotowywanej kontroli;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/158__art_14__ust_2__pkt_3" gd:GUID="abc1a2ed-3e53-4460-bb96-13c51cb70e20">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="d7fcb0ad-7bca-4624-a73a-5954327be9a6" fragment="4" gd:fragmentGUID="b8b3cab0-e6cb-4492-9a30-125876034328">czynniki ryzyka mające wpływ na działalność jednostki kontrolowanej;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/158__art_14__ust_2__pkt_4" gd:GUID="287202d0-a55e-49e9-b4f0-fd2b632d326b">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="d7fcb0ad-7bca-4624-a73a-5954327be9a6" fragment="5" gd:fragmentGUID="2307b30d-0bb2-47b8-8568-ef68cadb7dbd">informacje dotyczące działalności jednostki kontrolowanej.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2026/158__art_14__ust_3" gd:GUID="413a9d96-677a-4fe2-862f-66f8f806cb80">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="07cb7c02-1ed0-472b-971f-54f7bb5d399b" fragment="1" gd:fragmentGUID="3b7caf68-0129-4190-a0d1-25a6a236ae62">Program kontroli określa w szczególności:</zdanie>
+              </p>
+              <punkt eId="DU/2026/158__art_14__ust_3__pkt_1" gd:GUID="005f2364-5f6b-460c-8058-004461e036a4">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="07cb7c02-1ed0-472b-971f-54f7bb5d399b" fragment="2" gd:fragmentGUID="211921d9-349f-4984-9b0b-518f1059d42c">jednostkę kontrolowaną;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/158__art_14__ust_3__pkt_2" gd:GUID="102c1d04-b959-45fc-a73b-0d1c7d338e93">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="07cb7c02-1ed0-472b-971f-54f7bb5d399b" fragment="3" gd:fragmentGUID="db35cecd-2040-47f1-8bae-4059bc20885c">zakres kontroli, to jest przedmiot i okres objęty kontrolą;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/158__art_14__ust_3__pkt_3" gd:GUID="4dd4b37f-2dfa-4ef9-9bca-98973903b845">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="07cb7c02-1ed0-472b-971f-54f7bb5d399b" fragment="4" gd:fragmentGUID="647e1788-6e9f-4721-b5f0-8450de1de516">zagadnienia wymagające oceny;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/158__art_14__ust_3__pkt_4" gd:GUID="a2f582e8-77b2-4ea6-a9fe-6f470f89c6eb">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="07cb7c02-1ed0-472b-971f-54f7bb5d399b" fragment="5" gd:fragmentGUID="ab8f86e8-9240-46b3-bfd2-9d32ee0ec2cb">termin kontroli;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/158__art_14__ust_3__pkt_5" gd:GUID="31dc04e0-d12c-42fb-b8bf-05512a8e785c">
+                <nr>5</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="07cb7c02-1ed0-472b-971f-54f7bb5d399b" fragment="6" gd:fragmentGUID="76d5a1f8-65f4-42a5-83d6-a3a158e7e5d8">stan prawny dotyczący przedmiotu kontroli oraz wskazówki metodyczne dotyczące sposobu i techniki przeprowadzenia kontroli;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/158__art_14__ust_3__pkt_6" gd:GUID="8c13e096-d0df-4daa-9996-12f26c7c19ff">
+                <nr>6</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="07cb7c02-1ed0-472b-971f-54f7bb5d399b" fragment="7" gd:fragmentGUID="4020d8a2-eade-43d4-9a36-303eee6d2ca1">organizację i harmonogram przeprowadzenia kontroli.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2026/158__art_14__ust_4" gd:GUID="27db94d3-5f2a-4b1b-9d90-422e1ecf0c3d">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="5512160f-fd8a-43fb-9c05-88f1ef2bc45d" fragment="1" gd:fragmentGUID="cfdd7eee-27cc-42b9-b00b-5884e5a49ad5">Do czasu zakończenia kontroli programu kontroli nie udostępnia się.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/158__art_14__ust_5" gd:GUID="f0736e02-94ac-4b5f-a0ea-fe185be8de8c">
+              <nr>5</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="878ebc92-bb13-4158-b37a-0092c7a6ff03" fragment="1" gd:fragmentGUID="ffd926c4-4417-4b0d-bac6-842632ba9b14">Po zakończeniu kontroli jej program dołącza się do akt kontroli.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/158__art_15" gd:GUID="0d9d04d6-8738-4f2e-af27-7180121dbe9b">
+            <nr>15</nr>
+            <ustep eId="DU/2026/158__art_15__ust_1" gd:GUID="6872020f-5017-4d9f-bc6b-041c1b65ef87">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ea1ec199-1ef3-4921-af16-3bbaee262e86" fragment="1" gd:fragmentGUID="a5116d79-6448-4e16-9f02-2fbba1cdf7cd">W celu przygotowania kontroli kierownik jednostki kontrolowanej, na pisemny wniosek kierownika jednostki kontrolującej, niezwłocznie udostępnia dokumenty, materiały i informacje dotyczące jej działalności.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/158__art_15__ust_2" gd:GUID="78eccc23-81e5-4299-8c4e-2e6d5e620622">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="6bd03774-c99c-450a-8f53-2a6ffe7e626c" fragment="1" gd:fragmentGUID="dae1188c-daed-49d3-abdd-a749de7c9204">Kierownik jednostki kontrolującej może wystąpić również do innych organów i jednostek o niezwłoczne udostępnienie dokumentów, które są niezbędne do przygotowania i przeprowadzenia kontroli.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/158__art_16" gd:GUID="97ed1cb1-25a5-4214-a930-41164dcf889f">
+            <nr>16</nr>
+            <ustep eId="DU/2026/158__art_16__ust_1" gd:GUID="b032996c-50a1-4f3b-a342-149ea3f86fed">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="bfa702d6-1640-4fdb-9b09-81d32afd7d90" fragment="1" gd:fragmentGUID="e429995a-a1c0-42e9-a282-17f6403aa61b"><odnosnik id-odnosnika="3" symbol="3" gd:GUID="356fcbc7-bdf6-4fe4-a6d9-2e34d9dc2354"><p><zdanie nr="1" gd:zdGUID="3ce016fd-dbfd-4420-84c0-d529c32b4b78" fragment="1" gd:fragmentGUID="8e5f087f-6079-47d0-a335-8262d573502d">W brzmieniu ustalonym przez art. 2 pkt 2 ustawy, o której mowa w odnośniku 1.</zdanie></p></odnosnik> Kontrolę przeprowadza pracownik jednostki kontrolującej (kontroler) na podstawie pisemnego imiennego upoważnienia do przeprowadzenia kontroli, po okazaniu legitymacji służbowej albo innego dokumentu pozwalającego na ustalenie tożsamości lub po poświadczeniu tożsamości z wykorzystaniem kwalifikowanego podpisu elektronicznego, podpisu zaufanego albo podpisu osobistego, w toku dokonywania pierwszej czynności kontrolnej.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/158__art_16__ust_2" gd:GUID="3f638ffe-6c23-40db-8e24-ec6fbd26b9c2">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="605d1da3-c075-4e70-9191-de62c67a02d8" fragment="1" gd:fragmentGUID="15afd8ef-fb59-43cb-b165-3bd6cf90e1aa">Upoważnienie do przeprowadzenia kontroli wydaje kierownik jednostki kontrolującej.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/158__art_16__ust_3" gd:GUID="1e1c60b5-d2f6-45b3-a227-43a5aa02d6a8">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="7a506934-a879-4b3b-aa95-c1b3784f9d8f" fragment="1" gd:fragmentGUID="f7c9d280-e7d8-489b-9ce8-fc973eb6eba7">Upoważnienie do przeprowadzenia kontroli zawiera:</zdanie>
+              </p>
+              <punkt eId="DU/2026/158__art_16__ust_3__pkt_1" gd:GUID="4cf08160-5f0d-4084-964b-a68d75ee9e85">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="7a506934-a879-4b3b-aa95-c1b3784f9d8f" fragment="2" gd:fragmentGUID="d21e99f9-b47d-47bc-99fe-ca2447ea29c5">oznaczenie wydającego upoważnienie oraz numer i datę wystawienia;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/158__art_16__ust_3__pkt_2" gd:GUID="cecc4168-be9a-4f36-80c1-512d4778b295">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="7a506934-a879-4b3b-aa95-c1b3784f9d8f" fragment="3" gd:fragmentGUID="0bac2ba8-f1ff-45d2-9dde-3a15d62a5068">podstawę prawną podjęcia kontroli;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/158__art_16__ust_3__pkt_3" gd:GUID="65048e9d-8b08-4213-a86e-704496180366">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="7a506934-a879-4b3b-aa95-c1b3784f9d8f" fragment="4" gd:fragmentGUID="343aa5f7-9eef-4ad9-b6ee-012e69a304d3">imię, nazwisko i stanowisko służbowe kontrolera;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/158__art_16__ust_3__pkt_4" gd:GUID="ae61025a-050f-44cb-b3c6-1e5ff3ed99c3">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="7a506934-a879-4b3b-aa95-c1b3784f9d8f" fragment="5" gd:fragmentGUID="900923f7-5424-4c45-a67b-d0a8b9fbd137">zakres kontroli;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/158__art_16__ust_3__pkt_5" gd:GUID="82e105eb-0a68-4e03-b677-46cfe5a86664">
+                <nr>5</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="7a506934-a879-4b3b-aa95-c1b3784f9d8f" fragment="6" gd:fragmentGUID="d459723e-86d3-4b5d-b1ca-d2713b71c126">nazwę i adres jednostki kontrolowanej;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/158__art_16__ust_3__pkt_6" gd:GUID="5e04c1cd-5a24-42be-9641-a9e6c740c5dc">
+                <nr>6</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="7a506934-a879-4b3b-aa95-c1b3784f9d8f" fragment="7" gd:fragmentGUID="c68acc2b-155a-46fa-a56d-a5bfeb1d6b09">okres ważności upoważnienia;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/158__art_16__ust_3__pkt_7" gd:GUID="aa34bb39-3da7-4c1e-9047-d7ab04deb674">
+                <nr>7</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="7a506934-a879-4b3b-aa95-c1b3784f9d8f" fragment="8" gd:fragmentGUID="a4c8aaf9-b5c1-4f07-910b-56e0fd1410cc">podpis wydającego upoważnienie.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2026/158__art_16__ust_4" gd:GUID="52979ec9-d88b-4c19-bc07-c26459222248">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="440107b1-14f6-4576-bb45-4d55c86b0a2d" fragment="1" gd:fragmentGUID="4018fe06-c073-4084-b86b-441ad5578640">W przypadku gdy w trakcie przeprowadzania kontroli zaistnieje konieczność wydłużenia czasu trwania czynności kontrolnych lub rozszerzenia zakresu kontroli, kierownik jednostki kontrolującej przedłuża ważność upoważnienia, przez uczynienie na nim stosownej wzmianki, lub wydaje nowe upoważnienie do przeprowadzenia kontroli.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/158__art_16__ust_5" gd:GUID="49756c2b-a208-431a-b0f4-3bfc8bebdf73">
+              <nr>5</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="a43a4727-6bb8-49ec-b0fd-bc8b0be71700" fragment="1" gd:fragmentGUID="b1b9a661-82b1-4b70-aa13-f30e7991fbb5">Dla kontrolera delegowanego, o którym mowa w art. 8 ust. 1 pkt 2, upoważnienie wydaje Szef Kancelarii Prezesa Rady Ministrów.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/158__art_17" gd:GUID="10130ddb-320c-45d3-a62d-eaa08d643feb">
+            <nr>17</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="a0151b86-afe1-489a-ae14-6648b0e70c0d">
+              <p>
+                <zdanie nr="1" gd:zdGUID="e1f78717-6695-4cb9-9db5-7a01c3686c84" fragment="1" gd:fragmentGUID="b9f58b6a-0219-4ffa-b45d-738aa637a6c2">Kierownik jednostki kontrolującej może powołać zespół kontrolerów do przeprowadzenia kontroli.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2026/158__art_18" gd:GUID="84ac8957-86b8-4ff6-84c8-d0f75c40c841">
+            <nr>18</nr>
+            <ustep eId="DU/2026/158__art_18__ust_1" gd:GUID="e4e2161b-640e-463b-83ef-43cb722090d0">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="b89e0646-e683-4b4c-97a3-1f27bd1081a8" fragment="1" gd:fragmentGUID="8ce05727-8e22-46cc-83ab-13c1f9740c4d">Kierownik jednostki kontrolującej może włączyć w skład zespołu kontrolerów posiadających wiedzę specjalistyczną pracowników organów i jednostek organizacyjnych podporządkowanych lub przez niego nadzorowanych.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/158__art_18__ust_2" gd:GUID="0a88c9a5-2b60-4921-9b27-013a678c8c2b">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="020e0268-fb11-45fb-8df1-b8b697d09c2e" fragment="1" gd:fragmentGUID="ca0d0581-817d-436a-8a54-2e8e79e754fe">W przypadku, o którym mowa w ust. 1, upoważnienie do przeprowadzenia kontroli, o którym mowa w art. 16, wydaje kierownik jednostki kontrolującej.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/158__art_19" gd:GUID="26445f46-acca-4080-919a-75e88b9f90b3">
+            <nr>19</nr>
+            <ustep eId="DU/2026/158__art_19__ust_1" gd:GUID="20e988b8-3e69-4884-946c-dc28d0b5eccc">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="557ffff0-df23-4844-a310-e41478453647" fragment="1" gd:fragmentGUID="fedef8d7-2cd7-45f8-8694-eef1eecca80e">Kontroler podlega wyłączeniu z udziału w kontroli z urzędu, jeżeli kontrola mogłaby dotyczyć praw lub obowiązków jego lub osoby mu bliskiej, oraz z udziału w kontroli, której przedmiot stanowią zadania należące wcześniej do jego obowiązków jako pracownika, przez rok od zakończenia ich wykonywania.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/158__art_19__ust_2" gd:GUID="26a72dc0-6ba8-44ba-84df-27051fa2a2b7">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="e8f178ab-9505-4f78-9c50-72a530862b80" fragment="1" gd:fragmentGUID="df549452-401a-4d85-8ecb-88d1bf269896">Za osobę bliską kontrolera uważa się małżonka lub osobę pozostającą z nim faktycznie we wspólnym pożyciu, krewnego i powinowatego do drugiego stopnia albo osobę związaną z nim z tytułu przysposobienia, opieki lub kurateli.</zdanie>
+                <zdanie nr="2" gd:zdGUID="efde2d01-49bc-41e9-9219-7a578015f77f" fragment="1" gd:fragmentGUID="d9764f2d-d440-4d5f-b326-f857b33b44e8">Wyłączenie trwa mimo ustania jego przyczyny.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/158__art_19__ust_3" gd:GUID="0051cb9a-d378-4960-9a93-91a3921fee98">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="fb8f9ff9-b65a-4ed1-8242-04dcb2ec6a36" fragment="1" gd:fragmentGUID="153c9dea-7232-4910-8fb8-dc9083cb5087">Kontroler podlega wyłączeniu z udziału w kontroli na wniosek, jeżeli zaistnieją uzasadnione wątpliwości co do jego bezstronności.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/158__art_19__ust_4" gd:GUID="f3423f08-73e7-4151-b862-76f5126cce88">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="c94d7af7-ca09-408c-90cd-6fb7b38a3e3f" fragment="1" gd:fragmentGUID="59beec4e-3027-4d9c-b8b4-681b9a020602">Przed rozpoczęciem czynności kontrolnych kontroler składa pisemne oświadczenie o braku lub istnieniu okoliczności uzasadniających jego wyłączenie z udziału w kontroli.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/158__art_19__ust_5" gd:GUID="15959e03-73cb-4d81-8a8c-a221397441c3">
+              <nr>5</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="10e59a37-aa05-4c00-aa3f-25477a616989" fragment="1" gd:fragmentGUID="2123a4c5-9ee4-4354-b1fc-618cf10d4053">O wyłączeniu kontrolera rozstrzyga kierownik komórki do spraw kontroli.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/158__art_19__ust_6" gd:GUID="792ccac3-2c27-4989-91e9-9b9517f9a01a">
+              <nr>6</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="984ac647-b7bc-494e-87bb-9c942619cb8b" fragment="1" gd:fragmentGUID="17606bf0-02a3-4306-a29a-5db6ff58df9f"><odnosnik id-odnosnika="4" symbol="4" gd:GUID="4bfd59c1-2e4f-444d-ae14-984e08086215"><p><zdanie nr="1" gd:zdGUID="24b19ccc-2a9b-464c-aeb6-eeaef1b6c5ba" fragment="1" gd:fragmentGUID="b284a6a1-dcfa-4a72-96d4-8f7df5a222bc">W brzmieniu ustalonym przez art. 2 pkt 3 ustawy, o której mowa w odnośniku 1.</zdanie></p></odnosnik> W przypadku wyłączenia kontrolera z udziału w kontroli po rozpoczęciu czynności kontrolnych zawiadamia się o tym fakcie kierownika jednostki kontrolowanej.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/158__art_19__ust_7" gd:GUID="42da7eae-34bb-4f96-b926-d265e7556719">
+              <nr>7</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="50bbd103-7545-4881-84df-09110d007fea" fragment="1" gd:fragmentGUID="611bd5e9-7a3a-468e-aced-a75b5eb7a654">W okresie od złożenia wniosku o wyłączenie do czasu wydania rozstrzygnięcia o wyłączeniu kontrolera z udziału w kontroli kontroler podejmuje jedynie czynności niecierpiące zwłoki.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/158__art_20" gd:GUID="c8273739-b64b-49e7-8dce-f64358470156">
+            <nr>20</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="3cf63f25-c3b3-4679-8669-20bf19f304b3">
+              <p>
+                <zdanie nr="1" gd:zdGUID="8b720c04-7361-46cd-a43b-4e461d856b30" fragment="1" gd:fragmentGUID="fa04e52f-7a4f-416a-a8ee-ab94d625cec2">O planowanej kontroli zawiadamia się kierownika jednostki kontrolowanej, podając przewidywany czas trwania czynności kontrolnych.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2026/158__art_21" gd:GUID="617b4612-5ec1-474f-8efb-53155477a28b">
+            <nr>21</nr>
+            <ustep eId="DU/2026/158__art_21__ust_1" gd:GUID="cb641b45-b9b2-4935-aa6a-c5c18c6c862a">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="134d3fc8-b54d-43d8-8fd9-ed931cf44b0e" fragment="1" gd:fragmentGUID="58b157e5-006d-4120-8980-8c44dc11be41">Czynności kontrolne przeprowadza się w siedzibie jednostki kontrolowanej w czasie wykonywania przez nią zadań lub poza nią.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/158__art_21__ust_1a" gd:GUID="212bb833-37f0-436f-beba-8c7ea7cf325e">
+              <nr>1a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ae6d2b04-45b9-46b9-8a4c-8d6cbe1f27f6" fragment="1" gd:fragmentGUID="d4854f11-0e45-4c04-b8a3-7b7bd6d50721"><odnosnik id-odnosnika="5" symbol="5" gd:GUID="fc3d4add-3efb-41f0-aef4-66b3423aee29"><p><zdanie nr="1" gd:zdGUID="6b2fcfc6-1be1-418a-af64-d9bb3dfff464" fragment="1" gd:fragmentGUID="bf586b5a-b2d7-48ef-875d-6ae9ef25a8a5">Dodany przez art. 2 pkt 4 ustawy, o której mowa w odnośniku 1.</zdanie></p></odnosnik> Czynności kontrolne mogą być przeprowadzane z wykorzystaniem środków komunikacji elektronicznej lub informatycznych nośników danych.</zdanie>
+                <zdanie nr="2" gd:zdGUID="0c2e6178-cd9e-4cb7-89fb-efb326301211" fragment="1" gd:fragmentGUID="e4392f88-1247-46bf-a565-01c64dde1b3f">Dokumenty, o których mowa w art. 38–42, art. 45 ust. 2, art. 47, art. 49, art. 50 oraz art. 52 ust. 5, są doręczane zgodnie z przepisem art. 13 ust. 1.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/158__art_21__ust_2" gd:GUID="1a9bc29a-5f6d-41cc-8469-c9a8866d755d">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="05f085b9-e3b4-48b6-b9f9-e7a61157522f" fragment="1" gd:fragmentGUID="ba14ff2a-2632-48db-8db4-461c5ce7e02b">Czynności kontrolne powinny być przeprowadzane w sposób sprawny i możliwie niezakłócający funkcjonowania jednostki kontrolowanej.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/158__art_21__ust_3" gd:GUID="8f42aa9d-7606-4113-bf59-ca169474c30d">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="008e618e-9566-42c2-9388-1230d4cca79d" fragment="1" gd:fragmentGUID="6e3a1848-9e0a-49b9-8ff3-5976c68a505f">W szczególnych okolicznościach czynności kontrolne przeprowadza się także w dniach wolnych od pracy lub poza godzinami pracy.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/158__art_21__ust_4" gd:GUID="d0f6e8d4-e12c-4539-a8d9-3decf1d39a15">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="eed3ba57-a406-4fe5-8e9b-d1b0b1adc630" fragment="1" gd:fragmentGUID="0b7b4c45-9c83-4255-b5a4-84e38ac6abb3">Prowadzenie czynności kontrolnych z udziałem pracowników jednostki kontrolowanej w dniach wolnych od pracy lub poza godzinami pracy wymaga zgody kierownika jednostki kontrolowanej.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/158__art_22" gd:GUID="cdf3c261-e627-45f6-af0f-d575b502a15e">
+            <nr>22</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="fc6f6c6d-0aff-44e6-870a-f6c8af03cce5">
+              <p>
+                <zdanie nr="1" gd:zdGUID="afc7b20f-d5a7-4202-ad21-aa985712282f" fragment="1" gd:fragmentGUID="0c086646-0464-494f-8889-f63a6c9a69d9">Kontroler w trakcie przeprowadzania kontroli ma prawo do:</zdanie>
+              </p>
+              <punkt eId="DU/2026/158__art_22__pkt_1" gd:GUID="5e6e46dd-8083-4adb-a398-ec930c8d8544">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="afc7b20f-d5a7-4202-ad21-aa985712282f" fragment="2" gd:fragmentGUID="035f3556-177f-488e-97ac-7554392e285d">swobodnego wstępu i poruszania się po terenie jednostki kontrolowanej bez obowiązku uzyskiwania przepustki;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/158__art_22__pkt_2" gd:GUID="06a8bbe9-cb42-4c60-82f1-11128fe8f08f">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="afc7b20f-d5a7-4202-ad21-aa985712282f" fragment="3" gd:fragmentGUID="d6f0ab6e-921a-4e76-8cd9-6660e5a3e84f">wglądu do dokumentów dotyczących działalności jednostki kontrolowanej, pobierania za pokwitowaniem oraz zabezpieczania dokumentów związanych z zakresem kontroli, z zachowaniem przepisów o tajemnicy prawnie chronionej;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/158__art_22__pkt_3" gd:GUID="570be528-46f6-42d7-8d02-8c7b24964f9f">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="afc7b20f-d5a7-4202-ad21-aa985712282f" fragment="4" gd:fragmentGUID="739b0904-12c2-4a9a-a0e4-ad363df4e2e5"><odnosnik id-odnosnika="6" symbol="6" gd:GUID="b64d8afe-582d-4989-aae3-8793cefdb7ce"><p><zdanie nr="1" gd:zdGUID="b76a2694-2e9e-43f9-ab3d-a93829cca001" fragment="1" gd:fragmentGUID="c940398a-bb2a-4691-9fd6-4a2ee8a11cd4">W brzmieniu ustalonym przez art. 2 pkt 5 lit. a ustawy, o której mowa w odnośniku 1.</zdanie></p></odnosnik> sporządzania, a w razie potrzeby żądania sporządzenia niezbędnych do kontroli kopii, odpisów lub wyciągów, w szczególności z dokumentów, w tym ich odwzorowania w postaci papierowej bądź elektronicznej, oraz zestawień lub obliczeń;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/158__art_22__pkt_3a" gd:GUID="a874b03d-e1ea-44e1-b54a-67e1af7b9099">
+                <nr>3a</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="afc7b20f-d5a7-4202-ad21-aa985712282f" fragment="5" gd:fragmentGUID="9aecc799-aa4e-491e-b278-f2a3020fb729"><odnosnik id-odnosnika="7" symbol="7" gd:GUID="692bc010-737b-4e8b-86b8-3e45eb761a5a"><p><zdanie nr="1" gd:zdGUID="b9eb4757-cafe-4d9e-8693-d711227a697b" fragment="1" gd:fragmentGUID="15584c62-1e1c-47c9-925a-c1866269d985">Dodany przez art. 2 pkt 5 lit. b ustawy, o której mowa w odnośniku 1.</zdanie></p></odnosnik> żądania sporządzenia niezbędnych do kontroli wyciągów, raportów, zestawień lub obliczeń z systemów informatycznych i teleinformatycznych lub elektronicznych baz danych;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/158__art_22__pkt_4" gd:GUID="78303057-e470-40e1-956f-5c10901bd644">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="afc7b20f-d5a7-4202-ad21-aa985712282f" fragment="6" gd:fragmentGUID="6bfc0e88-2a9b-4d7c-8acd-946e9470d005">przetwarzania danych osobowych w zakresie niezbędnym do realizacji celu kontroli;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/158__art_22__pkt_5" gd:GUID="f3703c98-019a-468f-99ad-27c424f22eb7">
+                <nr>5</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="afc7b20f-d5a7-4202-ad21-aa985712282f" fragment="7" gd:fragmentGUID="2c9d94b4-62d2-4729-9c6e-d2564d987893">żądania złożenia ustnych lub pisemnych wyjaśnień w sprawach dotyczących zakresu kontroli;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/158__art_22__pkt_6" gd:GUID="6b2b3df4-7012-468a-a149-314bbfa9da35">
+                <nr>6</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="afc7b20f-d5a7-4202-ad21-aa985712282f" fragment="8" gd:fragmentGUID="a4c8210f-81bc-4f70-9bff-3f316852905a">swobodnego stosowania środków dowodowych przewidzianych w ustawie.</zdanie>
+                </p>
+              </punkt>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2026/158__art_23" gd:GUID="aca70973-bb7d-40a4-a49a-3c192fecf5a6">
+            <nr>23</nr>
+            <ustep eId="DU/2026/158__art_23__ust_1" gd:GUID="d0093597-8bbb-4a59-985a-902b7ac0b087">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="da5b3652-0d3e-413c-91e7-9bbbce36c5ff" fragment="1" gd:fragmentGUID="14c69aa3-5e17-4e15-ab46-7a28e7c0831f">Kontroler ma obowiązek niezwłocznego poinformowania kierownika jednostki kontrolowanej o stwierdzeniu bezpośredniego zagrożenia życia lub zdrowia ludzkiego, lub możliwości powstania niepowetowanej szkody w mieniu, w celu zapobieżenia tym zagrożeniom.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/158__art_23__ust_2" gd:GUID="a56ed7cd-83f4-46ed-8294-097f7ed8533a">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="5015cb43-2b64-413d-b708-67bf73293af3" fragment="1" gd:fragmentGUID="95db6a33-001a-4188-82a2-74b155eda086">Kierownik jednostki kontrolowanej jest obowiązany do niezwłocznego podjęcia działań zapobiegających zagrożeniom oraz poinformowania o tym kontrolera.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/158__art_23__ust_3" gd:GUID="720d38ab-21d7-456d-8744-b1322eebd82d">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="8e393f0e-9865-46bc-a43a-f86d1a497f07" fragment="1" gd:fragmentGUID="fcaffc19-02b7-4a72-b6b2-14a4872c7168">Kontroler w przypadku powzięcia uzasadnionego podejrzenia, że kierownik jednostki kontrolowanej nie podjął działań zapobiegających zagrożeniom lub podjęte działania są niewystarczające, informuje o tym kierownika komórki do spraw kontroli.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/158__art_23__ust_4" gd:GUID="7c980d15-909e-4e13-adf1-94e1cc9373bf">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="9e0cbe00-d200-41df-a4b4-2e30e4301bd5" fragment="1" gd:fragmentGUID="d11e3723-20cf-45a5-a384-4961f2205307">Kierownik komórki do spraw kontroli niezwłocznie powiadamia o stwierdzonych zagrożeniach kierownika jednostki nadrzędnej nad jednostką kontrolowaną lub właściwy organ państwowy.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/158__art_24" gd:GUID="c5e7680a-db04-4adb-8ea0-f0158a47abab">
+            <nr>24</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="db56db22-6b5a-4913-aab4-f0047d37757a">
+              <p>
+                <zdanie nr="1" gd:zdGUID="d4538ae0-2a28-4ca1-b508-c0a05a5d4c41" fragment="1" gd:fragmentGUID="1ed58122-dfab-46f1-b1c0-5eae5ed1cfa0">Kierownik jednostki kontrolowanej ma obowiązek zapewnienia kontrolerowi warunków niezbędnych do sprawnego przeprowadzenia kontroli, w szczególności przez zapewnienie niezwłocznego przedstawiania żądanych dokumentów, terminowego udzielania ustnych i pisemnych wyjaśnień w sprawach objętych kontrolą, a także udostępnianie niezbędnych urządzeń technicznych i zapewnienie dostępu do Internetu oraz, w miarę możliwości, oddzielnego pomieszczenia z odpowiednim wyposażeniem.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2026/158__art_25" gd:GUID="5a2c9ba8-9e23-48aa-9046-4e76151221a8">
+            <nr>25</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="6ba02b5d-0f49-4349-a9ab-436b675b1099">
+              <p>
+                <zdanie nr="1" gd:zdGUID="f15ab2fa-2746-4a9e-98ed-14d2bc3f7d42" fragment="1" gd:fragmentGUID="86a79674-aa95-4dc9-b6a4-41f0a86f000f">Pracownik jednostki kontrolowanej ma obowiązek:</zdanie>
+              </p>
+              <punkt eId="DU/2026/158__art_25__pkt_1" gd:GUID="bc800adb-795d-4c7f-9d98-9c0bd9de2e1a">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="f15ab2fa-2746-4a9e-98ed-14d2bc3f7d42" fragment="2" gd:fragmentGUID="da53ff11-2a23-478f-a555-ec8420f6f966">niezwłocznego przedstawiania, na żądanie kontrolera, dokumentów, materiałów i informacji niezbędnych do przeprowadzenia kontroli;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/158__art_25__pkt_2" gd:GUID="246502f3-31ea-462a-bc52-5d705315a093">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="f15ab2fa-2746-4a9e-98ed-14d2bc3f7d42" fragment="3" gd:fragmentGUID="68d80eee-44de-4d00-8a7f-e2037b95e20c"><odnosnik id-odnosnika="8" symbol="8" gd:GUID="e71066c7-5b57-4d8e-a03d-436bf9936c74"><p><zdanie nr="1" gd:zdGUID="cb202126-76c8-42c9-9cf9-a69ef9327558" fragment="1" gd:fragmentGUID="22bf7b37-1ff2-45da-b50a-004786646ec9">W brzmieniu ustalonym przez art. 2 pkt 6 lit. a ustawy, o której mowa w odnośniku 1.</zdanie></p></odnosnik> sporządzania niezbędnych do przeprowadzenia kontroli kopii, odpisów lub wyciągów, w szczególności z dokumentów, w tym ich odwzorowania w postaci papierowej bądź elektronicznej, jak również zestawień i obliczeń sporządzonych na podstawie dokumentów;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/158__art_25__pkt_2a" gd:GUID="cf1f8e6a-1202-4a57-85a4-73b669819032">
+                <nr>2a</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="f15ab2fa-2746-4a9e-98ed-14d2bc3f7d42" fragment="4" gd:fragmentGUID="593bcadc-43ea-4755-a4aa-0dcfa26c0753"><odnosnik id-odnosnika="9" symbol="9" gd:GUID="3515f512-fc8b-4d81-9d0b-a24d792f1ba2"><p><zdanie nr="1" gd:zdGUID="7879e9cc-379c-4858-b61d-f4c5023e49f7" fragment="1" gd:fragmentGUID="2d5733c3-1a1b-483f-8618-5b9f4a51ae8e">Dodany przez art. 2 pkt 6 lit. b ustawy, o której mowa w odnośniku 1.</zdanie></p></odnosnik> sporządzania niezbędnych do przeprowadzenia kontroli wyciągów, raportów, zestawień lub obliczeń z systemów informatycznych i teleinformatycznych lub elektronicznych baz danych;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/158__art_25__pkt_3" gd:GUID="e07ccfd1-1e6f-4893-b4ff-0da774618008">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="f15ab2fa-2746-4a9e-98ed-14d2bc3f7d42" fragment="5" gd:fragmentGUID="a202c2d1-50fc-4ae6-8b3c-d2a1c48c723b">udzielenia kontrolerowi, w wyznaczonym przez niego terminie, ustnych lub pisemnych wyjaśnień.</zdanie>
+                </p>
+              </punkt>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2026/158__art_25a" gd:GUID="a4b04110-8e0f-47ba-84ee-198c4f547f46">
+            <nr>25a</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="a305a2bc-a698-49ab-b0bf-63b4a90fdbb6">
+              <p>
+                <zdanie nr="1" gd:zdGUID="a4264767-59d3-45a0-9e7d-02c28de9c9b2" fragment="1" gd:fragmentGUID="3e3d0c7f-48fe-4be9-b0a5-ab11dbf8bac1"><odnosnik id-odnosnika="10" symbol="10" gd:GUID="9848391a-7e16-44d9-a7d4-deac8bd21066"><p><zdanie nr="1" gd:zdGUID="fe9778eb-1b54-491d-a717-dae3b5e497ac" fragment="1" gd:fragmentGUID="d26b155d-757f-48cd-9a70-7d5bb5dbdf9a">Dodany przez art. 2 pkt 7 ustawy, o której mowa w odnośniku 1.</zdanie></p></odnosnik> Zgodność kopii, odpisów, wyciągów, raportów, zestawień lub obliczeń z oryginalnymi dokumentami i danymi zawartymi w systemach informatycznych i teleinformatycznych oraz elektronicznych bazach danych potwierdza kierownik jednostki kontrolowanej lub kierownik komórki organizacyjnej, w której dokumenty się znajdują lub która przetwarza te dane lub nimi zarządza.</zdanie>
+                <zdanie nr="2" gd:zdGUID="bfcc93ba-ebb0-421d-9581-94ce0f9bb8a1" fragment="1" gd:fragmentGUID="8a7d091c-d97a-4f45-93c1-72b82b91c9fb">Poświadczenie zgodności z oryginałem następuje przez opatrzenie kopii, odpisu, wyciągu, raportu, zestawienia lub obliczenia odpowiednio podpisem albo pieczęcią, o których mowa w art. 13 ust. 3.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2026/158__art_26" gd:GUID="a7d0b7cb-11e0-4733-9dea-5bf7c8cf1b35">
+            <nr>26</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="6bf7ded8-ebca-42b2-aba8-d65a123c9dd5">
+              <p>
+                <zdanie nr="1" gd:zdGUID="0cf129a7-fbfb-4c3e-9291-4ecaeecbe4a4" fragment="1" gd:fragmentGUID="976d93bd-b665-4e3b-b310-704422cf426f">Niewywiązywanie się przez pracownika jednostki kontrolowanej z obowiązków, które wynikają z art. 25, może stanowić przesłankę odpowiedzialności dyscyplinarnej lub porządkowej.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2026/158__art_27" gd:GUID="a45cc130-a519-49b1-8425-3c460fe7ce51">
+            <nr>27</nr>
+            <ustep eId="DU/2026/158__art_27__ust_1" gd:GUID="3f8c2967-95a9-4391-ba58-08edd21c9da4">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="68e13c74-6e4a-47ba-99c3-930238ab7e67" fragment="1" gd:fragmentGUID="8db69660-68be-487b-86bc-02b2b49072f5">Kontroler ustala stan faktyczny na podstawie dowodów zebranych podczas kontroli.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/158__art_27__ust_2" gd:GUID="4edc3f76-3c6f-4c71-8584-e82b5450c5ba">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="92de3319-d90f-4e22-a557-f68a3ec80e8a" fragment="1" gd:fragmentGUID="2e5200f5-3743-4894-a2b5-168c158f55bc">Dowodami są w szczególności dokumenty, rzeczy, oględziny, opinie biegłych, ustne lub pisemne wyjaśnienia lub oświadczenia.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/158__art_28" gd:GUID="7af797e4-1a3f-4dc5-9051-ff3f296f02d5">
+            <nr>28</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="6133940e-9089-48cb-8987-3d28580e2bdd">
+              <p>
+                <zdanie nr="1" gd:zdGUID="98d72672-81df-40f5-9985-404419c606fe" fragment="1" gd:fragmentGUID="09acd49e-ba3c-464b-a27a-6c7f709a2f52">W ramach prowadzonych czynności kontrolnych kontroler może żądać udzielenia mu, w wyznaczonym przez niego terminie, ustnych lub pisemnych wyjaśnień od pracownika lub byłego pracownika.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2026/158__art_29" gd:GUID="0318aecf-3187-42aa-ae8d-d9523e6bb631">
+            <nr>29</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="634bcc07-ec20-4171-8d87-835cb24222d2">
+              <p>
+                <zdanie nr="1" gd:zdGUID="db8805af-205a-460a-91b8-c43255351839" fragment="1" gd:fragmentGUID="e29ccdf0-d07e-4ced-8edb-f4d36803f7db">Odmowa udzielenia wyjaśnień może nastąpić w przypadku, gdy dotyczą one faktów lub okoliczności, których ujawnienie mogłoby narazić na odpowiedzialność karną lub majątkową osobę wezwaną do złożenia wyjaśnień lub osobę jej bliską w rozumieniu art. 19 ust. 2.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2026/158__art_30" gd:GUID="9120f359-6917-481f-af78-c8c504cc23d3">
+            <nr>30</nr>
+            <ustep eId="DU/2026/158__art_30__ust_1" gd:GUID="479492de-4fc6-4f51-b68b-5fba1bb377b7">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="2a1cae6c-e30c-4628-bcc6-ee59cb755cd2" fragment="1" gd:fragmentGUID="2bdef28b-11d6-49b4-8847-9e5b1ac4247b">Każdy ma prawo złożyć oświadczenie dotyczące zakresu kontroli.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/158__art_30__ust_2" gd:GUID="800c344e-0c5f-45ec-9276-c9a65da46bcc">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="34446d25-b202-4dcd-bf9b-422b6c982c6c" fragment="1" gd:fragmentGUID="87494eca-049b-46f5-8699-ab927f3cd6a7">Kontroler nie ma prawa odmówić przyjęcia oświadczenia, jeżeli ma ono związek z zakresem kontroli.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/158__art_31" gd:GUID="4e794e78-548e-4482-8aea-aca3cce9ba29">
+            <nr>31</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="d1317de3-21ef-4865-be9d-bca8cac988c2">
+              <p>
+                <zdanie nr="1" gd:zdGUID="893b2558-cdf1-4e6d-8daf-85ef19ae05bf" fragment="1" gd:fragmentGUID="42f32cae-f512-4964-bc5b-6af9d5b87e71">Oględziny przeprowadza się w obecności pracownika jednostki kontrolowanej.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2026/158__art_32" gd:GUID="e58fdfaa-4ded-4c37-badb-070e0b3076de">
+            <nr>32</nr>
+            <ustep eId="DU/2026/158__art_32__ust_1" gd:GUID="9cb0c939-40f6-453f-999e-eb3b13fa8e5f">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="9ac4155f-7ef8-4424-8598-c84fe1881daa" fragment="1" gd:fragmentGUID="0db63541-4fd3-4d31-bde6-54624c7fdf4e">Z przebiegu oględzin oraz z przyjęcia ustnych wyjaśnień lub oświadczeń sporządza się protokół.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/158__art_32__ust_2" gd:GUID="8545bf89-7b46-497d-aded-7dd31ae7dfef">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="716639d0-901b-4399-89c1-2b3fd1fc8139" fragment="1" gd:fragmentGUID="3f31937f-41f3-4e8d-87fd-37a622a2f02e">Protokół obejmuje:</zdanie>
+              </p>
+              <punkt eId="DU/2026/158__art_32__ust_2__pkt_1" gd:GUID="c04caacb-7090-4845-b06d-4d536255cfab">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="716639d0-901b-4399-89c1-2b3fd1fc8139" fragment="2" gd:fragmentGUID="d686aee0-5a60-42d5-9595-8becddcdb978">oznaczenie czynności, czasu i miejsca jej przeprowadzenia;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/158__art_32__ust_2__pkt_2" gd:GUID="029a539a-fc73-4a2d-bf3a-0768f3cffda2">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="716639d0-901b-4399-89c1-2b3fd1fc8139" fragment="3" gd:fragmentGUID="55820b60-8f4c-4cbc-a6b5-18e053e9278d">imię, nazwisko i stanowisko służbowe kontrolera oraz osoby uczestniczącej w czynnościach;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/158__art_32__ust_2__pkt_3" gd:GUID="7c1aa6ba-9d02-44be-8ce2-eb102bf69b48">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="716639d0-901b-4399-89c1-2b3fd1fc8139" fragment="4" gd:fragmentGUID="7765028b-8e47-495d-ae91-dfdb26d40ad8">opis przebiegu czynności lub treść wyjaśnień lub oświadczeń;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/158__art_32__ust_2__pkt_4" gd:GUID="69ad058d-7776-4dea-86ec-043a68c7ebc5">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="716639d0-901b-4399-89c1-2b3fd1fc8139" fragment="5" gd:fragmentGUID="31f35298-77d3-433f-a9fe-7cfbb2eaf245">podpisy kontrolera i osoby uczestniczącej w czynnościach.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2026/158__art_32__ust_3" gd:GUID="edace28c-5208-437b-92e4-5b4f31d877e3">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="bbaecaa7-f7cb-4780-bdd0-74869dcb571c" fragment="1" gd:fragmentGUID="2c0f7cc1-3464-4b44-9e9d-253721b9ca40">Z czynności kontrolnych niewymienionych w ust. 1, które mają istotne znaczenie dla ustaleń kontroli, sporządza się notatkę służbową podpisaną przez kontrolera.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/158__art_33" gd:GUID="b8027496-945b-4f5e-9065-e8d96fb6f15c">
+            <nr>33</nr>
+            <ustep eId="DU/2026/158__art_33__ust_1" gd:GUID="250ab179-f6ed-4df1-b1e4-3105b6d9bd3f">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="c62c9006-3288-4482-b014-cc44403b0318" fragment="1" gd:fragmentGUID="8eba1a8c-f7dd-415d-9d80-4c3a4ae2aa50">Kierownik jednostki kontrolującej może, z urzędu lub na wniosek kontrolera, powołać biegłego, jeżeli w toku kontroli konieczne jest przeprowadzenie specjalistycznych badań lub zbadanie określonych zagadnień wymagających szczególnych umiejętności lub wiedzy specjalistycznej.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/158__art_33__ust_2" gd:GUID="dd8b72f3-8fb5-491e-8eb0-ae9807d63e34">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="a69bdc95-77cd-441e-8cf8-17b5845d2628" fragment="1" gd:fragmentGUID="eda53844-2fa3-461c-964a-5bac193cf48e">Kierownik jednostki kontrolującej zawiera z biegłym umowę, która określa przedmiot, termin wydania opinii oraz zakres niezbędnych badań, a także należne wynagrodzenie.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/158__art_33__ust_3" gd:GUID="06b70125-a70e-404e-8b4e-4fa2784eed98">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="7b9eaa07-0c14-4e9d-ace0-a9dc2b9bf09d" fragment="1" gd:fragmentGUID="4e164eac-360e-4662-9398-dc16d139befb">W razie potrzeby przeprowadzenia przez biegłego czynności niezbędnych do wydania opinii na terenie jednostki kontrolowanej kierownik jednostki kontrolującej wystawia upoważnienie zawierające:</zdanie>
+              </p>
+              <punkt eId="DU/2026/158__art_33__ust_3__pkt_1" gd:GUID="6836f46d-f669-4d62-8773-87a5d19c196a">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="7b9eaa07-0c14-4e9d-ace0-a9dc2b9bf09d" fragment="2" gd:fragmentGUID="79fde268-e6b4-4e5d-9cbf-7e484d816be5">oznaczenie wydającego upoważnienie oraz numer i datę wystawienia;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/158__art_33__ust_3__pkt_2" gd:GUID="509987a9-2744-46c3-9a3b-f068f46855de">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="7b9eaa07-0c14-4e9d-ace0-a9dc2b9bf09d" fragment="3" gd:fragmentGUID="94d31e5d-928b-44dd-b505-60b75bef321f">imię i nazwisko biegłego;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/158__art_33__ust_3__pkt_3" gd:GUID="61678cc2-ca37-48e7-90c8-2dacdc4b9645">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="7b9eaa07-0c14-4e9d-ace0-a9dc2b9bf09d" fragment="4" gd:fragmentGUID="11d592f6-de2e-463e-b2d7-584e76f9204f">oznaczenie kontroli, której ma dotyczyć wydana opinia;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/158__art_33__ust_3__pkt_4" gd:GUID="d46e696a-bc38-471b-8a9c-51d0119e7e25">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="7b9eaa07-0c14-4e9d-ace0-a9dc2b9bf09d" fragment="5" gd:fragmentGUID="a8debc62-1c07-4031-995b-31f20336bffe">okres ważności upoważnienia;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/158__art_33__ust_3__pkt_5" gd:GUID="ba5e78f4-8817-4cb1-be73-10100e681d93">
+                <nr>5</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="7b9eaa07-0c14-4e9d-ace0-a9dc2b9bf09d" fragment="6" gd:fragmentGUID="133eb301-7580-4564-8b14-46e1ef3d2c9a">podpis wydającego upoważnienie.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2026/158__art_33__ust_4" gd:GUID="ece4e7e7-bb38-47e1-83fb-242367ceb71a">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="8701378d-492f-4c6d-be30-f08ed206e625" fragment="1" gd:fragmentGUID="d9ae7bf2-4e6f-4d8f-b558-634bed92e303">Biegłym nie może być osoba, w stosunku do której istnieją okoliczności mogące mieć wpływ na jej bezstronność, w szczególności gdy kontrola jest prowadzona w jednostce zatrudniającej tę osobę albo obejmuje zadanie, którego ta osoba jest lub była wykonawcą.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/158__art_33__ust_5" gd:GUID="cdd83096-5138-4c17-a940-4736551164c4">
+              <nr>5</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="30a41e92-54ba-469d-ad8a-c91a7efcb4a7" fragment="1" gd:fragmentGUID="b3dbc09c-941b-4c8a-96f6-299d38151499">Kierownik jednostki kontrolowanej może żądać wyłączenia biegłego z przyczyn, z jakich można żądać wyłączenia kontrolera.</zdanie>
+                <zdanie nr="2" gd:zdGUID="ca737936-1c9e-4ce0-a57e-dbeb1fcb289f" fragment="1" gd:fragmentGUID="8e2b95ac-eb62-4d3e-8883-185ef0e70376">Przepis art. 19 ust. 4–7 stosuje się odpowiednio.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/158__art_34" gd:GUID="226ea649-dca1-4b8d-9fbd-82671ce3475c">
+            <nr>34</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="8c5215c9-9d5a-43a2-b673-7df4ed77a1d0">
+              <p>
+                <zdanie nr="1" gd:zdGUID="1afc909c-3bb2-4f17-9d4c-563ced95e193" fragment="1" gd:fragmentGUID="b796c861-ce23-4d4d-86f7-271281193c22"><odnosnik id-odnosnika="11" symbol="11" gd:GUID="b1ec6e5f-9d2d-4b53-8439-1e15afc09de9"><p><zdanie nr="1" gd:zdGUID="aea2cf45-aac6-4003-98fa-c036733693d8" fragment="1" gd:fragmentGUID="216e219a-ca37-4b4d-842a-b992cca421eb">Ze zmianą wprowadzoną przez art. 2 pkt 8 ustawy, o której mowa w odnośniku 1.</zdanie></p></odnosnik> Kontroler może wystąpić pisemnie do innych organów i jednostek administracji rządowej o udostępnienie dokumentów, udzielenie informacji lub wyjaśnień niezbędnych do przeprowadzenia kontroli.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2026/158__art_35" gd:GUID="f9699129-1a33-4310-9f83-f1761c3c777c">
+            <nr>35</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="4c711547-4320-4904-989d-0fed71602cfb">
+              <p>
+                <zdanie nr="1" gd:zdGUID="fa54aba0-66d5-4a5a-a5ef-d9b5efcfb581" fragment="1" gd:fragmentGUID="e9a0381f-1d1a-40dc-989e-b18d4d4b31db">Po zakończeniu czynności kontrolnych kontroler, za zgodą kierownika komórki do spraw kontroli, może zwrócić się do kierownika jednostki kontrolowanej o złożenie w wyznaczonym terminie dodatkowych pisemnych wyjaśnień dotyczących zakresu kontroli, niezbędnych do sporządzenia wystąpienia pokontrolnego.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2026/158__art_36" gd:GUID="be421c27-9cbd-4559-8233-350a3d27b956">
+            <nr>36</nr>
+            <ustep eId="DU/2026/158__art_36__ust_1" gd:GUID="69e49fef-6ce7-467c-9e3f-c2e0fdb3ca65">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="a4abbfe6-00d8-4742-9858-b4e85c915033" fragment="1" gd:fragmentGUID="a5c7880c-cbc1-40a6-b397-9b225f0694e5">Ustalenia dokonane w trakcie kontroli oraz oceny opisuje się w projekcie wystąpienia pokontrolnego.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/158__art_36__ust_2" gd:GUID="fe5ad115-2d65-464d-9b2c-78abac6d5910">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="0467eb51-90b8-445f-958c-39220e1b15e6" fragment="1" gd:fragmentGUID="35c92b47-1750-48a7-926b-e4a9d243c6cf">Projekt wystąpienia pokontrolnego zawiera w szczególności:</zdanie>
+              </p>
+              <punkt eId="DU/2026/158__art_36__ust_2__pkt_1" gd:GUID="df4830dc-d6a0-4a26-ae36-17e1d3db0404">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="0467eb51-90b8-445f-958c-39220e1b15e6" fragment="2" gd:fragmentGUID="1432c449-6404-4624-8883-f20d3a436053">nazwę i adres jednostki kontrolowanej;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/158__art_36__ust_2__pkt_2" gd:GUID="06c64a52-7cdd-4efc-ab27-aaa25b0e41ff">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="0467eb51-90b8-445f-958c-39220e1b15e6" fragment="3" gd:fragmentGUID="426c014e-099d-4ac2-8f20-89fd2b193b11">imię, nazwisko i stanowisko służbowe kontrolera;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/158__art_36__ust_2__pkt_3" gd:GUID="2148f3ad-4a6f-462c-a9d2-00ea82bf66ad">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="0467eb51-90b8-445f-958c-39220e1b15e6" fragment="4" gd:fragmentGUID="43e1aac9-7e33-431e-bb29-7e42f5fa96ea">datę rozpoczęcia i zakończenia czynności kontrolnych;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/158__art_36__ust_2__pkt_4" gd:GUID="be67e218-dcde-4dba-a884-8cfeab7c044c">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="0467eb51-90b8-445f-958c-39220e1b15e6" fragment="5" gd:fragmentGUID="74cae61b-7829-4e69-846a-d928fbc35212">zakres kontroli;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/158__art_36__ust_2__pkt_5" gd:GUID="cb03ca1b-8ef0-4a87-8f35-9df23b92d513">
+                <nr>5</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="0467eb51-90b8-445f-958c-39220e1b15e6" fragment="6" gd:fragmentGUID="67a28a4f-949d-4f70-b9c7-6aea1d2790c7">ocenę skontrolowanej działalności, ze wskazaniem ustaleń, na których została oparta;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/158__art_36__ust_2__pkt_6" gd:GUID="fe31c78d-4d1e-480b-9e16-976b2b3755bd">
+                <nr>6</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="0467eb51-90b8-445f-958c-39220e1b15e6" fragment="7" gd:fragmentGUID="cfec4820-f2ea-48cb-bdd2-197d3438e6c9">zakres, przyczyny i skutki stwierdzonych nieprawidłowości.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/158__art_37" gd:GUID="3dcf0384-33be-4f49-91ee-813de16441bd">
+            <nr>37</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="1b551ad3-88e4-45b1-83dc-3c92c1c9f1cf">
+              <p>
+                <zdanie nr="1" gd:zdGUID="2ca49ac1-b084-41e8-8bf5-08a5a0e37f35" fragment="1" gd:fragmentGUID="b081299a-9327-434a-9b5a-f41f2dfd6054">Projekt wystąpienia pokontrolnego podpisują kontroler i kierownik komórki do spraw kontroli.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2026/158__art_38" gd:GUID="890491c8-4876-480d-96fe-01b48938d7c0">
+            <nr>38</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="43f97ade-e2bb-4bc2-9eca-504eba55a514">
+              <p>
+                <zdanie nr="1" gd:zdGUID="dca206fa-2ac7-42c6-832d-9f2ae74dea6d" fragment="1" gd:fragmentGUID="f70f0178-76ae-4670-a690-39e638f40d00">Kierownik jednostki kontrolującej przekazuje kierownikowi jednostki kontrolowanej projekt wystąpienia pokontrolnego wraz z pouczeniem o prawie do zgłoszenia umotywowanych zastrzeżeń.</zdanie>
+                <zdanie nr="2" gd:zdGUID="b1636586-c4b1-41df-9323-594afce80d9c" fragment="1" gd:fragmentGUID="fe1b7d42-d975-42be-a7d5-e325387d3125">Przekazanie projektu wystąpienia pokontrolnego następuje z zachowaniem przepisów o tajemnicy prawnie chronionej.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2026/158__art_39" gd:GUID="7cf06688-bfc1-40c1-aee6-7c01ba65eae2">
+            <nr>39</nr>
+            <ustep eId="DU/2026/158__art_39__ust_1" gd:GUID="1f0b9378-75db-48ac-ac85-dd5c72f8b7e6">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="c6204014-0544-4c01-819e-0099e9467485" fragment="1" gd:fragmentGUID="cbf3be0c-a565-4d09-a3eb-2dc9f5fb0424">Jeżeli w projekcie wystąpienia pokontrolnego wskazane zostaną nieprawidłowości, za które odpowiedzialność ponosi były kierownik jednostki kontrolowanej, kierownik komórki do spraw kontroli przekazuje kopię projektu wystąpienia pokontrolnego byłemu kierownikowi, jeżeli jednostka kontrolowana dysponuje jego adresem, na który wystąpienie takie można przesłać.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/158__art_39__ust_2" gd:GUID="bb486067-12e7-4833-aea4-e0dcf45a593c">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="07830b1e-a489-45e2-8749-cdc3fbaf82a5" fragment="1" gd:fragmentGUID="a8e5817a-4c8e-4659-978b-015454350cdf">Były kierownik jednostki kontrolowanej może, w terminie wyznaczonym przez kierownika komórki do spraw kontroli, złożyć pisemne oświadczenie odnoszące się do stwierdzonych nieprawidłowości, za które ponosi odpowiedzialność w okresie objętym kontrolą.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/158__art_39__ust_3" gd:GUID="da5f08be-7b79-4ae0-8b9c-e05eb9261d14">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="28225ed4-8734-4a5e-8711-e6917fa2a8bc" fragment="1" gd:fragmentGUID="e5126d3c-41cb-4376-a2ed-3d6bff38d17a">Przekazanie projektu wystąpienia pokontrolnego byłemu kierownikowi następuje z zachowaniem przepisów o tajemnicy prawnie chronionej.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/158__art_39__ust_4" gd:GUID="0f4801e5-7cc1-418c-b6e4-bc27ba4efdbb">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="b0a3a384-67e0-4a75-a686-2f57f9b63fea" fragment="1" gd:fragmentGUID="52dab978-688b-4dd4-b3c5-4834fcc15a33">Oświadczenie byłego kierownika jednostki kontrolowanej włącza się do akt kontroli, a jeżeli kierownik jednostki kontrolującej uzna to za zasadne, może stanowić załącznik do wystąpienia pokontrolnego.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/158__art_39__ust_5" gd:GUID="f9dbccac-9f6b-4095-9300-43c10e0aa2a2">
+              <nr>5</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="685cf6c8-fe9f-4efa-92f0-4bf7835a031f" fragment="1" gd:fragmentGUID="f7a8c05c-7b3a-4344-bd85-437ec44dfe96">Przekazanie projektu wystąpienia pokontrolnego byłemu kierownikowi jednostki kontrolowanej nie wstrzymuje procedury wnoszenia zastrzeżeń przez kierownika jednostki kontrolowanej i przekazania wystąpienia pokontrolnego.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/158__art_40" gd:GUID="8e4c18e8-fe0b-46a3-b381-8a794e79bf16">
+            <nr>40</nr>
+            <ustep eId="DU/2026/158__art_40__ust_1" gd:GUID="9ec5cb74-ed81-454f-b0ea-b189c94b04f0">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="a4832ad2-c723-4ce2-824b-4c5d42972efb" fragment="1" gd:fragmentGUID="8abfc186-cb3d-4865-9ed7-676cc08c0030">Kierownik jednostki kontrolowanej ma prawo do zgłoszenia, w terminie 7 dni roboczych od dnia otrzymania projektu, umotywowanych pisemnych zastrzeżeń do projektu wystąpienia pokontrolnego.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/158__art_40__ust_2" gd:GUID="508901d7-d9e6-44d8-b996-ff3942f15a71">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="2aff2957-1a3b-4e91-8288-68c04b1548bd" fragment="1" gd:fragmentGUID="6df500ca-3209-4d51-a013-aa589e9ab64f">Na wniosek kierownika jednostki kontrolowanej, złożony przed upływem terminu zgłoszenia zastrzeżeń, termin ten może być przedłużony na czas oznaczony przez kierownika jednostki kontrolującej.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/158__art_41" gd:GUID="f23cdd12-243f-4f32-affb-8cc412c438b0">
+            <nr>41</nr>
+            <ustep eId="DU/2026/158__art_41__ust_1" gd:GUID="566b5b5a-7579-4e93-ba5d-76fb27fa28cc">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="00f2e2e8-af06-43c9-a413-17c77ad9a1f2" fragment="1" gd:fragmentGUID="fbdc5867-de28-48bc-aa4f-dbee65da73ba">Kierownik jednostki kontrolującej ma prawo sprostowania w projekcie wystąpienia pokontrolnego, w każdym czasie, z urzędu lub na wniosek kierownika jednostki kontrolowanej, błędów pisarskich lub innych oczywistych omyłek.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/158__art_41__ust_2" gd:GUID="a1d57bc9-5a74-4aab-ab58-3e228fefdd98">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="cc46b8de-4ee9-4fb6-ad06-217ebed119e4" fragment="1" gd:fragmentGUID="55438bf9-6652-4b20-a25c-d5057cfbc8f9">Projekt wystąpienia pokontrolnego, w którym dokonano sprostowania, przekazuje się kierownikowi jednostki kontrolowanej wraz z informacją o dokonanych zmianach.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/158__art_41__ust_3" gd:GUID="5475002f-a757-4f72-921d-6d4cd7fc67d2">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="96aacc41-2100-4fc4-b570-ad41f156546f" fragment="1" gd:fragmentGUID="616b599f-c23b-470b-b251-51297ef2cadb">Sprostowanie nie ma wpływu na bieg terminu zgłoszenia zastrzeżeń do projektu wystąpienia pokontrolnego.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/158__art_42" gd:GUID="249eadb0-481b-4e81-b35c-75d715543b68">
+            <nr>42</nr>
+            <ustep eId="DU/2026/158__art_42__ust_1" gd:GUID="b7ade92d-ec2e-42c7-9a8b-4c18fbbd6069">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="d3028555-7149-446b-a141-341369957a7b" fragment="1" gd:fragmentGUID="83f959e1-f9be-40f1-a45f-c580d2ca06e9">Zastrzeżenia do projektu wystąpienia pokontrolnego rozpatruje kierownik komórki do spraw kontroli.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/158__art_42__ust_2" gd:GUID="d5beef63-a5a5-468c-9716-e4938131d397">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="165e0bb3-f081-43f7-bc16-73c2dcec22a6" fragment="1" gd:fragmentGUID="64377236-5844-4b1e-8ef3-d4de351992e2">Kierownik komórki do spraw kontroli:</zdanie>
+              </p>
+              <punkt eId="DU/2026/158__art_42__ust_2__pkt_1" gd:GUID="cec69471-83e8-4e7e-a67d-145c76a836be">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="165e0bb3-f081-43f7-bc16-73c2dcec22a6" fragment="2" gd:fragmentGUID="db3bc18c-cb90-4874-be8f-310c124ded10">odrzuca zastrzeżenia wniesione przez osobę nieuprawnioną lub wniesione po upływie terminu i zawiadamia o tym zgłaszającego zastrzeżenia, informując na piśmie o przyczynach, albo</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/158__art_42__ust_2__pkt_2" gd:GUID="3c97844b-1c87-469c-b891-5746987caefa">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="165e0bb3-f081-43f7-bc16-73c2dcec22a6" fragment="3" gd:fragmentGUID="909c535a-1c37-4bbe-bd6f-af555db65e89">uwzględnia zastrzeżenia w całości lub w części albo je oddala.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2026/158__art_42__ust_3" gd:GUID="95092d4b-6af4-400c-8076-9def41fd3fea">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="9574c76d-dc28-4de9-8379-b4543a52106e" fragment="1" gd:fragmentGUID="1f10923d-aa2b-49c9-b14f-3cadb8466241">Kierownik jednostki kontrolowanej może w każdym czasie wycofać złożone zastrzeżenia.</zdanie>
+                <zdanie nr="2" gd:zdGUID="9f73f16b-b6bc-40dd-83c8-b0ebd897c3f7" fragment="1" gd:fragmentGUID="9dba1698-c4b5-4dba-8c2f-be3eb266dc28">Wycofane zastrzeżenia pozostawia się bez rozpatrzenia.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/158__art_42__ust_4" gd:GUID="dd78dc70-e6d1-4bba-8531-df9fe6f2ed74">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="3ae0af4b-a92b-48ed-981a-966ecb8a47af" fragment="1" gd:fragmentGUID="599b9e00-91d0-4fbf-91fd-8da472585949"><odnosnik id-odnosnika="12" symbol="12" gd:GUID="5c702731-c7e0-4b4f-a3fc-d7e7ae31d4ba"><p><zdanie nr="1" gd:zdGUID="c43a4c27-53c1-416e-b148-b86dde22b9a8" fragment="1" gd:fragmentGUID="010cafdf-393b-446e-a57c-27fa43f4ff04">Ze zmianą wprowadzoną przez art. 2 pkt 9 ustawy, o której mowa w odnośniku 1.</zdanie></p></odnosnik> Kierownikowi jednostki kontrolowanej, w terminie 5 dni roboczych od dnia otrzymania zawiadomienia o odrzuceniu zastrzeżeń, przysługuje prawo do wniesienia pisemnego odwołania do kierownika jednostki kontrolującej.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/158__art_42__ust_5" gd:GUID="0ee4b0eb-9323-40c8-8633-ecd2904d15ce">
+              <nr>5</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="70f16cea-1c8a-470c-9d2f-353c175b607f" fragment="1" gd:fragmentGUID="3ccb5b42-86d8-4821-899f-923e02c452b5">Kierownik jednostki kontrolującej rozpatruje odwołanie i o swoim rozstrzygnięciu informuje na piśmie kierownika jednostki kontrolowanej.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/158__art_43" gd:GUID="ac4af127-3e38-421a-a1ee-660ba8774e37">
+            <nr>43</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="74e8621c-b2ba-4108-aecc-675c12f87ee2">
+              <p>
+                <zdanie nr="1" gd:zdGUID="5da3d576-e8d3-4d1b-a6eb-8f86cd8fc220" fragment="1" gd:fragmentGUID="96c2e8e7-a408-4695-bf3a-c8fa344c339d">Jeżeli w trakcie rozpatrywania zastrzeżeń istnieje konieczność przeprowadzenia dodatkowych czynności kontrolnych, kontroler przeprowadza te czynności na podstawie dotychczasowego upoważnienia lub, jeżeli to konieczne, nowego upoważnienia.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2026/158__art_44" gd:GUID="7e0e6d8a-7058-4226-aafb-7e43c18ceac2">
+            <nr>44</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="8e121db8-dbaf-424c-beb5-93df71888e38">
+              <p>
+                <zdanie nr="1" gd:zdGUID="e5e43129-bb15-4b99-8efe-0fb11059afd5" fragment="1" gd:fragmentGUID="faf2b7f6-cace-40ce-89d8-6a947f171e54">W trakcie rozpatrywania zastrzeżeń kierownik komórki do spraw kontroli ma prawo żądać przedstawienia dokumentów lub złożenia pisemnych wyjaśnień przez pracowników jednostki kontrolowanej.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2026/158__art_45" gd:GUID="01024d7d-496c-47be-adeb-caabcc520520">
+            <nr>45</nr>
+            <ustep eId="DU/2026/158__art_45__ust_1" gd:GUID="5e1f8c1d-072a-4a3b-bd70-ac080c932728">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="b0b6a2ff-4cd1-450e-91aa-56c0df4bbe66" fragment="1" gd:fragmentGUID="49ab3339-0d46-4478-abec-00d35c84d71b">Kierownik komórki do spraw kontroli, po rozpatrzeniu zastrzeżeń, sporządza stanowisko wobec wniesionych zastrzeżeń, wraz z uzasadnieniem.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/158__art_45__ust_2" gd:GUID="a243fffd-784d-452e-aa87-bb702f648ef2">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="43762a85-7ac6-462b-9a07-74a5c8138e2e" fragment="1" gd:fragmentGUID="f4d810a4-7eeb-4fc2-8b5c-4fe86389813b">Kierownik komórki do spraw kontroli przekazuje stanowisko wobec oddalonych zastrzeżeń kierownikowi jednostki kontrolowanej.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/158__art_46" gd:GUID="7f84cde0-1941-4467-a5d1-f7f8557ab82f">
+            <nr>46</nr>
+            <ustep eId="DU/2026/158__art_46__ust_1" gd:GUID="300b77fb-5a80-4584-b1ee-5503b5ba933d">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="0b3ea3b1-9500-4e68-a42e-22bd5a6a29e6" fragment="1" gd:fragmentGUID="deaca7d3-7cdd-4e49-a2ef-2c92aa2af6d3">W przypadku niezgłoszenia zastrzeżeń albo nieuwzględnienia wszystkich zastrzeżeń sporządza się wystąpienie pokontrolne obejmujące treść projektu wystąpienia pokontrolnego.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/158__art_46__ust_2" gd:GUID="916d1bee-4de0-4964-8c71-8ae45af30c10">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="48d91217-0510-4e4f-8fa1-eed3409d1a9c" fragment="1" gd:fragmentGUID="89df94c1-2a2e-4696-b0c2-9d018958b6a0">W przypadku uwzględnienia zastrzeżeń wystąpienie pokontrolne sporządza się na podstawie projektu wystąpienia pokontrolnego oraz stanowiska kierownika komórki do spraw kontroli wobec oddalonych zastrzeżeń.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/158__art_46__ust_3" gd:GUID="a9798293-56e8-40a0-a589-6643598b032c">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="bb8b8ad8-9188-4c11-a42f-e9af866ea12e" fragment="1" gd:fragmentGUID="a1fff26f-5eb9-41ca-981f-c9c44ac3e7d0">Wystąpienie pokontrolne w razie potrzeby uzupełnia się o:</zdanie>
+              </p>
+              <punkt eId="DU/2026/158__art_46__ust_3__pkt_1" gd:GUID="1a6b8bf7-411f-4e8d-9c7b-e0f8b5e94165">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="bb8b8ad8-9188-4c11-a42f-e9af866ea12e" fragment="2" gd:fragmentGUID="96fd00f3-c769-44c2-8770-c08757bd96cc">zalecenia lub wnioski dotyczące usunięcia nieprawidłowości lub usprawnienia funkcjonowania jednostki kontrolowanej;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/158__art_46__ust_3__pkt_2" gd:GUID="ecc8dda7-c2c4-4df2-a29d-c7e9b3a0ba5e">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="bb8b8ad8-9188-4c11-a42f-e9af866ea12e" fragment="3" gd:fragmentGUID="12b03aee-aa1d-45c5-8d96-aa0608c32d4c">ocenę wskazującą na niezasadność zajmowania stanowiska lub pełnienia funkcji przez osobę odpowiedzialną za stwierdzone nieprawidłowości;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/158__art_46__ust_3__pkt_3" gd:GUID="534bae9e-32cf-4ba8-b160-4bceb326b680">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="bb8b8ad8-9188-4c11-a42f-e9af866ea12e" fragment="4" gd:fragmentGUID="9707a17b-81c1-4236-87f8-a9e8e722fbe8">termin złożenia informacji o wykonaniu zaleceń lub wykorzystaniu wniosków, a także o podjętych działaniach lub przyczynach ich niepodjęcia.</zdanie>
+                  <zdanie nr="2" gd:zdGUID="97b065cd-c89a-45e8-a73c-72d503427eed" fragment="1" gd:fragmentGUID="38b5c8eb-3700-427e-905a-62c72d81ab2f">Termin wyznacza się, uwzględniając charakter zaleceń lub wniosków.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/158__art_47" gd:GUID="e2fd090b-157a-4ae1-ad2d-23b67c3d5f69">
+            <nr>47</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="663a713c-4116-4244-a1e3-a873b3bcdbd9">
+              <p>
+                <zdanie nr="1" gd:zdGUID="8e11e5ac-b3f7-4719-999f-6a13b4016998" fragment="1" gd:fragmentGUID="f63ed9ed-583f-4ae7-85a1-13b501ed4f3c">Wystąpienie pokontrolne podpisuje kierownik jednostki kontrolującej i przekazuje kierownikowi jednostki kontrolowanej.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2026/158__art_48" gd:GUID="7c29b3bc-6a10-4116-969a-6890c8f689e8">
+            <nr>48</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="de0e7741-2188-41b0-8af4-16126fbba2be">
+              <p>
+                <zdanie nr="1" gd:zdGUID="cdcfb70f-71f8-4212-b3dc-01ac6c06dbc4" fragment="1" gd:fragmentGUID="90efe8ee-ae0a-446e-a9aa-88cf67a90f8e">Od wystąpienia pokontrolnego nie przysługują środki odwoławcze.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2026/158__art_49" gd:GUID="8ff674f7-640a-4cac-9121-17ae829cfc6a">
+            <nr>49</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="9c2858a8-8b92-424a-81b6-f3b2b9115302">
+              <p>
+                <zdanie nr="1" gd:zdGUID="36f6cb02-d566-4b99-903b-abd0b637a051" fragment="1" gd:fragmentGUID="f6aa6d1b-67c2-485e-b003-2965421b1fc6"><odnosnik id-odnosnika="13" symbol="13" gd:GUID="3e048477-684f-4167-9951-cff157dba233"><p><zdanie nr="1" gd:zdGUID="c2186e23-0c6b-41d8-b59c-078d80d1ac1d" fragment="1" gd:fragmentGUID="24cedfcf-11bb-4289-9a46-86ac5d63049e">Ze zmianą wprowadzoną przez art. 2 pkt 10 ustawy, o której mowa w odnośniku 1.</zdanie></p></odnosnik> Kierownik jednostki kontrolowanej, w wyznaczonym terminie, informuje pisemnie kierownika jednostki kontrolującej o sposobie wykonania zaleceń, wykorzystaniu wniosków lub przyczynach ich niewykorzystania albo o innym sposobie usunięcia stwierdzonych nieprawidłowości.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2026/158__art_50" gd:GUID="7e38bc9d-3fb5-483c-afa9-21ba3cafe7b7">
+            <nr>50</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="8ab0e62b-1a0f-4a71-9bdf-5a8bccc03e3c">
+              <p>
+                <zdanie nr="1" gd:zdGUID="43f8a524-8e25-42af-9ee8-0de4bd1143ec" fragment="1" gd:fragmentGUID="42ce9288-ac5c-4feb-8adf-408dc84ec80d">Kierownik jednostki kontrolującej może odstąpić w każdym czasie od dalszego przeprowadzania czynności kontrolnych, informując na piśmie kierownika jednostki kontrolowanej o odstąpieniu od kontroli.</zdanie>
+                <zdanie nr="2" gd:zdGUID="792bdfb7-2abd-447f-9f48-1c18f8927c08" fragment="1" gd:fragmentGUID="5345c399-e301-4438-8b48-e4898979fcb6">W takim przypadku nie sporządza się wystąpienia pokontrolnego.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+        </oddzial-n>
+      </rozdzial>
+      <rozdzial eId="DU/2026/158__rozdz_3" gd:GUID="d0b195af-3a65-4b7b-9af8-a643c3ded26d">
+        <naglowek-rozdzialu>
+          <nr>3</nr>
+          <p>Kontrola w trybie uproszczonym</p>
+        </naglowek-rozdzialu>
+        <oddzial-n brak-eid="jednostka-nieoznaczona" gd:GUID="4c50fbea-ca2f-4032-aa3f-998ec3b942b6">
+          <artykul eId="DU/2026/158__art_51" gd:GUID="c308242a-52f0-4f44-ae00-daba9a5eb20d">
+            <nr>51</nr>
+            <ustep eId="DU/2026/158__art_51__ust_1" gd:GUID="0824b312-3733-4f38-9871-dda235122625">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="6959046c-a56e-455e-8abb-1a90ac9da9c2" fragment="1" gd:fragmentGUID="ec53e580-0af4-4902-bd9d-477a04210676">W przypadkach uzasadnionych charakterem sprawy lub pilnością przeprowadzenia czynności kontrolnych można zarządzić przeprowadzenie kontroli w trybie uproszczonym.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/158__art_51__ust_2" gd:GUID="c6673dfc-1ae7-4a14-8065-00c8994a9e77">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="1459418f-061b-49d7-897b-18bd506bd7a8" fragment="1" gd:fragmentGUID="0690db2e-aca5-4abe-b1f3-92e1260b24a9">Kontrola w trybie uproszczonym może być zarządzona w szczególności w razie potrzeby:</zdanie>
+              </p>
+              <punkt eId="DU/2026/158__art_51__ust_2__pkt_1" gd:GUID="82c6765c-4e0d-4137-b4fa-4a363580652b">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="1459418f-061b-49d7-897b-18bd506bd7a8" fragment="2" gd:fragmentGUID="61833087-602a-4538-80f4-fe05daff6775">sporządzenia informacji dla kierownika jednostki kontrolującej;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/158__art_51__ust_2__pkt_2" gd:GUID="fb782dfe-86e4-4846-b34a-ed1f5b080bc6">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="1459418f-061b-49d7-897b-18bd506bd7a8" fragment="3" gd:fragmentGUID="5bc5c050-0518-4c28-bc42-55432aac507b">sprawdzenia informacji zawartych w skargach i wnioskach;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/158__art_51__ust_2__pkt_3" gd:GUID="6beac85e-7f32-48e8-b25f-39d66e6263c4">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="1459418f-061b-49d7-897b-18bd506bd7a8" fragment="4" gd:fragmentGUID="b2e46f5d-9e1c-4bcc-8192-e07e4bef735a">dokonania analizy dokumentów otrzymanych z jednostek kontrolowanych.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/158__art_52" gd:GUID="c95fb603-4197-4206-84f1-18cd6f0731a8">
+            <nr>52</nr>
+            <ustep eId="DU/2026/158__art_52__ust_1" gd:GUID="d92b7926-798f-4919-8cc3-e8a748dbdfdb">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="acb91731-c80c-434a-a58f-e9f8491cddff" fragment="1" gd:fragmentGUID="8f3a84bc-2ba4-4a6a-a3a1-cfee1da47da2">Kontrolę w trybie uproszczonym prowadzi się zgodnie z przepisami dotyczącymi kontroli w trybie zwykłym, z wyjątkiem przepisów dotyczących programu kontroli i sporządzania wystąpienia pokontrolnego.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/158__art_52__ust_2" gd:GUID="5b7242cb-f716-4671-baa9-eecc3c1af1ed">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="a2dfcfa4-2917-48c4-b66c-df4591dfa369" fragment="1" gd:fragmentGUID="b711a477-c290-4f69-8f32-07743dd55115">Jeżeli kontrola w trybie uproszczonym jest prowadzona w sposób określony w art. 8 ust. 2 albo art. 10 ust. 1, stosuje się przepisy dotyczące programu kontroli.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/158__art_52__ust_3" gd:GUID="81497238-6316-45f0-9beb-e007f0ebf433">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="2932a7c6-38ac-48af-a331-0618fd5e6b1b" fragment="1" gd:fragmentGUID="abedf1ca-a097-486c-a310-017a085f1b9a">Kontrola w trybie uproszczonym może być prowadzona także wtedy, gdy nie było możliwości wcześniejszego powiadomienia kierownika jednostki kontrolowanej o terminie przeprowadzenia kontroli.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/158__art_52__ust_4" gd:GUID="3fb7808b-1e54-4731-aee6-c979de9644bf">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="2ab904c9-7693-4826-b8fe-256ad8a98953" fragment="1" gd:fragmentGUID="a471bdf7-67fd-4dfb-97cb-f25fc879432c">Kontrola w trybie uproszczonym kończy się sporządzeniem sprawozdania z kontroli, zawierającego opis ustalonego stanu faktycznego oraz jego ocenę, a także, w razie potrzeby, zalecenia lub wnioski dotyczące usunięcia nieprawidłowości lub usprawnienia funkcjonowania jednostki kontrolowanej.</zdanie>
+                <zdanie nr="2" gd:zdGUID="791de0a5-d34b-42d8-aa40-850ed90bf049" fragment="1" gd:fragmentGUID="f625fb55-d66c-48b6-b8ca-0f20bfaad179">Sprawozdanie podpisuje kierownik jednostki kontrolującej.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/158__art_52__ust_5" gd:GUID="29b384cc-2bb9-4fe2-b06b-7b12483a2003">
+              <nr>5</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="3003b27a-0cf4-4ca8-a461-c7f4c449359e" fragment="1" gd:fragmentGUID="972b9c0e-3759-4310-b685-a2be6145f1f2"><odnosnik id-odnosnika="14" symbol="14" gd:GUID="d51678d7-c6a8-4094-a66b-8b6b94bbc3de"><p><zdanie nr="1" gd:zdGUID="e843ea65-ea40-4127-8e7c-10ee05e27653" fragment="1" gd:fragmentGUID="ff605ee5-68fc-4549-a282-c2818fd1fadf">Ze zmianą wprowadzoną przez art. 2 pkt 11 ustawy, o której mowa w odnośniku 1.</zdanie></p></odnosnik> Kierownik jednostki kontrolowanej w terminie 3 dni roboczych od dnia otrzymania sprawozdania ma prawo przedstawić do niego pisemnie stanowisko; nie wstrzymuje to realizacji ustaleń kontroli.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/158__art_52__ust_6" gd:GUID="0bd67e15-fa0a-4cb2-8955-f7c9ac6eee4b">
+              <nr>6</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="520c257e-1f10-47a3-9cc4-e943e6f34542" fragment="1" gd:fragmentGUID="d1f15326-a787-452e-81ca-c796bdcace94">Sprawozdania nie przekazuje się byłemu kierownikowi jednostki kontrolowanej.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/158__art_53" gd:GUID="b7975297-a208-4c67-8204-671bec324329">
+            <nr>53</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="cee9ffa5-985e-46fd-a736-1399d1e087bd">
+              <p>
+                <zdanie nr="1" gd:zdGUID="3f27967b-c2c1-4b7d-b67f-6e4fa69c3c57" fragment="1" gd:fragmentGUID="afd5583e-22da-4bbe-a994-3e955fa8cb1e">W przypadku ujawnienia w trakcie czynności kontrolnych okoliczności wskazujących na popełnienie przestępstwa, wykroczenia, przestępstwa skarbowego, wykroczenia skarbowego lub naruszenia dyscypliny finansów publicznych kontrolę w dalszej części przeprowadza się w trybie zwykłym.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+        </oddzial-n>
+      </rozdzial>
+      <rozdzial eId="DU/2026/158__rozdz_4" gd:GUID="f59b4afd-b9b4-44ee-80fb-a0ee7f969399">
+        <naglowek-rozdzialu>
+          <nr>4</nr>
+          <p>Dokumentacja kontroli</p>
+        </naglowek-rozdzialu>
+        <oddzial-n brak-eid="jednostka-nieoznaczona" gd:GUID="4cadc996-a16e-401a-9384-40953fd6109c">
+          <artykul eId="DU/2026/158__art_54" gd:GUID="5b8c33c9-17aa-4135-b9a1-b79ab828ecb7">
+            <nr>54</nr>
+            <ustep eId="DU/2026/158__art_54__ust_1" gd:GUID="7eb1f017-174f-41dc-8860-89bd4fd342ee">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="de2de3a3-a032-4ea6-8847-0f1b8734f3bc" fragment="1" gd:fragmentGUID="98f33770-af5e-43c7-91a6-6d09fcd9cc50"><odnosnik id-odnosnika="15" symbol="15" gd:GUID="77bec040-aeae-4444-bca6-bf09c96fd915"><p><zdanie nr="1" gd:zdGUID="1dc4f210-742c-4e20-b21f-5932085ae176" fragment="1" gd:fragmentGUID="d0f2122f-f1af-4104-8b66-9d06368151f3">W brzmieniu ustalonym przez art. 2 pkt 12 lit. a ustawy, o której mowa w odnośniku 1.</zdanie></p></odnosnik> Dla kontroli prowadzi się akta kontroli, które są utrwalone w postaci:</zdanie>
+              </p>
+              <punkt eId="DU/2026/158__art_54__ust_1__pkt_1" gd:GUID="70d9e7e3-b01b-40ec-80de-90920ed522aa">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="de2de3a3-a032-4ea6-8847-0f1b8734f3bc" fragment="2" gd:fragmentGUID="48b6aedc-7297-4fcd-b4f6-f9b58a7d0dfd">papierowej, z numerowanymi kolejno stronami, lub</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/158__art_54__ust_1__pkt_2" gd:GUID="a25876c7-6741-4662-b974-2df45e53d855">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="de2de3a3-a032-4ea6-8847-0f1b8734f3bc" fragment="3" gd:fragmentGUID="f9f28de6-caae-4038-9417-451cc5fe309c">elektronicznej.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2026/158__art_54__ust_2" gd:GUID="21be2c37-0bab-4488-92a6-339fd9beebef">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="b2d17f76-fa05-456d-aabb-3f0a750d17f0" fragment="1" gd:fragmentGUID="24a6201e-b167-492b-9e2d-6a6ab1295319">Akta kontroli obejmują w szczególności:</zdanie>
+              </p>
+              <punkt eId="DU/2026/158__art_54__ust_2__pkt_1" gd:GUID="5944341e-cca0-4df1-b0a7-abd82b014fff">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="b2d17f76-fa05-456d-aabb-3f0a750d17f0" fragment="2" gd:fragmentGUID="1572493f-cfb0-4dcc-8f74-f710bbe67131"><odnosnik id-odnosnika="16" symbol="16" gd:GUID="b4e5345c-16b9-4ba4-b270-0c8a36a7117e"><p><zdanie nr="1" gd:zdGUID="8ea22da4-0520-4cd1-ba84-9242d2c31afc" fragment="1" gd:fragmentGUID="1e352c58-cc10-445f-befd-32a655a2f665">W brzmieniu ustalonym przez art. 2 pkt 12 lit. b ustawy, o której mowa w odnośniku 1.</zdanie></p></odnosnik> wykaz ich zawartości, z podaniem nazw dokumentów oraz:</zdanie>
+                </p>
+                <litera eId="DU/2026/158__art_54__ust_2__pkt_1__lit_a" gd:GUID="0336b8ac-cfaf-4ea9-bd1a-124f25892736">
+                  <nr>a</nr>
+                  <p>
+                    <zdanie nr="1" gd:zdGUID="b2d17f76-fa05-456d-aabb-3f0a750d17f0" fragment="3" gd:fragmentGUID="6c860623-69c6-495f-a386-d4b85ee7e9f6">numerów stron dokumentów – jeżeli akta kontroli są prowadzone w postaci papierowej, lub</zdanie>
+                  </p>
+                </litera>
+                <litera eId="DU/2026/158__art_54__ust_2__pkt_1__lit_b" gd:GUID="e661e99d-a4f7-4244-8e78-e3787ee79736">
+                  <nr>b</nr>
+                  <p>
+                    <zdanie nr="1" gd:zdGUID="b2d17f76-fa05-456d-aabb-3f0a750d17f0" fragment="4" gd:fragmentGUID="d0a37bce-2053-40f3-9ae7-7cbdc9566f08">innych oznaczeń umożliwiających jednoznaczną identyfikację tych dokumentów – jeżeli akta kontroli są prowadzone w postaci elektronicznej;</zdanie>
+                  </p>
+                </litera>
+              </punkt>
+              <punkt eId="DU/2026/158__art_54__ust_2__pkt_2" gd:GUID="22a5b25b-7b70-4ea4-a1e9-6560e5994cc4">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="b2d17f76-fa05-456d-aabb-3f0a750d17f0" fragment="5" gd:fragmentGUID="e6c1135c-7252-4b12-83bb-ff5b7dd786e0">upoważnienie do przeprowadzenia kontroli;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/158__art_54__ust_2__pkt_3" gd:GUID="baae35bf-3076-4393-a050-b4bb79ec4eb9">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="b2d17f76-fa05-456d-aabb-3f0a750d17f0" fragment="6" gd:fragmentGUID="4c0bfc4c-b5cb-436d-8deb-8004acaeb1c0">oświadczenia kontrolera o braku albo istnieniu okoliczności uzasadniających jego wyłączenie z udziału w kontroli;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/158__art_54__ust_2__pkt_4" gd:GUID="0af8e011-0024-43a9-865b-13c168cd98c4">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="b2d17f76-fa05-456d-aabb-3f0a750d17f0" fragment="7" gd:fragmentGUID="a4076a11-0414-4c63-ba74-bb97a8f98f86">dowody zgromadzone w toku kontroli;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/158__art_54__ust_2__pkt_5" gd:GUID="c733d1dc-4ac7-46ea-9337-2032597b8c17">
+                <nr>5</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="b2d17f76-fa05-456d-aabb-3f0a750d17f0" fragment="8" gd:fragmentGUID="4a72a7e0-d258-4216-b535-e1c4f82e2652">protokoły z przeprowadzenia dowodów;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/158__art_54__ust_2__pkt_6" gd:GUID="f7039818-58f4-4c66-ad11-7aea123a65af">
+                <nr>6</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="b2d17f76-fa05-456d-aabb-3f0a750d17f0" fragment="9" gd:fragmentGUID="2f2d0366-a04b-4c5d-af85-d277bbf83d39">wystąpienie pokontrolne i jego projekt albo sprawozdanie oraz zgłoszone zastrzeżenia i dokumenty związane z ich rozpatrzeniem.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/158__art_55" gd:GUID="fba340eb-e5cc-47ed-ac73-62761eb52507">
+            <nr>55</nr>
+            <ustep eId="DU/2026/158__art_55__ust_1" gd:GUID="a5da82c9-c2da-41cc-95f3-97df8cea3385">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="f7383237-bf88-4c8b-adca-18545b000a26" fragment="1" gd:fragmentGUID="3ab71781-206f-4d60-83ce-f04b79ff8bd7">Kierownik jednostki kontrolowanej na każdym etapie prowadzonej kontroli ma prawo wglądu do akt kontroli, z zachowaniem przepisów o tajemnicy prawnie chronionej.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/158__art_55__ust_2" gd:GUID="67a6e559-a927-4289-8935-ca354c41df38">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="75b12817-4a6b-4930-8ec1-80e32519905c" fragment="1" gd:fragmentGUID="67f8896c-13fc-4dfa-a326-9fdb6f416ab8">Kontroler udostępnia akta kontroli po anonimizacji lub pseudonimizacji w dokumentach danych osobowych pracownika lub innej osoby, jeżeli zastrzegły one nieujawnianie danych umożliwiających ich identyfikację, a zachodzi uzasadniona obawa, że udzielone informacje w sprawach objętych kontrolą mogą narazić tego pracownika lub osobę na jakikolwiek uszczerbek lub zarzut z powodu udzielenia tych informacji.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+        </oddzial-n>
+      </rozdzial>
+      <rozdzial eId="DU/2026/158__rozdz_5" gd:GUID="970426d5-0c16-4fc9-843f-41f23dc59ce7">
+        <naglowek-rozdzialu>
+          <nr>5</nr>
+          <p>Informacje o wynikach kontroli</p>
+        </naglowek-rozdzialu>
+        <oddzial-n brak-eid="jednostka-nieoznaczona" gd:GUID="3be6a265-2c96-458f-9f74-d2c760555abd">
+          <artykul eId="DU/2026/158__art_56" gd:GUID="5c3f743c-e930-49b3-9269-bdbad43a7239">
+            <nr>56</nr>
+            <ustep eId="DU/2026/158__art_56__ust_1" gd:GUID="54baff90-f924-4cdc-9671-d2cd64f19dbf">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="3a73d490-38d1-4452-93f8-f6425be8e988" fragment="1" gd:fragmentGUID="b090d781-35eb-47a9-b0d2-379d4c9e20c1">W uzasadnionych przypadkach kierownik jednostki kontrolującej może zarządzić sporządzenie informacji o wynikach kontroli.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/158__art_56__ust_2" gd:GUID="ce83e281-5c68-4cb1-9f6b-45ed3caaa7c5">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="f53b7e9b-17b9-41e3-8918-79ddd2320239" fragment="1" gd:fragmentGUID="113b9fb1-63a5-4b92-901f-7c0ed3b34f43">Informacja o wynikach kontroli może obejmować przedstawienie wyników więcej niż jednej kontroli.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/158__art_56__ust_3" gd:GUID="229ea3ee-3041-4673-b662-0f7941756b96">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="4d18e6b3-0201-4536-a80c-09f75b40e92a" fragment="1" gd:fragmentGUID="3e44f2df-313c-43ad-b89e-5308cd2166b8">Informacja o wynikach kontroli jest sporządzana na podstawie akt kontroli i zawiera w szczególności:</zdanie>
+              </p>
+              <punkt eId="DU/2026/158__art_56__ust_3__pkt_1" gd:GUID="874a74f2-6ed4-4fde-a619-296fe58fb695">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="4d18e6b3-0201-4536-a80c-09f75b40e92a" fragment="2" gd:fragmentGUID="a90c4e3e-3f6c-4e6f-9d8e-366ce05e77a1">określenie celu i zakresu kontroli oraz termin jej prowadzenia;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/158__art_56__ust_3__pkt_2" gd:GUID="968d1da6-28b1-4db5-8bc7-85c29cecefd7">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="4d18e6b3-0201-4536-a80c-09f75b40e92a" fragment="3" gd:fragmentGUID="9a165069-c842-44a7-b318-c1b42a256572">ustalenia z kontroli wskazujące zakres stwierdzonych nieprawidłowości, przyczynę ich powstania i skutki, jakie wywołują lub mogą wywołać w świetle kryteriów stosowanych w postępowaniu kontrolnym;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/158__art_56__ust_3__pkt_3" gd:GUID="70669628-bca1-4a27-8e47-ff5048cdbe5a">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="4d18e6b3-0201-4536-a80c-09f75b40e92a" fragment="4" gd:fragmentGUID="c6a22b3b-9ea0-47bf-a08a-d07530ad38e2">zalecenia lub wnioski dotyczące usprawnienia funkcjonowania jednostki kontrolowanej w zakresie dotyczącym kontroli.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/158__art_57" gd:GUID="a9517696-65d6-4544-a9e6-69275fac5ce3">
+            <nr>57</nr>
+            <ustep eId="DU/2026/158__art_57__ust_1" gd:GUID="20150223-38a4-41d3-a828-0f4b6193bf05">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="e350f22c-4ac1-47ad-ad5b-bf733a97b673" fragment="1" gd:fragmentGUID="91357ffc-1d04-4d64-9933-bf36eb86d1d3">Kierownik jednostki kontrolującej przesyła informację o wynikach kontroli kierownikowi jednostki nadrzędnej lub sprawującej nadzór nad jednostką kontrolowaną.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/158__art_57__ust_2" gd:GUID="3a0f74e2-d81e-4657-8ae5-2d1d3d87cd00">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="a58dd9dd-a153-4c8f-8f40-1c2fc1b212aa" fragment="1" gd:fragmentGUID="c6831982-301f-4661-a9dc-4ebd54f4446c">Kierownik jednostki kontrolującej może przesłać informację o wynikach kontroli do innych organów lub jednostek, które uzna za właściwe.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+        </oddzial-n>
+      </rozdzial>
+      <rozdzial eId="DU/2026/158__rozdz_6" gd:GUID="417761a0-4b5e-481c-a68f-f764f6a082a5">
+        <naglowek-rozdzialu>
+          <nr>6</nr>
+          <p>Zmiany w przepisach obowiązujących</p>
+        </naglowek-rozdzialu>
+        <oddzial-n brak-eid="jednostka-nieoznaczona" gd:GUID="1b8d3eb5-c43f-4aca-be39-b4111a9cb6b8">
+          <artykul eId="DU/2026/158__art_58" gd:GUID="c45cb219-7e2d-4726-9df7-d4dc64362503">
+            <nr />
+            <nr-od>58</nr-od>
+            <nr-do>76</nr-do>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="6c94a915-c7b7-40c2-8aac-c501156aef70">
+              <p>
+                <zdanie nr="1" gd:zdGUID="6e87c678-9061-47e9-bebd-3988f8acec18" fragment="1" gd:fragmentGUID="76dc0906-9ca7-4dc6-b10e-a96192875ec3">(pominięte)</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+        </oddzial-n>
+      </rozdzial>
+      <rozdzial eId="DU/2026/158__rozdz_7" gd:GUID="7dcf8281-3048-41fb-985a-b880dbf9b8ea">
+        <naglowek-rozdzialu>
+          <nr>7</nr>
+          <p>Przepisy przejściowe i końcowe</p>
+        </naglowek-rozdzialu>
+        <oddzial-n brak-eid="jednostka-nieoznaczona" gd:GUID="e139d1a0-7b89-4de3-9641-38c38ac809a1">
+          <artykul eId="DU/2026/158__art_77" gd:GUID="a59ee960-eb1f-4731-ace3-eba7d87cfb9c">
+            <nr>77</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="c0979be3-13d4-494c-ac48-4d65bffe7de4">
+              <p>
+                <zdanie nr="1" gd:zdGUID="5ad53e03-9269-4171-b408-974683cc261b" fragment="1" gd:fragmentGUID="026614c8-2e5d-48ad-adf7-9c2f5c3223f8">Do kontroli wszczętych i niezakończonych przed dniem wejścia w życie ustawy stosuje się przepisy dotychczasowe.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2026/158__art_78" gd:GUID="e30b2b97-b172-4770-bfe0-011ccc902c72">
+            <nr>78</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="4434ae82-b942-4a06-9cc8-1256b04c29fb">
+              <p>
+                <zdanie nr="1" gd:zdGUID="8c71b7f5-2464-4227-9928-c0ea1af96cec" fragment="1" gd:fragmentGUID="e02578a4-cf1a-44bb-9022-86d141440877">Ustawa wchodzi w życie pierwszego dnia miesiąca następującego po upływie trzech miesięcy od dnia ogłoszenia<odnosnik id-odnosnika="17" symbol="17" gd:GUID="d8781a10-12ca-4355-affb-f7d1a7d7ade1"><p><zdanie nr="1" gd:zdGUID="b2cfc8d7-97dc-4d6e-a234-449e2a013f58" fragment="1" gd:fragmentGUID="02e392af-37c0-4782-b60a-f719e424318c">Ustawa została ogłoszona w dniu 6 września 2011 r.</zdanie></p></odnosnik>.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+        </oddzial-n>
+      </rozdzial>
+    </ustawa>
+  </obwieszczenie>
+</akt-prawny>

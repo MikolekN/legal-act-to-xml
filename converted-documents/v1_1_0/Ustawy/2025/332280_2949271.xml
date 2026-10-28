@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <ustawa>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/905</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>c416cd6d-8132-4631-858a-542a7275fba8</gd:GUIDwersji>
+      <AdresISAP>WDU20250000905</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>905</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 905</AdresWyswietlany>
+      <Tytul>Ustawa z dnia 4 czerwca 2025 r. o zmianie ustawy – Prawo farmaceutyczne</Tytul>
+      <Rodzaj>USTAWA</Rodzaj>
+      <DataOgloszenia>2025-07-07</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-06-04</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2025-07-22_DU-2025-905_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2025-07-22" warunek="po upływie 14 dni od dnia ogłoszenia" podstawa="art. 2" zrodlo="https://eli.gov.pl/eli/DU/2025/905" dowod="DU/2025/905__art_2" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2025-07-22_DU-2025-905_domyslne.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2025-07-22_DU-2025-905_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="3b656dd2-ff5c-4058-b1e5-ed92c539859c" rola="wydajacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Sejm">
+          <Nazwa>SEJM</Nazwa>
+        </Organ>
+        <Organ gd:GUID="b7c49eb5-a2ce-487f-a635-5dc0536911c0" rola="podpisujacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Prezydent">
+          <Nazwa>Prezydent Rzeczypospolitej Polskiej</Nazwa>
+          <OrganPodpisujacy>Prezydent Rzeczypospolitej Polskiej</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>A.</imie> <nazwisko>Duda</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Ustawa</rodzaj-aktu>
+    <data>z dnia 4 czerwca 2025 r.</data>
+    <tytul>o zmianie ustawy – Prawo farmaceutyczne</tytul>
+    <artykul eId="DU/2025/905__art_1" gd:GUID="9bb2906c-bba1-4b22-b9cf-9f3b2f08bca2" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-22_DU-2025-905_domyslne.x" wejscie-w-zycie="2025-07-22">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="a7f89afe-429e-4906-8e49-22166cafb987" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-22_DU-2025-905_domyslne.x" wejscie-w-zycie="2025-07-22">
+        <p>
+          <zdanie nr="1" gd:zdGUID="7eba605a-dc8c-41ac-8223-6be1f0c535d1" fragment="1" gd:fragmentGUID="02800f9a-f88e-4c8a-b453-b49d2891d96c" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-22_DU-2025-905_domyslne.x" wejscie-w-zycie="2025-07-22"><now:zamien-tekst stary-tekst="wystąpiła w formie pisemnej" nowy-tekst="wystąpiła w formie pisemnej lub dokumentowej" element-eId="DU/2025/750__art_54__ust_3__pkt_1" akt="https://eli.gov.pl/eli/DU/2025/750" gd:nowGUID="4fb7cef1-e47a-43a8-a70a-f0b26fbd5ae5" />W ustawie z dnia 6 września 2001 r. – Prawo farmaceutyczne (Dz. U. z 2025 r. poz. 750) w art. 54 w ust. 3 w pkt 1 wyrazy „wystąpiła w formie pisemnej” zastępuje się wyrazami „wystąpiła w formie pisemnej lub dokumentowej”.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2025/905__art_2" gd:GUID="ffb454af-4ead-48a2-833f-1f65289ef036" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-22_DU-2025-905_domyslne.x" wejscie-w-zycie="2025-07-22">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="b591814e-ac28-4021-961e-4f7eacc5f999" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-22_DU-2025-905_domyslne.x" wejscie-w-zycie="2025-07-22">
+        <p>
+          <zdanie nr="1" gd:zdGUID="02ff4c80-28ef-4697-9437-239d9d6788a0" fragment="1" gd:fragmentGUID="16ee294f-fa84-4453-9aca-07c00cd5ddfb" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-22_DU-2025-905_domyslne.x" wejscie-w-zycie="2025-07-22">Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <organ-podpisujacy>Prezydent Rzeczypospolitej Polskiej: <i><osoba podpisujacy="true" gd:osobaGUID="f066ce6e-0316-4f4d-a852-cc4119774fde"><imie>A.</imie> <nazwisko>Duda</nazwisko></osoba></i></organ-podpisujacy>
+  </ustawa>
+</akt-prawny>

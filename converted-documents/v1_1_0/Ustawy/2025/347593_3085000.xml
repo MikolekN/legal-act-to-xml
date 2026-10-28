@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <ustawa>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/1542</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>15d1f04b-2261-4e8b-b989-018debac98b2</gd:GUIDwersji>
+      <AdresISAP>WDU20250001542</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>1542</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 1542</AdresWyswietlany>
+      <Tytul>Ustawa z dnia 26 września 2025 r. o zmianie ustawy – Prawo geodezyjne i kartograficzne</Tytul>
+      <Rodzaj>USTAWA</Rodzaj>
+      <DataOgloszenia>2025-11-12</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-09-26</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2026-02-13_DU-2025-1542_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2026-02-13" warunek="po upływie 3 miesięcy od dnia ogłoszenia" podstawa="art. 4" zrodlo="https://eli.gov.pl/eli/DU/2025/1542" dowod="DU/2025/1542__art_4" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2026-02-13_DU-2025-1542_domyslne.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2026-02-13_DU-2025-1542_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="531b1228-0f66-4511-87ee-2e149d03d4bf" rola="wydajacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Sejm">
+          <Nazwa>SEJM</Nazwa>
+        </Organ>
+        <Organ gd:GUID="f2f093ea-d0c5-45ec-800d-3079490a9584" rola="podpisujacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Prezydent">
+          <Nazwa>Prezydent Rzeczypospolitej Polskiej</Nazwa>
+          <OrganPodpisujacy>Prezydent Rzeczypospolitej Polskiej</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>K.</imie> <nazwisko>Nawrocki</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Ustawa</rodzaj-aktu>
+    <data>z dnia 26 września 2025 r.</data>
+    <tytul>o zmianie ustawy – Prawo geodezyjne i kartograficzne</tytul>
+    <artykul eId="DU/2025/1542__art_1" gd:GUID="a876bd71-3642-4ccf-a2dd-e96311177fb2" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-13_DU-2025-1542_domyslne.x" wejscie-w-zycie="2026-02-13">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="92a92717-e68c-4ca3-ac63-65e2fc7f027f" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-13_DU-2025-1542_domyslne.x" wejscie-w-zycie="2026-02-13">
+        <p>
+          <zdanie nr="1" gd:zdGUID="79a435ff-7c14-41b4-9bf1-0d4f63076438" fragment="1" gd:fragmentGUID="6bc19031-46c5-4b56-9d12-36a042d0fbc0" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-13_DU-2025-1542_domyslne.x" wejscie-w-zycie="2026-02-13">W ustawie z dnia 17 maja 1989 r. – Prawo geodezyjne i kartograficzne (Dz. U. z 2024 r. poz. 1151 i 1824 oraz z 2025 r. poz. 1019) wprowadza się następujące zmiany:</zdanie>
+        </p>
+        <punkt eId="DU/2025/1542__art_1__pkt_1" gd:GUID="dc17e7d7-9268-4967-8a8a-3e86e04c7b7b" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-13_DU-2025-1542_domyslne.x" wejscie-w-zycie="2026-02-13">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="79a435ff-7c14-41b4-9bf1-0d4f63076438" fragment="2" gd:fragmentGUID="7c8fdc5b-4637-4f8a-ae88-a692fd69174a" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-13_DU-2025-1542_domyslne.x" wejscie-w-zycie="2026-02-13"><now:zamien-tekst stary-tekst=";" nowy-tekst="," element-eId="DU/2024/1151__art_40a__ust_2__pkt_1__lit_j" akt="https://eli.gov.pl/eli/DU/2024/1151" now:wystapienie="ostatnie" gd:nowGUID="228cf5a0-aeb4-4151-98f9-e782592e7ab0" />w art. 40a w ust. 2 w pkt 1 w lit. j średnik zastępuje się przecinkiem i dodaje się lit. k w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/1151" cudzyslowy="oba" gd:nowGUID="363af808-678a-4505-82e7-cbce3fd6fd48" element-eId="DU/2024/1151__art_40a__ust_2__pkt_1__lit_j" funkcja="dodaj-po"><litera eId="DU/2024/1151__art_40a__ust_2__pkt_1__lit_k" gd:GUID="32cfc1ac-34c6-4f2d-96fc-bdc2b1db5606" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-13_DU-2025-1542_domyslne.x" wejscie-w-zycie="2026-02-13"><nr>k</nr><p><zdanie nr="1" gd:zdGUID="72c80e1c-b165-4823-b4d3-f797111e0149" fragment="1" gd:fragmentGUID="975b3117-3a7e-4281-86a5-c650c5b015f0" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-13_DU-2025-1542_domyslne.x" wejscie-w-zycie="2026-02-13">rejestru cen nieruchomości;</zdanie></p></litera></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1542__art_1__pkt_2" gd:GUID="a9e6a2dc-6427-43d1-a3bf-a868bc71dba9" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-13_DU-2025-1542_domyslne.x" wejscie-w-zycie="2026-02-13">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="79a435ff-7c14-41b4-9bf1-0d4f63076438" fragment="3" gd:fragmentGUID="a6941353-03b6-4030-8a9a-38994c8c234c" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-13_DU-2025-1542_domyslne.x" wejscie-w-zycie="2026-02-13">w załączniku do ustawy:</zdanie>
+          </p>
+          <litera eId="DU/2025/1542__art_1__pkt_2__lit_a" gd:GUID="a9547b1a-6e02-488e-b9dd-7246b54b8b4f" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-13_DU-2025-1542_domyslne.x" wejscie-w-zycie="2026-02-13">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="79a435ff-7c14-41b4-9bf1-0d4f63076438" fragment="4" gd:fragmentGUID="685a6e27-ff9a-4423-88db-006e3586a1a9" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-13_DU-2025-1542_domyslne.x" wejscie-w-zycie="2026-02-13"><now:zamien-tekst stary-tekst="nr 2, 3, 6–14 i 16" nowy-tekst="nr 2, 3, 6–11, 13, 14 i 16" element-eId="DU/2024/1151__zal_1__ust_1" akt="https://eli.gov.pl/eli/DU/2024/1151" gd:nowGUID="d8757a0f-7340-4227-a485-d113d82beb06" />w ust. 1 wyrazy „nr 2, 3, 6–14 i 16” zastępuje się wyrazami „nr 2, 3, 6–11, 13, 14 i 16”,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1542__art_1__pkt_2__lit_b" gd:GUID="009b528d-05da-4c31-a33a-a88647f00510" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-13_DU-2025-1542_domyslne.x" wejscie-w-zycie="2026-02-13">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="79a435ff-7c14-41b4-9bf1-0d4f63076438" fragment="5" gd:fragmentGUID="d2e5f9b0-8fe9-4801-b93b-bffb1d8cf25d" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-13_DU-2025-1542_domyslne.x" wejscie-w-zycie="2026-02-13">w ust. 4 pkt 1 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/1151" cudzyslowy="oba" gd:nowGUID="03a247c8-911d-479b-a7ac-b561da80b20e" element-eId="DU/2024/1151__zal_1__ust_4__pkt_1" funkcja="zastap"><punkt eId="DU/2024/1151__zal_1__ust_4__pkt_1" gd:GUID="c2ab88c3-18b3-4a4c-9794-839ce556b386" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-13_DU-2025-1542_domyslne.x" wejscie-w-zycie="2026-02-13"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="e3aa195f-3de5-444f-87d3-e78515393c3e" fragment="1" gd:fragmentGUID="eab70a2b-a9e8-4111-a8f3-a22b11ee59bd" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-13_DU-2025-1542_domyslne.x" wejscie-w-zycie="2026-02-13">1,0 – gdy materiały zasobu są udostępniane określonemu podmiotowi dla jego potrzeb własnych niezwiązanych z działalnością gospodarczą, bez prawa publikacji w sieci Internet;</zdanie></p></punkt></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1542__art_1__pkt_2__lit_c" gd:GUID="8be36b0a-e36f-46f2-81ab-ea0f95d783c1" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-13_DU-2025-1542_domyslne.x" wejscie-w-zycie="2026-02-13">
+            <nr>c</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="79a435ff-7c14-41b4-9bf1-0d4f63076438" fragment="6" gd:fragmentGUID="0b31501d-c08e-4d08-a771-33d249e66d9d" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-13_DU-2025-1542_domyslne.x" wejscie-w-zycie="2026-02-13"><now:zamien-tekst stary-tekst="nr 2, 3, 6–14 i 16" nowy-tekst="nr 2, 3, 6–11, 13, 14 i 16" element-eId="DU/2024/1151__zal_1__ust_8" akt="https://eli.gov.pl/eli/DU/2024/1151" gd:nowGUID="8c21a3ec-4721-46ad-9f56-ebae0f65d481" />w ust. 8 wyrazy „nr 2, 3, 6–14 i 16” zastępuje się wyrazami „nr 2, 3, 6–11, 13, 14 i 16”,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1542__art_1__pkt_2__lit_d" gd:GUID="5830b330-fafb-4292-8b30-fe0ad2a63fac" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-13_DU-2025-1542_domyslne.x" wejscie-w-zycie="2026-02-13">
+            <nr>d</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="79a435ff-7c14-41b4-9bf1-0d4f63076438" fragment="7" gd:fragmentGUID="768278c3-0a2b-4fb1-b918-46200242addf" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-13_DU-2025-1542_domyslne.x" wejscie-w-zycie="2026-02-13"><now:zamien-tekst stary-tekst="nr 2, 3, 6–14, 16 i 17" nowy-tekst="nr 2, 3, 6–11, 13, 14, 16 i 17" element-eId="DU/2024/1151__zal_1__ust_10" akt="https://eli.gov.pl/eli/DU/2024/1151" gd:nowGUID="5bd42bb8-86df-46fc-b29e-fa509cd52e8c" />w ust. 10 wyrazy „nr 2, 3, 6–14, 16 i 17” zastępuje się wyrazami „nr 2, 3, 6–11, 13, 14, 16 i 17”,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1542__art_1__pkt_2__lit_e" gd:GUID="eadfb17e-5e5f-457a-acaa-39e6e04b0850" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-13_DU-2025-1542_domyslne.x" wejscie-w-zycie="2026-02-13">
+            <nr>e</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="79a435ff-7c14-41b4-9bf1-0d4f63076438" fragment="8" gd:fragmentGUID="ac45490d-da25-42c6-ba78-48e383cb6f2d" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-13_DU-2025-1542_domyslne.x" wejscie-w-zycie="2026-02-13"><now:zamien-tekst stary-tekst="nr 6, 9, 10 (lp. 3, 4, 19, 20), 12 lub 13" nowy-tekst="nr 6, 9, 10 (lp. 3, 4, 19, 20) lub 13" element-eId="DU/2024/1151__zal_1__ust_18" akt="https://eli.gov.pl/eli/DU/2024/1151" gd:nowGUID="4a9143ae-9029-4608-a37d-67b9be452580" />w ust. 18 wyrazy „nr 6, 9, 10 (lp. 3, 4, 19, 20), 12 lub 13” zastępuje się wyrazami „nr 6, 9, 10 (lp. 3, 4, 19, 20) lub 13”,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1542__art_1__pkt_2__lit_f" gd:GUID="0d4f937f-4c8d-4157-a0e4-080c039aa70b" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-13_DU-2025-1542_domyslne.x" wejscie-w-zycie="2026-02-13">
+            <nr>f</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="79a435ff-7c14-41b4-9bf1-0d4f63076438" fragment="9" gd:fragmentGUID="a9ccc162-e564-456e-86b2-7826dcea48cc" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-13_DU-2025-1542_domyslne.x" wejscie-w-zycie="2026-02-13">uchyla się tabelę nr 12,<cytat-w-tekscie now:akt="https://eli.gov.pl/eli/DU/2024/1151" cudzyslowy="brak" gd:nowGUID="e419e276-5d07-4b8f-bb89-82aec2cd4072" element-eId="DU/2024/1151__zal_1" funkcja="uchyl-recznie"><tekst>tabelę nr 12</tekst></cytat-w-tekscie></zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1542__art_1__pkt_2__lit_g" gd:GUID="ba1f3c95-50ea-438c-ad80-05a255b88788" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-13_DU-2025-1542_domyslne.x" wejscie-w-zycie="2026-02-13">
+            <nr>g</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="79a435ff-7c14-41b4-9bf1-0d4f63076438" fragment="10" gd:fragmentGUID="fed5f224-95c1-487b-b506-3dea7c326d97" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-13_DU-2025-1542_domyslne.x" wejscie-w-zycie="2026-02-13">użyte w tabeli nr 14 w kolumnie drugiej w lp. 1–3 wyrazy „1–13” zastępuje się wyrazami „1–11 i 13”,<cytat-w-tekscie now:akt="https://eli.gov.pl/eli/DU/2024/1151" cudzyslowy="oba" gd:nowGUID="d3f5c5f2-8617-4337-b4a8-c5d3fd975694" element-eId="DU/2024/1151__zal_1" funkcja="zastap-recznie"><tekst>1–11 i 13</tekst></cytat-w-tekscie></zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1542__art_1__pkt_2__lit_h" gd:GUID="e14cb07a-3dd9-4f50-bd2f-82b117266929" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-13_DU-2025-1542_domyslne.x" wejscie-w-zycie="2026-02-13">
+            <nr>h</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="79a435ff-7c14-41b4-9bf1-0d4f63076438" fragment="11" gd:fragmentGUID="101e2cbd-1009-4948-b87e-151b28a908af" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-13_DU-2025-1542_domyslne.x" wejscie-w-zycie="2026-02-13">użyte w tabeli nr 16 w tytule tabeli oraz w kolumnie drugiej w lp. 1 i 2 wyrazy „2, 3 i 6–14” zastępuje się wyrazami „2, 3, 6–11, 13 i 14”.<cytat-w-tekscie now:akt="https://eli.gov.pl/eli/DU/2024/1151" cudzyslowy="oba" gd:nowGUID="e37bc604-aab3-4341-af82-f5efba6c1e29" element-eId="DU/2024/1151__zal_1" funkcja="zastap-recznie"><tekst>2, 3, 6–11, 13 i 14</tekst></cytat-w-tekscie></zdanie>
+            </p>
+          </litera>
+        </punkt>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2025/1542__art_2" gd:GUID="1df2ef1d-d3c6-47f5-a883-5e464a4e1cf8" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-13_DU-2025-1542_domyslne.x" wejscie-w-zycie="2026-02-13">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="7df0f3e4-e45f-4cfc-b37f-ab423f748425" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-13_DU-2025-1542_domyslne.x" wejscie-w-zycie="2026-02-13">
+        <p>
+          <zdanie nr="1" gd:zdGUID="3bf84629-ca42-4abe-bd0e-bd6ec17295a9" fragment="1" gd:fragmentGUID="c90be4df-dc3a-4fc3-b786-09ef40f3a4af" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-13_DU-2025-1542_domyslne.x" wejscie-w-zycie="2026-02-13">Do wniosków o udostępnienie zbiorów danych rejestru cen nieruchomości złożonych i nierozpatrzonych przed dniem wejścia w życie niniejszej ustawy stosuje się przepisy ustawy zmienianej w art. 1 w brzmieniu dotychczasowym.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2025/1542__art_3" gd:GUID="6a535ac1-7435-4cd5-8c3d-2cb4edec3246" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-13_DU-2025-1542_domyslne.x" wejscie-w-zycie="2026-02-13">
+      <nr>3</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="a76d60fd-6e3e-4de9-821c-748fa9525727" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-13_DU-2025-1542_domyslne.x" wejscie-w-zycie="2026-02-13">
+        <p>
+          <zdanie nr="1" gd:zdGUID="bdeee93d-7549-4977-a7b2-0f16da29351f" fragment="1" gd:fragmentGUID="77319d9e-8554-4464-b5a3-50fc6faf1c7b" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-13_DU-2025-1542_domyslne.x" wejscie-w-zycie="2026-02-13">Dotychczasowe przepisy wykonawcze wydane na podstawie art. 40g ustawy zmienianej w art. 1 zachowują moc do dnia wejścia w życie przepisów wykonawczych wydanych na podstawie art. 40g ustawy zmienianej w art. 1, w brzmieniu nadanym niniejszą ustawą, jednak nie dłużej niż przez 6 miesięcy od dnia wejścia w życie niniejszej ustawy.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2025/1542__art_4" gd:GUID="e1e49716-050e-4212-a13d-0a7606971c59" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-13_DU-2025-1542_domyslne.x" wejscie-w-zycie="2026-02-13">
+      <nr>4</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="1a060026-1fb6-4c58-8139-ec3c5590c1c5" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-13_DU-2025-1542_domyslne.x" wejscie-w-zycie="2026-02-13">
+        <p>
+          <zdanie nr="1" gd:zdGUID="733183bd-1b3b-424b-9700-fdb02ae704b8" fragment="1" gd:fragmentGUID="c886b913-003c-4728-97d4-a2c90ed36a28" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-13_DU-2025-1542_domyslne.x" wejscie-w-zycie="2026-02-13">Ustawa wchodzi w życie po upływie 3 miesięcy od dnia ogłoszenia.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <organ-podpisujacy>Prezydent Rzeczypospolitej Polskiej: <i><osoba podpisujacy="true" gd:osobaGUID="b914cb28-1ece-42fe-8f21-67715b62a6bb"><imie>K.</imie> <nazwisko>Nawrocki</nazwisko></osoba></i></organ-podpisujacy>
+  </ustawa>
+</akt-prawny>

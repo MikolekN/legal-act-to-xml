@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <rozporzadzenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2026/22</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>2430b8e6-d793-4f58-9bea-2b02aced1d1d</gd:GUIDwersji>
+      <AdresISAP>WDU20260000022</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2026</Rok>
+      <Pozycja>22</Pozycja>
+      <AdresWyswietlany>Dz.U. 2026 poz. 22</AdresWyswietlany>
+      <Tytul>Rozporządzenie Ministra Finansów i Gospodarki z dnia 7 stycznia 2026 r. zmieniające rozporządzenie w sprawie sprawozdawczości budżetowej</Tytul>
+      <Rodzaj>ROZP</Rodzaj>
+      <DataOgloszenia>2026-01-09</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2026-01-07</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2026-01-24_DU-2026-22_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2026-01-24" warunek="po upływie 14 dni od dnia ogłoszenia" podstawa="§ 3" zrodlo="https://eli.gov.pl/eli/DU/2026/22" dowod="DU/2026/22__art_3" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2026-01-24_DU-2026-22_domyslne.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2026-01-24_DU-2026-22_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="f243ef44-5858-4b4d-b66b-8121b62b795d" rola="wydajacy">
+          <Nazwa>Minister Finansów i Gospodarki</Nazwa>
+          <OrganPodpisujacy>Minister Finansów i Gospodarki</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>J.</imie> <nazwisko>Neneman</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Rozporządzenie</rodzaj-aktu>
+    <autor-aktu>Ministra Finansów i Gospodarki</autor-aktu>
+    <data>z dnia 7 stycznia 2026 r.</data>
+    <tytul>zmieniające rozporządzenie w sprawie sprawozdawczości budżetowej</tytul>
+    <podstawa-prawna>Na podstawie art. 41 ust. 2 ustawy z dnia 27 sierpnia 2009 r. o finansach publicznych (Dz. U. z 2025 r. poz. 1483, 1844 i 1846) zarządza się, co następuje:</podstawa-prawna>
+    <paragraf eId="DU/2026/22__art_1" gd:GUID="def7dbdc-0808-4f8b-9433-d786e3c836b1" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-24_DU-2026-22_domyslne.x" wejscie-w-zycie="2026-01-24">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="7ee9d0f5-2b13-4d4a-ac86-0957cdf4ecb6" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-24_DU-2026-22_domyslne.x" wejscie-w-zycie="2026-01-24">
+        <p>
+          <zdanie nr="1" gd:zdGUID="d7c14178-094b-4ddc-b150-68670a0c51b8" fragment="1" gd:fragmentGUID="952ec634-d917-405e-a7cf-0ad10001974f" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-24_DU-2026-22_domyslne.x" wejscie-w-zycie="2026-01-24">W rozporządzeniu Ministra Finansów z dnia 29 stycznia 2025 r. w sprawie sprawozdawczości budżetowej (Dz. U. poz. 133) w załączniku nr 36:</zdanie>
+        </p>
+        <punkt eId="DU/2026/22__art_1__pkt_1" gd:GUID="bf4102f0-ba12-4c70-b8f0-b86ef454b740" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-24_DU-2026-22_domyslne.x" wejscie-w-zycie="2026-01-24">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="d7c14178-094b-4ddc-b150-68670a0c51b8" fragment="2" gd:fragmentGUID="3f28f1c7-f61f-4881-87f2-575d5f311ca0" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-24_DU-2026-22_domyslne.x" wejscie-w-zycie="2026-01-24">w § 10 w ust. 2 pkt 9 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2025/133" cudzyslowy="oba" gd:nowGUID="1ac9d6fd-4784-4495-950e-da811b5f4cfb" element-eId="DU/2025/133__zal_36" funkcja="zastap-recznie"><punkt eId="DU/2025/133__zal_36__art_10__ust_2__pkt_9" gd:GUID="a73aef8b-2386-47ab-925f-4ac89600b079" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-24_DU-2026-22_domyslne.x" wejscie-w-zycie="2026-01-24"><nr>9</nr><p><zdanie nr="1" gd:zdGUID="fd5c9bfd-cc4e-4d92-a658-de97bb9a0523" fragment="1" gd:fragmentGUID="6dade991-647c-471b-bf56-41f005028022" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-24_DU-2026-22_domyslne.x" wejscie-w-zycie="2026-01-24">316 – Fundusz Modernizacji Bezpieczeństwa Publicznego i Ochrony Ludności;</zdanie></p></punkt></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/22__art_1__pkt_2" gd:GUID="005a4828-67a9-4c28-87dc-06563d0f7193" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-24_DU-2026-22_domyslne.x" wejscie-w-zycie="2026-01-24">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="d7c14178-094b-4ddc-b150-68670a0c51b8" fragment="3" gd:fragmentGUID="02be1f1c-6576-41e8-be8d-5d9ec48efba2" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-24_DU-2026-22_domyslne.x" wejscie-w-zycie="2026-01-24">w § 15 w ust. 5 w pkt 20 kropkę zastępuje się średnikiem i dodaje się pkt 21 w brzmieniu:<cytat-w-tekscie now:akt="https://eli.gov.pl/eli/DU/2025/133" cudzyslowy="oba" gd:nowGUID="224ff6fd-3937-4255-af43-58cd82f4fc65" element-eId="DU/2025/133__zal_36" funkcja="zastap-recznie"><tekst>;</tekst></cytat-w-tekscie><cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2025/133" cudzyslowy="oba" gd:nowGUID="2783d704-8a7f-40d3-839f-026bae0b03dd" element-eId="DU/2025/133__zal_36" funkcja="dodaj-recznie"><punkt eId="DU/2025/133__zal_36__art_15__ust_5__pkt_21" gd:GUID="ffe136d5-cdbc-41bc-b8f0-e315ba392d51" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-24_DU-2026-22_domyslne.x" wejscie-w-zycie="2026-01-24"><nr>21</nr><p><zdanie nr="1" gd:zdGUID="9380c203-27cc-4408-8ca4-5e7f89a62070" fragment="1" gd:fragmentGUID="6ce5c9e6-6420-4a9e-bf62-5a5a82bd5c02" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-24_DU-2026-22_domyslne.x" wejscie-w-zycie="2026-01-24">członków Rady Fiskalnej.</zdanie></p></punkt></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/22__art_1__pkt_3" gd:GUID="69c48270-e5cc-4d5b-8498-962256826d6f" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-24_DU-2026-22_domyslne.x" wejscie-w-zycie="2026-01-24">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="d7c14178-094b-4ddc-b150-68670a0c51b8" fragment="4" gd:fragmentGUID="6d7a6fcd-9e2a-4b7e-a764-555bef1288c9" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-24_DU-2026-22_domyslne.x" wejscie-w-zycie="2026-01-24">w § 16 w pkt 7 w lit. u średnik zastępuje się przecinkiem i dodaje się lit. w w brzmieniu:<cytat-w-tekscie now:akt="https://eli.gov.pl/eli/DU/2025/133" cudzyslowy="oba" gd:nowGUID="b8765fcc-cac6-4fc0-b9e1-eaf387314696" element-eId="DU/2025/133__zal_36" funkcja="zastap-recznie"><tekst>,</tekst></cytat-w-tekscie><cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2025/133" cudzyslowy="oba" gd:nowGUID="d6e2c2b4-f580-4279-b575-f210a735d3b2" element-eId="DU/2025/133__zal_36" funkcja="dodaj-recznie"><litera eId="DU/2025/133__zal_36__art_16__pkt_7__lit_w" gd:GUID="4fc6eb61-9652-4ad8-91b4-86feccf6d409" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-24_DU-2026-22_domyslne.x" wejscie-w-zycie="2026-01-24"><nr>w</nr><p><zdanie nr="1" gd:zdGUID="efb4412a-feca-4774-80a0-e12e2532c572" fragment="1" gd:fragmentGUID="1358beda-2167-4d79-a137-684cf9e82d18" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-24_DU-2026-22_domyslne.x" wejscie-w-zycie="2026-01-24">21 – członkowie Rady Fiskalnej;</zdanie></p></litera></cytat-strukt>.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2026/22__art_2" gd:GUID="f1af495e-1c95-4606-848c-747ecd173326" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-24_DU-2026-22_domyslne.x" wejscie-w-zycie="2026-01-24">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="5df82b2c-5c14-4719-9aa8-c6db3429ef08" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-24_DU-2026-22_domyslne.x" wejscie-w-zycie="2026-01-24">
+        <p>
+          <zdanie nr="1" gd:zdGUID="5b3c8d6a-274b-45b1-ae2f-e1b9373f2ec2" fragment="1" gd:fragmentGUID="dad76943-fac5-4875-ac7d-9935eeda2194" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-24_DU-2026-22_domyslne.x" wejscie-w-zycie="2026-01-24">Przepisy § 15 ust. 5 pkt 21 i § 16 pkt 7 lit. w załącznika nr 36 do rozporządzenia zmienianego w § 1, w brzmieniu nadanym niniejszym rozporządzeniem, stosuje się po raz pierwszy do sprawozdań kwartalnych Rb-70 za I kwartał 2026 r.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2026/22__art_3" gd:GUID="583abdf6-5ca1-4352-b523-5c42791ce77a" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-24_DU-2026-22_domyslne.x" wejscie-w-zycie="2026-01-24">
+      <nr>3</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="45ee03bf-2021-456b-b897-89b67f48be7d" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-24_DU-2026-22_domyslne.x" wejscie-w-zycie="2026-01-24">
+        <p>
+          <zdanie nr="1" gd:zdGUID="bc952f1a-488c-410e-a2b3-5ad9ececa69e" fragment="1" gd:fragmentGUID="a754a13e-ba20-4ca7-89f7-ee720f55b69e" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-24_DU-2026-22_domyslne.x" wejscie-w-zycie="2026-01-24">Rozporządzenie wchodzi w życie po upływie 14 dni od dnia ogłoszenia.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <organ-podpisujacy>Minister Finansów i Gospodarki: wz. <i><osoba podpisujacy="true" gd:osobaGUID="c779669a-8ad6-4c49-919a-a6be536c2385"><imie>J.</imie> <nazwisko>Neneman</nazwisko></osoba></i></organ-podpisujacy>
+  </rozporzadzenie>
+</akt-prawny>

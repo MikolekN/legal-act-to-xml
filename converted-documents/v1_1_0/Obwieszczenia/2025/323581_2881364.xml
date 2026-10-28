@@ -1,0 +1,519 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <obwieszczenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/570</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>0c4e639f-a849-41f4-84ea-dcb0cc131cc1</gd:GUIDwersji>
+      <AdresISAP>WDU20250000570</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>570</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 570</AdresWyswietlany>
+      <Tytul>Obwieszczenie Marszałka Sejmu Rzeczypospolitej Polskiej z dnia 23 kwietnia 2025 r. w sprawie ogłoszenia jednolitego tekstu ustawy o szczególnych zasadach rozwiązywania z pracownikami stosunków pracy z przyczyn niedotyczących pracowników</Tytul>
+      <Rodzaj>OBW_TJ</Rodzaj>
+      <DataOgloszenia>2025-04-29</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-04-23</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_ujednolicenie_2025-04-29_DU-2025-570_domyslne" rodzaj="ujednolicenie" pochodzenie="domyslne-z-aktu" data="2025-04-29" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_ujednolicenie.zdarz_ujednolicenie_2025-04-29_DU-2025-570_domyslne" glowna="true">
+          <Przedzial rodzaj="ujednolicenie" od="zdarz_ujednolicenie_2025-04-29_DU-2025-570_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <DataObowiazywaniaWersji>
+        <Od>zdarz_ujednolicenie_2025-04-29_DU-2025-570_domyslne</Od>
+      </DataObowiazywaniaWersji>
+      <Organy>
+        <Organ gd:GUID="996c4fcf-1f58-4b7d-ae3c-32e485eb7441" rola="wydajacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/MSEJMU">
+          <Nazwa>Marszałek Sejmu</Nazwa>
+          <OrganPodpisujacy>Marszałek Sejmu</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>S.</imie> <nazwisko>Hołownia</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Obwieszczenie</rodzaj-aktu>
+    <autor-aktu>Marszałka Sejmu Rzeczypospolitej Polskiej</autor-aktu>
+    <data>z dnia 23 kwietnia 2025 r.</data>
+    <tytul>w sprawie ogłoszenia jednolitego tekstu ustawy o szczególnych zasadach rozwiązywania z pracownikami stosunków pracy z przyczyn niedotyczących pracowników</tytul>
+    <punkt-OTJ eId="DU/2025/570__pkt_1" gd:GUID="6d206ba2-3ae1-46e4-8d38-16544196fd5b">
+      <nr>1</nr>
+      <p>
+        <zdanie nr="1" gd:zdGUID="a3345037-0416-49c3-8e71-07add36d39e5" fragment="1" gd:fragmentGUID="2bd9d393-febc-4f94-9aa4-4676618e936a">Na podstawie art. 16 ust. 1 zdanie pierwsze ustawy z dnia 20 lipca 2000 r. o ogłaszaniu aktów normatywnych i niektórych innych aktów prawnych (Dz. U. z 2019 r. poz. 1461) ogłasza się w załączniku do niniejszego obwieszczenia jednolity tekst ustawy z dnia 13 marca 2003 r. o szczególnych zasadach rozwiązywania z pracownikami stosunków pracy z przyczyn niedotyczących pracowników (Dz. U. z 2024 r. poz. 61), z uwzględnieniem zmian wprowadzonych ustawą z dnia 6 grudnia 2024 r. o zmianie ustawy – Kodeks pracy oraz niektórych innych ustaw (Dz. U. poz. 1871) oraz zmian wynikających z przepisów ogłoszonych przed dniem 15 kwietnia 2025 r.</zdanie>
+      </p>
+    </punkt-OTJ>
+    <punkt-OTJ eId="DU/2025/570__pkt_2" gd:GUID="20304476-dea2-4430-b09b-6f1b6c023f2e">
+      <nr>2</nr>
+      <p>
+        <zdanie nr="1" gd:zdGUID="b544ccf5-7be8-4135-8244-d1c49d65382a" fragment="1" gd:fragmentGUID="9f8fa871-aa65-4fb7-b481-af2c75625135">Podany w załączniku do niniejszego obwieszczenia tekst jednolity ustawy nie obejmuje art. 32 ustawy z dnia 6 grudnia 2024 r. o zmianie ustawy – Kodeks pracy oraz niektórych innych ustaw (Dz. U. poz. 1871), który stanowi:<tresc-strukt cudzyslowy="oba" gd:GUID="41512365-d6f1-4dae-817a-e7cca721f4a0"><artykul eId="DU/2024/1871__art_32" gd:GUID="dbc63a28-5a57-44ce-8509-76307bb5343b"><nr>32</nr><ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="a96101b1-52f6-4817-869c-a22cd4b1a3fc"><p><zdanie nr="1" gd:zdGUID="d4492892-f525-49da-9969-dbec6d0ddc38" fragment="1" gd:fragmentGUID="97a3f188-f813-415e-a29b-cd89100c9b0b">Ustawa wchodzi w życie po upływie 3 miesięcy od dnia ogłoszenia.</zdanie></p></ustep-n></artykul></tresc-strukt>.</zdanie>
+      </p>
+    </punkt-OTJ>
+    <organ-podpisujacy>Marszałek Sejmu: <i><osoba podpisujacy="true" gd:osobaGUID="98bfdff0-df6b-4351-a48d-e19d6b0127f4"><imie>S.</imie> <nazwisko>Hołownia</nazwisko></osoba></i></organ-podpisujacy>
+    <ustawa>
+      <zalacznik-do>Załącznik do obwieszczenia Marszałka Sejmu Rzeczypospolitej Polskiej z dnia 23 kwietnia 2025 r. (Dz. U. poz. 570)</zalacznik-do>
+      <rodzaj-aktu>Ustawa</rodzaj-aktu>
+      <data>z dnia 13 marca 2003 r.</data>
+      <tytul>o szczególnych zasadach rozwiązywania z pracownikami stosunków pracy z przyczyn niedotyczących pracowników<odnosnik id-odnosnika="1" symbol="1" gd:GUID="11f7568b-59f9-4f7c-9a30-8375ec10fa7d"><p><zdanie nr="1" gd:zdGUID="0962c1a5-43a8-4027-a678-676c054d9181" fragment="1" gd:fragmentGUID="729946d1-9da3-4f22-8e15-6026f5266dd8">Niniejsza ustawa wdraża w zakresie swojej regulacji następujące dyrektywy:</zdanie></p><punkt-odnosnik><nr>1</nr><p><zdanie nr="1" gd:zdGUID="0962c1a5-43a8-4027-a678-676c054d9181" fragment="2" gd:fragmentGUID="11ecf217-d4b8-49ea-a36e-de16953e5018">dyrektywę Rady 98/59/WE z dnia 20 lipca 1998 r. w sprawie zbliżenia ustawodawstw państw członkowskich odnoszących się do zwolnień grupowych (Dz. Urz. WE L 225 z 12.08.1998, str. 16; Dz. Urz. UE Polskie wydanie specjalne, rozdz. 5, t. 3, str. 327);</zdanie></p></punkt-odnosnik><punkt-odnosnik><nr>2</nr><p><zdanie nr="1" gd:zdGUID="0962c1a5-43a8-4027-a678-676c054d9181" fragment="3" gd:fragmentGUID="6d6f26f3-2158-4a77-93ed-f6ab73c8cd56">dyrektywę Parlamentu Europejskiego i Rady (UE) 2019/1158 z dnia 20 czerwca 2019 r. w sprawie równowagi między życiem zawodowym a prywatnym rodziców i opiekunów oraz uchylającą dyrektywę Rady 2010/18/UE (Dz. Urz. UE L 188 z 12.07.2019, str. 79).</zdanie></p></punkt-odnosnik></odnosnik></tytul>
+      <artykul eId="DU/2025/570__art_1" gd:GUID="5a0a84e7-0c7a-4efb-a7e1-d7e44fc48aae">
+        <nr>1</nr>
+        <ustep eId="DU/2025/570__art_1__ust_1" gd:GUID="4e9d4122-1122-4389-8f55-07cdbae46939">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="7d7ea864-10a7-4d94-9cc5-217741dc1553" fragment="1" gd:fragmentGUID="dcd4653e-bde0-46ec-8c9b-099cb6d5de94">Przepisy ustawy stosuje się w razie konieczności rozwiązania przez pracodawcę zatrudniającego co najmniej 20 pracowników stosunków pracy z przyczyn niedotyczących pracowników, w drodze wypowiedzenia dokonanego przez pracodawcę, a także na mocy porozumienia stron, jeżeli w okresie nieprzekraczającym 30 dni zwolnienie obejmuje co najmniej:</zdanie>
+          </p>
+          <punkt eId="DU/2025/570__art_1__ust_1__pkt_1" gd:GUID="3e52a7b0-959a-4765-b458-78f6fedf56cd">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="7d7ea864-10a7-4d94-9cc5-217741dc1553" fragment="2" gd:fragmentGUID="da9edaa0-5cc9-4d74-8556-b26616ac8e65">10 pracowników, gdy pracodawca zatrudnia mniej niż 100 pracowników,</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/570__art_1__ust_1__pkt_2" gd:GUID="e2d254ee-39af-4463-a0eb-e41f5058ac8d">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="7d7ea864-10a7-4d94-9cc5-217741dc1553" fragment="3" gd:fragmentGUID="5827a4a8-2a01-477c-baf6-f69bc24f5277">10 % pracowników, gdy pracodawca zatrudnia co najmniej 100, jednakże mniej niż 300 pracowników,</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/570__art_1__ust_1__pkt_3" gd:GUID="485475ab-d702-485a-825f-be5c1b9ff804">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="7d7ea864-10a7-4d94-9cc5-217741dc1553" fragment="4" gd:fragmentGUID="d60ad895-d74e-43b6-b42f-9af708a0da52">30 pracowników, gdy pracodawca zatrudnia co najmniej 300 lub więcej pracowników</zdanie>
+            </p>
+          </punkt>
+          <czesc-wspolna-punkt eId="DU/2025/570__art_1__ust_1__czw" gd:GUID="f23d2324-63d9-4e49-8b15-766962e5c35e">
+            <p>
+              <zdanie nr="1" gd:zdGUID="7d7ea864-10a7-4d94-9cc5-217741dc1553" fragment="5" gd:fragmentGUID="5f43e9fe-7039-465a-9dbf-ff362664c8e1">– zwanego dalej „grupowym zwolnieniem”.</zdanie>
+            </p>
+          </czesc-wspolna-punkt>
+        </ustep>
+        <ustep eId="DU/2025/570__art_1__ust_2" gd:GUID="9fc1e4ba-194b-483e-a58d-ab1e6e84c883">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="87b3e205-f3d2-487f-87f7-27f825be516c" fragment="1" gd:fragmentGUID="50a420af-e0de-4ad0-b584-1b8dc98f4024">Liczby odnoszące się do pracowników, o których mowa w ust. 1, obejmują pracowników, z którymi w ramach grupowego zwolnienia następuje rozwiązanie stosunków pracy z inicjatywy pracodawcy na mocy porozumienia stron, jeżeli dotyczy to co najmniej 5 pracowników.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/570__art_2" gd:GUID="f7e0372a-19b3-4cbd-9782-93c129c31552">
+        <nr>2</nr>
+        <ustep eId="DU/2025/570__art_2__ust_1" gd:GUID="cc2c6d1a-bb65-4ec8-ad34-eb6c4e5af1a0">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="7924a115-ffde-4022-8bbb-17ca50483154" fragment="1" gd:fragmentGUID="c850951a-4a67-47a2-ab02-3f91402abcd5">Pracodawca jest obowiązany skonsultować zamiar przeprowadzenia grupowego zwolnienia z zakładowymi organizacjami związkowymi działającymi u tego pracodawcy.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/570__art_2__ust_2" gd:GUID="48e82c52-9de6-4fa8-a046-9f2500882fc8">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="d018dd7d-31b5-4163-8086-a3829a2ea311" fragment="1" gd:fragmentGUID="d62eaabe-4fdd-452a-af58-92abd3abdb20">Konsultacja, o której mowa w ust. 1, dotyczy w szczególności możliwości uniknięcia lub zmniejszenia rozmiaru grupowego zwolnienia oraz spraw pracowniczych związanych z tym zwolnieniem, w tym zwłaszcza możliwości przekwalifikowania lub przeszkolenia zawodowego, a także uzyskania innego zatrudnienia przez zwolnionych pracowników.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/570__art_2__ust_3" gd:GUID="127f9ae2-770a-4236-9764-95d2a9cfe889">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="c0b2ccdc-d491-47c4-847f-6174eae07030" fragment="1" gd:fragmentGUID="894d74d0-bcab-4de8-8b9b-d64423ca7fec">Pracodawca jest obowiązany zawiadomić na piśmie zakładowe organizacje związkowe o przyczynach zamierzonego grupowego zwolnienia, liczbie zatrudnionych pracowników i grupach zawodowych, do których oni należą, grupach zawodowych pracowników objętych zamiarem grupowego zwolnienia, okresie, w ciągu którego nastąpi takie zwolnienie, proponowanych kryteriach doboru pracowników do grupowego zwolnienia, kolejności dokonywania zwolnień pracowników, propozycjach rozstrzygnięcia spraw pracowniczych związanych z zamierzonym grupowym zwolnieniem, a jeżeli obejmują one świadczenia pieniężne, pracodawca jest obowiązany dodatkowo przedstawić sposób ustalania ich wysokości.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/570__art_2__ust_4" gd:GUID="077625ef-408e-4163-86d8-65edc2a37364">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="d08df181-2a54-404d-804c-1eb59823da61" fragment="1" gd:fragmentGUID="8690e979-d8fe-4877-a6d7-e5c543aba308">Pracodawca przekazuje zakładowym organizacjom związkowym informacje, o których mowa w ust. 3, w terminie umożliwiającym tym organizacjom zgłoszenie w ramach konsultacji propozycji dotyczących spraw określonych w ust. 2.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/570__art_2__ust_5" gd:GUID="b443d557-0334-4777-a1e8-82ffde3e5069">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="d22598e1-5c7b-472c-a49b-9bba56ffb9c2" fragment="1" gd:fragmentGUID="404430f0-6000-4465-a337-3d17cb60ad23">W trakcie konsultacji pracodawca jest obowiązany przekazać zakładowym organizacjom związkowym także inne niż określone w ust. 3 informacje, jeżeli mogą one mieć wpływ na przebieg konsultacji oraz treść porozumienia, o którym mowa w art. 3.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/570__art_2__ust_6" gd:GUID="82356d34-ca67-4302-ae9a-de8dbe4df980">
+          <nr>6</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="f7b26078-ae0d-43f4-8ecb-cf53728213dc" fragment="1" gd:fragmentGUID="dda9804a-c18e-49c8-91d5-36382a1e952e">Pracodawca przekazuje na piśmie właściwemu powiatowemu urzędowi pracy informacje, o których mowa w ust. 3, z wyłączeniem informacji dotyczących sposobu ustalania wysokości świadczeń pieniężnych przysługujących pracownikom.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/570__art_2__ust_6a" gd:GUID="b5b22ae8-817a-4fca-8495-5a66a9d098f7">
+          <nr>6a</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="c1d24693-572f-43bb-8192-7525fb234dca" fragment="1" gd:fragmentGUID="5276dcc8-784a-437c-9e05-3610153dcc7c">W przypadku zamiaru przeprowadzenia grupowego zwolnienia dotyczącego członków załogi statku morskiego o polskiej przynależności pracodawca przekazuje informacje, o których mowa w ust. 6, powiatowemu urzędowi pracy właściwemu ze względu na siedzibę armatora.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/570__art_2__ust_7" gd:GUID="cbce7cd7-a2c4-4aa7-a539-33fecafe8ec8">
+          <nr>7</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="aa6c9541-8177-4747-ade0-845b93207e9f" fragment="1" gd:fragmentGUID="683ae367-5be3-40de-b8b1-6e7a67561db8">Jeżeli u danego pracodawcy nie działają zakładowe organizacje związkowe, uprawnienia tych organizacji w zakresie wynikającym z ust. 1–5 przysługują przedstawicielom pracowników wyłonionym w trybie przyjętym u danego pracodawcy.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/570__art_3" gd:GUID="516f472e-4747-4811-abac-d49afaa5f152">
+        <nr>3</nr>
+        <ustep eId="DU/2025/570__art_3__ust_1" gd:GUID="9b9e4f47-4d85-43a7-ba21-092e4b494599">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="00b149af-e53b-4839-a897-02924480d40b" fragment="1" gd:fragmentGUID="d1af8478-1877-452e-ba18-2286d0ddab43">W terminie nie dłuższym niż 20 dni od dnia zawiadomienia, o którym mowa w art. 2 ust. 3, pracodawca i zakładowe organizacje związkowe zawierają porozumienie.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/570__art_3__ust_2" gd:GUID="30064051-b9df-4d5e-b8b3-8199e6af152a">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="fb19d9d6-4bff-427f-b19c-d31c48e4ce7e" fragment="1" gd:fragmentGUID="5e77240c-8d56-48d9-8ffd-d86b0250399a">W porozumieniu, o którym mowa w ust. 1, określa się zasady postępowania w sprawach dotyczących pracowników objętych zamiarem grupowego zwolnienia, a także obowiązki pracodawcy w zakresie niezbędnym do rozstrzygnięcia innych spraw pracowniczych związanych z zamierzonym grupowym zwolnieniem.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/570__art_3__ust_3" gd:GUID="658acf3d-c6d2-4c80-9c6e-e09c1731c1b0">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="66d76a90-7dfd-496b-8981-079224de1a60" fragment="1" gd:fragmentGUID="eb362f2d-00e5-4030-b8ad-25e75487d355">Jeżeli nie jest możliwe uzgodnienie treści porozumienia ze wszystkimi zakładowymi organizacjami związkowymi, pracodawca uzgadnia treść porozumienia z organizacjami związkowymi reprezentatywnymi w rozumieniu art. 25<sup>3</sup> ust. 1 lub 2 ustawy z dnia 23 maja 1991 r. o związkach zawodowych (Dz. U. z 2025 r. poz. 440), z których każda zrzesza co najmniej 5 % pracowników zatrudnionych u pracodawcy.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/570__art_3__ust_4" gd:GUID="a6cada41-3062-4f49-8f19-7bd7f7d43dd8">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="448eef57-5046-4b9c-a318-d1d74c323e83" fragment="1" gd:fragmentGUID="27e25cbb-dcbc-4cfb-a383-36d411c3875a">Jeżeli nie jest możliwe zawarcie porozumienia zgodnie z ust. 1 i 3, zasady postępowania w sprawach dotyczących pracowników objętych zamiarem grupowego zwolnienia ustala pracodawca w regulaminie, uwzględniając, w miarę możliwości, propozycje przedstawione w ramach konsultacji przez zakładowe organizacje związkowe.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/570__art_3__ust_5" gd:GUID="63a9d02b-4eba-47f6-a63f-b642799913a7">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a0900a98-f8fe-441f-bd45-2ac0d1e15f5f" fragment="1" gd:fragmentGUID="08a3b143-1ac0-46d8-bda1-06292c89432f">Jeżeli u danego pracodawcy nie działają zakładowe organizacje związkowe, zasady postępowania w sprawach dotyczących pracowników objętych zamiarem grupowego zwolnienia ustala pracodawca w regulaminie, po konsultacji z przedstawicielami pracowników wyłonionymi w trybie przyjętym u danego pracodawcy.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/570__art_4" gd:GUID="471344e9-9e73-4641-9b4b-60ca292a2563">
+        <nr>4</nr>
+        <ustep eId="DU/2025/570__art_4__ust_1" gd:GUID="9018d24d-0441-4372-9824-5b7b5891177a">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="b750de5a-0724-44ee-930e-b625167e496a" fragment="1" gd:fragmentGUID="84de19c4-2930-41f2-80cb-32d009195e12">Pracodawca – po zawarciu porozumienia, a w razie niezawarcia porozumienia po spełnieniu obowiązku, o którym mowa w art. 3 ust. 4 lub 5 – zawiadamia na piśmie właściwy powiatowy urząd pracy o przyjętych ustaleniach dotyczących grupowego zwolnienia, w tym o liczbie zatrudnionych i zwalnianych pracowników oraz o przyczynach ich zwolnienia, okresie, w ciągu którego ma być dokonane zwolnienie, a także o przeprowadzonej konsultacji zamierzonego grupowego zwolnienia z zakładowymi organizacjami związkowymi lub z przedstawicielami pracowników wyłonionymi w trybie przyjętym u danego pracodawcy.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/570__art_4__ust_1a" gd:GUID="77209192-e5be-4e87-a1be-cfd650f78f7b">
+          <nr>1a</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="0a3c19af-ef58-4277-a6ca-f5978e9a3f44" fragment="1" gd:fragmentGUID="a1172b25-132b-4c58-845c-b6f6b9dd5d24">W przypadku zamiaru przeprowadzenia grupowego zwolnienia dotyczącego członków załogi statku morskiego o polskiej przynależności pracodawca przekazuje informacje, o których mowa w ust. 1, powiatowemu urzędowi pracy właściwemu ze względu na siedzibę armatora.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/570__art_4__ust_2" gd:GUID="11fe3300-ad56-4b0d-9133-bc6e8ebaeb58">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="37024219-d630-4158-99ab-3f61868a47fb" fragment="1" gd:fragmentGUID="59af89ed-fcd1-481e-9661-8fad066117df">Kopię zawiadomienia, o którym mowa w ust. 1, pracodawca przekazuje zakładowym organizacjom związkowym.</zdanie>
+            <zdanie nr="2" gd:zdGUID="f08fe125-9b86-4321-82f9-fb0c31a634b0" fragment="1" gd:fragmentGUID="6d86d5f9-96a7-4786-ba27-7ce97565a649">Zakładowe organizacje związkowe mogą przedstawić właściwemu powiatowemu urzędowi pracy swoją opinię w sprawie grupowego zwolnienia.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/570__art_4__ust_3" gd:GUID="f85e4685-5180-45e0-9779-6e6abc6b7082">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="6e624c57-5e01-4d45-909d-9ddcbd85ff64" fragment="1" gd:fragmentGUID="2c58d6e9-b1ef-4a6e-8043-e3a3e9e823f4">Jeżeli u danego pracodawcy nie działają zakładowe organizacje związkowe, przepis ust. 2 stosuje się odpowiednio do przedstawicieli pracowników wyłonionych w trybie przyjętym u danego pracodawcy.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/570__art_4__ust_4" gd:GUID="3520e824-c48c-44d7-a8fe-1674e9d2fee7">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="ae9fac82-4351-4302-8454-32ad0ec484f2" fragment="1" gd:fragmentGUID="79772508-5c0f-40b2-943d-7ab8b809cb3f">W razie zakończenia działalności pracodawcy wskutek prawomocnego orzeczenia sądowego zawiadomienie, o którym mowa w ust. 1, jest wymagane, gdy z takim wnioskiem wystąpi właściwy powiatowy urząd pracy.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/570__art_5" gd:GUID="9af79b6c-ef30-4355-b950-12f894923b79">
+        <nr>5</nr>
+        <ustep eId="DU/2025/570__art_5__ust_1" gd:GUID="8db06a25-9b7a-424b-907d-62f9e15a203a">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="9fd200b4-1635-411f-83d0-1af75ffdd649" fragment="1" gd:fragmentGUID="1c25b0c4-d343-400c-8b01-dcd9064346b1">Przy wypowiadaniu pracownikom stosunków pracy w ramach grupowego zwolnienia nie stosuje się art. 38 i 41 Kodeksu pracy, z zastrzeżeniem ust. 2–4, a także przepisów odrębnych dotyczących szczególnej ochrony pracowników przed wypowiedzeniem lub rozwiązaniem stosunku pracy, z zastrzeżeniem ust. 5.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/570__art_5__ust_2" gd:GUID="95cfefc5-7b8c-461d-a84b-f8c864bedea7">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="0a95b018-2ba0-4cb0-b103-88a5ff613a17" fragment="1" gd:fragmentGUID="53853c1d-4815-4659-aba1-fa9858ff2f2e">W razie niezawarcia porozumienia, o którym mowa w art. 3, przy wypowiadaniu pracownikom stosunków pracy, a także warunków pracy i płacy, stosuje się art. 38 Kodeksu pracy.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/570__art_5__ust_3" gd:GUID="f8191256-0b68-4458-8b09-9716a3665822">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="1b4d2f41-af3e-467f-a95f-2b1d4c6668a6" fragment="1" gd:fragmentGUID="b9ed918f-56f1-4b1e-b428-10054b0a7f07">Wypowiedzenie pracownikom stosunków pracy w sytuacjach, o których mowa w art. 41 Kodeksu pracy, jest dopuszczalne w czasie urlopu trwającego co najmniej 3 miesiące, a także w czasie innej usprawiedliwionej nieobecności pracownika w pracy, jeżeli upłynął już okres uprawniający pracodawcę do rozwiązania umowy o pracę bez wypowiedzenia.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/570__art_5__ust_4" gd:GUID="5640f966-18a5-4156-bced-1f9094848aa7">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="47641552-49fc-4966-8390-45c0bd0ff421" fragment="1" gd:fragmentGUID="f3bbef88-ed2c-46fb-a5dd-19490ffe0e55">Wypowiedzenie pracownikom warunków pracy i płacy w sytuacjach, o których mowa w art. 41 Kodeksu pracy, jest dopuszczalne niezależnie od okresu trwania urlopu lub innej usprawiedliwionej nieobecności pracownika w pracy.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/570__art_5__ust_5" gd:GUID="8671bd2e-447f-471b-ac68-69437b57aa26">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="238eadef-c847-4a41-9346-733c17c8e00a" fragment="1" gd:fragmentGUID="22e3e84f-e56f-4f83-87e7-96a663270443">W okresie objęcia szczególną ochroną przed wypowiedzeniem lub rozwiązaniem stosunku pracy pracodawca może jedynie wypowiedzieć dotychczasowe warunki pracy i płacy pracownikowi:</zdanie>
+          </p>
+          <punkt eId="DU/2025/570__art_5__ust_5__pkt_1" gd:GUID="dc857f3e-696e-4353-96c6-08a8adb86566">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="238eadef-c847-4a41-9346-733c17c8e00a" fragment="2" gd:fragmentGUID="94bcdbd4-3bc9-48ee-960c-481bda885bdd"><odnosnik id-odnosnika="2" symbol="2" gd:GUID="27e64062-441a-4bd5-b983-d8c2e648c48b"><p><zdanie nr="1" gd:zdGUID="8a5937db-a6be-41de-ac61-e6ad638b5496" fragment="1" gd:fragmentGUID="9831e989-427d-4464-af8c-0af4d354e2a0">W brzmieniu ustalonym przez art. 11 pkt 1 ustawy z dnia 6 grudnia 2024 r. o zmianie ustawy – Kodeks pracy oraz niektórych innych ustaw (Dz. U. poz. 1871), która weszła w życie z dniem 19 marca 2025 r.</zdanie></p></odnosnik> któremu brakuje nie więcej niż 4 lata do osiągnięcia wieku emerytalnego, pracownicy w ciąży, pracownikowi od dnia złożenia wniosku o udzielenie urlopu macierzyńskiego albo jego części, urlopu na warunkach urlopu macierzyńskiego albo jego części, uzupełniającego urlopu macierzyńskiego, urlopu rodzicielskiego albo jego części, urlopu ojcowskiego albo jego części oraz urlopu opiekuńczego – do dnia zakończenia tego urlopu;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/570__art_5__ust_5__pkt_2" gd:GUID="c8d1d9cd-c6c2-4ce0-b079-bae2736b9ac4">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="238eadef-c847-4a41-9346-733c17c8e00a" fragment="3" gd:fragmentGUID="2c860083-daf5-4e9c-a76d-6330431ec861">będącemu członkiem rady pracowniczej przedsiębiorstwa państwowego;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/570__art_5__ust_5__pkt_3" gd:GUID="d53b773c-efd2-480c-89ca-24ad12a537f3">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="238eadef-c847-4a41-9346-733c17c8e00a" fragment="4" gd:fragmentGUID="a1fa1324-12e1-48b6-97e8-ba453363e00a">będącemu członkiem zarządu zakładowej organizacji związkowej;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/570__art_5__ust_5__pkt_4" gd:GUID="db34a844-aa0f-4f5e-80aa-24ee364722f1">
+            <nr>4</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="238eadef-c847-4a41-9346-733c17c8e00a" fragment="5" gd:fragmentGUID="f1878e38-e0f1-4f5b-8449-4f34fd964076">będącemu członkiem zakładowej organizacji związkowej, upoważnionemu do reprezentowania tej organizacji wobec pracodawcy albo organu lub osoby dokonującej za pracodawcę czynności w sprawach z zakresu prawa pracy;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/570__art_5__ust_5__pkt_4a" gd:GUID="c25796a0-dd07-4149-a921-ff987627051d">
+            <nr>4a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="238eadef-c847-4a41-9346-733c17c8e00a" fragment="6" gd:fragmentGUID="f4000ad3-3dc5-48d1-b504-906c7ee0e195">będącemu członkiem specjalnego zespołu negocjacyjnego lub europejskiej rady zakładowej;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/570__art_5__ust_5__pkt_4b" gd:GUID="a614a1a5-ef36-42c7-8a31-9f546b5f37c1">
+            <nr>4b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="238eadef-c847-4a41-9346-733c17c8e00a" fragment="7" gd:fragmentGUID="0fbd53d2-90da-4bb8-a065-12e397628b83">będącemu członkiem specjalnego zespołu negocjacyjnego, organu przedstawicielskiego lub przedstawicielem pracowników w spółce europejskiej;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/570__art_5__ust_5__pkt_4c" gd:GUID="d3606d3b-c3ad-4d7d-b1db-425311c604f8">
+            <nr>4c</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="238eadef-c847-4a41-9346-733c17c8e00a" fragment="8" gd:fragmentGUID="b207373e-1e2c-4bc9-aa5e-a8e68e35c69d">będącemu członkiem specjalnego zespołu negocjacyjnego, organu przedstawicielskiego lub przedstawicielem pracowników w spółdzielni europejskiej;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/570__art_5__ust_5__pkt_4d" gd:GUID="23689229-8429-43f6-b14f-4fde3d9e25e6">
+            <nr>4d</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="238eadef-c847-4a41-9346-733c17c8e00a" fragment="9" gd:fragmentGUID="f18490cd-99f9-46cf-9dd5-84df3093966a">będącemu członkiem specjalnego zespołu negocjacyjnego, członkiem zespołu przedstawicielskiego albo przedstawicielem pracowników w radzie nadzorczej albo radzie dyrektorów spółki powstałej w wyniku transgranicznego przekształcenia, połączenia lub podziału spółek;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/570__art_5__ust_5__pkt_5" gd:GUID="cc933bcb-9185-4854-8dfd-f62a3f606b3a">
+            <nr>5</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="238eadef-c847-4a41-9346-733c17c8e00a" fragment="10" gd:fragmentGUID="4e9fc7e2-b1fb-46f6-9cee-8d0ba641745d">będącemu społecznym inspektorem pracy;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/570__art_5__ust_5__pkt_6" gd:GUID="9ed13d1e-9456-425e-bee2-922d79c02206">
+            <nr>6</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="238eadef-c847-4a41-9346-733c17c8e00a" fragment="11" gd:fragmentGUID="bf897f9a-a6e3-4e89-b53e-94adcc881f6f">powołanemu do odbycia czynnej służby wojskowej, służby zastępczej, zasadniczej służby wojskowej albo przeszkolenia wojskowego;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/570__art_5__ust_5__pkt_7" gd:GUID="8e058888-6356-4fed-ad2c-d6181af42f5e">
+            <nr>7</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="238eadef-c847-4a41-9346-733c17c8e00a" fragment="12" gd:fragmentGUID="4abfb366-7c0e-4ec9-a287-33dde77a9bd0">będącemu członkiem rady pracowników lub określonym w porozumieniu, o którym mowa w art. 24 ustawy z dnia 7 kwietnia 2006 r. o informowaniu pracowników i przeprowadzaniu z nimi konsultacji (Dz. U. poz. 550, z 2008 r. poz. 584 i 778 oraz z 2009 r. poz. 805), przedstawicielem pracowników uprawnionym do uzyskiwania od pracodawcy informacji i prowadzenia z nim konsultacji.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/570__art_5__ust_6" gd:GUID="3444124b-e80b-43f9-9ccf-de7e72923d19">
+          <nr>6</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="8f450b92-490d-4650-8a39-50d6a4920351" fragment="1" gd:fragmentGUID="fe640ff8-b1ea-4825-a026-76475db59c94">Jeżeli wypowiedzenie warunków pracy i płacy powoduje obniżenie wynagrodzenia, pracownikom, o których mowa w ust. 5, przysługuje, do końca okresu, w którym korzystaliby ze szczególnej ochrony przed wypowiedzeniem lub rozwiązaniem stosunku pracy, dodatek wyrównawczy obliczony według zasad wynikających z Kodeksu pracy.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/570__art_5__ust_6a" gd:GUID="400d9ab6-ca3f-4ec6-aa5a-b772a24a7935">
+          <nr>6a</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="ca59a916-58d3-4346-a3a7-b1fd444bddc0" fragment="1" gd:fragmentGUID="d3d1af75-2028-4153-a91d-8e37276f3b9e"><odnosnik id-odnosnika="3" symbol="3" gd:GUID="744a31ac-570e-4ac6-a826-6a744175dbd9"><p><zdanie nr="1" gd:zdGUID="8a697367-2879-430c-ba94-bff0cecaa2d0" fragment="1" gd:fragmentGUID="f2a58004-739f-444b-b7c7-bf6fe575c690">W brzmieniu ustalonym przez art. 11 pkt 2 ustawy, o której mowa w odnośniku 2.</zdanie></p></odnosnik> W przypadku rozwiązania umowy o pracę z pracownicą w ciąży, pracownikiem od dnia złożenia wniosku o udzielenie urlopu macierzyńskiego, urlopu na warunkach urlopu macierzyńskiego, uzupełniającego urlopu macierzyńskiego, urlopu rodzicielskiego, urlopu ojcowskiego oraz urlopu opiekuńczego, o których mowa w ust. 5 pkt 1, z powodu odmowy przyjęcia przez tę pracownicę albo tego pracownika zaproponowanych warunków pracy lub płacy i rozwiązania umowy o pracę z upływem okresu dokonanego wypowiedzenia, pracodawca udowodni, że przy wypowiadaniu dotychczasowych warunków pracy i płacy kierował się innymi powodami.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/570__art_5__ust_7" gd:GUID="9d3ab799-d9d6-4874-ab50-1ae3da572067">
+          <nr>7</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="c25c4c01-2b25-4538-a3a2-91f34333de82" fragment="1" gd:fragmentGUID="2aebaeb9-efd5-4f66-9ca3-49902907ca14">(uchylony)</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/570__art_6" gd:GUID="4acbe33f-a4a7-4cda-bdaf-dc20fdc57d51">
+        <nr>6</nr>
+        <ustep eId="DU/2025/570__art_6__ust_1" gd:GUID="10f2f7f0-d7c8-4e2c-a4ce-edc10050e914">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="78b4cbdb-60b6-4161-ac7c-f09b677a5497" fragment="1" gd:fragmentGUID="439b5c27-a03d-4f72-8917-491a795276d2">Wypowiedzenie pracownikowi stosunku pracy w ramach grupowego zwolnienia może nastąpić nie wcześniej niż po dokonaniu przez pracodawcę zawiadomienia, o którym mowa w art. 4 ust. 1, a w przypadku gdy nie jest ono wymagane – nie wcześniej niż po zawarciu porozumienia lub spełnieniu obowiązku, o którym mowa w art. 3 ust. 4 lub 5.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/570__art_6__ust_2" gd:GUID="a5333944-52a2-46c0-8163-033e00f5baf5">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="13f4152d-8b88-4421-ad10-1b31e7a6bd40" fragment="1" gd:fragmentGUID="cf528ee8-bb1b-42e4-9a6f-dbb09ea62306">Rozwiązanie z pracownikiem stosunku pracy w ramach grupowego zwolnienia może nastąpić nie wcześniej niż po upływie 30 dni od dnia zawiadomienia, o którym mowa w art. 4 ust. 1, a w przypadku gdy nie jest ono wymagane – nie wcześniej niż po upływie 30 dni od dnia zawarcia porozumienia lub spełnienia obowiązku, o którym mowa w art. 3 ust. 4 lub 5.</zdanie>
+            <zdanie nr="2" gd:zdGUID="9f7d0322-3e32-4aee-8f8d-0a7893f53f9f" fragment="1" gd:fragmentGUID="71f89662-2d57-4dd3-bbd0-cce54c4db119">Nie dotyczy to przypadków rozwiązania z pracownikami stosunków pracy w razie zakończenia działalności pracodawcy wskutek prawomocnego orzeczenia sądowego.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/570__art_7" gd:GUID="8e6d913d-8013-4fff-8333-62e354282746">
+        <nr>7</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="ba06b9e9-e6dc-4571-8ced-9ea8db519ac2">
+          <p>
+            <zdanie nr="1" gd:zdGUID="0778f852-9183-4083-a7c6-23d757103e4e" fragment="1" gd:fragmentGUID="51b77ca7-4545-4323-9d49-7b1e68bc436d">Przy rozwiązywaniu z pracownikami stosunków pracy w ramach grupowego zwolnienia z powodu ogłoszenia upadłości lub likwidacji pracodawcy stosuje się przepisy art. 41<sup>1</sup> § 1, art. 177 § 4, art. 186<sup>8</sup> i art. 196 pkt 2 Kodeksu pracy, a także odrębne przepisy regulujące rozwiązywanie z pracownikami stosunków pracy z takiego powodu.</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2025/570__art_8" gd:GUID="688a6c0c-aad2-408c-a65b-ca749cded650">
+        <nr>8</nr>
+        <ustep eId="DU/2025/570__art_8__ust_1" gd:GUID="a0ee9e50-52ce-499c-b162-19f23f31c7be">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="27f5fd81-c1bd-4f74-983f-33477bd11d5c" fragment="1" gd:fragmentGUID="6ec06dd1-e570-4f4d-8f4e-4c9efd671602">Pracownikowi, w związku z rozwiązaniem stosunku pracy w ramach grupowego zwolnienia, przysługuje odprawa pieniężna w wysokości:</zdanie>
+          </p>
+          <punkt eId="DU/2025/570__art_8__ust_1__pkt_1" gd:GUID="2920e4c3-49e6-4c0f-9977-1ea6d1e30e75">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="27f5fd81-c1bd-4f74-983f-33477bd11d5c" fragment="2" gd:fragmentGUID="ec4ec2db-55f3-4f60-bfe6-7d7efe49b5aa">jednomiesięcznego wynagrodzenia, jeżeli pracownik był zatrudniony u danego pracodawcy krócej niż 2 lata;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/570__art_8__ust_1__pkt_2" gd:GUID="e42d5ddd-e426-41ac-b967-2f0b521d84a6">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="27f5fd81-c1bd-4f74-983f-33477bd11d5c" fragment="3" gd:fragmentGUID="1f09557c-9ce5-4422-81a1-49c2733b3690">dwumiesięcznego wynagrodzenia, jeżeli pracownik był zatrudniony u danego pracodawcy od 2 do 8 lat;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/570__art_8__ust_1__pkt_3" gd:GUID="b1257b25-a9d9-42d0-afd5-cf2b5e8ee7cc">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="27f5fd81-c1bd-4f74-983f-33477bd11d5c" fragment="4" gd:fragmentGUID="da8b89a6-a9ff-4ce8-addf-c511ee26eabd">trzymiesięcznego wynagrodzenia, jeżeli pracownik był zatrudniony u danego pracodawcy ponad 8 lat.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/570__art_8__ust_2" gd:GUID="a775a844-6880-4053-bfa7-7792260d6ed2">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="ac2f8453-8cd4-4f30-8298-967e11a79d00" fragment="1" gd:fragmentGUID="695252be-a01f-4986-948b-0408b9ea91a2">Przy ustalaniu okresu zatrudnienia, o którym mowa w ust. 1, przepis art. 36 § 1<sup>1</sup> Kodeksu pracy stosuje się odpowiednio.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/570__art_8__ust_3" gd:GUID="a062f9e8-6ac0-46fd-95ab-14072932b3b9">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="b5c19147-9145-47fd-aab3-5c7a9c8d5039" fragment="1" gd:fragmentGUID="0a55255f-ec0d-47f1-9e6a-d42c94a75712">Odprawę pieniężną ustala się według zasad obowiązujących przy obliczaniu ekwiwalentu pieniężnego za urlop wypoczynkowy.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/570__art_8__ust_4" gd:GUID="03e6784e-be8d-41cc-a602-f7c129f6c161">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="e1242f9e-b492-4b20-a90f-ae1f969893bd" fragment="1" gd:fragmentGUID="7e69201a-12b2-4d63-bb0a-c1db86317609">Wysokość odprawy pieniężnej nie może przekraczać kwoty 15-krotnego minimalnego wynagrodzenia za pracę, ustalanego na podstawie odrębnych przepisów, obowiązującego w dniu rozwiązania stosunku pracy.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/570__art_9" gd:GUID="01bf9d37-b913-4c2e-81d1-05d223a21eff">
+        <nr>9</nr>
+        <ustep eId="DU/2025/570__art_9__ust_1" gd:GUID="0c77016a-5685-4672-90bf-3a11b026dd1e">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="80aab922-f8af-436c-9159-ebfcbe249ffd" fragment="1" gd:fragmentGUID="10225206-5d7f-4e74-bd98-a47c312e4a7b">W razie ponownego zatrudniania pracowników w tej samej grupie zawodowej pracodawca powinien zatrudnić pracownika, z którym rozwiązał stosunek pracy w ramach grupowego zwolnienia, jeżeli zwolniony pracownik zgłosi zamiar podjęcia zatrudnienia u tego pracodawcy w ciągu roku od dnia rozwiązania z nim stosunku pracy.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/570__art_9__ust_2" gd:GUID="3409abb2-bbc8-4cde-b187-7dbd30096a36">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="d499ebbc-5a5d-457a-9b96-da75c4fbda44" fragment="1" gd:fragmentGUID="ff23853e-a2dc-4341-b243-143b737abe0a">Pracodawca powinien ponownie zatrudnić pracownika, o którym mowa w ust. 1, w okresie 15 miesięcy od dnia rozwiązania z nim stosunku pracy w ramach grupowego zwolnienia.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/570__art_10" gd:GUID="96bcc583-f9a7-469d-b16d-d7aa741fe960">
+        <nr>10</nr>
+        <ustep eId="DU/2025/570__art_10__ust_1" gd:GUID="419208e5-d814-45da-9c95-45538850c685">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="dbe547ac-4a88-4d6c-a53b-a6ad4e3ba6b4" fragment="1" gd:fragmentGUID="ecff5647-1b8e-43cc-aa4f-ee39917f97c0">Przepisy art. 5 ust. 3–6 i art. 8 stosuje się odpowiednio w razie konieczności rozwiązania przez pracodawcę zatrudniającego co najmniej 20 pracowników stosunków pracy z przyczyn niedotyczących pracowników, jeżeli przyczyny te stanowią wyłączny powód uzasadniający wypowiedzenie stosunku pracy lub jego rozwiązanie na mocy porozumienia stron, a zwolnienia w okresie nieprzekraczającym 30 dni obejmują mniejszą liczbę pracowników niż określona w art. 1.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/570__art_10__ust_2" gd:GUID="2b77c13d-e8a0-4826-9de4-2cd3ef3c1741">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="908ab268-2f8e-455d-be96-e4cfcd9ec0e5" fragment="1" gd:fragmentGUID="48c2597e-efbe-46e5-90cd-6202fed69ebc">W przypadku określonym w ust. 1 pracodawca może rozwiązać stosunki pracy, w drodze wypowiedzenia, z pracownikami, których stosunek pracy podlega z mocy odrębnych przepisów szczególnej ochronie przed wypowiedzeniem lub rozwiązaniem i wobec których jest dopuszczalne wypowiedzenie stosunku pracy w ramach grupowego zwolnienia, pod warunkiem niezgłoszenia sprzeciwu przez zakładową organizację związkową w terminie 14 dni od dnia otrzymania zawiadomienia o zamierzonym wypowiedzeniu.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/570__art_10__ust_3" gd:GUID="fdfa1439-b4e2-409e-a215-f4b71a5bbd17">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="8a8b5bc3-6c25-4b12-8cf6-afabc887b804" fragment="1" gd:fragmentGUID="39d204fb-d3ec-4730-af2b-883d6774d1d9">Pracodawca może wypowiedzieć warunki pracy i płacy pracownikom, o których mowa w ust. 2, jeżeli z przyczyn określonych w ust. 1 nie jest możliwe dalsze ich zatrudnianie na dotychczasowych stanowiskach pracy.</zdanie>
+            <zdanie nr="2" gd:zdGUID="1c49d168-2fbc-47b3-bc5d-3fac2afaf7d0" fragment="1" gd:fragmentGUID="ffa344ac-cd4e-46f4-90bf-01b002ae8b38">W takim przypadku stosuje się art. 38 Kodeksu pracy.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/570__art_10__ust_4" gd:GUID="83cbfa6d-dacb-48c5-8c06-0d5e6b7b29af">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="7cd109f7-8805-4ae3-9c64-a6b9a3d403bd" fragment="1" gd:fragmentGUID="1ad6aaf0-6edb-48f0-88fc-a8eb402e2c76">Jeżeli wypowiedzenie warunków pracy i płacy w okolicznościach określonych w ust. 3 powoduje obniżenie wynagrodzenia, pracownikom przysługuje, przez okres nieprzekraczający 6 miesięcy, dodatek wyrównawczy obliczony według zasad wynikających z Kodeksu pracy.</zdanie>
+            <zdanie nr="2" gd:zdGUID="ce672c92-1e89-40ad-a1de-ee8d0d0acd6b" fragment="1" gd:fragmentGUID="b777ca82-7b50-47b1-9f75-087cceea967a">Prawo do dodatku wyrównawczego nie przysługuje pracownikom, których szczególna ochrona przed wypowiedzeniem umowy o pracę wynika z art. 41 Kodeksu pracy.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/570__art_10__ust_5" gd:GUID="d30c0f5c-3ff9-4ffb-a54e-973fc20f35f0">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="0faf0dcb-15a2-47f5-840b-038a1485fb6f" fragment="1" gd:fragmentGUID="6a768506-95de-4d37-b44a-971e3b44dce9">Przepisów ust. 1–4 nie stosuje się do pracowników będących posłami, senatorami lub radnymi, w okresie, w którym ich stosunek pracy podlega z mocy odrębnych przepisów szczególnej ochronie przed wypowiedzeniem lub rozwiązaniem.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/570__art_11" gd:GUID="b3ff47b3-5811-43e9-be3c-8d31c9eb4015">
+        <nr>11</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="b7a28e6e-d769-4163-8278-dad51f280bd7">
+          <p>
+            <zdanie nr="1" gd:zdGUID="e9c30078-4dcd-42f0-8d8b-e7fb599076f3" fragment="1" gd:fragmentGUID="29803f4d-b0db-42b8-86b5-22546d42bc18">Przepisów ustawy nie stosuje się do pracowników zatrudnionych na podstawie mianowania.</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2025/570__art_12" gd:GUID="a35de223-c27a-4401-b529-bb7a68f5f2c2">
+        <nr>12</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="b84089dc-bff2-4624-bf50-3bb7c026abd1">
+          <p>
+            <zdanie nr="1" gd:zdGUID="b7625df2-c901-4ff3-b0f1-4a5edb4f4dec" fragment="1" gd:fragmentGUID="ccca5a07-55b5-4303-b388-826a4ae2d268">Przy rozwiązywaniu stosunków pracy z przyczyn niedotyczących pracowników, w zakresie nieuregulowanym w niniejszej ustawie, a także przy rozpatrywaniu sporów związanych z naruszeniem przepisów niniejszej ustawy stosuje się przepisy Kodeksu pracy.</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2025/570__art_13" gd:GUID="9c12b483-f8c9-43f7-9d54-8192a02dee69">
+        <nr />
+        <nr-od>13</nr-od>
+        <nr-do>27</nr-do>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="70758261-9780-4491-b944-f82aa45906e3">
+          <p>
+            <zdanie nr="1" gd:zdGUID="0e8a3e41-c11c-402b-b907-efa2f0358726" fragment="1" gd:fragmentGUID="71869909-7f9a-4523-a2d4-4b0b7efa1d6a">(pominięte)</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2025/570__art_28" gd:GUID="556bf3c3-9af6-4dd1-b5d1-e236caeb1bfc">
+        <nr>28</nr>
+        <ustep eId="DU/2025/570__art_28__ust_1" gd:GUID="da3fcde2-22e1-46e4-b7a8-2d5f661e78f0">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="799132f8-aebc-46ca-851d-b51e7c983923" fragment="1" gd:fragmentGUID="22047363-5f9c-43da-b48e-aee40fab70dd">Do trwających w dniu wejścia w życie ustawy postępowań dotyczących rozwiązywania z pracownikami stosunków pracy na podstawie przepisów ustawy wymienionej w art. 29 stosuje się dotychczasowe przepisy.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/570__art_28__ust_2" gd:GUID="3374d420-43d7-42d4-8c53-aa91e5c6d3f3">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="5e11c77f-4c5a-4fe9-b650-529fcb203c69" fragment="1" gd:fragmentGUID="318adcbb-4905-45f2-85a8-d021d619b380">Pracownikom, których stosunki pracy ulegną rozwiązaniu poczynając od dnia wejścia w życie ustawy, w następstwie postępowań, o których mowa w ust. 1, przysługuje odprawa pieniężna na zasadach określonych w dotychczasowych przepisach, chyba że odprawa pieniężna przysługująca na podstawie niniejszej ustawy jest dla nich korzystniejsza.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/570__art_28__ust_3" gd:GUID="95336ef8-565a-4f4f-acae-f30b1a8e47c9">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="0c43807a-b12e-44c5-a3ab-ee055cdd6092" fragment="1" gd:fragmentGUID="ad3418e5-38d9-42ef-8235-c69066a97ef4">Pracownicy otrzymujący dodatek wyrównawczy w dniu wejścia w życie ustawy, którzy nie byliby uprawnieni do dodatku wyrównawczego na podstawie niniejszej ustawy, zachowują prawo do tego dodatku na zasadach określonych w dotychczasowych przepisach.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/570__art_29" gd:GUID="3ae6cab5-5142-434d-a7a8-104063906561">
+        <nr>29</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="109b0ad3-c83b-4236-a986-4c710bbc8d48">
+          <p>
+            <zdanie nr="1" gd:zdGUID="964ee985-83b7-4276-8fbc-ba0b8e9e2088" fragment="1" gd:fragmentGUID="5234ee2e-9cc6-4470-9758-821e8fbe20f6">Traci moc ustawa z dnia 28 grudnia 1989 r. o szczególnych zasadach rozwiązywania z pracownikami stosunków pracy z przyczyn dotyczących zakładu pracy (Dz. U. z 2002 r. poz. 980, 1146 i 1679 oraz z 2003 r. poz. 844).</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2025/570__art_30" gd:GUID="4f08d1f6-e209-412c-a027-e9721c750709">
+        <nr>30</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="05784bc6-38f3-484b-b368-1e04190a8d5c">
+          <p>
+            <zdanie nr="1" gd:zdGUID="322b6293-4f1e-4bc0-8153-197286c45abf" fragment="1" gd:fragmentGUID="f93249e3-adf8-4da6-bd41-d3c4b4d82641">Ustawa wchodzi w życie z dniem 1 stycznia 2004 r., z wyjątkiem art. 15, który wchodzi w życie z dniem 1 lipca 2003 r.</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+    </ustawa>
+  </obwieszczenie>
+</akt-prawny>

@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <rozporzadzenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/904</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>15cd342e-da13-4836-9e48-07dc856eac90</gd:GUIDwersji>
+      <AdresISAP>WDU20250000904</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>904</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 904</AdresWyswietlany>
+      <Tytul>Rozporządzenie Ministra Finansów z dnia 23 czerwca 2025 r. zmieniające rozporządzenie w sprawie zgłoszeń INTRASTAT</Tytul>
+      <Rodzaj>ROZP</Rodzaj>
+      <DataOgloszenia>2025-07-07</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-06-23</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2025-07-22_DU-2025-904_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2025-07-22" warunek="po upływie 14 dni od dnia ogłoszenia" podstawa="§ 4" zrodlo="https://eli.gov.pl/eli/DU/2025/904" dowod="DU/2025/904__art_4" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2025-07-22_DU-2025-904_domyslne.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2025-07-22_DU-2025-904_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="ae2e4f16-5fd8-428d-91e3-a97ea51138d0" rola="wydajacy">
+          <Nazwa>Minister Finansów</Nazwa>
+          <OrganPodpisujacy>Minister Finansów</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>A.</imie> <nazwisko>Domański</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Rozporządzenie</rodzaj-aktu>
+    <autor-aktu>Ministra Finansów<odnosnik id-odnosnika="1" symbol="1" gd:GUID="bbc53cc4-b5d8-4c24-8af3-c129b6b676e3"><p><zdanie nr="1" gd:zdGUID="0fde1a39-eb10-4fd3-9423-39bc8928a43f" fragment="1" gd:fragmentGUID="49802a83-dfb9-4365-8735-4b7162481820">Minister Finansów kieruje działem administracji rządowej ‒ finanse publiczne, na podstawie § 1 ust. 2 pkt 2 rozporządzenia Prezesa Rady Ministrów z dnia 18 grudnia 2023 r. w sprawie szczegółowego zakresu działania Ministra Finansów (Dz. U. poz. 2710).</zdanie></p></odnosnik></autor-aktu>
+    <data>z dnia 23 czerwca 2025 r.</data>
+    <tytul>zmieniające rozporządzenie w sprawie zgłoszeń INTRASTAT</tytul>
+    <podstawa-prawna>Na podstawie art. 98 ust. 2 ustawy z dnia 19 marca 2004 r. – Prawo celne (Dz. U. z 2024 r. poz. 1373) zarządza się, co następuje:</podstawa-prawna>
+    <paragraf eId="DU/2025/904__art_1" gd:GUID="4394e545-36c3-4d42-a180-88ad55936fd1" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-22_DU-2025-904_domyslne.x" wejscie-w-zycie="2025-07-22">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="95b140ef-a431-4e13-bae6-2cdbf04b1008" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-22_DU-2025-904_domyslne.x" wejscie-w-zycie="2025-07-22">
+        <p>
+          <zdanie nr="1" gd:zdGUID="9e30226e-c55a-432e-8717-7f275af8cee4" fragment="1" gd:fragmentGUID="7050493a-acb5-4d4e-9b67-196de537a6d4" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-22_DU-2025-904_domyslne.x" wejscie-w-zycie="2025-07-22">W rozporządzeniu Ministra Finansów z dnia 25 listopada 2021 r. w sprawie zgłoszeń INTRASTAT (Dz. U. poz. 2258) wprowadza się następujące zmiany:</zdanie>
+        </p>
+        <punkt eId="DU/2025/904__art_1__pkt_1" gd:GUID="18e07a45-f8c7-4977-a211-9ac00bf3c84b" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-22_DU-2025-904_domyslne.x" wejscie-w-zycie="2025-07-22">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="9e30226e-c55a-432e-8717-7f275af8cee4" fragment="2" gd:fragmentGUID="bf696ac2-b202-46fb-b2b6-9f583be4bf62" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-22_DU-2025-904_domyslne.x" wejscie-w-zycie="2025-07-22"><now:zamien-tekst stary-tekst="równa lub mniejsza niż równowartość 200 euro" nowy-tekst="mniejsza niż równowartość 1000 euro" element-eId="DU/2021/2258__art_18__ust_1" akt="https://eli.gov.pl/eli/DU/2021/2258" gd:nowGUID="9b9f87ff-0d0b-4574-b335-4354bc4182af" />w § 18 w ust. 1 wyrazy „równa lub mniejsza niż równowartość 200 euro” zastępuje się wyrazami „mniejsza niż równowartość 1000 euro”;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/904__art_1__pkt_2" gd:GUID="672c02b6-d9a1-4d89-907d-4b449fb3587c" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-22_DU-2025-904_domyslne.x" wejscie-w-zycie="2025-07-22">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="9e30226e-c55a-432e-8717-7f275af8cee4" fragment="3" gd:fragmentGUID="4a687cc3-2df8-4be6-9d7d-5a480d46923a" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-22_DU-2025-904_domyslne.x" wejscie-w-zycie="2025-07-22"><now:uchyl akt="https://eli.gov.pl/eli/DU/2021/2258" element-eId="DU/2021/2258__art_21" gd:nowGUID="0fbd72d8-adff-474b-8a6b-ef5161a9367f" />uchyla się § 21.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2025/904__art_2" gd:GUID="3e437031-ee46-451b-9fb5-350cddc82650" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-22_DU-2025-904_domyslne.x" wejscie-w-zycie="2025-07-22">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="6d1720e7-f851-432d-b806-257aa3e1f6f6" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-22_DU-2025-904_domyslne.x" wejscie-w-zycie="2025-07-22">
+        <p>
+          <zdanie nr="1" gd:zdGUID="aec0b20c-c637-4cf4-bc89-d01a0a5005b6" fragment="1" gd:fragmentGUID="4035bfb5-f670-4415-a9a1-2cd5c8c35f23" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-22_DU-2025-904_domyslne.x" wejscie-w-zycie="2025-07-22">Przepis § 18 ust. 1 rozporządzenia zmienianego w § 1, w brzmieniu nadanym niniejszym rozporządzeniem, stosuje się również do przywozów lub wywozów towarów dokonanych przed dniem wejścia w życie niniejszego rozporządzenia, w przypadku których okres sprawozdawczy zakończy się po tym dniu.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2025/904__art_3" gd:GUID="d44efa27-0906-4dda-bfe8-db652f0d577c" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-22_DU-2025-904_domyslne.x" wejscie-w-zycie="2025-07-22">
+      <nr>3</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="55c444b0-5616-4633-89da-d3ec218f5087" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-22_DU-2025-904_domyslne.x" wejscie-w-zycie="2025-07-22">
+        <p>
+          <zdanie nr="1" gd:zdGUID="4abe13ab-e709-4db5-8c65-9e1c5f5b02dc" fragment="1" gd:fragmentGUID="c7db2816-0a66-4883-87cf-cfaf62ae9002" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-22_DU-2025-904_domyslne.x" wejscie-w-zycie="2025-07-22">Przepis § 21 rozporządzenia zmienianego w § 1 stosuje się do przywozu lub wywozu czasopism objętych jedną fakturą, dla których przed dniem wejścia w życie niniejszego rozporządzenia rozpoczął się okres prenumeraty, a nie wystąpił jeszcze przywóz lub wywóz ostatniej partii tych czasopism.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2025/904__art_4" gd:GUID="b0a679a3-5233-426a-b9d0-571bde46a778" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-22_DU-2025-904_domyslne.x" wejscie-w-zycie="2025-07-22">
+      <nr>4</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="9249a2ae-cb01-48d2-b408-bba9da2d6853" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-22_DU-2025-904_domyslne.x" wejscie-w-zycie="2025-07-22">
+        <p>
+          <zdanie nr="1" gd:zdGUID="3e7d0f63-5580-467d-a432-f0c64d37f105" fragment="1" gd:fragmentGUID="37a3c648-895e-44e8-b740-934839b06b2d" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-22_DU-2025-904_domyslne.x" wejscie-w-zycie="2025-07-22">Rozporządzenie wchodzi w życie po upływie 14 dni od dnia ogłoszenia.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <organ-podpisujacy>Minister Finansów: <i><osoba podpisujacy="true" gd:osobaGUID="0bf9f84d-6511-4300-832d-26d2aa4eaf23"><imie>A.</imie> <nazwisko>Domański</nazwisko></osoba></i></organ-podpisujacy>
+  </rozporzadzenie>
+</akt-prawny>

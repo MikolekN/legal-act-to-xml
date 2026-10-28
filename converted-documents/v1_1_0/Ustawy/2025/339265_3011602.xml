@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <ustawa>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/1218</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>4057dde5-51e4-4f8d-b3cd-69062afc3e46</gd:GUIDwersji>
+      <AdresISAP>WDU20250001218</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>1218</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 1218</AdresWyswietlany>
+      <Tytul>Ustawa z dnia 5 sierpnia 2025 r. o zmianie ustawy – Prawo energetyczne oraz niektórych innych ustaw</Tytul>
+      <Rodzaj>USTAWA</Rodzaj>
+      <DataOgloszenia>2025-09-03</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-08-05</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2025-09-18_DU-2025-1218_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2025-09-18" warunek="po upływie 14 dni od dnia ogłoszenia" podstawa="art. 6" zrodlo="https://eli.gov.pl/eli/DU/2025/1218" dowod="DU/2025/1218__art_6" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2025-09-18_DU-2025-1218_domyslne.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2025-09-18_DU-2025-1218_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="5e7050ed-f080-442e-9b17-decacf5e7ae0" rola="wydajacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Sejm">
+          <Nazwa>SEJM</Nazwa>
+        </Organ>
+        <Organ gd:GUID="eb176880-2f25-44a6-ad8d-f006266db4cf" rola="podpisujacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Prezydent">
+          <Nazwa>Prezydent Rzeczypospolitej Polskiej</Nazwa>
+          <OrganPodpisujacy>Prezydent Rzeczypospolitej Polskiej</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>K.</imie> <nazwisko>Nawrocki</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Ustawa</rodzaj-aktu>
+    <data>z dnia 5 sierpnia 2025 r.</data>
+    <tytul>o zmianie ustawy – Prawo energetyczne oraz niektórych innych ustaw<odnosnik id-odnosnika="1" symbol="1" gd:GUID="09751c6e-f534-4d57-aef5-38c423b67eb1"><p><zdanie nr="1" gd:zdGUID="b3acf0f8-2cf4-41a3-8203-19ea5d9ed617" fragment="1" gd:fragmentGUID="8fbef732-f28c-4a0c-a637-dae698a8d5e2">Niniejszą ustawą zmienia się ustawy: ustawę z dnia 15 lutego 1992 r. o podatku dochodowym od osób prawnych, ustawę z dnia 29 września 1994 r. o rachunkowości oraz ustawę z dnia 20 lutego 2015 r. o odnawialnych źródłach energii.</zdanie></p></odnosnik></tytul>
+    <artykul eId="DU/2025/1218__art_1" gd:GUID="1798d5dd-146d-4082-bbec-8137a6a69bdf" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-18_DU-2025-1218_domyslne.x" wejscie-w-zycie="2025-09-18">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="f7e90acd-caba-4a45-8ed7-4d733807befe" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-18_DU-2025-1218_domyslne.x" wejscie-w-zycie="2025-09-18">
+        <p>
+          <zdanie nr="1" gd:zdGUID="481e70d6-cb59-437d-98b6-c31f0c6ddcbd" fragment="1" gd:fragmentGUID="05646383-d04e-443b-b8a0-e07473704fbc" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-18_DU-2025-1218_domyslne.x" wejscie-w-zycie="2025-09-18">W ustawie z dnia 10 kwietnia 1997 r. – Prawo energetyczne (Dz. U. z 2024 r. poz. 266, z późn. zm.<odnosnik id-odnosnika="2" symbol="2" gd:GUID="db12e165-b394-45b1-8780-ea951fe1e991"><p><zdanie nr="1" gd:zdGUID="23a6d382-eadc-4fd8-b216-b93c0fbf9d77" fragment="1" gd:fragmentGUID="e804d1bc-d6bb-433d-a072-f5116f72f470">Zmiany tekstu jednolitego wymienionej ustawy zostały ogłoszone w Dz. U. z 2024 r. poz. 834, 859, 1847 i 1881 oraz z 2025 r. poz. 303 i 759.</zdanie></p></odnosnik>) wprowadza się następujące zmiany:</zdanie>
+        </p>
+        <punkt eId="DU/2025/1218__art_1__pkt_1" gd:GUID="1d69755a-e164-419f-8cd4-d9afc47e6efc" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-18_DU-2025-1218_domyslne.x" wejscie-w-zycie="2025-09-18">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="481e70d6-cb59-437d-98b6-c31f0c6ddcbd" fragment="2" gd:fragmentGUID="f0c62b82-97dd-4a95-a281-cbb8170b0615" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-18_DU-2025-1218_domyslne.x" wejscie-w-zycie="2025-09-18">w art. 5aa dodaje się ust. 13 w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/266" cudzyslowy="oba" gd:nowGUID="e313b499-4d35-407a-ab97-4a1285410f79" element-eId="DU/2024/266__art_5aa" funkcja="dodaj-w"><ustep eId="DU/2024/266__art_5aa__ust_13" gd:GUID="2ce89f7e-fd21-4cb8-bd3e-91f23bd8aab2" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-18_DU-2025-1218_domyslne.x" wejscie-w-zycie="2025-09-18"><nr>13</nr><p><zdanie nr="1" gd:zdGUID="36334da3-b509-46d8-95ec-7a53b2c47650" fragment="1" gd:fragmentGUID="64d52618-f843-4dc7-96ce-2c3845b0cd99" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-18_DU-2025-1218_domyslne.x" wejscie-w-zycie="2025-09-18">W przypadku gdy na podstawie art. 529 § 1 ustawy z dnia 15 września 2000 r. – Kodeks spółek handlowych (Dz. U. z 2024 r. poz. 18 i 96) jest dokonywany podział spółki będącej sprzedawcą rezerwowym paliw gazowych, z dniem podziału tej spółki sprzedawcą rezerwowym paliw gazowych staje się spółka nabywająca na podstawie planu podziału prawa i obowiązki spółki dzielonej w zakresie realizacji przez spółkę dzieloną obowiązków sprzedawcy rezerwowego paliw gazowych.</zdanie></p></ustep></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1218__art_1__pkt_2" gd:GUID="a5eb0a5a-f016-4530-be56-77b3040e14f6" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-18_DU-2025-1218_domyslne.x" wejscie-w-zycie="2025-09-18">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="481e70d6-cb59-437d-98b6-c31f0c6ddcbd" fragment="3" gd:fragmentGUID="d295a2cf-9e04-4c62-aa65-582c3c10c93f" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-18_DU-2025-1218_domyslne.x" wejscie-w-zycie="2025-09-18">w art. 5ad dodaje się ust. 10 w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/266" cudzyslowy="oba" gd:nowGUID="d850226b-e61c-4564-8752-9a03285a8cde" element-eId="DU/2024/266__art_5ad" funkcja="dodaj-w"><ustep eId="DU/2024/266__art_5ad__ust_10" gd:GUID="81b8b206-e419-497a-9188-a13b486ad1fc" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-18_DU-2025-1218_domyslne.x" wejscie-w-zycie="2025-09-18"><nr>10</nr><p><zdanie nr="1" gd:zdGUID="59c250a3-4889-4515-8273-5f134f4889ae" fragment="1" gd:fragmentGUID="a4f47b25-e845-4dfd-a7ed-d696536c77d8" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-18_DU-2025-1218_domyslne.x" wejscie-w-zycie="2025-09-18">W przypadku gdy na podstawie art. 529 § 1 ustawy z dnia 15 września 2000 r. – Kodeks spółek handlowych jest dokonywany podział spółki będącej sprzedawcą rezerwowym energii elektrycznej, z dniem podziału tej spółki sprzedawcą rezerwowym energii elektrycznej staje się spółka nabywająca na podstawie planu podziału prawa i obowiązki spółki dzielonej w zakresie realizacji przez spółkę dzieloną obowiązków sprzedawcy rezerwowego energii elektrycznej.</zdanie></p></ustep></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1218__art_1__pkt_3" gd:GUID="7758a27e-72cf-4de4-8e4f-b361ee0c6999" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-18_DU-2025-1218_domyslne.x" wejscie-w-zycie="2025-09-18">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="481e70d6-cb59-437d-98b6-c31f0c6ddcbd" fragment="4" gd:fragmentGUID="b5f7094d-32c5-4f9b-9e46-3fc87dc7e8af" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-18_DU-2025-1218_domyslne.x" wejscie-w-zycie="2025-09-18">po art. 9i dodaje się art. 9ia w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/266" cudzyslowy="oba" gd:nowGUID="f313ddbc-86a0-4ffd-9a19-c46037e89a51" element-eId="DU/2024/266__art_9i" funkcja="dodaj-po"><artykul eId="DU/2024/266__art_9ia" gd:GUID="5002903b-4d94-4a78-a194-2b37eb9b0051" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-18_DU-2025-1218_domyslne.x" wejscie-w-zycie="2025-09-18"><nr>9ia</nr><ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="f21daef1-98e8-492a-9748-60a5264c1e68" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-18_DU-2025-1218_domyslne.x" wejscie-w-zycie="2025-09-18"><p><zdanie nr="1" gd:zdGUID="17acc2e3-c7a4-4e85-bd94-4ce2ef923a4c" fragment="1" gd:fragmentGUID="50cc2c9a-1381-4cc9-8f28-bdf4fa2379a5" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-18_DU-2025-1218_domyslne.x" wejscie-w-zycie="2025-09-18">W przypadku gdy na podstawie art. 529 § 1 ustawy z dnia 15 września 2000 r. – Kodeks spółek handlowych jest dokonywany podział spółki wyznaczonej na sprzedawcę z urzędu na zasadach określonych w art. 9i, prawa i obowiązki sprzedawcy z urzędu przechodzą, do czasu wyznaczenia przez Prezesa URE sprzedawcy z urzędu na zasadach określonych w art. 9i, na wskazaną w planie podziału spółkę nabywającą od spółki dzielonej prawa i obowiązki sprzedawcy z urzędu.</zdanie></p></ustep-n></artykul></cytat-strukt>.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2025/1218__art_2" gd:GUID="a1be3916-28fe-4e57-9435-d2735a3e4ed3" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-18_DU-2025-1218_domyslne.x" wejscie-w-zycie="2025-09-18">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="3fdff50b-1913-4cef-bd1c-c8290caf25a5" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-18_DU-2025-1218_domyslne.x" wejscie-w-zycie="2025-09-18">
+        <p>
+          <zdanie nr="1" gd:zdGUID="7ee421bb-e0c3-4bdd-a433-7acfcf06aeac" fragment="1" gd:fragmentGUID="38c8d870-2417-4c76-addb-7e02d20bd3ba" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-18_DU-2025-1218_domyslne.x" wejscie-w-zycie="2025-09-18">W ustawie z dnia 15 lutego 1992 r. o podatku dochodowym od osób prawnych (Dz. U. z 2025 r. poz. 278, 340, 620, 680, 1022 i 1074) w art. 12:</zdanie>
+        </p>
+        <punkt eId="DU/2025/1218__art_2__pkt_1" gd:GUID="31522926-8cc5-4b08-96ad-d691ecaa68d7" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-18_DU-2025-1218_domyslne.x" wejscie-w-zycie="2025-09-18">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="7ee421bb-e0c3-4bdd-a433-7acfcf06aeac" fragment="2" gd:fragmentGUID="39ea28ba-74e4-464a-bb24-92cb9b0d3fc1" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-18_DU-2025-1218_domyslne.x" wejscie-w-zycie="2025-09-18">w ust. 1:</zdanie>
+          </p>
+          <litera eId="DU/2025/1218__art_2__pkt_1__lit_a" gd:GUID="6575dfc2-fc71-45ec-86ca-1736b022ef3f" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-18_DU-2025-1218_domyslne.x" wejscie-w-zycie="2025-09-18">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="7ee421bb-e0c3-4bdd-a433-7acfcf06aeac" fragment="3" gd:fragmentGUID="c639891e-9eb7-4f9e-ba01-5d28cbf5413e" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-18_DU-2025-1218_domyslne.x" wejscie-w-zycie="2025-09-18">pkt 7 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2025/278" cudzyslowy="oba" gd:nowGUID="7d95ce97-a2b2-42bd-baa1-2f9b95eab8e5" element-eId="DU/2025/278__art_12__ust_1__pkt_7" funkcja="zastap"><punkt eId="DU/2025/278__art_12__ust_1__pkt_7" gd:GUID="a6440066-ff75-4cca-981d-e8a91aaf2bd2" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-18_DU-2025-1218_domyslne.x" wejscie-w-zycie="2025-09-18"><nr>7</nr><p><zdanie nr="1" gd:zdGUID="3e762a06-574f-4826-97a7-172504b32f0c" fragment="1" gd:fragmentGUID="683d80cd-a8c4-4ca0-ba75-b468b90f952f" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-18_DU-2025-1218_domyslne.x" wejscie-w-zycie="2025-09-18">wartość wkładu określona w statucie lub umowie spółki, a w razie ich braku wartość wkładu określona w innym dokumencie o podobnym charakterze – w przypadku wniesienia do spółki albo spółdzielni wkładu niepieniężnego lub otrzymania wkładu w wyniku podziału spółki przez wyodrębnienie; jeżeli jednak wartość ta jest niższa od wartości rynkowej tego wkładu albo wartość wkładu nie została określona w statucie, umowie albo innym dokumencie o podobnym charakterze, przychodem jest wartość rynkowa takiego wkładu określona na dzień przeniesienia własności przedmiotu wkładu niepieniężnego; przepis art. 14 ust. 2 stosuje się odpowiednio;</zdanie></p></punkt></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1218__art_2__pkt_1__lit_b" gd:GUID="68164e1d-de31-4868-9d87-e02730a1bb55" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-18_DU-2025-1218_domyslne.x" wejscie-w-zycie="2025-09-18">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="7ee421bb-e0c3-4bdd-a433-7acfcf06aeac" fragment="4" gd:fragmentGUID="f5842ba7-7816-44f7-bd10-85cc9cad937c" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-18_DU-2025-1218_domyslne.x" wejscie-w-zycie="2025-09-18">pkt 8d otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2025/278" cudzyslowy="oba" gd:nowGUID="3824638e-5c8e-4301-a322-cf4d2b9edbb3" element-eId="DU/2025/278__art_12__ust_1__pkt_8d" funkcja="zastap"><punkt eId="DU/2025/278__art_12__ust_1__pkt_8d" gd:GUID="bd3a04f2-dc65-4b16-9bc9-d180624ec728" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-18_DU-2025-1218_domyslne.x" wejscie-w-zycie="2025-09-18"><nr>8d</nr><p><zdanie nr="1" gd:zdGUID="64dd8a85-7a2b-43d1-92d4-6f0929b3b5f0" fragment="1" gd:fragmentGUID="b4651ebf-733a-4892-82db-bfc87f99ef09" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-18_DU-2025-1218_domyslne.x" wejscie-w-zycie="2025-09-18">ustalona na dzień poprzedzający dzień łączenia lub podziału wartość rynkowa majątku podmiotu przejmowanego lub dzielonego otrzymanego przez spółkę przejmującą lub nowo zawiązaną w części przewyższającej wartość emisyjną udziałów (akcji) przydzielonych udziałowcom (akcjonariuszom) spółek łączonych lub spółki dzielonej, z tym że przychód nie powstaje w przypadku połączenia przeprowadzanego na podstawie art. 515<sup>1</sup> § 1 ustawy z dnia 15 września 2000 r. – Kodeks spółek handlowych;</zdanie></p></punkt></cytat-strukt>;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2025/1218__art_2__pkt_2" gd:GUID="5013562c-2a82-40b7-8517-f169c1a006d3" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-18_DU-2025-1218_domyslne.x" wejscie-w-zycie="2025-09-18">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="7ee421bb-e0c3-4bdd-a433-7acfcf06aeac" fragment="5" gd:fragmentGUID="e790b2fd-ea04-4a62-809a-4e72918db7fd" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-18_DU-2025-1218_domyslne.x" wejscie-w-zycie="2025-09-18">w ust. 4 pkt 25 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2025/278" cudzyslowy="oba" gd:nowGUID="de9ebc1c-cac5-4f68-b70a-66a085452cf7" element-eId="DU/2025/278__art_12__ust_4__pkt_25" funkcja="zastap"><punkt eId="DU/2025/278__art_12__ust_4__pkt_25" gd:GUID="60393cb0-8532-4e56-ad1a-fd97f14b1e4b" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-18_DU-2025-1218_domyslne.x" wejscie-w-zycie="2025-09-18"><nr>25</nr><p><zdanie nr="1" gd:zdGUID="7b88ed76-5dba-4b0f-9b35-86c178d4ea7b" fragment="1" gd:fragmentGUID="510a229e-8dd3-427b-b489-f0b82d6d098f" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-18_DU-2025-1218_domyslne.x" wejscie-w-zycie="2025-09-18">wartości, o której mowa w ust. 1 pkt 7, jeżeli przedmiotem:</zdanie></p><litera eId="DU/2025/278__art_12__ust_4__pkt_25__lit_a" gd:GUID="6da2200c-7b06-4fe7-ae6a-9eb4432f5068" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-18_DU-2025-1218_domyslne.x" wejscie-w-zycie="2025-09-18"><nr>a</nr><p><zdanie nr="1" gd:zdGUID="7b88ed76-5dba-4b0f-9b35-86c178d4ea7b" fragment="2" gd:fragmentGUID="72f13260-3cc5-4b09-b817-468d9f45ea96" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-18_DU-2025-1218_domyslne.x" wejscie-w-zycie="2025-09-18">wkładu niepieniężnego do spółki kapitałowej jest komercjalizowana własność intelektualna wniesiona przez podmiot komercjalizujący,</zdanie></p></litera><litera eId="DU/2025/278__art_12__ust_4__pkt_25__lit_b" gd:GUID="b9c0c8a3-b4af-4943-a060-64a62d8e3cf4" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-18_DU-2025-1218_domyslne.x" wejscie-w-zycie="2025-09-18"><nr>b</nr><p><zdanie nr="1" gd:zdGUID="7b88ed76-5dba-4b0f-9b35-86c178d4ea7b" fragment="3" gd:fragmentGUID="579d6f60-2023-447f-8978-c1f732f98fa5" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-18_DU-2025-1218_domyslne.x" wejscie-w-zycie="2025-09-18">wkładu niepieniężnego do spółki albo spółdzielni jest przedsiębiorstwo lub jego zorganizowana część oraz spółka lub spółdzielnia otrzymująca wkład przyjęła dla celów podatkowych składniki wchodzące w skład tego przedsiębiorstwa lub jego zorganizowanej części w wartości wynikającej z ksiąg podatkowych podmiotu wnoszącego ten wkład,</zdanie></p></litera><litera eId="DU/2025/278__art_12__ust_4__pkt_25__lit_c" gd:GUID="efe3a858-917c-4cef-bd87-14a686c3c0d7" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-18_DU-2025-1218_domyslne.x" wejscie-w-zycie="2025-09-18"><nr>c</nr><p><zdanie nr="1" gd:zdGUID="7b88ed76-5dba-4b0f-9b35-86c178d4ea7b" fragment="4" gd:fragmentGUID="904af807-3648-4b61-8a15-1ff88658c824" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-18_DU-2025-1218_domyslne.x" wejscie-w-zycie="2025-09-18">wyodrębnienia w ramach podziału przez wyodrębnienie jest przedsiębiorstwo lub jego zorganizowaną część oraz spółka otrzymująca to przedsiębiorstwo lub jego zorganizowana część w wyniku podziału przez wyodrębnienie przyjęła dla celów podatkowych składniki wchodzące w skład tego przedsiębiorstwa lub jego zorganizowanej części w wartości wynikającej z ksiąg podatkowych spółki dzielonej w drodze podziału przez wyodrębnienie;</zdanie></p></litera></punkt></cytat-strukt>.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2025/1218__art_3" gd:GUID="e0841a1a-24c8-4270-b413-94204293e20e" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-18_DU-2025-1218_domyslne.x" wejscie-w-zycie="2025-09-18">
+      <nr>3</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="5fd6bb24-83df-42d8-99b1-71212a918963" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-18_DU-2025-1218_domyslne.x" wejscie-w-zycie="2025-09-18">
+        <p>
+          <zdanie nr="1" gd:zdGUID="520b447c-fa49-4b2a-9c69-07f46c8ef799" fragment="1" gd:fragmentGUID="bd4cf472-edf6-4f5e-bcf7-dda748335911" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-18_DU-2025-1218_domyslne.x" wejscie-w-zycie="2025-09-18">W ustawie z dnia 29 września 1994 r. o rachunkowości (Dz. U. z 2023 r. poz. 120, 295 i 1598 oraz z 2024 r. poz. 619, 1685 i 1863) w art. 12 ust. 3a otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/120" cudzyslowy="oba" gd:nowGUID="355227ff-0e4f-4943-8bb5-4a9779676d69" element-eId="DU/2023/120__art_12__ust_3a" funkcja="zastap"><ustep eId="DU/2023/120__art_12__ust_3a" gd:GUID="b1f71d92-9567-43e9-8b32-9f317bf89419" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-18_DU-2025-1218_domyslne.x" wejscie-w-zycie="2025-09-18"><nr>3a</nr><p><zdanie nr="1" gd:zdGUID="83615448-7256-4ef7-a75e-9d7159362791" fragment="1" gd:fragmentGUID="e77f8886-81bd-4c8a-9d17-a0a9e7fad246" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-18_DU-2025-1218_domyslne.x" wejscie-w-zycie="2025-09-18">Można nie zamykać ksiąg rachunkowych, jeżeli podział jednostki następuje przez wydzielenie albo wyodrębnienie.</zdanie></p></ustep></cytat-strukt>.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2025/1218__art_4" gd:GUID="9a65b33c-14b0-4c46-b026-17547a21f1fd" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-18_DU-2025-1218_domyslne.x" wejscie-w-zycie="2025-09-18">
+      <nr>4</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="729967a2-ff77-4f6e-bbe9-edda871c26a2" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-18_DU-2025-1218_domyslne.x" wejscie-w-zycie="2025-09-18">
+        <p>
+          <zdanie nr="1" gd:zdGUID="7647b931-1bf4-4b56-be03-95342dffc892" fragment="1" gd:fragmentGUID="ff2728cd-611e-4a56-b764-3acfd004b762" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-18_DU-2025-1218_domyslne.x" wejscie-w-zycie="2025-09-18">W ustawie z dnia 20 lutego 2015 r. o odnawialnych źródłach energii (Dz. U. z 2024 r. poz. 1361, 1847 i 1881 oraz z 2025 r. poz. 303 i 759) w art. 40 dodaje się ust. 9 w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/1361" cudzyslowy="oba" gd:nowGUID="6a792e9c-4380-42d3-9e12-ef95ac0d492e" element-eId="DU/2024/1361__art_40" funkcja="dodaj-w"><ustep eId="DU/2024/1361__art_40__ust_9" gd:GUID="9be03258-2d22-48e7-8a18-c1769702cf32" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-18_DU-2025-1218_domyslne.x" wejscie-w-zycie="2025-09-18"><nr>9</nr><p><zdanie nr="1" gd:zdGUID="805ddbf3-d7af-4a4b-b536-16ed21f1e81e" fragment="1" gd:fragmentGUID="ef2780c2-2b42-481a-a544-6acedc5b85b6" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-18_DU-2025-1218_domyslne.x" wejscie-w-zycie="2025-09-18">W przypadku gdy na podstawie art. 529 § 1 ustawy z dnia 15 września 2000 r. – Kodeks spółek handlowych (Dz. U. z 2024 r. poz. 18 i 96) jest dokonywany podział spółki wyznaczonej na sprzedawcę zobowiązanego, spółka nabywająca na podstawie planu podziału prawa i obowiązki spółki dzielonej wynikające z umów zawartych przez spółkę dzieloną w wykonaniu obowiązków sprzedawcy zobowiązanego:</zdanie></p><punkt eId="DU/2024/1361__art_40__ust_9__pkt_1" gd:GUID="f49c65e2-d3c7-4f21-8600-e521a7c162ff" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-18_DU-2025-1218_domyslne.x" wejscie-w-zycie="2025-09-18"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="805ddbf3-d7af-4a4b-b536-16ed21f1e81e" fragment="2" gd:fragmentGUID="55dbf985-e01a-4d97-bba9-c1a9fbccbe35" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-18_DU-2025-1218_domyslne.x" wejscie-w-zycie="2025-09-18">staje się sprzedawcą zobowiązanym na okres od dnia podziału do końca roku kalendarzowego następującego po upływie roku, w którym zarejestrowano podział, oraz</zdanie></p></punkt><punkt eId="DU/2024/1361__art_40__ust_9__pkt_2" gd:GUID="c9e8ef63-ac81-41e3-a9b3-4a032e8ec6d5" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-18_DU-2025-1218_domyslne.x" wejscie-w-zycie="2025-09-18"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="805ddbf3-d7af-4a4b-b536-16ed21f1e81e" fragment="3" gd:fragmentGUID="697a373e-4c4c-40ea-8c1d-4f30c52e8114" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-18_DU-2025-1218_domyslne.x" wejscie-w-zycie="2025-09-18">staje się z dniem podziału stroną wskazanych w planie podziału umów zawartych przez spółkę dzieloną w wykonaniu obowiązków sprzedawcy zobowiązanego w miejsce spółki dzielonej.</zdanie></p></punkt></ustep></cytat-strukt>.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2025/1218__art_5" gd:GUID="f5ebca5e-fe2b-4c58-bc06-93d546fd5caa" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-18_DU-2025-1218_domyslne.x" wejscie-w-zycie="2025-09-18">
+      <nr>5</nr>
+      <ustep eId="DU/2025/1218__art_5__ust_1" gd:GUID="b9e60ae5-7d6b-4d46-92ce-94b260b3282e" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-18_DU-2025-1218_domyslne.x" wejscie-w-zycie="2025-09-18">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="3ab533fa-f13f-4396-a99e-448a270df549" fragment="1" gd:fragmentGUID="afcd4759-6dd2-4205-b787-8abfceca99cf" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-18_DU-2025-1218_domyslne.x" wejscie-w-zycie="2025-09-18">W przypadku gdy na podstawie art. 529 § 1 ustawy z dnia 15 września 2000 r. – Kodeks spółek handlowych (Dz. U. z 2024 r. poz. 18 i 96) jest dokonywany podział spółki pełniącej obowiązki sprzedawcy z urzędu na zasadach określonych w art. 10 ust. 2 ustawy z dnia 4 marca 2005 r. o zmianie ustawy – Prawo energetyczne oraz ustawy – Prawo ochrony środowiska (Dz. U. poz. 552 oraz z 2006 r. poz. 1123), prawa i obowiązki sprzedawcy z urzędu przechodzą, do czasu wyznaczenia przez Prezesa Urzędu Regulacji Energetyki sprzedawcy z urzędu na zasadach określonych w art. 9i ustawy zmienianej w art. 1, na wskazaną w planie podziału spółkę nabywającą od spółki dzielonej prawa i obowiązki sprzedawcy z urzędu.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/1218__art_5__ust_2" gd:GUID="e82e9762-62dd-4a01-8b26-1def8649afda" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-18_DU-2025-1218_domyslne.x" wejscie-w-zycie="2025-09-18">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="d3bbf498-9f81-476f-9638-808e9a9208a2" fragment="1" gd:fragmentGUID="9b127d72-87b8-480e-af3e-d2a50bc34edf" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-18_DU-2025-1218_domyslne.x" wejscie-w-zycie="2025-09-18">Spółka nabywająca od spółki dzielonej prawa i obowiązki sprzedawcy z urzędu staje się z dniem podziału stroną umów zawartych przez spółkę dzieloną w wykonaniu obowiązków sprzedawcy z urzędu.</zdanie>
+        </p>
+      </ustep>
+    </artykul>
+    <artykul eId="DU/2025/1218__art_6" gd:GUID="defa9b3d-024f-434a-8223-d92658adaa8e" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-18_DU-2025-1218_domyslne.x" wejscie-w-zycie="2025-09-18">
+      <nr>6</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="01154f55-6d1c-4833-8c5b-4ddb57204240" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-18_DU-2025-1218_domyslne.x" wejscie-w-zycie="2025-09-18">
+        <p>
+          <zdanie nr="1" gd:zdGUID="86acbe12-91f1-4c2b-bc56-80a8b8e9604c" fragment="1" gd:fragmentGUID="7e8dc80d-5452-4255-84c6-9c33c2408d29" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-18_DU-2025-1218_domyslne.x" wejscie-w-zycie="2025-09-18">Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <organ-podpisujacy>Prezydent Rzeczypospolitej Polskiej: <i><osoba podpisujacy="true" gd:osobaGUID="3cab4c99-fd74-4354-b1d2-ed553909f288"><imie>K.</imie> <nazwisko>Nawrocki</nazwisko></osoba></i></organ-podpisujacy>
+  </ustawa>
+</akt-prawny>

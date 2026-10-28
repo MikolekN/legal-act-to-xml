@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <rozporzadzenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/1890</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>7e02c210-208f-4756-bf60-dfaf1e13aee0</gd:GUIDwersji>
+      <AdresISAP>WDU20250001890</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>1890</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 1890</AdresWyswietlany>
+      <Tytul>Rozporządzenie Ministra Finansów i Gospodarki z dnia 23 grudnia 2025 r. zmieniające rozporządzenie w sprawie nadania statutu Polskiej Agencji Kosmicznej</Tytul>
+      <Rodzaj>ROZP</Rodzaj>
+      <DataOgloszenia>2025-12-31</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-12-23</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2026-01-01_DU-2025-1890_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2026-01-01" warunek="z dniem następującym po dniu ogłoszenia" podstawa="§ 2" zrodlo="https://eli.gov.pl/eli/DU/2025/1890" dowod="DU/2025/1890__art_2" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1890_domyslne.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2026-01-01_DU-2025-1890_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="455c7060-4ad8-4ec5-b8cf-4879a8442fd7" rola="wydajacy">
+          <Nazwa>Minister Finansów i Gospodarki</Nazwa>
+          <OrganPodpisujacy>Minister Finansów i Gospodarki</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>A.</imie> <nazwisko>Domański</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Rozporządzenie</rodzaj-aktu>
+    <autor-aktu>Ministra Finansów i Gospodarki<odnosnik id-odnosnika="1" symbol="1" gd:GUID="9ebca955-e3fe-46bc-90b7-78b17258823c"><p><zdanie nr="1" gd:zdGUID="c6eac555-1b87-45fa-b6ac-0303f18b1b3a" fragment="1" gd:fragmentGUID="19755cde-1c51-46d4-9d5c-6bc03f8d992b">Minister Finansów i Gospodarki kieruje działem administracji rządowej – gospodarka, na podstawie § 1 ust. 2 pkt 4 rozporządzenia Prezesa Rady Ministrów z dnia 25 lipca 2025 r. w sprawie szczegółowego zakresu działania Ministra Finansów i Gospodarki (Dz. U. poz. 997).</zdanie></p></odnosnik></autor-aktu>
+    <data>z dnia 23 grudnia 2025 r.</data>
+    <tytul>zmieniające rozporządzenie w sprawie nadania statutu Polskiej Agencji Kosmicznej</tytul>
+    <podstawa-prawna>Na podstawie art. 6 ust. 2 ustawy z dnia 26 września 2014 r. o Polskiej Agencji Kosmicznej (Dz. U. z 2020 r. poz. 1957) zarządza się, co następuje:</podstawa-prawna>
+    <paragraf eId="DU/2025/1890__art_1" gd:GUID="290d792d-6712-4051-a593-a352191ef033" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1890_domyslne.x" wejscie-w-zycie="2026-01-01">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="02629e6a-a1ce-41f3-918b-68b5c07f507e" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1890_domyslne.x" wejscie-w-zycie="2026-01-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="f2f2338a-1080-4efc-ba86-ba0586bdbce2" fragment="1" gd:fragmentGUID="1922dfa4-3a07-47fa-9420-6e15b4871f2d" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1890_domyslne.x" wejscie-w-zycie="2026-01-01">W rozporządzeniu Ministra Rozwoju i Technologii z dnia 23 listopada 2021 r. w sprawie nadania statutu Polskiej Agencji Kosmicznej (Dz. U. poz. 2248) w załączniku w § 4 ust. 1 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2021/2248" cudzyslowy="oba" gd:nowGUID="3e336f3c-419b-4868-bd7b-1f458e505ecf" element-eId="DU/2021/2248__zal_1" funkcja="zastap-recznie"><ustep eId="DU/2021/2248__zal_1__art_4__ust_1" gd:GUID="41b6cbd1-3e9e-472b-b604-4fc15c59cb7b" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1890_domyslne.x" wejscie-w-zycie="2026-01-01"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="93f345e8-57cc-481e-95c8-fd51c5cbbc8e" fragment="1" gd:fragmentGUID="6f328cfd-62c2-4166-8216-bc10ceef7713" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1890_domyslne.x" wejscie-w-zycie="2026-01-01">W Agencji tworzy się następujące komórki organizacyjne:</zdanie></p><punkt eId="DU/2021/2248__zal_1__art_4__ust_1__pkt_1" gd:GUID="fef963a4-6fab-457d-9919-730da7a67847" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1890_domyslne.x" wejscie-w-zycie="2026-01-01"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="93f345e8-57cc-481e-95c8-fd51c5cbbc8e" fragment="2" gd:fragmentGUID="ce2a0216-f14f-440c-9e13-8422d719c567" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1890_domyslne.x" wejscie-w-zycie="2026-01-01">Departament Badań i Rozwoju;</zdanie></p></punkt><punkt eId="DU/2021/2248__zal_1__art_4__ust_1__pkt_2" gd:GUID="c447115e-7765-41e7-99f4-a143623843fc" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1890_domyslne.x" wejscie-w-zycie="2026-01-01"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="93f345e8-57cc-481e-95c8-fd51c5cbbc8e" fragment="3" gd:fragmentGUID="c10c3c40-df12-497e-9c23-69fb7f4dc8c0" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1890_domyslne.x" wejscie-w-zycie="2026-01-01">Departament Bezpieczeństwa Kosmicznego;</zdanie></p></punkt><punkt eId="DU/2021/2248__zal_1__art_4__ust_1__pkt_3" gd:GUID="8536109b-10fd-472c-95e2-043e798c1c8d" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1890_domyslne.x" wejscie-w-zycie="2026-01-01"><nr>3</nr><p><zdanie nr="1" gd:zdGUID="93f345e8-57cc-481e-95c8-fd51c5cbbc8e" fragment="4" gd:fragmentGUID="226ce431-a9ce-4928-9a71-5d5d267b8ece" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1890_domyslne.x" wejscie-w-zycie="2026-01-01">Departament Edukacji;</zdanie></p></punkt><punkt eId="DU/2021/2248__zal_1__art_4__ust_1__pkt_4" gd:GUID="9ab66d0a-d667-43af-b7d0-8133af9665ea" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1890_domyslne.x" wejscie-w-zycie="2026-01-01"><nr>4</nr><p><zdanie nr="1" gd:zdGUID="93f345e8-57cc-481e-95c8-fd51c5cbbc8e" fragment="5" gd:fragmentGUID="84fea1ab-df78-4daa-8b08-43f407d59688" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1890_domyslne.x" wejscie-w-zycie="2026-01-01">Departament Finansowo-Ekonomiczny;</zdanie></p></punkt><punkt eId="DU/2021/2248__zal_1__art_4__ust_1__pkt_5" gd:GUID="49d2d775-6008-4b28-9e60-f3f4729717e0" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1890_domyslne.x" wejscie-w-zycie="2026-01-01"><nr>5</nr><p><zdanie nr="1" gd:zdGUID="93f345e8-57cc-481e-95c8-fd51c5cbbc8e" fragment="6" gd:fragmentGUID="dad3e527-86c0-457c-8d53-6f2a7bd1d064" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1890_domyslne.x" wejscie-w-zycie="2026-01-01">Departament Monitoringu Ziemi, Nawigacji i Łączności;</zdanie></p></punkt><punkt eId="DU/2021/2248__zal_1__art_4__ust_1__pkt_6" gd:GUID="8a45eb39-b7e9-4ec6-85e8-ba7de5ed2406" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1890_domyslne.x" wejscie-w-zycie="2026-01-01"><nr>6</nr><p><zdanie nr="1" gd:zdGUID="93f345e8-57cc-481e-95c8-fd51c5cbbc8e" fragment="7" gd:fragmentGUID="807b20f5-98d3-45e9-90e6-9cc0d1c22afc" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1890_domyslne.x" wejscie-w-zycie="2026-01-01">Departament Obsługi Prawnej i Prawa Kosmicznego;</zdanie></p></punkt><punkt eId="DU/2021/2248__zal_1__art_4__ust_1__pkt_7" gd:GUID="8b64ccc3-e59c-4079-8436-41f2a55f1e39" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1890_domyslne.x" wejscie-w-zycie="2026-01-01"><nr>7</nr><p><zdanie nr="1" gd:zdGUID="93f345e8-57cc-481e-95c8-fd51c5cbbc8e" fragment="8" gd:fragmentGUID="d4276547-0393-4f3f-9c72-0e042101898b" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1890_domyslne.x" wejscie-w-zycie="2026-01-01">Departament Programów;</zdanie></p></punkt><punkt eId="DU/2021/2248__zal_1__art_4__ust_1__pkt_8" gd:GUID="27abcd4b-d9fe-4449-9bd3-dd29961d7df0" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1890_domyslne.x" wejscie-w-zycie="2026-01-01"><nr>8</nr><p><zdanie nr="1" gd:zdGUID="93f345e8-57cc-481e-95c8-fd51c5cbbc8e" fragment="9" gd:fragmentGUID="c8ec894c-438e-4ddd-a123-a6707d555af1" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1890_domyslne.x" wejscie-w-zycie="2026-01-01">Departament Współpracy Międzynarodowej;</zdanie></p></punkt><punkt eId="DU/2021/2248__zal_1__art_4__ust_1__pkt_9" gd:GUID="e378c015-fe0f-425c-8f52-f9cd071e1d87" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1890_domyslne.x" wejscie-w-zycie="2026-01-01"><nr>9</nr><p><zdanie nr="1" gd:zdGUID="93f345e8-57cc-481e-95c8-fd51c5cbbc8e" fragment="10" gd:fragmentGUID="a8273a52-7f03-4201-98b1-a590803cd2c5" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1890_domyslne.x" wejscie-w-zycie="2026-01-01">Biuro Organizacyjne;</zdanie></p></punkt><punkt eId="DU/2021/2248__zal_1__art_4__ust_1__pkt_10" gd:GUID="34ae25be-400f-48f4-a361-10e4758f0c84" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1890_domyslne.x" wejscie-w-zycie="2026-01-01"><nr>10</nr><p><zdanie nr="1" gd:zdGUID="93f345e8-57cc-481e-95c8-fd51c5cbbc8e" fragment="11" gd:fragmentGUID="548c1a4c-d5b6-4140-8a8b-63b52b4adc62" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1890_domyslne.x" wejscie-w-zycie="2026-01-01">Biuro Prezesa.</zdanie></p></punkt></ustep></cytat-strukt>.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2025/1890__art_2" gd:GUID="0ad83c47-4a1a-4a68-b937-f0da5cdf297a" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1890_domyslne.x" wejscie-w-zycie="2026-01-01">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="4fc75961-841e-42d5-bbe0-56a59c41af07" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1890_domyslne.x" wejscie-w-zycie="2026-01-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="bd2cb2b2-3ea5-41f5-aa24-762846e51606" fragment="1" gd:fragmentGUID="3b61c201-7b41-48c3-86d4-bc244b0968db" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1890_domyslne.x" wejscie-w-zycie="2026-01-01">Rozporządzenie wchodzi w życie z dniem następującym po dniu ogłoszenia.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <organ-podpisujacy>Minister Finansów i Gospodarki: <i><osoba podpisujacy="true" gd:osobaGUID="6a175c49-e43e-405c-9001-fe89e35a22ad"><imie>A.</imie> <nazwisko>Domański</nazwisko></osoba></i></organ-podpisujacy>
+  </rozporzadzenie>
+</akt-prawny>

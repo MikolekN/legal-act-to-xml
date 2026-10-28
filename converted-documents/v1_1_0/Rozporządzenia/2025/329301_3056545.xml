@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <rozporzadzenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/1399</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>9a4d42fa-74e4-4726-90e9-8138ec805e75</gd:GUIDwersji>
+      <AdresISAP>WDU20250001399</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>1399</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 1399</AdresWyswietlany>
+      <Tytul>Rozporządzenie Ministra Finansów i Gospodarki z dnia 12 października 2025 r. zmieniające rozporządzenie w sprawie rozkładu czasu służby funkcjonariuszy Służby Celno-Skarbowej</Tytul>
+      <Rodzaj>ROZP</Rodzaj>
+      <DataOgloszenia>2025-10-16</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-10-12</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2025-10-31_DU-2025-1399_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2025-10-31" warunek="po upływie 14 dni od dnia ogłoszenia" podstawa="§ 3" zrodlo="https://eli.gov.pl/eli/DU/2025/1399" dowod="DU/2025/1399__art_3" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2025-10-31_DU-2025-1399_domyslne.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2025-10-31_DU-2025-1399_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="e4332826-b529-442d-9e12-3f7dd70e297b" rola="wydajacy">
+          <Nazwa>Minister Finansów i Gospodarki</Nazwa>
+          <OrganPodpisujacy>Minister Finansów i Gospodarki</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>A.</imie> <nazwisko>Domański</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Rozporządzenie</rodzaj-aktu>
+    <autor-aktu>Ministra Finansów i Gospodarki<odnosnik id-odnosnika="1" symbol="1" gd:GUID="ab9b5bd3-9a24-44d7-99ca-2c2eacce8eee"><p><zdanie nr="1" gd:zdGUID="ff9814c7-7af6-4cfa-a1a2-41eb6c34d885" fragment="1" gd:fragmentGUID="2a853ce5-3709-4876-9f24-9d1e1b1a5257">Minister Finansów i Gospodarki kieruje działem administracji rządowej – finanse publiczne, na podstawie § 1 ust. 2 pkt 3 rozporządzenia Prezesa Rady Ministrów z dnia 25 lipca 2025 r. w sprawie szczegółowego zakresu działania Ministra Finansów i Gospodarki (Dz. U. poz. 997).</zdanie></p></odnosnik></autor-aktu>
+    <data>z dnia 12 października 2025 r.</data>
+    <tytul>zmieniające rozporządzenie w sprawie rozkładu czasu służby funkcjonariuszy Służby Celno-Skarbowej</tytul>
+    <podstawa-prawna>Na podstawie art. 189 ust. 20 ustawy z dnia 16 listopada 2016 r. o Krajowej Administracji Skarbowej (Dz. U. z 2025 r. poz. 1131) zarządza się, co następuje:</podstawa-prawna>
+    <paragraf eId="DU/2025/1399__art_1" gd:GUID="935cd3b2-c331-4afd-be00-63b4daa30af5" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-31_DU-2025-1399_domyslne.x" wejscie-w-zycie="2025-10-31">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="62e7476d-6c3c-4bd1-a15d-4cbaf1357cef" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-31_DU-2025-1399_domyslne.x" wejscie-w-zycie="2025-10-31">
+        <p>
+          <zdanie nr="1" gd:zdGUID="c758281d-3210-4716-8380-f3ee45dabd6c" fragment="1" gd:fragmentGUID="7885d67c-78f8-4a18-8e9b-c156ac0ecc7f" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-31_DU-2025-1399_domyslne.x" wejscie-w-zycie="2025-10-31">W rozporządzeniu Ministra Finansów z dnia 22 lutego 2018 r. w sprawie rozkładu czasu służby funkcjonariuszy Służby Celno-Skarbowej (Dz. U. poz. 444) po § 8 dodaje się § 8a w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2018/444" cudzyslowy="oba" gd:nowGUID="f81ef73e-eec1-4c75-a1be-65dcc29b34cc" element-eId="DU/2018/444__art_8" funkcja="dodaj-po"><paragraf eId="DU/2018/444__art_8a" gd:GUID="aacde96f-02af-4e72-8f30-c2b7ca1c66e2" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-31_DU-2025-1399_domyslne.x" wejscie-w-zycie="2025-10-31"><nr>8a</nr><ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="9017a8a4-324f-4494-bce1-80e7b1f93402" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-31_DU-2025-1399_domyslne.x" wejscie-w-zycie="2025-10-31"><p><zdanie nr="1" gd:zdGUID="c0f0e9e7-3c29-4632-8242-a31ae228e8d1" fragment="1" gd:fragmentGUID="049fed81-2ca2-408d-b088-41ae1f1014c9" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-31_DU-2025-1399_domyslne.x" wejscie-w-zycie="2025-10-31">Do czasu służby wlicza się także przypadający poza wyznaczonymi godzinami rozpoczęcia i zakończenia służby czas podróży służbowej, w którym funkcjonariusz posiada broń służbową, z wyłączeniem okresów realizowania prawa do wypoczynku.</zdanie></p></ustep-n></paragraf></cytat-strukt>.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2025/1399__art_2" gd:GUID="44a0ae82-1da3-4aba-93e6-396dbdb6dc61" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-31_DU-2025-1399_domyslne.x" wejscie-w-zycie="2025-10-31">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="34682139-489c-4c18-9e92-174a13b0978d" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-31_DU-2025-1399_domyslne.x" wejscie-w-zycie="2025-10-31">
+        <p>
+          <zdanie nr="1" gd:zdGUID="c15cd717-9697-4ba9-b746-07a164403b6f" fragment="1" gd:fragmentGUID="4f554c74-5b24-4fa8-8c1e-7758c7d2747e" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-31_DU-2025-1399_domyslne.x" wejscie-w-zycie="2025-10-31">Do wliczania do czasu służby funkcjonariuszy Służby Celno-Skarbowej czasu podróży służbowych rozpoczętych przed dniem wejścia w życie niniejszego rozporządzenia stosuje się przepisy dotychczasowe.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2025/1399__art_3" gd:GUID="4b59a839-7636-4e7b-8eda-cb55121cfa8c" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-31_DU-2025-1399_domyslne.x" wejscie-w-zycie="2025-10-31">
+      <nr>3</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="f91a78b5-1bb2-4239-b7a2-e20c44aa4a37" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-31_DU-2025-1399_domyslne.x" wejscie-w-zycie="2025-10-31">
+        <p>
+          <zdanie nr="1" gd:zdGUID="962a0677-857e-4d7b-a78b-91cc7ee0749f" fragment="1" gd:fragmentGUID="86f920e7-64ee-4c5c-b804-09edbc1adc0d" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-31_DU-2025-1399_domyslne.x" wejscie-w-zycie="2025-10-31">Rozporządzenie wchodzi w życie po upływie 14 dni od dnia ogłoszenia.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <organ-podpisujacy>Minister Finansów i Gospodarki: <i><osoba podpisujacy="true" gd:osobaGUID="9543d774-bbc9-4b5a-8c25-49677281c46d"><imie>A.</imie> <nazwisko>Domański</nazwisko></osoba></i></organ-podpisujacy>
+  </rozporzadzenie>
+</akt-prawny>

@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <rozporzadzenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/1701</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>f4a942dc-b157-4199-a1cc-a9c5e83400d2</gd:GUIDwersji>
+      <AdresISAP>WDU20250001701</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>1701</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 1701</AdresWyswietlany>
+      <Tytul>Rozporządzenie Ministra Zdrowia z dnia 2 grudnia 2025 r. zmieniające rozporządzenie w sprawie szczegółowego zakresu zadań wojewódzkiego koordynatora ratownictwa medycznego</Tytul>
+      <Rodzaj>ROZP</Rodzaj>
+      <DataOgloszenia>2025-12-04</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-12-02</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2025-12-19_DU-2025-1701_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2025-12-19" warunek="po upływie 14 dni od dnia ogłoszenia" podstawa="§ 2" zrodlo="https://eli.gov.pl/eli/DU/2025/1701" dowod="DU/2025/1701__art_2" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2025-12-19_DU-2025-1701_domyslne.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2025-12-19_DU-2025-1701_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="67150ab5-d1ad-465b-9555-babe097e7b56" rola="wydajacy">
+          <Nazwa>Minister Zdrowia</Nazwa>
+          <OrganPodpisujacy>Minister Zdrowia</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>K.</imie> <nazwisko>Kacperczyk</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Rozporządzenie</rodzaj-aktu>
+    <autor-aktu>Ministra Zdrowia<odnosnik id-odnosnika="1" symbol="1" gd:GUID="e0d84b9b-f841-48d3-baa0-283bc2188151"><p><zdanie nr="1" gd:zdGUID="59d01bb7-ba44-41dc-81af-08db7b6296f1" fragment="1" gd:fragmentGUID="870f5372-66dc-42f3-b000-898364d85d74">Minister Zdrowia kieruje działem administracji rządowej – zdrowie, na podstawie § 1 ust. 2 rozporządzenia Prezesa Rady Ministrów z dnia 25 lipca 2025 r. w sprawie szczegółowego zakresu działania Ministra Zdrowia (Dz. U. poz. 1004).</zdanie></p></odnosnik></autor-aktu>
+    <data>z dnia 2 grudnia 2025 r.</data>
+    <tytul>zmieniające rozporządzenie w sprawie szczegółowego zakresu zadań wojewódzkiego koordynatora ratownictwa medycznego</tytul>
+    <podstawa-prawna>Na podstawie art. 29 ust. 10 ustawy z dnia 8 września 2006 r. o Państwowym Ratownictwie Medycznym (Dz. U. z 2025 r. poz. 91 i 637) zarządza się, co następuje:</podstawa-prawna>
+    <paragraf eId="DU/2025/1701__art_1" gd:GUID="78673e02-3412-4849-af4d-3f091fe454b8" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-19_DU-2025-1701_domyslne.x" wejscie-w-zycie="2025-12-19">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="34404a58-91fc-4270-92fc-c7f3d0ee5f98" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-19_DU-2025-1701_domyslne.x" wejscie-w-zycie="2025-12-19">
+        <p>
+          <zdanie nr="1" gd:zdGUID="5a9119b4-a0c2-458a-93d8-405589e850f1" fragment="1" gd:fragmentGUID="3087704d-8085-4cba-94ca-ddf994fd73d7" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-19_DU-2025-1701_domyslne.x" wejscie-w-zycie="2025-12-19">W rozporządzeniu Ministra Zdrowia z dnia 16 sierpnia 2018 r. w sprawie szczegółowego zakresu zadań wojewódzkiego koordynatora ratownictwa medycznego (Dz. U. poz. 1655) wprowadza się następujące zmiany:</zdanie>
+        </p>
+        <punkt eId="DU/2025/1701__art_1__pkt_1" gd:GUID="a4d60f3d-9830-44d0-b92d-5b15a870b2c8" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-19_DU-2025-1701_domyslne.x" wejscie-w-zycie="2025-12-19">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="5a9119b4-a0c2-458a-93d8-405589e850f1" fragment="2" gd:fragmentGUID="f37b3715-611c-436c-864b-6a658b4df496" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-19_DU-2025-1701_domyslne.x" wejscie-w-zycie="2025-12-19">w § 1:</zdanie>
+          </p>
+          <litera eId="DU/2025/1701__art_1__pkt_1__lit_a" gd:GUID="78021e32-51a1-4fc3-b649-e16db58338af" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-19_DU-2025-1701_domyslne.x" wejscie-w-zycie="2025-12-19">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="5a9119b4-a0c2-458a-93d8-405589e850f1" fragment="3" gd:fragmentGUID="bdf9ea95-57d3-403c-bc42-c9c43019d187" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-19_DU-2025-1701_domyslne.x" wejscie-w-zycie="2025-12-19">w pkt 1 w lit. k:</zdanie>
+            </p>
+            <tiret eId="DU/2025/1701__art_1__pkt_1__lit_a__tir_1" gd:GUID="caefb07a-93dd-4149-b8e5-0e2e9bda4694" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-19_DU-2025-1701_domyslne.x" wejscie-w-zycie="2025-12-19">
+              <p>
+                <zdanie nr="1" gd:zdGUID="5a9119b4-a0c2-458a-93d8-405589e850f1" fragment="4" gd:fragmentGUID="78d703a6-19f8-49d0-89b6-9eca8e0152ba" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-19_DU-2025-1701_domyslne.x" wejscie-w-zycie="2025-12-19"><now:uchyl akt="https://eli.gov.pl/eli/DU/2018/1655" element-eId="DU/2018/1655__art_1__pkt_1__lit_k__tir_2" gd:nowGUID="ec57dcb7-c635-4f5b-ba3f-d8cb6f7a09b1" />uchyla się tiret drugie,</zdanie>
+              </p>
+            </tiret>
+            <tiret eId="DU/2025/1701__art_1__pkt_1__lit_a__tir_2" gd:GUID="9e91f34e-a58e-4153-a5f9-3774ae5b172d" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-19_DU-2025-1701_domyslne.x" wejscie-w-zycie="2025-12-19">
+              <p>
+                <zdanie nr="1" gd:zdGUID="5a9119b4-a0c2-458a-93d8-405589e850f1" fragment="5" gd:fragmentGUID="da1a29e7-2dac-4a3b-a64c-9a410c90fec0" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-19_DU-2025-1701_domyslne.x" wejscie-w-zycie="2025-12-19">tiret czwarte otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2018/1655" cudzyslowy="oba" gd:nowGUID="eeca4037-27f5-4348-a531-269018d4a620" element-eId="DU/2018/1655__art_1__pkt_1__lit_k__tir_4" funkcja="zastap"><tiret eId="DU/2018/1655__art_1__pkt_1__lit_k__tir_1" gd:GUID="695c6c72-1499-4195-ac73-68f0e35352ba" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-19_DU-2025-1701_domyslne.x" wejscie-w-zycie="2025-12-19"><p><zdanie nr="1" gd:zdGUID="c43baf37-d68b-4f6d-b0a1-1b1322ebb950" fragment="1" gd:fragmentGUID="0ebc87fc-3b86-41ef-9c19-123d16afb9a6" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-19_DU-2025-1701_domyslne.x" wejscie-w-zycie="2025-12-19">współpracy z Krajowym Centrum Monitorowania Ratownictwa Medycznego, o którym mowa w art. 27a ustawy, krajowym koordynatorem ratownictwa medycznego, o którym mowa w art. 20a ust. 1 ustawy, oraz innymi wojewódzkimi koordynatorami ratownictwa medycznego,</zdanie></p></tiret></cytat-strukt>,</zdanie>
+              </p>
+            </tiret>
+            <tiret eId="DU/2025/1701__art_1__pkt_1__lit_a__tir_3" gd:GUID="bfd08488-d56f-442f-a018-c6f3eaf4614c" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-19_DU-2025-1701_domyslne.x" wejscie-w-zycie="2025-12-19">
+              <p>
+                <zdanie nr="1" gd:zdGUID="5a9119b4-a0c2-458a-93d8-405589e850f1" fragment="6" gd:fragmentGUID="082b658b-651e-4c43-9445-8a187c74866a" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-19_DU-2025-1701_domyslne.x" wejscie-w-zycie="2025-12-19"><now:zamien-tekst stary-tekst=";" nowy-tekst="," element-eId="DU/2018/1655__art_1__pkt_1__lit_k__tir_5" akt="https://eli.gov.pl/eli/DU/2018/1655" now:wystapienie="ostatnie" gd:nowGUID="8716a914-2f84-4e0a-9064-98534dcc559b" />w tiret piątym średnik zastępuje się przecinkiem i dodaje się tiret szóste w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2018/1655" cudzyslowy="oba" gd:nowGUID="cbdce851-2819-4320-afb4-a1f523e258b0" element-eId="DU/2018/1655__art_1__pkt_1__lit_k__tir_5" funkcja="dodaj-po"><tiret eId="DU/2018/1655__art_1__pkt_1__lit_k__tir_1" gd:GUID="b841e8de-53d4-44f7-9cbe-361d61a85935" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-19_DU-2025-1701_domyslne.x" wejscie-w-zycie="2025-12-19"><p><zdanie nr="1" gd:zdGUID="4982e600-1db8-4b24-b860-20a6ffe891f0" fragment="1" gd:fragmentGUID="6d5d9401-1ff9-4024-bc31-3f7bcab61b37" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-19_DU-2025-1701_domyslne.x" wejscie-w-zycie="2025-12-19">przekazywaniu do dyrektora właściwego oddziału wojewódzkiego Narodowego Funduszu Zdrowia informacji o odmowie przyjęcia przez szpital osoby w stanie nagłego zagrożenia zdrowotnego, pacjenta urazowego lub pacjenta urazowego dziecięcego od jednostek systemu, o których mowa w art. 32 ust. 1 ustawy, albo o niewykonaniu decyzji rozstrzygającej spór dotyczący przyjęcia do szpitala osoby w stanie nagłego zagrożenia zdrowotnego – w terminie 7 dni od dnia udzielenia odmowy albo od dnia niewykonania decyzji;</zdanie></p></tiret></cytat-strukt>,</zdanie>
+              </p>
+            </tiret>
+          </litera>
+          <litera eId="DU/2025/1701__art_1__pkt_1__lit_b" gd:GUID="10a9cd73-1eb0-4aeb-baaa-5b88a860eeed" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-19_DU-2025-1701_domyslne.x" wejscie-w-zycie="2025-12-19">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="5a9119b4-a0c2-458a-93d8-405589e850f1" fragment="7" gd:fragmentGUID="1ea48e91-5cc4-43c6-b603-f69b134b13fc" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-19_DU-2025-1701_domyslne.x" wejscie-w-zycie="2025-12-19"><now:zamien-tekst stary-tekst="dyspozytorowi medycznemu wskazanemu przez kierownika podmiotu leczniczego zatrudniającego dyspozytora medycznego" nowy-tekst="głównemu dyspozytorowi medycznemu lub jego zastępcy" element-eId="DU/2018/1655__art_1__pkt_2" akt="https://eli.gov.pl/eli/DU/2018/1655" gd:nowGUID="e5627d2c-2908-4ede-957a-90812ab152cd" />w pkt 2 wyrazy „dyspozytorowi medycznemu wskazanemu przez kierownika podmiotu leczniczego zatrudniającego dyspozytora medycznego” zastępuje się wyrazami „głównemu dyspozytorowi medycznemu lub jego zastępcy”,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1701__art_1__pkt_1__lit_c" gd:GUID="bc29b99e-0389-43c7-bc93-1e9ae2549ae4" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-19_DU-2025-1701_domyslne.x" wejscie-w-zycie="2025-12-19">
+            <nr>c</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="5a9119b4-a0c2-458a-93d8-405589e850f1" fragment="8" gd:fragmentGUID="669292ff-fb7d-4cd5-aec9-bc4b2634ee13" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-19_DU-2025-1701_domyslne.x" wejscie-w-zycie="2025-12-19"><now:zamien-tekst stary-tekst="dyspozytora medycznego wskazanego przez kierownika podmiotu leczniczego zatrudniającego dyspozytora medycznego" nowy-tekst="głównego dyspozytora medycznego lub jego zastępcy" element-eId="DU/2018/1655__art_1__pkt_3" akt="https://eli.gov.pl/eli/DU/2018/1655" gd:nowGUID="a1829b92-1466-4550-b5a5-3c2f6f9996b7" />w pkt 3 we wprowadzeniu do wyliczenia wyrazy „dyspozytora medycznego wskazanego przez kierownika podmiotu leczniczego zatrudniającego dyspozytora medycznego” zastępuje się wyrazami „głównego dyspozytora medycznego lub jego zastępcy”,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1701__art_1__pkt_1__lit_d" gd:GUID="3b72e741-f201-4cc5-b057-b07e237fb165" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-19_DU-2025-1701_domyslne.x" wejscie-w-zycie="2025-12-19">
+            <nr>d</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="5a9119b4-a0c2-458a-93d8-405589e850f1" fragment="9" gd:fragmentGUID="4dcddb8c-c157-413e-9ec1-ca8c418ea5e9" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-19_DU-2025-1701_domyslne.x" wejscie-w-zycie="2025-12-19">pkt 5 i 6 otrzymują brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2018/1655" cudzyslowy="otwierajacy" gd:nowGUID="4ef648c3-5f31-4dd7-8c38-b1e3acba91a6" element-eId="DU/2018/1655__art_1__pkt_5" funkcja="zastap"><punkt eId="DU/2018/1655__art_1__pkt_5" gd:GUID="62bc62af-4511-417d-b154-c2d1c71e54d4" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-19_DU-2025-1701_domyslne.x" wejscie-w-zycie="2025-12-19"><nr>5</nr><p><zdanie nr="1" gd:zdGUID="5411c485-d3b5-4313-bbf2-848f2bf5d435" fragment="1" gd:fragmentGUID="62d4fe3b-3c34-480e-bd10-844bb5d41f59" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-19_DU-2025-1701_domyslne.x" wejscie-w-zycie="2025-12-19">monitorowanie zdarzeń:</zdanie></p><litera eId="DU/2018/1655__art_1__pkt_5__lit_a" gd:GUID="0a1844fa-e6df-4244-b7d7-6f88fb1c1235" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-19_DU-2025-1701_domyslne.x" wejscie-w-zycie="2025-12-19"><nr>a</nr><p><zdanie nr="1" gd:zdGUID="5411c485-d3b5-4313-bbf2-848f2bf5d435" fragment="2" gd:fragmentGUID="73e7a171-2a8f-4d9e-90f4-39ea059ae3f1" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-19_DU-2025-1701_domyslne.x" wejscie-w-zycie="2025-12-19">których skutki mogą spowodować stan nagłego zagrożenia zdrowotnego znacznej liczby osób,</zdanie></p></litera><litera eId="DU/2018/1655__art_1__pkt_5__lit_b" gd:GUID="5b4c9c69-9e63-4102-a053-5b697366f600" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-19_DU-2025-1701_domyslne.x" wejscie-w-zycie="2025-12-19"><nr>b</nr><p><zdanie nr="1" gd:zdGUID="5411c485-d3b5-4313-bbf2-848f2bf5d435" fragment="3" gd:fragmentGUID="6371a34e-a3be-4ecf-ace1-584565bda682" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-19_DU-2025-1701_domyslne.x" wejscie-w-zycie="2025-12-19">które zidentyfikowano jako zdarzenia z użyciem czynników CBRNE lub HAZMAT – w zakresie analizy informacji o charakterze i skali zagrożenia pod kątem oceny jego skutków zdrowotnych oraz prognozowania zapotrzebowania na świadczenia zdrowotne w zakresie ratownictwa medycznego i leczenia szpitalnego, w celu koordynacji zabezpieczenia medycznego i wsparcia głównego dyspozytora medycznego;</zdanie></p></litera></punkt></cytat-strukt><cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2018/1655" cudzyslowy="zamykajacy" gd:nowGUID="fe64bc8a-8ead-41ee-a245-54b36d80bb54" element-eId="DU/2018/1655__art_1__pkt_6" funkcja="zastap"><punkt eId="DU/2018/1655__art_1__pkt_6" gd:GUID="edaa5acc-6834-47f8-ad60-f98a4eb4873f" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-19_DU-2025-1701_domyslne.x" wejscie-w-zycie="2025-12-19"><nr>6</nr><p><zdanie nr="1" gd:zdGUID="d3b816cc-87ef-44f3-bb5a-7a64b3cde362" fragment="1" gd:fragmentGUID="c6a47799-b255-41d5-8504-b0b4ccb9f434" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-19_DU-2025-1701_domyslne.x" wejscie-w-zycie="2025-12-19">udzielanie głównemu dyspozytorowi medycznemu niezbędnych informacji oraz wsparcia merytorycznego, zgodnie z aktualną wiedzą medyczną, przy podejmowaniu przez niego decyzji o skierowaniu zespołu ratownictwa medycznego do szpitala z pacjentem w stanie nagłego zagrożenia zdrowotnego;</zdanie></p></punkt></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1701__art_1__pkt_1__lit_e" gd:GUID="e0cf4017-5093-4979-8346-d4f8f930447f" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-19_DU-2025-1701_domyslne.x" wejscie-w-zycie="2025-12-19">
+            <nr>e</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="5a9119b4-a0c2-458a-93d8-405589e850f1" fragment="10" gd:fragmentGUID="ea8f1585-bfc7-470c-9eb7-aadbee567132" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-19_DU-2025-1701_domyslne.x" wejscie-w-zycie="2025-12-19">po pkt 6 dodaje się pkt 6a w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2018/1655" cudzyslowy="oba" gd:nowGUID="66f5320a-b4a8-4e3c-b75f-fc296fb24455" element-eId="DU/2018/1655__art_1__pkt_6" funkcja="dodaj-po"><punkt eId="DU/2018/1655__art_1__pkt_6a" gd:GUID="9795ec59-a7da-48f6-8149-90d575d3566c" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-19_DU-2025-1701_domyslne.x" wejscie-w-zycie="2025-12-19"><nr>6a</nr><p><zdanie nr="1" gd:zdGUID="0273558b-d984-4809-b3aa-e1935908909c" fragment="1" gd:fragmentGUID="30f5728a-4054-47c4-a501-ac4563446b30" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-19_DU-2025-1701_domyslne.x" wejscie-w-zycie="2025-12-19">rozstrzyganie sporów dotyczących funkcjonowania dyspozytorni medycznych, wynikłych pomiędzy głównymi dyspozytorami medycznymi z terenu danego województwa;</zdanie></p></punkt></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1701__art_1__pkt_1__lit_f" gd:GUID="ac77593f-56f0-4309-9a69-1338c9ec3ee6" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-19_DU-2025-1701_domyslne.x" wejscie-w-zycie="2025-12-19">
+            <nr>f</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="5a9119b4-a0c2-458a-93d8-405589e850f1" fragment="11" gd:fragmentGUID="46cb6713-f21f-4ed6-bed7-ce754f43044e" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-19_DU-2025-1701_domyslne.x" wejscie-w-zycie="2025-12-19"><now:zamien-tekst stary-tekst="dyspozytorem medycznym wskazanym przez kierownika podmiotu leczniczego zatrudniającego dyspozytora medycznego" nowy-tekst="głównym dyspozytorem medycznym lub jego zastępcą" element-eId="DU/2018/1655__art_1__pkt_9" akt="https://eli.gov.pl/eli/DU/2018/1655" gd:nowGUID="468d57f3-2de6-41ba-893a-37b9ef6941fa" />w pkt 9 wyrazy „dyspozytorem medycznym wskazanym przez kierownika podmiotu leczniczego zatrudniającego dyspozytora medycznego” zastępuje się wyrazami „głównym dyspozytorem medycznym lub jego zastępcą”,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1701__art_1__pkt_1__lit_g" gd:GUID="06cf68ad-0135-4100-8094-e806ed7c21d7" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-19_DU-2025-1701_domyslne.x" wejscie-w-zycie="2025-12-19">
+            <nr>g</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="5a9119b4-a0c2-458a-93d8-405589e850f1" fragment="12" gd:fragmentGUID="a764ef16-e294-45ed-abd9-b88b1865d871" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-19_DU-2025-1701_domyslne.x" wejscie-w-zycie="2025-12-19">pkt 11 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2018/1655" cudzyslowy="oba" gd:nowGUID="032bb6d9-66bd-4a46-b264-78b9d69699f8" element-eId="DU/2018/1655__art_1__pkt_11" funkcja="zastap"><punkt eId="DU/2018/1655__art_1__pkt_11" gd:GUID="22c19ca6-da9a-4bf9-a780-f8c51ca23154" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-19_DU-2025-1701_domyslne.x" wejscie-w-zycie="2025-12-19"><nr>11</nr><p><zdanie nr="1" gd:zdGUID="d79902df-350f-49cf-bbb1-27b9b5bc678c" fragment="1" gd:fragmentGUID="a97bd444-a044-459d-b5d8-530b9a14c5c7" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-19_DU-2025-1701_domyslne.x" wejscie-w-zycie="2025-12-19">niezwłoczne przekazywanie Krajowemu Centrum Monitorowania Ratownictwa Medycznego, o którym mowa w art. 27a ustawy, informacji dotyczących zdarzeń, o których mowa w pkt 5, na żądanie pracowników tego Centrum;</zdanie></p></punkt></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1701__art_1__pkt_1__lit_h" gd:GUID="8f4e9a6e-eb04-47be-a4f2-1ed4caba7657" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-19_DU-2025-1701_domyslne.x" wejscie-w-zycie="2025-12-19">
+            <nr>h</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="5a9119b4-a0c2-458a-93d8-405589e850f1" fragment="13" gd:fragmentGUID="f4a11fa5-ef89-42e5-adb8-62f37955956f" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-19_DU-2025-1701_domyslne.x" wejscie-w-zycie="2025-12-19">w pkt 15 lit. a i b otrzymują brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2018/1655" cudzyslowy="otwierajacy" gd:nowGUID="60aeda6f-bc64-40fc-974a-b707776b6152" element-eId="DU/2018/1655__art_1__pkt_15__lit_a" funkcja="zastap"><litera eId="DU/2018/1655__art_1__pkt_15__lit_a" gd:GUID="354eb34f-328e-4350-9f91-6481910ec285" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-19_DU-2025-1701_domyslne.x" wejscie-w-zycie="2025-12-19"><nr>a</nr><p><zdanie nr="1" gd:zdGUID="4d2f5c25-05df-4d73-8cce-57dfca8bc5a8" fragment="1" gd:fragmentGUID="d4a604e6-ba39-41fa-b6fc-92bbd6807e84" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-19_DU-2025-1701_domyslne.x" wejscie-w-zycie="2025-12-19">planów wojewody, o których mowa w przepisach wydanych na podstawie art. 27 ust. 2 pkt 7 ustawy z dnia 11 marca 2022 r. o obronie Ojczyzny (Dz. U. z 2025 r. poz. 825, 1014 i 1080),</zdanie></p></litera></cytat-strukt><cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2018/1655" cudzyslowy="zamykajacy" gd:nowGUID="b65a5bf0-f01b-4cce-a953-5e731afee25f" element-eId="DU/2018/1655__art_1__pkt_15__lit_b" funkcja="zastap"><litera eId="DU/2018/1655__art_1__pkt_15__lit_b" gd:GUID="ad9534d5-957e-4362-ad3b-11aa5f27ffbf" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-19_DU-2025-1701_domyslne.x" wejscie-w-zycie="2025-12-19"><nr>b</nr><p><zdanie nr="1" gd:zdGUID="e47d2956-be38-41de-bc41-f92c272037b7" fragment="1" gd:fragmentGUID="d1ef3457-4bb3-4274-9bbc-5c57872f8c3e" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-19_DU-2025-1701_domyslne.x" wejscie-w-zycie="2025-12-19">wojewódzkiego planu postępowania awaryjnego, o którym mowa w art. 86e ust. 3 ustawy z dnia 29 listopada 2000 r. – Prawo atomowe (Dz. U. z 2024 r. poz. 1277, 1897 i 1907),</zdanie></p></litera></cytat-strukt>;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2025/1701__art_1__pkt_2" gd:GUID="ddabd9d3-9b6e-4572-800e-6dd8051c1b34" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-19_DU-2025-1701_domyslne.x" wejscie-w-zycie="2025-12-19">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="5a9119b4-a0c2-458a-93d8-405589e850f1" fragment="14" gd:fragmentGUID="44970c46-bad0-47a5-959e-51bff69252d4" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-19_DU-2025-1701_domyslne.x" wejscie-w-zycie="2025-12-19"><now:zamien-tekst stary-tekst="art. 6 ust. 2 pkt 8 ustawy z dnia 21 listopada 1967 r. o powszechnym obowiązku obrony Rzeczypospolitej Polskiej" nowy-tekst="art. 27 ust. 2 pkt 7 ustawy z dnia 11 marca 2022 r. o obronie Ojczyzny" element-eId="DU/2018/1655__art_2__ust_2" akt="https://eli.gov.pl/eli/DU/2018/1655" gd:nowGUID="d4dc5547-bca0-4370-8877-a5c20ba18124" />w § 2 w ust. 2 wyrazy „art. 6 ust. 2 pkt 8 ustawy z dnia 21 listopada 1967 r. o powszechnym obowiązku obrony Rzeczypospolitej Polskiej” zastępuje się wyrazami „art. 27 ust. 2 pkt 7 ustawy z dnia 11 marca 2022 r. o obronie Ojczyzny”.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2025/1701__art_2" gd:GUID="f14e6e6e-60d8-420e-9097-ea8622760895" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-19_DU-2025-1701_domyslne.x" wejscie-w-zycie="2025-12-19">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="73ff753c-cfce-42e0-a38d-0f88fc927ba8" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-19_DU-2025-1701_domyslne.x" wejscie-w-zycie="2025-12-19">
+        <p>
+          <zdanie nr="1" gd:zdGUID="88e1f743-80e2-481f-bc32-c7439aa6eb56" fragment="1" gd:fragmentGUID="26e91456-ce53-427d-832d-6f81fb9d586e" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-19_DU-2025-1701_domyslne.x" wejscie-w-zycie="2025-12-19">Rozporządzenie wchodzi w życie po upływie 14 dni od dnia ogłoszenia.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <organ-podpisujacy>Minister Zdrowia: wz. <i><osoba podpisujacy="true" gd:osobaGUID="7df96b5b-901b-4bd7-beee-8921c51a603c"><imie>K.</imie> <nazwisko>Kacperczyk</nazwisko></osoba></i></organ-podpisujacy>
+  </rozporzadzenie>
+</akt-prawny>

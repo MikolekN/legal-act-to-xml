@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <rozporzadzenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/1282</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>8163fb6c-4c12-42bf-a2fe-bb8be75c7c35</gd:GUIDwersji>
+      <AdresISAP>WDU20250001282</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>1282</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 1282</AdresWyswietlany>
+      <Tytul>Rozporządzenie Ministra Klimatu i Środowiska z dnia 22 września 2025 r. zmieniające rozporządzenie w sprawie szczegółowych warunków wykonywania polowania i znakowania tusz</Tytul>
+      <Rodzaj>ROZP</Rodzaj>
+      <DataOgloszenia>2025-09-24</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-09-22</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2026-01-02_DU-2025-1282_odczytane" rodzaj="wejscie-w-zycie" pochodzenie="odczytane" data="2026-01-02" podstawa="§ 2" zrodlo="https://eli.gov.pl/eli/DU/2025/1282" dowod="DU/2025/1282__art_2" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2026-01-02_DU-2025-1282_odczytane.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2026-01-02_DU-2025-1282_odczytane" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="828bacca-792e-40bc-9c5a-4adb002dc772" rola="wydajacy">
+          <Nazwa>Minister Klimatu i Środowiska</Nazwa>
+          <OrganPodpisujacy>Minister Klimatu i Środowiska</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>P.</imie> <nazwisko>Hennig-Kloska</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Rozporządzenie</rodzaj-aktu>
+    <autor-aktu>Ministra Klimatu i Środowiska<odnosnik id-odnosnika="1" symbol="1" gd:GUID="ac07111c-86b7-421a-815b-08a5e3a8d20a"><p><zdanie nr="1" gd:zdGUID="378e1d5f-3107-49ac-9b08-dc3add5d7d48" fragment="1" gd:fragmentGUID="1d9cb9fa-429c-425a-ab77-b707b541a4d5">Minister Klimatu i Środowiska kieruje działem administracji rządowej – środowisko, na podstawie § 1 ust. 2 pkt 2 rozporządzenia Prezesa Rady Ministrów z dnia 25 lipca 2025 r. w sprawie szczegółowego zakresu działania Ministra Klimatu i Środowiska (Dz. U. poz. 995).</zdanie></p></odnosnik></autor-aktu>
+    <data>z dnia 22 września 2025 r.</data>
+    <tytul>zmieniające rozporządzenie w sprawie szczegółowych warunków wykonywania polowania i znakowania tusz</tytul>
+    <podstawa-prawna>Na podstawie art. 43 ust. 3 ustawy z dnia 13 października 1995 r. – Prawo łowieckie (Dz. U. z 2025 r. poz. 539) zarządza się, co następuje:</podstawa-prawna>
+    <paragraf eId="DU/2025/1282__art_1" gd:GUID="b480a750-6873-4276-9032-740f4f049e99" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-02_DU-2025-1282_odczytane.x" wejscie-w-zycie="2026-01-02">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="f3cb3fbb-4ded-4fd4-b190-fc4058271a8d" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-02_DU-2025-1282_odczytane.x" wejscie-w-zycie="2026-01-02">
+        <p>
+          <zdanie nr="1" gd:zdGUID="98d23377-8614-4f62-917d-b6d6260d72aa" fragment="1" gd:fragmentGUID="5dbd0e96-1b34-477f-a5bd-acb4c7aebf19" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-02_DU-2025-1282_odczytane.x" wejscie-w-zycie="2026-01-02"><now:zamien-tekst stary-tekst="jarząbków," nowy-tekst="" element-eId="DU/2005/548__art_6__ust_1__pkt_5" akt="https://eli.gov.pl/eli/DU/2005/548" gd:nowGUID="be727d4d-693d-46b9-85c6-0f9bf5053895" /><now:zamien-tekst stary-tekst="i łysek" nowy-tekst="" element-eId="DU/2005/548__art_6__ust_1__pkt_5" akt="https://eli.gov.pl/eli/DU/2005/548" gd:nowGUID="1672cb48-1d04-479d-b318-48b4ad6e7318" />W rozporządzeniu Ministra Środowiska z dnia 23 marca 2005 r. w sprawie szczegółowych warunków wykonywania polowania i znakowania tusz (Dz. U. poz. 548, z późn. zm.<odnosnik id-odnosnika="2" symbol="2" gd:GUID="6e421b81-666d-4d8b-a5a9-311b9283da68"><p><zdanie nr="1" gd:zdGUID="b7816927-9a96-43d9-852b-d483d6b93e58" fragment="1" gd:fragmentGUID="dcfeec33-b918-4f5e-b9e4-b753aa482304">Zmiany wymienionego rozporządzenia zostały ogłoszone w Dz. U. z 2010 r. poz. 1250, z 2011 r. poz. 1548, z 2013 r. poz. 889, z 2017 r. poz. 1485, z 2019 r. poz.1782 oraz z 2022 r. poz. 717 i 2323.</zdanie></p></odnosnik>) w § 6 w ust. 1 w pkt 5 skreśla się wyrazy „jarząbków,” oraz „i łysek”.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2025/1282__art_2" gd:GUID="4f59fcc9-690d-49ea-b0ae-593ceffdbb76" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-02_DU-2025-1282_odczytane.x" wejscie-w-zycie="2026-01-02">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="218afd83-2243-425c-afd9-1a28b7856636" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-02_DU-2025-1282_odczytane.x" wejscie-w-zycie="2026-01-02">
+        <p>
+          <zdanie nr="1" gd:zdGUID="706d659a-75f0-43d0-9af1-78b5e52ed6ef" fragment="1" gd:fragmentGUID="b4252e8d-fe09-4efa-9cfb-5b365d102dd9" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-02_DU-2025-1282_odczytane.x" wejscie-w-zycie="2026-01-02">Rozporządzenie wchodzi w życie z dniem 2 stycznia 2026 r.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <organ-podpisujacy>Minister Klimatu i Środowiska: <i><osoba podpisujacy="true" gd:osobaGUID="4da5d3b8-5a1e-47a1-92f1-256c067096a5"><imie>P.</imie> <nazwisko>Hennig-Kloska</nazwisko></osoba></i></organ-podpisujacy>
+  </rozporzadzenie>
+</akt-prawny>

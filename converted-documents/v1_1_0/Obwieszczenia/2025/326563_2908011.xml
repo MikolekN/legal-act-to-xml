@@ -1,0 +1,2355 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <obwieszczenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/683</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>ea557c9a-a38b-4937-a9a3-7be7a3dcf7e4</gd:GUIDwersji>
+      <AdresISAP>WDU20250000683</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>683</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 683</AdresWyswietlany>
+      <Tytul>Obwieszczenie Marszałka Sejmu Rzeczypospolitej Polskiej z dnia 21 maja 2025 r. w sprawie ogłoszenia jednolitego tekstu ustawy o funduszach promocji produktów rolno-spożywczych</Tytul>
+      <Rodzaj>OBW_TJ</Rodzaj>
+      <DataOgloszenia>2025-05-27</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-05-21</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_ujednolicenie_2025-05-27_DU-2025-683_domyslne" rodzaj="ujednolicenie" pochodzenie="domyslne-z-aktu" data="2025-05-27" />
+          <Zdarzenie id="zdarz_wejscie_2026-04-01_DU-2025-289_odczytane" rodzaj="wejscie-w-zycie" pochodzenie="odczytane" data="2026-04-01" podstawa="art. 1 pkt 3 lit. a; art. 1 pkt 3 lit. b" zrodlo="https://eli.gov.pl/eli/DU/2025/289" dowod="DU/2025/683__odn_8" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_ujednolicenie.zdarz_ujednolicenie_2025-05-27_DU-2025-683_domyslne" glowna="true">
+          <Przedzial rodzaj="ujednolicenie" od="zdarz_ujednolicenie_2025-05-27_DU-2025-683_domyslne" />
+        </GrupaCzasowa>
+        <GrupaCzasowa id="okr_obowiazywanie.x.zdarz_wejscie_2026-04-01_DU-2025-289_odczytane" glowna="false">
+          <Przedzial rodzaj="obowiazywanie" do="zdarz_wejscie_2026-04-01_DU-2025-289_odczytane" />
+        </GrupaCzasowa>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2026-04-01_DU-2025-289_odczytane.x" glowna="false">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2026-04-01_DU-2025-289_odczytane" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <DataObowiazywaniaWersji>
+        <Od>zdarz_ujednolicenie_2025-05-27_DU-2025-683_domyslne</Od>
+      </DataObowiazywaniaWersji>
+      <Organy>
+        <Organ gd:GUID="15ede087-3baa-4bae-940e-68ea9343578c" rola="wydajacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/MSEJMU">
+          <Nazwa>Marszałek Sejmu</Nazwa>
+          <OrganPodpisujacy>Marszałek Sejmu</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>S.</imie> <nazwisko>Hołownia</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Obwieszczenie</rodzaj-aktu>
+    <autor-aktu>Marszałka Sejmu Rzeczypospolitej Polskiej</autor-aktu>
+    <data>z dnia 21 maja 2025 r.</data>
+    <tytul>w sprawie ogłoszenia jednolitego tekstu ustawy o funduszach promocji produktów rolno-spożywczych</tytul>
+    <punkt-OTJ eId="DU/2025/683__pkt_1" gd:GUID="f39e7b03-0609-4fdc-ac03-33af8827fc2e">
+      <nr>1</nr>
+      <p>
+        <zdanie nr="1" gd:zdGUID="6090c1b9-6f08-4bb5-9b56-5db5cff59a02" fragment="1" gd:fragmentGUID="43090d6f-b149-433f-9eec-f72c2066b1be">Na podstawie art. 16 ust. 1 zdanie pierwsze ustawy z dnia 20 lipca 2000 r. o ogłaszaniu aktów normatywnych i niektórych innych aktów prawnych (Dz. U. z 2019 r. poz. 1461) ogłasza się w załączniku do niniejszego obwieszczenia jednolity tekst ustawy z dnia 22 maja 2009 r. o funduszach promocji produktów rolno-spożywczych (Dz. U. z 2021 r. poz. 1496), z uwzględnieniem zmian wprowadzonych ustawą z dnia 21 lutego 2025 r. o zmianie ustawy o funduszach promocji produktów rolno-spożywczych (Dz. U. poz. 289) oraz zmian wynikających z przepisów ogłoszonych przed dniem 16 maja 2025 r.</zdanie>
+      </p>
+    </punkt-OTJ>
+    <punkt-OTJ eId="DU/2025/683__pkt_2" gd:GUID="ac079343-a75c-4839-bd5a-aae841ad4b28">
+      <nr>2</nr>
+      <p>
+        <zdanie nr="1" gd:zdGUID="0b01b26b-b07d-4c1d-ac7e-7f2d64c4acb3" fragment="1" gd:fragmentGUID="4c2d049e-7fd1-4af1-910f-e9674fd90156">Podany w załączniku do niniejszego obwieszczenia tekst jednolity ustawy nie obejmuje art. 2 i art. 3 ustawy z dnia 21 lutego 2025 r. o zmianie ustawy o funduszach promocji produktów rolno-spożywczych (Dz. U. poz. 289), które stanowią:<tresc-strukt cudzyslowy="oba" gd:GUID="88687cc9-8c27-4c33-862e-bc3064a47a49"><artykul eId="DU/2025/289__art_2" gd:GUID="a35f7f5b-e8be-41db-b0ae-9aaa018aab7c"><nr>2</nr><ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="907a93f0-e959-4d40-b719-367936b4ff58"><p><zdanie nr="1" gd:zdGUID="0877d0fa-df31-4568-b10d-ecc722f6ec00" fragment="1" gd:fragmentGUID="be6a4b58-e2a5-4c69-825b-62a6457fe56d">Do zobowiązań względem Funduszu Promocji Roślin Oleistych powstałych przed dniem wejścia w życie ustawy stosuje się przepisy dotychczasowe.</zdanie></p></ustep-n></artykul><artykul eId="DU/2025/289__art_3" gd:GUID="012be691-c05b-4c7e-b501-a07504bf1266"><nr>3</nr><ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="31d78c14-ad04-45e5-873e-ba399d1521b3"><p><zdanie nr="1" gd:zdGUID="bdc4007e-ca1d-47f9-8306-f728b71ff98d" fragment="1" gd:fragmentGUID="b790ad99-b709-4655-b4d8-6d5b1392b5f0">Ustawa wchodzi w życie z dniem 1 kwietnia 2025 r., z wyjątkiem art. 1 pkt 3, który wchodzi w życie z dniem 1 kwietnia 2026 r.</zdanie></p></ustep-n></artykul></tresc-strukt>.</zdanie>
+      </p>
+    </punkt-OTJ>
+    <organ-podpisujacy>Marszałek Sejmu: <i><osoba podpisujacy="true" gd:osobaGUID="8b051da0-6443-4490-91d0-6343168cbe10"><imie>S.</imie> <nazwisko>Hołownia</nazwisko></osoba></i></organ-podpisujacy>
+    <ustawa>
+      <zalacznik-do>Załącznik do obwieszczenia Marszałka Sejmu Rzeczypospolitej Polskiej z dnia 21 maja 2025 r. (Dz. U. poz. 683)</zalacznik-do>
+      <rodzaj-aktu>Ustawa</rodzaj-aktu>
+      <data>z dnia 22 maja 2009 r.</data>
+      <tytul>o funduszach promocji produktów rolno-spożywczych</tytul>
+      <artykul eId="DU/2025/683__art_1" gd:GUID="d35fb634-9141-4650-ab82-f6626e3b7bf1">
+        <nr>1</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="87be1714-28aa-4faf-9ef5-6a4372918809">
+          <p>
+            <zdanie nr="1" gd:zdGUID="360bd45e-8fec-422e-bfa2-698ce13526d9" fragment="1" gd:fragmentGUID="aa500fe0-292f-4abb-af8d-ab3c72034759">Ustawa reguluje tworzenie, zadania, zasady finansowania, organizację i funkcjonowanie funduszy promocji produktów rolno-spożywczych, zwanych dalej „funduszami promocji”.</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2025/683__art_2" gd:GUID="68ccbdfe-36f0-43e1-b2ec-0e41cd56b07e">
+        <nr>2</nr>
+        <ustep eId="DU/2025/683__art_2__ust_1" gd:GUID="69dfb206-3c96-47ae-9522-a44f2b53dfb5">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="e325c64f-aa9d-482c-b46e-57602001010a" fragment="1" gd:fragmentGUID="2c2128f9-b032-4d2d-81ac-69335e00cee7">W celu wspierania marketingu rolnego, wzrostu spożycia i promocji produktów rolno-spożywczych tworzy się następujące fundusze promocji:</zdanie>
+          </p>
+          <punkt eId="DU/2025/683__art_2__ust_1__pkt_1" gd:GUID="4c0af9e9-c9ad-4430-bb8e-2a7cadd1b90b">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="e325c64f-aa9d-482c-b46e-57602001010a" fragment="2" gd:fragmentGUID="9180c59f-f2e6-4ce9-aaa1-41a9d3341d8a">Fundusz Promocji Mleka;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/683__art_2__ust_1__pkt_2" gd:GUID="d92492a0-d5c4-49db-8e47-645b99305701">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="e325c64f-aa9d-482c-b46e-57602001010a" fragment="3" gd:fragmentGUID="24183dc3-bb9d-4b87-a46e-ead699c542d1">Fundusz Promocji Mięsa Wieprzowego;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/683__art_2__ust_1__pkt_3" gd:GUID="ac6a6377-8c79-497f-9ce9-84f28a7272da">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="e325c64f-aa9d-482c-b46e-57602001010a" fragment="4" gd:fragmentGUID="f79beb14-f03f-4778-92e6-54413f574ad5">Fundusz Promocji Mięsa Wołowego;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/683__art_2__ust_1__pkt_4" gd:GUID="2b48a2f6-e63d-48c7-80f5-e62c787a4482">
+            <nr>4</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="e325c64f-aa9d-482c-b46e-57602001010a" fragment="5" gd:fragmentGUID="4d13003f-2db0-4aa0-830d-3236f07d76c3">Fundusz Promocji Mięsa Końskiego;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/683__art_2__ust_1__pkt_5" gd:GUID="dc703a76-e222-4a68-9d28-6c1452d638e2">
+            <nr>5</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="e325c64f-aa9d-482c-b46e-57602001010a" fragment="6" gd:fragmentGUID="77279fcd-a652-44c7-b6db-8daf6a9a0990">Fundusz Promocji Mięsa Owczego;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/683__art_2__ust_1__pkt_6" gd:GUID="da9b25d1-9d67-4c46-8bb6-4a7e611a4c40">
+            <nr>6</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="e325c64f-aa9d-482c-b46e-57602001010a" fragment="7" gd:fragmentGUID="597110b5-a7e9-4df3-a211-1bd316833b2f">Fundusz Promocji Ziarna Zbóż i Przetworów Zbożowych;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/683__art_2__ust_1__pkt_7" gd:GUID="60a21ff2-ab39-47cf-8522-adff3e2a01e3">
+            <nr>7</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="e325c64f-aa9d-482c-b46e-57602001010a" fragment="8" gd:fragmentGUID="d9c384b6-c141-4085-a103-8c7b8b637bea">Fundusz Promocji Owoców i Warzyw;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/683__art_2__ust_1__pkt_8" gd:GUID="2d500928-419f-462c-8a48-47d6b9dad9b4">
+            <nr>8</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="e325c64f-aa9d-482c-b46e-57602001010a" fragment="9" gd:fragmentGUID="3235f4bd-7d23-42cc-84e6-379847b54475">Fundusz Promocji Mięsa Drobiowego;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/683__art_2__ust_1__pkt_9" gd:GUID="da7ec3d1-3636-4858-a9e9-dad0eec41a45">
+            <nr>9</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="e325c64f-aa9d-482c-b46e-57602001010a" fragment="10" gd:fragmentGUID="c6b2f128-be11-4e3c-a70c-ab1058319d4f">Fundusz Promocji Ryb;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/683__art_2__ust_1__pkt_10" gd:GUID="2c9a39bc-803c-4841-a4c0-bd07ae7353a9">
+            <nr>10</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="e325c64f-aa9d-482c-b46e-57602001010a" fragment="11" gd:fragmentGUID="00db8890-bb59-4467-b8f1-5d3faa51a63c">Fundusz Promocji Roślin Oleistych.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/683__art_2__ust_2" gd:GUID="898a1d3a-b3ab-41f9-aaa2-c999736b6bf3">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="ad019907-6dcc-4262-a75c-f487784e66ec" fragment="1" gd:fragmentGUID="4753d400-cc23-4f35-9426-5918703b5e4a">Realizując cele, o których mowa w ust. 1:</zdanie>
+          </p>
+          <punkt eId="DU/2025/683__art_2__ust_2__pkt_1" gd:GUID="488ff3c9-56b3-43f7-9dba-42f6c1841fe5">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="ad019907-6dcc-4262-a75c-f487784e66ec" fragment="2" gd:fragmentGUID="6d83b723-b747-40e8-a244-4c6f84e48695">Fundusz Promocji Mleka wspiera:</zdanie>
+            </p>
+            <litera eId="DU/2025/683__art_2__ust_2__pkt_1__lit_a" gd:GUID="3a390b18-f7b8-44f2-a2e8-90979818ca41">
+              <nr>a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ad019907-6dcc-4262-a75c-f487784e66ec" fragment="3" gd:fragmentGUID="1f70ac3d-217e-4d85-bb0d-9891cedc6ca1">działania mające na celu informowanie o jakości i cechach, w tym zaletach, mleka krowiego, zwanego dalej „mlekiem”, i przetworów mlecznych,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_2__ust_2__pkt_1__lit_b" gd:GUID="b8b88fcf-d936-45e1-bf80-a6848ca982c6">
+              <nr>b</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ad019907-6dcc-4262-a75c-f487784e66ec" fragment="4" gd:fragmentGUID="219d8a61-4c7d-4e0e-9f8f-4fc77d3c695c">działania mające na celu promocję spożycia mleka lub przetworów mlecznych, w szczególności przez dzieci i młodzież,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_2__ust_2__pkt_1__lit_c" gd:GUID="7a0e7a91-f15a-420f-8e4c-5ce07c55ec65">
+              <nr>c</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ad019907-6dcc-4262-a75c-f487784e66ec" fragment="5" gd:fragmentGUID="d95742fa-478a-464d-a11f-04c49d6d3167">udział w wystawach i targach związanych z chowem lub hodowlą bydła mlecznego, produkcją lub przetwórstwem mleka,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_2__ust_2__pkt_1__lit_d" gd:GUID="57fa23ca-a091-4053-83b5-f0f3469de134">
+              <nr>d</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ad019907-6dcc-4262-a75c-f487784e66ec" fragment="6" gd:fragmentGUID="40c11a50-0b55-458a-a23c-b82dfad2b40c">badania rynkowe dotyczące spożycia mleka i przetworów mlecznych,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_2__ust_2__pkt_1__lit_e" gd:GUID="8f741836-162d-4056-b873-317921351f09">
+              <nr>e</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ad019907-6dcc-4262-a75c-f487784e66ec" fragment="7" gd:fragmentGUID="eba9b196-05b1-4ccc-a9ee-be7b85efef1c">badania naukowe i prace rozwojowe mające na celu poprawę jakości mleka i przetworów mlecznych oraz prowadzące do wzrostu ich spożycia,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_2__ust_2__pkt_1__lit_f" gd:GUID="52319ca7-3e4b-4db4-9b5e-f125f8190128">
+              <nr>f</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ad019907-6dcc-4262-a75c-f487784e66ec" fragment="8" gd:fragmentGUID="f74591bf-afae-40b8-b20e-9ff6f5c38700">działania mające na celu informowanie o korzyściach płynących z przeprowadzania oceny wartości użytkowej bydła typu użytkowego mlecznego i mięsno-mlecznego,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_2__ust_2__pkt_1__lit_g" gd:GUID="ffe42b14-7441-4245-bf21-82806eb4301c">
+              <nr>g</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ad019907-6dcc-4262-a75c-f487784e66ec" fragment="9" gd:fragmentGUID="a94aac6d-6427-4007-9bb5-59fcb321c5f9">szkolenia producentów mleka i pierwszych podmiotów skupujących w rozumieniu art. 151 rozporządzenia Parlamentu Europejskiego i Rady (UE) nr 1308/2013 z dnia 17 grudnia 2013 r. ustanawiającego wspólną organizację rynków produktów rolnych oraz uchylającego rozporządzenia Rady (EWG) nr 922/72, (EWG) nr 234/79, (WE) nr 1037/2001 i (WE) nr 1234/2007 (Dz. Urz. UE L 347 z 20.12.2013, str. 671, z późn. zm.), zwanego dalej „rozporządzeniem nr 1308/2013”,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_2__ust_2__pkt_1__lit_h" gd:GUID="4f940331-5543-41b9-b965-c3779e27ef83">
+              <nr>h</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ad019907-6dcc-4262-a75c-f487784e66ec" fragment="10" gd:fragmentGUID="29892725-f35e-47d9-bf63-3dab4575902c">działalność krajowych organizacji branżowych, w tym ich przedstawicieli, biorących udział w pracach specjalistycznych stałych i roboczych komitetów organizacji międzynarodowych lub będących członkami statutowych organów tych organizacji, zajmujących się problemami rynku mleka i przetworów mlecznych;</zdanie>
+              </p>
+            </litera>
+          </punkt>
+          <punkt eId="DU/2025/683__art_2__ust_2__pkt_2" gd:GUID="a349c4ce-d3e4-4275-a1fa-beefe2e32b40">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="ad019907-6dcc-4262-a75c-f487784e66ec" fragment="11" gd:fragmentGUID="375dbba2-8929-4d7c-ae0a-1baf9c7cfb8c">Fundusz Promocji Mięsa Wieprzowego wspiera:</zdanie>
+            </p>
+            <litera eId="DU/2025/683__art_2__ust_2__pkt_2__lit_a" gd:GUID="f069c940-2940-4589-afb7-e1392e010e90">
+              <nr>a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ad019907-6dcc-4262-a75c-f487784e66ec" fragment="12" gd:fragmentGUID="53e9c40e-09c7-4938-87c3-214a8c1debf6">działania mające na celu informowanie o jakości i cechach, w tym zaletach, mięsa wieprzowego,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_2__ust_2__pkt_2__lit_b" gd:GUID="67a4b9d0-9700-48bf-b67c-9fa765a56d9a">
+              <nr>b</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ad019907-6dcc-4262-a75c-f487784e66ec" fragment="13" gd:fragmentGUID="030bdb65-d2a3-44f2-bb5f-b302d1672417">działania mające na celu promocję spożycia mięsa wieprzowego oraz jego przetworów,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_2__ust_2__pkt_2__lit_c" gd:GUID="48c5c88a-ab46-48bb-bb76-737de24908c4">
+              <nr>c</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ad019907-6dcc-4262-a75c-f487784e66ec" fragment="14" gd:fragmentGUID="a71ad334-bbf6-48e0-91f8-17d6a57f884d">udział w wystawach i targach związanych z chowem lub hodowlą świń oraz produkcją lub przetwórstwem mięsa wieprzowego,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_2__ust_2__pkt_2__lit_d" gd:GUID="9286d862-3e35-4290-a65e-d04b96a2f4d2">
+              <nr>d</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ad019907-6dcc-4262-a75c-f487784e66ec" fragment="15" gd:fragmentGUID="1502778d-3686-4909-aa89-03ff5d949753">badania rynkowe dotyczące spożycia mięsa wieprzowego oraz jego przetworów,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_2__ust_2__pkt_2__lit_e" gd:GUID="847f829d-2a3a-463c-aba2-e9f6f5029ceb">
+              <nr>e</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ad019907-6dcc-4262-a75c-f487784e66ec" fragment="16" gd:fragmentGUID="19decd30-331b-4945-89d5-f83595ec6c51">badania naukowe i prace rozwojowe mające na celu poprawę jakości mięsa wieprzowego oraz jego przetworów, a także prowadzące do wzrostu ich spożycia,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_2__ust_2__pkt_2__lit_f" gd:GUID="425ad8b4-8ec7-4a48-a729-c455901f059f">
+              <nr>f</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ad019907-6dcc-4262-a75c-f487784e66ec" fragment="17" gd:fragmentGUID="332e041b-5798-4779-b6b2-ea6a1da05e78">szkolenia producentów i przetwórców mięsa wieprzowego,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_2__ust_2__pkt_2__lit_g" gd:GUID="88bc9dda-7ac5-4170-b9cb-8f5942134fb1">
+              <nr>g</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ad019907-6dcc-4262-a75c-f487784e66ec" fragment="18" gd:fragmentGUID="2c96af5f-4048-496f-97d5-c72e75a8d250">działalność krajowych organizacji branżowych, w tym ich przedstawicieli, biorących udział w pracach specjalistycznych stałych i roboczych komitetów organizacji międzynarodowych lub będących członkami statutowych organów tych organizacji, zajmujących się problemami rynku mięsa wieprzowego;</zdanie>
+              </p>
+            </litera>
+          </punkt>
+          <punkt eId="DU/2025/683__art_2__ust_2__pkt_3" gd:GUID="d05ccd21-adf6-41b1-8f72-9369d11384fb">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="ad019907-6dcc-4262-a75c-f487784e66ec" fragment="19" gd:fragmentGUID="3ce7c3d4-75c6-4929-883a-8751dca13961">Fundusz Promocji Mięsa Wołowego wspiera:</zdanie>
+            </p>
+            <litera eId="DU/2025/683__art_2__ust_2__pkt_3__lit_a" gd:GUID="b7a19692-3cf8-4d8d-acdf-a86adedf20e0">
+              <nr>a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ad019907-6dcc-4262-a75c-f487784e66ec" fragment="20" gd:fragmentGUID="848831a4-cba3-4e92-9b08-080fcd7674a4">działania mające na celu informowanie o jakości i cechach, w tym zaletach, mięsa wołowego,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_2__ust_2__pkt_3__lit_b" gd:GUID="51b03381-ae82-4069-be2b-35019727ef08">
+              <nr>b</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ad019907-6dcc-4262-a75c-f487784e66ec" fragment="21" gd:fragmentGUID="8f7b3afb-55d9-4e57-8c19-8665c7c06f85">działania mające na celu promocję spożycia mięsa wołowego oraz jego przetworów,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_2__ust_2__pkt_3__lit_c" gd:GUID="2b02e50b-0478-4ef9-9e12-9eb045c4b385">
+              <nr>c</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ad019907-6dcc-4262-a75c-f487784e66ec" fragment="22" gd:fragmentGUID="a2ca0f4b-dc62-4958-9178-a81c83859007">udział w wystawach i targach związanych z chowem lub hodowlą bydła mięsnego oraz produkcją lub przetwórstwem mięsa wołowego,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_2__ust_2__pkt_3__lit_d" gd:GUID="f489ea0c-7e0f-43a6-a938-23c8fe977877">
+              <nr>d</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ad019907-6dcc-4262-a75c-f487784e66ec" fragment="23" gd:fragmentGUID="2e2a5e08-1a21-4536-a4d6-1e941ad5e4f5">badania rynkowe dotyczące spożycia mięsa wołowego oraz jego przetworów,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_2__ust_2__pkt_3__lit_e" gd:GUID="b3c6a671-5e6c-4e02-b306-9d0f27c1c8bc">
+              <nr>e</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ad019907-6dcc-4262-a75c-f487784e66ec" fragment="24" gd:fragmentGUID="1175d41e-7851-432b-90ab-223d5c9137f3">badania naukowe i prace rozwojowe mające na celu poprawę jakości mięsa wołowego oraz jego przetworów, a także prowadzące do wzrostu jego spożycia,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_2__ust_2__pkt_3__lit_f" gd:GUID="5a173738-129b-46db-8af4-a8aaeaec40cf">
+              <nr>f</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ad019907-6dcc-4262-a75c-f487784e66ec" fragment="25" gd:fragmentGUID="91b8046f-31c7-4c43-86bb-c04f6c572589">szkolenia producentów i przetwórców mięsa wołowego,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_2__ust_2__pkt_3__lit_g" gd:GUID="cd89dd06-8d90-40bb-884c-d944daec0c31">
+              <nr>g</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ad019907-6dcc-4262-a75c-f487784e66ec" fragment="26" gd:fragmentGUID="30a8fcc2-33f1-4760-90ba-44c8070c0886">działalność krajowych organizacji branżowych, w tym ich przedstawicieli, biorących udział w pracach specjalistycznych stałych i roboczych komitetów organizacji międzynarodowych lub będących członkami statutowych organów tych organizacji, zajmujących się problemami rynku mięsa wołowego;</zdanie>
+              </p>
+            </litera>
+          </punkt>
+          <punkt eId="DU/2025/683__art_2__ust_2__pkt_4" gd:GUID="75332073-ed46-45a6-9857-0f661448f3e4">
+            <nr>4</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="ad019907-6dcc-4262-a75c-f487784e66ec" fragment="27" gd:fragmentGUID="636ee22b-ca67-45f0-ba31-c8659fd9ee3e">Fundusz Promocji Mięsa Końskiego wspiera:</zdanie>
+            </p>
+            <litera eId="DU/2025/683__art_2__ust_2__pkt_4__lit_a" gd:GUID="b2892586-4652-4a33-bbcb-b0fc7f8a7360">
+              <nr>a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ad019907-6dcc-4262-a75c-f487784e66ec" fragment="28" gd:fragmentGUID="c8633d9b-cbf4-463f-b599-5f4ed2746a57">działania mające na celu informowanie o jakości i cechach, w tym zaletach, mięsa końskiego,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_2__ust_2__pkt_4__lit_b" gd:GUID="92debdcd-f9ef-4bac-b230-48572c219b90">
+              <nr>b</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ad019907-6dcc-4262-a75c-f487784e66ec" fragment="29" gd:fragmentGUID="60f34ebb-e27f-4ba3-a92a-661a394b7c43">działania mające na celu promocję spożycia mięsa końskiego oraz jego przetworów,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_2__ust_2__pkt_4__lit_c" gd:GUID="e70c6a7b-4fe9-454e-8247-90cb1d973d0d">
+              <nr>c</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ad019907-6dcc-4262-a75c-f487784e66ec" fragment="30" gd:fragmentGUID="823de5b5-d349-46f3-a978-f8497b710020">udział w wystawach i targach związanych z chowem lub hodowlą koni oraz produkcją lub przetwórstwem mięsa końskiego,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_2__ust_2__pkt_4__lit_d" gd:GUID="086e6687-d917-4b7f-b6c9-fdecf8d51bd8">
+              <nr>d</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ad019907-6dcc-4262-a75c-f487784e66ec" fragment="31" gd:fragmentGUID="96b17f29-bbcf-4d80-bbcd-5a41fc4fc9ce">badania rynkowe dotyczące spożycia mięsa końskiego oraz jego przetworów,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_2__ust_2__pkt_4__lit_e" gd:GUID="769a9890-b599-4d2b-8ef0-3510417dbd58">
+              <nr>e</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ad019907-6dcc-4262-a75c-f487784e66ec" fragment="32" gd:fragmentGUID="f3d09c71-fd83-4452-8cfd-54ca12025380">badania naukowe i prace rozwojowe mające na celu poprawę jakości mięsa końskiego oraz jego przetworów, a także prowadzące do wzrostu ich spożycia,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_2__ust_2__pkt_4__lit_f" gd:GUID="f8e99eab-cd5e-44d0-99f4-455f0b94b78b">
+              <nr>f</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ad019907-6dcc-4262-a75c-f487784e66ec" fragment="33" gd:fragmentGUID="e3449117-9019-4f71-a92a-113032408cef">szkolenia producentów i przetwórców mięsa końskiego,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_2__ust_2__pkt_4__lit_g" gd:GUID="2cbb26ac-2667-4599-824f-1458ab4f4158">
+              <nr>g</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ad019907-6dcc-4262-a75c-f487784e66ec" fragment="34" gd:fragmentGUID="ec6d1932-6bc8-41ef-899f-686540cfa661">działalność krajowych organizacji branżowych, w tym ich przedstawicieli, biorących udział w pracach specjalistycznych stałych i roboczych komitetów organizacji międzynarodowych lub będących członkami statutowych organów tych organizacji, zajmujących się problemami rynku mięsa końskiego;</zdanie>
+              </p>
+            </litera>
+          </punkt>
+          <punkt eId="DU/2025/683__art_2__ust_2__pkt_5" gd:GUID="5f71fdd9-50aa-4a85-b805-c27185edd2c4">
+            <nr>5</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="ad019907-6dcc-4262-a75c-f487784e66ec" fragment="35" gd:fragmentGUID="fdc70941-c28b-4a50-9601-c6b82b447278">Fundusz Promocji Mięsa Owczego wspiera:</zdanie>
+            </p>
+            <litera eId="DU/2025/683__art_2__ust_2__pkt_5__lit_a" gd:GUID="d8365591-b71a-4e81-ba06-32f5b38b6615">
+              <nr>a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ad019907-6dcc-4262-a75c-f487784e66ec" fragment="36" gd:fragmentGUID="0d27fa7b-38c3-4e17-8706-142fa5b5d684">działania mające na celu informowanie o jakości i cechach, w tym zaletach, mięsa owczego,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_2__ust_2__pkt_5__lit_b" gd:GUID="fc149554-12d2-4d45-9df4-39d1629ffdab">
+              <nr>b</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ad019907-6dcc-4262-a75c-f487784e66ec" fragment="37" gd:fragmentGUID="7d8771e2-b08d-4428-9f74-b855e5cfe858">działania mające na celu promocję spożycia mięsa owczego oraz jego przetworów,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_2__ust_2__pkt_5__lit_c" gd:GUID="888f6a21-e91d-4167-8a81-64b809b3f25d">
+              <nr>c</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ad019907-6dcc-4262-a75c-f487784e66ec" fragment="38" gd:fragmentGUID="e657932a-0c73-4aad-b08d-511cfedddc6a">udział w wystawach i targach związanych z chowem lub hodowlą owiec oraz produkcją lub przetwórstwem mięsa owczego,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_2__ust_2__pkt_5__lit_d" gd:GUID="821c52d2-6ae5-4eb6-9ec9-b9892e88c006">
+              <nr>d</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ad019907-6dcc-4262-a75c-f487784e66ec" fragment="39" gd:fragmentGUID="3a1f7897-a2f5-421e-a4ad-a1e5490aed2c">badania rynkowe dotyczące spożycia mięsa owczego oraz jego przetworów,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_2__ust_2__pkt_5__lit_e" gd:GUID="6616aded-dac3-4c78-a302-cb2290386d5b">
+              <nr>e</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ad019907-6dcc-4262-a75c-f487784e66ec" fragment="40" gd:fragmentGUID="c5733def-4eb4-4508-bf78-8368d4487a6c">badania naukowe i prace rozwojowe mające na celu poprawę jakości mięsa owczego oraz jego przetworów, a także prowadzące do wzrostu ich spożycia,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_2__ust_2__pkt_5__lit_f" gd:GUID="15a164cc-732a-4d67-92da-2634da11cf25">
+              <nr>f</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ad019907-6dcc-4262-a75c-f487784e66ec" fragment="41" gd:fragmentGUID="ded434da-15e4-45fa-8d01-b0a30e7cc66b">szkolenia producentów i przetwórców mięsa owczego,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_2__ust_2__pkt_5__lit_g" gd:GUID="094dffef-efa4-4971-a867-fd20f9ee6826">
+              <nr>g</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ad019907-6dcc-4262-a75c-f487784e66ec" fragment="42" gd:fragmentGUID="86705405-fe37-467b-b4b5-385936c0d55e">działalność krajowych organizacji branżowych, w tym ich przedstawicieli, biorących udział w pracach specjalistycznych stałych i roboczych komitetów organizacji międzynarodowych lub będących członkami statutowych organów tych organizacji, zajmujących się problemami rynku mięsa owczego;</zdanie>
+              </p>
+            </litera>
+          </punkt>
+          <punkt eId="DU/2025/683__art_2__ust_2__pkt_6" gd:GUID="af1b5d0c-1769-4187-93cb-b0df1ca683c8">
+            <nr>6</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="ad019907-6dcc-4262-a75c-f487784e66ec" fragment="43" gd:fragmentGUID="099433da-bcf8-4afe-97cd-9a869ff80902">Fundusz Promocji Ziarna Zbóż i Przetworów Zbożowych wspiera:</zdanie>
+            </p>
+            <litera eId="DU/2025/683__art_2__ust_2__pkt_6__lit_a" gd:GUID="92a11790-b28f-45a9-9f21-db82be72b033">
+              <nr>a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ad019907-6dcc-4262-a75c-f487784e66ec" fragment="44" gd:fragmentGUID="3fcf26ee-b249-48a7-9731-1d1f0b0ea258"><odnosnik id-odnosnika="1" symbol="1" gd:GUID="8ff9dc6c-c9ef-42b5-889b-54aaefe9a688"><p><zdanie nr="1" gd:zdGUID="78880545-9655-4687-8891-bedcbc3311b7" fragment="1" gd:fragmentGUID="ae460c02-dfba-4cd7-981c-4b4f0b51b718">W brzmieniu ustalonym przez art. 1 pkt 1 lit. a tiret pierwsze ustawy z dnia 21 lutego 2025 r. o zmianie ustawy o funduszach promocji produktów rolno-spożywczych (Dz. U. poz. 289), która weszła w życie z dniem 1 kwietnia 2025 r.</zdanie></p></odnosnik> działania mające na celu informowanie o jakości i cechach, w tym zaletach, zbóż oraz przetworów zbożowych pochodzących z przetworzenia pszenicy, żyta, jęczmienia, kukurydzy, owsa oraz gryki, zwanych dalej „przetworami zbożowymi”, w tym biokomponentów w rozumieniu art. 2 ust. 1 pkt 3 ustawy z dnia 25 sierpnia 2006 r. o biokomponentach i biopaliwach ciekłych (Dz. U. z 2024 r. poz. 20, 834 i 1946 oraz z 2025 r. poz. 303), zwanych dalej „biokomponentami”, i biopaliw ciekłych w rozumieniu art. 2 ust. 1 pkt 11 ustawy z dnia 25 sierpnia 2006 r. o biokomponentach i biopaliwach ciekłych, zwanych dalej „biopaliwami ciekłymi”, wytwarzanych ze zbóż,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_2__ust_2__pkt_6__lit_b" gd:GUID="5332cb1f-ed8c-4c3c-9cd3-414cc85ac6f8">
+              <nr>b</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ad019907-6dcc-4262-a75c-f487784e66ec" fragment="45" gd:fragmentGUID="f27e5812-47d5-40cf-a57d-7a93fabbf7cb">działania mające na celu promocję spożycia przetworów zbożowych,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_2__ust_2__pkt_6__lit_c" gd:GUID="c9204795-d4ff-4be0-89f4-edc79acce4f3">
+              <nr>c</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ad019907-6dcc-4262-a75c-f487784e66ec" fragment="46" gd:fragmentGUID="624da0e4-ba8a-4161-b368-7ea622f854b8">udział w wystawach i targach związanych z produkcją lub przetwórstwem zbóż, o których mowa w lit. a, lub przetworów zbożowych,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_2__ust_2__pkt_6__lit_d" gd:GUID="e6257b3c-f17f-4d02-b125-254a4bfac906">
+              <nr>d</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ad019907-6dcc-4262-a75c-f487784e66ec" fragment="47" gd:fragmentGUID="2dc429ba-b208-46ee-ad09-0854e3fcd36e">badania rynkowe dotyczące spożycia przetworów zbożowych,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_2__ust_2__pkt_6__lit_e" gd:GUID="cd0e26fa-cf6f-48c1-838c-50181ae4a255">
+              <nr>e</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ad019907-6dcc-4262-a75c-f487784e66ec" fragment="48" gd:fragmentGUID="756e2088-bd55-4de3-827a-4351657edb8e">badania naukowe i prace rozwojowe mające na celu poprawę jakości zbóż, o których mowa w lit. a, oraz przetworów zbożowych, a także prowadzące do wzrostu ich spożycia,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_2__ust_2__pkt_6__lit_f" gd:GUID="f9a20705-8ca6-47c5-a4b9-509e24d9759d">
+              <nr>f</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ad019907-6dcc-4262-a75c-f487784e66ec" fragment="49" gd:fragmentGUID="6ec5d6c5-d8ef-4dff-b532-d33fc9448238">szkolenia producentów i przetwórców zbóż,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_2__ust_2__pkt_6__lit_g" gd:GUID="2c71445f-6765-4842-af7a-048dddbe0f44">
+              <nr>g</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ad019907-6dcc-4262-a75c-f487784e66ec" fragment="50" gd:fragmentGUID="78332db7-17a0-4389-b714-77d4a3cac520">działalność krajowych organizacji branżowych, w tym ich przedstawicieli, biorących udział w pracach specjalistycznych stałych i roboczych komitetów organizacji międzynarodowych lub będących członkami statutowych organów tych organizacji, zajmujących się problemami rynku zbóż i przetworów zbożowych,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_2__ust_2__pkt_6__lit_h" gd:GUID="ed1446c2-d826-4d20-bed5-97d83bef5e4b">
+              <nr>h</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ad019907-6dcc-4262-a75c-f487784e66ec" fragment="51" gd:fragmentGUID="b71a9778-d1cc-4bb2-834c-753aa45bd08e"><odnosnik id-odnosnika="2" symbol="2" gd:GUID="6e6a705e-3708-470a-a1e6-8f7efdab6004"><p><zdanie nr="1" gd:zdGUID="7bc8cb54-99eb-4050-851a-310843eca830" fragment="1" gd:fragmentGUID="95a81947-b525-44a7-b607-7ace1e0aa0bd">Dodana przez art. 1 pkt 1 lit. a tiret drugie ustawy, o której mowa w odnośniku 1.</zdanie></p></odnosnik> działania edukacyjno-informacyjne oraz inicjatywy badawczo-rozwojowe mające na celu zwiększenie wykorzystania biokomponentów i biopaliw ciekłych wytwarzanych ze zbóż,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_2__ust_2__pkt_6__lit_i" gd:GUID="26dce719-99ca-41da-88aa-a112ef0353c3">
+              <nr>i</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ad019907-6dcc-4262-a75c-f487784e66ec" fragment="52" gd:fragmentGUID="17ac0e24-91ae-46b4-832e-f3a1a7a040d0"><odsylacz-do-odnosnika id-odnosnika="2" symbol="2" /> promowanie zrównoważonego rozwoju wykorzystania zbóż do wytwarzania biokomponentów i biopaliw ciekłych;</zdanie>
+              </p>
+            </litera>
+          </punkt>
+          <punkt eId="DU/2025/683__art_2__ust_2__pkt_7" gd:GUID="87576cf5-fd3d-4148-9920-759c671deff5">
+            <nr>7</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="ad019907-6dcc-4262-a75c-f487784e66ec" fragment="53" gd:fragmentGUID="b094a559-9174-4602-b307-0cc8ab2f041c">Fundusz Promocji Owoców i Warzyw wspiera:</zdanie>
+            </p>
+            <litera eId="DU/2025/683__art_2__ust_2__pkt_7__lit_a" gd:GUID="112f7b1e-b068-483f-b960-7d5ea30937f2">
+              <nr>a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ad019907-6dcc-4262-a75c-f487784e66ec" fragment="54" gd:fragmentGUID="4f34b8a1-9c5c-47ce-b00f-e755adf21e97"><odnosnik id-odnosnika="3" symbol="3" gd:GUID="cdeb934f-5881-4169-bbbb-7ce3e34a9421"><p><zdanie nr="1" gd:zdGUID="d123340e-f29d-4827-9265-b7731bdd034c" fragment="1" gd:fragmentGUID="b97cc03d-3202-4c55-9a5d-898373ad49db">W brzmieniu ustalonym przez art. 1 pkt 1 lit. b ustawy, o której mowa w odnośniku 1.</zdanie></p></odnosnik> działania mające na celu informowanie o jakości i cechach, w tym zaletach, owoców lub warzyw oraz ich przetworów, a także miodu, pyłku kwiatowego, pierzgi, propolisu oraz mleczka pszczelego, zwanych dalej „produktami pszczelimi”,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_2__ust_2__pkt_7__lit_b" gd:GUID="6ee4dc1f-a742-4f78-ba55-e9b3f5fe37b4">
+              <nr>b</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ad019907-6dcc-4262-a75c-f487784e66ec" fragment="55" gd:fragmentGUID="f0ca801b-ecd4-4857-b4db-2d60ae3023a3"><odsylacz-do-odnosnika id-odnosnika="3" symbol="3" /> działania mające na celu promocję spożycia owoców lub warzyw oraz ich przetworów lub produktów pszczelich, w szczególności przez dzieci i młodzież,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_2__ust_2__pkt_7__lit_c" gd:GUID="e7cb749e-84d5-4897-ad39-34f0bec0b352">
+              <nr>c</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ad019907-6dcc-4262-a75c-f487784e66ec" fragment="56" gd:fragmentGUID="636eee66-2295-44c3-9ee0-3d4268b1b762"><odsylacz-do-odnosnika id-odnosnika="3" symbol="3" /> udział w wystawach i targach związanych z:</zdanie>
+              </p>
+              <tiret eId="DU/2025/683__art_2__ust_2__pkt_7__lit_c__tir_1" gd:GUID="85d60739-3631-4f6f-8da0-e3b06d899621">
+                <p>
+                  <zdanie nr="1" gd:zdGUID="ad019907-6dcc-4262-a75c-f487784e66ec" fragment="57" gd:fragmentGUID="095d2448-bebe-451d-88f3-528e1c8f99a4">produkcją owoców lub warzyw oraz ich przetworów lub produktów pszczelich,</zdanie>
+                </p>
+              </tiret>
+              <tiret eId="DU/2025/683__art_2__ust_2__pkt_7__lit_c__tir_2" gd:GUID="08691114-8685-4741-b383-7dcd2ef8314c">
+                <p>
+                  <zdanie nr="1" gd:zdGUID="ad019907-6dcc-4262-a75c-f487784e66ec" fragment="58" gd:fragmentGUID="dcb69c81-a9a1-4df2-b39c-45c99bb33ae7">przetwórstwem owoców lub warzyw, lub produktów pszczelich,</zdanie>
+                </p>
+              </tiret>
+            </litera>
+            <litera eId="DU/2025/683__art_2__ust_2__pkt_7__lit_d" gd:GUID="a26bbc7c-c472-46b4-89af-ad70e5ef9bee">
+              <nr>d</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ad019907-6dcc-4262-a75c-f487784e66ec" fragment="59" gd:fragmentGUID="4382bc2f-e5a0-44f8-8332-13c634d7a21a"><odsylacz-do-odnosnika id-odnosnika="3" symbol="3" /> badania rynkowe dotyczące spożycia owoców lub warzyw oraz ich przetworów lub produktów pszczelich,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_2__ust_2__pkt_7__lit_e" gd:GUID="d7e4862a-a3ee-4bd3-819b-bfadec974456">
+              <nr>e</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ad019907-6dcc-4262-a75c-f487784e66ec" fragment="60" gd:fragmentGUID="f0382b52-50a5-4dfb-bad9-eb287008b041"><odsylacz-do-odnosnika id-odnosnika="3" symbol="3" /> badania naukowe i prace rozwojowe mające na celu poprawę jakości owoców lub warzyw oraz ich przetworów lub produktów pszczelich, a także prowadzące do wzrostu ich spożycia,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_2__ust_2__pkt_7__lit_f" gd:GUID="07e0b669-1c9b-47fe-b506-8109f431b4d8">
+              <nr>f</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ad019907-6dcc-4262-a75c-f487784e66ec" fragment="61" gd:fragmentGUID="8bd4a6cd-7ab9-4506-ad4b-990c1bea0338"><odsylacz-do-odnosnika id-odnosnika="3" symbol="3" /> szkolenia producentów i przetwórców owoców lub warzyw oraz produktów pszczelich,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_2__ust_2__pkt_7__lit_g" gd:GUID="2e8b384c-6b94-4689-9e76-58c320c82614">
+              <nr>g</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ad019907-6dcc-4262-a75c-f487784e66ec" fragment="62" gd:fragmentGUID="d9b81f3d-3c78-4436-aa70-e5ebb05b408b"><odsylacz-do-odnosnika id-odnosnika="3" symbol="3" /> działalność krajowych organizacji branżowych, w tym ich przedstawicieli, biorących udział w pracach specjalistycznych stałych i roboczych komitetów organizacji międzynarodowych lub będących członkami statutowych organów tych organizacji, zajmujących się problemami rynku owoców lub warzyw lub produktów pszczelich;</zdanie>
+              </p>
+            </litera>
+          </punkt>
+          <punkt eId="DU/2025/683__art_2__ust_2__pkt_8" gd:GUID="47ed8b07-c785-41d1-b03b-8453e3edfdb3">
+            <nr>8</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="ad019907-6dcc-4262-a75c-f487784e66ec" fragment="63" gd:fragmentGUID="4f5eed3e-4d13-44a4-807d-7b9e5824a73a">Fundusz Promocji Mięsa Drobiowego wspiera:</zdanie>
+            </p>
+            <litera eId="DU/2025/683__art_2__ust_2__pkt_8__lit_a" gd:GUID="a2cf002a-1273-4d25-8fe0-dc232a46dc3d">
+              <nr>a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ad019907-6dcc-4262-a75c-f487784e66ec" fragment="64" gd:fragmentGUID="e0d0159e-2381-4f09-bce7-198efff3da3e">działania mające na celu informowanie o jakości i cechach, w tym zaletach, mięsa drobiowego oraz jego przetworów,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_2__ust_2__pkt_8__lit_b" gd:GUID="14d38b69-1494-4b45-b460-b1b42bac0a14">
+              <nr>b</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ad019907-6dcc-4262-a75c-f487784e66ec" fragment="65" gd:fragmentGUID="c79f7653-5a8a-4147-a19e-bdfc9a95cadc">działania mające na celu promocję spożycia mięsa drobiowego i jego przetworów,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_2__ust_2__pkt_8__lit_c" gd:GUID="c9c8ed35-956b-4d77-8bec-0977726c55aa">
+              <nr>c</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ad019907-6dcc-4262-a75c-f487784e66ec" fragment="66" gd:fragmentGUID="7f733f82-8d39-48d2-acba-97ab253f487d">udział w wystawach i targach związanych z chowem lub hodowlą drobiu, produkcją lub przetwórstwem mięsa drobiowego,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_2__ust_2__pkt_8__lit_d" gd:GUID="ed82041f-0b98-4b72-a5b5-ee67512dd579">
+              <nr>d</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ad019907-6dcc-4262-a75c-f487784e66ec" fragment="67" gd:fragmentGUID="51aa82e8-f105-439a-ac20-2c43ecf06445">badania rynkowe dotyczące spożycia mięsa drobiowego oraz jego przetworów,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_2__ust_2__pkt_8__lit_e" gd:GUID="52888e94-b28f-41ac-b668-ec30fb95f1ac">
+              <nr>e</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ad019907-6dcc-4262-a75c-f487784e66ec" fragment="68" gd:fragmentGUID="e3d01889-842d-4776-b9aa-d9a49cd2cab6">badania naukowe i prace rozwojowe mające na celu poprawę jakości mięsa drobiowego oraz jego przetworów, a także prowadzące do wzrostu ich spożycia,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_2__ust_2__pkt_8__lit_f" gd:GUID="6e82afbf-5253-4fe4-b25a-fc02f03fd989">
+              <nr>f</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ad019907-6dcc-4262-a75c-f487784e66ec" fragment="69" gd:fragmentGUID="8524aa81-f2d8-4e33-92e7-8c45e534ef79">szkolenia producentów i przetwórców mięsa drobiowego,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_2__ust_2__pkt_8__lit_g" gd:GUID="91f508e7-7249-4be3-b424-d40053865f94">
+              <nr>g</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ad019907-6dcc-4262-a75c-f487784e66ec" fragment="70" gd:fragmentGUID="4fd1b188-3934-4234-a9ec-c6dba3e219e5">działalność krajowych organizacji branżowych, w tym ich przedstawicieli, biorących udział w pracach specjalistycznych stałych i roboczych komitetów organizacji międzynarodowych lub będących członkami statutowych organów tych organizacji, zajmujących się problemami rynku mięsa drobiowego;</zdanie>
+              </p>
+            </litera>
+          </punkt>
+          <punkt eId="DU/2025/683__art_2__ust_2__pkt_9" gd:GUID="5c963fdb-476a-4def-9dd7-14a73d050bec">
+            <nr>9</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="ad019907-6dcc-4262-a75c-f487784e66ec" fragment="71" gd:fragmentGUID="9224863a-4589-415e-afe8-0d666c31ad8a">Fundusz Promocji Ryb wspiera:</zdanie>
+            </p>
+            <litera eId="DU/2025/683__art_2__ust_2__pkt_9__lit_a" gd:GUID="100f7027-d596-4296-bfcd-612899fbac7b">
+              <nr>a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ad019907-6dcc-4262-a75c-f487784e66ec" fragment="72" gd:fragmentGUID="35c060f2-9f91-482b-8f2c-e38d046f1797">działania mające na celu informowanie o jakości i cechach, w tym zaletach, ryb oraz ich przetworów,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_2__ust_2__pkt_9__lit_b" gd:GUID="3a28431a-29dc-4a0f-8680-6b154ac333b8">
+              <nr>b</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ad019907-6dcc-4262-a75c-f487784e66ec" fragment="73" gd:fragmentGUID="24015e56-1513-49a7-8ef0-47e69e732f2d">działania mające na celu promocję spożycia ryb i ich przetworów,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_2__ust_2__pkt_9__lit_c" gd:GUID="cd9ee80e-23f2-4077-9898-eaf2ec34ae7b">
+              <nr>c</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ad019907-6dcc-4262-a75c-f487784e66ec" fragment="74" gd:fragmentGUID="8ee29719-6ca6-4e2f-9862-9ca3c0ac05b8">udział w wystawach i targach związanych z połowem, chowem, hodowlą lub przetwórstwem ryb,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_2__ust_2__pkt_9__lit_d" gd:GUID="99f6ba3f-6a8a-4be3-81b9-eb25b6694574">
+              <nr>d</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ad019907-6dcc-4262-a75c-f487784e66ec" fragment="75" gd:fragmentGUID="1745de60-6dd0-463c-b69e-b6e8338fd40a">badania rynkowe dotyczące spożycia ryb i ich przetworów,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_2__ust_2__pkt_9__lit_e" gd:GUID="41a98b02-9ae6-4e53-97fc-799495bc0a45">
+              <nr>e</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ad019907-6dcc-4262-a75c-f487784e66ec" fragment="76" gd:fragmentGUID="3ee90aef-e703-47f1-bf97-1975b4199228">badania naukowe i prace rozwojowe mające na celu poprawę jakości ryb oraz ich przetworów, a także prowadzące do wzrostu ich spożycia,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_2__ust_2__pkt_9__lit_f" gd:GUID="d077654a-c91e-4cd4-839c-e4f6381b209d">
+              <nr>f</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ad019907-6dcc-4262-a75c-f487784e66ec" fragment="77" gd:fragmentGUID="2fdab075-9236-40d8-8e8e-67fe5699ffd8">szkolenia producentów i przetwórców ryb,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_2__ust_2__pkt_9__lit_g" gd:GUID="0e4b4798-bd72-4704-b15d-d5bf21dd1f5e">
+              <nr>g</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ad019907-6dcc-4262-a75c-f487784e66ec" fragment="78" gd:fragmentGUID="921790d4-ccbc-4de9-b31f-7c3fc1800abf">działalność krajowych organizacji branżowych, w tym ich przedstawicieli, biorących udział w pracach specjalistycznych stałych i roboczych komitetów organizacji międzynarodowych lub będących członkami statutowych organów tych organizacji, zajmujących się problemami rynku ryb;</zdanie>
+              </p>
+            </litera>
+          </punkt>
+          <punkt eId="DU/2025/683__art_2__ust_2__pkt_10" gd:GUID="16d0617d-b769-4612-a00e-ea30b3fad4ed">
+            <nr>10</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="ad019907-6dcc-4262-a75c-f487784e66ec" fragment="79" gd:fragmentGUID="fe5150d9-e025-422b-9d1b-95d05d6bbae3">Fundusz Promocji Roślin Oleistych wspiera:</zdanie>
+            </p>
+            <litera eId="DU/2025/683__art_2__ust_2__pkt_10__lit_a" gd:GUID="b576eaff-40f0-4620-9aa4-319cbf375bd6">
+              <nr>a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ad019907-6dcc-4262-a75c-f487784e66ec" fragment="80" gd:fragmentGUID="6acd7cf5-eca0-42e1-be74-9d13b1460bf8"><odnosnik id-odnosnika="4" symbol="4" gd:GUID="50939625-d07c-4250-97a2-edc650af2ac2"><p><zdanie nr="1" gd:zdGUID="dfc5def6-4a40-4800-89b9-cacbea6c7728" fragment="1" gd:fragmentGUID="b6d1dae1-4f4f-486c-9838-cb387ab41817">W brzmieniu ustalonym przez art. 1 pkt 1 lit. c tiret pierwsze ustawy, o której mowa w odnośniku 1.</zdanie></p></odnosnik> działania mające na celu informowanie o jakości i cechach, w tym zaletach rzepaku, rzepiku, soi, lnu, słonecznika oraz konopi, zwanych dalej „roślinami oleistymi”, przetworów pochodzących z przetworzenia roślin oleistych, zwanych dalej „przetworami nasion oleistych”, w tym biokomponentów i biopaliw ciekłych wytwarzanych z roślin oleistych, a także produktów pszczelich,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_2__ust_2__pkt_10__lit_b" gd:GUID="90320668-7a4a-412f-af1d-36ba6806bda6">
+              <nr>b</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ad019907-6dcc-4262-a75c-f487784e66ec" fragment="81" gd:fragmentGUID="42b2dfc6-348e-430c-802f-e3333f35c33b">działania mające na celu promocję spożycia przetworów nasion oleistych lub produktów pszczelich,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_2__ust_2__pkt_10__lit_c" gd:GUID="9d8f6d65-8adf-4da1-b476-47d7910c9523">
+              <nr>c</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ad019907-6dcc-4262-a75c-f487784e66ec" fragment="82" gd:fragmentGUID="23026926-dce3-470c-b877-adf57e40011d">udział w wystawach i targach związanych z produkcją lub przetwórstwem roślin oleistych, przetworów nasion oleistych lub produktów pszczelich,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_2__ust_2__pkt_10__lit_d" gd:GUID="8e82bad6-5a09-46fb-a4f8-e69261999894">
+              <nr>d</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ad019907-6dcc-4262-a75c-f487784e66ec" fragment="83" gd:fragmentGUID="fda8c119-6f40-41a5-bfe5-303c49238ae6">badania rynkowe dotyczące spożycia przetworów nasion oleistych lub produktów pszczelich,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_2__ust_2__pkt_10__lit_e" gd:GUID="8c5ee16c-c578-40b7-a687-8697782a53f7">
+              <nr>e</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ad019907-6dcc-4262-a75c-f487784e66ec" fragment="84" gd:fragmentGUID="554d6dc6-8dc2-43e4-ba5c-269447997fc8">badania naukowe i prace rozwojowe mające na celu poprawę jakości roślin oleistych, przetworów nasion oleistych lub produktów pszczelich, a także prowadzące do wzrostu ich spożycia,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_2__ust_2__pkt_10__lit_f" gd:GUID="5332fdaf-b115-4761-982e-3d76514ae8f0">
+              <nr>f</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ad019907-6dcc-4262-a75c-f487784e66ec" fragment="85" gd:fragmentGUID="6017d57e-48bc-451f-8ec3-30b3ea167367">szkolenia producentów i przetwórców nasion oleistych lub produktów pszczelich,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_2__ust_2__pkt_10__lit_g" gd:GUID="78ee8248-1765-4541-9006-5c35dfce0fe4">
+              <nr>g</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ad019907-6dcc-4262-a75c-f487784e66ec" fragment="86" gd:fragmentGUID="48b04c2d-bca0-4e49-91c8-64e003610d18">działalność krajowych organizacji branżowych, w tym ich przedstawicieli, biorących udział w pracach specjalistycznych stałych i roboczych komitetów organizacji międzynarodowych lub będących członkami statutowych organów tych organizacji, zajmujących się problemami rynku roślin oleistych, przetworów nasion oleistych lub produktów pszczelich,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_2__ust_2__pkt_10__lit_h" gd:GUID="f98ec90e-186e-4512-a27c-d4f9426c838a">
+              <nr>h</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ad019907-6dcc-4262-a75c-f487784e66ec" fragment="87" gd:fragmentGUID="f2ef39aa-5848-42ca-a879-2aeef3aed897"><odnosnik id-odnosnika="5" symbol="5" gd:GUID="b0ea3dcb-eeec-4baa-9cb8-b49938c1e158"><p><zdanie nr="1" gd:zdGUID="c1e9dfd6-ea4d-4ea6-a56b-d40903c2c1e0" fragment="1" gd:fragmentGUID="ad8c239f-6d06-46d1-9f79-e495f1b95a4f">Dodana przez art. 1 pkt 1 lit. c tiret drugie ustawy, o której mowa w odnośniku 1.</zdanie></p></odnosnik> działania edukacyjno-informacyjne oraz inicjatywy badawczo-rozwojowe mające na celu zwiększenie wykorzystania biokomponentów i biopaliw ciekłych wytwarzanych z roślin oleistych,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_2__ust_2__pkt_10__lit_i" gd:GUID="48727e07-6442-4660-8111-e147f73f724c">
+              <nr>i</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ad019907-6dcc-4262-a75c-f487784e66ec" fragment="88" gd:fragmentGUID="6b922340-071f-4c6c-ab22-e4c241bcc9f8"><odsylacz-do-odnosnika id-odnosnika="5" symbol="5" /> promowanie zrównoważonego rozwoju wykorzystania roślin oleistych do wytwarzania biokomponentów i biopaliw ciekłych.</zdanie>
+              </p>
+            </litera>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/683__art_2__ust_2a" gd:GUID="b73eff29-0f29-4563-99f4-9048da31f6b8">
+          <nr>2a</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="4816f6ac-0d71-4ef9-9ecb-f58d35777b97" fragment="1" gd:fragmentGUID="2cf97b08-d524-4ac4-a51e-4d032766abbd">Fundusze promocji, o których mowa w ust. 2 pkt 1–10, realizując cele, o których mowa w ust. 1, wspierają działania mające na celu przywrócenie normalnych warunków rynkowych w przypadku poważnych zakłóceń na rynku, utraty zaufania konsumentów lub innych szczególnych problemów.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/683__art_2__ust_3" gd:GUID="440dffa2-36b3-43b4-b56a-1d629be0bbe9">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="ac594e51-3b1d-410a-92c0-5cb2f8e5605b" fragment="1" gd:fragmentGUID="0d3a8ef9-3e34-42a3-9598-f84ad01104d4">Fundusz promocji, o którym mowa w ust. 2 pkt 6, w celu wspierania marketingu rolnego realizuje również działania mające na celu informowanie o jakości i cechach, w tym zaletach, pasz w rozumieniu przepisów o paszach pochodzących z przetworzenia zbóż, o których mowa w ust. 2 pkt 6 lit. a.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/683__art_2__ust_4" gd:GUID="fd48e03e-8949-4794-be18-14a5122f717e">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="baaf75d8-97cf-415e-9530-fa430a62c136" fragment="1" gd:fragmentGUID="43c59d00-f55e-4e6e-8cd1-78848c9ce985">Fundusz promocji, o którym mowa w ust. 2 pkt 10, w celu wspierania marketingu rolnego realizuje również działania mające na celu informowanie o jakości i cechach, w tym zaletach, pasz w rozumieniu przepisów o paszach pochodzących z przetworzenia roślin oleistych.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/683__art_3" gd:GUID="d7d66544-e90c-4c2a-b353-07443c28eeca">
+        <nr>3</nr>
+        <ustep eId="DU/2025/683__art_3__ust_1" gd:GUID="601fcaf3-fc26-4dbd-a137-4e4b6caecef9">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="6cdd0068-aa09-4e8d-a853-2d6c1cd8f8e0" fragment="1" gd:fragmentGUID="73316bc2-9e30-431d-b4aa-460e440a061b">Do wpłat na Fundusz Promocji Mleka są obowiązane pierwsze podmioty skupujące w rozumieniu art. 151 rozporządzenia nr 1308/2013, w wysokości 0,001 zł od każdego skupionego przez nie kilograma mleka.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/683__art_3__ust_2" gd:GUID="7e5fd1b2-f73f-4662-b20a-e449dca51f36">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="56a83c10-ff07-4448-97b2-1904877eeb5f" fragment="1" gd:fragmentGUID="526cfb70-6327-48c6-937f-b4757b8587b0">Wpłaty na fundusze promocji, o których mowa w art. 2 ust. 1 pkt 2–9, są naliczane, w wysokości 0,1 % wartości netto, od następujących rzeczy ruchomych, będących przedmiotem czynności podlegających opodatkowaniu podatkiem od towarów i usług:</zdanie>
+          </p>
+          <punkt eId="DU/2025/683__art_3__ust_2__pkt_1" gd:GUID="e57e3558-ce44-41cf-bf7c-dd6caf2e4a28">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="56a83c10-ff07-4448-97b2-1904877eeb5f" fragment="2" gd:fragmentGUID="9eb6db06-d898-4182-978e-41eac547baf6">świnie żywe,</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/683__art_3__ust_2__pkt_2" gd:GUID="340c3990-8624-4b5e-8f36-544567ed118c">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="56a83c10-ff07-4448-97b2-1904877eeb5f" fragment="3" gd:fragmentGUID="1666c244-7e35-47b1-b088-8d628bea8968">bydło i cielęta żywe,</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/683__art_3__ust_2__pkt_3" gd:GUID="f5b467c5-b72a-4d70-845c-065519cce2fb">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="56a83c10-ff07-4448-97b2-1904877eeb5f" fragment="4" gd:fragmentGUID="43de5ebd-dd46-49d4-8991-12b0f92854a1">konie żywe,</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/683__art_3__ust_2__pkt_4" gd:GUID="95a7822c-5ea5-4084-b5ca-b125ff759227">
+            <nr>4</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="56a83c10-ff07-4448-97b2-1904877eeb5f" fragment="5" gd:fragmentGUID="52a40116-79f0-44da-9cbd-c2f2ed0c5c94">owce żywe,</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/683__art_3__ust_2__pkt_5" gd:GUID="419b9202-d97e-4be1-be93-5f3fa41f053c">
+            <nr>5</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="56a83c10-ff07-4448-97b2-1904877eeb5f" fragment="6" gd:fragmentGUID="8ec3c95d-0a14-4ae4-addf-fd775b8b1167">zboża,</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/683__art_3__ust_2__pkt_6" gd:GUID="157c98f5-d808-406c-858b-4f39dba544bc">
+            <nr>6</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="56a83c10-ff07-4448-97b2-1904877eeb5f" fragment="7" gd:fragmentGUID="0207e5b1-881f-4b25-b89c-f090b8faf96e">owoce i warzywa,</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/683__art_3__ust_2__pkt_7" gd:GUID="b3a5549e-dd30-4aeb-a125-74dacc305d76">
+            <nr>7</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="56a83c10-ff07-4448-97b2-1904877eeb5f" fragment="8" gd:fragmentGUID="fb0d8478-4997-46fd-953a-1a2e98eda973">drób żywy,</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/683__art_3__ust_2__pkt_8" gd:GUID="94b84756-0e7e-4384-b763-d8cda3efd66c">
+            <nr>8</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="56a83c10-ff07-4448-97b2-1904877eeb5f" fragment="9" gd:fragmentGUID="a0fd2c9d-62ea-4fdd-a8ff-66cc7dc3eb90">ryby</zdanie>
+            </p>
+          </punkt>
+          <czesc-wspolna-punkt eId="DU/2025/683__art_3__ust_2__czw" gd:GUID="72c9f230-4859-4b03-bd10-24e5f36976f9">
+            <p>
+              <zdanie nr="1" gd:zdGUID="56a83c10-ff07-4448-97b2-1904877eeb5f" fragment="10" gd:fragmentGUID="cca5c138-702c-4c4e-8254-a0741c910354">– zwanych dalej „towarami”.</zdanie>
+            </p>
+          </czesc-wspolna-punkt>
+        </ustep>
+        <ustep eId="DU/2025/683__art_3__ust_2a" gd:GUID="6f9401cb-8793-4cc4-a563-aade7cc0db06">
+          <nr>2a</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="2a5a3e6b-26e7-447a-8c24-e3d1dc72e5d7" fragment="1" gd:fragmentGUID="1fc2ee45-87fa-4e84-b1a5-09446d126ca7">Wpłaty na fundusz promocji, o którym mowa w art. 2 ust. 1 pkt 10, są naliczane w wysokości 0,2 % wartości netto od roślin oleistych będących przedmiotem czynności podlegających opodatkowaniu podatkiem od towarów i usług.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/683__art_3__ust_2b" gd:GUID="da994d09-5dcf-4b14-8a06-52da11f9bde4">
+          <nr>2b</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="0e95042a-2b64-4152-95d7-4100aa30bb47" fragment="1" gd:fragmentGUID="1d47d20b-e40d-4787-be9b-d07ec7c99394">Ilekroć w ustawie jest mowa o towarach, rozumie się przez to również rośliny oleiste.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/683__art_3__ust_3" gd:GUID="da1ede60-ad7d-45fb-b550-dd64c66c0301">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="caa1cbeb-61ec-40c1-a3ea-eefbb46fd9f6" fragment="1" gd:fragmentGUID="83a50110-8243-4024-8ed2-054ea3d71b2b">Do naliczania, pobierania i przekazywania wpłat na:</zdanie>
+          </p>
+          <punkt eId="DU/2025/683__art_3__ust_3__pkt_1" gd:GUID="2026db72-d143-4583-b4eb-3311efedcc1b">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="caa1cbeb-61ec-40c1-a3ea-eefbb46fd9f6" fragment="2" gd:fragmentGUID="82f3e634-3573-40a8-ab99-afedec1706c6">Fundusz Promocji Mięsa Wieprzowego są obowiązani:</zdanie>
+            </p>
+            <litera eId="DU/2025/683__art_3__ust_3__pkt_1__lit_a" gd:GUID="0e81f143-c2b6-4b10-861a-a27ae999e465">
+              <nr>a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="caa1cbeb-61ec-40c1-a3ea-eefbb46fd9f6" fragment="3" gd:fragmentGUID="4b7e0cc4-26f6-4ae3-bd2f-c9ba05044f39">przedsiębiorcy prowadzący działalność gospodarczą w zakresie uboju świń,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_3__ust_3__pkt_1__lit_b" gd:GUID="8bbb108f-fb0e-482c-aec9-5e834da70bc7">
+              <nr>b</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="caa1cbeb-61ec-40c1-a3ea-eefbb46fd9f6" fragment="4" gd:fragmentGUID="f2305ba2-6d21-4b1c-be1b-47f1e42d622a">przedsiębiorcy będący podatnikami podatku od towarów i usług w rozumieniu ustawy z dnia 11 marca 2004 r. o podatku od towarów i usług (Dz. U. z 2024 r. poz. 361, 852, 1473, 1721 i 1911 oraz z 2025 r. poz. 222), zwanej dalej „ustawą o VAT”, którzy prowadzą działalność gospodarczą w zakresie wywozu poza terytorium Rzeczypospolitej Polskiej żywych świń;</zdanie>
+              </p>
+            </litera>
+          </punkt>
+          <punkt eId="DU/2025/683__art_3__ust_3__pkt_2" gd:GUID="2221f2d5-7d8f-489b-b4e3-1a029d4a33e8">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="caa1cbeb-61ec-40c1-a3ea-eefbb46fd9f6" fragment="5" gd:fragmentGUID="1559a656-34e9-4312-b67d-22c682465faa">Fundusz Promocji Mięsa Wołowego są obowiązani:</zdanie>
+            </p>
+            <litera eId="DU/2025/683__art_3__ust_3__pkt_2__lit_a" gd:GUID="31465e3a-5f9b-4437-bb20-eea98f839ca1">
+              <nr>a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="caa1cbeb-61ec-40c1-a3ea-eefbb46fd9f6" fragment="6" gd:fragmentGUID="a561cea7-764f-4b6e-add0-d64094401206">przedsiębiorcy prowadzący działalność gospodarczą w zakresie uboju bydła lub cieląt,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_3__ust_3__pkt_2__lit_b" gd:GUID="e091cd91-994f-4e1b-afd6-ac966b6f40ca">
+              <nr>b</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="caa1cbeb-61ec-40c1-a3ea-eefbb46fd9f6" fragment="7" gd:fragmentGUID="3b46e0ef-82c6-426b-a47f-9921df689791">przedsiębiorcy będący podatnikami podatku od towarów i usług w rozumieniu ustawy o VAT, którzy prowadzą działalność gospodarczą w zakresie wywozu poza terytorium Rzeczypospolitej Polskiej żywych zwierząt, o których mowa w lit. a;</zdanie>
+              </p>
+            </litera>
+          </punkt>
+          <punkt eId="DU/2025/683__art_3__ust_3__pkt_3" gd:GUID="8269fe66-d644-4e53-80ac-5e47ab649d3d">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="caa1cbeb-61ec-40c1-a3ea-eefbb46fd9f6" fragment="8" gd:fragmentGUID="36a33bab-a5be-427f-8298-ad9e532b5a50">Fundusz Promocji Mięsa Końskiego są obowiązani:</zdanie>
+            </p>
+            <litera eId="DU/2025/683__art_3__ust_3__pkt_3__lit_a" gd:GUID="34e54624-8d34-497c-acc8-209e8cc689d7">
+              <nr>a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="caa1cbeb-61ec-40c1-a3ea-eefbb46fd9f6" fragment="9" gd:fragmentGUID="59089647-2b4c-4490-b7b4-405926318133">przedsiębiorcy prowadzący działalność gospodarczą w zakresie uboju koni,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_3__ust_3__pkt_3__lit_b" gd:GUID="cbf6091e-bf3c-46a0-8997-a951d24fc23b">
+              <nr>b</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="caa1cbeb-61ec-40c1-a3ea-eefbb46fd9f6" fragment="10" gd:fragmentGUID="5e181bbd-250d-4280-89e5-c9986779d075">przedsiębiorcy będący podatnikami podatku od towarów i usług w rozumieniu ustawy o VAT, którzy prowadzą działalność gospodarczą w zakresie wywozu poza terytorium Rzeczypospolitej Polskiej żywych koni;</zdanie>
+              </p>
+            </litera>
+          </punkt>
+          <punkt eId="DU/2025/683__art_3__ust_3__pkt_4" gd:GUID="4d4471cb-23d7-40f5-946d-efb054e3a000">
+            <nr>4</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="caa1cbeb-61ec-40c1-a3ea-eefbb46fd9f6" fragment="11" gd:fragmentGUID="1d290beb-bacc-49cb-9a1a-9cfca794e0dd">Fundusz Promocji Mięsa Owczego są obowiązani:</zdanie>
+            </p>
+            <litera eId="DU/2025/683__art_3__ust_3__pkt_4__lit_a" gd:GUID="13380bbd-4857-4403-9041-ea45d3cfb679">
+              <nr>a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="caa1cbeb-61ec-40c1-a3ea-eefbb46fd9f6" fragment="12" gd:fragmentGUID="9934aecc-91d2-45a3-9c05-c8952fd204e5">przedsiębiorcy prowadzący działalność gospodarczą w zakresie uboju jagniąt lub owiec,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_3__ust_3__pkt_4__lit_b" gd:GUID="7f952ba0-37a7-4f70-890e-5fd9e7e1c301">
+              <nr>b</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="caa1cbeb-61ec-40c1-a3ea-eefbb46fd9f6" fragment="13" gd:fragmentGUID="949a7fe7-66ea-4b13-8aec-4fc0447dfc38">przedsiębiorcy będący podatnikami podatku od towarów i usług w rozumieniu ustawy o VAT, którzy prowadzą działalność gospodarczą w zakresie wywozu poza terytorium Rzeczypospolitej Polskiej żywych zwierząt, o których mowa w lit. a;</zdanie>
+              </p>
+            </litera>
+          </punkt>
+          <punkt eId="DU/2025/683__art_3__ust_3__pkt_5" gd:GUID="880dcb5f-56e2-47dd-8639-d78e61593b13">
+            <nr>5</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="caa1cbeb-61ec-40c1-a3ea-eefbb46fd9f6" fragment="14" gd:fragmentGUID="930b701b-db47-40f9-b958-6bc352bfd353">Fundusz Promocji Ziarna Zbóż i Przetworów Zbożowych są obowiązani przedsiębiorcy prowadzący działalność gospodarczą w zakresie przetwórstwa zbóż, o których mowa w art. 2 ust. 2 pkt 6 lit. a;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/683__art_3__ust_3__pkt_6" gd:GUID="1dcaaaf8-fb63-4d18-b57a-1db4ad22fc26">
+            <nr>6</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="caa1cbeb-61ec-40c1-a3ea-eefbb46fd9f6" fragment="15" gd:fragmentGUID="e1a49054-533a-44c0-bb1f-5726f7c1b72b">Fundusz Promocji Owoców i Warzyw są obowiązani przedsiębiorcy będący podatnikami podatku od towarów i usług w rozumieniu ustawy o VAT, którzy:</zdanie>
+            </p>
+            <litera eId="DU/2025/683__art_3__ust_3__pkt_6__lit_a" gd:GUID="d5c0619b-f2e3-4da4-b1eb-62d48a04f097">
+              <nr>a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="caa1cbeb-61ec-40c1-a3ea-eefbb46fd9f6" fragment="16" gd:fragmentGUID="a344aa7c-1211-4248-af9a-14bb8a2bb9c6">skupują owoce lub warzywa od podmiotów, o których mowa w art. 2 pkt 19 ustawy o VAT, w celu ich przetworzenia lub odprzedaży,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_3__ust_3__pkt_6__lit_b" gd:GUID="a441d247-587a-4348-8738-9ff0808e6f00">
+              <nr>b</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="caa1cbeb-61ec-40c1-a3ea-eefbb46fd9f6" fragment="17" gd:fragmentGUID="371038cc-4ad7-484c-a0cc-9137e3e9ace5">wytwarzają owoce i warzywa;</zdanie>
+              </p>
+            </litera>
+          </punkt>
+          <punkt eId="DU/2025/683__art_3__ust_3__pkt_7" gd:GUID="43e9a1a9-efb1-4b36-a316-19f377040d2e">
+            <nr>7</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="caa1cbeb-61ec-40c1-a3ea-eefbb46fd9f6" fragment="18" gd:fragmentGUID="9d398118-0730-433e-8ea0-cd1de02a6a5d">Fundusz Promocji Mięsa Drobiowego są obowiązani:</zdanie>
+            </p>
+            <litera eId="DU/2025/683__art_3__ust_3__pkt_7__lit_a" gd:GUID="688180bb-939d-41bf-9d44-d857d61bd793">
+              <nr>a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="caa1cbeb-61ec-40c1-a3ea-eefbb46fd9f6" fragment="19" gd:fragmentGUID="1ba3d023-9760-4b19-9fdf-e48a0a1ba9f9">przedsiębiorcy prowadzący działalność gospodarczą w zakresie uboju drobiu,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_3__ust_3__pkt_7__lit_b" gd:GUID="38f7c719-274f-45d2-a9dd-bd1926ad607d">
+              <nr>b</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="caa1cbeb-61ec-40c1-a3ea-eefbb46fd9f6" fragment="20" gd:fragmentGUID="634415aa-2ec6-4bd4-ade2-286179dbe170">przedsiębiorcy będący podatnikami podatku od towarów i usług w rozumieniu ustawy o VAT, którzy prowadzą działalność gospodarczą w zakresie wywozu poza terytorium Rzeczypospolitej Polskiej żywego drobiu;</zdanie>
+              </p>
+            </litera>
+          </punkt>
+          <punkt eId="DU/2025/683__art_3__ust_3__pkt_8" gd:GUID="31ace9da-2d15-40a6-9482-e1d82027318e">
+            <nr>8</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="caa1cbeb-61ec-40c1-a3ea-eefbb46fd9f6" fragment="21" gd:fragmentGUID="f1e719e1-f734-4190-919e-f4053b778ceb">Fundusz Promocji Ryb są obowiązani przedsiębiorcy będący podatnikami podatku od towarów i usług w rozumieniu ustawy o VAT, którzy:</zdanie>
+            </p>
+            <litera eId="DU/2025/683__art_3__ust_3__pkt_8__lit_a" gd:GUID="e5894380-f1b6-4e3e-972c-00a067b0866b">
+              <nr>a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="caa1cbeb-61ec-40c1-a3ea-eefbb46fd9f6" fragment="22" gd:fragmentGUID="870d0948-e7ca-42ed-9190-835355796ee7">skupują ryby od podmiotów, o których mowa w art. 2 pkt 19 ustawy o VAT, w celu ich przetworzenia lub odprzedaży,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_3__ust_3__pkt_8__lit_b" gd:GUID="5febdf0b-dd5d-4289-9a5d-0e497573229f">
+              <nr>b</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="caa1cbeb-61ec-40c1-a3ea-eefbb46fd9f6" fragment="23" gd:fragmentGUID="daa6184a-000a-4503-93e3-4115d35d351b">prowadzą działalność w zakresie połowu ryb w wodach śródlądowych lub morskich,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_3__ust_3__pkt_8__lit_c" gd:GUID="661fc075-ef80-4de9-b29c-8b957d3b0b01">
+              <nr>c</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="caa1cbeb-61ec-40c1-a3ea-eefbb46fd9f6" fragment="24" gd:fragmentGUID="605c6209-e062-4b16-a64c-684ef82b25fe">prowadzą działalność w zakresie chowu lub hodowli ryb;</zdanie>
+              </p>
+            </litera>
+          </punkt>
+          <punkt eId="DU/2025/683__art_3__ust_3__pkt_9" gd:GUID="c1d32296-c004-497a-a8a2-f242fbe66e77">
+            <nr>9</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="caa1cbeb-61ec-40c1-a3ea-eefbb46fd9f6" fragment="25" gd:fragmentGUID="43494fe4-de50-4ce0-9ea0-d29bda1fec30"><odnosnik id-odnosnika="6" symbol="6" gd:GUID="983a6ed5-c758-46f0-bd66-bea21ad1425d"><p><zdanie nr="1" gd:zdGUID="51fdfb2a-93e1-412c-9f79-1f3d363c5b35" fragment="1" gd:fragmentGUID="824811e9-6508-49e6-b0cc-3ea8a27ab56e">W brzmieniu ustalonym przez art. 1 pkt 2 ustawy, o której mowa w odnośniku 1.</zdanie></p></odnosnik> Fundusz Promocji Roślin Oleistych są obowiązane podmioty skupujące rośliny oleiste od ich producenta.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/683__art_3__ust_4" gd:GUID="f1521832-bb14-405c-8fd6-37db83604e64">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="46277cfb-5929-49fa-8859-16fcdc0d1a57" fragment="1" gd:fragmentGUID="76c71793-3a9f-4fe1-b274-a63a10e1c703">Wpłaty na fundusze promocji, o których mowa w art. 2 ust. 1 pkt 2–10, są naliczane i pobierane od podmiotów, które zbywają towary na rzecz podmiotów, o których mowa w ust. 3 pkt 1–5, pkt 6 lit. a, pkt 7, pkt 8 lit. a oraz pkt 9.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/683__art_3__ust_5" gd:GUID="2fed9353-cce4-4aa5-a9c9-5d6a0473243b">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="e25606f8-7ae7-42ba-8f29-cf28bfc8e189" fragment="1" gd:fragmentGUID="511ad4c3-e4f5-41f0-ad2e-4979c9e4ca5d">Podmioty, o których mowa w:</zdanie>
+          </p>
+          <punkt eId="DU/2025/683__art_3__ust_5__pkt_1" gd:GUID="881be4d5-5e6b-4049-b769-63f55dc4fae3">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="e25606f8-7ae7-42ba-8f29-cf28bfc8e189" fragment="2" gd:fragmentGUID="82587b2a-3cb2-481d-854f-4624502af45c">ust. 3 pkt 1–5, pkt 6 lit. a, pkt 7, pkt 8 lit. a oraz pkt 9:</zdanie>
+            </p>
+            <litera eId="DU/2025/683__art_3__ust_5__pkt_1__lit_a" gd:GUID="7d7139f8-1c72-4c65-94c3-33aac1672d02">
+              <nr>a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="e25606f8-7ae7-42ba-8f29-cf28bfc8e189" fragment="3" gd:fragmentGUID="ba367572-e7cc-4203-9568-1eb435cfd252">naliczają i pobierają od podmiotów, które zbywają na ich rzecz towary, wpłaty na fundusze promocji z należności za te towary na podstawie faktur, nie później niż w terminie 14 dni od dnia ich wystawienia,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_3__ust_5__pkt_1__lit_b" gd:GUID="8436407b-f2c5-41b2-aeab-536a771a1071">
+              <nr>b</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="e25606f8-7ae7-42ba-8f29-cf28bfc8e189" fragment="4" gd:fragmentGUID="7ff9318e-2e6e-4c49-af1f-2eab101246e1">potwierdzają, w formie pisemnego oświadczenia, naliczenie i pobranie wpłat na fundusze promocji, które zawiera w szczególności:</zdanie>
+              </p>
+              <tiret eId="DU/2025/683__art_3__ust_5__pkt_1__lit_b__tir_1" gd:GUID="93375f78-6633-4da2-9d2b-3fefd5681c3f">
+                <p>
+                  <zdanie nr="1" gd:zdGUID="e25606f8-7ae7-42ba-8f29-cf28bfc8e189" fragment="5" gd:fragmentGUID="5157611d-eaab-41f1-a224-9625feec1da7">nazwę, siedzibę i adres albo imię, nazwisko, miejsce zamieszkania i adres podmiotu obowiązanego do wpłat na dany fundusz promocji oraz podmiotu, od którego naliczono i pobrano tę wpłatę,</zdanie>
+                </p>
+              </tiret>
+              <tiret eId="DU/2025/683__art_3__ust_5__pkt_1__lit_b__tir_2" gd:GUID="c63f9ff6-c783-4b0c-8e00-5d5f9b62864c">
+                <p>
+                  <zdanie nr="1" gd:zdGUID="e25606f8-7ae7-42ba-8f29-cf28bfc8e189" fragment="6" gd:fragmentGUID="d38bf6da-b64d-4458-aae9-d9cf6225c6c3">określenie wartości i rodzaju towaru, stanowiącego podstawę wpłaty,</zdanie>
+                </p>
+              </tiret>
+              <tiret eId="DU/2025/683__art_3__ust_5__pkt_1__lit_b__tir_3" gd:GUID="ea8efc39-0456-4051-bf3a-f214572f65d8">
+                <p>
+                  <zdanie nr="1" gd:zdGUID="e25606f8-7ae7-42ba-8f29-cf28bfc8e189" fragment="7" gd:fragmentGUID="4968da22-6060-47a3-bffe-d9ee04e90498">kwotę pobraną z tytułu wpłaty na dany fundusz promocji od zbytego towaru;</zdanie>
+                </p>
+              </tiret>
+            </litera>
+          </punkt>
+          <punkt eId="DU/2025/683__art_3__ust_5__pkt_2" gd:GUID="3894b10c-d966-4dbf-9e8c-48d5f3d097cc">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="e25606f8-7ae7-42ba-8f29-cf28bfc8e189" fragment="8" gd:fragmentGUID="3f137d7c-6769-4549-a9ae-7958423b6a0c">ust. 3 pkt 6 lit. b, naliczają i przekazują należne wpłaty na fundusze promocji na podstawie faktur za zbyte przez nie towary, o których mowa w ust. 2 pkt 6;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/683__art_3__ust_5__pkt_3" gd:GUID="ee1c1e50-b5d9-4976-b740-b8ed05e0d9af">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="e25606f8-7ae7-42ba-8f29-cf28bfc8e189" fragment="9" gd:fragmentGUID="fa05b168-a68b-474e-8b9c-4849047f2806">ust. 3 pkt 8 lit. b i c, naliczają i przekazują należne wpłaty na fundusze promocji na podstawie faktur za zbyte przez nie towary, o których mowa w ust. 2 pkt 8.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/683__art_3__ust_6" gd:GUID="35dc630d-aa1f-421a-a337-939bb4a80f33">
+          <nr>6</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="ad389cf4-1a3f-44f5-9ddc-513f670ab043" fragment="1" gd:fragmentGUID="0174d9f6-83aa-46a7-bdb2-607e48eb8b77">Wpłat na fundusze promocji nie nalicza się i nie pobiera od mleka i towarów stanowiących przedmiot:</zdanie>
+          </p>
+          <punkt eId="DU/2025/683__art_3__ust_6__pkt_1" gd:GUID="806235e2-2911-44af-a164-7a9840b6d434">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="ad389cf4-1a3f-44f5-9ddc-513f670ab043" fragment="2" gd:fragmentGUID="4120cfb1-a1b3-4948-9c7b-c55b18186226">wewnątrzwspólnotowego nabycia towarów w rozumieniu przepisów ustawy o VAT;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/683__art_3__ust_6__pkt_2" gd:GUID="03151b4f-cf70-4121-af21-433a04bc340a">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="ad389cf4-1a3f-44f5-9ddc-513f670ab043" fragment="3" gd:fragmentGUID="090661ed-270a-4ceb-afbe-18ae620c3d71">sprzedaży z zapasów interwencyjnych Krajowego Ośrodka Wsparcia Rolnictwa, zwanego dalej „Krajowym Ośrodkiem”;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/683__art_3__ust_6__pkt_3" gd:GUID="7933ff6c-50a5-437f-a151-b85fc61c9d58">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="ad389cf4-1a3f-44f5-9ddc-513f670ab043" fragment="4" gd:fragmentGUID="b21239ce-f129-4e92-9895-a27459424919">sprzedaży, dokonywanej przez Rządową Agencję Rezerw Strategicznych w związku ze zwolnieniem lub restrukturyzacją rezerw państwowych, następującej w trybie określonym w przepisach odrębnych.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/683__art_3__ust_6a" gd:GUID="d87ba60f-f3e4-4c4c-8c6b-dee9d2a30fbe">
+          <nr>6a</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="e8356106-18c9-45c0-9850-8dfb1b501f51" fragment="1" gd:fragmentGUID="368a040f-3918-421f-bd86-f4c4136f7d52">W przypadku gdy przedsiębiorcy, o których mowa w ust. 3 pkt 1 lit. a, pkt 2 lit. a, pkt 4 lit. a i pkt 7 lit. a, dokonują uboju zwierząt, o których mowa w ust. 2 pkt 1, 2, 4 lub 7, niebędących przedmiotem czynności, o których mowa w ust. 2, przedsiębiorcy ci są obowiązani do naliczania i przekazywania wpłat na fundusze promocji w wysokości 0,1 % wartości netto tych zwierząt.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/683__art_3__ust_6b" gd:GUID="6992a6d6-73a0-4396-a5b9-5168485d7528">
+          <nr>6b</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="3ced9e85-fe0f-4b2c-a392-5b96809998f3" fragment="1" gd:fragmentGUID="ad92af3b-852e-463e-928a-edb87eb45faa">Wartość, o której mowa w ust. 6a, jest ustalana na podstawie:</zdanie>
+          </p>
+          <punkt eId="DU/2025/683__art_3__ust_6b__pkt_1" gd:GUID="31090dde-9c29-410b-94ad-6992fe8d82a7">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="3ced9e85-fe0f-4b2c-a392-5b96809998f3" fragment="2" gd:fragmentGUID="3715bb64-9e62-42ae-b9e5-e9e6e1b5abe6">średniej ceny netto zakupu świń rzeźnych za wagę żywą w tygodniu, w którym dokonano uboju zwierząt, o których mowa w ust. 2 pkt 1,</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/683__art_3__ust_6b__pkt_2" gd:GUID="ad2392fc-9b0c-448f-b391-208d26b1e383">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="3ced9e85-fe0f-4b2c-a392-5b96809998f3" fragment="3" gd:fragmentGUID="9bba7303-0945-49ad-b3ee-d6d268aee3c3">ceny netto zakupu bydła rzeźnego za wagę żywą w tygodniu, w którym dokonano uboju zwierząt, o których mowa w ust. 2 pkt 2,</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/683__art_3__ust_6b__pkt_3" gd:GUID="6843458a-ee23-4553-ac75-2d22feb72339">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="3ced9e85-fe0f-4b2c-a392-5b96809998f3" fragment="4" gd:fragmentGUID="cdfda3d9-d229-4a08-a0a0-cb20019fd1e3">średniej ceny zakupu owiec za wagę żywą w miesiącu poprzedzającym miesiąc, w którym dokonano uboju zwierząt, o których mowa w ust. 2 pkt 4,</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/683__art_3__ust_6b__pkt_4" gd:GUID="5a955d08-f7a0-4129-b199-ddb6356b80da">
+            <nr>4</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="3ced9e85-fe0f-4b2c-a392-5b96809998f3" fragment="5" gd:fragmentGUID="2c1d4ee3-4023-43db-86ed-7f4089a30d81">ceny skupu drobiu rzeźnego w tygodniu, w którym dokonano uboju zwierząt, o których mowa w ust. 2 pkt 7</zdanie>
+            </p>
+          </punkt>
+          <czesc-wspolna-punkt eId="DU/2025/683__art_3__ust_6b__czw" gd:GUID="bcee16b9-ce25-4649-838e-a8e9375008e2">
+            <p>
+              <zdanie nr="1" gd:zdGUID="3ced9e85-fe0f-4b2c-a392-5b96809998f3" fragment="6" gd:fragmentGUID="fe2e9554-06ea-4539-bc86-dd6e01aa65a2">– udostępnianych w biuletynie informacyjnym zamieszczanym na stronie internetowej urzędu obsługującego ministra właściwego do spraw rynków rolnych, wydawanym na podstawie przepisów ustawy z dnia 30 marca 2001 r. o rolniczych badaniach rynkowych (Dz. U. z 2015 r. poz. 1160).</zdanie>
+            </p>
+          </czesc-wspolna-punkt>
+        </ustep>
+        <ustep eId="DU/2025/683__art_3__ust_6c" gd:GUID="192b67e4-f90f-496b-90e0-cae2d75a4aed">
+          <nr>6c</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="d2f00de4-20fc-4074-9443-24ca081e88be" fragment="1" gd:fragmentGUID="853fcd6f-18da-4f55-b033-62762a528939">Ilekroć w ustawie jest mowa o towarach, rozumie się przez to również zwierzęta, które zostały poddane ubojowi, o którym mowa w ust. 6a.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/683__art_3__ust_7" gd:GUID="335d43bc-0387-45f3-a9df-3843d87a12c6">
+          <nr>7</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="0a871e0f-82ff-4867-9798-1cbc06770f7c" fragment="1" gd:fragmentGUID="8cb24d21-8a7a-4483-8b75-3cb274065c6f">Minister właściwy do spraw rynków rolnych określi, w drodze rozporządzenia, szczegółowy wykaz towarów, od których są naliczane, pobierane, przekazywane i wpłacane wpłaty na fundusze promocji, o których mowa w art. 2 ust. 1 pkt 2–10, mając na względzie zapewnienie efektywnej realizacji wpłat na fundusze promocji i z uwzględnieniem przepisów ustawy o VAT i przepisów w sprawie Polskiej Klasyfikacji Wyrobów i Usług.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/683__art_4" gd:GUID="4ed70232-3095-4f42-bbe2-4f2483668c8d">
+        <nr>4</nr>
+        <ustep eId="DU/2025/683__art_4__ust_1" gd:GUID="d9848b26-88cb-4547-ae97-0e0eaaf99880">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="10eaa288-13cb-4dfa-987c-b0606c03c36c" fragment="1" gd:fragmentGUID="ab12d80b-1f2a-4ce7-8e0a-806377c356e9">Dyrektor Generalny Krajowego Ośrodka:</zdanie>
+          </p>
+          <punkt eId="DU/2025/683__art_4__ust_1__pkt_1" gd:GUID="921188db-0c9f-404a-aed1-fc567c56359c">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="10eaa288-13cb-4dfa-987c-b0606c03c36c" fragment="2" gd:fragmentGUID="2860f01d-6246-4e5a-ba54-5b80030f8383">dysponuje środkami funduszy promocji na podstawie uchwał komisji zarządzających;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/683__art_4__ust_1__pkt_2" gd:GUID="3af764f0-c0a9-4d61-a55d-38ac0ed6700f">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="10eaa288-13cb-4dfa-987c-b0606c03c36c" fragment="3" gd:fragmentGUID="190a5d08-5346-4c43-b08c-991c12835dcc">zapewnia obsługę prawną oraz techniczno-biurową funduszy promocji oraz komisji zarządzających;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/683__art_4__ust_1__pkt_3" gd:GUID="c696ecd2-a80b-49de-ad02-f7a04cee8f8a">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="10eaa288-13cb-4dfa-987c-b0606c03c36c" fragment="4" gd:fragmentGUID="538863f3-9e3b-4b58-87e2-d3175307c38d">sporządza sprawozdania z wykonania planu finansowego funduszy promocji;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/683__art_4__ust_1__pkt_4" gd:GUID="7f7e9a9f-7636-40b5-a629-878dc64cb8b9">
+            <nr>4</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="10eaa288-13cb-4dfa-987c-b0606c03c36c" fragment="5" gd:fragmentGUID="76ac9204-3642-4a9f-8e4b-c98f7bada935">odmawia realizacji uchwał komisji zarządzających niezgodnych z przepisami prawa;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/683__art_4__ust_1__pkt_5" gd:GUID="bedbb326-4e3a-4945-b0f8-2838f76289b2">
+            <nr>5</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="10eaa288-13cb-4dfa-987c-b0606c03c36c" fragment="6" gd:fragmentGUID="18c4d71f-bc9b-4760-bce5-8a379a7358fe">ustala, w drodze decyzji, wysokość wpłat na Fundusz Promocji Mleka na podstawie informacji, o których mowa w art. 2a ust. 1 ustawy z dnia 20 kwietnia 2004 r. o organizacji rynku mleka i przetworów mlecznych (Dz. U. z 2023 r. poz. 1228).</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/683__art_4__ust_2" gd:GUID="df0765c2-16d9-44b5-b844-8753184eeaff">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="7326acf8-8d5a-44dc-8169-c5c90cdbeaa0" fragment="1" gd:fragmentGUID="bd149de6-4855-4159-8103-fcf074fbbd17">Do postępowań w sprawach indywidualnych, rozstrzyganych przez Dyrektora Generalnego Krajowego Ośrodka w drodze decyzji administracyjnych, stosuje się przepisy Kodeksu postępowania administracyjnego, chyba że ustawa stanowi inaczej.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/683__art_5" gd:GUID="eab90c7c-a76a-42e6-9a34-8da5642a7a0c">
+        <nr>5</nr>
+        <ustep eId="DU/2025/683__art_5__ust_1" gd:GUID="b767dd6f-9cf0-471e-b72d-36d00527935e">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="2acd5512-4e8f-4bc2-bb80-03c00c54b936" fragment="1" gd:fragmentGUID="2f11d9cb-0cb3-40d5-8752-703e948e2e79">Koszty związane z realizacją przez Krajowy Ośrodek zadań, o których mowa w art. 4 ust. 1 pkt 2, są pokrywane ze środków funduszy promocji.</zdanie>
+            <zdanie nr="2" gd:zdGUID="a516dac7-e429-488b-8bd0-6a835c4b8c38" fragment="1" gd:fragmentGUID="75e89c50-d4ad-4009-853a-1f05ed2a9874">Wysokość tych kosztów nie może przekroczyć 3,5 % rocznych wpływów na poszczególne fundusze promocji.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/683__art_5__ust_2" gd:GUID="3eb7ffcb-0cb0-4fd7-9b02-6c83136088f5">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="b32cc7b3-6d72-4a39-a452-b3e69607ea52" fragment="1" gd:fragmentGUID="464f2c7e-cd45-4c9e-8113-d11ff62c8cdc">Minister właściwy do spraw rynków rolnych określi, w drodze rozporządzenia, rodzaje kosztów związanych z realizacją przez Krajowy Ośrodek zadań, o których mowa w art. 4 ust. 1 pkt 2, pokrywanych ze środków funduszy promocji oraz sposób i warunki przekazywania i rozliczania tych środków, mając na względzie zapewnienie prawidłowej obsługi funduszy promocji oraz zasady gospodarki finansowej Krajowego Ośrodka.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/683__art_6" gd:GUID="3d4b306f-8984-4ad6-8034-e9d57d4ca937">
+        <nr>6</nr>
+        <ustep eId="DU/2025/683__art_6__ust_1" gd:GUID="18cfb364-196f-4566-89d0-ebec45f02120">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="d27c1316-8e3a-4e3c-95f7-f383b807bdda" fragment="1" gd:fragmentGUID="b68e1a97-8438-47b3-a03c-306c3845944e">Podmioty określone w:</zdanie>
+          </p>
+          <punkt eId="DU/2025/683__art_6__ust_1__pkt_1" gd:GUID="931cb431-f3b2-4d40-951e-0fd7898df374">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="d27c1316-8e3a-4e3c-95f7-f383b807bdda" fragment="2" gd:fragmentGUID="7e164ab4-fe44-45cc-83db-7049132860e9">art. 3 ust. 1 dokonują wpłaty na Fundusz Promocji Mleka na podstawie decyzji, o której mowa w art. 4 ust. 1 pkt 5, za okresy kwartalne, w terminie 14 dni od dnia doręczenia tej decyzji;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/683__art_6__ust_1__pkt_2" gd:GUID="fec2fbc4-df04-4076-9e09-ebfeb5bd9166">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="d27c1316-8e3a-4e3c-95f7-f383b807bdda" fragment="3" gd:fragmentGUID="68d6304e-96e1-4c05-9566-cebab23127cf">art. 3 ust. 3:</zdanie>
+            </p>
+            <litera eId="DU/2025/683__art_6__ust_1__pkt_2__lit_a" gd:GUID="229fe398-3481-451f-a8b8-49d767d6ba98">
+              <nr>a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="d27c1316-8e3a-4e3c-95f7-f383b807bdda" fragment="4" gd:fragmentGUID="f5d80697-942c-48c0-93d5-1f926fa8a7c9">składają Dyrektorowi Generalnemu Krajowego Ośrodka deklaracje, w których wykazują wysokość zobowiązania na rzecz danego funduszu promocji, z wyszczególnieniem odrębnie kwoty naliczonej i kwoty pobranej, za okresy kwartalne, w terminie do 25. dnia miesiąca następującego po każdym kolejnym kwartale,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_6__ust_1__pkt_2__lit_b" gd:GUID="8bdc1323-23f8-4ac3-8b73-7a1418e8c9f7">
+              <nr>b</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="d27c1316-8e3a-4e3c-95f7-f383b807bdda" fragment="5" gd:fragmentGUID="5c7ba33c-9359-4907-a437-f48bc54c2b55">bez wezwania Dyrektora Generalnego Krajowego Ośrodka, obliczają kwotę należną z tytułu naliczenia wpłaty na rzecz danego funduszu promocji za okresy kwartalne i przekazują tę kwotę w terminie do 25. dnia miesiąca następującego po danym kwartale.</zdanie>
+              </p>
+            </litera>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/683__art_6__ust_2" gd:GUID="a05bb9b4-8ada-4215-b0bb-5de590b5b7ea" okres="okr_obowiazywanie.x.zdarz_wejscie_2026-04-01_DU-2025-289_odczytane" obowiazuje-do="2026-04-01">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="90bbd786-9f71-404b-8f13-15d802ffa13f" fragment="1" gd:fragmentGUID="dda1912d-e910-40d7-9d75-a5e87c1f516e"><odnosnik id-odnosnika="7" symbol="7" gd:GUID="fafadf3a-3594-4b2c-960a-27d662c1276e"><p><zdanie nr="1" gd:zdGUID="2af0d7ed-0ff4-40b0-99c8-c56df6798493" fragment="1" gd:fragmentGUID="d3f7f1a0-04c5-4192-a137-ac07ffe83196">W tym brzmieniu obowiązuje do wejścia w życie zmiany, o której mowa w odnośniku 8.</zdanie></p></odnosnik> Deklaracje, o których mowa w ust. 1 pkt 2 lit. a, są składane na formularzach opracowanych i udostępnionych przez Krajowy Ośrodek i zawierają w szczególności:</zdanie>
+          </p>
+          <punkt eId="DU/2025/683__art_6__ust_2__pkt_1" gd:GUID="3222c3a0-e3ea-474e-baa0-dba4ce798e71" okres="okr_obowiazywanie.x.zdarz_wejscie_2026-04-01_DU-2025-289_odczytane" obowiazuje-do="2026-04-01">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="90bbd786-9f71-404b-8f13-15d802ffa13f" fragment="2" gd:fragmentGUID="36cf3ece-ab44-4409-9734-e9c994102748">nazwę, siedzibę i adres albo imię, nazwisko, miejsce zamieszkania i adres podmiotu naliczającego, pobierającego i przekazującego wpłaty na dany fundusz promocji;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/683__art_6__ust_2__pkt_2" gd:GUID="ec552a28-8000-4175-bffc-125fa0720f21" okres="okr_obowiazywanie.x.zdarz_wejscie_2026-04-01_DU-2025-289_odczytane" obowiazuje-do="2026-04-01">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="90bbd786-9f71-404b-8f13-15d802ffa13f" fragment="3" gd:fragmentGUID="d51f37b9-a09d-4b7f-87d9-5992c5d0b37d">określenie ilości lub wartości towaru, stanowiących podstawę wpłaty;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/683__art_6__ust_2__pkt_3" gd:GUID="7fdb2524-04fe-45d5-b028-5bc0be62608a" okres="okr_obowiazywanie.x.zdarz_wejscie_2026-04-01_DU-2025-289_odczytane" obowiazuje-do="2026-04-01">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="90bbd786-9f71-404b-8f13-15d802ffa13f" fragment="4" gd:fragmentGUID="e5da2053-303f-4a61-b92b-1b148f7183bb">kwotę należną z tytułu wpłaty na dany fundusz promocji za określony kwartał.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/683__art_6__ust_2" gd:GUID="35a5faaa-a12d-46c6-8f5c-c56ae8ee783c" okres="okr_obowiazywanie.zdarz_wejscie_2026-04-01_DU-2025-289_odczytane.x" wejscie-w-zycie="2026-04-01">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="f097c7d7-1e0b-4873-bb13-d9bcf7366f98" fragment="1" gd:fragmentGUID="782b1412-cb3b-40f3-8788-42d9693d1bff"><odnosnik id-odnosnika="8" symbol="8" gd:GUID="1e9d04b5-6b98-4d60-ad3e-3b41be77e9e6"><p><zdanie nr="1" gd:zdGUID="053720ef-ab01-4061-b443-c7574cc5b7a9" fragment="1" gd:fragmentGUID="c2c8fd52-ef66-44cc-81ac-19daf8e24a3b">W brzmieniu ustalonym przez art. 1 pkt 3 lit. a ustawy, o której mowa w odnośniku 1; wejdzie w życie z dniem 1 kwietnia 2026 r.</zdanie></p></odnosnik> Deklaracje, o których mowa w ust. 1 pkt 2 lit. a, są składane w formie dokumentu elektronicznego opatrzonego kwalifikowanym podpisem elektronicznym albo podpisem zaufanym, albo podpisem osobistym, za pomocą systemu teleinformatycznego Krajowego Ośrodka, na formularzach opracowanych i udostępnionych w tym systemie przez Krajowy Ośrodek, i zawierają:</zdanie>
+          </p>
+          <punkt eId="DU/2025/683__art_6__ust_2__pkt_1" gd:GUID="684ea2e5-7afe-4844-9801-3cef8840cf9b" okres="okr_obowiazywanie.zdarz_wejscie_2026-04-01_DU-2025-289_odczytane.x" wejscie-w-zycie="2026-04-01">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="f097c7d7-1e0b-4873-bb13-d9bcf7366f98" fragment="2" gd:fragmentGUID="5618a0c1-ef57-4aa4-b2d6-7fbc6101cb8e">nazwę, siedzibę i adres albo imię, nazwisko, miejsce zamieszkania i adres, numer telefonu kontaktowego oraz adres poczty elektronicznej podmiotu naliczającego, pobierającego i przekazującego wpłaty na dany fundusz promocji;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/683__art_6__ust_2__pkt_2" gd:GUID="2f094f63-5c52-4a53-b98c-0e9b8f42fcda" okres="okr_obowiazywanie.zdarz_wejscie_2026-04-01_DU-2025-289_odczytane.x" wejscie-w-zycie="2026-04-01">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="f097c7d7-1e0b-4873-bb13-d9bcf7366f98" fragment="3" gd:fragmentGUID="89756e8c-921a-4584-ba33-e093e08ec9ed">numer identyfikacyjny Powszechnego Elektronicznego Systemu Ewidencji Ludności (numer PESEL), jeżeli podmiot, o którym mowa w pkt 1, jest osobą fizyczną;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/683__art_6__ust_2__pkt_3" gd:GUID="3b9f199e-8830-4107-95a7-8082f27d386e" okres="okr_obowiazywanie.zdarz_wejscie_2026-04-01_DU-2025-289_odczytane.x" wejscie-w-zycie="2026-04-01">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="f097c7d7-1e0b-4873-bb13-d9bcf7366f98" fragment="4" gd:fragmentGUID="a12bc7d2-10bf-48e9-8722-f30ae4e62343">numer w Krajowym Rejestrze Sądowym, jeżeli podmiot, o którym mowa w pkt 1, taki numer posiada, oraz numer identyfikacji podatkowej (NIP), jeżeli został nadany;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/683__art_6__ust_2__pkt_4" gd:GUID="6152fbb1-e9b1-4deb-8ae5-9709fcc0f56a" okres="okr_obowiazywanie.zdarz_wejscie_2026-04-01_DU-2025-289_odczytane.x" wejscie-w-zycie="2026-04-01">
+            <nr>4</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="f097c7d7-1e0b-4873-bb13-d9bcf7366f98" fragment="5" gd:fragmentGUID="58002465-ba61-4645-9f22-e60dd09928a8">numer identyfikacji w Krajowym Rejestrze Urzędowym Podmiotów Gospodarki Narodowej (REGON) podmiotu, o którym mowa w pkt 1;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/683__art_6__ust_2__pkt_5" gd:GUID="0164add9-fcdf-4705-ab17-45f29c4973c6" okres="okr_obowiazywanie.zdarz_wejscie_2026-04-01_DU-2025-289_odczytane.x" wejscie-w-zycie="2026-04-01">
+            <nr>5</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="f097c7d7-1e0b-4873-bb13-d9bcf7366f98" fragment="6" gd:fragmentGUID="b9ae0179-5a71-4f49-9446-0f99b3061482">numer rachunku bankowego podmiotu, o którym mowa w pkt 1;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/683__art_6__ust_2__pkt_6" gd:GUID="65080df4-a977-48dd-83f0-bfccf73d6746" okres="okr_obowiazywanie.zdarz_wejscie_2026-04-01_DU-2025-289_odczytane.x" wejscie-w-zycie="2026-04-01">
+            <nr>6</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="f097c7d7-1e0b-4873-bb13-d9bcf7366f98" fragment="7" gd:fragmentGUID="9c202749-fadd-47c6-9312-014f63266291">określenie ilości lub wartości towaru, stanowiących podstawę wpłaty;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/683__art_6__ust_2__pkt_7" gd:GUID="607365ff-a23a-47dc-8f09-51925f4cfdc4" okres="okr_obowiazywanie.zdarz_wejscie_2026-04-01_DU-2025-289_odczytane.x" wejscie-w-zycie="2026-04-01">
+            <nr>7</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="f097c7d7-1e0b-4873-bb13-d9bcf7366f98" fragment="8" gd:fragmentGUID="d778a027-4bc2-45ec-9dfc-ae3278255f73">kwotę należną z tytułu wpłaty na dany fundusz promocji za określony kwartał.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/683__art_6__ust_2a" gd:GUID="72ffd785-3119-43ad-9110-edc6e5298623" okres="okr_obowiazywanie.zdarz_wejscie_2026-04-01_DU-2025-289_odczytane.x" wejscie-w-zycie="2026-04-01">
+          <nr>2a</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="40a5e342-8e60-4ddc-a849-f93633e58964" fragment="1" gd:fragmentGUID="f625c908-255b-4e18-aa22-96f007167162"><odnosnik id-odnosnika="9" symbol="9" gd:GUID="3dcfa81a-fd79-4239-856b-9fe3b614b7c5"><p><zdanie nr="1" gd:zdGUID="98a48a03-11e5-413a-8d73-5abc4ab6636c" fragment="1" gd:fragmentGUID="4af95eee-c822-4d5a-95c3-67281acd4012">Dodany przez art. 1 pkt 3 lit. b ustawy, o której mowa w odnośniku 1; wejdzie w życie z dniem 1 kwietnia 2026 r.</zdanie></p></odnosnik> Złożenie deklaracji, o których mowa w ust. 1 pkt 2 lit. a, za pomocą systemu teleinformatycznego Krajowego Ośrodka następuje po uwierzytelnieniu w tym systemie podmiotu składającego deklarację, a w przypadku gdy deklaracja jest składana przez podmiot niebędący osobą fizyczną – po uwierzytelnieniu osoby:</zdanie>
+          </p>
+          <punkt eId="DU/2025/683__art_6__ust_2a__pkt_1" gd:GUID="f2861e68-bc2e-43e8-8bc4-65aedf43c347" okres="okr_obowiazywanie.zdarz_wejscie_2026-04-01_DU-2025-289_odczytane.x" wejscie-w-zycie="2026-04-01">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="40a5e342-8e60-4ddc-a849-f93633e58964" fragment="2" gd:fragmentGUID="ae3fd5ed-2037-44fe-8237-482c5bf11476">uprawnionej do reprezentacji tego podmiotu – jeżeli jego reprezentacja jest jednoosobowa;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/683__art_6__ust_2a__pkt_2" gd:GUID="c62ad544-5e6e-415f-8d3e-739c60dd31a2" okres="okr_obowiazywanie.zdarz_wejscie_2026-04-01_DU-2025-289_odczytane.x" wejscie-w-zycie="2026-04-01">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="40a5e342-8e60-4ddc-a849-f93633e58964" fragment="3" gd:fragmentGUID="d10fb4d2-0d4e-4247-aaf7-2c8269c44cdd">upoważnionej przez osoby uprawnione do reprezentacji tego podmiotu – jeżeli jego reprezentacja jest wieloosobowa.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/683__art_6__ust_2b" gd:GUID="5cc88549-94ef-4481-b649-cb5cd8eb039f" okres="okr_obowiazywanie.zdarz_wejscie_2026-04-01_DU-2025-289_odczytane.x" wejscie-w-zycie="2026-04-01">
+          <nr>2b</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="85e79b8d-1778-4998-abdc-5da80a046b6b" fragment="1" gd:fragmentGUID="95158b2b-2952-402f-8fbc-7db24bfb14cc"><odsylacz-do-odnosnika id-odnosnika="9" symbol="9" /> Uwierzytelnienie w systemie teleinformatycznym Krajowego Ośrodka następuje:</zdanie>
+          </p>
+          <punkt eId="DU/2025/683__art_6__ust_2b__pkt_1" gd:GUID="2c077e9e-b58e-487f-b502-7836b1f17b02" okres="okr_obowiazywanie.zdarz_wejscie_2026-04-01_DU-2025-289_odczytane.x" wejscie-w-zycie="2026-04-01">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="85e79b8d-1778-4998-abdc-5da80a046b6b" fragment="2" gd:fragmentGUID="0db00449-8f59-4226-b946-a7fd8da2a1d0">w sposób określony w art. 20a ust. 1 ustawy z dnia 17 lutego 2005 r. o informatyzacji działalności podmiotów realizujących zadania publiczne (Dz. U. z 2024 r. poz. 1557 i 1717) lub</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/683__art_6__ust_2b__pkt_2" gd:GUID="792e3027-bc2e-417f-a207-cfbcadf64bdc" okres="okr_obowiazywanie.zdarz_wejscie_2026-04-01_DU-2025-289_odczytane.x" wejscie-w-zycie="2026-04-01">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="85e79b8d-1778-4998-abdc-5da80a046b6b" fragment="3" gd:fragmentGUID="ca9e1746-00e9-429d-9e9b-822a659915ec">za pomocą loginu i kodu dostępu do systemu teleinformatycznego Krajowego Ośrodka.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/683__art_6__ust_3" gd:GUID="c8c78724-01a0-49ea-ae41-d9f2afe0c5bd">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="eddbef22-bfa1-4745-80fa-c3937e6a4ce2" fragment="1" gd:fragmentGUID="6ad88234-a05c-45e2-b459-faf7bda9e114">Jeżeli wysokość zobowiązania za dany kwartał nie przekracza pięciokrotnie wysokości kosztów upomnienia w postępowaniu egzekucyjnym w administracji, zobowiązanie to zalicza się na poczet zobowiązania za kolejny kwartał.</zdanie>
+            <zdanie nr="2" gd:zdGUID="e7d37345-1673-45b3-a8b9-c39d04f0e9e5" fragment="1" gd:fragmentGUID="afd7a32c-d571-4227-8695-6912835310c8">Przepis ust. 1 pkt 2 stosuje się odpowiednio.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/683__art_6__ust_3a" gd:GUID="5100f6fd-d7d0-42fa-9b64-d9cd45773b61">
+          <nr>3a</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="7636b46a-a9d4-4598-909c-7737c925db1b" fragment="1" gd:fragmentGUID="08374e5e-661c-4200-8fb4-13c06692339d">W przypadku, o którym mowa w ust. 3, deklaracje określone w ust. 1 pkt 2 lit. a składa się, jeżeli suma zobowiązań na rzecz danego funduszu promocji za dany kwartał i kolejne kwartały przekracza pięciokrotnie wysokość kosztów upomnienia w postępowaniu egzekucyjnym w administracji.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/683__art_6__ust_4" gd:GUID="24c5fdeb-35e8-4d22-86db-f9ab53d1386c">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="4b0aaf4a-86e6-49a7-8df3-c584685a8b79" fragment="1" gd:fragmentGUID="e132ca59-305b-4de6-be4c-238f819a5e1d">Do wpłat i podmiotów, o których mowa w art. 3, stosuje się odpowiednio przepisy działu III i VI ustawy z dnia 29 sierpnia 1997 r. – Ordynacja podatkowa (Dz. U. z 2025 r. poz. 111, 497, 621 i 622), chyba że ustawa stanowi inaczej.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/683__art_6__ust_5" gd:GUID="d66bf946-ae0e-450b-b1ad-2764d655d0b1">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="dab136e1-f7d0-432f-b390-eb3c3c00c163" fragment="1" gd:fragmentGUID="89b4eafd-9b50-4c2d-af95-28cc9c925f15">Uprawnienia organów podatkowych określone w ustawie, o której mowa w ust. 4, przysługują:</zdanie>
+          </p>
+          <punkt eId="DU/2025/683__art_6__ust_5__pkt_1" gd:GUID="528312b9-8214-4dfb-80bd-f4cf695130bb">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="dab136e1-f7d0-432f-b390-eb3c3c00c163" fragment="2" gd:fragmentGUID="a2997201-9818-4bd8-a8ae-a8b760d26150">Dyrektorowi Generalnemu Krajowego Ośrodka jako organowi pierwszej instancji;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/683__art_6__ust_5__pkt_2" gd:GUID="f133dd2b-f34a-4f84-b165-15d0c83414a2">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="dab136e1-f7d0-432f-b390-eb3c3c00c163" fragment="3" gd:fragmentGUID="dc5d45af-9145-4351-a129-3634cb629feb">ministrowi właściwemu do spraw rynków rolnych jako organowi odwoławczemu od decyzji Dyrektora Generalnego Krajowego Ośrodka.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/683__art_6__ust_6" gd:GUID="a0775bb2-fbdf-4a78-865d-f1f580084534">
+          <nr>6</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="469188b0-0d26-4c0c-9b14-dcfeeea9c8b0" fragment="1" gd:fragmentGUID="54a5fda7-9bef-4e69-b3bf-b2eaef560c18">Do egzekucji należności przypadających na rzecz danego funduszu promocji od podmiotów, o których mowa w art. 3 ust. 1 i 3, stosuje się przepisy o postępowaniu egzekucyjnym w administracji.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/683__art_7" gd:GUID="fee23bab-292c-4b95-8d71-01f6a941c388">
+        <nr>7</nr>
+        <ustep eId="DU/2025/683__art_7__ust_1" gd:GUID="b49b22b8-8be6-43b0-9b1c-4c23aa359430">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="ab232f5e-1ab7-46b8-9f31-a968ec435ad0" fragment="1" gd:fragmentGUID="70a59945-70c9-4097-9e5c-ec9e5b9b8b1f">Środki finansowe funduszy promocji są gromadzone na wyodrębnionym dla każdego z funduszy promocji rachunku Krajowego Ośrodka.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/683__art_7__ust_2" gd:GUID="93b98acd-2dac-48f5-a841-e0e2d6633d30">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="3900fcd0-9154-44ab-a3a0-14b1e3d2dac4" fragment="1" gd:fragmentGUID="f7e3c6b7-f4eb-45ae-9621-0a0d427775ee">Dochodami funduszy promocji są:</zdanie>
+          </p>
+          <punkt eId="DU/2025/683__art_7__ust_2__pkt_1" gd:GUID="09cf427f-54ea-4606-b23b-bf48027d336f">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="3900fcd0-9154-44ab-a3a0-14b1e3d2dac4" fragment="2" gd:fragmentGUID="0d1f6b90-622d-4089-a74e-24b38a03d3f7">wpłaty, o których mowa w art. 3 ust. 1, 2 i 6a;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/683__art_7__ust_2__pkt_2" gd:GUID="26a7d771-2fb5-451c-a1c4-f3c9b21773ce">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="3900fcd0-9154-44ab-a3a0-14b1e3d2dac4" fragment="3" gd:fragmentGUID="ac077de1-d019-4b3b-9b82-7f4e68a3f9cf">odsetki bankowe od środków pieniężnych gromadzonych na rachunku bieżącym danego funduszu promocji oraz z tytułu oprocentowania lokat;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/683__art_7__ust_2__pkt_3" gd:GUID="60deade6-db0f-4178-82ce-9ed0285b6750">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="3900fcd0-9154-44ab-a3a0-14b1e3d2dac4" fragment="4" gd:fragmentGUID="3990f82f-0284-4ca3-acd2-ac3b47042a12">darowizny i zapisy.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/683__art_7__ust_3" gd:GUID="92a1cc97-dc58-4987-ae15-ac4459314d34">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a24e7a49-9bb6-44d2-9bcd-04320106760f" fragment="1" gd:fragmentGUID="9b931dae-d7ef-4bec-9e11-c4575e01ffdc">Środki finansowe funduszy promocji nie są środkami publicznymi w rozumieniu przepisów o finansach publicznych.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/683__art_8" gd:GUID="a2d3a42d-8562-4417-a1e7-bab78463bc34">
+        <nr>8</nr>
+        <ustep eId="DU/2025/683__art_8__ust_1" gd:GUID="3255fc04-32ff-439f-a0cd-d0d2f1c6fc44">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="952299d0-9e14-48c5-bbbb-6d80871e05da" fragment="1" gd:fragmentGUID="f484fd40-877c-47b0-b1a5-9142afb52192">Gospodarka finansowa każdego z funduszy promocji jest prowadzona na podstawie:</zdanie>
+          </p>
+          <punkt eId="DU/2025/683__art_8__ust_1__pkt_1" gd:GUID="6f212c30-fa9f-4f34-88de-924bc0541f3b">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="952299d0-9e14-48c5-bbbb-6d80871e05da" fragment="2" gd:fragmentGUID="22fdce04-d063-4204-8142-98c3ed18f121">zasad gospodarowania środkami finansowymi danego funduszu promocji;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/683__art_8__ust_1__pkt_2" gd:GUID="1d649ec7-0f54-4841-b691-1763ea553ac2">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="952299d0-9e14-48c5-bbbb-6d80871e05da" fragment="3" gd:fragmentGUID="303f4fe4-c34f-4e43-b227-fa69ddce5483">planu finansowego danego funduszu promocji.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/683__art_8__ust_2" gd:GUID="e0cdc54d-64be-4ed3-9cd4-d2b01fd20548">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="427b4186-dfe2-4b42-ad5c-a8ffec5a7e9d" fragment="1" gd:fragmentGUID="303b7a29-9ef2-40df-b8f7-a5fe4a57de56">W zasadach gospodarowania środkami finansowymi danego funduszu promocji określa się:</zdanie>
+          </p>
+          <punkt eId="DU/2025/683__art_8__ust_2__pkt_1" gd:GUID="56d1c4de-65e2-462f-a230-268c130dd366">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="427b4186-dfe2-4b42-ad5c-a8ffec5a7e9d" fragment="2" gd:fragmentGUID="731ea736-fbee-4ef2-b79c-f913d845e878">sposób sporządzania planu finansowego, uwzględniający cele realizowane przez ten fundusz oraz zakres informacji, o których mowa w ust. 3;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/683__art_8__ust_2__pkt_2" gd:GUID="2993dd0b-d615-4dcf-91df-4c68f0eae218">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="427b4186-dfe2-4b42-ad5c-a8ffec5a7e9d" fragment="3" gd:fragmentGUID="5913bebc-b615-4919-9991-15e9100a99dc">wysokość wsparcia finansowego na realizację zadań określonych w planie finansowym tego funduszu, wyrażoną procentowo.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/683__art_8__ust_3" gd:GUID="63d52803-056b-43c4-a6b1-8e436a491cbe">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="5824c8dd-c841-4d6e-b20a-65a35a07925d" fragment="1" gd:fragmentGUID="a6aa5a50-2069-4a79-9a8d-e6a7338c162c">Plan finansowy danego funduszu promocji zawiera informacje o:</zdanie>
+          </p>
+          <punkt eId="DU/2025/683__art_8__ust_3__pkt_1" gd:GUID="11fd5155-af7e-4317-b9de-a126fb64368a">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="5824c8dd-c841-4d6e-b20a-65a35a07925d" fragment="2" gd:fragmentGUID="94c3377c-34e8-4e24-9b6f-d2181ed750ad">stanie tego funduszu na początek i na koniec roku, obejmującym środki finansowe, należności i zobowiązania;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/683__art_8__ust_3__pkt_2" gd:GUID="2646971b-b63d-44df-be79-8a4d8fd66c96">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="5824c8dd-c841-4d6e-b20a-65a35a07925d" fragment="3" gd:fragmentGUID="10a684bc-c96a-4237-9993-73d3c59c93fd">dochodach;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/683__art_8__ust_3__pkt_3" gd:GUID="720c7f94-68fd-42ce-9205-84fb9fc11e28">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="5824c8dd-c841-4d6e-b20a-65a35a07925d" fragment="4" gd:fragmentGUID="5fad4b9b-f5bf-4371-9456-9b82dceae1ef">zadaniach realizowanych w danym roku finansowym;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/683__art_8__ust_3__pkt_4" gd:GUID="21ca4795-c94d-4481-91d0-e1d88a5d457f">
+            <nr>4</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="5824c8dd-c841-4d6e-b20a-65a35a07925d" fragment="5" gd:fragmentGUID="66cbefe9-3555-4cda-96f6-74d50c842e53">maksymalnej kwocie środków finansowych przeznaczonych na realizację poszczególnych zadań.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/683__art_8__ust_4" gd:GUID="897fe935-3e3f-4a6f-87c5-25604e55777c">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="c02185ee-29dc-48eb-9f83-23a2a6e7a7ca" fragment="1" gd:fragmentGUID="3f7a11b0-624b-4623-acfe-d5e7939ebc96">Rokiem finansowym funduszy promocji jest rok kalendarzowy.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/683__art_8__ust_5" gd:GUID="8dce5f69-234d-4f66-bad4-a2118804451b">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="946adab8-554f-426d-b13a-edb1790a2609" fragment="1" gd:fragmentGUID="fcc33523-8ab2-4ba7-bfc9-eac98b20a898">Plany finansowe funduszy promocji są uchwalane na każdy rok finansowy, nie później niż do dnia 30 listopada roku poprzedzającego dany rok finansowy.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/683__art_8__ust_6" gd:GUID="0710227e-505e-4987-9055-9391d3b3bc0d">
+          <nr>6</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="20f4f11f-8a9c-4fa4-8981-c1c11f013e44" fragment="1" gd:fragmentGUID="1959c7ee-5af0-45d6-af6f-0d28cb7d9321">Rok finansowy funduszy promocji jest zamykany sprawozdaniem:</zdanie>
+          </p>
+          <punkt eId="DU/2025/683__art_8__ust_6__pkt_1" gd:GUID="fe7dde8f-4dcd-4d66-9836-bfb41dab80ff">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="20f4f11f-8a9c-4fa4-8981-c1c11f013e44" fragment="2" gd:fragmentGUID="284ef7b0-be81-40e3-a83e-3e7a6bc5cf4c">z wykonania planu finansowego, sporządzonym nie później niż do ostatniego dnia drugiego miesiąca następującego po zakończeniu roku finansowego;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/683__art_8__ust_6__pkt_2" gd:GUID="6d51c196-f4b4-45b5-b0b6-6cd13d3b55ae">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="20f4f11f-8a9c-4fa4-8981-c1c11f013e44" fragment="3" gd:fragmentGUID="cd77390c-3074-4126-840c-c699377507bc">rzeczowym sporządzonym nie później niż do ostatniego dnia trzeciego miesiąca następującego po zakończeniu roku finansowego.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/683__art_8__ust_7" gd:GUID="7dc79265-d7e9-472b-a6ae-709102124262">
+          <nr>7</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="3d95a7d2-216c-477c-ab6f-7aaa5e49c158" fragment="1" gd:fragmentGUID="abc4710f-154b-4dbd-84b5-5e2fd3bd2797">Sprawozdanie rzeczowe zawiera w szczególności:</zdanie>
+          </p>
+          <punkt eId="DU/2025/683__art_8__ust_7__pkt_1" gd:GUID="30918747-4789-4297-bc5f-c780191f7498">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="3d95a7d2-216c-477c-ab6f-7aaa5e49c158" fragment="2" gd:fragmentGUID="2324580c-6382-47a1-acd6-591cb9a88d93">zestawienie zaplanowanych i zrealizowanych zadań;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/683__art_8__ust_7__pkt_2" gd:GUID="39cf8f43-e9ca-4961-a808-c3d23128d216">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="3d95a7d2-216c-477c-ab6f-7aaa5e49c158" fragment="3" gd:fragmentGUID="0b9c4d07-6f58-4ef9-aff2-975ad41896c4">terminy, w których zadania zostały zrealizowane;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/683__art_8__ust_7__pkt_3" gd:GUID="c61b3755-8c48-4ae5-88c5-632e1b4c441b">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="3d95a7d2-216c-477c-ab6f-7aaa5e49c158" fragment="4" gd:fragmentGUID="ed3c6273-9815-4081-8052-50817bd48333">ocenę merytoryczną zrealizowanych zadań.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/683__art_9" gd:GUID="cf08ec9b-bdcd-4fa0-b2d0-2d91b086031e">
+        <nr>9</nr>
+        <ustep eId="DU/2025/683__art_9__ust_1" gd:GUID="545dae32-ba84-4a57-a763-e45d44ff64b3">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="38c05b83-0d1d-40f8-a153-409068ab9516" fragment="1" gd:fragmentGUID="f200e9cb-fbea-48fa-bf6a-0fe4ee9b4b4e">Środki finansowe funduszy promocji służące realizacji celów, o których mowa w art. 2 ust. 1, mogą zostać przeznaczone na:</zdanie>
+          </p>
+          <punkt eId="DU/2025/683__art_9__ust_1__pkt_1" gd:GUID="ea842dfc-451c-4bea-9f36-17e7681d1000">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="38c05b83-0d1d-40f8-a153-409068ab9516" fragment="2" gd:fragmentGUID="8e758034-ae4c-4e53-8d9a-5c745503796e">finansowanie lub współfinansowanie programów promocyjnych i informacyjnych;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/683__art_9__ust_1__pkt_2" gd:GUID="f0ad588a-5b11-450b-aca5-1ad6fa864303">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="38c05b83-0d1d-40f8-a153-409068ab9516" fragment="3" gd:fragmentGUID="5a108fa6-8ac9-48aa-92c8-6e000d84b08b">współfinansowanie działań promocyjnych i informacyjnych kwalifikujących się do uzyskania na ich realizację wsparcia ze środków Unii Europejskiej;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/683__art_9__ust_1__pkt_3" gd:GUID="3781071c-12ed-482f-9692-40dc51b31a37">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="38c05b83-0d1d-40f8-a153-409068ab9516" fragment="4" gd:fragmentGUID="cb18e78e-4aec-48a9-a91f-a9adc49e7cc3">udzielanie wsparcia finansowego na realizację zadań określonych w art. 2 ust. 2 pkt 1 lit. e, g i h, pkt 2 lit. e–g, pkt 3 lit. e–g, pkt 4 lit. e–g, pkt 5 lit. e–g, pkt 6 lit. e–g, pkt 7 lit. e–g, pkt 8 lit. e–g, pkt 9 lit. e–g oraz pkt 10 lit. e–g.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/683__art_9__ust_1a" gd:GUID="187d23ed-69f9-43a5-86d0-77347f997eef">
+          <nr>1a</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="d545f812-c838-44de-b430-c9c564dd2468" fragment="1" gd:fragmentGUID="57e6e6b4-b53f-418b-b55b-2e8c59b40f7d">Programy oraz działania, o których mowa w ust. 1 pkt 1 i 2, finansowane lub współfinansowane ze środków finansowych funduszy promocji dotyczą produktu rolno-spożywczego:</zdanie>
+          </p>
+          <punkt eId="DU/2025/683__art_9__ust_1a__pkt_1" gd:GUID="c98d905f-e6b2-48e6-9d39-c1fcb341ea1a">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="d545f812-c838-44de-b430-c9c564dd2468" fragment="2" gd:fragmentGUID="b1cab8e8-b7ea-4d07-b052-01713d32f007">którego produkcja podstawowa w rozumieniu art. 3 pkt 17 rozporządzenia (WE) nr 178/2002 Parlamentu Europejskiego i Rady z dnia 28 stycznia 2002 r. ustanawiającego ogólne zasady i wymagania prawa żywnościowego, powołującego Europejski Urząd ds. Bezpieczeństwa Żywności oraz ustanawiającego procedury w zakresie bezpieczeństwa żywności (Dz. Urz. WE L 31 z 01.02.2002, str. 1, z późn. zm.<odnosnik id-odnosnika="10" symbol="10" gd:GUID="5646c00f-12ee-44cb-8575-a29e31d5863f"><p><zdanie nr="1" gd:zdGUID="acf0436a-7eab-4d3a-99bf-04e5b8d8adc1" fragment="1" gd:fragmentGUID="730f93a1-f401-4517-8003-7b9c372a3406">Zmiany wymienionego rozporządzenia zostały ogłoszone w Dz. Urz. UE L 245 z 29.09.2003, str. 4 – Dz. Urz. UE Polskie wydanie specjalne, rozdz. 15, t. 7, str. 614, Dz. Urz. UE L 100 z 08.04.2006, str. 3, Dz. Urz. UE L 179 z 07.07.2007, str. 59, Dz. Urz. UE L 60 z 05.03.2008, str. 17, Dz. Urz. UE L 188 z 18.07.2009, str. 14, Dz. Urz. UE L 189 z 27.06.2014, str. 1, Dz. Urz. UE L 327 z 12.11.2014, str. 9 oraz Dz. Urz. UE L 37 z 13.02.2015, str. 24.</zdanie></p></odnosnik> – Dz. Urz. UE Polskie wydanie specjalne, rozdz. 15, t. 6, str. 463), odbyła się na terytorium Rzeczypospolitej Polskiej, a w przypadku:</zdanie>
+            </p>
+            <litera eId="DU/2025/683__art_9__ust_1a__pkt_1__lit_a" gd:GUID="a7e9605a-f4cb-4968-9bfd-f07f981193e8">
+              <nr>a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="d545f812-c838-44de-b430-c9c564dd2468" fragment="3" gd:fragmentGUID="59af349a-e96f-4d12-bb70-1786b6162230">mięsa – jeżeli zostało pozyskane ze zwierząt urodzonych na terytorium Rzeczypospolitej Polskiej oraz których chów i ubój odbyły się na terytorium Rzeczypospolitej Polskiej,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_9__ust_1a__pkt_1__lit_b" gd:GUID="325904f7-d17d-4621-8e1a-c4acbae6648a">
+              <nr>b</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="d545f812-c838-44de-b430-c9c564dd2468" fragment="4" gd:fragmentGUID="0d7c55fb-79f6-4d0f-ad2a-a576ad0e2052">ryb – jeżeli ich chów lub hodowla odbyły się na terytorium Rzeczypospolitej Polskiej lub ich połowy odbyły się w wodach śródlądowych Rzeczypospolitej Polskiej, lub ich połowy odbyły się na obszarach morskich przy użyciu statków wpisanych do rejestru statków rybackich prowadzonego przez ministra właściwego do spraw rybołówstwa na podstawie art. 13 ust. 1 ustawy z dnia 19 grudnia 2014 r. o rybołówstwie morskim (Dz. U. z 2025 r. poz. 590),</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_9__ust_1a__pkt_1__lit_c" gd:GUID="550044dd-516e-4b49-8617-50dd17120db2">
+              <nr>c</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="d545f812-c838-44de-b430-c9c564dd2468" fragment="5" gd:fragmentGUID="98322f02-25cd-493a-8625-d838d6492943">produktów pochodzenia zwierzęcego innych niż mięso i ryby – jeżeli zostały pozyskane od zwierząt, których chów odbywa się na terytorium Rzeczypospolitej Polskiej lub</zdanie>
+              </p>
+            </litera>
+          </punkt>
+          <punkt eId="DU/2025/683__art_9__ust_1a__pkt_2" gd:GUID="e2313697-3951-4f15-937a-7e8781adb852">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="d545f812-c838-44de-b430-c9c564dd2468" fragment="6" gd:fragmentGUID="3bba0178-0587-4f47-9fa0-3b4facf6e47f">będącego produktem przetworzonym w rozumieniu art. 2 ust. 1 lit. o rozporządzenia (WE) nr 852/2004 Parlamentu Europejskiego i Rady z dnia 29 kwietnia 2004 r. w sprawie higieny środków spożywczych (Dz. Urz. UE L 139 z 30.04.2004, str. 1, z późn. zm.<odnosnik id-odnosnika="11" symbol="11" gd:GUID="b94a30fc-95cf-4a99-83e8-a46369819a4c"><p><zdanie nr="1" gd:zdGUID="4d72a3f3-f5d9-4f79-8823-658603af9f2e" fragment="1" gd:fragmentGUID="11b0a073-6530-4ee3-840d-8d67ac24a4a7">Zmiany wymienionego rozporządzenia zostały ogłoszone w Dz. Urz. UE L 153 z 12.06.2008, str. 42, Dz. Urz. UE L 277 z 18.10.2008, str. 7, Dz. Urz. UE L 87 z 31.03.2009, str. 109, Dz. Urz. UE L 160 z 12.06.2013, str. 19 oraz Dz. Urz. UE L 222 z 17.08.2016, str. 114.</zdanie></p></odnosnik> – Dz. Urz. UE Polskie wydanie specjalne, rozdz. 13, t. 34, str. 319), jeżeli został wyprodukowany na terytorium Rzeczypospolitej Polskiej i wszystkie jego składniki spełniają warunki określone w pkt 1 lub zostały wyprodukowane na terytorium Rzeczypospolitej Polskiej wyłącznie ze składników spełniających warunki określone w pkt 1, a jeżeli do jego produkcji użyto innych składników:</zdanie>
+            </p>
+            <litera eId="DU/2025/683__art_9__ust_1a__pkt_2__lit_a" gd:GUID="cd4e6531-65b9-4e47-88c0-53139c40eef5">
+              <nr>a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="d545f812-c838-44de-b430-c9c564dd2468" fragment="7" gd:fragmentGUID="cf7119c4-dd18-46d8-a3e8-91b1747dd349">łączna masa tych składników wynosi nie więcej niż 25 % łącznej masy wszystkich składników w chwili ich użycia do wyprodukowania tego produktu, nie licząc masy wody użytej do jego produkcji, oraz</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_9__ust_1a__pkt_2__lit_b" gd:GUID="0c650d6b-481d-4a36-92f7-c6323ca51990">
+              <nr>b</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="d545f812-c838-44de-b430-c9c564dd2468" fragment="8" gd:fragmentGUID="89021af0-39c3-4008-a671-040f768bc905">w produkcji tego produktu nie można zastąpić tych składników takimi samymi składnikami, które:</zdanie>
+              </p>
+              <tiret eId="DU/2025/683__art_9__ust_1a__pkt_2__lit_b__tir_1" gd:GUID="d932b3b9-d1d4-4d89-818b-a58af18c3be4">
+                <p>
+                  <zdanie nr="1" gd:zdGUID="d545f812-c838-44de-b430-c9c564dd2468" fragment="9" gd:fragmentGUID="6498eca5-12a7-4cf2-8bc1-d3cd9c823bef">spełniają warunki określone w pkt 1 lub</zdanie>
+                </p>
+              </tiret>
+              <tiret eId="DU/2025/683__art_9__ust_1a__pkt_2__lit_b__tir_2" gd:GUID="899c6aa7-a8e6-47b5-82b1-b33ae6ef2eea">
+                <p>
+                  <zdanie nr="1" gd:zdGUID="d545f812-c838-44de-b430-c9c564dd2468" fragment="10" gd:fragmentGUID="a5e992bf-f54b-404a-93f1-2dc3257804d7">zostały wyprodukowane na terytorium Rzeczypospolitej Polskiej wyłącznie ze składników spełniających warunki określone w pkt 1.</zdanie>
+                </p>
+              </tiret>
+            </litera>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/683__art_9__ust_2" gd:GUID="6ca27c3a-ab2d-4703-88ce-c81c3cbb4ffb">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="403d84c8-f3f8-422f-93e6-f921f317adbc" fragment="1" gd:fragmentGUID="2704ce22-ba8e-4a55-9dbd-5a290a494a69">O środki funduszy promocji mogą się ubiegać:</zdanie>
+          </p>
+          <punkt eId="DU/2025/683__art_9__ust_2__pkt_1" gd:GUID="a7daf28a-817c-4da1-a284-bed60153d806">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="403d84c8-f3f8-422f-93e6-f921f317adbc" fragment="2" gd:fragmentGUID="869f697d-b4ca-4908-b6da-b80278281029">ogólnokrajowe organizacje zrzeszające producentów rolnych lub przetwórców produktów rolno-spożywczych mających miejsce zamieszkania albo siedzibę na terytorium Rzeczypospolitej Polskiej, którzy produkują lub dokonują obrotu:</zdanie>
+            </p>
+            <litera eId="DU/2025/683__art_9__ust_2__pkt_1__lit_a" gd:GUID="c73cbb6f-24eb-400a-b439-6c321728675c">
+              <nr>a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="403d84c8-f3f8-422f-93e6-f921f317adbc" fragment="3" gd:fragmentGUID="aad5934f-15c6-4bb4-a4ba-8ace9ee8e935">mlekiem lub przetworami mlecznymi – w przypadku Funduszu Promocji Mleka,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_9__ust_2__pkt_1__lit_b" gd:GUID="032547b5-c815-433f-b3bd-3e510a974a4a">
+              <nr>b</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="403d84c8-f3f8-422f-93e6-f921f317adbc" fragment="4" gd:fragmentGUID="a1e2eb85-8672-4149-9f53-d0d1e6bfc9ac">świniami, mięsem wieprzowym lub jego przetworami – w przypadku Funduszu Promocji Mięsa Wieprzowego,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_9__ust_2__pkt_1__lit_c" gd:GUID="c87231d7-0f88-4c0a-bd06-f19657d43956">
+              <nr>c</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="403d84c8-f3f8-422f-93e6-f921f317adbc" fragment="5" gd:fragmentGUID="dd9c731a-881f-4b35-8fd2-64de869e8017">bydłem, mięsem wołowym lub przetworami z tego mięsa – w przypadku Funduszu Promocji Mięsa Wołowego,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_9__ust_2__pkt_1__lit_d" gd:GUID="fc225298-c73b-4439-b1db-c6912291357f">
+              <nr>d</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="403d84c8-f3f8-422f-93e6-f921f317adbc" fragment="6" gd:fragmentGUID="d7f1ddee-61f9-49aa-ac0f-f2a97aafa2c0">końmi, mięsem końskim lub przetworami z tego mięsa – w przypadku Funduszu Promocji Mięsa Końskiego,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_9__ust_2__pkt_1__lit_e" gd:GUID="1b7d93f1-49f9-4eab-a852-6f09f27bbfe4">
+              <nr>e</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="403d84c8-f3f8-422f-93e6-f921f317adbc" fragment="7" gd:fragmentGUID="8091691d-baa7-4e6a-9b21-17c022da2c49">owcami, mięsem owczym lub przetworami z tego mięsa – w przypadku Funduszu Promocji Mięsa Owczego,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_9__ust_2__pkt_1__lit_f" gd:GUID="2ed30858-b612-4b02-8187-c26dcb462d19">
+              <nr>f</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="403d84c8-f3f8-422f-93e6-f921f317adbc" fragment="8" gd:fragmentGUID="74877f8c-9a6a-472f-80ff-216c42f818e5">zbożem lub przetworami zbożowymi – w przypadku Funduszu Promocji Ziarna Zbóż i Przetworów Zbożowych,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_9__ust_2__pkt_1__lit_g" gd:GUID="49cee039-7888-4f85-802f-2340b1770cca">
+              <nr>g</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="403d84c8-f3f8-422f-93e6-f921f317adbc" fragment="9" gd:fragmentGUID="71d4067e-7c3b-4e1a-9435-6de134d4cf9b"><odnosnik id-odnosnika="12" symbol="12" gd:GUID="2f81e08e-d7e9-4c3c-90db-1346cead1639"><p><zdanie nr="1" gd:zdGUID="2b4bba36-666a-4d5d-895c-b945456a1d61" fragment="1" gd:fragmentGUID="eabe128b-c60e-44a8-99c5-b9da3ea6c8e5">W brzmieniu ustalonym przez art. 1 pkt 4 lit. a ustawy, o której mowa w odnośniku 1.</zdanie></p></odnosnik> owocami lub warzywami lub ich przetworami, lub produktami pszczelimi – w przypadku Funduszu Promocji Owoców i Warzyw,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_9__ust_2__pkt_1__lit_h" gd:GUID="8c9e6168-ad53-4e66-afba-87237839935a">
+              <nr>h</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="403d84c8-f3f8-422f-93e6-f921f317adbc" fragment="10" gd:fragmentGUID="a2482ad9-96bb-4d85-9b46-96ba5c981dc0">drobiem, mięsem drobiowym lub jego przetworami – w przypadku Funduszu Promocji Mięsa Drobiowego,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_9__ust_2__pkt_1__lit_i" gd:GUID="445c6896-7a06-49b6-8e01-efadf5df9202">
+              <nr>i</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="403d84c8-f3f8-422f-93e6-f921f317adbc" fragment="11" gd:fragmentGUID="a7ed4d82-ec43-4dd6-9f11-85eb6ef5f485">rybami lub ich przetworami – w przypadku Funduszu Promocji Ryb,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_9__ust_2__pkt_1__lit_j" gd:GUID="e2fdf24e-ac7e-430a-8192-a0cd2610ff43">
+              <nr>j</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="403d84c8-f3f8-422f-93e6-f921f317adbc" fragment="12" gd:fragmentGUID="e92c8d7a-b271-4da4-a8fe-eec36329def4">roślinami oleistymi, przetworami nasion oleistych lub produktami pszczelimi – w przypadku Funduszu Promocji Roślin Oleistych;</zdanie>
+              </p>
+            </litera>
+          </punkt>
+          <punkt eId="DU/2025/683__art_9__ust_2__pkt_2" gd:GUID="93782834-7907-4ba8-8c7e-7b8d0756675f">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="403d84c8-f3f8-422f-93e6-f921f317adbc" fragment="13" gd:fragmentGUID="ef57a9f4-aacd-4cd3-97b9-0279725138d1">ogólnokrajowe organizacje branżowe lub międzybranżowe zrzeszające producentów lub przetwórców produktów rolno-spożywczych, inne niż organizacje określone w pkt 1, jeżeli ich cele statutowe są zgodne z celami funduszy promocji, o których mowa w art. 2.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/683__art_9__ust_3" gd:GUID="c5239ef6-52bb-4b10-9df8-29c8912eb863">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="8010e287-6871-4ba2-8643-de5c40365fb8" fragment="1" gd:fragmentGUID="ab8450d1-e326-4f13-a83d-ad6e5161261f">Podmioty wykorzystujące środki funduszy promocji są obowiązane stosować konkurencyjne procedury wyboru wykonawców realizowanych działań.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/683__art_9__ust_4" gd:GUID="6e9f6d2f-8a5f-468b-afc5-dff40efdd8cc">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="78fcb450-0520-4d15-9da6-6dbd2490c2eb" fragment="1" gd:fragmentGUID="93a0b371-aaf1-40d2-9a4e-6d9a3fa126fd"><odnosnik id-odnosnika="13" symbol="13" gd:GUID="eed87658-3f0f-4684-a9b4-7ee65165a1d2"><p><zdanie nr="1" gd:zdGUID="6966ffa1-390e-4d16-9a57-b4c6b2e262e1" fragment="1" gd:fragmentGUID="af2e5e96-c15e-4c1d-9dcd-661b66342c3d">Ze zmianą wprowadzoną przez art. 1 pkt 4 lit. b ustawy, o której mowa w odnośniku 1.</zdanie></p></odnosnik> Wysokość wsparcia finansowego na realizację zadań określonych w art. 2 ust. 2 pkt 1 lit. f–h, pkt 2 lit. f i g, pkt 3 lit. f i g, pkt 4 lit. f i g, pkt 5 lit. f i g, pkt 6 lit. f i g, pkt 8 lit. f i g oraz pkt 9 lit. f i g, nie może przekroczyć 15 % maksymalnej kwoty środków finansowych przeznaczonych na realizację wszystkich zadań funduszu promocji w danym roku finansowym.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/683__art_9__ust_4a" gd:GUID="d24222fb-fed4-4ad1-bb7d-419169bac06e">
+          <nr>4a</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="e93804ec-1341-40ab-abdf-ca12bc133399" fragment="1" gd:fragmentGUID="38042408-f7d4-4a8a-928e-fe8184ad1550">Wysokość wsparcia finansowego na realizację zadań, o których mowa:</zdanie>
+          </p>
+          <punkt eId="DU/2025/683__art_9__ust_4a__pkt_1" gd:GUID="08cf047d-b915-4a67-9e05-ae6816b52298">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="e93804ec-1341-40ab-abdf-ca12bc133399" fragment="2" gd:fragmentGUID="69af0571-d9a2-48f6-a9a9-174277de284b">w art. 2 ust. 2 pkt 10 oraz ust. 4, dotyczących roślin oleistych, przetworów nasion oleistych oraz pasz w rozumieniu przepisów o paszach pochodzących z przetworzenia roślin oleistych nie może przekroczyć 85 % maksymalnej kwoty środków finansowych przeznaczonych na realizację wszystkich zadań Funduszu Promocji Roślin Oleistych w danym roku finansowym;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/683__art_9__ust_4a__pkt_2" gd:GUID="bc23f822-0e1c-486b-a088-c3afd98e5580">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="e93804ec-1341-40ab-abdf-ca12bc133399" fragment="3" gd:fragmentGUID="cf2b5172-5963-4041-9ecc-8c9bd28283a6">w art. 2 ust. 2 pkt 10, dotyczących produktów pszczelich nie może przekroczyć 15 % maksymalnej kwoty środków finansowych przeznaczonych na realizację wszystkich zadań Funduszu Promocji Roślin Oleistych w danym roku finansowym.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/683__art_9__ust_4b" gd:GUID="9a54afc7-3c1e-4cf4-b5be-711d90ac3142">
+          <nr>4b</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="7f1f8d07-6fd2-485d-bc5e-46c37a832401" fragment="1" gd:fragmentGUID="b12c3491-d052-4058-9d78-4ff9d23ec065">Wysokość wsparcia finansowego na realizację zadań, o których mowa w art. 2 ust. 2 pkt 10 lit. f i g, dotyczących:</zdanie>
+          </p>
+          <punkt eId="DU/2025/683__art_9__ust_4b__pkt_1" gd:GUID="c0fa4e06-bdce-470b-a015-ea87c31b1fb5">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="7f1f8d07-6fd2-485d-bc5e-46c37a832401" fragment="2" gd:fragmentGUID="365b6ef3-f382-41a4-b1c1-b48e2479765c">roślin oleistych i przetworów nasion oleistych – nie może przekroczyć 15 % kwoty określonej w ust. 4a pkt 1;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/683__art_9__ust_4b__pkt_2" gd:GUID="ba7164f1-c70b-4fef-adb0-733b570e90e3">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="7f1f8d07-6fd2-485d-bc5e-46c37a832401" fragment="3" gd:fragmentGUID="36cdaad7-e7d5-462b-992f-37f4d20baa2e">produktów pszczelich – nie może przekroczyć 15 % kwoty określonej w ust. 4a pkt 2.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/683__art_9__ust_4c" gd:GUID="2f1992a1-c7e2-48dc-a135-8d4524cbe300">
+          <nr>4c</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="e947ec5b-b7bf-45b7-b2d8-88e870fc71d6" fragment="1" gd:fragmentGUID="b18c7e57-365c-47f3-9998-4b8d3a6548b6"><odnosnik id-odnosnika="14" symbol="14" gd:GUID="4791cdce-5b5c-4ce0-b150-9049bca01d0f"><p><zdanie nr="1" gd:zdGUID="dcb42a6c-b406-4612-8b14-b986d2ddd81b" fragment="1" gd:fragmentGUID="fa46d556-448d-4ca8-830b-6cf4b5109be6">Dodany przez art. 1 pkt 4 lit. c ustawy, o której mowa w odnośniku 1.</zdanie></p></odnosnik> Wysokość wsparcia finansowego na realizację zadań, o których mowa w art. 2 ust. 2 pkt 7, dotyczących:</zdanie>
+          </p>
+          <punkt eId="DU/2025/683__art_9__ust_4c__pkt_1" gd:GUID="324273ef-24e4-4e0e-a8b2-356d367bf3bc">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="e947ec5b-b7bf-45b7-b2d8-88e870fc71d6" fragment="2" gd:fragmentGUID="d6749176-d49b-41dc-a8f0-bca92b4a77a6">owoców, warzyw i ich przetworów – nie może przekroczyć 95 % maksymalnej kwoty środków finansowych przeznaczonych na realizację wszystkich zadań Funduszu Promocji Owoców i Warzyw w danym roku finansowym;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/683__art_9__ust_4c__pkt_2" gd:GUID="52abc294-188f-4753-aa3f-1e2222f548b1">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="e947ec5b-b7bf-45b7-b2d8-88e870fc71d6" fragment="3" gd:fragmentGUID="3c59b9ed-510f-4f90-8365-4c63c4ee5f3c">produktów pszczelich – nie może przekroczyć 5 % maksymalnej kwoty środków finansowych przeznaczonych na realizację wszystkich zadań Funduszu Promocji Owoców i Warzyw w danym roku finansowym.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/683__art_9__ust_4d" gd:GUID="801658d7-ebf2-41f0-960d-7bb5f4bb49b5">
+          <nr>4d</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="aeb137fa-d199-46ce-be20-91f9dad5d169" fragment="1" gd:fragmentGUID="1db66c2e-e852-4fcf-b78e-027613a623ea"><odsylacz-do-odnosnika id-odnosnika="14" symbol="14" /> Wysokość wsparcia finansowego na realizacje zadań, o których mowa w art. 2 ust. 2 pkt 7 lit. f i g, dotyczących:</zdanie>
+          </p>
+          <punkt eId="DU/2025/683__art_9__ust_4d__pkt_1" gd:GUID="1c7b0c9b-5b55-4fc7-92cb-5db92c13fd68">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="aeb137fa-d199-46ce-be20-91f9dad5d169" fragment="2" gd:fragmentGUID="c0fdc34c-e624-4fc6-9dc7-b91eae3e0a80">owoców, warzyw i ich przetworów – nie może przekroczyć 15 % kwoty określonej w ust. 4c pkt 1;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/683__art_9__ust_4d__pkt_2" gd:GUID="e1f900ae-6c8a-419f-a93c-209197df945a">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="aeb137fa-d199-46ce-be20-91f9dad5d169" fragment="3" gd:fragmentGUID="e13a1aa2-92fb-4b8b-a4c3-0652b1359b7f">produktów pszczelich – nie może przekroczyć 15 % kwoty określonej w ust. 4c pkt 2.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/683__art_9__ust_5" gd:GUID="67b54e96-a20b-4e18-b0fc-07de6bcaded6">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="bdd04c87-f39b-4f91-82cf-0b4bea4f2a66" fragment="1" gd:fragmentGUID="73a8ce9b-8e57-4ee4-98bd-346281f930d0">Minister właściwy do spraw rynków rolnych określi, w drodze rozporządzenia, szczegółowe warunki i tryb udzielania wsparcia finansowego, o którym mowa w ust. 1, mając na względzie zapewnienie efektywnej realizacji celów funduszy promocji określonych w art. 2.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/683__art_9__ust_6" gd:GUID="9aad8c21-195d-4c3e-b90e-660481d5b2e8">
+          <nr>6</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="4d56a342-920c-4fc3-95a2-cd6a47c0f59d" fragment="1" gd:fragmentGUID="b28db1cf-61cf-47a0-8ede-69b024b9fb93">W przypadku niezrealizowania przez podmiot wykorzystujący środki funduszy promocji zadania, o którym mowa w art. 2 ust. 2–4, lub jego etapu w związku z wystąpieniem siły wyższej rozumianej jako zdarzenie zewnętrzne, niemożliwe do przewidzenia oraz którego skutkom nie można było zapobiec, środki finansowe z tytułu udzielonego wsparcia finansowego wypłaca się do wysokości faktycznie poniesionych kosztów kwalifikowalnych pod warunkiem:</zdanie>
+          </p>
+          <punkt eId="DU/2025/683__art_9__ust_6__pkt_1" gd:GUID="fc16cc51-9e2e-42ee-a993-4f9855ca4514">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="4d56a342-920c-4fc3-95a2-cd6a47c0f59d" fragment="2" gd:fragmentGUID="19ff5300-7f73-42c4-bf3c-7178da9db638">wykazania, że do niezrealizowania zadania lub jego etapu doszło w wyniku wyżej wskazanego zdarzenia, a poniesione koszty kwalifikowalne miały bezpośredni związek z planowanym do zrealizowania zadaniem lub jego etapem, oraz</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/683__art_9__ust_6__pkt_2" gd:GUID="c5748686-5ad4-4191-b026-5fb2f0cbf381">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="4d56a342-920c-4fc3-95a2-cd6a47c0f59d" fragment="3" gd:fragmentGUID="44559663-106f-4989-94d3-bf7ce6b1391f">braku możliwości odzyskania zwrotu poniesionych kosztów kwalifikowalnych.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/683__art_9a" gd:GUID="974fb283-2d83-4fe6-8204-3c5ea298f1b9">
+        <nr>9a</nr>
+        <ustep eId="DU/2025/683__art_9a__ust_1" gd:GUID="3d2358cf-9e24-424e-bb01-ba8bc2a81753">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="8650f4b1-33a3-426f-ab3d-a2166992bf2a" fragment="1" gd:fragmentGUID="15258c33-d2dd-413b-98cd-e92c8ce3d26a">Dyrektor Generalny Krajowego Ośrodka ustala, w drodze decyzji administracyjnej, kwoty nienależnie lub nadmiernie pobranych środków finansowych funduszy promocji produktów rolno-spożywczych, udzielonych w ramach wsparcia finansowego, o którym mowa w art. 9 ust. 1.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/683__art_9a__ust_2" gd:GUID="5a0a5db6-a44a-4daa-94fe-25dfe52538c8">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="3082ee9d-d204-4318-990e-0f64f119a0fa" fragment="1" gd:fragmentGUID="4eac5a96-a49f-405d-9963-1f96f17ae0db">Do należności, o których mowa w ust. 1, stosuje się odpowiednio przepisy działu III ustawy z dnia 29 sierpnia 1997 r. – Ordynacja podatkowa, z wyłączeniem przepisów dotyczących umarzania należności, odraczania płatności oraz rozkładania płatności na raty.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/683__art_9a__ust_3" gd:GUID="534cf11b-849b-4fe2-a13a-9ac1c80042d6">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="373b3228-61b3-438e-ad8e-a7f7cf809cba" fragment="1" gd:fragmentGUID="08fcfbd7-422e-4f75-81ed-fb9578fcfde7">Uprawnienia organu podatkowego określone w ustawie, o której mowa w ust. 2, przysługują:</zdanie>
+          </p>
+          <punkt eId="DU/2025/683__art_9a__ust_3__pkt_1" gd:GUID="eee0e165-f816-4cab-815a-acf088043f15">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="373b3228-61b3-438e-ad8e-a7f7cf809cba" fragment="2" gd:fragmentGUID="2eee9278-07ac-465f-aa35-2b9ebd323149">Dyrektorowi Generalnemu Krajowego Ośrodka, jako organowi pierwszej instancji;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/683__art_9a__ust_3__pkt_2" gd:GUID="89789339-6bd1-42c2-9dca-1a2cbb1f001a">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="373b3228-61b3-438e-ad8e-a7f7cf809cba" fragment="3" gd:fragmentGUID="222719ad-cc77-41c6-9ada-1364eb4bdd12">ministrowi właściwemu do spraw rynków rolnych, jako organowi odwoławczemu od decyzji Dyrektora Generalnego Krajowego Ośrodka.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/683__art_9a__ust_4" gd:GUID="c41d6f1f-92ed-478e-a106-0abb8c13d046">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="4b928583-0703-4535-831c-28a64a77e553" fragment="1" gd:fragmentGUID="618a9dc2-c150-41e3-91b9-ffbc382a347d">Do egzekucji należności, o których mowa w ust. 1, mają zastosowanie przepisy o postępowaniu egzekucyjnym w administracji.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/683__art_10" gd:GUID="33f6d58d-d35a-4780-9e88-0f466aeb9373">
+        <nr>10</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="1d861953-df46-4dbd-b988-f4ac4a520399">
+          <p>
+            <zdanie nr="1" gd:zdGUID="afa2d864-8fe3-49f4-919d-0edf2a56dc84" fragment="1" gd:fragmentGUID="d05279f9-8e79-4869-aab4-b421cbb05742">Dla każdego z funduszy promocji tworzy się komisję zarządzającą, w skład której wchodzi 9 członków, przy czym komisja zarządzająca:</zdanie>
+          </p>
+          <punkt eId="DU/2025/683__art_10__pkt_1" gd:GUID="db33eba9-bc53-469b-b528-464643ae19f6">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="afa2d864-8fe3-49f4-919d-0edf2a56dc84" fragment="2" gd:fragmentGUID="1286e9da-2257-4038-99fb-1191721f5019">Funduszu Promocji Mleka składa się z:</zdanie>
+            </p>
+            <litera eId="DU/2025/683__art_10__pkt_1__lit_a" gd:GUID="157926ef-e73b-4743-bcd7-f18030353d0f">
+              <nr>a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="afa2d864-8fe3-49f4-919d-0edf2a56dc84" fragment="3" gd:fragmentGUID="2ba310e3-48a5-4d9d-ac9f-edc4c963efe0">5 członków reprezentujących producentów mleka, wybranych spośród kandydatów zgłoszonych przez ogólnokrajowe organizacje zrzeszające tych producentów,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_10__pkt_1__lit_b" gd:GUID="b8974fd9-bc14-4d12-a762-d5a9c182ceeb">
+              <nr>b</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="afa2d864-8fe3-49f4-919d-0edf2a56dc84" fragment="4" gd:fragmentGUID="8453b959-2928-4ff9-9124-6b5934a9c4cb">3 członków reprezentujących pierwsze podmioty skupujące w rozumieniu art. 151 rozporządzenia nr 1308/2013 i zakłady prowadzące działalność w zakresie przetwórstwa mleka, niebędące pierwszymi podmiotami skupującymi, wybranych spośród kandydatów zgłoszonych przez ogólnokrajowe organizacje zrzeszające zakłady przetwórcze oraz pierwsze podmioty skupujące, niebędące zakładami przetwórczymi,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_10__pkt_1__lit_c" gd:GUID="192897bd-fcf9-4e5f-b82a-3a74c0c0ceb9">
+              <nr>c</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="afa2d864-8fe3-49f4-919d-0edf2a56dc84" fragment="5" gd:fragmentGUID="e74ade84-2f05-4e59-aaa7-d8316e8d23ce">członka reprezentującego izby rolnicze, wybranego spośród kandydatów zgłoszonych przez Krajową Radę Izb Rolniczych;</zdanie>
+              </p>
+            </litera>
+          </punkt>
+          <punkt eId="DU/2025/683__art_10__pkt_2" gd:GUID="9b5d207f-cd1d-454a-8ffb-e3a38ca9955a">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="afa2d864-8fe3-49f4-919d-0edf2a56dc84" fragment="6" gd:fragmentGUID="57a111d0-5bb7-4374-bd59-0ea913f7e5a3">Funduszu Promocji Mięsa Wieprzowego składa się z:</zdanie>
+            </p>
+            <litera eId="DU/2025/683__art_10__pkt_2__lit_a" gd:GUID="b301b2b5-2bcb-4d31-9fa6-f49764bdf819">
+              <nr>a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="afa2d864-8fe3-49f4-919d-0edf2a56dc84" fragment="7" gd:fragmentGUID="0fbcda13-c47e-469e-b28c-87f5a7a7facb">5 członków reprezentujących podmioty prowadzące chów lub hodowlę świń, wybranych spośród kandydatów zgłoszonych przez ogólnokrajowe organizacje tych podmiotów,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_10__pkt_2__lit_b" gd:GUID="bf604205-320c-4051-bc11-22f8f411235b">
+              <nr>b</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="afa2d864-8fe3-49f4-919d-0edf2a56dc84" fragment="8" gd:fragmentGUID="f3aa61f8-f827-4de5-a023-361be3238f23">3 członków reprezentujących zakłady prowadzące działalność w zakresie przetwórstwa mięsa oraz niebędących zakładami przetwórczymi przedsiębiorców prowadzących działalność gospodarczą w zakresie uboju świń, wybranych spośród kandydatów zgłoszonych przez ogólnokrajowe organizacje zrzeszające zakłady przetwórcze oraz niebędących zakładami przetwórczymi przedsiębiorców prowadzących działalność gospodarczą w zakresie uboju świń,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_10__pkt_2__lit_c" gd:GUID="f2cbc8e6-4a81-45a9-a9b9-d7aa833cbe2f">
+              <nr>c</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="afa2d864-8fe3-49f4-919d-0edf2a56dc84" fragment="9" gd:fragmentGUID="4a20a21d-54ef-4f8a-92e2-be587d5c8412">członka reprezentującego izby rolnicze, wybranego spośród kandydatów zgłoszonych przez Krajową Radę Izb Rolniczych;</zdanie>
+              </p>
+            </litera>
+          </punkt>
+          <punkt eId="DU/2025/683__art_10__pkt_3" gd:GUID="6cfa056f-ca44-484f-b4c5-65889ac9c600">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="afa2d864-8fe3-49f4-919d-0edf2a56dc84" fragment="10" gd:fragmentGUID="2f4e6ec6-6885-4fde-aefa-f05621897151">Funduszu Promocji Mięsa Wołowego składa się z:</zdanie>
+            </p>
+            <litera eId="DU/2025/683__art_10__pkt_3__lit_a" gd:GUID="47a02c3d-23ee-48b3-aa23-919fe2ed633b">
+              <nr>a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="afa2d864-8fe3-49f4-919d-0edf2a56dc84" fragment="11" gd:fragmentGUID="363ad895-9a42-4117-8738-717e4c485759">5 członków reprezentujących podmioty prowadzące chów lub hodowlę bydła rzeźnego, wybranych spośród kandydatów zgłoszonych przez ogólnokrajowe organizacje tych podmiotów,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_10__pkt_3__lit_b" gd:GUID="8e0d3e80-a5d1-4eda-b049-47d11e7c6737">
+              <nr>b</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="afa2d864-8fe3-49f4-919d-0edf2a56dc84" fragment="12" gd:fragmentGUID="659e90ac-5623-4825-b3e9-ed0238409d0a">3 członków reprezentujących zakłady prowadzące działalność w zakresie przetwórstwa mięsa oraz niebędących zakładami przetwórczymi przedsiębiorców prowadzących działalność gospodarczą w zakresie uboju bydła, wybranych spośród kandydatów zgłoszonych przez ogólnokrajowe organizacje zrzeszające zakłady przetwórcze oraz niebędących zakładami przetwórczymi przedsiębiorców prowadzących działalność gospodarczą w zakresie uboju bydła,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_10__pkt_3__lit_c" gd:GUID="7c1ac4e8-5b83-42d5-95b1-e4bcdbf526ca">
+              <nr>c</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="afa2d864-8fe3-49f4-919d-0edf2a56dc84" fragment="13" gd:fragmentGUID="93cb6c28-91bf-4290-b944-4f27735ca81f">członka reprezentującego izby rolnicze, wybranego spośród kandydatów zgłoszonych przez Krajową Radę Izb Rolniczych;</zdanie>
+              </p>
+            </litera>
+          </punkt>
+          <punkt eId="DU/2025/683__art_10__pkt_4" gd:GUID="43f30e62-2121-488e-90ea-7c1753292b2e">
+            <nr>4</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="afa2d864-8fe3-49f4-919d-0edf2a56dc84" fragment="14" gd:fragmentGUID="349642db-bdd4-440f-a1fc-90f1c0a974be">Fundusz Promocji Mięsa Końskiego składa się z:</zdanie>
+            </p>
+            <litera eId="DU/2025/683__art_10__pkt_4__lit_a" gd:GUID="1457a6d0-824c-4767-9556-5967beb0e476">
+              <nr>a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="afa2d864-8fe3-49f4-919d-0edf2a56dc84" fragment="15" gd:fragmentGUID="be87a4f1-3e78-4f0f-b50d-bf38b5a86a93">5 członków reprezentujących podmioty prowadzące chów lub hodowlę koni rzeźnych, wybranych spośród kandydatów zgłoszonych przez ogólnokrajowe organizacje tych podmiotów,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_10__pkt_4__lit_b" gd:GUID="3c9710f6-c494-4371-aa3e-9a6267610412">
+              <nr>b</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="afa2d864-8fe3-49f4-919d-0edf2a56dc84" fragment="16" gd:fragmentGUID="51555ba3-821d-4e35-9dd0-b217aa680936">3 członków reprezentujących zakłady prowadzące działalność w zakresie przetwórstwa mięsa oraz niebędących zakładami przetwórczymi przedsiębiorców prowadzących działalność gospodarczą w zakresie uboju koni wybranych spośród kandydatów zgłoszonych przez ogólnokrajowe organizacje zrzeszające zakłady przetwórcze oraz niebędących zakładami przetwórczymi przedsiębiorców prowadzących działalność gospodarczą w zakresie uboju koni,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_10__pkt_4__lit_c" gd:GUID="d0857900-9d72-4251-8481-57613333efe7">
+              <nr>c</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="afa2d864-8fe3-49f4-919d-0edf2a56dc84" fragment="17" gd:fragmentGUID="133ffe48-3555-4a65-a567-76b1ca67f2d4">członka reprezentującego izby rolnicze, wybranego spośród kandydatów zgłoszonych przez Krajową Radę Izb Rolniczych;</zdanie>
+              </p>
+            </litera>
+          </punkt>
+          <punkt eId="DU/2025/683__art_10__pkt_5" gd:GUID="01a42eb2-4980-4d27-8e82-12ba8ae18e2e">
+            <nr>5</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="afa2d864-8fe3-49f4-919d-0edf2a56dc84" fragment="18" gd:fragmentGUID="d8a36aac-e9d0-4ddd-97da-ae1afdab4edd">Funduszu Promocji Mięsa Owczego składa się z:</zdanie>
+            </p>
+            <litera eId="DU/2025/683__art_10__pkt_5__lit_a" gd:GUID="0222d6c1-e28b-4853-902f-a662f589a6f5">
+              <nr>a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="afa2d864-8fe3-49f4-919d-0edf2a56dc84" fragment="19" gd:fragmentGUID="42f0f81d-7dc2-42da-89bf-a3e976a312c7">5 członków reprezentujących podmioty prowadzące chów lub hodowlę owiec, wybranych spośród kandydatów zgłoszonych przez ogólnokrajowe organizacje tych podmiotów,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_10__pkt_5__lit_b" gd:GUID="4b21e5ce-9ed4-4391-8f8f-70beb0b26560">
+              <nr>b</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="afa2d864-8fe3-49f4-919d-0edf2a56dc84" fragment="20" gd:fragmentGUID="f9218360-7131-48a9-8a3a-06261b90e6c5">3 członków reprezentujących zakłady prowadzące działalność w zakresie przetwórstwa mięsa oraz niebędących zakładami przetwórczymi przedsiębiorców prowadzących działalność gospodarczą w zakresie uboju owiec, wybranych spośród kandydatów zgłoszonych przez ogólnokrajowe organizacje zrzeszające zakłady przetwórcze oraz niebędących zakładami przetwórczymi przedsiębiorców prowadzących działalność gospodarczą w zakresie uboju owiec,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_10__pkt_5__lit_c" gd:GUID="791a400e-b75d-4d95-8ed5-31e981148053">
+              <nr>c</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="afa2d864-8fe3-49f4-919d-0edf2a56dc84" fragment="21" gd:fragmentGUID="da409871-44fd-4660-a1e0-7895582beb84">członka reprezentującego izby rolnicze, wybranego spośród kandydatów zgłoszonych przez Krajową Radę Izb Rolniczych;</zdanie>
+              </p>
+            </litera>
+          </punkt>
+          <punkt eId="DU/2025/683__art_10__pkt_6" gd:GUID="61270cee-f047-48ee-87dc-447bdeae5d0c">
+            <nr>6</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="afa2d864-8fe3-49f4-919d-0edf2a56dc84" fragment="22" gd:fragmentGUID="7bf37fa4-2af6-49b5-b291-7e6411bb9e43">Funduszu Promocji Ziarna Zbóż i Przetworów Zbożowych składa się z:</zdanie>
+            </p>
+            <litera eId="DU/2025/683__art_10__pkt_6__lit_a" gd:GUID="57e9abad-d80c-41af-bc42-8b1531345ffc">
+              <nr>a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="afa2d864-8fe3-49f4-919d-0edf2a56dc84" fragment="23" gd:fragmentGUID="14e55fa0-8fb4-49c7-870c-d7c790ffba13">5 członków reprezentujących producentów zbóż, powołanych spośród kandydatów zgłoszonych przez ogólnokrajowe organizacje tych producentów,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_10__pkt_6__lit_b" gd:GUID="0bc1e2cf-31da-45df-a259-2b54da9584fc">
+              <nr>b</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="afa2d864-8fe3-49f4-919d-0edf2a56dc84" fragment="24" gd:fragmentGUID="857d0da4-1356-412c-a6b7-0ce3e8a0ac72">3 członków reprezentujących zakłady przetwórcze zbóż oraz niebędące zakładami przetwórczymi podmioty skupujące zboża, wybranych spośród kandydatów zgłoszonych przez ogólnokrajowe organizacje zrzeszające zakłady przetwórcze zbóż oraz niebędące zakładami przetwórczymi podmioty skupujące zboża,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_10__pkt_6__lit_c" gd:GUID="53abd4af-59ae-432c-b010-e48d24b0c5d3">
+              <nr>c</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="afa2d864-8fe3-49f4-919d-0edf2a56dc84" fragment="25" gd:fragmentGUID="46e151e3-f346-4a46-8ccf-8c00d325c3dd">członka reprezentującego izby rolnicze, wybranego spośród kandydatów zgłoszonych przez Krajową Radę Izb Rolniczych;</zdanie>
+              </p>
+            </litera>
+          </punkt>
+          <punkt eId="DU/2025/683__art_10__pkt_7" gd:GUID="7b6bad57-7a61-424f-8046-def1453a948d">
+            <nr>7</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="afa2d864-8fe3-49f4-919d-0edf2a56dc84" fragment="26" gd:fragmentGUID="bdc5476f-d3a2-4c70-8c9a-ef06e5b843fc">Funduszu Promocji Owoców i Warzyw składa się z:</zdanie>
+            </p>
+            <litera eId="DU/2025/683__art_10__pkt_7__lit_a" gd:GUID="5ab596a7-3cbd-4406-8333-bd3f5e4d457d">
+              <nr>a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="afa2d864-8fe3-49f4-919d-0edf2a56dc84" fragment="27" gd:fragmentGUID="b083a2eb-2f27-4585-a832-7076099d7210">5 członków reprezentujących producentów owoców lub warzyw, wybranych spośród kandydatów zgłoszonych przez ogólnokrajowe organizacje tych producentów,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_10__pkt_7__lit_b" gd:GUID="c1e27ff5-1eb5-4e9c-95e2-ff42c669f3ee">
+              <nr>b</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="afa2d864-8fe3-49f4-919d-0edf2a56dc84" fragment="28" gd:fragmentGUID="2f430d0e-162f-4922-b434-67fb29c135d7">3 członków reprezentujących zakłady przetwórcze owoców lub warzyw oraz niebędące zakładami przetwórczymi podmioty skupujące owoce lub warzywa, wybranych spośród kandydatów zgłoszonych przez ogólnokrajowe organizacje zrzeszające zakłady przetwórcze owoców lub warzyw oraz niebędące zakładami przetwórczymi podmioty skupujące owoce lub warzywa,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_10__pkt_7__lit_c" gd:GUID="2a200444-d108-4da2-8041-7cd1050e823e">
+              <nr>c</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="afa2d864-8fe3-49f4-919d-0edf2a56dc84" fragment="29" gd:fragmentGUID="77ad1ef4-66a5-4317-9008-232186174bec">członka reprezentującego izby rolnicze, wybranego spośród kandydatów zgłoszonych przez Krajową Radę Izb Rolniczych;</zdanie>
+              </p>
+            </litera>
+          </punkt>
+          <punkt eId="DU/2025/683__art_10__pkt_8" gd:GUID="291ffa59-928a-46c4-900a-b42a972b46b1">
+            <nr>8</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="afa2d864-8fe3-49f4-919d-0edf2a56dc84" fragment="30" gd:fragmentGUID="89ce4c2a-2ddd-4632-951f-042bfa33b9ad">Funduszu Promocji Mięsa Drobiowego składa się z:</zdanie>
+            </p>
+            <litera eId="DU/2025/683__art_10__pkt_8__lit_a" gd:GUID="a91d9ea5-0377-4209-a652-ef396910de5f">
+              <nr>a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="afa2d864-8fe3-49f4-919d-0edf2a56dc84" fragment="31" gd:fragmentGUID="8de6011a-f31f-41bb-b667-292da5ad0418">5 członków reprezentujących podmioty prowadzące chów lub hodowlę drobiu rzeźnego, wybranych spośród kandydatów zgłoszonych przez ogólnokrajowe organizacje tych podmiotów,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_10__pkt_8__lit_b" gd:GUID="4f8a1d02-6a9b-4dcc-845e-3a3785401dce">
+              <nr>b</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="afa2d864-8fe3-49f4-919d-0edf2a56dc84" fragment="32" gd:fragmentGUID="7976b237-4b06-427d-b3c3-d26e79d5d742">3 członków reprezentujących zakłady prowadzące działalność w zakresie przetwórstwa mięsa drobiowego oraz przedsiębiorców prowadzących działalność gospodarczą w zakresie uboju drobiu, nieprowadzących działalności w zakresie przetwórstwa mięsa drobiowego, wybranych spośród kandydatów zgłoszonych przez ogólnokrajowe organizacje zrzeszające zakłady prowadzące działalność w zakresie przetwórstwa mięsa drobiowego oraz przedsiębiorców prowadzących działalność w zakresie uboju drobiu, nieprowadzących działalności w zakresie przetwórstwa mięsa drobiowego,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_10__pkt_8__lit_c" gd:GUID="5d7149b1-38ad-4b6b-a2ad-60d0f9d6bf71">
+              <nr>c</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="afa2d864-8fe3-49f4-919d-0edf2a56dc84" fragment="33" gd:fragmentGUID="165ce58c-dfec-4732-b14b-ea5632ee8b6e">członka reprezentującego izby rolnicze, wybranego spośród kandydatów zgłoszonych przez Krajową Radę Izb Rolniczych;</zdanie>
+              </p>
+            </litera>
+          </punkt>
+          <punkt eId="DU/2025/683__art_10__pkt_9" gd:GUID="580ef84c-8565-4bad-9613-d09ce6c6a4d0">
+            <nr>9</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="afa2d864-8fe3-49f4-919d-0edf2a56dc84" fragment="34" gd:fragmentGUID="c44ba5ac-4868-4eb0-9b86-cf392f3ac3ac">Funduszu Promocji Ryb składa się z:</zdanie>
+            </p>
+            <litera eId="DU/2025/683__art_10__pkt_9__lit_a" gd:GUID="68099dac-c8ab-4290-8e9a-a825dfc4f596">
+              <nr>a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="afa2d864-8fe3-49f4-919d-0edf2a56dc84" fragment="35" gd:fragmentGUID="17bdda06-4f51-4d5a-9499-41bfc734559f">5 członków reprezentujących podmioty prowadzące działalność w zakresie połowu ryb śródlądowych lub morskich oraz chowu lub hodowli ryb, wybranych spośród kandydatów zgłoszonych przez ogólnokrajowe organizacje tych podmiotów,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_10__pkt_9__lit_b" gd:GUID="754e234b-452c-4872-9072-04cd3f9fcb75">
+              <nr>b</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="afa2d864-8fe3-49f4-919d-0edf2a56dc84" fragment="36" gd:fragmentGUID="ab68f98c-0c89-451c-a28d-6b6ce44a7663">3 członków reprezentujących zakłady przetwórcze ryb oraz niebędące zakładami przetwórczymi podmioty skupujące ryby, wybranych spośród kandydatów zgłoszonych przez ogólnokrajowe organizacje zrzeszające zakłady przetwórcze ryb oraz niebędące zakładami przetwórczymi podmioty skupujące ryby,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_10__pkt_9__lit_c" gd:GUID="68df0d0d-a350-4aa1-8210-a90f313b33b7">
+              <nr>c</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="afa2d864-8fe3-49f4-919d-0edf2a56dc84" fragment="37" gd:fragmentGUID="f206f035-3f2a-4746-932d-de0ed505860c">członka reprezentującego izby rolnicze, wybranego spośród kandydatów zgłoszonych przez Krajową Radę Izb Rolniczych;</zdanie>
+              </p>
+            </litera>
+          </punkt>
+          <punkt eId="DU/2025/683__art_10__pkt_10" gd:GUID="2b8b1445-866b-4def-a096-18b3dffcfe20">
+            <nr>10</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="afa2d864-8fe3-49f4-919d-0edf2a56dc84" fragment="38" gd:fragmentGUID="63b83ff1-44ae-411d-9a66-45169e0404ed">Funduszu Promocji Roślin Oleistych składa się z:</zdanie>
+            </p>
+            <litera eId="DU/2025/683__art_10__pkt_10__lit_a" gd:GUID="03d6bf5f-8901-4ee0-b67f-dddd5a43baa8">
+              <nr>a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="afa2d864-8fe3-49f4-919d-0edf2a56dc84" fragment="39" gd:fragmentGUID="ec14fec0-69b6-40f1-880f-6d3be1b3b85c">5 członków reprezentujących producentów, w tym 4 reprezentujących producentów roślin oleistych i jednego reprezentującego producentów produktów pszczelich, wybranych spośród kandydatów zgłoszonych przez ogólnokrajowe organizacje tych producentów,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_10__pkt_10__lit_b" gd:GUID="6d78ff5f-95e9-41f5-b26c-0857889e40df">
+              <nr>b</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="afa2d864-8fe3-49f4-919d-0edf2a56dc84" fragment="40" gd:fragmentGUID="5d02484b-ecf0-47f9-939b-f112ad5116b4">3 członków reprezentujących zakłady przetwórcze roślin oleistych oraz niebędące zakładami przetwórczymi podmioty skupujące rośliny oleiste, wybranych spośród kandydatów zgłoszonych przez ogólnokrajowe organizacje zrzeszające zakłady przetwórcze roślin oleistych oraz niebędące zakładami przetwórczymi podmioty skupujące rośliny oleiste,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_10__pkt_10__lit_c" gd:GUID="afcc2dd3-eb3e-4cc8-8bdd-acfcbed13770">
+              <nr>c</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="afa2d864-8fe3-49f4-919d-0edf2a56dc84" fragment="41" gd:fragmentGUID="68f3d7a4-5601-40d1-bf34-0165c045aa04">członka reprezentującego izby rolnicze, wybranego spośród kandydatów zgłoszonych przez Krajową Radę Izb Rolniczych.</zdanie>
+              </p>
+            </litera>
+          </punkt>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2025/683__art_11" gd:GUID="5ee7b4f0-6fee-4784-a367-b5166ad5cab2">
+        <nr>11</nr>
+        <ustep eId="DU/2025/683__art_11__ust_1" gd:GUID="6fe07714-793f-4acd-97b5-f47973612b48">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="27f31470-0ada-40aa-920a-0ac258aa09fa" fragment="1" gd:fragmentGUID="1ca3338d-7b24-4752-8f6a-337044b1c369">Członków komisji zarządzających powołuje i odwołuje minister właściwy do spraw rynków rolnych.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/683__art_11__ust_2" gd:GUID="27408217-68a4-43f4-9187-b6304c9d0e46">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="8d43bc13-6405-4e9d-a496-39d9cdddd60a" fragment="1" gd:fragmentGUID="89368b74-1cdb-4ce6-b089-6a077fb29b3a">W skład komisji zarządzającej powołuje się osobę, która nie została skazana prawomocnym wyrokiem za umyślne przestępstwo przeciwko mieniu, wiarygodności dokumentów, obrotowi pieniędzmi i papierami wartościowymi, obrotowi gospodarczemu lub za umyślne przestępstwo skarbowe.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/683__art_11__ust_3" gd:GUID="383de795-90f7-4130-8a2c-5126e90ab296">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="88522e1d-a3a9-4a9d-8928-97bfdca5ed14" fragment="1" gd:fragmentGUID="ff1048a4-b993-4470-b7ea-e8167b1160b6">Kadencja członków komisji zarządzających trwa 4 lata, licząc od dnia ich powołania.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/683__art_11__ust_4" gd:GUID="ef91517c-3c63-4027-9900-fbc3663085f1">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="7f7c4cdb-0467-40b1-b16d-018117183df8" fragment="1" gd:fragmentGUID="3c302c6c-65e4-4b55-8058-8de27069ed77">Członkowie komisji zarządzających wykonują swoje obowiązki do dnia powołania ich następców.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/683__art_11__ust_5" gd:GUID="1cfd9363-d99e-4370-9aab-e69413972742">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="53cb789b-3f03-4667-b360-1e06c212c646" fragment="1" gd:fragmentGUID="cb0462c6-e216-48d0-9045-611b19b9720a">Minister właściwy do spraw rynków rolnych odwołuje członka komisji zarządzającej:</zdanie>
+          </p>
+          <punkt eId="DU/2025/683__art_11__ust_5__pkt_1" gd:GUID="fa436677-5924-4987-b5dc-9e2f6ae882b6">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="53cb789b-3f03-4667-b360-1e06c212c646" fragment="2" gd:fragmentGUID="0d7a39dc-162d-4263-9b27-71244f8c28a0">na wniosek organizacji, która zgłosiła jego kandydaturę;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/683__art_11__ust_5__pkt_2" gd:GUID="63ad6274-abdf-4084-93ec-d52a6972c626">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="53cb789b-3f03-4667-b360-1e06c212c646" fragment="3" gd:fragmentGUID="37bf9201-a2f2-4c9f-b788-e655d755ffac">w przypadku jego rezygnacji.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/683__art_11__ust_6" gd:GUID="a496cb23-fb08-4c56-bdb5-91e4b4194b2d">
+          <nr>6</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="7d78d761-8bdc-47ac-a54f-809dc4326ff6" fragment="1" gd:fragmentGUID="5ba1c492-6516-4b65-ba19-60b11cdc992e">Członkostwo w komisji zarządzającej wygasa, jeżeli członek komisji zarządzającej zmarł lub został skazany za przestępstwo, o którym mowa w ust. 2.</zdanie>
+            <zdanie nr="2" gd:zdGUID="7f23fb26-824c-4cd6-bc00-ec45c04be233" fragment="1" gd:fragmentGUID="d95607ac-ff71-412a-a5d3-3bb6e9abb175">Stwierdzenia wygaśnięcia członkostwa w komisji zarządzającej w przypadku członka, skazanego prawomocnym wyrokiem za przestępstwo, o którym mowa w ust. 2, dokonuje, na wniosek komisji zarządzającej danego funduszu promocji, minister właściwy do spraw rynków rolnych.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/683__art_11__ust_7" gd:GUID="891cfc44-5fae-4b4e-80e7-a44cfcaba440">
+          <nr>7</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="d37a63aa-0671-4b7e-b072-e6e91f20dfb8" fragment="1" gd:fragmentGUID="a21a445a-c676-42f0-bcf3-1c249fd73046">Jeżeli członek komisji zarządzającej został odwołany albo wygasło jego członkostwo, minister właściwy do spraw rynków rolnych dokonuje w to miejsce powołania uzupełniającego spośród kandydatów zgłoszonych przez organizację, która zgłosiła kandydaturę odwołanego członka lub członka, którego członkostwo wygasło.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/683__art_11__ust_8" gd:GUID="280e3e9d-28af-4b16-a6f6-9c2c6bec5471">
+          <nr>8</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="db187862-3095-4e19-a7ae-8e9ee228f16b" fragment="1" gd:fragmentGUID="438143c7-462f-41ec-903d-83adec6a9650">Kadencja członka komisji zarządzającej powołanego w drodze powołania uzupełniającego upływa wraz z kadencją członka, o którym mowa w ust. 5 lub 6.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/683__art_11__ust_9" gd:GUID="a7aed400-f220-483d-8d7e-1dba92194b6e">
+          <nr>9</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="8bf94f31-8f34-465c-a478-a6dcd268cff3" fragment="1" gd:fragmentGUID="b7c5d099-ac25-4d71-9e3b-fc105e243267">Komisja zarządzająca działa na podstawie regulaminu określającego w szczególności sposób reprezentowania tej komisji, częstotliwość i tryb zwoływania jej posiedzeń oraz tryb podejmowania przez nią uchwał.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/683__art_11__ust_10" gd:GUID="9de9c06e-5ff8-44f1-852e-8d07080da220">
+          <nr>10</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="8831efe6-f7a7-41f9-a400-e159ccff5fe6" fragment="1" gd:fragmentGUID="4a506b3b-c28b-48fb-9def-16d495391088">Minister właściwy do spraw rynków rolnych określi, w drodze rozporządzenia, tryb zgłaszania przez ogólnokrajowe organizacje, o których mowa w art. 10, kandydatów na członków komisji zarządzających oraz sposób ich wyboru, mając na uwadze zapewnienie reprezentatywności tych komisji oraz powołanie do ich składu osób o doświadczeniu w zakresie danej branży.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/683__art_12" gd:GUID="688bcbe2-9bbf-48a1-8698-cd5da085eb25">
+        <nr>12</nr>
+        <ustep eId="DU/2025/683__art_12__ust_1" gd:GUID="4055b11d-f92b-4f39-a4b8-f2be1d0823d6">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="4633b1db-5b8f-4621-97cb-3b0c08effecc" fragment="1" gd:fragmentGUID="a2810f2f-e5e0-401f-8e91-c46fae73a80e">Do zadań komisji zarządzających należy:</zdanie>
+          </p>
+          <punkt eId="DU/2025/683__art_12__ust_1__pkt_1" gd:GUID="efa5e347-82a9-4af9-938b-52e92e0fb53d">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="4633b1db-5b8f-4621-97cb-3b0c08effecc" fragment="2" gd:fragmentGUID="94c627c1-0138-46c7-9a96-94d57c3e72cd">reprezentowanie interesów branż, których dotyczą fundusze promocji, wobec ministra właściwego do spraw rynków rolnych, innych organów administracji publicznej oraz Dyrektora Generalnego Krajowego Ośrodka w zakresie zarządzania funduszem promocji właściwym dla danej branży;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/683__art_12__ust_1__pkt_2" gd:GUID="c63f6b75-9494-43cd-9c83-e665d2408fcc">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="4633b1db-5b8f-4621-97cb-3b0c08effecc" fragment="3" gd:fragmentGUID="d982fdda-2800-44b7-b7ab-165500d3c7e9">ustalanie zasad gospodarowania środkami finansowymi danego funduszu promocji określających w szczególności szczegółowe warunki i tryb przedkładania propozycji programów oraz działań, o których mowa w art. 9 ust. 1 pkt 1 i 2;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/683__art_12__ust_1__pkt_3" gd:GUID="f788cee8-0128-479d-a5b3-2828a435ee95">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="4633b1db-5b8f-4621-97cb-3b0c08effecc" fragment="4" gd:fragmentGUID="114325fc-703f-4a50-bc5c-57d51facec0a">ustalenie planu finansowego danego funduszu promocji w zakresie realizacji celów, o których mowa w art. 2;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/683__art_12__ust_1__pkt_4" gd:GUID="cb75724c-1650-4ba4-a551-f80a3e9f3bef">
+            <nr>4</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="4633b1db-5b8f-4621-97cb-3b0c08effecc" fragment="5" gd:fragmentGUID="cfcfdd84-7321-4c3f-a10a-23430751c5fd">sporządzenie sprawozdania rzeczowego danego funduszu promocji;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/683__art_12__ust_1__pkt_5" gd:GUID="2bac3795-807a-4b00-ab76-a6bacfbf06c7">
+            <nr>5</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="4633b1db-5b8f-4621-97cb-3b0c08effecc" fragment="6" gd:fragmentGUID="7cca49c5-d0ac-470a-93ef-864ac19ca9e2">uchwalenie regulaminu danej komisji;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/683__art_12__ust_1__pkt_6" gd:GUID="0e9252ac-7175-462a-96ef-0292491ab77d">
+            <nr>6</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="4633b1db-5b8f-4621-97cb-3b0c08effecc" fragment="7" gd:fragmentGUID="705812a9-f9cc-4cf0-9757-1d45758d2651">opracowywanie strategii promocji dla branż, których dotyczą fundusze promocji.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/683__art_12__ust_2" gd:GUID="63f57373-ca6f-4590-a814-5b912a77bd62">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="2da3a3bf-1d47-42c5-a301-411829b5eebe" fragment="1" gd:fragmentGUID="4610ea48-29c4-436a-a9d4-c0c2e295a526">Rozstrzygnięcia komisji zarządzającej zapadają w formie uchwał.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/683__art_12__ust_3" gd:GUID="cb2c1a08-7424-42e5-b9bf-39d11a0acb97">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="24315487-aac4-4725-8496-41f53fe7f722" fragment="1" gd:fragmentGUID="8eca18d0-f8b9-4b80-8aa8-2265fa528954">Komisje zarządzające mogą ustalić, jakie zadania będą wspólnie finansowane ze środków poszczególnych funduszy promocji.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/683__art_13" gd:GUID="2a143b45-d969-4656-a069-e0b3134aeccc">
+        <nr>13</nr>
+        <ustep eId="DU/2025/683__art_13__ust_1" gd:GUID="1c22719e-06ff-4317-9fef-4820d0853325">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="01e9ac33-9513-4500-9300-fb0cf5da4af8" fragment="1" gd:fragmentGUID="32daa6a2-c0b2-4ade-954b-de2f05549415">Komisje zarządzające przekazują ministrowi właściwemu do spraw rynków rolnych:</zdanie>
+          </p>
+          <punkt eId="DU/2025/683__art_13__ust_1__pkt_1" gd:GUID="1f706f91-737d-4bd6-8dd9-837a32268857">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="01e9ac33-9513-4500-9300-fb0cf5da4af8" fragment="2" gd:fragmentGUID="7429232c-f0b1-4b11-b5ce-1f98726a8480">regulamin danej komisji;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/683__art_13__ust_1__pkt_2" gd:GUID="977eb259-b945-424c-a8c8-9bb3066663e7">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="01e9ac33-9513-4500-9300-fb0cf5da4af8" fragment="3" gd:fragmentGUID="abb1016b-2919-4038-a7e7-0c3398644fef">zasady gospodarowania środkami finansowymi danego funduszu promocji i plany finansowe danego funduszu promocji w zakresie realizacji celów, o których mowa w art. 2;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/683__art_13__ust_1__pkt_3" gd:GUID="df16380e-00f5-4c38-9da4-a3b34e20e572">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="01e9ac33-9513-4500-9300-fb0cf5da4af8" fragment="4" gd:fragmentGUID="591932f7-bf3c-41d5-8658-6d6c79797572">sprawozdania rzeczowe i sprawozdania z wykonania planu finansowego funduszy promocji;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/683__art_13__ust_1__pkt_4" gd:GUID="bb97e47e-61d0-45dc-9354-542f67105902">
+            <nr>4</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="01e9ac33-9513-4500-9300-fb0cf5da4af8" fragment="5" gd:fragmentGUID="842bc5d2-f361-4664-96fc-b5031fdadca7">strategię promocji opracowaną dla branży.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/683__art_13__ust_2" gd:GUID="bd079265-d61a-4878-a3d1-d4fb5b59387c">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="aa6290ed-7901-49e7-bf27-89f4d1fdf979" fragment="1" gd:fragmentGUID="c7bd86ea-2b4c-4bf8-8c06-6d484ff984da">Dokumenty, o których mowa w art. 4 ust. 1 pkt 3 oraz art. 12 ust. 1 pkt 2–4 i 6, są udostępniane przez Dyrektora Generalnego Krajowego Ośrodka w Biuletynie Informacji Publicznej Krajowego Ośrodka.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/683__art_14" gd:GUID="368e754b-28f2-4fb5-8c27-5b8295909783">
+        <nr>14</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="ab9b9522-76b1-4936-ad53-ad2e1f1123c2">
+          <p>
+            <zdanie nr="1" gd:zdGUID="3d675928-5b48-4878-b838-ef327dd7ab2e" fragment="1" gd:fragmentGUID="2fee2a23-b2ca-4aeb-a9c2-3727b7bd4184">Na potrzeby realizacji przez Krajowy Ośrodek zadań w ramach funduszy promocji są udostępniane następujące informacje:</zdanie>
+          </p>
+          <punkt eId="DU/2025/683__art_14__pkt_1" gd:GUID="027ab449-f36b-4773-b843-fa6039a4e260">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="3d675928-5b48-4878-b838-ef327dd7ab2e" fragment="2" gd:fragmentGUID="9cf6a0fe-ce43-477c-80c2-8e8fe42b3f4b">z Krajowego Rejestru Sądowego utworzonego ustawą z dnia 20 sierpnia 1997 r. o Krajowym Rejestrze Sądowym (Dz. U. z 2024 r. poz. 979 i 1863) – wykazy podmiotów, których przedmiot działalności został określony w art. 3 ust. 2, obejmujące:</zdanie>
+            </p>
+            <litera eId="DU/2025/683__art_14__pkt_1__lit_a" gd:GUID="d7948f63-ce48-40e9-aaf9-deb8812cd5a7">
+              <nr>a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="3d675928-5b48-4878-b838-ef327dd7ab2e" fragment="3" gd:fragmentGUID="78b06b08-1b0c-4d1a-a26b-093d020c5ff9">nazwę lub firmę, pod którą działa podmiot,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_14__pkt_1__lit_b" gd:GUID="36c46767-ed44-4b87-9c8a-0221d0ed0402">
+              <nr>b</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="3d675928-5b48-4878-b838-ef327dd7ab2e" fragment="4" gd:fragmentGUID="887a2827-28a8-409f-b9c8-3f2d50965fc4">oznaczenie formy prawnej podmiotu,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_14__pkt_1__lit_c" gd:GUID="ca981124-b627-4893-8b51-c86b4f94c185">
+              <nr>c</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="3d675928-5b48-4878-b838-ef327dd7ab2e" fragment="5" gd:fragmentGUID="b80df674-a2e6-4852-acae-0423a1057cc5">siedzibę i adres podmiotu,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_14__pkt_1__lit_d" gd:GUID="ef2580a6-3a57-48ff-ae0b-5006cc46ef2c">
+              <nr>d</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="3d675928-5b48-4878-b838-ef327dd7ab2e" fragment="6" gd:fragmentGUID="277227a7-3669-4473-9514-af1a9de4862b">numer identyfikacji podatkowej (NIP) podmiotu;</zdanie>
+              </p>
+            </litera>
+          </punkt>
+          <punkt eId="DU/2025/683__art_14__pkt_2" gd:GUID="f4a63dd7-d294-40a8-8aad-9e25db89a51f">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="3d675928-5b48-4878-b838-ef327dd7ab2e" fragment="7" gd:fragmentGUID="bb566e1f-2d74-42e6-8a9a-80eaf9d76f90">z rejestru zakładów, które produkują lub wprowadzają do obrotu żywność pochodzenia niezwierzęcego i wprowadzają do obrotu produkty pochodzenia zwierzęcego, nieobjętych urzędową kontrolą organów Inspekcji Weterynaryjnej utworzonego ustawą z dnia 25 sierpnia 2006 r. o bezpieczeństwie żywności i żywienia (Dz. U. z 2023 r. poz. 1448) – wykazy podmiotów, których przedmiot działalności został określony w art. 3 ust. 2, obejmujące:</zdanie>
+            </p>
+            <litera eId="DU/2025/683__art_14__pkt_2__lit_a" gd:GUID="ef93d375-c9fb-4ffa-b14c-c73e55a49cf1">
+              <nr>a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="3d675928-5b48-4878-b838-ef327dd7ab2e" fragment="8" gd:fragmentGUID="5d0e7cc2-5102-4ea5-97ea-8617cd3cfe4c">imię, nazwisko, miejsce zamieszkania i adres albo nazwę, siedzibę i adres tego podmiotu,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_14__pkt_2__lit_b" gd:GUID="43b7d9ea-fc9a-45ee-a5bd-ed2d1beb448e">
+              <nr>b</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="3d675928-5b48-4878-b838-ef327dd7ab2e" fragment="9" gd:fragmentGUID="5f2036ed-f69b-46b3-8be0-53103cda2c36"><odnosnik id-odnosnika="15" symbol="15" gd:GUID="7b755c6f-860c-4ab0-b3ba-e8177824fe7e"><p><zdanie nr="1" gd:zdGUID="a9870862-ac07-4b4e-aec3-956c906df9d3" fragment="1" gd:fragmentGUID="f5cd266e-6783-4a17-817e-227fd6f6eb8b">W brzmieniu ustalonym przez art. 1 pkt 5 ustawy, o której mowa w odnośniku 1.</zdanie></p></odnosnik> w przypadku osoby fizycznej – numer identyfikacyjny Powszechnego Elektronicznego Systemu Ewidencji Ludności (numer PESEL), jeżeli numer taki został nadany,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/683__art_14__pkt_2__lit_c" gd:GUID="6f9759a1-1eeb-4853-8e80-74586d17272d">
+              <nr>c</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="3d675928-5b48-4878-b838-ef327dd7ab2e" fragment="10" gd:fragmentGUID="ace6821a-4fdf-41c5-867f-dfdd67680b25">numer identyfikacji podatkowej (NIP) podmiotu.</zdanie>
+              </p>
+            </litera>
+          </punkt>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2025/683__art_15" gd:GUID="fd5c13da-c1ce-4e50-815c-571c22055639">
+        <nr>15</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="7e01ae5b-2a19-4da9-bf15-76dfbbae10d5">
+          <p>
+            <zdanie nr="1" gd:zdGUID="98995188-de1e-43f0-83ec-0090ada7e5a2" fragment="1" gd:fragmentGUID="57e0d77e-658e-4989-9399-af37860e4127">(pominięty)</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2025/683__art_16" gd:GUID="af9aa52b-8c3b-4dee-9c41-5ceda1a2e6ab">
+        <nr>16</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="f2a4d854-de47-4235-a7d1-5ff58dbe17a2">
+          <p>
+            <zdanie nr="1" gd:zdGUID="d14c7cec-17ce-4398-b8b5-c3c0df8aff07" fragment="1" gd:fragmentGUID="e8a24733-6972-4625-b2d5-79bfa1bb4ae3">(pominięty)</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2025/683__art_16a" gd:GUID="24e89fc2-16d9-4e38-861a-355285539522">
+        <nr>16a</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="f03b44ee-4a1b-4f1a-b80e-e8dc0e0b3730">
+          <p>
+            <zdanie nr="1" gd:zdGUID="ee38c6c8-d412-493c-b89e-11b4b6984f70" fragment="1" gd:fragmentGUID="61dbf435-e0f2-4bdc-830a-e8f0ed91bb65">W okresie obowiązywania na obszarze Rzeczypospolitej Polskiej stanu zagrożenia epidemicznego lub stanu epidemii ogłoszonych na podstawie ustawy z dnia 5 grudnia 2008 r. o zapobieganiu oraz zwalczaniu zakażeń i chorób zakaźnych u ludzi (Dz. U. z 2024 r. poz. 924 i 1897) w związku z zakażeniami wirusem SARS-CoV-2 oraz w okresie obowiązywania stanu nadzwyczajnego w przypadku jego wprowadzenia w związku z zakażeniami tym wirusem, a także w okresie 30 dni od dnia odwołania tych stanów:</zdanie>
+          </p>
+          <punkt eId="DU/2025/683__art_16a__pkt_1" gd:GUID="b7a21a44-d608-4f2e-b2de-396fb019bddf">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="ee38c6c8-d412-493c-b89e-11b4b6984f70" fragment="2" gd:fragmentGUID="80d2304d-181c-455a-8744-13ece6c0a125">nie nalicza się odsetek z tytułu nieterminowego regulowania należności przypadających na rzecz danego funduszu promocji;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/683__art_16a__pkt_2" gd:GUID="40dba94e-6232-4088-88f9-b26be6c0b8dc">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="ee38c6c8-d412-493c-b89e-11b4b6984f70" fragment="3" gd:fragmentGUID="f714baca-7140-4bd3-8fc8-d0f41cc4a8e7">bieg terminów wykonania określonych czynności przez podmioty ubiegające się o wsparcie finansowe ze środków funduszy promocji oraz przez podmioty, którym to wsparcie zostało udzielone, związanych z udzieleniem tego wsparcia, albo z wypłatą środków finansowych z tytułu tego wsparcia ulega zawieszeniu; terminy te nie mogą upłynąć wcześniej niż po upływie 60 dni od dnia odwołania tych stanów;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/683__art_16a__pkt_3" gd:GUID="64081bd1-63a7-45d5-bbf0-843e24de6776">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="ee38c6c8-d412-493c-b89e-11b4b6984f70" fragment="4" gd:fragmentGUID="fabfd3ce-399c-48e4-a213-8fd27783af1d">dokumenty składane do Dyrektora Generalnego Krajowego Ośrodka w związku z funkcjonowaniem funduszy promocji, w szczególności dotyczące wsparcia finansowego udzielanego ze środków funduszy promocji, mogą być składane w formie dokumentu elektronicznego za pomocą środków komunikacji elektronicznej.</zdanie>
+            </p>
+          </punkt>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2025/683__art_17" gd:GUID="a00053f5-6ddc-4b2c-ad42-0e3c3a693dd2">
+        <nr>17</nr>
+        <ustep eId="DU/2025/683__art_17__ust_1" gd:GUID="958cfc80-1184-4160-813d-346c61498e63">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a514085e-8e13-4736-8ca0-c609bf6563a3" fragment="1" gd:fragmentGUID="bd52dda9-9fef-4a1c-9539-1e63b0fdd782">Rok finansowy funduszy promocji w 2009 r. trwa od dnia 1 lipca do dnia 31 grudnia.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/683__art_17__ust_2" gd:GUID="e614b7d3-0301-479b-9392-92603b519130">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="48fb6a19-fac6-44b0-99be-a1adec7c3c33" fragment="1" gd:fragmentGUID="aa48e2b8-aea1-4506-99cc-2bfa78b4db47">Plan finansowy na 2009 r. fundusze promocji uchwalą do dnia 1 października 2009 r.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/683__art_18" gd:GUID="176a51ac-4674-42de-bccd-67b4ad71a597">
+        <nr>18</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="a4b25597-4f57-4704-92cc-b4b9eff7aa82">
+          <p>
+            <zdanie nr="1" gd:zdGUID="73674721-631b-4794-8dd9-b79c9fee95f1" fragment="1" gd:fragmentGUID="f883c7c1-c2e7-49ac-bf6f-9373fed67087">Minister właściwy do spraw rynków rolnych zwoła pierwsze posiedzenie komisji zarządzającej w terminie 14 dni od dnia powołania wszystkich członków danej komisji.</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2025/683__art_19" gd:GUID="f0eb1884-c387-495b-a3e4-75126b90c9d5">
+        <nr>19</nr>
+        <ustep eId="DU/2025/683__art_19__ust_1" gd:GUID="1d3f0754-0e8e-4970-882c-ddcacf4a4b0f">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="9b1870a7-7da9-429b-842d-c0763da6868b" fragment="1" gd:fragmentGUID="326dbd78-ea69-4942-8c18-aecaa700018d">Środki zgromadzone na wyodrębnionym rachunku Funduszu Promocji Mleczarstwa, o którym mowa w art. 52 ustawy wymienionej w art. 16<odnosnik id-odnosnika="16" symbol="16" gd:GUID="3fc1afd9-f841-4863-9890-27c6469c351f"><p><zdanie nr="1" gd:zdGUID="2ee10025-fbb3-4ff0-bf59-da1978fcd8ec" fragment="1" gd:fragmentGUID="695aa423-a749-417f-8a15-fb45bcfc9572">Artykuł 16 zawiera zmiany do ustawy z dnia 20 kwietnia 2004 r. o organizacji rynku mleka i przetworów mlecznych.</zdanie></p></odnosnik>, stają się z dniem wejścia w życie ustawy środkami finansowymi Funduszu Promocji Mleka.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/683__art_19__ust_2" gd:GUID="d0f3347a-1c5d-4118-8998-1666741a5ce1">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="0fae2fa2-2345-41f4-9b42-8c77208f8892" fragment="1" gd:fragmentGUID="432fda3f-ee8e-4aef-9891-0741e2b9fb4e">Prezes Agencji Rynku Rolnego na podstawie informacji, o których mowa w art. 10 ust. 1 pkt 5 lit. a ustawy wymienionej w art. 16<odsylacz-do-odnosnika id-odnosnika="16" symbol="16" />, może, w drodze decyzji administracyjnej, dokonać rozliczenia należnych wpłat na Fundusz Promocji Mleka za rok kwotowy 2009/2010.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/683__art_19__ust_3" gd:GUID="1406e379-02b2-4e1f-be9b-aa7dfde6b3f9">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="9eef13c6-3c34-4400-a072-f64d74f1332d" fragment="1" gd:fragmentGUID="c326549a-93ad-4af9-96df-a05fc4acaa3b">Postępowania w sprawach dotyczących dofinansowania ze środków Funduszu Promocji Mleczarstwa, wszczęte i niezakończone przed dniem wejścia w życie ustawy, toczą się na zasadach i w trybie określonych w przepisach dotychczasowych.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/683__art_19__ust_4" gd:GUID="baef8eed-90f8-4a8a-b4ab-1eec99f5bda5">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="3b1359b7-83d8-4fa7-bfae-1c93b0d3d9b5" fragment="1" gd:fragmentGUID="0db07ff9-44ca-4049-a814-89249a187bc4">Szczegółowe zasady gospodarowania Funduszem Promocji Mleczarstwa oraz jego plan finansowy, ustalone przez Komisję Porozumiewawczą do Spraw Mleka i Przetworów Mlecznych, stosuje się do dnia ustalenia zasad gospodarowania środkami finansowymi oraz planu finansowego Funduszu Promocji Mleka.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/683__art_20" gd:GUID="d00d12ee-b1e8-4618-8c0e-f879e19dba13">
+        <nr>20</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="262dfcfa-5299-441f-9cb5-c7a936508c0d">
+          <p>
+            <zdanie nr="1" gd:zdGUID="de20fed7-b82c-4b27-baa8-dd376164c832" fragment="1" gd:fragmentGUID="a84caba7-1b43-48c9-914d-5cf1ec556fc7">Ustawa wchodzi w życie z dniem 1 lipca 2009 r.</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+    </ustawa>
+  </obwieszczenie>
+</akt-prawny>

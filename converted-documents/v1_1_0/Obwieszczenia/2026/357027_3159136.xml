@@ -1,0 +1,984 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <obwieszczenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2026/46</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>c6b60d2c-0153-4e41-a8a3-34d4432ebf06</gd:GUIDwersji>
+      <AdresISAP>WDU20260000046</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2026</Rok>
+      <Pozycja>46</Pozycja>
+      <AdresWyswietlany>Dz.U. 2026 poz. 46</AdresWyswietlany>
+      <Tytul>Obwieszczenie Marszałka Sejmu Rzeczypospolitej Polskiej z dnia 9 stycznia 2026 r. w sprawie ogłoszenia jednolitego tekstu ustawy o rzemiośle</Tytul>
+      <Rodzaj>OBW_TJ</Rodzaj>
+      <DataOgloszenia>2026-01-15</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2026-01-09</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_ujednolicenie_2026-01-15_DU-2026-46_domyslne" rodzaj="ujednolicenie" pochodzenie="domyslne-z-aktu" data="2026-01-15" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_ujednolicenie.zdarz_ujednolicenie_2026-01-15_DU-2026-46_domyslne" glowna="true">
+          <Przedzial rodzaj="ujednolicenie" od="zdarz_ujednolicenie_2026-01-15_DU-2026-46_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <DataObowiazywaniaWersji>
+        <Od>zdarz_ujednolicenie_2026-01-15_DU-2026-46_domyslne</Od>
+      </DataObowiazywaniaWersji>
+      <Organy>
+        <Organ gd:GUID="2df36f5f-f763-4254-ba28-c9d5b9964644" rola="wydajacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/MSEJMU">
+          <Nazwa>Marszałek Sejmu</Nazwa>
+          <OrganPodpisujacy>Marszałek Sejmu</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>W.</imie> <nazwisko>Czarzasty</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Obwieszczenie</rodzaj-aktu>
+    <autor-aktu>Marszałka Sejmu Rzeczypospolitej Polskiej</autor-aktu>
+    <data>z dnia 9 stycznia 2026 r.</data>
+    <tytul>w sprawie ogłoszenia jednolitego tekstu ustawy o rzemiośle</tytul>
+    <punkt-OTJ eId="DU/2026/46__pkt_1" gd:GUID="1a287e03-4918-4276-b570-a985981546c9">
+      <nr>1</nr>
+      <p>
+        <zdanie nr="1" gd:zdGUID="04f0e290-becc-4188-aaa1-baa9d8b447f2" fragment="1" gd:fragmentGUID="46e130ad-e3ac-41c4-a0a4-aeb14c244997">Na podstawie art. 16 ust. 1 zdanie pierwsze ustawy z dnia 20 lipca 2000 r. o ogłaszaniu aktów normatywnych i niektórych innych aktów prawnych (Dz. U. z 2019 r. poz. 1461) ogłasza się w załączniku do niniejszego obwieszczenia jednolity tekst ustawy z dnia 22 marca 1989 r. o rzemiośle (Dz. U. z 2020 r. poz. 2159), z uwzględnieniem zmian wprowadzonych ustawą z dnia 21 maja 2025 r. o zmianie niektórych ustaw w celu deregulacji prawa gospodarczego i administracyjnego oraz doskonalenia zasad opracowywania prawa gospodarczego (Dz. U. poz. 769) oraz zmian wynikających z przepisów ogłoszonych przed dniem 8 stycznia 2026 r.</zdanie>
+      </p>
+    </punkt-OTJ>
+    <punkt-OTJ eId="DU/2026/46__pkt_2" gd:GUID="7aae7af0-3d0e-4e03-936d-46c39e14a4fd">
+      <nr>2</nr>
+      <p>
+        <zdanie nr="1" gd:zdGUID="971622f5-4644-4bde-b97f-1115d9152480" fragment="1" gd:fragmentGUID="034430cb-3761-4af4-86a3-702dd8cb9091">Podany w załączniku do niniejszego obwieszczenia tekst jednolity ustawy nie obejmuje art. 34 i art. 48 ustawy z dnia 21 maja 2025 r. o zmianie niektórych ustaw w celu deregulacji prawa gospodarczego i administracyjnego oraz doskonalenia zasad opracowywania prawa gospodarczego (Dz. U. poz. 769), które stanowią:<tresc-strukt cudzyslowy="oba" gd:GUID="cfbe7c6d-bb21-42ee-ac57-e9cf411c88c6"><artykul eId="DU/2025/769__art_34" gd:GUID="0d79c465-ce84-49c0-9ac6-80708581ab2c"><nr>34</nr><ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="ac907d35-ef40-41e7-a295-bb904c4d6913"><p><zdanie nr="1" gd:zdGUID="8334a0b0-f412-4bc8-84cb-faf1f604e22a" fragment="1" gd:fragmentGUID="3aa97336-b989-4f12-9407-e1a5ecf86301">Młodociani w rozumieniu art. 190 § 1 ustawy z dnia 26 czerwca 1974 r. – Kodeks pracy (Dz. U. z 2025 r. poz. 277), którzy przed dniem wejścia w życie niniejszej ustawy nie zakończyli przygotowania zawodowego odbywanego u pracodawcy niebędącego rzemieślnikiem w rozumieniu art. 2 ustawy zmienianej w art. 5, w brzmieniu dotychczasowym, który po dniu wejścia w życie niniejszej ustawy spełnia warunki uznania go za rzemieślnika w rozumieniu art. 2 ustawy zmienianej w art. 5, w brzmieniu nadanym niniejszą ustawą, kontynuują to przygotowanie zawodowe oraz zdają egzaminy na dotychczasowych zasadach dotyczących młodocianych zatrudnionych u pracodawców niebędących rzemieślnikami w rozumieniu art. 2 ustawy zmienianej w art. 5, w brzmieniu nadanym niniejszą ustawą.</zdanie></p></ustep-n></artykul></tresc-strukt><tresc-strukt cudzyslowy="oba" gd:GUID="6efdffc3-0ff5-4197-a6d7-659ea3e763c3"><artykul eId="DU/2025/769__art_48" gd:GUID="3048588e-2458-4d0f-ad17-3ad2c374c3f0"><nr>48</nr><ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="5f53d08d-4c87-4a10-950f-a91b54f64dfc"><p><zdanie nr="1" gd:zdGUID="89a2283b-a4a5-4f04-acdb-d0a9bb178d6f" fragment="1" gd:fragmentGUID="c9718eb8-9caa-4333-b3ee-224af87a2861">Ustawa wchodzi w życie po upływie 30 dni od dnia ogłoszenia, z wyjątkiem:</zdanie></p><punkt eId="DU/2025/769__art_48__pkt_1" gd:GUID="8debcf1d-85a1-4767-84cf-993f5fe4f31f"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="89a2283b-a4a5-4f04-acdb-d0a9bb178d6f" fragment="2" gd:fragmentGUID="78665b6b-68ed-48ca-a36c-87afe4447cb8">art. 6, art. 11, art. 18, art. 22, art. 24 pkt 4, 7 i 9, art. 38 oraz art. 40 ust. 1 i 2, które wchodzą w życie z dniem 1 stycznia 2026 r.;</zdanie></p></punkt><punkt eId="DU/2025/769__art_48__pkt_2" gd:GUID="5fde53c1-8b77-4497-8824-d783d065430f"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="89a2283b-a4a5-4f04-acdb-d0a9bb178d6f" fragment="3" gd:fragmentGUID="3ac5b456-1381-4085-82bf-810096ad8da7">art. 28 oraz art. 44, które wchodzą w życie po upływie 9 miesięcy od dnia ogłoszenia.</zdanie></p></punkt></ustep-n></artykul></tresc-strukt>.</zdanie>
+      </p>
+    </punkt-OTJ>
+    <organ-podpisujacy>Marszałek Sejmu: <i><osoba podpisujacy="true" gd:osobaGUID="6081ad77-c5f9-4a18-8e2d-f0ff38e61daf"><imie>W.</imie> <nazwisko>Czarzasty</nazwisko></osoba></i></organ-podpisujacy>
+    <ustawa>
+      <zalacznik-do>Załącznik do obwieszczenia Marszałka Sejmu Rzeczypospolitej Polskiej z dnia 9 stycznia 2026 r. (Dz. U. poz. 46)</zalacznik-do>
+      <rodzaj-aktu>Ustawa</rodzaj-aktu>
+      <data>z dnia 22 marca 1989 r.</data>
+      <tytul>o rzemiośle</tytul>
+      <rozdzial eId="DU/2026/46__rozdz_1" gd:GUID="fff99ec1-6687-47a1-b9bb-7bf69b1cd094">
+        <naglowek-rozdzialu>
+          <nr>1</nr>
+          <p>Przepisy ogólne</p>
+        </naglowek-rozdzialu>
+        <oddzial-n brak-eid="jednostka-nieoznaczona" gd:GUID="0234c37c-41cf-47b6-b190-339f2c4e57d7">
+          <artykul eId="DU/2026/46__art_1" gd:GUID="bfb1836c-2911-41c7-9af2-02b95e766ff1">
+            <nr>1</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="198dbe66-7a53-4e22-8153-b33f1b5394cb">
+              <p>
+                <zdanie nr="1" gd:zdGUID="00d4d775-7395-4634-8252-57f713e25772" fragment="1" gd:fragmentGUID="0d4f7d88-3304-4804-8dd6-4c991f5dde19">Przedsiębiorcy wykonujący działalność gospodarczą na podstawie ustawy z dnia 6 marca 2018 r. – Prawo przedsiębiorców (Dz. U. z 2025 r. poz. 1480, 1795 i 1826) mogą wykonywać tę działalność z zachowaniem warunków określonych w niniejszej ustawie.</zdanie>
+                <zdanie nr="2" gd:zdGUID="0bc02a41-c501-4d1e-b499-7dca0efad2f2" fragment="1" gd:fragmentGUID="8f8c19b5-4b87-418f-aef2-8d18eef64201">Działalność takich osób jest zaliczana do rzemiosła.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2026/46__art_2" gd:GUID="08ab5fcc-14f7-4ec6-a723-2074205ed52c">
+            <nr>2</nr>
+            <ustep eId="DU/2026/46__art_2__ust_1" gd:GUID="10439637-13fa-4ba3-a876-62dfbb007473">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="677cbccf-9ebd-4d9b-af1b-c5af8fd0e55c" fragment="1" gd:fragmentGUID="0a61ba4d-e4c2-4733-8c88-bbd3cef3b0d1"><odnosnik id-odnosnika="1" symbol="1" gd:GUID="af2a4ef2-5f0a-43cf-bf66-bf15e81a4612"><p><zdanie nr="1" gd:zdGUID="fc666540-afa8-43bf-9168-2d235f247bbd" fragment="1" gd:fragmentGUID="22ddf071-1bf3-4d49-8c93-2018a8100ce9">W brzmieniu ustalonym przez art. 5 pkt 1 lit. a ustawy z dnia 21 maja 2025 r. o zmianie niektórych ustaw w celu deregulacji prawa gospodarczego i administracyjnego oraz doskonalenia zasad opracowywania prawa gospodarczego (Dz. U. poz. 769), która weszła w życie z dniem 13 lipca 2025 r.</zdanie></p></odnosnik> Rzemiosłem jest zawodowe wykonywanie działalności gospodarczej przez:</zdanie>
+              </p>
+              <punkt eId="DU/2026/46__art_2__ust_1__pkt_1" gd:GUID="7cbda44d-18fb-4885-ad92-326fcb0274b8">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="677cbccf-9ebd-4d9b-af1b-c5af8fd0e55c" fragment="2" gd:fragmentGUID="b0a0643d-bda5-45f1-99a7-c22f073b28f2">osobę fizyczną z wykorzystaniem jej pracy własnej i kwalifikacji zawodowych w rzemiośle potwierdzonych dowodami kwalifikacji zawodowych w rzemiośle – jeżeli jest ona mikroprzedsiębiorcą, małym przedsiębiorcą albo średnim przedsiębiorcą w rozumieniu ustawy z dnia 6 marca 2018 r. – Prawo przedsiębiorców lub</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/46__art_2__ust_1__pkt_2" gd:GUID="20e429ab-d1bc-4d8d-a6f0-146c5fa6d506">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="677cbccf-9ebd-4d9b-af1b-c5af8fd0e55c" fragment="3" gd:fragmentGUID="8faaa0a0-4f64-4e70-a138-bc819f34fac8">wspólników spółki cywilnej w zakresie wykonywanej przez nich wspólnie działalności gospodarczej, jeżeli działalność gospodarcza w ramach tej spółki jest wykonywana z wykorzystaniem pracy własnej oraz kwalifikacji zawodowych w rzemiośle potwierdzonych dowodami kwalifikacji zawodowych w rzemiośle co najmniej jednej osoby fizycznej, która jest wspólnikiem:</zdanie>
+                </p>
+                <litera eId="DU/2026/46__art_2__ust_1__pkt_2__lit_a" gd:GUID="2ab3b69e-69a9-4dd9-8c1f-c14e162af74e">
+                  <nr>a</nr>
+                  <p>
+                    <zdanie nr="1" gd:zdGUID="677cbccf-9ebd-4d9b-af1b-c5af8fd0e55c" fragment="4" gd:fragmentGUID="b85e6376-e9cd-497d-a1fb-acd16f25271f">tej spółki cywilnej lub</zdanie>
+                  </p>
+                </litera>
+                <litera eId="DU/2026/46__art_2__ust_1__pkt_2__lit_b" gd:GUID="9b9408fa-c928-4b58-ae51-c22ad3c9f09e">
+                  <nr>b</nr>
+                  <p>
+                    <zdanie nr="1" gd:zdGUID="677cbccf-9ebd-4d9b-af1b-c5af8fd0e55c" fragment="5" gd:fragmentGUID="7c493db4-d38d-413f-a350-b78831dcf7db">spółki handlowej, z wyłączeniem spółki partnerskiej, będącej wspólnikiem tej spółki cywilnej</zdanie>
+                  </p>
+                </litera>
+                <czesc-wspolna-litera eId="DU/2026/46__art_2__ust_1__pkt_2__czw" gd:GUID="68ad63e2-f7c8-4034-8de5-0e6e85d4bf7d">
+                  <p>
+                    <zdanie nr="1" gd:zdGUID="677cbccf-9ebd-4d9b-af1b-c5af8fd0e55c" fragment="6" gd:fragmentGUID="9af9dc34-ee9c-464c-b77c-e16abccf51ee">– jeżeli wspólnicy tej spółki cywilnej łącznie spełniają warunki do uznania za mikroprzedsiębiorcę, małego przedsiębiorcę albo średniego przedsiębiorcę w rozumieniu ustawy z dnia 6 marca 2018 r. – Prawo przedsiębiorców, lub</zdanie>
+                  </p>
+                </czesc-wspolna-litera>
+              </punkt>
+              <punkt eId="DU/2026/46__art_2__ust_1__pkt_3" gd:GUID="d3fadf7f-faea-402b-b6c6-5779d7f214f0">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="677cbccf-9ebd-4d9b-af1b-c5af8fd0e55c" fragment="7" gd:fragmentGUID="fdc5985b-172e-4833-a377-d8d55490dd69">spółkę jawną z wykorzystaniem pracy własnej co najmniej jednego wspólnika będącego osobą fizyczną oraz jego kwalifikacji zawodowych w rzemiośle potwierdzonych dowodami kwalifikacji zawodowych w rzemiośle – jeżeli ta spółka jest mikroprzedsiębiorcą, małym przedsiębiorcą albo średnim przedsiębiorcą w rozumieniu ustawy z dnia 6 marca 2018 r. – Prawo przedsiębiorców, lub</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/46__art_2__ust_1__pkt_4" gd:GUID="55161a83-ffb3-412f-b771-ca53e77f52ca">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="677cbccf-9ebd-4d9b-af1b-c5af8fd0e55c" fragment="8" gd:fragmentGUID="b14ffd60-0d6f-4b87-a506-4cc2e4894b46">spółkę komandytową z wykorzystaniem pracy własnej co najmniej jednego wspólnika będącego osobą fizyczną oraz jego kwalifikacji zawodowych w rzemiośle potwierdzonych dowodami kwalifikacji zawodowych w rzemiośle – jeżeli ta spółka jest mikroprzedsiębiorcą, małym przedsiębiorcą albo średnim przedsiębiorcą w rozumieniu ustawy z dnia 6 marca 2018 r. – Prawo przedsiębiorców, lub</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/46__art_2__ust_1__pkt_5" gd:GUID="d095a021-52ce-4149-b9f0-1d166bed78ba">
+                <nr>5</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="677cbccf-9ebd-4d9b-af1b-c5af8fd0e55c" fragment="9" gd:fragmentGUID="ef58ce50-4e57-4a4f-a6be-b52bd74d0d02">spółkę komandytowo-akcyjną z wykorzystaniem pracy własnej co najmniej jednego wspólnika będącego osobą fizyczną oraz jego kwalifikacji zawodowych w rzemiośle potwierdzonych dowodami kwalifikacji zawodowych w rzemiośle – jeżeli ta spółka jest mikroprzedsiębiorcą, małym przedsiębiorcą albo średnim przedsiębiorcą w rozumieniu ustawy z dnia 6 marca 2018 r. – Prawo przedsiębiorców, lub</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/46__art_2__ust_1__pkt_6" gd:GUID="b522b18b-d60e-43cf-b161-e1ece066bc56">
+                <nr>6</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="677cbccf-9ebd-4d9b-af1b-c5af8fd0e55c" fragment="10" gd:fragmentGUID="0740b571-a59c-4104-acd9-c764d5db7c6b">spółkę kapitałową z wykorzystaniem pracy własnej co najmniej jednego wspólnika albo akcjonariusza będących osobami fizycznymi oraz ich kwalifikacji zawodowych w rzemiośle potwierdzonych dowodami kwalifikacji zawodowych w rzemiośle – jeżeli ta spółka jest mikroprzedsiębiorcą, małym przedsiębiorcą albo średnim przedsiębiorcą w rozumieniu ustawy z dnia 6 marca 2018 r. – Prawo przedsiębiorców.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2026/46__art_2__ust_1a" gd:GUID="683967d6-636b-4900-9a55-57db14dcee8d">
+              <nr>1a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="118e4f97-690c-49e5-9803-d3ca9ce87d12" fragment="1" gd:fragmentGUID="5e02297a-6f3c-4a21-83c3-5b5eac185832">(uchylony)</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/46__art_2__ust_2" gd:GUID="5b926b1d-d52d-4980-98ee-b4f61b5abe49">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="857a0dac-86df-4b62-9881-6977d1f3c5d7" fragment="1" gd:fragmentGUID="34ada93a-d7b8-4b80-b2c8-5dd1991b8f84">(uchylony)</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/46__art_2__ust_3" gd:GUID="d22752eb-7b60-4e64-9ec8-9ee2eeeb6bf7">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="8228a885-2666-4d2e-b4f6-36ad17174f9e" fragment="1" gd:fragmentGUID="54f2d2e9-228f-45e3-908b-8b4ea7363065">(uchylony)</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/46__art_2__ust_4" gd:GUID="575a88d5-53d3-4dbc-a452-6e6ea80321cc">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="fb718321-d1ce-4382-b3fe-a745c27d8e49" fragment="1" gd:fragmentGUID="beda61e2-e26b-45cd-8bd9-57952a231c99"><odnosnik id-odnosnika="2" symbol="2" gd:GUID="0d61c12a-695e-42b6-a30d-f8a9fe997f0c"><p><zdanie nr="1" gd:zdGUID="99b96d53-7c27-4d55-8239-7033533b71d4" fragment="1" gd:fragmentGUID="6d0d68e6-5b4a-44be-8f89-f25567923f50">W brzmieniu ustalonym przez art. 5 pkt 1 lit. b ustawy, o której mowa w odnośniku 1.</zdanie></p></odnosnik> Rzemiosłem:</zdanie>
+              </p>
+              <punkt eId="DU/2026/46__art_2__ust_4__pkt_1" gd:GUID="8a56d824-9af9-4556-80af-76bb96686d3d">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="fb718321-d1ce-4382-b3fe-a745c27d8e49" fragment="2" gd:fragmentGUID="41dff05c-e807-4857-99cf-596458d8b16e">nie jest działalność handlowa, transportowa, wytwórcza i usługowa artystów plastyków i fotografików oraz lecznicza, z wyłączeniem usług optyków okularowych oraz protetyków słuchu;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/46__art_2__ust_4__pkt_2" gd:GUID="c4c41f86-aa9e-4f03-9a49-00fc4b6671e2">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="fb718321-d1ce-4382-b3fe-a745c27d8e49" fragment="3" gd:fragmentGUID="aed26316-931e-4e71-a4ad-fbda6c22143b">nie są usługi hotelarskie oraz usługi świadczone w ramach wykonywania wolnych zawodów.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2026/46__art_2__ust_5" gd:GUID="ef233733-4c82-4e39-8c4c-ea57f1d1715a">
+              <nr>5</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="f50bfbd1-3d1b-4088-83fd-cf7fed9d8eb5" fragment="1" gd:fragmentGUID="510f00f3-2480-48ab-a1f5-ff87dcaf79a8">(uchylony)</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/46__art_2__ust_6" gd:GUID="3d9ea274-d7bb-41d8-b992-889592d2b31b">
+              <nr>6</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="a4792609-ec6b-4473-aeb3-97986d6098ff" fragment="1" gd:fragmentGUID="7130a493-2bea-4801-b94e-63f25cb03320"><odnosnik id-odnosnika="3" symbol="3" gd:GUID="9b28e2a1-9619-4a0d-a4a4-a3954ff55862"><p><zdanie nr="1" gd:zdGUID="66b89eab-9aa4-421c-8f4f-128b2a9e5bd9" fragment="1" gd:fragmentGUID="6fdcb05c-d053-4777-a753-295377865812">W brzmieniu ustalonym przez art. 5 pkt 1 lit. c ustawy, o której mowa w odnośniku 1.</zdanie></p></odnosnik> Rzemieślnikiem jest:</zdanie>
+              </p>
+              <punkt eId="DU/2026/46__art_2__ust_6__pkt_1" gd:GUID="4a361cb2-c603-4194-9e9a-a62aeedd9720">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="a4792609-ec6b-4473-aeb3-97986d6098ff" fragment="2" gd:fragmentGUID="1e7f3a28-3913-4a94-a314-593642b69794">osoba fizyczna, o której mowa w ust. 1 pkt 1;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/46__art_2__ust_6__pkt_2" gd:GUID="89e55741-3728-495e-a32e-0a5b8bfd73c7">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="a4792609-ec6b-4473-aeb3-97986d6098ff" fragment="3" gd:fragmentGUID="e4907230-8c14-4583-a9df-3954917199ec">wspólnik spółki cywilnej osób fizycznych w zakresie wykonywanej przez nie wspólnie działalności gospodarczej – jeżeli spełniają one indywidualnie i łącznie warunki określone w ust. 1 pkt 1;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/46__art_2__ust_6__pkt_3" gd:GUID="da16a9a7-6c36-4b77-91da-237baad84508">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="a4792609-ec6b-4473-aeb3-97986d6098ff" fragment="4" gd:fragmentGUID="49b57e49-fafd-4e5b-b609-67243362464e">spółka jawna wykonująca działalność gospodarczą z wykorzystaniem pracy własnej wszystkich wspólników będących osobami fizycznymi oraz ich kwalifikacji zawodowych w rzemiośle potwierdzonych dowodami kwalifikacji zawodowych w rzemiośle, o których mowa w art. 3 ust. 1 pkt 2 lub 3, jeżeli jest ona mikroprzedsiębiorcą, małym przedsiębiorcą albo średnim przedsiębiorcą w rozumieniu ustawy z dnia 6 marca 2018 r. – Prawo przedsiębiorców;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/46__art_2__ust_6__pkt_4" gd:GUID="1e7ec11a-1df7-4b64-b2c5-701cce28c08f">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="a4792609-ec6b-4473-aeb3-97986d6098ff" fragment="5" gd:fragmentGUID="51de3e07-0f33-4383-b0ff-2c0a9954bb6a">spółka komandytowa osób fizycznych wykonująca działalność gospodarczą z wykorzystaniem pracy własnej wszystkich wspólników oraz ich kwalifikacji zawodowych w rzemiośle potwierdzonych dowodami kwalifikacji zawodowych w rzemiośle, o których mowa w art. 3 ust. 1 pkt 2 lub 3, jeżeli jest ona mikroprzedsiębiorcą, małym przedsiębiorcą albo średnim przedsiębiorcą w rozumieniu ustawy z dnia 6 marca 2018 r. – Prawo przedsiębiorców;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/46__art_2__ust_6__pkt_5" gd:GUID="7d595210-0c80-4589-9fc8-443d328f93dd">
+                <nr>5</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="a4792609-ec6b-4473-aeb3-97986d6098ff" fragment="6" gd:fragmentGUID="27350a1b-fa36-4bdf-89e5-90b1c4a140ad">spółka komandytowo-akcyjna osób fizycznych wykonująca działalność gospodarczą z wykorzystaniem pracy własnej wszystkich wspólników oraz ich kwalifikacji zawodowych w rzemiośle potwierdzonych dowodami kwalifikacji zawodowych w rzemiośle, o których mowa w art. 3 ust. 1 pkt 2 lub 3, jeżeli jest ona mikroprzedsiębiorcą, małym przedsiębiorcą albo średnim przedsiębiorcą w rozumieniu ustawy z dnia 6 marca 2018 r. – Prawo przedsiębiorców;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/46__art_2__ust_6__pkt_6" gd:GUID="12868eac-b1c6-49a1-a7ba-953268106412">
+                <nr>6</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="a4792609-ec6b-4473-aeb3-97986d6098ff" fragment="7" gd:fragmentGUID="d54c5e16-d3bb-4e46-bef0-2b70d9fa4abc">jednoosobowa spółka kapitałowa, powstała na podstawie art. 551 § 5 ustawy z dnia 15 września 2000 r. – Kodeks spółek handlowych (Dz. U. z 2024 r. poz. 18 i 96) w wyniku przekształcenia przedsiębiorcy będącego osobą fizyczną, wykonującego we własnym imieniu działalność gospodarczą z wykorzystaniem pracy własnej oraz kwalifikacji zawodowych w rzemiośle potwierdzonych dowodami kwalifikacji zawodowych w rzemiośle, jeżeli powstała spółka jest mikroprzedsiębiorcą, małym przedsiębiorcą albo średnim przedsiębiorcą w rozumieniu ustawy z dnia 6 marca 2018 r. – Prawo przedsiębiorców;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/46__art_2__ust_6__pkt_7" gd:GUID="bafcee86-601c-466b-b722-b5c09dfe96e7">
+                <nr>7</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="a4792609-ec6b-4473-aeb3-97986d6098ff" fragment="8" gd:fragmentGUID="561a173f-c203-4ede-b71c-ff1de4a579fb">spółka, o której mowa w pkt 3–5, jeżeli wykonuje działalność gospodarczą z wykorzystaniem pracy własnej co najmniej jednego wspólnika oraz jego kwalifikacji zawodowych w rzemiośle potwierdzonych dowodami kwalifikacji zawodowych w rzemiośle, o których mowa w art. 3 ust. 1 pkt 2 lub 3, pod warunkiem że pozostałymi wspólnikami są małżonek, wstępni lub zstępni wspólnika;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/46__art_2__ust_6__pkt_8" gd:GUID="05ba7778-328f-47d0-95fa-995b655bbeb5">
+                <nr>8</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="a4792609-ec6b-4473-aeb3-97986d6098ff" fragment="9" gd:fragmentGUID="c73b78d8-a501-4cc6-ad72-02b1b8298514">wspólnik spółki cywilnej osób fizycznych w zakresie wykonywanej przez nie wspólnie działalności gospodarczej, jeżeli działalność gospodarcza jest wykonywana z wykorzystaniem pracy własnej co najmniej jednego wspólnika oraz jego kwalifikacji zawodowych w rzemiośle, potwierdzonych dowodami kwalifikacji zawodowych w rzemiośle, pod warunkiem że pozostałymi wspólnikami są małżonek, wstępni lub zstępni wspólnika oraz wszyscy wspólnicy łącznie są mikroprzedsiębiorcą, małym przedsiębiorcą albo średnim przedsiębiorcą w rozumieniu ustawy z dnia 6 marca 2018 r. – Prawo przedsiębiorców.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2026/46__art_2__ust_7" gd:GUID="efcb2fd7-e579-4cab-a980-15689f706c85">
+              <nr>7</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="c3c98aa1-fd9c-4edc-a75a-cade91878fde" fragment="1" gd:fragmentGUID="5cd0a9cc-8f39-4f53-ac00-ea6767290672"><odnosnik id-odnosnika="4" symbol="4" gd:GUID="3d8c5faf-ebc1-48e6-b2f2-a03ac8894416"><p><zdanie nr="1" gd:zdGUID="d37e67ae-be65-4552-afa7-9332e5effdb8" fragment="1" gd:fragmentGUID="09ac3df9-1154-4b89-8311-4d1a8303253e">Dodany przez art. 5 pkt 1 lit. d ustawy, o której mowa w odnośniku 1.</zdanie></p></odnosnik> Rzemieślnikiem jest również:</zdanie>
+              </p>
+              <punkt eId="DU/2026/46__art_2__ust_7__pkt_1" gd:GUID="065e9772-40fb-47fa-8717-23ec8f7fbe62">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="c3c98aa1-fd9c-4edc-a75a-cade91878fde" fragment="2" gd:fragmentGUID="5c94e998-4030-444d-b866-fb695aa82564">wspólnik spółki cywilnej, o której mowa w ust. 1 pkt 2, inny niż wspólnik spółki cywilnej, o którym mowa w ust. 6 pkt 2 i 8,</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/46__art_2__ust_7__pkt_2" gd:GUID="662134ad-c35c-469c-84d4-feaba0573308">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="c3c98aa1-fd9c-4edc-a75a-cade91878fde" fragment="3" gd:fragmentGUID="bdfb9a71-e355-4f72-9c87-f935fe343f23">spółka, o której mowa w ust. 1 pkt 3–6, inna niż spółka, o której mowa w ust. 6 pkt 3–7</zdanie>
+                </p>
+              </punkt>
+              <czesc-wspolna-punkt eId="DU/2026/46__art_2__ust_7__czw" gd:GUID="a73ad0af-1e87-49b0-8564-ae9dec168378">
+                <p>
+                  <zdanie nr="1" gd:zdGUID="c3c98aa1-fd9c-4edc-a75a-cade91878fde" fragment="4" gd:fragmentGUID="18ec95a5-a162-4907-b75c-969753ea1b72">– pod warunkiem zrzeszenia się w jednej z organizacji samorządu gospodarczego rzemiosła, o których mowa w art. 7 ust. 3 pkt 1 i 3.</zdanie>
+                </p>
+              </czesc-wspolna-punkt>
+            </ustep>
+            <ustep eId="DU/2026/46__art_2__ust_8" gd:GUID="4a029b5d-9608-40e5-bc13-ebba64049085">
+              <nr>8</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="c26f58c6-a812-44b2-8fcc-fbd01588143b" fragment="1" gd:fragmentGUID="c8cba131-73c2-45d9-a22e-bd5c86dce0b9"><odsylacz-do-odnosnika id-odnosnika="4" symbol="4" /> Podmioty, o których mowa w ust. 7, nabywają status rzemieślnika z dniem podjęcia przez właściwy organ statutowy organizacji samorządu gospodarczego rzemiosła uchwały o przyjęciu przedsiębiorcy do tej organizacji.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/46__art_3" gd:GUID="9163a57f-11cb-4c9a-9d33-15e6bd986145">
+            <nr>3</nr>
+            <ustep eId="DU/2026/46__art_3__ust_1" gd:GUID="bacc8fb5-fdb7-45df-b2c5-e81334ee6d3d">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="d5cec050-da14-44a3-89fd-15a2956e6c58" fragment="1" gd:fragmentGUID="1693eb94-ca53-4dc8-8742-034fb09d4afb">Dowodami kwalifikacji zawodowych w rzemiośle są:</zdanie>
+              </p>
+              <punkt eId="DU/2026/46__art_3__ust_1__pkt_1" gd:GUID="919c0000-e0e4-44b0-a93b-92737099bb10">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="d5cec050-da14-44a3-89fd-15a2956e6c58" fragment="2" gd:fragmentGUID="3b702c09-5c49-4c27-8d5f-2fcdece71223">dyplom lub świadectwo ukończenia wyższej, ponadgimnazjalnej lub ponadpodstawowej szkoły o profilu technicznym bądź artystycznym w zawodzie (kierunku) odpowiadającym dziedzinie wykonywanego rzemiosła;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/46__art_3__ust_1__pkt_2" gd:GUID="fac64e03-1e20-4c90-858a-4659ba2230c5">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="d5cec050-da14-44a3-89fd-15a2956e6c58" fragment="3" gd:fragmentGUID="9123ab9a-4b6a-4f86-b6f2-9b673fe12e1e">dyplom mistrza w zawodzie odpowiadającym danemu rodzajowi rzemiosła;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/46__art_3__ust_1__pkt_3" gd:GUID="90fd2c65-8a92-4b9b-a81f-d9e5b0f2bde8">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="d5cec050-da14-44a3-89fd-15a2956e6c58" fragment="4" gd:fragmentGUID="8b2ce2d9-352f-4e5c-b1e0-a987cafad6e5">świadectwo czeladnicze albo tytuł robotnika wykwalifikowanego w zawodzie odpowiadającym danemu rodzajowi rzemiosła;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/46__art_3__ust_1__pkt_4" gd:GUID="4a8aef31-5f0c-4468-89e2-491a90d6e2b9">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="d5cec050-da14-44a3-89fd-15a2956e6c58" fragment="5" gd:fragmentGUID="d778841f-d284-43a4-b0bb-e21a8ae0bd20">zaświadczenie potwierdzające posiadanie wybranych kwalifikacji zawodowych w zakresie zawodu odpowiadającego danemu rodzajowi rzemiosła.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2026/46__art_3__ust_1a" gd:GUID="ddef1ac9-1598-42fd-b69a-ed4785053ce5">
+              <nr>1a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="83f50a31-c603-44d4-9c0a-4f38d7c4e3f7" fragment="1" gd:fragmentGUID="c2dedeed-5f5f-4383-adb4-b48b9a0fdddb">Informacje o dowodach, o których mowa w ust. 1 pkt 2 i 3, podlegają udostępnieniu w zakresie i na zasadach określonych w ustawie z dnia 6 marca 2018 r. o Centralnej Ewidencji i Informacji o Działalności Gospodarczej i Punkcie Informacji dla Przedsiębiorcy (Dz. U. z 2022 r. poz. 541, z 2024 r. poz. 1841 oraz z 2025 r. poz. 769, 1541 i 1792).</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/46__art_3__ust_2" gd:GUID="78731419-7d7b-4ba2-be35-322665fc5dc1">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="7f170fc8-a750-4933-a1cb-7d690ad42831" fragment="1" gd:fragmentGUID="c17f915b-9829-45c5-b23d-ef09bbd97493">Osoba fizyczna, o której mowa w art. 2 ust. 1 pkt 1, 2 i <i>8</i>, oraz wspólnik spółki, o której mowa w art. 2 ust. 1 pkt 3–<i>7</i>, jest obowiązany wykazać się innymi dowodami kwalifikacji zawodowych niż określone w ust. 1, jeżeli z przepisów odrębnych ustaw wynika obowiązek posiadania takich kwalifikacji.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/46__art_3__ust_3" gd:GUID="f100d4b0-00b4-4dce-8ef2-83bef55be496">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="2995b736-328c-4f6f-8638-c9fcc3baa268" fragment="1" gd:fragmentGUID="b73a2191-3e2e-4b3d-a118-cf7ee0be4c9f">Dyplomy mistrza i świadectwa czeladnicze mogą być wydawane przez izby rzemieślnicze osobom, które złożyły stosowne egzaminy przed komisjami egzaminacyjnymi izb rzemieślniczych.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/46__art_3__ust_3a" gd:GUID="d6736e4d-980d-47d5-9bfc-b3d77cea3f1b">
+              <nr>3a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="24e062cd-6a0d-40df-bb96-f8a221d4f361" fragment="1" gd:fragmentGUID="f6a80514-7f28-4481-a6e3-dd8d7757c310">Podstawę przeprowadzania egzaminów w zawodach odpowiadających danemu rodzajowi rzemiosła stanowią standardy wymagań egzaminacyjnych ustalone przez Związek Rzemiosła Polskiego, z zastrzeżeniem ust. 3b.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/46__art_3__ust_3b" gd:GUID="5ef17945-1bda-4565-a60a-947b62f72e77">
+              <nr>3b</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="4e661ff5-5558-42e8-911b-fcd0f8255d74" fragment="1" gd:fragmentGUID="d3efa5bf-b692-423a-aacc-3b189a8f4ef5">Podstawę przeprowadzania egzaminu czeladniczego w zawodzie określonym w klasyfikacji zawodów szkolnictwa branżowego, o której mowa w przepisach wydanych na podstawie art. 46 ust. 1 ustawy z dnia 14 grudnia 2016 r. – Prawo oświatowe (Dz. U. z 2025 r. poz. 1043, 1160 i 1837), stanowią wymagania określone w podstawie programowej kształcenia w zawodzie szkolnictwa branżowego.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/46__art_3__ust_3c" gd:GUID="2986c918-1716-4616-a57f-79998cea3a89">
+              <nr>3c</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="646a8623-8fd6-442b-8564-2f2be5a70661" fragment="1" gd:fragmentGUID="4f6bebfc-b0d5-4a8d-9238-3a4d84b4f7da">Nadzór nad działalnością komisji egzaminacyjnych izb rzemieślniczych sprawuje Związek Rzemiosła Polskiego przez:</zdanie>
+              </p>
+              <punkt eId="DU/2026/46__art_3__ust_3c__pkt_1" gd:GUID="742ca678-32e3-41a2-aa5f-1979a6a00bb7">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="646a8623-8fd6-442b-8564-2f2be5a70661" fragment="2" gd:fragmentGUID="4f33458b-449a-4e81-9a22-1b002654b6da">przeprowadzanie, zgodnie z planem nadzoru, co najmniej raz w roku kontroli działalności komisji egzaminacyjnych;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/46__art_3__ust_3c__pkt_2" gd:GUID="e5b2f1fa-0c67-4980-9490-47e9959251b4">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="646a8623-8fd6-442b-8564-2f2be5a70661" fragment="3" gd:fragmentGUID="936dcb03-942e-4b40-8dea-fa0cb1450453">rozpatrywanie nieuwzględnionych przez izbę rzemieślniczą skarg kandydatów dotyczących prawidłowości przeprowadzenia egzaminu;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/46__art_3__ust_3c__pkt_3" gd:GUID="5add40ac-3628-478d-b09d-b538f48c07a4">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="646a8623-8fd6-442b-8564-2f2be5a70661" fragment="4" gd:fragmentGUID="5f159562-bbbd-47e9-bee7-03f17b9146a7">analizowanie wyników egzaminów oraz formułowanie wniosków.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2026/46__art_3__ust_3d" gd:GUID="7eb564d2-5953-4cf3-b327-99100a30e7f6">
+              <nr>3d</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="f3d1a14c-a1c2-4022-8a63-7ed98af1732e" fragment="1" gd:fragmentGUID="df7b846f-70cc-46d0-b8c5-9cd97cdbb8a4">Osoby wykonujące czynności z zakresu nadzoru mają prawo wstępu w charakterze obserwatora na egzamin, po uprzednim powiadomieniu właściwej izby rzemieślniczej, oraz wglądu do prowadzonej przez komisję egzaminacyjną dokumentacji komisji.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/46__art_3__ust_3e" gd:GUID="9d27d92d-a1a0-4862-99af-9246568ff7a0">
+              <nr>3e</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="88b995a8-4b7a-4189-a718-5c62203c9027" fragment="1" gd:fragmentGUID="eae0a897-ebbd-4ffe-a3b4-5e24ba670b59">Osoby, o których mowa w ust. 3d, mogą wydawać komisjom egzaminacyjnym zalecenia wynikające z przeprowadzonych czynności nadzoru.</zdanie>
+                <zdanie nr="2" gd:zdGUID="8aba856f-c3ae-440e-9b09-aa1ede44457b" fragment="1" gd:fragmentGUID="b25b7ffa-fdf8-4b91-9d52-6ac1d4352a27">Komisja egzaminacyjna w ciągu 7 dni od otrzymania zaleceń może zgłosić wobec nich zastrzeżenia do Związku Rzemiosła Polskiego.</zdanie>
+                <zdanie nr="3" gd:zdGUID="e181f46b-7b49-4b8e-9258-44c2dc519b03" fragment="1" gd:fragmentGUID="6fac2803-2257-4c5c-bb26-5bebd2b50bd0">W przypadku nieuwzględnienia zastrzeżeń przez Związek Rzemiosła Polskiego komisja egzaminacyjna jest obowiązana powiadomić Związek Rzemiosła Polskiego o realizacji zaleceń w terminie 30 dni.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/46__art_3__ust_3f" gd:GUID="016ed041-2867-4bd0-b6f8-43443586af10">
+              <nr>3f</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="119497fb-d903-4c28-88d6-2d863a83dac9" fragment="1" gd:fragmentGUID="ba6d304f-906d-4ece-9c64-bc346abff47a">W przypadku stwierdzenia istotnych uchybień w działalności komisji egzaminacyjnych Związek Rzemiosła Polskiego może wezwać komisję do usunięcia uchybień w wyznaczonym terminie, a w przypadku nieusunięcia uchybień – odwołać osoby wchodzące w skład komisji lub cały skład komisji albo unieważnić egzamin w całości lub w części.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/46__art_3__ust_3g" gd:GUID="c56c3c31-59c7-4759-9b30-0bdaa2b5648a">
+              <nr>3g</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="c4a0202b-24e4-43d9-8f7f-00a61ad2edbb" fragment="1" gd:fragmentGUID="8433df75-b83f-4add-a1ee-914969cfe1cd">Izba rzemieślnicza:</zdanie>
+              </p>
+              <punkt eId="DU/2026/46__art_3__ust_3g__pkt_1" gd:GUID="a955f2b7-bf1b-4b7e-9174-8ea6ad87029c">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="c4a0202b-24e4-43d9-8f7f-00a61ad2edbb" fragment="2" gd:fragmentGUID="71822e5f-96d0-44e2-bb17-5c5cca7e6b91">zatwierdza zadania i pytania egzaminacyjne, opracowane na podstawie standardów wymagań, o których mowa w ust. 3a i 3b;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/46__art_3__ust_3g__pkt_2" gd:GUID="09e35914-f671-48ec-951a-d7209e115a83">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="c4a0202b-24e4-43d9-8f7f-00a61ad2edbb" fragment="3" gd:fragmentGUID="ed84b460-3380-4d6d-8a20-9f5d2c9bf7f9">zatwierdza szczegółowe kryteria oceniania;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/46__art_3__ust_3g__pkt_3" gd:GUID="b6658078-3520-4a22-873b-385ad259ae73">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="c4a0202b-24e4-43d9-8f7f-00a61ad2edbb" fragment="4" gd:fragmentGUID="864a1a8f-2855-4b53-a61f-e68fdb495ce2">dopuszcza kandydatów do egzaminów;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/46__art_3__ust_3g__pkt_4" gd:GUID="bc703df3-b1c7-4e7d-85c2-9b35d7395373">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="c4a0202b-24e4-43d9-8f7f-00a61ad2edbb" fragment="5" gd:fragmentGUID="84d4231c-c0b3-4cf5-8c33-ba6b622425f4">informuje kandydatów o wysokości opłaty za egzaminy – przy czym opłata wynosi za egzamin:</zdanie>
+                </p>
+                <litera eId="DU/2026/46__art_3__ust_3g__pkt_4__lit_a" gd:GUID="efe5922b-1165-498e-b488-56ca3547eba0">
+                  <nr>a</nr>
+                  <p>
+                    <zdanie nr="1" gd:zdGUID="c4a0202b-24e4-43d9-8f7f-00a61ad2edbb" fragment="6" gd:fragmentGUID="32a9a01f-b8a3-4a89-b2b0-60f58f69004e">mistrzowski – 1400,00 zł,</zdanie>
+                  </p>
+                </litera>
+                <litera eId="DU/2026/46__art_3__ust_3g__pkt_4__lit_b" gd:GUID="567c6679-cf43-4e52-b164-068a3c173fd2">
+                  <nr>b</nr>
+                  <p>
+                    <zdanie nr="1" gd:zdGUID="c4a0202b-24e4-43d9-8f7f-00a61ad2edbb" fragment="7" gd:fragmentGUID="3a3eaff3-92f7-46f0-a216-68d856b959e7">czeladniczy – 700,00 zł,</zdanie>
+                  </p>
+                </litera>
+                <litera eId="DU/2026/46__art_3__ust_3g__pkt_4__lit_c" gd:GUID="beaa1649-4074-4b26-9e0d-072e5f91ed0a">
+                  <nr>c</nr>
+                  <p>
+                    <zdanie nr="1" gd:zdGUID="c4a0202b-24e4-43d9-8f7f-00a61ad2edbb" fragment="8" gd:fragmentGUID="501e66a3-dd30-40bc-89f4-77101fd2056f">sprawdzający – 250,00 zł,</zdanie>
+                  </p>
+                </litera>
+                <litera eId="DU/2026/46__art_3__ust_3g__pkt_4__lit_d" gd:GUID="ba1c5602-6a05-4ebe-af3d-75c8f21cff46">
+                  <nr>d</nr>
+                  <p>
+                    <zdanie nr="1" gd:zdGUID="c4a0202b-24e4-43d9-8f7f-00a61ad2edbb" fragment="9" gd:fragmentGUID="972be6d3-b2ae-441d-9c15-987b7b96b70f">poprawkowy – 50 % opłaty określonej w lit. a albo b;</zdanie>
+                  </p>
+                </litera>
+              </punkt>
+              <punkt eId="DU/2026/46__art_3__ust_3g__pkt_5" gd:GUID="8082b744-72e4-49f7-b2aa-b71966d28fec">
+                <nr>5</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="c4a0202b-24e4-43d9-8f7f-00a61ad2edbb" fragment="10" gd:fragmentGUID="a3e4acb2-6444-42bb-8ebb-13e612d728e6">prowadzi dokumentację komisji egzaminacyjnej, w tym ewidencję egzaminów;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/46__art_3__ust_3g__pkt_6" gd:GUID="ce7696e0-8681-4b82-a873-99b6c537a1e6">
+                <nr>6</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="c4a0202b-24e4-43d9-8f7f-00a61ad2edbb" fragment="11" gd:fragmentGUID="7daf77bf-41cd-4a00-b6d6-7c49c86ef987">rozpatruje skargi kandydatów dotyczące prawidłowości przeprowadzenia egzaminu;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/46__art_3__ust_3g__pkt_7" gd:GUID="4a1ad87c-1995-4671-b112-5360afaab967">
+                <nr>7</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="c4a0202b-24e4-43d9-8f7f-00a61ad2edbb" fragment="12" gd:fragmentGUID="7017471e-1655-4779-bcb3-0056406e2763">organizuje szkolenia dla osób wchodzących w skład komisji egzaminacyjnych według programu ustalonego przez Związek Rzemiosła Polskiego.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2026/46__art_3__ust_3ga" gd:GUID="fc7541ef-9940-4db6-8673-d33cb18bc978">
+              <nr>3ga</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="872a4de3-6b31-46fb-a880-89cdd6c09804" fragment="1" gd:fragmentGUID="bb217507-da81-4a86-a46a-62ecccc6bb94">Opłaty, o których mowa w ust. 3g pkt 4 lit. a–c, podlegają waloryzacji wskaźnikiem cen towarów i usług konsumpcyjnych ogółem, jeżeli ten wskaźnik w poprzednim roku kalendarzowym wynosi co najmniej 99 %.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/46__art_3__ust_3h" gd:GUID="37eb9d64-150f-45bb-944d-0ed01330ec31">
+              <nr>3h</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="06d7db79-14a7-44db-b849-dc023163ba65" fragment="1" gd:fragmentGUID="bd052b0e-7f88-4537-a090-9b656cd717af">Izba rzemieślnicza może zwolnić osobę przystępującą do egzaminu z opłaty, o której mowa w ust. 3g pkt 4.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/46__art_3__ust_3i" gd:GUID="8eca6090-3eb2-4fc6-b221-ccbc9d4e77c9">
+              <nr>3i</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="c3b22a9d-3fb7-4b9f-a453-72755415fbda" fragment="1" gd:fragmentGUID="e3d158ee-a0ba-4eab-abf6-99a09e03051c">Osoby dorosłe uzyskujące i uzupełniające wiedzę i umiejętności zawodowe w formach pozaszkolnych, określonych w odrębnych przepisach, mogą przystąpić do egzaminu sprawdzającego wybrane kwalifikacje zawodowe w zakresie zawodu odpowiadającego danemu rodzajowi rzemiosła.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/46__art_3__ust_4" gd:GUID="181e02ce-e85a-474e-8867-3c42e0d951d5">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="89d167d8-12cc-4e36-845d-96c54fdac0a0" fragment="1" gd:fragmentGUID="657d62c8-17bb-4cb2-9eb2-7ad4bfe2c03e">Minister właściwy do spraw oświaty i wychowania, po zasięgnięciu opinii Związku Rzemiosła Polskiego, określi, w drodze rozporządzenia, warunki powoływania komisji egzaminacyjnych izb rzemieślniczych, warunki dopuszczania do egzaminu i sposób jego przeprowadzania, wysokość wynagrodzenia członków komisji, warunki i tryb wydawania oraz wzory świadectw czeladniczych, dyplomów mistrzowskich, zaświadczeń o zdaniu egzaminu sprawdzającego, suplementów do świadectw czeladniczych i dyplomów mistrzowskich (Europass), umieszczenie znaków graficznych informujących o poziomie Polskiej Ramy Kwalifikacji, o których mowa w art. 10 ustawy z dnia 22 grudnia 2015 r. o Zintegrowanym Systemie Kwalifikacji (Dz. U. z 2024 r. poz. 1606), a także sposobów wydawania duplikatów i dokonywania legalizacji dokumentów przeznaczonych do obrotu z zagranicą oraz wysokość odpłatności za wykonywanie tych czynności.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/46__art_3__ust_4a" gd:GUID="bc18fbb3-f8fe-49b5-84ab-5cfbe2a7f842">
+              <nr>4a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="6cc44bf0-db87-4dd8-a44e-651d43b50f53" fragment="1" gd:fragmentGUID="91595003-b7ce-4f40-af8a-bf4acb6acf9f">Rozporządzenie, o którym mowa w ust. 4, powinno uwzględniać w szczególności wymagania, jakim powinny odpowiadać osoby wchodzące w skład komisji egzaminacyjnych, zakres obowiązujących tematów egzaminacyjnych oraz możliwość zwolnienia z części egzaminu osoby przystępującej do egzaminu.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/46__art_3__ust_5" gd:GUID="4422a5e5-dd9e-4302-8896-5e061a2d81fa">
+              <nr>5</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ecb14b2e-b0c7-4bc5-8a2b-6b0757544779" fragment="1" gd:fragmentGUID="446f755e-d6f6-4d17-8ade-aff96edf847d">Rzemieślnicy zatrudniający pracowników w celu przygotowania zawodowego w rzemiośle obowiązani są spełniać warunki określone odrębnymi przepisami oraz być członkami jednej z organizacji, o których mowa w art. 7 ust. 3 pkt 1 i 3.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/46__art_3__ust_6" gd:GUID="7f4cbf7d-6e2b-45ed-84c6-af8cc6446307">
+              <nr>6</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="a9a2815a-4f41-44ff-8832-8c1026904cc0" fragment="1" gd:fragmentGUID="4b1693cf-67c4-40d7-bc28-e27ccf4016ce">Przygotowanie zawodowe w rzemiośle realizowane jest na zasadach dualnego systemu kształcenia.</zdanie>
+                <zdanie nr="2" gd:zdGUID="39959d58-09e5-4e63-bbb9-3447c275562a" fragment="1" gd:fragmentGUID="a8c74a2c-3a73-4a98-86b3-970f09d786f2">Nadzór nad jego przebiegiem sprawuje izba rzemieślnicza lub z jej upoważnienia cech, którego członkiem jest rzemieślnik.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/46__art_3a" gd:GUID="e19d224c-99e2-4224-b9a9-34f28e21a727">
+            <nr>3a</nr>
+            <ustep eId="DU/2026/46__art_3a__ust_1" gd:GUID="6379149a-3549-424a-9e20-7d16bd6721dc">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="d6476b9c-0abb-4b85-8ddb-d00ef2949b02" fragment="1" gd:fragmentGUID="ff18a19a-9460-413e-acc0-efd6a7d29fbb">Rzemieślnikowi – osobie fizycznej posiadającej znaczący i uznany dorobek zawodowy w zakresie wytwarzania lub odtwarzania przedmiotów o charakterze artystycznym lub zabytkowym, naprawy i konserwacji takich przedmiotów, naprawy i konserwacji zabytkowych obiektów budowlanych oraz świadczenia usług związanych z artystycznym zdobieniem obiektów budowlanych może zostać nadany tytuł honorowy „Mistrz Rzemiosł Artystycznych”.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/46__art_3a__ust_2" gd:GUID="0da0df3c-be09-454d-8ff5-35b698b36db8">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="b5ccf164-6a45-4f6d-a76e-670c367b0f53" fragment="1" gd:fragmentGUID="8627674a-b26b-496e-800d-1d77b789fee6">Tytuł honorowy „Mistrz Rzemiosł Artystycznych” nadaje minister właściwy do spraw kultury i ochrony dziedzictwa narodowego.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/46__art_3a__ust_3" gd:GUID="cb8df6d4-4b80-4da1-841b-035cc22fdc61">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="a2188822-ebbe-40a5-a5a6-dc9d4347ba01" fragment="1" gd:fragmentGUID="785d2166-ab61-459d-bb67-200ccce8d139">Minister właściwy do spraw kultury i ochrony dziedzictwa narodowego określi, w drodze rozporządzenia:</zdanie>
+              </p>
+              <punkt eId="DU/2026/46__art_3a__ust_3__pkt_1" gd:GUID="27f4b87a-6e8b-4871-bd05-558e9d9a126d">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="a2188822-ebbe-40a5-a5a6-dc9d4347ba01" fragment="2" gd:fragmentGUID="cacc1b5a-189b-42b5-b9f5-87a7b0ce8af5">tryb nadawania tytułu honorowego „Mistrz Rzemiosł Artystycznych”,</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/46__art_3a__ust_3__pkt_2" gd:GUID="3e152711-ae3e-40ae-b9ba-b3a7d4711e4d">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="a2188822-ebbe-40a5-a5a6-dc9d4347ba01" fragment="3" gd:fragmentGUID="9d7d4884-1c8e-4799-bab1-49fbd328d790">podmioty uprawnione do występowania z wnioskiem o nadanie tytułu,</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/46__art_3a__ust_3__pkt_3" gd:GUID="ece486fd-d0df-40d1-9e11-76d2f01b93cd">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="a2188822-ebbe-40a5-a5a6-dc9d4347ba01" fragment="4" gd:fragmentGUID="3b6751fc-f608-4294-8aab-6c28dc82603f">warunki, jakie musi spełniać wniosek o nadanie tytułu,</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/46__art_3a__ust_3__pkt_4" gd:GUID="e2399713-fdef-441b-a1c0-f77f94ddeb25">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="a2188822-ebbe-40a5-a5a6-dc9d4347ba01" fragment="5" gd:fragmentGUID="9cd8cdc5-d1ad-4517-a589-7eb83867062a">wzór dyplomu potwierdzającego nadanie tytułu</zdanie>
+                </p>
+              </punkt>
+              <czesc-wspolna-punkt eId="DU/2026/46__art_3a__ust_3__czw" gd:GUID="a38b62b1-026c-4d13-a5a0-db33fe8be41b">
+                <p>
+                  <zdanie nr="1" gd:zdGUID="a2188822-ebbe-40a5-a5a6-dc9d4347ba01" fragment="6" gd:fragmentGUID="62d85d2f-742a-4158-875a-a3f956f7149d">– mając na względzie wspieranie zanikających zawodów oraz promocję umiejętności istotnych dla funkcjonowania wielu dziedzin kultury i sztuki jak również ochrony dziedzictwa narodowego.</zdanie>
+                </p>
+              </czesc-wspolna-punkt>
+            </ustep>
+          </artykul>
+        </oddzial-n>
+      </rozdzial>
+      <rozdzial eId="DU/2026/46__rozdz_2" gd:GUID="814a1617-86fb-4c46-b106-92df8d43380e">
+        <naglowek-rozdzialu>
+          <nr>2</nr>
+          <p>Podstawowe prawa i obowiązki rzemieślnika</p>
+        </naglowek-rozdzialu>
+        <oddzial-n brak-eid="jednostka-nieoznaczona" gd:GUID="31744b33-514f-45ff-afae-1bbbd6ff4fe0">
+          <artykul eId="DU/2026/46__art_4" gd:GUID="ae38e469-7948-4f08-b81f-ab91aa568320">
+            <nr>4</nr>
+            <ustep eId="DU/2026/46__art_4__ust_1" gd:GUID="fa6896cf-6b6d-4b7d-bed7-d2475eec220d">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="9576d9fe-3433-44ae-953c-0da7ca89c945" fragment="1" gd:fragmentGUID="0e319d5e-ed37-4d30-8ca4-f227de9c85a7">Rzemieślnik ma prawo:</zdanie>
+              </p>
+              <punkt eId="DU/2026/46__art_4__ust_1__pkt_1" gd:GUID="510368be-4503-4905-8173-a5d47de2c7e2">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="9576d9fe-3433-44ae-953c-0da7ca89c945" fragment="2" gd:fragmentGUID="72f0726f-a589-4837-a66c-590fcaeb92be">zrzeszania się w organizacjach, o których mowa w art. 7 ust. 3 pkt 1 i 3, na zasadach określonych w ustawie;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/46__art_4__ust_1__pkt_2" gd:GUID="fb4a5313-59b0-4e5e-b6a1-16906052976d">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="9576d9fe-3433-44ae-953c-0da7ca89c945" fragment="3" gd:fragmentGUID="262e7724-e35a-45ef-98f1-f92bccc0901e">wybierać i być wybieranym do organów samorządu gospodarczego rzemiosła;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/46__art_4__ust_1__pkt_3" gd:GUID="52ea77cc-ef6e-45ad-a58f-564fdfcb51bc">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="9576d9fe-3433-44ae-953c-0da7ca89c945" fragment="4" gd:fragmentGUID="16421795-e89f-4ac7-8533-8ecac8b77c80">korzystać z uproszczonych (zryczałtowanych) form opodatkowania oraz zwolnień i ulg podatkowych na zasadach powszechnie obowiązujących przedsiębiorców.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2026/46__art_4__ust_1a" gd:GUID="724aa62f-85be-4db8-a677-ed30fc36f694">
+              <nr>1a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="990bc859-397c-42b1-81fa-06f6c4f880e6" fragment="1" gd:fragmentGUID="1ac7c26a-2e15-41d8-8a6c-5ddfbdf1cdf6"><odnosnik id-odnosnika="5" symbol="5" gd:GUID="7c8b15d0-a2ae-4ce5-a149-1d57df5d049c"><p><zdanie nr="1" gd:zdGUID="207ebc7f-6c5f-43fe-9b68-e3f20f2df965" fragment="1" gd:fragmentGUID="ecbf4a0f-287d-482d-9c89-eab87c1d15f0">Dodany przez art. 5 pkt 2 ustawy, o której mowa w odnośniku 1.</zdanie></p></odnosnik> Prawo, o którym mowa w ust. 1 pkt 1, przysługuje również wspólnikowi spółki cywilnej oraz spółkom, o których mowa w art. 2 ust. 7.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/46__art_4__ust_2" gd:GUID="9fb6d313-1a66-45f3-9aec-871cd5f897a5">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="1f6fa6dd-086b-4bbe-ad30-18a09b458e2d" fragment="1" gd:fragmentGUID="87ea2e79-607c-4b77-8f6d-c11f424e3eaa">W przypadku śmierci osoby fizycznej posiadającej kwalifikacje, o których mowa w art. 3 ust. 1, współmałżonek pozostający do chwili śmierci na jego utrzymaniu oraz małoletni zstępni mają prawo nadal wykonywać rzemiosło w warunkach i na zasadach obowiązujących tę osobę.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/46__art_4__ust_3" gd:GUID="63e64ec3-969c-4296-b35f-939519515046">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="a5efabf8-67b4-4a98-9a69-a9a0a0052939" fragment="1" gd:fragmentGUID="ec184d11-d103-4581-90e6-7f374652bbba">Na rachunek zstępnych rzemiosło może być wykonywane przez ustawowego opiekuna do czasu osiągnięcia przez nich pełnoletności lub ukończenia nauki w szkołach ponadpodstawowych lub wyższych.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/46__art_4__ust_4" gd:GUID="e4e5460f-a492-4af7-932f-6e7193c7e235">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="a55e26d3-7e40-4495-ba06-067aa40bdbd7" fragment="1" gd:fragmentGUID="555d93b6-90e7-4490-9464-e381976425d0">Uprawnienia, o których mowa w ust. 2, przysługują także pozostającym na utrzymaniu osoby fizycznej posiadającej kwalifikacje, o których mowa w art. 3 ust. 1, do chwili jej śmierci pełnoletnim zstępnym pobierającym naukę w szkołach podstawowych, szkołach ponadpodstawowych lub wyższych przez okres pobierania przez nich nauki w tych szkołach.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/46__art_4__ust_5" gd:GUID="7562c541-2324-4bcd-a2c9-9257a2d8724e">
+              <nr>5</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="98e2e384-0386-4522-bae0-f857a343f4e6" fragment="1" gd:fragmentGUID="a3d973bf-bb25-4eee-bfd6-94bc13bd9945">W przypadku gdy dany rodzaj rzemiosła może być wykonywany wyłącznie po wykazaniu się przez osobę fizyczną posiadającą kwalifikacje, o których mowa w art. 3 ust. 1, innymi dowodami kwalifikacji zawodowych, o których mowa w art. 3 ust. 2, małżonek lub zstępni, o których mowa w ust. 3 i 4, wykonują działalność za pośrednictwem osoby posiadającej wymagane kwalifikacje.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/46__art_5" gd:GUID="8f7b9132-10a2-4350-b9b9-76eb3a8a5783">
+            <nr>5</nr>
+            <ustep eId="DU/2026/46__art_5__ust_1" gd:GUID="23581aee-9a52-46e5-9b26-603b263b6dca">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="7d5f6b23-2468-4191-bfe2-89e2ae55b8ec" fragment="1" gd:fragmentGUID="4b1d98cd-eca4-4d86-bfad-d300cbd096db">Rzemieślnik jest obowiązany przestrzegać zasad etyki i godności zawodowej.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/46__art_5__ust_2" gd:GUID="981b1233-c1d4-4e93-82b5-994e6a4fb4f8">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="a9e91f1f-bf66-42c1-81df-a1c522ea65f1" fragment="1" gd:fragmentGUID="e0fc782d-b4c5-4650-9248-784517220a9f">Szczegółowe zasady etyki zawodowej i rzetelnego wykonywania rzemiosła cechowego określa samorząd gospodarczy rzemiosła.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/46__art_5__ust_3" gd:GUID="0162b3f6-5b70-49b2-9e99-43d6a5b5b80e">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="8182c655-fd46-439e-b36c-34c24bfa8ab0" fragment="1" gd:fragmentGUID="b435d489-63bf-4d19-913a-f03bd374be20">Przepis ust. 1 dotyczy także członków organizacji samorządu gospodarczego rzemiosła, o których mowa w art. 7 ust. 7 pkt 1.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/46__art_6" gd:GUID="5496a5d6-cf87-48d6-b54e-33508c566f5b">
+            <nr>6</nr>
+            <ustep eId="DU/2026/46__art_6__ust_1" gd:GUID="b92671fc-a5f0-48d3-aa1c-12e52bfb486a">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="d0fc400c-5772-4c9a-9f91-03ca26491262" fragment="1" gd:fragmentGUID="863a2903-fc6a-446b-b17d-810e0f80d8d0">Rzemieślnicy podlegają odpowiedzialności dyscyplinarnej za naruszenie zasad etyki zawodowej i rzetelnego wykonywania rzemiosła.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/46__art_6__ust_2" gd:GUID="076237fe-6b1b-4161-820c-ed8932715e79">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="544e4164-3eb6-4445-95ad-086cfffa709a" fragment="1" gd:fragmentGUID="e0d110a0-8079-44ce-96ae-061ff180112c">Zasady odpowiedzialności dyscyplinarnej i tryb postępowania dyscyplinarnego określają statuty organizacji samorządu gospodarczego rzemiosła.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+        </oddzial-n>
+      </rozdzial>
+      <rozdzial eId="DU/2026/46__rozdz_3" gd:GUID="95b24602-bad6-4752-bba9-fe6ba5d955f5">
+        <naglowek-rozdzialu>
+          <nr>3</nr>
+          <p>Samorząd gospodarczy rzemiosła</p>
+        </naglowek-rozdzialu>
+        <oddzial-n brak-eid="jednostka-nieoznaczona" gd:GUID="0ab13fd8-898c-4582-929c-ec08c112c254">
+          <artykul eId="DU/2026/46__art_7" gd:GUID="6bb6a802-5fe4-4b8d-bebe-75b1a33fb808">
+            <nr>7</nr>
+            <ustep eId="DU/2026/46__art_7__ust_1" gd:GUID="ba85c62c-b26e-48ca-aece-5849c0a12e31">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="525d8d1d-02c8-4dd6-a928-8597ff469805" fragment="1" gd:fragmentGUID="d0e395c0-1579-4578-9c53-c75251c862a7">Tworzy się samorząd gospodarczy rzemiosła.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/46__art_7__ust_2" gd:GUID="9d8e86ef-f4ec-43f1-b64c-90eafadb8bde">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="4ebca2bd-6120-48e9-8f82-a1357d68b0f6" fragment="1" gd:fragmentGUID="ea7ada4d-5887-4061-8ef3-0d16c79132ac">Samorząd gospodarczy rzemiosła jest niezależny w wykonywaniu swych zadań i podlega tylko przepisom prawa.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/46__art_7__ust_3" gd:GUID="bc2d1971-f390-4e8d-a039-17a8d084f60e">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="29f198ce-7f48-48ca-bf0a-36893591b40d" fragment="1" gd:fragmentGUID="fa6f3941-e353-48c7-807b-0d65bc2d934e">Organizacjami samorządu gospodarczego rzemiosła są:</zdanie>
+              </p>
+              <punkt eId="DU/2026/46__art_7__ust_3__pkt_1" gd:GUID="8d5da40e-69c9-4c1c-9d00-aa4e393f473f">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="29f198ce-7f48-48ca-bf0a-36893591b40d" fragment="2" gd:fragmentGUID="01f65c82-3fb8-4186-b340-aab0df930da0">cechy;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/46__art_7__ust_3__pkt_2" gd:GUID="d1f84e2a-828e-4ffa-bf6d-078849f44d03">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="29f198ce-7f48-48ca-bf0a-36893591b40d" fragment="3" gd:fragmentGUID="a2ca7bdc-d74d-4dbb-b70a-a98080e45903">(uchylony)</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/46__art_7__ust_3__pkt_3" gd:GUID="2bff1492-9240-4ab2-947b-c0a996ef66c9">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="29f198ce-7f48-48ca-bf0a-36893591b40d" fragment="4" gd:fragmentGUID="134045a5-d044-49c7-8ba9-4075c0eff88f">izby rzemieślnicze;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/46__art_7__ust_3__pkt_4" gd:GUID="100a1986-f440-48d4-9f03-54a03e419df1">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="29f198ce-7f48-48ca-bf0a-36893591b40d" fragment="5" gd:fragmentGUID="ca0814f2-ebfc-45e8-afbf-7ba547cbe17b">Związek Rzemiosła Polskiego.</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/46__art_7__ust_3__pkt_5" gd:GUID="a52f91fb-1d75-4061-8c26-9d20d54ab55f">
+                <nr>5</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="29f198ce-7f48-48ca-bf0a-36893591b40d" fragment="6" gd:fragmentGUID="6f39930d-5dcc-4755-b745-5820ac747e7d">(uchylony)</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2026/46__art_7__ust_4" gd:GUID="9a96c13a-b5d5-483e-ad46-cbef33e09545">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="892eed0b-df91-4e9b-9a96-2a1295b35b95" fragment="1" gd:fragmentGUID="2e04bf76-d40a-4756-96ea-348522771100">Organizacje samorządu gospodarczego rzemiosła tworzone są z inicjatywy członków na zasadzie dobrowolnej przynależności.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/46__art_7__ust_5" gd:GUID="50de2eaa-b624-41eb-8ba1-61fbd023338f">
+              <nr>5</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="34a09efc-92c2-488b-b30f-b4a30a71a1ec" fragment="1" gd:fragmentGUID="c8656985-ed48-44e2-a8f8-9e990737a5eb">Do zadań samorządu gospodarczego rzemiosła należy w szczególności:</zdanie>
+              </p>
+              <punkt eId="DU/2026/46__art_7__ust_5__pkt_1" gd:GUID="6d6da97c-a190-4bd7-a786-60e6e50f626b">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="34a09efc-92c2-488b-b30f-b4a30a71a1ec" fragment="2" gd:fragmentGUID="e928490a-3a67-4835-875a-7cbb77b44ee1">promocja działalności gospodarczej i społeczno-zawodowej rzemiosła;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/46__art_7__ust_5__pkt_2" gd:GUID="fc09fe5d-052d-4b44-81f4-0b1781b8f88e">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="34a09efc-92c2-488b-b30f-b4a30a71a1ec" fragment="3" gd:fragmentGUID="03072368-2c5d-4447-b014-42c46c9c4244">nadzór nad organizacją i przebiegiem procesu przygotowania zawodowego w rzemiośle;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/46__art_7__ust_5__pkt_3" gd:GUID="7968c8f2-8ed5-468f-8518-49998f7ea65d">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="34a09efc-92c2-488b-b30f-b4a30a71a1ec" fragment="4" gd:fragmentGUID="704aae1b-fd35-49d9-acfc-a6142f9f6da3">udzielanie pomocy rzemieślnikom i innym przedsiębiorcom zrzeszonym w organizacjach samorządu gospodarczego rzemiosła;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/46__art_7__ust_5__pkt_4" gd:GUID="bf44a13b-d72a-45b1-af3c-90e796b8a467">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="34a09efc-92c2-488b-b30f-b4a30a71a1ec" fragment="5" gd:fragmentGUID="d10b76f3-ef3a-49a0-a2ea-3ac7345947e9">reprezentowanie interesów środowiska rzemieślniczego wobec organów administracji publicznej;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/46__art_7__ust_5__pkt_5" gd:GUID="6673efe3-7d94-4d74-a265-30101eebda8e">
+                <nr>5</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="34a09efc-92c2-488b-b30f-b4a30a71a1ec" fragment="6" gd:fragmentGUID="ba1f3234-ac16-4234-90d7-2e26c5d8ff83">uczestniczenie w realizacji zadań z zakresu oświaty i wychowania w celu zapewnienia wykwalifikowanych kadr dla gospodarki, w tym prowadzenie szkół.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2026/46__art_7__ust_6" gd:GUID="26c312c1-a1b5-40c1-b23b-9f2e9c1c3bfc">
+              <nr>6</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="c59ac3c3-610a-41ae-a6a6-50edcda54938" fragment="1" gd:fragmentGUID="05aa8407-4394-4c5d-b518-d969ef058a99">Właściwi ministrowie zasięgają opinii Związku Rzemiosła Polskiego odnośnie do projektów aktów prawnych dotyczących rzemiosła.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/46__art_7__ust_7" gd:GUID="396fcd30-ec3e-40ad-aa2d-65de045208f7">
+              <nr>7</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="e0739bf1-1de7-40cc-aa00-10dff0d4a11c" fragment="1" gd:fragmentGUID="ee1ac0be-afec-494c-8771-e5c21adaeb93">Za zgodą organizacji samorządu gospodarczego rzemiosła jej:</zdanie>
+              </p>
+              <punkt eId="DU/2026/46__art_7__ust_7__pkt_1" gd:GUID="e34c2253-0d65-44ca-bc2a-46e414bcd113">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="e0739bf1-1de7-40cc-aa00-10dff0d4a11c" fragment="2" gd:fragmentGUID="03ee379b-1bb1-4dba-9956-32917f88c4fd">członkami mogą być także:</zdanie>
+                </p>
+                <litera eId="DU/2026/46__art_7__ust_7__pkt_1__lit_a" gd:GUID="c12790fb-ec1a-48e9-b9d5-dbaab9cf6778">
+                  <nr>a</nr>
+                  <p>
+                    <zdanie nr="1" gd:zdGUID="e0739bf1-1de7-40cc-aa00-10dff0d4a11c" fragment="3" gd:fragmentGUID="0b183eff-6f4f-4019-b611-29747f7435da">małżonek lub zstępny osoby, o której mowa w art. 2 ust. 1, jeżeli uczestniczy w wykonywaniu przez tę osobę działalności gospodarczej w zakresie rzemiosła,</zdanie>
+                  </p>
+                </litera>
+                <litera eId="DU/2026/46__art_7__ust_7__pkt_1__lit_b" gd:GUID="17691aa3-9eea-4e94-a3bd-a3eff8d43ca8">
+                  <nr>b</nr>
+                  <p>
+                    <zdanie nr="1" gd:zdGUID="e0739bf1-1de7-40cc-aa00-10dff0d4a11c" fragment="4" gd:fragmentGUID="7004b0d8-d28c-482b-a53a-4d2e0f73d9d3">osoby fizyczne wykonujące działalność gospodarczą, niebędące rzemieślnikami, zatrudniające niewięcej niż 250 pracowników;</zdanie>
+                  </p>
+                </litera>
+              </punkt>
+              <punkt eId="DU/2026/46__art_7__ust_7__pkt_2" gd:GUID="4a71e057-a8f3-4d7a-b3f5-88831e9feadd">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="e0739bf1-1de7-40cc-aa00-10dff0d4a11c" fragment="5" gd:fragmentGUID="cade0f39-62d0-487e-b6d3-e99fd6e377ee">członkami wspierającymi mogą być osoby prawne wykonujące działalność gospodarczą.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/46__art_8" gd:GUID="11bff652-0872-437e-abc2-85c52527860d">
+            <nr>8</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="684b90ee-2ecb-4ecd-a60d-38c77fca9f31">
+              <p>
+                <zdanie nr="1" gd:zdGUID="2fbeb5cf-d657-495e-8d6a-6451a051b483" fragment="1" gd:fragmentGUID="fce81953-dcc9-42b1-9c7e-8db44f0d03d1">Organizacje samorządu gospodarczego rzemiosła wymienione w art. 7 ust. 3 mają osobowość prawną.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2026/46__art_9" gd:GUID="acd2df57-07bf-445b-a813-144b0cd73932">
+            <nr>9</nr>
+            <ustep eId="DU/2026/46__art_9__ust_1" gd:GUID="fb60482d-cad4-49f3-90b2-e390a9e9c28b">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="a61d0512-a509-4c77-ad0d-b3a8ee035403" fragment="1" gd:fragmentGUID="6576ee16-7c11-4b70-8528-fbfede0b6e0b">Cechy są organizacjami samorządu gospodarczego rzemiosła zrzeszającymi rzemieślników według kryterium terytorialnego lub według rodzaju działalności gospodarczej.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/46__art_9__ust_2" gd:GUID="6ed1975a-3cdb-4de7-a162-4d518458576a">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ad1c1783-01f4-484b-9c35-94dc41e64147" fragment="1" gd:fragmentGUID="57f92af1-45fe-4e9e-b25b-578842e75126">Podstawowym zadaniem cechu jest w szczególności utrwalanie więzi środowiskowych, postaw zgodnych z zasadami etyki i godności zawodu, a także prowadzenie na rzecz członków działalności społeczno-organizacyjnej, kulturalnej, oświatowej i gospodarczej, a także reprezentowanie interesów członków wobec organów administracji i sądów.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/46__art_10" gd:GUID="6ec02965-e90d-442c-9c8d-f84cdd48bbf5">
+            <nr>10</nr>
+            <ustep eId="DU/2026/46__art_10__ust_1" gd:GUID="b432f8f2-116e-4f2b-9db4-bc006c04e2d9">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="fd9c7cae-76cd-4810-84bc-f8c17d509480" fragment="1" gd:fragmentGUID="47f223e0-9559-4ab6-a09f-9e57d7f7a172">Spółdzielnie rzemieślnicze działają na zasadach określonych w przepisach Prawa spółdzielczego.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/46__art_10__ust_2" gd:GUID="2d865d4b-90ee-446b-883d-c9dd0cf04452">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="8a8d38e5-57e1-41c3-ac11-a3fdfe54b376" fragment="1" gd:fragmentGUID="74e8f68b-2712-48ca-a607-c37604afae08">Zadaniem spółdzielni rzemieślniczych jest w szczególności organizowanie działalności usługowej i wytwórczej rzemiosła, udzielanie pomocy członkom w wykonywaniu ich zadań oraz prowadzenie własnej działalności gospodarczej i społeczno-wychowawczej.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/46__art_11" gd:GUID="d6321d8a-eb99-405f-98d1-fa39f3cb1bc7">
+            <nr>11</nr>
+            <ustep eId="DU/2026/46__art_11__ust_1" gd:GUID="0fa53f69-9509-489b-b498-6416fd1e6659">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="3ded9900-86dd-4c01-bfd5-e5531d81dc24" fragment="1" gd:fragmentGUID="f69a40fc-e567-47e7-803a-4b09c4752416">Izby rzemieślnicze są organizacjami samorządu gospodarczego rzemiosła zrzeszającymi cechy, spółdzielnie rzemieślnicze, rzemieślników nienależących do cechów, a także inne jednostki organizacyjne, jeżeli ich celem jest wspieranie rozwoju gospodarczego rzemiosła.</zdanie>
+                <zdanie nr="2" gd:zdGUID="8164051f-43ad-4da3-ac15-d58fe9529cc2" fragment="1" gd:fragmentGUID="71164104-7f7b-4194-b697-a2ad02645b43">Izby mogą w swych statutach przyjmować nazwy z dodatkiem wyrazów „przedsiębiorczość” lub „przedsiębiorca” użytych w odpowiednim przypadku, a także określeń zawierających wskazanie regionu.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/46__art_11__ust_2" gd:GUID="1ce7b25c-0a64-4e5a-bf72-fe64a9a4af7f">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="f66403ed-5a01-43b7-9ca0-befd2e99b5ca" fragment="1" gd:fragmentGUID="a81eeece-a624-441c-8e7e-18efb61ef1f1">Podstawowym zadaniem izb rzemieślniczych jest pomoc w reprezentowaniu zrzeszonych organizacji oraz rzemieślników wobec organów administracji publicznej oraz innych organizacji i instytucji, udzielanie swym członkom pomocy instruktażowej i doradczej oraz przeprowadzanie egzaminów kwalifikacyjnych.</zdanie>
+                <zdanie nr="2" gd:zdGUID="f14cb484-2b98-4a2d-9e19-4a8ac7bb118f" fragment="1" gd:fragmentGUID="ced858de-90d7-4f4a-85f4-d94830b3064b">Szczegółowy zakres zadań izb rzemieślniczych określają ich statuty.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/46__art_11__ust_3" gd:GUID="f3e65ec0-3706-4759-b14b-08cef6b1e086">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="16422cb7-b7f6-444f-a8f0-9066f3101e2e" fragment="1" gd:fragmentGUID="d32fa786-c93c-40b9-9089-7fcae1ac0b0c">Izby rzemieślnicze są uprawnione do potwierdzania egzaminów kwalifikacyjnych świadectwami czeladniczymi i dyplomami mistrzowskimi oraz do opatrywania ich pieczęcią z godłem Państwa.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/46__art_11__ust_3a" gd:GUID="fe382916-f4a3-4161-a43b-3df6ced1ce84">
+              <nr>3a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="738b4b45-e76a-40c4-a008-c74dc5aaaff8" fragment="1" gd:fragmentGUID="a14df102-c488-4769-a1f2-c539cc9510da">Izby rzemieślnicze są uprawnione do potwierdzania wyników egzaminów sprawdzających zaświadczeniami o posiadaniu wybranych kwalifikacji zawodowych w zakresie zawodu odpowiadającego danemu rodzajowi rzemiosła.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/46__art_11__ust_3b" gd:GUID="3b39b174-3e6e-4f5f-8160-96d7f959b996">
+              <nr>3b</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="3967e7b2-e873-441e-be82-855c253529d6" fragment="1" gd:fragmentGUID="c73a0a72-a627-4fec-82c2-aa7b21353e44">Izby rzemieślnicze realizują zadania określone w art. 44 ust. 3c ustawy z dnia 6 marca 2018 r. o Centralnej Ewidencji i Informacji o Działalności Gospodarczej i Punkcie Informacji dla Przedsiębiorcy.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/46__art_11__ust_4" gd:GUID="de657f1b-ee31-4e8e-b328-59f8470ed55b">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="da8fc3f2-e901-493f-a5f4-377293574885" fragment="1" gd:fragmentGUID="62e6b533-af5d-4f89-a7c0-92c2cbd62300">Ilekroć w przepisach prawa mówi się o izbie rzemieślniczej, należy przez to rozumieć izbę rzemieślniczą, utworzoną w trybie i na zasadach określonych w niniejszej ustawie, bez względu na nazwę przyjętą w jej statucie.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/46__art_12" gd:GUID="91f1c9b3-4375-4e5a-af69-8f1f0cdbd761">
+            <nr>12</nr>
+            <ustep eId="DU/2026/46__art_12__ust_1" gd:GUID="9abe103b-0f75-4f1c-95df-f313e5289341">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="2d73f7d5-cda5-4910-bf75-3ba2ab77eebf" fragment="1" gd:fragmentGUID="0d30e52e-2d15-4d86-b8db-ce2ea3b6f325">Organizacje samorządu gospodarczego rzemiosła wymienione w art. 7 ust. 3 pkt 1–3 mogą powołać ogólnopolską reprezentację, zwaną „Związek Rzemiosła Polskiego”.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/46__art_12__ust_2" gd:GUID="cbc74382-f703-482c-954e-6f3aed552fa3">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="dc03cbe5-aa34-4ee0-b7aa-6886c3a9f4e3" fragment="1" gd:fragmentGUID="b6611bc8-6ca0-44ca-82af-934186779f2b">W Związku Rzemiosła Polskiego mogą się zrzeszać izby rzemieślnicze, a także cechy o zasięgu ogólnopolskim.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/46__art_12__ust_3" gd:GUID="6ffdc136-3a2b-4d8b-b77a-919f9688df5e">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="9d0d3d8c-ea78-4abb-b1e7-1c2e593a545c" fragment="1" gd:fragmentGUID="78df336d-2f7f-4f40-9e22-353be1bd6d89">Związek Rzemiosła Polskiego może być utworzony z inicjatywy co najmniej 10 organizacji samorządu gospodarczego rzemiosła, wymienionych w art. 7 ust. 3 pkt <i>2</i> i 3, oraz cechów ogólnopolskich, które zadeklarują członkostwo w tym związku w drodze uchwał walnych zgromadzeń.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/46__art_12__ust_4" gd:GUID="69d3d944-ddfd-4e5f-b849-6e8fa871955c">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="80579f35-d0f5-4f61-b544-7e8d8b91280b" fragment="1" gd:fragmentGUID="7850775d-7012-4639-82c6-ee9fc5278c21">Podstawowym zadaniem Związku jest zapewnienie zrzeszonym w nim organizacjom pomocy w realizacji zadań statutowych, rozwijanie działalności społeczno-zawodowej oraz reprezentowanie interesów rzemiosła w kraju i za granicą.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/46__art_12__ust_5" gd:GUID="54149911-cf7f-4dd2-aa4f-ce47988c4af2">
+              <nr>5</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ea2c6f13-3db2-473b-a707-deb8c40827df" fragment="1" gd:fragmentGUID="fecd3072-aa48-452a-ab8e-02aefbd39785">Związek Rzemiosła Polskiego pełni względem spółdzielni rzemieślniczych funkcje związku rewizyjnego, w trybie i na zasadach określonych w przepisach Prawa spółdzielczego.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/46__art_13" gd:GUID="a5edf8d3-187e-4539-8345-f4510d031b2f">
+            <nr>13</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="243beaf0-9c34-4463-8dbf-3300b83f6278">
+              <p>
+                <zdanie nr="1" gd:zdGUID="88c7121c-949b-49a0-bc50-f2660e3e3352" fragment="1" gd:fragmentGUID="839aa8cb-463d-4a2e-8280-03c986c6a5fb">Szczegółowe zadania organizacji samorządu gospodarczego rzemiosła, ich ustrój, stosunki prawne członków ustalane są w statutach uchwalanych przez zjazdy lub walne zgromadzenia tych organizacji.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2026/46__art_14" gd:GUID="1bca58d4-f9fd-458a-a8c7-e973d87c7633">
+            <nr>14</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="7bee9aaa-3a86-4cb1-9d4e-0020798577b9">
+              <p>
+                <zdanie nr="1" gd:zdGUID="83dd2750-f568-4f7d-b4d3-8f72a86d3a96" fragment="1" gd:fragmentGUID="6c01f70d-ed51-4da7-9e42-4ba9e3cb67b9">Zasady gospodarki finansowej organizacji samorządu gospodarczego rzemiosła oraz zasady wynagradzania zatrudnionych w nich pracowników określają walne zgromadzenia (zjazdy delegatów) tych organizacji, jeżeli inne przepisy nie stanowią inaczej.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+        </oddzial-n>
+      </rozdzial>
+      <rozdzial eId="DU/2026/46__rozdz_4" gd:GUID="6874b75b-7e0b-4cef-8fbf-685960388dae">
+        <naglowek-rozdzialu>
+          <nr>4</nr>
+          <p>Przepisy przejściowe i końcowe</p>
+        </naglowek-rozdzialu>
+        <oddzial-n brak-eid="jednostka-nieoznaczona" gd:GUID="eb02e56b-0c99-4b0f-b887-0de65e6d39e2">
+          <artykul eId="DU/2026/46__art_15" gd:GUID="ed32f3bf-88c5-4cc5-9ce1-cdc7d4a5c2f3">
+            <nr>15</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="7b5f528d-a286-4849-af1b-2b614fba0023">
+              <p>
+                <zdanie nr="1" gd:zdGUID="6bc67633-3a93-41ec-8ea1-adc7e7aa8af6" fragment="1" gd:fragmentGUID="26291ac1-aa49-4f48-8cdb-031a827d88a5">(pominięty)</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2026/46__art_16" gd:GUID="2fcaed01-6bbf-4c68-9062-70f4a22bcaee">
+            <nr>16</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="1a638761-2347-499c-a55f-7cb6c2b2559c">
+              <p>
+                <zdanie nr="1" gd:zdGUID="5fb77808-1e66-4919-9132-b29d0ab93c01" fragment="1" gd:fragmentGUID="6cc1c28c-827a-4508-85e5-bafbd642cdd7">Cechy i izby rzemieślnicze mogą być tworzone w trybie inicjatyw założycielskich lub w drodze podziału istniejących organizacji pod warunkiem zapewnienia samodzielności finansowej.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2026/46__art_17" gd:GUID="7f81c12c-c617-4977-9480-3d8a794a3370">
+            <nr>17</nr>
+            <ustep eId="DU/2026/46__art_17__ust_1" gd:GUID="7bda8682-74b9-4d23-bfb7-75e0f258b358">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="fea3b240-67de-4230-8c98-d8987d7689fb" fragment="1" gd:fragmentGUID="ca1b0a70-7488-4bc6-a704-6622362c453d">Podstawą utworzenia cechu w trybie inicjatywy założycielskiej jest uchwalenie statutu cechu odpowiadającego wymogom określonym w art. 16 przez co najmniej 30 członków założycieli.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/46__art_17__ust_2" gd:GUID="d8db2a52-a130-4bd4-9b60-1c02f5825e96">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="7892fadd-c6c3-4d9d-8f33-43fff23bdd98" fragment="1" gd:fragmentGUID="433a8535-3da8-483b-ba3e-11e2669e508d">Podstawą utworzenia cechu w trybie podziału jest uchwała walnego zgromadzenia cechu podlegającego podziałowi, powzięta w trybie określonym w statucie, zawierająca postanowienia o zasadach podziału z uwzględnieniem podziału składników majątkowych oraz praw i zobowiązań cechu podlegającego podziałowi.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/46__art_18" gd:GUID="b3b85cb9-e63b-4caf-a121-1c1627be8aa1">
+            <nr>18</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="0e98a152-4d47-4ba6-91b5-6b33f9695c6e">
+              <p>
+                <zdanie nr="1" gd:zdGUID="56c5c2c8-95a6-4a59-9923-558ab56cfd32" fragment="1" gd:fragmentGUID="d1e42a3a-9745-48f5-bec4-b1abf090b034">Przepis art. 17 stosuje się odpowiednio do izb rzemieślniczych, z tym że liczba członków założycieli (cechów) wynosi co najmniej 20.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2026/46__art_19" gd:GUID="4e013f58-fe7e-4840-8f67-ca560e9c5987">
+            <nr>19</nr>
+            <ustep eId="DU/2026/46__art_19__ust_1" gd:GUID="444d4c1d-dc28-40c6-84f8-e23de660be55">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="c65f6f13-5c14-4870-b2fb-4c3ef6342ffa" fragment="1" gd:fragmentGUID="d24ba7e4-82ff-4085-bedd-a9281f827280">Cechy rzemieślnicze, izby rzemieślnicze i Związek Rzemiosła Polskiego podlegają obowiązkowi wpisu do Krajowego Rejestru Sądowego.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/46__art_19__ust_2" gd:GUID="930bce07-f9a3-473f-b9fa-39462210b398">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="6153777f-afcc-4cf3-8ca8-d99ce0e3d445" fragment="1" gd:fragmentGUID="24531c7f-da09-4cdc-a2b1-6f5bb163c99a">Organizacje, o których mowa w ust. 1, uzyskują osobowość prawną z chwilą wpisania do Krajowego Rejestru Sądowego.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/46__art_20" gd:GUID="1314fd64-0d86-448c-85de-84395e761d51">
+            <nr>20</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="64fa6e8c-7ab1-44c5-97de-d2734bd7081f">
+              <p>
+                <zdanie nr="1" gd:zdGUID="7c2923f8-2861-41ef-9364-f524e08fcf99" fragment="1" gd:fragmentGUID="35a28f6e-5a09-4d41-a5f0-0f267722b34f">(pominięty)</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2026/46__art_21" gd:GUID="9ee19c60-97b3-4d2b-b314-045c737b1b30">
+            <nr>21</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="cc3af120-2cf9-46b8-9cc5-149ab5ceae5f">
+              <p>
+                <zdanie nr="1" gd:zdGUID="6df5ea81-0697-423a-bdcd-919aca5c9b17" fragment="1" gd:fragmentGUID="92a7371d-3fd5-4168-950e-0384a2af827b">Ustawa wchodzi w życie z dniem 1 maja 1989 r.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+        </oddzial-n>
+      </rozdzial>
+    </ustawa>
+  </obwieszczenie>
+</akt-prawny>

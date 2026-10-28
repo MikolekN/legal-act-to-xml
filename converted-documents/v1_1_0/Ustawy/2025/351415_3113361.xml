@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <ustawa>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/1697</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>ab31243f-ff54-4f49-957e-ab68f5dab3df</gd:GUIDwersji>
+      <AdresISAP>WDU20250001697</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>1697</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 1697</AdresWyswietlany>
+      <Tytul>Ustawa z dnia 21 listopada 2025 r. o zmianie ustawy o środkach ochrony roślin</Tytul>
+      <Rodzaj>USTAWA</Rodzaj>
+      <DataOgloszenia>2025-12-04</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-11-21</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2026-01-01_DU-2025-1697_odczytane" rodzaj="wejscie-w-zycie" pochodzenie="odczytane" data="2026-01-01" podstawa="art. 2" zrodlo="https://eli.gov.pl/eli/DU/2025/1697" dowod="DU/2025/1697__art_2" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1697_odczytane.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2026-01-01_DU-2025-1697_odczytane" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="6c3fcc91-1d39-46e7-a5c9-e2f0f6bf4672" rola="wydajacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Sejm">
+          <Nazwa>SEJM</Nazwa>
+        </Organ>
+        <Organ gd:GUID="2c7b09f2-3004-41d8-a9b4-aee34be9d4a4" rola="podpisujacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Prezydent">
+          <Nazwa>Prezydent Rzeczypospolitej Polskiej</Nazwa>
+          <OrganPodpisujacy>Prezydent Rzeczypospolitej Polskiej</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>K.</imie> <nazwisko>Nawrocki</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Ustawa</rodzaj-aktu>
+    <data>z dnia 21 listopada 2025 r.</data>
+    <tytul>o zmianie ustawy o środkach ochrony roślin<odnosnik id-odnosnika="1" symbol="1" gd:GUID="de8943ff-706f-4948-8f3e-64dc0b76985e"><p><zdanie nr="1" gd:zdGUID="4d4b6dad-59bc-487e-a317-5bcb11718891" fragment="1" gd:fragmentGUID="4711f382-c1c7-4fac-bc1f-b3d605ee4e72">Niniejsza ustawa służy stosowaniu rozporządzenia wykonawczego Komisji (UE) 2023/564 z dnia 10 marca 2023 r. w odniesieniu do treści i formatu dokumentacji dotyczącej środków ochrony roślin prowadzonej i przechowywanej przez użytkowników profesjonalnych na podstawie rozporządzenia Parlamentu Europejskiego i Rady (WE) nr 1107/2009 (Dz. Urz. UE L 74 z 13.03.2023, str. 4 oraz Dz. Urz. UE L 2025/2203 z 03.11.2025).</zdanie></p></odnosnik></tytul>
+    <artykul eId="DU/2025/1697__art_1" gd:GUID="43d30260-6b97-498b-901e-f9cad7e239cd" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1697_odczytane.x" wejscie-w-zycie="2026-01-01">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="1b866ab0-e5ef-4d7b-8a25-da81ed2f794a" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1697_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="663b28c3-573d-40c2-8c19-c462ad5eda5b" fragment="1" gd:fragmentGUID="21a4df65-cf84-4486-b625-c19c5a706d5e" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1697_odczytane.x" wejscie-w-zycie="2026-01-01">W ustawie z dnia 8 marca 2013 r. o środkach ochrony roślin (Dz. U. z 2024 r. poz. 630 oraz z 2025 r. poz. 1168) po rozdziale 10 dodaje się rozdział 10a w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/630" cudzyslowy="oba" gd:nowGUID="f1ccd853-3a06-48cd-9840-94dda07f1fb4" element-eId="DU/2024/630__rozdz_10" funkcja="dodaj-po"><rozdzial eId="DU/2024/630__rozdz_10a" gd:GUID="3e4ed725-5349-4bac-8a73-f81e88a768d9" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1697_odczytane.x" wejscie-w-zycie="2026-01-01"><naglowek-rozdzialu><nr>10a</nr><p>Przepisy epizodyczne</p></naglowek-rozdzialu><oddzial-n brak-eid="jednostka-nieoznaczona" gd:GUID="dfc83cd8-59f5-4d0e-bca6-2f2c54e9e9b9" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1697_odczytane.x" wejscie-w-zycie="2026-01-01"><artykul eId="DU/2024/630__art_78a" gd:GUID="4f9dce5b-38d9-491f-8522-5297ed02c6e6" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1697_odczytane.x" wejscie-w-zycie="2026-01-01"><nr>78a</nr><ustep eId="DU/2024/630__art_78a__ust_1" gd:GUID="13cd0567-0bac-4020-8286-1c1562beb33f" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1697_odczytane.x" wejscie-w-zycie="2026-01-01"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="1c08a0a9-eaa2-4dbb-a1a8-94609101dfcf" fragment="1" gd:fragmentGUID="99b4c391-9eb2-446e-9f96-65b7d4a3a13a" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1697_odczytane.x" wejscie-w-zycie="2026-01-01">Dokumentację, o której mowa w art. 67 ust. 1 rozporządzenia nr 1107/2009, dotyczącą środków ochrony roślin zastosowanych przez użytkownika profesjonalnego przed terminem określonym w art. 3 akapit trzeci rozporządzenia wykonawczego Komisji (UE) 2023/564 z dnia 10 marca 2023 r. w odniesieniu do treści i formatu dokumentacji dotyczącej środków ochrony roślin prowadzonej i przechowywanej przez użytkowników profesjonalnych na podstawie rozporządzenia Parlamentu Europejskiego i Rady (WE) nr 1107/2009 (Dz. Urz. UE L 74 z 13.03.2023, str. 4, z późn. zm.<odnosnik id-odnosnika="2" symbol="2" gd:GUID="546eac3f-fba7-4911-8935-84bae6d3732a"><p><zdanie nr="1" gd:zdGUID="cb18f30a-b4f2-46c3-89d1-eeb5cf1d3cf8" fragment="1" gd:fragmentGUID="49f650a0-9c78-4f53-b45a-2c73fe33f987">Zmiana wymienionego rozporządzenia została ogłoszona w Dz. Urz. UE L 2025/2203 z 03.11.2025.</zdanie></p></odnosnik>), zwanego dalej „rozporządzeniem 2023/564”, która nie została utworzona zgodnie z art. 2 rozporządzenia 2023/564, przenosi się do formatu elektronicznego zgodnego z art. 2 rozporządzenia 2023/564 do dnia 31 stycznia roku następującego po roku, w którym te środki ochrony roślin zostały zastosowane.</zdanie></p></ustep><ustep eId="DU/2024/630__art_78a__ust_2" gd:GUID="9f4c0e51-729b-4d88-8b9a-48bfab1e5f07" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1697_odczytane.x" wejscie-w-zycie="2026-01-01"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="bf9c8700-4eb4-4620-aaeb-f39d2ba72182" fragment="1" gd:fragmentGUID="53087255-c7fc-4d2e-905c-19227c4a448a" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1697_odczytane.x" wejscie-w-zycie="2026-01-01">W odniesieniu do dokumentacji, o której mowa w art. 67 ust. 1 rozporządzenia nr 1107/2009, dotyczącej środków ochrony roślin zastosowanych przez użytkownika profesjonalnego przed terminem określonym w art. 3 akapit czwarty rozporządzenia 2023/564 nie jest wymagane prowadzenie i przechowywanie jej w formacie elektronicznym zgodnym z art. 2 rozporządzenia 2023/564.</zdanie></p></ustep></artykul></oddzial-n></rozdzial></cytat-strukt>.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2025/1697__art_2" gd:GUID="7e029f8d-0029-4b83-8e31-794d12fd6180" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1697_odczytane.x" wejscie-w-zycie="2026-01-01">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="537d5423-8c8a-48b3-8096-67719ade5d4b" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1697_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="0f43df7d-f263-4d67-afe2-2ed76a416c7f" fragment="1" gd:fragmentGUID="fa48f465-a0fb-4f52-bca5-c1d929d6b123" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1697_odczytane.x" wejscie-w-zycie="2026-01-01">Ustawa wchodzi w życie z dniem 1 stycznia 2026 r.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <organ-podpisujacy>Prezydent Rzeczypospolitej Polskiej: <i><osoba podpisujacy="true" gd:osobaGUID="d3b53688-b58a-4474-b477-8bb2bfd8647a"><imie>K.</imie> <nazwisko>Nawrocki</nazwisko></osoba></i></organ-podpisujacy>
+  </ustawa>
+</akt-prawny>

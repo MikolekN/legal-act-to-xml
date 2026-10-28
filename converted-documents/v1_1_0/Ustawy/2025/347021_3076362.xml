@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <ustawa>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/1508</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>5d32b208-4176-4477-b34f-5193b73396b0</gd:GUIDwersji>
+      <AdresISAP>WDU20250001508</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>1508</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 1508</AdresWyswietlany>
+      <Tytul>Ustawa z dnia 9 października 2025 r. o zmianie ustawy – Kodeks cywilny</Tytul>
+      <Rodzaj>USTAWA</Rodzaj>
+      <DataOgloszenia>2025-11-03</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-10-09</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2025-12-04_DU-2025-1508_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2025-12-04" warunek="po upływie miesiąca od dnia ogłoszenia" podstawa="art. 3" zrodlo="https://eli.gov.pl/eli/DU/2025/1508" dowod="DU/2025/1508__art_3" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2025-12-04_DU-2025-1508_domyslne.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2025-12-04_DU-2025-1508_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="8675b9fb-eb1f-4af5-b378-8658407ad69e" rola="wydajacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Sejm">
+          <Nazwa>SEJM</Nazwa>
+        </Organ>
+        <Organ gd:GUID="5e3e7732-5abb-41a0-9bd3-a72cc61c9406" rola="podpisujacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Prezydent">
+          <Nazwa>Prezydent Rzeczypospolitej Polskiej</Nazwa>
+          <OrganPodpisujacy>Prezydent Rzeczypospolitej Polskiej</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>K.</imie> <nazwisko>Nawrocki</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Ustawa</rodzaj-aktu>
+    <data>z dnia 9 października 2025 r.</data>
+    <tytul>o zmianie ustawy – Kodeks cywilny</tytul>
+    <artykul eId="DU/2025/1508__art_1" gd:GUID="4abd26e5-0c32-426b-a0ea-cc836db7e554" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-04_DU-2025-1508_domyslne.x" wejscie-w-zycie="2025-12-04">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="3e1a3544-b7d8-4207-b878-663c20593e88" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-04_DU-2025-1508_domyslne.x" wejscie-w-zycie="2025-12-04">
+        <p>
+          <zdanie nr="1" gd:zdGUID="1be4e70c-6ab4-4550-98e8-4e3ac1c9f748" fragment="1" gd:fragmentGUID="db623363-724a-40fe-9d0e-3198b3835ce6" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-04_DU-2025-1508_domyslne.x" wejscie-w-zycie="2025-12-04">W ustawie z dnia 23 kwietnia 1964 r. – Kodeks cywilny (Dz. U. z 2025 r. poz. 1071 i 1172) w art. 647<sup>1</sup>:</zdanie>
+        </p>
+        <punkt eId="DU/2025/1508__art_1__pkt_1" gd:GUID="e09cbf5e-b661-4c8f-91ea-06526afc557d" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-04_DU-2025-1508_domyslne.x" wejscie-w-zycie="2025-12-04">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="1be4e70c-6ab4-4550-98e8-4e3ac1c9f748" fragment="2" gd:fragmentGUID="c1c4d579-757a-40e6-a871-2276b6b83e3d" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-04_DU-2025-1508_domyslne.x" wejscie-w-zycie="2025-12-04">§ 1 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2025/1071" cudzyslowy="oba" gd:nowGUID="75da056b-816d-481a-9a84-d8412c6f9551" element-eId="DU/2025/1071__art_647[1]__par_1" funkcja="zastap"><paragraf-kodeksu eId="DU/2025/1071__art_647[1]__par_1" gd:GUID="844a02ea-fdc5-4115-a638-33388ddfed1d" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-04_DU-2025-1508_domyslne.x" wejscie-w-zycie="2025-12-04"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="39780b07-c402-4e4c-8a8b-a5d1a249e584" fragment="1" gd:fragmentGUID="1054c740-544f-4125-b92b-58e87198c9e8" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-04_DU-2025-1508_domyslne.x" wejscie-w-zycie="2025-12-04">Inwestor odpowiada solidarnie z wykonawcą (generalnym wykonawcą) za zapłatę wynagrodzenia należnego podwykonawcy z tytułu wykonanych przez niego robót budowlanych, których szczegółowy przedmiot został zgłoszony inwestorowi przez wykonawcę lub podwykonawcę przed przystąpieniem do wykonywania tych robót, chyba że inwestor złożył podwykonawcy i wykonawcy sprzeciw wobec wykonywania tych robót przez podwykonawcę.</zdanie></p></paragraf-kodeksu></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1508__art_1__pkt_2" gd:GUID="9f25722d-6dfb-4442-8791-be741ef0c979" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-04_DU-2025-1508_domyslne.x" wejscie-w-zycie="2025-12-04">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="1be4e70c-6ab4-4550-98e8-4e3ac1c9f748" fragment="3" gd:fragmentGUID="9bb7fe61-98db-4bb0-aeb7-66729f42479d" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-04_DU-2025-1508_domyslne.x" wejscie-w-zycie="2025-12-04">po § 1 dodaje się § 1<sup>1</sup> i 1<sup>2</sup> w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2025/1071" cudzyslowy="oba" gd:nowGUID="436135c1-2826-4a52-b17d-e91cf6486af7" element-eId="DU/2025/1071__art_647[1]__par_1" funkcja="dodaj-po"><paragraf-kodeksu eId="DU/2025/1071__art_647[1]__par_1[1]" gd:GUID="3b1f181d-2ece-401a-966c-3754f9d5433c" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-04_DU-2025-1508_domyslne.x" wejscie-w-zycie="2025-12-04"><nr>1[1]</nr><p><zdanie nr="1" gd:zdGUID="15af73f1-0afc-4b66-9a47-5b7e06bce0e9" fragment="1" gd:fragmentGUID="8695ea39-529f-439c-af9e-440278ea1cff" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-04_DU-2025-1508_domyslne.x" wejscie-w-zycie="2025-12-04">Sprzeciw, o którym mowa w § 1, składa się w ciągu trzydziestu dni od dnia doręczenia inwestorowi zgłoszenia, o którym mowa w tym przepisie.</zdanie><zdanie nr="2" gd:zdGUID="a17d0761-5339-413f-bfda-42a22fce8d0b" fragment="1" gd:fragmentGUID="9e5daca2-cd54-43b1-9cff-81dfd40e4669" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-04_DU-2025-1508_domyslne.x" wejscie-w-zycie="2025-12-04">W umowie inwestor i wykonawca (generalny wykonawca) mogą zastrzec krótszy termin na złożenie sprzeciwu.</zdanie></p></paragraf-kodeksu><paragraf-kodeksu eId="DU/2025/1071__art_647[1]__par_1[2]" gd:GUID="5d675025-00dd-4722-841f-977a6ed54285" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-04_DU-2025-1508_domyslne.x" wejscie-w-zycie="2025-12-04"><nr>1[2]</nr><p><zdanie nr="1" gd:zdGUID="4bfe3281-71d2-4a07-8c98-893f54a2d8ae" fragment="1" gd:fragmentGUID="d090c97a-69fd-46c9-8a5a-f3a456741c24" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-04_DU-2025-1508_domyslne.x" wejscie-w-zycie="2025-12-04">Określony w umowie wykonawcy z podwykonawcą lub umowach z dalszym podwykonawcą termin na złożenie sprzeciwu, o którym mowa w § 1, nie może być krótszy od terminu określonego w umowie zawartej między inwestorem a wykonawcą (generalnym wykonawcą).</zdanie></p></paragraf-kodeksu></cytat-strukt>.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2025/1508__art_2" gd:GUID="11001240-c83d-4b0f-85a8-ed594af09321" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-04_DU-2025-1508_domyslne.x" wejscie-w-zycie="2025-12-04">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="99d270ca-b9b7-4126-803d-a3df748461f5" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-04_DU-2025-1508_domyslne.x" wejscie-w-zycie="2025-12-04">
+        <p>
+          <zdanie nr="1" gd:zdGUID="4ef3c110-6696-4e89-aa88-cd10b79113f7" fragment="1" gd:fragmentGUID="c10a1774-a9da-4b33-b490-3c7aaf984c25" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-04_DU-2025-1508_domyslne.x" wejscie-w-zycie="2025-12-04">Do umów zawartych przed dniem wejścia w życie niniejszej ustawy stosuje się przepisy art. 647<sup>1</sup> ustawy zmienianej w art. 1, w brzmieniu nadanym niniejszą ustawą.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2025/1508__art_3" gd:GUID="a905978a-c27d-4b43-b9a8-b506a8da75e9" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-04_DU-2025-1508_domyslne.x" wejscie-w-zycie="2025-12-04">
+      <nr>3</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="08d7db8e-e655-4713-9c1e-a77977585778" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-04_DU-2025-1508_domyslne.x" wejscie-w-zycie="2025-12-04">
+        <p>
+          <zdanie nr="1" gd:zdGUID="cb8e6477-d0dc-4823-a9aa-b7c53f16eb58" fragment="1" gd:fragmentGUID="9a52d349-df60-41d2-99e4-978f6c3c0ff5" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-04_DU-2025-1508_domyslne.x" wejscie-w-zycie="2025-12-04">Ustawa wchodzi w życie po upływie miesiąca od dnia ogłoszenia.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <organ-podpisujacy>Prezydent Rzeczypospolitej Polskiej: <i><osoba podpisujacy="true" gd:osobaGUID="890d79be-21ff-4e26-a8ec-f3a9ba42ccc3"><imie>K.</imie> <nazwisko>Nawrocki</nazwisko></osoba></i></organ-podpisujacy>
+  </ustawa>
+</akt-prawny>

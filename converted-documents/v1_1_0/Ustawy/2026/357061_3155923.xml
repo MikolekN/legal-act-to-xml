@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <ustawa>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2026/39</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>aa70b499-2dc3-4ae6-9f05-6c303d2da6e6</gd:GUIDwersji>
+      <AdresISAP>WDU20260000039</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2026</Rok>
+      <Pozycja>39</Pozycja>
+      <AdresWyswietlany>Dz.U. 2026 poz. 39</AdresWyswietlany>
+      <Tytul>Ustawa z dnia 4 grudnia 2025 r. o zmianie ustawy o spółdzielniach mieszkaniowych oraz niektórych innych ustaw</Tytul>
+      <Rodzaj>USTAWA</Rodzaj>
+      <DataOgloszenia>2026-01-13</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-12-04</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2026-01-28_DU-2026-39_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2026-01-28" warunek="po upływie 14 dni od dnia ogłoszenia" podstawa="art. 8" zrodlo="https://eli.gov.pl/eli/DU/2026/39" dowod="DU/2026/39__art_8" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2026-01-28_DU-2026-39_domyslne.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2026-01-28_DU-2026-39_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="be9b2d67-38b4-4317-bc31-6c51ba81f7b6" rola="wydajacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Sejm">
+          <Nazwa>SEJM</Nazwa>
+        </Organ>
+        <Organ gd:GUID="6d24c5ab-341f-40b3-b12f-e073223c762f" rola="podpisujacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Prezydent">
+          <Nazwa>Prezydent Rzeczypospolitej Polskiej</Nazwa>
+          <OrganPodpisujacy>Prezydent Rzeczypospolitej Polskiej</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>K.</imie> <nazwisko>Nawrocki</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Ustawa</rodzaj-aktu>
+    <data>z dnia 4 grudnia 2025 r.</data>
+    <tytul>o zmianie ustawy o spółdzielniach mieszkaniowych oraz niektórych innych ustaw<odnosnik id-odnosnika="1" symbol="1" gd:GUID="d5a82096-3960-4d23-a354-ce85c8fd2524"><p><zdanie nr="1" gd:zdGUID="211c29a1-e3a0-4698-a615-d84f3a0bd077" fragment="1" gd:fragmentGUID="1c59f242-9505-4536-95c5-09039617afa7">Niniejszą ustawą zmienia się ustawy: ustawę z dnia 24 czerwca 1994 r. o własności lokali, ustawę z dnia 26 października 1995 r. o społecznych formach rozwoju mieszkalnictwa, ustawę z dnia 20 lipca 2017 r. o Krajowym Zasobie Nieruchomości oraz ustawę z dnia 2 marca 2020 r. o szczególnych rozwiązaniach związanych z zapobieganiem, przeciwdziałaniem i zwalczaniem COVID-19, innych chorób zakaźnych oraz wywołanych nimi sytuacji kryzysowych.</zdanie></p></odnosnik></tytul>
+    <artykul eId="DU/2026/39__art_1" gd:GUID="35cbe58e-4ae2-4c14-a096-1b23b427db44" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-28_DU-2026-39_domyslne.x" wejscie-w-zycie="2026-01-28">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="a13c3f1a-8884-497d-a938-cf63d09025ea" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-28_DU-2026-39_domyslne.x" wejscie-w-zycie="2026-01-28">
+        <p>
+          <zdanie nr="1" gd:zdGUID="7b11f5cd-ada9-4a0b-a0c2-07c149325f90" fragment="1" gd:fragmentGUID="d97cc08b-efda-44bb-8939-f0aefe0ece16" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-28_DU-2026-39_domyslne.x" wejscie-w-zycie="2026-01-28">W ustawie z dnia 15 grudnia 2000 r. o spółdzielniach mieszkaniowych (Dz. U. z 2024 r. poz. 558 oraz z 2025 r. poz. 1077) wprowadza się następujące zmiany:</zdanie>
+        </p>
+        <punkt eId="DU/2026/39__art_1__pkt_1" gd:GUID="67bb2987-ee5a-414b-9268-44a7b06962c6" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-28_DU-2026-39_domyslne.x" wejscie-w-zycie="2026-01-28">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="7b11f5cd-ada9-4a0b-a0c2-07c149325f90" fragment="2" gd:fragmentGUID="4f499551-6ca2-45cd-9d4e-e91799839359" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-28_DU-2026-39_domyslne.x" wejscie-w-zycie="2026-01-28">w art. 8<sup>3</sup> po ust. 1<sup>1</sup> dodaje się ust. 1<sup>2</sup>–1<sup>6</sup> w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/558" cudzyslowy="oba" gd:nowGUID="3c9e85f1-80c7-47bf-b73b-a3b422c99a62" element-eId="DU/2024/558__art_8[3]__ust_1[1]" funkcja="dodaj-po"><ustep eId="DU/2024/558__art_8[3]__ust_1[2]" gd:GUID="a1737c7e-807c-4227-954b-ed913a589202" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-28_DU-2026-39_domyslne.x" wejscie-w-zycie="2026-01-28"><nr>1[2]</nr><p><zdanie nr="1" gd:zdGUID="adb09744-be15-4c49-8f39-fdee623382e5" fragment="1" gd:fragmentGUID="5dc65a52-3c77-4012-8722-4aabcb8c5177" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-28_DU-2026-39_domyslne.x" wejscie-w-zycie="2026-01-28">Pełnomocnikiem członka spółdzielni będącego osobą fizyczną może być:</zdanie></p><punkt eId="DU/2024/558__art_8[3]__ust_1[2]__pkt_1" gd:GUID="e8811fd8-a797-414a-a2b7-c48e821ab36d" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-28_DU-2026-39_domyslne.x" wejscie-w-zycie="2026-01-28"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="adb09744-be15-4c49-8f39-fdee623382e5" fragment="2" gd:fragmentGUID="dd1dd107-08d5-4ae8-a075-842773230eff" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-28_DU-2026-39_domyslne.x" wejscie-w-zycie="2026-01-28">osoba bliska członka z wyłączeniem osób pozostających faktycznie we wspólnym pożyciu;</zdanie></p></punkt><punkt eId="DU/2024/558__art_8[3]__ust_1[2]__pkt_2" gd:GUID="58d0b275-345c-4e9d-9319-7961e1551dc6" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-28_DU-2026-39_domyslne.x" wejscie-w-zycie="2026-01-28"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="adb09744-be15-4c49-8f39-fdee623382e5" fragment="3" gd:fragmentGUID="dcbdaec8-5b92-4741-8d6d-c960a575d7b9" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-28_DU-2026-39_domyslne.x" wejscie-w-zycie="2026-01-28">adwokat lub radca prawny;</zdanie></p></punkt><punkt eId="DU/2024/558__art_8[3]__ust_1[2]__pkt_3" gd:GUID="d285dae2-788d-44b3-ae90-6c0172a61bfc" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-28_DU-2026-39_domyslne.x" wejscie-w-zycie="2026-01-28"><nr>3</nr><p><zdanie nr="1" gd:zdGUID="adb09744-be15-4c49-8f39-fdee623382e5" fragment="4" gd:fragmentGUID="bab1db68-8a87-4e85-8027-1e9d8c5925bb" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-28_DU-2026-39_domyslne.x" wejscie-w-zycie="2026-01-28">inny członek tej samej spółdzielni.</zdanie></p></punkt></ustep><ustep eId="DU/2024/558__art_8[3]__ust_1[3]" gd:GUID="8dee3ed5-2e83-4fb6-9b6f-2000369d40d3" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-28_DU-2026-39_domyslne.x" wejscie-w-zycie="2026-01-28"><nr>1[3]</nr><p><zdanie nr="1" gd:zdGUID="06975f65-cb07-4792-a4eb-02c2d0c34644" fragment="1" gd:fragmentGUID="37e8fa77-4618-49fc-b92a-de17fb12b42d" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-28_DU-2026-39_domyslne.x" wejscie-w-zycie="2026-01-28">Do pełnomocnictwa udzielonego osobie bliskiej dołącza się oświadczenie, w którym pełnomocnik potwierdza pod rygorem odpowiedzialności karnej za składanie fałszywych oświadczeń, wynikającej z art. 27<sup>3a</sup>, że spełnia wymóg, o którym mowa w ust. 1<sup>2</sup> pkt 1.</zdanie><zdanie nr="2" gd:zdGUID="93b33fce-b847-47ce-8991-f24bfa1d4d9a" fragment="1" gd:fragmentGUID="f2945a8c-c021-4c8a-a34e-11b697aac1af" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-28_DU-2026-39_domyslne.x" wejscie-w-zycie="2026-01-28">W oświadczeniu zamieszcza się klauzulę w brzmieniu: „Jestem świadomy odpowiedzialności karnej za złożenie fałszywego oświadczenia.”.</zdanie></p></ustep><ustep eId="DU/2024/558__art_8[3]__ust_1[4]" gd:GUID="87653dde-c560-4858-95b2-99ae96d7b1fc" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-28_DU-2026-39_domyslne.x" wejscie-w-zycie="2026-01-28"><nr>1[4]</nr><p><zdanie nr="1" gd:zdGUID="729b3982-9b0e-4dd2-a1c4-74f3b6ef8d21" fragment="1" gd:fragmentGUID="d3bfecbf-bd58-4573-838d-bf8a8a34f296" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-28_DU-2026-39_domyslne.x" wejscie-w-zycie="2026-01-28">Pełnomocnictwo udzielone osobie bliskiej bez dołączonego oświadczenia, o którym mowa w ust. 1<sup>3</sup> zdanie pierwsze, jest nieważne.</zdanie></p></ustep><ustep eId="DU/2024/558__art_8[3]__ust_1[5]" gd:GUID="326fff8b-e6a4-4b07-b5dd-211a456d0dda" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-28_DU-2026-39_domyslne.x" wejscie-w-zycie="2026-01-28"><nr>1[5]</nr><p><zdanie nr="1" gd:zdGUID="c5247b97-95f8-40eb-85da-7dfb9bc40bdd" fragment="1" gd:fragmentGUID="ad630380-de54-4850-9902-2ff7e9bb8c49" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-28_DU-2026-39_domyslne.x" wejscie-w-zycie="2026-01-28">Członek spółdzielni lub pełnomocnik jest obowiązany do doręczenia spółdzielni pełnomocnictwa, a w przypadku gdy pełnomocnikiem jest osoba bliska członka – również oświadczenia, o którym mowa w ust. 1<sup>3</sup> zdanie pierwsze, nie później niż 3 dni przed terminem posiedzenia walnego zgromadzenia lub jego pierwszej części.</zdanie></p></ustep><ustep eId="DU/2024/558__art_8[3]__ust_1[6]" gd:GUID="9bd8fdc3-615c-4a38-b23d-86cf38cdb2a2" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-28_DU-2026-39_domyslne.x" wejscie-w-zycie="2026-01-28"><nr>1[6]</nr><p><zdanie nr="1" gd:zdGUID="d669c6a1-0e87-4032-96a8-8be27e34c4c5" fragment="1" gd:fragmentGUID="fae0d968-936c-49e3-b931-9db59b111d43" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-28_DU-2026-39_domyslne.x" wejscie-w-zycie="2026-01-28">Pełnomocnik nie może brać udziału w głosowaniu, którego przedmiotem jest wybór i odwołanie członków rady nadzorczej lub członków zarządu spółdzielni.</zdanie></p></ustep></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/39__art_1__pkt_2" gd:GUID="c18e61e5-4349-4655-b708-05759db3a23e" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-28_DU-2026-39_domyslne.x" wejscie-w-zycie="2026-01-28">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="7b11f5cd-ada9-4a0b-a0c2-07c149325f90" fragment="3" gd:fragmentGUID="4358a06c-ca26-490b-9f0d-bb2da1cab4e6" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-28_DU-2026-39_domyslne.x" wejscie-w-zycie="2026-01-28">po art. 27<sup>3</sup> dodaje się art. 27<sup>3a</sup> w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/558" cudzyslowy="oba" gd:nowGUID="de0467a8-9d57-45c6-acbb-e196e4bc65fb" element-eId="DU/2024/558__art_27[3]" funkcja="dodaj-po"><artykul eId="DU/2024/558__art_27[3a]" gd:GUID="f66d8727-6ab8-45ca-ba4f-32e29db583c6" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-28_DU-2026-39_domyslne.x" wejscie-w-zycie="2026-01-28"><nr>27[3a]</nr><ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="0fcf5eda-0ce0-4536-89f2-0efeb630e522" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-28_DU-2026-39_domyslne.x" wejscie-w-zycie="2026-01-28"><p><zdanie nr="1" gd:zdGUID="c9886da0-ac4f-41f1-a600-a804d725696a" fragment="1" gd:fragmentGUID="1682d261-5a05-4192-88fa-c0d1e1c12b6e" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-28_DU-2026-39_domyslne.x" wejscie-w-zycie="2026-01-28">Kto składa fałszywe oświadczenie, o którym mowa w art. 8<sup>3</sup> ust. 1<sup>3</sup> zdanie pierwsze, <sankcja-karna>podlega karze grzywny</sankcja-karna>.</zdanie></p></ustep-n></artykul></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/39__art_1__pkt_3" gd:GUID="492b7981-33be-4932-ae36-2566c9b13c41" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-28_DU-2026-39_domyslne.x" wejscie-w-zycie="2026-01-28">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="7b11f5cd-ada9-4a0b-a0c2-07c149325f90" fragment="4" gd:fragmentGUID="bd940582-a1b2-4003-9276-2ce4089548a5" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-28_DU-2026-39_domyslne.x" wejscie-w-zycie="2026-01-28"><now:zamien-tekst stary-tekst="art. 27[3]" nowy-tekst="art. 27[3] i art. 27[3a]" element-eId="DU/2024/558__art_27[4]" akt="https://eli.gov.pl/eli/DU/2024/558" gd:nowGUID="6305b96d-f3c3-4644-bc00-2fd731e3550e" />w art. 27<sup>4</sup> po wyrazach „art. 27<sup>3</sup>” dodaje się wyrazy „i art. 27<sup>3a</sup>”;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/39__art_1__pkt_4" gd:GUID="063233a0-f8b7-4ae3-a69f-f8842d0a6f18" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-28_DU-2026-39_domyslne.x" wejscie-w-zycie="2026-01-28">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="7b11f5cd-ada9-4a0b-a0c2-07c149325f90" fragment="5" gd:fragmentGUID="043e6559-db1a-44b1-99e8-fa58d428260d" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-28_DU-2026-39_domyslne.x" wejscie-w-zycie="2026-01-28">w art. 49 ust. 1 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/558" cudzyslowy="oba" gd:nowGUID="91648ac1-44fc-4447-8829-9258bfbf3159" element-eId="DU/2024/558__art_49__ust_1" funkcja="zastap"><ustep eId="DU/2024/558__art_49__ust_1" gd:GUID="d42d4866-5ad7-44fc-8048-d21343ef43de" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-28_DU-2026-39_domyslne.x" wejscie-w-zycie="2026-01-28"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="b8104b09-3832-49e9-99f7-4f72ceaf6823" fragment="1" gd:fragmentGUID="bb27638b-28c0-4bb8-b92a-cb130c410124" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-28_DU-2026-39_domyslne.x" wejscie-w-zycie="2026-01-28">Jeżeli przed upływem 24 miesięcy od dnia wejścia ustawy w życie spółdzielnia nie podejmie czynności, o których mowa w art. 41 i art. 42, a nie toczy się postępowanie sądowe w trybie art. 43 ust. 5, sąd na wniosek osoby, której zgodnie z przepisami ustawy przysługuje, z zastrzeżeniem art. 36, prawo żądania przeniesienia na nią własności lokalu należącego przed tym dniem do spółdzielni, orzeka o ustanowieniu odrębnej własności lokalu mieszkalnego lub lokalu o innym przeznaczeniu, na zasadach określonych w art. 39–43.</zdanie></p></ustep></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/39__art_1__pkt_5" gd:GUID="cbb5fe4e-05e6-4626-b26d-516d262e2fe0" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-28_DU-2026-39_domyslne.x" wejscie-w-zycie="2026-01-28">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="7b11f5cd-ada9-4a0b-a0c2-07c149325f90" fragment="6" gd:fragmentGUID="5d14d09a-aaa4-45f6-9257-8ef60356011c" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-28_DU-2026-39_domyslne.x" wejscie-w-zycie="2026-01-28">art. 49<sup>1</sup> otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/558" cudzyslowy="oba" gd:nowGUID="b87ac77f-3ec0-4a18-aaa6-6d22b1760b9f" element-eId="DU/2024/558__art_49[1]" funkcja="zastap"><artykul eId="DU/2024/558__art_49[1]" gd:GUID="c467fa5c-1c3e-41b7-8e32-16da23fc609e" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-28_DU-2026-39_domyslne.x" wejscie-w-zycie="2026-01-28"><nr>49[1]</nr><ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="4f5d14cc-0b3d-46d4-8b31-4af94227e8ff" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-28_DU-2026-39_domyslne.x" wejscie-w-zycie="2026-01-28"><p><zdanie nr="1" gd:zdGUID="16cf58d4-efbb-443e-bb04-59e4b1be5af5" fragment="1" gd:fragmentGUID="53808962-9874-499c-93cf-6440674fcc0c" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-28_DU-2026-39_domyslne.x" wejscie-w-zycie="2026-01-28">Jeżeli spółdzielnia uchyla się jedynie od złożenia oświadczenia woli o ustanowieniu albo przeniesieniu odrębnej własności lokalu na rzecz osoby, o której mowa w art. 49 ust. 1, osoba ta może wystąpić do sądu z powództwem o zobowiązanie spółdzielni do złożenia odpowiedniego oświadczenia woli.</zdanie></p></ustep-n></artykul></cytat-strukt>.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2026/39__art_2" gd:GUID="4eecadbe-52ca-4531-b725-1aa9893b1167" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-28_DU-2026-39_domyslne.x" wejscie-w-zycie="2026-01-28">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="4cf3e578-8bc9-4e41-aefb-9322d3b10d9d" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-28_DU-2026-39_domyslne.x" wejscie-w-zycie="2026-01-28">
+        <p>
+          <zdanie nr="1" gd:zdGUID="1c741e9d-d6fb-478f-b00b-7d8c150bdc8b" fragment="1" gd:fragmentGUID="b87a0b39-8a72-42ec-b49b-6ebac653823b" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-28_DU-2026-39_domyslne.x" wejscie-w-zycie="2026-01-28">W ustawie z dnia 24 czerwca 1994 r. o własności lokali (Dz. U. z 2021 r. poz. 1048 oraz z 2023 r. poz. 1688) wprowadza się następujące zmiany:</zdanie>
+        </p>
+        <punkt eId="DU/2026/39__art_2__pkt_1" gd:GUID="87d78d2c-7d06-48e7-81f9-53eae98ed415" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-28_DU-2026-39_domyslne.x" wejscie-w-zycie="2026-01-28">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="1c741e9d-d6fb-478f-b00b-7d8c150bdc8b" fragment="2" gd:fragmentGUID="0827b2c3-f7f6-4490-811d-e93f0197503b" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-28_DU-2026-39_domyslne.x" wejscie-w-zycie="2026-01-28"><now:zamien-tekst stary-tekst="art. 22 ust. 3 pkt 5, 5a i 6" nowy-tekst="art. 22 ust. 3 pkt 5, 5a i 6 oraz w art. 32a" element-eId="DU/2021/1048__art_21__ust_3" akt="https://eli.gov.pl/eli/DU/2021/1048" gd:nowGUID="004edecb-0b51-45de-ac3a-b812df30b236" />w art. 21 w ust. 3 po wyrazach „art. 22 ust. 3 pkt 5, 5a i 6” dodaje się wyrazy „oraz w art. 32a”;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/39__art_2__pkt_2" gd:GUID="113c977b-6b84-4562-a8aa-4a074a03a160" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-28_DU-2026-39_domyslne.x" wejscie-w-zycie="2026-01-28">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="1c741e9d-d6fb-478f-b00b-7d8c150bdc8b" fragment="3" gd:fragmentGUID="dfc47516-4a8b-463e-8860-a57a2eb1ac9f" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-28_DU-2026-39_domyslne.x" wejscie-w-zycie="2026-01-28"><now:zamien-tekst stary-tekst="wspólnoty mieszkaniowej" nowy-tekst="właścicieli lokali" element-eId="DU/2021/1048__art_32a__pkt_2" akt="https://eli.gov.pl/eli/DU/2021/1048" gd:nowGUID="022b5b6a-ca58-493b-88cb-4f2ece8320fd" />w art. 32a w pkt 2 wyrazy „wspólnoty mieszkaniowej” zastępuje się wyrazami „właścicieli lokali”.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2026/39__art_3" gd:GUID="0e0a0140-0dc7-4345-ae42-442fcc3192fa" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-28_DU-2026-39_domyslne.x" wejscie-w-zycie="2026-01-28">
+      <nr>3</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="11cafa8b-10df-4dc6-9f7d-a001517d458a" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-28_DU-2026-39_domyslne.x" wejscie-w-zycie="2026-01-28">
+        <p>
+          <zdanie nr="1" gd:zdGUID="171e50ef-9d2b-40d9-a8df-7dc3b26d976f" fragment="1" gd:fragmentGUID="90700705-5403-4c2d-8e76-23868aafbcf0" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-28_DU-2026-39_domyslne.x" wejscie-w-zycie="2026-01-28"><now:zamien-tekst stary-tekst="." nowy-tekst=";" element-eId="DU/2025/1273__art_22a__ust_2__pkt_2" akt="https://eli.gov.pl/eli/DU/2025/1273" now:wystapienie="ostatnie" gd:nowGUID="40cfded8-9c36-4eac-b615-35d8c5c7f829" />W ustawie z dnia 26 października 1995 r. o społecznych formach rozwoju mieszkalnictwa (Dz. U. z 2025 r. poz. 1273) w art. 22a w ust. 2 w pkt 2 po wyrazach „o działalności pożytku publicznego i o wolontariacie (Dz. U. z 2024 r. poz. 1491, 1761 i 1940)” kropkę zastępuje się średnikiem i dodaje się pkt 3 w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2025/1273" cudzyslowy="oba" gd:nowGUID="fef86f3a-b3df-4dd1-be53-b98c08d434f1" element-eId="DU/2025/1273__art_22a__ust_2__pkt_2" funkcja="dodaj-po"><punkt eId="DU/2025/1273__art_22a__ust_2__pkt_3" gd:GUID="afcd7e9f-3aea-4f84-9fed-cf190ba640cf" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-28_DU-2026-39_domyslne.x" wejscie-w-zycie="2026-01-28"><nr>3</nr><p><zdanie nr="1" gd:zdGUID="2a2da83a-a973-4bcd-8129-b33002967e53" fragment="1" gd:fragmentGUID="2412f29c-31fd-4ddd-ad91-5bfe578a8f26" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-28_DU-2026-39_domyslne.x" wejscie-w-zycie="2026-01-28">spółdzielnia mieszkaniowa.</zdanie></p></punkt></cytat-strukt>.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2026/39__art_4" gd:GUID="e8ae5f96-697f-43f3-a5ec-54da58c7b316" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-28_DU-2026-39_domyslne.x" wejscie-w-zycie="2026-01-28">
+      <nr>4</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="7661281f-bc8a-4edd-87ce-24a58bb65aee" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-28_DU-2026-39_domyslne.x" wejscie-w-zycie="2026-01-28">
+        <p>
+          <zdanie nr="1" gd:zdGUID="5bff571b-0a70-40c0-b66f-c7fb11959232" fragment="1" gd:fragmentGUID="419ddbdf-3570-4990-95bb-4dd7c7e68ca4" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-28_DU-2026-39_domyslne.x" wejscie-w-zycie="2026-01-28">W ustawie z dnia 20 lipca 2017 r. o Krajowym Zasobie Nieruchomości (Dz. U. z 2025 r. poz. 834) w art. 3 w ust. 1 pkt 4 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2025/834" cudzyslowy="oba" gd:nowGUID="b7c22330-c6fb-440f-b3ac-b1f4d47406e6" element-eId="DU/2025/834__art_3__ust_1__pkt_4" funkcja="zastap"><punkt eId="DU/2025/834__art_3__ust_1__pkt_4" gd:GUID="b7b76fb3-1bb6-437b-848b-a629269b14ab" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-28_DU-2026-39_domyslne.x" wejscie-w-zycie="2026-01-28"><nr>4</nr><p><zdanie nr="1" gd:zdGUID="4da0438d-a569-4240-beba-c821d99d39eb" fragment="1" gd:fragmentGUID="8fdd2dce-9d38-47e4-9d88-28a786c83df4" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-28_DU-2026-39_domyslne.x" wejscie-w-zycie="2026-01-28">mieszkanie na wynajem – mieszkanie zrealizowane na nieruchomości pochodzącej z Zasobu, przeznaczone na wynajem na podstawie umowy najmu instytucjonalnego lub najmu instytucjonalnego z dojściem do własności albo będące przedmiotem spółdzielczego lokatorskiego prawa do lokalu mieszkalnego;</zdanie></p></punkt></cytat-strukt>.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2026/39__art_5" gd:GUID="ea67ad6c-d46e-4e75-82c8-0a4999229add" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-28_DU-2026-39_domyslne.x" wejscie-w-zycie="2026-01-28">
+      <nr>5</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="77b026da-e119-4ba5-8d78-034ac4a1280b" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-28_DU-2026-39_domyslne.x" wejscie-w-zycie="2026-01-28">
+        <p>
+          <zdanie nr="1" gd:zdGUID="a7b72c42-3c95-41e3-9359-f15da74bf2f3" fragment="1" gd:fragmentGUID="e4f3d02c-f078-4f5b-8b16-5a7d9b8dbc6b" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-28_DU-2026-39_domyslne.x" wejscie-w-zycie="2026-01-28"><now:zamien-tekst stary-tekst="Skarb Państwa" nowy-tekst="Skarb Państwa, spółdzielnia mieszkaniowa" element-eId="DU/2025/764__art_15zzzr__zdn_1" akt="https://eli.gov.pl/eli/DU/2025/764" gd:nowGUID="580a5c9a-da54-41cb-885c-8f7a5e25e7e4" />W ustawie z dnia 2 marca 2020 r. o szczególnych rozwiązaniach związanych z zapobieganiem, przeciwdziałaniem i zwalczaniem COVID-19, innych chorób zakaźnych oraz wywołanych nimi sytuacji kryzysowych (Dz. U. z 2025 r. poz. 764 i 1806) w art. 15zzzr w zdaniu pierwszym po wyrazach „Skarb Państwa” dodaje się wyrazy „ , spółdzielnia mieszkaniowa”.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2026/39__art_6" gd:GUID="5c6aef85-2129-4094-a76f-016bfc34968f" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-28_DU-2026-39_domyslne.x" wejscie-w-zycie="2026-01-28">
+      <nr>6</nr>
+      <ustep eId="DU/2026/39__art_6__ust_1" gd:GUID="d0b6bf92-f957-46c4-92a3-0a82e3948011" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-28_DU-2026-39_domyslne.x" wejscie-w-zycie="2026-01-28">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="3ffac12b-ecec-4d2a-88f5-39c3f68b4980" fragment="1" gd:fragmentGUID="dc9b8c9f-f0d9-4dda-ac59-1780050972c8" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-28_DU-2026-39_domyslne.x" wejscie-w-zycie="2026-01-28">Do spraw sądowych dotyczących pełnomocnictw, o których mowa w art. 8<sup>3</sup> ust. 1<sup>1</sup> ustawy zmienianej w art. 1, oraz walnych zgromadzeń spółdzielni mieszkaniowych zwołanych w trybie art. 15zzzr ustawy zmienianej w art. 5 wszczętych i niezakończonych prawomocnym orzeczeniem przed dniem wejścia w życie niniejszej ustawy stosuje się przepisy dotychczasowe.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2026/39__art_6__ust_2" gd:GUID="c79b27d6-89dc-4333-8ca7-f7b7b2c4d0f0" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-28_DU-2026-39_domyslne.x" wejscie-w-zycie="2026-01-28">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="b9b5652a-c536-4f8f-b1da-1aaf128e3708" fragment="1" gd:fragmentGUID="e50493fb-2fcc-455c-a619-d0ea1dde8cbf" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-28_DU-2026-39_domyslne.x" wejscie-w-zycie="2026-01-28">Do spraw sądowych, o których mowa w art. 49 i art. 49<sup>1</sup> ustawy zmienianej w art. 1, wszczętych i niezakończonych prawomocnym orzeczeniem przed dniem wejścia w życie niniejszej ustawy stosuje się przepisy art. 49 i art. 49<sup>1</sup> ustawy zmienianej w art. 1 w brzmieniu nadanym niniejszą ustawą.</zdanie>
+        </p>
+      </ustep>
+    </artykul>
+    <artykul eId="DU/2026/39__art_7" gd:GUID="e21417ba-7ee5-4597-aa5c-706e83be36f3" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-28_DU-2026-39_domyslne.x" wejscie-w-zycie="2026-01-28">
+      <nr>7</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="989accf0-a978-4b60-9d80-b4934aed5072" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-28_DU-2026-39_domyslne.x" wejscie-w-zycie="2026-01-28">
+        <p>
+          <zdanie nr="1" gd:zdGUID="8371c3d0-9368-4c2e-8786-2e432aaecd1f" fragment="1" gd:fragmentGUID="cbea4ba0-7362-4db2-82db-dd8ecd389986" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-28_DU-2026-39_domyslne.x" wejscie-w-zycie="2026-01-28">Do walnych zgromadzeń spółdzielni mieszkaniowych zwołanych w trybie art. 15zzzr ustawy zmienianej w art. 5 i nieprzeprowadzonych przed dniem wejścia w życie niniejszej ustawy stosuje się przepis art. 15zzzr zdanie pierwsze ustawy zmienianej w art. 5 w brzmieniu nadanym niniejszą ustawą.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2026/39__art_8" gd:GUID="19d4288f-b055-4fe6-a712-a9f9a2acf3b9" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-28_DU-2026-39_domyslne.x" wejscie-w-zycie="2026-01-28">
+      <nr>8</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="108cb201-e9e2-4ff6-943b-24f56e022d1c" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-28_DU-2026-39_domyslne.x" wejscie-w-zycie="2026-01-28">
+        <p>
+          <zdanie nr="1" gd:zdGUID="8ee252e2-4f5d-40c6-a03b-83666ac2af59" fragment="1" gd:fragmentGUID="f4dc3b39-0814-4b47-909a-76ac339888d0" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-28_DU-2026-39_domyslne.x" wejscie-w-zycie="2026-01-28">Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <organ-podpisujacy>Prezydent Rzeczypospolitej Polskiej: <i><osoba podpisujacy="true" gd:osobaGUID="13e81200-e96c-4f2d-851a-2ae5211891ab"><imie>K.</imie> <nazwisko>Nawrocki</nazwisko></osoba></i></organ-podpisujacy>
+  </ustawa>
+</akt-prawny>

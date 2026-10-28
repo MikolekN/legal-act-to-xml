@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <ustawa>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/807</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>70a87db3-bd1f-4a05-b2f2-cbab76042ce8</gd:GUIDwersji>
+      <AdresISAP>WDU20250000807</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>807</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 807</AdresWyswietlany>
+      <Tytul>Ustawa z dnia 4 czerwca 2025 r. o zmianie ustawy – Kodeks pracy</Tytul>
+      <Rodzaj>USTAWA</Rodzaj>
+      <DataOgloszenia>2025-06-23</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-06-04</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2025-12-24_DU-2025-807_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2025-12-24" warunek="po upływie 6 miesięcy od dnia ogłoszenia" podstawa="art. 2" zrodlo="https://eli.gov.pl/eli/DU/2025/807" dowod="DU/2025/807__art_2" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2025-12-24_DU-2025-807_domyslne.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2025-12-24_DU-2025-807_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="aca7bf7b-0332-4029-8065-5970831980a4" rola="wydajacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Sejm">
+          <Nazwa>SEJM</Nazwa>
+        </Organ>
+        <Organ gd:GUID="7b16d28b-c6cc-4749-b634-a9a0c23f600b" rola="podpisujacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Prezydent">
+          <Nazwa>Prezydent Rzeczypospolitej Polskiej</Nazwa>
+          <OrganPodpisujacy>Prezydent Rzeczypospolitej Polskiej</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>A.</imie> <nazwisko>Duda</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Ustawa</rodzaj-aktu>
+    <data>z dnia 4 czerwca 2025 r.</data>
+    <tytul>o zmianie ustawy – Kodeks pracy</tytul>
+    <artykul eId="DU/2025/807__art_1" gd:GUID="c94c1b3d-0182-42e8-bf1f-a0f4e159f47a" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-24_DU-2025-807_domyslne.x" wejscie-w-zycie="2025-12-24">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="4adecc63-b7e7-4a53-b5b2-b810b7c079d4" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-24_DU-2025-807_domyslne.x" wejscie-w-zycie="2025-12-24">
+        <p>
+          <zdanie nr="1" gd:zdGUID="b99a63e3-ebaf-4b59-a4f6-d4be3183cd59" fragment="1" gd:fragmentGUID="cbca9607-6e56-44d5-ba35-5b3b4ff78e37" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-24_DU-2025-807_domyslne.x" wejscie-w-zycie="2025-12-24">W ustawie z dnia 26 czerwca 1974 r. – Kodeks pracy (Dz. U. z 2025 r. poz. 277) wprowadza się następujące zmiany:</zdanie>
+        </p>
+        <punkt eId="DU/2025/807__art_1__pkt_1" gd:GUID="b22657a8-8d08-47d1-a52e-a8da029c8a4f" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-24_DU-2025-807_domyslne.x" wejscie-w-zycie="2025-12-24">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="b99a63e3-ebaf-4b59-a4f6-d4be3183cd59" fragment="2" gd:fragmentGUID="f551c492-0263-4616-9205-20fc594cd7a8" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-24_DU-2025-807_domyslne.x" wejscie-w-zycie="2025-12-24">po art. 18<sup>3c</sup> dodaje się art. 18<sup>3ca</sup> w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2025/277" cudzyslowy="oba" gd:nowGUID="0ebdb920-e507-475c-b083-93b6be06033d" element-eId="DU/2025/277__art_18[3c]" funkcja="dodaj-po"><artykul eId="DU/2025/277__art_18[3ca]" gd:GUID="da8777a8-227f-41a5-8e3d-b556c073a840" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-24_DU-2025-807_domyslne.x" wejscie-w-zycie="2025-12-24"><nr>18[3ca]</nr><paragraf-kodeksu eId="DU/2025/277__art_18[3ca]__par_1" gd:GUID="80fa63dc-7f0f-4b4a-b250-44793740e99b" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-24_DU-2025-807_domyslne.x" wejscie-w-zycie="2025-12-24"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="cadf82fe-c3e5-4c7b-abc6-da053c71ecb6" fragment="1" gd:fragmentGUID="546e1022-1872-443d-ac81-f6ec354eb50f" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-24_DU-2025-807_domyslne.x" wejscie-w-zycie="2025-12-24">Osoba ubiegająca się o zatrudnienie na danym stanowisku otrzymuje od pracodawcy informację o:</zdanie></p><punkt eId="DU/2025/277__art_18[3ca]__par_1__pkt_1" gd:GUID="ea50ff13-2de5-43e1-be40-580754e3291b" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-24_DU-2025-807_domyslne.x" wejscie-w-zycie="2025-12-24"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="cadf82fe-c3e5-4c7b-abc6-da053c71ecb6" fragment="2" gd:fragmentGUID="9d5b96ab-8cca-4f97-9a94-629274f3e096" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-24_DU-2025-807_domyslne.x" wejscie-w-zycie="2025-12-24">wynagrodzeniu, o którym mowa w art. 18<sup>3c</sup> § 2, jego początkowej wysokości lub jego przedziale <b>–</b> opartym na obiektywnych, neutralnych kryteriach, w szczególności pod względem płci, oraz</zdanie></p></punkt><punkt eId="DU/2025/277__art_18[3ca]__par_1__pkt_2" gd:GUID="bda39578-699b-4190-a00d-be739fd5f162" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-24_DU-2025-807_domyslne.x" wejscie-w-zycie="2025-12-24"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="cadf82fe-c3e5-4c7b-abc6-da053c71ecb6" fragment="3" gd:fragmentGUID="2a31c890-5b68-403d-93c4-342d91d74eb0" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-24_DU-2025-807_domyslne.x" wejscie-w-zycie="2025-12-24">odpowiednich postanowieniach układu zbiorowego pracy lub regulaminu wynagradzania <b>–</b> w przypadku gdy pracodawca jest objęty układem zbiorowym pracy lub obowiązuje u niego regulamin wynagradzania.</zdanie></p></punkt></paragraf-kodeksu><paragraf-kodeksu eId="DU/2025/277__art_18[3ca]__par_2" gd:GUID="73251b9e-3b0b-4005-b5fa-36a7e22b79fb" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-24_DU-2025-807_domyslne.x" wejscie-w-zycie="2025-12-24"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="f86b56d9-2f0a-4c43-8747-1388db0e3925" fragment="1" gd:fragmentGUID="424353c7-454a-4444-954c-064724c066bc" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-24_DU-2025-807_domyslne.x" wejscie-w-zycie="2025-12-24">Informacje, o których mowa w § 1, pracodawca przekazuje z wyprzedzeniem umożliwiającym zapoznanie się z tymi informacjami, w postaci papierowej lub elektronicznej, osobie ubiegającej się o zatrudnienie, zapewniając świadome i przejrzyste negocjacje:</zdanie></p><punkt eId="DU/2025/277__art_18[3ca]__par_2__pkt_1" gd:GUID="5ffea45b-4ac9-44f4-8928-1f6a86b4d0e3" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-24_DU-2025-807_domyslne.x" wejscie-w-zycie="2025-12-24"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="f86b56d9-2f0a-4c43-8747-1388db0e3925" fragment="2" gd:fragmentGUID="dd60425d-f61b-4479-a5b2-9168fef8ba5e" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-24_DU-2025-807_domyslne.x" wejscie-w-zycie="2025-12-24">w ogłoszeniu o naborze na stanowisko;</zdanie></p></punkt><punkt eId="DU/2025/277__art_18[3ca]__par_2__pkt_2" gd:GUID="f32cf891-a389-46d3-94dc-20fe510565ee" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-24_DU-2025-807_domyslne.x" wejscie-w-zycie="2025-12-24"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="f86b56d9-2f0a-4c43-8747-1388db0e3925" fragment="3" gd:fragmentGUID="03098277-c2cc-4334-bf20-d6dc1202f6c7" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-24_DU-2025-807_domyslne.x" wejscie-w-zycie="2025-12-24">przed rozmową kwalifikacyjną – jeżeli pracodawca nie ogłosił naboru na stanowisko albo nie przekazał tych informacji w ogłoszeniu, o którym mowa w pkt 1;</zdanie></p></punkt><punkt eId="DU/2025/277__art_18[3ca]__par_2__pkt_3" gd:GUID="cd35bff2-9f79-4931-b156-cc0047539519" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-24_DU-2025-807_domyslne.x" wejscie-w-zycie="2025-12-24"><nr>3</nr><p><zdanie nr="1" gd:zdGUID="f86b56d9-2f0a-4c43-8747-1388db0e3925" fragment="4" gd:fragmentGUID="c6d5c8b7-9e76-4e02-857b-4be6e873f4b2" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-24_DU-2025-807_domyslne.x" wejscie-w-zycie="2025-12-24">przed nawiązaniem stosunku pracy – jeżeli pracodawca nie ogłosił naboru na stanowisko albo nie przekazał tych informacji w ogłoszeniu, o którym mowa w pkt 1, albo przed rozmową kwalifikacyjną.</zdanie></p></punkt></paragraf-kodeksu><paragraf-kodeksu eId="DU/2025/277__art_18[3ca]__par_3" gd:GUID="f007aee1-d39e-48b8-9ee0-21a5acd76af9" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-24_DU-2025-807_domyslne.x" wejscie-w-zycie="2025-12-24"><nr>3</nr><p><zdanie nr="1" gd:zdGUID="771bbd02-7272-497b-bbc3-2f7e2e31f59c" fragment="1" gd:fragmentGUID="a6f49c74-c523-4d4e-81b2-4195d303531d" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-24_DU-2025-807_domyslne.x" wejscie-w-zycie="2025-12-24">Pracodawca zapewnia, aby ogłoszenia o naborze na stanowisko oraz nazwy stanowisk były neutralne pod względem płci, a proces rekrutacyjny przebiegał w sposób niedyskryminujący.</zdanie></p></paragraf-kodeksu></artykul></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/807__art_1__pkt_2" gd:GUID="804c410b-4d6b-4390-ba99-1bb14aab26f0" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-24_DU-2025-807_domyslne.x" wejscie-w-zycie="2025-12-24">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="b99a63e3-ebaf-4b59-a4f6-d4be3183cd59" fragment="3" gd:fragmentGUID="9cae0ee0-2057-4e07-8a60-afdf24112243" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-24_DU-2025-807_domyslne.x" wejscie-w-zycie="2025-12-24">w art. 22<sup>1</sup> w § 1 pkt 6 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2025/277" cudzyslowy="oba" gd:nowGUID="44c90a29-424c-4cc4-84d3-8f2b7486be6b" element-eId="DU/2025/277__art_22[1]__par_1__pkt_6" funkcja="zastap"><punkt eId="DU/2025/277__art_22[1]__par_1__pkt_6" gd:GUID="02d06f94-0689-455a-934c-cd94c0bcd96d" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-24_DU-2025-807_domyslne.x" wejscie-w-zycie="2025-12-24"><nr>6</nr><p><zdanie nr="1" gd:zdGUID="f756cb81-a767-4cfc-9ca7-29d1ad23724c" fragment="1" gd:fragmentGUID="30871bf4-4dd3-4188-95be-e8d9e3ac5c4f" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-24_DU-2025-807_domyslne.x" wejscie-w-zycie="2025-12-24">przebieg dotychczasowego zatrudnienia, z wyłączeniem informacji o wynagrodzeniu w obecnym stosunku pracy oraz w poprzednich stosunkach pracy.</zdanie></p></punkt></cytat-strukt>.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2025/807__art_2" gd:GUID="8f6151cd-2337-4786-a281-62c93f87c26d" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-24_DU-2025-807_domyslne.x" wejscie-w-zycie="2025-12-24">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="4d3fdaa2-e6a9-410c-a9a4-e12b046c326a" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-24_DU-2025-807_domyslne.x" wejscie-w-zycie="2025-12-24">
+        <p>
+          <zdanie nr="1" gd:zdGUID="fc13bb02-a120-485e-ae51-7983f61aa8a2" fragment="1" gd:fragmentGUID="aee41e13-d1d7-48f3-8dfc-0caf453ded61" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-24_DU-2025-807_domyslne.x" wejscie-w-zycie="2025-12-24">Ustawa wchodzi w życie po upływie 6 miesięcy od dnia ogłoszenia.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <organ-podpisujacy>Prezydent Rzeczypospolitej Polskiej: <i><osoba podpisujacy="true" gd:osobaGUID="78bba1ad-32e7-478b-9c3b-90bb46916436"><imie>A.</imie> <nazwisko>Duda</nazwisko></osoba></i></organ-podpisujacy>
+  </ustawa>
+</akt-prawny>

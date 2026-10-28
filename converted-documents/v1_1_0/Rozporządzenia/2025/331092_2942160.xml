@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <rozporzadzenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/857</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>9ac2ea35-3e24-4852-a8d3-ac3d0357a01a</gd:GUIDwersji>
+      <AdresISAP>WDU20250000857</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>857</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 857</AdresWyswietlany>
+      <Tytul>Rozporządzenie Ministra Finansów z dnia 27 czerwca 2025 r. w sprawie przesyłania informacji o sprzedawcach</Tytul>
+      <Rodzaj>ROZP</Rodzaj>
+      <DataOgloszenia>2025-06-30</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-06-27</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2025-07-01_DU-2025-857_odczytane" rodzaj="wejscie-w-zycie" pochodzenie="odczytane" data="2025-07-01" podstawa="§ 3" zrodlo="https://eli.gov.pl/eli/DU/2025/857" dowod="DU/2025/857__art_3" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2025-07-01_DU-2025-857_odczytane.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2025-07-01_DU-2025-857_odczytane" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="83fecc97-ed96-482c-8190-32034ff6bbf4" rola="wydajacy">
+          <Nazwa>Minister Finansów</Nazwa>
+          <OrganPodpisujacy>Minister Finansów</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>J.</imie> <nazwisko>Drop</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Rozporządzenie</rodzaj-aktu>
+    <autor-aktu>Ministra Finansów<odnosnik id-odnosnika="1" symbol="1" gd:GUID="5e9755b5-513c-47f6-ba3b-1649d6ce8be8"><p><zdanie nr="1" gd:zdGUID="e60a982f-184e-4f65-9974-f059cd10da79" fragment="1" gd:fragmentGUID="cd40e7d5-5857-4de1-93ab-84ad60ad2674">Minister Finansów kieruje działem administracji rządowej – finanse publiczne, na podstawie § 1 ust. 2 pkt 2 rozporządzenia Prezesa Rady Ministrów z dnia 18 grudnia 2023 r. w sprawie szczegółowego zakresu działania Ministra Finansów (Dz. U. poz. 2710).</zdanie></p></odnosnik></autor-aktu>
+    <data>z dnia 27 czerwca 2025 r.</data>
+    <tytul>w sprawie przesyłania informacji o sprzedawcach</tytul>
+    <podstawa-prawna>Na podstawie art. 75b ust. 5 ustawy z dnia 9 marca 2017 r. o wymianie informacji podatkowych z innymi państwami (Dz. U. z 2024 r. poz. 1588 i 1685) zarządza się, co następuje:</podstawa-prawna>
+    <paragraf eId="DU/2025/857__art_1" gd:GUID="811d2ac4-1ced-4f4f-bb17-7593bcd3b6ae" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-01_DU-2025-857_odczytane.x" wejscie-w-zycie="2025-07-01">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="d24c9250-8825-4e3c-99f7-408940352541" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-01_DU-2025-857_odczytane.x" wejscie-w-zycie="2025-07-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="db332a22-c47b-42a2-846e-a826a5b31534" fragment="1" gd:fragmentGUID="281ddd23-3cca-4395-87bb-2fd30f21b324" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-01_DU-2025-857_odczytane.x" wejscie-w-zycie="2025-07-01">Rozporządzenie określa sposób przesyłania za pomocą środków komunikacji elektronicznej zbiorczej informacji o sprzedawcach podlegających raportowaniu za okres sprawozdawczy, zwanej dalej „informacją o sprzedawcach”.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2025/857__art_2" gd:GUID="418fed7c-0c16-4c73-9408-dd988a114256" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-01_DU-2025-857_odczytane.x" wejscie-w-zycie="2025-07-01">
+      <nr>2</nr>
+      <ustep eId="DU/2025/857__art_2__ust_1" gd:GUID="9451dcef-e53f-4460-ba1e-e059d1dd411b" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-01_DU-2025-857_odczytane.x" wejscie-w-zycie="2025-07-01">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="633f55c8-bc01-45c5-bce4-2faecbc4b5fe" fragment="1" gd:fragmentGUID="5fba47bc-66fe-46a1-abf9-3dc2d2c00078" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-01_DU-2025-857_odczytane.x" wejscie-w-zycie="2025-07-01">Informacja o sprzedawcach jest przesyłana za pomocą oprogramowania interfejsowego dostępnego na stronie, której adres jest podany w Biuletynie Informacji Publicznej na stronie podmiotowej urzędu obsługującego ministra właściwego do spraw finansów publicznych.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/857__art_2__ust_2" gd:GUID="7b2c33b7-82d0-41df-bc5f-1bbce7c42409" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-01_DU-2025-857_odczytane.x" wejscie-w-zycie="2025-07-01">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="f6085c35-1917-4fd0-8db4-587db459afe2" fragment="1" gd:fragmentGUID="b2c5ddea-0470-4267-9c6b-5059dd85ec5b" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-01_DU-2025-857_odczytane.x" wejscie-w-zycie="2025-07-01">Informacja o sprzedawcach przesyłana w sposób, o którym mowa w ust. 1, jest opatrywana:</zdanie>
+        </p>
+        <punkt eId="DU/2025/857__art_2__ust_2__pkt_1" gd:GUID="2f3bc4b6-e0da-4617-863d-a82e8aead24e" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-01_DU-2025-857_odczytane.x" wejscie-w-zycie="2025-07-01">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="f6085c35-1917-4fd0-8db4-587db459afe2" fragment="2" gd:fragmentGUID="544d32cb-076a-4cba-be5b-66afe7e2ba5d" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-01_DU-2025-857_odczytane.x" wejscie-w-zycie="2025-07-01">kwalifikowanym podpisem elektronicznym albo</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/857__art_2__ust_2__pkt_2" gd:GUID="8a96f06e-7c33-4a62-abef-4d03ab40e8e0" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-01_DU-2025-857_odczytane.x" wejscie-w-zycie="2025-07-01">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="f6085c35-1917-4fd0-8db4-587db459afe2" fragment="3" gd:fragmentGUID="6ddee1cf-3c08-44e1-8972-5629fd89be53" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-01_DU-2025-857_odczytane.x" wejscie-w-zycie="2025-07-01">podpisem zaufanym.</zdanie>
+          </p>
+        </punkt>
+      </ustep>
+      <ustep eId="DU/2025/857__art_2__ust_3" gd:GUID="32a379f5-0216-434b-86be-eb8a0854c8e0" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-01_DU-2025-857_odczytane.x" wejscie-w-zycie="2025-07-01">
+        <nr>3</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="d5dd0ade-842b-4593-a683-f05146d4506a" fragment="1" gd:fragmentGUID="35f22e07-b455-4d3e-a93d-918133cad205" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-01_DU-2025-857_odczytane.x" wejscie-w-zycie="2025-07-01">Dowodem złożenia informacji o sprzedawcach jest urzędowe poświadczenie odbioru wytworzone i udostępnione nadawcy przez system teleinformatyczny Szefa Krajowej Administracji Skarbowej po uprzednim przeprowadzeniu prawid-łowej weryfikacji struktury logicznej, poprawności danych i podpisu elektronicznego.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/857__art_2__ust_4" gd:GUID="908faae8-3c61-47af-94eb-c2e52d1ca2a9" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-01_DU-2025-857_odczytane.x" wejscie-w-zycie="2025-07-01">
+        <nr>4</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="3afe6ef2-7033-4bcb-bf4f-5f1e6cdbcb74" fragment="1" gd:fragmentGUID="39a98dcf-c3ae-4e51-8b56-80e5c9fe3b80" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-01_DU-2025-857_odczytane.x" wejscie-w-zycie="2025-07-01">Struktura logiczna urzędowego poświadczenia odbioru informacji o sprzedawcach jest udostępniana w Biuletynie Informacji Publicznej na stronie podmiotowej urzędu obsługującego ministra właściwego do spraw finansów publicznych.</zdanie>
+        </p>
+      </ustep>
+    </paragraf>
+    <paragraf eId="DU/2025/857__art_3" gd:GUID="8a363907-a5de-47f7-a880-5385548035b4" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-01_DU-2025-857_odczytane.x" wejscie-w-zycie="2025-07-01">
+      <nr>3</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="a41e6dd8-1841-406e-acb5-d7707ba6a781" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-01_DU-2025-857_odczytane.x" wejscie-w-zycie="2025-07-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="48654d87-5a35-4cef-aec4-d61f6507a6e9" fragment="1" gd:fragmentGUID="ce56cc1c-4278-4204-afa1-6cc0248f1222" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-01_DU-2025-857_odczytane.x" wejscie-w-zycie="2025-07-01">Rozporządzenie wchodzi w życie z dniem 1 lipca 2025 r.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <organ-podpisujacy>Minister Finansów: wz. <i><osoba podpisujacy="true" gd:osobaGUID="f829e2b7-926d-4be3-832a-ef391c5c6fe2"><imie>J.</imie> <nazwisko>Drop</nazwisko></osoba></i></organ-podpisujacy>
+  </rozporzadzenie>
+</akt-prawny>

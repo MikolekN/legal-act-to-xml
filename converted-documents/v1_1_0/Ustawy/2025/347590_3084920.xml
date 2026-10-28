@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <ustawa>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/1541</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>a0e9ca02-0c84-4984-bdae-670a2ac8ade2</gd:GUIDwersji>
+      <AdresISAP>WDU20250001541</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>1541</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 1541</AdresWyswietlany>
+      <Tytul>Ustawa z dnia 17 października 2025 r. o zmianie ustawy o Centralnej Ewidencji i Informacji o Działalności Gospodarczej i Punkcie Informacji dla Przedsiębiorcy oraz ustawy o podatku od towarów i usług</Tytul>
+      <Rodzaj>USTAWA</Rodzaj>
+      <DataOgloszenia>2025-11-12</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-10-17</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2025-11-27_DU-2025-1541_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2025-11-27" warunek="po upływie 14 dni od dnia ogłoszenia" podstawa="art. 3" zrodlo="https://eli.gov.pl/eli/DU/2025/1541" dowod="DU/2025/1541__art_3" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2025-11-27_DU-2025-1541_domyslne.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2025-11-27_DU-2025-1541_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="ef0aa350-6277-445a-b088-1c0f80db62ea" rola="wydajacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Sejm">
+          <Nazwa>SEJM</Nazwa>
+        </Organ>
+        <Organ gd:GUID="fa229bd9-5b1b-4a13-8ec1-de04462b1da3" rola="podpisujacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Prezydent">
+          <Nazwa>Prezydent Rzeczypospolitej Polskiej</Nazwa>
+          <OrganPodpisujacy>Prezydent Rzeczypospolitej Polskiej</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>K.</imie> <nazwisko>Nawrocki</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Ustawa</rodzaj-aktu>
+    <data>z dnia 17 października 2025 r.</data>
+    <tytul>o zmianie ustawy o Centralnej Ewidencji i Informacji o Działalności Gospodarczej i Punkcie Informacji dla Przedsiębiorcy oraz ustawy o podatku od towarów i usług</tytul>
+    <artykul eId="DU/2025/1541__art_1" gd:GUID="08a35759-d981-4114-b49a-c42434301316" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-27_DU-2025-1541_domyslne.x" wejscie-w-zycie="2025-11-27">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="d4146161-4917-4c80-8e23-3e6fa1a74c3f" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-27_DU-2025-1541_domyslne.x" wejscie-w-zycie="2025-11-27">
+        <p>
+          <zdanie nr="1" gd:zdGUID="87d9ebe5-db73-499b-8a0f-4aea4e727db8" fragment="1" gd:fragmentGUID="a5f7b5f0-6c4b-4a13-b77f-47e39bfa9ba5" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-27_DU-2025-1541_domyslne.x" wejscie-w-zycie="2025-11-27"><now:zamien-tekst stary-tekst="." nowy-tekst=";" element-eId="DU/2022/541__art_51__ust_3__pkt_3" akt="https://eli.gov.pl/eli/DU/2022/541" now:wystapienie="ostatnie" gd:nowGUID="2394c6a4-3245-4f4c-b3f1-59ca477a2982" />W ustawie z dnia 6 marca 2018 r. o Centralnej Ewidencji i Informacji o Działalności Gospodarczej i Punkcie Informacji dla Przedsiębiorcy (Dz. U. z 2022 r. poz. 541, z 2024 r. poz. 1841 oraz z 2025 r. poz. 769) w art. 51 w ust. 3 w pkt 3 kropkę zastępuje się średnikiem i dodaje się pkt 4 w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2022/541" cudzyslowy="oba" gd:nowGUID="85f31a28-96d6-4dbe-8379-79afa1de9949" element-eId="DU/2022/541__art_51__ust_3__pkt_3" funkcja="dodaj-po"><punkt eId="DU/2022/541__art_51__ust_3__pkt_4" gd:GUID="e46e9dff-d9e0-4a96-9689-9b4fec492801" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-27_DU-2025-1541_domyslne.x" wejscie-w-zycie="2025-11-27"><nr>4</nr><p><zdanie nr="1" gd:zdGUID="e6335be8-7e37-4902-b35c-208f4a12dbd0" fragment="1" gd:fragmentGUID="3e62e720-5faf-4677-9293-dd5634b5b3eb" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-27_DU-2025-1541_domyslne.x" wejscie-w-zycie="2025-11-27">zapewnienie dostępu do wykazu, o którym mowa w art. 96b ust. 1 ustawy z dnia 11 marca 2004 r. o podatku od towarów i usług (Dz. U. z 2025 r. poz. 775, 894, 896, 1203 i 1541), oraz udostępnianie na stronie internetowej Punktu danych podmiotu, o których mowa w art. 96b ust. 3 pkt 2–3 i 5 ustawy z dnia 11 marca 2004 r. o podatku od towarów i usług, o ile dany podmiot znajduje się w tym wykazie.</zdanie></p></punkt></cytat-strukt>.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2025/1541__art_2" gd:GUID="33a200c6-9f3b-42a8-8882-137e8637b910" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-27_DU-2025-1541_domyslne.x" wejscie-w-zycie="2025-11-27">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="8bc92d70-c752-43fc-8fd9-a558815d92e0" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-27_DU-2025-1541_domyslne.x" wejscie-w-zycie="2025-11-27">
+        <p>
+          <zdanie nr="1" gd:zdGUID="49f88d7a-48b1-410a-bc98-af1436b0b6d1" fragment="1" gd:fragmentGUID="98b349f1-a8e0-4e8f-88b1-443e13931ea6" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-27_DU-2025-1541_domyslne.x" wejscie-w-zycie="2025-11-27">W ustawie z dnia 11 marca 2004 r. o podatku od towarów i usług (Dz. U. z 2025 r. poz. 775, 894, 896 i 1203) w art. 96b:</zdanie>
+        </p>
+        <punkt eId="DU/2025/1541__art_2__pkt_1" gd:GUID="8454cd19-8bd8-4a77-8f4a-9bc38ec64654" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-27_DU-2025-1541_domyslne.x" wejscie-w-zycie="2025-11-27">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="49f88d7a-48b1-410a-bc98-af1436b0b6d1" fragment="2" gd:fragmentGUID="f844f073-1a2f-4097-9548-0c5d6373291a" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-27_DU-2025-1541_domyslne.x" wejscie-w-zycie="2025-11-27">ust. 9 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2025/775" cudzyslowy="oba" gd:nowGUID="683b5e80-1ebf-4755-b8b9-7b9bd5011e7e" element-eId="DU/2025/775__art_96b__ust_9" funkcja="zastap"><ustep eId="DU/2025/775__art_96b__ust_9" gd:GUID="39705c54-89bb-427d-bd74-e767bea6778a" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-27_DU-2025-1541_domyslne.x" wejscie-w-zycie="2025-11-27"><nr>9</nr><p><zdanie nr="1" gd:zdGUID="9fab5529-f65f-47c9-bf6f-e79ddff838f8" fragment="1" gd:fragmentGUID="a60e0daf-2802-498a-9e06-449b836c8879" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-27_DU-2025-1541_domyslne.x" wejscie-w-zycie="2025-11-27">Dostęp do wykazu jest możliwy także za pośrednictwem systemu teleinformatycznego Centralnej Ewidencji i Informacji o Działalności Gospodarczej oraz systemu teleinformatycznego Punktu Informacji dla Przedsiębiorcy, o których mowa w ustawie z dnia 6 marca 2018 r. o Centralnej Ewidencji i Informacji o Działalności Gospodarczej i Punkcie Informacji dla Przedsiębiorcy.</zdanie></p></ustep></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1541__art_2__pkt_2" gd:GUID="b05ec42a-2a29-4a76-8012-fd69212b30a7" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-27_DU-2025-1541_domyslne.x" wejscie-w-zycie="2025-11-27">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="49f88d7a-48b1-410a-bc98-af1436b0b6d1" fragment="3" gd:fragmentGUID="0b1347da-7285-437d-b2d7-3673e03630ae" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-27_DU-2025-1541_domyslne.x" wejscie-w-zycie="2025-11-27">po ust. 9 dodaje się ust. 9a w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2025/775" cudzyslowy="oba" gd:nowGUID="55a23b82-0ebc-4fd6-87fd-21656295c436" element-eId="DU/2025/775__art_96b__ust_9" funkcja="dodaj-po"><ustep eId="DU/2025/775__art_96b__ust_9a" gd:GUID="e067384d-a777-4684-a1f6-46c9f84bb635" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-27_DU-2025-1541_domyslne.x" wejscie-w-zycie="2025-11-27"><nr>9a</nr><p><zdanie nr="1" gd:zdGUID="c513ac87-ba0a-45ba-bf7f-fcf4fa0f8174" fragment="1" gd:fragmentGUID="cb9a88fa-ada8-4170-9bf3-7d0eceac9d06" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-27_DU-2025-1541_domyslne.x" wejscie-w-zycie="2025-11-27">Szef Krajowej Administracji Skarbowej przekazuje ministrowi właściwemu do spraw gospodarki dane, o których mowa w ust. 3 pkt 2–3 i 5, w celu udostępnienia tych danych w systemie teleinformatycznym Punktu Informacji dla Przedsiębiorcy, o którym mowa w art. 51 ustawy z dnia 6 marca 2018 r. o Centralnej Ewidencji i Informacji o Działalności Gospodarczej i Punkcie Informacji dla Przedsiębiorcy.</zdanie></p></ustep></cytat-strukt>.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2025/1541__art_3" gd:GUID="e1eead22-7c91-4972-b376-593626a580b1" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-27_DU-2025-1541_domyslne.x" wejscie-w-zycie="2025-11-27">
+      <nr>3</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="86be4cca-bdac-42c8-8ed6-8d362fece0a4" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-27_DU-2025-1541_domyslne.x" wejscie-w-zycie="2025-11-27">
+        <p>
+          <zdanie nr="1" gd:zdGUID="f9688a27-63d5-4485-9221-52a4588b576a" fragment="1" gd:fragmentGUID="a10aa877-c811-46e5-b257-22dc98f76db3" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-27_DU-2025-1541_domyslne.x" wejscie-w-zycie="2025-11-27">Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <organ-podpisujacy>Prezydent Rzeczypospolitej Polskiej: <i><osoba podpisujacy="true" gd:osobaGUID="93fbb80a-c734-4260-890c-7330da7951e4"><imie>K.</imie> <nazwisko>Nawrocki</nazwisko></osoba></i></organ-podpisujacy>
+  </ustawa>
+</akt-prawny>

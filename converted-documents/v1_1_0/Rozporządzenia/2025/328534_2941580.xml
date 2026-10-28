@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <rozporzadzenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/850</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>5abe93b0-292b-427e-8376-c2e2369d2981</gd:GUIDwersji>
+      <AdresISAP>WDU20250000850</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>850</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 850</AdresWyswietlany>
+      <Tytul>Rozporządzenie Ministra Cyfryzacji z dnia 27 czerwca 2025 r. zmieniające rozporządzenie w sprawie zakresu i warunków korzystania z elektronicznej platformy usług administracji publicznej</Tytul>
+      <Rodzaj>ROZP</Rodzaj>
+      <DataOgloszenia>2025-06-30</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-06-27</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2025-07-01_DU-2025-850_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2025-07-01" warunek="z dniem następującym po dniu ogłoszenia" podstawa="§ 2" zrodlo="https://eli.gov.pl/eli/DU/2025/850" dowod="DU/2025/850__art_2" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2025-07-01_DU-2025-850_domyslne.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2025-07-01_DU-2025-850_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="4b1891c3-58f1-4219-b263-e70634ff178f" rola="wydajacy">
+          <Nazwa>Minister Cyfryzacji</Nazwa>
+          <OrganPodpisujacy>Minister Cyfryzacji</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>D.</imie> <nazwisko>Standerski</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Rozporządzenie</rodzaj-aktu>
+    <autor-aktu>Ministra Cyfryzacji<odnosnik id-odnosnika="1" symbol="1" gd:GUID="1781c479-0d49-435c-9f18-d1e86f4ab278"><p><zdanie nr="1" gd:zdGUID="f898ebb1-6ddf-4ca0-a0f6-6b544cfb5c7f" fragment="1" gd:fragmentGUID="3598660e-c5d2-42cd-9205-863e4454553d">Minister Cyfryzacji kieruje działem administracji rządowej – informatyzacja, na podstawie § 1 ust. 2 rozporządzenia Prezesa Rady Ministrów z dnia 18 grudnia 2023 r. w sprawie szczegółowego zakresu działania Ministra Cyfryzacji (Dz. U. poz. 2720).</zdanie></p></odnosnik></autor-aktu>
+    <data>z dnia 27 czerwca 2025 r.</data>
+    <tytul>zmieniające rozporządzenie w sprawie zakresu i warunków korzystania z elektronicznej platformy usług administracji publicznej</tytul>
+    <podstawa-prawna>Na podstawie art. 19a ust. 3 ustawy z dnia 17 lutego 2005 r. o informatyzacji działalności podmiotów realizujących zadania publiczne (Dz. U. z 2024 r. poz. 1557 i 1717) zarządza się, co następuje:</podstawa-prawna>
+    <paragraf eId="DU/2025/850__art_1" gd:GUID="a56272a6-4568-444c-be97-6777b062ecc8" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-01_DU-2025-850_domyslne.x" wejscie-w-zycie="2025-07-01">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="af661ef7-39ad-4b88-9f21-b618cb4b70fb" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-01_DU-2025-850_domyslne.x" wejscie-w-zycie="2025-07-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="b1fe53ae-dcac-4883-969c-50a20a6faef3" fragment="1" gd:fragmentGUID="bcbc3f8f-7c5d-417c-a7f6-d056183b125f" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-01_DU-2025-850_domyslne.x" wejscie-w-zycie="2025-07-01">W rozporządzeniu Ministra Cyfryzacji z dnia 5 października 2016 r. w sprawie zakresu i warunków korzystania z elektronicznej platformy usług administracji publicznej (Dz. U. z 2023 r. poz. 2514) w § 4:</zdanie>
+        </p>
+        <punkt eId="DU/2025/850__art_1__pkt_1" gd:GUID="4eb017ee-5d8c-4f30-9741-22a4f7617ffc" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-01_DU-2025-850_domyslne.x" wejscie-w-zycie="2025-07-01">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="b1fe53ae-dcac-4883-969c-50a20a6faef3" fragment="2" gd:fragmentGUID="665344b8-0feb-45cd-bbdb-47a215498988" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-01_DU-2025-850_domyslne.x" wejscie-w-zycie="2025-07-01">w ust. 2 pkt 7 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/2514" cudzyslowy="oba" gd:nowGUID="89c5dc8c-eb70-46bd-a950-acd377d5f110" element-eId="DU/2023/2514__art_4__ust_2__pkt_7" funkcja="zastap"><punkt eId="DU/2023/2514__art_4__ust_2__pkt_7" gd:GUID="6d010655-372f-4b51-af85-72cd0e9cc375" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-01_DU-2025-850_domyslne.x" wejscie-w-zycie="2025-07-01"><nr>7</nr><p><zdanie nr="1" gd:zdGUID="be9f0a85-b264-4c1b-b451-41714e5d00e8" fragment="1" gd:fragmentGUID="74a42206-dc2b-45e4-baa0-e238ad0dfa2f" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-01_DU-2025-850_domyslne.x" wejscie-w-zycie="2025-07-01">certyfikat podstawowy, o którym mowa w art. 2 pkt 2 ustawy z dnia 26 maja 2023 r. o aplikacji mObywatel (Dz. U. z 2024 r. poz. 1275 i 1717).</zdanie></p></punkt></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/850__art_1__pkt_2" gd:GUID="f4e379c6-243d-4a56-999e-68f785f29271" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-01_DU-2025-850_domyslne.x" wejscie-w-zycie="2025-07-01">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="b1fe53ae-dcac-4883-969c-50a20a6faef3" fragment="3" gd:fragmentGUID="fd387476-f396-4ed0-9346-bcb85d29d3a9" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-01_DU-2025-850_domyslne.x" wejscie-w-zycie="2025-07-01">ust. 4 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/2514" cudzyslowy="oba" gd:nowGUID="99c22646-fbd2-458d-a550-14ad5b1c3971" element-eId="DU/2023/2514__art_4__ust_4" funkcja="zastap"><ustep eId="DU/2023/2514__art_4__ust_4" gd:GUID="7cd42135-f9db-4641-ba9f-b9f973fc795f" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-01_DU-2025-850_domyslne.x" wejscie-w-zycie="2025-07-01"><nr>4</nr><p><zdanie nr="1" gd:zdGUID="2732cbaa-7f7a-48d6-8435-52b3965595ac" fragment="1" gd:fragmentGUID="ed2fbafd-aa51-40f9-92f1-9d1b982913c6" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-01_DU-2025-850_domyslne.x" wejscie-w-zycie="2025-07-01">Komunikaty związane z funkcjonowaniem konta, w tym ze sprawami lub z procedurami zainicjowanymi z wykorzystaniem tego konta, są:</zdanie></p><punkt eId="DU/2023/2514__art_4__ust_4__pkt_1" gd:GUID="b67b8360-151e-4d6d-8639-b4ecf6d5b860" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-01_DU-2025-850_domyslne.x" wejscie-w-zycie="2025-07-01"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="2732cbaa-7f7a-48d6-8435-52b3965595ac" fragment="2" gd:fragmentGUID="a2093fcc-6f26-4573-b68d-c4992149270a" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-01_DU-2025-850_domyslne.x" wejscie-w-zycie="2025-07-01">przesyłane na adres poczty elektronicznej podany przez użytkownika zarejestrowanego;</zdanie></p></punkt><punkt eId="DU/2023/2514__art_4__ust_4__pkt_2" gd:GUID="b34f6ae1-5cf6-4007-a657-a182bdda85dd" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-01_DU-2025-850_domyslne.x" wejscie-w-zycie="2025-07-01"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="2732cbaa-7f7a-48d6-8435-52b3965595ac" fragment="3" gd:fragmentGUID="90416973-bded-4f37-b72c-34bb858c2c0e" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-01_DU-2025-850_domyslne.x" wejscie-w-zycie="2025-07-01">udostępniane w aplikacji mObywatel, jeżeli użytkownik zarejestrowany jest jednocześnie użytkownikiem tej aplikacji i wyraził zgodę na otrzymywanie komunikatów.</zdanie></p></punkt></ustep></cytat-strukt>.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2025/850__art_2" gd:GUID="9ee4f63a-7a8e-4b33-ac0c-d05ffe93e544" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-01_DU-2025-850_domyslne.x" wejscie-w-zycie="2025-07-01">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="5d4e975d-6f35-475e-ad53-032b02f8a73f" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-01_DU-2025-850_domyslne.x" wejscie-w-zycie="2025-07-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="c5e88dcd-5112-43c4-88d0-61c526b3672c" fragment="1" gd:fragmentGUID="deec0ed5-2f1f-45b8-9650-ffd0e1adf526" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-01_DU-2025-850_domyslne.x" wejscie-w-zycie="2025-07-01">Rozporządzenie wchodzi w życie z dniem następującym po dniu ogłoszenia.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <organ-podpisujacy>Minister Cyfryzacji: wz. <i><osoba podpisujacy="true" gd:osobaGUID="46f0739f-373d-4733-80a6-e915b2b24ab5"><imie>D.</imie> <nazwisko>Standerski</nazwisko></osoba></i></organ-podpisujacy>
+  </rozporzadzenie>
+</akt-prawny>

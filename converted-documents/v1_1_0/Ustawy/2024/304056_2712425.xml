@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <ustawa>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2024/1597</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>a6d435d0-3dc1-4154-8cbf-ae2a157d3329</gd:GUIDwersji>
+      <AdresISAP>WDU20240001597</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2024</Rok>
+      <Pozycja>1597</Pozycja>
+      <AdresWyswietlany>Dz.U. 2024 poz. 1597</AdresWyswietlany>
+      <Tytul>Ustawa z dnia 18 października 2024 r. o zmianie ustawy o udostępnianiu informacji gospodarczych i wymianie danych gospodarczych</Tytul>
+      <Rodzaj>USTAWA</Rodzaj>
+      <DataOgloszenia>2024-10-30</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2024-10-18</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2024-11-30_DU-2024-1597_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2024-11-30" warunek="po upływie 30 dni od dnia ogłoszenia" podstawa="art. 4" zrodlo="https://eli.gov.pl/eli/DU/2024/1597" dowod="DU/2024/1597__art_4" />
+          <Zdarzenie id="zdarz_wejscie_2025-05-01_DU-2024-1597_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2025-05-01" warunek="po upływie 6 miesięcy od dnia ogłoszenia" podstawa="art. 4" zrodlo="https://eli.gov.pl/eli/DU/2024/1597" dowod="DU/2024/1597__art_4">
+            <JednostkaAktu eId="DU/2024/1597__art_1__pkt_5" />
+            <JednostkaAktu eId="DU/2024/1597__art_1__pkt_8" />
+          </Zdarzenie>
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2024-11-30_DU-2024-1597_domyslne.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2024-11-30_DU-2024-1597_domyslne" />
+        </GrupaCzasowa>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2025-05-01_DU-2024-1597_domyslne.x" glowna="false">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2025-05-01_DU-2024-1597_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="156cf91c-50de-4eaa-a818-c0f44a3ff853" rola="wydajacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Sejm">
+          <Nazwa>SEJM</Nazwa>
+        </Organ>
+        <Organ gd:GUID="8f8199f5-a169-485b-9333-b2c19624d3dc" rola="podpisujacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Prezydent">
+          <Nazwa>Prezydent Rzeczypospolitej Polskiej</Nazwa>
+          <OrganPodpisujacy>Prezydent Rzeczypospolitej Polskiej</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>A.</imie> <nazwisko>Duda</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Ustawa</rodzaj-aktu>
+    <data>z dnia 18 października 2024 r.</data>
+    <tytul>o zmianie ustawy o udostępnianiu informacji gospodarczych i wymianie danych gospodarczych</tytul>
+    <artykul eId="DU/2024/1597__art_1" gd:GUID="d5c646ab-265e-4919-8482-52bb24a8c94d" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-30_DU-2024-1597_domyslne.x" wejscie-w-zycie="2024-11-30">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="352d8c59-c1f6-4124-9aae-c39ca23bbec1" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-30_DU-2024-1597_domyslne.x" wejscie-w-zycie="2024-11-30">
+        <p>
+          <zdanie nr="1" gd:zdGUID="69c45b51-740e-46c6-8cb6-00b81f87e4ff" fragment="1" gd:fragmentGUID="82ea8520-eec6-4b96-ac07-2a99b16994c3" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-30_DU-2024-1597_domyslne.x" wejscie-w-zycie="2024-11-30">W ustawie z dnia 9 kwietnia 2010 r. o udostępnianiu informacji gospodarczych i wymianie danych gospodarczych (Dz. U. z 2023 r. poz. 2160) wprowadza się następujące zmiany:</zdanie>
+        </p>
+        <punkt eId="DU/2024/1597__art_1__pkt_1" gd:GUID="ffb5db6b-d713-4e89-8b20-1df2294a3527" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-30_DU-2024-1597_domyslne.x" wejscie-w-zycie="2024-11-30">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="69c45b51-740e-46c6-8cb6-00b81f87e4ff" fragment="2" gd:fragmentGUID="322b7809-5850-4d23-94d4-17bf83aa7c5c" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-30_DU-2024-1597_domyslne.x" wejscie-w-zycie="2024-11-30">w art. 2 w ust. 1:</zdanie>
+          </p>
+          <litera eId="DU/2024/1597__art_1__pkt_1__lit_a" gd:GUID="40dab91c-4251-48e6-ada7-603986599394" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-30_DU-2024-1597_domyslne.x" wejscie-w-zycie="2024-11-30">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="69c45b51-740e-46c6-8cb6-00b81f87e4ff" fragment="3" gd:fragmentGUID="1ca33eb5-031d-4f72-be78-a8494a262b0e" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-30_DU-2024-1597_domyslne.x" wejscie-w-zycie="2024-11-30">w pkt 1 lit. b otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/2160" cudzyslowy="oba" gd:nowGUID="9893d9b1-b431-45fc-9925-3b60902f6e54" element-eId="DU/2023/2160__art_2__ust_1__pkt_1__lit_b" funkcja="zastap"><litera eId="DU/2023/2160__art_2__ust_1__pkt_1__lit_b" gd:GUID="fff53e15-c2ac-4942-9611-46ad10297902" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-30_DU-2024-1597_domyslne.x" wejscie-w-zycie="2024-11-30"><nr>b</nr><p><zdanie nr="1" gd:zdGUID="8cef7d52-c498-4ab6-8255-efbf57d767c0" fragment="1" gd:fragmentGUID="8b20987c-4615-4072-adae-9f03b68c4f29" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-30_DU-2024-1597_domyslne.x" wejscie-w-zycie="2024-11-30">siedziby i adresu lub adresu do doręczeń elektronicznych, o którym mowa w art. 2 pkt 1 ustawy z dnia 18 listopada 2020 r. o doręczeniach elektronicznych (Dz. U. z 2024 r. poz. 1045), zwanego dalej „adresem do doręczeń elektronicznych”, wpisanego do bazy adresów elektronicznych, o której mowa w art. 25 tej ustawy, zwanej dalej „bazą adresów elektronicznych”,</zdanie></p></litera></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2024/1597__art_1__pkt_1__lit_b" gd:GUID="1327e55c-6ea4-4b50-9859-f6d33d77d9a7" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-30_DU-2024-1597_domyslne.x" wejscie-w-zycie="2024-11-30">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="69c45b51-740e-46c6-8cb6-00b81f87e4ff" fragment="4" gd:fragmentGUID="e3e599e1-29df-458c-ae1e-76f37fc7826e" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-30_DU-2024-1597_domyslne.x" wejscie-w-zycie="2024-11-30">w pkt 2 lit. b otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/2160" cudzyslowy="oba" gd:nowGUID="28ccfc09-fc86-4c46-b698-b28f01343443" element-eId="DU/2023/2160__art_2__ust_1__pkt_2__lit_b" funkcja="zastap"><litera eId="DU/2023/2160__art_2__ust_1__pkt_2__lit_b" gd:GUID="9573609b-3b5b-460a-a906-d6467ba2227e" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-30_DU-2024-1597_domyslne.x" wejscie-w-zycie="2024-11-30"><nr>b</nr><p><zdanie nr="1" gd:zdGUID="98a7de2d-2af8-463c-8ad2-fe9769b95e6f" fragment="1" gd:fragmentGUID="b2325b2d-6214-4a65-9547-fec04b20441e" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-30_DU-2024-1597_domyslne.x" wejscie-w-zycie="2024-11-30">adresu miejsca zamieszkania lub adresu do doręczeń, lub adresu do doręczeń elektronicznych wpisanego do bazy adresów elektronicznych,</zdanie></p></litera></cytat-strukt>;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2024/1597__art_1__pkt_2" gd:GUID="b557aea4-ff06-4079-837a-79203f5bb89a" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-30_DU-2024-1597_domyslne.x" wejscie-w-zycie="2024-11-30">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="69c45b51-740e-46c6-8cb6-00b81f87e4ff" fragment="5" gd:fragmentGUID="954bd173-27fc-4ec7-98fa-69fdb04d56dd" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-30_DU-2024-1597_domyslne.x" wejscie-w-zycie="2024-11-30">w art. 11:</zdanie>
+          </p>
+          <litera eId="DU/2024/1597__art_1__pkt_2__lit_a" gd:GUID="d885b71e-3caf-41a7-8933-36f0fad4b007" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-30_DU-2024-1597_domyslne.x" wejscie-w-zycie="2024-11-30">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="69c45b51-740e-46c6-8cb6-00b81f87e4ff" fragment="6" gd:fragmentGUID="bc49d37f-36ff-4fb3-8460-d0cefc7061d0" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-30_DU-2024-1597_domyslne.x" wejscie-w-zycie="2024-11-30">po ust. 1 dodaje się ust. 1a w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/2160" cudzyslowy="oba" gd:nowGUID="228e7a51-b51a-4983-a2a0-64d46466a48e" element-eId="DU/2023/2160__art_11__ust_1" funkcja="dodaj-po"><ustep eId="DU/2023/2160__art_11__ust_1a" gd:GUID="417d6ddf-f0fe-44d5-a557-0cb919c5200a" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-30_DU-2024-1597_domyslne.x" wejscie-w-zycie="2024-11-30"><nr>1a</nr><p><zdanie nr="1" gd:zdGUID="eccd28a2-c158-4037-ab09-12f2e3123d24" fragment="1" gd:fragmentGUID="5e32d809-e2b6-4825-a3d7-4c4df9f5370a" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-30_DU-2024-1597_domyslne.x" wejscie-w-zycie="2024-11-30">Zarząd biura przesyła ministrowi właściwemu do spraw gospodarki, do zatwierdzenia, regulamin wraz z kopią uchwały, w terminie 7 dni od dnia uchwalenia regulaminu.</zdanie></p></ustep></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2024/1597__art_1__pkt_2__lit_b" gd:GUID="e81018c5-f523-4da5-a905-c1014d049259" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-30_DU-2024-1597_domyslne.x" wejscie-w-zycie="2024-11-30">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="69c45b51-740e-46c6-8cb6-00b81f87e4ff" fragment="7" gd:fragmentGUID="6acdcaca-8c9a-48ec-be31-c8f85c280938" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-30_DU-2024-1597_domyslne.x" wejscie-w-zycie="2024-11-30">po ust. 2 dodaje się ust. 2a w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/2160" cudzyslowy="oba" gd:nowGUID="e4f7195f-4bcb-4fb8-bff6-92d6795ec0d5" element-eId="DU/2023/2160__art_11__ust_2" funkcja="dodaj-po"><ustep eId="DU/2023/2160__art_11__ust_2a" gd:GUID="2f93bc48-4a42-4607-8ef1-58fa6d57668d" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-30_DU-2024-1597_domyslne.x" wejscie-w-zycie="2024-11-30"><nr>2a</nr><p><zdanie nr="1" gd:zdGUID="230b9330-ce16-40f1-bf1e-849ab7559458" fragment="1" gd:fragmentGUID="5577cd43-d4d4-4165-a508-3eb82b33df6b" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-30_DU-2024-1597_domyslne.x" wejscie-w-zycie="2024-11-30">Minister Sprawiedliwości i Prezes Urzędu Ochrony Danych Osobowych niezwłocznie informują ministra właściwego do spraw gospodarki o dniu, w którym ich opinie stały się ostateczne.</zdanie></p></ustep></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2024/1597__art_1__pkt_2__lit_c" gd:GUID="2aadcdbb-3dc0-41f7-8eef-dd87cc8cf227" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-30_DU-2024-1597_domyslne.x" wejscie-w-zycie="2024-11-30">
+            <nr>c</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="69c45b51-740e-46c6-8cb6-00b81f87e4ff" fragment="8" gd:fragmentGUID="87bd71b5-40fe-4e9c-8c69-ea638dfdc954" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-30_DU-2024-1597_domyslne.x" wejscie-w-zycie="2024-11-30">po ust. 3 dodaje się ust. 3a i 3b w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/2160" cudzyslowy="oba" gd:nowGUID="5e6d688d-af46-4bae-80b4-17715b83ecc4" element-eId="DU/2023/2160__art_11__ust_3" funkcja="dodaj-po"><ustep eId="DU/2023/2160__art_11__ust_3a" gd:GUID="cb0879f6-49e7-450f-a9a9-bbf872bbabfc" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-30_DU-2024-1597_domyslne.x" wejscie-w-zycie="2024-11-30"><nr>3a</nr><p><zdanie nr="1" gd:zdGUID="4089ce4c-197b-44a0-b075-9201ed6814c8" fragment="1" gd:fragmentGUID="3c40d78e-3f84-48c5-956c-d09eada1336b" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-30_DU-2024-1597_domyslne.x" wejscie-w-zycie="2024-11-30">Do zatwierdzenia regulaminu, w przypadku gdy opinie organów, o których mowa w ust. 2, są pozytywne, stosuje się przepisy działu II rozdziału 8a ustawy z dnia 14 czerwca 1960 r. – Kodeks postępowania administracyjnego (Dz. U. z 2024 r. poz. 572), z zastrzeżeniem że termin, o którym mowa w art. 122a § 2 pkt 1 tej ustawy, wynosi 14 dni od dnia otrzymania ostatniej z informacji, o których mowa w ust. 2a.</zdanie></p></ustep><ustep eId="DU/2023/2160__art_11__ust_3b" gd:GUID="c4a70729-d182-4284-b609-947363bb978c" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-30_DU-2024-1597_domyslne.x" wejscie-w-zycie="2024-11-30"><nr>3b</nr><p><zdanie nr="1" gd:zdGUID="9166facc-5fdd-4703-bc1d-f0cfa20b045f" fragment="1" gd:fragmentGUID="68afced8-7d56-4ea9-9a8e-85b08b31628e" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-30_DU-2024-1597_domyslne.x" wejscie-w-zycie="2024-11-30">Minister właściwy do spraw gospodarki niezwłocznie informuje biuro o dacie załatwienia sprawy zgodnie z ust. 3a.</zdanie></p></ustep></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2024/1597__art_1__pkt_2__lit_d" gd:GUID="d2db812a-b409-4686-bea7-bd2bbbebf70d" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-30_DU-2024-1597_domyslne.x" wejscie-w-zycie="2024-11-30">
+            <nr>d</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="69c45b51-740e-46c6-8cb6-00b81f87e4ff" fragment="9" gd:fragmentGUID="35af4c5f-33fd-4d49-b7e4-096515ed05f2" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-30_DU-2024-1597_domyslne.x" wejscie-w-zycie="2024-11-30">ust. 4 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/2160" cudzyslowy="oba" gd:nowGUID="79d34556-5d69-43e7-ace4-03c141314539" element-eId="DU/2023/2160__art_11__ust_4" funkcja="zastap"><ustep eId="DU/2023/2160__art_11__ust_4" gd:GUID="e984024b-74a2-493b-a9b3-0e5c697b5b1a" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-30_DU-2024-1597_domyslne.x" wejscie-w-zycie="2024-11-30"><nr>4</nr><p><zdanie nr="1" gd:zdGUID="e35039ef-52cd-46ae-a7cf-3b4ac8e1078d" fragment="1" gd:fragmentGUID="2e2b6747-8a88-4a37-87a9-48c9cf996c13" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-30_DU-2024-1597_domyslne.x" wejscie-w-zycie="2024-11-30">Zatwierdzony regulamin minister właściwy do spraw gospodarki publikuje na swojej stronie internetowej w terminie 14 dni od dnia zatwierdzenia regulaminu zgodnie z ust. 3a albo uprawomocnienia się decyzji zatwierdzającej regulamin.</zdanie><zdanie nr="2" gd:zdGUID="725f7180-2973-4e31-945d-8b2a1b6bc136" fragment="1" gd:fragmentGUID="88e05bca-5a89-485b-9d4a-afbf54b397c1" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-30_DU-2024-1597_domyslne.x" wejscie-w-zycie="2024-11-30">Zarząd biura jest obowiązany do publikacji aktualnej treści regulaminu na stronie internetowej biura.</zdanie></p></ustep></cytat-strukt>;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2024/1597__art_1__pkt_3" gd:GUID="9d8f40c9-81ac-4123-8134-f39aa1f05449" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-30_DU-2024-1597_domyslne.x" wejscie-w-zycie="2024-11-30">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="69c45b51-740e-46c6-8cb6-00b81f87e4ff" fragment="10" gd:fragmentGUID="5022f5ee-3a27-452a-9734-e10c92459016" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-30_DU-2024-1597_domyslne.x" wejscie-w-zycie="2024-11-30">w art. 11a ust. 1 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/2160" cudzyslowy="oba" gd:nowGUID="75520bee-4f65-444a-9d78-08fbc6b01e64" element-eId="DU/2023/2160__art_11a__ust_1" funkcja="zastap"><ustep eId="DU/2023/2160__art_11a__ust_1" gd:GUID="1b6a5d75-40b7-4205-954c-1d876e42f8fb" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-30_DU-2024-1597_domyslne.x" wejscie-w-zycie="2024-11-30"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="9e15e7f1-2296-4866-b5de-e164678653d3" fragment="1" gd:fragmentGUID="3c55dc31-13b5-4a4d-bc99-52e1eb68ed66" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-30_DU-2024-1597_domyslne.x" wejscie-w-zycie="2024-11-30">Biuro jest obowiązane do zawiadomienia ministra właściwego do spraw gospodarki o firmie, pod którą działa, o podjęciu oraz o zaprzestaniu wykonywania działalności gospodarczej, a także o adresie, na który należy przekazywać informacje gospodarcze, i o jego zmianach, w terminie 7 dni od dnia zaistnienia tych zdarzeń.</zdanie></p></ustep></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2024/1597__art_1__pkt_4" gd:GUID="ab1d75de-88d9-4103-8a81-5da3586bf8c1" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-30_DU-2024-1597_domyslne.x" wejscie-w-zycie="2024-11-30">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="69c45b51-740e-46c6-8cb6-00b81f87e4ff" fragment="11" gd:fragmentGUID="b0cc2cf5-3d59-447a-991f-49e1b7214c87" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-30_DU-2024-1597_domyslne.x" wejscie-w-zycie="2024-11-30">po art. 11a dodaje się art. 11b w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/2160" cudzyslowy="oba" gd:nowGUID="0dfb464b-b28b-4a50-8c3e-bd2f0a569f3a" element-eId="DU/2023/2160__art_11a" funkcja="dodaj-po"><artykul eId="DU/2023/2160__art_11b" gd:GUID="076863cc-cd67-4faf-b61d-da2982bb3ae6" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-30_DU-2024-1597_domyslne.x" wejscie-w-zycie="2024-11-30"><nr>11b</nr><ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="04ad1945-f323-49b6-b9ce-a934b2b8a3ad" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-30_DU-2024-1597_domyslne.x" wejscie-w-zycie="2024-11-30"><p><zdanie nr="1" gd:zdGUID="027d543d-f53b-46d9-b041-cb242ab8e328" fragment="1" gd:fragmentGUID="632f1ab2-71f8-43f0-a7aa-2f5d80fa92fe" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-30_DU-2024-1597_domyslne.x" wejscie-w-zycie="2024-11-30">Informację o wysokości opłat, o których mowa w art. 22 ust. 1, art. 22a ust. 6, art. 22b ust. 2 i 4, art. 23 ust. 4, art. 25 ust. 2 oraz art. 27 ust. 5, zarząd biura publikuje w jednym dokumencie na stronie internetowej biura.</zdanie></p></ustep-n></artykul></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2024/1597__art_1__pkt_5" gd:GUID="d3a86a35-9676-424d-86d7-373b3a16c22e" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-01_DU-2024-1597_domyslne.x" wejscie-w-zycie="2025-05-01">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="69c45b51-740e-46c6-8cb6-00b81f87e4ff" fragment="12" gd:fragmentGUID="52e031c6-8132-43c0-b0dc-22a461713ff2" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-01_DU-2024-1597_domyslne.x" wejscie-w-zycie="2025-05-01">w art. 22 po ust. 2 dodaje się ust. 2a i 2b w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/2160" cudzyslowy="oba" gd:nowGUID="f18d418d-2ca0-4071-b0ba-90bed9e788cc" element-eId="DU/2023/2160__art_22__ust_2" funkcja="dodaj-po"><ustep eId="DU/2023/2160__art_22__ust_2a" gd:GUID="32b711ce-47f2-4d1e-aff3-d1af262e8c9c" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-01_DU-2024-1597_domyslne.x" wejscie-w-zycie="2025-05-01"><nr>2a</nr><p><zdanie nr="1" gd:zdGUID="8dc2d427-0353-4f4f-98a1-197ddc79ee9f" fragment="1" gd:fragmentGUID="3ab78f71-e478-476b-a28f-00f4ea740a0a" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-01_DU-2024-1597_domyslne.x" wejscie-w-zycie="2025-05-01">Wniosek, o którym mowa w ust. 2, można złożyć działając w imieniu własnym lub na rzecz innego podmiotu.</zdanie></p></ustep><ustep eId="DU/2023/2160__art_22__ust_2b" gd:GUID="a9f7a463-03d1-4c71-bb11-16ff3342bcda" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-01_DU-2024-1597_domyslne.x" wejscie-w-zycie="2025-05-01"><nr>2b</nr><p><zdanie nr="1" gd:zdGUID="e5086f98-9e96-485d-993e-ee43155efffd" fragment="1" gd:fragmentGUID="7a0aa278-6559-46c2-87e1-24cb1a9b1121" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-01_DU-2024-1597_domyslne.x" wejscie-w-zycie="2025-05-01">Wniosek, o którym mowa w ust. 2, składany przez podmiot działający:</zdanie></p><punkt eId="DU/2023/2160__art_22__ust_2b__pkt_1" gd:GUID="cbf22fbb-7923-4e35-bb8c-dad0f2f5550c" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-01_DU-2024-1597_domyslne.x" wejscie-w-zycie="2025-05-01"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="e5086f98-9e96-485d-993e-ee43155efffd" fragment="2" gd:fragmentGUID="4424a503-4050-44de-98a2-2980800d5357" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-01_DU-2024-1597_domyslne.x" wejscie-w-zycie="2025-05-01">w imieniu własnym – zawiera oznaczenie tego podmiotu;</zdanie></p></punkt><punkt eId="DU/2023/2160__art_22__ust_2b__pkt_2" gd:GUID="08f35d85-2a0c-44ea-b855-66f2fe6b8313" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-01_DU-2024-1597_domyslne.x" wejscie-w-zycie="2025-05-01"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="e5086f98-9e96-485d-993e-ee43155efffd" fragment="3" gd:fragmentGUID="5cb6718d-052c-4b03-a39b-4db45268e3d7" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-01_DU-2024-1597_domyslne.x" wejscie-w-zycie="2025-05-01">na rzecz innego podmiotu – zawiera:</zdanie></p><litera eId="DU/2023/2160__art_22__ust_2b__pkt_2__lit_a" gd:GUID="8ccee7bd-5f0f-410f-b103-77247e2022a8" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-01_DU-2024-1597_domyslne.x" wejscie-w-zycie="2025-05-01"><nr>a</nr><p><zdanie nr="1" gd:zdGUID="e5086f98-9e96-485d-993e-ee43155efffd" fragment="4" gd:fragmentGUID="5bf46606-48e5-4ae4-95c9-67786194149b" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-01_DU-2024-1597_domyslne.x" wejscie-w-zycie="2025-05-01">dane identyfikujące podmiot składający wniosek określone odpowiednio w art. 2 ust. 1 pkt 1 lit. a i d lub pkt 2 lit. a i c, lub pkt 3 lit. a, d i f,</zdanie></p></litera><litera eId="DU/2023/2160__art_22__ust_2b__pkt_2__lit_b" gd:GUID="cbc97748-2cf6-468a-a5ff-4e026fca65b8" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-01_DU-2024-1597_domyslne.x" wejscie-w-zycie="2025-05-01"><nr>b</nr><p><zdanie nr="1" gd:zdGUID="e5086f98-9e96-485d-993e-ee43155efffd" fragment="5" gd:fragmentGUID="6a2755ad-b516-4817-a7d8-8c5a4cf86194" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-01_DU-2024-1597_domyslne.x" wejscie-w-zycie="2025-05-01">oznaczenie podmiotu, na rzecz którego działa podmiot składający wniosek.</zdanie></p></litera></punkt></ustep></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2024/1597__art_1__pkt_6" gd:GUID="fae4a2f9-81a2-4e95-bcee-f6d836e95fbe" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-30_DU-2024-1597_domyslne.x" wejscie-w-zycie="2024-11-30">
+          <nr>6</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="69c45b51-740e-46c6-8cb6-00b81f87e4ff" fragment="13" gd:fragmentGUID="32905b01-9bbe-442f-b0c6-251c5bbc5d44" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-30_DU-2024-1597_domyslne.x" wejscie-w-zycie="2024-11-30">w art. 25 w ust. 1:</zdanie>
+          </p>
+          <litera eId="DU/2024/1597__art_1__pkt_6__lit_a" gd:GUID="17c99273-3569-4c2d-bc2e-ac20f8429112" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-30_DU-2024-1597_domyslne.x" wejscie-w-zycie="2024-11-30">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="69c45b51-740e-46c6-8cb6-00b81f87e4ff" fragment="14" gd:fragmentGUID="b002ac5f-9fa8-4b09-88cd-7903b12fbbc1" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-30_DU-2024-1597_domyslne.x" wejscie-w-zycie="2024-11-30">po pkt 2 dodaje się pkt 2a w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/2160" cudzyslowy="oba" gd:nowGUID="504bde5c-2545-4cab-a51f-b52da6b48e4e" element-eId="DU/2023/2160__art_25__ust_1__pkt_2" funkcja="dodaj-po"><punkt eId="DU/2023/2160__art_25__ust_1__pkt_2a" gd:GUID="b266a8ff-dc9b-4aef-a38a-64c54bc001dd" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-30_DU-2024-1597_domyslne.x" wejscie-w-zycie="2024-11-30"><nr>2a</nr><p><zdanie nr="1" gd:zdGUID="9fb59a59-4ee6-4d86-9797-7653e1a7ae84" fragment="1" gd:fragmentGUID="dd146186-af6f-406b-986c-28df549e3ec9" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-30_DU-2024-1597_domyslne.x" wejscie-w-zycie="2024-11-30">Szef Służby Kontrwywiadu Wojskowego oraz Szef Służby Wywiadu Wojskowego – na zasadach i w trybie określonych w art. 38 ustawy z dnia 9 czerwca 2006 r. o Służbie Kontrwywiadu Wojskowego oraz Służbie Wywiadu Wojskowego (Dz. U. z 2024 r. poz. 1405);</zdanie></p></punkt></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2024/1597__art_1__pkt_6__lit_b" gd:GUID="76f12a1d-7803-414d-8481-162e7d7bac0f" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-30_DU-2024-1597_domyslne.x" wejscie-w-zycie="2024-11-30">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="69c45b51-740e-46c6-8cb6-00b81f87e4ff" fragment="15" gd:fragmentGUID="ab3efa9d-32b9-4d98-a70e-6d8e216840b0" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-30_DU-2024-1597_domyslne.x" wejscie-w-zycie="2024-11-30">pkt 3 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/2160" cudzyslowy="oba" gd:nowGUID="cb157a0a-77c2-42ae-97e0-70a56082dc2d" element-eId="DU/2023/2160__art_25__ust_1__pkt_3" funkcja="zastap"><punkt eId="DU/2023/2160__art_25__ust_1__pkt_3" gd:GUID="9dd30f79-b704-4a8f-99ae-486a8c6c8d30" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-30_DU-2024-1597_domyslne.x" wejscie-w-zycie="2024-11-30"><nr>3</nr><p><zdanie nr="1" gd:zdGUID="7f859def-c238-4795-b236-2f23bfb989d5" fragment="1" gd:fragmentGUID="8d61395a-f9b1-4bcd-bdba-a507f0d83d28" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-30_DU-2024-1597_domyslne.x" wejscie-w-zycie="2024-11-30">Komendant Główny Policji, Komendant Centralnego Biura Śledczego Policji, Komendant Biura Spraw Wewnętrznych Policji, Komendant Centralnego Biura Zwalczania Cyberprzestępczości, komendant wojewódzki Policji oraz Komendant Stołeczny Policji – na zasadach i w trybie określonych w art. 20 ust. 1d i 1e ustawy z dnia 6 kwietnia 1990 r. o Policji (Dz. U. z 2024 r. poz. 145, z późn. zm.<odnosnik id-odnosnika="1" symbol="1" gd:GUID="51920149-c4b0-4578-a188-9e782d03637e"><p><zdanie nr="1" gd:zdGUID="e5c39574-f3fe-40be-9086-9b7c5b5786f4" fragment="1" gd:fragmentGUID="0d303983-52a9-4e99-a76e-8f8e2bc285dd">Zmiany tekstu jednolitego wymienionej ustawy zostały ogłoszone w Dz. U. z 2024 r. poz. 1006, 1089, 1222, 1248, 1473 i 1562.</zdanie></p></odnosnik>);</zdanie></p></punkt></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2024/1597__art_1__pkt_6__lit_c" gd:GUID="b410b968-9094-4717-957c-7e8ef0fc8553" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-30_DU-2024-1597_domyslne.x" wejscie-w-zycie="2024-11-30">
+            <nr>c</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="69c45b51-740e-46c6-8cb6-00b81f87e4ff" fragment="16" gd:fragmentGUID="97d49739-fa3b-4116-80c8-6fbc44e2db80" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-30_DU-2024-1597_domyslne.x" wejscie-w-zycie="2024-11-30">pkt 12 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/2160" cudzyslowy="oba" gd:nowGUID="b88113ef-e8ea-4e50-8ac4-e95092c5b7e2" element-eId="DU/2023/2160__art_25__ust_1__pkt_12" funkcja="zastap"><punkt eId="DU/2023/2160__art_25__ust_1__pkt_12" gd:GUID="cd03697a-d051-43f4-911b-b398997bf4da" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-30_DU-2024-1597_domyslne.x" wejscie-w-zycie="2024-11-30"><nr>12</nr><p><zdanie nr="1" gd:zdGUID="438fa406-95c0-4395-b449-b5ed9911ea6b" fragment="1" gd:fragmentGUID="fd3facb5-ed6a-4ba1-9a70-45208eef8520" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-30_DU-2024-1597_domyslne.x" wejscie-w-zycie="2024-11-30">Komendant Główny Straży Granicznej, Komendant Biura Spraw Wewnętrznych Straży Granicznej oraz komendant oddziału Straży Granicznej – na zasadach i w trybie określonych w art. 10a ustawy z dnia 12 października 1990 r. o Straży Granicznej (Dz. U. z 2024 r. poz. 915, 1089, 1222, 1248, 1473 i 1562);</zdanie></p></punkt></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2024/1597__art_1__pkt_6__lit_d" gd:GUID="78e130c3-2915-43e4-a86e-75c317e2c9d5" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-30_DU-2024-1597_domyslne.x" wejscie-w-zycie="2024-11-30">
+            <nr>d</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="69c45b51-740e-46c6-8cb6-00b81f87e4ff" fragment="17" gd:fragmentGUID="061f84ef-d5d7-402a-a3a1-b71bd34d91fc" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-30_DU-2024-1597_domyslne.x" wejscie-w-zycie="2024-11-30"><now:zamien-tekst stary-tekst="." nowy-tekst=";" element-eId="DU/2023/2160__art_25__ust_1__pkt_18" akt="https://eli.gov.pl/eli/DU/2023/2160" now:wystapienie="ostatnie" gd:nowGUID="10612220-c0cf-49f9-a692-6f1ff2b5e8f8" />w pkt 18 kropkę zastępuje się średnikiem i dodaje się pkt 19 i 20 w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/2160" cudzyslowy="oba" gd:nowGUID="44c1a45c-2224-49ce-ae49-edbe573c17a3" element-eId="DU/2023/2160__art_25__ust_1__pkt_18" funkcja="dodaj-po"><punkt eId="DU/2023/2160__art_25__ust_1__pkt_19" gd:GUID="f87b463c-0166-47cf-a816-80e76e7ac104" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-30_DU-2024-1597_domyslne.x" wejscie-w-zycie="2024-11-30"><nr>19</nr><p><zdanie nr="1" gd:zdGUID="9b63854a-659a-49ce-b1d2-a8762a12c14f" fragment="1" gd:fragmentGUID="9f515726-1f83-4a3e-980a-f72094c14477" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-30_DU-2024-1597_domyslne.x" wejscie-w-zycie="2024-11-30">Inspektor Nadzoru Wewnętrznego – na zasadach i w trybie określonych w art. 11t ustawy z dnia 21 czerwca 1996 r. o szczególnych formach sprawowania nadzoru przez ministra właściwego do spraw wewnętrznych (Dz. U. z 2024 r. poz. 309 i 1222);</zdanie></p></punkt><punkt eId="DU/2023/2160__art_25__ust_1__pkt_20" gd:GUID="ec34b2f0-0d36-465c-8243-12131298d379" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-30_DU-2024-1597_domyslne.x" wejscie-w-zycie="2024-11-30"><nr>20</nr><p><zdanie nr="1" gd:zdGUID="9b63854a-659a-49ce-b1d2-a8762a12c14f" fragment="2" gd:fragmentGUID="917a612c-de7e-48ee-a414-c5f0cdb01d32" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-30_DU-2024-1597_domyslne.x" wejscie-w-zycie="2024-11-30">Komendant Główny Żandarmerii Wojskowej oraz komendant oddziału Żandarmerii Wojskowej – na zasadach i w trybie określonych w art. 29 ust. 4 i 5 ustawy z dnia 24 sierpnia 2001 r. o Żandarmerii Wojskowej i wojskowych organach porządkowych (Dz. U. z 2023 r. poz. 1266 i 1860 oraz z 2024 r. poz. 1222 i 1248).</zdanie></p></punkt></cytat-strukt>;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2024/1597__art_1__pkt_7" gd:GUID="5f1e09ff-317c-4c9f-b083-3efae4a5f85a" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-30_DU-2024-1597_domyslne.x" wejscie-w-zycie="2024-11-30">
+          <nr>7</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="69c45b51-740e-46c6-8cb6-00b81f87e4ff" fragment="18" gd:fragmentGUID="43211938-141c-4250-8c5b-d3c2eb51c338" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-30_DU-2024-1597_domyslne.x" wejscie-w-zycie="2024-11-30">w art. 26 dodaje się ust. 5 w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/2160" cudzyslowy="oba" gd:nowGUID="aabe7ea9-da47-4b01-9050-941bb3780312" element-eId="DU/2023/2160__art_26" funkcja="dodaj-w"><ustep eId="DU/2023/2160__art_26__ust_5" gd:GUID="20eb24cd-33f9-4792-aca0-9a699dac245c" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-30_DU-2024-1597_domyslne.x" wejscie-w-zycie="2024-11-30"><nr>5</nr><p><zdanie nr="1" gd:zdGUID="7662d3ee-c0a1-4936-93df-0f58416b3d7b" fragment="1" gd:fragmentGUID="14337647-35ac-427f-993d-2bbe474e4487" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-30_DU-2024-1597_domyslne.x" wejscie-w-zycie="2024-11-30">Przepisy ust. 1 zdanie pierwsze oraz ust. 2 zdanie pierwsze stosuje się również do podmiotu, który otrzymał informacje gospodarcze od biura, działając na rzecz innego podmiotu.</zdanie></p></ustep></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2024/1597__art_1__pkt_8" gd:GUID="4221de55-5209-4589-a02b-de4d11075774" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-01_DU-2024-1597_domyslne.x" wejscie-w-zycie="2025-05-01">
+          <nr>8</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="69c45b51-740e-46c6-8cb6-00b81f87e4ff" fragment="19" gd:fragmentGUID="c7cd194f-176e-4d1b-b5af-abb17c07cc88" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-01_DU-2024-1597_domyslne.x" wejscie-w-zycie="2025-05-01">w art. 27:</zdanie>
+          </p>
+          <litera eId="DU/2024/1597__art_1__pkt_8__lit_a" gd:GUID="ee7b4e6e-a1e2-4843-9120-35ba56671bae" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-01_DU-2024-1597_domyslne.x" wejscie-w-zycie="2025-05-01">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="69c45b51-740e-46c6-8cb6-00b81f87e4ff" fragment="20" gd:fragmentGUID="ff873bfd-2e83-4c03-8a4f-adef00f083de" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-01_DU-2024-1597_domyslne.x" wejscie-w-zycie="2025-05-01">ust. 2 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/2160" cudzyslowy="oba" gd:nowGUID="f9a9b003-0fc3-4c32-951a-013d72e8e9ce" element-eId="DU/2023/2160__art_27__ust_2" funkcja="zastap"><ustep eId="DU/2023/2160__art_27__ust_2" gd:GUID="32d61652-6353-49c4-acb0-c902356d294d" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-01_DU-2024-1597_domyslne.x" wejscie-w-zycie="2025-05-01"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="4b79af1f-7eaa-478a-a08a-5a97072d0652" fragment="1" gd:fragmentGUID="914aeb29-1050-4d56-b7ce-de808d09a74a" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-01_DU-2024-1597_domyslne.x" wejscie-w-zycie="2025-05-01">Rejestr zapytań obejmuje informację o złożonym wniosku o udostępnienie informacji gospodarczych oraz następujące informacje:</zdanie></p><punkt eId="DU/2023/2160__art_27__ust_2__pkt_1" gd:GUID="234e877a-c4a7-481f-8470-a09128a0fd93" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-01_DU-2024-1597_domyslne.x" wejscie-w-zycie="2025-05-01"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="4b79af1f-7eaa-478a-a08a-5a97072d0652" fragment="2" gd:fragmentGUID="8e75a4f2-cd50-4036-a39a-41874b2d7d31" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-01_DU-2024-1597_domyslne.x" wejscie-w-zycie="2025-05-01">datę ujawnienia informacji gospodarczych;</zdanie></p></punkt><punkt eId="DU/2023/2160__art_27__ust_2__pkt_2" gd:GUID="f10c589b-138d-4f03-b168-8722c9ec0747" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-01_DU-2024-1597_domyslne.x" wejscie-w-zycie="2025-05-01"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="4b79af1f-7eaa-478a-a08a-5a97072d0652" fragment="3" gd:fragmentGUID="61d5b686-96d7-4da7-b365-53a6520a7462" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-01_DU-2024-1597_domyslne.x" wejscie-w-zycie="2025-05-01">oznaczenie podmiotu, któremu ujawniono informacje gospodarcze, a jeżeli podmiot ten otrzymał informacje gospodarcze od biura za pośrednictwem podmiotu działającego na jego rzecz, również dane tego podmiotu, o których mowa w art. 22 ust. 2b pkt 2 lit. a;</zdanie></p></punkt><punkt eId="DU/2023/2160__art_27__ust_2__pkt_3" gd:GUID="c244b768-e16b-4c27-ae8d-1c8b48f815c4" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-01_DU-2024-1597_domyslne.x" wejscie-w-zycie="2025-05-01"><nr>3</nr><p><zdanie nr="1" gd:zdGUID="4b79af1f-7eaa-478a-a08a-5a97072d0652" fragment="4" gd:fragmentGUID="77bcb695-7e09-4435-8494-fecfce534f03" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-01_DU-2024-1597_domyslne.x" wejscie-w-zycie="2025-05-01">wskazanie ujawnionych danych.</zdanie></p></punkt></ustep></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2024/1597__art_1__pkt_8__lit_b" gd:GUID="56c976d0-28cc-4e4a-b38f-cb5755cfdecb" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-01_DU-2024-1597_domyslne.x" wejscie-w-zycie="2025-05-01">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="69c45b51-740e-46c6-8cb6-00b81f87e4ff" fragment="21" gd:fragmentGUID="50908f1f-3df1-4522-b2a1-201b4dddf637" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-01_DU-2024-1597_domyslne.x" wejscie-w-zycie="2025-05-01">ust. 4 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/2160" cudzyslowy="oba" gd:nowGUID="fd46c721-4b06-4ba8-8f17-d108098b647f" element-eId="DU/2023/2160__art_27__ust_4" funkcja="zastap"><ustep eId="DU/2023/2160__art_27__ust_4" gd:GUID="3abeea47-1694-42e3-b4c4-8bb8895774a7" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-01_DU-2024-1597_domyslne.x" wejscie-w-zycie="2025-05-01"><nr>4</nr><p><zdanie nr="1" gd:zdGUID="4873950f-1e78-4594-8797-0bc308604dfc" fragment="1" gd:fragmentGUID="f2ce14e4-f752-443b-a75b-071d068af394" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-01_DU-2024-1597_domyslne.x" wejscie-w-zycie="2025-05-01">Nie podaje się informacji o złożonym wniosku o udostępnienie informacji gospodarczych oraz informacji, o których mowa w ust. 2, jeżeli z wnioskiem wystąpiły podmioty, o których mowa w art. 25 ust. 1.</zdanie></p></ustep></cytat-strukt>;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2024/1597__art_1__pkt_9" gd:GUID="3e8afa18-c98c-4fed-b1f5-8732b2e95c09" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-30_DU-2024-1597_domyslne.x" wejscie-w-zycie="2024-11-30">
+          <nr>9</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="69c45b51-740e-46c6-8cb6-00b81f87e4ff" fragment="22" gd:fragmentGUID="7c1401b8-f380-4884-bae1-ef8928de8983" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-30_DU-2024-1597_domyslne.x" wejscie-w-zycie="2024-11-30">po art. 32 dodaje się art. 32a w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/2160" cudzyslowy="oba" gd:nowGUID="2c2196b6-5df8-4633-ae26-da2b530bb1d1" element-eId="DU/2023/2160__art_32" funkcja="dodaj-po"><artykul eId="DU/2023/2160__art_32a" gd:GUID="15e84b14-0e39-4f46-8a0b-5d6cce859da0" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-30_DU-2024-1597_domyslne.x" wejscie-w-zycie="2024-11-30"><nr>32a</nr><ustep eId="DU/2023/2160__art_32a__ust_1" gd:GUID="382d56f7-1153-49ba-99b3-78b9ce63e573" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-30_DU-2024-1597_domyslne.x" wejscie-w-zycie="2024-11-30"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="23744ae3-e897-44a1-865d-56fd9bc452ce" fragment="1" gd:fragmentGUID="86eac23b-648a-4eae-b79b-ca73eee7731a" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-30_DU-2024-1597_domyslne.x" wejscie-w-zycie="2024-11-30">Minister właściwy do spraw gospodarki może wystąpić do biura w sprawach z zakresu nadzoru nad biurem, o którym mowa w art. 32 ust. 1.</zdanie></p></ustep><ustep eId="DU/2023/2160__art_32a__ust_2" gd:GUID="c820cf93-32bf-4c41-bced-46ec020b2c0b" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-30_DU-2024-1597_domyslne.x" wejscie-w-zycie="2024-11-30"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="0a7f85f9-2d88-4357-848c-4ee608cd340b" fragment="1" gd:fragmentGUID="3c567f05-3a61-402a-8e12-a33ccfb0d3bd" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-30_DU-2024-1597_domyslne.x" wejscie-w-zycie="2024-11-30">Biuro może w terminie określonym przez ministra właściwego do spraw gospodarki, nie krótszym niż 14 dni, licząc od dnia otrzymania przez biuro wystąpienia ministra, o którym mowa w ust. 1, przedstawić swoje stanowisko w sprawie, której dotyczy wystąpienie.</zdanie></p></ustep></artykul></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2024/1597__art_1__pkt_10" gd:GUID="93c2085e-0752-4c1b-8052-fb27dd2deb01" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-30_DU-2024-1597_domyslne.x" wejscie-w-zycie="2024-11-30">
+          <nr>10</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="69c45b51-740e-46c6-8cb6-00b81f87e4ff" fragment="23" gd:fragmentGUID="492304d5-bd46-4156-8fd8-99407cddccc0" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-30_DU-2024-1597_domyslne.x" wejscie-w-zycie="2024-11-30">w art. 41 dodaje się ust. 3 w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/2160" cudzyslowy="oba" gd:nowGUID="42ebbfbc-0936-4305-a4b0-61e7953dccc8" element-eId="DU/2023/2160__art_41" funkcja="dodaj-w"><ustep eId="DU/2023/2160__art_41__ust_3" gd:GUID="0ac8ee31-7eac-41d6-8f74-3b5e8b8945bd" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-30_DU-2024-1597_domyslne.x" wejscie-w-zycie="2024-11-30"><nr>3</nr><p><zdanie nr="1" gd:zdGUID="0f08c375-5890-45a7-8166-faeb6f935510" fragment="1" gd:fragmentGUID="48e848cc-ccb4-45ac-a61f-21dff3194e10" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-30_DU-2024-1597_domyslne.x" wejscie-w-zycie="2024-11-30">Stanowisko, o którym mowa w ust. 2, podpisane przez kontrolującego wraz z protokołem kontroli kontrolujący przedkłada osobie upoważnionej do reprezentowania biura.</zdanie></p></ustep></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2024/1597__art_1__pkt_11" gd:GUID="deaf1fb1-6bd1-4e65-a30b-9bdcbbec5ad2" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-30_DU-2024-1597_domyslne.x" wejscie-w-zycie="2024-11-30">
+          <nr>11</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="69c45b51-740e-46c6-8cb6-00b81f87e4ff" fragment="24" gd:fragmentGUID="2dea609f-a1f1-4332-8a8f-09557ea4410a" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-30_DU-2024-1597_domyslne.x" wejscie-w-zycie="2024-11-30">w art. 43 ust. 1 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/2160" cudzyslowy="oba" gd:nowGUID="67676273-5600-4ace-9f75-db515064a507" element-eId="DU/2023/2160__art_43__ust_1" funkcja="zastap"><ustep eId="DU/2023/2160__art_43__ust_1" gd:GUID="e33e446a-7af3-46fb-a21a-0f580a4033db" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-30_DU-2024-1597_domyslne.x" wejscie-w-zycie="2024-11-30"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="9d7f5e9a-a027-43eb-9a73-ef0a9d8c3f53" fragment="1" gd:fragmentGUID="a51c003e-112f-4a97-911a-0ef89471a207" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-30_DU-2024-1597_domyslne.x" wejscie-w-zycie="2024-11-30">W razie powzięcia uzasadnionego podejrzenia naruszenia przez biuro przepisów ustawy lub regulaminu lub w razie stwierdzenia w wyniku kontroli takiego naruszenia, minister właściwy do spraw gospodarki wszczyna postępowanie w sprawie wydania decyzji nakazującej usunięcie nieprawidłowości.</zdanie><zdanie nr="2" gd:zdGUID="74515a65-dd31-4674-a799-c0e5f4b6dd28" fragment="1" gd:fragmentGUID="b6a608d0-9be7-488f-9ca5-c0ba21d6e670" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-30_DU-2024-1597_domyslne.x" wejscie-w-zycie="2024-11-30">W decyzji tej określa się termin usunięcia stwierdzonych nieprawidłowości.</zdanie></p></ustep></cytat-strukt>.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2024/1597__art_2" gd:GUID="5d98571a-8152-4915-b4c5-87b7b8e542c7" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-30_DU-2024-1597_domyslne.x" wejscie-w-zycie="2024-11-30">
+      <nr>2</nr>
+      <ustep eId="DU/2024/1597__art_2__ust_1" gd:GUID="a5c22ff2-e2de-449a-907c-b3410fd6f972" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-30_DU-2024-1597_domyslne.x" wejscie-w-zycie="2024-11-30">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="3b25afe8-c2cd-4d31-9102-fe967a855bd4" fragment="1" gd:fragmentGUID="c4f1b129-3765-49bb-8c76-8c77595b574e" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-30_DU-2024-1597_domyslne.x" wejscie-w-zycie="2024-11-30">W terminie 6 miesięcy od dnia wejścia w życie art. 1 pkt 5 i 8, biuro informacji gospodarczej, które wykonuje w dniu wejścia w życie niniejszej ustawy działalność gospodarczą, dostosuje, w drodze uchwały, regulamin zarządzania danymi do art. 22 ust. 2a i 2b ustawy zmienianej w art. 1 oraz art. 27 ust. 2 i 4 tej ustawy, w brzmieniu nadanym niniejszą ustawą.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2024/1597__art_2__ust_2" gd:GUID="c9f19c33-2f19-40e1-bfbc-61acb9507ce9" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-30_DU-2024-1597_domyslne.x" wejscie-w-zycie="2024-11-30">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="6aead4de-456e-4888-817b-ee749dda4ee2" fragment="1" gd:fragmentGUID="802bef3e-b87a-49d1-961b-11b966b395c4" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-30_DU-2024-1597_domyslne.x" wejscie-w-zycie="2024-11-30">Biuro informacji gospodarczej przekazuje uchwałę, o której mowa w ust. 1, w terminie 14 dni od dnia jej powzięcia ministrowi właściwemu do spraw gospodarki do zatwierdzenia.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2024/1597__art_2__ust_3" gd:GUID="1cb0d4d5-fb88-4c15-a3c8-e349c35c834b" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-30_DU-2024-1597_domyslne.x" wejscie-w-zycie="2024-11-30">
+        <nr>3</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="cf87e821-62e1-422c-abcc-e13e72df2469" fragment="1" gd:fragmentGUID="1e9369d8-b755-488b-97b6-5d6e86dc9049" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-30_DU-2024-1597_domyslne.x" wejscie-w-zycie="2024-11-30">W przypadku gdy biuro informacji gospodarczej nie przekaże ministrowi właściwemu do spraw gospodarki uchwały, o której mowa w ust. 1, w terminie, o którym mowa w ust. 2, do zatwierdzenia, minister właściwy do spraw gospodarki wydaje decyzję o zakazie wykonywania działalności gospodarczej przez to biuro.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2024/1597__art_2__ust_4" gd:GUID="2793bc74-29d9-4819-b645-5d5ee7e94ee9" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-30_DU-2024-1597_domyslne.x" wejscie-w-zycie="2024-11-30">
+        <nr>4</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="aeff997c-3d86-4547-bb68-c92912472bb1" fragment="1" gd:fragmentGUID="9a8aacf9-c126-4f69-9578-4f2edc20e300" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-30_DU-2024-1597_domyslne.x" wejscie-w-zycie="2024-11-30">Regulaminy zarządzania danymi albo zmiany w tych regulaminach przekazane ministrowi właściwemu do spraw gospodarki do zatwierdzenia przed dniem wejścia w życie art. 1 pkt 5 i 8, a niezatwierdzone przed tym dniem, podlegają zwrotowi w celu dostosowania, o którym mowa w ust. 1.</zdanie>
+        </p>
+      </ustep>
+    </artykul>
+    <artykul eId="DU/2024/1597__art_3" gd:GUID="ab7855b4-29d1-4e3d-aeb5-f89cbdd25558" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-30_DU-2024-1597_domyslne.x" wejscie-w-zycie="2024-11-30">
+      <nr>3</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="de82ce00-2a9f-4186-80b2-44e02bb69bfc" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-30_DU-2024-1597_domyslne.x" wejscie-w-zycie="2024-11-30">
+        <p>
+          <zdanie nr="1" gd:zdGUID="1eedd19b-3d4e-4c66-b008-52a46028bcf4" fragment="1" gd:fragmentGUID="b22ec781-25e1-4aa4-8d22-69d15132b967" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-30_DU-2024-1597_domyslne.x" wejscie-w-zycie="2024-11-30">Informację o wysokości opłat za usługi biura informacji gospodarczej, o której mowa w art. 11b ustawy zmienianej w art. 1, zarząd biura informacji gospodarczej publikuje w terminie 30 dni od dnia wejścia w życie niniejszej ustawy.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2024/1597__art_4" gd:GUID="ee33408f-48d7-42be-bb07-b03afdc19d16" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-30_DU-2024-1597_domyslne.x" wejscie-w-zycie="2024-11-30">
+      <nr>4</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="153c4f9e-cec5-4b05-992b-e052577a06a5" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-30_DU-2024-1597_domyslne.x" wejscie-w-zycie="2024-11-30">
+        <p>
+          <zdanie nr="1" gd:zdGUID="918101b0-c66a-4303-b074-9bc3a37520cf" fragment="1" gd:fragmentGUID="66b70a3a-5966-4ca0-9fb9-b312dd2cab1c" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-30_DU-2024-1597_domyslne.x" wejscie-w-zycie="2024-11-30">Ustawa wchodzi w życie po upływie 30 dni od dnia ogłoszenia, z wyjątkiem art. 1 pkt 5 i 8, które wchodzą w życie po upływie 6 miesięcy od dnia ogłoszenia.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <organ-podpisujacy>Prezydent Rzeczypospolitej Polskiej: <i><osoba podpisujacy="true" gd:osobaGUID="237ee98d-24a6-4f60-999a-1688e24deb4f"><imie>A.</imie> <nazwisko>Duda</nazwisko></osoba></i></organ-podpisujacy>
+  </ustawa>
+</akt-prawny>

@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <rozporzadzenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/1509</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>cf6a1902-6d73-48c5-9593-9d3f22d7a776</gd:GUIDwersji>
+      <AdresISAP>WDU20250001509</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>1509</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 1509</AdresWyswietlany>
+      <Tytul>Rozporządzenie Ministra Zdrowia z dnia 24 października 2025 r. zmieniające rozporządzenie w sprawie świadczeń gwarantowanych z zakresu leczenia szpitalnego</Tytul>
+      <Rodzaj>ROZP</Rodzaj>
+      <DataOgloszenia>2025-11-03</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-10-24</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2026-01-01_DU-2025-1509_odczytane" rodzaj="wejscie-w-zycie" pochodzenie="odczytane" data="2026-01-01" podstawa="§ 2" zrodlo="https://eli.gov.pl/eli/DU/2025/1509" dowod="DU/2025/1509__art_2" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1509_odczytane.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2026-01-01_DU-2025-1509_odczytane" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="239d66e6-9bf2-49f7-bfb8-816683539d43" rola="wydajacy">
+          <Nazwa>Minister Zdrowia</Nazwa>
+          <OrganPodpisujacy>Minister Zdrowia</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>T.</imie> <nazwisko>Maciejewski</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Rozporządzenie</rodzaj-aktu>
+    <autor-aktu>Ministra Zdrowia<odnosnik id-odnosnika="1" symbol="1" gd:GUID="dbd0e434-a06f-43d1-8bc8-2dd1f13a43d7"><p><zdanie nr="1" gd:zdGUID="7fb5987e-d823-4a56-946e-814336d13179" fragment="1" gd:fragmentGUID="997c5180-af92-4a5e-aec0-147407b1d902">Minister Zdrowia kieruje działem administracji rządowej – zdrowie, na podstawie § 1 ust. 2 rozporządzenia Prezesa Rady Ministrów z dnia 25 lipca 2025 r. w sprawie szczegółowego zakresu działania Ministra Zdrowia (Dz. U. poz. 1004).</zdanie></p></odnosnik></autor-aktu>
+    <data>z dnia 24 października 2025 r.</data>
+    <tytul>zmieniające rozporządzenie w sprawie świadczeń gwarantowanych z zakresu leczenia szpitalnego</tytul>
+    <podstawa-prawna>Na podstawie art. 31d ustawy z dnia 27 sierpnia 2004 r. o świadczeniach opieki zdrowotnej finansowanych ze środków publicznych (Dz. U. z 2025 r. poz. 1461) zarządza się, co następuje:</podstawa-prawna>
+    <paragraf eId="DU/2025/1509__art_1" gd:GUID="d7df4101-271e-4178-b889-37f6b6d60a5a" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1509_odczytane.x" wejscie-w-zycie="2026-01-01">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="cb2fdcbc-416f-4706-90e4-a4989f796b16" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1509_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="18224630-6165-49da-83cc-17d887e2cf91" fragment="1" gd:fragmentGUID="d37aba2f-0bdd-4875-a0c6-7a8d263cac6c" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1509_odczytane.x" wejscie-w-zycie="2026-01-01">W rozporządzeniu Ministra Zdrowia z dnia 22 listopada 2013 r. w sprawie świadczeń gwarantowanych z zakresu leczenia szpitalnego (Dz. U. z 2023 r. poz. 870, z późn. zm.<odnosnik id-odnosnika="2" symbol="2" gd:GUID="ac63edbb-3bab-44b9-9d2f-2431f178a111"><p><zdanie nr="1" gd:zdGUID="fe747ab1-0aa8-4a8e-b189-f954c36ba44c" fragment="1" gd:fragmentGUID="02a85fff-a1cc-4a42-b0e3-2187de8c226a">Zmiany tekstu jednolitego wymienionego rozporządzenia zostały ogłoszone w Dz. U. z 2023 r. poz. 978, 1477, 1955 i 2610, z 2024 r. poz. 961 i 1798 oraz z 2025 r. poz. 724, 743 i 784.</zdanie></p></odnosnik>) wprowadza się następujące zmiany:</zdanie>
+        </p>
+        <punkt eId="DU/2025/1509__art_1__pkt_1" gd:GUID="7ea54197-5c6b-45b1-84e9-3da77893dcf9" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1509_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="18224630-6165-49da-83cc-17d887e2cf91" fragment="2" gd:fragmentGUID="d8ddae06-3d64-4488-9128-497ea97db8f6" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1509_odczytane.x" wejscie-w-zycie="2026-01-01">w załączniku nr 1 do rozporządzenia „Wykaz świadczeń gwarantowanych” w części I „Świadczenia scharakteryzowane procedurami medycznymi” po poz. 99.87 dodaje się poz. 99.8821 w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/870" cudzyslowy="brak" gd:nowGUID="bc22fe44-dd9f-43d9-8a70-2a5c4b579f5d" element-eId="DU/2023/870__zal_1" funkcja="dodaj-recznie"><tabela gd:GUID="566c2f0b-5ec0-4288-adf1-97313e819862"><tbody><tr gd:GUID="5990809b-fce1-4d56-8743-e163efd3fc4a"><td gd:GUID="213fd07d-c70d-45d0-923f-6e240624c418"><tekst-zwykly gd:GUID="46727328-1497-40c5-9dc7-eaa0511b3e25">99.8821</tekst-zwykly></td><td gd:GUID="50091b84-e4b8-4c3e-bfc8-33901824ab59"><tekst-zwykly gd:GUID="3e943697-a0fc-458f-ba04-35308d5cdff2">Leczenie ostrej lub przewlekłej choroby przeszczep przeciwko gospodarzowi (GvHD) opornej na kortykosteroidy z wykorzystaniem fotoferezy pozaustrojowej (ECP)</tekst-zwykly></td></tr></tbody></tabela></cytat-strukt></zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1509__art_1__pkt_2" gd:GUID="bd984c43-e4ef-4259-b199-145f2d7fb0b7" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1509_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="18224630-6165-49da-83cc-17d887e2cf91" fragment="3" gd:fragmentGUID="7b49a32d-cc6e-463c-97e1-e6c17b3fdb60" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1509_odczytane.x" wejscie-w-zycie="2026-01-01">w załączniku nr 4 do rozporządzenia „Wykaz świadczeń gwarantowanych z zakresu leczenia szpitalnego, które są udzielane po spełnieniu dodatkowych warunków ich realizacji, oraz dodatkowe warunki realizacji tych świadczeń” po lp. 71 dodaje się lp. 72 w brzmieniu określonym w załączniku do niniejszego rozporządzenia.<cytat-w-tekscie now:akt="https://eli.gov.pl/eli/DU/2023/870" cudzyslowy="brak" gd:nowGUID="2ba3b634-3ca4-4791-9c75-5556ffb77941" element-eId="DU/2023/870__zal_4" funkcja="dodaj-recznie"><tekst>lp. 72</tekst></cytat-w-tekscie></zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2025/1509__art_2" gd:GUID="caf827cd-3424-4db4-8137-05a41799afda" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1509_odczytane.x" wejscie-w-zycie="2026-01-01">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="e539fa0d-17f2-4f65-8433-780d22eb821b" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1509_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="83da7516-5692-40f1-ab3c-50a4c75fbb4f" fragment="1" gd:fragmentGUID="cd4b4a99-bba8-4c68-98e2-003deba10175" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1509_odczytane.x" wejscie-w-zycie="2026-01-01">Rozporządzenie wchodzi w życie z dniem 1 stycznia 2026 r.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <organ-podpisujacy>Minister Zdrowia: wz. <i><osoba podpisujacy="true" gd:osobaGUID="d8235086-41ee-4634-a423-999f00790053"><imie>T.</imie> <nazwisko>Maciejewski</nazwisko></osoba></i></organ-podpisujacy>
+    <zalacznik eId="DU/2025/1509__zal_1" gd:GUID="2ab14cb7-bc38-41f8-88a9-9e3e9fa91965">
+      <zalacznik-do gd:GUID="3dbc4b68-0c6b-4fc4-8c56-ff891ecc62ac">Załącznik do rozporządzenia Ministra Zdrowia z dnia 24 października 2025 r. (Dz. U. poz. 1509)</zalacznik-do>
+      <segment-zalacznika gd:GUID="f46a5489-bda8-4824-81ca-2e4c7c115d0c" orientacja="pionowa">
+        <tabela gd:GUID="8d1c1fa3-77e0-4faf-a854-44467177510c">
+          <tbody>
+            <tr gd:GUID="f9597d54-9e70-4e24-9802-554eb4979409">
+              <td rowspan="6" gd:GUID="8341c542-379c-469e-ba4a-489c908c057d">
+                <liczba gd:GUID="52eb3ba3-1b44-4fa3-8463-0e4545f8586b">72</liczba>
+              </td>
+              <td rowspan="6" gd:GUID="67f7bce5-f290-4943-9c86-78470b25af7e">
+                <tekst-zwykly gd:GUID="d9b0a193-6632-492e-b28a-4e19f7e6482b">Leczenie ostrej lub przewlekłej choroby przeszczep przeciwko gospodarzowi (GvHD) opornej na kortykosteroidy z wykorzystaniem fotoferezy pozaustrojowej (ECP)</tekst-zwykly>
+              </td>
+              <td gd:GUID="28ca188c-8362-4ab7-a25f-e1dc6348a2c4">
+                <tekst-zwykly gd:GUID="bc1bc1b5-a2e0-4677-81e7-26271aa49381">Wymagania formalne</tekst-zwykly>
+              </td>
+              <td gd:GUID="732a8687-8d27-48d4-ba0c-67b531b9b5c2">
+                <tekst-zwykly gd:GUID="65dfb7cf-1772-46c4-81dc-aae1886b20c6">Oddział szpitalny o profilu: transplantologia kliniczna lub hematologia, lub onkologia i hematologia dziecięca.</tekst-zwykly>
+                <tekst-zwykly gd:GUID="48f22041-14fc-4973-94a5-46a1a5b29c5e">Jeżeli świadczeniodawca wykonuje fotoferezę pozaustrojową w systemie otwartym w strukturze podmiotu leczniczego Bank Komórek Krwiotwórczych lub umowa z Bankiem Komórek Krwiotwórczych.</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="5e401c52-e8d7-4f82-9b5a-e532ac29435c">
+              <td gd:GUID="b8bac382-3f4f-4a6e-9d14-77278b753058">
+                <tekst-zwykly gd:GUID="c126c969-092f-4e1f-a99b-976428fd5a27">Personel</tekst-zwykly>
+              </td>
+              <td gd:GUID="7cb65e06-ce28-4652-8438-da3194441af2">
+                <tekst-zwykly gd:GUID="4814a6fd-5b2e-4a58-8b08-ee37ca0fbd58">1. Lekarz specjalista w dziedzinie transplantologii klinicznej lub hematologii, lub onkologii i hematologii dziecięcej, lub transfuzjologii klinicznej – równoważnik co najmniej 2 etatów.</tekst-zwykly>
+                <tekst-zwykly gd:GUID="df7e95f8-811f-488d-9570-bcef9cd46406">2. Pielęgniarki posiadające przeszkolenie w zakresie wykonywania zabiegu fotoferezy pozaustrojowej.</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="07c247cb-fe8a-4b3a-a796-6a8e54543e47">
+              <td gd:GUID="8b06a80e-2192-45ec-8ed3-b8ef78599d16">
+                <tekst-zwykly gd:GUID="5e7ce61a-1abc-40d8-9566-4bef1d5a4bf1">Kryteria kwalifikacji do świadczenia</tekst-zwykly>
+              </td>
+              <td gd:GUID="8f66568c-ab88-42b5-8698-210b5e726067">
+                <tekst-zwykly gd:GUID="e83bcad2-5033-417e-9aee-f24154389865">1. Świadczenie jest udzielane świadczeniobiorcy z ostrą lub przewlekłą chorobą przeszczep przeciwko gospodarzowi (GvHD) (ICD-10: T86):</tekst-zwykly>
+                <wyliczenie-1 gd:GUID="7ed10f9c-6595-4224-b0f0-bb1e957c2555">1) oporną na kortykosteroidy:</wyliczenie-1>
+                <wyliczenie-2 gd:GUID="d6c9d538-27f0-4954-a0d9-883fe9636854">a) sterydooporność jest definiowana jako progresja ostrej GvHD (aGvHD) po 3 dniach stosowania glikokortykosteroidów w dawce 2 mg/kg masy ciała lub brak odpowiedzi po 7 dniach glikokortykosteroidów, lub brak remisji po 14 dniach glikokortykosterydoterapii,</wyliczenie-2>
+                <wyliczenie-2 gd:GUID="c8d1d263-c4bd-4757-92eb-22b26c1419b0">b) sterydooporność jest definiowana jako progresja przewlekłej GvHD (cGvHD) po 2 tygodniach glikokortykosterydoterapii lub brak odpowiedzi po 1 miesiącu glikokortykosterydoterapii, lub brak remisji po 2 miesiącach glikokortykosterydoterapii lub</wyliczenie-2>
+                <wyliczenie-1 gd:GUID="5d45e29d-3f8f-4801-b8df-b7b0e026049a">2) sterydozależną:</wyliczenie-1>
+                <wyliczenie-2 gd:GUID="d1c006fa-9e75-46d7-b110-d4ea75784799">a) sterydozależność jest definiowana w aGvHD jako niemożność zmniejszenia dawki glikokortykosteroidów poniżej 2 mg/kg masy ciała na dobę po początkowo skutecznym leczeniu trwającym co najmniej 7 dni lub jako nawrót aktywności aGvHD podczas zmniejszania dawki steroidów,</wyliczenie-2>
+                <wyliczenie-2 gd:GUID="bccdcce8-9a2f-4ca2-935b-7d27a8994130">b) sterydozależność jest definiowana w cGvHD jako niemożność kontrolowania objawów cGvHD podczas zmniejszania dawki glikokortykosteroidów poniżej 0,25 mg/kg masy ciała na dobę lub 0,5 mg/kg masy ciała co drugi dzień w co najmniej dwóch indywidualnych próbach w odstępie co najmniej 8 tygodni.</wyliczenie-2>
+                <tekst-zwykly gd:GUID="2d0291bf-2a71-4faf-a8af-e62faad2f72e">2. Świadczenie jest udzielane pacjentom po niepowodzeniu lub nietolerancji wcześniejszej terapii.</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="804bcd35-fc79-49e3-b0fa-369b07f5ba99">
+              <td gd:GUID="3e678fbe-92fc-46f0-9195-95cd6f033ec3">
+                <tekst-zwykly gd:GUID="1fba326b-f841-4d78-9456-eecc5085d1bb">Wyposażenie w sprzęt i aparaturę medyczną</tekst-zwykly>
+              </td>
+              <td gd:GUID="dcb5e942-33c0-459b-b83d-d7a706b9afa7">
+                <tekst-zwykly gd:GUID="a3128233-5601-4690-a16d-8dcde3cb3407">W lokalizacji – urządzenie do wykonania fotoferezy (fototerapii) pozaustrojowej.</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="d478e486-d340-4fc0-a81f-1ae3d3515cff">
+              <td gd:GUID="a24c7586-15a4-4346-9adf-5b01f41f89c8">
+                <tekst-zwykly gd:GUID="5dd714d3-b176-40f1-b503-154fb5cf6a6a">Zapewnienie realizacji badań</tekst-zwykly>
+              </td>
+              <td gd:GUID="334ed378-0848-4175-99e7-2925c8f99535">
+                <tekst-zwykly gd:GUID="51f624c7-6a45-484d-a21c-3f43e54acd9c">W dostępie badania:</tekst-zwykly>
+                <wyliczenie-1 gd:GUID="19ba8507-db77-41a9-9d22-a345b7bb1c20">1) hematologiczne;</wyliczenie-1>
+                <wyliczenie-1 gd:GUID="b7cbb61e-3527-4280-aa84-7f081f12878a">2) biochemiczne;</wyliczenie-1>
+                <wyliczenie-1 gd:GUID="64959802-1dd9-4baa-ad8f-a16d764d0268">3) mikrobiologiczne;</wyliczenie-1>
+                <wyliczenie-1 gd:GUID="19ebbee1-9f62-4048-bd56-f24fdb56cf5a">4) radiologiczne.</wyliczenie-1>
+              </td>
+            </tr>
+            <tr gd:GUID="74af1256-a557-4144-9d2c-0a15427c60fe">
+              <td gd:GUID="f0f1e220-d594-4e81-bf47-69dcdc08dd7d">
+                <tekst-zwykly gd:GUID="a2f1a5d0-066d-4889-8112-3341ed05cb6e">Pozostałe wymagania</tekst-zwykly>
+              </td>
+              <td gd:GUID="18c4db3a-4fe1-482b-8fb2-e17d8735df1c">
+                <tekst-zwykly gd:GUID="b47e64ec-c8e4-4875-a7ed-f4c8149c1378">Posiadanie pozwolenia ministra właściwego do spraw zdrowia na wykonanie czynności, o których mowa w art. 36 ust 1:</tekst-zwykly>
+                <wyliczenie-1 gd:GUID="5dff2d5d-8999-4047-9ff1-a1fc06b03203">1) pkt 1 ustawy z dnia 1 lipca 2005 r. o pobieraniu, przechowywaniu i przeszczepianiu komórek, tkanek i narządów (Dz. U. z 2023 r. poz. 1185) – jeżeli wykonuje fotoferezę pozaustrojową w systemie zamkniętym lub</wyliczenie-1>
+                <wyliczenie-1 gd:GUID="7fed30a5-b093-43c7-9db1-40be81d36863">2) pkt 1 i 5 ustawy z dnia 1 lipca 2005 r. o pobieraniu, przechowywaniu i przeszczepianiu komórek, tkanek i narządów – jeżeli wykonuje fotoferezę pozaustrojową w systemie otwartym.</wyliczenie-1>
+              </td>
+            </tr>
+          </tbody>
+        </tabela>
+      </segment-zalacznika>
+    </zalacznik>
+  </rozporzadzenie>
+</akt-prawny>

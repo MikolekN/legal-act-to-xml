@@ -1,0 +1,411 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <rozporzadzenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/1294</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>cf79a224-d05c-4e26-92df-f05f995e18df</gd:GUIDwersji>
+      <AdresISAP>WDU20250001294</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>1294</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 1294</AdresWyswietlany>
+      <Tytul>Rozporządzenie Ministra Finansów i Gospodarki z dnia 6 września 2025 r. w sprawie prowadzenia ewidencji przychodów i wykazu środków trwałych oraz wartości niematerialnych i prawnych</Tytul>
+      <Rodzaj>ROZP</Rodzaj>
+      <DataOgloszenia></DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-09-06</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane" rodzaj="wejscie-w-zycie" pochodzenie="odczytane" data="2026-01-01" podstawa="§ 12" zrodlo="https://eli.gov.pl/eli/DU/2025/1294" dowod="DU/2025/1294__art_12" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="f44aee95-3c1f-4e64-bfe6-81bd7042af5d" rola="wydajacy">
+          <Nazwa>Minister Finansów i Gospodarki</Nazwa>
+          <OrganPodpisujacy>Minister Finansów i Gospodarki</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>A.</imie> <nazwisko>Domański</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Rozporządzenie</rodzaj-aktu>
+    <autor-aktu>Ministra Finansów i Gospodarki<odnosnik id-odnosnika="1" symbol="1" gd:GUID="9a208ee8-9500-4de4-be91-df64bad0bc99"><p><zdanie nr="1" gd:zdGUID="5aa109e7-deee-4c56-8eeb-ae466979fc82" fragment="1" gd:fragmentGUID="a7b5eae1-c9d8-4364-b9aa-de4b5aecb449">Minister Finansów i Gospodarki kieruje działem administracji rządowej – finanse publiczne, na podstawie § 1 ust. 2 pkt 3 rozporządzenia Prezesa Rady Ministrów z dnia 25 lipca 2025 r. w sprawie szczegółowego zakresu działania Ministra Finansów i Gospodarki (Dz. U. poz. 997).</zdanie></p></odnosnik></autor-aktu>
+    <data>z dnia 6 września 2025 r.</data>
+    <tytul>w sprawie prowadzenia ewidencji przychodów i wykazu środków trwałych oraz wartości niematerialnych i prawnych</tytul>
+    <podstawa-prawna>Na podstawie art. 16 ustawy z dnia 20 listopada 1998 r. o zryczałtowanym podatku dochodowym od niektórych przychodów osiąganych przez osoby fizyczne (Dz. U. z 2025 r. poz. 843) zarządza się, co następuje:</podstawa-prawna>
+    <paragraf eId="DU/2025/1294__art_1" gd:GUID="11461a4a-c41a-4d69-9c68-adfce26f37db" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="78a15f24-6c06-4084-9a9e-478052916bd7" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="77aea190-f588-45bf-bf41-607b980c925d" fragment="1" gd:fragmentGUID="c1c537b0-263a-4cd2-8c91-a5567823307f" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">Rozporządzenie określa sposób prowadzenia przez podatników, o których mowa w art. 15 ust. 1 ustawy z dnia 20 listopada 1998 r. o zryczałtowanym podatku dochodowym od niektórych przychodów osiąganych przez osoby fizyczne, zwanej dalej „ustawą”:</zdanie>
+        </p>
+        <punkt eId="DU/2025/1294__art_1__pkt_1" gd:GUID="22ac3e70-db94-4d4c-8114-ee81697f3b54" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="77aea190-f588-45bf-bf41-607b980c925d" fragment="2" gd:fragmentGUID="f196bbe1-8b6b-4fdc-8f37-e342efb76e75" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">ewidencji przychodów, zwanej dalej „ewidencją”, oraz szczegółowe warunki, jakim powinna odpowiadać ewidencja, aby stanowiła dowód w postępowaniu podatkowym, a także sposób dokumentowania przychodów oraz obliczania należnego ryczałtu od przychodów ewidencjonowanych;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1294__art_1__pkt_2" gd:GUID="a6648028-27d5-4e18-b9be-2aa41c49fc40" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="77aea190-f588-45bf-bf41-607b980c925d" fragment="3" gd:fragmentGUID="841bf974-775a-4694-9f94-b33ea5d6fd37" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">wykazu środków trwałych oraz wartości niematerialnych i prawnych, zwanego dalej „wykazem”.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2025/1294__art_2" gd:GUID="1cf2a566-bfad-4e91-988a-d5991fb671f7" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">
+      <nr>2</nr>
+      <ustep eId="DU/2025/1294__art_2__ust_1" gd:GUID="865830cf-0d62-440b-afb6-927378b569a4" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="2470c342-d883-42e9-b13a-64713f207190" fragment="1" gd:fragmentGUID="c4cb1e96-6a17-4d72-9112-cb4730283a0a" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">Podatnicy są obowiązani prowadzić ewidencję według wzoru ustalonego w załączniku do rozporządzenia.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/1294__art_2__ust_2" gd:GUID="ef3c70c1-a347-4536-af35-36797f561945" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="69fce62c-9657-44a8-beb5-2cb5874e8f79" fragment="1" gd:fragmentGUID="cfac8601-5817-4c4a-b41a-359b489b1994" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">Wspólną ewidencję prowadzą podatnicy wykonujący działalność w formie spółki, o której mowa w art. 6 ust. 1 ustawy.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/1294__art_2__ust_3" gd:GUID="7bbb578e-ec55-49f7-ab57-2612b51a727d" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <nr>3</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="2fdfd0d4-658c-4cbb-80bd-82b7ba276d77" fragment="1" gd:fragmentGUID="13a2fa4c-2b92-4eab-8920-45822ed278a6" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">W przypadku prowadzenia ewidencji bez użycia programów komputerowych podatnik jest obowiązany zbroszurować ewidencję i kolejno ponumerować jej karty.</zdanie>
+        </p>
+      </ustep>
+    </paragraf>
+    <paragraf eId="DU/2025/1294__art_3" gd:GUID="a8217a52-034a-48af-8827-fe2c5283c988" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">
+      <nr>3</nr>
+      <ustep eId="DU/2025/1294__art_3__ust_1" gd:GUID="98d06c6b-a2fd-4202-9310-cca470259ac6" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="4caa7165-72f6-40a5-a066-cfb8fb857b85" fragment="1" gd:fragmentGUID="3c541b75-f51a-4dd6-862e-5bd5ecedf56f" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">Podatnik jest obowiązany prowadzić ewidencję rzetelnie i w sposób niewadliwy.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/1294__art_3__ust_2" gd:GUID="40abd8e9-e24f-4ae4-8b39-759d2ac16faf" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="cf1d840f-182d-4658-b231-9b30f9ac4d32" fragment="1" gd:fragmentGUID="5557ffbc-a842-4ee5-a9eb-f1f76f741fad" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">Za niewadliwą uznaje się ewidencję prowadzoną zgodnie z przepisami rozporządzenia i według ustalonego wzoru.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/1294__art_3__ust_3" gd:GUID="0a106dde-ff0a-4fb8-a60f-90219bff9974" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <nr>3</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="75c642dc-4e50-47da-867a-15dd0a5d0e7b" fragment="1" gd:fragmentGUID="bf9fe1ca-e041-4059-a3ad-1949edd276b3" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">Za rzetelną uznaje się ewidencję, jeżeli dokonywane w niej zapisy odzwierciedlają stan rzeczywisty.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/1294__art_3__ust_4" gd:GUID="09788d07-1f58-4c53-a851-af58f86f0695" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <nr>4</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="c39b9b71-b4de-42b8-989e-c27d3402222c" fragment="1" gd:fragmentGUID="7b42049d-273f-4da0-a397-3cc8fc688d76" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">Ewidencję uznaje się za rzetelną i niewadliwą również wtedy, gdy:</zdanie>
+        </p>
+        <punkt eId="DU/2025/1294__art_3__ust_4__pkt_1" gd:GUID="0ec18095-b0b7-44e2-a23f-dcecfd242b1a" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="c39b9b71-b4de-42b8-989e-c27d3402222c" fragment="2" gd:fragmentGUID="ebf9affc-b318-47f3-9b49-147ea2b8f085" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">niewpisane lub błędnie wpisane przychody łącznie nie przekraczają 0,5 % przychodu wykazanego w ewidencji za dany rok podatkowy lub przychodu wykazanego w roku podatkowym do dnia, w którym organ podatkowy stwierdził te błędy, lub</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1294__art_3__ust_4__pkt_2" gd:GUID="8283736a-22ee-44b5-93bd-d1a00d66f21a" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="c39b9b71-b4de-42b8-989e-c27d3402222c" fragment="3" gd:fragmentGUID="26e5f565-1d03-48c5-a664-6e7b955426b2" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">brak właściwych zapisów jest związany z nieszczęśliwym wypadkiem lub zdarzeniem losowym, które uniemożliwiły podatnikowi prowadzenie ewidencji, lub</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1294__art_3__ust_4__pkt_3" gd:GUID="938aac7d-0955-40bf-aa74-4b6372c49275" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="c39b9b71-b4de-42b8-989e-c27d3402222c" fragment="4" gd:fragmentGUID="319ee483-ce89-41eb-a841-1f8dc2f5bc96" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">podatnik uzupełnił zapisy lub poprawił błędne zapisy w ewidencji przed rozpoczęciem kontroli przez organ podatkowy lub w terminie, w którym podatnikowi przysługuje uprawnienie do złożenia deklaracji lub korekty deklaracji na podstawie art. 62 ust. 4 ustawy z dnia 16 listopada 2016 r. o Krajowej Administracji Skarbowej (Dz. U. z 2025 r. poz. 1131), lub</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1294__art_3__ust_4__pkt_4" gd:GUID="7028691e-d7f7-4beb-a26c-877ba1a2068a" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="c39b9b71-b4de-42b8-989e-c27d3402222c" fragment="5" gd:fragmentGUID="7ecf2c52-9bc9-4d96-837f-bd89dff16036" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">błędne zapisy są skutkiem oczywistej omyłki, a podatnik posiada dowody, o których mowa w § 4 i § 5.</zdanie>
+          </p>
+        </punkt>
+      </ustep>
+    </paragraf>
+    <paragraf eId="DU/2025/1294__art_4" gd:GUID="a24e30b6-4809-4f16-9772-55d5092783f4" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">
+      <nr>4</nr>
+      <ustep eId="DU/2025/1294__art_4__ust_1" gd:GUID="55c01952-6ba0-45b4-9fbd-869f7c49ae34" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="784485fc-ee58-4e4e-9d23-e8f71d88d432" fragment="1" gd:fragmentGUID="c9ce3e3f-af39-4f5a-ae9a-9ca02401d3d4" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">Zapisy w ewidencji są dokonywane na podstawie faktur, faktur VAT RR, rachunków oraz dokumentów celnych, zwanych dalej „fakturami”, wystawionych zgodnie z odrębnymi przepisami, jeżeli sprzedaż jest udokumentowana fakturami, a w przypadku sprzedaży bez faktur – na podstawie wystawionego na koniec dnia dowodu wewnętrznego, w którym w jednej kwocie jest wykazana wysokość przychodów za dany dzień z podziałem na przychody objęte poszczególnymi stawkami ryczałtu od przychodów ewidencjonowanych, stanowiące podstawę obliczenia ryczałtu od przychodów ewidencjonowanych.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/1294__art_4__ust_2" gd:GUID="0ec5f61d-5f1c-41a4-91f7-a86158fac425" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="ac2a3246-509b-418a-a685-8d7b0a87ff64" fragment="1" gd:fragmentGUID="183f7567-d126-4abf-a81e-0dbbf6197825" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">Podatnicy, którzy prowadzą ewidencję sprzedaży przy użyciu kas rejestrujących, o której mowa w przepisach ustawy z dnia 11 marca 2004 r. o podatku od towarów i usług (Dz. U. z 2025 r. poz. 775, 894, 896 i 1203), zwanej dalej „ustawą o podatku od towarów i usług”, dokonują zapisów w ewidencji na podstawie danych wynikających z raportów fiskalnych dobowych, z zastrzeżeniem ust. 3, skorygowanych o kwoty mające wpływ na wysokość przychodu.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/1294__art_4__ust_3" gd:GUID="d788cd64-8fc7-4dd7-b474-849eb529f099" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <nr>3</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="fa18d921-67e5-4c68-812a-8d0c85948063" fragment="1" gd:fragmentGUID="b842bb93-3912-4cfc-b2de-3e2e1836e354" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">Podatnicy, o których mowa w ust. 2, mogą dokonywać zapisów w ewidencji na koniec każdego miesiąca, w terminie określonym w § 6, na podstawie danych wynikających z raportów fiskalnych okresowych (miesięcznych) skorygowanych o kwoty mające wpływ na wysokość przychodu.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/1294__art_4__ust_4" gd:GUID="9779153a-da51-4087-909e-754166498ba7" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <nr>4</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="187379e6-1bd2-4061-9e6b-2acb54971e4e" fragment="1" gd:fragmentGUID="750ef40c-c357-4224-9932-e18155aaa222" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">Korekty danych wynikających z raportów fiskalnych dobowych lub okresowych (miesięcznych), o których mowa w ust. 2 i 3, dokonuje się na podstawie:</zdanie>
+        </p>
+        <punkt eId="DU/2025/1294__art_4__ust_4__pkt_1" gd:GUID="97836bc3-fa8e-4fa1-8a6f-3bf79e576fc1" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="187379e6-1bd2-4061-9e6b-2acb54971e4e" fragment="2" gd:fragmentGUID="5f925fc4-9f86-470e-8db8-4d3be6099b48" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">odrębnych ewidencji;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1294__art_4__ust_4__pkt_2" gd:GUID="48fcc679-1913-4e67-a4ec-217b2a28cc45" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="187379e6-1bd2-4061-9e6b-2acb54971e4e" fragment="3" gd:fragmentGUID="1e41c526-1793-40e7-b81b-bef62711b261" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">dowodu wewnętrznego – w przypadku korekt, które nie podlegają ujęciu w odrębnych ewidencjach.</zdanie>
+          </p>
+        </punkt>
+      </ustep>
+      <ustep eId="DU/2025/1294__art_4__ust_5" gd:GUID="e7975317-0d89-41c1-8fbf-9788896650ef" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <nr>5</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="23212180-32aa-4547-b99b-e3762b6e640f" fragment="1" gd:fragmentGUID="0959d320-4703-43c6-bfde-71bb5920515e" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">Dowód wewnętrzny, o którym mowa w ust. 4 pkt 2, stanowi podstawę dokonania zapisu w ewidencji ze znakiem (-).</zdanie>
+          <zdanie nr="2" gd:zdGUID="b89ae556-4696-4c39-b2a7-73291203ef4a" fragment="1" gd:fragmentGUID="a3dbd3ed-7171-4f20-a5d0-ab350c0dd472" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">Dowód ten powinien zawierać co najmniej następujące dane: numer dowodu, datę wystawienia, oznaczenie raportu fiskalnego, którego dotyczy korekta, oraz wysokość korekty, która pomniejsza wysokość przychodu wynikającą z raportu fiskalnego.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/1294__art_4__ust_6" gd:GUID="9e797702-04a6-41bb-a4d3-49f41d55eb59" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <nr>6</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="18654b76-ccaf-4bda-a0f0-aa2ffc6b4fb5" fragment="1" gd:fragmentGUID="d452f0fa-b925-4f64-a9b9-557025c6e114" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">Podatnicy, o których mowa w ust. 2 i 3, nie wpisują do ewidencji kwot wynikających z faktur dokumentujących dokonanie sprzedaży uprzednio ujętej w ewidencji prowadzonej przy użyciu kas rejestrujących, o której mowa w przepisach ustawy o podatku od towarów i usług.</zdanie>
+        </p>
+      </ustep>
+    </paragraf>
+    <paragraf eId="DU/2025/1294__art_5" gd:GUID="79bf81fe-38c3-41db-aa02-c1b7920f85e2" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">
+      <nr>5</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="7f12964e-bd2f-4bfc-a1b4-4205bfd23ed3" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="63de6545-f502-4c1d-b7d8-fd7c1118b70c" fragment="1" gd:fragmentGUID="2b41da10-8f25-48aa-a4b5-643db4c72d09" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">W przypadku osiągania przychodów, o których mowa w art. 14 ust. 2 ustawy z dnia 26 lipca 1991 r. o podatku dochodowym od osób fizycznych (Dz. U. z 2025 r. poz. 163, z późn. zm.<odnosnik id-odnosnika="2" symbol="2" gd:GUID="7eb9e29b-2d55-4fac-9a24-586dd3424e10"><p><zdanie nr="1" gd:zdGUID="20d180a3-8d8d-4a97-9af9-04bf62fb7a30" fragment="1" gd:fragmentGUID="bc7ff03b-4830-406f-83f1-f679df650db2">Zmiany tekstu jednolitego wymienionej ustawy zostały ogłoszone w Dz. U. z 2025 r. poz. 340, 368, 620, 680, 1022 i 1180.</zdanie></p></odnosnik>), zwanej dalej „ustawą o podatku dochodowym”, zapisów dokonuje się na podstawie dowodów potwierdzających uzyskanie tych przychodów.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2025/1294__art_6" gd:GUID="675ec290-3f67-4400-a940-45d5116a0c27" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">
+      <nr>6</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="a1c8e369-b8ff-49d3-832c-472304269af1" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="5a5ccfd2-9cdf-4871-871e-7bc3f5314810" fragment="1" gd:fragmentGUID="b35578e8-d5fc-473b-b622-77fa09b7d7f8" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">Zapisy w ewidencji są dokonywane na podstawie dowodów, o których mowa w § 4 i § 5, najpóźniej do 20. dnia każdego miesiąca za miesiąc poprzedni.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2025/1294__art_7" gd:GUID="86571edd-5286-43d5-a19a-13ee17a57a18" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">
+      <nr>7</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="efcd9470-c977-442a-ae86-e7ff75149cb6" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="5f40b928-67f5-4316-bcac-591b7db2d9dd" fragment="1" gd:fragmentGUID="4fc96f6e-b252-41b7-8f1b-822ff7ce159a" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">Podatnicy, o których mowa w art. 84 ustawy o podatku od towarów i usług, mogą wykazywać przychody w ewidencji łącznie z podatkiem od towarów i usług, z tym że na koniec miesiąca przychód pomniejsza się o należny podatek od towarów i usług.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2025/1294__art_8" gd:GUID="73aaf9f5-ffe5-4a9d-9676-726f529e7437" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">
+      <nr>8</nr>
+      <ustep eId="DU/2025/1294__art_8__ust_1" gd:GUID="d92555b9-6ec0-4314-844b-f43c4a7da26b" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="834b304c-72ef-4c17-9a60-abbfe01bcd42" fragment="1" gd:fragmentGUID="82904a55-3d20-417a-a7f7-4796046958d3" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">Wykaz zawiera co najmniej następujące dane:</zdanie>
+        </p>
+        <punkt eId="DU/2025/1294__art_8__ust_1__pkt_1" gd:GUID="c4656969-135e-4e48-a033-971113b2cb23" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="834b304c-72ef-4c17-9a60-abbfe01bcd42" fragment="2" gd:fragmentGUID="87eb288e-fbd1-4099-8e88-bcdf814fbc98" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">liczbę porządkową;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1294__art_8__ust_1__pkt_2" gd:GUID="02d56777-612c-420e-ba47-7c887786f233" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="834b304c-72ef-4c17-9a60-abbfe01bcd42" fragment="3" gd:fragmentGUID="f399a30d-6054-4d06-8b07-3970d0f79dc4" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">dane dotyczące nabycia, wytworzenia, przyjęcia do używania lub wykreślenia z wykazu środka trwałego lub wartości niematerialnej i prawnej:</zdanie>
+          </p>
+          <litera eId="DU/2025/1294__art_8__ust_1__pkt_2__lit_a" gd:GUID="160844a5-ed93-442f-ab6f-62bf9cd166f7" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="834b304c-72ef-4c17-9a60-abbfe01bcd42" fragment="4" gd:fragmentGUID="507ed305-06f1-4e26-bdfc-dac72c30285d" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">numer identyfikujący fakturę w Krajowym Systemie e-Faktur, jeżeli jest to faktura wystawiona przy użyciu Krajowego Systemu e-Faktur – w przypadku faktury dotyczącej zbycia środka trwałego lub wartości niematerialnej i prawnej,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1294__art_8__ust_1__pkt_2__lit_b" gd:GUID="46d6c7af-ccaf-44d3-9a44-ff9cdadadc02" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="834b304c-72ef-4c17-9a60-abbfe01bcd42" fragment="5" gd:fragmentGUID="fb9f14ca-3d80-44e1-8c49-4e32359b9447" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">numer dokumentu, na podstawie którego przyjęto do używania lub wykreślono z wykazu środek trwały lub wartość niematerialną i prawną,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1294__art_8__ust_1__pkt_2__lit_c" gd:GUID="512efe8d-c094-4659-943f-f462497d1b55" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">
+            <nr>c</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="834b304c-72ef-4c17-9a60-abbfe01bcd42" fragment="6" gd:fragmentGUID="9b7ce2ee-338a-4475-8347-9e0ae8d93cba" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">rodzaj dokumentu stwierdzającego nabycie lub wytworzenie środka trwałego lub wartości niematerialnej i prawnej,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1294__art_8__ust_1__pkt_2__lit_d" gd:GUID="d5268156-6de1-4077-b002-1345d18a03d0" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">
+            <nr>d</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="834b304c-72ef-4c17-9a60-abbfe01bcd42" fragment="7" gd:fragmentGUID="f624c5d5-23e3-45ba-8534-71f9fdd74000" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">datę nabycia albo datę wytworzenia,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1294__art_8__ust_1__pkt_2__lit_e" gd:GUID="f22011ce-68c3-4133-bc3d-6d307f7baac4" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">
+            <nr>e</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="834b304c-72ef-4c17-9a60-abbfe01bcd42" fragment="8" gd:fragmentGUID="ec259951-be59-40fb-aaee-f21ed52546dd" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">datę przyjęcia do używania;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2025/1294__art_8__ust_1__pkt_3" gd:GUID="18a1d9c6-0b5d-4c2a-a906-b013f7953c07" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="834b304c-72ef-4c17-9a60-abbfe01bcd42" fragment="9" gd:fragmentGUID="965b66c1-2aa4-4611-8bf8-bd5cd3d58904" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">określenie środka trwałego lub wartości niematerialnej i prawnej;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1294__art_8__ust_1__pkt_4" gd:GUID="c1976aa1-823d-491f-8cb5-2621afd0ec8d" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="834b304c-72ef-4c17-9a60-abbfe01bcd42" fragment="10" gd:fragmentGUID="ac7fffd0-5aed-4626-a044-22b95b31d7a3" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">symbol Klasyfikacji Środków Trwałych (KŚT) wydanej na podstawie odrębnych przepisów;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1294__art_8__ust_1__pkt_5" gd:GUID="e4d49e5e-0828-42f0-aab3-9158e9e76d68" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="834b304c-72ef-4c17-9a60-abbfe01bcd42" fragment="11" gd:fragmentGUID="e6a22b14-7983-4257-957c-de5a32baf0f3" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">wartość początkową;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1294__art_8__ust_1__pkt_6" gd:GUID="c7dde53e-58bc-4465-bdfd-988406eb39e1" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>6</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="834b304c-72ef-4c17-9a60-abbfe01bcd42" fragment="12" gd:fragmentGUID="c6c410dc-ffcf-45f7-9bde-e9645bce0c1c" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">stawkę amortyzacyjną;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1294__art_8__ust_1__pkt_7" gd:GUID="3ce0fcb0-10d1-4714-8aa2-3dab1598f2f5" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>7</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="834b304c-72ef-4c17-9a60-abbfe01bcd42" fragment="13" gd:fragmentGUID="4d6a3e57-b33a-4056-ba99-00461890459a" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">zaktualizowaną wartość początkową;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1294__art_8__ust_1__pkt_8" gd:GUID="ea9a12d5-ac18-4d6c-9173-31bca3663436" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>8</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="834b304c-72ef-4c17-9a60-abbfe01bcd42" fragment="14" gd:fragmentGUID="11ebc294-5045-46d8-b2ce-5e47345e3d78" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">datę likwidacji oraz przyczynę likwidacji albo datę zbycia środka trwałego lub wartości niematerialnej i prawnej.</zdanie>
+          </p>
+        </punkt>
+      </ustep>
+      <ustep eId="DU/2025/1294__art_8__ust_2" gd:GUID="2a59d8a3-253b-456e-8d93-d957953080e7" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="a7cfc355-4a30-47ff-9d83-c5659b42d8bc" fragment="1" gd:fragmentGUID="87e0a186-7575-47ea-a3c8-2c6b4fcc9a8a" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">Za środki trwałe oraz wartości niematerialne i prawne uznaje się składniki majątkowe, o których mowa w art. 22a–22o ustawy o podatku dochodowym.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/1294__art_8__ust_3" gd:GUID="f6b0d337-94b3-4904-9151-cd94721276ac" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <nr>3</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="04d07a4d-f602-46c2-ad6b-5c4052d76119" fragment="1" gd:fragmentGUID="71b0400a-3194-4a7a-bd5a-bef40d4890d7" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">Zapisów dotyczących środków trwałych oraz wartości niematerialnych i prawnych dokonuje się w wykazie najpóźniej w miesiącu przyjęcia ich do używania.</zdanie>
+          <zdanie nr="2" gd:zdGUID="e3592fdb-a425-443a-88a3-829e0a5174cb" fragment="1" gd:fragmentGUID="b98c1c32-61e9-448b-8063-eb184eafad80" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">Późniejszy termin wprowadzenia do wykazu uznaje się za ujawnienie środka trwałego, o którym mowa w art. 22h ust. 1 pkt 4 ustawy o podatku dochodowym.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/1294__art_8__ust_4" gd:GUID="392a71e3-d3b0-4ce9-94db-ad098acad46c" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <nr>4</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="6da3f53a-d283-4a5d-82b8-aee8c54b3fc2" fragment="1" gd:fragmentGUID="20f2a0a9-abb1-4729-a927-e1c9bed15484" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">Dane, o których mowa w ust. 1, wykazuje się w odniesieniu do danego środka trwałego lub danej wartości niematerialnej i prawnej wprowadzonych do wykazu.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/1294__art_8__ust_5" gd:GUID="cc83366c-35e4-4df4-a1dc-8a0c15cda172" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <nr>5</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="1609a850-646e-48b1-832b-1e8b3bada435" fragment="1" gd:fragmentGUID="be250acd-540c-4b7d-b90f-f4a4ad4c0a06" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">Nie podlegają objęciu wykazem:</zdanie>
+        </p>
+        <punkt eId="DU/2025/1294__art_8__ust_5__pkt_1" gd:GUID="6b77bdd4-7ff5-428d-9ab8-75e75c41972b" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="1609a850-646e-48b1-832b-1e8b3bada435" fragment="2" gd:fragmentGUID="1e040936-ac1a-497a-bee9-f8fa78af9824" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">budynki mieszkalne, lokale mieszkalne stanowiące odrębną nieruchomość, grunty lub prawo użytkowania wieczystego gruntu, związane z tym budynkiem lub lokalem, spółdzielcze własnościowe prawo do lokalu mieszkalnego oraz prawo do domu jednorodzinnego w spółdzielni mieszkaniowej;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1294__art_8__ust_5__pkt_2" gd:GUID="4107a043-7f59-4c54-93a4-00ee009b0e14" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="1609a850-646e-48b1-832b-1e8b3bada435" fragment="3" gd:fragmentGUID="0699e4cf-cff2-4af7-ae5e-6d6333f2ccf6" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">spółdzielcze prawo do lokalu użytkowego, którego wartość początkową ustala się zgodnie z art. 22g ust. 10 ustawy o podatku dochodowym.</zdanie>
+          </p>
+        </punkt>
+      </ustep>
+      <ustep eId="DU/2025/1294__art_8__ust_6" gd:GUID="04a48f15-a859-4c1c-9b41-c55cfcf46462" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <nr>6</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="072936b2-3a69-4c00-93b3-6d3380fdce58" fragment="1" gd:fragmentGUID="f15ac8b0-486e-4356-99d5-ceb1f0963d0a" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">W razie zmiany formy opodatkowania, jeżeli podatnik prowadził ewidencję środków trwałych oraz wartości nie- materialnych i prawnych, o której mowa w art. 22n ustawy o podatku dochodowym, może prowadzić dalej tę ewidencję, w sposób określony w przepisach rozporządzenia, pod warunkiem że ewidencja ta będzie odpowiadać wymogom określonym w ust. 1.</zdanie>
+        </p>
+      </ustep>
+    </paragraf>
+    <paragraf eId="DU/2025/1294__art_9" gd:GUID="be3f7003-0483-416c-a383-ba3111250f67" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">
+      <nr>9</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="4c7b1765-6b86-418f-bf34-3574f56925fe" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="c84b921f-6989-41e9-b342-d63c71da5f5e" fragment="1" gd:fragmentGUID="c9038506-911f-4ffe-9c99-2f00fca3207e" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">Do prowadzenia wykazu przepisy § 2 ust. 2 i 3 stosuje się odpowiednio.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2025/1294__art_10" gd:GUID="64e3a509-0483-42db-834a-2b16e19bd9a6" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">
+      <nr>10</nr>
+      <ustep eId="DU/2025/1294__art_10__ust_1" gd:GUID="5db56dd6-7dfb-46b6-bfa8-3ad863740fa1" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="dd689563-981c-45a6-af62-1bbefb2d5aa6" fragment="1" gd:fragmentGUID="f04e4e81-857b-4401-81bd-d43361c89a1a" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">Wykaz może nie zawierać danych, o których mowa w § 8 ust. 1 pkt 2:</zdanie>
+        </p>
+        <punkt eId="DU/2025/1294__art_10__ust_1__pkt_1" gd:GUID="713926a6-a6bb-4d08-950a-6bba803e71d8" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="dd689563-981c-45a6-af62-1bbefb2d5aa6" fragment="2" gd:fragmentGUID="73863e14-cbe5-4166-ad6e-cf4eaf8175dd" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">lit. b – w zakresie numeru dokumentu, na podstawie którego przyjęto do używania,</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1294__art_10__ust_1__pkt_2" gd:GUID="f95e0b62-3c6e-47df-93a1-98c897b43181" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="dd689563-981c-45a6-af62-1bbefb2d5aa6" fragment="3" gd:fragmentGUID="b6c6749c-b3b0-4caf-bb76-fe0bff687d77" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">lit. c – w zakresie rodzaju dokumentu stwierdzającego wytworzenie,</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1294__art_10__ust_1__pkt_3" gd:GUID="592b52a5-a7a6-4c75-b7e0-1c2f6b844503" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="dd689563-981c-45a6-af62-1bbefb2d5aa6" fragment="4" gd:fragmentGUID="17f29066-12ff-4c25-bca5-f596f4d2417c" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">lit. d – w zakresie daty wytworzenia</zdanie>
+          </p>
+        </punkt>
+        <czesc-wspolna-punkt eId="DU/2025/1294__art_10__ust_1__czw" gd:GUID="f19044e1-a6f7-4a28-a95b-5fb2e63d14cb" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <p>
+            <zdanie nr="1" gd:zdGUID="dd689563-981c-45a6-af62-1bbefb2d5aa6" fragment="5" gd:fragmentGUID="bae721a9-1abc-4fe4-bbbe-ab4b946e3a32" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">– dotyczących danego środka trwałego lub danej wartości niematerialnej i prawnej wprowadzonych do wykazu przed dniem 1 stycznia 2026 r.</zdanie>
+          </p>
+        </czesc-wspolna-punkt>
+      </ustep>
+      <ustep eId="DU/2025/1294__art_10__ust_2" gd:GUID="f8d6d985-d424-4196-9e29-b3058c48425d" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="198ab481-0110-4613-835d-bffa0a18942d" fragment="1" gd:fragmentGUID="1d7ed1ac-1cc3-4aa5-8353-aaa0c584e985" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">Przepis ust. 1 stosuje się odpowiednio w odniesieniu do ewidencji środków trwałych oraz wartości niematerialnych i prawnych, o której mowa w § 8 ust. 6.</zdanie>
+        </p>
+      </ustep>
+    </paragraf>
+    <paragraf eId="DU/2025/1294__art_11" gd:GUID="5f3f311a-f2ca-4f2d-8933-6c6943414425" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">
+      <nr>11</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="329bf503-f977-4c48-a6e6-4e90108615aa" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="ac757031-d6f6-44fb-8a47-29e7e132516e" fragment="1" gd:fragmentGUID="3bef4589-d1e5-4ab3-8a21-d9669cbadb6f" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">Traci moc rozporządzenie Ministra Finansów z dnia 17 grudnia 2021 r. w sprawie prowadzenia ewidencji przychodów i wykazu środków trwałych oraz wartości niematerialnych i prawnych (Dz. U. poz. 2414).</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2025/1294__art_12" gd:GUID="ddeadd98-6ab2-4ed2-8852-1f0e9330fc2d" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">
+      <nr>12</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="5584d143-1a4c-4fee-8362-b4a1637aade7" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="1173002a-d1a4-41ee-af23-18d56b9e0168" fragment="1" gd:fragmentGUID="0681b6dd-8692-4e64-b502-a83c950472da" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1294_odczytane.x" wejscie-w-zycie="2026-01-01">Rozporządzenie wchodzi w życie z dniem 1 stycznia 2026 r.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <organ-podpisujacy>Minister Finansów i Gospodarki: <i><osoba podpisujacy="true" gd:osobaGUID="dc8ce59a-8595-4226-b3fa-c75fa3fb0fc3"><imie>A.</imie> <nazwisko>Domański</nazwisko></osoba></i></organ-podpisujacy>
+    <zalacznik eId="DU/2025/1294__zal_1" gd:GUID="e83d38e3-fd37-4add-81f1-310b665c4371">
+      <zalacznik-do gd:GUID="898d9f5f-6637-4203-9c54-8e2d4606b78b">Załącznik do rozporządzenia Ministra Finansów i Gospodarki z dnia 6 września 2025 r. (Dz. U. poz. 1294)</zalacznik-do>
+      <tytul-zalacznika gd:GUID="75582220-4978-473a-9a9a-4dbc3b2637f9">WZÓR</tytul-zalacznika>
+      <segment-zalacznika gd:GUID="0a94a96f-a242-4fac-a0f3-84a2f3a25274" orientacja="pionowa">
+        <tekst-zwykly gd:GUID="888a4a13-a7f4-4ebe-a49f-4c21887de37d">EWIDENCJA PRZYCHODÓW</tekst-zwykly>
+      </segment-zalacznika>
+    </zalacznik>
+  </rozporzadzenie>
+</akt-prawny>

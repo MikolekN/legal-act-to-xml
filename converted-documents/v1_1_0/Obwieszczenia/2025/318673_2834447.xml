@@ -1,0 +1,862 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <obwieszczenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/299</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>f8fb58b5-f429-4bf8-a1a1-65107a6fccd2</gd:GUIDwersji>
+      <AdresISAP>WDU20250000299</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>299</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 299</AdresWyswietlany>
+      <Tytul>Obwieszczenie Marszałka Sejmu Rzeczypospolitej Polskiej z dnia 6 marca 2025 r. w sprawie ogłoszenia jednolitego tekstu ustawy o godle, barwach i hymnie Rzeczypospolitej Polskiej oraz o pieczęciach państwowych</Tytul>
+      <Rodzaj>OBW_TJ</Rodzaj>
+      <DataOgloszenia>2025-03-11</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-03-06</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_ujednolicenie_2025-03-11_DU-2025-299_domyslne" rodzaj="ujednolicenie" pochodzenie="domyslne-z-aktu" data="2025-03-11" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_ujednolicenie.zdarz_ujednolicenie_2025-03-11_DU-2025-299_domyslne" glowna="true">
+          <Przedzial rodzaj="ujednolicenie" od="zdarz_ujednolicenie_2025-03-11_DU-2025-299_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <DataObowiazywaniaWersji>
+        <Od>zdarz_ujednolicenie_2025-03-11_DU-2025-299_domyslne</Od>
+      </DataObowiazywaniaWersji>
+      <Organy>
+        <Organ gd:GUID="843ed859-16ba-4be3-b7b4-c824b0793b3f" rola="wydajacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/MSEJMU">
+          <Nazwa>Marszałek Sejmu</Nazwa>
+          <OrganPodpisujacy>Marszałek Sejmu</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>S.</imie> <nazwisko>Hołownia</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Obwieszczenie</rodzaj-aktu>
+    <autor-aktu>Marszałka Sejmu Rzeczypospolitej Polskiej</autor-aktu>
+    <data>z dnia 6 marca 2025 r.</data>
+    <tytul>w sprawie ogłoszenia jednolitego tekstu ustawy o godle, barwach i hymnie Rzeczypospolitej Polskiej oraz o pieczęciach państwowych</tytul>
+    <punkt-OTJ eId="DU/2025/299__pkt_1" gd:GUID="b145daf9-8308-491d-8828-b824b3d60e33">
+      <nr>1</nr>
+      <p>
+        <zdanie nr="1" gd:zdGUID="dccd7330-50c4-4179-9880-6b398edcd73a" fragment="1" gd:fragmentGUID="3b76e560-c45c-4f5d-82b4-eeabd85da980">Na podstawie art. 16 ust. 1 zdanie pierwsze ustawy z dnia 20 lipca 2000 r. o ogłaszaniu aktów normatywnych i niektórych innych aktów prawnych (Dz. U. z 2019 r. poz. 1461) ogłasza się w załączniku do niniejszego obwieszczenia jednolity tekst ustawy z dnia 31 stycznia 1980 r. o godle, barwach i hymnie Rzeczypospolitej Polskiej oraz o pieczęciach państwowych (Dz. U. z 2024 r. poz. 155), z uwzględnieniem zmiany wprowadzonej ustawą z dnia 5 grudnia 2024 r. o ochronie ludności i obronie cywilnej (Dz. U. poz. 1907) oraz zmian wynikających z przepisów ogłoszonych przed dniem 26 lutego 2025 r.</zdanie>
+      </p>
+    </punkt-OTJ>
+    <punkt-OTJ eId="DU/2025/299__pkt_2" gd:GUID="216b28a5-e4cc-4278-9dbe-042491d579fd">
+      <nr>2</nr>
+      <p>
+        <zdanie nr="1" gd:zdGUID="30f6a62a-9e6d-441e-b02d-7dbef8390f71" fragment="1" gd:fragmentGUID="ecdf1e31-92f0-4b3c-aed3-df956eeb5284">Podany w załączniku do niniejszego obwieszczenia tekst jednolity ustawy nie obejmuje art. 212 ustawy z dnia 5 grudnia 2024 r. o ochronie ludności i obronie cywilnej (Dz. U. poz. 1907), który stanowi:<tresc-strukt cudzyslowy="oba" gd:GUID="0b3a934a-0a49-4fd9-9211-dab8ca13d4a5"><artykul eId="DU/2024/1907__art_212" gd:GUID="5d4d6d80-d146-4878-a8a7-bf380cc39b90"><nr>212</nr><ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="53379e44-c632-45d5-9f16-51af91e9bb25"><p><zdanie nr="1" gd:zdGUID="07b2634f-69c5-4d4e-92ea-7ecfdc0799eb" fragment="1" gd:fragmentGUID="f9f86bb0-7481-4d88-ab10-683f0ec25a30">Ustawa wchodzi w życie z dniem 1 stycznia 2025 r., z wyjątkiem:</zdanie></p><punkt eId="DU/2024/1907__art_212__pkt_1" gd:GUID="d6780212-1d0e-42b5-bcfc-59c08d714de7"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="07b2634f-69c5-4d4e-92ea-7ecfdc0799eb" fragment="2" gd:fragmentGUID="20eec70b-68c9-4fb0-bbca-231222fb8ed8">art. 16, art. 156, art. 198 i art. 199, które wchodzą w życie z dniem następującym po dniu ogłoszenia;</zdanie></p></punkt><punkt eId="DU/2024/1907__art_212__pkt_2" gd:GUID="fb9b3d98-035c-4955-8e8c-50b251f5303f"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="07b2634f-69c5-4d4e-92ea-7ecfdc0799eb" fragment="3" gd:fragmentGUID="2b0dcde5-1d48-4b68-beed-803fbfe5a896">art. 76 ust. 5 i art. 78 ust. 2, które wchodzą w życie po upływie roku od dnia ogłoszenia;</zdanie></p></punkt><punkt eId="DU/2024/1907__art_212__pkt_3" gd:GUID="8caac296-b710-4e6b-a432-40445eef126c"><nr>3</nr><p><zdanie nr="1" gd:zdGUID="07b2634f-69c5-4d4e-92ea-7ecfdc0799eb" fragment="4" gd:fragmentGUID="693d9e3c-dcb3-48bf-8728-fd76eeaa03ff">art. 11 ust. 3 pkt 3, art. 45–48, art. 189 oraz art. 211, które wchodzą w życie z dniem 1 stycznia 2026 r.;</zdanie></p></punkt><punkt eId="DU/2024/1907__art_212__pkt_4" gd:GUID="0203cd48-32b9-4dec-aaa8-a4a336d253d9"><nr>4</nr><p><zdanie nr="1" gd:zdGUID="07b2634f-69c5-4d4e-92ea-7ecfdc0799eb" fragment="5" gd:fragmentGUID="649e09aa-002e-4a1a-bf91-35f931fb1e48">art. 187, który wchodzi w życie z dniem 1 stycznia 2027 r.</zdanie></p></punkt></ustep-n></artykul></tresc-strukt>.</zdanie>
+      </p>
+    </punkt-OTJ>
+    <organ-podpisujacy>Marszałek Sejmu: <i><osoba podpisujacy="true" gd:osobaGUID="1b9f5598-47b4-42cd-956b-66ae4c28f405"><imie>S.</imie> <nazwisko>Hołownia</nazwisko></osoba></i></organ-podpisujacy>
+    <ustawa>
+      <zalacznik-do>Załącznik do obwieszczenia Marszałka Sejmu Rzeczypospolitej Polskiej z dnia 6 marca 2025 r. (Dz. U. poz. 299)</zalacznik-do>
+      <rodzaj-aktu>Ustawa</rodzaj-aktu>
+      <data>z dnia 31 stycznia 1980 r.</data>
+      <tytul>o godle, barwach i hymnie Rzeczypospolitej Polskiej oraz o pieczęciach państwowych</tytul>
+      <preambula gd:GUID="b5021f03-9efb-460e-81a0-9368dea223d5">
+        <p>
+          <zdanie nr="1" gd:zdGUID="020ec173-5ff1-41ba-9393-f473cd312e49" fragment="1" gd:fragmentGUID="3b68f082-5947-4abc-ba6e-b207d8851baa">Wstęp (uchylony)</zdanie>
+        </p>
+      </preambula>
+      <artykul eId="DU/2025/299__art_1" gd:GUID="daa1e65a-1523-42ed-a9fe-fe6e1a253dc0">
+        <nr>1</nr>
+        <ustep eId="DU/2025/299__art_1__ust_1" gd:GUID="0885a4ce-601b-4b77-913b-854a807806b2">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="297964fd-e8d8-43a3-99c6-c8d7cfe322fc" fragment="1" gd:fragmentGUID="62b10819-cfd4-4cb5-8ed7-3af5c01ab9ec">Orzeł biały, biało-czerwone barwy i „Mazurek Dąbrowskiego” są symbolami Rzeczypospolitej Polskiej.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/299__art_1__ust_2" gd:GUID="d8df59d9-beca-4af4-a61a-72550cb72ed8">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="8681f3a8-c4d4-4ee2-8b1c-a744e3da5b70" fragment="1" gd:fragmentGUID="15a5fea0-6eec-457e-9c9f-5df1873c0da1">Otaczanie tych symboli czcią i szacunkiem jest prawem i obowiązkiem każdego obywatela Rzeczypospolitej Polskiej oraz wszystkich organów państwowych, instytucji i organizacji.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/299__art_1__ust_3" gd:GUID="1488b424-0fa7-43a6-bead-5c812fae85a5">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="e47e80db-4b5d-4edb-be3b-fcb75c383728" fragment="1" gd:fragmentGUID="7af4f148-63b1-4326-bcf0-4731893a5473">Symbole Rzeczypospolitej Polskiej pozostają pod szczególną ochroną prawa, przewidzianą w odrębnych przepisach.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/299__art_2" gd:GUID="d1d82e6b-00a5-49bc-b683-3653c3d9bafe">
+        <nr>2</nr>
+        <ustep eId="DU/2025/299__art_2__ust_1" gd:GUID="9344c9d3-60af-4751-a64b-539d87935487">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="443ab88e-9735-4010-86db-dfee3704b97b" fragment="1" gd:fragmentGUID="0dd423e8-61fc-4a03-bb50-e838981bfef7">Godłem Rzeczypospolitej Polskiej jest wizerunek orła białego ze złotą koroną na głowie zwróconej w prawo, z rozwiniętymi skrzydłami, z dziobem i szponami złotymi, umieszczony w czerwonym polu tarczy.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/299__art_2__ust_2" gd:GUID="4f9e396e-84f0-40c7-880d-a4273657baa1">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="5d7d741c-ba36-4cfc-ba8c-2ca89ba8c5eb" fragment="1" gd:fragmentGUID="a0cbee82-fb9f-487a-9cd4-bf6b6abbbf33">Wzór godła Rzeczypospolitej Polskiej zawiera załącznik nr 1.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/299__art_2a" gd:GUID="f3b74f74-0eba-4946-92af-a64d1f45689b">
+        <nr>2a</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="4a12123c-79b4-4c6a-b5fb-fff13d467c1d">
+          <p>
+            <zdanie nr="1" gd:zdGUID="dd9a8aeb-0c52-40cf-8294-a0dce6b03c29" fragment="1" gd:fragmentGUID="e43c6807-bee7-436a-b5df-2bf94c799667">Wizerunku orła ustalonego dla godła używają:</zdanie>
+          </p>
+          <punkt eId="DU/2025/299__art_2a__pkt_1" gd:GUID="9cdd8d92-22c2-418d-b0c3-dca845b3915e">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="dd9a8aeb-0c52-40cf-8294-a0dce6b03c29" fragment="2" gd:fragmentGUID="8a8732ce-5e24-41d6-90b0-da7c92ef9c6c">organy władzy państwowej;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/299__art_2a__pkt_2" gd:GUID="748ff8bd-8f86-4444-9cb7-fc41334a3159">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="dd9a8aeb-0c52-40cf-8294-a0dce6b03c29" fragment="3" gd:fragmentGUID="9619c0ae-cbd3-4be0-a8c5-d2f3d74b2ba6">organy administracji rządowej;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/299__art_2a__pkt_3" gd:GUID="8cf19acf-d8b0-4fda-a7fb-bd591de1ca93">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="dd9a8aeb-0c52-40cf-8294-a0dce6b03c29" fragment="4" gd:fragmentGUID="b97455ca-7047-44ff-97da-b75d03a7aba1">gminy, związki międzygminne oraz ich organy;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/299__art_2a__pkt_4" gd:GUID="6c1bddfc-a3a4-4619-a06e-e1d18b3b476b">
+            <nr>4</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="dd9a8aeb-0c52-40cf-8294-a0dce6b03c29" fragment="5" gd:fragmentGUID="1a368c9d-5be8-48e8-b777-5b3447959dbb">powiaty, związki powiatów oraz ich organy;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/299__art_2a__pkt_4a" gd:GUID="03506dd9-481a-40db-b3ac-6f4913b44620">
+            <nr>4a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="dd9a8aeb-0c52-40cf-8294-a0dce6b03c29" fragment="6" gd:fragmentGUID="63ddf4fd-a6f7-4dd9-a0a7-037564886cb2">związki powiatowo-gminne oraz ich organy;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/299__art_2a__pkt_4b" gd:GUID="34abd1a1-2ea5-44c4-a964-0c039d65cfb9">
+            <nr>4b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="dd9a8aeb-0c52-40cf-8294-a0dce6b03c29" fragment="7" gd:fragmentGUID="5e21de6d-adab-4ae5-96ea-b9d02c05c9ca">związki metropolitalne i ich organy;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/299__art_2a__pkt_5" gd:GUID="0ecbf710-e9e6-4f1e-ad9d-ccb5732c4f1b">
+            <nr>5</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="dd9a8aeb-0c52-40cf-8294-a0dce6b03c29" fragment="8" gd:fragmentGUID="9ada7acb-ed29-487a-a5b6-4669c9439840">samorządy województw oraz ich organy;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/299__art_2a__pkt_6" gd:GUID="14c8440f-7613-41a9-b866-9356c1a85186">
+            <nr>6</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="dd9a8aeb-0c52-40cf-8294-a0dce6b03c29" fragment="9" gd:fragmentGUID="b750aa77-da91-412e-8b05-59a6ea58b286">sądy, prokuratury i komornicy sądowi;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/299__art_2a__pkt_7" gd:GUID="bd5bee0e-b9af-4ff9-8b87-f1ba8f26915c">
+            <nr>7</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="dd9a8aeb-0c52-40cf-8294-a0dce6b03c29" fragment="10" gd:fragmentGUID="8f035aa9-23c3-4888-b22f-51451699001c">samorządowe kolegia odwoławcze;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/299__art_2a__pkt_8" gd:GUID="5e309f3c-2504-414c-aeb1-f6be7ae9eb7d">
+            <nr>8</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="dd9a8aeb-0c52-40cf-8294-a0dce6b03c29" fragment="11" gd:fragmentGUID="b1addebe-419f-4c8f-8ae5-d402fa589980">regionalne izby obrachunkowe;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/299__art_2a__pkt_9" gd:GUID="5edc9930-5d77-488f-8dc3-f3f504e01a1f">
+            <nr>9</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="dd9a8aeb-0c52-40cf-8294-a0dce6b03c29" fragment="12" gd:fragmentGUID="e64b7560-3670-4cd9-af05-32c19e4df423">jednostki organizacyjne Sił Zbrojnych Rzeczypospolitej Polskiej;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/299__art_2a__pkt_10" gd:GUID="5b68d8b4-23c8-43b3-95c7-f9058387695f">
+            <nr>10</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="dd9a8aeb-0c52-40cf-8294-a0dce6b03c29" fragment="13" gd:fragmentGUID="71dcf018-b8b5-408c-bc60-beebb1c3c3a0"><odnosnik id-odnosnika="1" symbol="1" gd:GUID="b7bcc7be-d520-4c79-a0d7-b48893411360"><p><zdanie nr="1" gd:zdGUID="297f81f7-cde5-4f56-9c49-d2bdfd38503c" fragment="1" gd:fragmentGUID="19bfbf47-5fa7-4de6-bae5-75b8cb957c37">W brzmieniu ustalonym przez art. 167 ustawy z dnia 5 grudnia 2024 r. o ochronie ludności i obronie cywilnej (Dz. U. poz. 1907), która weszła w życie z dniem 1 stycznia 2025 r.</zdanie></p></odnosnik> jednostki organizacyjne Policji, Straży Granicznej, Krajowej Administracji Skarbowej i Państwowej Straży Pożarnej;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/299__art_2a__pkt_10a" gd:GUID="82b692d9-9b50-4072-8201-dab0a8deceda">
+            <nr>10a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="dd9a8aeb-0c52-40cf-8294-a0dce6b03c29" fragment="14" gd:fragmentGUID="5ac4eea4-2cbd-4ed0-aa24-f9d3f3f5c13f">Służba Ochrony Państwa;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/299__art_2a__pkt_11" gd:GUID="9c03a675-9576-446c-8c40-79718271104b">
+            <nr>11</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="dd9a8aeb-0c52-40cf-8294-a0dce6b03c29" fragment="15" gd:fragmentGUID="b91df2d1-fc32-48d0-86bb-bed5cd52b64d">jednostki organizacyjne Służby Więziennej;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/299__art_2a__pkt_12" gd:GUID="91a00366-d9c6-431a-8904-ed84c051b433">
+            <nr>12</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="dd9a8aeb-0c52-40cf-8294-a0dce6b03c29" fragment="16" gd:fragmentGUID="90b69e07-e09b-42cd-80b1-529e319d344f">szkoły publiczne, szkoły niepubliczne i niepubliczne szkoły artystyczne o uprawnieniach publicznej szkoły artystycznej, uczelnie publiczne, uczelnie niepubliczne oraz federacje podmiotów systemu szkolnictwa wyższego i nauki;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/299__art_2a__pkt_13" gd:GUID="340a81c0-72e9-4dad-9d9e-04ae75ac9615">
+            <nr>13</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="dd9a8aeb-0c52-40cf-8294-a0dce6b03c29" fragment="17" gd:fragmentGUID="2c17e154-4477-43c9-9385-fde6e06cda06">inne podmioty, jeżeli przepisy szczególne uprawniają je do używania wizerunku orła.</zdanie>
+            </p>
+          </punkt>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2025/299__art_3" gd:GUID="ace485c7-ee79-4cf3-b707-6c254aa5a130">
+        <nr>3</nr>
+        <ustep eId="DU/2025/299__art_3__ust_1" gd:GUID="b33bcd11-b8bc-4d5c-b7b7-034a616f6d23">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="809de0c9-89e8-4ef5-8d7d-27b97929a25e" fragment="1" gd:fragmentGUID="a1d092e6-eb70-42e6-bb30-bf40897cb3c8">Godło Rzeczypospolitej Polskiej umieszcza się w szczególności w pomieszczeniach urzędowych i salach posiedzeń, salach wykładowych i lekcyjnych należących do:</zdanie>
+          </p>
+          <punkt eId="DU/2025/299__art_3__ust_1__pkt_1" gd:GUID="d20e74eb-f027-44a6-9ab0-2805834cd2c5">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="809de0c9-89e8-4ef5-8d7d-27b97929a25e" fragment="2" gd:fragmentGUID="e7e21053-9d8c-49ae-b756-1b99672340f5">organów państwowych;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/299__art_3__ust_1__pkt_1a" gd:GUID="451b7d82-f40e-4505-bbf2-ad33b6a57ef3">
+            <nr>1a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="809de0c9-89e8-4ef5-8d7d-27b97929a25e" fragment="3" gd:fragmentGUID="8ceaf1ae-dafa-4cd3-ab98-3ae8e51d0846">organów gmin, powiatów, samorządów województw oraz związków jednostek samorządu terytorialnego;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/299__art_3__ust_1__pkt_1b" gd:GUID="c2699c83-dfc1-4cbe-b245-d0449fdd7d57">
+            <nr>1b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="809de0c9-89e8-4ef5-8d7d-27b97929a25e" fragment="4" gd:fragmentGUID="e41d4b66-5828-468c-87c0-2a8ea0db708b">klubów, kół i zespołów poselskich, senackich i parlamentarnych oraz biur poselskich, senatorskich i poselsko-senatorskich;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/299__art_3__ust_1__pkt_2" gd:GUID="5665fd68-8789-4526-9f76-675fe4ddd856">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="809de0c9-89e8-4ef5-8d7d-27b97929a25e" fragment="5" gd:fragmentGUID="cc1e0b67-2622-4bc8-b506-55597d7f9458">jednostek Sił Zbrojnych;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/299__art_3__ust_1__pkt_3" gd:GUID="a62d3365-2361-4aaa-9202-f3b3aee36a23">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="809de0c9-89e8-4ef5-8d7d-27b97929a25e" fragment="6" gd:fragmentGUID="cce04180-5921-4b44-b9ee-74ea395f2cbd">szkół i placówek oświatowo-wychowawczych;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/299__art_3__ust_1__pkt_4" gd:GUID="f8540e95-6d4b-4533-86b9-7ec73c2c2d95">
+            <nr>4</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="809de0c9-89e8-4ef5-8d7d-27b97929a25e" fragment="7" gd:fragmentGUID="8a7cc976-ba79-4229-9aec-709f74534b23">przedstawicielstw dyplomatycznych, urzędów konsularnych oraz innych oficjalnych przedstawicielstw i misji za granicą.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/299__art_3__ust_1a" gd:GUID="015aa9ce-778c-4280-89ca-347a9ec63f21">
+          <nr>1a</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="c8088dab-2e53-41cb-80f5-9e4b8fe0c5dd" fragment="1" gd:fragmentGUID="dc0efe8d-3951-460f-8aab-3f13c601a440">Na budynkach siedzib podmiotów, o których mowa w art. 2a, umieszcza się urzędowe tablice z godłem Rzeczypospolitej Polskiej oraz urzędowe tablice z napisem nazwy tego podmiotu.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/299__art_3__ust_1b" gd:GUID="15ab99e2-2dc2-44fb-9751-f902bdd3a508">
+          <nr>1b</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="67fbf735-fc01-4ba7-a57b-048f46a61b2e" fragment="1" gd:fragmentGUID="ee96a542-7b00-4b00-a6a0-ad0b630235fe">Urzędowa tablica z godłem ma kształt owalny w układzie pionowym, obwódkę biało-czerwoną i tło szare, na którym znajduje się godło Rzeczypospolitej Polskiej.</zdanie>
+            <zdanie nr="2" gd:zdGUID="0eef04a3-4a50-4cec-bd1a-0b5f0459bd2d" fragment="1" gd:fragmentGUID="fb31f526-7983-4583-b435-622139d1eee9">Urzędowa tablica z napisem jest prostokątna w układzie poziomym, ma tło czerwone, a litery napisu białe.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/299__art_3__ust_2" gd:GUID="b73d0542-9bbf-46c1-a48e-f686627488b1">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="ae04bc51-a1ac-4bb5-a709-45d5864190ee" fragment="1" gd:fragmentGUID="fc5c78bd-b329-4cd3-8e9d-1c683101114f">Godło Rzeczypospolitej Polskiej można umieszczać w innych miejscach niż wymienione w ust. 1, z uwzględnieniem art. 1 ust. 2.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/299__art_3__ust_3" gd:GUID="1db322dc-ce09-4347-9447-c043ffda6e07">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="8155d393-567e-46a5-aac6-3aa26343b048" fragment="1" gd:fragmentGUID="df3c3bed-3e69-4507-8984-7414737af24d">Jednostki organizacyjne wymienione w ust. 1 pkt 4, w wypadkach przewidzianych w prawie i zwyczajach międzynarodowych, umieszczają godło Rzeczypospolitej Polskiej także na obiektach stanowiących ich siedziby urzędowe.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/299__art_3__ust_4" gd:GUID="862f80e1-5336-4a97-826d-59f7a71affaa">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="897e4481-952c-422b-9211-8fc93a37534c" fragment="1" gd:fragmentGUID="66a69f6b-4887-468e-bac5-91573e9d74f1">Rada Ministrów określi, w drodze rozporządzenia, wzory oraz wymiary urzędowych tablic z godłem Rzeczypospolitej Polskiej i napisem, a także sposób ich umieszczania na budynkach siedzib podmiotów, o których mowa w art. 2a, biorąc pod uwagę czytelność i estetykę tablic oraz funkcjonalność ich umieszczania.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/299__art_3a" gd:GUID="9934ab16-e3f9-492b-a182-9cebc5fd38d4">
+        <nr>3a</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="bafcd2f2-ba97-4548-9f9f-7e952f70d4c3">
+          <p>
+            <zdanie nr="1" gd:zdGUID="4b8826a3-21a7-48b6-be54-0dc858402bd6" fragment="1" gd:fragmentGUID="39d0900c-b5c3-42b3-b14c-ec3e18cbdec8">Godło Rzeczypospolitej Polskiej umieszcza się na stroju reprezentacji kraju, na stroju reprezentacji olimpijskiej oraz na stroju reprezentacji paralimpijskiej, na zasadach określonych w ustawie z dnia 25 czerwca 2010 r. o sporcie (Dz. U. z 2024 r. poz. 1488 oraz z 2025 r. poz. 28), z uwzględnieniem art. 1 ust. 2.</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2025/299__art_4" gd:GUID="460dd407-1546-4f0e-ac99-31509e3f8f56">
+        <nr>4</nr>
+        <ustep eId="DU/2025/299__art_4__ust_1" gd:GUID="9e37c582-1895-4af8-bd96-106b4a832a8e">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="61ca5a7f-b7d0-4759-b49a-dfc1c6b115e7" fragment="1" gd:fragmentGUID="68a52a62-94aa-4d75-bc7a-519ab7367877">Barwami Rzeczypospolitej Polskiej są kolory biały i czerwony, ułożone w dwóch poziomych, równoległych pasach tej samej szerokości, z których górny jest koloru białego, a dolny koloru czerwonego.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/299__art_4__ust_2" gd:GUID="a1ceaaf6-22d6-49df-a69a-963afd09982c">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="ef248bf7-22d6-4717-9036-e0b64da553f8" fragment="1" gd:fragmentGUID="142afde2-e0c7-4c7a-acc7-f0c4b74396fe">Przy umieszczaniu barw Rzeczypospolitej Polskiej w układzie pionowym kolor biały umieszcza się po lewej stronie płaszczyzny oglądanej z przodu.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/299__art_4__ust_3" gd:GUID="b7219e5e-5839-4504-9f99-f6cd2696e23e">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="8cc3c94f-a629-4d49-a242-9f7fd6ba0fa5" fragment="1" gd:fragmentGUID="4e74b307-a836-4070-9631-c5085700531d">Wzór barw Rzeczypospolitej Polskiej zawiera załącznik nr 2.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/299__art_5" gd:GUID="c200d29e-de63-469a-b291-26e1d430fcff">
+        <nr>5</nr>
+        <ustep eId="DU/2025/299__art_5__ust_1" gd:GUID="958bdb37-ab03-4acc-932b-a77d23b86798">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="b887b03b-7275-44db-8d27-4dd0d86b586f" fragment="1" gd:fragmentGUID="b49ddf66-6db6-4d38-aaa1-bfd3046d283d">Barwy Rzeczypospolitej Polskiej stanowią składniki flagi państwowej Rzeczypospolitej Polskiej.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/299__art_5__ust_2" gd:GUID="67c5995c-7761-4edd-8191-bf0c43696ed5">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="cb045cc4-2caa-458d-88ab-2b06b2255325" fragment="1" gd:fragmentGUID="0f6f3c1b-d7cc-4611-a540-da7f8ffde453">Każdy ma prawo używać barw Rzeczypospolitej Polskiej, w szczególności w celu podkreślenia znaczenia uroczystości, świąt lub innych wydarzeń, z uwzględnieniem art. 1 ust. 2.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/299__art_5__ust_3" gd:GUID="4c6a4778-0821-4270-afa2-8a5e0f3dcba3">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="44782c42-da54-4786-b5ba-93a974f2f910" fragment="1" gd:fragmentGUID="33649679-abc2-40e2-9174-c108c13fc71a">(uchylony)</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/299__art_6" gd:GUID="c0ad4b92-faa1-47ac-87f0-923715536964">
+        <nr>6</nr>
+        <ustep eId="DU/2025/299__art_6__ust_1" gd:GUID="4aaf86c4-0a4f-448f-a0f6-9885d03fd3c9">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="06a786cb-dad3-4cae-95c6-ecf228a9b497" fragment="1" gd:fragmentGUID="5ed40c95-56a4-489e-b182-af39fd8f61d1">Flagą państwową Rzeczypospolitej Polskiej jest prostokątny płat tkaniny o barwach Rzeczypospolitej Polskiej, umieszczony na maszcie.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/299__art_6__ust_2" gd:GUID="e714b697-2bb3-4eec-b9b7-52819f6daaab">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="0406fd7c-ffe6-4580-a2f0-d7a9781390b1" fragment="1" gd:fragmentGUID="b3014411-b511-4220-8673-9123a1aa9d64">Flagą państwową Rzeczypospolitej Polskiej jest także flaga określona w ust. 1, z umieszczonym pośrodku białego pasa godłem Rzeczypospolitej Polskiej.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/299__art_6__ust_3" gd:GUID="6eacb409-8635-4364-97b1-be653c7e28d9">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="bf9bea2e-0fb3-4a4d-8cf9-3c6d55f29d96" fragment="1" gd:fragmentGUID="f81b3a81-a0db-4be4-a5f9-552db87c0ae6">Wzory flagi państwowej Rzeczypospolitej Polskiej i flagi państwowej z godłem Rzeczypospolitej Polskiej zawiera załącznik nr 3.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/299__art_6a" gd:GUID="45e71123-1465-4d06-a6f6-3a3c322e1225">
+        <nr>6a</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="7bd8512c-461c-4641-962a-44a50fa4da29">
+          <p>
+            <zdanie nr="1" gd:zdGUID="d42aa17f-ca9d-4bad-942f-80137719fb0a" fragment="1" gd:fragmentGUID="a0dfe57a-abd1-4f19-84be-bc4c1a98526e">Ustanawia się dzień 2 maja Dniem Flagi Rzeczypospolitej Polskiej.</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2025/299__art_7" gd:GUID="6f275078-bed1-4a94-9cca-c126fd66701c">
+        <nr>7</nr>
+        <ustep eId="DU/2025/299__art_7__ust_1" gd:GUID="b78e7aaa-821b-4339-b6bf-760a3e11fe22">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="25f202e0-b779-4d28-a255-1a0f55629ba8" fragment="1" gd:fragmentGUID="26c13915-521b-417c-bbb6-b57164ea0bab">Flagę państwową Rzeczypospolitej Polskiej podnosi się na budynkach lub przed budynkami stanowiącymi siedziby urzędowe albo miejsce obrad:</zdanie>
+          </p>
+          <punkt eId="DU/2025/299__art_7__ust_1__pkt_1" gd:GUID="616f01a1-c5da-4d51-aae4-632d497c1969">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="25f202e0-b779-4d28-a255-1a0f55629ba8" fragment="2" gd:fragmentGUID="cf4ffe57-cc55-49c7-9e0a-ce46bf771317">Sejmu Rzeczypospolitej Polskiej;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/299__art_7__ust_1__pkt_2" gd:GUID="c3e91cf2-3581-4528-a06a-b90abd83e99f">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="25f202e0-b779-4d28-a255-1a0f55629ba8" fragment="3" gd:fragmentGUID="ce840fd6-9792-417a-aa23-d2ab931139aa">Senatu Rzeczypospolitej Polskiej;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/299__art_7__ust_1__pkt_3" gd:GUID="435bd3c0-ec7c-4dc3-b379-f755e44e3162">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="25f202e0-b779-4d28-a255-1a0f55629ba8" fragment="4" gd:fragmentGUID="27b201be-84a4-4c0c-829d-80da81eaf70a">Prezydenta Rzeczypospolitej Polskiej;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/299__art_7__ust_1__pkt_4" gd:GUID="35026a7d-364c-4802-a063-c080b7939860">
+            <nr>4</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="25f202e0-b779-4d28-a255-1a0f55629ba8" fragment="5" gd:fragmentGUID="3686a24f-cf99-44ea-ac8d-5f86351e7c96">Rady Ministrów oraz Prezesa Rady Ministrów;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/299__art_7__ust_1__pkt_5" gd:GUID="c1a955ab-d43f-4881-b27a-10874a353c8e">
+            <nr>5</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="25f202e0-b779-4d28-a255-1a0f55629ba8" fragment="6" gd:fragmentGUID="da4bf154-278e-468d-a6e5-0f387f0b2c6b">organów stanowiących jednostek samorządu terytorialnego – w czasie ich sesji;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/299__art_7__ust_1__pkt_6" gd:GUID="2a99401b-d5c0-49cc-af9f-6d0b6b393552">
+            <nr>6</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="25f202e0-b779-4d28-a255-1a0f55629ba8" fragment="7" gd:fragmentGUID="e950cc8c-c23c-4e80-9c28-91191d97cc50">organów administracji rządowej i innych organów państwowych oraz państwowych jednostek organizacyjnych, a także organów jednostek samorządu terytorialnego i samorządowych jednostek organizacyjnych – z okazji uroczystości oraz rocznic i świąt państwowych.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/299__art_7__ust_2" gd:GUID="f77a350f-3048-4eca-97b8-70a6083cb57d">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="2fe04aca-cf6c-4734-bb00-f3542a5ebdee" fragment="1" gd:fragmentGUID="2fcb3dc4-0985-453c-a700-8959f16551a4">Flagę państwową Rzeczypospolitej Polskiej podnoszą również polskie statki żeglugi śródlądowej.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/299__art_7__ust_3" gd:GUID="7406cb6f-5d33-476c-a997-380808fa0005">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="904c73dd-1c5f-46cc-b3d9-9d19cf9b8070" fragment="1" gd:fragmentGUID="9321550a-289c-4481-a0c5-1a14598005d9">Flagę państwową Rzeczypospolitej Polskiej zaleca się podnosić lub umieszczać na budynkach mieszkalnych lub przed budynkami mieszkalnymi oraz na budynkach lub przed budynkami, w których prowadzi się działalność gospodarczą lub w innych miejscach niż wymienione w ust. 1 i 2 – z okazji świąt i rocznic państwowych oraz innych uroczystości o zasięgu państwowym lub lokalnym, z uwzględnieniem art. 1 ust. 2.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/299__art_8" gd:GUID="5be8b606-1b31-4559-91dc-de4c5d057633">
+        <nr>8</nr>
+        <ustep eId="DU/2025/299__art_8__ust_1" gd:GUID="6a3cb85a-aa1a-46ef-abdb-ade23032dd18">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="de8d30c3-d69e-4ed0-bdbc-fa6bd0d81a09" fragment="1" gd:fragmentGUID="f21023cc-f3dc-4fe0-9e16-1ab41e1f815f">Flagę państwową z godłem Rzeczypospolitej Polskiej podnoszą:</zdanie>
+          </p>
+          <punkt eId="DU/2025/299__art_8__ust_1__pkt_1" gd:GUID="273be822-2ca8-4d73-9e32-52b6a3e01df2">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="de8d30c3-d69e-4ed0-bdbc-fa6bd0d81a09" fragment="2" gd:fragmentGUID="aa340a14-aa77-4fe6-aafb-6d6324b350eb">przedstawicielstwa dyplomatyczne, urzędy konsularne oraz inne oficjalne przedstawicielstwa i misje za granicą na budynkach lub przed budynkami ich siedzib urzędowych, a także kierownicy tych przedstawicielstw, urzędów i misji na swych rezydencjach i środkach komunikacji – w wypadkach przewidzianych w prawie i zwyczajach międzynarodowych;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/299__art_8__ust_1__pkt_2" gd:GUID="942f1924-ce77-4c34-8fdb-bc367840ecd5">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="de8d30c3-d69e-4ed0-bdbc-fa6bd0d81a09" fragment="3" gd:fragmentGUID="007ad5f2-b676-4f55-8189-9f66cd1c4e90">cywilne lotniska i lądowiska;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/299__art_8__ust_1__pkt_3" gd:GUID="ecbfc8cf-7632-4d7c-ba4d-4ed9b4058afe">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="de8d30c3-d69e-4ed0-bdbc-fa6bd0d81a09" fragment="4" gd:fragmentGUID="c84c7621-6d3f-4aa9-9910-528d7a2dfbbe">cywilne samoloty komunikacyjne podczas lotów za granicą;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/299__art_8__ust_1__pkt_4" gd:GUID="f64cde8b-47c1-4d6c-a00b-ab030fb1bc7e">
+            <nr>4</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="de8d30c3-d69e-4ed0-bdbc-fa6bd0d81a09" fragment="5" gd:fragmentGUID="01efe5ed-979a-4533-af72-b86832576d50">kapitanaty (bosmanaty) portów – na budynkach lub przed budynkami stanowiącymi ich siedziby urzędowe.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/299__art_8__ust_2" gd:GUID="66c71d32-30d5-4eee-b029-412728ba0e01">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="fe2c2767-18b2-4fe0-8d08-1f6f4fbff4a0" fragment="1" gd:fragmentGUID="9e6ac006-2e03-461f-8bfd-4741029bf5dc">Minister właściwy do spraw zagranicznych określi, w drodze rozporządzenia, szczegółowe zasady dotyczące postępowania w sprawach, o których mowa w ust. 1 pkt 1, uwzględniając praktykę i zwyczaje istniejące w państwie przyjmującym, określając sytuacje, w których podnoszenie flagi państwowej jest obowiązkowe, oraz określając szczegółowo jej usytuowanie.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/299__art_8__ust_3" gd:GUID="baa107b1-be84-4ff8-addb-f10815040719">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="9e46dc83-22d3-4d18-a312-040e19ef8dba" fragment="1" gd:fragmentGUID="9c0c2914-a58b-4ad7-857f-82bfd4f4735c"><i>Minister Transportu i Gospodarki Morskiej</i><odnosnik id-odnosnika="2" symbol="2" gd:GUID="ca5a6e1d-f85e-4c0e-8946-14004f8919a5"><p><zdanie nr="1" gd:zdGUID="9ba449a5-bade-4dc9-91e3-179ac50fbf9b" fragment="1" gd:fragmentGUID="13e38b99-e313-495c-9c7a-09d6c1614f67">Obecnie minister właściwy do spraw transportu zgodnie z art. 4 ust. 1, art. 5 pkt 22 i art. 27 ustawy z dnia 4 września 1997 r. o działach administracji rządowej (Dz. U. z 2024 r. poz. 1370 i 1907), która weszła w życie z dniem 1 kwietnia 1999 r.</zdanie></p></odnosnik> określi sposób podnoszenia flagi państwowej z godłem Rzeczypospolitej Polskiej na cywilnych lotniskach i lądowiskach oraz na cywilnych samolotach komunikacyjnych podczas lotów za granicą.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/299__art_8__ust_4" gd:GUID="c7f7209c-f587-447a-b36d-2d1b17056c38">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="4aaba00d-a336-4bac-be99-314feaacc326" fragment="1" gd:fragmentGUID="452e9389-e425-4579-8782-0c43c8616918">Minister Obrony Narodowej określi, w drodze zarządzenia, sposób używania flagi państwowej z godłem Rzeczypospolitej Polskiej przez oddziały i jednostki Sił Zbrojnych Rzeczypospolitej Polskiej podczas oficjalnych uroczystości poza granicami państwa oraz w kontaktach międzynarodowych na terytorium Rzeczypospolitej Polskiej, uwzględniając charakter uroczystości.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/299__art_9" gd:GUID="2f52cfd9-d71f-4b32-a85d-e055a6d2feb3">
+        <nr>9</nr>
+        <ustep eId="DU/2025/299__art_9__ust_1" gd:GUID="cdb30f15-f263-4713-9094-c71f23ece682">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="ef65c64e-ce86-4c98-99a5-b9948362c00d" fragment="1" gd:fragmentGUID="edbf42cb-3e2a-486a-9db9-139a79199cdc">Flagę państwową z godłem Rzeczypospolitej Polskiej podnoszą polskie statki morskie jako banderę, zgodnie z obowiązującymi w tym zakresie przepisami szczególnymi; ponadto do bandery stosuje się prawo i zwyczaje międzynarodowe.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/299__art_9__ust_2" gd:GUID="31928ae2-5c1d-4a1d-a9d3-41599fe6c329">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="715b306e-9afa-43db-ab96-5a45d99330b1" fragment="1" gd:fragmentGUID="dae9929b-6dfc-4ab5-a07b-085cb7511077">Statki morskie pełniące specjalną służbę państwową podnoszą także flagę oznaczającą pełnienie tej służby.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/299__art_9__ust_3" gd:GUID="4bb685e1-c997-4668-b468-d0092b5b81c4">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="dd59f38c-b493-4fe0-ac60-4cf329e54d78" fragment="1" gd:fragmentGUID="7485e7ba-272c-45ee-851e-e6fd6f1958fa">Minister właściwy do spraw gospodarki morskiej ustala wzory flag na oznaczenie pełnionej specjalnej służby państwowej oraz okoliczności i warunki ich podnoszenia.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/299__art_10" gd:GUID="469c5f65-0c71-4fb0-a408-69ca897e106a">
+        <nr>10</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="e9f5eb73-1cee-440a-9169-6358c14ead41">
+          <p>
+            <zdanie nr="1" gd:zdGUID="ca3f957b-2458-4069-8ddb-ff0b348cf304" fragment="1" gd:fragmentGUID="0fde7f19-df09-4102-bb21-1e91cf41c4cc">Przepisy wydane na podstawie ustawy mogą przewidywać obowiązek podnoszenia flagi państwowej Rzeczypospolitej Polskiej także w innych wypadkach niż określone w art. 7–9.</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2025/299__art_11" gd:GUID="96d82efc-97f7-4683-87ff-96957d755932">
+        <nr>11</nr>
+        <ustep eId="DU/2025/299__art_11__ust_1" gd:GUID="e5f9b1be-6011-4ba3-8c48-8774ed828eae">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="04bcb36a-43a3-4248-b47a-a9e711876275" fragment="1" gd:fragmentGUID="9404725b-4856-47d8-97ff-0c4ac3573e1a">Prezydent Rzeczypospolitej Polskiej może, w drodze rozporządzenia, wprowadzić żałobę narodową na terytorium Rzeczypospolitej Polskiej.</zdanie>
+            <zdanie nr="2" gd:zdGUID="d666ff81-4f7e-4289-9aba-baa3c0960082" fragment="1" gd:fragmentGUID="110d8011-b2bd-4c1a-b5fe-064478b2518f">Rozporządzenie w szczególności powinno określać przyczyny wprowadzenia oraz czas trwania żałoby narodowej, uwzględniając uwarunkowania kulturowe i historyczne oraz przyjęte w tym zakresie zwyczaje.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/299__art_11__ust_2" gd:GUID="1f1c0198-b392-4b90-9b4a-64468fa6b1e7">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="074c904c-2497-4248-9078-ade5b38efbb2" fragment="1" gd:fragmentGUID="5c7c73f3-27d7-4cca-bab8-e79b1aec35d8">W czasie trwania żałoby narodowej flagę państwową opuszcza się do połowy masztu.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/299__art_12" gd:GUID="9f4405e0-455c-436c-817e-9a0352be46a9">
+        <nr>12</nr>
+        <ustep eId="DU/2025/299__art_12__ust_1" gd:GUID="92fd7e35-8378-4890-8f8e-ed52ad638d0d">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="9a527c48-dde0-48f4-846d-a151f98fd899" fragment="1" gd:fragmentGUID="6d0a7cb7-7a34-4920-8e89-37e456b93643">Hymnem państwowym Rzeczypospolitej Polskiej jest „Mazurek Dąbrowskiego”.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/299__art_12__ust_2" gd:GUID="414be65d-a913-4303-a5f9-d30f6a5560ff">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="f7e3433c-0cc9-4b44-a4cd-c71c5a0ec714" fragment="1" gd:fragmentGUID="976f7d40-c616-4416-a629-9224827bd906">Tekst literacki hymnu państwowego zawiera załącznik nr 4.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/299__art_12__ust_3" gd:GUID="954d9618-73d6-455b-88b3-53b5c61d1c80">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="abd2a70c-515b-4206-b974-5d2311f771fb" fragment="1" gd:fragmentGUID="53c50da9-4c4f-4bf0-b150-ad6284be0f1b">Tekst muzyczny hymnu państwowego w układach: na jeden głos, na fortepian oraz na głos i fortepian zawiera załącznik nr 5.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/299__art_12__ust_4" gd:GUID="8db6b4bc-79f2-418c-b538-682730ed0175">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="4636408e-ab33-4294-a9de-2f3ba13a5a81" fragment="1" gd:fragmentGUID="da51aec8-f32d-4a68-ba99-9075f0e9340b"><i>Minister Kultury i Sztuki</i><odnosnik id-odnosnika="3" symbol="3" gd:GUID="fa67bf10-e2e5-4c98-8b61-7ad8445f6b7d"><p><zdanie nr="1" gd:zdGUID="7dc87c12-46cc-4043-948e-bb27df0ab56d" fragment="1" gd:fragmentGUID="2b71d46d-065b-4a49-ad4e-f9993e17a2bf">Obecnie minister właściwy do spraw kultury i ochrony dziedzictwa narodowego zgodnie z art. 4 ust. 1, art. 5 pkt 9 i art. 14 ustawy, o której mowa w odnośniku 2.</zdanie></p></odnosnik> zatwierdza tekst muzyczny hymnu państwowego w układach: na zespoły chóralne, instrumentalne i instrumentalno-wokalne.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/299__art_13" gd:GUID="0744b602-c101-41be-a1e6-fb697c0ffd8b">
+        <nr>13</nr>
+        <ustep eId="DU/2025/299__art_13__ust_1" gd:GUID="7d0fc93e-a602-45d0-9f34-31027bedbb5e">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="e4a5f726-91b3-4126-b690-a56be5bba24a" fragment="1" gd:fragmentGUID="6340ec9f-b389-4481-9a9c-ea92edd4baf3">Hymn państwowy wykonuje się lub odtwarza publicznie w układach, o których mowa w art. 12.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/299__art_13__ust_2" gd:GUID="dea67e0e-6c88-4a56-9f35-bdae8d86d163">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a2959617-0a5d-4b1e-a800-857ac08bfd36" fragment="1" gd:fragmentGUID="b03a17e3-0ca0-4d44-9229-6cfd527b1012">Publicznie hymn państwowy wykonuje się lub odtwarza w szczególności w czasie uroczystości oraz świąt i rocznic państwowych.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/299__art_13__ust_3" gd:GUID="fda5a8a3-9b24-4ecc-852b-fd6a8aacff42">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="2aac6325-1523-439b-a15d-7c7e878ec40d" fragment="1" gd:fragmentGUID="19319842-32c5-4d03-adfe-1cbbd95a9e65">(uchylony)</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/299__art_14" gd:GUID="96d1dad0-1891-45f4-9f7d-5306c9bc7e05">
+        <nr>14</nr>
+        <ustep eId="DU/2025/299__art_14__ust_1" gd:GUID="a75e2cf8-3ca9-4456-a605-5bfdff41c5f3">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="93a2ee96-5123-4468-a266-376cb854edb2" fragment="1" gd:fragmentGUID="744210e4-2370-4775-b95e-2d2568166f6c">Podczas wykonywania lub odtwarzania hymnu państwowego obowiązuje zachowanie powagi i spokoju.</zdanie>
+            <zdanie nr="2" gd:zdGUID="44849056-5426-45d2-befe-aae049084494" fragment="1" gd:fragmentGUID="71bda201-2227-430b-81ee-2b9a60b86375">Osoby obecne podczas publicznego wykonywania lub odtwarzania hymnu stoją w postawie wyrażającej szacunek, a ponadto mężczyźni w ubraniach cywilnych – zdejmują nakrycia głowy, zaś osoby w umundurowaniu obejmującym nakrycie głowy, niebędące w zorganizowanej grupie – oddają honory przez salutowanie.</zdanie>
+            <zdanie nr="3" gd:zdGUID="f49ba914-7435-4ef5-b3aa-9415fcabb94a" fragment="1" gd:fragmentGUID="2f6349a6-fe5d-4206-abd8-0e68739f2e30">Poczty sztandarowe podczas wykonywania lub odtwarzania hymnu oddają honory przez pochylenie sztandaru.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/299__art_14__ust_2" gd:GUID="d9c359d7-d4dd-43c7-b04b-32b4c8d0c983">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="d1e01a10-9b50-4ca9-b4fe-7d588fab495f" fragment="1" gd:fragmentGUID="ae9a1797-a051-4c70-91e6-0f659f7df151">Przepisy wydane na podstawie ustawy określają zachowanie się osób w umundurowaniu, występujących w zorganizowanej grupie.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/299__art_15" gd:GUID="12cc6cca-992d-4245-83e0-a2727fcc3c5b">
+        <nr>15</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="986d6c19-56cb-48bc-aeb3-c80264b967b3">
+          <p>
+            <zdanie nr="1" gd:zdGUID="8fdb7696-0e0e-44a0-a9be-235f046f004f" fragment="1" gd:fragmentGUID="b3083121-10bb-4fa7-a0c6-f8d214825156">Godło i barwy Rzeczypospolitej Polskiej są umieszczane, a hymn Rzeczypospolitej Polskiej wykonywany lub odtwarzany w sposób zapewniający im należną cześć i szacunek.</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2025/299__art_16" gd:GUID="c3d5c083-c429-48e5-9c4d-a8ee7bfc1255">
+        <nr>16</nr>
+        <ustep eId="DU/2025/299__art_16__ust_1" gd:GUID="c4b1abcc-54a0-4eb4-b217-ad1c0e37aa68">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="2d1ec172-0a1f-4a87-a95a-a367acb9c976" fragment="1" gd:fragmentGUID="aa0c7b99-05dd-4709-b486-488ce8254150">Symbole Rzeczypospolitej Polskiej nie mogą być umieszczane na przedmiotach przeznaczonych do obrotu handlowego.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/299__art_16__ust_2" gd:GUID="0b3f54ac-eeee-46ad-aac8-1f03fde6f614">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="9eabf7d6-43b7-4503-9bbe-e26f8895517c" fragment="1" gd:fragmentGUID="bad2e9e9-7fec-457f-83cc-7392c82757d5">Dozwolone jest umieszczanie na przedmiotach przeznaczonych do obrotu handlowego godła lub barw Rzeczypospolitej Polskiej w formie stylizowanej lub artystycznie przetworzonej.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/299__art_16a" gd:GUID="ac3165b7-2de0-4a0a-bbff-5304c06bc128">
+        <nr>16a</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="f5fde3aa-4500-4af0-9a51-85e30f426dac">
+          <p>
+            <zdanie nr="1" gd:zdGUID="a88cc7e6-19a1-4b6a-8e84-c9615ba9fa59" fragment="1" gd:fragmentGUID="c8f549ef-a6fa-4ed9-80b6-1d0174ee3bc1">Pieczęcią Rzeczypospolitej Polskiej jest metalowa, tłoczona pieczęć okrągła średnicy 77 mm, zawierająca pośrodku wizerunek orła ustalony dla godła Rzeczypospolitej Polskiej, a w otoku napis „Rzeczpospolita Polska”.</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2025/299__art_16b" gd:GUID="7a1fc58c-1728-482c-b84d-f4b0c8c85c42">
+        <nr>16b</nr>
+        <ustep eId="DU/2025/299__art_16b__ust_1" gd:GUID="7d82f5f5-0b14-43ae-95b9-7adbdb6b3337">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="d80c17c9-9bd2-4277-b3bb-3f1f712311c4" fragment="1" gd:fragmentGUID="7b6e0f9d-b247-46f6-8cd8-03a12ee376fc">Pieczęcią Sejmu Rzeczypospolitej Polskiej jest metalowa, tłoczona pieczęć okrągła średnicy 62 mm, zawierająca pośrodku wizerunek orła ustalony dla godła Rzeczypospolitej Polskiej, a w otoku napis „Sejm Rzeczypospolitej Polskiej”.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/299__art_16b__ust_2" gd:GUID="2f0f655f-5a79-4004-a453-dc2f35691fe6">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="1791f837-6b2d-479f-9cbb-11b265afa422" fragment="1" gd:fragmentGUID="8ab076a0-c2a3-4bfe-9135-8c9c8bd83a9f">Pieczęcią Senatu Rzeczypospolitej Polskiej jest metalowa, tłoczona pieczęć okrągła średnicy 62 mm, zawierająca pośrodku wizerunek orła ustalony dla godła Rzeczypospolitej Polskiej, a w otoku napis „Senat Rzeczypospolitej Polskiej”.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/299__art_16b__ust_3" gd:GUID="0a7854b9-c717-44f3-994c-82c75994b58b">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="643f8199-59f3-4c1e-82bf-ea7bf7e0f076" fragment="1" gd:fragmentGUID="7829841c-51ac-4e37-a38f-8dbfecd3f5fe">Pieczęcią Prezydenta Rzeczypospolitej Polskiej jest metalowa, tłoczona pieczęć okrągła średnicy 62 mm, zawierająca pośrodku wizerunek orła ustalony dla godła Rzeczypospolitej Polskiej, a w otoku napis „Prezydent Rzeczypospolitej Polskiej”.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/299__art_16c" gd:GUID="970413a1-04d7-4293-ac1a-a6af6b07e74c">
+        <nr>16c</nr>
+        <ustep eId="DU/2025/299__art_16c__ust_1" gd:GUID="6e1a4ca7-e9da-4e09-817f-27cf2bca4abc">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a49bed76-4c0a-43e4-9f8a-e9702944dc57" fragment="1" gd:fragmentGUID="2380d89e-578a-47c1-81b9-2f6d85a488e4">Urzędową pieczęcią jest metalowa, tłoczona pieczęć okrągła zawierająca pośrodku wizerunek orła ustalony dla godła Rzeczypospolitej Polskiej, a w otoku napis odpowiadający nazwie podmiotu uprawnionego do używania urzędowej pieczęci.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/299__art_16c__ust_2" gd:GUID="a542c27c-5544-407e-aa39-3b4e73e3d1b3">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="d80e3582-e2b6-424d-907a-9a71e2748cb1" fragment="1" gd:fragmentGUID="7ea2f997-4489-4aa9-9627-18d15759a27a">Urzędową pieczęcią gminy, powiatu, samorządu województwa lub związku jednostek samorządu terytorialnego może być również pieczęć, o której mowa w ust. 1, zawierająca pośrodku, zamiast wizerunku orła ustalonego dla godła Rzeczypospolitej Polskiej, odpowiednio herb gminy, powiatu lub województwa.</zdanie>
+            <zdanie nr="2" gd:zdGUID="4bb0744e-9f15-4f1c-a55c-b9929ca46d87" fragment="1" gd:fragmentGUID="afd77c46-e9af-4d89-a0b9-a98628faefd2">Odcisk pieczęci z herbem nie może być umieszczany na dokumentach urzędowych w sprawach z zakresu administracji rządowej.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/299__art_16c__ust_3" gd:GUID="627c77d4-51cd-4a6f-87ef-b984c56101b1">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="6c0fefb0-2418-45d8-8319-8bfe5da80e59" fragment="1" gd:fragmentGUID="c5ec1f27-9ef2-4ed3-ba55-218de3c6dfff">Urzędowej pieczęci używają podmioty, o których mowa w art. 2a.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/299__art_16d" gd:GUID="164c6c3f-e8ef-4dfc-9f23-e68177ac9243">
+        <nr>16d</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="c31a813c-12b2-428a-ae56-0b7407b6559f">
+          <p>
+            <zdanie nr="1" gd:zdGUID="730a6351-7e5f-48c5-a116-c5d5903dda3e" fragment="1" gd:fragmentGUID="4734db04-fec2-4549-bc35-35c8f6b9edab">Rada Ministrów określi, w drodze rozporządzenia, wymiary oraz sposób używania i strzeżenia urzędowych pieczęci, a także tryb zamawiania i sposób wyrobu urzędowych pieczęci oraz nadzór nad ich wyrobem, uwzględniając w szczególności konieczność zapobieżenia utracie urzędowych pieczęci przez uprawnione podmioty.</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2025/299__art_17" gd:GUID="ccc7ae81-5826-407e-bc00-db3e7fc0439b">
+        <nr>17</nr>
+        <ustep eId="DU/2025/299__art_17__ust_1" gd:GUID="1c698b89-d50e-4f34-8806-c96ebef5f7c5">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="6cc342f0-216c-4270-ab82-a3ceeadc5216" fragment="1" gd:fragmentGUID="302ae915-025d-40e7-b8bd-3b8d1efb863a">Prezydent Rzeczypospolitej Polskiej, w drodze rozporządzenia:</zdanie>
+          </p>
+          <punkt eId="DU/2025/299__art_17__ust_1__pkt_1" gd:GUID="8797bc05-5d04-45af-b50e-2f24364bb526">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="6cc342f0-216c-4270-ab82-a3ceeadc5216" fragment="2" gd:fragmentGUID="e3043923-6597-4360-b896-c4e7b7e71d48">wydaje przepisy przewidziane w art. 10 oraz art. 14 ust. 2,</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/299__art_17__ust_1__pkt_2" gd:GUID="f604692e-9157-4810-a2f5-744c19d6ee1f">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="6cc342f0-216c-4270-ab82-a3ceeadc5216" fragment="3" gd:fragmentGUID="80cda258-bf8a-4440-b4b8-49c9752ad111">może ustalać zasady obchodów świąt i rocznic państwowych oraz innych uroczystości o zasięgu państwowym lub lokalnym</zdanie>
+            </p>
+          </punkt>
+          <czesc-wspolna-punkt eId="DU/2025/299__art_17__ust_1__czw" gd:GUID="d89bee9b-867d-4da9-b460-fc8f90cdd275">
+            <p>
+              <zdanie nr="1" gd:zdGUID="6cc342f0-216c-4270-ab82-a3ceeadc5216" fragment="4" gd:fragmentGUID="a598de2b-a822-453a-a31d-25659f448d00">– biorąc pod uwagę uwarunkowania kulturowe i historyczne oraz przyjęte w tym zakresie zwyczaje, kierując się w szczególności potrzebami społeczności lokalnych.</zdanie>
+            </p>
+          </czesc-wspolna-punkt>
+        </ustep>
+        <ustep eId="DU/2025/299__art_17__ust_2" gd:GUID="d9fbc592-41a6-425e-b3ad-653ff062761e">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="f190a8a8-84e5-477d-aee7-834fde6c19fe" fragment="1" gd:fragmentGUID="f2902c07-124c-412b-b91b-92ba6c2a6d03">Minister Obrony Narodowej określi, w drodze zarządzenia, sposób i okoliczności stosowania symboli Rzeczypospolitej Polskiej w jednostkach Sił Zbrojnych Rzeczypospolitej Polskiej, uwzględniając rodzaj jednostki Sił Zbrojnych Rzeczypospolitej Polskiej.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/299__art_18" gd:GUID="552b0ef7-2fff-4f2b-b465-a02bb3a67138">
+        <nr>18</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="a1652209-d3ed-4d73-a296-daed561e31c2">
+          <p>
+            <zdanie nr="1" gd:zdGUID="05c791a0-1a3b-4231-ad77-e45d4254ae6f" fragment="1" gd:fragmentGUID="79781f12-f801-4aa8-b1b1-85b7cf691111">Traci moc dekret z dnia 7 grudnia 1955 r. o godle i barwach Polskiej Rzeczypospolitej Ludowej oraz o pieczęciach państwowych (Dz. U. poz. 314, z 1956 r. poz. 43 oraz z 1957 r. poz. 42)<odnosnik id-odnosnika="4" symbol="4" gd:GUID="b76d17fd-bd01-4f30-bae9-819e28cb93be"><p><zdanie nr="1" gd:zdGUID="e350febe-d39c-4b8d-9d28-e10edff01fb6" fragment="1" gd:fragmentGUID="e1b6acea-c649-4ec6-a5db-dc8fb1076a6b">Dekret z dnia 7 grudnia 1955 r. o godle i barwach Polskiej Rzeczypospolitej Ludowej oraz o pieczęciach państwowych utracił moc z dniem 24 września 2005 r. na podstawie art. 3 ustawy z dnia 28 lipca 2005 r. o zmianie ustawy o godle, barwach i hymnie Rzeczypospolitej Polskiej (Dz. U. poz. 1439), która weszła w życie z dniem 24 września 2005 r.</zdanie></p></odnosnik> w części dotyczącej godła i barw Polskiej Rzeczypospolitej Ludowej.</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2025/299__art_19" gd:GUID="13ea5d03-0e07-4111-846f-df9b3b8eacdd">
+        <nr>19</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="fc6165ae-8a43-4ed0-b460-272e189fa335">
+          <p>
+            <zdanie nr="1" gd:zdGUID="5bdc958e-b5f7-47ef-998e-4dd502a00051" fragment="1" gd:fragmentGUID="defec56a-0282-4f77-bf35-ecd9594fea0a">Ustawa wchodzi w życie z dniem ogłoszenia<odnosnik id-odnosnika="5" symbol="5" gd:GUID="9653f31e-d475-47b8-adec-6d9fe8765c26"><p><zdanie nr="1" gd:zdGUID="44f9c899-77db-4c86-8a7b-f18e2d64adaf" fragment="1" gd:fragmentGUID="f5a0a183-4c30-4d5e-b8e6-19408369d4b6">Ustawa została ogłoszona w dniu 11 marca 1980 r.</zdanie></p></odnosnik>.</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+      <zalacznik eId="DU/2025/299__zal_1" gd:GUID="d7da5b6a-2d97-45f0-bc82-be9611d15c11">
+        <zalacznik-do gd:GUID="5d6b01b3-9d81-477c-a3ed-fdcf7acf1aec">Załączniki do ustawy z dnia 31 stycznia 1980 r. (Dz. U. z 2025 r. poz. 299)</zalacznik-do>
+        <zalacznik-nr gd:GUID="dc1857e7-8f48-436f-a1f8-b00450c953bc">
+          <nr>1</nr>
+        </zalacznik-nr>
+        <segment-zalacznika gd:GUID="9b706809-f4dd-45e7-a08d-f23960584b6e" orientacja="pionowa">
+          <tekst-zwykly gd:GUID="ad2f95ad-8589-4f20-8fc8-d0cf7cfd7c09">uwaga: Biel i czerwień zgodnie z barwami RP</tekst-zwykly>
+        </segment-zalacznika>
+      </zalacznik>
+      <zalacznik eId="DU/2025/299__zal_2" gd:GUID="448c027b-2958-459f-9363-388ae0ec1e70">
+        <zalacznik-nr gd:GUID="bf0f01b7-979b-421f-ba03-d509916aea16">
+          <nr>2</nr>
+        </zalacznik-nr>
+        <tytul-zalacznika gd:GUID="559e3c5b-e562-4829-9436-6138dce323d9">BarwaxyYΔ Ebiała0,3150,32082,04,0czerwona0,5700,30516,08,0BarwaxyYΔ Ebiała0,3150,32082,04,0czerwona0,5700,30516,08,0Barwy Rzeczypospolitej PolskiejBarwy Rzeczypospolitej PolskiejWspółrzędne trójchromatyczne barw x, y, ich składowa Y oraz dopuszczalna różnica barwy Δ E w przestrzeni barw CIE 1976 (L* u* v*) ustalona według wzoru CIELUV przy iluminacie C i geometrii pomiarowej d/0Współrzędne trójchromatyczne barw x, y, ich składowa Y oraz dopuszczalna różnica barwy Δ E w przestrzeni barw CIE 1976 (L* u* v*) ustalona według wzoru CIELUV przy iluminacie C i geometrii pomiarowej d/0</tytul-zalacznika>
+        <segment-zalacznika gd:GUID="4ad8dc5b-8c65-4dba-b0ac-fb61ec3b0042" orientacja="pionowa">
+          <tabela gd:GUID="51a5e6d0-e737-4d50-9f0a-f2b28595c56c">
+            <tbody>
+              <tr gd:GUID="f27789ca-279c-4e18-af2e-a0a87872e4e7">
+                <td gd:GUID="0bb38716-d2e4-4408-acc0-01c82f4c154f">
+                  <tekst-zwykly gd:GUID="6a785173-7fc6-49c0-af3b-093737f491f0">Barwa</tekst-zwykly>
+                </td>
+                <td gd:GUID="651597d1-857c-4ae6-b679-9ed2d2bd080c">
+                  <tekst-zwykly gd:GUID="965a134e-ebdf-43ef-b007-8b9b68c4d1f5">x</tekst-zwykly>
+                </td>
+                <td gd:GUID="f7181df5-b3ef-4380-935d-a88ce2280025">
+                  <tekst-zwykly gd:GUID="c70d5221-fc94-4316-a646-a1cc4ed605c2">y</tekst-zwykly>
+                </td>
+                <td gd:GUID="53e7399d-f4b5-48db-8426-e04e5ebd118d">
+                  <tekst-zwykly gd:GUID="fe6b2a6a-40e4-4498-9861-8283b0782b2a">Y</tekst-zwykly>
+                </td>
+                <td gd:GUID="4c86bf19-d4be-4db4-8bee-9ecaf62f865c">
+                  <tekst-zwykly gd:GUID="55c02a39-8b6c-4b6b-98c8-c867b58b621e">Δ E</tekst-zwykly>
+                </td>
+              </tr>
+              <tr gd:GUID="890ace4e-42ee-450f-a5e3-03d80c0fe1aa">
+                <td gd:GUID="7f9ad876-4351-44ab-b801-8bb19b390453">
+                  <tekst-zwykly gd:GUID="6bc10bad-3bc0-41d0-bf94-bdad5abcb215">biała</tekst-zwykly>
+                </td>
+                <td gd:GUID="d8369634-ef81-43ca-b8c0-8fbf4b15cfa1">
+                  <liczba gd:GUID="f5b0c46f-392a-4a12-acea-ac1a2728df9f">0,315</liczba>
+                </td>
+                <td gd:GUID="e50155e7-fc0f-48c6-8ec1-45aed44b3319">
+                  <liczba gd:GUID="dac8a697-9b6b-47ee-82fe-5667f53a1580">0,320</liczba>
+                </td>
+                <td gd:GUID="18230dd7-7f53-421b-8e64-938d8c3ef296">
+                  <liczba gd:GUID="f0cae0d8-a0b3-40d8-ba4f-4d9ba324813d">82,0</liczba>
+                </td>
+                <td gd:GUID="8d33967f-e1e5-40d0-ac92-e33bd3f13f93">
+                  <liczba gd:GUID="89b6fb9b-e8d1-4cb2-9242-8e05abd1cc59">4,0</liczba>
+                </td>
+              </tr>
+              <tr gd:GUID="e5d892d8-aeb8-4534-a066-fa5b98f3fc49">
+                <td gd:GUID="4128b02c-e4e7-4dea-8991-cdebb2a9b22b">
+                  <tekst-zwykly gd:GUID="66fb3654-6404-4e25-b39b-4ed013ed4dd4">czerwona</tekst-zwykly>
+                </td>
+                <td gd:GUID="fc9d6afc-8a44-4da7-bb36-c2c180e1f684">
+                  <liczba gd:GUID="a6e4460f-9648-4c6a-bd2c-7fe5fef7aa75">0,570</liczba>
+                </td>
+                <td gd:GUID="360ef6ae-979a-4fab-82b8-d3f4499cbf9b">
+                  <liczba gd:GUID="4133a06a-2ce1-45cd-b7ff-6f689d481079">0,305</liczba>
+                </td>
+                <td gd:GUID="a6509a06-43e2-4e32-823c-8dc8628b5636">
+                  <liczba gd:GUID="9b3aabdb-b2c4-4879-8d66-45ca8d456b84">16,0</liczba>
+                </td>
+                <td gd:GUID="1873e3aa-ce42-4677-a569-9010433a759a">
+                  <liczba gd:GUID="64b9f37f-c716-420c-a7c3-f9796ee1a63a">8,0</liczba>
+                </td>
+              </tr>
+            </tbody>
+          </tabela>
+          <tabela gd:GUID="8d6635ca-d95c-4b10-887c-107cd70792b3">
+            <tbody>
+              <tr gd:GUID="3c30f13e-3fdc-4104-935b-a0665c41e2ab">
+                <td gd:GUID="2757aaa0-e1fe-4765-9047-13d23fdde7c5">
+                  <tekst-zwykly gd:GUID="09deb692-a46e-4d0d-9bd6-aee503880ca5">Barwa</tekst-zwykly>
+                </td>
+                <td gd:GUID="c52549e5-6e0c-4c1e-89d5-3b230fb896c1">
+                  <tekst-zwykly gd:GUID="f265672d-3b2e-4d59-ae92-1e7e64b8a13f">x</tekst-zwykly>
+                </td>
+                <td gd:GUID="f7b760a7-004e-4890-8182-c074d8073b8e">
+                  <tekst-zwykly gd:GUID="1923309c-0b79-4156-88ec-55ab061b48c0">y</tekst-zwykly>
+                </td>
+                <td gd:GUID="b6528fdf-7acc-4780-8d51-b24beb04a870">
+                  <tekst-zwykly gd:GUID="8a78f756-5814-49fd-ac1e-02a1a5a1d125">Y</tekst-zwykly>
+                </td>
+                <td gd:GUID="e4c1311f-0ee1-4415-a42f-c218cdda99b2">
+                  <tekst-zwykly gd:GUID="d4b18eb0-4067-4b2c-9a09-106c8a0ee06d">Δ E</tekst-zwykly>
+                </td>
+              </tr>
+              <tr gd:GUID="8a23bb24-7980-4bbd-97a1-091ecb89ee7a">
+                <td gd:GUID="38e6012b-cc05-4e9d-9490-eabdd22dd62e">
+                  <tekst-zwykly gd:GUID="c37da4a1-8412-4e55-b8fd-09e8cf30bd83">biała</tekst-zwykly>
+                </td>
+                <td gd:GUID="5c7b7ea6-bd57-4365-8987-bf127658b2db">
+                  <liczba gd:GUID="6f65bbcd-8812-4459-bfba-dc11a10e7c36">0,315</liczba>
+                </td>
+                <td gd:GUID="e69ebeef-c649-4d26-b356-69e3fce01d1f">
+                  <liczba gd:GUID="3a342c0f-b5c4-42ef-8bad-411665f018f2">0,320</liczba>
+                </td>
+                <td gd:GUID="85ba910c-e51d-40a4-8ddc-549937c6066f">
+                  <liczba gd:GUID="d31c2f36-7a5e-46ec-8526-346d28e02566">82,0</liczba>
+                </td>
+                <td gd:GUID="dfdfb336-0338-4bc7-9dda-f0d45e46104c">
+                  <liczba gd:GUID="496c05ef-b85d-40cf-b034-9ddd1847a78d">4,0</liczba>
+                </td>
+              </tr>
+              <tr gd:GUID="a4bb584c-3f33-4bdb-9dda-70a2f76d446d">
+                <td gd:GUID="ed069527-1fa9-48a1-9b24-8006cfaff25f">
+                  <tekst-zwykly gd:GUID="c9cae936-98f0-4418-8164-f2d0054eec52">czerwona</tekst-zwykly>
+                </td>
+                <td gd:GUID="5c30e072-630c-4c83-adaf-346733665220">
+                  <liczba gd:GUID="b24f856c-2e1a-4e63-b87e-b751f2f85a7f">0,570</liczba>
+                </td>
+                <td gd:GUID="87caf283-29b6-46df-9dea-f439eddcd019">
+                  <liczba gd:GUID="9ba2a5ad-57aa-48b8-8cc6-c5166b23baae">0,305</liczba>
+                </td>
+                <td gd:GUID="50fe03bb-f6ba-4dbe-8aa4-553fca890645">
+                  <liczba gd:GUID="c35adc64-bb6c-4d72-a2d2-c4fff8b91d97">16,0</liczba>
+                </td>
+                <td gd:GUID="342776f1-ed97-468a-9638-e32418126778">
+                  <liczba gd:GUID="d8529f96-0d84-4f61-b3b9-22991f086d9b">8,0</liczba>
+                </td>
+              </tr>
+            </tbody>
+          </tabela>
+          <tekst-zwykly gd:GUID="73e0c5c4-558a-447e-864e-df23dc2c8af1">Barwy Rzeczypospolitej Polskiej</tekst-zwykly>
+          <tekst-zwykly gd:GUID="e04d3647-1fb8-43a9-b72f-e982614c8561">Barwy Rzeczypospolitej Polskiej</tekst-zwykly>
+          <tekst-zwykly gd:GUID="24c0e0fe-fb55-4c4c-a20c-0a3afcca4e11">Współrzędne trójchromatyczne barw x, y, ich składowa Y oraz dopuszczalna różnica barwy Δ E w przestrzeni barw CIE 1976 (L* u* v*) ustalona według wzoru CIELUV przy iluminacie C i geometrii pomiarowej d/0</tekst-zwykly>
+          <tekst-zwykly gd:GUID="85cfb060-3ddd-4db0-8618-0af0b1b6c73e">Współrzędne trójchromatyczne barw x, y, ich składowa Y oraz dopuszczalna różnica barwy Δ E w przestrzeni barw CIE 1976 (L* u* v*) ustalona według wzoru CIELUV przy iluminacie C i geometrii pomiarowej d/0</tekst-zwykly>
+          <tekst-zwykly gd:GUID="0b736ee7-15c4-4ef6-a1f5-89edcd5db7d5">Stosunek szerokości flagi do jej długości – wynosi 5:8Stosunek szerokości flagi do jej długości – wynosi 5:8Załącznik nr 3</tekst-zwykly>
+          <tekst-zwykly gd:GUID="2586223d-abe0-4d72-b43f-ac9ea4081981">Stosunek szerokości flagi do jej długości – wynosi 5:8</tekst-zwykly>
+          <tekst-zwykly gd:GUID="96adad49-7be6-4fc8-ab9f-4d34e381fa60">Stosunek szerokości flagi do jej długości – wynosi 5:8</tekst-zwykly>
+          <tekst-zwykly gd:GUID="af83fb9d-e023-420d-8286-99d70178ad46">Flaga państwowa Rzeczypospolitej Polskiej</tekst-zwykly>
+          <tekst-zwykly gd:GUID="7f92ef81-9d69-439a-8d8c-5033941ae594">Stosunek wysokości godła do szerokości flagi – wynosi 2:5Stosunek wysokości godła do szerokości flagi – wynosi 2:5</tekst-zwykly>
+          <tekst-zwykly gd:GUID="1ee7f84b-3940-460c-8f4e-27e2b13e01b3">Stosunek wysokości godła do szerokości flagi – wynosi 2:5</tekst-zwykly>
+          <tekst-zwykly gd:GUID="eb70c9e1-a0d8-4ce4-9d03-7d1215ebcea7">Stosunek wysokości godła do szerokości flagi – wynosi 2:5</tekst-zwykly>
+          <tekst-zwykly gd:GUID="21da333d-9c8f-4966-99ad-906239794d7a">Flaga państwowa z godłem Rzeczypospolitej Polskiej</tekst-zwykly>
+          <tekst-zwykly gd:GUID="1fbc1fc4-588c-4d9f-8639-57cffcc65622">uwaga: Biel i czerwień zgodnie z barwami RP</tekst-zwykly>
+        </segment-zalacznika>
+      </zalacznik>
+      <zalacznik eId="DU/2025/299__zal_4" gd:GUID="1d0a5d87-43f2-4d94-96bc-cb3ee32f1ca7">
+        <zalacznik-nr gd:GUID="9d4a608e-0d6f-4779-84d0-2c74007b534e">
+          <nr>4</nr>
+        </zalacznik-nr>
+      </zalacznik>
+      <zalacznik eId="DU/2025/299__zal_5" gd:GUID="510986c3-45b0-4a2e-8987-45d3972aa65c">
+        <zalacznik-nr gd:GUID="7c4ef605-d581-4b1e-b717-e5168fabd2aa">
+          <nr>5</nr>
+        </zalacznik-nr>
+      </zalacznik>
+    </ustawa>
+  </obwieszczenie>
+</akt-prawny>

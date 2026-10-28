@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <rozporzadzenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2026/285</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>c95eaf88-fd85-43f8-a158-51ac77b4b3fe</gd:GUIDwersji>
+      <AdresISAP>WDU20260000285</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2026</Rok>
+      <Pozycja>285</Pozycja>
+      <AdresWyswietlany>Dz.U. 2026 poz. 285</AdresWyswietlany>
+      <Tytul>Rozporządzenie Ministra Sprawiedliwości z dnia 3 marca 2026 r. zmieniające rozporządzenie w sprawie obiegu dokumentów związanych z postępowaniem dyscyplinarnym funkcjonariuszy Służby Więziennej</Tytul>
+      <Rodzaj>ROZP</Rodzaj>
+      <DataOgloszenia>2026-03-06</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2026-03-03</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2026-03-21_DU-2026-285_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2026-03-21" warunek="po upływie 14 dni od dnia ogłoszenia" podstawa="§ 2" zrodlo="https://eli.gov.pl/eli/DU/2026/285" dowod="DU/2026/285__art_2" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2026-03-21_DU-2026-285_domyslne.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2026-03-21_DU-2026-285_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="1ad6b7e8-3257-4355-b2a5-70f6d2791698" rola="wydajacy">
+          <Nazwa>Minister Sprawiedliwości</Nazwa>
+          <OrganPodpisujacy>Minister Sprawiedliwości</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>W.</imie> <nazwisko>Żurek</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Rozporządzenie</rodzaj-aktu>
+    <autor-aktu>Ministra Sprawiedliwości</autor-aktu>
+    <data>z dnia 3 marca 2026 r.</data>
+    <tytul>zmieniające rozporządzenie w sprawie obiegu dokumentów związanych z postępowaniem dyscyplinarnym funkcjonariuszy Służby Więziennej</tytul>
+    <podstawa-prawna>Na podstawie art. 264 ustawy z dnia 9 kwietnia 2010 r. o Służbie Więziennej (Dz. U. z 2025 r. poz. 1750 i 1823) zarządza się, co następuje:</podstawa-prawna>
+    <paragraf eId="DU/2026/285__art_1" gd:GUID="a1c08257-d997-4d25-bb2e-4c9e80d2c061" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-21_DU-2026-285_domyslne.x" wejscie-w-zycie="2026-03-21">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="3f48c0f6-c87f-4076-8a4c-adee65a70b9d" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-21_DU-2026-285_domyslne.x" wejscie-w-zycie="2026-03-21">
+        <p>
+          <zdanie nr="1" gd:zdGUID="c95f4218-7de3-4950-96c5-fd1e8dfa327e" fragment="1" gd:fragmentGUID="87e012d2-29a0-4a44-9b15-a8bbab8748ca" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-21_DU-2026-285_domyslne.x" wejscie-w-zycie="2026-03-21">W rozporządzeniu Ministra Sprawiedliwości z dnia 22 maja 2023 r. w sprawie obiegu dokumentów związanych z postępowaniem dyscyplinarnym funkcjonariuszy Służby Więziennej (Dz. U. poz. 1169) wprowadza się następujące zmiany:</zdanie>
+        </p>
+        <punkt eId="DU/2026/285__art_1__pkt_1" gd:GUID="2c78deee-230e-4e3f-8b95-6e6543f94af1" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-21_DU-2026-285_domyslne.x" wejscie-w-zycie="2026-03-21">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="c95f4218-7de3-4950-96c5-fd1e8dfa327e" fragment="2" gd:fragmentGUID="655b4f00-d8c6-43ba-879e-71ab05d4508e" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-21_DU-2026-285_domyslne.x" wejscie-w-zycie="2026-03-21"><now:zamien-tekst stary-tekst=", albo Szefa Inspektoratu Wewnętrznego Służby Więziennej" nowy-tekst="" element-eId="DU/2023/1169__art_9__pkt_27" akt="https://eli.gov.pl/eli/DU/2023/1169" gd:nowGUID="580f43eb-a29e-4e4a-9816-99e2f7433722" />w § 9 w pkt 27 skreśla się wyrazy „ , albo Szefa Inspektoratu Wewnętrznego Służby Więziennej”;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/285__art_1__pkt_2" gd:GUID="cc7e45b1-3241-4ab8-a597-9d9da98a6b14" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-21_DU-2026-285_domyslne.x" wejscie-w-zycie="2026-03-21">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="c95f4218-7de3-4950-96c5-fd1e8dfa327e" fragment="3" gd:fragmentGUID="dd5d6b6b-294f-4366-ba3a-1a1bc19609c6" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-21_DU-2026-285_domyslne.x" wejscie-w-zycie="2026-03-21"><now:zastap akt="https://eli.gov.pl/eli/DU/2023/1169" element-eId="DU/2023/1169__zal_27" akt-nowelizujacy="https://eli.gov.pl/eli/DU/2026/285" nowelizujacy-element-eId="DU/2026/285__zal_1" gd:nowGUID="96087efd-142f-43ab-b873-8849e0009696" />załącznik nr 27 do rozporządzenia otrzymuje brzmienie określone w załączniku do niniejszego rozporządzenia.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2026/285__art_2" gd:GUID="ee88eb84-2e1a-4c00-b640-6a823c000c31" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-21_DU-2026-285_domyslne.x" wejscie-w-zycie="2026-03-21">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="1b4816b4-2c64-4e8c-ad47-2c46de2fa77d" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-21_DU-2026-285_domyslne.x" wejscie-w-zycie="2026-03-21">
+        <p>
+          <zdanie nr="1" gd:zdGUID="4f4b6a1b-7615-4c3e-bf68-8b1f274c9deb" fragment="1" gd:fragmentGUID="318ee258-65d9-4e35-b4ef-db776aea64f5" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-21_DU-2026-285_domyslne.x" wejscie-w-zycie="2026-03-21">Rozporządzenie wchodzi w życie po upływie 14 dni od dnia ogłoszenia.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <organ-podpisujacy>Minister Sprawiedliwości: <i><osoba podpisujacy="true" gd:osobaGUID="c16ef4c1-33aa-46b1-97f2-ac427a63a5a2"><imie>W.</imie> <nazwisko>Żurek</nazwisko></osoba></i></organ-podpisujacy>
+    <zalacznik eId="DU/2026/285__zal_1" gd:GUID="dd992300-06e8-4e58-84c0-e1d2cb38fb8b">
+      <zalacznik-do gd:GUID="6b615c66-9091-47a4-a90e-f029ce8c7b3f">Załącznik do rozporządzenia Ministra Sprawiedliwości z dnia 3 marca 2026 r. (Dz. U. poz. 285)</zalacznik-do>
+      <tytul-zalacznika gd:GUID="6564fc8e-93c3-4f22-97e9-d77152c376d1">WZÓR</tytul-zalacznika>
+      <segment-zalacznika gd:GUID="2ced489a-2f51-4d85-8cf0-e7f46e7deee1" orientacja="pionowa">
+        <tekst-zwykly gd:GUID="4a89ace1-41af-4899-a47b-01708b9436ae">……………………………… / ………</tekst-zwykly>
+        <tekst-zwykly gd:GUID="ad3e80f5-89a2-4f12-965c-d4cfa8a42e32">(sygn. akt postępowania)</tekst-zwykly>
+        <tekst-zwykly gd:GUID="4094f522-da15-47f0-a4a2-8ab0855aa41a"><b>POSTANOWIENIE NR</b> ……</tekst-zwykly>
+        <tekst-zwykly gd:GUID="4e49b0c4-933b-4f7d-a784-ae0ad02ac6b3">Dyrektora Generalnego Służby Więziennej / Rektora-Komendanta uczelni Służby Więziennej / Ministra Sprawiedliwości*</tekst-zwykly>
+        <tekst-zwykly gd:GUID="6fd35623-a749-4b11-a2fc-cd86cde250d4">z dnia ……………………………………… r.</tekst-zwykly>
+        <tekst-zwykly gd:GUID="6471cb72-f3f5-4083-9984-885ec668a722">o przedłużeniu terminu prowadzenia czynności dowodowych na czas oznaczony dłuższy niż 3 miesiące</tekst-zwykly>
+        <tekst-zwykly gd:GUID="c996565f-5138-4fb6-b6d5-f069b36b182c">Na podstawie art. 250 ust. 1a i ust. 1b / ust. 1c* ustawy z dnia 9 kwietnia 2010 r. o Służbie Więziennej (Dz. U. z 2025 r. poz. 1750, z późn. zm.)</tekst-zwykly>
+        <tekst-zwykly gd:GUID="8f803d7c-9bd7-4377-961a-7cae71aeef3a">postanawiam</tekst-zwykly>
+        <tekst-zwykly gd:GUID="4741e9ea-a5af-4ebe-a251-e31d94564cc7">przedłużyć termin prowadzenia czynności dowodowych do dnia ……………………………………………………………</tekst-zwykly>
+        <tekst-zwykly gd:GUID="b93a416b-1a71-43bc-97a9-b542362cc0e8">w postępowaniu dyscyplinarnym wobec funkcjonariusza</tekst-zwykly>
+        <tekst-zwykly gd:GUID="5dd204b5-c93c-4985-9780-a940bcc5e09c">…………………………………………………………………………………………………………………………………</tekst-zwykly>
+        <tekst-zwykly gd:GUID="37d6f1c5-e49e-4ca0-be9b-e3c15fe5cde5">(stopień, imię i nazwisko, stanowisko służbowe obwinionego)</tekst-zwykly>
+        <tekst-zwykly gd:GUID="bc6eb9e0-78d9-45ad-ab52-bea3b848c9af">obwinionego o popełnienie przewinienia dyscyplinarnego określonego w / przewinień dyscyplinarnych określonych w*</tekst-zwykly>
+        <tekst-zwykly gd:GUID="c1f162cf-42aa-480c-b2a7-be03baaa6e2d">……………………………………………………………………………………………………….…………………………</tekst-zwykly>
+        <tekst-zwykly gd:GUID="3f712348-7526-455e-ba21-e50ae93fbf48">(kwalifikacja prawna)</tekst-zwykly>
+        <tekst-zwykly gd:GUID="bbef0257-c029-48d9-ab63-f88ebd32da1a">Uzasadnienie</tekst-zwykly>
+        <tekst-zwykly gd:GUID="9b593703-f02f-43c5-815a-736689aada54">……………………………………………………………………………………………………….…………………………</tekst-zwykly>
+        <tekst-zwykly gd:GUID="ac584721-914f-43b8-a635-5f11f15125c9">……………………………………………………………………………………………………….…………………………</tekst-zwykly>
+        <tekst-zwykly gd:GUID="091d835a-bcc2-40da-97de-db87d81aa056">……………………………………………………………………………………………………….…………………………</tekst-zwykly>
+        <tekst-zwykly gd:GUID="ce5ac241-30d1-4cd9-b762-f59a44be70c3">(uzasadnienie faktyczne i prawne)</tekst-zwykly>
+        <tekst-zwykly gd:GUID="1237de91-863d-47cc-8057-79e20efa6305">………………………………………………………</tekst-zwykly>
+        <tekst-zwykly gd:GUID="440b4c9f-c5a8-4ad0-a220-97ddc79e252d">(stopień, imię i nazwisko oraz podpis wydającego postanowienie)</tekst-zwykly>
+        <tekst-zwykly gd:GUID="aa0bbd25-06f5-4a63-ac50-45fe01431a0a">Pouczenie</tekst-zwykly>
+        <tekst-zwykly gd:GUID="133cbfe3-79b5-4d3a-bfb2-e999bd27fe81">Na niniejsze postanowienie nie przysługuje zażalenie.</tekst-zwykly>
+        <tekst-zwykly gd:GUID="906a524a-e835-4a6d-b040-5ecbca2d974e">* Niepotrzebne skreślić/usunąć.</tekst-zwykly>
+      </segment-zalacznika>
+    </zalacznik>
+  </rozporzadzenie>
+</akt-prawny>

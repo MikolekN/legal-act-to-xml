@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <ustawa>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2026/174</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>9b6fa7a7-bcbb-42f7-a883-7ce77a57512c</gd:GUIDwersji>
+      <AdresISAP>WDU20260000174</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2026</Rok>
+      <Pozycja>174</Pozycja>
+      <AdresWyswietlany>Dz.U. 2026 poz. 174</AdresWyswietlany>
+      <Tytul>Ustawa z dnia 9 stycznia 2026 r. o zmianie ustawy o gospodarce opakowaniami i odpadami opakowaniowymi, ustawy o odpadach oraz ustawy o zmianie ustawy o gospodarce opakowaniami i odpadami opakowaniowymi oraz niektórych innych ustaw</Tytul>
+      <Rodzaj>USTAWA</Rodzaj>
+      <DataOgloszenia>2026-02-17</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2026-01-09</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_moc-wsteczna_2026-01-01_DU-2026-174_odczytane" rodzaj="stosowanie-z-moca-wsteczna" pochodzenie="odczytane" data="2026-01-01" podstawa="art. 4" zrodlo="https://eli.gov.pl/eli/DU/2026/174" dowod="DU/2026/174__art_4">
+            <JednostkaAktu eId="DU/2026/174__art_3" />
+          </Zdarzenie>
+          <Zdarzenie id="zdarz_wejscie_2026-02-18_DU-2026-174_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2026-02-18" warunek="z dniem następującym po dniu ogłoszenia" podstawa="art. 4" zrodlo="https://eli.gov.pl/eli/DU/2026/174" dowod="DU/2026/174__art_4" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_moc-wsteczna.zdarz_moc-wsteczna_2026-01-01_DU-2026-174_odczytane.obowiazywanie.zdarz_wejscie_2026-02-18_DU-2026-174_domyslne.x" glowna="false">
+          <Przedzial rodzaj="stosowanie-z-moca-wsteczna" od="zdarz_moc-wsteczna_2026-01-01_DU-2026-174_odczytane" do="zdarz_wejscie_2026-02-18_DU-2026-174_domyslne" />
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2026-02-18_DU-2026-174_domyslne" />
+        </GrupaCzasowa>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2026-02-18_DU-2026-174_domyslne.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2026-02-18_DU-2026-174_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="5deba39c-adad-453f-93cf-3c65a17a37f7" rola="wydajacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Sejm">
+          <Nazwa>SEJM</Nazwa>
+        </Organ>
+        <Organ gd:GUID="90f90091-8e3f-4b65-b807-e9d56e3ce589" rola="podpisujacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Prezydent">
+          <Nazwa>Prezydent Rzeczypospolitej Polskiej</Nazwa>
+          <OrganPodpisujacy>Prezydent Rzeczypospolitej Polskiej</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>K.</imie> <nazwisko>Nawrocki</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Ustawa</rodzaj-aktu>
+    <data>z dnia 9 stycznia 2026 r.</data>
+    <tytul>o zmianie ustawy o gospodarce opakowaniami i odpadami opakowaniowymi, ustawy o odpadach oraz ustawy o zmianie ustawy o gospodarce opakowaniami i odpadami opakowaniowymi oraz niektórych innych ustaw</tytul>
+    <artykul eId="DU/2026/174__art_1" gd:GUID="87ec209d-bb27-4b77-aa3b-ec2e93fb1ceb" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-18_DU-2026-174_domyslne.x" wejscie-w-zycie="2026-02-18">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="7b30aba0-efb4-4a2d-a2dc-2cf1c47ac6f2" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-18_DU-2026-174_domyslne.x" wejscie-w-zycie="2026-02-18">
+        <p>
+          <zdanie nr="1" gd:zdGUID="feb69f4f-fe3b-45e0-ac1d-798dd2eb13d0" fragment="1" gd:fragmentGUID="4909437e-d4e1-425b-982a-e9cf91cacd6a" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-18_DU-2026-174_domyslne.x" wejscie-w-zycie="2026-02-18">W ustawie z dnia 13 czerwca 2013 r. o gospodarce opakowaniami i odpadami opakowaniowymi (Dz. U. z 2025 r. poz. 870 i 1812) wprowadza się następujące zmiany:</zdanie>
+        </p>
+        <punkt eId="DU/2026/174__art_1__pkt_1" gd:GUID="58f93a39-51d5-4f17-ae39-d1967f8ae045" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-18_DU-2026-174_domyslne.x" wejscie-w-zycie="2026-02-18">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="feb69f4f-fe3b-45e0-ac1d-798dd2eb13d0" fragment="2" gd:fragmentGUID="05c96d8d-456b-4842-9836-6aea1b492a9b" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-18_DU-2026-174_domyslne.x" wejscie-w-zycie="2026-02-18">w art. 21a:</zdanie>
+          </p>
+          <litera eId="DU/2026/174__art_1__pkt_1__lit_a" gd:GUID="01a43680-7513-444d-ac61-4e1b39f8297d" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-18_DU-2026-174_domyslne.x" wejscie-w-zycie="2026-02-18">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="feb69f4f-fe3b-45e0-ac1d-798dd2eb13d0" fragment="3" gd:fragmentGUID="f31a0ab5-0da5-431a-b1fb-8a7e8c73add4" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-18_DU-2026-174_domyslne.x" wejscie-w-zycie="2026-02-18">ust. 2 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2025/870" cudzyslowy="oba" gd:nowGUID="210c7766-ebd1-4c53-b9a9-635299d40312" element-eId="DU/2025/870__art_21a__ust_2" funkcja="zastap"><ustep eId="DU/2025/870__art_21a__ust_2" gd:GUID="76b93636-85ed-446a-8dbf-afab46d0e3aa" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-18_DU-2026-174_domyslne.x" wejscie-w-zycie="2026-02-18"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="4bafc0b8-545d-4aec-bf0c-6bde7dfcf58a" fragment="1" gd:fragmentGUID="98868d55-7716-4071-953b-e2543bfefcef" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-18_DU-2026-174_domyslne.x" wejscie-w-zycie="2026-02-18">Wprowadzający produkty w opakowaniach na napoje, o których mowa w poz. 3 załącznika nr 1a do ustawy, lub wprowadzający bezpośrednio produkty w opakowaniach na napoje są obowiązani osiągnąć poziomy selektywnego zbierania opakowań co najmniej w wysokości określonej w poz. 3 załącznika nr 1a do ustawy, przy czym obowiązek ten mogą wykonywać w ramach systemu kaucyjnego utworzonego przez podmiot reprezentujący albo samodzielnie w ramach systemu zbierania opakowań utworzonego i utrzymywanego przez tego wprowadzającego.</zdanie></p></ustep></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2026/174__art_1__pkt_1__lit_b" gd:GUID="0e42484d-0374-4322-8694-8bdd21bbfa63" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-18_DU-2026-174_domyslne.x" wejscie-w-zycie="2026-02-18">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="feb69f4f-fe3b-45e0-ac1d-798dd2eb13d0" fragment="4" gd:fragmentGUID="8dffd490-e55d-49f8-b417-e3cfa8b0e571" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-18_DU-2026-174_domyslne.x" wejscie-w-zycie="2026-02-18">po ust. 4 dodaje się ust. 4a w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2025/870" cudzyslowy="oba" gd:nowGUID="1d675ff4-7ac5-4adc-8d6e-2ef2ff893fd0" element-eId="DU/2025/870__art_21a__ust_4" funkcja="dodaj-po"><ustep eId="DU/2025/870__art_21a__ust_4a" gd:GUID="797fbcc9-2dda-44f9-b80c-4a341f636f4e" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-18_DU-2026-174_domyslne.x" wejscie-w-zycie="2026-02-18"><nr>4a</nr><p><zdanie nr="1" gd:zdGUID="6275c8be-bded-4280-b653-c8283225d158" fragment="1" gd:fragmentGUID="3ca2cc92-d4f4-4cd6-a650-8d2e8bd74fd8" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-18_DU-2026-174_domyslne.x" wejscie-w-zycie="2026-02-18">W przypadku gdy opakowania na napoje, o których mowa w poz. 3 załącznika nr 1a do ustawy, odbierane są przez wprowadzającego produkty w opakowaniach na napoje lub wprowadzającego bezpośrednio produkty w opakowaniach na napoje w ramach systemu zbierania opakowań utworzonego i utrzymywanego przez tego wprowadzającego, poziom selektywnego zbierania opakowań w danym roku kalendarzowym stanowi wyrażona w procentach wartość ilorazu ilości opakowań tego samego rodzaju odebranych przez wprowadzającego w danym roku oraz ilości opakowań z produktem przekazanych do odbiorcy przez tego wprowadzającego w danym roku.</zdanie></p></ustep></cytat-strukt>;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2026/174__art_1__pkt_2" gd:GUID="c0c30f02-4b95-4f45-8180-70e2e5d9af3c" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-18_DU-2026-174_domyslne.x" wejscie-w-zycie="2026-02-18">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="feb69f4f-fe3b-45e0-ac1d-798dd2eb13d0" fragment="5" gd:fragmentGUID="52d860be-ae5b-4779-9e00-69c64714d361" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-18_DU-2026-174_domyslne.x" wejscie-w-zycie="2026-02-18">w art. 40h po ust. 2 dodaje się ust. 2a–2c w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2025/870" cudzyslowy="oba" gd:nowGUID="da3cdf34-564b-45d3-aa9a-02f64f830e76" element-eId="DU/2025/870__art_40h__ust_2" funkcja="dodaj-po"><ustep eId="DU/2025/870__art_40h__ust_2a" gd:GUID="c4af15b6-4f7f-41a5-be16-396016ed1b35" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-18_DU-2026-174_domyslne.x" wejscie-w-zycie="2026-02-18"><nr>2a</nr><p><zdanie nr="1" gd:zdGUID="c4b42874-c68c-4f56-967c-3278643661fc" fragment="1" gd:fragmentGUID="ef54af18-2a12-4529-96eb-9cfc54475637" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-18_DU-2026-174_domyslne.x" wejscie-w-zycie="2026-02-18">W przypadku wprowadzającego produkty w opakowaniach na napoje, o których mowa w poz. 3 załącznika nr 1a do ustawy, lub wprowadzającego bezpośrednio produkty w opakowaniach na napoje przystąpienie do systemu kaucyjnego utworzonego przez podmiot reprezentujący jest dobrowolne w zakresie produktów w tych opakowaniach do dnia 31 grudnia 2028 r.</zdanie></p></ustep><ustep eId="DU/2025/870__art_40h__ust_2b" gd:GUID="bc05199d-44fb-483b-8888-e92704505585" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-18_DU-2026-174_domyslne.x" wejscie-w-zycie="2026-02-18"><nr>2b</nr><p><zdanie nr="1" gd:zdGUID="19dd4ff6-5d97-4875-bb5a-5c232bb4ba6f" fragment="1" gd:fragmentGUID="e7a743d4-6926-4393-9a6f-3a4b66061b77" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-18_DU-2026-174_domyslne.x" wejscie-w-zycie="2026-02-18">Do wprowadzającego produkty w opakowaniach na napoje, o których mowa w poz. 3 załącznika nr 1a do ustawy, który nie przystąpił do systemu kaucyjnego utworzonego przez podmiot reprezentujący, stosuje się odpowiednio art. 34 ust. 2d.</zdanie></p></ustep><ustep eId="DU/2025/870__art_40h__ust_2c" gd:GUID="b255d752-2a70-48f3-9299-52d9a71015ea" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-18_DU-2026-174_domyslne.x" wejscie-w-zycie="2026-02-18"><nr>2c</nr><p><zdanie nr="1" gd:zdGUID="d7c8b0ff-6ec1-4f04-b095-7698963d629b" fragment="1" gd:fragmentGUID="97345af1-b7d9-417a-954a-62aefd90036e" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-18_DU-2026-174_domyslne.x" wejscie-w-zycie="2026-02-18">Wprowadzający produkty w opakowaniach na napoje, o którym mowa w ust. 2b, jest obowiązany zawiadomić ministra właściwego do spraw klimatu o zamiarze samodzielnego osiągnięcia poziomów selektywnego zbierania opakowań, o których mowa w poz. 3 załącznika nr 1a do ustawy.</zdanie><zdanie nr="2" gd:zdGUID="1b56bb1b-afdb-4a02-bdfe-582689c50d8f" fragment="1" gd:fragmentGUID="eb129c5f-ce1c-4f2f-9eb1-9f0a233e56c7" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-18_DU-2026-174_domyslne.x" wejscie-w-zycie="2026-02-18">Zawiadomienie składa się w terminie 3 miesięcy od dnia pierwszego wprowadzenia do obrotu produktów w opakowaniach na napoje objętych systemem pobierania i zwracania kaucji utworzonym przez tego wprowadzającego.</zdanie></p></ustep></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/174__art_1__pkt_3" gd:GUID="23e9f475-398f-4b91-b87b-72f02b57d5ad" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-18_DU-2026-174_domyslne.x" wejscie-w-zycie="2026-02-18">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="feb69f4f-fe3b-45e0-ac1d-798dd2eb13d0" fragment="6" gd:fragmentGUID="422e9369-6114-41d5-9036-54ab68a0f960" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-18_DU-2026-174_domyslne.x" wejscie-w-zycie="2026-02-18">w art. 44 po ust. 2 dodaje się ust. 2a w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2025/870" cudzyslowy="oba" gd:nowGUID="37665457-b7bb-4a0f-9511-ebeb2253b1d9" element-eId="DU/2025/870__art_44__ust_2" funkcja="dodaj-po"><ustep eId="DU/2025/870__art_44__ust_2a" gd:GUID="f13701b8-450a-47b6-acc3-cb8aeea8b99a" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-18_DU-2026-174_domyslne.x" wejscie-w-zycie="2026-02-18"><nr>2a</nr><p><zdanie nr="1" gd:zdGUID="6df3466d-07c9-456b-a718-1267f00d5381" fragment="1" gd:fragmentGUID="8d52ce7e-58e0-4b6e-bd95-4a513c0a4122" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-18_DU-2026-174_domyslne.x" wejscie-w-zycie="2026-02-18">W ramach systemu zbierania opakowań utworzonego i utrzymywanego przez wprowadzającego produkty w opakowaniach na napoje, o których mowa w poz. 3 załącznika nr 1a do ustawy, przedsiębiorca prowadzący jednostkę handlu detalicznego lub hurtowego, w której użytkownikom końcowym są oferowane produkty będące napojami w opakowaniach na napoje objętych tym systemem, jest obowiązany do przyjmowania od użytkowników końcowych pustych opakowań po napojach oferowanych w danej jednostce oraz zwrotu pobranej kwoty pieniężnej, bez wymogu okazania dowodu zakupu.</zdanie></p></ustep></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/174__art_1__pkt_4" gd:GUID="4fbadee7-72b4-45d8-978a-c6ec320a79c3" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-18_DU-2026-174_domyslne.x" wejscie-w-zycie="2026-02-18">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="feb69f4f-fe3b-45e0-ac1d-798dd2eb13d0" fragment="7" gd:fragmentGUID="b58a5d51-addc-40b9-bf7d-a5dda93cdd63" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-18_DU-2026-174_domyslne.x" wejscie-w-zycie="2026-02-18">w załączniku nr 2 do ustawy w pkt 7 objaśnienie „OZ” otrzymuje brzmienie:<cytat-w-tekscie now:akt="https://eli.gov.pl/eli/DU/2025/870" cudzyslowy="oba" gd:nowGUID="e0a19363-2183-403b-b289-7b644e42597e" element-eId="DU/2025/870__zal_2__pkt_7" funkcja="zastap-tekst"><tekst>OZ – oznacza osiągnięty poziom zbierania opakowań obliczony odpowiednio jako iloraz wysokości kaucji zwróconej oraz wysokości kaucji pobranej w ramach systemu kaucyjnego za opakowania, w których zostały wprowadzone do obrotu produkty będące napojami albo jako iloraz ilości opakowań odebranych oraz ilości opakowań z produktem przekazanych do odbiorcy, wyrażony w %,</tekst></cytat-w-tekscie>.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2026/174__art_2" gd:GUID="49cb38cd-67f6-436e-bc2d-b54f2904be0a" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-18_DU-2026-174_domyslne.x" wejscie-w-zycie="2026-02-18">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="1ef575b9-d831-421a-a2cb-cb411405b4ad" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-18_DU-2026-174_domyslne.x" wejscie-w-zycie="2026-02-18">
+        <p>
+          <zdanie nr="1" gd:zdGUID="46cf7c8b-6eb2-4b2c-9ce9-2e22d8f6eba7" fragment="1" gd:fragmentGUID="cf1b17d6-3447-404c-8b95-132707ef4d88" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-18_DU-2026-174_domyslne.x" wejscie-w-zycie="2026-02-18">W ustawie z dnia 14 grudnia 2012 r. o odpadach (Dz. U. z 2023 r. poz. 1587, z późn. zm.<odnosnik id-odnosnika="1" symbol="1" gd:GUID="13193b9d-3c22-4f00-a359-92914de6a8c0"><p><zdanie nr="1" gd:zdGUID="0b020fc3-de3e-43cd-9cee-6970c2aceef7" fragment="1" gd:fragmentGUID="327064c0-8ebe-4f0e-8e8f-b1a3e7c588cb">Zmiany tekstu jednolitego wymienionej ustawy zostały ogłoszone w Dz. U. z 2023 r. poz. 1597, 1688, 1852 i 2029, z 2024 r. poz. 1834, 1911 i 1914 oraz z 2025 r. poz. 1812.</zdanie></p></odnosnik>) w art. 73 w ust. 2 w pkt 2 po lit. dd dodaje się lit. de i df w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/1587" cudzyslowy="oba" gd:nowGUID="31e7a137-1c70-474f-a808-09bacf071cc4" element-eId="DU/2023/1587__art_73__ust_2__pkt_2__lit_dd" funkcja="dodaj-po"><litera eId="DU/2023/1587__art_73__ust_2__pkt_2__lit_de" gd:GUID="659d5ca0-ec25-4c32-8e15-1cdf131df14b" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-18_DU-2026-174_domyslne.x" wejscie-w-zycie="2026-02-18"><nr>de</nr><p><zdanie nr="1" gd:zdGUID="a075a9d0-8633-41a8-822d-f1c25b1d295c" fragment="1" gd:fragmentGUID="5cf8220d-b924-4211-962b-5f5f69db198d" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-18_DU-2026-174_domyslne.x" wejscie-w-zycie="2026-02-18">ilości przekazanych do odbiorcy opakowań z produktem, o których mowa w poz. 3 załącznika nr 1a do ustawy z dnia 13 czerwca 2013 r. o gospodarce opakowaniami i odpadami opakowaniowymi,</zdanie></p></litera><litera eId="DU/2023/1587__art_73__ust_2__pkt_2__lit_df" gd:GUID="504a0448-a167-48b6-afee-02890fd1062d" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-18_DU-2026-174_domyslne.x" wejscie-w-zycie="2026-02-18"><nr>df</nr><p><zdanie nr="1" gd:zdGUID="a075a9d0-8633-41a8-822d-f1c25b1d295c" fragment="2" gd:fragmentGUID="03b9c785-1920-4b75-9e9b-9a74ff32ed04" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-18_DU-2026-174_domyslne.x" wejscie-w-zycie="2026-02-18">ilości odebranych opakowań, o których mowa w poz. 3 załącznika nr 1a do ustawy z dnia 13 czerwca 2013 r. o gospodarce opakowaniami i odpadami opakowaniowymi,</zdanie></p></litera></cytat-strukt>.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2026/174__art_3" gd:GUID="a4459760-8025-4ecf-ac88-0426fdd4e954" okres="okr_moc-wsteczna.zdarz_moc-wsteczna_2026-01-01_DU-2026-174_odczytane.obowiazywanie.zdarz_wejscie_2026-02-18_DU-2026-174_domyslne.x" wejscie-w-zycie="2026-01-01">
+      <nr>3</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="0f4f2bf7-c74f-4254-ba27-4017cc2cac5a" okres="okr_moc-wsteczna.zdarz_moc-wsteczna_2026-01-01_DU-2026-174_odczytane.obowiazywanie.zdarz_wejscie_2026-02-18_DU-2026-174_domyslne.x" wejscie-w-zycie="2026-01-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="072ae71d-147a-4df5-bf5b-c2adbe6355b9" fragment="1" gd:fragmentGUID="bf70ac62-6a54-42e7-b1ba-4282229ac186" okres="okr_moc-wsteczna.zdarz_moc-wsteczna_2026-01-01_DU-2026-174_odczytane.obowiazywanie.zdarz_wejscie_2026-02-18_DU-2026-174_domyslne.x" wejscie-w-zycie="2026-01-01">W ustawie z dnia 13 lipca 2023 r. o zmianie ustawy o gospodarce opakowaniami i odpadami opakowaniowymi oraz niektórych innych ustaw (Dz. U. poz. 1852 oraz z 2024 r. poz. 1911) w art. 9 ust. 3 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/1852" cudzyslowy="oba" gd:nowGUID="e8f761f9-9b6b-45e3-9ba9-3a78a8adeca6" element-eId="DU/2023/1852__art_9__ust_3" funkcja="zastap"><ustep eId="DU/2023/1852__art_9__ust_3" gd:GUID="bd5f2bca-d9e6-4397-a293-7e9e3bd03726" okres="okr_moc-wsteczna.zdarz_moc-wsteczna_2026-01-01_DU-2026-174_odczytane.obowiazywanie.zdarz_wejscie_2026-02-18_DU-2026-174_domyslne.x" wejscie-w-zycie="2026-01-01"><nr>3</nr><p><zdanie nr="1" gd:zdGUID="c8ed189b-6e9e-4c1f-a390-59aa0c6c1920" fragment="1" gd:fragmentGUID="70e69bee-9874-42bf-9a67-7045a553c2b6" okres="okr_moc-wsteczna.zdarz_moc-wsteczna_2026-01-01_DU-2026-174_odczytane.obowiazywanie.zdarz_wejscie_2026-02-18_DU-2026-174_domyslne.x" wejscie-w-zycie="2026-01-01">Przedsiębiorcy, którzy przed dniem wejścia w życie niniejszej ustawy utworzyli i prowadzą system zbierania opakowań na napoje, o których mowa w poz. 3 załącznika nr 1a do ustawy zmienianej w art. 1, mogą prowadzić ten system na zasadach dotychczasowych do dnia 31 grudnia 2028 r.</zdanie><zdanie nr="2" gd:zdGUID="3d0c22e3-48ae-485e-8d01-de48d144a436" fragment="1" gd:fragmentGUID="9b0bc80d-f6f5-4ad7-aa4d-65698104d658" okres="okr_moc-wsteczna.zdarz_moc-wsteczna_2026-01-01_DU-2026-174_odczytane.obowiazywanie.zdarz_wejscie_2026-02-18_DU-2026-174_domyslne.x" wejscie-w-zycie="2026-01-01">Przedsiębiorcy, o których mowa w zdaniu pierwszym, zamierzający kontynuować prowadzenie systemu na zasadach dotychczasowych są obowiązani zgłosić ten zamiar ministrowi właściwemu do spraw klimatu w terminie do dnia 31 marca 2026 r.</zdanie></p></ustep></cytat-strukt>.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2026/174__art_4" gd:GUID="5c7541bf-f472-4645-b361-cd70bcf0f83f" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-18_DU-2026-174_domyslne.x" wejscie-w-zycie="2026-02-18">
+      <nr>4</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="290faa63-1cd0-400d-91b0-f113fd1278b5" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-18_DU-2026-174_domyslne.x" wejscie-w-zycie="2026-02-18">
+        <p>
+          <zdanie nr="1" gd:zdGUID="dbf199fc-e530-491c-b3c1-57692805bd0a" fragment="1" gd:fragmentGUID="ddb0a24b-d00d-43da-b105-6611f8196e83" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-18_DU-2026-174_domyslne.x" wejscie-w-zycie="2026-02-18">Ustawa wchodzi w życie z dniem następującym po dniu ogłoszenia, z wyjątkiem art. 3, który wchodzi w życie z dniem następującym po dniu ogłoszenia, z mocą od dnia 1 stycznia 2026 r.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <organ-podpisujacy>Prezydent Rzeczypospolitej Polskiej: <i><osoba podpisujacy="true" gd:osobaGUID="8cf1b699-fd0a-456a-80d8-a4abb0c714d8"><imie>K.</imie> <nazwisko>Nawrocki</nazwisko></osoba></i></organ-podpisujacy>
+  </ustawa>
+</akt-prawny>

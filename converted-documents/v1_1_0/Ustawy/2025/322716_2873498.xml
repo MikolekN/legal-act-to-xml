@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <ustawa>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/523</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>f1f10627-4e57-4e75-9783-9d8ab10e7407</gd:GUIDwersji>
+      <AdresISAP>WDU20250000523</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>523</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 523</AdresWyswietlany>
+      <Tytul>Ustawa z dnia 20 marca 2025 r. o zmianie ustawy o zawodzie lekarza weterynarii i izbach lekarsko-weterynaryjnych</Tytul>
+      <Rodzaj>USTAWA</Rodzaj>
+      <DataOgloszenia>2025-04-22</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-03-20</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2025-05-07_DU-2025-523_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2025-05-07" warunek="po upływie 14 dni od dnia ogłoszenia" podstawa="art. 3" zrodlo="https://eli.gov.pl/eli/DU/2025/523" dowod="DU/2025/523__art_3" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-523_domyslne.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2025-05-07_DU-2025-523_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="91c47314-3b51-4211-9951-5a3fcb886711" rola="wydajacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Sejm">
+          <Nazwa>SEJM</Nazwa>
+        </Organ>
+        <Organ gd:GUID="52f20ab3-dc2e-4af8-a1fb-b31fc751fa0e" rola="podpisujacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Prezydent">
+          <Nazwa>Prezydent Rzeczypospolitej Polskiej</Nazwa>
+          <OrganPodpisujacy>Prezydent Rzeczypospolitej Polskiej</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>A.</imie> <nazwisko>Duda</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Ustawa</rodzaj-aktu>
+    <data>z dnia 20 marca 2025 r.</data>
+    <tytul>o zmianie ustawy o zawodzie lekarza weterynarii i izbach lekarsko-weterynaryjnych</tytul>
+    <artykul eId="DU/2025/523__art_1" gd:GUID="d8679665-e2af-405b-abda-a977dae8c811" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-523_domyslne.x" wejscie-w-zycie="2025-05-07">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="1d96c3f1-18c7-4107-9d5b-3960edb319b3" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-523_domyslne.x" wejscie-w-zycie="2025-05-07">
+        <p>
+          <zdanie nr="1" gd:zdGUID="be0e18c1-24d8-485a-9af3-59e84abf5eaa" fragment="1" gd:fragmentGUID="69e97736-11c6-46e4-a46b-d990cff71aaf" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-523_domyslne.x" wejscie-w-zycie="2025-05-07">W ustawie z dnia 21 grudnia 1990 r. o zawodzie lekarza weterynarii i izbach lekarsko-weterynaryjnych (Dz. U. z 2023 r. poz. 154) wprowadza się następujące zmiany:</zdanie>
+        </p>
+        <punkt eId="DU/2025/523__art_1__pkt_1" gd:GUID="51b3c9a0-d157-43f9-b0fc-b425ff12c370" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-523_domyslne.x" wejscie-w-zycie="2025-05-07">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="be0e18c1-24d8-485a-9af3-59e84abf5eaa" fragment="2" gd:fragmentGUID="ace92a78-52ae-435e-a749-b49714f6d864" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-523_domyslne.x" wejscie-w-zycie="2025-05-07"><now:zamien-tekst stary-tekst="26" nowy-tekst="32" element-eId="DU/2023/154__art_3b__ust_4" akt="https://eli.gov.pl/eli/DU/2023/154" gd:nowGUID="cfd19369-defa-402b-b5ac-5bd33fd940e9" />w art. 3b w ust. 4 liczbę „26” zastępuje się liczbą „32”;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/523__art_1__pkt_2" gd:GUID="ceff7ccf-2732-41c6-a404-5c3869a823af" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-523_domyslne.x" wejscie-w-zycie="2025-05-07">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="be0e18c1-24d8-485a-9af3-59e84abf5eaa" fragment="3" gd:fragmentGUID="9401fb8b-6932-49bf-9b70-de6e8d58f3fb" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-523_domyslne.x" wejscie-w-zycie="2025-05-07">w art. 10 w ust. 2 po pkt 7 dodaje się pkt 7a w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/154" cudzyslowy="oba" gd:nowGUID="7fc7663d-104f-4477-b33b-47b6d8fa6e5d" element-eId="DU/2023/154__art_10__ust_2__pkt_7" funkcja="dodaj-po"><punkt eId="DU/2023/154__art_10__ust_2__pkt_7a" gd:GUID="7ff1b66a-51a4-44aa-9b8e-0687857ed4d2" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-523_domyslne.x" wejscie-w-zycie="2025-05-07"><nr>7a</nr><p><zdanie nr="1" gd:zdGUID="7ef1dd04-8eb6-4d68-baba-5fffaae918b9" fragment="1" gd:fragmentGUID="11d7965b-f0eb-49fb-8c11-0ec9ab6ab78f" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-523_domyslne.x" wejscie-w-zycie="2025-05-07">prowadzenie ustawicznego doskonalenia lekarzy weterynarii przez organizowanie, współorganizowanie lub certyfikowanie szkoleń i egzaminów szkoleniowych dla lekarzy weterynarii, przy czym realizacja tych działań może się wiązać z częściową lub pełną odpłatnością;</zdanie></p></punkt></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/523__art_1__pkt_3" gd:GUID="5d9ca22c-0676-4883-b44c-9aa6f736495d" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-523_domyslne.x" wejscie-w-zycie="2025-05-07">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="be0e18c1-24d8-485a-9af3-59e84abf5eaa" fragment="4" gd:fragmentGUID="ed68466e-6540-4a05-94a0-09bac60871a2" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-523_domyslne.x" wejscie-w-zycie="2025-05-07">w art. 12:</zdanie>
+          </p>
+          <litera eId="DU/2025/523__art_1__pkt_3__lit_a" gd:GUID="1168b9a9-5a11-4896-87ad-ef913cd899e2" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-523_domyslne.x" wejscie-w-zycie="2025-05-07">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="be0e18c1-24d8-485a-9af3-59e84abf5eaa" fragment="5" gd:fragmentGUID="166af7fe-e31f-41b2-8883-bab3b5c7f8c9" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-523_domyslne.x" wejscie-w-zycie="2025-05-07">ust. 1 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/154" cudzyslowy="oba" gd:nowGUID="01787663-e567-48cb-88ac-1e6472fc1593" element-eId="DU/2023/154__art_12__ust_1" funkcja="zastap"><ustep eId="DU/2023/154__art_12__ust_1" gd:GUID="afe5f4da-de74-42c7-90f8-9518b2e71234" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-523_domyslne.x" wejscie-w-zycie="2025-05-07"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="3821ff98-0aef-4b63-96a4-80590c10c464" fragment="1" gd:fragmentGUID="77afe618-2ff9-4373-b037-350a03ae6512" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-523_domyslne.x" wejscie-w-zycie="2025-05-07">Kadencja organów izb lekarsko-weterynaryjnych trwa 4 lata, przy czym organy te działają do czasu pierwszego posiedzenia nowo wybranych organów.</zdanie></p></ustep></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/523__art_1__pkt_3__lit_b" gd:GUID="14a7948a-224d-4084-8bfa-bfbfb235c3ed" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-523_domyslne.x" wejscie-w-zycie="2025-05-07">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="be0e18c1-24d8-485a-9af3-59e84abf5eaa" fragment="6" gd:fragmentGUID="1f690482-986d-4ff7-bafc-c105abceff13" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-523_domyslne.x" wejscie-w-zycie="2025-05-07">po ust. 2 dodaje się ust. 2a i 2b w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/154" cudzyslowy="oba" gd:nowGUID="8726840f-5f44-480d-b836-e7b01af2d1d3" element-eId="DU/2023/154__art_12__ust_2" funkcja="dodaj-po"><ustep eId="DU/2023/154__art_12__ust_2a" gd:GUID="29aefe63-c341-4865-92dd-e95b61613b8b" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-523_domyslne.x" wejscie-w-zycie="2025-05-07"><nr>2a</nr><p><zdanie nr="1" gd:zdGUID="55e643ba-2f81-4d2d-89df-5b56cf363196" fragment="1" gd:fragmentGUID="1ccb7c93-fc3f-43d9-aa55-6fa74405b18b" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-523_domyslne.x" wejscie-w-zycie="2025-05-07">Wyboru zastępcy rzecznika odpowiedzialności zawodowej dokonuje się na okres kadencji rzecznika odpowiedzialności zawodowej.</zdanie></p></ustep><ustep eId="DU/2023/154__art_12__ust_2b" gd:GUID="dfc19f55-4238-445a-b002-81e36f9520fc" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-523_domyslne.x" wejscie-w-zycie="2025-05-07"><nr>2b</nr><p><zdanie nr="1" gd:zdGUID="9ab00286-bc62-4a0d-bdb1-984f31419a95" fragment="1" gd:fragmentGUID="7d17e78b-1c48-43d5-9509-430d94fe6f37" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-523_domyslne.x" wejscie-w-zycie="2025-05-07">Zastępca rzecznika odpowiedzialności zawodowej pełni funkcję do czasu wyboru nowego zastępcy rzecznika odpowiedzialności zawodowej.</zdanie></p></ustep></cytat-strukt>;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2025/523__art_1__pkt_4" gd:GUID="c66ea894-ffe0-4814-8cb2-d2031d8f21d0" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-523_domyslne.x" wejscie-w-zycie="2025-05-07">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="be0e18c1-24d8-485a-9af3-59e84abf5eaa" fragment="7" gd:fragmentGUID="c84eccd6-e368-4b12-8913-586c44d6d139" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-523_domyslne.x" wejscie-w-zycie="2025-05-07"><now:dodaj-ustep element-eId="DU/2023/154__art_14" akt="https://eli.gov.pl/eli/DU/2023/154" gd:nowGUID="6cf12d36-884c-4a8f-ad3e-e9ab797aaac6" />w art. 14 dotychczasową treść oznacza się jako ust. 1 i dodaje się ust. 2 w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/154" cudzyslowy="oba" gd:nowGUID="42b2ab64-6d8e-4610-93b7-5f031045fad1" element-eId="DU/2023/154__art_14__ust_1" funkcja="dodaj-po"><ustep eId="DU/2023/154__art_14__ust_2" gd:GUID="e45d1ded-4fdf-47c8-9ab3-1d9403158722" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-523_domyslne.x" wejscie-w-zycie="2025-05-07"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="c9313f0d-b76f-40e8-9fa8-5f9de1f4e922" fragment="1" gd:fragmentGUID="4f9849a3-aebe-4cb7-93cc-7bae321e9c89" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-523_domyslne.x" wejscie-w-zycie="2025-05-07">Organy samorządu mogą podejmować uchwały za pomocą środków komunikacji elektronicznej w rozumieniu art. 2 pkt 5 ustawy z dnia 18 lipca 2002 r. o świadczeniu usług drogą elektroniczną lub w trybie obiegowym na zasadach określonych przez Krajową Radę Lekarsko-Weterynaryjną.</zdanie></p></ustep></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/523__art_1__pkt_5" gd:GUID="db257701-df8e-4fe2-af4c-72d7eebd48e4" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-523_domyslne.x" wejscie-w-zycie="2025-05-07">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="be0e18c1-24d8-485a-9af3-59e84abf5eaa" fragment="8" gd:fragmentGUID="b3043154-3481-4bcf-bf2e-6629701790b8" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-523_domyslne.x" wejscie-w-zycie="2025-05-07">w art. 17:</zdanie>
+          </p>
+          <litera eId="DU/2025/523__art_1__pkt_5__lit_a" gd:GUID="907929d6-6100-4eaa-85ab-7695f2d852a8" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-523_domyslne.x" wejscie-w-zycie="2025-05-07">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="be0e18c1-24d8-485a-9af3-59e84abf5eaa" fragment="9" gd:fragmentGUID="aa40d248-510b-4dcf-af57-770a9812a65b" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-523_domyslne.x" wejscie-w-zycie="2025-05-07">w ust. 1a:</zdanie>
+            </p>
+            <tiret eId="DU/2025/523__art_1__pkt_5__lit_a__tir_1" gd:GUID="8cf07e86-c9dc-4470-98bd-7a52224f4a7c" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-523_domyslne.x" wejscie-w-zycie="2025-05-07">
+              <p>
+                <zdanie nr="1" gd:zdGUID="be0e18c1-24d8-485a-9af3-59e84abf5eaa" fragment="10" gd:fragmentGUID="98fda7e3-aac0-4e08-a845-6155713f6496" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-523_domyslne.x" wejscie-w-zycie="2025-05-07"><now:zamien-tekst stary-tekst="adres" nowy-tekst="adres oraz adres do doręczeń" element-eId="DU/2023/154__art_17__ust_1a__pkt_3" akt="https://eli.gov.pl/eli/DU/2023/154" gd:nowGUID="e6eff1fe-ea0e-4a36-b25e-ac964ddf5a6f" />w pkt 3 po wyrazie „adres” dodaje się wyrazy „oraz adres do doręczeń”,</zdanie>
+              </p>
+            </tiret>
+            <tiret eId="DU/2025/523__art_1__pkt_5__lit_a__tir_2" gd:GUID="05f7ff88-a79d-4a73-8e40-57a25e5c7999" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-523_domyslne.x" wejscie-w-zycie="2025-05-07">
+              <p>
+                <zdanie nr="1" gd:zdGUID="be0e18c1-24d8-485a-9af3-59e84abf5eaa" fragment="11" gd:fragmentGUID="dbc4de29-2825-4332-8124-0c2bb5d3c021" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-523_domyslne.x" wejscie-w-zycie="2025-05-07">po pkt 3 dodaje się pkt 3a w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/154" cudzyslowy="oba" gd:nowGUID="79a4d9b3-7cc5-46ed-9c5d-7c7f0deafa47" element-eId="DU/2023/154__art_17__ust_1a__pkt_3" funkcja="dodaj-po"><punkt eId="DU/2023/154__art_17__ust_1a__pkt_3a" gd:GUID="bcb156c8-5b2b-47e2-adb7-cfbf3e28b6a0" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-523_domyslne.x" wejscie-w-zycie="2025-05-07"><nr>3a</nr><p><zdanie nr="1" gd:zdGUID="79c4631f-2590-4eb9-a3e9-c0a4969131c5" fragment="1" gd:fragmentGUID="60122f9d-4911-4861-8abd-dcd5cbb93943" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-523_domyslne.x" wejscie-w-zycie="2025-05-07">adres poczty elektronicznej lub numer telefonu lekarza weterynarii, jeżeli takie posiada;</zdanie></p></punkt></cytat-strukt>,</zdanie>
+              </p>
+            </tiret>
+          </litera>
+          <litera eId="DU/2025/523__art_1__pkt_5__lit_b" gd:GUID="4bd2bb88-ace8-4c05-9edc-d1f66e9018d4" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-523_domyslne.x" wejscie-w-zycie="2025-05-07">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="be0e18c1-24d8-485a-9af3-59e84abf5eaa" fragment="12" gd:fragmentGUID="3c7347bf-e5cf-46b7-abaf-33426db70332" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-523_domyslne.x" wejscie-w-zycie="2025-05-07"><now:zamien-tekst stary-tekst="o których mowa w ust. 1a pkt 3, 4, 9 i 10" nowy-tekst="o których mowa w ust. 1a pkt 3, 3a, 4, 9 i 10" element-eId="DU/2023/154__art_17__ust_1b" akt="https://eli.gov.pl/eli/DU/2023/154" gd:nowGUID="5fcce229-9dcf-40db-9354-4e5efb392754" />w ust. 1b wyrazy „o których mowa w ust. 1a pkt 3, 4, 9 i 10” zastępuje się wyrazami „o których mowa w ust. 1a pkt 3, 3a, 4, 9 i 10”;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2025/523__art_1__pkt_6" gd:GUID="7b3fdfac-4f97-401a-8bad-060f5d28ff36" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-523_domyslne.x" wejscie-w-zycie="2025-05-07">
+          <nr>6</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="be0e18c1-24d8-485a-9af3-59e84abf5eaa" fragment="13" gd:fragmentGUID="9f17b15b-f5a4-431e-b7d7-9375333c5214" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-523_domyslne.x" wejscie-w-zycie="2025-05-07">w art. 18:</zdanie>
+          </p>
+          <litera eId="DU/2025/523__art_1__pkt_6__lit_a" gd:GUID="a3cc4c2f-8029-4f73-9467-1bae8424c7fa" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-523_domyslne.x" wejscie-w-zycie="2025-05-07">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="be0e18c1-24d8-485a-9af3-59e84abf5eaa" fragment="14" gd:fragmentGUID="d7051c47-356b-4e13-88e5-c603344bb392" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-523_domyslne.x" wejscie-w-zycie="2025-05-07">w ust. 1 wprowadzenie do wyliczenia otrzymuje brzmienie:<cytat-w-tekscie now:akt="https://eli.gov.pl/eli/DU/2023/154" cudzyslowy="oba" gd:nowGUID="bc65e147-b3a0-4982-b35b-a9e58a64f45d" element-eId="DU/2023/154__art_18__ust_1" funkcja="zastap-tekst"><zdanie nr="1" gd:zdGUID="6495859d-ccba-470a-82ab-888c6d230c3d" fragment="1" gd:fragmentGUID="d6cca826-55a2-48b7-ba13-8265f062bbb2" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-523_domyslne.x" wejscie-w-zycie="2025-05-07">Skreślenia lekarza weterynarii z rejestru członków okręgowej izby lekarsko-weterynaryjnej dokonuje się w przypadku:</zdanie></cytat-w-tekscie>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/523__art_1__pkt_6__lit_b" gd:GUID="cca171d2-b57d-45a2-b603-85ce6c7c0d44" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-523_domyslne.x" wejscie-w-zycie="2025-05-07">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="be0e18c1-24d8-485a-9af3-59e84abf5eaa" fragment="15" gd:fragmentGUID="7d20504f-e51b-4c09-89a9-185b520f06d0" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-523_domyslne.x" wejscie-w-zycie="2025-05-07">dodaje się ust. 3 w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/154" cudzyslowy="oba" gd:nowGUID="58eddc97-0928-418b-8000-2e064323dd70" element-eId="DU/2023/154__art_18" funkcja="dodaj-w"><ustep eId="DU/2023/154__art_18__ust_3" gd:GUID="d8845b0f-7803-450f-9b3f-b7a473efbc3b" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-523_domyslne.x" wejscie-w-zycie="2025-05-07"><nr>3</nr><p><zdanie nr="1" gd:zdGUID="02209a69-f53d-4304-a566-e45053658147" fragment="1" gd:fragmentGUID="711cc1ae-865b-46b9-ac0a-54df1a1da2e1" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-523_domyslne.x" wejscie-w-zycie="2025-05-07">Skreślenia lekarza weterynarii z rejestru członków okręgowej izby lekarsko-weterynaryjnej z przyczyn, o których mowa w ust. 1:</zdanie></p><punkt eId="DU/2023/154__art_18__ust_3__pkt_1" gd:GUID="00ece465-a559-41d0-9f8b-5922dcfef9c8" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-523_domyslne.x" wejscie-w-zycie="2025-05-07"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="02209a69-f53d-4304-a566-e45053658147" fragment="2" gd:fragmentGUID="85f83772-a7a3-46c9-8186-9de4419e4f5d" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-523_domyslne.x" wejscie-w-zycie="2025-05-07">pkt 1, 4 i 5 – dokonuje się na podstawie uchwały okręgowej rady lekarsko-weterynaryjnej;</zdanie></p></punkt><punkt eId="DU/2023/154__art_18__ust_3__pkt_2" gd:GUID="fd265844-241b-4e49-bec2-8e232ef0186c" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-523_domyslne.x" wejscie-w-zycie="2025-05-07"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="02209a69-f53d-4304-a566-e45053658147" fragment="3" gd:fragmentGUID="9beefe69-5226-4654-8b4c-bbfc5ec467ec" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-523_domyslne.x" wejscie-w-zycie="2025-05-07">pkt 2, 3 i 6 – dokonuje się na podstawie decyzji prezesa okręgowej rady lekarsko-weterynaryjnej.</zdanie></p></punkt></ustep></cytat-strukt>;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2025/523__art_1__pkt_7" gd:GUID="b674c2cd-883f-41ee-b6c5-1b51bf2e332e" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-523_domyslne.x" wejscie-w-zycie="2025-05-07">
+          <nr>7</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="be0e18c1-24d8-485a-9af3-59e84abf5eaa" fragment="16" gd:fragmentGUID="10c58b7b-d977-4ec8-8473-7dc28ad7f447" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-523_domyslne.x" wejscie-w-zycie="2025-05-07">w art. 26:</zdanie>
+          </p>
+          <litera eId="DU/2025/523__art_1__pkt_7__lit_a" gd:GUID="01669022-6bea-43e3-8444-613bb6ca01a5" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-523_domyslne.x" wejscie-w-zycie="2025-05-07">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="be0e18c1-24d8-485a-9af3-59e84abf5eaa" fragment="17" gd:fragmentGUID="3df7a196-e991-412c-8b97-1033aad031e2" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-523_domyslne.x" wejscie-w-zycie="2025-05-07">ust. 4 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/154" cudzyslowy="oba" gd:nowGUID="f7d474c5-20fa-4bcc-9f0e-1b9019b8264f" element-eId="DU/2023/154__art_26__ust_4" funkcja="zastap"><ustep eId="DU/2023/154__art_26__ust_4" gd:GUID="943e7bb8-453e-4011-a53e-3e56a708142c" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-523_domyslne.x" wejscie-w-zycie="2025-05-07"><nr>4</nr><p><zdanie nr="1" gd:zdGUID="4d594a0e-4cde-4371-add0-af2900399014" fragment="1" gd:fragmentGUID="02999694-e228-494f-bb73-fa0c4a7df001" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-523_domyslne.x" wejscie-w-zycie="2025-05-07">W powiatach, w których liczba członków okręgowej izby lekarsko-weterynaryjnej przekracza 50 osób, okręgowa rada lekarsko-weterynaryjna może utworzyć więcej niż jeden rejon wyborczy.</zdanie></p></ustep></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/523__art_1__pkt_7__lit_b" gd:GUID="920d6c1a-100f-416d-960e-be410cfe8365" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-523_domyslne.x" wejscie-w-zycie="2025-05-07">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="be0e18c1-24d8-485a-9af3-59e84abf5eaa" fragment="18" gd:fragmentGUID="68afe47f-1c1a-41b8-aa26-505aa991ccad" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-523_domyslne.x" wejscie-w-zycie="2025-05-07"><now:uchyl akt="https://eli.gov.pl/eli/DU/2023/154" element-eId="DU/2023/154__art_26__ust_6" gd:nowGUID="6e81409d-e194-47e5-9745-466c4994ab34" />uchyla się ust. 6;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2025/523__art_1__pkt_8" gd:GUID="deaece7f-676a-4acc-8383-2c436d4b6fa6" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-523_domyslne.x" wejscie-w-zycie="2025-05-07">
+          <nr>8</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="be0e18c1-24d8-485a-9af3-59e84abf5eaa" fragment="19" gd:fragmentGUID="a7dd41f1-5374-4a13-8b38-af3109441d6d" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-523_domyslne.x" wejscie-w-zycie="2025-05-07"><now:zamien-tekst stary-tekst="." nowy-tekst=";" element-eId="DU/2023/154__art_39__ust_1__pkt_17" akt="https://eli.gov.pl/eli/DU/2023/154" now:wystapienie="ostatnie" gd:nowGUID="1eac9aec-3172-404e-9e63-06cb29a5439a" />w art. 39 w ust. 1 w pkt 17 kropkę zastępuje się średnikiem i dodaje się pkt 18 w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/154" cudzyslowy="oba" gd:nowGUID="631c5fed-7f20-4ccd-950d-dc0c97c40701" element-eId="DU/2023/154__art_39__ust_1__pkt_17" funkcja="dodaj-po"><punkt eId="DU/2023/154__art_39__ust_1__pkt_18" gd:GUID="6156f538-5dd9-4f21-baed-e74829d5d93c" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-523_domyslne.x" wejscie-w-zycie="2025-05-07"><nr>18</nr><p><zdanie nr="1" gd:zdGUID="1fdbdf54-15f8-4b3c-8574-5b5b1c91602b" fragment="1" gd:fragmentGUID="efcf7eb6-f79f-4fd5-bb03-6430ed0ea1db" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-523_domyslne.x" wejscie-w-zycie="2025-05-07">może określać wymagania lub minimalne standardy dla poszczególnych usług weterynaryjnych na podstawie aktualnej wiedzy w zakresie medycyny weterynaryjnej.</zdanie></p></punkt></cytat-strukt>.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2025/523__art_2" gd:GUID="592e8866-b3e2-4a7f-9050-65dd88a2873e" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-523_domyslne.x" wejscie-w-zycie="2025-05-07">
+      <nr>2</nr>
+      <ustep eId="DU/2025/523__art_2__ust_1" gd:GUID="50e16d58-2e85-4a4f-95c8-cc92de7389ba" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-523_domyslne.x" wejscie-w-zycie="2025-05-07">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="e82241bf-5534-4f13-ad1a-b9400a9092c9" fragment="1" gd:fragmentGUID="60c1b8ca-68d8-4283-97f2-7826cfc16a6a" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-523_domyslne.x" wejscie-w-zycie="2025-05-07">Członkowie Komisji do spraw Specjalizacji Lekarzy Weterynarii, o której mowa w art. 3a ust. 2 ustawy zmienianej w art. 1, zwanej dalej „Komisją”, powołani na podstawie art. 3b ust. 3 tej ustawy przed dniem wejścia w życie niniejszej ustawy, pełnią swoje funkcje do dnia wygaśnięcia kadencji tej Komisji.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/523__art_2__ust_2" gd:GUID="cc6af089-a2f6-4f63-8f4e-178d7be6ea0a" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-523_domyslne.x" wejscie-w-zycie="2025-05-07">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="eabe0b50-cb5e-419e-9d78-2f9173d50b50" fragment="1" gd:fragmentGUID="8aee1929-47b0-4046-a00f-c8d1e13dc821" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-523_domyslne.x" wejscie-w-zycie="2025-05-07">W terminie 3 miesięcy od dnia wejścia w życie niniejszej ustawy Krajowa Rada Lekarsko-Weterynaryjna występuje z wnioskiem do ministra właściwego do spraw rolnictwa o powołanie w skład Komisji 6 lekarzy weterynarii wyróżniających się wiedzą lub umiejętnościami w obszarach weterynarii, posiadających tytuł specjalisty co najmniej w jednym z tych obszarów weterynarii lub posiadających co najmniej stopień naukowy doktora, tak aby skład tej Komisji odpowiadał liczbie jej członków określonej w art. 3b ust. 4 ustawy zmienianej w art. 1 w brzmieniu nadanym niniejszą ustawą.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/523__art_2__ust_3" gd:GUID="cccd8279-526f-4abb-ad62-2f71f1da923b" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-523_domyslne.x" wejscie-w-zycie="2025-05-07">
+        <nr>3</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="3b78441b-a6da-434c-8006-860c495b5695" fragment="1" gd:fragmentGUID="b2846a9d-46a7-4e23-a6d9-d2e1e23bf146" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-523_domyslne.x" wejscie-w-zycie="2025-05-07">Członkowie Komisji powołani zgodnie z wnioskiem, o którym mowa w ust. 2, pełnią swoje funkcje do dnia wygaś-nięcia kadencji tej Komisji.</zdanie>
+        </p>
+      </ustep>
+    </artykul>
+    <artykul eId="DU/2025/523__art_3" gd:GUID="e9ba350f-0388-4176-a39b-2b5cff76d43c" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-523_domyslne.x" wejscie-w-zycie="2025-05-07">
+      <nr>3</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="1b32938b-d2c8-46c1-9cbb-9a74204b596f" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-523_domyslne.x" wejscie-w-zycie="2025-05-07">
+        <p>
+          <zdanie nr="1" gd:zdGUID="50407568-2a39-473b-a8d5-07d64f2ee72a" fragment="1" gd:fragmentGUID="d306b930-6fe4-45ae-bc62-18e97bdbb4c7" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-523_domyslne.x" wejscie-w-zycie="2025-05-07">Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <organ-podpisujacy>Prezydent Rzeczypospolitej Polskiej: <i><osoba podpisujacy="true" gd:osobaGUID="d21ec31b-469a-4111-b66b-f926499ca90d"><imie>A.</imie> <nazwisko>Duda</nazwisko></osoba></i></organ-podpisujacy>
+  </ustawa>
+</akt-prawny>

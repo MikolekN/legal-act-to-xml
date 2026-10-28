@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <rozporzadzenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/1005</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>92d31e00-19ae-4437-ba0d-33605e1a7cda</gd:GUIDwersji>
+      <AdresISAP>WDU20250001005</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>1005</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 1005</AdresWyswietlany>
+      <Tytul>Rozporządzenie Prezesa Rady Ministrów z dnia 25 lipca 2025 r. w sprawie szczegółowego zakresu działania Ministra Sprawiedliwości</Tytul>
+      <Rodzaj>ROZP</Rodzaj>
+      <DataOgloszenia>2025-07-25</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-07-25</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_moc-wsteczna_2025-07-24_DU-2025-1005_odczytane" rodzaj="stosowanie-z-moca-wsteczna" pochodzenie="odczytane" data="2025-07-24" podstawa="§ 2" zrodlo="https://eli.gov.pl/eli/DU/2025/1005" dowod="DU/2025/1005__art_2" />
+          <Zdarzenie id="zdarz_wejscie_2025-07-25_DU-2025-1005_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2025-07-25" warunek="z dniem ogłoszenia" podstawa="§ 2" zrodlo="https://eli.gov.pl/eli/DU/2025/1005" dowod="DU/2025/1005__art_2" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_moc-wsteczna.zdarz_moc-wsteczna_2025-07-24_DU-2025-1005_odczytane.obowiazywanie.zdarz_wejscie_2025-07-25_DU-2025-1005_domyslne.x" glowna="true">
+          <Przedzial rodzaj="stosowanie-z-moca-wsteczna" od="zdarz_moc-wsteczna_2025-07-24_DU-2025-1005_odczytane" do="zdarz_wejscie_2025-07-25_DU-2025-1005_domyslne" />
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2025-07-25_DU-2025-1005_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="8a29e61c-6508-40aa-b2a9-e2bc4223af77" rola="wydajacy">
+          <Nazwa>Prezes Rady Ministrów</Nazwa>
+          <OrganPodpisujacy>Prezes Rady Ministrów</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>D.</imie> <nazwisko>Tusk</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Rozporządzenie</rodzaj-aktu>
+    <autor-aktu>Prezesa Rady Ministrów</autor-aktu>
+    <data>z dnia 25 lipca 2025 r.</data>
+    <tytul>w sprawie szczegółowego zakresu działania Ministra Sprawiedliwości</tytul>
+    <podstawa-prawna>Na podstawie art. 33 ust. 1 i 1a ustawy z dnia 8 sierpnia 1996 r. o Radzie Ministrów (Dz. U. z 2025 r. poz. 780) zarządza się, co następuje:</podstawa-prawna>
+    <paragraf eId="DU/2025/1005__art_1" gd:GUID="2ca55da7-12c9-4b4c-9988-af7606172207" okres="okr_moc-wsteczna.zdarz_moc-wsteczna_2025-07-24_DU-2025-1005_odczytane.obowiazywanie.zdarz_wejscie_2025-07-25_DU-2025-1005_domyslne.x" wejscie-w-zycie="2025-07-24">
+      <nr>1</nr>
+      <ustep eId="DU/2025/1005__art_1__ust_1" gd:GUID="4db1d068-4f21-49bf-ba8d-fb4fca4c7b24" okres="okr_moc-wsteczna.zdarz_moc-wsteczna_2025-07-24_DU-2025-1005_odczytane.obowiazywanie.zdarz_wejscie_2025-07-25_DU-2025-1005_domyslne.x" wejscie-w-zycie="2025-07-24">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="b393ae34-7bfe-45ae-943a-6335c5fe4194" fragment="1" gd:fragmentGUID="945ff4f4-f2a3-4abc-b6e9-1fa5ea93c51d" okres="okr_moc-wsteczna.zdarz_moc-wsteczna_2025-07-24_DU-2025-1005_odczytane.obowiazywanie.zdarz_wejscie_2025-07-25_DU-2025-1005_domyslne.x" wejscie-w-zycie="2025-07-24">Rozporządzenie określa szczegółowy zakres działania Ministra Sprawiedliwości, zwanego dalej „ministrem”.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/1005__art_1__ust_2" gd:GUID="2533e4d5-0b0a-484e-acd4-6a888b7ed152" okres="okr_moc-wsteczna.zdarz_moc-wsteczna_2025-07-24_DU-2025-1005_odczytane.obowiazywanie.zdarz_wejscie_2025-07-25_DU-2025-1005_domyslne.x" wejscie-w-zycie="2025-07-24">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="16bdec2f-70a1-4477-8867-8d8960132149" fragment="1" gd:fragmentGUID="50431f2c-9ae9-4656-9371-cb9f0db026fd" okres="okr_moc-wsteczna.zdarz_moc-wsteczna_2025-07-24_DU-2025-1005_odczytane.obowiazywanie.zdarz_wejscie_2025-07-25_DU-2025-1005_domyslne.x" wejscie-w-zycie="2025-07-24">Minister kieruje działem administracji rządowej – sprawiedliwość.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/1005__art_1__ust_3" gd:GUID="7a992d3f-0d43-4fb5-a905-2e915cf5acbf" okres="okr_moc-wsteczna.zdarz_moc-wsteczna_2025-07-24_DU-2025-1005_odczytane.obowiazywanie.zdarz_wejscie_2025-07-25_DU-2025-1005_domyslne.x" wejscie-w-zycie="2025-07-24">
+        <nr>3</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="39467a48-8e8e-4ab3-9d8f-9a74fc9fb77f" fragment="1" gd:fragmentGUID="170043c4-1249-47e0-a250-68d6a6833010" okres="okr_moc-wsteczna.zdarz_moc-wsteczna_2025-07-24_DU-2025-1005_odczytane.obowiazywanie.zdarz_wejscie_2025-07-25_DU-2025-1005_domyslne.x" wejscie-w-zycie="2025-07-24">Minister jest dysponentem części 15 i 37 budżetu państwa.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/1005__art_1__ust_4" gd:GUID="aab95da7-eda4-4000-ae6e-d8eeafe624f9" okres="okr_moc-wsteczna.zdarz_moc-wsteczna_2025-07-24_DU-2025-1005_odczytane.obowiazywanie.zdarz_wejscie_2025-07-25_DU-2025-1005_domyslne.x" wejscie-w-zycie="2025-07-24">
+        <nr>4</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="17c20c16-8159-4be2-8141-0dfffe73c411" fragment="1" gd:fragmentGUID="2da66bdc-4eb4-4724-9748-8b68f89143bb" okres="okr_moc-wsteczna.zdarz_moc-wsteczna_2025-07-24_DU-2025-1005_odczytane.obowiazywanie.zdarz_wejscie_2025-07-25_DU-2025-1005_domyslne.x" wejscie-w-zycie="2025-07-24">Obsługę ministra zapewnia Ministerstwo Sprawiedliwości.</zdanie>
+        </p>
+      </ustep>
+    </paragraf>
+    <paragraf eId="DU/2025/1005__art_2" gd:GUID="b3da114f-ad24-441a-9cfd-a259344e74e7" okres="okr_moc-wsteczna.zdarz_moc-wsteczna_2025-07-24_DU-2025-1005_odczytane.obowiazywanie.zdarz_wejscie_2025-07-25_DU-2025-1005_domyslne.x" wejscie-w-zycie="2025-07-24">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="16e2c054-4c3c-4677-bf67-3a56ca731341" okres="okr_moc-wsteczna.zdarz_moc-wsteczna_2025-07-24_DU-2025-1005_odczytane.obowiazywanie.zdarz_wejscie_2025-07-25_DU-2025-1005_domyslne.x" wejscie-w-zycie="2025-07-24">
+        <p>
+          <zdanie nr="1" gd:zdGUID="49165236-0364-4f59-918b-4988e41d8fbe" fragment="1" gd:fragmentGUID="c65c2b0f-7956-4d12-9a01-0917fc50e9e1" okres="okr_moc-wsteczna.zdarz_moc-wsteczna_2025-07-24_DU-2025-1005_odczytane.obowiazywanie.zdarz_wejscie_2025-07-25_DU-2025-1005_domyslne.x" wejscie-w-zycie="2025-07-24">Rozporządzenie wchodzi w życie z dniem ogłoszenia, z mocą od dnia 24 lipca 2025 r.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <organ-podpisujacy>Prezes Rady Ministrów: <i><osoba podpisujacy="true" gd:osobaGUID="af3a0501-d39c-4906-be4a-90c3e80037f0"><imie>D.</imie> <nazwisko>Tusk</nazwisko></osoba></i></organ-podpisujacy>
+  </rozporzadzenie>
+</akt-prawny>

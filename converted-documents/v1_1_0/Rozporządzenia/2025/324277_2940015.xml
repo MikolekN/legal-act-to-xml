@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <rozporzadzenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/842</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>65054b2c-988e-433c-8e1a-d3d44aa3f16c</gd:GUIDwersji>
+      <AdresISAP>WDU20250000842</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>842</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 842</AdresWyswietlany>
+      <Tytul>Rozporządzenie Ministra Finansów z dnia 26 czerwca 2025 r. zmieniające rozporządzenie w sprawie sposobu przesyłania deklaracji i podań oraz rodzajów podpisu elektronicznego, którymi powinny być opatrzone</Tytul>
+      <Rodzaj>ROZP</Rodzaj>
+      <DataOgloszenia>2025-06-27</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-06-26</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2025-07-01_DU-2025-842_odczytane" rodzaj="wejscie-w-zycie" pochodzenie="odczytane" data="2025-07-01" podstawa="§ 2" zrodlo="https://eli.gov.pl/eli/DU/2025/842" dowod="DU/2025/842__art_2" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2025-07-01_DU-2025-842_odczytane.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2025-07-01_DU-2025-842_odczytane" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="ae32232d-192f-4483-bb3d-a9d9d2499789" rola="wydajacy">
+          <Nazwa>Minister Finansów</Nazwa>
+          <OrganPodpisujacy>Minister Finansów</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>H.</imie> <nazwisko>Majszczyk</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Rozporządzenie</rodzaj-aktu>
+    <autor-aktu>Ministra Finansów<odnosnik id-odnosnika="1" symbol="1" gd:GUID="bc78c308-6e14-4f5a-8fdd-aba9d44e7549"><p><zdanie nr="1" gd:zdGUID="7dc05fb9-07e8-49b5-b569-47f593c7554c" fragment="1" gd:fragmentGUID="a756926e-894e-429f-8875-005c41ed336a">Minister Finansów kieruje działem administracji rządowej – finanse publiczne, na podstawie § 1 ust. 2 pkt 2 rozporządzenia Prezesa Rady Ministrów z dnia 18 grudnia 2023 r. w sprawie szczegółowego zakresu działania Ministra Finansów (Dz. U. poz. 2710).</zdanie></p></odnosnik></autor-aktu>
+    <data>z dnia 26 czerwca 2025 r.</data>
+    <tytul>zmieniające rozporządzenie w sprawie sposobu przesyłania deklaracji i podań oraz rodzajów podpisu elektronicznego, którymi powinny być opatrzone</tytul>
+    <podstawa-prawna>Na podstawie art. 3b § 2 ustawy z dnia 29 sierpnia 1997 r. – Ordynacja podatkowa (Dz. U. z 2025 r. poz. 111, 497, 621, 622, 769 i 820) zarządza się, co następuje:</podstawa-prawna>
+    <paragraf eId="DU/2025/842__art_1" gd:GUID="65c2dfca-ea65-48ce-8609-073bbd4a71e0" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-01_DU-2025-842_odczytane.x" wejscie-w-zycie="2025-07-01">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="6965f0f7-31c1-4a00-9ce5-94b607f89726" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-01_DU-2025-842_odczytane.x" wejscie-w-zycie="2025-07-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="d76e03f1-3fff-46d3-9d8d-5bf048537bf6" fragment="1" gd:fragmentGUID="52b837f4-fb64-4162-a065-2fb5474669a6" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-01_DU-2025-842_odczytane.x" wejscie-w-zycie="2025-07-01">W rozporządzeniu Ministra Rozwoju i Finansów z dnia 19 września 2017 r. w sprawie sposobu przesyłania deklaracji i podań oraz rodzajów podpisu elektronicznego, którymi powinny być opatrzone (Dz. U. z 2025 r. poz. 327) wprowadza się następujące zmiany:</zdanie>
+        </p>
+        <punkt eId="DU/2025/842__art_1__pkt_1" gd:GUID="a98086b6-3753-4d0a-8bd6-2ef08c136112" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-01_DU-2025-842_odczytane.x" wejscie-w-zycie="2025-07-01">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="d76e03f1-3fff-46d3-9d8d-5bf048537bf6" fragment="2" gd:fragmentGUID="eaf58e14-444b-4cdc-b350-bf6c0d9b830f" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-01_DU-2025-842_odczytane.x" wejscie-w-zycie="2025-07-01">w § 8 po pkt 9b dodaje się pkt 9c w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2025/327" cudzyslowy="oba" gd:nowGUID="886f0a3b-0220-491a-a9e0-cb6561e62911" element-eId="DU/2025/327__art_8__pkt_9b" funkcja="dodaj-po"><punkt eId="DU/2025/327__art_8__pkt_9c" gd:GUID="32a9a77e-59b2-4187-be3e-863817863595" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-01_DU-2025-842_odczytane.x" wejscie-w-zycie="2025-07-01"><nr>9c</nr><p><zdanie nr="1" gd:zdGUID="73537302-f516-475f-8d00-84a7cd015da5" fragment="1" gd:fragmentGUID="9fe3606b-a32b-4050-ac84-362f3caf1fd2" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-01_DU-2025-842_odczytane.x" wejscie-w-zycie="2025-07-01">deklaracja w sprawie podatku akcyzowego od zestawów części do urządzeń do waporyzacji (AKC-ZC/AKC-ZCn);</zdanie></p></punkt></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/842__art_1__pkt_2" gd:GUID="38465445-aa4e-4c62-907c-eb896a9733e2" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-01_DU-2025-842_odczytane.x" wejscie-w-zycie="2025-07-01">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="d76e03f1-3fff-46d3-9d8d-5bf048537bf6" fragment="3" gd:fragmentGUID="946653b6-27ea-4cd9-9bf1-3e9ce7a89d37" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-01_DU-2025-842_odczytane.x" wejscie-w-zycie="2025-07-01">w § 10 w pkt 3 po lit. ba dodaje się lit. baa w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2025/327" cudzyslowy="oba" gd:nowGUID="64fcd390-ab51-4664-82da-be9f85a4a505" element-eId="DU/2025/327__art_10__pkt_3__lit_ba" funkcja="dodaj-po"><nie-ztp-punkt brak-eid="jednostka-nieoznaczona" gd:GUID="6af9533d-12a5-4e9e-bc4f-c530b435c7dd" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-01_DU-2025-842_odczytane.x" wejscie-w-zycie="2025-07-01"><nr></nr><p><zdanie nr="1" gd:zdGUID="517b6d89-cd70-4ced-9299-38f15d0247d3" fragment="1" gd:fragmentGUID="a0297ada-c8fc-48b7-b673-578108310074" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-01_DU-2025-842_odczytane.x" wejscie-w-zycie="2025-07-01">baa) deklaracja w sprawie podatku akcyzowego od zestawów części do urządzeń do waporyzacji (AKC-ZC/AKC-ZCn),</zdanie></p></nie-ztp-punkt></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/842__art_1__pkt_3" gd:GUID="db87ecfc-f04d-49a9-8249-d16299a4fa62" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-01_DU-2025-842_odczytane.x" wejscie-w-zycie="2025-07-01">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="d76e03f1-3fff-46d3-9d8d-5bf048537bf6" fragment="4" gd:fragmentGUID="19c78cec-77b5-47c9-91ed-9919ef7ff4ff" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-01_DU-2025-842_odczytane.x" wejscie-w-zycie="2025-07-01">w § 11 po pkt 38b dodaje się pkt 38c w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2025/327" cudzyslowy="oba" gd:nowGUID="85cd8f82-f30b-40cb-a56f-0f5e515986df" element-eId="DU/2025/327__art_11__pkt_38b" funkcja="dodaj-po"><punkt eId="DU/2025/327__art_11__pkt_38c" gd:GUID="771054f3-cf7e-48dd-9d48-8e53f684878d" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-01_DU-2025-842_odczytane.x" wejscie-w-zycie="2025-07-01"><nr>38c</nr><p><zdanie nr="1" gd:zdGUID="4d8b1ba9-efdb-4c61-afbb-13353c47f18c" fragment="1" gd:fragmentGUID="ec24af84-1f21-4abe-9b31-045866fa5e19" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-01_DU-2025-842_odczytane.x" wejscie-w-zycie="2025-07-01">deklaracja w sprawie podatku akcyzowego od zestawów części do urządzeń do waporyzacji (AKC-ZC/AKC-ZCn);</zdanie></p></punkt></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/842__art_1__pkt_4" gd:GUID="4687186d-8750-4f95-9d18-432a99fbbc04" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-01_DU-2025-842_odczytane.x" wejscie-w-zycie="2025-07-01">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="d76e03f1-3fff-46d3-9d8d-5bf048537bf6" fragment="5" gd:fragmentGUID="cff293e7-0540-467f-962d-5f389bcbac71" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-01_DU-2025-842_odczytane.x" wejscie-w-zycie="2025-07-01"><now:zamien-tekst stary-tekst="30–38a" nowy-tekst="30–38a, 38c" element-eId="DU/2025/327__art_12__ust_2" akt="https://eli.gov.pl/eli/DU/2025/327" gd:nowGUID="f11e3391-c181-48d7-ad48-75bfb83d213e" />w § 12 w ust. 2 we wprowadzeniu do wyliczenia wyrazy „30–38a” zastępuje się wyrazami „30–38a, 38c”.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2025/842__art_2" gd:GUID="7c089953-dc9a-4eb7-8628-99b348a0c25b" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-01_DU-2025-842_odczytane.x" wejscie-w-zycie="2025-07-01">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="67dd1473-6a3b-4d17-afbd-ebe7f94b9af2" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-01_DU-2025-842_odczytane.x" wejscie-w-zycie="2025-07-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="fb59aae9-14e7-4ffb-b690-2e4022b9165f" fragment="1" gd:fragmentGUID="828bdd7e-1e34-469c-9b07-03fad684b6fc" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-01_DU-2025-842_odczytane.x" wejscie-w-zycie="2025-07-01">Rozporządzenie wchodzi w życie z dniem 1 lipca 2025 r.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <organ-podpisujacy>Minister Finansów: wz. <i><osoba podpisujacy="true" gd:osobaGUID="0591a6f3-5f8a-428e-8f41-4a326ce0ffe9"><imie>H.</imie> <nazwisko>Majszczyk</nazwisko></osoba></i></organ-podpisujacy>
+  </rozporzadzenie>
+</akt-prawny>

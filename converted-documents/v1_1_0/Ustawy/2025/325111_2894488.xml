@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <ustawa>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/630</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>250751eb-a8bb-4aa3-b77b-f191a77dfe0b</gd:GUIDwersji>
+      <AdresISAP>WDU20250000630</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>630</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 630</AdresWyswietlany>
+      <Tytul>Ustawa z dnia 4 kwietnia 2025 r. o zmianie ustawy o zagospodarowaniu wspólnot gruntowych</Tytul>
+      <Rodzaj>USTAWA</Rodzaj>
+      <DataOgloszenia>2025-05-14</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-04-04</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2025-05-29_DU-2025-630_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2025-05-29" warunek="po upływie 14 dni od dnia ogłoszenia" podstawa="art. 3" zrodlo="https://eli.gov.pl/eli/DU/2025/630" dowod="DU/2025/630__art_3" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2025-05-29_DU-2025-630_domyslne.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2025-05-29_DU-2025-630_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="a0746f7f-bccd-4c38-8f1d-2dc959f4a50c" rola="wydajacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Sejm">
+          <Nazwa>SEJM</Nazwa>
+        </Organ>
+        <Organ gd:GUID="4424e7f8-c40c-4af3-a149-a6bc2988b456" rola="podpisujacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Prezydent">
+          <Nazwa>Prezydent Rzeczypospolitej Polskiej</Nazwa>
+          <OrganPodpisujacy>Prezydent Rzeczypospolitej Polskiej</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>A.</imie> <nazwisko>Duda</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Ustawa</rodzaj-aktu>
+    <data>z dnia 4 kwietnia 2025 r.</data>
+    <tytul>o zmianie ustawy o zagospodarowaniu wspólnot gruntowych</tytul>
+    <artykul eId="DU/2025/630__art_1" gd:GUID="3de4f6e1-0e30-4666-ba32-b46d5ca9bfb0" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-29_DU-2025-630_domyslne.x" wejscie-w-zycie="2025-05-29">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="6e5bec7b-382e-493a-b26b-b881dc404f7a" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-29_DU-2025-630_domyslne.x" wejscie-w-zycie="2025-05-29">
+        <p>
+          <zdanie nr="1" gd:zdGUID="e79a8c43-0f1d-4554-a06f-7a25df24a22e" fragment="1" gd:fragmentGUID="ad0da061-7294-4947-ae7e-54c390f25b46" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-29_DU-2025-630_domyslne.x" wejscie-w-zycie="2025-05-29">W ustawie z dnia 29 czerwca 1963 r. o zagospodarowaniu wspólnot gruntowych (Dz. U. z 2022 r. poz. 140) art. 8o otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2022/140" cudzyslowy="oba" gd:nowGUID="5284e0db-5f75-49a7-a193-3536031933b0" element-eId="DU/2022/140__art_8o" funkcja="zastap"><artykul eId="DU/2022/140__art_8o" gd:GUID="dfb474a6-d1d5-43dc-8b42-cf60711e75c5" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-29_DU-2025-630_domyslne.x" wejscie-w-zycie="2025-05-29"><nr>8o</nr><ustep eId="DU/2022/140__art_8o__ust_1" gd:GUID="2cfec075-04ad-451a-888f-155972400b35" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-29_DU-2025-630_domyslne.x" wejscie-w-zycie="2025-05-29"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="acc7469e-0411-4389-8e77-9096a749c0c5" fragment="1" gd:fragmentGUID="b3a68a48-7c83-400c-b759-8a16be2b6343" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-29_DU-2025-630_domyslne.x" wejscie-w-zycie="2025-05-29">Do postępowań dotyczących wzruszenia decyzji ostatecznych wydanych na podstawie niniejszej ustawy nie stosuje się art. 145–145b, art. 154 oraz art. 155 ustawy z dnia 14 czerwca 1960 r. – Kodeks postępowania administracyjnego, jeżeli upłynęło 5 lat od dnia, w którym stała się ostateczna, decyzja o ustaleniu, które nierucho-mości stanowią wspólnotę gruntową, ustaleniu wykazu uprawnionych do udziału we wspólnocie gruntowej oraz wykazu obszarów gospodarstw rolnych przez nich posiadanych i wielkości przysługujących im udziałów we wspólnocie.</zdanie></p></ustep><ustep eId="DU/2022/140__art_8o__ust_2" gd:GUID="be1c7448-3813-4c86-bfe1-ae62278b0601" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-29_DU-2025-630_domyslne.x" wejscie-w-zycie="2025-05-29"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="65cab3cd-322c-46a0-accc-8aeb1e6676b0" fragment="1" gd:fragmentGUID="9a23d173-3347-4862-9b9c-a8c092c014fb" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-29_DU-2025-630_domyslne.x" wejscie-w-zycie="2025-05-29">Nie stwierdza się nieważności decyzji o ustaleniu, które nieruchomości stanowią wspólnotę gruntową, ustaleniu wykazu uprawnionych do udziału we wspólnocie gruntowej oraz wykazu obszarów gospodarstw rolnych przez nich posiadanych i wielkości przysługujących im udziałów we wspólnocie, jeżeli od dnia, w którym decyzja stała się ostateczna, upłynęło 5 lat.</zdanie><zdanie nr="2" gd:zdGUID="0737e1ad-4693-4077-b14c-ed9dc4bf5f45" fragment="1" gd:fragmentGUID="5853153f-14a7-4b53-9208-42f54c6aeba8" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-29_DU-2025-630_domyslne.x" wejscie-w-zycie="2025-05-29">Art. 158 § 2 ustawy z dnia 14 czerwca 1960 r. – Kodeks postępowania administracyjnego stosuje się odpowiednio.</zdanie></p></ustep></artykul></cytat-strukt>.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2025/630__art_2" gd:GUID="53c8761f-ab5e-448b-b584-4451344c6f01" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-29_DU-2025-630_domyslne.x" wejscie-w-zycie="2025-05-29">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="28e58a47-617d-41b5-b3fd-8fdad2544a59" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-29_DU-2025-630_domyslne.x" wejscie-w-zycie="2025-05-29">
+        <p>
+          <zdanie nr="1" gd:zdGUID="17991eea-812f-4a53-9737-e669dbf1a0fd" fragment="1" gd:fragmentGUID="93b6ef57-c0db-40b5-9886-9a0d3907400c" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-29_DU-2025-630_domyslne.x" wejscie-w-zycie="2025-05-29">Do postępowań administracyjnych w sprawach stwierdzenia nieważności decyzji, o których mowa w art. 8o ustawy zmienianej w art. 1, wszczętych i niezakończonych przed dniem wejścia w życie niniejszej ustawy, stosuje się przepisy art. 8o ustawy zmienianej w art. 1, w brzmieniu nadanym niniejszą ustawą.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2025/630__art_3" gd:GUID="455fd1a2-943d-40eb-b01f-9065840b124f" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-29_DU-2025-630_domyslne.x" wejscie-w-zycie="2025-05-29">
+      <nr>3</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="13e61de6-aafb-459e-9190-f79a86723ac0" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-29_DU-2025-630_domyslne.x" wejscie-w-zycie="2025-05-29">
+        <p>
+          <zdanie nr="1" gd:zdGUID="5f7d5386-7320-43f6-9ed2-b7784990e0d9" fragment="1" gd:fragmentGUID="c04a3384-0c33-4131-93dc-9fe52c0af38b" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-29_DU-2025-630_domyslne.x" wejscie-w-zycie="2025-05-29">Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <organ-podpisujacy>Prezydent Rzeczypospolitej Polskiej: <i><osoba podpisujacy="true" gd:osobaGUID="3ce290b8-0e7a-4907-bbea-edced4588c20"><imie>A.</imie> <nazwisko>Duda</nazwisko></osoba></i></organ-podpisujacy>
+  </ustawa>
+</akt-prawny>

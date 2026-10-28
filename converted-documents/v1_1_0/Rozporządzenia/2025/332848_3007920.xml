@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <rozporzadzenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/1205</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>c28a8f5c-4843-44d8-ac3b-ca7b51388c89</gd:GUIDwersji>
+      <AdresISAP>WDU20250001205</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>1205</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 1205</AdresWyswietlany>
+      <Tytul>Rozporządzenie Ministra Finansów i Gospodarki z dnia 26 sierpnia 2025 r. zmieniające rozporządzenie w sprawie miejsca świadczenia usług oraz zwrotu kwoty podatku naliczonego jednostce dokonującej nabycia (importu) towarów lub usług</Tytul>
+      <Rodzaj>ROZP</Rodzaj>
+      <DataOgloszenia>2025-09-01</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-08-26</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2025-09-16_DU-2025-1205_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2025-09-16" warunek="po upływie 14 dni od dnia ogłoszenia" podstawa="§ 3" zrodlo="https://eli.gov.pl/eli/DU/2025/1205" dowod="DU/2025/1205__art_3" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2025-09-16_DU-2025-1205_domyslne.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2025-09-16_DU-2025-1205_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="9bdb5792-45d0-4c09-af08-2c4ca947d064" rola="wydajacy">
+          <Nazwa>Minister Finansów i Gospodarki</Nazwa>
+          <OrganPodpisujacy>Minister Finansów i Gospodarki</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>A.</imie> <nazwisko>Domański</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Rozporządzenie</rodzaj-aktu>
+    <autor-aktu>Ministra Finansów i Gospodarki<odnosnik id-odnosnika="1" symbol="1" gd:GUID="1fe787a7-1f11-4db4-93b4-8ce2a81cfe5b"><p><zdanie nr="1" gd:zdGUID="e8e30d30-acfc-4e8f-9bdc-0f1bad1307f0" fragment="1" gd:fragmentGUID="95820acf-ec6f-4ed2-9193-113c1f3100d1">Minister Finansów i Gospodarki kieruje działem administracji rządowej ‒ finanse publiczne, na podstawie § 1 ust. 2 pkt 3 rozporządzenia Prezesa Rady Ministrów z dnia 25 lipca 2025 r. w sprawie szczegółowego zakresu działania Ministra Finansów i Gospodarki (Dz. U. poz. 997).</zdanie></p></odnosnik></autor-aktu>
+    <data>z dnia 26 sierpnia 2025 r.</data>
+    <tytul>zmieniające rozporządzenie w sprawie miejsca świadczenia usług oraz zwrotu kwoty podatku naliczonego jednostce dokonującej nabycia (importu) towarów lub usług</tytul>
+    <podstawa-prawna>Na podstawie art. 28o i art. 92 ust. 1 pkt 3 ustawy z dnia 11 marca 2004 r. o podatku od towarów i usług (Dz. U. z 2025 r. poz. 775, 894, 896 i 1203) zarządza się, co następuje:</podstawa-prawna>
+    <paragraf eId="DU/2025/1205__art_1" gd:GUID="07759a0e-e9c0-409f-ab07-ca394a116a25" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-16_DU-2025-1205_domyslne.x" wejscie-w-zycie="2025-09-16">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="647cc088-c7ac-4926-aad1-862391f7bf66" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-16_DU-2025-1205_domyslne.x" wejscie-w-zycie="2025-09-16">
+        <p>
+          <zdanie nr="1" gd:zdGUID="826ebc1f-4bcf-418d-bfc9-a13a222e5c53" fragment="1" gd:fragmentGUID="b68c64cd-7fc1-40c5-bccb-505d7520582f" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-16_DU-2025-1205_domyslne.x" wejscie-w-zycie="2025-09-16"><now:zamien-tekst stary-tekst="do kwoty 27 719 złotych" nowy-tekst="do kwoty 28 745 złotych" element-eId="DU/2024/1328__art_6a__ust_6" akt="https://eli.gov.pl/eli/DU/2024/1328" gd:nowGUID="ab8f061e-eecc-4f15-8151-1237b64686b7" />W rozporządzeniu Ministra Finansów z dnia 16 grudnia 2013 r. w sprawie miejsca świadczenia usług oraz zwrotu kwoty podatku naliczonego jednostce dokonującej nabycia (importu) towarów lub usług (Dz. U. z 2024 r. poz. 1328 i 1899 oraz z 2025 r. poz. 484) w § 6a w ust. 6 wyrazy „do kwoty 27 719 złotych” zastępuje się wyrazami „do kwoty 28 745 złotych”.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2025/1205__art_2" gd:GUID="e690489c-1360-4002-9764-dfe20f6a8775" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-16_DU-2025-1205_domyslne.x" wejscie-w-zycie="2025-09-16">
+      <nr>2</nr>
+      <ustep eId="DU/2025/1205__art_2__ust_1" gd:GUID="e65a013a-0308-4f27-ac9d-3d383ec7a1dc" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-16_DU-2025-1205_domyslne.x" wejscie-w-zycie="2025-09-16">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="a73efdd7-592d-47d9-9e9f-a247cac8c909" fragment="1" gd:fragmentGUID="25a335ae-cb39-4810-81bb-6ade9793c981" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-16_DU-2025-1205_domyslne.x" wejscie-w-zycie="2025-09-16">Maksymalną kwotę zwrotu podatku określoną w § 6a ust. 6 rozporządzenia zmienianego w § 1, w brzmieniu nadanym niniejszym rozporządzeniem, stosuje się do zwrotu podatku, o którym mowa w § 6a ust. 1 pkt 1 rozporządzenia zmienianego w § 1, z tytułu nabycia towarów po dniu 31 grudnia 2024 r.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/1205__art_2__ust_2" gd:GUID="98c91570-c3cf-4b74-b431-a9cff6237257" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-16_DU-2025-1205_domyslne.x" wejscie-w-zycie="2025-09-16">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="8d343002-0c29-4708-9981-c78b2790c82b" fragment="1" gd:fragmentGUID="044bee6e-2397-4e65-bf0e-544b7d1093f5" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-16_DU-2025-1205_domyslne.x" wejscie-w-zycie="2025-09-16">W przypadku gdy nabycia towarów, o których mowa w § 6a ust. 1 pkt 1 rozporządzenia zmienianego w § 1, są dokonywane w okresie 12 następujących po sobie miesięcy na przełomie lat 2024 i 2025, maksymalną kwotę zwrotu podatku oblicza się proporcjonalnie do wartości towarów nabytych w poszczególnych latach, z uwzględnieniem maksymalnej kwoty zwrotu podatku obowiązującej w tych latach.</zdanie>
+        </p>
+      </ustep>
+    </paragraf>
+    <paragraf eId="DU/2025/1205__art_3" gd:GUID="19094b81-7a26-493a-a1f6-29ce3a20a30e" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-16_DU-2025-1205_domyslne.x" wejscie-w-zycie="2025-09-16">
+      <nr>3</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="0ad82e08-c9ea-4b42-98ca-9d3bcd5cdaab" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-16_DU-2025-1205_domyslne.x" wejscie-w-zycie="2025-09-16">
+        <p>
+          <zdanie nr="1" gd:zdGUID="46d156d6-61e6-48b3-a509-90902ea51ea4" fragment="1" gd:fragmentGUID="5cc31156-c7aa-405a-9e8f-52c00e00a02a" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-16_DU-2025-1205_domyslne.x" wejscie-w-zycie="2025-09-16">Rozporządzenie wchodzi w życie po upływie 14 dni od dnia ogłoszenia.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <organ-podpisujacy>Minister Finansów i Gospodarki: <i><osoba podpisujacy="true" gd:osobaGUID="9aa5e424-ad8d-422b-a304-2fb8b0b24433"><imie>A.</imie> <nazwisko>Domański</nazwisko></osoba></i></organ-podpisujacy>
+  </rozporzadzenie>
+</akt-prawny>

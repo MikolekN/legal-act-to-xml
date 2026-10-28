@@ -1,0 +1,965 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <obwieszczenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2026/115</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>fcf22df8-e8b9-43f7-a895-48000ce614b3</gd:GUIDwersji>
+      <AdresISAP>WDU20260000115</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2026</Rok>
+      <Pozycja>115</Pozycja>
+      <AdresWyswietlany>Dz.U. 2026 poz. 115</AdresWyswietlany>
+      <Tytul>Obwieszczenie Marszałka Sejmu Rzeczypospolitej Polskiej z dnia 26 stycznia 2026 r. w sprawie ogłoszenia jednolitego tekstu ustawy o świadczeniach przedemerytalnych</Tytul>
+      <Rodzaj>OBW_TJ</Rodzaj>
+      <DataOgloszenia>2026-02-02</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2026-01-26</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_ujednolicenie_2026-02-02_DU-2026-115_domyslne" rodzaj="ujednolicenie" pochodzenie="domyslne-z-aktu" data="2026-02-02" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_ujednolicenie.zdarz_ujednolicenie_2026-02-02_DU-2026-115_domyslne" glowna="true">
+          <Przedzial rodzaj="ujednolicenie" od="zdarz_ujednolicenie_2026-02-02_DU-2026-115_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <DataObowiazywaniaWersji>
+        <Od>zdarz_ujednolicenie_2026-02-02_DU-2026-115_domyslne</Od>
+      </DataObowiazywaniaWersji>
+      <Organy>
+        <Organ gd:GUID="0de52913-37fb-42fa-8e8a-d7546bb2e96a" rola="wydajacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/MSEJMU">
+          <Nazwa>Marszałek Sejmu</Nazwa>
+          <OrganPodpisujacy>Marszałek Sejmu</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>W.</imie> <nazwisko>Czarzasty</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Obwieszczenie</rodzaj-aktu>
+    <autor-aktu>Marszałka Sejmu Rzeczypospolitej Polskiej</autor-aktu>
+    <data>z dnia 26 stycznia 2026 r.</data>
+    <tytul>w sprawie ogłoszenia jednolitego tekstu ustawy o świadczeniach przedemerytalnych</tytul>
+    <punkt-OTJ eId="DU/2026/115__pkt_1" gd:GUID="4e4218b7-caab-44c5-aa40-a11f7be97d55">
+      <nr>1</nr>
+      <p>
+        <zdanie nr="1" gd:zdGUID="94b2c5e9-fd30-4a32-b773-264697ae9dda" fragment="1" gd:fragmentGUID="e2262d46-8e16-4036-8471-16e9d6ac9d0f">Na podstawie art. 16 ust. 1 zdanie pierwsze ustawy z dnia 20 lipca 2000 r. o ogłaszaniu aktów normatywnych i niektórych innych aktów prawnych (Dz. U. z 2019 r. poz. 1461) ogłasza się w załączniku do niniejszego obwieszczenia jednolity tekst ustawy z dnia 30 kwietnia 2004 r. o świadczeniach przedemerytalnych (Dz. U. z 2025 r. poz. 421), z uwzględnieniem zmian wprowadzonych ustawą z dnia 20 marca 2025 r. o rynku pracy i służbach zatrudnienia (Dz. U. poz. 620) oraz zmian wynikających z przepisów ogłoszonych przed dniem 22 stycznia 2026 r.</zdanie>
+      </p>
+    </punkt-OTJ>
+    <punkt-OTJ eId="DU/2026/115__pkt_2" gd:GUID="f02a59ba-4b69-40ad-b985-5d039fe89a4a">
+      <nr>2</nr>
+      <p>
+        <zdanie nr="1" gd:zdGUID="0d4d21a7-a456-4d42-b86d-507469c2f0bc" fragment="1" gd:fragmentGUID="515d5943-1c63-4969-be66-81eb2724b08c">Podany w załączniku do niniejszego obwieszczenia tekst jednolity ustawy nie obejmuje art. 461 ustawy z dnia 20 marca 2025 r. o rynku pracy i służbach zatrudnienia (Dz. U. poz. 620), który stanowi:<tresc-strukt cudzyslowy="oba" gd:GUID="dceca3ab-69ec-4873-99f6-3083585adffd"><artykul eId="DU/2025/620__art_461" gd:GUID="4474124e-a320-4539-9120-b143e2cc68eb"><nr>461</nr><ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="d90d7ec7-bb5f-4805-8e0f-cb13d53731a5"><p><zdanie nr="1" gd:zdGUID="1c1c1721-bfa2-4c2a-a2c7-7834eee3a10f" fragment="1" gd:fragmentGUID="c67b73c3-d609-4d72-ba4e-b346df5c39d4">Ustawa wchodzi w życie pierwszego dnia miesiąca następującego po upływie 14 dni od dnia ogłoszenia, z wyjątkiem:</zdanie></p><punkt eId="DU/2025/620__art_461__pkt_1" gd:GUID="2635aa01-c764-4c7d-9cf5-dcd20ecf47a2"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="1c1c1721-bfa2-4c2a-a2c7-7834eee3a10f" fragment="2" gd:fragmentGUID="571627f7-51cc-4a34-91e6-08d858d7db5d">art. 392 pkt 2 lit. b oraz art. 458, które wchodzą w życie z dniem następującym po dniu ogłoszenia;</zdanie></p></punkt><punkt eId="DU/2025/620__art_461__pkt_2" gd:GUID="b20a4111-804f-40da-9f54-d6752c100b11"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="1c1c1721-bfa2-4c2a-a2c7-7834eee3a10f" fragment="3" gd:fragmentGUID="ed2b7e44-8d6c-4977-973d-d88324e73119">art. 106, art. 128 ust. 2, art. 203 oraz art. 300 ust. 3 pkt 11, które wchodzą w życie z dniem 1 stycznia 2026 r.</zdanie></p></punkt></ustep-n></artykul></tresc-strukt>.</zdanie>
+      </p>
+    </punkt-OTJ>
+    <organ-podpisujacy>Marszałek Sejmu: <i><osoba podpisujacy="true" gd:osobaGUID="8440cfb6-c425-4fdc-8561-a9024da7f4bd"><imie>W.</imie> <nazwisko>Czarzasty</nazwisko></osoba></i></organ-podpisujacy>
+    <ustawa>
+      <zalacznik-do>Załącznik do obwieszczenia Marszałka Sejmu Rzeczypospolitej Polskiej z dnia 26 stycznia 2026 r. (Dz. U. poz. 115)</zalacznik-do>
+      <rodzaj-aktu>Ustawa</rodzaj-aktu>
+      <data>z dnia 30 kwietnia 2004 r.</data>
+      <tytul>o świadczeniach przedemerytalnych</tytul>
+      <artykul eId="DU/2026/115__art_1" gd:GUID="1217e93a-ea98-461d-bd8c-4e379eb0b12f">
+        <nr>1</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="f74f37ff-b4ec-4ded-8fea-d6842955f9bc">
+          <p>
+            <zdanie nr="1" gd:zdGUID="0fcd145f-e05e-4c07-90b5-a11a2fdce04c" fragment="1" gd:fragmentGUID="c27afab8-935c-4078-968c-380f41b81132">Ustawa określa:</zdanie>
+          </p>
+          <punkt eId="DU/2026/115__art_1__pkt_1" gd:GUID="20898d15-f5f9-4b96-bda1-1a4214f7c5a5">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="0fcd145f-e05e-4c07-90b5-a11a2fdce04c" fragment="2" gd:fragmentGUID="7a7aa0d4-b60f-437a-b77c-338c0088fa7c">warunki nabywania i utraty prawa do świadczeń przedemerytalnych;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2026/115__art_1__pkt_2" gd:GUID="478d364e-8580-4258-9803-378e7fb1aa02">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="0fcd145f-e05e-4c07-90b5-a11a2fdce04c" fragment="3" gd:fragmentGUID="31ec922d-f9ac-4309-a1e9-9a24cede03a8">zasady wypłaty i finansowania świadczeń przedemerytalnych.</zdanie>
+            </p>
+          </punkt>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2026/115__art_2" gd:GUID="42b40a2e-6a45-43de-ac57-bef6e930515f">
+        <nr>2</nr>
+        <ustep eId="DU/2026/115__art_2__ust_1" gd:GUID="49adf9cc-79be-428a-8374-49bf2b8fe7ad">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="d10825e3-971c-4930-901a-c0bc7e8778c7" fragment="1" gd:fragmentGUID="a7812adc-561f-42fd-b997-8cf20228768a">Prawo do świadczenia przedemerytalnego przysługuje osobie, która:</zdanie>
+          </p>
+          <punkt eId="DU/2026/115__art_2__ust_1__pkt_1" gd:GUID="ba44255d-9a8b-4325-8620-931acb784e62">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="d10825e3-971c-4930-901a-c0bc7e8778c7" fragment="2" gd:fragmentGUID="58cacfd6-dba1-49ad-8d84-c00a49c60114">do dnia rozwiązania stosunku pracy lub stosunku służbowego z powodu likwidacji pracodawcy lub niewypłacalności pracodawcy, w rozumieniu przepisów o ochronie roszczeń pracowniczych w razie niewypłacalności pracodawcy, u którego była zatrudniona lub pozostawała w stosunku służbowym przez okres niekrótszy niż 6 miesięcy, ukończyła co najmniej 56 lat – kobieta oraz 61 lat – mężczyzna i posiada okres uprawniający do emerytury, wynoszący co najmniej 20 lat dla kobiet i 25 lat dla mężczyzn, lub</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2026/115__art_2__ust_1__pkt_2" gd:GUID="efa36a80-5448-4d55-9be2-0bdb19595bdb">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="d10825e3-971c-4930-901a-c0bc7e8778c7" fragment="3" gd:fragmentGUID="a8e3dc4c-1d1f-45ec-b58c-03d52f7d4b57"><odnosnik id-odnosnika="1" symbol="1" gd:GUID="0f202b7d-57af-40fd-a117-19f20023ddac"><p><zdanie nr="1" gd:zdGUID="d3a0d5b9-092f-4c17-9e2f-c05d5c8895fb" fragment="1" gd:fragmentGUID="89dca7a6-4881-4604-b0b3-7370dfb989fd">W brzmieniu ustalonym przez art. 393 pkt 1 lit. a tiret pierwsze ustawy z dnia 20 marca 2025 r. o rynku pracy i służbach zatrudnienia (Dz. U. poz. 620), która weszła w życie z dniem 1 czerwca 2025 r.</zdanie></p></odnosnik> do dnia rozwiązania stosunku pracy lub stosunku służbowego z przyczyn dotyczących zakładu pracy, w rozumieniu przepisów ustawy z dnia 20 marca 2025 r. o rynku pracy i służbach zatrudnienia (Dz. U. poz. 620, 1746 i 1794), w którym była zatrudniona przez okres niekrótszy niż 6 miesięcy, ukończyła co najmniej 55 lat – kobieta oraz 60 lat – mężczyzna oraz posiada okres uprawniający do emerytury, wynoszący co najmniej 30 lat dla kobiet i 35 lat dla mężczyzn, lub</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2026/115__art_2__ust_1__pkt_3" gd:GUID="60becd3e-bc50-46c9-a9c1-546ca40ea555">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="d10825e3-971c-4930-901a-c0bc7e8778c7" fragment="4" gd:fragmentGUID="d535fb26-0fa1-4d2f-9bb7-eb41ec7f3a42">do dnia ogłoszenia upadłości prowadziła nieprzerwanie i przez okres niekrótszy niż 24 miesiące pozarolniczą działalność, w rozumieniu przepisów ustawy z dnia 13 października 1998 r. o systemie ubezpieczeń społecznych (Dz. U. z 2025 r. poz. 350, z późn. zm.<odnosnik id-odnosnika="2" symbol="2" gd:GUID="8fae2a8c-fa3b-4f29-a67f-7fe987b9e8a6"><p><zdanie nr="1" gd:zdGUID="9607339b-e83e-4ac0-aab5-513d70dca79e" fragment="1" gd:fragmentGUID="4f17f090-9f5c-47dd-8f87-88dd103cc808">Zmiany tekstu jednolitego wymienionej ustawy zostały ogłoszone w Dz. U. z 2025 r. poz. 620, 622, 769, 820, 1083, 1160, 1216, 1409, 1413 i 1423 oraz z 2026 r. poz. 26.</zdanie></p></odnosnik>), zwanej dalej „ustawą o systemie ubezpieczeń społecznych”, i za ten okres opłaciła składki na ubezpieczenia społeczne oraz do dnia ogłoszenia upadłości ukończyła co najmniej 56 lat – kobieta i 61 lat – mężczyzna i posiada okres uprawniający do emerytury, wynoszący co najmniej 20 lat dla kobiet i 25 lat dla mężczyzn, lub</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2026/115__art_2__ust_1__pkt_4" gd:GUID="7809d2fb-14c7-41c8-a105-0fc3b3a0e949">
+            <nr>4</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="d10825e3-971c-4930-901a-c0bc7e8778c7" fragment="5" gd:fragmentGUID="5fa7423e-7646-4cc2-a337-7a49f6953ff9">zarejestrowała się we właściwym powiatowym urzędzie pracy w ciągu 30 dni od dnia ustania prawa do renty z tytułu niezdolności do pracy, pobieranej nieprzerwanie przez okres co najmniej 5 lat, i do dnia, w którym ustało prawo do renty, ukończyła co najmniej 55 lat – kobieta oraz 60 lat – mężczyzna i osiągnęła okres uprawniający do emerytury, wynoszący co najmniej 20 lat dla kobiet i 25 lat dla mężczyzn, lub</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2026/115__art_2__ust_1__pkt_4a" gd:GUID="791cdcdb-7d6e-425a-a255-1dc7183b812c">
+            <nr>4a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="d10825e3-971c-4930-901a-c0bc7e8778c7" fragment="6" gd:fragmentGUID="0f9b0810-2e3b-4b51-af60-c64b2c54cfba"><odnosnik id-odnosnika="3" symbol="3" gd:GUID="8fcbdc65-53e2-42d4-8168-67d3fee0e776"><p><zdanie nr="1" gd:zdGUID="eb02c800-819d-453b-b787-a31bdc406db6" fragment="1" gd:fragmentGUID="00f9b209-3ea4-432d-a387-3b5015d7ac2e">W brzmieniu ustalonym przez art. 393 pkt 1 lit. a tiret drugie ustawy, o której mowa w odnośniku 1.</zdanie></p></odnosnik> zarejestrowała się we właściwym powiatowym urzędzie pracy w ciągu 60 dni od dnia ustania prawa do świadczenia pielęgnacyjnego lub specjalnego zasiłku opiekuńczego, o których mowa w ustawie z dnia 28 listopada 2003 r. o świadczeniach rodzinnych (Dz. U. z 2025 r. poz. 1208), lub zasiłku dla opiekuna, o którym mowa w ustawie z dnia 4 kwietnia 2014 r. o ustaleniu i wypłacie zasiłków dla opiekunów (Dz. U. z 2024 r. poz. 246), pobieranych nieprzerwanie przez okres co najmniej 365 dni, i do dnia, w którym ustało prawo do świadczenia pielęgnacyjnego, specjalnego zasiłku opiekuńczego lub zasiłku dla opiekuna, ukończyła co najmniej 55 lat – kobieta oraz 60 lat – mężczyzna i osiągnęła okres uprawniający do emerytury, wynoszący co najmniej 20 lat dla kobiet i 25 lat dla mężczyzn, lub</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2026/115__art_2__ust_1__pkt_5" gd:GUID="fb6c56e4-a8be-454a-8ee8-12e5504c7560">
+            <nr>5</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="d10825e3-971c-4930-901a-c0bc7e8778c7" fragment="7" gd:fragmentGUID="e31743e1-fcb9-4c49-ac6f-37f40f29e1a7"><odsylacz-do-odnosnika id-odnosnika="3" symbol="3" /> do dnia rozwiązania stosunku pracy z przyczyn dotyczących zakładu pracy, w rozumieniu przepisów ustawy z dnia 20 marca 2025 r. o rynku pracy i służbach zatrudnienia, w którym była zatrudniona przez okres niekrótszy niż 6 miesięcy, posiada okres uprawniający do emerytury, wynoszący co najmniej 35 lat dla kobiet i 40 lat dla mężczyzn, lub</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2026/115__art_2__ust_1__pkt_6" gd:GUID="15f88cb4-4d14-485d-8702-5ec4219be303">
+            <nr>6</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="d10825e3-971c-4930-901a-c0bc7e8778c7" fragment="8" gd:fragmentGUID="64573854-95bf-4619-9cb8-2f36d6bac741">do dnia 31 grudnia roku poprzedzającego rozwiązanie stosunku pracy lub stosunku służbowego, z powodu likwidacji pracodawcy lub niewypłacalności pracodawcy, w rozumieniu przepisów o ochronie roszczeń pracowniczych w razie niewypłacalności pracodawcy, u którego była zatrudniona lub pozostawała w stosunku służbowym przez okres niekrótszy niż 6 miesięcy, posiadała okres uprawniający do emerytury wynoszący co najmniej 34 lata dla kobiet i 39 lat dla mężczyzn.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2026/115__art_2__ust_2" gd:GUID="93c9b3c3-415b-4c32-b00f-35a97860e960">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="555bd4f2-992c-49cf-917c-858efd58231b" fragment="1" gd:fragmentGUID="9d956c4a-6b6c-4bcf-a5b6-7b8936ecd184">Za okres uprawniający do emerytury, o którym mowa w ust. 1, uważa się okres ustalony zgodnie z przepisami art. 5–9, art. 10 ust. 1 oraz art. 11 ustawy z dnia 17 grudnia 1998 r. o emeryturach i rentach z Funduszu Ubezpieczeń Społecznych (Dz. U. z 2025 r. poz. 1749 oraz z 2026 r. poz. 26), zwanej dalej „ustawą o emeryturach i rentach z FUS”.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/115__art_2__ust_3" gd:GUID="bc462e02-dc13-4518-898f-60932914d43e">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="97f2378c-a146-4ff4-890a-bf3b343c4e04" fragment="1" gd:fragmentGUID="bce617b1-2e6d-4d6a-83f1-36e51aa246d8"><odnosnik id-odnosnika="4" symbol="4" gd:GUID="b08a206a-afef-41a3-8440-a1bf30ddf63f"><p><zdanie nr="1" gd:zdGUID="219b765f-f7ca-4bfe-bba7-d5db74e8c086" fragment="1" gd:fragmentGUID="654015d7-11ff-402a-894c-497b988e0e3c">W brzmieniu ustalonym przez art. 393 pkt 1 lit. b ustawy, o której mowa w odnośniku 1.</zdanie></p></odnosnik> Świadczenie przedemerytalne przysługuje osobie określonej w ust. 1 po upływie co najmniej 180 dni pobierania zasiłku dla bezrobotnych, o którym mowa w ustawie z dnia 20 marca 2025 r. o rynku pracy i służbach zatrudnienia, jeżeli osoba ta spełnia łącznie następujące warunki:</zdanie>
+          </p>
+          <punkt eId="DU/2026/115__art_2__ust_3__pkt_1" gd:GUID="01cf19d3-086f-4067-ba9b-60a058256d13">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="97f2378c-a146-4ff4-890a-bf3b343c4e04" fragment="2" gd:fragmentGUID="237ff3c2-e051-45b3-b789-249e714845f6">nadal jest zarejestrowana jako bezrobotny;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2026/115__art_2__ust_3__pkt_2" gd:GUID="4f60b68d-04ef-4c78-9bb9-2b5bc70cf6f4">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="97f2378c-a146-4ff4-890a-bf3b343c4e04" fragment="3" gd:fragmentGUID="c488ce18-2e16-45e9-972a-c41c559546fb">złoży wniosek o przyznanie świadczenia przedemerytalnego w terminie nieprzekraczającym 30 dni od dnia wydania przez powiatowy urząd pracy dokumentu poświadczającego 180-dniowy okres pobierania zasiłku dla bezrobotnych.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2026/115__art_2__ust_4" gd:GUID="0326f104-d33d-4b22-832a-12dfda1cc8e9">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="63678c31-dd8b-445a-92f8-854a291a6f1f" fragment="1" gd:fragmentGUID="768fadf8-f9c0-47c4-9d93-a650817d208f"><odnosnik id-odnosnika="5" symbol="5" gd:GUID="3480f22d-7bde-4eb9-b657-c92c832d00b9"><p><zdanie nr="1" gd:zdGUID="cf3846af-eacc-4500-a8b4-3f179f504231" fragment="1" gd:fragmentGUID="78ca316d-b72e-4abc-9ef4-7cc4d371d611">Ze zmianą wprowadzoną przez art. 393 pkt 1 lit. c ustawy, o której mowa w odnośniku 1.</zdanie></p></odnosnik> W szczególnie uzasadnionych przypadkach Zakład Ubezpieczeń Społecznych, na wniosek osoby zainteresowanej, może przywrócić termin złożenia wniosku, o którym mowa w ust. 3 pkt 2.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/115__art_2__ust_5" gd:GUID="546c9b29-9acc-4ee8-88c9-884ca2f476b4">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="e4affedd-4702-4065-8e81-dc33c795145b" fragment="1" gd:fragmentGUID="68d9e24a-6162-416b-9608-b0cf25cec15b"><odnosnik id-odnosnika="6" symbol="6" gd:GUID="219b5faa-2ab1-4d04-867e-81c15ed6a942"><p><zdanie nr="1" gd:zdGUID="9cde07c6-1452-4c1e-b9cd-edca5e2984cc" fragment="1" gd:fragmentGUID="b287a16f-58dc-4e53-9b6b-004e6dcf5e62">W brzmieniu ustalonym przez art. 393 pkt 1 lit. d ustawy, o której mowa w odnośniku 1.</zdanie></p></odnosnik> Do okresu 180 dni pobierania zasiłku dla bezrobotnych, o którym mowa w ust. 3, wlicza się:</zdanie>
+          </p>
+          <punkt eId="DU/2026/115__art_2__ust_5__pkt_1" gd:GUID="1fee50bb-94b7-47ff-90f5-4122c4f17e2f">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="e4affedd-4702-4065-8e81-dc33c795145b" fragment="2" gd:fragmentGUID="fad3eb15-f25e-4ff2-b83b-8b1f15829109">okresy, za które, zgodnie z art. 220 ust. 2 ustawy z dnia 20 marca 2025 r. o rynku pracy i służbach zatrudnienia, prawo do tego zasiłku dla bezrobotnych nie przysługiwało;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2026/115__art_2__ust_5__pkt_2" gd:GUID="43aaf238-3554-4835-bb17-b797169ccca9">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="e4affedd-4702-4065-8e81-dc33c795145b" fragment="3" gd:fragmentGUID="9ebdd29f-3bfc-4341-84fd-2cf9c0c555c6">okresy zatrudnienia lub innej pracy zarobkowej, w rozumieniu przepisów ustawy z dnia 20 marca 2025 r. o rynku pracy i służbach zatrudnienia, albo zatrudnienia w ramach prac interwencyjnych lub robót publicznych podjętego w tym okresie; w przypadku gdy zatrudnienie lub inna praca zarobkowa ustanie po upływie 180-dniowego okresu, o którym mowa w ust. 3 pkt 2, prawo do świadczenia przedemerytalnego przysługuje, jeżeli wniosek o przyznanie tego świadczenia zostanie złożony w terminie nieprzekraczającym 30 dni od dnia ustania zatrudnienia lub innej pracy zarobkowej, w rozumieniu przepisów ustawy z dnia 20 marca 2025 r. o rynku pracy i służbach zatrudnienia, albo zatrudnienia w ramach prac interwencyjnych lub robót publicznych.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2026/115__art_2__ust_5a" gd:GUID="b276f0fb-7ff5-4ba5-8306-fbd25cd19b00">
+          <nr>5a</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="0f0d4d23-98c4-4e16-8ece-9839ad2f02e6" fragment="1" gd:fragmentGUID="db140b2f-3b9d-4d1f-bcc2-16429ebaf6ce">Przepis ust. 4 stosuje się odpowiednio do terminu złożenia wniosku, o którym mowa w ust. 5 pkt 2.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/115__art_2__ust_6" gd:GUID="71a096be-45f6-488d-b8e2-abe65b018a95">
+          <nr>6</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="e2110548-5f57-4a10-8cd5-3d1697d85aa7" fragment="1" gd:fragmentGUID="13019643-b259-4eaf-97d5-588c97337291">Prawo do świadczenia przedemerytalnego przysługuje również osobom, o których mowa w art. 6 ustawy z dnia 19 czerwca 1997 r. o zakazie stosowania wyrobów zawierających azbest (Dz. U. z 2025 r. poz. 1708), po spełnieniu warunków, o których mowa w ust. 3.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2026/115__art_3" gd:GUID="db4bc7e6-1ee5-4d9e-8b9d-48db66e0bb72">
+        <nr>3</nr>
+        <ustep eId="DU/2026/115__art_3__ust_1" gd:GUID="b41dea88-f6e6-4c82-ae67-74318f8388b5">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="cc517bb6-461e-491a-a90a-bc90fd315709" fragment="1" gd:fragmentGUID="ba584447-6c92-414b-b958-a14cdfd9e420">Kwota świadczenia przedemerytalnego wynosi 1600,70 zł miesięcznie, z wyjątkiem świadczeń dla osób, o których mowa w art. 2 ust. 1 pkt 4, których świadczenie nie może być wyższe niż ostatnio otrzymywana renta.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/115__art_3__ust_2" gd:GUID="b18e070f-5b8c-4576-ad9c-863598f84d86">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="545d3c99-6e99-4a8a-b518-ba2c8abf4e29" fragment="1" gd:fragmentGUID="67349999-7bfb-4199-9e0b-6c2f0d4bea46">Kwota, o której mowa w ust. 1, podlega waloryzacji na zasadach i w terminach przewidzianych w ustawie o emeryturach i rentach z FUS.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2026/115__art_4" gd:GUID="50a3ddde-0474-4c24-b49f-e5cb55a48787">
+        <nr>4</nr>
+        <ustep eId="DU/2026/115__art_4__ust_1" gd:GUID="8bdb6569-252a-4f22-bdf9-865c1e334b9f">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="933623b6-5f9f-4ccf-ab6d-f42551e14f1f" fragment="1" gd:fragmentGUID="34c47360-a4c6-4ac0-a950-9c771ea9fdf4">Prawo do świadczenia przedemerytalnego ustaje:</zdanie>
+          </p>
+          <punkt eId="DU/2026/115__art_4__ust_1__pkt_1" gd:GUID="bae30bea-7165-42dc-aab0-fde047990484">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="933623b6-5f9f-4ccf-ab6d-f42551e14f1f" fragment="2" gd:fragmentGUID="a8cb8807-6ada-4a4c-bc1d-4aa566537828">na wniosek osoby pobierającej świadczenie przedemerytalne;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2026/115__art_4__ust_1__pkt_2" gd:GUID="2c0339a9-81a0-4730-8bfe-5c14e08fddeb">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="933623b6-5f9f-4ccf-ab6d-f42551e14f1f" fragment="3" gd:fragmentGUID="b5106614-efc4-41a6-a53a-7c5e73456ce3">w dniu poprzedzającym dzień nabycia prawa do emerytury, która jest ustalona decyzją terenowej jednostki organizacyjnej Zakładu Ubezpieczeń Społecznych, zwanej dalej „organem rentowym”, lub innego organu emerytalno-rentowego określonego w odrębnych przepisach;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2026/115__art_4__ust_1__pkt_3" gd:GUID="6714f827-66c3-40d6-8b31-5830f1709ed0">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="933623b6-5f9f-4ccf-ab6d-f42551e14f1f" fragment="4" gd:fragmentGUID="bf10c518-7306-4617-9849-4e5e15f17b1c">z dniem osiągnięcia wieku 60 lat przez kobietę i 65 lat przez mężczyznę;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2026/115__art_4__ust_1__pkt_4" gd:GUID="2f81cb86-bdfd-4b88-bd1e-d35b0a3d2c3f">
+            <nr>4</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="933623b6-5f9f-4ccf-ab6d-f42551e14f1f" fragment="5" gd:fragmentGUID="6280a54e-5932-4077-83a3-3f273c025e7e">z dniem nabycia prawa własności lub objęcia w posiadanie (samoistne lub zależne) nieruchomości rolnej o powierzchni użytków rolnych przekraczających 2 ha przeliczeniowe albo współwłasności nieruchomości rolnej, jeżeli udział przekracza 2 ha przeliczeniowe;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2026/115__art_4__ust_1__pkt_5" gd:GUID="64e6d32b-8076-458f-b2d5-23d2d942ea30">
+            <nr>5</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="933623b6-5f9f-4ccf-ab6d-f42551e14f1f" fragment="6" gd:fragmentGUID="e3a73cab-f58c-44b7-91ba-1c9a983d2c74">wraz ze śmiercią osoby uprawnionej.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2026/115__art_4__ust_2" gd:GUID="857446b2-7cee-43e9-9fcd-70c29cc18c7d">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a31a50de-b993-436c-b686-5c4b6dd18df7" fragment="1" gd:fragmentGUID="31f0a4c7-e4c0-4829-8fbc-935644aaae12">Prawo do świadczenia przedemerytalnego ulega zawieszeniu w przypadku nabycia prawa do renty z tytułu niezdolności do pracy, renty inwalidzkiej albo podjęcia wypłaty renty strukturalnej lub świadczenia o charakterze rentowym z instytucji zagranicznej.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/115__art_4__ust_3" gd:GUID="58d4431b-ecaf-4601-87fa-9ce569b3162d">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="e0f9f0cd-8fdf-4f17-b7b9-1d7e0e7fbef0" fragment="1" gd:fragmentGUID="ed2768cc-9322-43c3-9e25-0e8349779d69">Wstrzymanie wypłaty świadczenia przedemerytalnego następuje, poczynając od:</zdanie>
+          </p>
+          <punkt eId="DU/2026/115__art_4__ust_3__pkt_1" gd:GUID="9cc097fa-585e-4bee-8185-133ddb6ff5ca">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="e0f9f0cd-8fdf-4f17-b7b9-1d7e0e7fbef0" fragment="2" gd:fragmentGUID="9045e16d-557f-4015-9187-992aaf0dc616">miesiąca przypadającego po miesiącu, w którym złożono wniosek, o którym mowa w ust. 1 pkt 1;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2026/115__art_4__ust_3__pkt_2" gd:GUID="657b3358-7a75-4d11-acc0-e96bfa1e7164">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="e0f9f0cd-8fdf-4f17-b7b9-1d7e0e7fbef0" fragment="3" gd:fragmentGUID="17a38efb-797c-4b17-ac9c-5442d424def4">dnia nabycia prawa do emerytury, o której mowa w ust. 1 pkt 2;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2026/115__art_4__ust_3__pkt_3" gd:GUID="30465477-cff9-4bc8-a150-a85c24029ce8">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="e0f9f0cd-8fdf-4f17-b7b9-1d7e0e7fbef0" fragment="4" gd:fragmentGUID="8dda39ce-dd85-4df0-876e-18d28d57104d">dnia osiągnięcia wieku 60 lat przez kobietę i 65 lat przez mężczyznę;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2026/115__art_4__ust_3__pkt_4" gd:GUID="e4f1133c-5235-414b-a9d1-309dc5b31200">
+            <nr>4</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="e0f9f0cd-8fdf-4f17-b7b9-1d7e0e7fbef0" fragment="5" gd:fragmentGUID="2f90361d-0e46-4eec-a16d-3226df973570">dnia nabycia prawa własności lub objęcia w posiadanie (samoistne lub zależne) nieruchomości rolnej o powierzchni użytków rolnych przekraczających 2 ha przeliczeniowe albo współwłasności nieruchomości rolnej, jeżeli udział przekracza 2 ha przeliczeniowe;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2026/115__art_4__ust_3__pkt_5" gd:GUID="bf6dd832-0190-4b10-9302-28b7637058f7">
+            <nr>5</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="e0f9f0cd-8fdf-4f17-b7b9-1d7e0e7fbef0" fragment="6" gd:fragmentGUID="a6434002-961e-4f05-b961-fe2a2372ceef">miesiąca przypadającego po miesiącu, w którym zmarła osoba uprawniona;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2026/115__art_4__ust_3__pkt_6" gd:GUID="d3e0bbbe-8a44-48be-bf6e-04383d6f4ce3">
+            <nr>6</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="e0f9f0cd-8fdf-4f17-b7b9-1d7e0e7fbef0" fragment="7" gd:fragmentGUID="28dd68d7-53db-4a75-88af-66796ec9e8ff">dnia nabycia prawa do renty z tytułu niezdolności do pracy, renty inwalidzkiej albo podjęcia wypłaty renty strukturalnej lub świadczenia o charakterze rentowym z instytucji zagranicznej;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2026/115__art_4__ust_3__pkt_7" gd:GUID="d8a05bec-4b69-4279-bb02-517528684ced">
+            <nr>7</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="e0f9f0cd-8fdf-4f17-b7b9-1d7e0e7fbef0" fragment="8" gd:fragmentGUID="297f0ac4-7cea-4ad7-a7c4-0762dab7c10d">najbliższego możliwego technicznie terminu płatności, jeżeli wstrzymanie wypłaty świadczenia przedemerytalnego nie było możliwe w terminie, o którym mowa w pkt 2, 4 i 6.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2026/115__art_4__ust_4" gd:GUID="59beb12f-2c09-49ec-9903-4c34d55d5f01">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="6715cb0b-dd0e-4598-8614-ef491163b48d" fragment="1" gd:fragmentGUID="d17b4603-20f5-41e0-8888-1a7c6c0d7968">W razie nabycia przez osobę uprawnioną do świadczenia przedemerytalnego prawa do renty rodzinnej lub uposażenia rodzinnego wypłaca się jedno z tych świadczeń – wyższe lub wybrane przez uprawnionego.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/115__art_4__ust_5" gd:GUID="07e3cfa5-e978-406b-b31e-83f7a6c2d5e7">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="178dbdff-11b1-4857-a5c3-32ab594fc34f" fragment="1" gd:fragmentGUID="506345ec-50ea-4c68-b7ed-579c841bac6f">Osoba pobierająca świadczenie przedemerytalne jest obowiązana zawiadomić organ rentowy wypłacający to świadczenie o okolicznościach powodujących ustanie lub zawieszenie prawa do tego świadczenia.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2026/115__art_5" gd:GUID="e7a1dca0-fe6c-42ae-95c7-95889ef014de">
+        <nr>5</nr>
+        <ustep eId="DU/2026/115__art_5__ust_1" gd:GUID="e9bfd628-fad7-44f9-84c0-f4900b1de5e9">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="5e13602a-0edb-4564-9b5e-a85654cbb233" fragment="1" gd:fragmentGUID="77eac6b9-9c50-41c7-bf8f-f9e64591b459">Świadczenie przedemerytalne ulega zmniejszeniu lub zawieszeniu, na zasadach określonych w ust. 2–5, 7 i 8, w przypadku osiągania przychodu, o którym mowa w art. 104 ustawy o emeryturach i rentach z FUS, zwanego dalej „przychodem”.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/115__art_5__ust_2" gd:GUID="7dfaf429-975c-4ae2-a66c-227fbcd2ad23">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="297bba5b-c39d-499d-bdfd-e0333c4366e5" fragment="1" gd:fragmentGUID="a275cf60-ddee-4c9f-b52a-ae64841f225a">Świadczenie przedemerytalne ulega zmniejszeniu, jeżeli kwota przychodu przekracza miesięcznie kwotę 25 % przeciętnego wynagrodzenia w roku kalendarzowym poprzedzającym termin waloryzacji, ogłoszonego przez Prezesa Głównego Urzędu Statystycznego do celów emerytalnych, zwaną dalej „dopuszczalną kwotą przychodu”, nie przekracza jednak kwoty 70 % tego wynagrodzenia, zwanej dalej „graniczną kwotą przychodu”.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/115__art_5__ust_3" gd:GUID="e6b0ea03-780c-45c8-b071-b5f03bd17797">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="6a02f56e-ed11-4d55-a6dd-92161e809b9b" fragment="1" gd:fragmentGUID="8c649a8c-387e-41d9-9088-df2428c1a911">Jeżeli kwota przychodu przekracza dopuszczalną kwotę przychodu, świadczenie przedemerytalne ulega zmniejszeniu o kwotę tego przekroczenia, z zastrzeżeniem ust. 4.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/115__art_5__ust_4" gd:GUID="e3b754de-cc29-47b5-9f5e-76b7b7ae20b4">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="13aeef78-0bba-46e8-abd3-bad616f82f4f" fragment="1" gd:fragmentGUID="096b61ac-af06-4a6c-8662-b441746828c5">W przypadku gdy w wyniku zmniejszenia, o którym mowa w ust. 3, kwota świadczenia przedemerytalnego byłaby niższa niż 800,35 zł, świadczenie przedemerytalne wynosi 800,35 zł, z zastrzeżeniem ust. 5.</zdanie>
+            <zdanie nr="2" gd:zdGUID="825371bc-48ea-4e56-b010-5a02a3594596" fragment="1" gd:fragmentGUID="9e56882a-9fd4-4ab2-bc70-a446df77f919">Do kwoty świadczenia przedemerytalnego w wysokości 800,35 zł art. 3 ust. 2 stosuje się odpowiednio.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/115__art_5__ust_4a" gd:GUID="fb80d60a-142e-49ef-bf0c-8c7aac07ea5e">
+          <nr>4a</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="661c8db0-83fd-43c6-a32e-0aa731cb4a11" fragment="1" gd:fragmentGUID="de70238f-ce21-43c0-806d-f54132c57d29">Kwota świadczenia przedemerytalnego, o której mowa w ust. 4, wypłacanego w 25 % pełnej wysokości świadczenia zgodnie z art. 95a ust. 1 ustawy o emeryturach i rentach z FUS, wynosi 25 % kwoty, o której mowa w ust. 4.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/115__art_5__ust_4b" gd:GUID="d8a91e1a-a6b2-4186-bffd-77005733f2b7">
+          <nr>4b</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="204adf17-070e-4622-8d3d-2e1e135d66b7" fragment="1" gd:fragmentGUID="f504da61-04c3-427d-aa9f-d03672b4628c">Kwotę świadczenia przedemerytalnego, o której mowa w ust. 4, wypłacanego w wysokości zmniejszonej zgodnie z art. 95a ust. 7 ustawy o emeryturach i rentach z FUS, ustala się przez pomnożenie kwoty, o której mowa w ust. 4, przez iloraz kwoty świadczenia przedemerytalnego, wypłacanego w wysokości zmniejszonej zgodnie z art. 95a ust. 7 ustawy o emeryturach i rentach z FUS do pełnej kwoty świadczenia przedemerytalnego.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/115__art_5__ust_5" gd:GUID="04777bbf-5ff8-49ab-817d-b742bf8dfb57">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="9e651b1b-58e0-478a-b411-778786550385" fragment="1" gd:fragmentGUID="618ed3db-1641-4a11-b0c9-78e6ac4ff063">W przypadku gdy kwota przychodu przekracza graniczną kwotę przychodu, świadczenie przedemerytalne ulega zawieszeniu.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/115__art_5__ust_6" gd:GUID="2f4dcf8b-11b4-42f5-962a-ebde7cdae976">
+          <nr>6</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="c604fce3-5b68-49b3-9353-f8a9d50e0327" fragment="1" gd:fragmentGUID="8872bbc5-f6ed-4a87-9ccb-690f3e329346">(uchylony)</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/115__art_5__ust_7" gd:GUID="bb83eb35-374b-4238-9b6b-0c7847992113">
+          <nr>7</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="671b2b1e-1c81-4d81-8e37-e7e25b935cf7" fragment="1" gd:fragmentGUID="bdadb47d-b374-405d-8580-bd1e229caf9c">Przychód uważa się za osiągnięty w miesiącu, w którym został wypłacony.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/115__art_5__ust_8" gd:GUID="6e17f820-3e07-43d9-8bd6-b7fdde9f7255">
+          <nr>8</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="e3ae292d-aa0b-4719-9377-7df342c9d9eb" fragment="1" gd:fragmentGUID="30afecd1-b95d-473b-9f11-8d82f9de8ec5">Przy ustalaniu przychodu nie uwzględnia się kwot przychodu należnych za okres przed dniem, od którego ustalono prawo do świadczenia przedemerytalnego.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2026/115__art_6" gd:GUID="d52068e8-8f0c-487e-b51c-eb61be3bac3f">
+        <nr>6</nr>
+        <ustep eId="DU/2026/115__art_6__ust_1" gd:GUID="d1283743-8ae1-4b42-8ad9-d9f9412f0d15">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="b2c967c3-8f67-4f49-b3a0-0180c9d8a149" fragment="1" gd:fragmentGUID="223d4ae0-adf9-4112-88a4-0edcb341efce">Rozliczenie przychodu następuje po zakończeniu roku rozliczeniowego, ustalonego od dnia 1 marca każdego roku do ostatniego dnia lutego następnego roku, w formie rozliczenia rocznego lub miesięcznego, w zależności od tego, która forma rozliczenia jest dla świadczeniobiorcy korzystniejsza.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/115__art_6__ust_2" gd:GUID="5d896199-7f2b-4481-b5f9-631db035a495">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="76ed0361-cc89-435a-aa24-4a0d12cbe29a" fragment="1" gd:fragmentGUID="138d0193-0761-4b26-98b4-021838af630f">Osoba pobierająca świadczenie przedemerytalne jest obowiązana niezwłocznie powiadomić organ rentowy o osiąganiu przychodu oraz o wysokości tego przychodu, a po zakończeniu roku rozliczeniowego, w terminie do dnia 31 maja następnego roku, o wysokości przychodu uzyskanego w roku rozliczeniowym, z uwzględnieniem przychodów uzyskanych w kolejnych miesiącach tego roku.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/115__art_6__ust_3" gd:GUID="0d0e62cb-36e8-41a1-809b-f6a21e64e06f">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="8a19a637-fdb1-46d2-87b5-7331975e2d51" fragment="1" gd:fragmentGUID="b7b03c32-9521-4c04-907b-7f300140d9a8">Obowiązek powiadomienia, o którym mowa w ust. 2, spoczywa odpowiednio na pracodawcy i zleceniodawcy lub innym płatniku składek, a w przypadku osoby pełniącej służbę – na właściwej jednostce organizacyjnej.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/115__art_6__ust_4" gd:GUID="e63db6ae-4791-4b3e-895a-d9dc483991c5">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="3e34e038-cc36-4fc7-8f2d-76c66682543f" fragment="1" gd:fragmentGUID="52544c32-f476-49c2-b98b-a25ff201f51a">Prezes Zakładu Ubezpieczeń Społecznych ogłasza, w formie komunikatu, w Dzienniku Urzędowym Rzeczypospolitej Polskiej „Monitor Polski”, co najmniej na 7 dni roboczych przed najbliższym terminem waloryzacji, obowiązujące w kolejnym roku rozliczeniowym:</zdanie>
+          </p>
+          <punkt eId="DU/2026/115__art_6__ust_4__pkt_1" gd:GUID="1a1db9c2-52f6-4355-9535-8e80ead61b11">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="3e34e038-cc36-4fc7-8f2d-76c66682543f" fragment="2" gd:fragmentGUID="44c3d10a-bf07-46c5-9a8c-d95678a5ec96">dopuszczalną kwotę przychodu oraz graniczną kwotę przychodu, ustalone na podstawie przeciętnego miesięcznego wynagrodzenia w roku kalendarzowym poprzedzającym termin waloryzacji, ogłoszonego do celów emerytalnych przez Prezesa Głównego Urzędu Statystycznego, z zaokrągleniem do 10 groszy w górę;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2026/115__art_6__ust_4__pkt_2" gd:GUID="5f917642-9195-4327-81e7-d0e6fe63902e">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="3e34e038-cc36-4fc7-8f2d-76c66682543f" fragment="3" gd:fragmentGUID="799c47d4-0e6a-44e2-9a1b-ec4d8c544a2f">roczną dopuszczalną kwotę przychodu oraz roczną graniczną kwotę przychodu – dla każdego roku rozliczeniowego, stanowiące – odpowiednio – dwunastokrotność kwot, o których mowa w pkt 1.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2026/115__art_6a" gd:GUID="c995e35a-2df4-407b-8f5f-2faa1965c62b">
+        <nr>6a</nr>
+        <ustep eId="DU/2026/115__art_6a__ust_1" gd:GUID="c82943c1-211d-454a-973b-6b3055e7723d">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="67479f24-818c-455e-adce-850b44ae2884" fragment="1" gd:fragmentGUID="b84374f5-3e2e-476f-b0fd-adfd7fac2584">W celu dokonania rozliczenia rocznego organ rentowy ustala łączną kwotę przychodu osiągniętą w okresie roku rozliczeniowego i porównuje ją z:</zdanie>
+          </p>
+          <punkt eId="DU/2026/115__art_6a__ust_1__pkt_1" gd:GUID="03308588-7753-47c9-ae8f-82c582de0778">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="67479f24-818c-455e-adce-850b44ae2884" fragment="2" gd:fragmentGUID="2cd3749b-0b2c-457c-99a5-2c7ac449f720">roczną dopuszczalną kwotą przychodu,</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2026/115__art_6a__ust_1__pkt_2" gd:GUID="db75fd47-e814-4a89-b0db-c4e7af6aca6c">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="67479f24-818c-455e-adce-850b44ae2884" fragment="3" gd:fragmentGUID="7d2a4f31-4410-48fa-be87-eecc2aa7f72c">roczną graniczną kwotą przychodu</zdanie>
+            </p>
+          </punkt>
+          <czesc-wspolna-punkt eId="DU/2026/115__art_6a__ust_1__czw" gd:GUID="ffdc7c92-68bb-4c4e-92ba-3af19d0ca40c">
+            <p>
+              <zdanie nr="1" gd:zdGUID="67479f24-818c-455e-adce-850b44ae2884" fragment="4" gd:fragmentGUID="9544cffa-f5e1-48fb-9a7c-f30a593078f4">– z tym że okres, z którego ustala się kwoty roczne, ulega odpowiedniemu skróceniu w roku rozliczeniowym, w którym prawo do świadczenia przedemerytalnego powstało, ustało lub w którym wypłata tego świadczenia była wstrzymana z przyczyn określonych w art. 4 ust. 2 lub 4 lub na podstawie art. 103 ust. 3 ustawy o emeryturach i rentach z FUS.</zdanie>
+            </p>
+          </czesc-wspolna-punkt>
+        </ustep>
+        <ustep eId="DU/2026/115__art_6a__ust_2" gd:GUID="c4d53d2f-edc7-4290-b14e-931498b7beeb">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="79df8cb1-2a44-482c-8c3a-3858dab4685c" fragment="1" gd:fragmentGUID="9bff31b9-7ccf-4c5d-a4f1-0c9abdb617ee">Jeżeli kwota przychodu uzyskana w roku rozliczeniowym przekroczyła roczną dopuszczalną kwotę przychodu, nie przekroczyła jednak rocznej granicznej kwoty przychodu, organ rentowy ustala łączną kwotę zmniejszenia w roku rozliczeniowym zgodnie z art. 5 ust. 3, z uwzględnieniem art. 5 ust. 4.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/115__art_6a__ust_3" gd:GUID="353d233e-72db-4aeb-9b84-25ea74e34c10">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="7af54ec4-44a4-42b2-abd4-61d36dff8784" fragment="1" gd:fragmentGUID="22883e16-1aef-4a04-bcd2-9cc6e30eeac7">Jeżeli kwota przychodu uzyskanego w roku rozliczeniowym przekroczyła roczną graniczną kwotę przychodu, organ rentowy ustala, że w roku rozliczeniowym świadczenie przedemerytalne podlegało zawieszeniu.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/115__art_6a__ust_4" gd:GUID="b58ee5f3-656c-4175-8c52-08fc254ccc5b">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="53ac837d-12ad-4bfe-a9dc-e40a8ada20ee" fragment="1" gd:fragmentGUID="24424711-f9ec-4cbc-a116-0c34810f3bb9">Jeżeli w roku rozliczeniowym świadczenie przedemerytalne zostało wypłacone w wysokości innej niż wynikająca z rozliczenia, o którym mowa w ust. 1–3, w przypadku gdy kwota wypłaconych świadczeń:</zdanie>
+          </p>
+          <punkt eId="DU/2026/115__art_6a__ust_4__pkt_1" gd:GUID="8b564a4c-6a12-4ea8-a4c7-37573c52dc4c">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="53ac837d-12ad-4bfe-a9dc-e40a8ada20ee" fragment="2" gd:fragmentGUID="32d03a62-70b7-4c0e-bf33-453b44c3df3a">była wyższa od kwoty wynikającej z rozliczenia – organ rentowy ustala kwotę nienależnie pobranych świadczeń i dochodzi jej zwrotu na zasadach przewidzianych w ustawie o emeryturach i rentach z FUS;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2026/115__art_6a__ust_4__pkt_2" gd:GUID="a4a91cb3-e19e-4327-9175-c584a2344091">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="53ac837d-12ad-4bfe-a9dc-e40a8ada20ee" fragment="3" gd:fragmentGUID="e2073c31-5732-4858-8ee0-0d0128659f3a">była niższa od kwoty wynikającej z rozliczenia – organ rentowy dokonuje zwrotu kwoty świadczenia.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2026/115__art_6b" gd:GUID="1012e40c-df4f-47a3-a660-f146ffab5daa">
+        <nr>6b</nr>
+        <ustep eId="DU/2026/115__art_6b__ust_1" gd:GUID="bcb20bee-8948-4b1b-9de2-7149cc0fd8a3">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="cbb6171e-05a7-4af4-8eea-89200accd164" fragment="1" gd:fragmentGUID="e0049dd8-8902-43a9-bfb0-6b275f735855">W celu dokonania rozliczenia miesięcznego organ rentowy ustala kwoty przychodu osiągnięte przez osobę uprawnioną do świadczenia przedemerytalnego w okresie kolejnych miesięcy roku rozliczeniowego i porównuje je z kwotami przychodu: dopuszczalną i graniczną, a następnie:</zdanie>
+          </p>
+          <punkt eId="DU/2026/115__art_6b__ust_1__pkt_1" gd:GUID="be96c26f-4e60-4d22-847e-0a5faadaa555">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="cbb6171e-05a7-4af4-8eea-89200accd164" fragment="2" gd:fragmentGUID="f5020f59-fd7f-46c6-92cc-1e80537f8c14">ustala kwoty nienależnie pobranych świadczeń i dochodzi ich zwrotu na zasadach przewidzianych w ustawie o emeryturach i rentach z FUS, jeżeli kwota wypłaconych świadczeń była wyższa od kwoty wynikającej z rozliczenia;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2026/115__art_6b__ust_1__pkt_2" gd:GUID="2099411b-710e-4d5f-af50-e792152350a6">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="cbb6171e-05a7-4af4-8eea-89200accd164" fragment="3" gd:fragmentGUID="13a13e56-c006-40f9-9045-a3fea02670d9">dokonuje zwrotu kwoty świadczenia, jeżeli kwota wypłaconych świadczeń była niższa od kwoty wynikającej z rozliczenia.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2026/115__art_6b__ust_2" gd:GUID="525a9f00-0987-4842-a86c-546acb8b979f">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="6bf87065-ce26-4c3d-bb38-9abd31ba1408" fragment="1" gd:fragmentGUID="657a476a-63cb-40b8-98ae-31bd58683bec">Do miesięcznego rozliczania świadczeń art. 6a stosuje się odpowiednio.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2026/115__art_7" gd:GUID="a006348b-8777-4fcf-a34e-f409bfc78191">
+        <nr>7</nr>
+        <ustep eId="DU/2026/115__art_7__ust_1" gd:GUID="d6407c65-ae27-462c-a124-937eace04030">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="6361a921-8237-4baa-b168-384fd1508429" fragment="1" gd:fragmentGUID="72645a88-fa8b-48fc-a60b-53e0d54d0a61">Prawo do świadczenia przedemerytalnego ustala się na wniosek osoby zainteresowanej, od następnego dnia po dniu złożenia wniosku wraz z dokumentami, o których mowa w ust. 3 i 4.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/115__art_7__ust_2" gd:GUID="9b9a7612-107f-491e-810d-d4acc52a6507">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="c376bf6a-38ec-41ee-9e85-215f43e5fcce" fragment="1" gd:fragmentGUID="08ab36c7-a470-4391-b30c-e6e65738b127">Wniosek składa się do organu rentowego właściwego ze względu na miejsce zamieszkania.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/115__art_7__ust_3" gd:GUID="545fbec9-2c06-409b-8c5a-ca461f96df1f">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="768d9e3c-d468-4239-80cc-a4abf6412ef4" fragment="1" gd:fragmentGUID="1086563a-3cef-4577-a075-a558cf9d9422">Do wniosku dołącza się dowody uzasadniające prawo do świadczenia przedemerytalnego, w tym decyzję o utracie prawa do zasiłku dla bezrobotnych lub informację o upływie 180 dni pobierania zasiłku dla bezrobotnych, o którym mowa w art. 2 ust. 3, a także dowody wymagane do ustalenia prawa do emerytury oraz jej wysokości, określone przepisami ustawy o emeryturach i rentach z FUS.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/115__art_7__ust_4" gd:GUID="d1c6556d-9d60-43f2-adcd-c43b8e57dc2c">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="3ae1ffc1-5e9e-41e0-8f82-635336aa94e1" fragment="1" gd:fragmentGUID="f726fc1c-88c8-42e6-8b85-72a43561ba21"><odnosnik id-odnosnika="7" symbol="7" gd:GUID="fa88cbd2-94ee-4546-bfff-5bbae8123b1c"><p><zdanie nr="1" gd:zdGUID="dd1673b7-48c5-44ff-b1fd-fe6a063e44ac" fragment="1" gd:fragmentGUID="a57e7c5c-6850-4c86-8020-30355c1383e0">W brzmieniu ustalonym przez art. 393 pkt 2 ustawy, o której mowa w odnośniku 1.</zdanie></p></odnosnik> W przypadku osoby, o której mowa w art. 2 ust. 1 pkt 4a, do wniosku dołącza się również zaświadczenie właściwego organu potwierdzające nieprzerwane pobieranie przez okres co najmniej 365 dni świadczenia pielęgnacyjnego lub specjalnego zasiłku opiekuńczego, lub zasiłku dla opiekuna, utratę prawa do nich, a także datę ustania tego prawa.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2026/115__art_8" gd:GUID="595f55ea-3d95-4b1f-84d1-e5593d254815">
+        <nr>8</nr>
+        <ustep eId="DU/2026/115__art_8__ust_1" gd:GUID="d80e198b-bd55-4136-afce-d9ce4f9d7a2e">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="b24dd15a-fe46-46c3-993a-e5ab72248afc" fragment="1" gd:fragmentGUID="628695fd-3fab-4cc8-8d3e-d7c92f9788e3">Decyzję w sprawie świadczenia przedemerytalnego wydaje i świadczenie to wypłaca organ rentowy właściwy ze względu na miejsce zamieszkania osoby uprawnionej do świadczenia przedemerytalnego.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/115__art_8__ust_2" gd:GUID="b28a64aa-2c64-4621-a17d-24671a889375">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="4c9a598e-3352-4b9b-ab5f-d3d137c3ba87" fragment="1" gd:fragmentGUID="35c2f416-1c4c-47a7-8016-6ef35ac64800">Od decyzji organu rentowego przysługują środki odwoławcze przewidziane w ustawie o systemie ubezpieczeń społecznych dla decyzji w sprawach emerytur i rent.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2026/115__art_9" gd:GUID="fd0efab9-70dc-4194-b9f3-8e97e825d906">
+        <nr>9</nr>
+        <ustep eId="DU/2026/115__art_9__ust_1" gd:GUID="1c341b22-4afb-47d3-86d0-772638c34d5d">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="969450ae-2e15-4469-8413-191e191367ba" fragment="1" gd:fragmentGUID="bff6e3b3-0f5f-4d97-8f85-60425e3559a9">Świadczenie przedemerytalne wypłaca się za miesiąc kalendarzowy w terminie płatności wskazanym w decyzji organu rentowego.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/115__art_9__ust_2" gd:GUID="676234f9-ce58-4636-b1ce-fab11023d5ed">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="4dd9725e-db47-4533-8e06-5f9f74e693eb" fragment="1" gd:fragmentGUID="65c80147-549e-40b1-9e9d-9e9b4404745e">Świadczenie przedemerytalne za niepełny miesiąc ustala się, dzieląc kwotę świadczenia przez liczbę dni kalendarzowych w miesiącu, a otrzymaną kwotę mnoży się przez liczbę dni kalendarzowych, za które świadczenie przysługuje.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2026/115__art_10" gd:GUID="7e7716e4-2b1b-493e-a9c8-be209d334490">
+        <nr>10</nr>
+        <ustep eId="DU/2026/115__art_10__ust_1" gd:GUID="f1cf84d9-25b1-4c98-9594-d1bd855e3219">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="45f92972-6fdd-4166-a19f-e0a24ceee963" fragment="1" gd:fragmentGUID="d209cea0-71ed-4ac2-8e94-3bc0004e580e">Osobie, która pokryła koszty pogrzebu po śmierci:</zdanie>
+          </p>
+          <punkt eId="DU/2026/115__art_10__ust_1__pkt_1" gd:GUID="14969fae-db72-42e8-af8c-0151a168ee66">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="45f92972-6fdd-4166-a19f-e0a24ceee963" fragment="2" gd:fragmentGUID="80623461-37ee-4758-8a87-0fd7ac4bf2a1">osoby pobierającej świadczenie przedemerytalne,</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2026/115__art_10__ust_1__pkt_2" gd:GUID="9f4cc734-cb1c-4c31-a97b-75419c4f6574">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="45f92972-6fdd-4166-a19f-e0a24ceee963" fragment="3" gd:fragmentGUID="3590f88f-27a7-4aee-aa84-581e4deb84cc">członka rodziny osoby, o której mowa w pkt 1, spełniającego warunki do uzyskania renty rodzinnej</zdanie>
+            </p>
+          </punkt>
+          <czesc-wspolna-punkt eId="DU/2026/115__art_10__ust_1__czw" gd:GUID="82cac5e3-135c-4535-aa2c-dccd90c283eb">
+            <p>
+              <zdanie nr="1" gd:zdGUID="45f92972-6fdd-4166-a19f-e0a24ceee963" fragment="4" gd:fragmentGUID="b505a211-e1c7-42e7-984b-279df8077ef6">– przysługuje zasiłek pogrzebowy na zasadach i w wysokości określonych w ustawie o emeryturach i rentach z FUS.</zdanie>
+            </p>
+          </czesc-wspolna-punkt>
+        </ustep>
+        <ustep eId="DU/2026/115__art_10__ust_2" gd:GUID="d6d53d41-9080-406e-8319-4961ae0c60e5">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="9aaf1eec-be60-4229-beeb-9f9911d29ca5" fragment="1" gd:fragmentGUID="0e90c694-2217-4fed-8c70-37f2b81e2551">Decyzje w sprawach zasiłku pogrzebowego wydają i zasiłki te wypłacają organy rentowe.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/115__art_10__ust_3" gd:GUID="f861bd72-957b-47fc-9f88-e3da7c90d8e0">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="f73c65ac-648a-4d4a-a072-727826823384" fragment="1" gd:fragmentGUID="ee42047b-ec6a-441e-9342-a6d9979084f4">W razie zbiegu prawa do zasiłku pogrzebowego na podstawie ustawy z prawem do zasiłku pogrzebowego lub do świadczenia w wysokości zasiłku pogrzebowego na podstawie odrębnych przepisów – zasiłek pogrzebowy, o którym mowa w ust. 1, nie przysługuje.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2026/115__art_11" gd:GUID="d768d5f3-c84e-42a6-adbc-62792e87c757">
+        <nr>11</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="b2548266-4264-47e0-a1f3-fe20463129c8">
+          <p>
+            <zdanie nr="1" gd:zdGUID="9640aa69-1aeb-443b-b462-e2fe7420b13b" fragment="1" gd:fragmentGUID="3dc2df00-e998-44d8-b353-4bfffc393f5d">W sprawach nieuregulowanych w ustawie stosuje się odpowiednio przepisy:</zdanie>
+          </p>
+          <punkt eId="DU/2026/115__art_11__pkt_1" gd:GUID="d7f1a63a-5be9-4077-9399-d505c794fa42">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="9640aa69-1aeb-443b-b462-e2fe7420b13b" fragment="2" gd:fragmentGUID="9f1bda9c-db8c-47fe-a358-dd3ac8b1f650">art. 78–81, art. 88–94, art. 98, art. 103 ust. 3, art. 114, art. 116 ust. 1b i 2, art. 117 ust. 1–4a, art. 118 ust. 1–5, art. 121, art. 122 ust. 1, art. 124, art. 125a, art. 128, art. 129 ust. 1, art. 130 ust. 2 i 3, art. 132, art. 133, art. 134 ust. 1 pkt 1, 2, 4 i 5 oraz ust. 2 pkt 2 i 3, art. 135, art. 136b–140, art. 141 ust. 1–3 i art. 142–144 ustawy o emeryturach i rentach z FUS, przy czym kwotę wolną od potrąceń i egzekucji ustala się według zasad określonych dla emerytury;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2026/115__art_11__pkt_2" gd:GUID="a302fb5f-c2ec-40cc-a717-16083cd94170">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="9640aa69-1aeb-443b-b462-e2fe7420b13b" fragment="3" gd:fragmentGUID="fadf7f4b-9c50-459b-9c50-6f952275fc0e">art. 80 pkt 1–4, art. 82, art. 84 ust. 1, 4a, 6–8e i 11 oraz art. 85 ustawy o systemie ubezpieczeń społecznych.</zdanie>
+            </p>
+          </punkt>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2026/115__art_12" gd:GUID="21a3d575-5ece-4526-9a5c-38cd42ad1a07">
+        <nr>12</nr>
+        <ustep eId="DU/2026/115__art_12__ust_1" gd:GUID="636f71a4-e1c4-4214-ad83-f7b0235d8161">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="63b70562-31d9-4042-843f-b21995ec5a7a" fragment="1" gd:fragmentGUID="60f63fb4-0e70-410c-b6b3-a5b5d68d6d83">Świadczenia przedemerytalne i zasiłki pogrzebowe oraz koszty ich obsługi są finansowane ze środków Funduszu Pracy.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/115__art_12__ust_2" gd:GUID="985af89d-133f-4a33-b202-95f3dacea07c">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="4d44f24d-91c4-4a71-9ede-b5e83b229528" fragment="1" gd:fragmentGUID="e61462b8-6d33-43cf-ac1a-7010d90ea690">Koszty obsługi, o których mowa w ust. 1, wynoszą 1,2 % kwoty przeznaczonej na wypłatę świadczeń przedemerytalnych i zasiłków pogrzebowych.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/115__art_12__ust_3" gd:GUID="69d62d88-1787-46ff-a936-c0b219fec9c8">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="6ac47efd-035c-49d3-bc08-011568f5ef1c" fragment="1" gd:fragmentGUID="2906b6e7-002d-41bd-bb7f-fe78b348e732">Podstawą przekazania środków na wypłatę świadczeń przedemerytalnych i zasiłków pogrzebowych oraz kosztów ich obsługi jest umowa zawarta między ministrem właściwym do spraw pracy a Prezesem Zakładu Ubezpieczeń Społecznych.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2026/115__art_13" gd:GUID="60934b4e-ed7b-46e7-ad96-abfeb061302c">
+        <nr />
+        <nr-od>13</nr-od>
+        <nr-do>22</nr-do>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="5c66d114-8ab6-49ee-8266-7c95b336b0f6">
+          <p>
+            <zdanie nr="1" gd:zdGUID="a06bffb8-2237-4b3c-a4ca-53674acb0331" fragment="1" gd:fragmentGUID="6fb956b7-9994-402f-bd87-1ffd87531899">(pominięte)</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2026/115__art_23" gd:GUID="86ddcc83-e1ef-478b-8562-ad7e3bca5ba9">
+        <nr>23</nr>
+        <ustep eId="DU/2026/115__art_23__ust_1" gd:GUID="45d7dcae-44ed-46ed-a6c1-7e0b1202cc80">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="3c1d6490-1ea0-410d-9275-e4aa2eacf9e8" fragment="1" gd:fragmentGUID="d84556cd-d5e8-4dea-ba26-afaccb65cabf">Świadczenia przedemerytalne przyznane na zasadach określonych w przepisach o zatrudnieniu i przeciwdziałaniu bezrobociu stają się świadczeniami w rozumieniu niniejszej ustawy, w dotychczasowej wysokości, z uwzględnieniem art. 3 ust. 2.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/115__art_23__ust_2" gd:GUID="ea772748-b202-4868-9141-39732f7839dd">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="509819cf-e686-4fa8-bd20-cfadd4ef12b3" fragment="1" gd:fragmentGUID="434b48ab-2cfc-4ed3-98a7-32829804be41">Świadczenia przedemerytalne przyznane na zasadach określonych w przepisach o zakazie stosowania wyrobów zawierających azbest stają się świadczeniami w rozumieniu niniejszej ustawy, w dotychczasowej wysokości, z uwzględnieniem art. 3 ust. 2.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/115__art_23__ust_3" gd:GUID="fcb718cb-779a-4c23-a6af-08100ed21203">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="3f631557-6b0d-4281-b2cc-195708056065" fragment="1" gd:fragmentGUID="a532f562-f786-4e71-8a8c-83bc64123db0">Z dniem 1 sierpnia 2004 r. Zakład Ubezpieczeń Społecznych przejmuje zadania związane z przyznawaniem i wypłatą świadczeń przedemerytalnych.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/115__art_23__ust_4" gd:GUID="3c2ea92b-d280-487d-b69a-23cfa95a517b">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="050af670-4887-45cf-95b7-80dc0e1ff6a9" fragment="1" gd:fragmentGUID="fb697d2b-5d26-4d9f-acd3-38ff8031e58c">Świadczenia przedemerytalne, o których mowa w ust. 1 i 2, wypłaca się za miesiąc kalendarzowy, w terminie płatności wskazanym w zawiadomieniu organu rentowego.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2026/115__art_24" gd:GUID="7912ce4f-3464-44c0-ae48-a3dd6fac6c39">
+        <nr>24</nr>
+        <ustep eId="DU/2026/115__art_24__ust_1" gd:GUID="54978007-5c7a-4312-b0dc-ebb26059241e">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="4e4e018f-ef34-4d4e-ab43-1bab967f593b" fragment="1" gd:fragmentGUID="358175a7-c90a-4bb4-ac26-e9d840832c3a">Powiatowe urzędy pracy są obowiązane przekazać w terminie 14 dni od dnia wejścia w życie niniejszej ustawy organom rentowym dokumentację umożliwiającą kontynuację wypłaty świadczeń przedemerytalnych od dnia przejęcia przez Zakład Ubezpieczeń Społecznych przyznawania i wypłaty świadczeń przedemerytalnych.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/115__art_24__ust_2" gd:GUID="4ab09833-822b-49b9-ad83-a10cebc1df53">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="e9870311-8ae6-4fc3-afd9-761cddd28409" fragment="1" gd:fragmentGUID="767459c1-b4a7-4a1f-a427-04bc6893f909">W terminie 14 dni od dnia przejęcia przez Zakład Ubezpieczeń Społecznych przyznawania i wypłaty świadczeń przedemerytalnych powiatowe urzędy pracy przekażą:</zdanie>
+          </p>
+          <punkt eId="DU/2026/115__art_24__ust_2__pkt_1" gd:GUID="7ea8e7a0-94fa-4dc5-9446-3a49c8e861a2">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="e9870311-8ae6-4fc3-afd9-761cddd28409" fragment="2" gd:fragmentGUID="3b65b268-0750-425b-8639-2ca96daa8f9a">listy osób, którym zawieszono lub wstrzymano wypłatę świadczenia przedemerytalnego do dnia przejęcia przez Zakład Ubezpieczeń Społecznych przyznawania i wypłaty świadczeń przedemerytalnych, oraz osób niepobierających świadczenia przedemerytalnego z przyczyn określonych w art. 27 ust. 1 pkt 3–6 i ust. 2 ustawy z dnia 14 grudnia 1994 r. o zatrudnieniu i przeciwdziałaniu bezrobociu (Dz. U. z 2003 r. poz. 514, z późn. zm.<odnosnik id-odnosnika="8" symbol="8" gd:GUID="7ed889f4-8478-4c32-8e96-360a05b6e9d4"><p><zdanie nr="1" gd:zdGUID="8d0478c4-7f2a-4315-a9ee-757601d2d7c4" fragment="1" gd:fragmentGUID="3b1fc7dc-6f24-41e3-9093-8879e3903905">Zmiany tekstu jednolitego wymienionej ustawy zostały ogłoszone w Dz. U. z 2003 r. poz. 844, 1143, 1176, 1268, 1302, 1380, 1608, 1966, 2036, 2037, 2217 i 2255 oraz z 2004 r. poz. 593, 624 i 959.</zdanie></p></odnosnik>);</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2026/115__art_24__ust_2__pkt_2" gd:GUID="dace4319-d99e-42eb-b116-4c1476900de7">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="e9870311-8ae6-4fc3-afd9-761cddd28409" fragment="3" gd:fragmentGUID="417b7e83-659c-4d2a-b109-db1e0c81ba9b">dokumentację dotyczącą osób, którym ustalono lub zawieszono prawo do świadczenia przedemerytalnego w okresie pomiędzy dniem wejścia w życie niniejszej ustawy a dniem przejęcia przez Zakład Ubezpieczeń Społecznych przyznawania i wypłaty świadczeń przedemerytalnych;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2026/115__art_24__ust_2__pkt_3" gd:GUID="7c756de3-86c1-4551-beec-cc4e3df2eb7c">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="e9870311-8ae6-4fc3-afd9-761cddd28409" fragment="4" gd:fragmentGUID="34e04529-81ab-4a33-ba09-7346998697e4">informację dotyczącą ostatniego miejsca zatrudnienia osób uprawnionych do świadczeń przedemerytalnych refinansowanych w części przez PKP SA, o których mowa w art. 58 ustawy wymienionej w art. 18<odnosnik id-odnosnika="9" symbol="9" gd:GUID="2969c814-03e0-4bc7-8406-a765594086f8"><p><zdanie nr="1" gd:zdGUID="9d60e756-9590-4fa8-9051-e4473f5c61e7" fragment="1" gd:fragmentGUID="32c67a56-b326-4a1a-94f5-e3040171e4f4">Artykuł 18 zawiera zmiany do ustawy z dnia 8 września 2000 r. o komercjalizacji, restrukturyzacji i prywatyzacji przedsiębiorstwa państwowego „Polskie Koleje Państwowe”.</zdanie></p></odnosnik>.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2026/115__art_24__ust_3" gd:GUID="1b51ace6-9eea-4a27-88eb-0c40f9380b16">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="755e716f-7f81-47cc-a27e-ea209effa6ad" fragment="1" gd:fragmentGUID="c06596e7-7f72-4754-ac25-b22fc1ecefea">Dokumentacja, o której mowa w ust. 2 pkt 2, obejmuje:</zdanie>
+          </p>
+          <punkt eId="DU/2026/115__art_24__ust_3__pkt_1" gd:GUID="6691d08e-d908-440c-b32a-936bd8667d3d">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="755e716f-7f81-47cc-a27e-ea209effa6ad" fragment="2" gd:fragmentGUID="c0ad370d-f5da-462a-99a3-3e14f85eb3b2">informację o kwocie przysługującego świadczenia przedemerytalnego oraz okresie jego pobierania;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2026/115__art_24__ust_3__pkt_2" gd:GUID="23d5dd18-cad2-4140-bda0-f9db7a26fd36">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="755e716f-7f81-47cc-a27e-ea209effa6ad" fragment="3" gd:fragmentGUID="cba921f8-5dec-471c-a831-b4306ffb69d0">informację o członkach rodziny uprawnionych do zgłoszenia do ubezpieczenia zdrowotnego;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2026/115__art_24__ust_3__pkt_3" gd:GUID="eb0acc70-7bab-4b46-8c24-a25261ad3b61">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="755e716f-7f81-47cc-a27e-ea209effa6ad" fragment="4" gd:fragmentGUID="6c06b48f-ee97-4143-b83a-d1b26ad40097">kopię decyzji przyznającej świadczenie przedemerytalne oraz kopie innych dokumentów mających wpływ na prawo do świadczenia lub jego wysokość;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2026/115__art_24__ust_3__pkt_4" gd:GUID="0b8bd69d-0318-487f-9924-1db3d1b3dadf">
+            <nr>4</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="755e716f-7f81-47cc-a27e-ea209effa6ad" fragment="5" gd:fragmentGUID="8e5c019a-e865-4508-b900-692a001fd19e">dane identyfikacyjne osób uprawnionych do świadczeń przedemerytalnych i członków ich rodzin, o których mowa w pkt 2, w tym numery PESEL i NIP;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2026/115__art_24__ust_3__pkt_5" gd:GUID="9d742ee0-22a7-4ee0-a967-b9d5823d95d0">
+            <nr>5</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="755e716f-7f81-47cc-a27e-ea209effa6ad" fragment="6" gd:fragmentGUID="393baf77-23a9-4eb7-90fe-f4f1cc30d784">poświadczone przez osobę uprawnioną do świadczenia przedemerytalnego powiadomienie, o którym mowa w ust. 5.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2026/115__art_24__ust_4" gd:GUID="a1fdb0d7-608f-4c24-9422-7254d35d8566">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="57b12afd-512c-49bf-9e21-d42e9daf8a49" fragment="1" gd:fragmentGUID="56edc1cc-96d1-4ff4-a60d-48f2975795a5">Powiatowy urząd pracy przekazuje do Zakładu Ubezpieczeń Społecznych dokumentację, o której mowa w ust. 3, dotyczącą osób niepobierających świadczeń przedemerytalnych z przyczyn określonych w art. 27 ust. 1 pkt 3–6 i ust. 2 ustawy z dnia 14 grudnia 1994 r. o zatrudnieniu i przeciwdziałaniu bezrobociu w terminie do 5 dni po dniu nabycia prawa do świadczenia przedemerytalnego.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/115__art_24__ust_5" gd:GUID="635d98dc-b404-4b30-8226-5bbcbbb91d9a">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="bf8dd3b7-b243-4b6e-badf-ad4fd7b79d71" fragment="1" gd:fragmentGUID="33371209-ab2b-4f89-9f18-905a08951b94">Dokumentacja jest przekazywana w indywidualnych aktach każdej osoby uprawnionej do świadczenia przedemerytalnego.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/115__art_24__ust_6" gd:GUID="7d166e31-7a28-4300-b25b-b3c80d542d9a">
+          <nr>6</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="28763013-1f1f-41fc-95d6-ac7c0e60c20f" fragment="1" gd:fragmentGUID="5ae40710-b89e-4749-a21e-e5f14ade0f58">Powiatowe urzędy pracy są obowiązane do powiadomienia osób uprawnionych do świadczeń przedemerytalnych o przejęciu wypłaty tych świadczeń przez Zakład Ubezpieczeń Społecznych, o warunkach wypłaty tych świadczeń od dnia przejęcia przez Zakład Ubezpieczeń Społecznych przyznawania i wypłaty świadczeń przedemerytalnych, o wynikających z ustawy obowiązkach ciążących na osobach uprawnionych, a także o innych okolicznościach, mających wpływ na prawo do świadczenia przedemerytalnego oraz jego wysokość.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/115__art_24__ust_7" gd:GUID="c8c87e96-7ca5-4255-b348-19bac1b74eac">
+          <nr>7</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="78dcfc43-bb24-4c2f-8c54-2ae4e8cb73f1" fragment="1" gd:fragmentGUID="dcc29ec5-d382-47c8-8d09-e9eb6889a420">Zakład Ubezpieczeń Społecznych jest uprawniony do przetwarzania danych osobowych w zakresie niezbędnym do przyznania i wypłacania świadczeń przedemerytalnych na zasadach określonych w ustawie oraz przejęcia wypłaty świadczeń i zasiłków przedemerytalnych przyznanych na podstawie przepisów dotychczasowych.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2026/115__art_25" gd:GUID="2ab211f3-4884-4331-9d70-5b9b0e6d1d76">
+        <nr>25</nr>
+        <ustep eId="DU/2026/115__art_25__ust_1" gd:GUID="15f153f8-0ac7-4557-ba79-241080b4d42d">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="aaf066dc-88bd-4249-a1d9-56c64bebb4ff" fragment="1" gd:fragmentGUID="5c4e533c-d314-4b2a-bba2-4e3b2e825efd">Zasiłki przedemerytalne przyznane na zasadach określonych w ustawie o zatrudnieniu i przeciwdziałaniu bezrobociu stają się zasiłkami w rozumieniu niniejszej ustawy, z tym że zachowuje się je w dotychczasowej wysokości i z dniem 1 sierpnia 2004 r.</zdanie>
+            <zdanie nr="2" gd:zdGUID="f630aeec-ba24-4373-b634-232031970aab" fragment="1" gd:fragmentGUID="f96d6924-d529-42b6-8aa1-56ddedbac8f6">Zakład Ubezpieczeń Społecznych przejmie zadania związane z ich wypłatą.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/115__art_25__ust_2" gd:GUID="c53f569a-979c-4cd4-8610-94e83c5683ed">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="66535b0b-7dc4-43c0-951d-995e20dad805" fragment="1" gd:fragmentGUID="ab573469-a50d-4906-864c-6168c3725eb4">Zasiłki przedemerytalne podlegają waloryzacji na zasadach i w terminach przewidzianych w ustawie o emeryturach i rentach z FUS.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/115__art_25__ust_3" gd:GUID="36a7c91e-3b97-4092-9f75-8df23a555884">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="d21adc3e-fa3f-4b0f-83e6-90c7f8969430" fragment="1" gd:fragmentGUID="7f261dcb-6077-4085-9a00-10b6096fb6b0">Do ustania, zmniejszenia i zawieszenia prawa do zasiłku przedemerytalnego oraz wstrzymania jego wypłaty przepisy art. 4–6b stosuje się odpowiednio.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/115__art_25__ust_4" gd:GUID="fa41194a-05b2-4bc4-8f0a-4510a422d2e7">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="30431182-08fd-4de4-b613-480d584ccaa0" fragment="1" gd:fragmentGUID="c96b969b-c113-4bc8-9765-6f1d59e7843e">W przypadku zbiegu prawa do zasiłku przedemerytalnego z prawem do renty rodzinnej wypłaca się jedno z tych świadczeń – wyższe lub wybrane przez uprawnionego.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/115__art_25__ust_5" gd:GUID="052bdc49-683c-40a1-b92a-d61d8697e21f">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="143af357-924f-4d6f-90da-001f957bb403" fragment="1" gd:fragmentGUID="250827c8-1774-4c01-907f-3ed5b7406e0e">W zakresie kompletowania, sposobu przekazywania informacji i dokumentacji oraz powiadamiania osób uprawnionych o przejęciu wypłaty zasiłków przez Zakład Ubezpieczeń Społecznych, przekazywanej organom rentowym przez powiatowe urzędy pracy, art. 24 stosuje się odpowiednio.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/115__art_25__ust_6" gd:GUID="a2631bcd-6f92-4937-b028-8eb796677a52">
+          <nr>6</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="7077352a-208c-4e07-8c78-17cb594e0ca4" fragment="1" gd:fragmentGUID="b621da9d-d5a4-4d6b-a5ef-28defce71e0d">Zasiłki przedemerytalne oraz koszty ich obsługi są finansowane ze środków Funduszu Pracy.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2026/115__art_26" gd:GUID="e5811409-53f4-4b51-8836-93748daad27e">
+        <nr>26</nr>
+        <ustep eId="DU/2026/115__art_26__ust_1" gd:GUID="d8abef1c-d743-4ae1-9a9f-f398980206a6">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="b913c291-a9b3-4af0-9361-b842367e2e07" fragment="1" gd:fragmentGUID="9ee84c61-6b46-4195-84d1-187d4553b304">Osobie, która pokryła koszty pogrzebu po śmierci:</zdanie>
+          </p>
+          <punkt eId="DU/2026/115__art_26__ust_1__pkt_1" gd:GUID="2a1ae3b7-2ac8-45bd-af0e-ef2525da09b4">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="b913c291-a9b3-4af0-9361-b842367e2e07" fragment="2" gd:fragmentGUID="cd250eae-1fee-4730-8254-da8e367c2a45">osoby pobierającej zasiłek przedemerytalny,</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2026/115__art_26__ust_1__pkt_2" gd:GUID="ee2d17bb-a090-4e27-8948-83da3c1a9974">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="b913c291-a9b3-4af0-9361-b842367e2e07" fragment="3" gd:fragmentGUID="974b7efd-455e-4882-8f39-eec0b19213f8">członka rodziny osoby, o której mowa w pkt 1, spełniającego warunki do uzyskania renty rodzinnej</zdanie>
+            </p>
+          </punkt>
+          <czesc-wspolna-punkt eId="DU/2026/115__art_26__ust_1__czw" gd:GUID="68ae6fa3-5804-4ddf-b7e5-cb08232c26fb">
+            <p>
+              <zdanie nr="1" gd:zdGUID="b913c291-a9b3-4af0-9361-b842367e2e07" fragment="4" gd:fragmentGUID="11514794-5981-4cb2-9b6b-4c2105e90938">– przysługuje zasiłek pogrzebowy na zasadach i w wysokości określonych w ustawie o emeryturach i rentach z FUS.</zdanie>
+            </p>
+          </czesc-wspolna-punkt>
+        </ustep>
+        <ustep eId="DU/2026/115__art_26__ust_2" gd:GUID="9fc70408-0c63-4cbe-ace4-521d0d50de47">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="5ac7f67a-5651-487f-9271-31b1b6b07008" fragment="1" gd:fragmentGUID="a6c4e4c7-e8fb-433b-b8a7-f34f8a879aa8">Do zasiłku pogrzebowego, o którym mowa w ust. 1, art. 10 ust. 2 i 3 stosuje się odpowiednio.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2026/115__art_27" gd:GUID="7012eb2e-de60-4fa3-84c8-ea7821eeeed7">
+        <nr>27</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="83d353bc-9d32-4c06-8488-84f114b2ce72">
+          <p>
+            <zdanie nr="1" gd:zdGUID="5e996720-65fd-47eb-b307-d2c3e0d16724" fragment="1" gd:fragmentGUID="d7dd0149-e441-4b26-97d1-d398c8f9df1b">Zasiłki przedemerytalne wypłaca się za miesiąc kalendarzowy, w terminie płatności wskazanym w zawiadomieniu organu rentowego.</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2026/115__art_28" gd:GUID="974faece-4de8-4c5a-8622-858756064750">
+        <nr>28</nr>
+        <ustep eId="DU/2026/115__art_28__ust_1" gd:GUID="2a2b4c54-f5e6-4398-a2bb-710e3ad626d6">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="897d1fc8-63a1-425b-813b-d55db66d9217" fragment="1" gd:fragmentGUID="1d9736ae-1c36-4b2c-abf9-2f883ce32d85">Przepisy art. 5 i 6 stosuje się od dnia przejęcia przez Zakład Ubezpieczeń Społecznych przyznawania i wypłaty świadczeń przedemerytalnych, z tym że za rok rozliczeniowy, o którym mowa w art. 6 ust. 1, uważa się okres od dnia tego przejęcia do dnia 28 lutego 2005 r.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/115__art_28__ust_2" gd:GUID="6635d259-add8-435f-bf82-eda1af295608">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="442af6b6-45c8-46ca-aebe-6df2ace90bc6" fragment="1" gd:fragmentGUID="a439c444-77e4-4b50-b3ef-feb68ea398a9">Prezes Zakładu Ubezpieczeń Społecznych ogłosi, w formie komunikatu, w Dzienniku Urzędowym Rzeczypospolitej Polskiej „Monitor Polski” w ciągu 14 dni od dnia wejścia w życie ustawy:</zdanie>
+          </p>
+          <punkt eId="DU/2026/115__art_28__ust_2__pkt_1" gd:GUID="30347270-b091-4a30-8287-81b8dad733dd">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="442af6b6-45c8-46ca-aebe-6df2ace90bc6" fragment="2" gd:fragmentGUID="617da6b8-512f-4143-b326-c696bcd0e111">dopuszczalne kwoty przychodu oraz graniczne kwoty przychodu obowiązujące począwszy od dnia przejęcia przez Zakład Ubezpieczeń Społecznych przyznawania i wypłaty świadczeń przedemerytalnych, ustalone na podstawie przeciętnego miesięcznego wynagrodzenia w 2003 r., ogłoszonego do celów emerytalnych przez Prezesa Głównego Urzędu Statystycznego, z zaokrągleniem do 10 groszy w górę;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2026/115__art_28__ust_2__pkt_2" gd:GUID="137bcb8a-e045-473a-8045-768cc48e3e46">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="442af6b6-45c8-46ca-aebe-6df2ace90bc6" fragment="3" gd:fragmentGUID="0f25f175-3b4d-423f-bfd1-9f5b5437107a">roczną dopuszczalną kwotę przychodu oraz roczną graniczną kwotę przychodu dla okresu, o którym mowa w ust. 1, stanowiące iloczyny kwot, o których mowa w pkt 1, i liczby miesięcy, stanowiących rok rozliczeniowy, o którym mowa w ust. 1.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2026/115__art_28__ust_3" gd:GUID="970b4317-2164-45a7-b045-cc3edc26d99a">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="e8308800-2c62-446f-8ae0-5afe15938500" fragment="1" gd:fragmentGUID="e14facbf-788e-4692-ba6d-b19bbb9dac66">W okresie od dnia 1 marca 2005 r. do końca lutego roku, w którym jest przeprowadzana kolejna waloryzacja emerytur i rent, dopuszczalne kwoty przychodu, graniczne kwoty przychodu oraz roczna dopuszczalna kwota przychodu i roczna graniczna kwota przychodu, dla każdego roku rozliczeniowego, obowiązują w wysokości ustalonej na podstawie przeciętnego miesięcznego wynagrodzenia w 2004 r., ogłoszonego do celów emerytalnych przez Prezesa Głównego Urzędu Statystycznego.</zdanie>
+            <zdanie nr="2" gd:zdGUID="3f1af889-269e-450f-a318-8bae9f82884c" fragment="1" gd:fragmentGUID="4e970597-7ff9-43d3-aa77-249ac5cbbb54">Prezes Zakładu Ubezpieczeń Społecznych ogłosi wysokość tych kwot, w formie komunikatu, w Dzienniku Urzędowym Rzeczypospolitej Polskiej „Monitor Polski” co najmniej na 7 dni roboczych przed dniem 1 marca 2005 r.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2026/115__art_29" gd:GUID="8cdeca22-b665-4dbb-bc31-a386e31957e2">
+        <nr>29</nr>
+        <ustep eId="DU/2026/115__art_29__ust_1" gd:GUID="f8bbf530-b1ab-47d1-a288-f7b3029a7c6e">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="64afd31a-c8be-420b-9887-a0383fac497d" fragment="1" gd:fragmentGUID="ffe86fa5-bedb-4ff5-908e-189978475bf7">Osoby, które do dnia przejęcia przez Zakład Ubezpieczeń Społecznych wypłaty zasiłków przedemerytalnych spełniały warunki do nabycia prawa do zasiłku przedemerytalnego, zachowują to prawo na zasadach określonych w art. 11 ust. 2<odnosnik id-odnosnika="10" symbol="10" gd:GUID="f322d547-fffe-4c39-a2dc-ddf827a52634"><p><zdanie nr="1" gd:zdGUID="e3b0c86d-7cdc-4262-9880-e982eaa823d3" fragment="1" gd:fragmentGUID="c2e23451-63d9-43ff-87d0-1adb91e83f33">Utracił moc z dniem 12 kwietnia 2005 r. w części obejmującej wyrazy „zarejestrowały się w powiatowym urzędzie pracy i”, na podstawie wyroku Trybunału Konstytucyjnego z dnia 30 marca 2005 r. sygn. akt K 19/02 (Dz. U. poz. 517).</zdanie></p></odnosnik> ustawy z dnia 17 grudnia 2001 r. o zmianie ustawy o gospodarowaniu nieruchomościami rolnymi Skarbu Państwa, ustawy o ochronie roszczeń pracowniczych w razie niewypłacalności pracodawcy, ustawy o zatrudnieniu i przeciwdziałaniu bezrobociu, ustawy o zakazie stosowania wyrobów zawierających azbest, ustawy o Trójstronnej Komisji do Spraw Społeczno-Gospodarczych i wojewódzkich komisjach dialogu społecznego oraz ustawy o ułatwieniu zatrudnienia absolwentom szkół (Dz. U. poz. 1793 oraz z 2005 r. poz. 517).</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/115__art_29__ust_2" gd:GUID="8ed26ba3-2f49-4c11-b888-adfee0267d61">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="efb18a9a-090a-47ca-aa2f-2c0a529933fe" fragment="1" gd:fragmentGUID="d526a28d-72df-42a6-a470-e3cf075b6388">Osoby, które do dnia przejęcia przez Zakład Ubezpieczeń Społecznych przyznawania i wypłaty świadczeń przedemerytalnych zarejestrowały się w urzędzie pracy i spełniały warunki do nabycia prawa do świadczenia przedemerytalnego nabywają to prawo na zasadach określonych w ustawie z dnia 14 grudnia 1994 r. o zatrudnieniu i przeciwdziałaniu bezrobociu w brzmieniu obowiązującym w dniu poprzedzającym dzień wejścia w życie niniejszej ustawy.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/115__art_29__ust_3" gd:GUID="b9626276-06d9-4fef-bdf4-28e47dd33ac9">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a6fde4fd-4486-4b76-8753-faf6bdec7f49" fragment="1" gd:fragmentGUID="eef2c127-5c78-40ff-9c25-5c83f1f61b7a">Powiatowe urzędy pracy do dnia przejęcia przez Zakład Ubezpieczeń Społecznych przyznawania i wypłaty świadczeń przedemerytalnych ustalają i wypłacają świadczenia przedemerytalne osobom zarejestrowanym w powiatowych urzędach pracy do dnia przejęcia na zasadach określonych w przepisach ustawy, o której mowa w ust. 2.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2026/115__art_30" gd:GUID="882f295a-343c-4454-9338-373cc25b703e">
+        <nr>30</nr>
+        <ustep eId="DU/2026/115__art_30__ust_1" gd:GUID="b8509f38-d239-4ef2-a958-833a922c2348">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="7cba5f0c-0586-4419-8d76-ca4333580e83" fragment="1" gd:fragmentGUID="fa7e735d-a4f5-4777-8a6a-de7127a6a2a2">Do spraw wszczętych i niezakończonych przed dniem wejścia w życie niniejszej ustawy stosuje się przepisy o zatrudnieniu i przeciwdziałaniu bezrobociu.</zdanie>
+            <zdanie nr="2" gd:zdGUID="5f1de429-7581-4c20-9113-a942a1cbd1a2" fragment="1" gd:fragmentGUID="4a7af689-4cb7-49ca-b39d-715b86549c0c">Przez sprawy wszczęte i niezakończone rozumie się również wnioski o ustalenie prawa do świadczenia przedemerytalnego złożone przed dniem przejęcia przez Zakład Ubezpieczeń Społecznych przyznawania i wypłaty świadczeń przedemerytalnych podlegające rozpatrzeniu po dniu przejęcia w związku z art. 37l ust. 2 i art. 27 ust. 1 pkt 5 i 6 ustawy o zatrudnieniu i przeciwdziałaniu bezrobociu.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/115__art_30__ust_2" gd:GUID="3a101b2c-5891-4d91-8dd9-13387a8bb0a2">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="76664fb1-e695-46d5-964a-71c823908695" fragment="1" gd:fragmentGUID="52895578-c5b6-4702-a7bc-6f02672bad78">W przypadku ustalenia po dniu wejścia w życie ustawy prawa do świadczenia przedemerytalnego lub zasiłku przedemerytalnego, na podstawie przepisów o zatrudnieniu i przeciwdziałaniu bezrobociu, powiatowe urzędy pracy po dokonaniu wypłaty świadczeń przedemerytalnych i zasiłków przedemerytalnych za okres do dnia przejęcia przez Zakład Ubezpieczeń Społecznych przyznawania i wypłaty świadczeń przedemerytalnych niezwłocznie przekażą Zakładowi Ubezpieczeń Społecznych informację i dokumentację, o których mowa w art. 24 ust. 2 pkt 3 i ust. 3.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/115__art_30__ust_3" gd:GUID="7e9e6717-1e1b-47c0-82ca-ff1d38a466c5">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="3ca3bb64-d842-4a25-9563-a94b58221613" fragment="1" gd:fragmentGUID="0dea2a6e-3cbe-485e-8ce3-c60817805ee9">Świadczenia przedemerytalne i zasiłki przedemerytalne przyznane w przypadkach określonych w ust. 2 przed dniem przejęcia przez Zakład Ubezpieczeń Społecznych przyznawania i wypłaty świadczeń przedemerytalnych stają się świadczeniami przedemerytalnymi i zasiłkami przedemerytalnymi w rozumieniu ustawy.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/115__art_30__ust_4" gd:GUID="88920658-c884-4065-b332-4d856fe7259a">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="4cc0671a-eb1c-4b98-86c2-bbd48293229a" fragment="1" gd:fragmentGUID="aa0796e5-37ae-4395-bf33-61ff145f2c0b">Dochodzenia zwrotu nienależnie pobranych zasiłków przedemerytalnych i świadczeń przedemerytalnych za okres przypadający przed dniem przejęcia przez Zakład Ubezpieczeń Społecznych przyznawania i wypłaty świadczeń przedemerytalnych dokonują powiatowe urzędy pracy według zasad określonych w przepisach o zatrudnieniu i przeciwdziałaniu bezrobociu.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/115__art_30__ust_5" gd:GUID="61578cb7-3d6b-42f2-bdce-f3e5f33b7cf7">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="e448b120-2c8d-4ecb-ade7-a284ead3e86e" fragment="1" gd:fragmentGUID="5d64e3a2-c325-4021-a3ef-80cfd10b50f7">W przypadku przyznania prawa do emerytury, renty z tytułu niezdolności do pracy, renty szkoleniowej, renty socjalnej, zasiłku chorobowego, świadczenia rehabilitacyjnego lub renty rodzinnej w wysokości przekraczającej połowę minimalnego wynagrodzenia za pracę za okres, za który wypłacono świadczenie przedemerytalne lub zasiłek przedemerytalny z Funduszu Pracy przed dniem przejęcia przez Zakład Ubezpieczeń Społecznych przyznawania i wypłaty świadczeń przedemerytalnych, Zakład Ubezpieczeń Społecznych oraz organy rentowe pobrane z tego tytułu kwoty, w wysokości uwzględniającej zaliczkę na podatek dochodowy od osób fizycznych i składkę na ubezpieczenie zdrowotne, zaliczają na poczet przyznanego świadczenia.</zdanie>
+            <zdanie nr="2" gd:zdGUID="46706e3f-7bf9-4d24-9c82-ccebc605e177" fragment="1" gd:fragmentGUID="98dca844-12de-42f7-9d2f-5174321db9e8">Kwoty te traktuje się jak świadczenia wypłacane w kwocie zaliczkowej w rozumieniu ustawy o emeryturach i rentach z Funduszu Ubezpieczeń Społecznych.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/115__art_30__ust_6" gd:GUID="7afbf3ce-e5bf-4fc6-9a92-dc94e8185f7e">
+          <nr>6</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="03bd75ee-90d8-4523-bc58-ba6f5406aec1" fragment="1" gd:fragmentGUID="822f5845-d924-4c20-be56-4506ad0330f8">Kwota zaliczona na poczet przyznanego świadczenia nie może być wyższa niż ustalona za poszczególne miesiące okresu, o którym mowa w ust. 5, kwota emerytury, renty z tytułu niezdolności do pracy, renty szkoleniowej, renty socjalnej, zasiłku chorobowego, świadczenia rehabilitacyjnego lub renty rodzinnej.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/115__art_30__ust_7" gd:GUID="e6237814-1626-4902-8400-677441a9bdd5">
+          <nr>7</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="4f17d2eb-ebc9-4fc5-8d6b-0461bb4265ed" fragment="1" gd:fragmentGUID="fc0c0a66-e4f4-4cdd-b1ec-526fbf3086dd">Zakład Ubezpieczeń Społecznych lub inny organ rentowy przekazuje kwotę zaliczoną na poczet przyznanego świadczenia, o której mowa w ust. 5, na rachunek bankowy Funduszu Pracy właściwego powiatowego urzędu pracy, który wypłacił zasiłek przedemerytalny lub świadczenie przedemerytalne za okres przed dniem przejęcia przez Zakład Ubezpieczeń Społecznych przyznawania i wypłaty świadczeń przedemerytalnych.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2026/115__art_31" gd:GUID="27f2a94a-5d13-47de-8d3c-bd732735bf70">
+        <nr>31</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="8632226b-0a3d-4c25-a255-36473ee43ca3">
+          <p>
+            <zdanie nr="1" gd:zdGUID="c0a570c2-7143-4f52-bc27-1ad13029fd67" fragment="1" gd:fragmentGUID="b1c2c9d4-222b-48c8-9c95-fdd29db28102">Po rocznym okresie obowiązywania ustawy minister właściwy do spraw pracy przedstawi Sejmowi Rzeczypospolitej Polskiej, w okresie 3 miesięcy, sprawozdanie z realizacji ustawy, z uwzględnieniem skutków finansowych oraz liczby świadczeniobiorców.</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2026/115__art_32" gd:GUID="abb9e598-c477-40c5-9a51-6ba51146c7b7">
+        <nr>32</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="db0ce944-5e20-45b2-a510-08779a70b865">
+          <p>
+            <zdanie nr="1" gd:zdGUID="c7725093-ae4e-45b7-8362-87bf167e708b" fragment="1" gd:fragmentGUID="21d0df5c-1eb1-445e-b37b-aec7d1eee442">Ustawa wchodzi w życie z dniem 1 czerwca 2004 r., z wyjątkiem art. 2–12, 14, 16, 18, 20, 21, 23, 25 ust. 1–4 i 6 oraz art. 26–28, które wchodzą w życie z dniem 1 sierpnia 2004 r.</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+    </ustawa>
+  </obwieszczenie>
+</akt-prawny>

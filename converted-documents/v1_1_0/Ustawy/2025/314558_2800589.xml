@@ -1,0 +1,293 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <ustawa>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/129</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>69013b16-16a3-41c3-a5cd-c504f652634b</gd:GUIDwersji>
+      <AdresISAP>WDU20250000129</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>129</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 129</AdresWyswietlany>
+      <Tytul>Ustawa z dnia 5 grudnia 2024 r. o zmianie ustawy o świadczeniach opieki zdrowotnej finansowanych ze środków publicznych oraz niektórych innych ustaw</Tytul>
+      <Rodzaj>USTAWA</Rodzaj>
+      <DataOgloszenia>2025-01-30</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2024-12-05</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2025-02-14_DU-2025-129_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2025-02-14" warunek="po upływie 14 dni od dnia ogłoszenia" podstawa="art. 7" zrodlo="https://eli.gov.pl/eli/DU/2025/129" dowod="DU/2025/129__art_7" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2025-02-14_DU-2025-129_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="aff4365a-b35f-4b7a-9831-2113b76098c7" rola="wydajacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Sejm">
+          <Nazwa>SEJM</Nazwa>
+        </Organ>
+        <Organ gd:GUID="fabcc880-b483-443d-90f6-c75398a26b8e" rola="podpisujacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Prezydent">
+          <Nazwa>Prezydent Rzeczypospolitej Polskiej</Nazwa>
+          <OrganPodpisujacy>Prezydent Rzeczypospolitej Polskiej</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>A.</imie> <nazwisko>Duda</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Ustawa</rodzaj-aktu>
+    <data>z dnia 5 grudnia 2024 r.</data>
+    <tytul>o zmianie ustawy o świadczeniach opieki zdrowotnej finansowanych ze środków publicznych oraz niektórych innych ustaw<odnosnik id-odnosnika="1" symbol="1" gd:GUID="1b1ee8df-79d7-4fa2-9e2e-87f8eb97e5a9"><p><zdanie nr="1" gd:zdGUID="af911273-c19e-4479-b1d6-0b2c37b2d711" fragment="1" gd:fragmentGUID="b346165e-f846-414b-9fe5-53156913dab9">Niniejszą ustawą zmienia się ustawy: ustawę z dnia 6 września 2001 r. – Prawo farmaceutyczne, ustawę z dnia 15 kwietnia 2011 r. o działalności leczniczej, ustawę z dnia 12 maja 2011 r. o refundacji leków, środków spożywczych specjalnego przeznaczenia żywieniowego oraz wyrobów medycznych oraz ustawę z dnia 15 lipca 2011 r. o zawodach pielęgniarki i położnej.</zdanie></p></odnosnik></tytul>
+    <artykul eId="DU/2025/129__art_1" gd:GUID="ce2d83cc-910e-431c-bfa1-cfd4109df8a5" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="e6124562-2332-492d-b28a-8774e987160f" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14">
+        <p>
+          <zdanie nr="1" gd:zdGUID="62ac58e7-e391-4024-97bb-3d30ebf13d0d" fragment="1" gd:fragmentGUID="4aa4822e-00f2-4558-94c4-0f56ec68ebd6" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14">W ustawie z dnia 27 sierpnia 2004 r. o świadczeniach opieki zdrowotnej finansowanych ze środków publicznych (Dz. U. z 2024 r. poz. 146, 858, 1222, 1593, 1615 i 1915) wprowadza się następujące zmiany:</zdanie>
+        </p>
+        <punkt eId="DU/2025/129__art_1__pkt_1" gd:GUID="114689b6-72ff-4932-94ca-cd996d301f3f" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="62ac58e7-e391-4024-97bb-3d30ebf13d0d" fragment="2" gd:fragmentGUID="79b2070f-b8ff-44fb-b5ff-01031885b6b8" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14">w art. 43a:</zdanie>
+          </p>
+          <litera eId="DU/2025/129__art_1__pkt_1__lit_a" gd:GUID="038e08d6-7c73-4455-b4ea-0e3b1a7f5184" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="62ac58e7-e391-4024-97bb-3d30ebf13d0d" fragment="3" gd:fragmentGUID="9ac3b0f4-cb69-42f1-946d-aad83c2bbd54" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14">w ust. 1 część wspólna otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/146" cudzyslowy="oba" gd:nowGUID="d3643ef5-425b-4806-8471-7be2d8fee322" element-eId="DU/2024/146__art_43a__ust_1__czw" funkcja="zastap"><czesc-wspolna-punkt eId="DU/2024/146__art_43a__ust_1__czw" gd:GUID="76f9f57a-3e24-4150-a543-76dd1a4c0b42" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14"><p><zdanie nr="1" gd:zdGUID="a5bbd8f5-3aa9-4a90-9ce3-cabb8c918e1e" fragment="1" gd:fragmentGUID="227e53db-8104-4b4f-8ad2-5b8438d6563b" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14">– przysługuje bezpłatne zaopatrzenie w leki, środki spożywcze specjalnego przeznaczenia żywieniowego oraz wyroby medyczne określone w wykazie, o którym mowa w art. 37 ust. 1 ustawy o refundacji, ustalonym w sposób określony w ust. 2, na podstawie recepty wystawionej przez osobę uprawnioną w rozumieniu art. 2 pkt 14 ustawy o refundacji, w tym również posiadającą prawo wykonywania zawodu, która zaprzestała jego wykonywania i wystawia receptę dla siebie albo dla małżonka, albo dla osoby pozostającej we wspólnym pożyciu, albo dla krewnych lub powinowatych w linii prostej, a w linii bocznej do stopnia pokrewieństwa między dziećmi rodzeństwa.</zdanie></p></czesc-wspolna-punkt></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/129__art_1__pkt_1__lit_b" gd:GUID="b1beafa6-0b97-404c-b366-e5f8a2993a84" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="62ac58e7-e391-4024-97bb-3d30ebf13d0d" fragment="4" gd:fragmentGUID="d2fdc2dc-4917-42ad-9c7d-e90f232c7fbb" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14">ust. 1a otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/146" cudzyslowy="oba" gd:nowGUID="b6e20a3c-3568-4822-bead-a0589568eada" element-eId="DU/2024/146__art_43a__ust_1a" funkcja="zastap"><ustep eId="DU/2024/146__art_43a__ust_1a" gd:GUID="711d59de-1975-4053-8bbe-aaa3065bfe03" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>1a</nr><p><zdanie nr="1" gd:zdGUID="b6fa74c0-c037-4972-a3de-afe4d0b45e58" fragment="1" gd:fragmentGUID="8cd3910e-e353-4733-8666-1693772bf8c0" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14">Uprawnienie świadczeniobiorcy określone w ust. 1:</zdanie></p><punkt eId="DU/2024/146__art_43a__ust_1a__pkt_1" gd:GUID="9cb92932-b909-4fd5-9b43-44116a44367a" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="b6fa74c0-c037-4972-a3de-afe4d0b45e58" fragment="2" gd:fragmentGUID="4edb1653-e8f3-4bfa-a132-26b086a7d101" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14">przysługuje w zakresie, w jakim przepisywany lek, środek spożywczy specjalnego przeznaczenia żywieniowego lub wyrób medyczny podlega refundacji na zasadach wynikających z ustawy o refundacji;</zdanie></p></punkt><punkt eId="DU/2024/146__art_43a__ust_1a__pkt_2" gd:GUID="0917ab27-b39b-4c6c-bebc-f78229d459f9" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="b6fa74c0-c037-4972-a3de-afe4d0b45e58" fragment="3" gd:fragmentGUID="a4c401f7-5e30-4952-8583-cfafc566a070" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14">jest uwzględniane na recepcie w oparciu o wiek pacjenta oraz o zakres, o którym mowa w pkt 1, przy pomocy narzędzia informatycznego, o którym mowa w art. 9b ustawy z dnia 28 kwietnia 2011 r. o systemie informacji w ochronie zdrowia, jeżeli recepta ta jest wystawiana w postaci elektronicznej.</zdanie></p></punkt></ustep></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/129__art_1__pkt_1__lit_c" gd:GUID="7018357b-d99d-46aa-9ba7-67b107b6bd7f" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14">
+            <nr>c</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="62ac58e7-e391-4024-97bb-3d30ebf13d0d" fragment="5" gd:fragmentGUID="fa203a66-ace2-4cf0-bcce-8b8f741159bd" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14"><now:zamien-tekst stary-tekst="i 1a," nowy-tekst="" element-eId="DU/2024/146__art_43a__ust_1b" akt="https://eli.gov.pl/eli/DU/2024/146" gd:nowGUID="3bba9bef-6f22-4b37-bf71-647def4c804e" />w ust. 1b skreśla się wyrazy „i 1a,”;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2025/129__art_1__pkt_2" gd:GUID="7494dd2c-5396-4fcb-84cf-62e6d0a198a3" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="62ac58e7-e391-4024-97bb-3d30ebf13d0d" fragment="6" gd:fragmentGUID="f2dda0bf-d98b-4f02-bda6-4b4e8cb937b0" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14">w art. 97:</zdanie>
+          </p>
+          <litera eId="DU/2025/129__art_1__pkt_2__lit_a" gd:GUID="97ce724d-6ac9-4aaf-966a-dea114360e86" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="62ac58e7-e391-4024-97bb-3d30ebf13d0d" fragment="7" gd:fragmentGUID="6550bbb0-9ca9-4564-810e-925df7901941" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14">w ust. 3 po pkt 2h dodaje się pkt 2i w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/146" cudzyslowy="oba" gd:nowGUID="2a4d4434-c7b4-4485-b9e8-60ef5e64b6ef" element-eId="DU/2024/146__art_97__ust_3__pkt_2h" funkcja="dodaj-po"><punkt eId="DU/2024/146__art_97__ust_3__pkt_2i" gd:GUID="4d386f40-4067-47d9-954d-50462294e44a" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>2i</nr><p><zdanie nr="1" gd:zdGUID="f41d84ae-ceb2-4a59-ba28-67297da4147f" fragment="1" gd:fragmentGUID="6fd05688-8c1d-47f2-ba30-5537582c5d46" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14">finansowanie leków w ramach ratunkowego dostępu do technologii lekowych, o którym mowa w art. 47d;</zdanie></p></punkt></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/129__art_1__pkt_2__lit_b" gd:GUID="ade72419-2fcf-4a11-8c15-5a1f7645506b" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="62ac58e7-e391-4024-97bb-3d30ebf13d0d" fragment="8" gd:fragmentGUID="6ae446ea-fd53-42ce-ad75-e95ecf45a365" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14">ust. 3i dodany przez art. 4 pkt 11 lit. b ustawy z dnia 17 sierpnia 2023 r. o zmianie ustawy o refundacji leków, środków spożywczych specjalnego przeznaczenia żywieniowego oraz wyrobów medycznych oraz niektórych innych ustaw (Dz. U. poz. 1938 i 2105) oznacza się jako ust. 3ja,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/129__art_1__pkt_2__lit_c" gd:GUID="9bc301dc-304d-4588-8a18-2856adeebb85" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14">
+            <nr>c</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="62ac58e7-e391-4024-97bb-3d30ebf13d0d" fragment="9" gd:fragmentGUID="92be5cc4-4d2c-46e8-a718-50a8d2916693" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14">ust. 3j dodany przez art. 4 pkt 11 lit. b ustawy z dnia 17 sierpnia 2023 r. o zmianie ustawy o refundacji leków, środków spożywczych specjalnego przeznaczenia żywieniowego oraz wyrobów medycznych oraz niektórych innych ustaw (Dz. U. poz. 1938 i 2105) oznacza się jako ust. 3jb,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/129__art_1__pkt_2__lit_d" gd:GUID="1be0bdae-c738-49da-af7b-c4fed49e281c" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14">
+            <nr>d</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="62ac58e7-e391-4024-97bb-3d30ebf13d0d" fragment="10" gd:fragmentGUID="3b923c10-5ace-4811-ab28-1003782c9074" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14"><now:zamien-tekst stary-tekst="ust. 3i" nowy-tekst="ust. 3ja" element-eId="DU/2024/146__art_97__ust_3jb" akt="https://eli.gov.pl/eli/DU/2024/146" gd:nowGUID="807c1977-e606-4a9e-a68f-da6eea54f7e7" />w ust. 3jb wyrazy „ust. 3i” zastępuje się wyrazami „ust. 3ja”,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/129__art_1__pkt_2__lit_e" gd:GUID="82207f1f-f6ed-4bdf-8dfb-e85114d091cd" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14">
+            <nr>e</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="62ac58e7-e391-4024-97bb-3d30ebf13d0d" fragment="11" gd:fragmentGUID="68161c61-dd88-4137-88ab-cef1e1702446" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14">ust. 8c otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/146" cudzyslowy="oba" gd:nowGUID="5e8ddc6a-53cb-447b-9fac-e13a76622b74" element-eId="DU/2024/146__art_97__ust_8c" funkcja="zastap"><ustep eId="DU/2024/146__art_97__ust_8c" gd:GUID="eff4dc56-aa6e-49a0-a806-e8fbfe1d5976" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>8c</nr><p><zdanie nr="1" gd:zdGUID="b66c4502-e108-45c8-a6c0-e0b5b2735fda" fragment="1" gd:fragmentGUID="9e7df9c5-7c1e-41a6-90f5-608967794f75" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14">Fundusz otrzymuje dotację z Funduszu Medycznego na finansowanie kosztów realizacji zadań, o których mowa w ust. 3 pkt 2f–2i.</zdanie></p></ustep></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/129__art_1__pkt_2__lit_f" gd:GUID="c7feb812-e6dd-4b9a-9302-3f4e79ed780a" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14">
+            <nr>f</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="62ac58e7-e391-4024-97bb-3d30ebf13d0d" fragment="12" gd:fragmentGUID="9f7d54f9-f616-4b57-ab2e-1bf947578420" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14">po ust. 8c dodaje się ust. 8d w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/146" cudzyslowy="oba" gd:nowGUID="0963cd79-0b0f-4e43-8ec2-5755003ecd21" element-eId="DU/2024/146__art_97__ust_8c" funkcja="dodaj-po"><ustep eId="DU/2024/146__art_97__ust_8d" gd:GUID="59f6d38b-7962-430c-b732-40fe37787679" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>8d</nr><p><zdanie nr="1" gd:zdGUID="abdd4bcc-8ae3-4f04-9283-21e81f0ed973" fragment="1" gd:fragmentGUID="ccd83f6b-b0c1-4c27-b8ec-f5dff665e06d" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14">Prezes Funduszu składa do dysponenta Funduszu Medycznego wniosek o przekazanie dotacji celowej, w wysokości odpowiadającej kwocie wydatkowanej przez Fundusz w miesiącach poprzedzających, na pokrycie wydatków na realizację zadania, o którym mowa w ust. 3 pkt 2i, w terminie do 20. dnia danego miesiąca kalendarzowego.</zdanie></p></ustep></cytat-strukt>;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2025/129__art_1__pkt_3" gd:GUID="e185ce78-5da6-4aa7-b63b-f582b6f835fe" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="62ac58e7-e391-4024-97bb-3d30ebf13d0d" fragment="13" gd:fragmentGUID="2d956e12-a46a-4471-93a0-e44208e4421f" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14"><now:zamien-tekst stary-tekst="i 1a" nowy-tekst="" element-eId="DU/2024/146__art_102__ust_5__pkt_26a" akt="https://eli.gov.pl/eli/DU/2024/146" gd:nowGUID="692d538b-9233-48f0-8d27-3cee14a96978" /><now:zamien-tekst stary-tekst="i 1a" nowy-tekst="" element-eId="DU/2024/146__art_188__ust_4__pkt_15a" akt="https://eli.gov.pl/eli/DU/2024/146" gd:nowGUID="51ab9344-c7d9-4a3a-be1a-b518b74944e8" />w art. 102 w ust. 5 w pkt 26a oraz w art. 188 w ust. 4 w pkt 15a skreśla się wyrazy „i 1a”;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/129__art_1__pkt_4" gd:GUID="e2d3ab03-7064-4aec-af8c-5bfd1c08b8ed" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="62ac58e7-e391-4024-97bb-3d30ebf13d0d" fragment="14" gd:fragmentGUID="83b69a28-acd8-4d1d-8b17-99453929b177" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14">w art. 116 w ust. 1 pkt 5 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/146" cudzyslowy="oba" gd:nowGUID="e154e44c-4503-495f-a701-2cd40ff58db8" element-eId="DU/2024/146__art_116__ust_1__pkt_5" funkcja="zastap"><punkt eId="DU/2024/146__art_116__ust_1__pkt_5" gd:GUID="64d12940-77fa-42dd-91a4-352f6a1e8674" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>5</nr><p><zdanie nr="1" gd:zdGUID="475846c0-0b39-4c57-9d1c-f68c61b32dd4" fragment="1" gd:fragmentGUID="25d0a6b8-30f0-4fc7-b26e-e05214804271" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14">dotacje, w tym dotacje celowe przeznaczone na finansowanie zadań, o których mowa w art. 97 ust. 3 pkt 2f–2i i 4c;</zdanie></p></punkt></cytat-strukt>.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2025/129__art_2" gd:GUID="a9ec5393-6d62-486f-bd78-269d5284020a" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="d617b0ee-e445-4a3c-839f-19fed59636bb" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14">
+        <p>
+          <zdanie nr="1" gd:zdGUID="882c786c-a8ba-439f-abf7-32483cc01eb4" fragment="1" gd:fragmentGUID="5afb0efa-8d5c-4d70-b87c-dab5c052fbae" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14">W ustawie z dnia 6 września 2001 r. – Prawo farmaceutyczne (Dz. U. z 2024 r. poz. 686) wprowadza się następujące zmiany:</zdanie>
+        </p>
+        <punkt eId="DU/2025/129__art_2__pkt_1" gd:GUID="33898e74-1188-47b1-bd15-2bfee1a6e059" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="882c786c-a8ba-439f-abf7-32483cc01eb4" fragment="2" gd:fragmentGUID="a1860206-8f32-44ba-aa1c-67c08dd7c4b9" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14">w art. 94:</zdanie>
+          </p>
+          <litera eId="DU/2025/129__art_2__pkt_1__lit_a" gd:GUID="a20ad85e-b050-4660-bdb5-8357f0275829" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="882c786c-a8ba-439f-abf7-32483cc01eb4" fragment="3" gd:fragmentGUID="f9c5d822-0874-4441-b933-370bcd426f9e" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14">ust. 20 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/686" cudzyslowy="oba" gd:nowGUID="5099470c-f731-4e63-9086-c544e55e0a84" element-eId="DU/2024/686__art_94__ust_20" funkcja="zastap"><ustep eId="DU/2024/686__art_94__ust_20" gd:GUID="e39301e2-bfdc-45e3-a4b2-797b1df77406" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>20</nr><p><zdanie nr="1" gd:zdGUID="15753f79-3901-4a55-819b-571e463f55a7" fragment="1" gd:fragmentGUID="968b9982-e6e7-455d-b4ae-1e36e71b916e" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14">W przypadku gdy apteka ogólnodostępna nie pełniła dyżuru albo pełniła go w wymiarze mniejszym niż zostało to wyznaczone w uchwale, o której mowa w ust. 3, podmiot prowadzący aptekę ogólnodostępną ma obowiązek zwrotu dotychczas otrzymanego wynagrodzenia ryczałtowego z tytułu pełnienia dyżurów, od czasu wyznaczenia do ich pełnienia, wraz z odsetkami ustawowymi za opóźnienie.</zdanie><zdanie nr="2" gd:zdGUID="6da98199-f63a-4990-a236-54199698b984" fragment="1" gd:fragmentGUID="087e9e01-982b-4e49-8ae2-2183e56eb763" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14">W takim przypadku Narodowy Fundusz Zdrowia wzywa podmiot prowadzący aptekę do zapłaty kwoty w wysokości określonej w zdaniu pierwszym, a podmiot ten ma obowiązek jej zapłaty w terminie 14 dni od dnia otrzymania wezwania.</zdanie></p></ustep></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/129__art_2__pkt_1__lit_b" gd:GUID="879c5cb7-9e7f-49c9-8e80-0e7c3d2217c3" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="882c786c-a8ba-439f-abf7-32483cc01eb4" fragment="4" gd:fragmentGUID="85028e81-108c-4af4-851f-3f5a31df3331" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14">po ust. 20 dodaje się ust. 20a i 20b w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/686" cudzyslowy="oba" gd:nowGUID="b55e778c-0c3f-404e-9917-a9d01620ea04" element-eId="DU/2024/686__art_94__ust_20" funkcja="dodaj-po"><ustep eId="DU/2024/686__art_94__ust_20a" gd:GUID="511321f2-5e80-43ef-8dac-abf6ce3d2791" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>20a</nr><p><zdanie nr="1" gd:zdGUID="29ae7a26-026d-4ab3-a6ed-608fa3afceba" fragment="1" gd:fragmentGUID="f2f959d1-a377-4afc-ae45-69f6e8ca789a" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14">W przypadku gdy w wyniku działania siły wyższej apteka ogólnodostępna nie pełniła dyżuru albo pełniła go w wymiarze mniejszym niż zostało to wyznaczone w uchwale, o której mowa w ust. 3, podmiot prowadzący aptekę jest obowiązany do powiadomienia o tym zarządu powiatu oraz Narodowego Funduszu Zdrowia w terminie 14 dni od dnia ustąpienia działania siły wyższej.</zdanie></p></ustep><ustep eId="DU/2024/686__art_94__ust_20b" gd:GUID="c01e8db1-54b0-4998-9b7c-53748a76c910" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>20b</nr><p><zdanie nr="1" gd:zdGUID="8732fcb2-9606-4cab-8e94-534f28f36c4a" fragment="1" gd:fragmentGUID="076d69d4-f205-46f0-a141-13d400ba4e33" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14">Obowiązek zwrotu, o którym mowa w ust. 20, nie dotyczy przypadków będących wynikiem:</zdanie></p><punkt eId="DU/2024/686__art_94__ust_20b__pkt_1" gd:GUID="87d9f0c5-99f3-4f48-b8ef-e3d7fbe16132" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="8732fcb2-9606-4cab-8e94-534f28f36c4a" fragment="2" gd:fragmentGUID="41304268-d7aa-43af-aa16-976bc02ea6ea" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14">działania siły wyższej, o których podmiot prowadzący aptekę ogólnodostępną powiadomił Narodowy Fundusz Zdrowia w terminie określonym w ust. 20a;</zdanie></p></punkt><punkt eId="DU/2024/686__art_94__ust_20b__pkt_2" gd:GUID="d4b550eb-0dde-4c44-90a2-737fb4b55aae" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="8732fcb2-9606-4cab-8e94-534f28f36c4a" fragment="3" gd:fragmentGUID="8f95a10e-fe8b-4382-955a-950d0b52d77a" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14">wystąpienia przyczyn losowych innych niż siła wyższa, o których podmiot prowadzący aptekę ogólnodostępną powiadomił zarząd powiatu oraz Narodowy Fundusz Zdrowia w terminie 14 dni od dnia ich wystąpienia.</zdanie></p></punkt></ustep></cytat-strukt>;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2025/129__art_2__pkt_2" gd:GUID="e95ad7a6-6528-4891-86d5-452dd327adf3" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="882c786c-a8ba-439f-abf7-32483cc01eb4" fragment="5" gd:fragmentGUID="43f0cd2f-f04b-430d-ba3f-cea84bbdabbc" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14">w art. 96:</zdanie>
+          </p>
+          <litera eId="DU/2025/129__art_2__pkt_2__lit_a" gd:GUID="c00205f1-dd64-496d-ac09-9a2acd34ac00" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="882c786c-a8ba-439f-abf7-32483cc01eb4" fragment="6" gd:fragmentGUID="a5a2b0a6-3044-45a5-90f2-73a20e7f1787" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14">w ust. 4 pkt 3 i 4 otrzymują brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/686" cudzyslowy="otwierajacy" gd:nowGUID="8bff0336-246f-47c6-8c25-ed5132e5d89e" element-eId="DU/2024/686__art_96__ust_4__pkt_3" funkcja="zastap"><punkt eId="DU/2024/686__art_96__ust_4__pkt_3" gd:GUID="b34c1a01-f391-4490-8f59-5131412d0e2e" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>3</nr><p><zdanie nr="1" gd:zdGUID="3d8a34e9-84f7-4890-a4e2-f0bc12b2b72d" fragment="1" gd:fragmentGUID="354daeec-655f-4dca-b240-48b65f37e151" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14">zawiera dane, o których mowa w art. 96a ust. 1 pkt 1–4, pkt 5 lit. a oraz pkt 6, a w przypadku recepty, na której co najmniej jeden z przepisanych produktów leczniczych, dla którego wydano decyzję o objęciu refundacją w rozumieniu art. 11 ust. 1 ustawy z dnia 12 maja 2011 r. o refundacji leków, środków spożywczych specjalnego przeznaczenia żywieniowego oraz wyrobów medycznych, ma być wydany za odpłatnością, o której mowa w art. 6 ust. 2 tej ustawy – dodatkowo dane, o których mowa w art. 96a ust. 8 pkt 1a, 1b i 3–10, a także przyczynę wydania, z zastrzeżeniem że w przypadku recepty farmaceutycznej wystawionej na podstawie ust. 4<sup>1</sup> nie jest wymagana przyczyna zastosowania;</zdanie></p></punkt></cytat-strukt><cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/686" cudzyslowy="zamykajacy" gd:nowGUID="a2f9f74e-0180-411d-a491-6c268e6acf83" element-eId="DU/2024/686__art_96__ust_4__pkt_4" funkcja="zastap"><punkt eId="DU/2024/686__art_96__ust_4__pkt_4" gd:GUID="8a52c0bb-c6fb-4708-a064-a7f73ea0e2f0" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>4</nr><p><zdanie nr="1" gd:zdGUID="34d7d63e-d0ff-4057-93d2-5a0e884c10a3" fragment="1" gd:fragmentGUID="29452f96-c584-4ff1-bb71-876b748f8ccb" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14">recepta jest realizowana z odpłatnością 100 %, z wyjątkiem:</zdanie></p><litera eId="DU/2024/686__art_96__ust_4__pkt_4__lit_a" gd:GUID="314a6b75-1cbb-471e-87e4-eb9c350e22a9" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>a</nr><p><zdanie nr="1" gd:zdGUID="34d7d63e-d0ff-4057-93d2-5a0e884c10a3" fragment="2" gd:fragmentGUID="a547149e-b02b-4094-a694-9e48d40894df" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14">recept wystawionych dla osób określonych w art. 95b ust. 3 lub</zdanie></p></litera><litera eId="DU/2024/686__art_96__ust_4__pkt_4__lit_b" gd:GUID="c44b2df9-42c2-49d0-a259-ed1c46e80ad8" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>b</nr><p><zdanie nr="1" gd:zdGUID="34d7d63e-d0ff-4057-93d2-5a0e884c10a3" fragment="3" gd:fragmentGUID="f7b497c5-59cd-4623-ac24-a56c62ab352b" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14">recept farmaceutycznych, o których mowa w ust. 4<sup>1</sup>;</zdanie></p></litera></punkt></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/129__art_2__pkt_2__lit_b" gd:GUID="ca17b534-9f2b-4108-a304-b7463a45e938" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="882c786c-a8ba-439f-abf7-32483cc01eb4" fragment="7" gd:fragmentGUID="758ec03f-52e7-44aa-91fa-df0c18cefe53" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14">ust. 4<sup>1</sup> otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/686" cudzyslowy="oba" gd:nowGUID="dcdd7852-0f60-4cd6-b8b3-f79097e55b3c" element-eId="DU/2024/686__art_96__ust_4[1]" funkcja="zastap"><ustep eId="DU/2024/686__art_96__ust_4[1]" gd:GUID="0543ffb7-80d9-475e-b813-185a3a424602" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>4[1]</nr><p><zdanie nr="1" gd:zdGUID="68869a22-7014-42d9-9f11-529ec2293ae6" fragment="1" gd:fragmentGUID="d3fa72ff-0898-4f3b-b39a-5c97748908a0" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14">Receptę farmaceutyczną można również wystawić na produkt immunologiczny niezbędny do przeprowadzania w aptece zalecanego szczepienia ochronnego w rozumieniu art. 19 ust. 1 ustawy z dnia 5 grudnia 2008 r. o zapobieganiu oraz zwalczaniu zakażeń i chorób zakaźnych u ludzi, w tym z uwzględnieniem uprawnień dodatkowych przysługujących na podstawie art. 43 ust. 1, art. 43a ust. 1, art. 44 ust. 1, 1a i 1c, art. 45 ust. 1 lub art. 46 ust. 1 ustawy z dnia 27 sierpnia 2004 r. o świadczeniach opieki zdrowotnej finansowanych ze środków publicznych.</zdanie><zdanie nr="2" gd:zdGUID="a883297f-7b13-4e5a-9ed9-162b32c6ecb1" fragment="1" gd:fragmentGUID="4ef0ca93-1da0-4694-a55c-027b193bd693" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14">Recepta ta jest podstawą zastosowania produktu immunologicznego w aptece ogólnodostępnej, w której farmaceuta wystawił tę receptę.</zdanie></p></ustep></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/129__art_2__pkt_2__lit_c" gd:GUID="1015fbe5-e4a8-4ae7-a99a-10d836aac5a4" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14">
+            <nr>c</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="882c786c-a8ba-439f-abf7-32483cc01eb4" fragment="8" gd:fragmentGUID="76945f2d-e8d4-4226-be55-a363b32c1c65" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14"><now:zamien-tekst stary-tekst="w ust. 5 pkt 3" nowy-tekst="w ust. 5 pkt 2 lit. a tiret drugie" element-eId="DU/2024/686__art_96__ust_5a" akt="https://eli.gov.pl/eli/DU/2024/686" gd:nowGUID="8a8743f7-6959-4b8f-93c9-d19512024122" />w ust. 5a wyrazy „w ust. 5 pkt 3” zastępuje się wyrazami „w ust. 5 pkt 2 lit. a tiret drugie”.</zdanie>
+            </p>
+          </litera>
+        </punkt>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2025/129__art_3" gd:GUID="de443574-3bb1-489d-a413-35a8a83bed83" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14">
+      <nr>3</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="d68749ff-78d5-4d30-9fad-48de1a4dca8d" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14">
+        <p>
+          <zdanie nr="1" gd:zdGUID="ca5d3879-41e5-4c64-9339-2e959a8e4731" fragment="1" gd:fragmentGUID="781172a3-a2fb-402a-a3b4-999e9eaf6fbe" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14">W ustawie z dnia 15 kwietnia 2011 r. o działalności leczniczej (Dz. U. z 2024 r. poz. 799 i 1897) wprowadza się następujące zmiany:</zdanie>
+        </p>
+        <punkt eId="DU/2025/129__art_3__pkt_1" gd:GUID="b70d1680-8408-462b-958a-06f3824f5d00" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="ca5d3879-41e5-4c64-9339-2e959a8e4731" fragment="2" gd:fragmentGUID="bf9f1ec7-d276-4798-8934-8a2c1d61d466" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14">w art. 4 w ust. 3 pkt 4 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/799" cudzyslowy="oba" gd:nowGUID="b49da633-f00d-4577-b835-6c3cf6cd7830" element-eId="DU/2024/799__art_4__ust_3__pkt_4" funkcja="zastap"><punkt eId="DU/2024/799__art_4__ust_3__pkt_4" gd:GUID="edebf2f6-ab71-4592-9c22-6d550c530ce2" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>4</nr><p><zdanie nr="1" gd:zdGUID="e30b7a0a-df93-480b-936d-b7f04cbff26f" fragment="1" gd:fragmentGUID="e117e810-62d2-43d5-8805-a09681db9e4d" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14">przepisy art. 114, art. 115 z wyjątkiem ust. 4 oraz art. 116–117a – w zakresie dotyczącym przekazywania środków finansowych;</zdanie></p></punkt></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/129__art_3__pkt_2" gd:GUID="a174627b-b6f9-4cae-975a-6e33d83bb7d5" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="ca5d3879-41e5-4c64-9339-2e959a8e4731" fragment="3" gd:fragmentGUID="83f434fc-6301-40a0-84dc-978b09e99569" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14"><now:zamien-tekst stary-tekst="art. 114–117" nowy-tekst="art. 114–117a" element-eId="DU/2024/799__art_55__ust_1__pkt_4" akt="https://eli.gov.pl/eli/DU/2024/799" gd:nowGUID="3773cf17-60c6-438e-b3bb-9251c840d822" />w art. 55 w ust. 1 w pkt 4 wyrazy „art. 114–117” zastępuje się wyrazami „art. 114–117a”;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/129__art_3__pkt_3" gd:GUID="1c378154-9e97-48f7-8bd8-3b590f57adea" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="ca5d3879-41e5-4c64-9339-2e959a8e4731" fragment="4" gd:fragmentGUID="bed49427-858c-44fb-98ef-1528b5b57dc6" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14">w art. 115:</zdanie>
+          </p>
+          <litera eId="DU/2025/129__art_3__pkt_3__lit_a" gd:GUID="d2aec942-9b08-4e49-a2f2-53cb090dfc2f" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="ca5d3879-41e5-4c64-9339-2e959a8e4731" fragment="5" gd:fragmentGUID="bf181961-776f-44f0-a890-94668525ad72" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14">ust. 1 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/799" cudzyslowy="oba" gd:nowGUID="aca5c618-0f47-4111-9888-59c428af8333" element-eId="DU/2024/799__art_115__ust_1" funkcja="zastap"><ustep eId="DU/2024/799__art_115__ust_1" gd:GUID="6b3f24e2-00e4-4214-aa75-76bb40166a20" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="d507638f-41cc-4198-9a0c-cd3ac8c3868b" fragment="1" gd:fragmentGUID="dc3b699c-c3f8-4a27-8145-a53634fe0c5f" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14">Środki finansowe na realizację zadań, o których mowa w art. 114 ust. 1 pkt 1 i 4–7, może przyznać podmiotowi wykonującemu działalność leczniczą na podstawie umowy:</zdanie></p><punkt eId="DU/2024/799__art_115__ust_1__pkt_1" gd:GUID="b8ed4bd8-9168-4391-b576-b19c04bc7bb8" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="d507638f-41cc-4198-9a0c-cd3ac8c3868b" fragment="2" gd:fragmentGUID="b3aa0887-8531-4fe8-b30c-f2dd62c732e2" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14">Skarb Państwa, reprezentowany przez ministra, centralny organ administracji rządowej, wojewodę, a także jednostka samorządu terytorialnego lub uczelnia medyczna;</zdanie></p></punkt><punkt eId="DU/2024/799__art_115__ust_1__pkt_2" gd:GUID="b876f24a-bee2-4a6d-834f-1d3c241e5556" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="d507638f-41cc-4198-9a0c-cd3ac8c3868b" fragment="3" gd:fragmentGUID="d039a184-1306-455b-83ec-788f85d6ff9e" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14">inny podmiot uprawniony do finansowania tych zadań na podstawie odrębnych przepisów.</zdanie></p></punkt></ustep></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/129__art_3__pkt_3__lit_b" gd:GUID="d84d0b8c-9300-46b9-9bf4-34f62b195035" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="ca5d3879-41e5-4c64-9339-2e959a8e4731" fragment="6" gd:fragmentGUID="f9470d2d-6cf4-4533-b535-8cc118392afd" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14">ust. 3 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/799" cudzyslowy="oba" gd:nowGUID="daf7b937-77eb-416c-a945-5a0a6d79c325" element-eId="DU/2024/799__art_115__ust_3" funkcja="zastap"><ustep eId="DU/2024/799__art_115__ust_3" gd:GUID="380ce391-09c7-4c1a-af86-b2f8a1b35a71" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>3</nr><p><zdanie nr="1" gd:zdGUID="da4027f9-ebae-44fc-a73d-96bb68174a2c" fragment="1" gd:fragmentGUID="62e211e7-5873-4b3b-bc89-fbe4e9fd148c" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14">Dotację w rozumieniu przepisów o finansach publicznych podmiotom wykonującym działalność leczniczą na realizację zadań, o których mowa w art. 114 ust. 1 pkt 1–6, mogą przyznać podmioty, o których mowa w ust. 1, z wyjątkiem uczelni medycznej.</zdanie></p></ustep></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/129__art_3__pkt_3__lit_c" gd:GUID="59d38818-5157-401b-aec6-3ff8f5f9eff4" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14">
+            <nr>c</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="ca5d3879-41e5-4c64-9339-2e959a8e4731" fragment="7" gd:fragmentGUID="f2334627-4e0a-419e-bb09-f30e12ef49aa" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14">w ust. 4 wprowadzenie do wyliczenia otrzymuje brzmienie:<cytat-w-tekscie now:akt="https://eli.gov.pl/eli/DU/2024/799" cudzyslowy="oba" gd:nowGUID="bbe1dcac-8168-4759-a57c-5b772c76ad36" element-eId="DU/2024/799__art_115__ust_4" funkcja="zastap-tekst"><zdanie nr="1" gd:zdGUID="3275c528-b51b-432e-9097-d93a35c51492" fragment="1" gd:fragmentGUID="4029a068-e3d0-43bf-8821-a8ecf4807cd3" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14">Dotację w rozumieniu przepisów o finansach publicznych na realizację zadań, o których mowa w art. 114 ust. 1 pkt 2 i 3, może także przyznać:</zdanie></cytat-w-tekscie>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/129__art_3__pkt_3__lit_d" gd:GUID="e5c2dbae-32d9-4e94-8cbe-3d812eef847b" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14">
+            <nr>d</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="ca5d3879-41e5-4c64-9339-2e959a8e4731" fragment="8" gd:fragmentGUID="01fff40b-8356-41e8-837c-1529af5ec5cf" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14">ust. 4a i 4b otrzymują brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/799" cudzyslowy="otwierajacy" gd:nowGUID="fae0ca2e-7f7a-4939-90db-c0ba73875688" element-eId="DU/2024/799__art_115__ust_4a" funkcja="zastap"><ustep eId="DU/2024/799__art_115__ust_4a" gd:GUID="c035647f-a13a-43b2-8f8c-984a0d72cd98" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>4a</nr><p><zdanie nr="1" gd:zdGUID="e1489cb6-9cba-47cd-baf8-225e5fdd481b" fragment="1" gd:fragmentGUID="67df941c-4ce5-4d80-a5a5-01908bafb61c" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14">Podmiot leczniczy może uzyskać dotację na realizację zadania, o którym mowa w art. 114 ust. 1 pkt 2 i 3, jeżeli dla inwestycji, przy pomocy której ma być realizowane dane zadanie, została wydana pozytywna opinia, o której mowa w art. 95d ust. 1 ustawy z dnia 27 sierpnia 2004 r. o świadczeniach opieki zdrowotnej finansowanych ze środków publicznych, chyba że opinia ta nie jest wymagana na podstawie przepisów tej ustawy.</zdanie></p></ustep></cytat-strukt><cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/799" cudzyslowy="zamykajacy" gd:nowGUID="dc068f56-787b-45f5-a4c1-3b5a205ff8fc" element-eId="DU/2024/799__art_115__ust_4b" funkcja="zastap"><ustep eId="DU/2024/799__art_115__ust_4b" gd:GUID="bde1853f-af24-4131-b913-3bc00b3a4534" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>4b</nr><p><zdanie nr="1" gd:zdGUID="8075045f-3597-4dd3-a5fd-463d1438abec" fragment="1" gd:fragmentGUID="f758a248-4c8f-4988-b1a5-a6505fcbaec7" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14">Podmiot leczniczy ubiegający się o dotację na realizację zadania, o którym mowa w art. 114 ust. 1 pkt 2 i 3, przedkłada właściwemu organowi pozytywną opinię, o której mowa w art. 95d ust. 1 ustawy z dnia 27 sierpnia 2004 r. o świadczeniach opieki zdrowotnej finansowanych ze środków publicznych, wraz z wnioskiem o dotację.</zdanie></p></ustep></cytat-strukt>.</zdanie>
+            </p>
+          </litera>
+        </punkt>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2025/129__art_4" gd:GUID="2b9bbe90-1704-406b-8090-6beb20ab6fe1" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14">
+      <nr>4</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="42b6377d-2673-4727-b705-8e9b3f7ce623" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14">
+        <p>
+          <zdanie nr="1" gd:zdGUID="39ec092e-6607-4fec-83a7-bf1ad95035d3" fragment="1" gd:fragmentGUID="916bf191-6c0a-43c0-ac24-7af58b9ca363" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14">W ustawie z dnia 12 maja 2011 r. o refundacji leków, środków spożywczych specjalnego przeznaczenia żywieniowego oraz wyrobów medycznych (Dz. U. z 2024 r. poz. 930) wprowadza się następujące zmiany:</zdanie>
+        </p>
+        <punkt eId="DU/2025/129__art_4__pkt_1" gd:GUID="2b8e8af9-9fb5-44bf-97fd-4b0e52369f47" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="39ec092e-6607-4fec-83a7-bf1ad95035d3" fragment="2" gd:fragmentGUID="65307571-7750-4f99-a225-690c5cc3a551" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14"><now:zamien-tekst stary-tekst=", o której mowa w art. 11 ust. 2 pkt 8" nowy-tekst="" element-eId="DU/2024/930__art_16" akt="https://eli.gov.pl/eli/DU/2024/930" gd:nowGUID="c090a7fc-2fef-4d86-8997-622139e8b7ee" />w art. 16 skreśla się przecinek i wyrazy „o której mowa w art. 11 ust. 2 pkt 8”;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/129__art_4__pkt_2" gd:GUID="c6b7d350-1301-4d3e-8eb8-7ecb0c2bd337" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="39ec092e-6607-4fec-83a7-bf1ad95035d3" fragment="3" gd:fragmentGUID="562722cd-7c9e-4ad9-9170-e00c92b2662e" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14"><now:zamien-tekst stary-tekst="art. 24" nowy-tekst="" element-eId="DU/2024/930__art_24__ust_1a" akt="https://eli.gov.pl/eli/DU/2024/930" gd:nowGUID="866cb201-6048-42e7-a01e-ad40b1d8c902" />w art. 24 w ust. 1a skreśla się wyrazy „art. 24”;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/129__art_4__pkt_3" gd:GUID="d3054810-719c-4a95-ac3d-8909eaf483a5" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="39ec092e-6607-4fec-83a7-bf1ad95035d3" fragment="4" gd:fragmentGUID="3ef90850-8921-4096-90e4-47f569d12a96" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14"><now:zamien-tekst stary-tekst="ustawy z dnia 27 sierpnia 2004 r. o świadczeniach opieki zdrowotnej finansowanych ze środków publicznych" nowy-tekst="ustawy o świadczeniach" element-eId="DU/2024/930__art_40a__ust_7" akt="https://eli.gov.pl/eli/DU/2024/930" gd:nowGUID="ea2fc8f0-168b-4952-972f-87e97aa0ba32" />w art. 40a w ust. 7 wyrazy „ustawy z dnia 27 sierpnia 2004 r. o świadczeniach opieki zdrowotnej finansowanych ze środków publicznych” zastępuje się wyrazami „ustawy o świadczeniach”;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/129__art_4__pkt_4" gd:GUID="2257a95b-9a3a-4aa9-817e-754be21027ec" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="39ec092e-6607-4fec-83a7-bf1ad95035d3" fragment="5" gd:fragmentGUID="97816c8f-dd4e-47da-acdd-8252c13aae78" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14"><now:zamien-tekst stary-tekst="i 1a" nowy-tekst="" element-eId="DU/2024/930__art_44a__ust_1__tir_1" akt="https://eli.gov.pl/eli/DU/2024/930" gd:nowGUID="dd048a0e-f604-4f8e-af0f-3a2f24a42e22" /><now:zamien-tekst stary-tekst="i 1a" nowy-tekst="" element-eId="DU/2024/930__art_45a__pkt_8__lit_i__tir_1" akt="https://eli.gov.pl/eli/DU/2024/930" gd:nowGUID="4834db8e-f1b0-4d10-b333-abc4e8f87e23" /><now:zamien-tekst stary-tekst="i 1a" nowy-tekst="" element-eId="DU/2024/930__art_45a__pkt_8__lit_i__tir_3" akt="https://eli.gov.pl/eli/DU/2024/930" gd:nowGUID="4c1ea3f9-1acc-442d-8a09-aef6f245ce9e" /><now:zamien-tekst stary-tekst="i 1a" nowy-tekst="" element-eId="DU/2024/930__art_45a__pkt_8__lit_i__tir_5" akt="https://eli.gov.pl/eli/DU/2024/930" gd:nowGUID="da3640a8-de15-4902-a278-c0938054dfb4" /><now:zamien-tekst stary-tekst="i 1a" nowy-tekst="" element-eId="DU/2024/930__art_45a__pkt_8__lit_i__tir_7" akt="https://eli.gov.pl/eli/DU/2024/930" gd:nowGUID="81ca9712-2715-46b7-8607-920858a8e885" /><now:zamien-tekst stary-tekst="i 1a" nowy-tekst="" element-eId="DU/2024/930__art_45a__pkt_8__lit_i__tir_9" akt="https://eli.gov.pl/eli/DU/2024/930" gd:nowGUID="1f9f9fda-2ed7-46fa-aa06-b2d86047d939" />w art. 44a w ust. 1 i w art. 45a w pkt 8 w lit. i w tiret pierwszym, trzecim, piątym, siódmym i dziewiątym skreśla się wyrazy „i 1a”;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/129__art_4__pkt_5" gd:GUID="d204dbb0-09ec-4b75-b7c6-0d6ac79e8a79" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="39ec092e-6607-4fec-83a7-bf1ad95035d3" fragment="6" gd:fragmentGUID="b214869b-89ac-4ae9-a69f-a98793850abb" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14"><now:zamien-tekst stary-tekst=";" nowy-tekst="," element-eId="DU/2024/930__art_45a__pkt_3__lit_e" akt="https://eli.gov.pl/eli/DU/2024/930" now:wystapienie="ostatnie" gd:nowGUID="0e28a7a4-55b3-4506-abe9-75f9862d78c8" />w art. 45a w pkt 3 w lit. e średnik zastępuje się przecinkiem i dodaje się lit. f w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/930" cudzyslowy="oba" gd:nowGUID="57412904-1163-4ca1-adad-af2ae5d4121c" element-eId="DU/2024/930__art_45a__pkt_3__lit_e" funkcja="dodaj-po"><litera eId="DU/2024/930__art_45a__pkt_3__lit_f" gd:GUID="fde5a304-7953-4148-9edc-01b7ad08ed85" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14"><nr>f</nr><p><zdanie nr="1" gd:zdGUID="f4c67259-f5f1-4641-818d-c8bef1cfd215" fragment="1" gd:fragmentGUID="1f4255ef-f6c5-4b1e-921c-7ed8b2776489" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14">w przypadku gdy recepta została wystawiona w aptece ogólnodostępnej – numer wpisu do rejestru zezwoleń na prowadzenie aptek ogólnodostępnych, punktów aptecznych;</zdanie></p></litera></cytat-strukt>.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2025/129__art_5" gd:GUID="2277f125-06be-49db-94e8-ae0bc8f6bad8" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14">
+      <nr>5</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="906b6093-5894-498f-9e26-38b8087645fc" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14">
+        <p>
+          <zdanie nr="1" gd:zdGUID="f28b2cc5-5d4e-4a2f-b513-5586e4f55dea" fragment="1" gd:fragmentGUID="78a13c17-4d4e-4262-a2e2-6d22367c973c" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14"><now:zamien-tekst stary-tekst="i 1a" nowy-tekst="" element-eId="DU/2024/814__art_15a__ust_3__pkt_1" akt="https://eli.gov.pl/eli/DU/2024/814" gd:nowGUID="ed66c40b-1c4a-49c9-b9a4-cfd1ce56851e" />W ustawie z dnia 15 lipca 2011 r. o zawodach pielęgniarki i położnej (Dz. U. z 2024 r. poz. 814, 854 i 1897) w art. 15a w ust. 3 w pkt 1 skreśla się wyrazy „i 1a”.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2025/129__art_6" gd:GUID="61ae0128-c0d8-4cc1-b8eb-81c150271933" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14">
+      <nr>6</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="a8031f71-2e3b-421e-bca1-4e946951fee3" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14">
+        <p>
+          <zdanie nr="1" gd:zdGUID="fcc8b48a-bc74-410f-a828-26052d42f9f3" fragment="1" gd:fragmentGUID="3420b080-f63b-42bf-ab2d-5632bf30d16a" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14">Strony umów zawartych na podstawie przepisów art. 4 ust. 3 pkt 4 i art. 115 ustawy zmienianej w art. 3, w brzmieniu dotychczasowym, przed dniem wejścia w życie niniejszej ustawy i realizowanych w dniu wejścia w życie niniejszej ustawy dostosują treść tych umów do przepisów art. 4 ust. 3 pkt 4 i art. 115 ustawy zmienianej w art. 3, w brzmieniu nadanym niniejszą ustawą.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2025/129__art_7" gd:GUID="ae25f106-5e72-4c00-8791-8f56c00da459" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14">
+      <nr>7</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="f827cf67-0a84-4f59-b32a-210827007ca9" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14">
+        <p>
+          <zdanie nr="1" gd:zdGUID="e3c1825d-010a-484d-848c-1aad3708fce7" fragment="1" gd:fragmentGUID="1ee9065f-4e7e-4faa-ba63-8f0419ddac15" okres="okr_obowiazywanie.zdarz_wejscie_2025-02-14_DU-2025-129_domyslne.x" wejscie-w-zycie="2025-02-14">Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <organ-podpisujacy>Prezydent Rzeczypospolitej Polskiej: <i><osoba podpisujacy="true" gd:osobaGUID="87939cc0-5865-4299-8380-f8db1c1a85cd"><imie>A.</imie> <nazwisko>Duda</nazwisko></osoba></i></organ-podpisujacy>
+  </ustawa>
+</akt-prawny>

@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <ustawa>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/1167</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>df47210d-8e43-433e-9422-7c345524d9ab</gd:GUIDwersji>
+      <AdresISAP>WDU20250001167</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>1167</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 1167</AdresWyswietlany>
+      <Tytul>Ustawa z dnia 9 lipca 2025 r. o zmianie ustawy o ochronie praw nabywcy lokalu mieszkalnego lub domu jednorodzinnego oraz Deweloperskim Funduszu Gwarancyjnym</Tytul>
+      <Rodzaj>USTAWA</Rodzaj>
+      <DataOgloszenia>2025-08-25</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-07-09</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2025-09-09_DU-2025-1167_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2025-09-09" warunek="po upływie 14 dni od dnia ogłoszenia" podstawa="art. 2" zrodlo="https://eli.gov.pl/eli/DU/2025/1167" dowod="DU/2025/1167__art_2" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2025-09-09_DU-2025-1167_domyslne.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2025-09-09_DU-2025-1167_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="792e92a8-20dd-4144-b71a-35cfbe21d9c4" rola="wydajacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Sejm">
+          <Nazwa>SEJM</Nazwa>
+        </Organ>
+        <Organ gd:GUID="b5f6c3e7-eda6-4c36-afc3-5ae9d0511770" rola="podpisujacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Prezydent">
+          <Nazwa>Prezydent Rzeczypospolitej Polskiej</Nazwa>
+          <OrganPodpisujacy>Prezydent Rzeczypospolitej Polskiej</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>K.</imie> <nazwisko>Nawrocki</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Ustawa</rodzaj-aktu>
+    <data>z dnia 9 lipca 2025 r.</data>
+    <tytul>o zmianie ustawy o ochronie praw nabywcy lokalu mieszkalnego lub domu jednorodzinnego oraz Deweloperskim Funduszu Gwarancyjnym</tytul>
+    <artykul eId="DU/2025/1167__art_1" gd:GUID="9e6709ff-a8f9-4df3-a0f0-02beb7f9b86f" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-09_DU-2025-1167_domyslne.x" wejscie-w-zycie="2025-09-09">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="5c735753-c9ff-4272-8c5a-772b4002ebf0" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-09_DU-2025-1167_domyslne.x" wejscie-w-zycie="2025-09-09">
+        <p>
+          <zdanie nr="1" gd:zdGUID="2d149846-6fca-485a-aa69-f99d173c9663" fragment="1" gd:fragmentGUID="2e55e46e-ff6f-4d48-a1ce-ab8fbf899fa5" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-09_DU-2025-1167_domyslne.x" wejscie-w-zycie="2025-09-09">W ustawie z dnia 20 maja 2021 r. o ochronie praw nabywcy lokalu mieszkalnego lub domu jednorodzinnego oraz Deweloperskim Funduszu Gwarancyjnym (Dz. U. z 2024 r. poz. 695 oraz z 2025 r. poz. 758 i 1077) po art. 41 dodaje się art. 41a w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/695" cudzyslowy="oba" gd:nowGUID="efae5075-6a86-45a6-bfb5-3363c33c22e5" element-eId="DU/2024/695__art_41" funkcja="dodaj-po"><artykul eId="DU/2024/695__art_41a" gd:GUID="6138b1d5-6aef-4a7e-8e80-8dd77760f061" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-09_DU-2025-1167_domyslne.x" wejscie-w-zycie="2025-09-09"><nr>41a</nr><ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="63af0e97-c883-4be8-83b0-b5672edef59a" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-09_DU-2025-1167_domyslne.x" wejscie-w-zycie="2025-09-09"><p><zdanie nr="1" gd:zdGUID="b0648dbe-3b0a-45ed-8687-c3886ab5aca9" fragment="1" gd:fragmentGUID="675b8079-0f22-4d7d-a7ab-19fa9ef2933f" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-09_DU-2025-1167_domyslne.x" wejscie-w-zycie="2025-09-09">W przypadku przeniesienia na nabywcę praw wynikających z umowy deweloperskiej i umowy, o której mowa w art. 2 ust. 1 pkt 2, 3 lub 5, w zakresie nieuregulowanym w art. 41, oraz umowy, o której mowa w art. 2 ust. 2, do odpowiedzialności dewelopera za wady fizyczne i prawne stosuje się odpowiednio przepisy ustawy z dnia 23 kwietnia 1964 r. – Kodeks cywilny o rękojmi przy sprzedaży.</zdanie></p></ustep-n></artykul></cytat-strukt>.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2025/1167__art_2" gd:GUID="ad483ed1-52e9-4787-9231-8782cc7f435b" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-09_DU-2025-1167_domyslne.x" wejscie-w-zycie="2025-09-09">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="fce90519-7665-4c99-8635-6887b33e6d86" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-09_DU-2025-1167_domyslne.x" wejscie-w-zycie="2025-09-09">
+        <p>
+          <zdanie nr="1" gd:zdGUID="cebe05d8-a902-41b4-a1ef-744bf59a908f" fragment="1" gd:fragmentGUID="5e3ffc42-ef59-4805-9028-a0e02ad0682b" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-09_DU-2025-1167_domyslne.x" wejscie-w-zycie="2025-09-09">Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <organ-podpisujacy>Prezydent Rzeczypospolitej Polskiej: <i><osoba podpisujacy="true" gd:osobaGUID="c72906dd-1687-40a8-a3cd-4bccaf37f263"><imie>K.</imie> <nazwisko>Nawrocki</nazwisko></osoba></i></organ-podpisujacy>
+  </ustawa>
+</akt-prawny>

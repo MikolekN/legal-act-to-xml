@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <ustawa>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/1849</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>64efebec-fd05-4d40-b267-2ce507e25c0b</gd:GUIDwersji>
+      <AdresISAP>WDU20250001849</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>1849</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 1849</AdresWyswietlany>
+      <Tytul>Ustawa z dnia 21 listopada 2025 r. o zmianie ustawy – Karta Nauczyciela</Tytul>
+      <Rodzaj>USTAWA</Rodzaj>
+      <DataOgloszenia>2025-12-23</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-11-21</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_moc-wsteczna_2025-09-01_DU-2025-1849_odczytane" rodzaj="stosowanie-z-moca-wsteczna" pochodzenie="odczytane" data="2025-09-01" podstawa="art. 3" zrodlo="https://eli.gov.pl/eli/DU/2025/1849" dowod="DU/2025/1849__art_3">
+            <JednostkaAktu eId="DU/2025/1849__art_1__pkt_1">
+              <JednostkaWZakresie eId="DU/2024/986__art_35__ust_3e" />
+            </JednostkaAktu>
+          </Zdarzenie>
+          <Zdarzenie id="zdarz_wejscie_2026-01-01_DU-2025-1849_odczytane" rodzaj="wejscie-w-zycie" pochodzenie="odczytane" data="2026-01-01" podstawa="art. 3" zrodlo="https://eli.gov.pl/eli/DU/2025/1849" dowod="DU/2025/1849__art_3" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_moc-wsteczna.zdarz_moc-wsteczna_2025-09-01_DU-2025-1849_odczytane.obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1849_odczytane.x" glowna="false">
+          <Przedzial rodzaj="stosowanie-z-moca-wsteczna" od="zdarz_moc-wsteczna_2025-09-01_DU-2025-1849_odczytane" do="zdarz_wejscie_2026-01-01_DU-2025-1849_odczytane" />
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2026-01-01_DU-2025-1849_odczytane" />
+        </GrupaCzasowa>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1849_odczytane.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2026-01-01_DU-2025-1849_odczytane" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="1ea14e59-deff-4cd5-a115-7e63a8d57be1" rola="wydajacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Sejm">
+          <Nazwa>SEJM</Nazwa>
+        </Organ>
+        <Organ gd:GUID="06f805a1-d640-4262-9a07-6df257dd825a" rola="podpisujacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Prezydent">
+          <Nazwa>Prezydent Rzeczypospolitej Polskiej</Nazwa>
+          <OrganPodpisujacy>Prezydent Rzeczypospolitej Polskiej</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>K.</imie> <nazwisko>Nawrocki</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Ustawa</rodzaj-aktu>
+    <data>z dnia 21 listopada 2025 r.</data>
+    <tytul>o zmianie ustawy – Karta Nauczyciela</tytul>
+    <artykul eId="DU/2025/1849__art_1" gd:GUID="d9d33594-3c5f-4aff-86be-ed7ea4f600c0" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1849_odczytane.x" wejscie-w-zycie="2026-01-01">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="516a1b54-a40e-4102-b68c-63f50d24e4d8" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1849_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="a8ed6638-0652-4761-a0cc-5148638e7020" fragment="1" gd:fragmentGUID="3fc46e68-c58d-47b8-9569-8d3c0639bf15" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1849_odczytane.x" wejscie-w-zycie="2026-01-01">W ustawie z dnia 26 stycznia 1982 r. – Karta Nauczyciela (Dz. U. z 2024 r. poz. 986, z późn. zm.<odnosnik id-odnosnika="1" symbol="1" gd:GUID="22eeb1c4-a906-403e-8f4d-c9dbdc8ca2d6"><p><zdanie nr="1" gd:zdGUID="eb9a1d01-9d7a-4baa-9ac2-9ff492c7a18a" fragment="1" gd:fragmentGUID="3e1dbd93-8abc-47a5-ba67-925572e98db8">Zmiany tekstu jednolitego wymienionej ustawy zostały ogłoszone w Dz. U. z 2024 r. poz. 1871 oraz z 2025 r. poz. 620, 1019, 1160, 1188, 1189, 1661 i 1792.</zdanie></p></odnosnik>) wprowadza się następujące zmiany:</zdanie>
+        </p>
+        <punkt eId="DU/2025/1849__art_1__pkt_1" gd:GUID="fc8b63a6-81b0-427f-955e-cde293b84879" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1849_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a8ed6638-0652-4761-a0cc-5148638e7020" fragment="2" gd:fragmentGUID="675244ff-227b-441d-89ff-9c9789b447db" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1849_odczytane.x" wejscie-w-zycie="2026-01-01">w art. 35 ust. 3e i 3f otrzymują brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/986" cudzyslowy="otwierajacy" gd:nowGUID="2219f058-23a7-4dd6-92b7-d0a223749738" element-eId="DU/2024/986__art_35__ust_3e" funkcja="zastap"><ustep eId="DU/2024/986__art_35__ust_3e" gd:GUID="8e08dba3-5472-46bc-b5dc-39c29e8669e9" okres="okr_moc-wsteczna.zdarz_moc-wsteczna_2025-09-01_DU-2025-1849_odczytane.obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1849_odczytane.x" wejscie-w-zycie="2025-09-01"><nr>3e</nr><p><zdanie nr="1" gd:zdGUID="71abd961-3493-4631-9fe4-5b5e628cd8cd" fragment="1" gd:fragmentGUID="98adde83-f5e1-47b1-9196-8a1f2c656227" okres="okr_moc-wsteczna.zdarz_moc-wsteczna_2025-09-01_DU-2025-1849_odczytane.obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1849_odczytane.x" wejscie-w-zycie="2025-09-01">Wynagrodzenie za godziny ponadwymiarowe przysługuje również w przypadku, gdy niezrealizowanie przez nauczyciela przydzielonych godzin zajęć dydaktycznych, wychowawczych lub opiekuńczych nastąpiło z przyczyn niedotyczących nauczyciela, a nauczyciel był gotów do realizacji tych zajęć.</zdanie><zdanie nr="2" gd:zdGUID="23223a1b-c204-4722-a9dc-c9322a712e2e" fragment="1" gd:fragmentGUID="19e033bc-0ce2-4e65-8b3c-d2fce1eb86cc" okres="okr_moc-wsteczna.zdarz_moc-wsteczna_2025-09-01_DU-2025-1849_odczytane.obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1849_odczytane.x" wejscie-w-zycie="2025-09-01">W takim przypadku nauczycielowi można przydzielić do realizacji w czasie, w którym zostały zaplanowane godziny zajęć dydaktycznych, wychowawczych lub opiekuńczych, zajęcia i czynności wynikające z zadań statutowych szkoły, w tym zajęcia opiekuńcze lub wychowawcze uwzględniające potrzeby i zainteresowania uczniów, o których mowa w art. 42 ust. 2 pkt 2.</zdanie></p></ustep></cytat-strukt><cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/986" cudzyslowy="zamykajacy" gd:nowGUID="e7752e48-462f-46b0-a41b-1c30d548ba42" element-eId="DU/2024/986__art_35__ust_3f" funkcja="zastap"><ustep eId="DU/2024/986__art_35__ust_3f" gd:GUID="50c39adc-15af-449f-ba52-70f47b464768" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1849_odczytane.x" wejscie-w-zycie="2026-01-01"><nr>3f</nr><p><zdanie nr="1" gd:zdGUID="ecc2a325-c06f-4c72-b68e-b59eba2918b2" fragment="1" gd:fragmentGUID="e6dde31a-ff57-45aa-9636-e73d43cc8240" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1849_odczytane.x" wejscie-w-zycie="2026-01-01">Dla ustalenia wynagrodzenia za godziny ponadwymiarowe w tygodniach, w których przypadają dni usprawiedliwionej nieobecności w pracy nauczyciela, dni ustawowo wolne od pracy lub dni, w których dla nauczyciela nie zaplanowano zajęć, o których mowa w art. 42 ust. 2 pkt 1, oraz w tygodniach w danym miesiącu, w których zajęcia rozpoczynają się lub kończą się w trakcie tygodnia, za podstawę ustalenia liczby godzin ponadwymiarowych przyjmuje się tygodniowy obowiązkowy wymiar zajęć określony w art. 42 ust. 3 lub ustalony na podstawie art. 42 ust. 4a albo ust. 7 albo obniżony na podstawie art. 42 ust. 6, pomniejszony o 1/5 tego wymiaru lub 1/4, gdy dla nauczyciela ustalono czterodniowy tydzień pracy, za każdy dzień usprawiedliwionej nieobecności w pracy, dzień ustawowo wolny od pracy, dzień, w którym dla nauczyciela nie zaplanowano zajęć, o których mowa w art. 42 ust. 2 pkt 1, lub dzień w danym tygodniu, który przypada w innym miesiącu.</zdanie><zdanie nr="2" gd:zdGUID="a37e1ce1-1553-4cb5-91cc-b923386e6b85" fragment="1" gd:fragmentGUID="db52a3c6-2dce-4a7a-9b8a-e8c9c028025f" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1849_odczytane.x" wejscie-w-zycie="2026-01-01">Liczba godzin ponadwymiarowych, za które przysługuje wynagrodzenie w takim tygodniu, nie może być większa niż liczba godzin ponadwymiarowych przydzielonych nauczycielowi.</zdanie></p></ustep></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1849__art_1__pkt_2" gd:GUID="2711736b-87c9-4371-8fbd-6827a120ea81" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1849_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a8ed6638-0652-4761-a0cc-5148638e7020" fragment="3" gd:fragmentGUID="a566b35d-e15e-4f45-9833-496e3a84088b" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1849_odczytane.x" wejscie-w-zycie="2026-01-01">w art. 42 ust. 2cb otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/986" cudzyslowy="oba" gd:nowGUID="ae5f5f80-788a-4852-bb55-b553bbc79d33" element-eId="DU/2024/986__art_42__ust_2cb" funkcja="zastap"><ustep eId="DU/2024/986__art_42__ust_2cb" gd:GUID="2a8ebeb2-45a0-452a-8df5-8c55c6c97c7d" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1849_odczytane.x" wejscie-w-zycie="2026-01-01"><nr>2cb</nr><p><zdanie nr="1" gd:zdGUID="9d2ea114-0c59-4c81-acfb-b933206fc090" fragment="1" gd:fragmentGUID="9586d155-f4eb-4a02-815b-32ccb53701d4" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1849_odczytane.x" wejscie-w-zycie="2026-01-01">Godziny doraźnych zastępstw mogą być realizowane w czasie, w którym zostały zaplanowane do realizacji przez nauczyciela zajęcia dydaktyczne, wychowawcze lub opiekuńcze, w przypadku gdy z przyczyn dotyczących szkoły w danym dniu nauczyciel nie mógłby zrealizować zajęć wynikających z obowiązującego go tygodniowego obowiązkowego wymiaru godzin zajęć lub przydzielonych godzin ponadwymiarowych.</zdanie><zdanie nr="2" gd:zdGUID="3098b4ba-7e13-4f91-9cb2-501cf08f610a" fragment="1" gd:fragmentGUID="9099e502-a309-4f34-b447-cb4245df3acf" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1849_odczytane.x" wejscie-w-zycie="2026-01-01">W takim przypadku nauczyciel realizuje godziny doraźnych zastępstw w ramach wynagrodzenia, jakie przysługuje mu za zaplanowane zajęcia dydaktyczne, wychowawcze lub opiekuńcze.</zdanie></p></ustep></cytat-strukt>.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2025/1849__art_2" gd:GUID="078d1c0d-37b0-439a-8fd7-aaf6e9a28246" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1849_odczytane.x" wejscie-w-zycie="2026-01-01">
+      <nr>2</nr>
+      <ustep eId="DU/2025/1849__art_2__ust_1" gd:GUID="f0f146fa-d785-402c-b7e5-388d89fb28da" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1849_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="278c2f2d-e9cd-4de6-bd94-1e20274ba914" fragment="1" gd:fragmentGUID="a5e1eeee-73c9-4bb7-b0ed-ee10e937f3d0" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1849_odczytane.x" wejscie-w-zycie="2026-01-01">Przepis art. 35 ust. 3e ustawy zmienianej w art. 1 w brzmieniu nadanym niniejszą ustawą, ma zastosowanie do ustalania wynagrodzenia za godziny ponadwymiarowe przypadające do realizacji począwszy od dnia 1 września 2025 r.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/1849__art_2__ust_2" gd:GUID="f78371d0-012c-4d63-b5dd-633f5bc339a0" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1849_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="7f01740d-2f34-4ff1-a41c-f0689317ebf5" fragment="1" gd:fragmentGUID="09205d2d-5a88-49ec-bae5-d7827400cb21" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1849_odczytane.x" wejscie-w-zycie="2026-01-01">Wynagrodzenie za godziny ponadwymiarowe przypadające do realizacji w okresie od dnia 1 września 2025 r. do dnia 31 grudnia 2025 r., przysługujące nauczycielowi na podstawie ust. 1, wypłaca się do dnia 6 lutego 2026 r.</zdanie>
+        </p>
+      </ustep>
+    </artykul>
+    <artykul eId="DU/2025/1849__art_3" gd:GUID="1ff7e0cd-8f70-4b70-8be2-71025faddb55" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1849_odczytane.x" wejscie-w-zycie="2026-01-01">
+      <nr>3</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="852009e1-6187-4ca3-aa08-0fa2aa9788e3" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1849_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="6af21d0d-0aa5-4aa3-86da-dcd7faffebc1" fragment="1" gd:fragmentGUID="0d489c4c-83a8-4b35-81dc-cdfcf4fb318a" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1849_odczytane.x" wejscie-w-zycie="2026-01-01">Ustawa wchodzi w życie z dniem 1 stycznia 2026 r., z wyjątkiem art. 1 pkt 1 w zakresie art. 35 ust. 3e, który wchodzi w życie z dniem 1 stycznia 2026 r., z mocą od dnia 1 września 2025 r.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <organ-podpisujacy>Prezydent Rzeczypospolitej Polskiej: <i><osoba podpisujacy="true" gd:osobaGUID="403d9eb7-e7ec-4aa0-bfe4-d0ebac0a62b4"><imie>K.</imie> <nazwisko>Nawrocki</nazwisko></osoba></i></organ-podpisujacy>
+  </ustawa>
+</akt-prawny>

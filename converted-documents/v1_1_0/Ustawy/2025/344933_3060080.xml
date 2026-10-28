@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <ustawa>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/1409</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>c74679df-a788-4bfb-b281-24f7022b121b</gd:GUIDwersji>
+      <AdresISAP>WDU20250001409</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>1409</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 1409</AdresWyswietlany>
+      <Tytul>Ustawa z dnia 12 września 2025 r. o zmianie ustawy o systemie ubezpieczeń społecznych</Tytul>
+      <Rodzaj>USTAWA</Rodzaj>
+      <DataOgloszenia>2025-10-20</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-09-12</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2025-11-04_DU-2025-1409_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2025-11-04" warunek="po upływie 14 dni od dnia ogłoszenia" podstawa="art. 2" zrodlo="https://eli.gov.pl/eli/DU/2025/1409" dowod="DU/2025/1409__art_2" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2025-11-04_DU-2025-1409_domyslne.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2025-11-04_DU-2025-1409_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="37f60a31-b88f-4893-b850-26537cf7eab7" rola="wydajacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Sejm">
+          <Nazwa>SEJM</Nazwa>
+        </Organ>
+        <Organ gd:GUID="5f0d92a9-b726-417b-8767-a5d2869cc3eb" rola="podpisujacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Prezydent">
+          <Nazwa>Prezydent Rzeczypospolitej Polskiej</Nazwa>
+          <OrganPodpisujacy>Prezydent Rzeczypospolitej Polskiej</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>K.</imie> <nazwisko>Nawrocki</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Ustawa</rodzaj-aktu>
+    <data>z dnia 12 września 2025 r.</data>
+    <tytul>o zmianie ustawy o systemie ubezpieczeń społecznych</tytul>
+    <artykul eId="DU/2025/1409__art_1" gd:GUID="c0ee7b6d-b928-4fa5-b6ab-411d917e6723" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-04_DU-2025-1409_domyslne.x" wejscie-w-zycie="2025-11-04">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="9187a983-b332-4491-a443-8b8b9d990346" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-04_DU-2025-1409_domyslne.x" wejscie-w-zycie="2025-11-04">
+        <p>
+          <zdanie nr="1" gd:zdGUID="e046455b-ada1-4921-897b-8574cefccc6b" fragment="1" gd:fragmentGUID="d0e9990a-4507-4f68-8a82-63196689d761" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-04_DU-2025-1409_domyslne.x" wejscie-w-zycie="2025-11-04"><now:uchyl akt="https://eli.gov.pl/eli/DU/2025/350" element-eId="DU/2025/350__art_36__ust_8" gd:nowGUID="772c4432-b307-493e-90b3-501bebbf7de6" />W ustawie z dnia 13 października 1998 r. o systemie ubezpieczeń społecznych (Dz. U. z 2025 r. poz. 350, z późn. zm.<odnosnik id-odnosnika="1" symbol="1" gd:GUID="beb913c7-1b64-4753-b333-2beea8619a41"><p><zdanie nr="1" gd:zdGUID="0e0e7f84-c2c7-4b04-b1ba-52fce4c3b052" fragment="1" gd:fragmentGUID="89ed651b-a75e-4e0e-b32c-fb75ea9993fd">Zmiany tekstu jednolitego wymienionej ustawy zostały ogłoszone w Dz. U. z 2025 r. poz. 620, 622, 769, 820, 1083, 1160 i 1216.</zdanie></p></odnosnik>) w art. 36 uchyla się ust. 8.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2025/1409__art_2" gd:GUID="99ce1fdf-19f3-45e9-8788-058cf35007e8" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-04_DU-2025-1409_domyslne.x" wejscie-w-zycie="2025-11-04">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="022336e4-c540-4c02-a567-dfbf4d1a1c0f" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-04_DU-2025-1409_domyslne.x" wejscie-w-zycie="2025-11-04">
+        <p>
+          <zdanie nr="1" gd:zdGUID="668974f5-879a-4b99-896b-0fbcc2313138" fragment="1" gd:fragmentGUID="04e1de3f-8d4b-40dd-b23f-75928e7907ea" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-04_DU-2025-1409_domyslne.x" wejscie-w-zycie="2025-11-04">Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <organ-podpisujacy>Prezydent Rzeczypospolitej Polskiej: <i><osoba podpisujacy="true" gd:osobaGUID="0ba3eca6-456d-483f-ba09-4d161221d497"><imie>K.</imie> <nazwisko>Nawrocki</nazwisko></osoba></i></organ-podpisujacy>
+  </ustawa>
+</akt-prawny>

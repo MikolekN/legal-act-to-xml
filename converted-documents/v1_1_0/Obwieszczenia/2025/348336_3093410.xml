@@ -1,0 +1,755 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <obwieszczenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/1580</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>e6c8cadc-fbec-41e6-bb1a-e46f107397bf</gd:GUIDwersji>
+      <AdresISAP>WDU20250001580</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>1580</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 1580</AdresWyswietlany>
+      <Tytul>Obwieszczenie Marszałka Sejmu Rzeczypospolitej Polskiej z dnia 7 listopada 2025 r. w sprawie ogłoszenia jednolitego tekstu ustawy o pomocy państwa w spłacie niektórych kredytów mieszkaniowych udzielonych osobom, które utraciły pracę</Tytul>
+      <Rodzaj>OBW_TJ</Rodzaj>
+      <DataOgloszenia>2025-11-19</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-11-07</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_ujednolicenie_2025-11-19_DU-2025-1580_domyslne" rodzaj="ujednolicenie" pochodzenie="domyslne-z-aktu" data="2025-11-19" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_ujednolicenie.zdarz_ujednolicenie_2025-11-19_DU-2025-1580_domyslne" glowna="true">
+          <Przedzial rodzaj="ujednolicenie" od="zdarz_ujednolicenie_2025-11-19_DU-2025-1580_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <DataObowiazywaniaWersji>
+        <Od>zdarz_ujednolicenie_2025-11-19_DU-2025-1580_domyslne</Od>
+      </DataObowiazywaniaWersji>
+      <Organy>
+        <Organ gd:GUID="b7960df8-325b-4ceb-86c4-5b2871cab8c3" rola="wydajacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/MSEJMU">
+          <Nazwa>Marszałek Sejmu</Nazwa>
+          <OrganPodpisujacy>Marszałek Sejmu</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>S.</imie> <nazwisko>Hołownia</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Obwieszczenie</rodzaj-aktu>
+    <autor-aktu>Marszałka Sejmu Rzeczypospolitej Polskiej</autor-aktu>
+    <data>z dnia 7 listopada 2025 r.</data>
+    <tytul>w sprawie ogłoszenia jednolitego tekstu ustawy o pomocy państwa w spłacie niektórych kredytów mieszkaniowych udzielonych osobom, które utraciły pracę</tytul>
+    <punkt-OTJ eId="DU/2025/1580__pkt_1" gd:GUID="c13df4ff-b721-467c-b5e8-771b3bb4e7b6">
+      <nr>1</nr>
+      <p>
+        <zdanie nr="1" gd:zdGUID="7d3589ea-f27e-4d41-a8f9-f58af2940625" fragment="1" gd:fragmentGUID="720ff65d-a5f9-4d53-ab57-557206eea522">Na podstawie art. 16 ust. 1 zdanie pierwsze ustawy z dnia 20 lipca 2000 r. o ogłaszaniu aktów normatywnych i niektórych innych aktów prawnych (Dz. U. z 2019 r. poz. 1461) ogłasza się w załączniku do niniejszego obwieszczenia jednolity tekst ustawy z dnia 19 czerwca 2009 r. o pomocy państwa w spłacie niektórych kredytów mieszkaniowych udzielonych osobom, które utraciły pracę (Dz. U. z 2016 r. poz. 734), z uwzględnieniem zmiany wprowadzonej ustawą z dnia 20 marca 2025 r. o rynku pracy i służbach zatrudnienia (Dz. U. poz. 620) oraz zmian wynikających z przepisów ogłoszonych przed dniem 4 listopada 2025 r.</zdanie>
+      </p>
+    </punkt-OTJ>
+    <punkt-OTJ eId="DU/2025/1580__pkt_2" gd:GUID="4e8d8469-8dfa-41b3-bc39-f8014c5de0d7">
+      <nr>2</nr>
+      <p>
+        <zdanie nr="1" gd:zdGUID="65ae7a8f-d4d3-4984-a1f6-3ff967e04218" fragment="1" gd:fragmentGUID="c429a805-5ca5-44d2-a734-554986bc4da3">Podany w załączniku do niniejszego obwieszczenia tekst jednolity ustawy nie obejmuje art. 461 ustawy z dnia 20 marca 2025 r. o rynku pracy i służbach zatrudnienia (Dz. U. poz. 620), który stanowi:<tresc-strukt cudzyslowy="oba" gd:GUID="3d4acf49-1ec9-401f-9263-e3e069de2805"><artykul eId="DU/2025/620__art_461" gd:GUID="e6f2716c-2568-4afa-970f-e14b5292bcf0"><nr>461</nr><ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="4feacfb9-8fb2-4b0e-9c7d-b1d82c78741e"><p><zdanie nr="1" gd:zdGUID="f055e05a-abcc-4716-b206-98c28cf1d909" fragment="1" gd:fragmentGUID="ec491ebe-acd4-4a3f-a7b7-610968a98c59">Ustawa wchodzi w życie pierwszego dnia miesiąca następującego po upływie 14 dni od dnia ogłoszenia, z wyjątkiem:</zdanie></p><punkt eId="DU/2025/620__art_461__pkt_1" gd:GUID="85fa5452-c4f8-4945-96b9-75d11ee74de5"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="f055e05a-abcc-4716-b206-98c28cf1d909" fragment="2" gd:fragmentGUID="9401a02f-ffce-423b-a720-3ad5d043ff3d">art. 392 pkt 2 lit. b oraz art. 458, które wchodzą w życie z dniem następującym po dniu ogłoszenia;</zdanie></p></punkt><punkt eId="DU/2025/620__art_461__pkt_2" gd:GUID="acd65bb1-d4ba-4646-ac0b-15fe541f888e"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="f055e05a-abcc-4716-b206-98c28cf1d909" fragment="3" gd:fragmentGUID="07273c24-596e-435b-a036-f336f5732101">art. 106, art. 128 ust. 2, art. 203 oraz art. 300 ust. 3 pkt 11, które wchodzą w życie z dniem 1 stycznia 2026 r.</zdanie></p></punkt></ustep-n></artykul></tresc-strukt>.</zdanie>
+      </p>
+    </punkt-OTJ>
+    <organ-podpisujacy>Marszałek Sejmu: <i><osoba podpisujacy="true" gd:osobaGUID="b7005d45-d46b-4e87-a2fa-f3f86f2734f5"><imie>S.</imie> <nazwisko>Hołownia</nazwisko></osoba></i></organ-podpisujacy>
+    <ustawa>
+      <zalacznik-do>Załącznik do obwieszczenia Marszałka Sejmu Rzeczypospolitej Polskiej z dnia 7 listopada 2025 r. (Dz. U. poz. 1580)</zalacznik-do>
+      <rodzaj-aktu>Ustawa</rodzaj-aktu>
+      <data>z dnia 19 czerwca 2009 r.</data>
+      <tytul>o pomocy państwa w spłacie niektórych kredytów mieszkaniowych udzielonych osobom, które utraciły pracę</tytul>
+      <artykul eId="DU/2025/1580__art_1" gd:GUID="4ccaaa5a-0ce7-4ab3-a94a-2e873ef1f934">
+        <nr>1</nr>
+        <ustep eId="DU/2025/1580__art_1__ust_1" gd:GUID="979856c7-56b4-4b89-bee0-0c46636dd763">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="0d99d74a-5da6-4b2a-89e9-83ee36b570af" fragment="1" gd:fragmentGUID="9009d70c-0eea-4b6e-a018-334d59224ccb">Ustawa określa zasady przyznawania okresowej zwrotnej pomocy państwa osobom fizycznym zobowiązanym do spłaty kredytu mieszkaniowego, które utraciły pracę, zwanej dalej „pomocą”, oraz warunki korzystania z pomocy i jej zwrotu.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1580__art_1__ust_2" gd:GUID="2634ee8c-08ea-413d-bc00-f94cae319be3">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="0c4a9ef4-71fe-44e7-b33f-ecfc0d6dc836" fragment="1" gd:fragmentGUID="c53819d8-0074-4b99-99de-bbed2a324ace">Pomoc jest realizowana za pośrednictwem Banku Gospodarstwa Krajowego.</zdanie>
+            <zdanie nr="2" gd:zdGUID="ecd66b85-45d0-4348-8e89-c0a60be0a2c8" fragment="1" gd:fragmentGUID="42163b5f-831c-46e8-aa4f-0ebd000cf8e3">Źródłem finansowania pomocy oraz kosztów jej realizacji jest Fundusz Pracy.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/1580__art_2" gd:GUID="841a8cc6-25d7-454b-8142-f7bf74081991">
+        <nr>2</nr>
+        <ustep eId="DU/2025/1580__art_2__ust_1" gd:GUID="cdbe9946-5a20-41e2-990c-e95ef7fda2dc">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="7e07bfa2-7a0e-4e27-b97b-cf99f9304523" fragment="1" gd:fragmentGUID="7ee7eb05-431e-4fbf-bae5-063adc4a0dcc">Użyte w ustawie określenia oznaczają:</zdanie>
+          </p>
+          <punkt eId="DU/2025/1580__art_2__ust_1__pkt_1" gd:GUID="87dece38-4a7d-4151-9b10-df37fa2926be">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="7e07bfa2-7a0e-4e27-b97b-cf99f9304523" fragment="2" gd:fragmentGUID="92d3008e-627b-4d3e-a4b8-0db72a5e22dd">lokal mieszkalny – samodzielny lokal mieszkalny w rozumieniu art. 2 ust. 2 zdanie pierwsze ustawy z dnia 24 czerwca 1994 r. o własności lokali (Dz. U. z 2021 r. poz. 1048 oraz z 2023 r. poz. 1688), położony na terytorium Rzeczypospolitej Polskiej, oraz taki lokal mieszkalny wraz z pomieszczeniami przynależnymi w rozumieniu art. 2 ust. 4 tej ustawy;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/1580__art_2__ust_1__pkt_2" gd:GUID="18b94b45-5a9f-4e6c-8785-884c629893ba">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="7e07bfa2-7a0e-4e27-b97b-cf99f9304523" fragment="3" gd:fragmentGUID="de5786a0-2cc4-4ea2-b7ed-62708d10941b">dom jednorodzinny – budynek mieszkalny w rozumieniu przepisów ustawy z dnia 7 lipca 1994 r. – Prawo budowlane (Dz. U. z 2025 r. poz. 418 i 1080), położony na terytorium Rzeczypospolitej Polskiej, w którym nie znajduje się będący własnością kredytobiorcy lokal użytkowy;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/1580__art_2__ust_1__pkt_3" gd:GUID="a5bf37c2-ebc7-408b-94ce-12340019e375">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="7e07bfa2-7a0e-4e27-b97b-cf99f9304523" fragment="4" gd:fragmentGUID="35645749-a82d-49f4-b581-dbf2e29d67b0">instytucja kredytująca – bank krajowy, oddział instytucji kredytowej, oddział banku zagranicznego, o których mowa w art. 4 ust. 1 pkt 1, 18 i 20 ustawy z dnia 29 sierpnia 1997 r. – Prawo bankowe (Dz. U. z 2024 r. poz. 1646, z późn. zm.<odnosnik id-odnosnika="1" symbol="1" gd:GUID="3e97bea6-ed3e-490d-a02f-0d36f92a07c7"><p><zdanie nr="1" gd:zdGUID="9cd11264-19d5-4b81-884c-249375d3e421" fragment="1" gd:fragmentGUID="370dd2b0-a407-45fc-9b17-96d3de1a61fd">Zmiany tekstu jednolitego wymienionej ustawy zostały ogłoszone w Dz. U. z 2024 r. poz. 1685 i 1863 oraz z 2025 r. poz. 146, 222, 525, 769, 820, 1069, 1170, 1191 i 1216.</zdanie></p></odnosnik>) albo spółdzielczą kasę oszczędnościowo-kredytową, które udzieliły kredytu mieszkaniowego.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/1580__art_2__ust_2" gd:GUID="86240556-a589-4cfa-9fd5-f3378e03e88b">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="4e5d537f-43a4-4a8e-a395-956c85ac83ef" fragment="1" gd:fragmentGUID="cb363bc6-6b09-4b52-b614-161a8389e646">Kredytem mieszkaniowym w rozumieniu ustawy jest kredyt udzielony na:</zdanie>
+          </p>
+          <punkt eId="DU/2025/1580__art_2__ust_2__pkt_1" gd:GUID="1b7e94ec-96a8-4867-8f15-41c70b081606">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="4e5d537f-43a4-4a8e-a395-956c85ac83ef" fragment="2" gd:fragmentGUID="578f5d1d-a8d6-4f1b-b18c-6babe0425ff3">budowę domu jednorodzinnego, jeżeli przed złożeniem wniosku o pomoc właściwy organ nie zgłosił w terminie sprzeciwu w związku z zawiadomieniem o zakończeniu budowy albo została wydana ostateczna decyzja o pozwoleniu na użytkowanie obiektu budowlanego,</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/1580__art_2__ust_2__pkt_2" gd:GUID="de61b34f-ddf1-42e3-b8e7-179c75b910f6">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="4e5d537f-43a4-4a8e-a395-956c85ac83ef" fragment="3" gd:fragmentGUID="385f9ac2-07bd-409c-a433-03ab595e512f">nabycie:</zdanie>
+            </p>
+            <litera eId="DU/2025/1580__art_2__ust_2__pkt_2__lit_a" gd:GUID="9a1cca0c-5c27-4654-a0f5-c6f2bbcfb3af">
+              <nr>a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="4e5d537f-43a4-4a8e-a395-956c85ac83ef" fragment="4" gd:fragmentGUID="6c88cbc2-5806-4380-8f0e-fb4f37ee0c4b">prawa własności domu jednorodzinnego lub prawa odrębnej własności lokalu mieszkalnego w budynku wielorodzinnym,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/1580__art_2__ust_2__pkt_2__lit_b" gd:GUID="be77b6bf-5d65-4f10-9414-f7ef6f1c2953">
+              <nr>b</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="4e5d537f-43a4-4a8e-a395-956c85ac83ef" fragment="5" gd:fragmentGUID="df84154a-ce8e-46ea-b32e-edf613f05243">spółdzielczego własnościowego prawa do lokalu mieszkalnego,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/1580__art_2__ust_2__pkt_2__lit_c" gd:GUID="e7c23b24-bf28-4bac-ae42-87e1a5298909">
+              <nr>c</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="4e5d537f-43a4-4a8e-a395-956c85ac83ef" fragment="6" gd:fragmentGUID="fff0f113-682f-471a-9b28-5b6f98f2c1ae">prawa odrębnej własności lokalu mieszkalnego w spółdzielni mieszkaniowej</zdanie>
+              </p>
+            </litera>
+          </punkt>
+          <czesc-wspolna-punkt eId="DU/2025/1580__art_2__ust_2__czw" gd:GUID="1015835a-f4b7-471b-af24-f383ae758bd0">
+            <p>
+              <zdanie nr="1" gd:zdGUID="4e5d537f-43a4-4a8e-a395-956c85ac83ef" fragment="7" gd:fragmentGUID="c0e971cd-c993-4326-adcb-92c2331b3a47">– którego spłatę zabezpieczono hipoteką ustanowioną na przedmiocie kredytowania.</zdanie>
+            </p>
+          </czesc-wspolna-punkt>
+        </ustep>
+        <ustep eId="DU/2025/1580__art_2__ust_3" gd:GUID="a9422165-ca47-4b0b-9a44-0ece0d646b10">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a87baec8-a798-4d8d-9b4d-0e553fb724b7" fragment="1" gd:fragmentGUID="ccb405fe-5fa3-4d88-a84e-940ab2d0cc41">Kredytem mieszkaniowym w rozumieniu ustawy jest również:</zdanie>
+          </p>
+          <punkt eId="DU/2025/1580__art_2__ust_3__pkt_1" gd:GUID="f095c209-1994-4af6-84e6-452eaa8e593d">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="a87baec8-a798-4d8d-9b4d-0e553fb724b7" fragment="2" gd:fragmentGUID="cc1fd00b-0b31-4c09-b21c-bff3c27a3dff">kredyt udzielony na spłatę kredytu mieszkaniowego, o którym mowa w ust. 2, jeżeli kredyt ten został zabezpieczony hipoteką na przedmiocie kredytowania;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/1580__art_2__ust_3__pkt_2" gd:GUID="ab2836c1-756f-4333-8921-caf2af2efdd2">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="a87baec8-a798-4d8d-9b4d-0e553fb724b7" fragment="3" gd:fragmentGUID="50a17b60-f676-406c-9ef7-9cf58c91c3eb">ta część kredytu udzielonego na spłatę różnych zobowiązań kredytowych, która jest przeznaczona na spłatę kredytu mieszkaniowego, o którym mowa w ust. 2, jeżeli kredyt ten został zabezpieczony w sposób, o którym mowa w pkt 1.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/1580__art_3" gd:GUID="faa529e8-98df-4d99-90c6-5c55e3a8b7a3">
+        <nr>3</nr>
+        <ustep eId="DU/2025/1580__art_3__ust_1" gd:GUID="1f06fe19-bdce-4ada-b34c-668e8af56d27">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="d87169f1-bdf9-46a1-95dd-eb183f1b22f9" fragment="1" gd:fragmentGUID="5bcff8e7-5332-4340-851e-0e13e54b3207">Pomoc może być przyznana kredytobiorcy zobowiązanemu do spłaty kredytu mieszkaniowego, który po dniu 1 lipca 2008 r. utracił pracę rozumianą jako:</zdanie>
+          </p>
+          <punkt eId="DU/2025/1580__art_3__ust_1__pkt_1" gd:GUID="ecb680f7-e587-4cd2-9b21-5c257bbc3af4">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="d87169f1-bdf9-46a1-95dd-eb183f1b22f9" fragment="2" gd:fragmentGUID="1e6fe10f-11d1-4519-ba08-4532d4561630">zatrudnienie lub inną pracę zarobkową lub</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/1580__art_3__ust_1__pkt_2" gd:GUID="c9629474-eb9a-4bb0-b20a-7713c3996f13">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="d87169f1-bdf9-46a1-95dd-eb183f1b22f9" fragment="3" gd:fragmentGUID="26a58342-edea-4eda-9524-a72297d60a4e">prowadzenie działalności gospodarczej, podlegającej wpisowi do ewidencji działalności gospodarczej, jako przedsiębiorca niezatrudniający pracowników</zdanie>
+            </p>
+          </punkt>
+          <czesc-wspolna-punkt eId="DU/2025/1580__art_3__ust_1__czw" gd:GUID="82721e06-9f46-4a29-a707-a906ed94b0e9">
+            <p>
+              <zdanie nr="1" gd:zdGUID="d87169f1-bdf9-46a1-95dd-eb183f1b22f9" fragment="4" gd:fragmentGUID="b61bdc10-f0b9-4750-bd80-34fd2d8de501">– oraz zarejestrował się jako bezrobotny i któremu przyznano prawo do zasiłku dla bezrobotnych, a w dniu złożenia wniosku o pomoc posiada status bezrobotnego, zwanemu dalej „uprawnionym”.</zdanie>
+            </p>
+          </czesc-wspolna-punkt>
+        </ustep>
+        <ustep eId="DU/2025/1580__art_3__ust_2" gd:GUID="ddba72c5-1e78-4f1b-9898-036593bbc2a1">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="909348ca-435d-4462-b5a6-cd9da3e194b8" fragment="1" gd:fragmentGUID="0c73bc97-5d8f-4afe-94c9-4ea62f239127">W przypadku określonym w ust. 1 pkt 2 przez utratę pracy należy rozumieć zakończenie prowadzenia działalności, o której mowa w tym przepisie.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1580__art_3__ust_3" gd:GUID="a24366be-f60b-4225-a7c7-d45ff303b2d8">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="ea9ebd88-c934-4f25-be34-ae32dae5c8f1" fragment="1" gd:fragmentGUID="7ca445aa-36ce-48b6-b5f3-253667ab0630">Pomoc nie może być przyznana, jeżeli utrata zatrudnienia nastąpiła w wyniku rozwiązania umowy o pracę za wypowiedzeniem przez uprawnionego lub rozwiązania umowy o pracę bez wypowiedzenia z winy pracownika w trybie art. 52 § 1 ustawy z dnia 26 czerwca 1974 r. – Kodeks pracy (Dz. U. z 2025 r. poz. 277, 807 i 1423).</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1580__art_3__ust_4" gd:GUID="dc1c3338-6cef-483f-97cc-e814d4e97391">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="0a6ea1b5-8078-402b-bc14-712fb1fe76f7" fragment="1" gd:fragmentGUID="be774c43-5a61-497d-af9d-fd9b60a86481">W przypadku gdy kredytobiorcą jest jeden z małżonków, między którymi istnieje wspólność majątkowa, a kredytobiorca nie utracił pracy, pomoc może być przyznana, jeżeli małżonek niebędący kredytobiorcą spełnia warunki, o których mowa w ust. 1, i nie utracił zatrudnienia w sposób określony w ust. 3.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1580__art_3__ust_5" gd:GUID="ca5e2431-5b1d-4fff-a028-e31af517f469">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="04674696-74b8-4414-abf0-df2105602975" fragment="1" gd:fragmentGUID="9c527147-cf4c-43aa-af35-c8ff3873d3e7">Pomoc nie może być przyznana na spłatę kredytu mieszkaniowego, jeżeli jeden z kredytobiorców uzyskał pomoc na zasadach określonych w ustawie, chyba że pomoc nie jest już udzielana, a okres udzielonej pomocy nie przekroczył 11 miesięcy.</zdanie>
+            <zdanie nr="2" gd:zdGUID="1f4a9902-6f90-4465-a679-9f232b328128" fragment="1" gd:fragmentGUID="052d0c6e-bbcd-4e6b-82fb-daddc6e2dae9">W takim przypadku łączny okres pomocy przyznanej kredytobiorcom na spłatę kredytu mieszkaniowego, zabezpieczonego hipoteką ustanowioną na tym samym przedmiocie kredytowania, nie może przekroczyć 12 miesięcy.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1580__art_3__ust_6" gd:GUID="428b372c-f4c4-44ff-af33-188d5b8efd4c">
+          <nr>6</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="d7210ec6-0463-4205-9f02-4acdf52965cf" fragment="1" gd:fragmentGUID="b01a798d-c503-40ad-9625-9f0930a8ec00">Pomoc nie może być przyznana, jeżeli umowa kredytu mieszkaniowego została wypowiedziana.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/1580__art_4" gd:GUID="376f1acf-5e62-4882-897e-158efa3725c9">
+        <nr>4</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="52ff19d1-ff28-4ffc-abb3-9eedb132ad8b">
+          <p>
+            <zdanie nr="1" gd:zdGUID="3581d393-e88b-478a-83b7-abf784ff79a1" fragment="1" gd:fragmentGUID="081653c5-e906-470c-a04e-80d7c73a0779">Pomoc nie może być przyznana, jeżeli w dniu złożenia wniosku o pomoc uprawniony lub jego małżonek:</zdanie>
+          </p>
+          <punkt eId="DU/2025/1580__art_4__pkt_1" gd:GUID="b1575d0b-fc4b-4541-a2b1-a55c4daa74b2">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="3581d393-e88b-478a-83b7-abf784ff79a1" fragment="2" gd:fragmentGUID="226352cc-563d-47b4-8834-deebcb15bbef">jest właścicielem innego lokalu mieszkalnego lub domu jednorodzinnego;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/1580__art_4__pkt_2" gd:GUID="4e81939a-0a29-457d-aae8-6f8d6059d024">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="3581d393-e88b-478a-83b7-abf784ff79a1" fragment="3" gd:fragmentGUID="93632aa5-9c58-4a6d-8185-d7b88d4339c7">posiada inne spółdzielcze lokatorskie prawo do lokalu mieszkalnego, spółdzielcze własnościowe prawo do lokalu mieszkalnego, prawo do domu jednorodzinnego w spółdzielni mieszkaniowej lub prawo do domu jednorodzinnego lub lokalu mieszkalnego budowanych w celu przeniesienia ich własności na rzecz członków;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/1580__art_4__pkt_3" gd:GUID="789796ba-d573-42b2-94ab-11c7b307d5be">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="3581d393-e88b-478a-83b7-abf784ff79a1" fragment="4" gd:fragmentGUID="729f624a-fb3c-47ff-8f92-71288f43b4f0">jest najemcą innego lokalu mieszkalnego lub domu jednorodzinnego.</zdanie>
+            </p>
+          </punkt>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2025/1580__art_5" gd:GUID="8147b524-1c72-42c7-8196-630e7720f9ce">
+        <nr>5</nr>
+        <ustep eId="DU/2025/1580__art_5__ust_1" gd:GUID="fa1c5827-0cf8-408d-91e0-c98645e1f9be">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="8889d738-fc8b-47b2-a01e-15eaab5a6616" fragment="1" gd:fragmentGUID="d7923078-852b-440c-ac9c-210ded2f3fb7">Pomoc polega na przekazywaniu przez Bank Gospodarstwa Krajowego instytucji kredytującej kwoty środków pieniężnych określonej w decyzji, o której mowa w art. 6 ust. 1, z przeznaczeniem na spłatę zobowiązań uprawnionego z tytułu kredytu mieszkaniowego, przez okres nie dłuższy niż 12 miesięcy.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1580__art_5__ust_2" gd:GUID="abd8ec5f-36c2-420d-a57b-f877d42bafa3">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="499c7e34-80df-4255-8f4f-39a5f47cbff0" fragment="1" gd:fragmentGUID="26a004ef-73d9-4383-8c38-be968cdcf8d7">Wysokość pomocy określa się w złotych jako równowartość 12 miesięcznych rat kapitałowych i odsetkowych kredytu mieszkaniowego, z tym że jeżeli wysokość miesięcznej raty kapitałowej i odsetkowej jest wyższa niż 1200 zł, do określenia wysokości pomocy przyjmuje się kwotę 1200 zł.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1580__art_5__ust_3" gd:GUID="3170d297-f2c5-439c-8880-1f466c4e303f">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="87090abf-591d-4668-bf95-c03f00f6417e" fragment="1" gd:fragmentGUID="b44fe309-afce-402a-bb3a-cf1390014723">Pomoc jest przekazywana w ratach miesięcznych, nie wyższych niż 1200 zł, na wskazany przez instytucję kredytującą rachunek przeznaczony do przekazywania pomocy na spłatę kredytu mieszkaniowego, przy czym liczba rat nie może być większa niż 12.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1580__art_5__ust_4" gd:GUID="436d9990-dfa6-4b3c-bb03-830ccc9cd3ee">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="6f7f4d9b-08ea-4856-855e-0970af2a1479" fragment="1" gd:fragmentGUID="45f76fe8-c011-4722-9fb7-889dd669749b">Wysokość pomocy i terminy jej przekazywania są określane w decyzji, o której mowa w art. 6 ust. 1, na podstawie informacji zawartych w oświadczeniu instytucji kredytującej, o którym mowa w art. 6 ust. 4.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1580__art_5__ust_5" gd:GUID="936d9099-c771-4aae-8fb8-ebaac27f01e5">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="4d5fe991-791b-4e7c-9148-d6ffe8cf18c7" fragment="1" gd:fragmentGUID="8b3d89d4-9f7a-4d48-b4ae-ece74854a82e">W przypadku gdy kredyt mieszkaniowy jest spłacany w walucie obcej, Bank Gospodarstwa Krajowego przekazuje pomoc w walucie spłaty kredytu, dokonując przeliczenia wysokości raty pomocy wynikającej z decyzji, o której mowa w art. 6 ust. 1, na walutę spłaty kredytu według kursu sprzedaży ogłoszonego przez Narodowy Bank Polski, obowiązującego w dniu poprzedzającym dzień przekazania środków pieniężnych z tytułu pomocy.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1580__art_5__ust_6" gd:GUID="85c17541-61b8-40f1-9581-d9b2f32332dc">
+          <nr>6</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="b1a37952-24e2-4307-8e08-a56b4a2571dd" fragment="1" gd:fragmentGUID="9057eb84-99e9-4153-a41b-697827a9bfc5">W przypadku gdy uprawniony zawarł umowę, o której mowa w art. 6 ust. 2 pkt 2 lit. b, przekazywanie rat pomocy rozpoczyna się po upływie okresu wypłaty świadczenia z tytułu tej umowy.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1580__art_5__ust_7" gd:GUID="63af197b-0a07-4955-871a-129f310371f7">
+          <nr>7</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="843be6f2-cb95-4241-8a75-41e7acadcf64" fragment="1" gd:fragmentGUID="068e764a-0894-4fe4-a0d7-64582a6de2f0">Pomocy przyznanej na podstawie ustawy nie uwzględnia się przy ocenie zdolności uprawnionego do pokrywania w całości lub części świadczeń wynikających z umowy kredytu mieszkaniowego.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/1580__art_6" gd:GUID="7479fe76-ef06-46aa-b0fb-374194fbda45">
+        <nr>6</nr>
+        <ustep eId="DU/2025/1580__art_6__ust_1" gd:GUID="a886eab1-e5d5-44df-a42c-a2c13d6e60d6">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="507d266a-a04b-4a70-9039-7315eda0da42" fragment="1" gd:fragmentGUID="26b96b41-7cfa-49dc-b9ee-8866d8e57fac">Pomoc jest przyznawana na podstawie decyzji właściwego starosty, zwanej dalej „decyzją”, na wniosek uprawnionego złożony według ustalonego wzoru, w terminie do dnia 31 grudnia 2010 r., w powiatowym urzędzie pracy, w którym został on zarejestrowany jako bezrobotny.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1580__art_6__ust_2" gd:GUID="23f80d4c-2152-4acf-914f-b767eb855fa3">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="35041915-ca8d-4067-83d1-2d3073d63836" fragment="1" gd:fragmentGUID="b87da2b6-e19d-498b-925d-9a44ea010b1e">We wniosku, o którym mowa w ust. 1, uprawniony:</zdanie>
+          </p>
+          <punkt eId="DU/2025/1580__art_6__ust_2__pkt_1" gd:GUID="aeea4ca0-626b-429a-8215-97072049cce1">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="35041915-ca8d-4067-83d1-2d3073d63836" fragment="2" gd:fragmentGUID="f8850077-e3f7-46d0-a48f-04a766100e74">podaje imię i nazwisko, adres miejsca zamieszkania, numer PESEL, o ile został nadany, oraz numer dowodu osobistego lub rodzaj i numer innego dokumentu potwierdzającego tożsamość;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/1580__art_6__ust_2__pkt_2" gd:GUID="88d9711e-223d-42d1-bae0-c5b0df4d4755">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="35041915-ca8d-4067-83d1-2d3073d63836" fragment="3" gd:fragmentGUID="a625e2a1-cc0e-4b07-b532-ed0b0b851541">składa, pod rygorem odpowiedzialności karnej za składanie fałszywych oświadczeń, oświadczenie o:</zdanie>
+            </p>
+            <litera eId="DU/2025/1580__art_6__ust_2__pkt_2__lit_a" gd:GUID="7ede5274-8bb1-477a-9fba-02ea4060907d">
+              <nr>a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="35041915-ca8d-4067-83d1-2d3073d63836" fragment="4" gd:fragmentGUID="33db1bb7-a944-48b5-ad84-16291dd6578d">istnieniu okoliczności stanowiących podstawę przyznania pomocy,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/1580__art_6__ust_2__pkt_2__lit_b" gd:GUID="678dee14-c85a-470b-865e-a55d7a772191">
+              <nr>b</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="35041915-ca8d-4067-83d1-2d3073d63836" fragment="5" gd:fragmentGUID="715583ce-f2cb-4944-bf43-06b56a5d8efe">warunkach wszystkich umów ubezpieczenia, na podstawie których przysługuje mu świadczenie z tytułu utraty pracy, w tym o terminie, w którym upływa okres wypłaty świadczeń z tytułu tych umów – w przypadku gdy zawarł umowę ubezpieczenia spłaty kredytu, gwarantującego wypłatę świadczenia na wypadek utraty pracy.</zdanie>
+              </p>
+            </litera>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/1580__art_6__ust_3" gd:GUID="a88d4f6f-0ee3-40d0-bd53-cd5a6878796e">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="54947e9a-5be0-4524-9ac6-f12bcccec5dd" fragment="1" gd:fragmentGUID="bfb30a72-6970-483d-9c50-28c01f2051a0">Do wniosku, o którym mowa w ust. 1, uprawniony dołącza oświadczenie instytucji kredytującej, o którym mowa w ust. 4.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1580__art_6__ust_4" gd:GUID="abf3d968-05b7-4bed-ac50-02504f4bbcf4">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="f5ff968f-8e08-4ef8-83b6-bbf070792cdf" fragment="1" gd:fragmentGUID="5a9c1138-7f40-4872-8c7a-7c5319ed0cd8">Instytucja kredytująca wydaje na wniosek kredytobiorcy, w terminie 3 dni roboczych od dnia złożenia wniosku, oświadczenie według ustalonego wzoru zawierające następujące informacje:</zdanie>
+          </p>
+          <punkt eId="DU/2025/1580__art_6__ust_4__pkt_1" gd:GUID="e75287e9-6dcb-4b59-8a87-64d77a597fc4">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="f5ff968f-8e08-4ef8-83b6-bbf070792cdf" fragment="2" gd:fragmentGUID="b45720b8-9c53-4741-be7e-21e67fd53a9d">nazwę i adres instytucji kredytującej;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/1580__art_6__ust_4__pkt_2" gd:GUID="ed084cdf-2252-464a-9292-4b5dd25fe191">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="f5ff968f-8e08-4ef8-83b6-bbf070792cdf" fragment="3" gd:fragmentGUID="b209504e-8abf-452d-a5b8-a65c15176536">dane kredytobiorcy w zakresie określonym w ust. 2 pkt 1;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/1580__art_6__ust_4__pkt_3" gd:GUID="34acbb01-d8e5-4aa1-91e5-1594da95eeaa">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="f5ff968f-8e08-4ef8-83b6-bbf070792cdf" fragment="4" gd:fragmentGUID="8af4a45d-ed60-4f2c-928a-6cca5ad45e83">numer umowy kredytu mieszkaniowego;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/1580__art_6__ust_4__pkt_4" gd:GUID="b73afaa4-6a63-447f-a5c4-e55f7d716801">
+            <nr>4</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="f5ff968f-8e08-4ef8-83b6-bbf070792cdf" fragment="5" gd:fragmentGUID="b75af104-13f8-4db0-9214-ba48b43e66c7">numer rachunku wskazany przez instytucję kredytującą przeznaczony do przekazywania pomocy na spłatę kredytu mieszkaniowego;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/1580__art_6__ust_4__pkt_5" gd:GUID="57665997-1fae-4337-9d79-517ed5728a41">
+            <nr>5</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="f5ff968f-8e08-4ef8-83b6-bbf070792cdf" fragment="6" gd:fragmentGUID="e0c4054c-778b-4552-bde8-c9897d8d71a8">walutę spłaty kredytu mieszkaniowego;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/1580__art_6__ust_4__pkt_6" gd:GUID="5d9400e9-c258-4ca6-8a3d-1d9d6a3bcd0d">
+            <nr>6</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="f5ff968f-8e08-4ef8-83b6-bbf070792cdf" fragment="7" gd:fragmentGUID="a22810d7-8042-45d0-b9b6-b0b38f9b0544">terminy płatności oraz wysokość w złotych kolejnych 12 niewymagalnych miesięcznych rat kapitałowych i odsetkowych, a w przypadku zawarcia umowy, o której mowa w ust. 2 pkt 2 lit. b – terminy płatności tych rat rozpoczynające się od miesiąca następującego po upływie okresu wypłaty świadczenia z tytułu tej umowy; w przypadku kredytów indeksowanych i walutowych przy przeliczeniu na złote stosuje się kurs średni ogłoszony przez Narodowy Bank Polski w dniu wymagalności ostatniej raty kredytu mieszkaniowego.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/1580__art_6__ust_5" gd:GUID="e636c75e-3f9d-477f-a796-2a929d6f4785">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="3262f1cd-6819-452c-92df-8ffd775ea1ae" fragment="1" gd:fragmentGUID="062a63d9-a061-4bbe-892c-ea204f9ca512">W przypadku gdy kredytobiorca zawarł umowę, o której mowa w ust. 2 pkt 2 lit. b, jest obowiązany podać we wniosku, o którym mowa w ust. 4, informację o warunkach wszystkich umów ubezpieczenia, na podstawie których przysługuje mu świadczenie z tytułu utraty pracy, w tym o terminie, w którym upływa okres wypłaty świadczeń z tytułu tych umów, chyba że instytucja kredytująca jest w posiadaniu tych informacji.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1580__art_6__ust_6" gd:GUID="9d08d1a8-ea4d-43c9-a43e-14e00c971d6f">
+          <nr>6</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="650e3e05-cd18-47eb-9a5d-b1611b8ce8c0" fragment="1" gd:fragmentGUID="81890c51-2817-42bc-a4d6-4b9593078396">Minister właściwy do spraw pracy w porozumieniu z ministrem właściwym do spraw instytucji finansowych określi, w drodze rozporządzenia:</zdanie>
+          </p>
+          <punkt eId="DU/2025/1580__art_6__ust_6__pkt_1" gd:GUID="a594a305-c320-41df-85d6-ecb64f885d71">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="650e3e05-cd18-47eb-9a5d-b1611b8ce8c0" fragment="2" gd:fragmentGUID="760ea5b8-57da-4984-8bc6-306078800a83">wzór wniosku, o którym mowa w ust. 1, z uwzględnieniem treści oświadczenia, o którym mowa w ust. 2 pkt 2, oraz konieczności pouczenia wnioskodawcy o odpowiedzialności karnej za składanie fałszywych oświadczeń, a także skutkach otrzymania pomocy nienależnej,</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/1580__art_6__ust_6__pkt_2" gd:GUID="69c7d8e3-8bc1-4178-b860-2cde89d0102f">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="650e3e05-cd18-47eb-9a5d-b1611b8ce8c0" fragment="3" gd:fragmentGUID="cb49b3c0-8699-495f-a2dd-459cf8966cef">wzór oświadczenia instytucji kredytującej, o którym mowa w ust. 4</zdanie>
+            </p>
+          </punkt>
+          <czesc-wspolna-punkt eId="DU/2025/1580__art_6__ust_6__czw" gd:GUID="98cfa59a-4fd9-4f0e-af2e-1a16bbb4ed47">
+            <p>
+              <zdanie nr="1" gd:zdGUID="650e3e05-cd18-47eb-9a5d-b1611b8ce8c0" fragment="4" gd:fragmentGUID="62b64314-497a-476d-8870-67c217a62b88">– kierując się potrzebą rzetelnego udokumentowania danych niezbędnych do przyznania pomocy.</zdanie>
+            </p>
+          </czesc-wspolna-punkt>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/1580__art_7" gd:GUID="50269052-c73d-4f51-85af-0ad41553b6c0">
+        <nr>7</nr>
+        <ustep eId="DU/2025/1580__art_7__ust_1" gd:GUID="6d835830-0f0f-48ad-ab56-253de9c10e52">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a957495e-a148-4883-a5a9-dba369406654" fragment="1" gd:fragmentGUID="e9cf72ba-2364-4abb-b38c-59acecdde059">Decyzja, o której mowa w art. 6 ust. 1, zawiera:</zdanie>
+          </p>
+          <punkt eId="DU/2025/1580__art_7__ust_1__pkt_1" gd:GUID="ab589eb8-e726-4ec0-af22-a832ead10f51">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="a957495e-a148-4883-a5a9-dba369406654" fragment="2" gd:fragmentGUID="66c03c67-e495-4a0e-a9e7-b44bad592762">określenie uprawnionego ze wskazaniem informacji, o których mowa w art. 6 ust. 2 pkt 1;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/1580__art_7__ust_1__pkt_2" gd:GUID="e21a3d3d-6616-49fa-98db-c517dd61853c">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="a957495e-a148-4883-a5a9-dba369406654" fragment="3" gd:fragmentGUID="5b09bc8a-fb60-44fc-8bc0-450be5f36211">nazwę i adres instytucji kredytującej;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/1580__art_7__ust_1__pkt_3" gd:GUID="d77d793e-9a92-4c1a-8de4-146128e55b69">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="a957495e-a148-4883-a5a9-dba369406654" fragment="4" gd:fragmentGUID="266fb531-ebc9-4712-98ac-1487e52fcbfd">numer rachunku wskazany przez instytucję kredytującą przeznaczony do przekazywania pomocy na spłatę kredytu mieszkaniowego;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/1580__art_7__ust_1__pkt_4" gd:GUID="5a84d620-a4db-4902-b47e-5a1c958a7c9f">
+            <nr>4</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="a957495e-a148-4883-a5a9-dba369406654" fragment="5" gd:fragmentGUID="48c93112-4e70-4a10-b6e8-aebd85a70268">walutę spłaty kredytu mieszkaniowego;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/1580__art_7__ust_1__pkt_5" gd:GUID="03de186c-948a-4ad5-8d66-ac015b6b9ebb">
+            <nr>5</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="a957495e-a148-4883-a5a9-dba369406654" fragment="6" gd:fragmentGUID="707de9e2-c4ad-4b15-8ea1-0c5d16d85fa1">terminy płatności i wysokość w złotych 12 kolejnych rat pomocy według stanu na dzień wydania decyzji.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/1580__art_7__ust_2" gd:GUID="6a6267e2-f649-4e32-9cfb-861506af5b0e">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="9467ad35-c3f7-4ad3-b23b-441077b47263" fragment="1" gd:fragmentGUID="02b2c5e5-d90b-4018-bea7-8a4c10330499">W decyzji zamieszcza się również pouczenie o jej wygaśnięciu w przypadkach, o których mowa w art. 10.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1580__art_7__ust_3" gd:GUID="e6d40b8c-a14e-4574-b5ae-615677b00b0e">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="f58e1319-0f2f-46e3-81ee-efa3d9ac7e32" fragment="1" gd:fragmentGUID="47f30b68-6a2e-4c98-a2b7-1cdf3af8be42">Decyzja podlega natychmiastowemu wykonaniu.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1580__art_7__ust_4" gd:GUID="4f2c6a36-d100-43e1-8ad9-4321ff72d492">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="fa783e90-c8ff-4a6d-8702-11115c99c430" fragment="1" gd:fragmentGUID="039bd85a-7aa8-422a-916f-b31126006b12">Decyzję doręcza się uprawnionemu, a kopię decyzji przekazuje Bankowi Gospodarstwa Krajowego oraz instytucji kredytującej.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1580__art_7__ust_5" gd:GUID="07dfb88a-717d-4a67-99dc-5883f6a25bad">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="67f24496-edbd-4769-9ef5-ade303482fa9" fragment="1" gd:fragmentGUID="8e67766c-c84a-4510-a929-eed5ddf594f4">Jeżeli decyzja zawiera oczywiste omyłki uniemożliwiające realizację przez Bank Gospodarstwa Krajowego decyzji albo nie zawiera danych umożliwiających jej realizację, Bank informuje niezwłocznie o tym fakcie starostę i uprawnionego.</zdanie>
+            <zdanie nr="2" gd:zdGUID="845229bf-dc8c-4026-bd3c-85d0276a1387" fragment="1" gd:fragmentGUID="0f9e1261-474b-485f-8953-d4aa760f1724">W takim przypadku Bank nie przekazuje rat pomocy wynikających z decyzji do czasu otrzymania od starosty kopii postanowienia o sprostowaniu błędów w wydanej decyzji albo informacji o braku podstaw do wydania postanowienia.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/1580__art_8" gd:GUID="72db2bf7-4828-4ab9-bb8d-4b9cafcf49aa">
+        <nr>8</nr>
+        <ustep eId="DU/2025/1580__art_8__ust_1" gd:GUID="357efa10-27a8-4a56-b9b8-d8ce5b646e19">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="c67c2fcf-5365-49c1-aa93-36ce4be7f1b5" fragment="1" gd:fragmentGUID="7f37aa66-4367-4f5a-b35c-df544e5595aa">Bank Gospodarstwa Krajowego przekazuje pomoc na podstawie decyzji.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1580__art_8__ust_2" gd:GUID="f911e514-52ac-49c0-8452-6c8009d9f838">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="0108feb8-4307-4eb2-bed7-19f311bdce45" fragment="1" gd:fragmentGUID="f09b78ad-faa0-4e7c-b706-c7caaaea1c13">W przypadku otrzymania przez Bank Gospodarstwa Krajowego kopii decyzji w terminie późniejszym niż 3 dni robocze przed terminem najbliższej płatności raty pomocy wynikającej z decyzji, Bank dokona pierwszej płatności raty pomocy w terminie 3 dni roboczych od dnia otrzymania kopii tej decyzji.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1580__art_8__ust_3" gd:GUID="aa016a53-db46-4d4d-b6dc-0472b2289b75">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="97704736-1b16-4786-847e-2cee22ad304d" fragment="1" gd:fragmentGUID="d501c81c-2712-45fb-b2fe-89a9b15b67d6">W przypadku, o którym mowa w art. 7 ust. 5, Bank Gospodarstwa Krajowego dokona pierwszej płatności raty w terminie 3 dni roboczych od dnia otrzymania kopii postanowienia o sprostowaniu błędów w wydanej decyzji albo informacji o braku podstaw do wydania postanowienia.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/1580__art_9" gd:GUID="a762d347-c9e2-4e99-b607-81a3b5de3eee">
+        <nr>9</nr>
+        <ustep eId="DU/2025/1580__art_9__ust_1" gd:GUID="6cf448ed-87df-402d-bd9e-5b8d4f8374b3">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="1197281e-ecb6-4454-892a-7b4a63c229b7" fragment="1" gd:fragmentGUID="011d78f2-1435-454a-9d4a-cbdd28f826c0">Bank Gospodarstwa Krajowego jest niezwłocznie powiadamiany przez:</zdanie>
+          </p>
+          <punkt eId="DU/2025/1580__art_9__ust_1__pkt_1" gd:GUID="b9648ca1-4378-4aec-8feb-02c754022003">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="1197281e-ecb6-4454-892a-7b4a63c229b7" fragment="2" gd:fragmentGUID="e27ade8b-d179-4506-a995-fc4edfcc0ff3">powiatowy urząd pracy – o utracie statusu bezrobotnego przez uprawnionego;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/1580__art_9__ust_1__pkt_2" gd:GUID="a84b93bc-0c9d-4ecc-aaad-3bb1ac39f001">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="1197281e-ecb6-4454-892a-7b4a63c229b7" fragment="3" gd:fragmentGUID="21b8ded2-eee7-4ffd-9b3a-96d0be4abe03">instytucję kredytującą – o zbyciu przedmiotu kredytowania, wypowiedzeniu umowy kredytu mieszkaniowego albo dokonaniu jego spłaty;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/1580__art_9__ust_1__pkt_3" gd:GUID="1bb8848e-e283-4172-a10e-4ee7e9ecf3bb">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="1197281e-ecb6-4454-892a-7b4a63c229b7" fragment="4" gd:fragmentGUID="06bc57fe-0952-44db-b354-779d9f5efc32">uprawnionego – o zbyciu przedmiotu kredytowania, wypowiedzeniu umowy kredytu mieszkaniowego albo podjęciu czynności egzekucyjnych z przedmiotu kredytowania.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/1580__art_9__ust_2" gd:GUID="17e378f0-ab37-44aa-ad16-a43634b3ab7e">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="ff938b3d-7231-495a-9131-7000588546aa" fragment="1" gd:fragmentGUID="b5ec6319-e109-44f5-a9e9-6cd1ccdc06bf">Bank Gospodarstwa Krajowego zaprzestaje przekazywania rat pomocy z dniem otrzymania informacji, o których mowa w ust. 1, z zastrzeżeniem art. 10 pkt 1.</zdanie>
+            <zdanie nr="2" gd:zdGUID="45899a05-f96f-47cb-b05b-82a8e7bf43c9" fragment="1" gd:fragmentGUID="989cfe1c-e70a-4482-90ce-463696f90535">O zaprzestaniu przekazywania rat pomocy Bank zawiadamia starostę i uprawnionego.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/1580__art_10" gd:GUID="d0552dbe-ea55-49a0-8b5c-26e338f046c7">
+        <nr>10</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="4a653d65-fdda-403d-95e7-b81af9a68dc2">
+          <p>
+            <zdanie nr="1" gd:zdGUID="d1203db8-955d-4a49-894a-0f743a6b062e" fragment="1" gd:fragmentGUID="b8698ba8-b44e-4474-a784-0c6699436e0a">Decyzja wygasa w razie:</zdanie>
+          </p>
+          <punkt eId="DU/2025/1580__art_10__pkt_1" gd:GUID="8a9494d3-4e8d-4e16-ada0-39603125998c">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="d1203db8-955d-4a49-894a-0f743a6b062e" fragment="2" gd:fragmentGUID="5e11ba2f-8967-4bd6-af3b-85f36b4dbbdb">utraty statusu bezrobotnego, z upływem miesiąca następującego po miesiącu, w którym utrata tego statusu nastąpiła;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/1580__art_10__pkt_2" gd:GUID="4fa1527b-5c20-4572-84a9-2fddb1380ca8">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="d1203db8-955d-4a49-894a-0f743a6b062e" fragment="3" gd:fragmentGUID="96f6a97c-9123-40d3-956c-9b284175b7d9">zbycia przedmiotu kredytowania, z dniem zbycia;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/1580__art_10__pkt_3" gd:GUID="e3e60ceb-fcfe-4222-97db-91cf4edb7877">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="d1203db8-955d-4a49-894a-0f743a6b062e" fragment="4" gd:fragmentGUID="dabc9286-959f-48e8-b728-ec89d9da0870">wypowiedzenia umowy kredytu mieszkaniowego, z dniem upływu okresu wypowiedzenia;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/1580__art_10__pkt_4" gd:GUID="defe6ff6-c4e2-407c-81ed-9f51f94bf76a">
+            <nr>4</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="d1203db8-955d-4a49-894a-0f743a6b062e" fragment="5" gd:fragmentGUID="7c0f5647-b780-4d4e-93d6-49fb2391d367">podjęcia czynności egzekucyjnych z przedmiotu kredytowania, z dniem podjęcia pierwszej czynności egzekucyjnej;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/1580__art_10__pkt_5" gd:GUID="de067587-c174-4c7f-99db-aafa31c15eed">
+            <nr>5</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="d1203db8-955d-4a49-894a-0f743a6b062e" fragment="6" gd:fragmentGUID="b745ea5e-2ebb-4b5a-b36b-7c4f390aea41">spłaty kredytu, z dniem dokonania spłaty ostatniej raty.</zdanie>
+            </p>
+          </punkt>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2025/1580__art_11" gd:GUID="3926d9fb-0c36-44f6-9146-52efa7bd449a">
+        <nr>11</nr>
+        <ustep eId="DU/2025/1580__art_11__ust_1" gd:GUID="6474c0bb-14ac-49d6-8821-257962e465c5">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="aacf2dd5-92a9-48a6-8076-ccfb07094f9e" fragment="1" gd:fragmentGUID="16731821-a8bb-4b2b-ad23-eedd8bcdc006">Środki Funduszu Pracy, z których jest finansowana pomoc oraz koszty jej realizacji przez Bank Gospodarstwa Krajowego są przekazywane na wyodrębniony rachunek w Banku przez ministra właściwego do spraw pracy z utworzonej na ten cel rezerwy.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1580__art_11__ust_2" gd:GUID="376ad062-0b7b-497c-83f5-54f29d3e844f">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="79212445-c590-4ceb-b402-fb58bfbc4d47" fragment="1" gd:fragmentGUID="92cd6633-076b-4f97-812e-39a1e58685ba">Sposób przekazywania i rozliczania środków, o których mowa w ust. 1, z uwzględnieniem przypadku określonego w ust. 6, określa umowa zawarta między Bankiem Gospodarstwa Krajowego a dysponentem Funduszu Pracy.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1580__art_11__ust_3" gd:GUID="a410c1cc-8ad3-4e38-8871-a48565942362">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="3e0026d1-02c1-4ab1-8a93-2ac92b97c9ac" fragment="1" gd:fragmentGUID="6ed0dc8e-3ed0-4f22-973e-19e3a81f2f88">Dysponent Funduszu Pracy przekazuje środki, o których mowa w ust. 1, na wyodrębniony rachunek w Banku Gospodarstwa Krajowego w terminie 7 dni od dnia złożenia zapotrzebowania na te środki.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1580__art_11__ust_4" gd:GUID="7fc53bcc-6288-47d3-ac43-5b6f65d17b75">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="efcbd73b-45b0-4eac-ab1b-7e6586156d41" fragment="1" gd:fragmentGUID="1c3c7aed-c308-4bae-86c6-28579e2e2243">Bank Gospodarstwa Krajowego dokonuje rozliczenia otrzymanych środków w terminie 20 dni po upływie miesiąca, w którym przekazano środki na realizację pomocy.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1580__art_11__ust_5" gd:GUID="dff70c93-5e6c-493f-8fda-b7bd1afb2292">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="9ce5d4ad-b9b7-4e8a-8d4b-f3c696f6e856" fragment="1" gd:fragmentGUID="5cfc90fb-e50e-407b-863e-c143b402792b">Bankowi Gospodarstwa Krajowego przysługuje prowizja z tytułu realizacji zadań wynikających z przepisów ustawy w wysokości określonej w umowie, o której mowa w ust. 2, nie wyższej jednak niż 1,5 % kwoty środków przekazanych przez Bank z tytułu pomocy.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1580__art_11__ust_6" gd:GUID="709dd7b5-fec4-4ddd-95ef-eb226adfced6">
+          <nr>6</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="f894242b-e31b-4ac3-ba16-5e45cfbd623e" fragment="1" gd:fragmentGUID="40f7ec4c-c58b-43d5-ae25-580ca76acaae">Jeżeli wysokość środków, o których mowa w ust. 1, nie pozwala na dokonanie płatności rat pomocy w wysokości wynikającej z decyzji, Bank Gospodarstwa Krajowego dokona płatności z własnych środków, a dysponent Funduszu Pracy zwróci Bankowi wypłaconą kwotę wraz z odsetkami określonymi w umowie, o której mowa w ust. 2.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/1580__art_12" gd:GUID="75c9f4ca-ca64-4fbd-808b-ac113bd8a765">
+        <nr>12</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="d5888e44-f53e-481a-a7fc-7ccb1a765021">
+          <p>
+            <zdanie nr="1" gd:zdGUID="352f2e2a-05f5-4e25-8032-b4b916d02fbf" fragment="1" gd:fragmentGUID="17fd1007-bfc4-47eb-9dfa-4e6069aba6eb">Bank Gospodarstwa Krajowego informuje właściwego starostę o wysokości środków przekazanych z tytułu dokonywanych płatności rat pomocy oraz terminach ich przekazania na rachunek instytucji kredytującej.</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2025/1580__art_13" gd:GUID="28108a21-2342-4994-8601-aea963e5e219">
+        <nr>13</nr>
+        <ustep eId="DU/2025/1580__art_13__ust_1" gd:GUID="cb70509f-855a-4908-ae82-039aff4e9849">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="0a6f6a75-e2a5-4daf-9ff7-b43b940eadb4" fragment="1" gd:fragmentGUID="92182db9-eaf3-4fef-b315-7587cf0164f2">Zwrot pomocy przyznanej na podstawie ustawy rozpoczyna się w miesiącu następującym po miesiącu, w którym upłynęły dwa lata od zaprzestania płatności rat pomocy i jest dokonywany przez 8 kolejnych lat w równych nieoprocentowanych miesięcznych ratach, płatnych do 15 dnia każdego miesiąca, na rachunek bankowy Funduszu Pracy właściwego powiatowego urzędu pracy.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1580__art_13__ust_2" gd:GUID="8d95f9bf-b8ab-40ad-b8ef-a772c00b685e">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="2e4db8bb-ab33-4658-b1a4-9694f4548706" fragment="1" gd:fragmentGUID="33077a8b-d9f7-43cf-a71e-8fe63eb36f56">Właściwy starosta informuje uprawnionego, co najmniej 30 dni przed terminem wpłaty pierwszej raty zwracanej pomocy, o wysokości miesięcznej raty, a także wskazuje numer rachunku bankowego Funduszu Pracy powiatowego urzędu pracy, na który dokonuje się wpłat.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1580__art_13__ust_3" gd:GUID="23ec396e-a4d1-4ce8-88d9-7fce540a841d">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="25823bda-9f13-494f-a53f-0bf3a597e8c8" fragment="1" gd:fragmentGUID="ce65706e-6d52-4b86-bf31-0112ec03075e">Powiatowy urząd pracy przekazuje środki wpłacone z tytułu zwrotu pomocy na rachunek dysponenta Funduszu Pracy.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/1580__art_14" gd:GUID="aeddc056-2e0a-4ac2-a841-06c75279e4db">
+        <nr>14</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="4732535c-b707-4bbd-99be-1e8e95e65ec0">
+          <p>
+            <zdanie nr="1" gd:zdGUID="1c2a44e1-4d27-4bf1-8951-20598c6213ee" fragment="1" gd:fragmentGUID="4eb13c9a-22a5-4636-80ac-5517f4d3b4b6">W przypadku zbycia przez kredytobiorcę przedmiotu kredytowania objętego pomocą zwrot pomocy jest dokonywany w terminie 30 dni od dnia zbycia.</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2025/1580__art_15" gd:GUID="dd038d3e-cb09-4275-87c5-5cecbd56da41">
+        <nr>15</nr>
+        <ustep eId="DU/2025/1580__art_15__ust_1" gd:GUID="41f4dbd6-9eac-4ed8-bac8-b731b7bff45f">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="4e6c3ad5-1149-453f-a60c-e715bb9fd383" fragment="1" gd:fragmentGUID="8123f150-128e-4ded-bc03-6afc21e6f267">W przypadku uchybienia terminowi, o którym mowa w art. 13 ust. 1 lub art. 14, właściwy starosta wzywa uprawnionego do dokonania płatności, wyznaczając termin jej dokonania nie dłuższy niż 30 dni.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1580__art_15__ust_2" gd:GUID="58a4b7cf-3510-4f2b-9a0c-ae278a702a2a">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="07b51e00-c36f-4b72-88b2-9c5e1f4021ea" fragment="1" gd:fragmentGUID="d5f2c820-4582-4a7a-a195-c19ad4bc730e">W przypadku niedokonania płatności w terminie określonym w wezwaniu, starosta wydaje decyzję w sprawie zwrotu pomocy.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/1580__art_16" gd:GUID="b1b0f661-65fa-4c43-a65d-370d06edf60d">
+        <nr>16</nr>
+        <ustep eId="DU/2025/1580__art_16__ust_1" gd:GUID="976a102e-c98e-4fa2-a422-ae2d4d0aa01c">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="4187343d-603c-4f2b-adae-4d911c437813" fragment="1" gd:fragmentGUID="b2c84eb1-3846-44cf-bc57-109fd3442d67">Osoba, która otrzymała pomoc nienależną na podstawie przepisów ustawy, dokonuje zwrotu środków równych kwocie przyznanej pomocy wraz z odsetkami ustawowymi naliczonymi od dnia przekazania przez Bank Gospodarstwa Krajowego na rachunek instytucji kredytującej środków z tytułu pomocy.</zdanie>
+            <zdanie nr="2" gd:zdGUID="092d6d92-d515-45fe-a4e6-ac5d60a0143d" fragment="1" gd:fragmentGUID="b17c2c93-bc23-40de-b688-0c81d5455219">Zwrot środków następuje na rachunek bankowy Funduszu Pracy właściwego powiatowego urzędu pracy w terminie 30 dni od dnia doręczenia decyzji w sprawie pomocy nienależnej.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1580__art_16__ust_2" gd:GUID="5a5560eb-20ae-4b86-88bb-326b29e4f9d1">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="f338dff5-2dfb-4fe2-936f-9d55acd9cd4b" fragment="1" gd:fragmentGUID="819286a6-2e8d-4993-ad0b-653760739107">Za pomoc nienależną uważa się pomoc wypłaconą:</zdanie>
+          </p>
+          <punkt eId="DU/2025/1580__art_16__ust_2__pkt_1" gd:GUID="40d9c60d-2748-44c4-93c3-ce8a0fa9a394">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="f338dff5-2dfb-4fe2-936f-9d55acd9cd4b" fragment="2" gd:fragmentGUID="12f63dbe-0e93-43e8-923c-417ff909ea24">pomimo zaistnienia okoliczności stanowiących podstawę zaprzestania płatności rat pomocy;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/1580__art_16__ust_2__pkt_2" gd:GUID="d3a88dac-68d6-4a1a-93d6-2523daa548e3">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="f338dff5-2dfb-4fe2-936f-9d55acd9cd4b" fragment="3" gd:fragmentGUID="29a98d76-b58f-47b0-83f6-0dc4956e49c9">na podstawie nieprawdziwych informacji lub sfałszowanych dokumentów albo w innych przypadkach świadomego wprowadzenia w błąd starosty przez osobę, której pomoc przyznano.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/1580__art_16__ust_3" gd:GUID="fc250928-2764-4acd-9432-e78506d68e57">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="948c19ac-b88d-4a05-8a9a-44009e4c9bc6" fragment="1" gd:fragmentGUID="3f66d864-a365-487c-b96e-98b18df0717f">Decyzję w sprawie pomocy nienależnej wydaje starosta, który pomoc przyznał.</zdanie>
+            <zdanie nr="2" gd:zdGUID="41204aa5-c333-4b1a-8ef9-c68c90073626" fragment="1" gd:fragmentGUID="1fd1ce71-08b8-406a-b0a3-df382d2c3b18">Decyzję doręcza się osobie, której pomoc przyznano.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/1580__art_17" gd:GUID="8f7bdc37-b37b-4f51-98e9-e37f09085483">
+        <nr>17</nr>
+        <ustep eId="DU/2025/1580__art_17__ust_1" gd:GUID="10c958b2-adea-4d28-9683-29fc174b00e6">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="14ec961a-8f92-4d3d-94f4-596d0ef90f1c" fragment="1" gd:fragmentGUID="3b4f572f-a53f-431f-b225-bdf87a75f781">W zakresie nieuregulowanym ustawą do należności z tytułu zwrotów pomocy, o których mowa w art. 13, art. 14 i art. 16, stosuje się odpowiednio przepisy działu III ustawy z dnia 29 sierpnia 1997 r. – Ordynacja podatkowa (Dz. U. z 2025 r. poz. 111, z późn. zm.<odnosnik id-odnosnika="2" symbol="2" gd:GUID="bdb3b512-9080-41b4-88a9-06e0ee94cd51"><p><zdanie nr="1" gd:zdGUID="d74aebfa-a4ac-4a23-8a59-b1f45d724d36" fragment="1" gd:fragmentGUID="aaa1be2b-846a-4ad4-86b7-3ab8b4a79124">Zmiany tekstu jednolitego wymienionej ustawy zostały ogłoszone w Dz. U. z 2025 r. poz. 497, 621, 622, 769, 820, 1203, 1235, 1414 i 1417.</zdanie></p></odnosnik>), z tym że zamiast odsetek za zwłokę nalicza się odsetki ustawowe za opóźnienie.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1580__art_17__ust_2" gd:GUID="b83997ff-5842-4378-beab-7dfbad2e636d">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="1b94d6c8-c0ce-4c39-a092-9474b5e9a845" fragment="1" gd:fragmentGUID="c714322e-d2a6-4cfc-9ecb-c5c65908ce08">Egzekucję należności z tytułu zwrotów pomocy, o których mowa w art. 13, 14 i 16, prowadzi starosta w trybie przepisów o postępowaniu egzekucyjnym w administracji.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1580__art_17__ust_3" gd:GUID="a16af209-7126-4a52-83c0-886024593c64">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="4630a92a-1ef8-4d6a-9ce4-36d09485e827" fragment="1" gd:fragmentGUID="6aa01901-85ba-4c4a-b2db-508c5be0652b">Starosta może odroczyć termin płatności, rozłożyć na raty lub umorzyć w całości albo w części należności, o których mowa w art. 13, 14 i 16.</zdanie>
+            <zdanie nr="2" gd:zdGUID="04e5c911-6355-44bc-84f3-4640bdc71667" fragment="1" gd:fragmentGUID="7bc24e4d-4bf2-4052-bf10-6fed4bbcbd98">Przepisy art. 247 ustawy z dnia 20 marca 2025 r. o rynku pracy i służbach zatrudnienia (Dz. U. poz. 620) stosuje się odpowiednio.<odnosnik id-odnosnika="3" symbol="3" gd:GUID="e9bbe490-1979-4687-9792-6fc332941b98"><p><zdanie nr="1" gd:zdGUID="6fadc666-8108-423f-9575-70dc2d1ee94f" fragment="1" gd:fragmentGUID="3acd5606-ee88-429d-a36e-6ff0b113a7eb">Zdanie drugie w brzmieniu ustalonym przez art. 403 ustawy z dnia 20 marca 2025 r. o rynku pracy i służbach zatrudnienia (Dz. U. poz. 620), która weszła w życie z dniem 1 czerwca 2025 r.</zdanie></p></odnosnik></zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/1580__art_18" gd:GUID="ebafcbf8-e80d-4283-af95-e388f1be10f9">
+        <nr>18</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="4b33ca27-deb0-4567-9b2d-6fc5b3f4a5b5">
+          <p>
+            <zdanie nr="1" gd:zdGUID="cb6c7908-60e6-4fa1-ada3-94956a0dcb32" fragment="1" gd:fragmentGUID="fb1bf2dd-aa1b-48f9-8fc5-8143ffe954b2">Organem wyższego stopnia w stosunku do starosty w sprawach określonych ustawą jest wojewoda.</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2025/1580__art_19" gd:GUID="90c2605f-f9d4-4443-8b8d-5f9728a90a32">
+        <nr>19</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="c74db317-56d1-4afa-a33d-ce745ddeb31c">
+          <p>
+            <zdanie nr="1" gd:zdGUID="b752d857-79c5-4c2b-992f-e0d8353f86f6" fragment="1" gd:fragmentGUID="7bce8e43-ab7e-447d-b380-54ea2ae2c6b6">Bank Gospodarstwa Krajowego sporządza kwartalne informacje o wysokości i przebiegu wypłaty pomocy przyznanej na podstawie ustawy i przekazuje je dysponentowi Funduszu Pracy do 20 dnia miesiąca następującego po upływie kwartału.</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2025/1580__art_20" gd:GUID="d7172f66-8dbe-45ed-b93d-416d8e82522a">
+        <nr>20</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="9b931cf4-4345-4cd6-9fad-ea7faa7a7173">
+          <p>
+            <zdanie nr="1" gd:zdGUID="38cebddb-a676-4de3-b784-5a29b7835612" fragment="1" gd:fragmentGUID="fb24931a-b928-4c5a-b9e3-7383bcec928f">(pominięty)</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2025/1580__art_21" gd:GUID="baa03b90-bd91-4a53-a325-ebbac40f6ad1">
+        <nr>21</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="66eba7db-4ae3-4e8d-9163-22a01e9aa2e5">
+          <p>
+            <zdanie nr="1" gd:zdGUID="40d9394a-1906-410f-a69b-1bf4f53ac1ff" fragment="1" gd:fragmentGUID="c4a5ea6e-8549-4347-bc00-d94b00ea5dfd">(pominięty)</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2025/1580__art_22" gd:GUID="4497a0da-adc0-4960-88e2-ff5814d9ec12">
+        <nr>22</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="10966744-05f3-4705-8097-841c9d04c2c2">
+          <p>
+            <zdanie nr="1" gd:zdGUID="694fe5f4-d994-43a4-81fd-7798125729c9" fragment="1" gd:fragmentGUID="84339dfa-4578-4035-b2f0-5e81027382aa">Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia<odnosnik id-odnosnika="4" symbol="4" gd:GUID="407841de-6016-4723-a923-c3555974ab8d"><p><zdanie nr="1" gd:zdGUID="c7f83791-11c6-4528-bad2-95ca0a14540d" fragment="1" gd:fragmentGUID="12319b11-937a-4635-b0a3-7469c5f8ce19">Ustawa została ogłoszona w dniu 21 lipca 2009 r.</zdanie></p></odnosnik>.</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+    </ustawa>
+  </obwieszczenie>
+</akt-prawny>

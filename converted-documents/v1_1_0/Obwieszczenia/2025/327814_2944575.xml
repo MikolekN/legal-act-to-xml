@@ -1,0 +1,861 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <obwieszczenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/866</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>130289e4-bbea-485e-8653-373fb7ab9343</gd:GUIDwersji>
+      <AdresISAP>WDU20250000866</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>866</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 866</AdresWyswietlany>
+      <Tytul>Obwieszczenie Ministra Zdrowia z dnia 26 czerwca 2025 r. w sprawie ogłoszenia jednolitego tekstu rozporządzenia Ministra Zdrowia w sprawie szczegółowego zakresu danych zdarzenia medycznego przetwarzanego w systemie informacji oraz sposobu i terminów przekazywania tych danych do Systemu Informacji Medycznej</Tytul>
+      <Rodzaj>OBW_TJ</Rodzaj>
+      <DataOgloszenia>2025-07-02</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-06-26</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_ujednolicenie_2025-07-02_DU-2025-866_domyslne" rodzaj="ujednolicenie" pochodzenie="domyslne-z-aktu" data="2025-07-02" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_ujednolicenie.zdarz_ujednolicenie_2025-07-02_DU-2025-866_domyslne" glowna="true">
+          <Przedzial rodzaj="ujednolicenie" od="zdarz_ujednolicenie_2025-07-02_DU-2025-866_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <DataObowiazywaniaWersji>
+        <Od>zdarz_ujednolicenie_2025-07-02_DU-2025-866_domyslne</Od>
+      </DataObowiazywaniaWersji>
+      <Organy>
+        <Organ gd:GUID="09214f5f-42a1-4047-9068-18b19afa9493" rola="wydajacy">
+          <Nazwa>Minister Zdrowia</Nazwa>
+          <OrganPodpisujacy>Minister Zdrowia</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>W.</imie> <nazwisko>Konieczny</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Obwieszczenie</rodzaj-aktu>
+    <autor-aktu>Ministra Zdrowia<odnosnik id-odnosnika="1" symbol="1" gd:GUID="33c246da-bde7-4415-9550-f6fabf18b698"><p><zdanie nr="1" gd:zdGUID="d1169f6e-4d70-44b6-a764-f0ed11f85dbf" fragment="1" gd:fragmentGUID="d6daf524-9ecd-49ed-a1a3-9c208d152a1c">Minister Zdrowia kieruje działem administracji rządowej – zdrowie, na podstawie § 1 ust. 2 rozporządzenia Prezesa Rady Ministrów z dnia 18 grudnia 2023 r. w sprawie szczegółowego zakresu działania Ministra Zdrowia (Dz. U. poz. 2704).</zdanie></p></odnosnik></autor-aktu>
+    <data>z dnia 26 czerwca 2025 r.</data>
+    <tytul>w sprawie ogłoszenia jednolitego tekstu rozporządzenia Ministra Zdrowia w sprawie szczegółowego zakresu danych zdarzenia medycznego przetwarzanego w systemie informacji oraz sposobu i terminów przekazywania tych danych do Systemu Informacji Medycznej</tytul>
+    <punkt-OTJ eId="DU/2025/866__pkt_1" gd:GUID="42e92146-109b-483f-8f03-9c350d8c7a3c">
+      <nr>1</nr>
+      <p>
+        <zdanie nr="1" gd:zdGUID="a969b2b6-fd39-4507-bed7-14e1acd6ab83" fragment="1" gd:fragmentGUID="6b1d640c-6fc3-49bf-be37-a5e3e0b6ee78">Na podstawie art. 16 ust. 3 ustawy z dnia 20 lipca 2000 r. o ogłaszaniu aktów normatywnych i niektórych innych aktów prawnych (Dz. U. z 2019 r. poz. 1461) ogłasza się w załączniku do niniejszego obwieszczenia jednolity tekst rozporządzenia Ministra Zdrowia z dnia 26 czerwca 2020 r. w sprawie szczegółowego zakresu danych zdarzenia medycznego przetwarzanego w systemie informacji oraz sposobu i terminów przekazywania tych danych do Systemu Informacji Medycznej (Dz. U. z 2023 r. poz. 738), z uwzględnieniem zmiany wprowadzonej rozporządzeniem Ministra Zdrowia z dnia 17 września 2024 r. zmieniającym rozporządzenie w sprawie szczegółowego zakresu danych zdarzenia medycznego przetwarzanego w systemie informacji oraz sposobu i terminów przekazywania tych danych do Systemu Informacji Medycznej (Dz. U. poz. 1388).</zdanie>
+      </p>
+    </punkt-OTJ>
+    <punkt-OTJ eId="DU/2025/866__pkt_2" gd:GUID="174a4b1b-2c57-49ac-8a78-491d9af9be30">
+      <nr>2</nr>
+      <p>
+        <zdanie nr="1" gd:zdGUID="4f613227-22d4-48d8-bd0a-588991d4dfef" fragment="1" gd:fragmentGUID="3670bd36-bac7-4a2f-bec2-0aea02211b2b">Podany w załączniku do niniejszego obwieszczenia tekst jednolity rozporządzenia nie obejmuje § 2 rozporządzenia Ministra Zdrowia z dnia 17 września 2024 r. zmieniającego rozporządzenie w sprawie szczegółowego zakresu danych zdarzenia medycznego przetwarzanego w systemie informacji oraz sposobu i terminów przekazywania tych danych do Systemu Informacji Medycznej (Dz. U. poz. 1388), który stanowi:<tresc-strukt cudzyslowy="oba" gd:GUID="e1fae9ea-89f8-49da-9ee7-9ec1a57bd7b2"><paragraf eId="DU/2024/1388__art_2" gd:GUID="f5950edb-08b2-4c18-9e04-662017806b73"><nr>2</nr><ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="ff26fe79-6dcb-47b1-953b-9dc5a596715f"><p><zdanie nr="1" gd:zdGUID="1f3f9f84-b7df-439d-85b6-c5937a369932" fragment="1" gd:fragmentGUID="950b850e-b931-4ff6-91ae-3fa16e8ba167">Rozporządzenie wchodzi w życie z dniem następującym po dniu ogłoszenia.</zdanie></p></ustep-n></paragraf></tresc-strukt>.</zdanie>
+      </p>
+    </punkt-OTJ>
+    <organ-podpisujacy>Minister Zdrowia: wz. <i><osoba podpisujacy="true" gd:osobaGUID="72cf577b-b5f2-4176-9d42-93764050a8cc"><imie>W.</imie> <nazwisko>Konieczny</nazwisko></osoba></i></organ-podpisujacy>
+    <rozporzadzenie>
+      <zalacznik-do>Załącznik do obwieszczenia Ministra Zdrowia z dnia 26 czerwca 2025 r. (Dz. U. poz. 866)</zalacznik-do>
+      <rodzaj-aktu>Rozporządzenie</rodzaj-aktu>
+      <autor-aktu>Ministra Zdrowia<odnosnik id-odnosnika="100001" symbol="1" gd:GUID="7c327f7b-2cd5-40ce-abb7-2a94bb322b31"><p><zdanie nr="1" gd:zdGUID="1549f090-0551-4a37-bcc1-a3d778cb3f3a" fragment="1" gd:fragmentGUID="bf31e085-aa6e-4ac4-bf7a-ba956a0ecec0">Na dzień ogłoszenia obwieszczenia w Dzienniku Ustaw Rzeczypospolitej Polskiej działem administracji rządowej – zdrowie kieruje Minister Zdrowia, na podstawie § 1 ust. 2 rozporządzenia Prezesa Rady Ministrów z dnia 18 grudnia 2023 r. w sprawie szczegółowego zakresu działania Ministra Zdrowia (Dz. U. poz. 2704).</zdanie></p></odnosnik></autor-aktu>
+      <data>z dnia 26 czerwca 2020 r.</data>
+      <tytul>w sprawie szczegółowego zakresu danych zdarzenia medycznego przetwarzanego w systemie informacji oraz sposobu i terminów przekazywania tych danych do Systemu Informacji Medycznej</tytul>
+      <podstawa-prawna>Na podstawie art. 11 ust. 4a ustawy z dnia 28 kwietnia 2011 r. o systemie informacji w ochronie zdrowia (Dz. U. z 2025 r. poz. 302 i 779) zarządza się, co następuje:</podstawa-prawna>
+      <paragraf eId="DU/2025/866__art_1" gd:GUID="f243834b-3021-44d5-8f26-e8360435f4c7">
+        <nr>1</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="6d8fa175-a446-488c-af58-e72e67ea3bf0">
+          <p>
+            <zdanie nr="1" gd:zdGUID="fcb5dc6b-746f-4776-b2b6-c5437f379e0e" fragment="1" gd:fragmentGUID="2a5729e7-b8ba-4592-aee3-2097790dfc61">Rozporządzenie określa:</zdanie>
+          </p>
+          <punkt eId="DU/2025/866__art_1__pkt_1" gd:GUID="43e425a1-25dc-4a4c-847e-a8d2d0fc26e5">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="fcb5dc6b-746f-4776-b2b6-c5437f379e0e" fragment="2" gd:fragmentGUID="e5fcd7ef-644c-477f-a0f1-d58586fbe929">szczegółowy zakres danych zdarzenia medycznego przetwarzanego w systemie informacji w ochronie zdrowia, o którym mowa w art. 1 ust. 1 ustawy z dnia 28 kwietnia 2011 r. o systemie informacji w ochronie zdrowia, zwanego dalej „zdarzeniem medycznym”, przekazywanych przez usługodawców do Systemu Informacji Medycznej, o którym mowa w art. 10 ustawy z dnia 28 kwietnia 2011 r. o systemie informacji w ochronie zdrowia, zwanego dalej „SIM”;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/866__art_1__pkt_2" gd:GUID="6e5fdd6a-cfc1-438b-a64f-6b3e50465430">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="fcb5dc6b-746f-4776-b2b6-c5437f379e0e" fragment="3" gd:fragmentGUID="7312de56-f227-42fd-89a4-4d66e30277a7">terminy przekazywania do SIM danych, o których mowa w pkt 1;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/866__art_1__pkt_3" gd:GUID="2cb24ca2-4f28-4b49-bc75-a0162f79d6a9">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="fcb5dc6b-746f-4776-b2b6-c5437f379e0e" fragment="4" gd:fragmentGUID="1110c8ac-b98f-442c-83d1-f526b020b319">sposób przekazywania do SIM danych, o których mowa w pkt 1.</zdanie>
+            </p>
+          </punkt>
+        </ustep-n>
+      </paragraf>
+      <paragraf eId="DU/2025/866__art_2" gd:GUID="1845c15f-b5ea-4ebd-b5dc-3d91b954f378">
+        <nr>2</nr>
+        <ustep eId="DU/2025/866__art_2__ust_1" gd:GUID="74c7ee1b-9312-42d4-8cc8-9000746a8c83">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="aec137c5-a2c0-413a-82a2-b592744d36ae" fragment="1" gd:fragmentGUID="a12d8734-3d3c-44fb-b333-e76b1c05848a">Usługodawca przekazuje do SIM:</zdanie>
+          </p>
+          <punkt eId="DU/2025/866__art_2__ust_1__pkt_1" gd:GUID="f86c0a00-7848-464b-8145-786dfc100521">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="aec137c5-a2c0-413a-82a2-b592744d36ae" fragment="2" gd:fragmentGUID="ff409c08-7b62-4be8-8dc3-83b814b6cef5">dane usługodawcy, które obejmują:</zdanie>
+            </p>
+            <litera eId="DU/2025/866__art_2__ust_1__pkt_1__lit_a" gd:GUID="6c2625ea-f3da-494f-99eb-4d2ec17b4b3b">
+              <nr>a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="aec137c5-a2c0-413a-82a2-b592744d36ae" fragment="3" gd:fragmentGUID="412018db-5d4e-4b54-a981-f67837c6b358">numer księgi rejestrowej w rejestrze podmiotów wykonujących działalność leczniczą stanowiący część I kodu resortowego z systemu resortowych kodów identyfikacyjnych, o którym mowa w przepisach wydanych na podstawie art. 105 ust. 5 ustawy z dnia 15 kwietnia 2011 r. o działalności leczniczej (Dz. U. z 2025 r. poz. 450, 620 i 637), oraz 14-cyfrowy numer REGON zakładu leczniczego, w którym udzielono świadczenia zdrowotnego – w przypadku podmiotu leczniczego, o którym mowa w art. 4 ust. 1 ustawy z dnia 15 kwietnia 2011 r. o działalności leczniczej,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/866__art_2__ust_1__pkt_1__lit_b" gd:GUID="57735d1d-1795-48ba-a2b6-748fa3d2840a">
+              <nr>b</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="aec137c5-a2c0-413a-82a2-b592744d36ae" fragment="4" gd:fragmentGUID="c10a4c92-728b-454d-b6a3-168aed4abf5f">numer księgi rejestrowej w rejestrze podmiotów wykonujących działalność leczniczą w części prowadzonej przez okręgową radę lekarską, okręgową radę pielęgniarek i położnych albo Krajową Radę Fizjoterapeutów wraz z kodem właściwego organu prowadzącego rejestr – w przypadku praktyki zawodowej, o której mowa w art. 5 ust. 2 ustawy z dnia 15 kwietnia 2011 r. o działalności leczniczej,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/866__art_2__ust_1__pkt_1__lit_c" gd:GUID="2c35d0a1-2ca2-45cc-a2f5-fc74acc38fbd">
+              <nr>c</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="aec137c5-a2c0-413a-82a2-b592744d36ae" fragment="5" gd:fragmentGUID="e4978518-bbeb-4802-84c3-68b5c7448cc3">9-cyfrowy numer REGON oraz 10-cyfrowy nr NIP – w przypadku świadczeniodawcy, o którym mowa w art. 5 pkt 41 lit. b ustawy z dnia 27 sierpnia 2004 r. o świadczeniach opieki zdrowotnej finansowanych ze środków pub-licznych (Dz. U. z 2024 r. poz. 146, z późn. zm.<odnosnik id-odnosnika="100002" symbol="2" gd:GUID="fc70e0e2-b04b-4416-bfd4-12036d451756"><p><zdanie nr="1" gd:zdGUID="9f706aa5-885f-44bb-84eb-ee8ab606ce6d" fragment="1" gd:fragmentGUID="702f18ef-b382-4266-baf6-95f2bfca3c93">Zmiany tekstu jednolitego wymienionej ustawy zostały ogłoszone w Dz. U. z 2024 r. poz. 858, 1222, 1593, 1615 i 1915 oraz z 2025 r. poz. 129, 304, 620, 637 i 779.</zdanie></p></odnosnik>);</zdanie>
+              </p>
+            </litera>
+          </punkt>
+          <punkt eId="DU/2025/866__art_2__ust_1__pkt_2" gd:GUID="32a967e5-6dcf-4d9d-bd6f-8fa2fcea46b1">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="aec137c5-a2c0-413a-82a2-b592744d36ae" fragment="6" gd:fragmentGUID="7d1f0f3b-1039-4157-bee0-5ca1bed94fec">dane usługobiorcy, które obejmują:</zdanie>
+            </p>
+            <litera eId="DU/2025/866__art_2__ust_1__pkt_2__lit_a" gd:GUID="d453d01e-ccf6-4a99-b4b8-71d198d10541">
+              <nr>a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="aec137c5-a2c0-413a-82a2-b592744d36ae" fragment="7" gd:fragmentGUID="c00cf681-4c44-43b1-9415-93fb118b3291">identyfikator usługobiorcy, o którym mowa w art. 17c ust. 2 ustawy z dnia 28 kwietnia 2011 r. o systemie informacji w ochronie zdrowia,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/866__art_2__ust_1__pkt_2__lit_b" gd:GUID="5ea10aef-7d20-42b7-b18a-afb7d23ec809">
+              <nr>b</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="aec137c5-a2c0-413a-82a2-b592744d36ae" fragment="8" gd:fragmentGUID="b48170f1-c70c-435e-b677-68e1c0fea6e5">identyfikator, o którym mowa w art. 17c ust. 2 ustawy z dnia 28 kwietnia 2011 r. o systemie informacji w ochronie zdrowia, przedstawiciela ustawowego usługobiorcy – w przypadku noworodka, który nie posiada takiego identyfikatora,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/866__art_2__ust_1__pkt_2__lit_c" gd:GUID="b25b06f1-eedb-489c-a529-8d1c8fcce326">
+              <nr>c</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="aec137c5-a2c0-413a-82a2-b592744d36ae" fragment="9" gd:fragmentGUID="ee8c6ccb-0d34-44e6-90d9-4d8c4dc1eefb">identyfikator nadany według formatu: XXXXX-RRRR-NN, gdzie XXXXX – oznacza kolejny unikalny numer osoby w ramach kodu identyfikatora i roku, RRRR – oznacza rok, a NN – stanowi niezmienną część tego identyfikatora – w przypadku usługobiorcy, który nie posiada identyfikatora usługobiorcy, o którym mowa w art. 17c ust. 2 ustawy z dnia 28 kwietnia 2011 r. o systemie informacji w ochronie zdrowia,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/866__art_2__ust_1__pkt_2__lit_d" gd:GUID="57d8f1ad-c276-49d7-88ea-910d874a6ea0">
+              <nr>d</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="aec137c5-a2c0-413a-82a2-b592744d36ae" fragment="10" gd:fragmentGUID="48f4a191-70fd-4a94-9a88-c77d3cbd1e1c">identyfikator nadany według formatu: XXXXX-RRRR-NW, gdzie XXXXX – oznacza kolejny unikalny numer osoby w ramach kodu identyfikatora i roku, RRRR – oznacza rok, a NW – stanowi niezmienną część tego identyfikatora – w przypadku dziecka do 6. miesiąca życia, które nie posiada identyfikatora usługobiorcy, o którym mowa w art. 17c ust. 2 ustawy z dnia 28 kwietnia 2011 r. o systemie informacji w ochronie zdrowia, i nie jest możliwe ustalenie takiego identyfikatora jego przedstawiciela ustawowego,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/866__art_2__ust_1__pkt_2__lit_e" gd:GUID="f5e4b1ba-d491-424e-bccf-c5ad3caa1d91">
+              <nr>e</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="aec137c5-a2c0-413a-82a2-b592744d36ae" fragment="11" gd:fragmentGUID="08ed3cda-96da-4171-9db8-e3173a851e09">imię (imiona) i nazwisko,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/866__art_2__ust_1__pkt_2__lit_f" gd:GUID="837c17d1-2ab2-4016-9efa-83cfcc315305">
+              <nr>f</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="aec137c5-a2c0-413a-82a2-b592744d36ae" fragment="12" gd:fragmentGUID="9dffa137-4f1a-4566-9f63-f71cc65eea4f">datę urodzenia i płeć, jeżeli usługobiorcy nie nadano numeru PESEL lub świadczenie zdrowotne jest udzielane na podstawie przepisów o koordynacji w rozumieniu art. 5 pkt 32 ustawy z dnia 27 sierpnia 2004 r. o świadczeniach opieki zdrowotnej finansowanych ze środków publicznych, zwanych dalej „przepisami o koordynacji”,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/866__art_2__ust_1__pkt_2__lit_g" gd:GUID="fe890a03-7175-47a4-8ffd-5c8e48e68610">
+              <nr>g</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="aec137c5-a2c0-413a-82a2-b592744d36ae" fragment="13" gd:fragmentGUID="5a6094ae-cd72-429e-95d8-d09bbd5e6d4a">numer telefonu kontaktowego oraz adres poczty elektronicznej, a w przypadku gdy usługobiorca jest osobą małoletnią, całkowicie ubezwłasnowolnioną lub niezdolną do świadomego wyrażenia zgody – numer telefonu kontaktowego oraz adres poczty elektronicznej przedstawiciela ustawowego usługobiorcy albo jego opiekuna faktycznego w rozumieniu art. 3 ust. 1 pkt 1 ustawy z dnia 6 listopada 2008 r. o prawach pacjenta i Rzeczniku Praw Pacjenta (Dz. U. z 2024 r. poz. 581), jeżeli są one znane usługodawcy i usługodawca nie przekazywał ich wcześniej do SIM albo dane te uległy zmianie;</zdanie>
+              </p>
+            </litera>
+          </punkt>
+          <punkt eId="DU/2025/866__art_2__ust_1__pkt_3" gd:GUID="cecc94f8-e113-4d85-9141-10ec10fde69c">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="aec137c5-a2c0-413a-82a2-b592744d36ae" fragment="14" gd:fragmentGUID="db40f541-c4e1-49fa-8339-5a673b183ef6">dane identyfikujące świadczenie zdrowotne, które obejmują:</zdanie>
+            </p>
+            <litera eId="DU/2025/866__art_2__ust_1__pkt_3__lit_a" gd:GUID="6bf70267-a013-4c8b-94b1-c1fce5354d31">
+              <nr>a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="aec137c5-a2c0-413a-82a2-b592744d36ae" fragment="15" gd:fragmentGUID="7be19286-0b73-49ac-973f-99a36f782db6">kod świadczenia, który stanowi kod jednostki statystycznej określonej zgodnie z załącznikiem nr 1 do rozporządzenia Ministra Zdrowia z dnia 26 czerwca 2019 r. w sprawie zakresu niezbędnych informacji przetwarzanych przez świadczeniodawców, szczegółowego sposobu rejestrowania tych informacji oraz ich przekazywania podmiotom zobowiązanym do finansowania świadczeń ze środków publicznych (Dz. U. z 2024 r. poz. 610 i 1469 oraz z 2025 r. poz. 205), zwanego dalej „rozporządzeniem w sprawie zakresu niezbędnych informacji”,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/866__art_2__ust_1__pkt_3__lit_b" gd:GUID="127ff073-ff5c-4091-9f79-8a9fd1e1f2b2">
+              <nr>b</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="aec137c5-a2c0-413a-82a2-b592744d36ae" fragment="16" gd:fragmentGUID="b69e97f2-5c49-4671-9e3e-bd12bcebcee6">datę i godzinę rozpoczęcia udzielania świadczenia zdrowotnego,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/866__art_2__ust_1__pkt_3__lit_c" gd:GUID="4ea7ec4b-4996-4994-a987-ea15d03534ac">
+              <nr>c</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="aec137c5-a2c0-413a-82a2-b592744d36ae" fragment="17" gd:fragmentGUID="028777e5-4993-420e-b221-7c171f623649">datę i godzinę zakończenia udzielania świadczenia zdrowotnego,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/866__art_2__ust_1__pkt_3__lit_d" gd:GUID="a37b46db-57fa-4794-9de4-f8027507f10c">
+              <nr>d</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="aec137c5-a2c0-413a-82a2-b592744d36ae" fragment="18" gd:fragmentGUID="b1cba816-12d9-4ae0-b0af-d2af078d5589">datę i godzinę rozpoczęcia oraz zakończenia przebywania usługobiorcy na przepustce w rozumieniu § 1 ust. 2 pkt 4 rozporządzenia w sprawie zakresu niezbędnych informacji – w przypadku gdy jednostką statystyczną, o której mowa w załączniku nr 1 do rozporządzenia w sprawie zakresu niezbędnych informacji, jest pobyt w oddziale szpitalnym lub pobyt,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/866__art_2__ust_1__pkt_3__lit_e" gd:GUID="cde0b18c-3473-49a3-8c7f-d7ddb65e7993">
+              <nr>e</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="aec137c5-a2c0-413a-82a2-b592744d36ae" fragment="19" gd:fragmentGUID="6edcecb7-d322-4b03-8eb6-3324571506d3">kod przyczyny głównej według Międzynarodowej Statystycznej Klasyfikacji Chorób i Problemów Zdrowotnych Rewizja Dziesiąta, a jeżeli:</zdanie>
+              </p>
+              <tiret eId="DU/2025/866__art_2__ust_1__pkt_3__lit_e__tir_1" gd:GUID="14c0ea27-40c2-4046-ad54-655e4fe737c5">
+                <p>
+                  <zdanie nr="1" gd:zdGUID="aec137c5-a2c0-413a-82a2-b592744d36ae" fragment="20" gd:fragmentGUID="c20416b5-bd84-4e02-8b0f-6a0ebfc7d5c2">świadczenie zdrowotne zostało udzielone w oddziale szpitalnym – przyczyną główną jest rozpoznanie przy wypisie, wpisane do wykazu chorych oddziału, prowadzonej zgodnie z przepisami w sprawie rodzajów i zakresu dokumentacji medycznej oraz sposobu jej przetwarzania,</zdanie>
+                </p>
+              </tiret>
+              <tiret eId="DU/2025/866__art_2__ust_1__pkt_3__lit_e__tir_2" gd:GUID="a9ee3f96-b626-4a57-9518-f2986ce24a43">
+                <p>
+                  <zdanie nr="1" gd:zdGUID="aec137c5-a2c0-413a-82a2-b592744d36ae" fragment="21" gd:fragmentGUID="9803b1dd-b53b-4217-a162-52cdef379023">świadczenie zdrowotne zostało udzielone w związku z wydaniem karty diagnostyki i leczenia onkologicznego, zwanej dalej „kartą onkologiczną”, lub na podstawie karty onkologicznej – przyczyną główną jest podejrzenie lub rozpoznanie nowotworu złośliwego lub miejscowo złośliwego wpisane do karty onkologicznej po udzieleniu tego świadczenia,</zdanie>
+                </p>
+              </tiret>
+              <tiret eId="DU/2025/866__art_2__ust_1__pkt_3__lit_e__tir_3" gd:GUID="15fa093d-96eb-41e0-9139-8042ad2abbeb">
+                <p>
+                  <zdanie nr="1" gd:zdGUID="aec137c5-a2c0-413a-82a2-b592744d36ae" fragment="22" gd:fragmentGUID="1d14efa5-c313-4db5-878a-9047fe56c116">przyczyną główną jest rozpoznanie choroby rzadkiej, znajdującej się w klasyfikacji ORPHANET – usługodawca dodatkowo przekazuje do SIM właściwy numer tej klasyfikacji,</zdanie>
+                </p>
+              </tiret>
+              <tiret eId="DU/2025/866__art_2__ust_1__pkt_3__lit_e__tir_4" gd:GUID="6ee5b2eb-e449-45fc-a8cf-ae9987c2e3f9">
+                <p>
+                  <zdanie nr="1" gd:zdGUID="aec137c5-a2c0-413a-82a2-b592744d36ae" fragment="23" gd:fragmentGUID="1c43a4ee-96aa-490a-8537-509073b1b2f8">świadczenie zdrowotne zostało udzielone na podstawie zlecenia transportu sanitarnego lub lotniczego – usługo-dawca przekazuje kod przyczyny głównej wskazany w tym zleceniu,</zdanie>
+                </p>
+              </tiret>
+              <tiret eId="DU/2025/866__art_2__ust_1__pkt_3__lit_e__tir_5" gd:GUID="dcbee7e8-3b67-4c36-81dc-7e3e092cc116">
+                <p>
+                  <zdanie nr="1" gd:zdGUID="aec137c5-a2c0-413a-82a2-b592744d36ae" fragment="24" gd:fragmentGUID="7f81d2f8-ea80-4903-a4a4-286b44d5edae">usługobiorcy zostało udzielone świadczenie zdrowotne z zakresu rehabilitacji leczniczej – dodatkowo przekazuje się jeden lub więcej kodów głównego ograniczenia z prefiksem „d”, z pominięciem kwalifikatora „wykonanie” oraz „zdolność”, określonych w części 1 składnika „Aktywność i uczestniczenie” Międzynarodowej Klasyfikacji Funkcjonowania, Niepełnosprawności i Zdrowia; w przypadku braku stwierdzenia ograniczenia na poziomie aktywności i uczestniczenia przekazuje się kod „0” (zero) – „brak ograniczenia aktywności i uczestnictwa”, przy czym w przypadku świadczenia zdrowotnego realizowanego w warunkach:</zdanie>
+                </p>
+                <podw-tiret eId="DU/2025/866__art_2__ust_1__pkt_3__lit_e__tir_5__dwtir_1" gd:GUID="96ac1b66-5a10-4f74-809c-2919b73fe36f">
+                  <p>
+                    <zdanie nr="1" gd:zdGUID="aec137c5-a2c0-413a-82a2-b592744d36ae" fragment="25" gd:fragmentGUID="9cba2e33-ecc2-48af-95c4-0fc9c0d66549">stacjonarnych – przekazuje się ten kod albo te kody przy przyjęciu do i przy wypisie ze szpitala lub zakładu wykonującego działalność leczniczą w rodzaju stacjonarne i całodobowe świadczenie zdrowotne inne niż szpitalne,</zdanie>
+                  </p>
+                </podw-tiret>
+                <podw-tiret eId="DU/2025/866__art_2__ust_1__pkt_3__lit_e__tir_5__dwtir_2" gd:GUID="519cbf7a-51c2-4ec0-bf61-cc7b49d55fc7">
+                  <p>
+                    <zdanie nr="1" gd:zdGUID="aec137c5-a2c0-413a-82a2-b592744d36ae" fragment="26" gd:fragmentGUID="2115589d-b510-4c8f-904c-3c64dc278dd1">ambulatoryjnych – przekazuje się ten kod albo te kody przy wizycie, a w przypadku cyklu leczenia – również przy jego zakończeniu,</zdanie>
+                  </p>
+                </podw-tiret>
+              </tiret>
+              <tiret eId="DU/2025/866__art_2__ust_1__pkt_3__lit_e__tir_6" gd:GUID="9da867aa-8e2e-4ce8-809f-5694fcdaf7ea">
+                <p>
+                  <zdanie nr="1" gd:zdGUID="aec137c5-a2c0-413a-82a2-b592744d36ae" fragment="27" gd:fragmentGUID="75be6fe6-356e-4461-8458-edb2bface837">usługobiorcy zostało udzielone świadczenie zdrowotne psychologiczne lub psychoterapeutyczne z zakresu opieki psychiatrycznej i leczenia uzależnień, finansowane ze środków publicznych – usługodawca przekazuje dodatkowo kod diagnozy psychologicznej według słownika opracowanego przez Narodowy Fundusz Zdrowia,</zdanie>
+                </p>
+              </tiret>
+            </litera>
+            <litera eId="DU/2025/866__art_2__ust_1__pkt_3__lit_f" gd:GUID="7e461792-d451-4301-843c-d5ff3e825bed">
+              <nr>f</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="aec137c5-a2c0-413a-82a2-b592744d36ae" fragment="28" gd:fragmentGUID="426a2ac7-4ff6-45d6-b599-7c5650d29f58">kody przyczyn współistniejących według Międzynarodowej Statystycznej Klasyfikacji Chorób i Problemów Zdrowotnych Rewizja Dziesiąta – w przypadku świadczeń zdrowotnych finansowanych ze środków publicznych pierwsze trzy kody przekazane przez usługodawcę do SIM udostępnia się Narodowemu Funduszowi Zdrowia w celu rozliczania świadczeń opieki zdrowotnej,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/866__art_2__ust_1__pkt_3__lit_g" gd:GUID="593e51cd-9bad-4387-9263-ae96a93a5d28">
+              <nr>g</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="aec137c5-a2c0-413a-82a2-b592744d36ae" fragment="29" gd:fragmentGUID="29527046-f876-4dae-be9a-132dfb60aa4c">kody zrealizowanych istotnych procedur medycznych według polskiej wersji Międzynarodowej Klasyfikacji Procedur Medycznych Rewizja Dziewiąta CM, uznanej przez Narodowy Fundusz Zdrowia za obowiązującą w związku z rozliczaniem świadczeń, a jeżeli kod dotyczy procedury:</zdanie>
+              </p>
+              <tiret eId="DU/2025/866__art_2__ust_1__pkt_3__lit_g__tir_1" gd:GUID="4df7dd45-8bdb-464e-8035-842cc41354e2">
+                <p>
+                  <zdanie nr="1" gd:zdGUID="aec137c5-a2c0-413a-82a2-b592744d36ae" fragment="30" gd:fragmentGUID="04200659-52ea-43cb-9ed7-2dcf8490592b">dokonania przeszczepu lub innej procedury określonej przez Narodowy Fundusz Zdrowia – dodatkowo przekazuje się datę i godzinę wykonania tej procedury,</zdanie>
+                </p>
+              </tiret>
+              <tiret eId="DU/2025/866__art_2__ust_1__pkt_3__lit_g__tir_2" gd:GUID="5b6d61b0-00c7-4aa2-a335-58934dedc313">
+                <p>
+                  <zdanie nr="1" gd:zdGUID="aec137c5-a2c0-413a-82a2-b592744d36ae" fragment="31" gd:fragmentGUID="630def85-ea42-4c08-a55d-55dc9a4c32d4">wykonanej w warunkach, o których mowa w art. 15 ustawy z dnia 15 kwietnia 2011 r. o działalności leczniczej, w art. 30 ustawy z dnia 5 grudnia 1996 r. o zawodach lekarza i lekarza dentysty (Dz. U. z 2024 r. poz. 1287 i 1897 oraz z 2025 r. poz. 619 i 769) lub w art. 3 pkt 8 ustawy z dnia 8 września 2006 r. o Państwowym Ratownictwie Medycznym (Dz. U. z 2025 r. poz. 91 i 637) – dodatkowo przekazuje się datę, godzinę i minutę w systemie 24-godzinnym wykonania tej procedury, z wyłączeniem świadczeń udzielanych przez zespół ratownictwa medycznego,</zdanie>
+                </p>
+              </tiret>
+            </litera>
+            <litera eId="DU/2025/866__art_2__ust_1__pkt_3__lit_h" gd:GUID="8e6bf767-9084-4da7-be0c-b935f9e73cbe">
+              <nr>h</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="aec137c5-a2c0-413a-82a2-b592744d36ae" fragment="32" gd:fragmentGUID="0f265e76-7869-4179-b134-69857179393f">numer identyfikujący skierowanie, o którym mowa w art. 59aa ust. 4 ustawy z dnia 27 sierpnia 2004 r. o świadczeniach opieki zdrowotnej finansowanych ze środków publicznych, na podstawie którego nastąpiło dane zdarzenie medyczne,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/866__art_2__ust_1__pkt_3__lit_i" gd:GUID="0ba15fd5-2fbb-4995-aaf2-6ecb44ca5b88">
+              <nr>i</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="aec137c5-a2c0-413a-82a2-b592744d36ae" fragment="33" gd:fragmentGUID="66e2f754-b86b-4469-9923-798ea1c964ad">numer identyfikujący zlecenie nadany przez usługodawcę, który zawarł umowę o udzielenie świadczenia zdrowotnego lub zrealizowanie istotnej procedury medycznej z innym usługodawcą, zwanym dalej „podwykonawcą”,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/866__art_2__ust_1__pkt_3__lit_j" gd:GUID="a2d4a7bd-40ad-4437-af69-e2f32bde164b">
+              <nr>j</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="aec137c5-a2c0-413a-82a2-b592744d36ae" fragment="34" gd:fragmentGUID="de434eb1-e4d2-4e59-9d15-dc844550a247">informacje o wyrobach medycznych zaimplantowanych u usługobiorcy, o ile usługodawca uzyska je w związku z udzielaniem świadczenia zdrowotnego lub realizacją istotnej procedury medycznej,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/866__art_2__ust_1__pkt_3__lit_k" gd:GUID="0c694080-bc45-4cbc-bb86-a45d6fb573dd">
+              <nr>k</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="aec137c5-a2c0-413a-82a2-b592744d36ae" fragment="35" gd:fragmentGUID="74a25784-6ad5-4bb5-850f-c2b136eb211c">informacje o alergiach usługobiorcy, o ile usługodawca uzyska je w związku z udzielaniem świadczenia zdrowotnego lub realizacją istotnej procedury medycznej,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/866__art_2__ust_1__pkt_3__lit_l" gd:GUID="6544e26e-2ddd-479b-b9e3-8f4220c3cb61">
+              <nr>l</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="aec137c5-a2c0-413a-82a2-b592744d36ae" fragment="36" gd:fragmentGUID="5cf867fd-cb41-46c0-b688-8b03ed37075f">informacje o potwierdzonym wyniku grupy krwi usługobiorcy, w rozumieniu przepisów wydanych na podstawie art. 21 ust. 8 ustawy z dnia 22 sierpnia 1997 r. o publicznej służbie krwi (Dz. U. z 2024 r. poz. 1782), o ile usługodawca uzyska je w związku z udzielaniem świadczenia zdrowotnego lub realizacją istotnej procedury medycznej,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/866__art_2__ust_1__pkt_3__lit_m" gd:GUID="f3a058a3-69bb-45d1-ae4e-71abbd9aa622">
+              <nr>m</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="aec137c5-a2c0-413a-82a2-b592744d36ae" fragment="37" gd:fragmentGUID="d08a793e-1bf2-4315-9acc-f152cbcc401a"><odnosnik id-odnosnika="100003" symbol="3" gd:GUID="879f1fb5-6d65-4938-8ada-d7598044fbca"><p><zdanie nr="1" gd:zdGUID="ed97ab77-61b8-43ca-8ea6-0a49c8bead0c" fragment="1" gd:fragmentGUID="49027628-3513-416a-ae84-602598ff5598">W brzmieniu ustalonym przez § 1 rozporządzenia Ministra Zdrowia z dnia 17 września 2024 r. zmieniającego rozporządzenie w sprawie szczegółowego zakresu danych zdarzenia medycznego przetwarzanego w systemie informacji oraz sposobu i terminów przekazywania tych danych do Systemu Informacji Medycznej (Dz. U. poz. 1388), które weszło w życie z dniem 20 września 2024 r.</zdanie></p></odnosnik> informacje o ciąży, o ile usługodawca uzyska te informacje w związku z udzielaniem świadczenia zdrowotnego lub realizacją istotnej procedury medycznej; informacje o ciąży usługodawca przekazuje wyłącznie na wniosek usługobiorcy;</zdanie>
+              </p>
+            </litera>
+          </punkt>
+          <punkt eId="DU/2025/866__art_2__ust_1__pkt_4" gd:GUID="6b5b330d-dfc7-41eb-b577-c4fb1b1960ee">
+            <nr>4</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="aec137c5-a2c0-413a-82a2-b592744d36ae" fragment="38" gd:fragmentGUID="b9aecc02-2708-4a26-bacf-ff382da25902">dane miejsca udzielenia świadczenia zdrowotnego, które obejmują:</zdanie>
+            </p>
+            <litera eId="DU/2025/866__art_2__ust_1__pkt_4__lit_a" gd:GUID="cb00e2d8-0aba-434d-b089-29e9f2b4afba">
+              <nr>a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="aec137c5-a2c0-413a-82a2-b592744d36ae" fragment="39" gd:fragmentGUID="d41ed9d7-1d0e-4b37-805a-7b089d513c58">identyfikator miejsca udzielania świadczenia opieki zdrowotnej, o którym mowa w art. 17c ust. 4 pkt 1 ustawy z dnia 28 kwietnia 2011 r. o systemie informacji w ochronie zdrowia,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/866__art_2__ust_1__pkt_4__lit_b" gd:GUID="bc47360f-6b10-4392-84f3-d718da6c4d40">
+              <nr>b</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="aec137c5-a2c0-413a-82a2-b592744d36ae" fragment="40" gd:fragmentGUID="b0453666-6072-4ed4-900d-217dbc2a2563">niepowtarzalny kod identyfikujący jednostkę organizacyjną zakładu leczniczego w strukturze organizacyjnej podmiotu leczniczego stanowiący część V systemu resortowych kodów identyfikacyjnych, o którym mowa w przepisach wydanych na podstawie art. 105 ust. 5 ustawy z dnia 15 kwietnia 2011 r. o działalności leczniczej – w przypadku podmiotu leczniczego, w którego strukturze organizacyjnej wyodrębniono jednostki organizacyjne,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/866__art_2__ust_1__pkt_4__lit_c" gd:GUID="ca23044d-285f-4445-af5c-6c583f3ad6ed">
+              <nr>c</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="aec137c5-a2c0-413a-82a2-b592744d36ae" fragment="41" gd:fragmentGUID="551e23a4-661c-4cf0-b2f2-302af549af43">niepowtarzalny kod identyfikujący komórkę organizacyjną zakładu leczniczego podmiotu leczniczego w strukturze organizacyjnej podmiotu leczniczego stanowiący część VII systemu resortowych kodów identyfikacyjnych, o którym mowa w przepisach wydanych na podstawie art. 105 ust. 5 ustawy z dnia 15 kwietnia 2011 r. o działalności leczniczej – w przypadku podmiotu leczniczego, w którego strukturze organizacyjnej wyodrębniono komórki organizacyjne,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/866__art_2__ust_1__pkt_4__lit_d" gd:GUID="cfe678c6-816c-4877-95b2-2ff73d07ca52">
+              <nr>d</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="aec137c5-a2c0-413a-82a2-b592744d36ae" fragment="42" gd:fragmentGUID="edcd2359-5f2b-4da2-b8ec-fcfe782fe058">adres miejsca udzielania świadczenia zdrowotnego, na który składają się nazwa miejscowości, kod pocztowy, ulica, numer domu i lokalu – w przypadku świadczeniodawcy, o którym mowa w art. 5 pkt 41 lit. b ustawy z dnia 27 sierpnia 2004 r. o świadczeniach opieki zdrowotnej finansowanych ze środków publicznych;</zdanie>
+              </p>
+            </litera>
+          </punkt>
+          <punkt eId="DU/2025/866__art_2__ust_1__pkt_5" gd:GUID="a7ac1228-2bee-443d-8e39-8b786dbf58ea">
+            <nr>5</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="aec137c5-a2c0-413a-82a2-b592744d36ae" fragment="43" gd:fragmentGUID="8b1e08ce-f632-45b0-bba8-7787c8b0cf63">dane pracownika medycznego udzielającego świadczenia zdrowotnego lub odpowiedzialnego za jego udzielenie, a w przypadku wykonania operacji lub zabiegu w oddziale szpitalnym – dane pracownika medycznego kierującego wykonaniem tej operacji albo zabiegu (operatora), które obejmują:</zdanie>
+            </p>
+            <litera eId="DU/2025/866__art_2__ust_1__pkt_5__lit_a" gd:GUID="950416cc-bf9d-407d-a458-91990c8a647b">
+              <nr>a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="aec137c5-a2c0-413a-82a2-b592744d36ae" fragment="44" gd:fragmentGUID="c3df22a6-585c-4575-9afd-687ce7797334">identyfikator pracownika medycznego, o którym mowa w art. 17c ust. 5 ustawy z dnia 28 kwietnia 2011 r. o systemie informacji w ochronie zdrowia,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/866__art_2__ust_1__pkt_5__lit_b" gd:GUID="7e337c63-0d04-4d36-9ae3-3f3059c91a49">
+              <nr>b</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="aec137c5-a2c0-413a-82a2-b592744d36ae" fragment="45" gd:fragmentGUID="ab51e408-5af4-4d5f-b39b-4a10bfca1b2c">serię i numer paszportu albo innego dokumentu stwierdzającego tożsamość albo niepowtarzalny identyfikator nadany przez państwo członkowskie Unii Europejskiej dla celów transgranicznej identyfikacji, o którym mowa w rozporządzeniu wykonawczym Komisji (UE) 2015/1501 z dnia 8 września 2015 r. w sprawie ram interoperacyjności na podstawie art. 12 ust. 8 rozporządzenia Parlamentu Europejskiego i Rady (UE) nr 910/2014 w sprawie identyfikacji elektronicznej i usług zaufania w odniesieniu do transakcji elektronicznych na rynku wewnętrznym (Dz. Urz. UE L 235 z 09.09.2015, str. 1, z późn. zm.<odnosnik id-odnosnika="100004" symbol="4" gd:GUID="9d488f79-e615-4c34-8c6f-682ed0440e06"><p><zdanie nr="1" gd:zdGUID="f161b709-cd76-4eb7-9cf2-3ec7760ed07e" fragment="1" gd:fragmentGUID="950874b4-3ae1-4a46-8718-18cd3f49c75f">Zmiana wymienionego rozporządzenia została ogłoszona w Dz. Urz. UE L 28 z 04.02.2016, str. 18.</zdanie></p></odnosnik>) – w przypadku pracownika medycznego, który nie posiada identyfikatora pracownika medycznego, o którym mowa w art. 17c ust. 5 ustawy z dnia 28 kwietnia 2011 r. o systemie informacji w ochronie zdrowia,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/866__art_2__ust_1__pkt_5__lit_c" gd:GUID="aa2f2448-583d-40e2-9134-1b105f921859">
+              <nr>c</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="aec137c5-a2c0-413a-82a2-b592744d36ae" fragment="46" gd:fragmentGUID="fcb46973-bceb-4883-9e9d-884d1f5a3500">imię (imiona) i nazwisko,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/866__art_2__ust_1__pkt_5__lit_d" gd:GUID="47e61a65-233e-4d7e-98e5-931d8fa0f495">
+              <nr>d</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="aec137c5-a2c0-413a-82a2-b592744d36ae" fragment="47" gd:fragmentGUID="cb5b0c67-9128-496e-b54d-8235f155d532">kod przynależności do danej grupy zawodowej określony zgodnie z tabelą nr 1 załącznika nr 3 do rozporządzenia w sprawie zakresu niezbędnych informacji;</zdanie>
+              </p>
+            </litera>
+          </punkt>
+          <punkt eId="DU/2025/866__art_2__ust_1__pkt_6" gd:GUID="ba48c321-9257-4f4d-93da-4bf055ed38a9">
+            <nr>6</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="aec137c5-a2c0-413a-82a2-b592744d36ae" fragment="48" gd:fragmentGUID="56ac1477-21b6-420b-8a3c-f7281ef2b792">dane dotyczące dokumentacji medycznej prowadzonej w postaci elektronicznej zgodnie ze standardem HL7 oraz – w odniesieniu do dokumentacji obrazowej – w formacie DICOM, wytworzonej w związku z udzielonym świadczeniem zdrowotnym, które obejmują:</zdanie>
+            </p>
+            <litera eId="DU/2025/866__art_2__ust_1__pkt_6__lit_a" gd:GUID="256de4cc-969a-44ec-807a-f68b3bdc50bb">
+              <nr>a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="aec137c5-a2c0-413a-82a2-b592744d36ae" fragment="49" gd:fragmentGUID="3f290e7f-37f1-4632-a877-181e4070c0f2">identyfikator nadawany przez system usługodawcy,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/866__art_2__ust_1__pkt_6__lit_b" gd:GUID="a0b29b05-dd5f-41f6-87e1-7d3a7703635d">
+              <nr>b</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="aec137c5-a2c0-413a-82a2-b592744d36ae" fragment="50" gd:fragmentGUID="741f53f7-9094-4f7f-becb-82148b727957">rodzaj,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/866__art_2__ust_1__pkt_6__lit_c" gd:GUID="4fe5b004-1e10-488f-88c3-b484fdcf81f0">
+              <nr>c</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="aec137c5-a2c0-413a-82a2-b592744d36ae" fragment="51" gd:fragmentGUID="26d6a712-3666-48f7-a944-db647ca47987">datę i godzinę wytworzenia,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/866__art_2__ust_1__pkt_6__lit_d" gd:GUID="f3e3f9e4-358a-489b-8faf-e676c629498d">
+              <nr>d</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="aec137c5-a2c0-413a-82a2-b592744d36ae" fragment="52" gd:fragmentGUID="bb778b84-5769-49b8-968e-4a6106e7cf70">tryb udostępniania,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/866__art_2__ust_1__pkt_6__lit_e" gd:GUID="e23dde95-73a4-46cb-85ed-3590f36f0827">
+              <nr>e</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="aec137c5-a2c0-413a-82a2-b592744d36ae" fragment="53" gd:fragmentGUID="e4ec2273-b7a4-4684-a310-144639524fe5">adres repozytorium, w którym jest przechowywana dokumentacja medyczna;</zdanie>
+              </p>
+            </litera>
+          </punkt>
+          <punkt eId="DU/2025/866__art_2__ust_1__pkt_7" gd:GUID="060e3465-ae9f-4025-9e10-ac616c8af807">
+            <nr>7</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="aec137c5-a2c0-413a-82a2-b592744d36ae" fragment="54" gd:fragmentGUID="8cc7feee-95d9-4d6d-8121-8e82527b189f">inne dane pozwalające na identyfikację zdarzenia medycznego, które obejmują:</zdanie>
+            </p>
+            <litera eId="DU/2025/866__art_2__ust_1__pkt_7__lit_a" gd:GUID="0c808ce2-ac1f-4a7e-ad06-9c952040b1c9">
+              <nr>a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="aec137c5-a2c0-413a-82a2-b592744d36ae" fragment="55" gd:fragmentGUID="a9714c15-969f-4b34-8125-9d9c3686277c">identyfikator zdarzenia medycznego nadawany przez system usługodawcy,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/866__art_2__ust_1__pkt_7__lit_b" gd:GUID="18d69b37-7d74-419f-9538-8a527641963c">
+              <nr>b</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="aec137c5-a2c0-413a-82a2-b592744d36ae" fragment="56" gd:fragmentGUID="33e47f2d-a740-4bc0-8326-c7b3bf5905af">dane dotyczące płatnika:</zdanie>
+              </p>
+              <tiret eId="DU/2025/866__art_2__ust_1__pkt_7__lit_b__tir_1" gd:GUID="2d42c832-230e-4d6b-9a08-cc3842e88a2d">
+                <p>
+                  <zdanie nr="1" gd:zdGUID="aec137c5-a2c0-413a-82a2-b592744d36ae" fragment="57" gd:fragmentGUID="192a7661-393e-4bbf-9593-69a7b911376e">informację o rodzaju płatnika w rozumieniu art. 2 pkt 9 ustawy z dnia 28 kwietnia 2011 r. o systemie informacji w ochronie zdrowia,</zdanie>
+                </p>
+              </tiret>
+              <tiret eId="DU/2025/866__art_2__ust_1__pkt_7__lit_b__tir_2" gd:GUID="3f6e7010-4e22-442a-9e13-1225383dd074">
+                <p>
+                  <zdanie nr="1" gd:zdGUID="aec137c5-a2c0-413a-82a2-b592744d36ae" fragment="58" gd:fragmentGUID="d919ea76-a0eb-43aa-b5e7-5c2b51e3d807">identyfikator podmiotu zobowiązanego do finansowania świadczeń zdrowotnych ze środków publicznych określony zgodnie z załącznikiem nr 5 do rozporządzenia w sprawie zakresu niezbędnych informacji,</zdanie>
+                </p>
+              </tiret>
+            </litera>
+            <litera eId="DU/2025/866__art_2__ust_1__pkt_7__lit_c" gd:GUID="ace084c3-6949-48fd-8b15-e695a4dd0671">
+              <nr>c</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="aec137c5-a2c0-413a-82a2-b592744d36ae" fragment="59" gd:fragmentGUID="17cc9a85-ff85-4f2d-87be-70bd91cebe3d">osobisty numer identyfikacyjny, o którym mowa w rozporządzeniu w sprawie zakresu niezbędnych informacji – w przypadku usługobiorcy uprawnionego do świadczeń opieki zdrowotnej na podstawie przepisów o koordynacji,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/866__art_2__ust_1__pkt_7__lit_d" gd:GUID="a28e8c48-e0c1-4ffd-a988-6cda8f763b3e">
+              <nr>d</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="aec137c5-a2c0-413a-82a2-b592744d36ae" fragment="60" gd:fragmentGUID="70cf5016-a4e4-477e-b3bd-d42735e1ab33">informacje charakteryzujące uprawnienie do świadczeń opieki zdrowotnej, o których mowa w § 4 pkt 8 i 9 rozporządzenia w sprawie zakresu niezbędnych informacji,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/866__art_2__ust_1__pkt_7__lit_e" gd:GUID="fbcfc4fe-b5e8-4cf5-bfe8-0a13e94d6487">
+              <nr>e</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="aec137c5-a2c0-413a-82a2-b592744d36ae" fragment="61" gd:fragmentGUID="4a29ce39-2499-40dc-8b68-f48e75975a55">(uchylona),</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/866__art_2__ust_1__pkt_7__lit_f" gd:GUID="b7eb45f0-c82d-440d-b2b9-ff2d21a26d27">
+              <nr>f</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="aec137c5-a2c0-413a-82a2-b592744d36ae" fragment="62" gd:fragmentGUID="9bd109be-cca6-4e0c-a92a-a3edb71d1c75">identyfikator umowy zawartej między Narodowym Funduszem Zdrowia a usługodawcą, zwanej dalej „umową”, oraz jej rodzaj według słownika rodzajów świadczeń Narodowego Funduszu Zdrowia, jeżeli dotyczy,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/866__art_2__ust_1__pkt_7__lit_g" gd:GUID="97d560b4-ef81-41d1-9763-9708e1498278">
+              <nr>g</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="aec137c5-a2c0-413a-82a2-b592744d36ae" fragment="63" gd:fragmentGUID="97ed478f-42f3-4119-a6e7-88ad6e87c269">(uchylona),</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/866__art_2__ust_1__pkt_7__lit_h" gd:GUID="69719f9c-a558-4b24-99f9-899904efed5a">
+              <nr>h</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="aec137c5-a2c0-413a-82a2-b592744d36ae" fragment="64" gd:fragmentGUID="f1b21b9f-a727-4c1f-80c8-fd13e1092756">unikalny numer identyfikacyjny karty onkologicznej – w przypadku gdy świadczenie zdrowotne zostało udzielone w związku z wydaniem karty onkologicznej lub na podstawie karty onkologicznej,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/866__art_2__ust_1__pkt_7__lit_i" gd:GUID="85621d53-9c33-4bcf-901b-828d76baa609">
+              <nr>i</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="aec137c5-a2c0-413a-82a2-b592744d36ae" fragment="65" gd:fragmentGUID="6d4de47f-b324-493f-9e3d-f62441975e40">informację o masie ciała i wzroście usługobiorcy,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/866__art_2__ust_1__pkt_7__lit_j" gd:GUID="2edb8f1b-022f-4892-82ba-dc79006d3af0">
+              <nr>j</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="aec137c5-a2c0-413a-82a2-b592744d36ae" fragment="66" gd:fragmentGUID="b83b3dc9-a6fd-4fbb-8ea2-4463600a5463">informację dotyczącą używania przez usługobiorcę, który ukończył 15 rok życia, wyrobów tytoniowych zgodnie z kodem określonym w tabeli nr 18 załącznika nr 3 do rozporządzenia w sprawie zakresu niezbędnych informacji.</zdanie>
+              </p>
+            </litera>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/866__art_2__ust_2" gd:GUID="5a0ca560-eb90-4f8f-ba6e-28a0e238f36f">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="0c42e986-d4d1-4a33-90cc-813bd7759508" fragment="1" gd:fragmentGUID="9aa143d0-e763-40bc-91b5-16872554c849">W przypadku raportowania danych, o których mowa w ust. 1 pkt 3 lit. e–g, usługodawca przekazuje do SIM również dane o:</zdanie>
+          </p>
+          <punkt eId="DU/2025/866__art_2__ust_2__pkt_1" gd:GUID="158b1680-aaea-408b-ad08-d2c1d7d13af1">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="0c42e986-d4d1-4a33-90cc-813bd7759508" fragment="2" gd:fragmentGUID="7b7c2c92-1b4e-4633-ab7e-5bddccac00c6">dacie dokonania każdego rozpoznania przyczyny głównej lub przyczyny współistniejącej lub wykonania każdej istotnej procedury medycznej;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/866__art_2__ust_2__pkt_2" gd:GUID="7535eec5-95a5-4861-8165-fa14a697c1b4">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="0c42e986-d4d1-4a33-90cc-813bd7759508" fragment="3" gd:fragmentGUID="bfa94f12-27fb-4db2-b97a-69aa1f57ee81">miejscu dokonania każdego rozpoznania przyczyny głównej lub przyczyny współistniejącej lub wykonania każdej istotnej procedury medycznej – zgodnie z zakresem określonym w ust. 1 pkt 4;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/866__art_2__ust_2__pkt_3" gd:GUID="69c02a5a-ee14-4ea9-956d-489125d2c82e">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="0c42e986-d4d1-4a33-90cc-813bd7759508" fragment="4" gd:fragmentGUID="397d73b0-fd29-434a-8e25-edff0be1ef98">pracowniku medycznym, który dokonał rozpoznania danej przyczyny głównej lub danej przyczyny współistniejącej lub wykonał daną istotną procedurę medyczną – zgodnie z zakresem określonym w ust. 1 pkt 5.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/866__art_2__ust_3" gd:GUID="0e74d671-7daa-4442-a092-30fb5c9eca2d">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="371358b4-ef6b-4c26-850e-77394ad5c372" fragment="1" gd:fragmentGUID="0290dcce-b64f-483f-8bf0-e201ba3ef7fc">Dane, o których mowa w ust. 1 pkt 7 lit. i oraz j, usługodawca przekazuje do SIM fakultatywnie.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/866__art_2__ust_4" gd:GUID="b48c3e3d-94e2-4568-ae35-6549fc5937d5">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="6ee1f0d6-8d5d-480f-8d08-68079c30c9b4" fragment="1" gd:fragmentGUID="8090bbaf-7890-405e-a0ef-a36348266bd7">W przypadku gdy jednostką statystyczną, o której mowa w załączniku nr 1 do rozporządzenia w sprawie zakresu niezbędnych informacji, jest pobyt w oddziale szpitalnym, wszystkie pobyty usługobiorcy, któremu udzielono świadczenia zdrowotnego, pomiędzy wpisem do wykazu głównego przyjęć i wypisów a wypisem z niego, stanowią jedną hospitalizację.</zdanie>
+            <zdanie nr="2" gd:zdGUID="f796bce4-c17a-4797-8083-d0bbbecb13cb" fragment="1" gd:fragmentGUID="a30c7f4a-c58c-4115-9b47-3edef399baa8">W tym przypadku dane charakteryzujące poszczególne pobyty w oddziale usługodawca grupuje i przyporządkowuje do komórki organizacyjnej, w której udzielono usługobiorcy świadczenia zdrowotnego, lub jednostki organizacyjnej, w której udzielono usługobiorcy świadczenia zdrowotnego, jeżeli w strukturze organizacyjnej podmiotu leczniczego nie wyodrębniono komórek organizacyjnych, oraz usługodawca przekazuje dodatkowo do SIM:</zdanie>
+          </p>
+          <punkt eId="DU/2025/866__art_2__ust_4__pkt_1" gd:GUID="248c3f29-49bd-4e4a-b4a9-57c334e0cb81">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="2" gd:zdGUID="f796bce4-c17a-4797-8083-d0bbbecb13cb" fragment="2" gd:fragmentGUID="78be2413-c2ff-4410-aee5-a6cf0f402261">datę i godzinę przyjęcia usługobiorcy na oddział szpitalny;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/866__art_2__ust_4__pkt_2" gd:GUID="8fcb6caf-455f-45fa-b449-a0fbf8650edd">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="2" gd:zdGUID="f796bce4-c17a-4797-8083-d0bbbecb13cb" fragment="3" gd:fragmentGUID="6b28a4b1-63fe-4864-80fe-c752613525cd">kod trybu przyjęcia usługobiorcy do szpitala w rozumieniu art. 2 ust. 1 pkt 9 ustawy z dnia 15 kwietnia 2011 r. o działalności leczniczej określony zgodnie z załącznikiem nr 4 do rozporządzenia w sprawie zakresu niezbędnych informacji;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/866__art_2__ust_4__pkt_3" gd:GUID="f869a187-c4f3-41e5-8336-543678f8d657">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="2" gd:zdGUID="f796bce4-c17a-4797-8083-d0bbbecb13cb" fragment="4" gd:fragmentGUID="8505d5cf-0a8a-4c5d-bdd0-2ec38f5bc4c7">datę i godzinę wypisu usługobiorcy z oddziału szpitalnego;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/866__art_2__ust_4__pkt_4" gd:GUID="27086620-1ba7-45e2-a1d5-f0f84ed0d094">
+            <nr>4</nr>
+            <p>
+              <zdanie nr="2" gd:zdGUID="f796bce4-c17a-4797-8083-d0bbbecb13cb" fragment="5" gd:fragmentGUID="afd40ee3-f0a5-465d-8fed-9e4258527878">kod trybu wypisu usługobiorcy ze szpitala w rozumieniu art. 2 ust. 1 pkt 9 ustawy z dnia 15 kwietnia 2011 r. o działalności leczniczej określony zgodnie z załącznikiem nr 4 do rozporządzenia w sprawie zakresu niezbędnych informacji;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/866__art_2__ust_4__pkt_5" gd:GUID="a4ad0ef7-51ad-40e2-9a7b-3998e4f01e6f">
+            <nr>5</nr>
+            <p>
+              <zdanie nr="2" gd:zdGUID="f796bce4-c17a-4797-8083-d0bbbecb13cb" fragment="6" gd:fragmentGUID="c88152f3-628f-4a82-9542-64b7f3227d94">kod przyczyny głównej hospitalizacji według Międzynarodowej Statystycznej Klasyfikacji Chorób i Problemów Zdrowotnych Rewizja Dziesiąta zgodny z chorobą zasadniczą wpisaną do historii choroby, w części dotyczącej wypisu pacjenta ze szpitala, prowadzonej zgodnie z przepisami w sprawie rodzajów i zakresu dokumentacji medycznej w podmiotach leczniczych oraz sposobu jej przetwarzania;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/866__art_2__ust_4__pkt_6" gd:GUID="0d1581a6-95a0-480f-9c8f-bc0eb08c80ed">
+            <nr>6</nr>
+            <p>
+              <zdanie nr="2" gd:zdGUID="f796bce4-c17a-4797-8083-d0bbbecb13cb" fragment="7" gd:fragmentGUID="2cfd3c0d-4f11-4266-b52c-f951403968e1">kody przyczyn współistniejących istotnych w przypadku tej hospitalizacji według Międzynarodowej Statystycznej Klasyfikacji Chorób i Problemów Zdrowotnych Rewizja Dziesiąta – w przypadku świadczeń zdrowotnych finansowanych ze środków publicznych pierwszych pięć kodów przekazanych przez usługodawcę do SIM udostępnia się Narodowemu Funduszowi Zdrowia w celu rozliczania świadczeń opieki zdrowotnej.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/866__art_2__ust_5" gd:GUID="84436aeb-30e1-4f7c-827d-a7840ea022b5">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="f5f59ae1-e4a5-48ec-ac09-d58665b5a829" fragment="1" gd:fragmentGUID="e2c10d66-3ee5-4e6b-b7b1-749847135d0b">W przypadku gdy jednostką statystyczną, o której mowa w załączniku nr 1 do rozporządzenia w sprawie zakresu niezbędnych informacji, jest wyjazd ratowniczy albo akcja ratownicza, usługodawca przekazuje do SIM dane określone w ust. 1, przy czym:</zdanie>
+          </p>
+          <punkt eId="DU/2025/866__art_2__ust_5__pkt_1" gd:GUID="5bc7a7ab-39b2-4642-b20a-07cf12bdd75a">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="f5f59ae1-e4a5-48ec-ac09-d58665b5a829" fragment="2" gd:fragmentGUID="d5c0c94f-58b5-4036-9aea-7fa69598f272">w zakresie danych usługobiorcy – dane określone w ust. 1 pkt 2 lit. a–d, a jeżeli identyfikatorem usługobiorcy nie jest numer PESEL – także dane usługobiorcy, o których mowa w ust. 1 pkt 2 lit. e oraz f, w przypadku gdy ustalenie tych danych było możliwe;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/866__art_2__ust_5__pkt_2" gd:GUID="959ebd9b-c450-4166-bca3-70b23726794d">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="f5f59ae1-e4a5-48ec-ac09-d58665b5a829" fragment="3" gd:fragmentGUID="c603cdbd-f912-4482-b380-d6a3777c534e">w zakresie danych pracownika medycznego udzielającego świadczenia zdrowotnego lub odpowiedzialnego za jego udzielenie – dane określone w ust. 1 pkt 5 dotyczące wszystkich osób wchodzących w skład zespołu ratownictwa medycznego uprawnionych do wykonywania medycznych czynności ratunkowych oraz dodatkowo oznaczenie kierownika zespołu ratownictwa medycznego;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/866__art_2__ust_5__pkt_3" gd:GUID="5798702a-4217-4e56-9be1-501ebc9e549b">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="f5f59ae1-e4a5-48ec-ac09-d58665b5a829" fragment="4" gd:fragmentGUID="80142d22-9187-4826-a96c-ab4b44e0b2f2">usługodawca nie przekazuje danych miejsca udzielenia świadczenia zdrowotnego określonych w ust. 1 pkt 4.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/866__art_2__ust_6" gd:GUID="ac08cb04-9a9b-499e-8779-f93e5d968532">
+          <nr>6</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="8c700310-6a7b-4d2c-b62a-6e82ede30f28" fragment="1" gd:fragmentGUID="8dfd80ae-34f6-48aa-a003-1981ab13a72f">W przypadku gdy jednostką statystyczną, o której mowa w załączniku nr 1 do rozporządzenia w sprawie zakresu niezbędnych informacji, jest transport sanitarny albo transport lotniczy, usługodawca przekazuje do SIM dane określone w ust. 1 pkt 1, pkt 2 lit. a–f, pkt 3 lit. a–c, e oraz g, pkt 5–7, przy czym w zakresie danych pracownika medycznego udzielającego świadczenia zdrowotnego lub odpowiedzialnego za jego udzielenie, o których mowa w ust. 1 pkt 5, usługodawca przekazuje do SIM informacje o wszystkich pracownikach medycznych biorących udział w transporcie usługobiorcy; dane te usługodawca przekazuje do SIM tylko, jeżeli transportowanie pacjenta jest połączone z udzielaniem świadczenia zdrowotnego w trakcie przewozu.</zdanie>
+          </p>
+        </ustep>
+      </paragraf>
+      <paragraf eId="DU/2025/866__art_2a" gd:GUID="30174590-da52-4b69-8ff8-742f276d047c">
+        <nr>2a</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="3c6cbb6d-8141-4431-afca-bde49bcf8c88">
+          <p>
+            <zdanie nr="1" gd:zdGUID="a6d0c1b8-14d1-461f-b7bb-c6afe9b58051" fragment="1" gd:fragmentGUID="4f2e6c08-cb2a-46f4-a3ac-1391a0ae88bd">W przypadku gdy usługodawca zlecił udzielenie świadczenia zdrowotnego lub zrealizowanie istotnej procedury medycznej podwykonawcy, podwykonawca przekazuje do SIM dane dotyczące udzielonego przez niego świadczenia zdrowotnego lub zrealizowanej istotnej procedury medycznej, o których mowa w § 2 i § 3–5, a także dane dotyczące usługodawcy, który zlecił ich wykonanie, o których mowa w § 2 ust. 1 pkt 1 i 4, oraz identyfikator umowy, w ramach której udzielono świadczenia opieki zdrowotnej lub zrealizowano istotną procedurę medyczną, o którym mowa w § 2 ust. 1 pkt 7 lit. f, jeżeli dotyczy.</zdanie>
+          </p>
+        </ustep-n>
+      </paragraf>
+      <paragraf eId="DU/2025/866__art_3" gd:GUID="e2d9a914-fad7-4f0c-898d-e3bbd6e7bf8c">
+        <nr>3</nr>
+        <ustep eId="DU/2025/866__art_3__ust_1" gd:GUID="1df18cc5-21bf-415a-af7b-f267cc0f12da">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="81296a61-4a4f-4f3d-b379-f5e2f4c809a1" fragment="1" gd:fragmentGUID="30a086f5-6b7f-4d0d-a100-8480b9dbe516">W przypadku świadczeń zdrowotnych lekarza podstawowej opieki zdrowotnej usługodawca przekazuje do SIM dane dotyczące każdego udzielonego świadczenia zdrowotnego.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/866__art_3__ust_2" gd:GUID="87d1c8f6-2ad8-415a-9c36-3ace249c5d7e">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="783f9283-444c-4ef1-ba6f-211eb40a6162" fragment="1" gd:fragmentGUID="fbcf783f-c05e-4285-8011-9ddcf4086053">W przypadku udzielenia świadczenia zdrowotnego, o którym mowa w ust. 1, usługobiorcy, który złożył deklarację wyboru, o której mowa w art. 10 ustawy z dnia 27 października 2017 r. o podstawowej opiece zdrowotnej (Dz. U. z 2025 r. poz. 515), u danego usługodawcy, usługodawca przekazuje do SIM dane, o których mowa w § 2 ust. 1, przy czym w zakresie danych identyfikujących świadczenie zdrowotne – wyłącznie dane, o których mowa w § 2 ust. 1 pkt 3 lit. a–c oraz g, oraz dodatkowo:</zdanie>
+          </p>
+          <punkt eId="DU/2025/866__art_3__ust_2__pkt_1" gd:GUID="ce225448-5ba0-44f9-b155-0b1463d03612">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="783f9283-444c-4ef1-ba6f-211eb40a6162" fragment="2" gd:fragmentGUID="25d6b3b6-65c1-4ed4-9a67-1155f86dd7a9">dane, o których mowa w § 2 ust. 1 pkt 3 lit. e – w przypadku gdy jednostką statystyczną, o której mowa w załączniku nr 1 do rozporządzenia w sprawie zakresu niezbędnych informacji, jest porada;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/866__art_3__ust_2__pkt_2" gd:GUID="b6d8fbe6-6aee-4236-8f67-2b03636fc8c0">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="783f9283-444c-4ef1-ba6f-211eb40a6162" fragment="3" gd:fragmentGUID="b6d8947c-8f31-4c0a-8260-e861d9e73ac6">dane, o których mowa w § 2 ust. 2, dotyczące przyczyny głównej, o której informacje usługodawca przekazuje do SIM zgodnie z pkt 1;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/866__art_3__ust_2__pkt_3" gd:GUID="73e92a09-6b73-46cb-9d1e-8eb9c2d4cb27">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="783f9283-444c-4ef1-ba6f-211eb40a6162" fragment="4" gd:fragmentGUID="e441b302-944f-40c7-b21d-fcea17be710f">informację o masie ciała i wzroście usługobiorcy – co najmniej raz w danym roku kalendarzowym;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/866__art_3__ust_2__pkt_4" gd:GUID="a627e990-534b-409a-8e91-7dcfdf3169b0">
+            <nr>4</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="783f9283-444c-4ef1-ba6f-211eb40a6162" fragment="5" gd:fragmentGUID="a703582d-3a61-439e-ae40-1bf6c3dda1dd">informację dotyczącą używania przez usługobiorcę, który ukończył 15 rok życia, wyrobów tytoniowych zgodnie z kodem określonym w tabeli nr 18 załącznika nr 3 do rozporządzenia w sprawie zakresu niezbędnych informacji – co najmniej raz w danym roku kalendarzowym.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/866__art_3__ust_3" gd:GUID="162260aa-5433-47d1-a828-3abd2da1f5d8">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="5348768c-0954-4108-ab50-bc653535fe6c" fragment="1" gd:fragmentGUID="80d5633b-d8e1-4baf-a1b8-1ae6e8321a96">W przypadku udzielenia świadczenia zdrowotnego, o którym mowa w ust. 1, innemu usługobiorcy niż wymieniony w ust. 2 usługodawca przekazuje do SIM dane określone w § 2 ust. 1, przy czym w zakresie danych identyfikujących świadczenie zdrowotne – wyłącznie dane, o których mowa w § 2 ust. 1 pkt 3 lit. a–c oraz g, oraz dodatkowo:</zdanie>
+          </p>
+          <punkt eId="DU/2025/866__art_3__ust_3__pkt_1" gd:GUID="18bc75a9-4a9a-4bd9-9488-b1b2692ad4ea">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="5348768c-0954-4108-ab50-bc653535fe6c" fragment="2" gd:fragmentGUID="f6bdcf5c-da91-4d12-9141-862e3254d216">dane, o których mowa w § 2 ust. 1 pkt 3 lit. e – w przypadku gdy jednostką statystyczną, o której mowa w załączniku nr 1 do rozporządzenia w sprawie zakresu niezbędnych informacji, jest porada;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/866__art_3__ust_3__pkt_2" gd:GUID="f304269f-2678-4021-873f-abb1c483efa5">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="5348768c-0954-4108-ab50-bc653535fe6c" fragment="3" gd:fragmentGUID="9e7a0124-fc8e-40a0-ad04-3acd911a874a">dane, o których mowa w § 2 ust. 2, dotyczące przyczyny głównej, o której informacje usługodawca przekazuje do SIM zgodnie z pkt 1;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/866__art_3__ust_3__pkt_3" gd:GUID="1004263b-559f-478a-8e1a-1ed97cb66e78">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="5348768c-0954-4108-ab50-bc653535fe6c" fragment="4" gd:fragmentGUID="5daa3131-f278-4684-8e61-0d5a7fb43740">(uchylony);</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/866__art_3__ust_3__pkt_4" gd:GUID="666bace0-c3c7-41a8-a1bb-9e8f58ff815c">
+            <nr>4</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="5348768c-0954-4108-ab50-bc653535fe6c" fragment="5" gd:fragmentGUID="87715fef-a1ff-4a03-badc-7249f5395b03">informacje charakteryzujące uprawnienie do świadczeń opieki zdrowotnej, o których mowa w § 4 pkt 8 i 9 rozporządzenia w sprawie zakresu niezbędnych informacji.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+      </paragraf>
+      <paragraf eId="DU/2025/866__art_4" gd:GUID="3d7978ef-6e9e-4b95-8149-be3bf6ac3cf9">
+        <nr>4</nr>
+        <ustep eId="DU/2025/866__art_4__ust_1" gd:GUID="28fd8e1a-d18a-4502-a741-62858c72ac82">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="69015f68-671f-4f8b-b0c2-744fe50af94d" fragment="1" gd:fragmentGUID="479f2722-292a-4108-9c4c-2012b5499b25">W przypadku świadczeń zdrowotnych pielęgniarki podstawowej opieki zdrowotnej oraz położnej podstawowej opieki zdrowotnej usługodawca przekazuje do SIM dane dotyczące każdego udzielonego świadczenia zdrowotnego.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/866__art_4__ust_2" gd:GUID="568cc96d-0f97-4e72-a876-7ecf5a61fee5">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="5ed61e28-1741-44cf-ab0d-1647a476530b" fragment="1" gd:fragmentGUID="e04884f5-8ca3-4a91-a11d-9da82e8230f1">W przypadku udzielenia świadczenia zdrowotnego, o którym mowa w ust. 1, usługobiorcy, który złożył deklarację wyboru, o której mowa w art. 10 ustawy z dnia 27 października 2017 r. o podstawowej opiece zdrowotnej, u danego usługodawcy, usługodawca przekazuje do SIM dane, o których mowa w § 2 ust. 1, przy czym w zakresie danych identyfikujących świadczenie zdrowotne – wyłącznie dane, o których mowa w § 2 ust. 1 pkt 3 lit. a–c oraz g, oraz w przypadku porady – dodatkowo informację dotyczącą zakresu porady, zgodnie z kodem określonym w tabeli nr 19 załącznika nr 3 do rozporządzenia w sprawie zakresu niezbędnych informacji – dla porad pielęgniarki podstawowej opieki zdrowotnej albo w tabeli nr 20 załącznika nr 3 do rozporządzenia w sprawie zakresu niezbędnych informacji – dla porad położnej podstawowej opieki zdrowotnej.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/866__art_4__ust_3" gd:GUID="27aa637c-05c4-404e-9946-98a73b5ab037">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a0c25386-a5b3-4bb8-8c6e-a39b6a3f1977" fragment="1" gd:fragmentGUID="c2ee7729-d0dc-42ff-bad0-3fd3b4e8625a">W przypadku udzielenia świadczenia zdrowotnego, o którym mowa w ust. 1, innemu usługobiorcy niż wymieniony w ust. 2 usługodawca przekazuje do SIM dane określone w § 2 ust. 1, przy czym w zakresie danych identyfikujących świadczenie zdrowotne – wyłącznie dane, o których mowa w § 2 ust. 1 pkt 3 lit. a–c oraz g, oraz dodatkowo:</zdanie>
+          </p>
+          <punkt eId="DU/2025/866__art_4__ust_3__pkt_1" gd:GUID="b7326cc0-991b-4f4d-adf4-c7623919175e">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="a0c25386-a5b3-4bb8-8c6e-a39b6a3f1977" fragment="2" gd:fragmentGUID="01e3caba-8237-4129-9f7f-36654ad2abe1">(uchylony);</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/866__art_4__ust_3__pkt_2" gd:GUID="78ee189b-c387-4f30-a7ac-29ae61e8ead8">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="a0c25386-a5b3-4bb8-8c6e-a39b6a3f1977" fragment="3" gd:fragmentGUID="7ff548a7-c9de-4234-b62b-46acd1dea1ac">informacje charakteryzujące uprawnienie do świadczeń opieki zdrowotnej, o których mowa w § 4 pkt 8 i 9 rozporządzenia w sprawie zakresu niezbędnych informacji.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/866__art_4__ust_4" gd:GUID="42c6b8f9-391e-4ab9-8d9b-7cae3ce429b9">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="5715c221-7033-4066-b0c0-141fe12661b8" fragment="1" gd:fragmentGUID="64f384f0-b5e9-4029-b736-61db3c1a1e67">W przypadku świadczeń zdrowotnych pielęgniarki lub higienistki szkolnej udzielanych w środowisku nauczania i wychowania usługodawca przekazuje do SIM dane o udzielonych świadczeniach zdrowotnych określone w § 2 ust. 1, gdy jednostką statystyczną, o której mowa w załączniku nr 1 do rozporządzenia w sprawie zakresu niezbędnych informacji, jest szczepienie, przy czym w zakresie danych identyfikujących świadczenie zdrowotne usługodawca przekazuje wyłącznie dane, o których mowa w § 2 ust. 1 pkt 3 lit. a–c oraz g.</zdanie>
+          </p>
+        </ustep>
+      </paragraf>
+      <paragraf eId="DU/2025/866__art_5" gd:GUID="bfe2b0a7-eebb-44a9-abd5-11c16a15e7de">
+        <nr>5</nr>
+        <ustep eId="DU/2025/866__art_5__ust_1" gd:GUID="7c03977c-2094-410f-ae31-8addec526a68">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="b9e591e4-cabe-46ef-a56c-09ee8c84eda0" fragment="1" gd:fragmentGUID="1e00727a-598c-48cd-9e61-6df09ae6a95c">W przypadku udzielenia świadczeń zdrowotnych, o których mowa w § 3 lub § 4, usługodawca przekazuje dodatkowo do SIM:</zdanie>
+          </p>
+          <punkt eId="DU/2025/866__art_5__ust_1__pkt_1" gd:GUID="bad5c3e3-ad14-4046-99fc-c7a1dacee748">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="b9e591e4-cabe-46ef-a56c-09ee8c84eda0" fragment="2" gd:fragmentGUID="1f588d74-1b41-4878-8146-8a74196aef18">(uchylony);</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/866__art_5__ust_1__pkt_2" gd:GUID="08a22420-ac71-4e6d-a103-ee6e875bb4d2">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="b9e591e4-cabe-46ef-a56c-09ee8c84eda0" fragment="3" gd:fragmentGUID="bb0154a2-7c89-4a47-a02a-6e442b7f271e">(uchylony);</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/866__art_5__ust_1__pkt_3" gd:GUID="8c6a5e6c-3182-4586-a23b-9815bf5cb0f2">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="b9e591e4-cabe-46ef-a56c-09ee8c84eda0" fragment="4" gd:fragmentGUID="98296fcf-7d0e-4fc5-93ed-af186715c826">(uchylony);</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/866__art_5__ust_1__pkt_4" gd:GUID="c80197b7-2f13-4c02-8ff7-6bf3db5c2551">
+            <nr>4</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="b9e591e4-cabe-46ef-a56c-09ee8c84eda0" fragment="5" gd:fragmentGUID="ce67db58-fbb8-4c09-be45-47f0586602b2">kod świadczenia określony przez Narodowy Fundusz Zdrowia, jeżeli został nadany;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/866__art_5__ust_1__pkt_5" gd:GUID="8f11dac7-e64b-41b9-af58-6a271151fe3a">
+            <nr>5</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="b9e591e4-cabe-46ef-a56c-09ee8c84eda0" fragment="6" gd:fragmentGUID="7634d581-6296-4439-845e-427b8c61325e">informacje niezbędne do rozliczenia, jeżeli obowiązek ich rejestrowania wynika z umowy lub z przepisów odrębnych;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/866__art_5__ust_1__pkt_6" gd:GUID="d282a8dc-45b0-4c89-8ffb-3ff40f5cb95a">
+            <nr>6</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="b9e591e4-cabe-46ef-a56c-09ee8c84eda0" fragment="7" gd:fragmentGUID="a284eb12-7a6c-4ff0-9b35-7cea050fd98d">informacje niezbędne do monitorowania celowości udzielanych świadczeń, jeżeli obowiązek ich rejestrowania wynika z umowy lub z przepisów odrębnych;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/866__art_5__ust_1__pkt_7" gd:GUID="e5b785e9-56bf-42dc-97f8-2ae30f4d7ec7">
+            <nr>7</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="b9e591e4-cabe-46ef-a56c-09ee8c84eda0" fragment="8" gd:fragmentGUID="84f4e2ed-0b4f-4ddd-a14c-b3eb2a0dfcbd">informacje niezbędne do potwierdzenia spełniania warunków realizacji świadczeń gwarantowanych określonych w przepisach wydanych na podstawie art. 31d ustawy z dnia 27 sierpnia 2004 r. o świadczeniach opieki zdrowotnej finansowanych ze środków publicznych;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/866__art_5__ust_1__pkt_8" gd:GUID="a102dc60-03f4-4be2-b3b8-a9f9bbd7bd24">
+            <nr>8</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="b9e591e4-cabe-46ef-a56c-09ee8c84eda0" fragment="9" gd:fragmentGUID="d7d0d92d-9faf-4a55-9d3e-ee7fd3b381ce">kody przyczyn współistniejących według Międzynarodowej Statystycznej Klasyfikacji Chorób i Problemów Zdrowotnych Rewizja Dziesiąta;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/866__art_5__ust_1__pkt_9" gd:GUID="23398010-7707-4cca-9aff-e10b93dd3e61">
+            <nr>9</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="b9e591e4-cabe-46ef-a56c-09ee8c84eda0" fragment="10" gd:fragmentGUID="7fd33034-01fb-4205-91de-5c66cef3a5c8">(uchylony).</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/866__art_5__ust_2" gd:GUID="c0267cab-4af0-4010-8a60-862719b481cb">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="47d30d58-9927-48ad-b302-00d9840afb73" fragment="1" gd:fragmentGUID="7cef87e0-0cbb-45e9-a2a1-afce4f55453a">Dane, o których mowa w ust. 1 pkt 8, usługodawca udzielający świadczeń zdrowotnych, o których mowa w § 3 lub § 4, przekazuje do SIM fakultatywnie.</zdanie>
+          </p>
+        </ustep>
+      </paragraf>
+      <paragraf eId="DU/2025/866__art_6" gd:GUID="a22d9e2c-32f6-4b1e-893e-1812d1806597">
+        <nr>6</nr>
+        <ustep eId="DU/2025/866__art_6__ust_1" gd:GUID="00650afc-e3b7-4f79-b9fe-9d859d10fb3a">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="8f7a70b8-a636-4633-baf7-9bb2ceabcbc5" fragment="1" gd:fragmentGUID="526e1bfe-ebda-432d-8947-7f5278fa39f1">Usługodawca przekazuje do SIM dane, o których mowa w § 2–5, niezwłocznie, lecz nie później niż w terminie 2 dni od dnia zakończenia zdarzenia medycznego.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/866__art_6__ust_2" gd:GUID="7c9fb923-73ad-4395-a228-c608781e7c59">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="88759e13-f870-4465-8018-11ec99f67844" fragment="1" gd:fragmentGUID="dab3bdc2-5f7f-4963-8422-6428abb933f2">W przypadku gdy rozpoczęcie i zakończenie udzielania świadczenia zdrowotnego nie następuje w tym samym dniu, usługodawca przekazuje do SIM niezwłocznie, lecz nie później niż w terminie 2 dni od dnia rozpoczęcia zdarzenia medycznego, dane, o których mowa w § 2 ust. 1 pkt 1 i 2, pkt 3 lit. a i b oraz pkt 4.</zdanie>
+            <zdanie nr="2" gd:zdGUID="7db9853b-1cad-4555-80fa-90865e001bf6" fragment="1" gd:fragmentGUID="cb414e77-0436-438c-a789-f554539f1115">Pozostałe dane określone w § 2–5 usługodawca przekazuje do SIM w trakcie trwania zdarzenia medycznego lub niezwłocznie po jego zakończeniu, lecz nie później niż w terminie 2 dni od dnia zakończenia zdarzenia medycznego.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/866__art_6__ust_3" gd:GUID="00801bc1-601d-4284-a3ad-f641eb89140f">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="7d3a3c5a-0fa3-4d2f-9294-1b2b030bc544" fragment="1" gd:fragmentGUID="549ac2e3-8c08-4d55-8fcb-ae23a59ee2a7">Jeżeli po przekazaniu danych zdarzenia medycznego do SIM usługodawca uzyska informacje o dodatkowych danych zdarzenia medycznego, niezwłocznie przekazuje te dane do SIM.</zdanie>
+          </p>
+        </ustep>
+      </paragraf>
+      <paragraf eId="DU/2025/866__art_7" gd:GUID="0096c695-e99c-44b0-ac54-aebb073f4a4f">
+        <nr>7</nr>
+        <ustep eId="DU/2025/866__art_7__ust_1" gd:GUID="32242a5c-b27e-4d5f-ad3a-98f73c1fe4e6">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="751db9c8-9b7b-4080-9aa6-7972540a74e3" fragment="1" gd:fragmentGUID="f6b75954-1fd6-4814-a518-2055bea66249">Usługodawcy przekazują dane do SIM w postaci elektronicznej.</zdanie>
+            <zdanie nr="2" gd:zdGUID="dd1c78df-1aa4-42cb-9bdb-7aaf6b1439e6" fragment="1" gd:fragmentGUID="cfc2d773-f897-4968-8a23-a040748a6e47">Usługodawca może dokonywać zmian danych przekazanych do SIM.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/866__art_7__ust_2" gd:GUID="f381359e-3a19-455e-b4f3-a7c4c982ee87">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="339da44f-14d7-4c61-b798-bfb454e3691c" fragment="1" gd:fragmentGUID="8f9202f9-dd5b-4639-bea5-2f89fc00c404">Dane są przekazywane do SIM w formacie komunikatów elektronicznych zgodnie z wzorami dokumentów stanowiącymi opis komunikatów elektronicznych stosowanych do przekazywania danych określonymi przez jednostkę podległą ministrowi właściwemu do spraw zdrowia właściwą w zakresie systemów informacyjnych ochrony zdrowia i zamieszczonymi w Biuletynie Informacji Publicznej ministra właściwego do spraw zdrowia.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/866__art_7__ust_3" gd:GUID="91e34cdb-bde4-4378-9a0b-c9ed87ff9bba">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="5e9d647a-f420-4582-bed2-5cc17f9848d2" fragment="1" gd:fragmentGUID="9112d2bb-56da-4d74-b8a2-1d88d3f10643">Przekazywanie komunikatów elektronicznych, o których mowa w ust. 2, obejmuje mogące się powtarzać fazy:</zdanie>
+          </p>
+          <punkt eId="DU/2025/866__art_7__ust_3__pkt_1" gd:GUID="d34c611c-a908-44ee-ad1a-c64ec141b986">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="5e9d647a-f420-4582-bed2-5cc17f9848d2" fragment="2" gd:fragmentGUID="0dd16ad0-f78e-462d-8dc7-34409c05131b">przygotowania komunikatu elektronicznego przez usługodawcę;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/866__art_7__ust_3__pkt_2" gd:GUID="23046a8e-8c7d-4dce-bb03-33e2347ed3c5">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="5e9d647a-f420-4582-bed2-5cc17f9848d2" fragment="3" gd:fragmentGUID="2ac605d1-3ce9-44f2-a482-f27946df19d1">przekazania komunikatu elektronicznego do SIM przez usługodawcę;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/866__art_7__ust_3__pkt_3" gd:GUID="5c6a7f1e-7e26-4790-badf-723894d70830">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="5e9d647a-f420-4582-bed2-5cc17f9848d2" fragment="4" gd:fragmentGUID="1f13ccc2-6334-4264-b0f4-e535a8d5c423">weryfikacji komunikatu elektronicznego przez jednostkę podległą ministrowi właściwemu do spraw zdrowia właściwą w zakresie systemów informacyjnych ochrony zdrowia lub przez Narodowy Fundusz Zdrowia – w przypadku świadczeń zdrowotnych finansowanych ze środków publicznych;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/866__art_7__ust_3__pkt_4" gd:GUID="aff113f8-f92c-444f-af07-085bcfdcb3c0">
+            <nr>4</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="5e9d647a-f420-4582-bed2-5cc17f9848d2" fragment="5" gd:fragmentGUID="a7c521c5-b6ff-421e-bd0f-d936e2e38adc">przygotowania przez jednostkę podległą ministrowi właściwemu do spraw zdrowia właściwą w zakresie systemów informacyjnych ochrony zdrowia zwrotnego komunikatu elektronicznego zawierającego potwierdzenie prawidłowości komunikatu elektronicznego albo wykaz stwierdzonych w nim błędów i braków lub przez Narodowy Fundusz Zdrowia – w przypadku świadczeń zdrowotnych finansowanych ze środków publicznych i jeżeli stwierdzone błędy i braki dotyczą danych niezbędnych do rozliczania świadczeń opieki zdrowotnej;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/866__art_7__ust_3__pkt_5" gd:GUID="1f9cf9f6-dfea-41db-a0b6-94c04a034019">
+            <nr>5</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="5e9d647a-f420-4582-bed2-5cc17f9848d2" fragment="6" gd:fragmentGUID="e8b96e07-c609-4d81-81c3-f89280768849">przekazania przez jednostkę podległą ministrowi właściwemu do spraw zdrowia właściwą w zakresie systemów informacyjnych ochrony zdrowia usługodawcy zwrotnego komunikatu elektronicznego lub przez Narodowy Fundusz Zdrowia – w przypadku świadczeń zdrowotnych finansowanych ze środków publicznych i jeżeli stwierdzone błędy i braki, o których mowa w pkt 4, dotyczą danych niezbędnych do rozliczania świadczeń opieki zdrowotnej;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/866__art_7__ust_3__pkt_6" gd:GUID="4b5f88fa-898a-40f0-be83-617368f286f0">
+            <nr>6</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="5e9d647a-f420-4582-bed2-5cc17f9848d2" fragment="7" gd:fragmentGUID="63bdf55b-25d0-45cf-b6ac-20bb6f5f5966">przekazania przez usługodawcę niezwłocznie poprawionego komunikatu elektronicznego jednostce podległej ministrowi właściwemu do spraw zdrowia właściwej w zakresie systemów informacyjnych ochrony zdrowia.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/866__art_7__ust_4" gd:GUID="ebfd36ef-8cec-4b3c-b53f-0296aeb0f6bd">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="61d69d03-70cd-4e24-8a1a-be1d4a3f0c0f" fragment="1" gd:fragmentGUID="a471250b-650f-44d3-b159-fac476d9a2fc">Opis sposobu weryfikacji, o której mowa w ust. 3 pkt 3, jest jawny i zamieszczany na stronie internetowej jednostki podległej ministrowi właściwemu do spraw zdrowia właściwej w zakresie systemów informacyjnych ochrony zdrowia, a także na stronie internetowej Narodowego Funduszu Zdrowia.</zdanie>
+          </p>
+        </ustep>
+      </paragraf>
+      <paragraf eId="DU/2025/866__art_8" gd:GUID="219b3ffa-bde8-4a26-acfc-b4d27a13b0d2">
+        <nr>8</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="70d0c1b2-955d-4d7a-aa7c-e4b133dafba8">
+          <p>
+            <zdanie nr="1" gd:zdGUID="daa2805d-381e-4161-8a95-6801ecd7eb13" fragment="1" gd:fragmentGUID="dd979fb5-3be5-473d-a2ab-75e170f52a39">Rozporządzenie wchodzi w życie po upływie 14 dni od dnia ogłoszenia<odnosnik id-odnosnika="100005" symbol="5" gd:GUID="81daca27-412d-4f4e-be31-75176ad3b1eb"><p><zdanie nr="1" gd:zdGUID="cea756a7-eac5-4606-9dd0-4c91b7bf5810" fragment="1" gd:fragmentGUID="09c6d068-28ec-4b24-8485-2407f665891e">Rozporządzenie zostało ogłoszone w dniu 16 lipca 2020 r.</zdanie></p></odnosnik>.</zdanie>
+          </p>
+        </ustep-n>
+      </paragraf>
+    </rozporzadzenie>
+  </obwieszczenie>
+</akt-prawny>

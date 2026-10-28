@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <rozporzadzenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/1755</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>a1f3450a-79e0-47a1-b36a-7c1054c5851b</gd:GUIDwersji>
+      <AdresISAP>WDU20250001755</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>1755</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 1755</AdresWyswietlany>
+      <Tytul>Rozporządzenie Ministra Zdrowia z dnia 9 grudnia 2025 r. zmieniające rozporządzenie w sprawie programu pilotażowego w zakresie koordynowanej opieki medycznej nad chorymi z neurofibromatozami oraz pokrewnymi im rasopatiami</Tytul>
+      <Rodzaj>ROZP</Rodzaj>
+      <DataOgloszenia>2025-12-10</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-12-09</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2025-12-30_DU-2025-1755_odczytane" rodzaj="wejscie-w-zycie" pochodzenie="odczytane" data="2025-12-30" podstawa="§ 2" zrodlo="https://eli.gov.pl/eli/DU/2025/1755" dowod="DU/2025/1755__art_2" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2025-12-30_DU-2025-1755_odczytane.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2025-12-30_DU-2025-1755_odczytane" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="1733211c-6e34-4b83-91a7-81767bf4459c" rola="wydajacy">
+          <Nazwa>Minister Zdrowia</Nazwa>
+          <OrganPodpisujacy>Minister Zdrowia</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>T.</imie> <nazwisko>Maciejewski</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Rozporządzenie</rodzaj-aktu>
+    <autor-aktu>Ministra Zdrowia<odnosnik id-odnosnika="1" symbol="1" gd:GUID="efdce082-b8bd-4ec4-bdd1-f2163598b045"><p><zdanie nr="1" gd:zdGUID="ac875485-b159-401b-b9e6-1fa38e9d0c1a" fragment="1" gd:fragmentGUID="4c58643c-51b2-45c2-acd6-a8aef0fc6613">Minister Zdrowia kieruje działem administracji rządowej – zdrowie, na podstawie § 1 ust. 2 rozporządzenia Prezesa Rady Ministrów z dnia 25 lipca 2025 r. w sprawie szczegółowego zakresu działania Ministra Zdrowia (Dz. U. poz. 1004).</zdanie></p></odnosnik></autor-aktu>
+    <data>z dnia 9 grudnia 2025 r.</data>
+    <tytul>zmieniające rozporządzenie w sprawie programu pilotażowego w zakresie koordynowanej opieki medycznej nad chorymi z neurofibromatozami oraz pokrewnymi im rasopatiami</tytul>
+    <podstawa-prawna>Na podstawie art. 48e ust. 5 ustawy z dnia 27 sierpnia 2004 r. o świadczeniach opieki zdrowotnej finansowanych ze środków publicznych (Dz. U. z 2025 r. poz. 1461, 1537 i 1739) zarządza się, co następuje:</podstawa-prawna>
+    <paragraf eId="DU/2025/1755__art_1" gd:GUID="40f277b5-161c-4747-82e4-a4eb22c7ff91" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-30_DU-2025-1755_odczytane.x" wejscie-w-zycie="2025-12-30">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="6194b86f-ca5e-439d-9562-1303d032f4d6" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-30_DU-2025-1755_odczytane.x" wejscie-w-zycie="2025-12-30">
+        <p>
+          <zdanie nr="1" gd:zdGUID="51daa1b6-31c7-4239-8c82-20c989e34dfc" fragment="1" gd:fragmentGUID="ff875bc5-b076-465c-8d1e-125833a9cd08" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-30_DU-2025-1755_odczytane.x" wejscie-w-zycie="2025-12-30">W rozporządzeniu Ministra Zdrowia z dnia 15 czerwca 2020 r. w sprawie programu pilotażowego w zakresie koordynowanej opieki medycznej nad chorymi z neurofibromatozami oraz pokrewnymi im rasopatiami (Dz. U. z 2024 r. poz. 495 i 1895) w § 4 pkt 2 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/495" cudzyslowy="oba" gd:nowGUID="323f9600-3331-4551-8855-211798c04584" element-eId="DU/2024/495__art_4__pkt_2" funkcja="zastap"><punkt eId="DU/2024/495__art_4__pkt_2" gd:GUID="33edb446-cffd-4577-87c2-79ebd493f75b" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-30_DU-2025-1755_odczytane.x" wejscie-w-zycie="2025-12-30"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="3a356ffa-686f-4deb-8361-0c5723e0bfeb" fragment="1" gd:fragmentGUID="72bc0c2a-c764-49b6-b344-023399c5e6de" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-30_DU-2025-1755_odczytane.x" wejscie-w-zycie="2025-12-30">etap realizacji programu pilotażowego, który trwa od dnia zawarcia umowy o udzielanie świadczeń opieki zdrowotnej w zakresie programu pilotażowego do dnia 30 kwietnia 2026 r.;</zdanie></p></punkt></cytat-strukt>.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2025/1755__art_2" gd:GUID="b303ef08-d724-4ff1-9228-86a7d40752b3" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-30_DU-2025-1755_odczytane.x" wejscie-w-zycie="2025-12-30">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="125c13d3-0fce-4a9c-a28f-8f9788cc7068" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-30_DU-2025-1755_odczytane.x" wejscie-w-zycie="2025-12-30">
+        <p>
+          <zdanie nr="1" gd:zdGUID="980d0fc8-7c83-4af2-8b67-5de2d56265f3" fragment="1" gd:fragmentGUID="0c1d725d-d659-4bb2-93d2-749fbb4016e5" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-30_DU-2025-1755_odczytane.x" wejscie-w-zycie="2025-12-30">Rozporządzenie wchodzi w życie z dniem 30 grudnia 2025 r.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <organ-podpisujacy>Minister Zdrowia: wz. <i><osoba podpisujacy="true" gd:osobaGUID="450bb61e-723a-4002-b2f0-75354a033984"><imie>T.</imie> <nazwisko>Maciejewski</nazwisko></osoba></i></organ-podpisujacy>
+  </rozporzadzenie>
+</akt-prawny>

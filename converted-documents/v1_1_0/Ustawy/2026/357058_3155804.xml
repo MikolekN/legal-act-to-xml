@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <ustawa>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2026/36</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>f0da5c28-f1d4-49db-991e-9cda3046f90c</gd:GUIDwersji>
+      <AdresISAP>WDU20260000036</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2026</Rok>
+      <Pozycja>36</Pozycja>
+      <AdresWyswietlany>Dz.U. 2026 poz. 36</AdresWyswietlany>
+      <Tytul>Ustawa z dnia 18 grudnia 2025 r. zmieniająca ustawę o zmianie ustawy o dotacji przeznaczonej dla niektórych podmiotów</Tytul>
+      <Rodzaj>USTAWA</Rodzaj>
+      <DataOgloszenia>2026-01-13</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-12-18</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2026-01-14_DU-2026-36_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2026-01-14" warunek="z dniem następującym po dniu ogłoszenia" podstawa="art. 2" zrodlo="https://eli.gov.pl/eli/DU/2026/36" dowod="DU/2026/36__art_2" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2026-01-14_DU-2026-36_domyslne.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2026-01-14_DU-2026-36_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="58119570-10b9-4679-b876-3d0534154b95" rola="wydajacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Sejm">
+          <Nazwa>SEJM</Nazwa>
+        </Organ>
+        <Organ gd:GUID="11288bf0-11fe-4925-b9bc-a05ecd58ad4c" rola="podpisujacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Prezydent">
+          <Nazwa>Prezydent Rzeczypospolitej Polskiej</Nazwa>
+          <OrganPodpisujacy>Prezydent Rzeczypospolitej Polskiej</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>K.</imie> <nazwisko>Nawrocki</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Ustawa</rodzaj-aktu>
+    <data>z dnia 18 grudnia 2025 r.</data>
+    <tytul>zmieniająca ustawę o zmianie ustawy o dotacji przeznaczonej dla niektórych podmiotów</tytul>
+    <artykul eId="DU/2026/36__art_1" gd:GUID="c1062abf-d81a-43c1-9056-c2f813bf672f" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-14_DU-2026-36_domyslne.x" wejscie-w-zycie="2026-01-14">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="84c3f9a3-a278-432a-baee-057dea735f60" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-14_DU-2026-36_domyslne.x" wejscie-w-zycie="2026-01-14">
+        <p>
+          <zdanie nr="1" gd:zdGUID="9b397f7e-e4d4-42d8-ba5e-966c9c0da49c" fragment="1" gd:fragmentGUID="8a8f1c29-0dc1-4029-8f96-018177c31b45" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-14_DU-2026-36_domyslne.x" wejscie-w-zycie="2026-01-14">W ustawie z dnia 27 listopada 2020 r. o zmianie ustawy o dotacji przeznaczonej dla niektórych podmiotów (Dz. U. poz. 2398) w art. 4 w ust. 1 pkt 6 i 7 otrzymują brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2020/2398" cudzyslowy="otwierajacy" gd:nowGUID="11a5db7a-0b90-45b2-8f53-6f057356f3e8" element-eId="DU/2020/2398__art_4__ust_1__pkt_6" funkcja="zastap"><punkt eId="DU/2020/2398__art_4__ust_1__pkt_6" gd:GUID="797d96ad-ccef-43a9-ba2d-c7d857794d55" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-14_DU-2026-36_domyslne.x" wejscie-w-zycie="2026-01-14"><nr>6</nr><p><zdanie nr="1" gd:zdGUID="1837e6f5-8fff-43b5-ac6f-47b553151f08" fragment="1" gd:fragmentGUID="c168111e-a276-4be3-a031-713a932f5257" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-14_DU-2026-36_domyslne.x" wejscie-w-zycie="2026-01-14">2026 r. – 135 474 500 zł;</zdanie></p></punkt></cytat-strukt><cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2020/2398" cudzyslowy="zamykajacy" gd:nowGUID="e908b8c6-c72d-4fed-aeef-4c1a1ea5d8ba" element-eId="DU/2020/2398__art_4__ust_1__pkt_7" funkcja="zastap"><punkt eId="DU/2020/2398__art_4__ust_1__pkt_7" gd:GUID="7b45a6ab-7d0f-43bc-a26e-c45951e222fd" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-14_DU-2026-36_domyslne.x" wejscie-w-zycie="2026-01-14"><nr>7</nr><p><zdanie nr="1" gd:zdGUID="1135a498-2711-4972-879f-2873aeeaa318" fragment="1" gd:fragmentGUID="1aa869e4-a54b-42cd-8615-d20c53767197" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-14_DU-2026-36_domyslne.x" wejscie-w-zycie="2026-01-14">2027 r. – 161 610 852 zł.</zdanie></p></punkt></cytat-strukt>.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2026/36__art_2" gd:GUID="c6bc0976-449c-44de-bfce-0a0b2b2a1f83" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-14_DU-2026-36_domyslne.x" wejscie-w-zycie="2026-01-14">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="1fe12dcf-599d-4c5f-991d-b542507d8704" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-14_DU-2026-36_domyslne.x" wejscie-w-zycie="2026-01-14">
+        <p>
+          <zdanie nr="1" gd:zdGUID="9df60495-18ab-4167-8737-4cde52f3fc37" fragment="1" gd:fragmentGUID="4d750290-18c0-4f01-8b0b-c3f8aa1d5d71" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-14_DU-2026-36_domyslne.x" wejscie-w-zycie="2026-01-14">Ustawa wchodzi w życie z dniem następującym po dniu ogłoszenia.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <organ-podpisujacy>Prezydent Rzeczypospolitej Polskiej: <i><osoba podpisujacy="true" gd:osobaGUID="20aa0656-de4c-4c0a-b3be-0d54e4c4a79c"><imie>K.</imie> <nazwisko>Nawrocki</nazwisko></osoba></i></organ-podpisujacy>
+  </ustawa>
+</akt-prawny>

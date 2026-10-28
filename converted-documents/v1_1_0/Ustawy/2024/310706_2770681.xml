@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <ustawa>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2024/1915</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>e096263f-fcbe-4972-bb20-c7eef40f92a5</gd:GUIDwersji>
+      <AdresISAP>WDU20240001915</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2024</Rok>
+      <Pozycja>1915</Pozycja>
+      <AdresWyswietlany>Dz.U. 2024 poz. 1915</AdresWyswietlany>
+      <Tytul>Ustawa z dnia 6 grudnia 2024 r. o zmianie ustawy o świadczeniach opieki zdrowotnej finansowanych ze środków publicznych</Tytul>
+      <Rodzaj>USTAWA</Rodzaj>
+      <DataOgloszenia>2024-12-23</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2024-12-06</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2024-12-24_DU-2024-1915_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2024-12-24" warunek="z dniem następującym po dniu ogłoszenia" podstawa="art. 6" zrodlo="https://eli.gov.pl/eli/DU/2024/1915" dowod="DU/2024/1915__art_6">
+            <JednostkaAktu eId="DU/2024/1915__art_5" />
+          </Zdarzenie>
+          <Zdarzenie id="zdarz_wejscie_2025-01-01_DU-2024-1915_odczytane" rodzaj="wejscie-w-zycie" pochodzenie="odczytane" data="2025-01-01" podstawa="art. 6" zrodlo="https://eli.gov.pl/eli/DU/2024/1915" dowod="DU/2024/1915__art_6" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2024-12-24_DU-2024-1915_domyslne.x" glowna="false">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2024-12-24_DU-2024-1915_domyslne" />
+        </GrupaCzasowa>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1915_odczytane.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2025-01-01_DU-2024-1915_odczytane" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="de66b1ea-dcc4-4958-9d46-da7debde73cc" rola="wydajacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Sejm">
+          <Nazwa>SEJM</Nazwa>
+        </Organ>
+        <Organ gd:GUID="869fbb5b-0789-4cc1-ad11-316c2e0d2e79" rola="podpisujacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Prezydent">
+          <Nazwa>Prezydent Rzeczypospolitej Polskiej</Nazwa>
+          <OrganPodpisujacy>Prezydent Rzeczypospolitej Polskiej</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>A.</imie> <nazwisko>Duda</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Ustawa</rodzaj-aktu>
+    <data>z dnia 6 grudnia 2024 r.</data>
+    <tytul>o zmianie ustawy o świadczeniach opieki zdrowotnej finansowanych ze środków publicznych</tytul>
+    <artykul eId="DU/2024/1915__art_1" gd:GUID="859e6619-f033-4c29-92ec-e64f997979ad" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1915_odczytane.x" wejscie-w-zycie="2025-01-01">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="255cf8bb-d39c-46ca-a07c-ca2fc452c66c" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1915_odczytane.x" wejscie-w-zycie="2025-01-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="52d00b18-e175-41ad-af00-9da34e3bedf4" fragment="1" gd:fragmentGUID="77d7fb58-16a0-473d-8663-8458331e14fc" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1915_odczytane.x" wejscie-w-zycie="2025-01-01">W ustawie z dnia 27 sierpnia 2004 r. o świadczeniach opieki zdrowotnej finansowanych ze środków publicznych (Dz. U. z 2024 r. poz. 146, 858, 1222, 1593 i 1615) w art. 81 wprowadza się następujące zmiany:</zdanie>
+        </p>
+        <punkt eId="DU/2024/1915__art_1__pkt_1" gd:GUID="66b89e29-16e5-46f0-9800-84a22590a5aa" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1915_odczytane.x" wejscie-w-zycie="2025-01-01">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="52d00b18-e175-41ad-af00-9da34e3bedf4" fragment="2" gd:fragmentGUID="5333699b-436c-41ed-b869-d02f6987b7e5" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1915_odczytane.x" wejscie-w-zycie="2025-01-01">w ust. 2 zdanie pierwsze otrzymuje brzmienie:<cytat-w-tekscie now:akt="https://eli.gov.pl/eli/DU/2024/146" cudzyslowy="oba" gd:nowGUID="143942b5-83b1-413e-8f1d-ac958db65bc4" element-eId="DU/2024/146__art_81__ust_2__zdn_1" funkcja="zastap-tekst"><zdanie nr="1" gd:zdGUID="e22fce20-f64e-4577-9224-16d88ec3c9b1" fragment="1" gd:fragmentGUID="e4f4ac49-68b7-4969-9ff0-2528705794aa" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1915_odczytane.x" wejscie-w-zycie="2025-01-01">Roczną podstawę wymiaru składki na ubezpieczenie zdrowotne osób prowadzących działalność pozarolniczą, o których mowa w art. 8 ust. 6 pkt 1, 3, 4 i 5 ustawy z dnia 13 października 1998 r. o systemie ubezpieczeń społecznych oraz art. 18 ust. 1 ustawy z dnia 6 marca 2018 r. – Prawo przedsiębiorców, opłacających podatek dochodowy na zasadach określonych w art. 27, art. 30c lub art. 30ca ustawy z dnia 26 lipca 1991 r. o podatku dochodowym od osób fizycznych, stanowi dochód z działalności gospodarczej ustalony za rok kalendarzowy jako różnica między osiągniętymi przychodami w rozumieniu ustawy z dnia 26 lipca 1991 r. o podatku dochodowym od osób fizycznych a poniesionymi kosztami uzyskania tych przychodów w rozumieniu ustawy z dnia 26 lipca 1991 r. o podatku dochodowym od osób fizycznych, z uwzględnieniem art. 14c, art. 22 ust. 4a i 4b oraz art. 24 ust. 1 i ust. 2 zdanie pierwsze ustawy z dnia 26 lipca 1991 r. o podatku dochodowym od osób fizycznych, pomniejszony o kwotę opłaconych w tym roku składek na ubezpieczenia emerytalne, rentowe, chorobowe i wypadkowe, jeżeli nie zostały zaliczone do kosztów uzyskania przychodów.</zdanie></cytat-w-tekscie>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2024/1915__art_1__pkt_2" gd:GUID="c50d005d-d62b-4967-8e97-1720416172b8" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1915_odczytane.x" wejscie-w-zycie="2025-01-01">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="52d00b18-e175-41ad-af00-9da34e3bedf4" fragment="3" gd:fragmentGUID="f81ebd3c-75d6-4082-bb2b-f83e1d5d1c41" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1915_odczytane.x" wejscie-w-zycie="2025-01-01">w ust. 2c pkt 5 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/146" cudzyslowy="oba" gd:nowGUID="a11240cb-db5a-4ee0-9d26-9609cb79a534" element-eId="DU/2024/146__art_81__ust_2c__pkt_5" funkcja="zastap"><punkt eId="DU/2024/146__art_81__ust_2c__pkt_5" gd:GUID="786eff24-d95a-4245-8f99-b3040d3009f9" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1915_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>5</nr><p><zdanie nr="1" gd:zdGUID="cdadac7d-4939-4614-bbfe-a5f0e50b6314" fragment="1" gd:fragmentGUID="909f5817-7119-4b1a-a946-b2d92eef5bce" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1915_odczytane.x" wejscie-w-zycie="2025-01-01">przy obliczaniu dochodów, o których mowa w pkt 1 i 3, stosuje się art. 24 ust. 1 i ust. 2 zdanie pierwsze ustawy z dnia 26 lipca 1991 r. o podatku dochodowym od osób fizycznych oraz uwzględnia się art. 14c oraz art. 22 ust. 4a i 4b ustawy z dnia 26 lipca 1991 r. o podatku dochodowym od osób fizycznych; w przypadku osób prowadzących podatkową księgę przychodów i rozchodów dochód, o którym mowa w pkt 1 i 3, ustala się z uwzględnieniem art. 44 ust. 2 zdanie drugie ustawy z dnia 26 lipca 1991 r. o podatku dochodowym od osób fizycznych.</zdanie></p></punkt></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2024/1915__art_1__pkt_3" gd:GUID="093e4bc1-8398-4e7b-a042-35082bac4e0d" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1915_odczytane.x" wejscie-w-zycie="2025-01-01">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="52d00b18-e175-41ad-af00-9da34e3bedf4" fragment="4" gd:fragmentGUID="bf0e10a6-824f-461d-bbc2-a610250dd0aa" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1915_odczytane.x" wejscie-w-zycie="2025-01-01"><now:uchyl akt="https://eli.gov.pl/eli/DU/2024/146" element-eId="DU/2024/146__art_81__ust_2ca" gd:nowGUID="8e3be4c3-629d-4a84-aadf-7df1e9bb666f" />uchyla się ust. 2ca;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2024/1915__art_1__pkt_4" gd:GUID="903cabf7-87ca-49d5-9c09-fb87fa2fa110" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1915_odczytane.x" wejscie-w-zycie="2025-01-01">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="52d00b18-e175-41ad-af00-9da34e3bedf4" fragment="5" gd:fragmentGUID="adb8daa6-5c5b-4a7b-a227-fee71e1c798a" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1915_odczytane.x" wejscie-w-zycie="2025-01-01"><now:uchyl akt="https://eli.gov.pl/eli/DU/2024/146" element-eId="DU/2024/146__art_81__ust_2fa" gd:nowGUID="f8f7f70e-dbaf-4f9a-9d7a-6858745ebc3b" />uchyla się ust. 2fa;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2024/1915__art_1__pkt_5" gd:GUID="e75a0731-cd05-470d-8bd3-7c5812ce4821" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1915_odczytane.x" wejscie-w-zycie="2025-01-01">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="52d00b18-e175-41ad-af00-9da34e3bedf4" fragment="6" gd:fragmentGUID="b5de567c-7122-4fec-a1c2-2e0b922620c0" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1915_odczytane.x" wejscie-w-zycie="2025-01-01"><now:uchyl akt="https://eli.gov.pl/eli/DU/2024/146" element-eId="DU/2024/146__art_81__ust_2g__zdn_2" gd:nowGUID="f4cb7e2b-86e6-4080-90ea-3c265f3166b5" />w ust. 2g skreśla się zdanie drugie;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2024/1915__art_1__pkt_6" gd:GUID="f9a6b9d7-d6ea-4496-892d-438cd2b0e9d9" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1915_odczytane.x" wejscie-w-zycie="2025-01-01">
+          <nr>6</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="52d00b18-e175-41ad-af00-9da34e3bedf4" fragment="7" gd:fragmentGUID="3b0197bb-4707-4377-8e95-e006facd7fd1" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1915_odczytane.x" wejscie-w-zycie="2025-01-01"><now:uchyl akt="https://eli.gov.pl/eli/DU/2024/146" element-eId="DU/2024/146__art_81__ust_2ga" gd:nowGUID="ebf53914-3bce-4289-9ef9-9843ed9f400f" />uchyla się ust. 2ga;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2024/1915__art_1__pkt_7" gd:GUID="73c23ba2-3c1c-474b-9023-bb4f34ceb730" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1915_odczytane.x" wejscie-w-zycie="2025-01-01">
+          <nr>7</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="52d00b18-e175-41ad-af00-9da34e3bedf4" fragment="8" gd:fragmentGUID="1528ee69-587d-4cae-a082-7a4f6a93d772" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1915_odczytane.x" wejscie-w-zycie="2025-01-01">ust. 2zd otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/146" cudzyslowy="oba" gd:nowGUID="bee50d5b-75af-45aa-b018-70967d87d772" element-eId="DU/2024/146__art_81__ust_2zd" funkcja="zastap"><ustep eId="DU/2024/146__art_81__ust_2zd" gd:GUID="4ea189e1-0d52-452c-ac78-f4ec8f9548c3" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1915_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>2zd</nr><p><zdanie nr="1" gd:zdGUID="6b009d05-854c-4ecd-9a48-b08c5d61d617" fragment="1" gd:fragmentGUID="6219dc82-9300-46be-9c35-5226ebcc5a89" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1915_odczytane.x" wejscie-w-zycie="2025-01-01">Ilekroć w ust. 2, 2b–2c, 2d–2f, 2g i 2h–2zc jest mowa o przychodach lub kosztach ich uzyskania, w rozumieniu ustawy z dnia 26 lipca 1991 r. o podatku dochodowym od osób fizycznych lub ustawy z dnia 20 listopada 1998 r. o zryczałtowanym podatku dochodowym od niektórych przychodów osiąganych przez osoby fizyczne, nie uwzględnia się w tych przychodach i kosztach ich uzyskania:</zdanie></p><punkt eId="DU/2024/146__art_81__ust_2zd__pkt_1" gd:GUID="1c9b61a7-d81c-43a0-90c5-142aac063376" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1915_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="6b009d05-854c-4ecd-9a48-b08c5d61d617" fragment="2" gd:fragmentGUID="55f4aa82-d5a5-4d19-b737-ee842bd5401c" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1915_odczytane.x" wejscie-w-zycie="2025-01-01">przychodów osiągniętych i kosztów poniesionych w okresie zawieszenia wykonywania działalności gospodarczej na podstawie przepisów ustawy z dnia 6 marca 2018 r. – Prawo przedsiębiorców, z wyłączeniem przychodów rozliczanych w tym okresie na podstawie art. 14c ustawy z dnia 26 lipca 1991 r. o podatku dochodowym od osób fizycznych i kosztów potrąconych w tym okresie na podstawie art. 22 ust. 4a i 4b ustawy z dnia 26 lipca 1991 r. o podatku dochodowym od osób fizycznych;</zdanie></p></punkt><punkt eId="DU/2024/146__art_81__ust_2zd__pkt_2" gd:GUID="0d177d29-1a3b-4f8f-8b84-efab449acfd8" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1915_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="6b009d05-854c-4ecd-9a48-b08c5d61d617" fragment="3" gd:fragmentGUID="a7813c1e-83a4-4957-8ec0-d25e16ec6346" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1915_odczytane.x" wejscie-w-zycie="2025-01-01">przychodów niepodlegających opodatkowaniu podatkiem dochodowym innych niż określone w art. 21 ust. 1 pkt 63a, 63b i 152–154 ustawy z dnia 26 lipca 1991 r. o podatku dochodowym od osób fizycznych;</zdanie></p></punkt><punkt eId="DU/2024/146__art_81__ust_2zd__pkt_3" gd:GUID="41148df8-6713-4750-871b-46d1bcb4e140" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1915_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>3</nr><p><zdanie nr="1" gd:zdGUID="6b009d05-854c-4ecd-9a48-b08c5d61d617" fragment="4" gd:fragmentGUID="75901bbb-253a-4b05-90f0-2c68ea4875b9" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1915_odczytane.x" wejscie-w-zycie="2025-01-01">przychodów, o których mowa w art. 14 ust. 2 pkt 1 i 19 ustawy z dnia 26 lipca 1991 r. o podatku dochodowym od osób fizycznych, i kosztów uzyskania przychodów, o których mowa w art. 23 ust. 1 pkt 1 ustawy z dnia 26 lipca 1991 r. o podatku dochodowym od osób fizycznych;</zdanie></p></punkt><punkt eId="DU/2024/146__art_81__ust_2zd__pkt_4" gd:GUID="76473c44-f7f8-4421-b508-e8a84d18de5f" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1915_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>4</nr><p><zdanie nr="1" gd:zdGUID="6b009d05-854c-4ecd-9a48-b08c5d61d617" fragment="5" gd:fragmentGUID="2f85c5e4-cc9f-4cc9-8c72-418b3b4acfe1" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1915_odczytane.x" wejscie-w-zycie="2025-01-01">przychodów osiągniętych i kosztów poniesionych w miesiącu, w którym ubezpieczony spełniał warunki do zwolnienia z obowiązku opłacania składki na podstawie art. 82 ust. 8–9a.</zdanie></p></punkt></ustep></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2024/1915__art_1__pkt_8" gd:GUID="575f3e33-a757-4be2-b408-39569c30d93f" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1915_odczytane.x" wejscie-w-zycie="2025-01-01">
+          <nr>8</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="52d00b18-e175-41ad-af00-9da34e3bedf4" fragment="9" gd:fragmentGUID="abcdf2ea-1cc1-434f-92bb-d24522d2a9be" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1915_odczytane.x" wejscie-w-zycie="2025-01-01">po ust. 2zd dodaje się ust. 2ze i 2zf w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/146" cudzyslowy="oba" gd:nowGUID="6151e04a-01f4-43ce-b364-7aa4c89c75c0" element-eId="DU/2024/146__art_81__ust_2zd" funkcja="dodaj-po"><ustep eId="DU/2024/146__art_81__ust_2ze" gd:GUID="21a9cb7a-693e-4f09-8032-a02fe5f0b527" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1915_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>2ze</nr><p><zdanie nr="1" gd:zdGUID="19cefdd4-de3e-4e94-b679-0ae7518a6ab3" fragment="1" gd:fragmentGUID="17244069-5955-4b61-af68-5cf7e74d5d21" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1915_odczytane.x" wejscie-w-zycie="2025-01-01">Osoba, o której mowa w ust. 2, może uwzględnić osiągnięte przychody, o których mowa w art. 14 ust. 2 pkt 1 i 19 ustawy z dnia 26 lipca 1991 r. o podatku dochodowym od osób fizycznych, i poniesione koszty uzyskania tych przychodów, o których mowa w art. 23 ust. 1 pkt 1 ustawy z dnia 26 lipca 1991 r. o podatku dochodowym od osób fizycznych, w rocznej podstawie wymiaru składki na ubezpieczenie zdrowotne.</zdanie><zdanie nr="2" gd:zdGUID="7203fc55-48ad-4dcf-aa95-f554756cfbcd" fragment="1" gd:fragmentGUID="463b8110-f8de-4be1-ac44-47542eb3e304" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1915_odczytane.x" wejscie-w-zycie="2025-01-01">Przychody i koszty, o których mowa w zdaniu pierwszym, wykazywane są w dokumencie rozliczeniowym, o którym mowa w ust. 2k, wraz z oświadczeniem o uwzględnieniu tych przychodów i kosztów w rocznej podstawie wymiaru składki na ubezpieczenie zdrowotne.</zdanie></p></ustep><ustep eId="DU/2024/146__art_81__ust_2zf" gd:GUID="1d20e59f-7ee9-4ee3-ad85-602d027285c8" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1915_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>2zf</nr><p><zdanie nr="1" gd:zdGUID="ecc66dc9-a096-47e9-b26a-f2af6688d176" fragment="1" gd:fragmentGUID="d1f0755f-90fe-41be-af7d-5eb2551bd02e" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1915_odczytane.x" wejscie-w-zycie="2025-01-01">Ilekroć w ust. 2, 2b–2c, 2d–2f, 2g i 2h–2zc jest mowa o składkach na ubezpieczenia emerytalne, rentowe, chorobowe i wypadkowe, nie uwzględnia się w ich kwotach składek opłaconych w miesiącu, w którym ubezpieczony spełniał warunki do zwolnienia z obowiązku opłacania składki na podstawie art. 82 ust. 8–9a.</zdanie></p></ustep></cytat-strukt>.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2024/1915__art_2" gd:GUID="91eebe8f-9a66-4cd1-b7c9-998f9da84f25" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1915_odczytane.x" wejscie-w-zycie="2025-01-01">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="0f683e2b-6c4a-4d72-98c7-42808bb3ef8b" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1915_odczytane.x" wejscie-w-zycie="2025-01-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="e3d29f99-a287-46cb-9eaf-ca1d6b655f3f" fragment="1" gd:fragmentGUID="060c3a4f-afdb-4473-92a6-adc167501dd7" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1915_odczytane.x" wejscie-w-zycie="2025-01-01">W przypadku osób prowadzących działalność pozarolniczą, o których mowa w art. 8 ust. 6 pkt 1, 3, 4 i 5 ustawy z dnia 13 października 1998 r. o systemie ubezpieczeń społecznych (Dz. U. z 2024 r. poz. 497, 863, 1243 i 1615) oraz w art. 18 ust. 1 ustawy z dnia 6 marca 2018 r. – Prawo przedsiębiorców (Dz. U. z 2024 r. poz. 236, 1222 i 1871), opłacających podatek dochodowy na zasadach określonych w art. 27, art. 30c lub art. 30ca ustawy z dnia 26 lipca 1991 r. o podatku dochodowym od osób fizycznych (Dz. U. z 2024 r. poz. 226, z późn. zm.<odnosnik id-odnosnika="1" symbol="1" gd:GUID="1587ba30-7e0d-4e59-936b-1a633a7b95c4"><p><zdanie nr="1" gd:zdGUID="9097ea33-9955-457f-a385-a18e86790885" fragment="1" gd:fragmentGUID="1f52cb69-9d74-41b4-9685-2ea0c09319b8">Zmiany tekstu jednolitego wymienionej ustawy zostały ogłoszone w Dz. U. z 2024 r. poz. 232, 854, 858, 859, 863, 1572, 1585, 1593, 1615 i 1635.</zdanie></p></odnosnik>), przepisy art. 81 ust. 2 zdanie pierwsze, ust. 2c pkt 5 i ust. 2zd pkt 3 ustawy zmienianej w art. 1, w brzmieniu nadanym niniejszą ustawą, oraz art. 81 ust. 2ze ustawy zmienianej w art. 1 stosuje się do rozliczenia składek na ubezpieczenie zdrowotne należnych za okres od dnia 1 lutego 2025 r.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2024/1915__art_3" gd:GUID="9b1ae606-bac8-45f8-92d6-e5bd206b732e" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1915_odczytane.x" wejscie-w-zycie="2025-01-01">
+      <nr>3</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="56fd2015-744a-480f-8a1a-c67f8d494562" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1915_odczytane.x" wejscie-w-zycie="2025-01-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="65fe2eed-5da7-4f83-a3b4-c9bc6baf56a1" fragment="1" gd:fragmentGUID="50d27e1f-a9ea-4dfb-a5a2-b6e6619bdcc1" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1915_odczytane.x" wejscie-w-zycie="2025-01-01">Do rozliczenia składek na ubezpieczenie zdrowotne osób, o których mowa w art. 81 ust. 2e ustawy zmienianej w art. 1, należnych za okres do dnia 31 grudnia 2024 r. stosuje się przepisy ustawy zmienianej w art. 1 w brzmieniu dotychczasowym.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2024/1915__art_4" gd:GUID="840f3256-a962-48b2-9d7c-d7c6957054ab" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1915_odczytane.x" wejscie-w-zycie="2025-01-01">
+      <nr>4</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="b0206222-11a7-477b-a099-a7688802fbee" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1915_odczytane.x" wejscie-w-zycie="2025-01-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="cb9f3e40-07d6-4b9b-b79c-0aade0eefcdd" fragment="1" gd:fragmentGUID="4c57ad59-aea4-4478-81d4-b51d7e56f6d7" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1915_odczytane.x" wejscie-w-zycie="2025-01-01">W przypadku składek na ubezpieczenie zdrowotne należnych odpowiednio za rok 2025 albo za rok składkowy obejmujący okres od dnia 1 lutego 2025 r. do dnia 31 stycznia 2026 r.:</zdanie>
+        </p>
+        <punkt eId="DU/2024/1915__art_4__pkt_1" gd:GUID="c69019b6-7ba3-4fed-a593-bc1d18f56ed7" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1915_odczytane.x" wejscie-w-zycie="2025-01-01">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="cb9f3e40-07d6-4b9b-b79c-0aade0eefcdd" fragment="2" gd:fragmentGUID="b3a4454d-fc0f-4452-9ff6-c5efe54db201" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1915_odczytane.x" wejscie-w-zycie="2025-01-01">podstawa wymiaru składki na ubezpieczenie zdrowotne, o której mowa:</zdanie>
+          </p>
+          <litera eId="DU/2024/1915__art_4__pkt_1__lit_a" gd:GUID="3ce5240a-d66e-44c4-b30c-de66c7a7502e" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1915_odczytane.x" wejscie-w-zycie="2025-01-01">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="cb9f3e40-07d6-4b9b-b79c-0aade0eefcdd" fragment="3" gd:fragmentGUID="c7f7a6fb-8f82-44cd-8e47-24d3d186366e" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1915_odczytane.x" wejscie-w-zycie="2025-01-01">w art. 79a ust. 1 pkt 1 ustawy zmienianej w art. 1, nie może być niższa niż kwota 75 % minimalnego wynagrodzenia obowiązującego w pierwszym dniu roku składkowego,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2024/1915__art_4__pkt_1__lit_b" gd:GUID="29339a11-4ea0-432b-933b-cfc510548679" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1915_odczytane.x" wejscie-w-zycie="2025-01-01">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="cb9f3e40-07d6-4b9b-b79c-0aade0eefcdd" fragment="4" gd:fragmentGUID="104e3491-aa9d-4fb4-a23b-27b5f28ca804" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1915_odczytane.x" wejscie-w-zycie="2025-01-01">w art. 79a ust. 1 pkt 2 ustawy zmienianej w art. 1, nie może być niższa niż kwota stanowiąca iloczyn liczby miesięcy w roku składkowym i 75 % minimalnego wynagrodzenia obowiązującego w pierwszym dniu roku składkowego,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2024/1915__art_4__pkt_1__lit_c" gd:GUID="0b41453e-4ffb-41c5-a7eb-2ab2915ca0f6" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1915_odczytane.x" wejscie-w-zycie="2025-01-01">
+            <nr>c</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="cb9f3e40-07d6-4b9b-b79c-0aade0eefcdd" fragment="5" gd:fragmentGUID="51f2b184-af1a-4651-8d1d-6116ca8ef15e" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1915_odczytane.x" wejscie-w-zycie="2025-01-01">w art. 81 ust. 2b ustawy zmienianej w art. 1, nie może być niższa niż kwota stanowiąca iloczyn liczby miesięcy podlegania ubezpieczeniu zdrowotnemu w roku kalendarzowym, za który był ustalany dochód z działalności gospodarczej, i 75 % minimalnego wynagrodzenia obowiązującego w pierwszym dniu roku składkowego;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2024/1915__art_4__pkt_2" gd:GUID="5254f300-a47d-4741-a76d-b1464959dfd1" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1915_odczytane.x" wejscie-w-zycie="2025-01-01">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="cb9f3e40-07d6-4b9b-b79c-0aade0eefcdd" fragment="6" gd:fragmentGUID="510d2f80-5c39-46b7-9c7d-3bf288a5b7ec" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1915_odczytane.x" wejscie-w-zycie="2025-01-01">podstawę wymiaru składki na ubezpieczenie zdrowotne, o której mowa:</zdanie>
+          </p>
+          <litera eId="DU/2024/1915__art_4__pkt_2__lit_a" gd:GUID="2538fdd9-76d5-425e-8a45-9edf97322585" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1915_odczytane.x" wejscie-w-zycie="2025-01-01">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="cb9f3e40-07d6-4b9b-b79c-0aade0eefcdd" fragment="7" gd:fragmentGUID="0ddce8cc-daa2-4ee1-90e7-7a99a3abaf66" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1915_odczytane.x" wejscie-w-zycie="2025-01-01">w art. 81 ust. 2d ustawy zmienianej w art. 1, stanowi kwota 75 % minimalnego wynagrodzenia obowiązującego w pierwszym dniu roku składkowego,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2024/1915__art_4__pkt_2__lit_b" gd:GUID="640ca687-9bdd-46f9-bd85-fe4546f37ba8" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1915_odczytane.x" wejscie-w-zycie="2025-01-01">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="cb9f3e40-07d6-4b9b-b79c-0aade0eefcdd" fragment="8" gd:fragmentGUID="33512bc9-c0aa-4cc8-b11b-d73501de23b5" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1915_odczytane.x" wejscie-w-zycie="2025-01-01">w art. 81 ust. 2z ustawy zmienianej w art. 1, stanowi kwota 75 % minimalnego wynagrodzenia obowiązującego w pierwszym dniu roku kalendarzowego.</zdanie>
+            </p>
+          </litera>
+        </punkt>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2024/1915__art_5" gd:GUID="f2a23e1b-f98d-4fb8-91c9-00fc98b1799b" okres="okr_obowiazywanie.zdarz_wejscie_2024-12-24_DU-2024-1915_domyslne.x" wejscie-w-zycie="2024-12-24">
+      <nr>5</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="b7818257-ed61-45d0-8f53-6ba439cef49d" okres="okr_obowiazywanie.zdarz_wejscie_2024-12-24_DU-2024-1915_domyslne.x" wejscie-w-zycie="2024-12-24">
+        <p>
+          <zdanie nr="1" gd:zdGUID="4c0c2ae2-cc85-4400-8c93-6ffa9c3e597d" fragment="1" gd:fragmentGUID="8b2920eb-e78a-48aa-82fc-a6342914a1e6" okres="okr_obowiazywanie.zdarz_wejscie_2024-12-24_DU-2024-1915_domyslne.x" wejscie-w-zycie="2024-12-24">Do dnia 31 grudnia 2025 r. do zamówień na usługi lub dostawy udzielanych przez Zakład Ubezpieczeń Społecznych w związku z realizacją przepisu art. 4, które mają być wykonywane w 2025 r., nie stosuje się przepisów ustawy z dnia 11 września 2019 r. – Prawo zamówień publicznych (Dz. U. z 2024 r. poz. 1320).</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2024/1915__art_6" gd:GUID="a1c8d92d-1a32-447d-bee2-9c79753b7e09" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1915_odczytane.x" wejscie-w-zycie="2025-01-01">
+      <nr>6</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="51f284df-e0d1-479e-baf0-e96dca96e849" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1915_odczytane.x" wejscie-w-zycie="2025-01-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="ae794c37-28a7-439b-97bb-82c688c55379" fragment="1" gd:fragmentGUID="0cc13477-04c6-4fca-9b7d-056cb4503874" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1915_odczytane.x" wejscie-w-zycie="2025-01-01">Ustawa wchodzi w życie z dniem 1 stycznia 2025 r., z wyjątkiem art. 5, który wchodzi w życie z dniem następującym po dniu ogłoszenia.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <organ-podpisujacy>Prezydent Rzeczypospolitej Polskiej: <i><osoba podpisujacy="true" gd:osobaGUID="85604657-c436-4b2b-b41d-d739f5e30d80"><imie>A.</imie> <nazwisko>Duda</nazwisko></osoba></i></organ-podpisujacy>
+  </ustawa>
+</akt-prawny>

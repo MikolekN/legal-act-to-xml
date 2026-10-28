@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <ustawa>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/526</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>c857cb66-29db-4a8f-a246-2536b8ae7c07</gd:GUIDwersji>
+      <AdresISAP>WDU20250000526</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>526</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 526</AdresWyswietlany>
+      <Tytul>Ustawa z dnia 6 marca 2025 r. o zmianie ustawy – Prawo o ustroju sądów powszechnych oraz ustawy – Prawo o ustroju sądów wojskowych</Tytul>
+      <Rodzaj>USTAWA</Rodzaj>
+      <DataOgloszenia>2025-04-22</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-03-06</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2025-05-07_DU-2025-526_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2025-05-07" warunek="po upływie 14 dni od dnia ogłoszenia" podstawa="art. 5" zrodlo="https://eli.gov.pl/eli/DU/2025/526" dowod="DU/2025/526__art_5" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-526_domyslne.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2025-05-07_DU-2025-526_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="9096622d-f1ea-470a-a7ea-c8c7654667e6" rola="wydajacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Sejm">
+          <Nazwa>SEJM</Nazwa>
+        </Organ>
+        <Organ gd:GUID="8f7ed34e-fc6c-47b4-8e43-d62f230e6fe0" rola="podpisujacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Prezydent">
+          <Nazwa>Prezydent Rzeczypospolitej Polskiej</Nazwa>
+          <OrganPodpisujacy>Prezydent Rzeczypospolitej Polskiej</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>A.</imie> <nazwisko>Duda</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Ustawa</rodzaj-aktu>
+    <data>z dnia 6 marca 2025 r.</data>
+    <tytul>o zmianie ustawy – Prawo o ustroju sądów powszechnych oraz ustawy – Prawo o ustroju sądów wojskowych</tytul>
+    <artykul eId="DU/2025/526__art_1" gd:GUID="431009dc-5f85-4bf5-b548-4b2a1739ef65" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-526_domyslne.x" wejscie-w-zycie="2025-05-07">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="c13d769c-b7df-4734-9f5f-cc8a5b7825c2" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-526_domyslne.x" wejscie-w-zycie="2025-05-07">
+        <p>
+          <zdanie nr="1" gd:zdGUID="97c4677b-f003-447c-b5ae-77f82a74e24d" fragment="1" gd:fragmentGUID="4f2bbf4f-2cae-4d18-9a51-59d1a670d7ba" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-526_domyslne.x" wejscie-w-zycie="2025-05-07">W ustawie z dnia 27 lipca 2001 r. – Prawo o ustroju sądów powszechnych (Dz. U. z 2024 r. poz. 334 i 1907) w art. 77:</zdanie>
+        </p>
+        <punkt eId="DU/2025/526__art_1__pkt_1" gd:GUID="40387013-5184-4187-b322-dd8fc35aa77a" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-526_domyslne.x" wejscie-w-zycie="2025-05-07">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="97c4677b-f003-447c-b5ae-77f82a74e24d" fragment="2" gd:fragmentGUID="67d3d011-97bb-4eca-813d-c39add5318fc" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-526_domyslne.x" wejscie-w-zycie="2025-05-07">w § 1 pkt 1 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/334" cudzyslowy="oba" gd:nowGUID="4029c466-6c0b-4c44-95cb-e8774a526e02" element-eId="DU/2024/334__art_77__par_1__pkt_1" funkcja="zastap"><punkt eId="DU/2024/334__art_77__par_1__pkt_1" gd:GUID="df6703cc-8e13-4c8e-bad6-3d454a321a25" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-526_domyslne.x" wejscie-w-zycie="2025-05-07"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="c32b331a-71e8-4911-8e19-677e581957e3" fragment="1" gd:fragmentGUID="dba1fd53-86d2-43bb-afd9-d56e6c5e7ab7" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-526_domyslne.x" wejscie-w-zycie="2025-05-07">w innym sądzie równorzędnym lub niższym, a w szczególnie uzasadnionych wypadkach – także w sądzie wyższym,</zdanie></p></punkt></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/526__art_1__pkt_2" gd:GUID="0b2e4482-fde6-423c-bd13-071e776e2152" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-526_domyslne.x" wejscie-w-zycie="2025-05-07">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="97c4677b-f003-447c-b5ae-77f82a74e24d" fragment="3" gd:fragmentGUID="31ec3092-4276-4ea4-8628-853572788b6f" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-526_domyslne.x" wejscie-w-zycie="2025-05-07">po § 3b dodaje się § 3c i 3d w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/334" cudzyslowy="oba" gd:nowGUID="bd02ff13-1968-40cf-9058-eafd4d97e69b" element-eId="DU/2024/334__art_77__par_3b" funkcja="dodaj-po"><paragraf-kodeksu eId="DU/2024/334__art_77__par_3c" gd:GUID="9b9ab260-da65-4636-8adf-5fd81b31a659" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-526_domyslne.x" wejscie-w-zycie="2025-05-07"><nr>3c</nr><p><zdanie nr="1" gd:zdGUID="765b40cc-3b12-4da1-87c2-cc583021920f" fragment="1" gd:fragmentGUID="6729c371-448b-492d-b19c-6c04e39e6c91" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-526_domyslne.x" wejscie-w-zycie="2025-05-07">Delegowania sędziego do pełnienia obowiązków sędziego w innym sądzie dokonuje się w wypadku uzasadnionych potrzeb tego sądu, w szczególności gdy przemawiają za tym liczba i rodzaj spraw wpływających do sądu, stopień opanowania wpływu spraw oraz średnia wielkość referatu sędziego lub asesora sądowego w relacji do wartości tych parametrów w innych sądach, w tym przy uwzględnieniu liczby obsadzonych stanowisk sędziowskich i asesorskich, długotrwałych nieobecności sędziów i asesorów sądowych oraz planowanych zwolnień stanowisk sędziowskich w sądzie, do którego ma nastąpić delegowanie.</zdanie></p></paragraf-kodeksu><paragraf-kodeksu eId="DU/2024/334__art_77__par_3d" gd:GUID="c7bf0771-acd5-4b5f-bce0-fc49b60836e5" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-526_domyslne.x" wejscie-w-zycie="2025-05-07"><nr>3d</nr><p><zdanie nr="1" gd:zdGUID="73ffeea4-3323-4b60-a9b3-856a3f902d3e" fragment="1" gd:fragmentGUID="7699d8fc-c55b-4597-9444-b648c2bdf9db" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-526_domyslne.x" wejscie-w-zycie="2025-05-07">Przy delegowaniu sędziego do pełnienia obowiązków sędziego w innym sądzie uwzględnia się w szczególności okres pełnienia służby sędziowskiej, w tym na zajmowanym stanowisku sędziowskim, doświadczenie w rozpoznawaniu spraw z określonego zakresu, sprawność postępowania w prowadzonych sprawach oraz ocenę wpływu delegowania na pracę sądu, w którym sędzia ma miejsce służbowe.</zdanie></p></paragraf-kodeksu></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/526__art_1__pkt_3" gd:GUID="55832657-8215-4e5b-9bb2-400409d225ce" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-526_domyslne.x" wejscie-w-zycie="2025-05-07">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="97c4677b-f003-447c-b5ae-77f82a74e24d" fragment="4" gd:fragmentGUID="092396d0-17f3-449c-9031-fd33004b2964" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-526_domyslne.x" wejscie-w-zycie="2025-05-07">w § 4 dodaje się zdanie trzecie w brzmieniu:<cytat-w-tekscie now:akt="https://eli.gov.pl/eli/DU/2024/334" cudzyslowy="oba" gd:nowGUID="0c4c8736-a56f-4907-9776-fc5a388dcc9e" element-eId="DU/2024/334__art_77__par_4__zdn_2" funkcja="dodaj-po"><zdanie nr="1" gd:zdGUID="c63c73e4-db40-457a-a3f5-9d4f2845b724" fragment="1" gd:fragmentGUID="6e365c1f-dcea-454f-8fa5-307468be3d69" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-526_domyslne.x" wejscie-w-zycie="2025-05-07">Odwołanie z delegowania sędziego do pełnienia obowiązków sędziego w innym sądzie wymaga uzasadnienia.</zdanie></cytat-w-tekscie>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/526__art_1__pkt_4" gd:GUID="9850a162-79f8-4511-a0a3-9cd2cd5501fe" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-526_domyslne.x" wejscie-w-zycie="2025-05-07">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="97c4677b-f003-447c-b5ae-77f82a74e24d" fragment="5" gd:fragmentGUID="3df36fd8-2daa-46aa-ae68-4c8ed1bc6421" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-526_domyslne.x" wejscie-w-zycie="2025-05-07">po § 4 dodaje się § 4a w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/334" cudzyslowy="oba" gd:nowGUID="39cc462d-1f5f-4050-bbd1-03c050df5f35" element-eId="DU/2024/334__art_77__par_4" funkcja="dodaj-po"><paragraf-kodeksu eId="DU/2024/334__art_77__par_4a" gd:GUID="eb1226d5-ebb8-4989-b00c-9fe32ad5c174" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-526_domyslne.x" wejscie-w-zycie="2025-05-07"><nr>4a</nr><p><zdanie nr="1" gd:zdGUID="6ad5f433-2cb1-45e9-ac08-cca6c1005c06" fragment="1" gd:fragmentGUID="ad25eb49-ed48-41ec-8cd8-e6ce7e8c1a13" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-526_domyslne.x" wejscie-w-zycie="2025-05-07">Minister Sprawiedliwości ogłasza w Biuletynie Informacji Publicznej o każdym dokonanym przez niego delegowaniu sędziego oraz o każdym odwołaniu albo ustąpieniu z delegowania.</zdanie><zdanie nr="2" gd:zdGUID="072abfe3-f2fe-455e-b146-fa988cd8cc96" fragment="1" gd:fragmentGUID="c1d1c5ea-577b-4937-beaa-32fb51fde1ec" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-526_domyslne.x" wejscie-w-zycie="2025-05-07">W ogłoszeniu wskazuje się przyczyny delegowania albo odwołania.</zdanie></p></paragraf-kodeksu></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/526__art_1__pkt_5" gd:GUID="9893a455-b550-4ffc-ba31-00d915e58fd2" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-526_domyslne.x" wejscie-w-zycie="2025-05-07">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="97c4677b-f003-447c-b5ae-77f82a74e24d" fragment="6" gd:fragmentGUID="a05f88b6-6779-47c8-bcde-d9956c6f760d" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-526_domyslne.x" wejscie-w-zycie="2025-05-07"><now:uchyl akt="https://eli.gov.pl/eli/DU/2024/334" element-eId="DU/2024/334__art_77__par_7" gd:nowGUID="461b44ab-bd38-4a2b-af63-ec5c2b7ce0a3" />uchyla się § 7.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2025/526__art_2" gd:GUID="07806750-ae06-4325-bbe5-d91862807d13" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-526_domyslne.x" wejscie-w-zycie="2025-05-07">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="e6483bf9-6b44-4988-8ee1-c23c9926e109" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-526_domyslne.x" wejscie-w-zycie="2025-05-07">
+        <p>
+          <zdanie nr="1" gd:zdGUID="f84b152d-bc09-4b92-8e9c-b35e017d1616" fragment="1" gd:fragmentGUID="b2f66783-e469-4ce3-8fe7-f912cc4970ba" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-526_domyslne.x" wejscie-w-zycie="2025-05-07"><now:zamien-tekst stary-tekst="art. 77 § 2–2b, 3a, 4 i 6–7" nowy-tekst="art. 77 § 2–2b, 3c–4a i 6–6b" element-eId="DU/2022/2250__art_70__par_1" akt="https://eli.gov.pl/eli/DU/2022/2250" gd:nowGUID="ad70143c-2a9b-4e86-bcc3-5590fbeb56a3" />W ustawie z dnia 21 sierpnia 1997 r. – Prawo o ustroju sądów wojskowych (Dz. U. z 2022 r. poz. 2250) w art. 70 w § 1 we wprowadzeniu do wyliczenia wyrazy „art. 77 § 2–2b, 3a, 4 i 6–7” zastępuje się wyrazami „art. 77 § 2–2b, 3c–4a i 6–6b”.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2025/526__art_3" gd:GUID="5f090e04-e9f3-4f8b-8485-8dd9cad0d924" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-526_domyslne.x" wejscie-w-zycie="2025-05-07">
+      <nr>3</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="73db690e-7cf7-4798-8cd8-f940bc2a113e" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-526_domyslne.x" wejscie-w-zycie="2025-05-07">
+        <p>
+          <zdanie nr="1" gd:zdGUID="1d4b439b-01c4-4af5-821a-af39d6faf349" fragment="1" gd:fragmentGUID="0b4bca77-1a5b-4f91-ae33-fdb3963340aa" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-526_domyslne.x" wejscie-w-zycie="2025-05-07">Delegowanie sędziego do pełnienia obowiązków sędziego w innym sądzie dokonane przed dniem wejścia w życie niniejszej ustawy pozostaje w mocy.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2025/526__art_4" gd:GUID="e709c24c-f972-4237-8c53-9ce2c6ed9277" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-526_domyslne.x" wejscie-w-zycie="2025-05-07">
+      <nr>4</nr>
+      <ustep eId="DU/2025/526__art_4__ust_1" gd:GUID="b23d4aba-cc7e-49e3-9730-64679bdd38ec" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-526_domyslne.x" wejscie-w-zycie="2025-05-07">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="eef2485c-48cc-443b-8cab-1a9bbc60aa4f" fragment="1" gd:fragmentGUID="1e2f95f9-fc83-424e-aec3-df5d5d905204" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-526_domyslne.x" wejscie-w-zycie="2025-05-07">Sędziemu sądu powszechnego delegowanemu do pełnienia obowiązków sędziego w innym sądzie na podstawie art. 77 § 1 pkt 1 ustawy zmienianej w art. 1 oraz sędziemu sądu wojskowego delegowanemu do pełnienia obowiązków sędziowskich w innym sądzie wojskowym lub sądzie powszechnym na podstawie art. 26 § 1 ustawy zmienianej w art. 2 przysługuje dodatek z tytułu delegowania w wysokości 12,5 % podstawy ustalenia wynagrodzenia zasadniczego sędziego, o której mowa w art. 91 § 1c ustawy zmienianej w art. 1, a po upływie sześciu miesięcy delegowania – w wysokości 20 % tej podstawy.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/526__art_4__ust_2" gd:GUID="c1c80763-846f-4090-95a4-6a668bd83c5c" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-526_domyslne.x" wejscie-w-zycie="2025-05-07">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="62a58660-2bcd-4ee6-a0dc-a8bf5f48b7aa" fragment="1" gd:fragmentGUID="ba0cfa4f-36c3-49bf-86b8-686eec7c0241" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-526_domyslne.x" wejscie-w-zycie="2025-05-07">Do sędziego, o którym mowa w ust. 1, delegowanego przed dniem wejścia w życie niniejszej ustawy stosuje się przepis ust. 1 od dnia wejścia w życie niniejszej ustawy.</zdanie>
+          <zdanie nr="2" gd:zdGUID="0476b5f7-a2da-43ee-a41b-b7aa8b1eb58e" fragment="1" gd:fragmentGUID="6f911402-2774-4d97-a6fa-a91b0491587d" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-526_domyslne.x" wejscie-w-zycie="2025-05-07">Do okresu delegowania, od którego zależy wysokość dodatku z tytułu delegowania, wlicza się okres delegowania przed dniem wejścia w życie niniejszej ustawy.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/526__art_4__ust_3" gd:GUID="f1c2b768-2c3d-49db-a96b-bcfd4e24be26" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-526_domyslne.x" wejscie-w-zycie="2025-05-07">
+        <nr>3</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="7f87c346-de5a-43a3-972c-02b404fcb642" fragment="1" gd:fragmentGUID="8095a480-7718-4aa1-be73-d995a69b312e" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-526_domyslne.x" wejscie-w-zycie="2025-05-07">Przepisy ust. 1 i 2 tracą moc po upływie 24 miesięcy od dnia wejścia w życie niniejszej ustawy.</zdanie>
+        </p>
+      </ustep>
+    </artykul>
+    <artykul eId="DU/2025/526__art_5" gd:GUID="91f7e9a5-8c44-4aea-8000-a2db3c4e6c08" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-526_domyslne.x" wejscie-w-zycie="2025-05-07">
+      <nr>5</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="f9903590-970c-4449-b52b-4768cfc2a273" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-526_domyslne.x" wejscie-w-zycie="2025-05-07">
+        <p>
+          <zdanie nr="1" gd:zdGUID="8055e10e-2efa-4239-961d-c119838948c8" fragment="1" gd:fragmentGUID="be959cb8-b2a7-4216-b931-5129e3f1feea" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-526_domyslne.x" wejscie-w-zycie="2025-05-07">Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <organ-podpisujacy>Prezydent Rzeczypospolitej Polskiej: <i><osoba podpisujacy="true" gd:osobaGUID="b68382b5-056e-4377-b2a1-032e1fca2d63"><imie>A.</imie> <nazwisko>Duda</nazwisko></osoba></i></organ-podpisujacy>
+  </ustawa>
+</akt-prawny>

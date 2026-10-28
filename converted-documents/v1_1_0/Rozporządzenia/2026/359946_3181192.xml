@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <rozporzadzenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2026/130</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>b6d1544c-2f57-456b-a1b9-556b3f1b732f</gd:GUIDwersji>
+      <AdresISAP>WDU20260000130</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2026</Rok>
+      <Pozycja>130</Pozycja>
+      <AdresWyswietlany>Dz.U. 2026 poz. 130</AdresWyswietlany>
+      <Tytul>Rozporządzenie Ministra Edukacji z dnia 28 stycznia 2026 r. zmieniające rozporządzenie w sprawie szczegółowej organizacji publicznych szkół i publicznych przedszkoli</Tytul>
+      <Rodzaj>ROZP</Rodzaj>
+      <DataOgloszenia>2026-02-04</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2026-01-28</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2026-02-19_DU-2026-130_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2026-02-19" warunek="po upływie 14 dni od dnia ogłoszenia" podstawa="§ 2" zrodlo="https://eli.gov.pl/eli/DU/2026/130" dowod="DU/2026/130__art_2" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-130_domyslne.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2026-02-19_DU-2026-130_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="8ff24b84-5c33-45b4-a063-8807d70a6924" rola="wydajacy">
+          <Nazwa>Minister Edukacji</Nazwa>
+          <OrganPodpisujacy>Minister Edukacji</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>K.</imie> <nazwisko>Lubnauer</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Rozporządzenie</rodzaj-aktu>
+    <autor-aktu>Ministra Edukacji<odnosnik id-odnosnika="1" symbol="1" gd:GUID="3450ed9c-c652-49f8-aa0c-cded7fc81ad5"><p><zdanie nr="1" gd:zdGUID="aab8f2bc-bc66-4fab-8e83-b79c5350edd0" fragment="1" gd:fragmentGUID="0b0c4486-8a05-42c6-892f-5be7d5f2c1ef">Minister Edukacji kieruje działem administracji rządowej – oświata i wychowanie, na podstawie § 1 ust. 2 rozporządzenia Prezesa Rady Ministrów z dnia 18 grudnia 2023 r. w sprawie szczegółowego zakresu działania Ministra Edukacji (Dz. U. poz. 2717).</zdanie></p></odnosnik></autor-aktu>
+    <data>z dnia 28 stycznia 2026 r.</data>
+    <tytul>zmieniające rozporządzenie w sprawie szczegółowej organizacji publicznych szkół i publicznych przedszkoli</tytul>
+    <podstawa-prawna>Na podstawie art. 111 ustawy z dnia 14 grudnia 2016 r. – Prawo oświatowe (Dz. U. z 2025 r. poz. 1043, 1160 i 1837) zarządza się, co następuje:</podstawa-prawna>
+    <paragraf eId="DU/2026/130__art_1" gd:GUID="4cfbea9b-e351-47d8-84ce-37b8771013ca" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-130_domyslne.x" wejscie-w-zycie="2026-02-19">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="615779fe-3513-49de-ad3b-75863d47b01b" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-130_domyslne.x" wejscie-w-zycie="2026-02-19">
+        <p>
+          <zdanie nr="1" gd:zdGUID="8d24a43f-6c44-4ec1-92a1-bc13bad618bf" fragment="1" gd:fragmentGUID="8ff2218a-df2a-4838-a944-0ba76400a82f" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-130_domyslne.x" wejscie-w-zycie="2026-02-19"><now:zamien-tekst stary-tekst="wychowania do życia w rodzinie" nowy-tekst="edukacji zdrowotnej" element-eId="DU/2023/2736__art_17__ust_4__pkt_3__lit_b" akt="https://eli.gov.pl/eli/DU/2023/2736" gd:nowGUID="03b84dea-ca0a-458f-85c6-1f913328e023" />W rozporządzeniu Ministra Edukacji Narodowej z dnia 28 lutego 2019 r. w sprawie szczegółowej organizacji publicznych szkół i publicznych przedszkoli (Dz. U. z 2023 r. poz. 2736 oraz z 2025 r. poz. 849) w § 17 w ust. 4 w pkt 3 w lit. b wyrazy „wychowania do życia w rodzinie” zastępuje się wyrazami „edukacji zdrowotnej”.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2026/130__art_2" gd:GUID="a44a446a-b1c6-4306-8fd9-a0f7cd140473" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-130_domyslne.x" wejscie-w-zycie="2026-02-19">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="640a7f1b-4a81-48ae-814d-a104480c88e2" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-130_domyslne.x" wejscie-w-zycie="2026-02-19">
+        <p>
+          <zdanie nr="1" gd:zdGUID="6feff064-495d-4e7a-8b66-4a60335e7ea4" fragment="1" gd:fragmentGUID="7c341187-a21d-4cac-8265-bd029f1bf75b" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-130_domyslne.x" wejscie-w-zycie="2026-02-19">Rozporządzenie wchodzi w życie po upływie 14 dni od dnia ogłoszenia.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <organ-podpisujacy>Minister Edukacji: wz. <i><osoba podpisujacy="true" gd:osobaGUID="78b92306-647b-4362-8690-f236240b7299"><imie>K.</imie> <nazwisko>Lubnauer</nazwisko></osoba></i></organ-podpisujacy>
+  </rozporzadzenie>
+</akt-prawny>

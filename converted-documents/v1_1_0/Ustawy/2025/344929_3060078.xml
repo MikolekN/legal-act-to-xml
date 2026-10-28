@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <ustawa>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/1408</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>ae9fe6e5-21fd-4a49-8134-7b4bc10f8fb9</gd:GUIDwersji>
+      <AdresISAP>WDU20250001408</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>1408</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 1408</AdresWyswietlany>
+      <Tytul>Ustawa z dnia 12 września 2025 r. o zmianie ustawy o funduszach inwestycyjnych i zarządzaniu alternatywnymi funduszami inwestycyjnymi</Tytul>
+      <Rodzaj>USTAWA</Rodzaj>
+      <DataOgloszenia>2025-10-20</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-09-12</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2025-11-04_DU-2025-1408_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2025-11-04" warunek="po upływie 14 dni od dnia ogłoszenia" podstawa="art. 2" zrodlo="https://eli.gov.pl/eli/DU/2025/1408" dowod="DU/2025/1408__art_2" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2025-11-04_DU-2025-1408_domyslne.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2025-11-04_DU-2025-1408_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="08e17707-e252-4934-a712-6ee0fcb57dfa" rola="wydajacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Sejm">
+          <Nazwa>SEJM</Nazwa>
+        </Organ>
+        <Organ gd:GUID="f46ce217-6bc0-426e-bfda-7443d7b545ee" rola="podpisujacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Prezydent">
+          <Nazwa>Prezydent Rzeczypospolitej Polskiej</Nazwa>
+          <OrganPodpisujacy>Prezydent Rzeczypospolitej Polskiej</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>K.</imie> <nazwisko>Nawrocki</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Ustawa</rodzaj-aktu>
+    <data>z dnia 12 września 2025 r.</data>
+    <tytul>o zmianie ustawy o funduszach inwestycyjnych i zarządzaniu alternatywnymi funduszami inwestycyjnymi</tytul>
+    <artykul eId="DU/2025/1408__art_1" gd:GUID="6011341e-d11f-4b1d-8673-70a06976e2c3" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-04_DU-2025-1408_domyslne.x" wejscie-w-zycie="2025-11-04">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="4c3af183-0045-4988-8ccc-d1c8fb7dbb14" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-04_DU-2025-1408_domyslne.x" wejscie-w-zycie="2025-11-04">
+        <p>
+          <zdanie nr="1" gd:zdGUID="46a6b8af-8a25-4ab1-ab81-9aac47f340e2" fragment="1" gd:fragmentGUID="a07da651-9698-4fad-91e1-132accf12f83" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-04_DU-2025-1408_domyslne.x" wejscie-w-zycie="2025-11-04"><now:zamien-tekst stary-tekst="w przypadku znacznego spadku ich wartości" nowy-tekst="" element-eId="DU/2024/1034__art_36__ust_3" akt="https://eli.gov.pl/eli/DU/2024/1034" gd:nowGUID="7f217ab0-2f8c-499b-ad93-fddbf49290cf" />W ustawie z dnia 27 maja 2004 r. o funduszach inwestycyjnych i zarządzaniu alternatywnymi funduszami inwestycyjnymi (Dz. U. z 2024 r. poz. 1034, z późn. zm.<odnosnik id-odnosnika="1" symbol="1" gd:GUID="3d925906-9909-4dfd-ae69-1bc365bcd553"><p><zdanie nr="1" gd:zdGUID="270f114e-7310-438c-8399-c68e5f7c7dfb" fragment="1" gd:fragmentGUID="5116a58c-75da-4be9-8a69-7bb1239381f7">Zmiany tekstu jednolitego wymienionej ustawy zostały ogłoszone w Dz. U. z 2024 r. poz. 1863 oraz z 2025 r. poz. 146, 820, 935, 1069, 1161 i 1216.</zdanie></p></odnosnik>) w art. 36 w ust. 3 skreśla się wyrazy „w przypadku znacznego spadku ich wartości”.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2025/1408__art_2" gd:GUID="d9bb7819-a350-46f3-a554-fe36eee48a30" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-04_DU-2025-1408_domyslne.x" wejscie-w-zycie="2025-11-04">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="03d29f72-b523-4386-a073-5bd89f4fd1d0" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-04_DU-2025-1408_domyslne.x" wejscie-w-zycie="2025-11-04">
+        <p>
+          <zdanie nr="1" gd:zdGUID="e1383479-0b1e-46b1-bbfd-8ef093318f5a" fragment="1" gd:fragmentGUID="939cf2b2-c00b-4242-b5ec-d587d63402d2" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-04_DU-2025-1408_domyslne.x" wejscie-w-zycie="2025-11-04">Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <organ-podpisujacy>Prezydent Rzeczypospolitej Polskiej: <i><osoba podpisujacy="true" gd:osobaGUID="25c92eb6-f28c-4e82-90c6-be5bda8488ac"><imie>K.</imie> <nazwisko>Nawrocki</nazwisko></osoba></i></organ-podpisujacy>
+  </ustawa>
+</akt-prawny>

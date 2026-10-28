@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <rozporzadzenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/931</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>ce3e80f5-1954-4932-9dc1-c7ecd68c7fb8</gd:GUIDwersji>
+      <AdresISAP>WDU20250000931</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>931</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 931</AdresWyswietlany>
+      <Tytul>Rozporządzenie Ministra Zdrowia z dnia 9 lipca 2025 r. zmieniające rozporządzenie w sprawie rodzajów, zakresu i wzorów dokumentacji medycznej oraz sposobu jej przetwarzania</Tytul>
+      <Rodzaj>ROZP</Rodzaj>
+      <DataOgloszenia>2025-07-11</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-07-09</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2025-07-26_DU-2025-931_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2025-07-26" warunek="po upływie 14 dni od dnia ogłoszenia" podstawa="§ 3" zrodlo="https://eli.gov.pl/eli/DU/2025/931" dowod="DU/2025/931__art_3" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2025-07-26_DU-2025-931_domyslne.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2025-07-26_DU-2025-931_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="a1a41328-6a34-408d-83d3-5208b75ee0f4" rola="wydajacy">
+          <Nazwa>Minister Zdrowia</Nazwa>
+          <OrganPodpisujacy>Minister Zdrowia</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>I.</imie> <nazwisko>Leszczyna</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Rozporządzenie</rodzaj-aktu>
+    <autor-aktu>Ministra Zdrowia<odnosnik id-odnosnika="1" symbol="1" gd:GUID="1f8df92c-91b1-4206-b956-81e0606ad10f"><p><zdanie nr="1" gd:zdGUID="8c11d2cc-527f-44ab-b272-b0418a5a87f9" fragment="1" gd:fragmentGUID="e925ed30-a7ff-404b-b56c-06e76469fb11">Minister Zdrowia kieruje działem administracji rządowej – zdrowie, na podstawie § 1 ust. 2 rozporządzenia Prezesa Rady Ministrów z dnia 18 grudnia 2023 r. w sprawie szczegółowego zakresu działania Ministra Zdrowia (Dz. U. poz. 2704).</zdanie></p></odnosnik></autor-aktu>
+    <data>z dnia 9 lipca 2025 r.</data>
+    <tytul>zmieniające rozporządzenie w sprawie rodzajów, zakresu i wzorów dokumentacji medycznej oraz sposobu jej przetwarzania</tytul>
+    <podstawa-prawna>Na podstawie art. 30 ust. 1 ustawy z dnia 6 listopada 2008 r. o prawach pacjenta i Rzeczniku Praw Pacjenta (Dz. U. z 2024 r. poz. 581) zarządza się, co następuje:</podstawa-prawna>
+    <paragraf eId="DU/2025/931__art_1" gd:GUID="6afd88d0-cecb-4c32-8d84-4ff81e468622" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-26_DU-2025-931_domyslne.x" wejscie-w-zycie="2025-07-26">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="9fbe56ba-23e8-435f-a2ec-73c069254efd" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-26_DU-2025-931_domyslne.x" wejscie-w-zycie="2025-07-26">
+        <p>
+          <zdanie nr="1" gd:zdGUID="54545b6a-dfd3-4fb5-96a4-0d0381b9b409" fragment="1" gd:fragmentGUID="0eed056d-58c5-4141-af13-632e054d3600" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-26_DU-2025-931_domyslne.x" wejscie-w-zycie="2025-07-26">W rozporządzeniu Ministra Zdrowia z dnia 6 kwietnia 2020 r. w sprawie rodzajów, zakresu i wzorów dokumentacji medycznej oraz sposobu jej przetwarzania (Dz. U. z 2024 r. poz. 798) wprowadza się następujące zmiany:</zdanie>
+        </p>
+        <punkt eId="DU/2025/931__art_1__pkt_1" gd:GUID="58006643-70d1-4084-a39e-2ccf1808d65f" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-26_DU-2025-931_domyslne.x" wejscie-w-zycie="2025-07-26">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="54545b6a-dfd3-4fb5-96a4-0d0381b9b409" fragment="2" gd:fragmentGUID="909b1c8a-35dd-43c6-b5f5-c60b1625437a" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-26_DU-2025-931_domyslne.x" wejscie-w-zycie="2025-07-26">w § 44:</zdanie>
+          </p>
+          <litera eId="DU/2025/931__art_1__pkt_1__lit_a" gd:GUID="e7b7722f-0f3c-483f-b2a8-200968430947" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-26_DU-2025-931_domyslne.x" wejscie-w-zycie="2025-07-26">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="54545b6a-dfd3-4fb5-96a4-0d0381b9b409" fragment="3" gd:fragmentGUID="40f91ed6-3e93-404a-9d4d-ec51e249a633" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-26_DU-2025-931_domyslne.x" wejscie-w-zycie="2025-07-26">po ust. 1 dodaje się ust. 1a w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/798" cudzyslowy="oba" gd:nowGUID="c7916957-81fd-4b43-ac01-7be3810bca50" element-eId="DU/2024/798__art_44__ust_1" funkcja="dodaj-po"><ustep eId="DU/2024/798__art_44__ust_1a" gd:GUID="7529ae43-745e-4498-84ea-964f7d0afe10" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-26_DU-2025-931_domyslne.x" wejscie-w-zycie="2025-07-26"><nr>1a</nr><p><zdanie nr="1" gd:zdGUID="194c7bc9-c272-4869-a2db-bb32221bb6e6" fragment="1" gd:fragmentGUID="7a4a0383-106e-4e8a-a4fe-a91b37464ae1" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-26_DU-2025-931_domyslne.x" wejscie-w-zycie="2025-07-26">Dokumentacja, o której mowa w ust. 1, jest prowadzona w Systemie Wspomagania Dowodzenia Państwowego Ratownictwa Medycznego w rozumieniu art. 3 pkt 15 ustawy z dnia 8 września 2006 r. o Państwowym Ratownictwie Medycznym, zwanym dalej „SWD PRM”.</zdanie></p></ustep></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/931__art_1__pkt_1__lit_b" gd:GUID="ec5b731b-97fb-4378-8eb8-178843957bda" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-26_DU-2025-931_domyslne.x" wejscie-w-zycie="2025-07-26">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="54545b6a-dfd3-4fb5-96a4-0d0381b9b409" fragment="4" gd:fragmentGUID="2524fbc5-91dc-45dd-9dcd-cdffe65e41a7" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-26_DU-2025-931_domyslne.x" wejscie-w-zycie="2025-07-26"><now:zamien-tekst stary-tekst="Systemu Wspomagania Dowodzenia Państwowego Ratownictwa Medycznego w rozumieniu art. 3 pkt 15 ustawy z dnia 8 września 2006 r. o Państwowym Ratownictwie Medycznym, zwanego dalej „SWD PRM”," nowy-tekst="SWD PRM" element-eId="DU/2024/798__art_44__ust_3" akt="https://eli.gov.pl/eli/DU/2024/798" gd:nowGUID="94d751d3-4cba-4a89-b955-446915d914bd" />w ust. 3 wyrazy „Systemu Wspomagania Dowodzenia Państwowego Ratownictwa Medycznego w rozumieniu art. 3 pkt 15 ustawy z dnia 8 września 2006 r. o Państwowym Ratownictwie Medycznym, zwanego dalej „SWD PRM”,” zastępuje się wyrazami „SWD PRM”;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2025/931__art_1__pkt_2" gd:GUID="8d577000-4f75-4eec-b5d7-9b6e2c58a303" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-26_DU-2025-931_domyslne.x" wejscie-w-zycie="2025-07-26">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="54545b6a-dfd3-4fb5-96a4-0d0381b9b409" fragment="5" gd:fragmentGUID="83d6f8c3-5b6a-4376-aa7d-78d3c918f7e6" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-26_DU-2025-931_domyslne.x" wejscie-w-zycie="2025-07-26">w § 46:</zdanie>
+          </p>
+          <litera eId="DU/2025/931__art_1__pkt_2__lit_a" gd:GUID="50e52bad-1012-40cf-85a7-d1272213452b" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-26_DU-2025-931_domyslne.x" wejscie-w-zycie="2025-07-26">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="54545b6a-dfd3-4fb5-96a4-0d0381b9b409" fragment="6" gd:fragmentGUID="eb075ee1-b77c-4649-a294-62249da0ef54" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-26_DU-2025-931_domyslne.x" wejscie-w-zycie="2025-07-26">ust. 2 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/798" cudzyslowy="oba" gd:nowGUID="c1418216-eea6-4c38-929b-5df7bc6b6c52" element-eId="DU/2024/798__art_46__ust_2" funkcja="zastap"><ustep eId="DU/2024/798__art_46__ust_2" gd:GUID="566775d3-039f-4b7a-b1d2-7057ddb45dd5" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-26_DU-2025-931_domyslne.x" wejscie-w-zycie="2025-07-26"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="f13ec924-02ab-468e-86cb-076366a811fd" fragment="1" gd:fragmentGUID="315496ce-c0cc-4f55-8c3c-1b5116cfaee4" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-26_DU-2025-931_domyslne.x" wejscie-w-zycie="2025-07-26">Karta medycznych czynności ratunkowych oraz karta medyczna lotniczego zespołu ratownictwa medycznego są udostępniane:</zdanie></p><punkt eId="DU/2024/798__art_46__ust_2__pkt_1" gd:GUID="24f5712f-e204-4601-a339-af2b95850536" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-26_DU-2025-931_domyslne.x" wejscie-w-zycie="2025-07-26"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="f13ec924-02ab-468e-86cb-076366a811fd" fragment="2" gd:fragmentGUID="58905724-b4c1-4c4f-bf2f-c5b44462e801" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-26_DU-2025-931_domyslne.x" wejscie-w-zycie="2025-07-26">zespołowi ratownictwa medycznego, za pośrednictwem SWD PRM – jeżeli jest to niezbędne do zapewnienia realizacji zlecenia wyjazdu lub wylotu zespołu ratownictwa medycznego;</zdanie></p></punkt><punkt eId="DU/2024/798__art_46__ust_2__pkt_2" gd:GUID="5d7c7bd5-5665-4ae0-851b-65e73a382ec4" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-26_DU-2025-931_domyslne.x" wejscie-w-zycie="2025-07-26"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="f13ec924-02ab-468e-86cb-076366a811fd" fragment="3" gd:fragmentGUID="b7bbb672-d407-4626-b7f7-352e2dcc4fd5" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-26_DU-2025-931_domyslne.x" wejscie-w-zycie="2025-07-26">innemu podmiotowi leczniczemu, za pośrednictwem systemu teleinformatycznego – Elektroniczna Platforma Gromadzenia, Analizy i Udostępniania Zasobów Cyfrowych o Zdarzeniach Medycznych, o którym mowa w art. 7 ust. 1 ustawy z dnia 28 kwietnia 2011 r. o systemie informacji w ochronie zdrowia, w przypadku przetransportowania pacjenta do tego podmiotu;</zdanie></p></punkt><punkt eId="DU/2024/798__art_46__ust_2__pkt_3" gd:GUID="fcc641fe-6152-49e0-92df-f4135f7901c5" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-26_DU-2025-931_domyslne.x" wejscie-w-zycie="2025-07-26"><nr>3</nr><p><zdanie nr="1" gd:zdGUID="f13ec924-02ab-468e-86cb-076366a811fd" fragment="4" gd:fragmentGUID="1c342a2e-5cf0-4051-b703-b1159b491df0" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-26_DU-2025-931_domyslne.x" wejscie-w-zycie="2025-07-26">osobom, o których mowa w art. 26 ust. 1 ustawy z dnia 6 listopada 2008 r. o prawach pacjenta i Rzeczniku Praw Pacjenta, za pośrednictwem Internetowego Konta Pacjenta, o którym mowa w art. 7a ustawy z dnia 28 kwietnia 2011 r. o systemie informacji w ochronie zdrowia.</zdanie></p></punkt></ustep></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/931__art_1__pkt_2__lit_b" gd:GUID="082d0bc1-f2ee-4e0e-b3b8-d3595d2411dc" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-26_DU-2025-931_domyslne.x" wejscie-w-zycie="2025-07-26">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="54545b6a-dfd3-4fb5-96a4-0d0381b9b409" fragment="7" gd:fragmentGUID="5e31e67b-0f98-45e1-8ada-f11636bf279e" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-26_DU-2025-931_domyslne.x" wejscie-w-zycie="2025-07-26">dodaje się ust. 3 w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/798" cudzyslowy="oba" gd:nowGUID="8641bfcc-4083-419e-8d95-a5c1391fa2a8" element-eId="DU/2024/798__art_46" funkcja="dodaj-w"><ustep eId="DU/2024/798__art_46__ust_3" gd:GUID="8fad6ec2-355b-43d6-af9b-6628505f09b9" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-26_DU-2025-931_domyslne.x" wejscie-w-zycie="2025-07-26"><nr>3</nr><p><zdanie nr="1" gd:zdGUID="2369865a-1058-4e6b-aca1-b8a3a4b87b83" fragment="1" gd:fragmentGUID="46040d4a-dfe1-4d86-83db-531d9f727305" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-26_DU-2025-931_domyslne.x" wejscie-w-zycie="2025-07-26">W przypadku pozostawienia pacjenta na miejscu zdarzenia zespół ratownictwa medycznego informuje osobę, o której mowa w art. 26 ust. 1 ustawy z dnia 6 listopada 2008 r. o prawach pacjenta i Rzeczniku Praw Pacjenta, o możliwości otrzymania karty medycznych czynności ratunkowych lub karty medycznej lotniczego zespołu ratownictwa medycznego w postaci wydruku.</zdanie></p></ustep></cytat-strukt>.</zdanie>
+            </p>
+          </litera>
+        </punkt>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2025/931__art_2" gd:GUID="b97b5cad-4199-408f-8be1-3e5f59f7c35b" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-26_DU-2025-931_domyslne.x" wejscie-w-zycie="2025-07-26">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="78806872-f624-4a00-9d50-c9d3d09f862f" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-26_DU-2025-931_domyslne.x" wejscie-w-zycie="2025-07-26">
+        <p>
+          <zdanie nr="1" gd:zdGUID="e502bb5b-39ed-45b1-af4a-f672e4e1046c" fragment="1" gd:fragmentGUID="f59d8ef3-4291-4093-8c66-02840c65ab1e" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-26_DU-2025-931_domyslne.x" wejscie-w-zycie="2025-07-26">Do dnia 31 grudnia 2025 r. karta medycznych czynności ratunkowych oraz karta medyczna lotniczego zespołu ratownictwa medycznego mogą być prowadzone i udostępniane w sposób określony w dotychczasowych przepisach.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2025/931__art_3" gd:GUID="c1293e73-71ef-4242-8016-b43b244ac338" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-26_DU-2025-931_domyslne.x" wejscie-w-zycie="2025-07-26">
+      <nr>3</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="aa29e14f-9582-4f74-bd93-40896c4c5a32" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-26_DU-2025-931_domyslne.x" wejscie-w-zycie="2025-07-26">
+        <p>
+          <zdanie nr="1" gd:zdGUID="b2414b2d-4ded-4df9-afc4-dd7d0890e068" fragment="1" gd:fragmentGUID="c06d498d-4ed2-4763-ae2a-307918e0cf9e" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-26_DU-2025-931_domyslne.x" wejscie-w-zycie="2025-07-26">Rozporządzenie wchodzi w życie po upływie 14 dni od dnia ogłoszenia.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <organ-podpisujacy>Minister Zdrowia: <i><osoba podpisujacy="true" gd:osobaGUID="4b19f990-0d7a-4702-8dc8-40d80a268457"><imie>I.</imie> <nazwisko>Leszczyna</nazwisko></osoba></i></organ-podpisujacy>
+  </rozporzadzenie>
+</akt-prawny>

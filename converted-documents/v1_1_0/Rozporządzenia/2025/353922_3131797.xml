@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <rozporzadzenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/1801</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>a76f2ba1-704f-41ea-8777-7f4d16e32acf</gd:GUIDwersji>
+      <AdresISAP>WDU20250001801</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>1801</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 1801</AdresWyswietlany>
+      <Tytul>Rozporządzenie Ministra Sprawiedliwości z dnia 11 grudnia 2025 r. zmieniające rozporządzenie w sprawie regulaminu organizacyjno-porządkowego wykonywania tymczasowego aresztowania</Tytul>
+      <Rodzaj>ROZP</Rodzaj>
+      <DataOgloszenia>2025-12-17</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-12-11</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2026-01-01_DU-2025-1801_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2026-01-01" warunek="po upływie 14 dni od dnia ogłoszenia" podstawa="§ 2" zrodlo="https://eli.gov.pl/eli/DU/2025/1801" dowod="DU/2025/1801__art_2" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1801_domyslne.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2026-01-01_DU-2025-1801_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="baf84efe-3ccb-47a2-bf35-6ed12d31eeb6" rola="wydajacy">
+          <Nazwa>Minister Sprawiedliwości</Nazwa>
+          <OrganPodpisujacy>Minister Sprawiedliwości</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>W.</imie> <nazwisko>Żurek</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Rozporządzenie</rodzaj-aktu>
+    <autor-aktu>Ministra Sprawiedliwości</autor-aktu>
+    <data>z dnia 11 grudnia 2025 r.</data>
+    <tytul>zmieniające rozporządzenie w sprawie regulaminu organizacyjno-porządkowego wykonywania tymczasowego aresztowania</tytul>
+    <podstawa-prawna>Na podstawie art. 249 § 1 ustawy z dnia 6 czerwca 1997 r. – Kodeks karny wykonawczy (Dz. U. z 2025 r. poz. 911 i 1423) zarządza się, co następuje:</podstawa-prawna>
+    <paragraf eId="DU/2025/1801__art_1" gd:GUID="75a93636-20a0-468b-94dd-b6b2d549d969" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1801_domyslne.x" wejscie-w-zycie="2026-01-01">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="9d6baa31-8893-4e5f-b7c1-f5e58d2ddd42" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1801_domyslne.x" wejscie-w-zycie="2026-01-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="c09678c4-ab2d-4c47-9ff3-12dd5d8ddc6c" fragment="1" gd:fragmentGUID="0ca2c5d2-494d-4025-8e4c-be5516bd0e4a" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1801_domyslne.x" wejscie-w-zycie="2026-01-01">W rozporządzeniu Ministra Sprawiedliwości z dnia 23 grudnia 2022 r. w sprawie regulaminu organizacyjno- -porządkowego wykonywania tymczasowego aresztowania (Dz. U. poz. 2848) wprowadza się następujące zmiany:</zdanie>
+        </p>
+        <punkt eId="DU/2025/1801__art_1__pkt_1" gd:GUID="093554bc-c8ed-4ff8-b780-69c0c28f1f08" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1801_domyslne.x" wejscie-w-zycie="2026-01-01">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="c09678c4-ab2d-4c47-9ff3-12dd5d8ddc6c" fragment="2" gd:fragmentGUID="d46ed878-a411-4ee3-8ad8-6e7d0d6a6e8e" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1801_domyslne.x" wejscie-w-zycie="2026-01-01">§ 20 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2022/2848" cudzyslowy="oba" gd:nowGUID="4cf28824-3e62-40bf-940e-54257a0d2fe2" element-eId="DU/2022/2848__art_20" funkcja="zastap"><paragraf eId="DU/2022/2848__art_20" gd:GUID="22ae3f88-6169-4237-9717-490c5a70c835" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1801_domyslne.x" wejscie-w-zycie="2026-01-01"><nr>20</nr><ustep eId="DU/2022/2848__art_20__ust_1" gd:GUID="d47f3043-44f4-4806-b53f-6e555d89447a" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1801_domyslne.x" wejscie-w-zycie="2026-01-01"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="a2394b7b-55a5-467a-a80d-b5e9211fe989" fragment="1" gd:fragmentGUID="6553cecf-6741-4ed7-a2b9-569c1f403d58" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1801_domyslne.x" wejscie-w-zycie="2026-01-01">Wobec tymczasowo aresztowanych kobiet ciężarnych i karmiących dyrektor może dokonywać, na wniosek lekarza lub położnej albo po zasięgnięciu ich opinii, niezbędnych odstępstw od przewidzianego w regulaminie sposobu wykonywania tymczasowego aresztowania w zakresie wynikającym z potrzeby uwzględnienia stanu fizycznego lub psychicznego tych kobiet.</zdanie></p></ustep><ustep eId="DU/2022/2848__art_20__ust_2" gd:GUID="156042b2-44c9-44ff-8e16-2427a3777959" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1801_domyslne.x" wejscie-w-zycie="2026-01-01"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="657793a8-b757-4f38-9431-10e9127ce8d2" fragment="1" gd:fragmentGUID="d4b42ddb-eb89-473e-b9dd-dead538a765f" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1801_domyslne.x" wejscie-w-zycie="2026-01-01">Tymczasowo aresztowaną kobietę ciężarną przenosi się niepóźniej niż w 28. tygodniu ciąży do aresztu śledczego lub zakładu karnego, w którym jest zapewniona całodobowa opieka medyczna sprawowana co najmniej przez położną oraz jest zapewniony dostęp do świadczeń opieki zdrowotnej w zakresie ginekologii i położnictwa realizowanych przez podmiot leczniczy w ramach działalności statutowej.</zdanie></p></ustep></paragraf></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1801__art_1__pkt_2" gd:GUID="f43f32bd-4cdf-4066-b1c2-32b092b7b76d" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1801_domyslne.x" wejscie-w-zycie="2026-01-01">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="c09678c4-ab2d-4c47-9ff3-12dd5d8ddc6c" fragment="3" gd:fragmentGUID="2ea1fb53-14fa-45ee-b70a-f30996609958" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1801_domyslne.x" wejscie-w-zycie="2026-01-01">w § 23 ust. 3 i 4 otrzymują brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2022/2848" cudzyslowy="otwierajacy" gd:nowGUID="6e54dbaf-4998-467b-8eb5-155a731152f6" element-eId="DU/2022/2848__art_23__ust_3" funkcja="zastap"><ustep eId="DU/2022/2848__art_23__ust_3" gd:GUID="a6d1fd19-46a3-4ae9-a144-6ca2aea193c0" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1801_domyslne.x" wejscie-w-zycie="2026-01-01"><nr>3</nr><p><zdanie nr="1" gd:zdGUID="53a6149a-b3ae-480a-bfd3-cc9d100918ec" fragment="1" gd:fragmentGUID="6956a4bc-19b6-46a7-b38b-22230794be00" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1801_domyslne.x" wejscie-w-zycie="2026-01-01">Tymczasowo aresztowany korzysta co najmniej dwa razy w tygodniu z ciepłej kąpieli.</zdanie><zdanie nr="2" gd:zdGUID="9fdf095a-da0c-4bc7-869b-f9ae491cf33e" fragment="1" gd:fragmentGUID="9c8b9327-eda2-45c6-b55a-4a086d4f59f5" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1801_domyslne.x" wejscie-w-zycie="2026-01-01">Tymczasowo aresztowany zatrudniony przy pracach brudzących korzysta z odpowiednio częstszych kąpieli.</zdanie><zdanie nr="3" gd:zdGUID="cd46d14f-e045-4070-903c-40cafb213c60" fragment="1" gd:fragmentGUID="37aeed1f-e5e7-4920-90f0-39a8ea545d8a" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1801_domyslne.x" wejscie-w-zycie="2026-01-01">Kąpiel tymczasowo aresztowanego chorego odbywa się według wskazań lekarza, pielęgniarki lub położnej.</zdanie></p></ustep></cytat-strukt><cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2022/2848" cudzyslowy="zamykajacy" gd:nowGUID="2888fc66-2952-4c2c-9aa3-7f7e833a4874" element-eId="DU/2022/2848__art_23__ust_4" funkcja="zastap"><ustep eId="DU/2022/2848__art_23__ust_4" gd:GUID="c104c8d3-50a1-475f-ae74-4cd9d6febd06" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1801_domyslne.x" wejscie-w-zycie="2026-01-01"><nr>4</nr><p><zdanie nr="1" gd:zdGUID="87281a51-b042-470e-a79f-8b5d3d584062" fragment="1" gd:fragmentGUID="39d77cbd-d591-4597-85b6-f8a945f52cf8" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1801_domyslne.x" wejscie-w-zycie="2026-01-01">Tymczasowo aresztowana kobieta korzysta co najmniej raz dziennie z ciepłej wody.</zdanie></p></ustep></cytat-strukt>.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2025/1801__art_2" gd:GUID="3eae0c73-25c6-4612-8946-20a9d41dd9af" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1801_domyslne.x" wejscie-w-zycie="2026-01-01">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="5d7100fb-492d-4736-8244-6307eeac068f" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1801_domyslne.x" wejscie-w-zycie="2026-01-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="150d7c2a-1c30-48ad-8490-d7ddf22d96af" fragment="1" gd:fragmentGUID="3145928a-4494-4d60-9540-1ae301b2f60c" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1801_domyslne.x" wejscie-w-zycie="2026-01-01">Rozporządzenie wchodzi w życie po upływie 14 dni od dnia ogłoszenia.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <organ-podpisujacy>Minister Sprawiedliwości: <i><osoba podpisujacy="true" gd:osobaGUID="643a9dc3-aec8-4acd-a515-0fb83044a656"><imie>W.</imie> <nazwisko>Żurek</nazwisko></osoba></i></organ-podpisujacy>
+  </rozporzadzenie>
+</akt-prawny>

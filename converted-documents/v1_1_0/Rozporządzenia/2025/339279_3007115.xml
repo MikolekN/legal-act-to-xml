@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <rozporzadzenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/1200</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>c2fa5c51-874b-4b27-9d37-4344e31e05c0</gd:GUIDwersji>
+      <AdresISAP>WDU20250001200</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>1200</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 1200</AdresWyswietlany>
+      <Tytul>Rozporządzenie Ministra Energii z dnia 28 sierpnia 2025 r. zmieniające rozporządzenie w sprawie szczegółowych zasad kształtowania i kalkulacji taryf oraz rozliczeń z tytułu zaopatrzenia w ciepło</Tytul>
+      <Rodzaj>ROZP</Rodzaj>
+      <DataOgloszenia>2025-08-29</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-08-28</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2025-08-30_DU-2025-1200_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2025-08-30" warunek="z dniem następującym po dniu ogłoszenia" podstawa="§ 3" zrodlo="https://eli.gov.pl/eli/DU/2025/1200" dowod="DU/2025/1200__art_3" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2025-08-30_DU-2025-1200_domyslne.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2025-08-30_DU-2025-1200_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="b9d64b71-1f57-4177-8c3c-8c4d974713ce" rola="wydajacy">
+          <Nazwa>Minister Energii</Nazwa>
+          <OrganPodpisujacy>Minister Energii</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>M.</imie> <nazwisko>Motyka</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Rozporządzenie</rodzaj-aktu>
+    <autor-aktu>Ministra Energii<odnosnik id-odnosnika="1" symbol="1" gd:GUID="d20a6d77-9361-4591-8c1f-0eb4cb7496af"><p><zdanie nr="1" gd:zdGUID="3de14391-92a9-49ff-a54b-2d1eea0d3869" fragment="1" gd:fragmentGUID="62dbd903-e2c5-410b-9eee-fbad990dd429">Minister Energii kieruje działem administracji rządowej – energia, na podstawie § 1 ust. 2 pkt 1 rozporządzenia Prezesa Rady Ministrów z dnia 25 lipca 2025 r. w sprawie szczegółowego zakresu działania Ministra Energii (Dz. U. poz. 1001 i 1142).</zdanie></p></odnosnik></autor-aktu>
+    <data>z dnia 28 sierpnia 2025 r.</data>
+    <tytul>zmieniające rozporządzenie w sprawie szczegółowych zasad kształtowania i kalkulacji taryf oraz rozliczeń z tytułu zaopatrzenia w ciepło</tytul>
+    <podstawa-prawna>Na podstawie art. 46 ust. 5 i 6 ustawy z dnia 10 kwietnia 1997 r. – Prawo energetyczne (Dz. U. z 2024 r. poz. 266, z późn. zm.<odnosnik id-odnosnika="2" symbol="2" gd:GUID="f3fbbbd2-4a0e-44fe-88f1-0f535cc86784"><p><zdanie nr="1" gd:zdGUID="f82cb8e4-de6e-4a92-a4f0-b64feb07279e" fragment="1" gd:fragmentGUID="a2fb67ad-2601-46ec-a94d-08c182196c57">Zmiany tekstu jednolitego wymienionej ustawy zostały ogłoszone w Dz. U. z 2024 r. poz. 834, 859, 1847 i 1881 oraz z 2025 r. poz. 303 i 759.</zdanie></p></odnosnik>) zarządza się, co następuje:</podstawa-prawna>
+    <paragraf eId="DU/2025/1200__art_1" gd:GUID="5819c107-6879-4825-a560-c1fd30ce56d2" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-30_DU-2025-1200_domyslne.x" wejscie-w-zycie="2025-08-30">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="5cf991a0-5e93-499f-9c09-de692808f022" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-30_DU-2025-1200_domyslne.x" wejscie-w-zycie="2025-08-30">
+        <p>
+          <zdanie nr="1" gd:zdGUID="1511ee15-3f64-4c5f-b95f-4b30fd3467f9" fragment="1" gd:fragmentGUID="bfa7310b-7c15-4f54-ba0b-de6b06a7d68b" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-30_DU-2025-1200_domyslne.x" wejscie-w-zycie="2025-08-30">W rozporządzeniu Ministra Klimatu z dnia 7 kwietnia 2020 r. w sprawie szczegółowych zasad kształtowania i kalkulacji taryf oraz rozliczeń z tytułu zaopatrzenia w ciepło (Dz. U. poz. 718, z późn. zm.<odnosnik id-odnosnika="3" symbol="3" gd:GUID="b4373a7e-19b7-43fc-8773-6ba705122b92"><p><zdanie nr="1" gd:zdGUID="bc277fd2-ae76-434b-bdab-862ee9860157" fragment="1" gd:fragmentGUID="3ddf7454-f611-432a-b349-b7fe55a50f65">Zmiany wymienionego rozporządzenia zostały ogłoszone w Dz. U. z 2021 r. poz. 158 i 788, z 2022 r. poz. 37, 597 i 2437 oraz z 2023 r. poz. 1695.</zdanie></p></odnosnik>) wprowadza się następujące zmiany:</zdanie>
+        </p>
+        <punkt eId="DU/2025/1200__art_1__pkt_1" gd:GUID="7c634f3b-ffb5-4875-83ea-4a9daa7d0afe" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-30_DU-2025-1200_domyslne.x" wejscie-w-zycie="2025-08-30">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="1511ee15-3f64-4c5f-b95f-4b30fd3467f9" fragment="2" gd:fragmentGUID="a76a0b4b-fb72-44f1-9910-f944e97cab0f" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-30_DU-2025-1200_domyslne.x" wejscie-w-zycie="2025-08-30"><now:uchyl akt="https://eli.gov.pl/eli/DU/2020/718" element-eId="DU/2020/718__art_13__ust_5" gd:nowGUID="6e0d9dea-b321-4003-b577-3705aca15200" /><now:uchyl akt="https://eli.gov.pl/eli/DU/2020/718" element-eId="DU/2020/718__art_13__ust_6" gd:nowGUID="2d70393e-fc3d-436e-b26d-2a71e75609bc" /><now:uchyl akt="https://eli.gov.pl/eli/DU/2020/718" element-eId="DU/2020/718__art_13__ust_8" gd:nowGUID="f7721ea4-8bf3-41d6-ad38-020d075d1a4f" /><now:uchyl akt="https://eli.gov.pl/eli/DU/2020/718" element-eId="DU/2020/718__art_13__ust_9" gd:nowGUID="745f2d05-0c10-4b17-839c-0dc2bd52022f" />w § 13 uchyla się ust. 5, 6, 8 i 9;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1200__art_1__pkt_2" gd:GUID="dc6f24a9-224f-45ed-9640-b5496364dedb" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-30_DU-2025-1200_domyslne.x" wejscie-w-zycie="2025-08-30">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="1511ee15-3f64-4c5f-b95f-4b30fd3467f9" fragment="3" gd:fragmentGUID="8dea58f2-72ee-40c0-abc8-4acf55b5af3e" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-30_DU-2025-1200_domyslne.x" wejscie-w-zycie="2025-08-30">w § 14 użyte w różnym przypadku wyrazy „dane źródło” zastępuje się użytymi w odpowiednim przypadku wyrazami „dana jednostka kogeneracji”.<cytat-w-tekscie now:akt="https://eli.gov.pl/eli/DU/2020/718" cudzyslowy="oba" gd:nowGUID="79f6115e-fae5-4be8-ad26-f5f34ed22897" element-eId="DU/2020/718__art_14" funkcja="zastap-recznie"><tekst>dana jednostka kogeneracji</tekst></cytat-w-tekscie></zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2025/1200__art_2" gd:GUID="82e13afb-6f48-40d5-914b-56bdf6458ad5" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-30_DU-2025-1200_domyslne.x" wejscie-w-zycie="2025-08-30">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="b5298ee6-67fe-45e9-85a2-1656c906e73a" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-30_DU-2025-1200_domyslne.x" wejscie-w-zycie="2025-08-30">
+        <p>
+          <zdanie nr="1" gd:zdGUID="e9169255-2851-46e9-b205-e5e3fe4f9fa4" fragment="1" gd:fragmentGUID="e05abaf6-e777-4a69-bcbe-da06e466a5ea" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-30_DU-2025-1200_domyslne.x" wejscie-w-zycie="2025-08-30">Do spraw wszczętych na podstawie wniosków o zatwierdzenie taryf dla ciepła albo wniosków o zatwierdzenie zmian taryf dla ciepła i niezakończonych przed dniem wejścia w życie niniejszego rozporządzenia stosuje się przepisy rozporządzenia zmienianego w § 1 w brzmieniu nadanym niniejszym rozporządzeniem.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2025/1200__art_3" gd:GUID="e27b1fa0-2377-4a5d-ad1f-d5b79aa0afa5" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-30_DU-2025-1200_domyslne.x" wejscie-w-zycie="2025-08-30">
+      <nr>3</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="64c4bfa8-bd49-41ac-b676-db75bb51c731" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-30_DU-2025-1200_domyslne.x" wejscie-w-zycie="2025-08-30">
+        <p>
+          <zdanie nr="1" gd:zdGUID="cc2c9389-2424-4ef2-9cb2-d9d726c57747" fragment="1" gd:fragmentGUID="a1af1093-0a7b-44aa-8b1f-3805911294bb" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-30_DU-2025-1200_domyslne.x" wejscie-w-zycie="2025-08-30">Rozporządzenie wchodzi w życie z dniem następującym po dniu ogłoszenia.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <organ-podpisujacy>Minister Energii: <i><osoba podpisujacy="true" gd:osobaGUID="c31ca3a0-b899-4d14-868d-8add3c480f33"><imie>M.</imie> <nazwisko>Motyka</nazwisko></osoba></i></organ-podpisujacy>
+  </rozporzadzenie>
+</akt-prawny>

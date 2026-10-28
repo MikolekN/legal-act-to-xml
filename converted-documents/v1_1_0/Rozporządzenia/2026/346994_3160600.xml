@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <rozporzadzenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2026/51</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>3c2fe631-2882-4ec2-ba0e-bc22957f606a</gd:GUIDwersji>
+      <AdresISAP>WDU20260000051</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2026</Rok>
+      <Pozycja>51</Pozycja>
+      <AdresWyswietlany>Dz.U. 2026 poz. 51</AdresWyswietlany>
+      <Tytul>Rozporządzenie Ministra Zdrowia z dnia 15 stycznia 2026 r. zmieniające rozporządzenie w sprawie świadczeń gwarantowanych z zakresu leczenia szpitalnego</Tytul>
+      <Rodzaj>ROZP</Rodzaj>
+      <DataOgloszenia>2026-01-16</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2026-01-15</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2026-01-31_DU-2026-51_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2026-01-31" warunek="po upływie 14 dni od dnia ogłoszenia" podstawa="§ 2" zrodlo="https://eli.gov.pl/eli/DU/2026/51" dowod="DU/2026/51__art_2" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2026-01-31_DU-2026-51_domyslne.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2026-01-31_DU-2026-51_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="4dfd62a8-353c-42d0-9137-7f8c7ec6522b" rola="wydajacy">
+          <Nazwa>Minister Zdrowia</Nazwa>
+          <OrganPodpisujacy>Minister Zdrowia</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>T.</imie> <nazwisko>Maciejewski</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Rozporządzenie</rodzaj-aktu>
+    <autor-aktu>Ministra Zdrowia<odnosnik id-odnosnika="1" symbol="1" gd:GUID="190bbc2b-f59e-41dc-977d-5a5fee63f99c"><p><zdanie nr="1" gd:zdGUID="54514571-dd3d-48b7-9ba6-e933f37fa600" fragment="1" gd:fragmentGUID="27d30c1a-ca71-4327-a372-cb03696833e4">Minister Zdrowia kieruje działem administracji rządowej – zdrowie, na podstawie § 1 ust. 2 rozporządzenia Prezesa Rady Ministrów z dnia 25 lipca 2025 r. w sprawie szczegółowego zakresu działania Ministra Zdrowia (Dz. U. poz. 1004).</zdanie></p></odnosnik></autor-aktu>
+    <data>z dnia 15 stycznia 2026 r.</data>
+    <tytul>zmieniające rozporządzenie w sprawie świadczeń gwarantowanych z zakresu leczenia szpitalnego</tytul>
+    <podstawa-prawna>Na podstawie art. 31d ustawy z dnia 27 sierpnia 2004 r. o świadczeniach opieki zdrowotnej finansowanych ze środków publicznych (Dz. U. z 2025 r. poz. 1461, 1537 i 1739 oraz z 2026 r. poz. 26) zarządza się, co następuje:</podstawa-prawna>
+    <paragraf eId="DU/2026/51__art_1" gd:GUID="6f3c7f4d-4800-4a93-93ff-1d5315e23d20" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-31_DU-2026-51_domyslne.x" wejscie-w-zycie="2026-01-31">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="10953d8d-792f-4596-aca9-6759a2113ccd" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-31_DU-2026-51_domyslne.x" wejscie-w-zycie="2026-01-31">
+        <p>
+          <zdanie nr="1" gd:zdGUID="37cc96f7-c55e-4609-bfb9-4630ec8786b0" fragment="1" gd:fragmentGUID="718a5f01-e35f-43c3-a514-e3bad401c2d3" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-31_DU-2026-51_domyslne.x" wejscie-w-zycie="2026-01-31">W rozporządzeniu Ministra Zdrowia z dnia 22 listopada 2013 r. w sprawie świadczeń gwarantowanych z zakresu leczenia szpitalnego (Dz. U. z 2023 r. poz. 870, z późn. zm.<odnosnik id-odnosnika="2" symbol="2" gd:GUID="4d6adb43-b0a4-4a49-90db-f6124c5b034a"><p><zdanie nr="1" gd:zdGUID="d875da66-5881-4806-b939-6156ac1ca5df" fragment="1" gd:fragmentGUID="0bb6e877-9edc-428e-adc3-7f7c685169ed">Zmiany tekstu jednolitego wymienionego rozporządzenia zostały ogłoszone w Dz. U. z 2023 r. poz. 978, 1477, 1955 i 2610, z 2024 r. poz. 961 i 1798 oraz z 2025 r. poz. 724, 743, 784 i 1509.</zdanie></p></odnosnik>) w załączniku nr 4 „Wykaz świadczeń gwarantowanych z zakresu leczenia szpitalnego, które są udzielane po spełnieniu dodatkowych warunków ich realizacji, oraz dodatkowe warunki realizacji tych świadczeń” dodaje się lp. 73 w brzmieniu określonym w załączniku do niniejszego rozporządzenia.<cytat-w-tekscie now:akt="https://eli.gov.pl/eli/DU/2023/870" cudzyslowy="brak" gd:nowGUID="21d430a5-cebf-4706-b9eb-877ed63e099f" element-eId="DU/2023/870__zal_4" funkcja="dodaj-recznie"><tekst>lp. 73</tekst></cytat-w-tekscie></zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2026/51__art_2" gd:GUID="2f93886b-49d4-4624-b3d9-93df8c3457bc" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-31_DU-2026-51_domyslne.x" wejscie-w-zycie="2026-01-31">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="21c1dc0f-9a5b-4fdb-9bd2-ecb306dab41a" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-31_DU-2026-51_domyslne.x" wejscie-w-zycie="2026-01-31">
+        <p>
+          <zdanie nr="1" gd:zdGUID="920116db-4a5a-410e-a1e3-0d17a744cabc" fragment="1" gd:fragmentGUID="b48917dd-dc1e-42c7-98e7-ad0d1982ffef" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-31_DU-2026-51_domyslne.x" wejscie-w-zycie="2026-01-31">Rozporządzenie wchodzi w życie po upływie 14 dni od dnia ogłoszenia.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <organ-podpisujacy>Minister Zdrowia: wz. <i><osoba podpisujacy="true" gd:osobaGUID="b695be5b-9286-4a4f-97eb-85a7c18447bb"><imie>T.</imie> <nazwisko>Maciejewski</nazwisko></osoba></i></organ-podpisujacy>
+    <zalacznik eId="DU/2026/51__zal_1" gd:GUID="cb9d583d-5566-489e-93c5-0790c9bed3b4">
+      <zalacznik-do gd:GUID="91766c54-d529-4bd4-967d-b891077d599a">Załącznik do rozporządzenia Ministra Zdrowia z dnia 15 stycznia 2026 r. (Dz. U. poz. 51)</zalacznik-do>
+      <segment-zalacznika gd:GUID="3a5a816c-1717-41f0-8530-9c7f8744adf2" orientacja="pionowa">
+        <tabela gd:GUID="f226a99a-2205-4c7d-afde-411e73974cd5">
+          <tbody>
+            <tr gd:GUID="7a112737-7eab-43a3-8189-33ae6bd7371e">
+              <td rowspan="4" gd:GUID="29871e99-0288-4cab-bd65-c87db9512930">
+                <liczba gd:GUID="6f0ce365-728d-44c7-be4e-bc9fc0e561b0">73</liczba>
+              </td>
+              <td rowspan="4" gd:GUID="25e944e7-38fb-4680-91e6-5415dd94ee18">
+                <tekst-zwykly gd:GUID="9938a4c8-3e7c-42a2-9e83-7eda71b5d9c1">Opieka nad kobietą w ciąży lub kobietą rodzącą realizowana przez położną</tekst-zwykly>
+              </td>
+              <td gd:GUID="09637b0a-436d-4945-af10-6dee252005ee">
+                <tekst-zwykly gd:GUID="10596de5-697a-486f-9a3a-d080937e5388">Wymagania formalne</tekst-zwykly>
+              </td>
+              <td gd:GUID="9e197836-5472-434b-9f35-7d6f509ae2d0">
+                <wyliczenie-1 gd:GUID="b6cdb9c6-1c34-44f8-9d5a-7d7a3492d9bc">1) w lokalizacji:</wyliczenie-1>
+                <wyliczenie-2 gd:GUID="be96a7ac-51ad-4075-bc8f-6ad28598b9a2">a) izba przyjęć lub szpitalny oddział ratunkowy,</wyliczenie-2>
+                <wyliczenie-2 gd:GUID="529f78f0-f971-4024-9937-569e7f82a483">b) co najmniej jedno wydzielone pomieszczenie mające bezpośrednie połączenie z pomieszczeniem wyposażonym w pełny węzeł higieniczno-sanitarny oraz bidet, przeznaczone do udzielania świadczenia opieki zdrowotnej,</wyliczenie-2>
+                <wyliczenie-2 gd:GUID="c3f2695f-fa09-44f8-86d2-12d75955dfcb">c) poradnia położniczo-ginekologiczna, w której lekarz udziela świadczeń opieki zdrowotnej od poniedziałku do piątku, w godzinach od 8.00 do 18.00, z wyłączeniem dni ustawowo wolnych od pracy;</wyliczenie-2>
+                <wyliczenie-1 gd:GUID="8a35cc56-f149-4958-83e2-a443138d762e">2) opinia konsultanta wojewódzkiego w dziedzinie położnictwa i ginekologii w sprawie potrzeby realizacji świadczenia opieki zdrowotnej przez świadczeniodawcę, uwzględniająca organizację opieki okołoporodowej na terenie województwa;</wyliczenie-1>
+                <wyliczenie-1 gd:GUID="95836d0a-1488-4d0f-b123-0b1f892d543a">3) opinia konsultanta wojewódzkiego w dziedzinie pielęgniarstwa ginekologiczno-położniczego w sprawie potrzeby realizacji świadczenia opieki zdrowotnej przez świadczeniodawcę, uwzględniająca organizację opieki okołoporodowej na terenie województwa;</wyliczenie-1>
+                <wyliczenie-1 gd:GUID="ad5c6c0f-0dee-49b4-8079-6cc8402009b8">4) odległość od najbliższego świadczeniodawcy udzielającego świadczeń opieki zdrowotnej z zakresu położnictwa i ginekologii, w trybie hospitalizacji, wynosząca ponad 25 km;</wyliczenie-1>
+                <wyliczenie-1 gd:GUID="6e2980e1-ee21-455a-9d4b-12c4ac63f22e">5) całodobowy dostęp do środka transportu, który:</wyliczenie-1>
+                <wyliczenie-2 gd:GUID="dcc1759c-959e-45d2-9fa7-d478de7f1ec8">a) umożliwia przejazd z miejsca stacjonowania do świadczeniodawcy w czasie krótszym niż 15 minut,</wyliczenie-2>
+                <wyliczenie-2 gd:GUID="94aea527-cf57-4d99-bfc4-255fa06ed741">b) spełnia cechy techniczne i jakościowe określone w Polskich Normach przenoszących europejskie normy zharmonizowane, jest dostosowany do przewozu kobiety w ciąży, kobiety rodzącej albo kobiety w połogu lub noworodka i wyposażony co najmniej w:</wyliczenie-2>
+                <wyliczenie-3 gd:GUID="b537890c-f156-424d-b7e0-c5b1b7540771">– zestaw porodowy,</wyliczenie-3>
+                <wyliczenie-3 gd:GUID="aa181000-e7c2-49df-94cb-1708efc2ed34">– urządzenie do nieinwazyjnego wsparcia oddechu,</wyliczenie-3>
+                <wyliczenie-3 gd:GUID="608a7ab2-c98b-4e70-b233-605dad2e0f92">– źródło tlenu z nawilżaczem oraz mieszalnikiem gazów dla noworodka,</wyliczenie-3>
+                <wyliczenie-3 gd:GUID="a8c9c8bf-f324-4f7a-8f7a-64132cb435dd">– respirator manualny (ambu) dla noworodka,</wyliczenie-3>
+                <wyliczenie-3 gd:GUID="8583351b-0b3a-429f-9206-67d10d5c2ee4">– przenośny ssak (aspirator),</wyliczenie-3>
+                <wyliczenie-3 gd:GUID="bb77c057-42df-4a91-a792-ac3a08355dbb">– pulsoksymetr i termometr elektroniczny,</wyliczenie-3>
+                <wyliczenie-3 gd:GUID="24a67969-18b5-471c-848d-efcd64ac7e01">– fotelik do przewozu noworodka lub</wyliczenie-3>
+                <wyliczenie-3 gd:GUID="6e271e64-2971-447e-bed5-bb6b12618a74">– transporter neonatologiczny;</wyliczenie-3>
+                <tekst-zwykly gd:GUID="3d1239f5-89b2-4218-b2b2-1e9feeacec77">Środek transportu nie może być przeznaczony do udzielania innych świadczeń opieki zdrowotnej.</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="87fd70d9-a6b8-4084-a048-ef0b2b7a7b3f">
+              <td gd:GUID="b05e60bb-7630-47cd-b786-00553112ad41">
+                <tekst-zwykly gd:GUID="c9fe1f88-6df5-4fb2-9da4-371ecfcff3a2">Personel</tekst-zwykly>
+              </td>
+              <td gd:GUID="5abb1fb2-11f3-4fed-937a-ca40825a7155">
+                <wyliczenie-1 gd:GUID="a2742a53-7a95-4708-84b4-15a1456ab108">1) położna;</wyliczenie-1>
+                <wyliczenie-1 gd:GUID="2f6b1db5-7d54-4505-a371-0f180a0d7666">2) ratownik medyczny.</wyliczenie-1>
+              </td>
+            </tr>
+            <tr gd:GUID="212a868d-69e2-4cfe-a698-9bfd677fea2a">
+              <td gd:GUID="45ae2ba0-4acb-41e4-b6fa-8262119c12ba">
+                <tekst-zwykly gd:GUID="e5e31f77-79c1-4925-8d65-cdeac9bd8cc7">Wyposażenie w sprzęt i aparaturę medyczną</tekst-zwykly>
+              </td>
+              <td gd:GUID="39c00711-ceb6-4834-82f7-3752b47e3652">
+                <tekst-zwykly gd:GUID="35dbc4f3-11b9-4a83-b805-7131c672077d">W miejscu udzielania świadczeń opieki zdrowotnej:</tekst-zwykly>
+                <wyliczenie-1 gd:GUID="663b7fed-1284-475d-992c-26765949bfe5">1) aparat KTG;</wyliczenie-1>
+                <wyliczenie-1 gd:GUID="994fc917-b63f-4f5f-82f3-15c1d41562b3">2) kardiomonitor;</wyliczenie-1>
+                <wyliczenie-1 gd:GUID="16a7731a-f55e-4880-ac3d-6128da2fa22e">3) pulsoksymetr;</wyliczenie-1>
+                <wyliczenie-1 gd:GUID="2899fabe-0428-48e7-9850-8fc91d688d34">4) łóżko porodowe;</wyliczenie-1>
+                <wyliczenie-1 gd:GUID="a64918a2-41f4-4084-a54c-9ed0be43e814">5) łóżeczko dla noworodka;</wyliczenie-1>
+                <wyliczenie-1 gd:GUID="e98ffc19-e629-47cd-9048-467c1a750657">6) fotel ginekologiczny;</wyliczenie-1>
+                <wyliczenie-1 gd:GUID="409463fd-3c36-46ab-96a5-2d2f6bf33a08">7) stanowisko do resuscytacji noworodka;</wyliczenie-1>
+                <wyliczenie-1 gd:GUID="3c40f2c5-0607-4359-a6b6-2c71f96cbbdd">8) urządzenie do nieinwazyjnego wsparcia oddechu;</wyliczenie-1>
+                <wyliczenie-1 gd:GUID="ee7b3a5b-024f-4725-b513-64aabb734dff">9) inkubator zamknięty lub otwarty do opieki podstawowej;</wyliczenie-1>
+                <wyliczenie-1 gd:GUID="e2a3694e-a22c-4090-bfd8-17796a44d204">10) zestaw porodowy.</wyliczenie-1>
+              </td>
+            </tr>
+            <tr gd:GUID="3db11717-50cc-4848-ac5d-b6f68de7234c">
+              <td gd:GUID="87def17d-6853-46b3-981f-eee364a0334c">
+                <tekst-zwykly gd:GUID="9cf7a976-101f-4618-b81c-9b1f38651c04">Organizacja udzielania świadczeń opieki zdrowotnej</tekst-zwykly>
+              </td>
+              <td gd:GUID="6eaafce9-1df1-4da4-8b51-dc5c5f55e9ed">
+                <wyliczenie-1 gd:GUID="70f69538-52dd-4164-9325-42cd7ba87b3d">1) świadczenie opieki zdrowotnej jest udzielane przez świadczeniodawcę, który zapewnia całodobową opiekę co najmniej jednej położnej w miejscu udzielania świadczeń opieki zdrowotnej, która posiada udokumentowane potwierdzenie odbycia szkolenia w zakresie resuscytacji noworodka, oraz całodobową opiekę:</wyliczenie-1>
+                <wyliczenie-2 gd:GUID="2c0241f1-e543-4584-b223-36baa5a0d51f">a) co najmniej jednej położnej w lokalizacji, która to położna posiada udokumentowane potwierdzenie odbycia szkolenia w zakresie resuscytacji noworodka (opieka może być łączona z innymi komórkami organizacyjnymi świadczeniodawcy w sposób określony w jego regulaminie organizacyjnym), lub</wyliczenie-2>
+                <wyliczenie-2 gd:GUID="b271fe11-2116-448b-b17b-c15a3a7b33ee">b) co najmniej jednej położnej pozostającej w gotowości do udzielania świadczeń opieki zdrowotnej, która posiada udokumentowane potwierdzenie odbycia szkolenia w zakresie resuscytacji noworodka;</wyliczenie-2>
+                <wyliczenie-1 gd:GUID="744abcd2-bad5-45c5-9a04-c108a621da4f">2) położna:</wyliczenie-1>
+                <wyliczenie-2 gd:GUID="6021696b-dcd9-4acb-91de-62357a38f284">a) dokonuje oceny stanu klinicznego kobiety w ciąży lub kobiety rodzącej,</wyliczenie-2>
+                <wyliczenie-2 gd:GUID="6685c0a6-fb87-4196-890d-27cf226cc689">b) wykrywa czynniki ryzyka oraz wczesną patologię ciąży, porodu albo połogu,</wyliczenie-2>
+                <wyliczenie-2 gd:GUID="6554331b-1caa-4c15-8cd2-3cf07d57fefe">c) zapewnia ciągłość opieki nad kobietą rodzącą w czasie porodu albo w połogu lub nad noworodkiem;</wyliczenie-2>
+                <wyliczenie-1 gd:GUID="14f462ed-e614-476d-a048-74a6b3033ce3">3) świadczeniodawca, po dokonaniu oceny stanu klinicznego przez położną, w sytuacji wystąpienia wskazań do hospitalizacji kieruje i transportuje kobietę w ciąży, kobietę rodzącą albo kobietę w połogu lub noworodka do świadczeniodawcy udzielającego świadczeń opieki zdrowotnej w zakresie położnictwa i ginekologii lub neonatologii, posiadającego oddział o poziomie referencyjnym zapewniającym opiekę perinatalną odpowiednią do stanu klinicznego kobiety lub noworodka;</wyliczenie-1>
+                <wyliczenie-1 gd:GUID="65b5b267-8d3d-4ee5-a9e9-cbfb798c679f">4) w sytuacji gdy położna przekazuje kobietę w ciąży, kobietę rodzącą albo kobietę w połogu lub noworodka osobie sprawującej opiekę u innego świadczeniodawcy, w dokumentacji medycznej odnotowuje się dokładny czas przekazania, dane dotyczące stanu klinicznego oraz dotychczasowego przebiegu opieki (adnotacja jest podpisywana przez położną przekazującą i przez osobę przejmującą opiekę);</wyliczenie-1>
+                <wyliczenie-1 gd:GUID="8a3b59bd-60e9-4968-b1b6-50278f4b5fa5">5) świadczeniodawca – w przypadku braku możliwości przekazania kobiety rodzącej wynikającego z etapu zaawansowania porodu – zapewnia przyjęcie porodu;</wyliczenie-1>
+                <wyliczenie-1 gd:GUID="150e381b-f659-4d83-bdf6-2849b7525698">6) w transporcie kobiety w ciąży, kobiety rodzącej, kobiety w połogu lub noworodka do innego szpitala uczestniczą:</wyliczenie-1>
+                <wyliczenie-2 gd:GUID="e91706bf-965b-4e6d-b7f6-0db185502f09">a) położna, o której mowa w pkt 1,</wyliczenie-2>
+                <wyliczenie-2 gd:GUID="028a9ab1-daea-4a3f-baf9-7438acfbdb55">b) ratownik medyczny,</wyliczenie-2>
+                <wyliczenie-2 gd:GUID="aa695947-8c8a-4f75-923a-f0c61afb8f36">c) osoba uprawniona do prowadzenia pojazdów uprzywilejowanych – w przypadku gdy żadna z osób wymienionych i w lit. a i b nie posiada tego uprawnienia;</wyliczenie-2>
+                <wyliczenie-1 gd:GUID="57908d01-bd08-491d-9aa4-ebf3fb36ec47">7) w przypadku:</wyliczenie-1>
+                <wyliczenie-2 gd:GUID="8dcde1cb-4f65-4fd1-ad73-e07620a3cb3b">a) dziecka urodzonego przed ukończeniem 37. tygodnia ciąży lub</wyliczenie-2>
+                <wyliczenie-2 gd:GUID="e34b9585-055b-4318-97a2-10086aa0b821">b) dziecka o masie urodzeniowej &lt; 2500 g, lub</wyliczenie-2>
+                <wyliczenie-2 gd:GUID="d8c72029-a0b0-43e9-a595-a0bfae0b1f46">c) wystąpienia u dziecka objawów niewydolności oddechowej, sinicy, zaburzeń krążenia</wyliczenie-2>
+                <wyliczenie-3 gd:GUID="d9db150d-bfa0-4a92-b0ab-cc4e974ea482">– transport jest realizowany przez wyjazdowy zespół sanitarny typu „N”.</wyliczenie-3>
+              </td>
+            </tr>
+          </tbody>
+        </tabela>
+      </segment-zalacznika>
+    </zalacznik>
+  </rozporzadzenie>
+</akt-prawny>

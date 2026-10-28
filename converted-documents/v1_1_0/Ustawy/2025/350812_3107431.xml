@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <ustawa>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/1665</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>fd817ed4-8090-4dab-bf82-62c7c0b012b2</gd:GUIDwersji>
+      <AdresISAP>WDU20250001665</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>1665</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 1665</AdresWyswietlany>
+      <Tytul>Ustawa z dnia 7 listopada 2025 r. o zmianie ustawy o rehabilitacji zawodowej i społecznej oraz zatrudnianiu osób niepełnosprawnych</Tytul>
+      <Rodzaj>USTAWA</Rodzaj>
+      <DataOgloszenia>2025-11-28</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-11-07</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2026-01-01_DU-2025-1665_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2026-01-01" warunek="pierwszego dnia miesiąca następującego po upływie miesiąca od dnia ogłoszenia" podstawa="art. 4" zrodlo="https://eli.gov.pl/eli/DU/2025/1665" dowod="DU/2025/1665__art_4" />
+          <Zdarzenie id="zdarz_wejscie_2026-04-01_DU-2025-1665_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2026-04-01" warunek="pierwszego dnia miesiąca następującego po upływie 3 miesięcy od dnia ogłoszenia" podstawa="art. 4" zrodlo="https://eli.gov.pl/eli/DU/2025/1665" dowod="DU/2025/1665__art_4">
+            <JednostkaAktu eId="DU/2025/1665__art_1__pkt_1" />
+            <JednostkaAktu eId="DU/2025/1665__art_2" />
+            <JednostkaAktu eId="DU/2025/1665__art_3__pkt_2" />
+          </Zdarzenie>
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1665_domyslne.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2026-01-01_DU-2025-1665_domyslne" />
+        </GrupaCzasowa>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2026-04-01_DU-2025-1665_domyslne.x" glowna="false">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2026-04-01_DU-2025-1665_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="8d0ac725-c0b0-4623-8f87-33dbc2d3d677" rola="wydajacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Sejm">
+          <Nazwa>SEJM</Nazwa>
+        </Organ>
+        <Organ gd:GUID="9334f88c-3071-4104-b9cb-b50384210335" rola="podpisujacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Prezydent">
+          <Nazwa>Prezydent Rzeczypospolitej Polskiej</Nazwa>
+          <OrganPodpisujacy>Prezydent Rzeczypospolitej Polskiej</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>K.</imie> <nazwisko>Nawrocki</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Ustawa</rodzaj-aktu>
+    <data>z dnia 7 listopada 2025 r.</data>
+    <tytul>o zmianie ustawy o rehabilitacji zawodowej i społecznej oraz zatrudnianiu osób niepełnosprawnych</tytul>
+    <artykul eId="DU/2025/1665__art_1" gd:GUID="7a388242-bfbe-4e28-a402-8d20b8bae2dd" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1665_domyslne.x" wejscie-w-zycie="2026-01-01">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="75c1e2fe-b7da-435e-b8f4-7a37b780f8c9" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1665_domyslne.x" wejscie-w-zycie="2026-01-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="5676527d-527b-4eb0-9fff-1ded482465f8" fragment="1" gd:fragmentGUID="7762a726-2d48-4bc5-af4b-3d038f8d223d" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1665_domyslne.x" wejscie-w-zycie="2026-01-01">W ustawie z dnia 27 sierpnia 1997 r. o rehabilitacji zawodowej i społecznej oraz zatrudnianiu osób niepełnosprawnych (Dz. U. z 2025 r. poz. 913 i 1301) wprowadza się następujące zmiany:</zdanie>
+        </p>
+        <punkt eId="DU/2025/1665__art_1__pkt_1" gd:GUID="efaac241-acf7-4b6f-b16e-fcd2803058eb" okres="okr_obowiazywanie.zdarz_wejscie_2026-04-01_DU-2025-1665_domyslne.x" wejscie-w-zycie="2026-04-01">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="5676527d-527b-4eb0-9fff-1ded482465f8" fragment="2" gd:fragmentGUID="3597b7d0-0a17-41a6-b9a5-c15d735dfd02" okres="okr_obowiazywanie.zdarz_wejscie_2026-04-01_DU-2025-1665_domyslne.x" wejscie-w-zycie="2026-04-01">w art. 22:</zdanie>
+          </p>
+          <litera eId="DU/2025/1665__art_1__pkt_1__lit_a" gd:GUID="716d6b65-4b1d-48c0-bf30-251ecd4e9caf" okres="okr_obowiazywanie.zdarz_wejscie_2026-04-01_DU-2025-1665_domyslne.x" wejscie-w-zycie="2026-04-01">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="5676527d-527b-4eb0-9fff-1ded482465f8" fragment="3" gd:fragmentGUID="50f83bbf-85c1-4c61-890f-2cb24780e843" okres="okr_obowiazywanie.zdarz_wejscie_2026-04-01_DU-2025-1665_domyslne.x" wejscie-w-zycie="2026-04-01"><now:uchyl akt="https://eli.gov.pl/eli/DU/2025/913" element-eId="DU/2025/913__art_22__ust_1a" gd:nowGUID="92adf521-288b-40b5-ad6c-d8275837083d" />uchyla się ust. 1a,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1665__art_1__pkt_1__lit_b" gd:GUID="7edbd5c1-b3f4-41a5-b675-5bdfc05c3f0f" okres="okr_obowiazywanie.zdarz_wejscie_2026-04-01_DU-2025-1665_domyslne.x" wejscie-w-zycie="2026-04-01">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="5676527d-527b-4eb0-9fff-1ded482465f8" fragment="4" gd:fragmentGUID="b87de9b0-ee52-482c-b4b3-c73aad3ceecf" okres="okr_obowiazywanie.zdarz_wejscie_2026-04-01_DU-2025-1665_domyslne.x" wejscie-w-zycie="2026-04-01">po ust. 2 dodaje się ust. 2a–2d w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2025/913" cudzyslowy="oba" gd:nowGUID="456a7f3a-9dd8-4282-8001-461c1564ad31" element-eId="DU/2025/913__art_22__ust_2" funkcja="dodaj-po"><ustep eId="DU/2025/913__art_22__ust_2a" gd:GUID="5af041a5-b1f6-49a7-9c3f-ca3eb45be83f" okres="okr_obowiazywanie.zdarz_wejscie_2026-04-01_DU-2025-1665_domyslne.x" wejscie-w-zycie="2026-04-01"><nr>2a</nr><p><zdanie nr="1" gd:zdGUID="81d21f57-75dc-46b7-ba90-c8f0c44562a2" fragment="1" gd:fragmentGUID="20e4813e-ad8f-4195-952f-fd8309d63b3a" okres="okr_obowiazywanie.zdarz_wejscie_2026-04-01_DU-2025-1665_domyslne.x" wejscie-w-zycie="2026-04-01">Informacja, o której mowa w ust. 2 pkt 3, jest wystawiana na wniosek nabywcy złożony w formie pisemnej, elektronicznej lub dokumentowej.</zdanie></p></ustep><ustep eId="DU/2025/913__art_22__ust_2b" gd:GUID="d8520033-049c-4d1f-b166-d1850c572a53" okres="okr_obowiazywanie.zdarz_wejscie_2026-04-01_DU-2025-1665_domyslne.x" wejscie-w-zycie="2026-04-01"><nr>2b</nr><p><zdanie nr="1" gd:zdGUID="f0670ff1-65d0-42ab-821c-71de1dcc0d0a" fragment="1" gd:fragmentGUID="b5ab8736-cd34-406f-9540-504ebdc2d87e" okres="okr_obowiazywanie.zdarz_wejscie_2026-04-01_DU-2025-1665_domyslne.x" wejscie-w-zycie="2026-04-01">Wniosek składany jest jednorazowo.</zdanie><zdanie nr="2" gd:zdGUID="183bff5f-2ed5-44a0-8591-d96f79cc822f" fragment="1" gd:fragmentGUID="6b0792d3-493d-4435-a36a-93433767a180" okres="okr_obowiazywanie.zdarz_wejscie_2026-04-01_DU-2025-1665_domyslne.x" wejscie-w-zycie="2026-04-01">Wniosek może zostać odwołany w każdym czasie, w formach określonych w ust. 2a.</zdanie></p></ustep><ustep eId="DU/2025/913__art_22__ust_2c" gd:GUID="c3b407fe-4bf3-40f9-888c-760a6936111b" okres="okr_obowiazywanie.zdarz_wejscie_2026-04-01_DU-2025-1665_domyslne.x" wejscie-w-zycie="2026-04-01"><nr>2c</nr><p><zdanie nr="1" gd:zdGUID="d30b94cc-16fb-4ba1-a573-8795ddd4c3c5" fragment="1" gd:fragmentGUID="4f4ae70c-a082-4dcb-a585-05efeccd7362" okres="okr_obowiazywanie.zdarz_wejscie_2026-04-01_DU-2025-1665_domyslne.x" wejscie-w-zycie="2026-04-01">Sprzedający, który otrzymał wniosek, o którym mowa w ust. 2a, każdorazowo po wystawieniu faktury nabywcy wystawia mu informację, o której mowa w ust. 2 pkt 3.</zdanie></p></ustep><ustep eId="DU/2025/913__art_22__ust_2d" gd:GUID="08bc3eea-a34c-4afe-bbfa-169b1858a8d6" okres="okr_obowiazywanie.zdarz_wejscie_2026-04-01_DU-2025-1665_domyslne.x" wejscie-w-zycie="2026-04-01"><nr>2d</nr><p><zdanie nr="1" gd:zdGUID="d907e915-1687-406a-b06c-93f3768ea174" fragment="1" gd:fragmentGUID="992ce1ed-d405-472b-8f57-02c2a4e1200f" okres="okr_obowiazywanie.zdarz_wejscie_2026-04-01_DU-2025-1665_domyslne.x" wejscie-w-zycie="2026-04-01">Sprzedający może skorygować informację, o której mowa w ust. 2 pkt 3, pomimo braku wniosku nabywcy.</zdanie></p></ustep></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1665__art_1__pkt_1__lit_c" gd:GUID="daae1afc-fab3-4541-baa1-68be9d182e8e" okres="okr_obowiazywanie.zdarz_wejscie_2026-04-01_DU-2025-1665_domyslne.x" wejscie-w-zycie="2026-04-01">
+            <nr>c</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="5676527d-527b-4eb0-9fff-1ded482465f8" fragment="5" gd:fragmentGUID="5709eb15-dd3e-4002-bd1a-745219c429fa" okres="okr_obowiazywanie.zdarz_wejscie_2026-04-01_DU-2025-1665_domyslne.x" wejscie-w-zycie="2026-04-01">w ust. 10 pkt 1 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2025/913" cudzyslowy="oba" gd:nowGUID="4a73f1f6-7d97-4b23-80e4-4b013901265b" element-eId="DU/2025/913__art_22__ust_10__pkt_1" funkcja="zastap"><punkt eId="DU/2025/913__art_22__ust_10__pkt_1" gd:GUID="549d4e29-1036-416e-9d5c-4930b54bfed1" okres="okr_obowiazywanie.zdarz_wejscie_2026-04-01_DU-2025-1665_domyslne.x" wejscie-w-zycie="2026-04-01"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="5cd6fce2-1b30-4647-ab48-33e6a36dc059" fragment="1" gd:fragmentGUID="51db7d11-d741-464e-b263-c0626e738a7a" okres="okr_obowiazywanie.zdarz_wejscie_2026-04-01_DU-2025-1665_domyslne.x" wejscie-w-zycie="2026-04-01">wystawia nabywcy informację o kwocie obniżenia:</zdanie></p><litera eId="DU/2025/913__art_22__ust_10__pkt_1__lit_a" gd:GUID="e85ed256-7b90-4c14-b43b-180e505fbb77" okres="okr_obowiazywanie.zdarz_wejscie_2026-04-01_DU-2025-1665_domyslne.x" wejscie-w-zycie="2026-04-01"><nr>a</nr><p><zdanie nr="1" gd:zdGUID="5cd6fce2-1b30-4647-ab48-33e6a36dc059" fragment="2" gd:fragmentGUID="74b5d3e3-88cb-4b03-acd4-fe607c53db9b" okres="okr_obowiazywanie.zdarz_wejscie_2026-04-01_DU-2025-1665_domyslne.x" wejscie-w-zycie="2026-04-01">po otrzymaniu wniosku określonego w ust. 2a oraz</zdanie></p></litera><litera eId="DU/2025/913__art_22__ust_10__pkt_1__lit_b" gd:GUID="ae6a5cd8-e67b-4c70-83b2-9727d29d7e2e" okres="okr_obowiazywanie.zdarz_wejscie_2026-04-01_DU-2025-1665_domyslne.x" wejscie-w-zycie="2026-04-01"><nr>b</nr><p><zdanie nr="1" gd:zdGUID="5cd6fce2-1b30-4647-ab48-33e6a36dc059" fragment="3" gd:fragmentGUID="417d8966-a3df-4d39-9228-5ddfe55a922a" okres="okr_obowiazywanie.zdarz_wejscie_2026-04-01_DU-2025-1665_domyslne.x" wejscie-w-zycie="2026-04-01">niezwłocznie po terminowym uregulowaniu należności za zakup</zdanie></p></litera><czesc-wspolna-litera eId="DU/2025/913__art_22__ust_10__pkt_1__czw" gd:GUID="c5684947-e198-4386-b113-ba0d0db04362" okres="okr_obowiazywanie.zdarz_wejscie_2026-04-01_DU-2025-1665_domyslne.x" wejscie-w-zycie="2026-04-01"><p><zdanie nr="1" gd:zdGUID="5cd6fce2-1b30-4647-ab48-33e6a36dc059" fragment="4" gd:fragmentGUID="53cfb9a0-dfe0-49cf-a483-c4125cfc3113" okres="okr_obowiazywanie.zdarz_wejscie_2026-04-01_DU-2025-1665_domyslne.x" wejscie-w-zycie="2026-04-01">– jednak nie później niż do ostatniego dnia miesiąca następującego po miesiącu, w którym przypadał termin płatności za zakup;</zdanie></p></czesc-wspolna-litera></punkt></cytat-strukt>;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2025/1665__art_1__pkt_2" gd:GUID="a6b8fd1d-629d-45fb-a522-fa8cdf58e276" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1665_domyslne.x" wejscie-w-zycie="2026-01-01">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="5676527d-527b-4eb0-9fff-1ded482465f8" fragment="6" gd:fragmentGUID="fef89f12-973b-49fe-b2d9-ea47343ae5db" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1665_domyslne.x" wejscie-w-zycie="2026-01-01">w art. 28:</zdanie>
+          </p>
+          <litera eId="DU/2025/1665__art_1__pkt_2__lit_a" gd:GUID="bb684eee-5861-4b81-b50b-d1dfa4dd6deb" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1665_domyslne.x" wejscie-w-zycie="2026-01-01">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="5676527d-527b-4eb0-9fff-1ded482465f8" fragment="7" gd:fragmentGUID="236c5961-b659-469b-b724-235868f41212" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1665_domyslne.x" wejscie-w-zycie="2026-01-01">w ust. 1 pkt 3 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2025/913" cudzyslowy="oba" gd:nowGUID="ecdafff4-bd3f-4e92-93cf-a70840a64ffd" element-eId="DU/2025/913__art_28__ust_1__pkt_3" funkcja="zastap"><punkt eId="DU/2025/913__art_28__ust_1__pkt_3" gd:GUID="86c64223-4e3b-4d4c-b886-c5e195a08666" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1665_domyslne.x" wejscie-w-zycie="2026-01-01"><nr>3</nr><p><zdanie nr="1" gd:zdGUID="64caa3ee-275e-4b03-81ca-0839c13d3b81" fragment="1" gd:fragmentGUID="36a969bd-1640-40ca-9a70-1ebf775d1e9c" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1665_domyslne.x" wejscie-w-zycie="2026-01-01">jest zapewniona specjalistyczna opieka medyczna, poradnictwo i usługi rehabilitacyjne;</zdanie></p></punkt></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1665__art_1__pkt_2__lit_b" gd:GUID="e27948fe-87ef-49b3-8265-fdb56a3fecc2" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1665_domyslne.x" wejscie-w-zycie="2026-01-01">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="5676527d-527b-4eb0-9fff-1ded482465f8" fragment="8" gd:fragmentGUID="61322f94-8ff6-4957-9c8f-7bee08294b28" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1665_domyslne.x" wejscie-w-zycie="2026-01-01"><now:uchyl akt="https://eli.gov.pl/eli/DU/2025/913" element-eId="DU/2025/913__art_28__ust_2a" gd:nowGUID="005774a3-c1c0-4653-8f1a-4e5082ce1110" /><now:uchyl akt="https://eli.gov.pl/eli/DU/2025/913" element-eId="DU/2025/913__art_28__ust_2b" gd:nowGUID="dfbb0d85-9616-4447-85ce-9336a9590dea" />uchyla się ust. 2a i 2b;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2025/1665__art_1__pkt_3" gd:GUID="645d53c3-a28e-448b-b230-540b11379b7a" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1665_domyslne.x" wejscie-w-zycie="2026-01-01">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="5676527d-527b-4eb0-9fff-1ded482465f8" fragment="9" gd:fragmentGUID="97239753-6c73-4647-a40c-d4655c546399" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1665_domyslne.x" wejscie-w-zycie="2026-01-01">w art. 29:</zdanie>
+          </p>
+          <litera eId="DU/2025/1665__art_1__pkt_3__lit_a" gd:GUID="4c38b514-8916-43ad-b2d7-abf27a5a3e05" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1665_domyslne.x" wejscie-w-zycie="2026-01-01">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="5676527d-527b-4eb0-9fff-1ded482465f8" fragment="10" gd:fragmentGUID="a1860b3e-7578-4755-9c3a-93a0a34684d4" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1665_domyslne.x" wejscie-w-zycie="2026-01-01">ust. 1a otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2025/913" cudzyslowy="oba" gd:nowGUID="4836f1ed-988a-4913-a3f4-017862a5c82f" element-eId="DU/2025/913__art_29__ust_1a" funkcja="zastap"><ustep eId="DU/2025/913__art_29__ust_1a" gd:GUID="82194f35-d668-448a-b003-308146ce846a" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1665_domyslne.x" wejscie-w-zycie="2026-01-01"><nr>1a</nr><p><zdanie nr="1" gd:zdGUID="9a696fec-7633-4b54-b661-eff9a4aff40e" fragment="1" gd:fragmentGUID="87d8bbc9-f57e-4a63-8166-6406a3bdba66" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1665_domyslne.x" wejscie-w-zycie="2026-01-01">Stan zatrudnienia osób niepełnosprawnych, o których mowa w ust. 1 pkt 1 lit. b, nie może być wyższy niż 55 % ogółu zatrudnionych.</zdanie></p></ustep></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1665__art_1__pkt_3__lit_b" gd:GUID="e511b0dc-7f49-4c6e-bb89-9a443df1309b" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1665_domyslne.x" wejscie-w-zycie="2026-01-01">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="5676527d-527b-4eb0-9fff-1ded482465f8" fragment="11" gd:fragmentGUID="c1a1906c-3e08-4b6b-805c-6599b91c7f69" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1665_domyslne.x" wejscie-w-zycie="2026-01-01">ust. 1c otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2025/913" cudzyslowy="oba" gd:nowGUID="2da42a92-447c-4d06-8012-993dbf8a1425" element-eId="DU/2025/913__art_29__ust_1c" funkcja="zastap"><ustep eId="DU/2025/913__art_29__ust_1c" gd:GUID="a6d55743-233a-44e2-bc36-863686f71980" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1665_domyslne.x" wejscie-w-zycie="2026-01-01"><nr>1c</nr><p><zdanie nr="1" gd:zdGUID="ec42d786-2ba9-4c63-b511-bdf17eccfd08" fragment="1" gd:fragmentGUID="7cf7878e-278a-4395-b6f3-6e84db7b786d" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1665_domyslne.x" wejscie-w-zycie="2026-01-01">Wojewoda, w drodze decyzji, zwalnia na czas określony, nie dłużej niż na sześć miesięcy, organizatora zakładu aktywności zawodowej od spełniania warunku, o którym mowa w ust. 1 pkt 1 lit. a lub ust. 1a, jeżeli naruszenie tego warunku nastąpiło z przyczyn niezależnych od pracodawcy a właściwy powiatowy urząd pracy nie może skierować wymaganej liczby osób niepełnosprawnych, o których mowa w ust. 1, do pracy w tym zakładzie.</zdanie></p></ustep></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1665__art_1__pkt_3__lit_c" gd:GUID="55da149d-f638-4ba1-8401-077bbd9ef0f7" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1665_domyslne.x" wejscie-w-zycie="2026-01-01">
+            <nr>c</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="5676527d-527b-4eb0-9fff-1ded482465f8" fragment="12" gd:fragmentGUID="fa6c3139-6e5b-46f7-81f4-586fecd1612a" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1665_domyslne.x" wejscie-w-zycie="2026-01-01">w ust. 3a<sup>1</sup> wprowadzenie do wyliczenia otrzymuje brzmienie:<cytat-w-tekscie now:akt="https://eli.gov.pl/eli/DU/2025/913" cudzyslowy="oba" gd:nowGUID="391b3688-126f-44aa-b472-44d20dc94465" element-eId="DU/2025/913__art_29__ust_3a[1]" funkcja="zastap-tekst"><zdanie nr="1" gd:zdGUID="51589d31-dec9-4489-8751-52ccfc22319a" fragment="1" gd:fragmentGUID="b47a994f-f36d-4dad-b831-454dd38c0c94" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1665_domyslne.x" wejscie-w-zycie="2026-01-01">W przypadku wydatkowania zakładowego funduszu aktywności niezgodnie z przepisami wydanymi na podstawie ust. 4 albo w razie nieprzekazania środków, o których mowa w ust. 1 pkt 3, na wyodrębniony rachunek bankowy w terminie do dnia 31 grudnia roku następującego po roku uzyskania tych środków, pracodawca jest obowiązany do dokonania:</zdanie></cytat-w-tekscie>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1665__art_1__pkt_3__lit_d" gd:GUID="d2f674d4-1180-45b5-8a04-581ecef581b9" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1665_domyslne.x" wejscie-w-zycie="2026-01-01">
+            <nr>d</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="5676527d-527b-4eb0-9fff-1ded482465f8" fragment="13" gd:fragmentGUID="7c86ffef-7d23-43de-8eca-91989a12c7a2" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1665_domyslne.x" wejscie-w-zycie="2026-01-01"><now:zamien-tekst stary-tekst="art. 29" nowy-tekst="" element-eId="DU/2025/913__art_29__ust_3a[3]" akt="https://eli.gov.pl/eli/DU/2025/913" gd:nowGUID="7487abda-008c-485b-8663-5f2049e41253" />w ust. 3a<sup>3</sup> skreśla się wyrazy „art. 29”;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2025/1665__art_1__pkt_4" gd:GUID="6d20f379-9433-4112-999b-dfd8ddbb4600" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1665_domyslne.x" wejscie-w-zycie="2026-01-01">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="5676527d-527b-4eb0-9fff-1ded482465f8" fragment="14" gd:fragmentGUID="4deb3522-a454-40b0-8881-650996e524e5" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1665_domyslne.x" wejscie-w-zycie="2026-01-01">w art. 48 po ust. 3 dodaje się ust. 3a w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2025/913" cudzyslowy="oba" gd:nowGUID="d9c8c269-8da1-4f44-866f-9d91bf7340bf" element-eId="DU/2025/913__art_48__ust_3" funkcja="dodaj-po"><ustep eId="DU/2025/913__art_48__ust_3a" gd:GUID="9e8476e5-4e72-423d-8f4d-71367f22fd6b" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1665_domyslne.x" wejscie-w-zycie="2026-01-01"><nr>3a</nr><p><zdanie nr="1" gd:zdGUID="6ee46713-cf09-4c4f-86f6-ef4ff233b22d" fragment="1" gd:fragmentGUID="1bad749e-2488-4cbd-a219-37b5f6bbe596" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1665_domyslne.x" wejscie-w-zycie="2026-01-01">Samorząd województwa może zwiększyć maksymalną kwotę zobowiązań samorządu województwa do wypłaty w danym roku z tytułu dofinansowania kosztów działalności zakładów aktywności zawodowej z zaoszczędzonych środków własnych lub ze środków otrzymanych na realizację innych działań, przekazanych przez Prezesa Zarządu Funduszu, według algorytmu, o którym mowa w ust. 1 pkt 1.</zdanie></p></ustep></cytat-strukt>.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2025/1665__art_2" gd:GUID="93d75616-3bcb-4840-81c7-dd2ca3cc9eaf" okres="okr_obowiazywanie.zdarz_wejscie_2026-04-01_DU-2025-1665_domyslne.x" wejscie-w-zycie="2026-04-01">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="905667d0-99bf-43bb-8a15-bcc51c802300" okres="okr_obowiazywanie.zdarz_wejscie_2026-04-01_DU-2025-1665_domyslne.x" wejscie-w-zycie="2026-04-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="9e2c5a97-5a2d-4683-ba89-3a5553800634" fragment="1" gd:fragmentGUID="d74e7c0b-f7b9-4933-b653-8d6f9c740fec" okres="okr_obowiazywanie.zdarz_wejscie_2026-04-01_DU-2025-1665_domyslne.x" wejscie-w-zycie="2026-04-01">Do obniżenia wpłat na Państwowy Fundusz Rehabilitacji Osób Niepełnosprawnych, o których mowa w art. 22 ust. 1 ustawy zmienianej w art. 1, związanych z zakupem produkcji lub usługi dokonanym przed dniem wejścia w życie art. 1 pkt 1, stosuje się przepisy dotychczasowe.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2025/1665__art_3" gd:GUID="d4a773e3-60ca-45c5-ae31-3269700a1f87" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1665_domyslne.x" wejscie-w-zycie="2026-01-01">
+      <nr>3</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="cb382d5d-55e4-41be-bfcd-b277d23cfded" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1665_domyslne.x" wejscie-w-zycie="2026-01-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="cfca8c6d-6176-426c-8ff8-75df368eddd2" fragment="1" gd:fragmentGUID="1467ded2-7cad-489f-8215-06aa0f35e057" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1665_domyslne.x" wejscie-w-zycie="2026-01-01">Dotychczasowe przepisy wykonawcze wydane na podstawie:</zdanie>
+        </p>
+        <punkt eId="DU/2025/1665__art_3__pkt_1" gd:GUID="da1dfed9-e1ac-4cf8-9db2-cf384c0074cf" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1665_domyslne.x" wejscie-w-zycie="2026-01-01">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="cfca8c6d-6176-426c-8ff8-75df368eddd2" fragment="2" gd:fragmentGUID="7c6c5898-a296-4717-b7ad-5af059f977ed" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1665_domyslne.x" wejscie-w-zycie="2026-01-01">art. 30 ust. 5 ustawy zmienianej w art. 1 zachowują moc do dnia wejścia w życie nowych przepisów wykonawczych wydanych na podstawie art. 30 ust. 5 ustawy zmienianej w art. 1, jednak nie dłużej niż przez 18 miesięcy od dnia wejścia w życie niniejszej ustawy;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1665__art_3__pkt_2" gd:GUID="dd3dfc59-04b9-454d-9775-51b1da98424b" okres="okr_obowiazywanie.zdarz_wejscie_2026-04-01_DU-2025-1665_domyslne.x" wejscie-w-zycie="2026-04-01">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="cfca8c6d-6176-426c-8ff8-75df368eddd2" fragment="3" gd:fragmentGUID="d03fb4f2-8552-4373-94d7-1dbca804040c" okres="okr_obowiazywanie.zdarz_wejscie_2026-04-01_DU-2025-1665_domyslne.x" wejscie-w-zycie="2026-04-01">art. 22 ust. 12 ustawy zmienianej w art. 1 zachowują moc do dnia wejścia w życie nowych przepisów wykonawczych wydanych na podstawie art. 22 ust. 12 ustawy zmienianej w art. 1, jednak nie dłużej niż przez 18 miesięcy od dnia wejścia w życie art. 1 pkt 1.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2025/1665__art_4" gd:GUID="3ed19122-98e1-4b2a-9e77-08a75ad04a1f" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1665_domyslne.x" wejscie-w-zycie="2026-01-01">
+      <nr>4</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="153ce314-f67b-458f-acd6-c5aff2946042" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1665_domyslne.x" wejscie-w-zycie="2026-01-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="69d10d06-726e-404d-bd1f-715cc68cb561" fragment="1" gd:fragmentGUID="c6b4dbc2-1e14-4e12-a586-f8a1a27593aa" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1665_domyslne.x" wejscie-w-zycie="2026-01-01">Ustawa wchodzi w życie pierwszego dnia miesiąca następującego po upływie miesiąca od dnia ogłoszenia, z wyjątkiem art. 1 pkt 1, art. 2 i art. 3 pkt 2, które wchodzą w życie pierwszego dnia miesiąca następującego po upływie 3 miesięcy od dnia ogłoszenia.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <organ-podpisujacy>Prezydent Rzeczypospolitej Polskiej: <i><osoba podpisujacy="true" gd:osobaGUID="58aab492-9584-44c5-a0e2-6c44f33d460b"><imie>K.</imie> <nazwisko>Nawrocki</nazwisko></osoba></i></organ-podpisujacy>
+  </ustawa>
+</akt-prawny>

@@ -1,0 +1,313 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <rozporzadzenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2026/133</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>ad496616-5ca8-44c3-88cc-88e14144b808</gd:GUIDwersji>
+      <AdresISAP>WDU20260000133</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2026</Rok>
+      <Pozycja>133</Pozycja>
+      <AdresWyswietlany>Dz.U. 2026 poz. 133</AdresWyswietlany>
+      <Tytul>Rozporządzenie Ministrów Infrastruktury oraz Spraw Wewnętrznych i Administracji z dnia 14 stycznia 2026 r. zmieniające rozporządzenie w sprawie znaków i sygnałów drogowych</Tytul>
+      <Rodzaj>ROZP</Rodzaj>
+      <DataOgloszenia>2026-02-04</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2026-01-14</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2026-02-19_DU-2026-133_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2026-02-19" warunek="po upływie 14 dni od dnia ogłoszenia" podstawa="§ 4" zrodlo="https://eli.gov.pl/eli/DU/2026/133" dowod="DU/2026/133__art_4" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2026-02-19_DU-2026-133_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="18e03333-135f-4c24-8797-4dbc2fc0103d" rola="wydajacy">
+          <Nazwa>Minister Infrastruktury</Nazwa>
+          <OrganPodpisujacy>Minister Infrastruktury</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>M.</imie> <nazwisko>Bukowiec</nazwisko></OsobaPodpisujaca>
+        </Organ>
+        <Organ gd:GUID="38679ca4-644b-459d-b35f-9e8a65ab08bc" rola="wydajacy">
+          <Nazwa>Minister Spraw Wewnętrznych i Administracji</Nazwa>
+          <OrganPodpisujacy>Minister Spraw Wewnętrznych i Administracji</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>C.</imie> <nazwisko>Mroczek</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Rozporządzenie</rodzaj-aktu>
+    <autor-aktu>Ministrów Infrastruktury<odnosnik id-odnosnika="1" symbol="1" gd:GUID="d4c5a57f-26b4-430a-9fd1-29393aa0744c"><p><zdanie nr="1" gd:zdGUID="f5aa1c2b-0950-4219-bef4-bf8af3c0f242" fragment="1" gd:fragmentGUID="0a4f58b7-4005-41a8-928c-34dd5dea89a8">Minister Infrastruktury kieruje działem administracji rządowej – transport, na podstawie § 1 ust. 2 pkt 3 rozporządzenia Prezesa Rady Ministrów z dnia 18 grudnia 2023 r. w sprawie szczegółowego zakresu działania Ministra Infrastruktury (Dz. U. poz. 2725).</zdanie></p></odnosnik> oraz Spraw Wewnętrznych i Administracji<odnosnik id-odnosnika="2" symbol="2" gd:GUID="5565216c-75d7-40dc-8c9e-9b10339c19a6"><p><zdanie nr="1" gd:zdGUID="60eab201-9941-462b-a5cf-84d322502664" fragment="1" gd:fragmentGUID="37fd6993-af11-4574-a241-df0633b8a9ec">Minister Spraw Wewnętrznych i Administracji kieruje działem administracji rządowej – sprawy wewnętrzne, na podstawie § 1 ust. 2 pkt 2 rozporządzenia Prezesa Rady Ministrów z dnia 25 lipca 2025 r. w sprawie szczegółowego zakresu działania Ministra Spraw Wewnętrznych i Administracji (Dz. U. poz. 999).</zdanie></p></odnosnik></autor-aktu>
+    <data>z dnia 14 stycznia 2026 r.</data>
+    <tytul>zmieniające rozporządzenie w sprawie znaków i sygnałów drogowych</tytul>
+    <podstawa-prawna>Na podstawie art. 7 ust. 2 ustawy z dnia 20 czerwca 1997 r. – Prawo o ruchu drogowym (Dz. U. z 2024 r. poz. 1251, z późn. zm.<odnosnik id-odnosnika="3" symbol="3" gd:GUID="ffed89ac-fda1-493c-b72d-cb01c2c6a9b3"><p><zdanie nr="1" gd:zdGUID="f5f1ce14-0095-4920-baf5-67a02cf47aad" fragment="1" gd:fragmentGUID="9870622f-d2a5-4cfb-8321-008cbf349c2d">Zmiany tekstu jednolitego wymienionej ustawy zostały ogłoszone w Dz. U. z 2025 r. poz. 820, 1006, 1676, 1734, 1843 i 1872.</zdanie></p></odnosnik>) zarządza się, co następuje:</podstawa-prawna>
+    <paragraf eId="DU/2026/133__art_1" gd:GUID="9fc603a9-99ff-4f64-9877-f8778726472c" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="db300bfa-fde4-442e-a9b9-983678b0e09b" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">
+        <p>
+          <zdanie nr="1" gd:zdGUID="79796055-8cbb-4301-a835-e9136b243c3e" fragment="1" gd:fragmentGUID="0a97c2a8-95f7-498c-b57f-798a600ce822" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">W rozporządzeniu Ministrów Infrastruktury oraz Spraw Wewnętrznych i Administracji z dnia 31 lipca 2002 r. w sprawie znaków i sygnałów drogowych (Dz. U. z 2019 r. poz. 2310, z 2021 r. poz. 433 i 2065 oraz z 2022 r. poz. 2372) wprowadza się następujące zmiany:</zdanie>
+        </p>
+        <punkt eId="DU/2026/133__art_1__pkt_1" gd:GUID="79326777-73fd-4bbc-a02b-cf8d3db99e55" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="79796055-8cbb-4301-a835-e9136b243c3e" fragment="2" gd:fragmentGUID="50852d8d-b632-49b5-8689-c800a18171b0" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">w § 54 w ust. 1 pkt 5a i 5b otrzymują brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2019/2310" cudzyslowy="otwierajacy" gd:nowGUID="9488bc42-24e4-46a3-bab6-78d2687bba8f" element-eId="DU/2019/2310__art_54__ust_1__pkt_5a" funkcja="zastap"><punkt eId="DU/2019/2310__art_54__ust_1__pkt_5a" gd:GUID="456abe56-f771-403a-a2e1-6cc37f0bf4a0" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19"><nr>5a</nr><p><zdanie nr="1" gd:zdGUID="c396a06f-c01d-4aa1-b7a9-1c444f8e6622" fragment="1" gd:fragmentGUID="70221d97-4a2b-45f9-aefb-fab4848d64cb" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">D-23b „stacja paliwowa z punktem ładowania pojazdów elektrycznych lub hybrydowych”,</zdanie></p></punkt></cytat-strukt><cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2019/2310" cudzyslowy="zamykajacy" gd:nowGUID="b5787ddb-98c3-4ccf-bf75-cb4e19c13e89" element-eId="DU/2019/2310__art_54__ust_1__pkt_5b" funkcja="zastap"><punkt eId="DU/2019/2310__art_54__ust_1__pkt_5b" gd:GUID="be986971-d937-4ea7-8524-2f47e52a1d4b" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19"><nr>5b</nr><p><zdanie nr="1" gd:zdGUID="9b168598-9a16-45f6-b16a-19421653f803" fragment="1" gd:fragmentGUID="8b04776f-951e-40f0-8b0d-7d9c94dddecc" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">D-23c „punkt ładowania pojazdów elektrycznych lub hybrydowych”,</zdanie></p></punkt></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/133__art_1__pkt_2" gd:GUID="5ff135de-3e0f-468a-a804-a495c9ca585d" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="79796055-8cbb-4301-a835-e9136b243c3e" fragment="3" gd:fragmentGUID="606d20fa-13c4-4694-87c1-3b88292757a9" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">w § 62:</zdanie>
+          </p>
+          <litera eId="DU/2026/133__art_1__pkt_2__lit_a" gd:GUID="15cc80ed-5477-4c2b-b5bf-cbd52beef88e" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="79796055-8cbb-4301-a835-e9136b243c3e" fragment="4" gd:fragmentGUID="39b5c6ae-4b90-4493-a510-cde2d0827473" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">po ust. 2 dodaje się ust. 2a w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2019/2310" cudzyslowy="oba" gd:nowGUID="29680cd6-57a1-4369-92d0-4a265291a316" element-eId="DU/2019/2310__art_62__ust_2" funkcja="dodaj-po"><ustep eId="DU/2019/2310__art_62__ust_2a" gd:GUID="0f1947f4-bdf0-4d14-86bf-c87e9cf4d2ed" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19"><nr>2a</nr><p><zdanie nr="1" gd:zdGUID="33298701-b2bd-4b1e-9cfc-f79fad733fec" fragment="1" gd:fragmentGUID="ce138290-641b-431a-8968-6ea9a6ccf0e2" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">Znak E-1c „tablica przeddrogowskazowa na drodze ekspresowej” uprzedza o wyjeździe z drogi ekspresowej.</zdanie></p></ustep></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2026/133__art_1__pkt_2__lit_b" gd:GUID="dc79e415-09db-44df-9e90-2a1c6bab6b29" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="79796055-8cbb-4301-a835-e9136b243c3e" fragment="5" gd:fragmentGUID="67feb166-6b22-4b49-9c4f-e2d817aa3868" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19"><now:uchyl akt="https://eli.gov.pl/eli/DU/2019/2310" element-eId="DU/2019/2310__art_62__ust_3" gd:nowGUID="09667ff2-a325-4fe8-a719-50fa5aadda66" />uchyla się ust. 3,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2026/133__art_1__pkt_2__lit_c" gd:GUID="71826e39-57b8-4971-b605-4c4fb7638ea1" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">
+            <nr>c</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="79796055-8cbb-4301-a835-e9136b243c3e" fragment="6" gd:fragmentGUID="135cb82e-9cc3-4812-b35f-a7f6841b7c02" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19"><now:zamien-tekst stary-tekst="ust. 1–3" nowy-tekst="ust. 1–2a" element-eId="DU/2019/2310__art_62__ust_4" akt="https://eli.gov.pl/eli/DU/2019/2310" gd:nowGUID="26ae8833-6a42-4b3b-98d7-4954cb90a8b5" />w ust. 4 wyrazy „ust. 1–3” zastępuje się wyrazami „ust. 1–2a”;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2026/133__art_1__pkt_3" gd:GUID="bd8ce99e-8240-45b7-96e0-27a92cdc1a44" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="79796055-8cbb-4301-a835-e9136b243c3e" fragment="7" gd:fragmentGUID="55a5aff7-993e-438c-b7c5-08e3614a8def" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">w § 63 w ust. 1:</zdanie>
+          </p>
+          <litera eId="DU/2026/133__art_1__pkt_3__lit_a" gd:GUID="f23f4ffd-ad66-4b3b-bac6-e9d0276147aa" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="79796055-8cbb-4301-a835-e9136b243c3e" fragment="8" gd:fragmentGUID="f0a27668-8ecf-4170-bc18-a52f39235494" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19"><now:uchyl akt="https://eli.gov.pl/eli/DU/2019/2310" element-eId="DU/2019/2310__art_63__ust_1__pkt_3" gd:nowGUID="d18da6bc-1924-40b0-8e67-bf584a193927" />uchyla się pkt 3,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2026/133__art_1__pkt_3__lit_b" gd:GUID="74d93d83-b32e-45e2-a26a-61ae3f9b7f1c" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="79796055-8cbb-4301-a835-e9136b243c3e" fragment="9" gd:fragmentGUID="17c53bb2-19ee-4730-b63d-fc2cf4ece30a" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">pkt 4 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2019/2310" cudzyslowy="oba" gd:nowGUID="8765dc7a-a448-4f80-949f-f09dfb4a3f77" element-eId="DU/2019/2310__art_63__ust_1__pkt_4" funkcja="zastap"><punkt eId="DU/2019/2310__art_63__ust_1__pkt_4" gd:GUID="a74e0098-4242-40a7-8913-84f146474c7b" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19"><nr>4</nr><p><zdanie nr="1" gd:zdGUID="d0282b56-e392-4f41-bc91-dbbf75391394" fragment="1" gd:fragmentGUID="d431ff04-3636-40f9-ac53-fc3b90da348e" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">E-2d „drogowskaz tablicowy umieszczany nad jezdnią na autostradzie lub na drodze ekspresowej”,</zdanie></p></punkt></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2026/133__art_1__pkt_3__lit_c" gd:GUID="7c00a6cf-83fa-4dc5-91c8-4b403d86193a" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">
+            <nr>c</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="79796055-8cbb-4301-a835-e9136b243c3e" fragment="10" gd:fragmentGUID="5e39d0e2-9644-4af4-8cf7-98736e12a4cb" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19"><now:uchyl akt="https://eli.gov.pl/eli/DU/2019/2310" element-eId="DU/2019/2310__art_63__ust_1__pkt_5" gd:nowGUID="104cbf70-7002-40f1-a80e-af817da0f6ca" /><now:uchyl akt="https://eli.gov.pl/eli/DU/2019/2310" element-eId="DU/2019/2310__art_63__ust_1__pkt_6" gd:nowGUID="91a09300-264f-41d3-a8e8-be8f017cd84e" />uchyla się pkt 5 i 6;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2026/133__art_1__pkt_4" gd:GUID="54ab862e-56c3-4293-98eb-323f9c6247d6" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="79796055-8cbb-4301-a835-e9136b243c3e" fragment="11" gd:fragmentGUID="7fd880d4-6427-4d40-b64b-c4b82f4df727" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">w § 64 ust. 2 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2019/2310" cudzyslowy="oba" gd:nowGUID="8d0ae9ac-ccda-4c1a-b6f0-8c3df70ac2e5" element-eId="DU/2019/2310__art_64__ust_2" funkcja="zastap"><ustep eId="DU/2019/2310__art_64__ust_2" gd:GUID="c7555466-fe2b-4a22-9d0e-64dadaaf563b" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="a6ebcae5-4670-4281-ba4f-212e4e8b3430" fragment="1" gd:fragmentGUID="3ea85382-c386-48ca-b79d-ac72bc77718d" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">Znak E-14 „tablica szlaku drogowego” wskazuje numer drogi oraz odległości do głównych miejscowości położonych przy danym szlaku drogowym, a na autostradzie lub na drodze ekspresowej dodatkowo odległość do najbliższego węzła o określonym numerze.</zdanie></p></ustep></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/133__art_1__pkt_5" gd:GUID="ee2e91c6-2b16-4d8d-900a-e0dc838266d1" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="79796055-8cbb-4301-a835-e9136b243c3e" fragment="12" gd:fragmentGUID="0c2606ae-bdfa-49f6-b442-fe3d1bb54383" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">w § 66:</zdanie>
+          </p>
+          <litera eId="DU/2026/133__art_1__pkt_5__lit_a" gd:GUID="45344b79-0734-49af-8b53-0657ab9014df" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="79796055-8cbb-4301-a835-e9136b243c3e" fragment="13" gd:fragmentGUID="8f190301-46e0-4b2c-943e-80895a93638f" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">ust. 4 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2019/2310" cudzyslowy="oba" gd:nowGUID="41885fbc-a191-4a5f-8598-b9e28679ef4a" element-eId="DU/2019/2310__art_66__ust_4" funkcja="zastap"><ustep eId="DU/2019/2310__art_66__ust_4" gd:GUID="5bdcb0d6-b254-46c6-bd3f-13e0f31f4e19" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19"><nr>4</nr><p><zdanie nr="1" gd:zdGUID="7686eefa-a27b-4441-b142-0e2ac8589eb7" fragment="1" gd:fragmentGUID="1ea1c60d-c9a5-491c-bdfd-9b2da9134176" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">Znak E-20 „tablica węzła drogowego” informuje o zbliżaniu się do wyjazdu z drogi.</zdanie><zdanie nr="2" gd:zdGUID="8720ff34-ee0e-4629-9408-c8e25b082fd3" fragment="1" gd:fragmentGUID="5be5daf1-0736-46c2-a427-79e16d168b3b" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">Liczba umieszczona na znaku z prawej strony wskazuje odległość tablicy do początku pasa wyłączania.</zdanie><zdanie nr="3" gd:zdGUID="67439e5f-250b-4d03-855d-f6c51f0c40b2" fragment="1" gd:fragmentGUID="622338ab-f33a-47fb-9c6b-042ba0346dd8" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">Na autostradzie lub na drodze ekspresowej liczba umieszczona na znaku z lewej strony wskazuje numer węzła.</zdanie></p></ustep></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2026/133__art_1__pkt_5__lit_b" gd:GUID="cb92fa72-4832-417d-992b-4f14b705d2a1" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="79796055-8cbb-4301-a835-e9136b243c3e" fragment="14" gd:fragmentGUID="4a7acd1e-c960-442f-ab75-be0c3476bd85" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">po ust. 4 dodaje się ust. 4a w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2019/2310" cudzyslowy="oba" gd:nowGUID="c028410c-3493-47d9-a6f1-3471537ad026" element-eId="DU/2019/2310__art_66__ust_4" funkcja="dodaj-po"><ustep eId="DU/2019/2310__art_66__ust_4a" gd:GUID="be4cdcbe-72c0-488b-8a22-c909c394fbd6" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19"><nr>4a</nr><p><zdanie nr="1" gd:zdGUID="363c93e1-1c04-49d0-b88e-9f595709524c" fragment="1" gd:fragmentGUID="b8a9ef2b-15c8-447a-995b-5c6784fdb1e7" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">Znak E-20a „numer węzła drogowego na autostradzie lub na drodze ekspresowej” jest stosowany w celu uzupełnienia informacji dla kierujących o zbliżaniu się do wyjazdu z autostrady lub z drogi ekspresowej na węźle o określonym numerze.</zdanie></p></ustep></cytat-strukt>;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2026/133__art_1__pkt_6" gd:GUID="43058fca-a06a-498f-b9fd-db7b7ed9519b" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">
+          <nr>6</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="79796055-8cbb-4301-a835-e9136b243c3e" fragment="15" gd:fragmentGUID="57700060-052d-493a-856c-dc76bf828fcc" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">po § 67 dodaje się § 67a w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2019/2310" cudzyslowy="oba" gd:nowGUID="70a03cbf-d424-47bc-9abe-9aee2af7ee94" element-eId="DU/2019/2310__art_67" funkcja="dodaj-po"><paragraf eId="DU/2019/2310__art_67a" gd:GUID="79d80af0-9435-4bea-a97d-79af3a8c5020" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19"><nr>67a</nr><ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="ca93d269-bc26-4738-938b-4557b7ef18a2" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19"><p><zdanie nr="1" gd:zdGUID="46ee4a2d-d856-4eab-ac67-9d410c4b6dfb" fragment="1" gd:fragmentGUID="7a9893f7-b231-493b-9bd0-e2d8b2b48b14" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">Znaki określone w § 62 ust. 1–2a, § 63 ust. 1 pkt 1, 2, 4, 7 i 8, § 64 ust. 2 oraz § 66 ust. 4 i 4a lub ich części:</zdanie></p><punkt eId="DU/2019/2310__art_67a__pkt_1" gd:GUID="f408d554-5b7a-4bcc-b89f-8964d02f5c2a" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="46ee4a2d-d856-4eab-ac67-9d410c4b6dfb" fragment="2" gd:fragmentGUID="d41f5d33-aa39-4325-a704-8fc3f18c3ed6" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">barwy niebieskiej – oznaczają kierunki lub miejscowości na autostradzie lub na dojeździe do autostrady;</zdanie></p></punkt><punkt eId="DU/2019/2310__art_67a__pkt_2" gd:GUID="1814c0f1-2af8-4625-a583-c3078c2b3dbd" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="46ee4a2d-d856-4eab-ac67-9d410c4b6dfb" fragment="3" gd:fragmentGUID="a3c924f5-dfad-4eea-af7c-70dd36fb311f" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">barwy zielonej – oznaczają kierunki lub miejscowości na drodze niebędącej autostradą lub dojazdem do autostrady.</zdanie></p></punkt></ustep-n></paragraf></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/133__art_1__pkt_7" gd:GUID="96a873d1-bf63-4d03-96b3-1ce16692890c" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">
+          <nr>7</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="79796055-8cbb-4301-a835-e9136b243c3e" fragment="16" gd:fragmentGUID="170a3274-af00-46b7-abf0-7a48e059fafb" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">po § 77 dodaje się § 77a i § 77b w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2019/2310" cudzyslowy="oba" gd:nowGUID="5bdd3dae-1806-4eff-8bda-431d532501ea" element-eId="DU/2019/2310__art_77" funkcja="dodaj-po"><paragraf eId="DU/2019/2310__art_77a" gd:GUID="6ffd38c7-1e61-40d2-8fd7-e21ae207a2f9" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19"><nr>77a</nr><ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="cffd1fdb-8f10-429e-98b4-580c991dc1fc" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19"><p><zdanie nr="1" gd:zdGUID="86db987a-9820-4bd2-a1f6-0ed68ef7b07f" fragment="1" gd:fragmentGUID="81d95cce-cf2c-4ffd-a752-f047c8150e2e" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">Znak F-23 „środkowy pas wielofunkcyjny” informuje o rozpoczęciu odcinka drogi, na którym zabronione jest wyprzedzanie innych pojazdów, który posiada wyznaczony środkowy pas wielofunkcyjny przeznaczony dla pojazdów wyjeżdżających z drogi lub wjeżdżających na drogę.</zdanie></p></ustep-n></paragraf><paragraf eId="DU/2019/2310__art_77b" gd:GUID="15d4f932-a0ac-4417-bf05-5dde45f0c4b8" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19"><nr>77b</nr><ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="de9efd0c-c661-4ac5-b198-90a08c098ba1" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19"><p><zdanie nr="1" gd:zdGUID="10d88d19-0191-48b2-95c0-521db193219f" fragment="1" gd:fragmentGUID="57f0b7dd-fb75-4e6d-9aca-69ddbb6b7447" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">Znak F-24 „zły kierunek” informuje o wyborze nieprawidłowego kierunku jazdy.</zdanie></p></ustep-n></paragraf></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/133__art_1__pkt_8" gd:GUID="f0a0d14d-80a8-44ab-8de8-66470c27b79d" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">
+          <nr>8</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="79796055-8cbb-4301-a835-e9136b243c3e" fragment="17" gd:fragmentGUID="f0ec08f0-9aa4-4579-a4f5-3e38cf201c3b" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">w § 84 w ust. 1 pkt 7 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2019/2310" cudzyslowy="oba" gd:nowGUID="c76a2701-5739-4449-9482-5df76e2e047e" element-eId="DU/2019/2310__art_84__ust_1__pkt_7" funkcja="zastap"><punkt eId="DU/2019/2310__art_84__ust_1__pkt_7" gd:GUID="0a6d5e60-af53-43c0-bf74-1c4bc0ddf021" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19"><nr>7</nr><p><zdanie nr="1" gd:zdGUID="cbc54719-22c1-401d-b0d0-d2b7a795689c" fragment="1" gd:fragmentGUID="a2364717-7fce-4af6-b501-b78e8e815287" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">znak W-7 „wysokość skrajni jezdni”.</zdanie></p></punkt></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/133__art_1__pkt_9" gd:GUID="90f8547e-093d-41c7-a42f-158aeab15cd8" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">
+          <nr>9</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="79796055-8cbb-4301-a835-e9136b243c3e" fragment="18" gd:fragmentGUID="8d950ece-1553-444e-8748-a14c7d22839a" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">w § 86 ust. 4 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2019/2310" cudzyslowy="oba" gd:nowGUID="bd64b700-3fb7-4f4f-b008-104da61dac94" element-eId="DU/2019/2310__art_86__ust_4" funkcja="zastap"><ustep eId="DU/2019/2310__art_86__ust_4" gd:GUID="3d105b38-7bd5-4cd2-a0dc-832c490a183a" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19"><nr>4</nr><p><zdanie nr="1" gd:zdGUID="1c7c7560-fbce-4519-817e-e453264dc278" fragment="1" gd:fragmentGUID="49bde5ed-ede2-445a-b139-5a691d74a2ee" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">Znak P-3 „linia jednostronnie przekraczalna” oznacza zakaz przejeżdżania przez tę linię od strony linii ciągłej i najeżdżania na nią, z wyjątkiem powrotu po wyprzedzaniu na położony przy linii przerywanej pas ruchu zajmowany przed wyprzedzaniem na jezdni dwukierunkowej.</zdanie></p></ustep></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/133__art_1__pkt_10" gd:GUID="6f9ccbcd-4c1b-44d2-9100-3357d0513d0b" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">
+          <nr>10</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="79796055-8cbb-4301-a835-e9136b243c3e" fragment="19" gd:fragmentGUID="cdd39dd1-8ffa-4246-88e6-be2091ac7cb3" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">w załączniku do rozporządzenia:</zdanie>
+          </p>
+          <litera eId="DU/2026/133__art_1__pkt_10__lit_a" gd:GUID="5e8c986b-a3d6-42de-aba5-174b8bf41beb" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="79796055-8cbb-4301-a835-e9136b243c3e" fragment="20" gd:fragmentGUID="40684df7-67c5-4b97-b6dd-d2f30af0e1ba" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">w części „ZNAKI DROGOWE PIONOWE”:</zdanie>
+            </p>
+            <tiret eId="DU/2026/133__art_1__pkt_10__lit_a__tir_1" gd:GUID="459ab5b9-269c-40eb-a8a9-595c4ead9d47" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">
+              <p>
+                <zdanie nr="1" gd:zdGUID="79796055-8cbb-4301-a835-e9136b243c3e" fragment="21" gd:fragmentGUID="817f4adb-0ec4-4cd5-b8f8-01317956942b" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">w grupie „Znaki informacyjne” pkt 31a i 31b otrzymują brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2019/2310" cudzyslowy="otwierajacy" gd:nowGUID="6c075d4a-8fa5-4434-9067-07f2563bc229" element-eId="DU/2019/2310__zal_1" funkcja="zastap-recznie"><punkt eId="DU/2019/2310__zal_1__pkt_31a" gd:GUID="b8d042a4-0aac-4172-945a-948a531d8110" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19"><nr>31a</nr><p><zdanie nr="1" gd:zdGUID="306b9fa3-dce4-47c9-a0a3-11f077e6e349" fragment="1" gd:fragmentGUID="0eafac91-fb11-4224-889d-43a327054e9e" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">D-23b „stacja paliwowa z punktem ładowania pojazdów elektrycznych lub hybrydowych”;</zdanie></p></punkt></cytat-strukt><cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2019/2310" cudzyslowy="zamykajacy" gd:nowGUID="6d17c61a-caf3-4820-aca0-c8ace5eb1b7c" element-eId="DU/2019/2310__zal_1" funkcja="zastap-recznie"><punkt eId="DU/2019/2310__zal_1__pkt_31b" gd:GUID="b20ddcdf-de91-4905-936f-dcfa190ac2d9" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19"><nr>31b</nr><p><zdanie nr="1" gd:zdGUID="bb0d8a8a-f629-4206-a2a1-c9946cbdc923" fragment="1" gd:fragmentGUID="ef36f06e-c10b-4cdf-a0d5-5cf7b7bbf649" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">D-23c „punkt ładowania pojazdów elektrycznych lub hybrydowych”;</zdanie></p></punkt></cytat-strukt>,</zdanie>
+              </p>
+            </tiret>
+            <tiret eId="DU/2026/133__art_1__pkt_10__lit_a__tir_2" gd:GUID="20d98c4a-3c03-4508-82e3-6ffd8f5a97de" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">
+              <p>
+                <zdanie nr="1" gd:zdGUID="79796055-8cbb-4301-a835-e9136b243c3e" fragment="22" gd:fragmentGUID="a31afd99-d0f4-4139-b858-af461574e1f8" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">w grupie „Znaki kierunku i miejscowości”:</zdanie>
+              </p>
+              <podw-tiret eId="DU/2026/133__art_1__pkt_10__lit_a__tir_2__dwtir_1" gd:GUID="9587b093-f840-4fc4-aeb0-de69420ba84d" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">
+                <p>
+                  <zdanie nr="1" gd:zdGUID="79796055-8cbb-4301-a835-e9136b243c3e" fragment="23" gd:fragmentGUID="3ac1887f-ac54-4229-9721-e1dd759ffc5b" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">po pkt 2 dodaje się pkt 2a w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2019/2310" cudzyslowy="oba" gd:nowGUID="87da23d9-606c-493b-8fd7-5ef550580e91" element-eId="DU/2019/2310__zal_1" funkcja="dodaj-recznie"><punkt eId="DU/2019/2310__zal_1__pkt_2a" gd:GUID="06d7e34b-d1f6-46f8-87c2-bee3c038c7c0" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19"><nr>2a</nr><p><zdanie nr="1" gd:zdGUID="8db3519b-40e7-41f2-b974-3ab00bda1918" fragment="1" gd:fragmentGUID="bfecbc92-cced-4fce-be8b-a1bf91ddafe3" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">E-1c „tablica przeddrogowskazowa na drodze ekspresowej”;</zdanie></p></punkt></cytat-strukt>,</zdanie>
+                </p>
+              </podw-tiret>
+              <podw-tiret eId="DU/2026/133__art_1__pkt_10__lit_a__tir_2__dwtir_2" gd:GUID="9d961f63-0cbe-432b-8227-2257833d7396" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">
+                <p>
+                  <zdanie nr="1" gd:zdGUID="79796055-8cbb-4301-a835-e9136b243c3e" fragment="24" gd:fragmentGUID="4bcd99b4-f8ea-42c6-88d9-0a0aa927e566" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">uchyla się pkt 3 i 6,<cytat-w-tekscie now:akt="https://eli.gov.pl/eli/DU/2019/2310" cudzyslowy="brak" gd:nowGUID="9cfa0a52-97d5-4d6e-aa4e-3282514e29ac" element-eId="DU/2019/2310__zal_1" funkcja="uchyl-recznie"><tekst>pkt 3 i 6</tekst></cytat-w-tekscie></zdanie>
+                </p>
+              </podw-tiret>
+              <podw-tiret eId="DU/2026/133__art_1__pkt_10__lit_a__tir_2__dwtir_3" gd:GUID="62fe6010-c7b6-4aa7-a42c-9fedeeae84e9" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">
+                <p>
+                  <zdanie nr="1" gd:zdGUID="79796055-8cbb-4301-a835-e9136b243c3e" fragment="25" gd:fragmentGUID="afd65c77-ef30-4a60-b452-42f14deb7eb1" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">pkt 7 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2019/2310" cudzyslowy="oba" gd:nowGUID="07c1c921-9a7e-46cc-bc84-467e331875ef" element-eId="DU/2019/2310__zal_1" funkcja="zastap-recznie"><punkt eId="DU/2019/2310__zal_1__pkt_7" gd:GUID="b1535c69-73f7-445f-81fb-8616917e46b4" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19"><nr>7</nr><p><zdanie nr="1" gd:zdGUID="41c2098b-84e3-4284-a96b-1c1ee4e02dc7" fragment="1" gd:fragmentGUID="b9ad1ecb-af25-41f2-8945-455a79236f8c" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">E-2d „drogowskaz tablicowy umieszczany nad jezdnią na autostradzie lub na drodze ekspresowej”;</zdanie></p></punkt></cytat-strukt>,</zdanie>
+                </p>
+              </podw-tiret>
+              <podw-tiret eId="DU/2026/133__art_1__pkt_10__lit_a__tir_2__dwtir_4" gd:GUID="c03114b9-72df-4d81-9dae-a5f8e68d5167" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">
+                <p>
+                  <zdanie nr="1" gd:zdGUID="79796055-8cbb-4301-a835-e9136b243c3e" fragment="26" gd:fragmentGUID="88de3fa0-57f3-45c6-9625-41205d8ad24d" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">uchyla się pkt 8, 9 i 26,<cytat-w-tekscie now:akt="https://eli.gov.pl/eli/DU/2019/2310" cudzyslowy="brak" gd:nowGUID="999732ae-ac49-4318-a8d4-867a21f791e1" element-eId="DU/2019/2310__zal_1" funkcja="uchyl-recznie"><tekst>pkt 8, 9 i 26</tekst></cytat-w-tekscie></zdanie>
+                </p>
+              </podw-tiret>
+              <podw-tiret eId="DU/2026/133__art_1__pkt_10__lit_a__tir_2__dwtir_5" gd:GUID="773938bb-21f5-4942-a460-8a1e1b80473f" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">
+                <p>
+                  <zdanie nr="1" gd:zdGUID="79796055-8cbb-4301-a835-e9136b243c3e" fragment="27" gd:fragmentGUID="28758021-addb-4cb0-93c3-2d69c8b7f23e" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">pkt 36 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2019/2310" cudzyslowy="oba" gd:nowGUID="74d1999d-03c6-4be7-a046-5e64d881b3f8" element-eId="DU/2019/2310__zal_1" funkcja="zastap-recznie"><punkt eId="DU/2019/2310__zal_1__pkt_36" gd:GUID="b0c77308-39ae-4de4-8693-a043c8bff525" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19"><nr>36</nr><p><zdanie nr="1" gd:zdGUID="2f586b7a-ee9d-4976-bf5a-0b864d06cf13" fragment="1" gd:fragmentGUID="3cedb632-6fc0-4616-94f4-f9d9551abfe9" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">E-20 „tablica węzła drogowego”;</zdanie></p></punkt></cytat-strukt>,</zdanie>
+                </p>
+              </podw-tiret>
+              <podw-tiret eId="DU/2026/133__art_1__pkt_10__lit_a__tir_2__dwtir_6" gd:GUID="589373ee-b0c6-417f-ba37-4e45cb2ee9dc" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">
+                <p>
+                  <zdanie nr="1" gd:zdGUID="79796055-8cbb-4301-a835-e9136b243c3e" fragment="28" gd:fragmentGUID="1deecf04-8352-4bd2-9dfa-46a00f1ed25b" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">po pkt 36 dodaje się pkt 36a w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2019/2310" cudzyslowy="oba" gd:nowGUID="ddbf2657-e813-4135-80ba-8142906ef9cb" element-eId="DU/2019/2310__zal_1" funkcja="dodaj-recznie"><punkt eId="DU/2019/2310__zal_1__pkt_36a" gd:GUID="8bdfc331-915b-4cd5-b23e-463c4e420acd" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19"><nr>36a</nr><p><zdanie nr="1" gd:zdGUID="2f16af19-8169-4e2c-9746-8ad3dd0f19cc" fragment="1" gd:fragmentGUID="4abde66d-4d43-416c-8858-420533dfecf9" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">E-20a „numer węzła drogowego na autostradzie lub na drodze ekspresowej”;</zdanie></p></punkt></cytat-strukt>,</zdanie>
+                </p>
+              </podw-tiret>
+            </tiret>
+            <tiret eId="DU/2026/133__art_1__pkt_10__lit_a__tir_3" gd:GUID="0e249120-6301-466d-ace6-dbc4a207fd7a" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">
+              <p>
+                <zdanie nr="1" gd:zdGUID="79796055-8cbb-4301-a835-e9136b243c3e" fragment="29" gd:fragmentGUID="df7ac52c-37ca-433a-a22c-1f4ba15a9f93" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">w grupie „Znaki uzupełniające” w pkt 24 kropkę zastępuje się średnikiem i dodaje się pkt 25 i 26 w brzmieniu:<cytat-w-tekscie now:akt="https://eli.gov.pl/eli/DU/2019/2310" cudzyslowy="oba" gd:nowGUID="4d786e82-6acb-4200-bd82-d0c1bee2ca70" element-eId="DU/2019/2310__zal_1" funkcja="zastap-recznie"><tekst>;</tekst></cytat-w-tekscie><cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2019/2310" cudzyslowy="oba" gd:nowGUID="ec79a0ce-0b0a-4e53-acd2-0283fe346e1a" element-eId="DU/2019/2310__zal_1" funkcja="dodaj-recznie"><punkt eId="DU/2019/2310__zal_1__pkt_25" gd:GUID="cc0dfbb5-8f56-49db-80ec-2ef4c6e3af84" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19"><nr>25</nr><p><zdanie nr="1" gd:zdGUID="5b33d4db-aa2e-4e37-a4a9-a417861c061e" fragment="1" gd:fragmentGUID="c71a8884-c487-4f43-ad9c-2a3ab74ec529" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">F-23 „środkowy pas wielofunkcyjny”;</zdanie></p></punkt><punkt eId="DU/2019/2310__zal_1__pkt_26" gd:GUID="f31d4fc5-a9b5-45e8-8efe-81a669c831cb" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19"><nr>26</nr><p><zdanie nr="1" gd:zdGUID="5b33d4db-aa2e-4e37-a4a9-a417861c061e" fragment="2" gd:fragmentGUID="6d93937b-39ae-421a-89c5-ef93dec0f7cf" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">F-24 „zły kierunek”.</zdanie></p></punkt></cytat-strukt>,</zdanie>
+              </p>
+            </tiret>
+          </litera>
+          <litera eId="DU/2026/133__art_1__pkt_10__lit_b" gd:GUID="8a66df01-396d-4be4-b148-79283cd71026" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="79796055-8cbb-4301-a835-e9136b243c3e" fragment="30" gd:fragmentGUID="8d836a9e-2ea0-47a7-904f-00bfbabc2986" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">w części „DODATKOWE ZNAKI PIONOWE” w grupie „Dodatkowe znaki dla kierujących pojazdami wojskowymi” pkt 7 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2019/2310" cudzyslowy="oba" gd:nowGUID="ac0b4e1c-c2a7-41ac-9a04-23a6c94bae59" element-eId="DU/2019/2310__zal_1" funkcja="zastap-recznie"><punkt eId="DU/2019/2310__zal_1__pkt_7" gd:GUID="d8f7b7fa-5f6b-4c72-a03e-c1a6bc83d427" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19"><nr>7</nr><p><zdanie nr="1" gd:zdGUID="c7624896-ca48-4fb2-b961-e750d593670b" fragment="1" gd:fragmentGUID="a9bb72ea-c36e-4614-9d08-db38b073480c" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">W-7 „wysokość skrajni jezdni”.</zdanie></p></punkt></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2026/133__art_1__pkt_10__lit_c" gd:GUID="f04d9781-5b23-443c-94dd-89bb061110d0" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">
+            <nr>c</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="79796055-8cbb-4301-a835-e9136b243c3e" fragment="31" gd:fragmentGUID="c1975c1b-ce92-4c81-9bd2-06cf6abefd22" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">w zestawieniu wzorów graficznych znaków w części „ZNAKI DROGOWE PIONOWE”:</zdanie>
+            </p>
+            <tiret eId="DU/2026/133__art_1__pkt_10__lit_c__tir_1" gd:GUID="0fcc3a93-3e35-4bee-8f91-a5e14a4a0aa6" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">
+              <p>
+                <zdanie nr="1" gd:zdGUID="79796055-8cbb-4301-a835-e9136b243c3e" fragment="32" gd:fragmentGUID="902d74ae-90fd-4c85-805a-d57ec3afa79a" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">w grupie „Znaki kierunku i miejscowości”:</zdanie>
+              </p>
+              <podw-tiret eId="DU/2026/133__art_1__pkt_10__lit_c__tir_1__dwtir_1" gd:GUID="af1b24f6-c37a-41e3-a912-bf25bc040bd4" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">
+                <p>
+                  <zdanie nr="1" gd:zdGUID="79796055-8cbb-4301-a835-e9136b243c3e" fragment="33" gd:fragmentGUID="ff39ecfe-dde8-4e3f-aefb-ca66174ba05e" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">skreśla się rysunki: E-1b, E-2c, E-2e, E-2f i E-14a,<cytat-w-tekscie now:akt="https://eli.gov.pl/eli/DU/2019/2310" cudzyslowy="brak" gd:nowGUID="2e2147b1-e3f1-45f9-8e50-bddfff88857b" element-eId="DU/2019/2310__zal_1" funkcja="uchyl-recznie"><tekst>rysunki: E-1b, E-2c, E-2e, E-2f i E-14a</tekst></cytat-w-tekscie></zdanie>
+                </p>
+              </podw-tiret>
+              <podw-tiret eId="DU/2026/133__art_1__pkt_10__lit_c__tir_1__dwtir_2" gd:GUID="1aa79309-6b73-4eb7-aa81-690e534f574e" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">
+                <p>
+                  <zdanie nr="1" gd:zdGUID="79796055-8cbb-4301-a835-e9136b243c3e" fragment="34" gd:fragmentGUID="81bac1d2-08c0-4147-a0c1-5322e8933f21" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">rysunki E-2d i E-20 otrzymują brzmienie:<cytat-w-tekscie now:akt="https://eli.gov.pl/eli/DU/2019/2310" cudzyslowy="brak" gd:nowGUID="a8fdb5b2-dd5c-44b7-88e7-6695a84b6c83" element-eId="DU/2019/2310__zal_1" funkcja="zastap-recznie"><tekst>E-2d</tekst></cytat-w-tekscie></zdanie>
+                </p>
+                <fragment gd:GUID="03026554-3a3a-4983-9416-d8dd92407bc2">E-20</fragment>
+              </podw-tiret>
+              <podw-tiret eId="DU/2026/133__art_1__pkt_10__lit_c__tir_1__dwtir_3" gd:GUID="c50cc999-03fa-4bd5-a6b2-59fd1e063349" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">
+                <p>
+                  <zdanie nr="1" gd:zdGUID="79796055-8cbb-4301-a835-e9136b243c3e" fragment="35" gd:fragmentGUID="df5deb30-3e59-4f7a-9df2-ecf74c219a1f" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">dodaje się rysunki E-1c i E-20a w brzmieniu:<cytat-w-tekscie now:akt="https://eli.gov.pl/eli/DU/2019/2310" cudzyslowy="brak" gd:nowGUID="27d16130-cd26-4ffb-af0d-3a2b28a1f89b" element-eId="DU/2019/2310__zal_1" funkcja="dodaj-recznie"><tekst>E-1c</tekst></cytat-w-tekscie></zdanie>
+                </p>
+                <fragment gd:GUID="191a53e8-83dd-4e74-9032-8ec2907722cb">E-20a</fragment>
+              </podw-tiret>
+            </tiret>
+            <tiret eId="DU/2026/133__art_1__pkt_10__lit_c__tir_2" gd:GUID="a2d66f97-5739-4b53-862f-c0c519ddf384" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">
+              <p>
+                <zdanie nr="1" gd:zdGUID="79796055-8cbb-4301-a835-e9136b243c3e" fragment="36" gd:fragmentGUID="7e7f001d-ff5c-4ce8-a2d9-04e593ce5a4e" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">w grupie „Znaki uzupełniające” dodaje się rysunki F-23 i F-24 w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2019/2310" cudzyslowy="brak" gd:nowGUID="6b2eb378-ddb1-4429-899f-f2442f6cd873" element-eId="DU/2019/2310__zal_1" funkcja="dodaj-recznie"><tiret eId="DU/2019/2310__zal_1__tir_1" gd:GUID="00fd2d3a-e88c-4169-ba16-0db1977d97e6" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19"><p><zdanie nr="1" gd:zdGUID="adbc1f15-3793-4ba2-ace1-cbbfc4a5e014" fragment="1" gd:fragmentGUID="46396b94-90b4-4c03-ab43-50aecaf7f30c" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">F-23</zdanie></p></tiret><tiret eId="DU/2019/2310__zal_1__tir_2" gd:GUID="f8e9b10c-cf8d-4ed9-b0ab-4bcb3c09fcc1" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19"><p><zdanie nr="1" gd:zdGUID="adbc1f15-3793-4ba2-ace1-cbbfc4a5e014" fragment="2" gd:fragmentGUID="694dca16-4281-404a-b14c-914738e8edb6" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">F-24</zdanie></p></tiret></cytat-strukt></zdanie>
+              </p>
+            </tiret>
+          </litera>
+        </punkt>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2026/133__art_2" gd:GUID="b8be9eff-e555-40f4-9bb8-89f3015bcabb" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">
+      <nr>2</nr>
+      <ustep eId="DU/2026/133__art_2__ust_1" gd:GUID="ef38d595-79e1-46f5-8499-fef18b6aab77" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="382d59e5-0d98-470e-8ddc-ab01f5f1c719" fragment="1" gd:fragmentGUID="dcceb4d7-7a1a-4d74-9abc-33383a5284a0" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">Znak E-1 „tablica przeddrogowskazowa” na drodze ekspresowej stosowany na podstawie dotychczasowych przepisów obowiązuje do czasu zastąpienia go znakiem E-1c „tablica przeddrogowskazowa na drodze ekspresowej”, o którym mowa w § 62 ust. 2a rozporządzenia zmienianego w § 1, jednak niedłużej niż przez 10 lat od dnia wejścia w życie niniejszego rozporządzenia.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2026/133__art_2__ust_2" gd:GUID="fc3316a3-478c-42c3-bd7c-82c9bc848fc0" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="bd3c5d04-79a0-4f68-9bbd-624576b2d8ce" fragment="1" gd:fragmentGUID="c68ea44e-f24f-42f4-9fce-b08ec02f1c9c" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">Znak E-20 „tablica węzła drogowego na autostradzie” stosowany na podstawie dotychczasowych przepisów obowiązuje do czasu zastąpienia go znakiem E-20 „tablica węzła drogowego”, o którym mowa w § 66 ust. 4 rozporządzenia zmienianego w § 1 w brzmieniu nadanym niniejszym rozporządzeniem, jednak niedłużej niż przez 10 lat od dnia wejścia w życie niniejszego rozporządzenia.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2026/133__art_2__ust_3" gd:GUID="1baf8082-6b45-45fb-a1d0-9c1033ec138c" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">
+        <nr>3</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="a78c8fad-659a-4adb-8eeb-da1bada9d7f6" fragment="1" gd:fragmentGUID="e788efc1-86bf-42a6-965c-a77ce13ea8f6" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">Znaki E-2a „drogowskaz tablicowy umieszczany obok jezdni” i E-2b „drogowskaz tablicowy umieszczany nad jezdnią” na drodze ekspresowej oraz znaki E-2c „drogowskaz tablicowy umieszczany obok jezdni na autostradzie” i E-2d „drogowskaz tablicowy umieszczany nad jezdnią na autostradzie” stosowane na podstawie dotychczasowych przepisów obowiązują do czasu zastąpienia ich znakiem E-2d „drogowskaz tablicowy umieszczany nad jezdnią na autostradzie lub na drodze ekspresowej”, o którym mowa w § 63 ust. 1 pkt 4 rozporządzenia zmienianego w § 1 w brzmieniu nadanym niniejszym rozporządzeniem, jednak niedłużej niż przez 10 lat od dnia wejścia w życie niniejszego rozporządzenia.</zdanie>
+        </p>
+      </ustep>
+    </paragraf>
+    <paragraf eId="DU/2026/133__art_3" gd:GUID="c58f619b-b05d-4a1d-8132-d46380a3c022" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">
+      <nr>3</nr>
+      <ustep eId="DU/2026/133__art_3__ust_1" gd:GUID="4c30130f-f23c-4c5e-b22f-393481d18750" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="84785e47-bfbf-428b-b18e-5524cdd68386" fragment="1" gd:fragmentGUID="62e90562-fd7b-4396-b7bf-7951c3bc9a82" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">Znak E-1b „tablica przeddrogowskazowa przed wjazdem na autostradę” stosowany na podstawie dotychczasowych przepisów traktuje się jako znak E-1 „tablica przeddrogowskazowa”, o którym mowa w § 62 ust. 1 rozporządzenia zmienianego w § 1.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2026/133__art_3__ust_2" gd:GUID="4c7fd44b-a9b5-4781-a723-451b6beb84f3" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="32ceaeef-0f4e-4916-b246-8df006302e20" fragment="1" gd:fragmentGUID="d92cf0c4-458e-4abc-914e-179ccb951320" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">Znak E-2e „drogowskaz tablicowy umieszczany obok jezdni przed wjazdem na autostradę” stosowany na podstawie dotychczasowych przepisów traktuje się jako znak E-2a „drogowskaz tablicowy umieszczany obok jezdni”, o którym mowa w § 63 ust. 1 pkt 1 rozporządzenia zmienianego w § 1.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2026/133__art_3__ust_3" gd:GUID="732922da-f862-47cd-a1c9-d26403e44f87" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">
+        <nr>3</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="0c551163-6e84-41d7-aaac-2f1990088eb0" fragment="1" gd:fragmentGUID="239a2500-11e6-4f75-b202-08ddaa97df11" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">Znak E-2f „drogowskaz tablicowy umieszczany nad jezdnią przed wjazdem na autostradę” stosowany na podstawie dotychczasowych przepisów traktuje się jako znak E-2b „drogowskaz tablicowy umieszczany nad jezdnią”, o którym mowa w § 63 ust. 1 pkt 2 rozporządzenia zmienianego w § 1.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2026/133__art_3__ust_4" gd:GUID="2f6afc30-a214-4b1b-9bfd-bcb2d39c6689" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">
+        <nr>4</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="c3d41451-3bc0-49b9-9c6f-17b90d62855f" fragment="1" gd:fragmentGUID="68861cde-dbab-43c0-8517-a535816b17b9" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">Znak E-14a „tablica szlaku drogowego na autostradzie” stosowany na podstawie dotychczasowych przepisów traktuje się jako znak E-14 „tablica szlaku drogowego”, o którym mowa w § 64 ust. 2 rozporządzenia zmienianego w § 1 w brzmieniu nadanym niniejszym rozporządzeniem.</zdanie>
+        </p>
+      </ustep>
+    </paragraf>
+    <paragraf eId="DU/2026/133__art_4" gd:GUID="42a286f9-4fc3-4833-9687-bfb001622f73" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">
+      <nr>4</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="5fdd08ec-ddcc-4c7d-957e-f6e626d1ab13" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">
+        <p>
+          <zdanie nr="1" gd:zdGUID="5927f32b-31af-4b08-8f24-d2c2474ee731" fragment="1" gd:fragmentGUID="b1f469a5-0585-4d2f-9133-cf0a6f2cc601" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-19_DU-2026-133_domyslne.x" wejscie-w-zycie="2026-02-19">Rozporządzenie wchodzi w życie po upływie 14 dni od dnia ogłoszenia.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <organ-podpisujacy>Minister Infrastruktury: wz. <i><osoba podpisujacy="true" gd:osobaGUID="02f8e460-84b1-42ec-b3ff-7cd2483662ff"><imie>M.</imie> <nazwisko>Bukowiec</nazwisko></osoba></i></organ-podpisujacy>
+    <organ-podpisujacy>Minister Spraw Wewnętrznych i Administracji: wz. <i><osoba podpisujacy="true" gd:osobaGUID="16c00e19-902c-4450-85eb-e966e1dbaab9"><imie>C.</imie> <nazwisko>Mroczek</nazwisko></osoba></i></organ-podpisujacy>
+  </rozporzadzenie>
+</akt-prawny>

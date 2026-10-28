@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <rozporzadzenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/1049</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>56c654fa-6c40-49b9-8dec-bfa8fc4ee7c9</gd:GUIDwersji>
+      <AdresISAP>WDU20250001049</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>1049</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 1049</AdresWyswietlany>
+      <Tytul>Rozporządzenie Rady Ministrów z dnia 31 lipca 2025 r. w sprawie określenia miesiąca wypłaty kolejnego dodatkowego rocznego świadczenia pieniężnego dla emerytów i rencistów w 2025 r.</Tytul>
+      <Rodzaj>ROZP</Rodzaj>
+      <DataOgloszenia>2025-07-31</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-07-31</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2025-08-01_DU-2025-1049_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2025-08-01" warunek="z dniem następującym po dniu ogłoszenia" podstawa="§ 2" zrodlo="https://eli.gov.pl/eli/DU/2025/1049" dowod="DU/2025/1049__art_2" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2025-08-01_DU-2025-1049_domyslne.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2025-08-01_DU-2025-1049_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="3d8947a6-36e4-48d0-b179-0949cd60a122" rola="wydajacy">
+          <Nazwa>Rada Ministrów</Nazwa>
+        </Organ>
+        <Organ gd:GUID="1b3e83f2-8716-4e2f-9394-e358d0778982" rola="podpisujacy">
+          <Nazwa>Prezes Rady Ministrów</Nazwa>
+          <OrganPodpisujacy>Prezes Rady Ministrów</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>D.</imie> <nazwisko>Tusk</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Rozporządzenie</rodzaj-aktu>
+    <autor-aktu>Rady Ministrów</autor-aktu>
+    <data>z dnia 31 lipca 2025 r.</data>
+    <tytul>w sprawie określenia miesiąca wypłaty kolejnego dodatkowego rocznego świadczenia pieniężnego dla emerytów i rencistów w 2025 r.</tytul>
+    <podstawa-prawna>Na podstawie art. 6 ust. 3 ustawy z dnia 26 maja 2023 r. o kolejnym dodatkowym rocznym świadczeniu pieniężnym dla emerytów i rencistów (Dz. U. z 2025 r. poz. 183) zarządza się, co następuje:</podstawa-prawna>
+    <paragraf eId="DU/2025/1049__art_1" gd:GUID="8350e7be-1c34-4029-9e8e-de486d1bd0e7" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-01_DU-2025-1049_domyslne.x" wejscie-w-zycie="2025-08-01">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="4211dac0-35a2-428f-9c96-311f22a02de3" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-01_DU-2025-1049_domyslne.x" wejscie-w-zycie="2025-08-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="50d74d39-601b-4b20-8602-68b83ba95cb3" fragment="1" gd:fragmentGUID="6441769b-f8b9-4b8e-9f28-ae234c5249b5" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-01_DU-2025-1049_domyslne.x" wejscie-w-zycie="2025-08-01">W 2025 r. kolejne dodatkowe roczne świadczenie pieniężne dla emerytów i rencistów, o którym mowa w art. 1 ustawy z dnia 26 maja 2023 r. o kolejnym dodatkowym rocznym świadczeniu pieniężnym dla emerytów i rencistów, wypłaca się w miesiącu wrześniu.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2025/1049__art_2" gd:GUID="001f189c-8ed7-46e1-b1d5-17cae9bac76d" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-01_DU-2025-1049_domyslne.x" wejscie-w-zycie="2025-08-01">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="b6ee0a27-fe4f-462c-98fa-7066d7e8fb64" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-01_DU-2025-1049_domyslne.x" wejscie-w-zycie="2025-08-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="6ced82d4-b536-4bcd-9c38-c2911533cffe" fragment="1" gd:fragmentGUID="473314cd-b1ca-4aee-a422-96bd8d6d8e50" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-01_DU-2025-1049_domyslne.x" wejscie-w-zycie="2025-08-01">Rozporządzenie wchodzi w życie z dniem następującym po dniu ogłoszenia.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <organ-podpisujacy>Prezes Rady Ministrów: <i><osoba podpisujacy="true" gd:osobaGUID="90501f3c-2540-41e1-a57b-37a805a19aaa"><imie>D.</imie> <nazwisko>Tusk</nazwisko></osoba></i></organ-podpisujacy>
+  </rozporzadzenie>
+</akt-prawny>

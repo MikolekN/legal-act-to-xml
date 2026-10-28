@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <rozporzadzenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/964</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>011fe0df-5a7d-43bf-95c3-4cca3302899c</gd:GUIDwersji>
+      <AdresISAP>WDU20250000964</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>964</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 964</AdresWyswietlany>
+      <Tytul>Rozporządzenie Ministra Finansów z dnia 16 lipca 2025 r. zmieniające rozporządzenie w sprawie warunków, jakie muszą spełniać alternatywny system obrotu lub zorganizowana platforma obrotu</Tytul>
+      <Rodzaj>ROZP</Rodzaj>
+      <DataOgloszenia>2025-07-22</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-07-16</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2025-08-06_DU-2025-964_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2025-08-06" warunek="po upływie 14 dni od dnia ogłoszenia" podstawa="§ 2" zrodlo="https://eli.gov.pl/eli/DU/2025/964" dowod="DU/2025/964__art_2">
+            <JednostkaAktu eId="DU/2025/964__art_1__pkt_3" />
+          </Zdarzenie>
+          <Zdarzenie id="zdarz_wejscie_2025-09-29_DU-2025-964_odczytane" rodzaj="wejscie-w-zycie" pochodzenie="odczytane" data="2025-09-29" podstawa="§ 2" zrodlo="https://eli.gov.pl/eli/DU/2025/964" dowod="DU/2025/964__art_2" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2025-08-06_DU-2025-964_domyslne.x" glowna="false">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2025-08-06_DU-2025-964_domyslne" />
+        </GrupaCzasowa>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2025-09-29_DU-2025-964_odczytane.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2025-09-29_DU-2025-964_odczytane" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="af9dc670-ed18-49fe-a8e9-adce87973bd6" rola="wydajacy">
+          <Nazwa>Minister Finansów</Nazwa>
+          <OrganPodpisujacy>Minister Finansów</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>A.</imie> <nazwisko>Domański</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Rozporządzenie</rodzaj-aktu>
+    <autor-aktu>Ministra Finansów<odnosnik id-odnosnika="1" symbol="1" gd:GUID="945b8267-7f9c-4dc9-a3f3-0842443a9836"><p><zdanie nr="1" gd:zdGUID="5933ece2-dc6f-40b9-9e6c-6872e67fee35" fragment="1" gd:fragmentGUID="621ba1f7-6d45-4683-915c-7efaf582760d">Minister Finansów kieruje działem administracji rządowej – instytucje finansowe, na podstawie § 1 ust. 2 pkt 3 rozporządzenia Prezesa Rady Ministrów z dnia 18 grudnia 2023 r. w sprawie szczegółowego zakresu działania Ministra Finansów (Dz. U. poz. 2710).</zdanie></p></odnosnik></autor-aktu>
+    <data>z dnia 16 lipca 2025 r.</data>
+    <tytul>zmieniające rozporządzenie w sprawie warunków, jakie muszą spełniać alternatywny system obrotu lub zorganizowana platforma obrotu<odnosnik id-odnosnika="2" symbol="2" gd:GUID="a794640c-9a3c-4cca-b755-efb74d2ed66b"><p><zdanie nr="1" gd:zdGUID="4d004497-35af-47e5-a26c-80d3474e2fbd" fragment="1" gd:fragmentGUID="895e1e99-e18d-4e34-ae9f-4ddff9b99657">Niniejsze rozporządzenie w zakresie swojej regulacji wdraża dyrektywę Parlamentu Europejskiego i Rady (UE) 2024/790 z dnia 28 lutego 2024 r. zmieniającą dyrektywę 2014/65/UE w sprawie rynków instrumentów finansowych (Dz. Urz. UE L 2024/790 z 08.03.2024).</zdanie></p></odnosnik></tytul>
+    <podstawa-prawna>Na podstawie art. 94 ust. 1 pkt 3 ustawy z dnia 29 lipca 2005 r. o obrocie instrumentami finansowymi (Dz. U. z 2024 r. poz. 722 i 1863 oraz z 2025 r. poz. 146, 820 i 923) zarządza się, co następuje:</podstawa-prawna>
+    <paragraf eId="DU/2025/964__art_1" gd:GUID="e49bb258-31db-4278-ab17-504dbd9a45fc" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-29_DU-2025-964_odczytane.x" wejscie-w-zycie="2025-09-29">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="6b4f2e1a-b805-4376-be3d-7c220a87bdf8" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-29_DU-2025-964_odczytane.x" wejscie-w-zycie="2025-09-29">
+        <p>
+          <zdanie nr="1" gd:zdGUID="a9b8e1b2-951b-4a44-857f-ba98d83ff914" fragment="1" gd:fragmentGUID="60accffb-41f9-4d70-aac6-68c09b680370" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-29_DU-2025-964_odczytane.x" wejscie-w-zycie="2025-09-29">W rozporządzeniu Ministra Finansów z dnia 2 września 2024 r. w sprawie warunków, jakie muszą spełniać alternatywny system obrotu lub zorganizowana platforma obrotu (Dz. U. poz. 1333) wprowadza się następujące zmiany:</zdanie>
+        </p>
+        <punkt eId="DU/2025/964__art_1__pkt_1" gd:GUID="00cf8c62-1170-4aee-b299-4bcba4408b34" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-29_DU-2025-964_odczytane.x" wejscie-w-zycie="2025-09-29">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a9b8e1b2-951b-4a44-857f-ba98d83ff914" fragment="2" gd:fragmentGUID="73206d15-79c2-4c4a-99bd-52760b9302f0" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-29_DU-2025-964_odczytane.x" wejscie-w-zycie="2025-09-29"><now:zamien-tekst stary-tekst="." nowy-tekst=";" element-eId="DU/2024/1333__art_2__ust_1__pkt_20" akt="https://eli.gov.pl/eli/DU/2024/1333" now:wystapienie="ostatnie" gd:nowGUID="dc58bfdc-632f-47f2-bf61-41f51f742853" />w § 2 w ust. 1 w pkt 20 kropkę zastępuje się średnikiem i dodaje się pkt 21 w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/1333" cudzyslowy="oba" gd:nowGUID="9dbbe2df-b2c6-4302-a5f5-13e646726a8a" element-eId="DU/2024/1333__art_2__ust_1__pkt_20" funkcja="dodaj-po"><punkt eId="DU/2024/1333__art_2__ust_1__pkt_21" gd:GUID="ca779dac-4692-4531-9356-894b79b21021" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-29_DU-2025-964_odczytane.x" wejscie-w-zycie="2025-09-29"><nr>21</nr><p><zdanie nr="1" gd:zdGUID="9760f2fb-159b-48e4-99d7-6ce667509a27" fragment="1" gd:fragmentGUID="155111a3-0ebf-4b50-838e-daae17da8934" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-29_DU-2025-964_odczytane.x" wejscie-w-zycie="2025-09-29">mechanizmy umożliwiające kontrolę otwartych pozycji w zakresie towarowych instrumentów pochodnych lub instrumentów pochodnych bazujących na uprawnieniach do emisji, innych niż towarowe instrumenty pochodne, o których mowa w art. 32f ust. 8 ustawy z dnia 29 lipca 2005 r. o obrocie instrumentami finansowymi, obejmujące:</zdanie></p><litera eId="DU/2024/1333__art_2__ust_1__pkt_21__lit_a" gd:GUID="5cd34a40-1327-4921-af66-2db5cb2c72b9" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-29_DU-2025-964_odczytane.x" wejscie-w-zycie="2025-09-29"><nr>a</nr><p><zdanie nr="1" gd:zdGUID="9760f2fb-159b-48e4-99d7-6ce667509a27" fragment="2" gd:fragmentGUID="3d2adba2-95ce-435b-9039-074d51936624" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-29_DU-2025-964_odczytane.x" wejscie-w-zycie="2025-09-29">monitorowanie otwartych pozycji członka lub uczestnika ASO, a w przypadku OTF – także klienta,</zdanie></p></litera><litera eId="DU/2024/1333__art_2__ust_1__pkt_21__lit_b" gd:GUID="445682d3-22c2-4ee0-8e44-ff1bd07127d6" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-29_DU-2025-964_odczytane.x" wejscie-w-zycie="2025-09-29"><nr>b</nr><p><zdanie nr="1" gd:zdGUID="9760f2fb-159b-48e4-99d7-6ce667509a27" fragment="3" gd:fragmentGUID="436f5d54-e2dc-490c-8acc-bb96a1a16fb7" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-29_DU-2025-964_odczytane.x" wejscie-w-zycie="2025-09-29">uzyskiwanie od członka lub uczestnika ASO, a w przypadku OTF – także klienta, dostępu do informacji, w tym do istotnych dokumentów, dotyczących wielkości i celu pozycji lub otwartych ekspozycji, informacji na temat beneficjentów rzeczywistych lub właścicieli instrumentu bazowego oraz do informacji na temat wspólnych ustaleń oraz powiązanych aktywów lub pasywów na rynku instrumentu bazowego, w tym pozycji utrzymywanych w instrumentach pochodnych bazujących na uprawnieniach do emisji lub w towarowych instrumentach pochodnych o tym samym instrumencie bazowym i tych samych cechach w innych systemach obrotu instrumentami finansowymi, i w ekonomicznie równoważnych kontraktach będących przedmiotem obrotu poza systemami obrotu instrumentami finansowymi,</zdanie></p></litera><litera eId="DU/2024/1333__art_2__ust_1__pkt_21__lit_c" gd:GUID="c7845b0c-43d2-4a65-ab2c-02d3cd16781e" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-29_DU-2025-964_odczytane.x" wejscie-w-zycie="2025-09-29"><nr>c</nr><p><zdanie nr="1" gd:zdGUID="9760f2fb-159b-48e4-99d7-6ce667509a27" fragment="4" gd:fragmentGUID="70f1eba5-7bea-45e8-bcda-03d91b4c7fe1" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-29_DU-2025-964_odczytane.x" wejscie-w-zycie="2025-09-29">żądanie od członka lub uczestnika ASO, a w przypadku OTF – także klienta, aby zamknął albo zmniejszył daną pozycję tymczasowo albo na stałe,</zdanie></p></litera><litera eId="DU/2024/1333__art_2__ust_1__pkt_21__lit_d" gd:GUID="92b3955a-a9e4-483a-bff4-dfc77c490998" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-29_DU-2025-964_odczytane.x" wejscie-w-zycie="2025-09-29"><nr>d</nr><p><zdanie nr="1" gd:zdGUID="9760f2fb-159b-48e4-99d7-6ce667509a27" fragment="5" gd:fragmentGUID="9ded90eb-60c3-459b-8972-7d958050b97d" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-29_DU-2025-964_odczytane.x" wejscie-w-zycie="2025-09-29">jednostronne podjęcie odpowiednich działań w celu zapewnienia zamknięcia albo zmniejszenia danej pozycji, jeżeli członek lub uczestnik ASO, a w przypadku OTF – także klient, nie zastosuje się do żądania, o którym mowa w lit. c,</zdanie></p></litera><litera eId="DU/2024/1333__art_2__ust_1__pkt_21__lit_e" gd:GUID="37ac7aec-b040-4c99-8f1f-22ed7b9b1eee" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-29_DU-2025-964_odczytane.x" wejscie-w-zycie="2025-09-29"><nr>e</nr><p><zdanie nr="1" gd:zdGUID="9760f2fb-159b-48e4-99d7-6ce667509a27" fragment="6" gd:fragmentGUID="181d3463-27e8-41a6-85e4-e48040df9253" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-29_DU-2025-964_odczytane.x" wejscie-w-zycie="2025-09-29">żądanie od członka lub uczestnika ASO, a w przypadku OTF – także klienta, aby tymczasowo przywrócił płynność na rynku zgodnie z ustaloną ceną i wolumenem, z wyraźnym zamiarem złagodzenia skutków dużej lub dominującej pozycji.</zdanie></p></litera></punkt></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/964__art_1__pkt_2" gd:GUID="8c2e2a7b-ced7-498e-9b8c-490f60c9628a" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-29_DU-2025-964_odczytane.x" wejscie-w-zycie="2025-09-29">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a9b8e1b2-951b-4a44-857f-ba98d83ff914" fragment="3" gd:fragmentGUID="2fda8f29-c15f-4ff5-88ab-0a35e2b98f98" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-29_DU-2025-964_odczytane.x" wejscie-w-zycie="2025-09-29">po § 4 dodaje się § 4a w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/1333" cudzyslowy="oba" gd:nowGUID="d29523a9-2c81-46b0-8cd3-5436b282957c" element-eId="DU/2024/1333__art_4" funkcja="dodaj-po"><paragraf eId="DU/2024/1333__art_4a" gd:GUID="f79ad82c-9582-451e-b96a-60dddb9305fd" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-29_DU-2025-964_odczytane.x" wejscie-w-zycie="2025-09-29"><nr>4a</nr><ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="b4a3fb15-d158-4ec5-934c-ef55b09c125d" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-29_DU-2025-964_odczytane.x" wejscie-w-zycie="2025-09-29"><p><zdanie nr="1" gd:zdGUID="f117ca09-2cf9-458d-8a02-775f272f09dd" fragment="1" gd:fragmentGUID="3e420134-a92f-42e4-89c5-814fefc52058" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-29_DU-2025-964_odczytane.x" wejscie-w-zycie="2025-09-29">ASO lub OTF, które przekazują dane do centrum danych dostawcy informacji skonsolidowanych, o którym mowa w art. 2 ust. 1 pkt 35 rozporządzenia Parlamentu Europejskiego i Rady (UE) nr 600/2014 z dnia 15 maja 2014 r. w sprawie rynków instrumentów finansowych oraz zmieniającego rozporządzenie (UE) nr 648/2012 (Dz. Urz. UE L 173 z 12.06.2014, str. 84, z późn. zm.<odnosnik id-odnosnika="3" symbol="3" gd:GUID="8f5f63f2-7034-487c-a035-f4661bea5d38"><p><zdanie nr="1" gd:zdGUID="20309b50-db77-4032-9084-f4eec5378959" fragment="1" gd:fragmentGUID="98b36e2a-1158-40dc-9577-01704900ff8c">Zmiany wymienionego rozporządzenia zostały ogłoszone w Dz. Urz. UE L 270 z 15.10.2015, str. 4, Dz. Urz. UE L 175 z 30.06.2016, str. 1, Dz. Urz. UE L 314 z 05.12.2019, str. 1, Dz. Urz. UE L 334 z 27.12.2019, str. 1, Dz. Urz. UE L 20 z 24.01.2020, str. 26, Dz. Urz. UE L 405 z 02.12.2020, str. 79, Dz. Urz. UE L 22 z 22.01.2021, str. 1, Dz. Urz. UE L 131 z 05.05.2022, str. 11, Dz. Urz. UE L 151 z 02.06.2022, str. 1, Dz. Urz. UE L 283 z 03.11.2022, str. 17, Dz. Urz. UE L 333 z 27.12.2022, str. 1, Dz. Urz. UE L 2023/2869 z 20.12.2023, Dz. Urz. UE L 2024/791 z 08.03.2024 oraz Dz. Urz. UE L 2024/2809 z 14.11.2024.</zdanie></p></odnosnik>), posiadają ustalone i wdrożone przez firmę inwestycyjną lub bank państwowy prowadzący działalność maklerską mechanizmy zapewniające spełnianie standardów jakości danych, zgodnie z art. 22b tego rozporządzenia.</zdanie></p></ustep-n></paragraf></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/964__art_1__pkt_3" gd:GUID="119edb26-b5f3-460d-a449-53a40421f0b1" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-06_DU-2025-964_domyslne.x" wejscie-w-zycie="2025-08-06">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a9b8e1b2-951b-4a44-857f-ba98d83ff914" fragment="4" gd:fragmentGUID="557caeb5-61d1-4c10-bcf2-54adfa826cdb" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-06_DU-2025-964_domyslne.x" wejscie-w-zycie="2025-08-06"><now:uchyl akt="https://eli.gov.pl/eli/DU/2024/1333" element-eId="DU/2024/1333__art_7" gd:nowGUID="f74f00e7-206d-4dd2-8c7d-720048cab6d4" />uchyla się § 7.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2025/964__art_2" gd:GUID="1022e989-d344-42fe-97e2-3845b6ab1325" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-29_DU-2025-964_odczytane.x" wejscie-w-zycie="2025-09-29">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="0cafc10a-81ef-4ae1-a980-8608c64a0d24" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-29_DU-2025-964_odczytane.x" wejscie-w-zycie="2025-09-29">
+        <p>
+          <zdanie nr="1" gd:zdGUID="f2f14b9b-c154-4f42-8c35-cb264fa0f59d" fragment="1" gd:fragmentGUID="fbf6a419-7bd4-4cee-91b4-c5b23e356fd6" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-29_DU-2025-964_odczytane.x" wejscie-w-zycie="2025-09-29">Rozporządzenie wchodzi w życie z dniem 29 września 2025 r., z wyjątkiem § 1 pkt 3, który wchodzi w życie po upływie 14 dni od dnia ogłoszenia.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <organ-podpisujacy>Minister Finansów: <i><osoba podpisujacy="true" gd:osobaGUID="0b0cccb7-f07c-4d41-ab40-2cdd16f66464"><imie>A.</imie> <nazwisko>Domański</nazwisko></osoba></i></organ-podpisujacy>
+  </rozporzadzenie>
+</akt-prawny>

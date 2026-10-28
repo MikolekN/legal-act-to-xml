@@ -1,0 +1,1729 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <obwieszczenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2026/146</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>4d8cfbd7-6ae4-4bee-bd03-dc70daf853ab</gd:GUIDwersji>
+      <AdresISAP>WDU20260000146</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2026</Rok>
+      <Pozycja>146</Pozycja>
+      <AdresWyswietlany>Dz.U. 2026 poz. 146</AdresWyswietlany>
+      <Tytul>Obwieszczenie Marszałka Sejmu Rzeczypospolitej Polskiej z dnia 5 lutego 2026 r. w sprawie ogłoszenia jednolitego tekstu ustawy o ubezpieczeniach gwarantowanych przez Skarb Państwa</Tytul>
+      <Rodzaj>OBW_TJ</Rodzaj>
+      <DataOgloszenia>2026-02-09</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2026-02-05</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_ujednolicenie_2026-02-09_DU-2026-146_domyslne" rodzaj="ujednolicenie" pochodzenie="domyslne-z-aktu" data="2026-02-09" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_ujednolicenie.zdarz_ujednolicenie_2026-02-09_DU-2026-146_domyslne" glowna="true">
+          <Przedzial rodzaj="ujednolicenie" od="zdarz_ujednolicenie_2026-02-09_DU-2026-146_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <DataObowiazywaniaWersji>
+        <Od>zdarz_ujednolicenie_2026-02-09_DU-2026-146_domyslne</Od>
+      </DataObowiazywaniaWersji>
+      <Organy>
+        <Organ gd:GUID="5c73f3af-f867-428c-9ecd-04e124de906b" rola="wydajacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/MSEJMU">
+          <Nazwa>Marszałek Sejmu</Nazwa>
+          <OrganPodpisujacy>Marszałek Sejmu</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>W.</imie> <nazwisko>Czarzasty</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Obwieszczenie</rodzaj-aktu>
+    <autor-aktu>Marszałka Sejmu Rzeczypospolitej Polskiej</autor-aktu>
+    <data>z dnia 5 lutego 2026 r.</data>
+    <tytul>w sprawie ogłoszenia jednolitego tekstu ustawy o ubezpieczeniach gwarantowanych przez Skarb Państwa</tytul>
+    <punkt-OTJ eId="DU/2026/146__pkt_1" gd:GUID="88464765-5636-4d54-b1d0-cecd657cbc28">
+      <nr>1</nr>
+      <p>
+        <zdanie nr="1" gd:zdGUID="e9ac839c-31c8-4688-bd31-d6d7af7a160e" fragment="1" gd:fragmentGUID="63c1d303-f000-408a-9bd0-f84d7f7b7bdd">Na podstawie art. 16 ust. 1 zdanie pierwsze ustawy z dnia 20 lipca 2000 r. o ogłaszaniu aktów normatywnych i niektórych innych aktów prawnych (Dz. U. z 2019 r. poz. 1461) ogłasza się w załączniku do niniejszego obwieszczenia jednolity tekst ustawy z dnia 7 lipca 1994 r. o ubezpieczeniach gwarantowanych przez Skarb Państwa (Dz. U. z 2024 r. poz. 284), z uwzględnieniem zmian wprowadzonych ustawą z dnia 25 czerwca 2025 r. o zmianie niektórych ustaw w związku z zapewnieniem operacyjnej odporności cyfrowej sektora finansowego oraz emitowaniem europejskich zielonych obligacji (Dz. U. poz. 1069) oraz zmian wynikających z przepisów ogłoszonych przed dniem 5 lutego 2026 r.</zdanie>
+      </p>
+    </punkt-OTJ>
+    <punkt-OTJ eId="DU/2026/146__pkt_2" gd:GUID="44b4d8f7-54c0-47f4-9e3e-72f13024b117">
+      <nr>2</nr>
+      <p>
+        <zdanie nr="1" gd:zdGUID="b31e840e-2a32-44e9-b7f6-c35d56ed7893" fragment="1" gd:fragmentGUID="6038b037-9ba4-45d2-b521-ea83edbc1481">Podany w załączniku do niniejszego obwieszczenia tekst jednolity ustawy nie obejmuje art. 20 ustawy z dnia 25 czerwca 2025 r. o zmianie niektórych ustaw w związku z zapewnieniem operacyjnej odporności cyfrowej sektora finansowego oraz emitowaniem europejskich zielonych obligacji (Dz. U. poz. 1069), który stanowi:<tresc-strukt cudzyslowy="oba" gd:GUID="12d7b5c2-ad6a-4a80-bd84-341f0d6e2b77"><artykul eId="DU/2025/1069__art_20" gd:GUID="01625114-6190-46ba-bd46-f5029da462a3"><nr>20</nr><ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="8d4e7d6d-9407-4bcf-8112-5c00b0e3ed49"><p><zdanie nr="1" gd:zdGUID="acd0b45f-1cc8-4bd0-a767-28e7c097d5d5" fragment="1" gd:fragmentGUID="8dab3ea6-e3d8-4c85-a60e-27605fb6beaf">Ustawa wchodzi w życie z dniem następującym po dniu ogłoszenia.</zdanie></p></ustep-n></artykul></tresc-strukt>.</zdanie>
+      </p>
+    </punkt-OTJ>
+    <organ-podpisujacy>Marszałek Sejmu: <i><osoba podpisujacy="true" gd:osobaGUID="cc8a21c6-eb72-4e3b-a2dd-e1517f7bb06d"><imie>W.</imie> <nazwisko>Czarzasty</nazwisko></osoba></i></organ-podpisujacy>
+    <ustawa>
+      <zalacznik-do>Załącznik do obwieszczenia Marszałka Sejmu Rzeczypospolitej Polskiej z dnia 5 lutego 2026 r. (Dz. U. poz. 146)</zalacznik-do>
+      <rodzaj-aktu>Ustawa</rodzaj-aktu>
+      <data>z dnia 7 lipca 1994 r.</data>
+      <tytul>o ubezpieczeniach gwarantowanych przez Skarb Państwa<odnosnik id-odnosnika="1" symbol="1" gd:GUID="c8633815-60db-4341-9cc2-89c92f4a200e"><p><zdanie nr="1" gd:zdGUID="21cfd969-68d8-445c-83a8-defdb1ba8e81" fragment="1" gd:fragmentGUID="4c493705-6e47-4b49-814b-0698d81847e7">Niniejsza ustawa dokonuje w zakresie swojej regulacji wdrożenia dyrektywy 98/29/WE z dnia 7 maja 1998 r. w sprawie harmonizacji głównych przepisów dotyczących ubezpieczenia kredytów eksportowych dla transakcji objętych ubezpieczeniem średnio- i długo-terminowym (Dz. Urz. WE L 148 z 19.05.1998, str. 22).</zdanie></p><fragment-odnosnik><p><zdanie nr="1" gd:zdGUID="38c88ae6-e4b9-40b1-aa5b-ae9384a215a0" fragment="1" gd:fragmentGUID="97f1f9cf-3c7a-49d1-a036-0634940f4e72">Dane dotyczące ogłoszenia aktów prawa Unii Europejskiej, zamieszczone w niniejszej ustawie – z dniem uzyskania przez Rzecz-pospolitą Polską członkostwa w Unii Europejskiej – dotyczą ogłoszenia tych aktów w Dzienniku Urzędowym Unii Europejskiej – wydanie specjalne.</zdanie></p></fragment-odnosnik></odnosnik></tytul>
+      <rozdzial eId="DU/2026/146__rozdz_1" gd:GUID="de5e7c40-45b2-4e5b-a4bd-11e143268359">
+        <naglowek-rozdzialu>
+          <nr>1</nr>
+          <p>Przepisy ogólne</p>
+        </naglowek-rozdzialu>
+        <oddzial-n brak-eid="jednostka-nieoznaczona" gd:GUID="ce989536-4953-4a22-8a81-9cfc5a9b879a">
+          <artykul eId="DU/2026/146__art_1" gd:GUID="81804e19-d0ad-4d35-bb9d-f8549902d06a">
+            <nr>1</nr>
+            <ustep eId="DU/2026/146__art_1__ust_1" gd:GUID="00e4a206-a186-4c29-8176-76cf8432aa3a">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ec639bdf-70d5-4f87-9186-091dc3d76b86" fragment="1" gd:fragmentGUID="7420cfe5-e564-40c8-9672-ef4b55af5a16">Ustawa określa zasady ubezpieczeń gwarantowanych, w wypadku których wypłata odszkodowań jest zapewniona w drodze przekazywania zakładowi ubezpieczeń przez Skarb Państwa niezbędnych na ten cel środków.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/146__art_1__ust_2" gd:GUID="4506b29f-f81d-45b6-9833-12d3e23feed1">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="988b0954-f7d2-4513-8386-5c0ed4a14e51" fragment="1" gd:fragmentGUID="bec5efd1-095c-4ee2-9049-dcc7b11fbb03">Ubezpieczenie udzielane przez podmiot, o którym mowa w art. 5 ust. 1, na podstawie ustawy, zwane dalej „ubezpieczeniem gwarantowanym”, dotyczy:</zdanie>
+              </p>
+              <punkt eId="DU/2026/146__art_1__ust_2__pkt_1" gd:GUID="33a62ac3-c056-4c16-b3f6-11a5795534e7">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="988b0954-f7d2-4513-8386-5c0ed4a14e51" fragment="2" gd:fragmentGUID="d2dbfc61-4e0a-4cb9-b01c-688b00335417">instrumentów finansujących, rozumianych jako umowa lub inna czynność służąca finansowaniu, w całości albo części, kontraktów eksportowych, umów lub inwestycji, o których mowa w pkt 2–5, albo służąca finansowaniu podmiotu, o którym mowa w art. 6 ust. 1 pkt 1 lit. a, pkt 2 lub pkt 5 lit. a, w szczególności:</zdanie>
+                </p>
+                <litera eId="DU/2026/146__art_1__ust_2__pkt_1__lit_a" gd:GUID="6c2a4944-8f3d-4704-bf98-f9122dba9408">
+                  <nr>a</nr>
+                  <p>
+                    <zdanie nr="1" gd:zdGUID="988b0954-f7d2-4513-8386-5c0ed4a14e51" fragment="3" gd:fragmentGUID="03b14ff6-73dc-4230-be20-0c65ffe3868c">kredytu bankowego,</zdanie>
+                  </p>
+                </litera>
+                <litera eId="DU/2026/146__art_1__ust_2__pkt_1__lit_b" gd:GUID="5309934f-49fa-4b49-afb3-96234a814756">
+                  <nr>b</nr>
+                  <p>
+                    <zdanie nr="1" gd:zdGUID="988b0954-f7d2-4513-8386-5c0ed4a14e51" fragment="4" gd:fragmentGUID="7552da24-d4a5-4792-9347-10896063d74d">pożyczki,</zdanie>
+                  </p>
+                </litera>
+                <litera eId="DU/2026/146__art_1__ust_2__pkt_1__lit_c" gd:GUID="21c27cd6-502d-4779-bee7-aede24f0b20c">
+                  <nr>c</nr>
+                  <p>
+                    <zdanie nr="1" gd:zdGUID="988b0954-f7d2-4513-8386-5c0ed4a14e51" fragment="5" gd:fragmentGUID="8bb670c4-2b87-49a9-b1ab-0c0060eb1ccf">limitu kredytowego na wystawianie gwarancji lub akredytyw,</zdanie>
+                  </p>
+                </litera>
+                <litera eId="DU/2026/146__art_1__ust_2__pkt_1__lit_d" gd:GUID="a10fd130-8412-4bbf-b714-941045b09bf3">
+                  <nr>d</nr>
+                  <p>
+                    <zdanie nr="1" gd:zdGUID="988b0954-f7d2-4513-8386-5c0ed4a14e51" fragment="6" gd:fragmentGUID="681a30e6-5075-4450-931e-d52e7ad8bdcb">nabycia lub zagwarantowania emisji papierów wartościowych o charakterze dłużnym, w szczególności obligacji,</zdanie>
+                  </p>
+                </litera>
+                <litera eId="DU/2026/146__art_1__ust_2__pkt_1__lit_e" gd:GUID="bb4e486f-b690-415e-965e-2a740fd80c93">
+                  <nr>e</nr>
+                  <p>
+                    <zdanie nr="1" gd:zdGUID="988b0954-f7d2-4513-8386-5c0ed4a14e51" fragment="7" gd:fragmentGUID="e958ded5-0cdc-4b1f-8a76-b62e30e0f47e">wykupu wierzytelności,</zdanie>
+                  </p>
+                </litera>
+                <litera eId="DU/2026/146__art_1__ust_2__pkt_1__lit_f" gd:GUID="4ab36faf-60c0-4c3d-8e10-8bec6d4674fd">
+                  <nr>f</nr>
+                  <p>
+                    <zdanie nr="1" gd:zdGUID="988b0954-f7d2-4513-8386-5c0ed4a14e51" fragment="8" gd:fragmentGUID="745d7df2-0687-437d-bf7b-554dc65aa721">leasingu;</zdanie>
+                  </p>
+                </litera>
+              </punkt>
+              <punkt eId="DU/2026/146__art_1__ust_2__pkt_2" gd:GUID="784fb329-0b7a-45c9-b40e-42a8d905b8b5">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="988b0954-f7d2-4513-8386-5c0ed4a14e51" fragment="9" gd:fragmentGUID="f90a7a47-89d1-4257-8015-4b0276816a36">kontraktów eksportowych;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/146__art_1__ust_2__pkt_3" gd:GUID="f3d2b257-952f-45e7-9970-cfbf970031d7">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="988b0954-f7d2-4513-8386-5c0ed4a14e51" fragment="10" gd:fragmentGUID="4cdb4512-acc8-498c-98a6-b23022f92b39">inwestycji bezpośrednich za granicą lub inwestycji podejmowanych w celu realizacji kontraktów eksportowych;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/146__art_1__ust_2__pkt_4" gd:GUID="2310d875-9f6a-4382-a9ad-861868fd8c93">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="988b0954-f7d2-4513-8386-5c0ed4a14e51" fragment="11" gd:fragmentGUID="db8007de-8783-4dab-a1a0-d28753fdbcbf">umów przedsiębiorców zależnych;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/146__art_1__ust_2__pkt_5" gd:GUID="4bc1ed15-766d-4897-95ae-63c0a104e866">
+                <nr>5</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="988b0954-f7d2-4513-8386-5c0ed4a14e51" fragment="12" gd:fragmentGUID="38123a6d-c960-4d75-a0e8-fea29295b4f4">umów lub inwestycji realizowanych na terytorium Rzeczypospolitej Polskiej, umożliwiających rozpoczynanie, kontynuowanie lub rozwijanie działalności gospodarczej wnoszącej istotny wkład w łagodzenie zmian klimatu, o której mowa w art. 10 rozporządzenia Parlamentu Europejskiego i Rady (UE) 2020/852 z dnia 18 czerwca 2020 r. w sprawie ustanowienia ram ułatwiających zrównoważone inwestycje, zmieniającego rozporządzenie (UE) 2019/2088 (Dz. Urz. UE L 198 z 22.06.2020, str. 13, z późn. zm.<odnosnik id-odnosnika="2" symbol="2" gd:GUID="55422551-75b9-49b5-a435-a0e5041cdb9a"><p><zdanie nr="1" gd:zdGUID="70e77a48-776f-477d-8492-9a1cfbc6cfc9" fragment="1" gd:fragmentGUID="495ac704-650c-4ff5-a4ea-c6e1d95a3c45">Zmiana wymienionego rozporządzenia została ogłoszona w Dz. Urz. UE L 156 z 09.06.2022, str. 159.</zdanie></p></odnosnik>), zwanego dalej „rozporządzeniem 2020/852”;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/146__art_1__ust_2__pkt_6" gd:GUID="55f11f1f-835e-415f-8bd1-cf07e5204ade">
+                <nr>6</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="988b0954-f7d2-4513-8386-5c0ed4a14e51" fragment="13" gd:fragmentGUID="ae104ec5-03f8-4799-ba69-912aad901bc0">ryzyk pokrywanych ubezpieczeniami, o których mowa w dziale II w grupach 3–7 i 9–16 załącznika do ustawy z dnia 11 września 2015 r. o działalności ubezpieczeniowej i reasekuracyjnej (Dz. U. z 2025 r. poz. 1526), o ile ryzyka te nie wystąpiły na terytorium Rzeczypospolitej Polskiej – w przypadkach, o których mowa w przepisach wydanych na podstawie art. 2 ust. 10.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2026/146__art_1__ust_2a" gd:GUID="dd937a3f-81f3-4a3e-a16c-dc0f9784fe45">
+              <nr>2a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="d559e5b5-36f8-47ae-83d0-5022719fce61" fragment="1" gd:fragmentGUID="cf14b936-3777-4daa-b1cc-a0a8c4827b5a">W przypadku gdy ubezpieczający lub ubezpieczony, któremu zostało udzielone ubezpieczenie gwarantowane dotyczące ryzyka nierynkowego, nabywa towary lub usługi od kontrahenta zagranicznego, ochroną ubezpieczeniową w ramach tego ubezpieczenia gwarantowanego mogą zostać objęte również szkody poniesione odpowiednio przez ubezpieczającego lub ubezpieczonego w wyniku niewykonania lub nienależytego wykonania umowy przez tego kontrahenta.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/146__art_1__ust_3" gd:GUID="e0b82b8c-9895-4fbf-9bdd-e14992cccc81">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ff0b408c-6e31-4e60-967c-f55a2611bb1f" fragment="1" gd:fragmentGUID="fc535e4f-ed74-42e9-8cbf-dc3fdd1a1b7d">Ubezpieczenie gwarantowane może być realizowane w formie:</zdanie>
+              </p>
+              <punkt eId="DU/2026/146__art_1__ust_3__pkt_1" gd:GUID="62a87eff-8f81-44a9-a019-02317e3b039f">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="ff0b408c-6e31-4e60-967c-f55a2611bb1f" fragment="2" gd:fragmentGUID="dfd7ec04-2811-4362-b1e9-82fc0061c0ea">ubezpieczenia bezpośredniego;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/146__art_1__ust_3__pkt_2" gd:GUID="446231f4-14cd-4d5d-9390-10a82aa50a46">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="ff0b408c-6e31-4e60-967c-f55a2611bb1f" fragment="3" gd:fragmentGUID="07cc9525-fde3-4f11-b8b5-454462adb60b">ubezpieczenia pośredniego (reasekuracji);</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/146__art_1__ust_3__pkt_3" gd:GUID="20029dd7-2be6-4ec7-97f3-537f0cfdb938">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="ff0b408c-6e31-4e60-967c-f55a2611bb1f" fragment="4" gd:fragmentGUID="9fe2ad8c-4198-497a-8833-f4b2d00be668">udzielenia gwarancji ubezpieczeniowej;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/146__art_1__ust_3__pkt_4" gd:GUID="2fb7ba1d-1a5e-4921-9309-49dd888ac9f2">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="ff0b408c-6e31-4e60-967c-f55a2611bb1f" fragment="5" gd:fragmentGUID="3db673fd-f11d-43b9-8c84-1c52a093313a">udziału w ubezpieczeniu udzielonym przez agencję kredytów eksportowych w rozumieniu rozporządzenia Parlamentu Europejskiego i Rady (UE) 1233/2011 z dnia 16 listopada 2011 r. w sprawie zastosowania niektórych wytycznych w dziedzinie oficjalnie wspieranych kredytów eksportowych oraz uchylającego decyzje Rady 2001/76/WE i 2001/77/WE (Dz. Urz. UE L 326 z 08.12.2011, str. 45, z późn. zm.<odnosnik id-odnosnika="3" symbol="3" gd:GUID="c846a7c9-d26c-4da7-a34a-07ec2357ec47"><p><zdanie nr="1" gd:zdGUID="3d419476-5d3e-47ed-82fc-4fe76dae57f6" fragment="1" gd:fragmentGUID="1ef90379-fb0b-4e52-b4a6-3916b8ca7883">Zmiany wymienionego rozporządzenia zostały ogłoszone w Dz. Urz. UE L 207 z 02.08.2013, str. 1, Dz. Urz. UE L 36 z 11.02.2016, str. 1, Dz. Urz. UE L 37 z 09.02.2018, str. 1 oraz Dz. Urz. UE L 38 z 08.02.2023, str. 1.</zdanie></p></odnosnik>), zwaną dalej „agencją kredytów eksportowych”.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2026/146__art_1__ust_4" gd:GUID="ce28206b-ef38-421c-acfb-66aab6149186">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="a3fa0de5-7008-423f-8892-92e2b3a1d244" fragment="1" gd:fragmentGUID="180b78af-2233-4fb3-8a35-0538ad3b09a3">Ubezpieczenie gwarantowane dotyczące ryzyk pokrywanych ubezpieczeniami, o których mowa w dziale II w grupach 3–7 i 9–16 załącznika do ustawy z dnia 11 września 2015 r. o działalności ubezpieczeniowej i reasekuracyjnej, może być realizowane wyłącznie w formie ubezpieczenia pośredniego (reasekuracji) lub udziału w ubezpieczeniu udzielonym przez agencję kredytów eksportowych.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/146__art_2" gd:GUID="1dbca9a3-ca3d-4c24-be6a-1d2e3fab0e63">
+            <nr>2</nr>
+            <ustep eId="DU/2026/146__art_2__ust_1" gd:GUID="c1136265-5ab0-47d4-8be6-db1f7816b3cd">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="dcec5ccd-23d9-4e00-8a54-3124d76c5307" fragment="1" gd:fragmentGUID="8ad9c9d3-c188-4472-b71d-abaaa00582e9">Celem ubezpieczeń gwarantowanych jest umożliwienie polskim przedsiębiorcom udziału w międzynarodowym obrocie handlowym oraz wzrostu ich aktywności na arenie międzynarodowej oraz ochrona podmiotów prywatnych i publicznych na wypadek strat poniesionych w związku z działaniami służącymi transformacji energetycznej Rzeczypospolitej Polskiej w zakresie realizacji celów Porozumienia paryskiego do Ramowej konwencji Narodów Zjednoczonych w sprawie zmian klimatu, sporządzonej w Nowym Jorku dnia 9 maja 1992 r., przyjętego w Paryżu dnia 12 grudnia 2015 r. (Dz. U. z 2017 r. poz. 36 i 37).</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/146__art_2__ust_1a" gd:GUID="6c1f5c95-1213-4307-9834-774d4756cba5">
+              <nr>1a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="fc15ae5d-23a1-4903-90e8-ad1bd3f8adb9" fragment="1" gd:fragmentGUID="85a91ebf-9bd3-413c-9ecd-5849f2ef63d8">Celem ubezpieczeń gwarantowanych jest, w przypadku ubezpieczenia:</zdanie>
+              </p>
+              <punkt eId="DU/2026/146__art_2__ust_1a__pkt_1" gd:GUID="31f361a4-1da9-48a6-9aa2-8558fc5a81f4">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="fc15ae5d-23a1-4903-90e8-ad1bd3f8adb9" fragment="2" gd:fragmentGUID="7a4f2121-966f-4ca2-b947-17a991572e16">instrumentów finansujących – ochrona jednostek finansujących na wypadek strat poniesionych w związku z finansowaniem, w całości albo części, kontraktu eksportowego, umowy lub inwestycji, o których mowa w art. 1 ust. 2 pkt 2–5, lub podmiotów, o których mowa w art. 6 ust. 1 pkt 1 lit. a, pkt 2 lub pkt 5 lit. a;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/146__art_2__ust_1a__pkt_2" gd:GUID="8faf2e0f-e553-4a19-8333-700d6f59dbd3">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="fc15ae5d-23a1-4903-90e8-ad1bd3f8adb9" fragment="3" gd:fragmentGUID="7fe511d5-21bf-44d5-b19b-7c97bd3cb814">kontraktów eksportowych – ochrona krajowych przedsiębiorców na wypadek strat poniesionych, w związku z realizacją kontraktu eksportowego, przed wysyłką towarów bądź realizacją usług (ryzyko produkcji) oraz po wysyłce towarów bądź realizacji usług (ryzyko kredytu);</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/146__art_2__ust_1a__pkt_3" gd:GUID="76673b1b-7388-4672-86a3-3ef02edcc3a1">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="fc15ae5d-23a1-4903-90e8-ad1bd3f8adb9" fragment="4" gd:fragmentGUID="d43a5042-0ca9-43e5-b822-b417ff40460e">inwestycji bezpośrednich za granicą lub inwestycji podejmowanych w celu realizacji kontraktów eksportowych – ochrona krajowych przedsiębiorców na wypadek strat poniesionych w związku z realizacją inwestycji bezpośredniej za granicą lub inwestycji podejmowanej w celu realizacji kontraktu eksportowego, a także przedsiębiorców zależnych na wypadek strat poniesionych w związku z realizacją inwestycji za granicą, podejmowanej w celu sprzedaży za granicą towarów i usług;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/146__art_2__ust_1a__pkt_4" gd:GUID="63345e2a-a098-47d2-b88d-035e5821777c">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="fc15ae5d-23a1-4903-90e8-ad1bd3f8adb9" fragment="5" gd:fragmentGUID="a46829b6-87e3-4515-b990-c1392be885a4">umów przedsiębiorców zależnych – ochrona przedsiębiorców zależnych na wypadek strat poniesionych w związku ze sprzedażą za granicą towarów i usług, które stanowiły towary lub usługi krajowe;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/146__art_2__ust_1a__pkt_5" gd:GUID="4a3b6634-54fb-4e5e-b077-e408281c4859">
+                <nr>5</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="fc15ae5d-23a1-4903-90e8-ad1bd3f8adb9" fragment="6" gd:fragmentGUID="515e9981-d55a-43a8-b884-3926e49bd88f">umów lub inwestycji realizowanych na terytorium Rzeczypospolitej Polskiej, umożliwiających rozpoczynanie, kontynuowanie lub rozwijanie działalności gospodarczej wnoszącej istotny wkład w łagodzenie zmian klimatu, o której mowa w art. 10 rozporządzenia 2020/852 – ochrona podmiotów prywatnych i publicznych na wypadek strat poniesionych w związku z realizacją takiej umowy lub inwestycji;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/146__art_2__ust_1a__pkt_6" gd:GUID="992e0f1c-ea22-4646-8231-31776430352d">
+                <nr>6</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="fc15ae5d-23a1-4903-90e8-ad1bd3f8adb9" fragment="7" gd:fragmentGUID="adb7e19e-23b3-4256-9593-d16ae7b310ed">ryzyk pokrywanych ubezpieczeniami, o których mowa w dziale II w grupach 3–7 i 9–16 załącznika do ustawy z dnia 11 września 2015 r. o działalności ubezpieczeniowej i reasekuracyjnej – ochrona zakładów ubezpieczeń i agencji kredytów eksportowych, udzielających ochrony ubezpieczeniowej na wypadek strat poniesionych w związku z ubezpieczaniem ryzyk poza terytorium Rzeczypospolitej Polskiej.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2026/146__art_2__ust_2" gd:GUID="ba5caaae-2d9f-4215-b780-302d0ea73dcb">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="e8e13a55-bd34-47ea-9007-73244418c6b3" fragment="1" gd:fragmentGUID="6e0baf36-930c-4abb-800d-43f3c614a2b2">Celem gwarancji ubezpieczeniowej jest umożliwienie krajowym przedsiębiorcom oraz przedsiębiorcom zależnym zawarcia lub realizacji kontraktów eksportowych, umów lub inwestycji, o których mowa w art. 1 ust. 2 pkt 2–5.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/146__art_2__ust_3" gd:GUID="b5ef5775-06bd-46e9-901c-3525041fe458">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="a9728b68-510c-4b4e-b65f-73823a7f5fc2" fragment="1" gd:fragmentGUID="7aa21ee7-f2e7-4fe6-8b3f-8ee94db31e9d">Ochrona ubezpieczeniowa z tytułu ubezpieczeń gwarantowanych, o których mowa w ust. 1, nie obejmuje utraconych korzyści ani innych szkód pośrednich poniesionych przez ubezpieczającego, chyba że w umowie ubezpieczenia gwarantowanego postanowiono inaczej.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/146__art_2__ust_4" gd:GUID="343390c5-d95b-4144-a67a-122058912557">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="3280c415-2cd2-4f6b-ba11-73c66d9201a1" fragment="1" gd:fragmentGUID="f5298cd5-7d2a-46fc-b0f8-097e97d53f04">Ubezpieczenie instrumentów, o których mowa w art. 1 ust. 2 pkt 1, obejmuje szkody poniesione przez jednostkę finansującą w związku z finansowaniem kontraktów eksportowych, umów lub inwestycji, o których mowa w art. 1 ust. 2 pkt 2–5, lub finansowaniem podmiotu, o którym mowa w art. 6 ust. 1 pkt 1 lit. a, pkt 2 lub pkt 5 lit. a, jeżeli szkody te są następstwem zdarzeń określonych jako:</zdanie>
+              </p>
+              <punkt eId="DU/2026/146__art_2__ust_4__pkt_1" gd:GUID="5893eae1-2583-4afd-bce7-b09c930d0247">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="3280c415-2cd2-4f6b-ba11-73c66d9201a1" fragment="2" gd:fragmentGUID="22a09b84-7d7f-4ae3-810b-5948b8bf007a">ryzyko handlowe;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/146__art_2__ust_4__pkt_2" gd:GUID="85eb996f-d18d-4de2-b9c9-fe9288784e79">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="3280c415-2cd2-4f6b-ba11-73c66d9201a1" fragment="3" gd:fragmentGUID="66c8bfe4-b6d5-40bd-bbab-21c4053b515e">ryzyko polityczne;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/146__art_2__ust_4__pkt_3" gd:GUID="84f83fd0-693d-4f33-90b5-a3ee838c6183">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="3280c415-2cd2-4f6b-ba11-73c66d9201a1" fragment="4" gd:fragmentGUID="65f204c2-10dc-4a8a-bf78-19d3ac6beb16">ryzyko nierynkowe.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2026/146__art_2__ust_5" gd:GUID="d906f2ef-e969-4662-a7b2-d8677e768776">
+              <nr>5</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="090701d7-a701-4484-afa9-b1ca355b3e9a" fragment="1" gd:fragmentGUID="f86c4e21-d03e-4e7a-a210-1545adc76f76">Ubezpieczenie kontraktów eksportowych obejmuje szkody poniesione przez ubezpieczającego w wyniku niemożności wykonania kontraktu eksportowego bądź w wyniku niewykonania lub nienależytego wykonania kontraktu eksportowego przez kontrahenta zagranicznego, jeżeli szkody te są następstwem zdarzeń określonych jako:</zdanie>
+              </p>
+              <punkt eId="DU/2026/146__art_2__ust_5__pkt_1" gd:GUID="bca52e77-6bba-4fdf-92af-a88e9704b988">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="090701d7-a701-4484-afa9-b1ca355b3e9a" fragment="2" gd:fragmentGUID="2a92b94f-f5b3-4d12-904c-2c04ce61636d">ryzyko handlowe;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/146__art_2__ust_5__pkt_2" gd:GUID="847796b7-d3d4-4d61-ad73-480f0bd801b9">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="090701d7-a701-4484-afa9-b1ca355b3e9a" fragment="3" gd:fragmentGUID="2039294b-f132-4437-9e82-cb410e1f76e1">ryzyko polityczne;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/146__art_2__ust_5__pkt_3" gd:GUID="584e9bc0-8549-40ab-bc72-ec1dd61d6c05">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="090701d7-a701-4484-afa9-b1ca355b3e9a" fragment="4" gd:fragmentGUID="f62df26f-ff8d-42db-8671-5e97adfaeccb">ryzyko nierynkowe.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2026/146__art_2__ust_6" gd:GUID="420ca59f-c3cf-4cf5-92ae-5404485a7f4b">
+              <nr>6</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="3c904050-2e71-415e-a985-c0a278a704b2" fragment="1" gd:fragmentGUID="8da13668-c025-49fc-a8d6-eb35cfbf4dc6">Ubezpieczenie inwestycji bezpośrednich za granicą obejmuje szkody poniesione przez ubezpieczającego w związku z realizacją tej inwestycji, jeżeli szkody te są następstwem zdarzeń określonych jako ryzyko polityczne.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/146__art_2__ust_6a" gd:GUID="2b34c6a3-fdff-41a8-9fc4-5add5737cfe2">
+              <nr>6a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="e2786b19-5162-406b-8411-ffb2c24f61e1" fragment="1" gd:fragmentGUID="14293fc1-1b88-4dea-99b0-b15f15b65e5b">Ubezpieczenie inwestycji podejmowanych w celu realizacji kontraktów eksportowych obejmuje szkody poniesione przez ubezpieczającego w związku z realizacją tej inwestycji, jeżeli szkody te są następstwem zdarzeń określonych jako ryzyko polityczne.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/146__art_2__ust_7" gd:GUID="ab5e1a01-fe72-4238-a978-acf1999e12bb">
+              <nr>7</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="23a0f247-15fe-4593-a6e8-41c906715fb1" fragment="1" gd:fragmentGUID="e5f576d8-1869-44b3-a043-84e1d09f3e6c">(uchylony)</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/146__art_2__ust_8" gd:GUID="97eec94e-5122-4fa4-ae75-59b22c24a4e0">
+              <nr>8</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="8feea041-48b1-45da-80a2-6ab4b0e24cc3" fragment="1" gd:fragmentGUID="be61327e-3577-4dfa-a343-b6dafe3d55be">Ubezpieczenie umów przedsiębiorców zależnych obejmuje szkody poniesione przez ubezpieczającego lub ubezpieczonego w wyniku niemożności wykonania umowy sprzedaży bądź niewykonania lub nienależytego wykonania umowy przez kontrahenta, pod warunkiem że szkody te są następstwem zdarzeń określonych jako:</zdanie>
+              </p>
+              <punkt eId="DU/2026/146__art_2__ust_8__pkt_1" gd:GUID="42f9b305-962a-46c0-88a9-b9dc85027261">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="8feea041-48b1-45da-80a2-6ab4b0e24cc3" fragment="2" gd:fragmentGUID="3d2de711-078b-448c-8ad4-82ca24740582">ryzyko handlowe;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/146__art_2__ust_8__pkt_2" gd:GUID="67c56c5f-a17a-44fa-8a5e-db5f83e28374">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="8feea041-48b1-45da-80a2-6ab4b0e24cc3" fragment="3" gd:fragmentGUID="e53871c4-e3bd-47bd-9e59-3b301cb3ffea">ryzyko polityczne;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/146__art_2__ust_8__pkt_3" gd:GUID="21438edf-7b22-433f-971b-0e44e5e4dc9d">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="8feea041-48b1-45da-80a2-6ab4b0e24cc3" fragment="4" gd:fragmentGUID="98244f06-d264-4f9a-b323-5b89956a0ad5">ryzyko nierynkowe.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2026/146__art_2__ust_8a" gd:GUID="7b1cc225-b84a-4760-b731-790dfd5c158a">
+              <nr>8a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="abb1fcca-bc81-441a-b44e-62718b656d36" fragment="1" gd:fragmentGUID="ec342e80-8366-4029-aa62-c0411fa48b07">Ubezpieczenie umów lub inwestycji realizowanych na terytorium Rzeczypospolitej Polskiej, umożliwiających rozpoczynanie, kontynuowanie lub rozwijanie działalności gospodarczej wnoszącej istotny wkład w łagodzenie zmian klimatu, o której mowa w art. 10 rozporządzenia 2020/852, obejmuje szkody poniesione przez ubezpieczającego lub ubezpieczonego:</zdanie>
+              </p>
+              <punkt eId="DU/2026/146__art_2__ust_8a__pkt_1" gd:GUID="634b3fd0-35b7-4895-938a-057d7d2f8041">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="abb1fcca-bc81-441a-b44e-62718b656d36" fragment="2" gd:fragmentGUID="812fea0a-f277-4b1c-90c7-4dc87bd5ae66">w wyniku niewykonania lub nienależytego wykonania umowy przez kontrahenta albo</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/146__art_2__ust_8a__pkt_2" gd:GUID="128c8af7-5c7b-4dd7-95fe-11b76b4ab90a">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="abb1fcca-bc81-441a-b44e-62718b656d36" fragment="3" gd:fragmentGUID="609c2927-1cd8-4cc0-9d0d-7e9eb0cd022c">w wyniku realizacji inwestycji</zdanie>
+                </p>
+              </punkt>
+              <czesc-wspolna-punkt eId="DU/2026/146__art_2__ust_8a__czw" gd:GUID="5fbbe3c8-e089-4432-aaa8-1b5ebe32c685">
+                <p>
+                  <zdanie nr="1" gd:zdGUID="abb1fcca-bc81-441a-b44e-62718b656d36" fragment="4" gd:fragmentGUID="f2fd0ae7-26b8-4958-a685-ddc4a19b0335">– pod warunkiem że szkody te są następstwem zdarzeń określonych jako ryzyko handlowe, polityczne lub nierynkowe.</zdanie>
+                </p>
+              </czesc-wspolna-punkt>
+            </ustep>
+            <ustep eId="DU/2026/146__art_2__ust_8b" gd:GUID="098ca260-c41f-4920-9b0d-ae77af11b8ff">
+              <nr>8b</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="17904587-9afc-4bea-ac1f-d955d4a53e87" fragment="1" gd:fragmentGUID="6dc5f0d5-1019-4979-b41d-126aa1f08dac">W ramach ubezpieczeń gwarantowanych, o których mowa w art. 1 ust. 2 pkt 6, podmiot, o którym mowa w art. 5 ust. 1, zgodnie z art. 1 ust. 4 przejmuje ryzyko cedowane przez zakład ubezpieczeń albo agencję kredytów eksportowych, wynikające z zawartych przez te podmioty umów ubezpieczenia, pod warunkiem że szkody są następstwem zdarzeń określonych jako ryzyko nadzwyczajne, zgodnie z przepisami wydanymi na podstawie ust. 10, w zakresie, w jakim zaistniały w toku wykonywania działalności gospodarczej przez przedsiębiorców krajowych, oddziały przedsiębiorców zagranicznych mające siedzibę na terytorium Rzeczypospolitej Polskiej lub przedsiębiorców zależnych, również w przypadku gdy podmiot w ramach tej działalności korzysta z instrumentów, o których mowa w art. 1 ust. 2 pkt 1.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/146__art_2__ust_8c" gd:GUID="43c6a930-bd19-4c2a-9a91-403ff8c5ca85">
+              <nr>8c</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="6405c21e-4622-4fae-96d1-b1c0fe916ae7" fragment="1" gd:fragmentGUID="ad77f492-d8a0-4eff-acea-1f4d65c9c5df">Przepisów ust. 4–8a nie stosuje się do ubezpieczenia gwarantowanego realizowanego w formie udzielenia gwarancji ubezpieczeniowej.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/146__art_2__ust_9" gd:GUID="1347dce4-8faa-490a-928b-1e3dd7e21b61">
+              <nr>9</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="58cc3451-285e-4880-a4cf-3caf7a98c376" fragment="1" gd:fragmentGUID="c93f267c-1fd4-4f2c-bd48-b9021ca0bcd2">Minister właściwy do spraw gospodarki określi, w drodze rozporządzenia, definicje ryzyka handlowego, politycznego i nierynkowego, mając na uwadze konieczność uwzględnienia rodzaju i zakresu ryzyka w umowach objętych ubezpieczeniem gwarantowanym.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/146__art_2__ust_10" gd:GUID="55862643-e7dc-40a2-8c19-495ad126da6a">
+              <nr>10</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="a809d9cd-d3c3-477e-8f29-8043d16dd421" fragment="1" gd:fragmentGUID="957dea8e-14ea-42d5-acd7-65ab39d56304">W sytuacjach uzasadnionych ważnym interesem gospodarczym Rada Ministrów może określić, w drodze rozporządzenia, zakres ryzyka według rodzajów ubezpieczeń, o których mowa w dziale II w grupach 3–7 i 9–16 załącznika do ustawy z dnia 11 września 2015 r. o działalności ubezpieczeniowej i reasekuracyjnej, oraz definicje zdarzeń wchodzących w zakres ryzyka nadzwyczajnego, o którym mowa w ust. 8b, a także przyczynę i okres przejmowania tego ryzyka, uwzględniając jego rodzaj.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/146__art_3" gd:GUID="4dcd5efd-0830-4d40-84bc-bfa792457c5a">
+            <nr>3</nr>
+            <ustep eId="DU/2026/146__art_3__ust_1" gd:GUID="f48463a4-0140-4bc0-a52b-3934c4de8b60">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="92f53087-83fc-439c-8704-a0f3b9d4c6d9" fragment="1" gd:fragmentGUID="fb4f5567-65a9-4850-bebe-d65cab8f61e5">Ubezpieczenie gwarantowane dotyczy ryzyka handlowego i politycznego, jeżeli jest związane z kontraktem eksportowym lub umową zawartą na okres kredytu dwóch lub więcej lat.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/146__art_3__ust_2" gd:GUID="842a4891-b124-4c7f-95c9-c4810d89c9cc">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="7c02185c-79cc-4f84-aa8a-32521ceb7f5e" fragment="1" gd:fragmentGUID="805d8c34-de0b-42b7-9b0f-afc8d02b3f65">Ubezpieczenie gwarantowane dotyczy ryzyka nierynkowego, jeżeli jest związane z kontraktem eksportowym lub umową zawartą na okres kredytu poniżej dwóch lat.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/146__art_3__ust_3" gd:GUID="2d37b7fc-5769-4a74-ba5b-841eec31f4e1">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="f86aac25-41d4-4a69-968c-89f0a242f5a0" fragment="1" gd:fragmentGUID="92959faa-05ab-456a-971d-ff2b177acc1c">Ubezpieczenie gwarantowane może dotyczyć ryzyka związanego ze zmianami kursów walutowych.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/146__art_4" gd:GUID="828c323a-6a73-4e3b-b18c-371b114cb90d">
+            <nr>4</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="f689df67-f1e9-409d-81bf-cb32f8d9f1e2">
+              <p>
+                <zdanie nr="1" gd:zdGUID="1553b717-0787-4425-a511-398d993e2d2f" fragment="1" gd:fragmentGUID="ee76863a-80b4-48a3-a2bb-965464ef6962">(uchylony)</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+        </oddzial-n>
+      </rozdzial>
+      <rozdzial eId="DU/2026/146__rozdz_2" gd:GUID="aab6cf6e-ebff-44a7-9623-ca8ffa27cf00">
+        <naglowek-rozdzialu>
+          <nr>2</nr>
+          <p>Przepisy szczegółowe</p>
+        </naglowek-rozdzialu>
+        <oddzial-n brak-eid="jednostka-nieoznaczona" gd:GUID="48d90dec-9393-45e5-8ebc-1bc2a7e90d88">
+          <artykul eId="DU/2026/146__art_5" gd:GUID="8e55ac60-160a-4b87-a65a-34f2e7cb686a">
+            <nr>5</nr>
+            <ustep eId="DU/2026/146__art_5__ust_1" gd:GUID="25212cc0-447e-402c-8e68-0dfd5f50ab3a">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="f2cefb81-39aa-4228-8c65-2e4e0465ac94" fragment="1" gd:fragmentGUID="3be27477-f303-4b5c-9cc4-0a25f8ad8fee">Prowadzenie działalności w zakresie ubezpieczeń gwarantowanych, na warunkach określonych ustawą, powierza się Korporacji Ubezpieczeń Kredytów Eksportowych Spółka Akcyjna, zwanej dalej „Korporacją”.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/146__art_5__ust_1a" gd:GUID="c27db809-bdbe-4c8d-924c-660d0323c349">
+              <nr>1a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="90ba129c-0882-4f16-b55f-2ab4cf389a65" fragment="1" gd:fragmentGUID="52623bba-85d1-4a41-90a4-aa37487e5a5e">Korporacja należy do systemu instytucji rozwoju, o którym mowa w art. 2 ust. 1 ustawy z dnia 4 lipca 2019 r. o systemie instytucji rozwoju (Dz. U. z 2026 r. poz. 9).</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/146__art_5__ust_2" gd:GUID="4c14b08d-5c65-43d5-82ee-0a3918ba9a82">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="312ae759-6315-481a-9faf-33a9c79d76af" fragment="1" gd:fragmentGUID="42edeef9-d54e-49df-86e5-7950871d384d">Korporacja prowadzi działalność, o której mowa w ust. 1, w imieniu własnym.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/146__art_5__ust_2a" gd:GUID="f5aee8e3-cdf9-43d6-bd83-908d103d76e3">
+              <nr>2a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="90e581a6-ede2-4e0c-9f9d-036f595c9f00" fragment="1" gd:fragmentGUID="25b51581-028c-42e9-be19-cfb7f204a308">Zarząd Korporacji składa się z niewięcej niż 4 członków.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/146__art_5__ust_3" gd:GUID="4d5681a2-f860-4a23-9348-b8000edbd262">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="4c74a026-5adc-4005-b2fd-082d81255c08" fragment="1" gd:fragmentGUID="ee93ffb4-958e-438b-933b-4b7ba8e061d4">Członków Zarządu Korporacji powołuje i odwołuje Walne Zgromadzenie Korporacji, w tym jednego na wniosek ministra właściwego do spraw finansów publicznych.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/146__art_5__ust_3a" gd:GUID="f14671e7-4384-4016-82d7-abc1cf83142f">
+              <nr>3a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="c1704e55-6dca-4451-80f7-db4fe7ff3162" fragment="1" gd:fragmentGUID="3966915b-c96a-430f-a2dc-291f6ad66446">(uchylony)</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/146__art_5__ust_3b" gd:GUID="21a274c1-a743-479f-b57c-a8d0c97cf366">
+              <nr>3b</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="243ac760-96d8-419e-8f3f-9f1d1969e219" fragment="1" gd:fragmentGUID="80271e6b-e4eb-453c-bc72-ca1a51cf9931">(uchylony)</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/146__art_5__ust_4" gd:GUID="37989b65-ef5b-4206-8db7-a1d6c6ddba73">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="eaf77771-686b-45a9-9daa-ed2b39f253a7" fragment="1" gd:fragmentGUID="80f26705-0e17-4a1f-a5da-cfe6200bda3a">Do umów zawieranych w zakresie uregulowanym niniejszą ustawą nie stosuje się przepisów ustawy z dnia 11 września 2015 r. o działalności ubezpieczeniowej i reasekuracyjnej.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/146__art_5__ust_5" gd:GUID="7cf6099c-b3f9-4a05-9fd8-e4f170b95553">
+              <nr>5</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="e1d45e0c-a1e6-4226-a238-ce147dbd8354" fragment="1" gd:fragmentGUID="517f4baf-6103-4ccd-aa6b-7fe8dc89e083">Do firmy Korporacji nie stosuje się art. 7 ust. 3 ustawy, o której mowa w ust. 4.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/146__art_5a" gd:GUID="ffde4393-e0da-42ac-b9ac-f66a6b3348cb">
+            <nr>5a</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="8f416218-a0f2-48c0-b751-01380b646a0b">
+              <p>
+                <zdanie nr="1" gd:zdGUID="14a48fe6-7eca-4de9-8bba-a73bb5068127" fragment="1" gd:fragmentGUID="b201bb5b-882e-40c8-b846-2461bb692ebc">Ustawa budżetowa określa limit, którego nie mogą przekroczyć łączne zobowiązania Korporacji z tytułu ubezpieczeń gwarantowanych, a także przewidywane na dany rok wypłaty ze środków budżetu państwa z tytułu pożyczek udzielonych Korporacji z budżetu państwa, stosownie do art. 13 ust. 1.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2026/146__art_6" gd:GUID="caf7acc6-8d7e-480d-a5a0-9d81f102d7ae">
+            <nr>6</nr>
+            <ustep eId="DU/2026/146__art_6__ust_1" gd:GUID="2b449e45-43fe-48f1-aec2-27744eb8fddf">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="f442fafb-901a-4801-8074-c31ea6fa4232" fragment="1" gd:fragmentGUID="b863cf4c-c08f-48d6-9ea5-bb679f95d2fc">Z ubezpieczenia gwarantowanego jako ubezpieczający, ubezpieczony albo zleceniodawca lub beneficjent gwarancji ubezpieczeniowej, z uwzględnieniem art. 5a, mogą korzystać:</zdanie>
+              </p>
+              <punkt eId="DU/2026/146__art_6__ust_1__pkt_1" gd:GUID="39b49f36-80d3-4c23-b515-d61d525d54e2">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="f442fafb-901a-4801-8074-c31ea6fa4232" fragment="2" gd:fragmentGUID="70026d01-1e09-4500-9bd1-deff6702d3fb">przedsiębiorcy mający miejsce zamieszkania albo siedzibę na terytorium Rzeczypospolitej Polskiej, którzy dokonują:</zdanie>
+                </p>
+                <litera eId="DU/2026/146__art_6__ust_1__pkt_1__lit_a" gd:GUID="bd73e463-b455-42a9-a268-44b4573a2c29">
+                  <nr>a</nr>
+                  <p>
+                    <zdanie nr="1" gd:zdGUID="f442fafb-901a-4801-8074-c31ea6fa4232" fragment="3" gd:fragmentGUID="7b70ae85-bc12-4315-aa1b-e4bee6d6d404">eksportu krajowych produktów i usług, z uwzględnieniem ust. 2,</zdanie>
+                  </p>
+                </litera>
+                <litera eId="DU/2026/146__art_6__ust_1__pkt_1__lit_b" gd:GUID="649ad406-2c42-413a-8b25-8ce322a76ad8">
+                  <nr>b</nr>
+                  <p>
+                    <zdanie nr="1" gd:zdGUID="f442fafb-901a-4801-8074-c31ea6fa4232" fragment="4" gd:fragmentGUID="11cec336-8658-4b43-9163-47f92a8ea026">inwestycji bezpośrednich za granicą, w tym za pośrednictwem przedsiębiorców zależnych mających siedzibę za granicą;</zdanie>
+                  </p>
+                </litera>
+              </punkt>
+              <punkt eId="DU/2026/146__art_6__ust_1__pkt_2" gd:GUID="5b7e241c-24b4-4169-a9ee-19a51b108134">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="f442fafb-901a-4801-8074-c31ea6fa4232" fragment="5" gd:fragmentGUID="35e19d69-0574-4b83-8cfb-16576e298b64">oddziały przedsiębiorców zagranicznych mające siedzibę na terytorium Rzeczypospolitej Polskiej, które dokonują eksportu krajowych towarów i usług, z uwzględnieniem ust. 2;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/146__art_6__ust_1__pkt_3" gd:GUID="adde074e-548d-4a67-87c0-8e619d600551">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="f442fafb-901a-4801-8074-c31ea6fa4232" fragment="6" gd:fragmentGUID="f0ce0c34-9f7a-4aff-8079-b9f96550c1c4">podmioty prywatne lub publiczne:</zdanie>
+                </p>
+                <litera eId="DU/2026/146__art_6__ust_1__pkt_3__lit_a" gd:GUID="138a2c76-83f0-4784-8c0d-af7a4532ce04">
+                  <nr>a</nr>
+                  <p>
+                    <zdanie nr="1" gd:zdGUID="f442fafb-901a-4801-8074-c31ea6fa4232" fragment="7" gd:fragmentGUID="9919f8da-bc8c-4ebb-97a6-2cae0f2bae90">zawierające umowy lub</zdanie>
+                  </p>
+                </litera>
+                <litera eId="DU/2026/146__art_6__ust_1__pkt_3__lit_b" gd:GUID="0f44a5fe-7c0c-43b3-9b39-ca2d30e6724e">
+                  <nr>b</nr>
+                  <p>
+                    <zdanie nr="1" gd:zdGUID="f442fafb-901a-4801-8074-c31ea6fa4232" fragment="8" gd:fragmentGUID="57e38879-9b2d-46dd-a22f-c346b69c53f4">dokonujące inwestycji</zdanie>
+                  </p>
+                </litera>
+                <czesc-wspolna-litera eId="DU/2026/146__art_6__ust_1__pkt_3__czw" gd:GUID="785544c8-5bc7-4f2f-a18c-636e835fa95a">
+                  <p>
+                    <zdanie nr="1" gd:zdGUID="f442fafb-901a-4801-8074-c31ea6fa4232" fragment="9" gd:fragmentGUID="f5a656d0-adae-44c8-9cc0-181ae4786b10">– które mają być realizowane na terytorium Rzeczypospolitej Polskiej i umożliwiają rozpoczynanie, kontynuowanie lub rozwijanie działalności gospodarczej wnoszącej istotny wkład w łagodzenie zmian klimatu, o której mowa w art. 10 rozporządzenia 2020/852;</zdanie>
+                  </p>
+                </czesc-wspolna-litera>
+              </punkt>
+              <punkt eId="DU/2026/146__art_6__ust_1__pkt_4" gd:GUID="c480fa11-0a8e-4209-8a4d-2a338a49929d">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="f442fafb-901a-4801-8074-c31ea6fa4232" fragment="10" gd:fragmentGUID="a7a3a30e-f951-48d3-9fe8-694d24192211">podmioty udzielające instrumentów finansujących;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/146__art_6__ust_1__pkt_5" gd:GUID="d87ca1fd-8ace-470c-82a9-f103114bdc1d">
+                <nr>5</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="f442fafb-901a-4801-8074-c31ea6fa4232" fragment="11" gd:fragmentGUID="4a46f68e-226a-4aed-a4a2-7794b6738bb2">przedsiębiorcy zależni:</zdanie>
+                </p>
+                <litera eId="DU/2026/146__art_6__ust_1__pkt_5__lit_a" gd:GUID="39326f17-da83-4fd9-aee9-ec200bb7f911">
+                  <nr>a</nr>
+                  <p>
+                    <zdanie nr="1" gd:zdGUID="f442fafb-901a-4801-8074-c31ea6fa4232" fragment="12" gd:fragmentGUID="263e54f7-041a-45bf-afe6-0dcb68b74faf">w zakresie, w jakim ubezpieczenie gwarantowane będzie dotyczyć towarów i usług, które stanowiły towary lub usługi krajowe, z uwzględnieniem ust. 2,</zdanie>
+                  </p>
+                </litera>
+                <litera eId="DU/2026/146__art_6__ust_1__pkt_5__lit_b" gd:GUID="f8f5576b-7e44-4a98-bcd0-3c0165b3d404">
+                  <nr>b</nr>
+                  <p>
+                    <zdanie nr="1" gd:zdGUID="f442fafb-901a-4801-8074-c31ea6fa4232" fragment="13" gd:fragmentGUID="49c1747e-5a7c-46f9-90aa-1212d4a50d41">dokonujący inwestycji bezpośrednich za granicą;</zdanie>
+                  </p>
+                </litera>
+              </punkt>
+              <punkt eId="DU/2026/146__art_6__ust_1__pkt_6" gd:GUID="1f4ab802-7e08-4631-af4d-5d54d77edfcb">
+                <nr>6</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="f442fafb-901a-4801-8074-c31ea6fa4232" fragment="14" gd:fragmentGUID="9adf048c-28ca-4da4-aaaf-88f69db1ebbd">członkowie konsorcjum, w skład którego wchodzi przedsiębiorca krajowy lub jego przedsiębiorca zależny, lub oddział przedsiębiorcy zagranicznego mający siedzibę na terytorium Rzeczypospolitej Polskiej, jeżeli w ramach tego konsorcjum ma miejsce:</zdanie>
+                </p>
+                <litera eId="DU/2026/146__art_6__ust_1__pkt_6__lit_a" gd:GUID="fbe398df-e31f-4d40-8120-35d92467da1a">
+                  <nr>a</nr>
+                  <p>
+                    <zdanie nr="1" gd:zdGUID="f442fafb-901a-4801-8074-c31ea6fa4232" fragment="15" gd:fragmentGUID="9ee4205a-b130-4f2b-8c7f-dd922d78ff77">eksport krajowych produktów i usług, z uwzględnieniem ust. 2, lub</zdanie>
+                  </p>
+                </litera>
+                <litera eId="DU/2026/146__art_6__ust_1__pkt_6__lit_b" gd:GUID="1147efce-7c68-445a-886e-cdb62875524d">
+                  <nr>b</nr>
+                  <p>
+                    <zdanie nr="1" gd:zdGUID="f442fafb-901a-4801-8074-c31ea6fa4232" fragment="16" gd:fragmentGUID="acd0f756-e1cf-4fcc-ad11-51fd1a876fea">sprzedaż przez przedsiębiorcę zależnego za granicą towarów i usług, które stanowiły towary lub usługi krajowe, z uwzględnieniem ust. 2, lub</zdanie>
+                  </p>
+                </litera>
+                <litera eId="DU/2026/146__art_6__ust_1__pkt_6__lit_c" gd:GUID="e1b595b5-10bb-47dd-ae9f-36d74f63c9d7">
+                  <nr>c</nr>
+                  <p>
+                    <zdanie nr="1" gd:zdGUID="f442fafb-901a-4801-8074-c31ea6fa4232" fragment="17" gd:fragmentGUID="db20efb0-9cca-4a51-a132-0a7123a4253c">inwestycja bezpośrednia za granicą;</zdanie>
+                  </p>
+                </litera>
+              </punkt>
+              <punkt eId="DU/2026/146__art_6__ust_1__pkt_7" gd:GUID="7519d551-ab2c-46ce-a0f3-75e0bd89226a">
+                <nr>7</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="f442fafb-901a-4801-8074-c31ea6fa4232" fragment="18" gd:fragmentGUID="d50e6145-55a0-4b38-ac17-03d0fcf9cb31">zakłady ubezpieczeń – w przypadku ubezpieczenia gwarantowanego w formie ubezpieczenia pośredniego (reasekuracji);</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/146__art_6__ust_1__pkt_8" gd:GUID="755fe244-a999-4bec-8e6b-76a7f321eb77">
+                <nr>8</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="f442fafb-901a-4801-8074-c31ea6fa4232" fragment="19" gd:fragmentGUID="8a2a7a43-d183-4a03-a733-eecf6f0cd8be">agencje kredytów eksportowych – w przypadku udziału w ubezpieczeniu udzielonym przez agencję kredytów eksportowych.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2026/146__art_6__ust_2" gd:GUID="d6ccc0d1-b017-4e50-beb0-8499215d022d">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="c964d254-486b-4088-9f6a-edd020e21804" fragment="1" gd:fragmentGUID="260da93b-781d-4c93-b1a9-aad9887d7009">Ubezpieczenie gwarantowane może zostać udzielone mimo niespełnienia wymogu krajowych produktów i usług, w przypadku gdy:</zdanie>
+              </p>
+              <punkt eId="DU/2026/146__art_6__ust_2__pkt_1" gd:GUID="b0e2e9c3-9ab5-45d6-8697-11bb2b5bc5ba">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="c964d254-486b-4088-9f6a-edd020e21804" fragment="2" gd:fragmentGUID="f6cb0a54-059a-472f-9768-5bcaf1b686d7">kontrakt został zawarty na okres kredytu poniżej dwóch lat;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/146__art_6__ust_2__pkt_2" gd:GUID="d4dc4e66-6549-4702-a1b4-de7248ca2874">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="c964d254-486b-4088-9f6a-edd020e21804" fragment="3" gd:fragmentGUID="eb8e2234-729b-4339-b611-c66f732335f9">jest ono uzasadnione interesem Rzeczypospolitej Polskiej;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/146__art_6__ust_2__pkt_3" gd:GUID="0a5298a4-a00e-4883-82ea-6b6e9dd972d1">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="c964d254-486b-4088-9f6a-edd020e21804" fragment="4" gd:fragmentGUID="b383a15d-33de-4722-bc99-3122bb717e45">dotyczy umów lub inwestycji, o których mowa w art. 1 ust. 2 pkt 5;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/146__art_6__ust_2__pkt_4" gd:GUID="56743b25-f8ec-4887-a294-073071f957bd">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="c964d254-486b-4088-9f6a-edd020e21804" fragment="5" gd:fragmentGUID="93b87ad2-c47e-4c1a-bcd4-7d509bf94c5b">dotyczy ryzyk pokrywanych ubezpieczeniami, o których mowa w art. 1 ust. 2 pkt 6.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2026/146__art_6__ust_3" gd:GUID="0db7daf0-09af-45c3-b071-d57dfc976c1a">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="d26e9576-5f40-4cce-b0c3-c5fc79034aa1" fragment="1" gd:fragmentGUID="c567caff-0544-4fe3-a6b0-7cced88df6e7">Na potrzeby niniejszej ustawy interes Rzeczypospolitej Polskiej oznacza wymierną korzyść dla Rzeczypospolitej Polskiej wynikającą z konieczności zrównoważonego rozwoju społeczno-gospodarczego, wzrostu lub utrzymania zatrudnienia, zwiększenia konkurencyjności lub innowacyjności gospodarki polskiej.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/146__art_6__ust_4" gd:GUID="bca07f42-c3aa-4380-9086-ab786f543bf3">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="0d252dd5-e50f-405f-9c0e-2c870968e215" fragment="1" gd:fragmentGUID="22aa7d69-0b89-4e9e-9143-50e2315ae2ef">Oceny spełnienia warunku, o którym mowa w ust. 2 pkt 2, dokonuje Komitet.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/146__art_6a" gd:GUID="75478543-2b48-423c-b25d-79bca561ee09">
+            <nr>6a</nr>
+            <ustep eId="DU/2026/146__art_6a__ust_1" gd:GUID="2521a187-bd90-4a49-9b61-8a7b795aa3af">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="3b712359-32ad-48e1-969d-c63bc9287303" fragment="1" gd:fragmentGUID="b3b1edf9-dba1-47b6-a5cc-8c70f2122fda">Produkt lub usługę, eksportowane w ramach kontraktu eksportowego, uznaje się za krajowe, jeżeli udział składników pochodzenia zagranicznego, w zależności od rodzaju eksportowanych produktów i usług lub okresu kredytu, w przychodzie netto z realizacji kontraktu eksportowego wynosi maksymalnie od 50 % do 90 %.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/146__art_6a__ust_2" gd:GUID="f8c1f0e4-a8e7-4d72-a990-3217233fdad6">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="3ab175ed-732f-4829-9b9a-ce0eee1711b4" fragment="1" gd:fragmentGUID="6b593dbc-8135-419e-8d73-cdf8c52ca8f2">W przypadku reasekuracji, udział składników pochodzenia zagranicznego w przychodzie netto z realizacji kontraktu eksportowego oblicza się w stosunku do części kontraktu eksportowego realizowanej przez krajowego przedsiębiorcę.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/146__art_6b" gd:GUID="e229cffc-f5bb-4004-b9c7-6ce623914575">
+            <nr>6b</nr>
+            <ustep eId="DU/2026/146__art_6b__ust_1" gd:GUID="5d0ed638-4382-4120-90cc-e512096ab06d">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="1df1aa8f-e8a9-4845-a2c9-94f0cb2d1157" fragment="1" gd:fragmentGUID="daff1e20-1ef9-4557-a1a9-1e0135396597">Ustalenie pochodzenia produktu lub usługi, eksportowanych w ramach kontraktu eksportowego, następuje na podstawie dowodów przedstawionych przez ubezpieczającego lub przedsiębiorcę, który zawarł z Korporacją umowę, o której mowa w art. 6f ust. 1.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/146__art_6b__ust_2" gd:GUID="d5a717f4-c278-4e1c-87ae-963f0ade3ead">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="0995f406-1a0e-4a76-9805-489f51c77cf7" fragment="1" gd:fragmentGUID="0f461fd4-6e7a-402e-93eb-6e6ca290a6c1">Udział składników pochodzenia zagranicznego w przychodzie netto z realizacji kontraktu eksportowego ustala się w odniesieniu do ogółu produktów lub usług, eksportowanych w ramach kontraktu eksportowego.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/146__art_6b__ust_3" gd:GUID="d10c5e05-306d-40a1-9f8d-2e8cbac5baf8">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="7d25bbd9-3493-4997-aeee-c060f7f4759e" fragment="1" gd:fragmentGUID="4a21ecd0-05aa-44ea-bf1e-84f9cc5a1e0a">Pochodzenie produktu lub usługi może być wykazane przez udowodnienie minimalnego procentowego udziału składników pochodzenia krajowego, liczonego jako różnica 100 % i wyrażonego w procentach maksymalnego udziału składników pochodzenia zagranicznego, o którym mowa w przepisach wydanych na podstawie art. 6e.</zdanie>
+                <zdanie nr="2" gd:zdGUID="6ed2903a-8996-414e-94f3-fc09ed09ed7d" fragment="1" gd:fragmentGUID="38f960cd-8474-4cf9-aa3e-aa36aa9e9188">Minimalny procentowy udział składników pochodzenia krajowego może być wykazany przez udowodnienie pochodzenia krajowego jedynie wybranych składników.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/146__art_6c" gd:GUID="9ab98cf2-6e49-4aa5-b822-07e9e25d006c">
+            <nr>6c</nr>
+            <ustep eId="DU/2026/146__art_6c__ust_1" gd:GUID="091d69fd-c2dd-450b-978d-d8ef4f8cb485">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="81f3c3a0-e90e-4573-ad41-d66fd49643e3" fragment="1" gd:fragmentGUID="be4e65be-fd28-49d2-a7ba-c36e30ff1ae6">Składnikami pochodzenia zagranicznego produktu lub usługi są koszty wytworzenia lub cena nabycia w rozumieniu ustawy z dnia 29 września 1994 r. o rachunkowości (Dz. U. z 2023 r. poz. 120, z późn. zm.<odnosnik id-odnosnika="4" symbol="4" gd:GUID="98ef19b3-3c96-4597-8726-3bbbf5dbc895"><p><zdanie nr="1" gd:zdGUID="7069fefc-1e7d-401f-aa36-4c65c0495a87" fragment="1" gd:fragmentGUID="518bccea-2e9c-4682-af88-6495876f4a9e">Zmiany tekstu jednolitego wymienionej ustawy zostały ogłoszone w Dz. U. z 2023 r. poz. 295 i 1598, z 2024 r. poz. 619, 1685 i 1863 oraz z 2025 r. poz. 1218.</zdanie></p></odnosnik>) poniesione przez przedsiębiorcę w związku z realizacją kontraktu eksportowego na rzecz:</zdanie>
+              </p>
+              <punkt eId="DU/2026/146__art_6c__ust_1__pkt_1" gd:GUID="4b53917f-d5f2-43fe-a436-cacc51857204">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="81f3c3a0-e90e-4573-ad41-d66fd49643e3" fragment="2" gd:fragmentGUID="5e364aee-781f-4af3-a01e-9aafd1e35359">dostawców i usługodawców, będących osobami prawnymi lub jednostkami nieposiadającymi osobowości prawnej, mającymi siedzibę poza terytorium Rzeczypospolitej Polskiej;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/146__art_6c__ust_1__pkt_2" gd:GUID="8162f7be-a338-449c-ad28-c664521116d0">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="81f3c3a0-e90e-4573-ad41-d66fd49643e3" fragment="3" gd:fragmentGUID="8f565694-270e-463c-8ee4-43d319e0615d">pracowników, dostawców i usługodawców, będących osobami fizycznymi nieposiadającymi miejsca zamieszkania na terytorium Rzeczypospolitej Polskiej;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/146__art_6c__ust_1__pkt_3" gd:GUID="621d510f-042d-4548-a908-2d085b869e73">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="81f3c3a0-e90e-4573-ad41-d66fd49643e3" fragment="4" gd:fragmentGUID="4e9afe5e-b72e-4a2a-a243-371e746f2987">organów władzy publicznej państw obcych.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2026/146__art_6c__ust_2" gd:GUID="15d88f3e-7324-4a36-9448-2c8f4d584b86">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="807f51b3-f638-465c-a3a9-d683879f5f73" fragment="1" gd:fragmentGUID="2babc113-b2a6-4486-8be7-a839ffa67922">Składnikami pochodzenia krajowego produktu lub usługi są:</zdanie>
+              </p>
+              <punkt eId="DU/2026/146__art_6c__ust_2__pkt_1" gd:GUID="76cc420c-ed8b-4fbd-ad7b-bb3d3ca31bcd">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="807f51b3-f638-465c-a3a9-d683879f5f73" fragment="2" gd:fragmentGUID="9d36c22d-2fcb-4f5a-b24f-38aabecf7a37">inne niż wymienione w ust. 1 koszty wytworzenia lub cena nabycia w rozumieniu ustawy z dnia 29 września 1994 r. o rachunkowości,</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/146__art_6c__ust_2__pkt_2" gd:GUID="a5713fb6-0d4d-45f7-803f-f78342023eee">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="807f51b3-f638-465c-a3a9-d683879f5f73" fragment="3" gd:fragmentGUID="274ddfbe-e3b4-42a2-9996-457a0e1dfd62">koszty zakupu surowców lub półfabrykatów, które nie są wydobywane ani wytwarzane na terytorium Rzeczypospolitej Polskiej lub których odpowiedniki wydobywane lub wytwarzane na terytorium Rzeczypospolitej Polskiej nie posiadają parametrów określonych w kontrakcie eksportowym</zdanie>
+                </p>
+              </punkt>
+              <czesc-wspolna-punkt eId="DU/2026/146__art_6c__ust_2__czw" gd:GUID="1e80896d-bd8a-411a-8cda-46a38e9a2e68">
+                <p>
+                  <zdanie nr="1" gd:zdGUID="807f51b3-f638-465c-a3a9-d683879f5f73" fragment="4" gd:fragmentGUID="461f1239-18d5-400f-b75f-51902e76616e">– poniesione przez przedsiębiorcę w związku z realizacją kontraktu eksportowego.</zdanie>
+                </p>
+              </czesc-wspolna-punkt>
+            </ustep>
+            <ustep eId="DU/2026/146__art_6c__ust_3" gd:GUID="36c97e4c-4e60-4c72-89c3-6343bc6f5591">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="66799f68-2239-4ea2-a479-a1f3b4716eb6" fragment="1" gd:fragmentGUID="5c23775f-2f8b-42ec-b032-2e671136533b">Składnikiem pochodzenia krajowego jest również marża na realizację kontraktu eksportowego wyliczona jako różnica przychodu netto z realizacji kontraktu eksportowego oraz ogółu kosztów wytworzenia produktu lub usługi poniesionych w związku z realizacją kontraktu eksportowego.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/146__art_6d" gd:GUID="c032d7a0-59ea-445f-a9da-8159bc004b41">
+            <nr>6d</nr>
+            <ustep eId="DU/2026/146__art_6d__ust_1" gd:GUID="3052310f-9a77-4037-a5ac-ead6c3f797bd">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="464d58bc-6d92-4685-9fd5-23ea7ae6d7f5" fragment="1" gd:fragmentGUID="c9b2d224-5146-4ffe-ac48-5837c801e394">W przypadku niezrealizowania kontraktu eksportowego w całości pochodzenie produktu lub usługi, eksportowanych w ramach kontraktu eksportowego, na wniosek ubezpieczającego, ustala się w odniesieniu do zakładanego w dniu zawierania kontraktu eksportowego ogółu produktów lub usług, które miały być dostarczone w ramach tego kontraktu.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/146__art_6d__ust_2" gd:GUID="5d89e73f-9bf3-46fa-896a-101f2b1fbc16">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="28acd2da-3b9c-4d4c-8448-e7b92378dc2c" fragment="1" gd:fragmentGUID="5e6beb7b-bb55-4ef3-badc-23aa32f8553f">W przypadku wystąpienia w trakcie realizacji kontraktu eksportowego okoliczności skutkujących utratą przez eksportowane produkt lub usługę statusu krajowego, które są niezależne od przedsiębiorcy, pochodzenie produktu lub usługi, eksportowanych w ramach kontraktu eksportowego, ustala się, na wniosek ubezpieczającego, zgodnie z ust. 1.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/146__art_6d__ust_3" gd:GUID="103cc6ee-dd20-468b-b45d-ccdb403b56e9">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="f947c8de-f3a3-4b6b-92a2-5ae26a1e6178" fragment="1" gd:fragmentGUID="e8b43bc1-dccd-4592-b25b-2a89411fffac">Okoliczności, o których mowa w ust. 2, obejmują w szczególności zmianę kursów walutowych, cen podstawowych surowców, półfabrykatów i usług wykorzystywanych w trakcie realizacji kontraktu eksportowego.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/146__art_6e" gd:GUID="f610946f-002b-470d-b127-3cd5399e24fd">
+            <nr>6e</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="643edc6b-81bf-482b-ba67-6e9ca9d4898d">
+              <p>
+                <zdanie nr="1" gd:zdGUID="c404a3d7-9ec4-4d95-8593-2f6891f16f2e" fragment="1" gd:fragmentGUID="cc105b7b-fe01-499e-86b5-b8236c59aa09">Minister właściwy do spraw gospodarki w porozumieniu z ministrem właściwym do spraw finansów publicznych określa, w drodze rozporządzenia:</zdanie>
+              </p>
+              <punkt eId="DU/2026/146__art_6e__pkt_1" gd:GUID="0fdaf844-6d02-48dc-94b5-7f0393def4aa">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="c404a3d7-9ec4-4d95-8593-2f6891f16f2e" fragment="2" gd:fragmentGUID="195cff7a-5e70-4c7d-a9da-73ca634db5cc">maksymalny procentowy udział składników pochodzenia zagranicznego w przychodzie netto z realizacji kontraktu eksportowego, uwzględniając rodzaj eksportowanych produktów i usług lub okres kredytu, oraz</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/146__art_6e__pkt_2" gd:GUID="64cdfb1e-cefd-41d2-84c9-d6be431afeb8">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="c404a3d7-9ec4-4d95-8593-2f6891f16f2e" fragment="3" gd:fragmentGUID="015f1325-ffcc-42b0-96e2-a26d764e34c4">rodzaje dowodów, na podstawie których ustala się pochodzenie produktu lub usługi, uwzględniając możliwość ustalenia na ich podstawie udziału procentowego składników pochodzenia krajowego lub składników pochodzenia zagranicznego w przychodzie netto z realizacji kontraktu eksportowego.</zdanie>
+                </p>
+              </punkt>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2026/146__art_6f" gd:GUID="7a9652b7-a178-4af0-89e9-c73777b428c0">
+            <nr>6f</nr>
+            <ustep eId="DU/2026/146__art_6f__ust_1" gd:GUID="cd37a43d-9e77-4af3-b274-c233ec4281d8">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="2fb835d8-8a30-4e17-b59e-e0e2a369a4df" fragment="1" gd:fragmentGUID="6ec95149-770b-4b67-ac42-0d86750f8dc5">Jeżeli uprawnionym z tytułu ubezpieczenia gwarantowanego jest jednostka finansująca, Korporacja może zawrzeć z przedsiębiorcą krajowym lub z przedsiębiorcą zależnym, w związku z działalnością którego ta jednostka finansująca ma uzyskać ubezpieczenie gwarantowane, umowę określającą co najmniej:</zdanie>
+              </p>
+              <punkt eId="DU/2026/146__art_6f__ust_1__pkt_1" gd:GUID="a8aa40a4-179d-4533-b3d4-7481af82a285">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="2fb835d8-8a30-4e17-b59e-e0e2a369a4df" fragment="2" gd:fragmentGUID="63b5d1d5-5846-4720-9d15-5102ddbae315">maksymalny procentowy udział składników pochodzenia zagranicznego w przychodzie netto, umożliwiający uznanie towaru lub usługi za krajowe, a także określenie sposobu udokumentowania tego udziału, umożliwiającego uznanie towaru lub usługi za krajowe;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/146__art_6f__ust_1__pkt_2" gd:GUID="961e48ea-b383-4e40-a7dc-f2e0073bb35f">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="2fb835d8-8a30-4e17-b59e-e0e2a369a4df" fragment="3" gd:fragmentGUID="a449323c-968b-4604-a21b-c4335472f92f">obowiązek udzielania przez przedsiębiorcę krajowego lub przedsiębiorcę zależnego informacji, związanych z realizacją kontraktu eksportowego lub umowy przedsiębiorcy zależnego;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/146__art_6f__ust_1__pkt_3" gd:GUID="4247f2df-437b-49fc-85f5-972d88d48ff9">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="2fb835d8-8a30-4e17-b59e-e0e2a369a4df" fragment="4" gd:fragmentGUID="e9f9aaeb-86c7-451e-8017-793ff6fc0651">obowiązek dochowania innych wymogów dotyczących przedsiębiorcy krajowego lub przedsiębiorcy zależnego, wynikających z obowiązujących przepisów prawa polskiego, prawa Unii Europejskiej i prawa międzynarodowego oraz zobowiązań wynikających z członkostwa Rzeczypospolitej Polskiej w Organizacji Współpracy Gospodarczej i Rozwoju i członkostwa Korporacji w Unii Berneńskiej;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/146__art_6f__ust_1__pkt_4" gd:GUID="ac870480-b54c-45c2-be55-7080810f7e01">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="2fb835d8-8a30-4e17-b59e-e0e2a369a4df" fragment="5" gd:fragmentGUID="cbb66ef0-bc83-42cd-baa9-27b1cd928d31">postanowienia o odpowiedzialności cywilnej w stosunku do Korporacji z tytułu:</zdanie>
+                </p>
+                <litera eId="DU/2026/146__art_6f__ust_1__pkt_4__lit_a" gd:GUID="d1da57eb-5655-4290-8844-94698d5c24e6">
+                  <nr>a</nr>
+                  <p>
+                    <zdanie nr="1" gd:zdGUID="2fb835d8-8a30-4e17-b59e-e0e2a369a4df" fragment="6" gd:fragmentGUID="025bf5da-71bb-4a86-8112-2ac26b9f1584">popełnienia, przy zawieraniu kontraktu eksportowego lub umowy przedsiębiorcy zależnego, przestępstwa przekupstwa lub innego przestępstwa o podobnym charakterze,</zdanie>
+                  </p>
+                </litera>
+                <litera eId="DU/2026/146__art_6f__ust_1__pkt_4__lit_b" gd:GUID="7ac5d3de-731e-4cdf-9bd9-99d21f3a822a">
+                  <nr>b</nr>
+                  <p>
+                    <zdanie nr="1" gd:zdGUID="2fb835d8-8a30-4e17-b59e-e0e2a369a4df" fragment="7" gd:fragmentGUID="f9ccffbd-e7b1-405f-a687-6677cc1e03c7">naruszenia wymogów, o których mowa w pkt 1–3.</zdanie>
+                  </p>
+                </litera>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2026/146__art_6f__ust_2" gd:GUID="d2db69cd-cc1a-4277-8aa0-55861b74f4ac">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="297747ee-eced-4d2a-a99f-65b8a26add09" fragment="1" gd:fragmentGUID="b12a4680-7af9-41f4-ba5c-0c3326931ff7">Naruszenie postanowień umowy, o której mowa w ust. 1, nie może stanowić przesłanki odmowy wypłaty odszkodowania lub kwoty gwarancji jednostce finansującej, o której mowa w ust. 1.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/146__art_6f__ust_3" gd:GUID="fd3eb368-f698-4356-935e-3890eb3f978c">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="7f91bf21-5fca-46aa-97ef-909db3c1c527" fragment="1" gd:fragmentGUID="43d015ba-17d9-46f4-8ac1-e25490f23c0e">W przypadku zawarcia umowy, o której mowa w ust. 1, Korporacja może uzależnić udzielenie ubezpieczenia gwarantowanego od zobowiązania jednostki finansującej w umowie ubezpieczenia gwarantowanego do niezwłocznego informowania Korporacji o okolicznościach, które mogą stanowić naruszenie postanowień umowy, o której mowa w ust. 1, lub skutkować powstaniem odpowiedzialności cywilnej w stosunku do Korporacji z tytułu tej umowy.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/146__art_7" gd:GUID="f7bfe081-49a7-43ca-a730-65a877fc8a66">
+            <nr>7</nr>
+            <ustep eId="DU/2026/146__art_7__ust_1" gd:GUID="1156bae9-3461-43e0-bd6e-3dd1417d1c27">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="4e2b03b6-a345-45f6-ab72-fe79d2943f54" fragment="1" gd:fragmentGUID="16c8d900-6852-47dc-bd33-618fcbeeef26">Tworzy się Komitet Polityki Ubezpieczeń Gwarantowanych przez Skarb Państwa, zwany dalej „Komitetem”.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/146__art_7__ust_2" gd:GUID="f36b9856-f615-4e42-b988-39a53ec7675b">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="c95a9ad8-fd64-4172-bd0d-df743d6eae66" fragment="1" gd:fragmentGUID="3bd97c48-5c31-4829-816e-7b190aaadebf">Do zadań Komitetu należy:</zdanie>
+              </p>
+              <punkt eId="DU/2026/146__art_7__ust_2__pkt_1" gd:GUID="4db58bc7-a092-4d59-8f5c-758baf79e498">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="c95a9ad8-fd64-4172-bd0d-df743d6eae66" fragment="2" gd:fragmentGUID="e569c509-088d-4959-b5f1-496710c519c3">określanie szczegółowych zasad działalności Korporacji w zakresie ubezpieczeń gwarantowanych, z uwzględnieniem standardów obowiązujących w państwach członkowskich Unii Europejskiej;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/146__art_7__ust_2__pkt_2" gd:GUID="fc077f5b-9e6d-456b-bd12-ae7a6b96d269">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="c95a9ad8-fd64-4172-bd0d-df743d6eae66" fragment="3" gd:fragmentGUID="1cd73962-c0c0-4983-96de-0c02f2001fa0">określanie zasad ustalania stawek ubezpieczeniowych oraz wynagrodzeń z tytułu udzielonych gwarancji ubezpieczeniowych;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/146__art_7__ust_2__pkt_3" gd:GUID="ac5fd2b1-3a16-49f2-b1ed-7bba9faf20f9">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="c95a9ad8-fd64-4172-bd0d-df743d6eae66" fragment="4" gd:fragmentGUID="9951fb30-5d02-4caa-a680-a617b9b79478">określanie szczegółowych kryteriów branych przez Komitet pod uwagę przy ocenie zaistnienia interesu Rzeczypospolitej Polskiej, o którym mowa w art. 6 ust. 3;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/146__art_7__ust_2__pkt_4" gd:GUID="bdd92cff-9722-4504-b939-40a0558f9e81">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="c95a9ad8-fd64-4172-bd0d-df743d6eae66" fragment="5" gd:fragmentGUID="7a7869c9-f3b0-4753-a367-bb34c84a27d8">opiniowanie wniosków o ubezpieczenie gwarantowane oraz zleceń udzielenia gwarancji ubezpieczeniowej w ramach limitu, o którym mowa w art. 5a;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/146__art_7__ust_2__pkt_5" gd:GUID="e96fa771-bf9f-4332-83d5-35458b7c595e">
+                <nr>5</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="c95a9ad8-fd64-4172-bd0d-df743d6eae66" fragment="6" gd:fragmentGUID="a1f9361a-0b53-40bb-b773-8cd5dfdab37e">ustalanie zakresu uprawnień Korporacji do podejmowania decyzji dotyczących zawierania umów ubezpieczenia gwarantowanego;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/146__art_7__ust_2__pkt_6" gd:GUID="0b993a1c-3665-483d-8785-db7884b59824">
+                <nr>6</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="c95a9ad8-fd64-4172-bd0d-df743d6eae66" fragment="7" gd:fragmentGUID="b40b39ea-ddc4-406d-8875-aeb47e27fffe">klasyfikowanie krajów w zależności od stopnia ryzyka;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/146__art_7__ust_2__pkt_7" gd:GUID="544b7d47-a7ed-4475-8e01-f29bd721b1e0">
+                <nr>7</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="c95a9ad8-fd64-4172-bd0d-df743d6eae66" fragment="8" gd:fragmentGUID="6535fd99-e2d9-4130-b0da-34abef1826fa">ocena zaistnienia interesu Rzeczypospolitej Polskiej, o którym mowa w art. 6 ust. 3, w odniesieniu do ubezpieczenia gwarantowanego, o którym mowa w art. 6 ust. 2 pkt 2;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/146__art_7__ust_2__pkt_8" gd:GUID="e1e41cc7-fa32-4353-bb40-3b8efc68002f">
+                <nr>8</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="c95a9ad8-fd64-4172-bd0d-df743d6eae66" fragment="9" gd:fragmentGUID="e9d8121a-bcb5-4881-a15d-0ed242fa1404">rozpatrywanie rocznych sprawozdań Korporacji z jej działalności, obejmujących:</zdanie>
+                </p>
+                <litera eId="DU/2026/146__art_7__ust_2__pkt_8__lit_a" gd:GUID="2d1ee29f-d408-4013-8b36-ea339eb7dc2e">
+                  <nr>a</nr>
+                  <p>
+                    <zdanie nr="1" gd:zdGUID="c95a9ad8-fd64-4172-bd0d-df743d6eae66" fragment="10" gd:fragmentGUID="49ddcb7c-2286-4904-ba23-88432faaeec5">stan zobowiązań z tytułu zawartych umów ubezpieczenia gwarantowanego i umów kredytowych oraz stopień wykorzystania limitu, o którym mowa w art. 5a,</zdanie>
+                  </p>
+                </litera>
+                <litera eId="DU/2026/146__art_7__ust_2__pkt_8__lit_b" gd:GUID="642d769c-b3a3-4eb9-84c1-941c94dc7254">
+                  <nr>b</nr>
+                  <p>
+                    <zdanie nr="1" gd:zdGUID="c95a9ad8-fd64-4172-bd0d-df743d6eae66" fragment="11" gd:fragmentGUID="e38e592e-6e08-4c4d-bdbb-e1ea2acbcda1">przychody ze składek, wynagrodzenia z tytułu udzielonych gwarancji ubezpieczeniowych, wypłacone odszkodowania i kwoty gwarancji ubezpieczeniowych oraz uzyskane kwoty regresów,</zdanie>
+                  </p>
+                </litera>
+                <litera eId="DU/2026/146__art_7__ust_2__pkt_8__lit_c" gd:GUID="758c7328-15c0-4f88-b871-31872d286e88">
+                  <nr>c</nr>
+                  <p>
+                    <zdanie nr="1" gd:zdGUID="c95a9ad8-fd64-4172-bd0d-df743d6eae66" fragment="12" gd:fragmentGUID="cbcba5db-9583-443e-9ea2-2d3275d3d623">przewidywane zobowiązania z tytułu umów ubezpieczeń gwarantowanych na poszczególne lata;</zdanie>
+                  </p>
+                </litera>
+              </punkt>
+              <punkt eId="DU/2026/146__art_7__ust_2__pkt_9" gd:GUID="0a27109d-7de5-4b50-af59-f334d99aa27c">
+                <nr>9</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="c95a9ad8-fd64-4172-bd0d-df743d6eae66" fragment="13" gd:fragmentGUID="bc31b8e0-0ed7-4ccf-a495-b31189cee832">rozpatrywanie propozycji zmian w działalności Korporacji i przedstawianie ich ministrowi właściwemu do spraw gospodarki.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2026/146__art_7__ust_3" gd:GUID="2d1fca88-c75c-45b9-9f3d-fa340ee7b451">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="78cfbad8-9311-4f68-8e2d-db48d09fe79d" fragment="1" gd:fragmentGUID="a2565cc8-dd5a-44c1-9522-d3fda4e50afd">Komitet przedstawia Radzie Ministrów roczne sprawozdanie ze swojej działalności w terminie do dnia 31 maja następnego roku.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/146__art_7a" gd:GUID="0a6e4217-ef7a-46b9-98e8-120bfd4ae71d">
+            <nr>7a</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="6538b2d3-600a-410d-b621-64a32af444e5">
+              <p>
+                <zdanie nr="1" gd:zdGUID="ca544e21-21c3-45e7-bf20-33692d8ff3fa" fragment="1" gd:fragmentGUID="6e506b01-be60-4cc8-a38a-a0da4042058f">W skład Komitetu wchodzą, powołani przez Prezesa Rady Ministrów, po jednym przedstawicielu:</zdanie>
+              </p>
+              <punkt eId="DU/2026/146__art_7a__pkt_1" gd:GUID="d738856f-2fcd-449d-9dcf-9343768a114e">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="ca544e21-21c3-45e7-bf20-33692d8ff3fa" fragment="2" gd:fragmentGUID="60e142ab-28be-4d0e-ab87-82abc6fc0f0b">ministra właściwego do spraw aktywów państwowych,</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/146__art_7a__pkt_2" gd:GUID="d5da9bf8-645b-43ac-8b21-d257cffd06d0">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="ca544e21-21c3-45e7-bf20-33692d8ff3fa" fragment="3" gd:fragmentGUID="1cb7618a-8978-499e-83ae-3bc4c04395c6">ministra właściwego do spraw finansów publicznych,</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/146__art_7a__pkt_3" gd:GUID="5d892344-1caa-4b22-8773-7b35253f4582">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="ca544e21-21c3-45e7-bf20-33692d8ff3fa" fragment="4" gd:fragmentGUID="927fd63b-caf6-486d-8a16-5846304657ee">ministra właściwego do spraw gospodarki,</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/146__art_7a__pkt_4" gd:GUID="ecb331ed-03bb-4041-ab4f-3791f2e4b689">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="ca544e21-21c3-45e7-bf20-33692d8ff3fa" fragment="5" gd:fragmentGUID="a6974c40-d2ad-4588-97d5-82ae3cee6f91">ministra właściwego do spraw klimatu,</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/146__art_7a__pkt_5" gd:GUID="e9fcafde-50e2-4e02-bc2c-24b46c6d7902">
+                <nr>5</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="ca544e21-21c3-45e7-bf20-33692d8ff3fa" fragment="6" gd:fragmentGUID="fc6fae36-c17d-4ebb-955b-f5e5ad3ae658">ministra właściwego do spraw rynków rolnych,</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/146__art_7a__pkt_6" gd:GUID="be8e9c57-3da8-415f-b092-07edd806ad13">
+                <nr>6</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="ca544e21-21c3-45e7-bf20-33692d8ff3fa" fragment="7" gd:fragmentGUID="6625274b-c50d-45ba-a131-d9e152cde927">ministra właściwego do spraw zagranicznych</zdanie>
+                </p>
+              </punkt>
+              <czesc-wspolna-punkt eId="DU/2026/146__art_7a__czw" gd:GUID="de797c15-60d9-4ab4-b749-7bdd9acb5948">
+                <p>
+                  <zdanie nr="1" gd:zdGUID="ca544e21-21c3-45e7-bf20-33692d8ff3fa" fragment="8" gd:fragmentGUID="c3fcf696-6554-4e33-953c-752f5b0726cd">– w randze sekretarza albo podsekretarza stanu.</zdanie>
+                </p>
+              </czesc-wspolna-punkt>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2026/146__art_7b" gd:GUID="9a9bedb2-9340-47fc-8c4f-d2c83776a584">
+            <nr>7b</nr>
+            <ustep eId="DU/2026/146__art_7b__ust_1" gd:GUID="e309aa5c-e791-402a-bb21-c3031d863281">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="28112628-63e7-4ca2-84d6-bd73ef65f75b" fragment="1" gd:fragmentGUID="9e6b6cf8-9962-434a-9b39-93541af95d99">Przewodniczącym Komitetu jest przedstawiciel ministra właściwego do spraw gospodarki.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/146__art_7b__ust_2" gd:GUID="d4f51de3-8cf0-4731-b064-d43c39a0407b">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="96481bf9-7280-43aa-ab44-4277a7965a43" fragment="1" gd:fragmentGUID="62e563fe-f7e9-40ba-9241-669dbff172f8">Sekretariat Komitetu prowadzony jest przez urząd obsługujący ministra właściwego do spraw gospodarki.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/146__art_7b__ust_3" gd:GUID="2a58c384-04b9-477d-8a23-94ed8f47c8c4">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="8d882cea-5810-46f8-ab3e-af8e8a2f9fc3" fragment="1" gd:fragmentGUID="51c167f5-95a1-4653-8c91-147dc9ce2304">Rada Ministrów określi, w drodze rozporządzenia, szczegółowy tryb działania i organizację Komitetu.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/146__art_7c" gd:GUID="c3bb0f6b-8762-4fff-a859-a42c6b9386eb">
+            <nr>7c</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="0a086d0e-a0ec-4b9b-bb13-e7e293138b33">
+              <p>
+                <zdanie nr="1" gd:zdGUID="ff69c83d-17d8-4a00-961c-c48a17a85ff3" fragment="1" gd:fragmentGUID="4cb9e0f5-0713-4f1b-bfe2-e399ed207c2a">Komitet podejmuje decyzje w formie uchwał wiążących Korporację.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2026/146__art_8" gd:GUID="14c9ce71-adb4-47a5-9034-d72eee38d31d">
+            <nr>8</nr>
+            <ustep eId="DU/2026/146__art_8__ust_1" gd:GUID="73bc9bb7-a57c-46ad-8109-34469f601ecc">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="b8acfa2e-9eee-43d6-96f2-45e9f6489ca1" fragment="1" gd:fragmentGUID="7d34a806-5b40-419f-a82c-b7a5d70dc04f">(uchylony)</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/146__art_8__ust_2" gd:GUID="27bfab87-3be2-4879-a73a-f6176cf60c38">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="28c5fab9-2711-4239-953f-ecfce7354fbf" fragment="1" gd:fragmentGUID="9c0abf94-6726-4572-bca8-cfc5f3c8213d">(uchylony)</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/146__art_9" gd:GUID="505c9283-d04e-45bf-8608-d16d2e528dd9">
+            <nr>9</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="420a7d72-6c7d-460f-bd17-3b4c8fbd64c4">
+              <p>
+                <zdanie nr="1" gd:zdGUID="d03c839a-2851-414d-93db-45362a25a9b9" fragment="1" gd:fragmentGUID="23eb9129-092d-4863-bbd9-ceee17d260ef">(uchylony)</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2026/146__art_10" gd:GUID="bd2005db-7bf9-4097-a4db-27d2244412bf">
+            <nr>10</nr>
+            <ustep eId="DU/2026/146__art_10__ust_1" gd:GUID="4b117059-4475-4f4a-bb06-a0aad70d286f">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ab5b1829-0f77-42b0-a898-551b0175ec52" fragment="1" gd:fragmentGUID="9a463993-8d22-48a2-9c07-b9d70f8d3b04">Rozliczenia finansowe związane z ubezpieczeniami gwarantowanymi w zakresie uregulowanym ustawą są prowadzone przez Korporację na wyodrębnionym rachunku bankowym.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/146__art_10__ust_2" gd:GUID="6a71ec9d-9b9d-4491-9567-47d963fa7e27">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="2ac6e63f-90fb-449f-8231-c941f587551c" fragment="1" gd:fragmentGUID="c9608899-a0eb-4ab1-8798-1f2ea1a0c11e">Na rachunku, o którym mowa w ust. 1, są gromadzone:</zdanie>
+              </p>
+              <punkt eId="DU/2026/146__art_10__ust_2__pkt_1" gd:GUID="37143318-489f-4fb2-a4a3-f82a2159bec7">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="2ac6e63f-90fb-449f-8231-c941f587551c" fragment="2" gd:fragmentGUID="36af4362-cec5-47f8-a902-5b8cf3b05070">składki oraz wynagrodzenia z tytułu zawartych umów ubezpieczenia gwarantowanego oraz opłaty administracyjne, w szczególności z tytułu rozpatrywania wniosków o udzielenie ubezpieczenia gwarantowanego lub wniosków o zmianę warunków ubezpieczenia gwarantowanego;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/146__art_10__ust_2__pkt_2" gd:GUID="7a0a88d1-f05b-4190-8d65-ef029cf513c3">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="2ac6e63f-90fb-449f-8231-c941f587551c" fragment="3" gd:fragmentGUID="2b2cf42f-70f6-4f12-a228-897413b07271">kwoty uzyskane w wyniku postępowań windykacyjnych i regresowych;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/146__art_10__ust_2__pkt_3" gd:GUID="b91eddd0-e696-4f90-ac7c-dae49e627636">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="2ac6e63f-90fb-449f-8231-c941f587551c" fragment="4" gd:fragmentGUID="ea5797b5-415e-4051-b6d4-a8f5b4b55d06">odsetki od środków gromadzonych na wyodrębnionym rachunku;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/146__art_10__ust_2__pkt_4" gd:GUID="f7e7abce-731d-4608-95ba-260f56530645">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="2ac6e63f-90fb-449f-8231-c941f587551c" fragment="5" gd:fragmentGUID="7f466333-8b7f-4baf-8b40-9c50b1546f03">odsetki od lokat wolnych środków;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/146__art_10__ust_2__pkt_5" gd:GUID="366e8370-b9e5-4c5a-bd0b-d70655f70c94">
+                <nr>5</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="2ac6e63f-90fb-449f-8231-c941f587551c" fragment="6" gd:fragmentGUID="2e00a488-4f82-49f9-9db2-164dba13c0a4">(uchylony)</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/146__art_10__ust_2__pkt_6" gd:GUID="7fd65cea-a691-446c-a303-6c4ea7edd4b9">
+                <nr>6</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="2ac6e63f-90fb-449f-8231-c941f587551c" fragment="7" gd:fragmentGUID="f0763aa4-166a-4066-9cbf-0d3e2d00669d">pożyczki, o których mowa w art. 13 ust. 1;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/146__art_10__ust_2__pkt_7" gd:GUID="cac03cff-6913-482a-bc4e-efb8757b5caa">
+                <nr>7</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="2ac6e63f-90fb-449f-8231-c941f587551c" fragment="8" gd:fragmentGUID="1665c4a8-d223-4f85-8945-acd924fe904f">środki przekazane przez ministra właściwego do spraw finansów publicznych, określone w art. 19;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/146__art_10__ust_2__pkt_8" gd:GUID="731091dc-e043-45f3-8592-4117bcd524be">
+                <nr>8</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="2ac6e63f-90fb-449f-8231-c941f587551c" fragment="9" gd:fragmentGUID="e9389bf1-ac01-4c88-a9a8-51cb8a914219">środki przekazane przez ministra właściwego do spraw członkostwa Rzeczypospolitej Polskiej w Unii Europejskiej, określone w art. 20 ust. 1;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/146__art_10__ust_2__pkt_9" gd:GUID="8a206391-c7b7-4d33-b38c-604d80b7fa31">
+                <nr>9</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="2ac6e63f-90fb-449f-8231-c941f587551c" fragment="10" gd:fragmentGUID="7ee6772f-e64e-40d3-8608-2515c9f9a8b4">składki zwrotne;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/146__art_10__ust_2__pkt_10" gd:GUID="aef69be3-ef8b-4cac-8535-5f70379c3160">
+                <nr>10</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="2ac6e63f-90fb-449f-8231-c941f587551c" fragment="11" gd:fragmentGUID="1d515351-ee05-4eb7-814d-acac66daeb5b">dodatnie różnice kursowe;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/146__art_10__ust_2__pkt_11" gd:GUID="acd0d573-a070-4205-96a9-dc88c89353ca">
+                <nr>11</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="2ac6e63f-90fb-449f-8231-c941f587551c" fragment="12" gd:fragmentGUID="da7dc9e8-1d31-479d-866d-37a4edda00f4">pozostałe wpływy.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2026/146__art_10__ust_2a" gd:GUID="1b18ff2f-72b8-4122-b9ae-51437ec58f2f">
+              <nr>2a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="e5ad7ab5-84d1-4529-8193-4f3b9db389a1" fragment="1" gd:fragmentGUID="f8d639a3-03be-4350-9214-3cea2fc1cf40">Z rachunku, o którym mowa w ust. 1, są pokrywane:</zdanie>
+              </p>
+              <punkt eId="DU/2026/146__art_10__ust_2a__pkt_1" gd:GUID="870f5ad9-b3d3-4cca-90e2-74831f07d31b">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="e5ad7ab5-84d1-4529-8193-4f3b9db389a1" fragment="2" gd:fragmentGUID="24e91a68-4e12-4f0b-9e36-14380472e5c2">odszkodowania i kwoty gwarancji ubezpieczeniowych;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/146__art_10__ust_2a__pkt_2" gd:GUID="c1fda3a1-526a-45b7-847a-58dfc63abb02">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="e5ad7ab5-84d1-4529-8193-4f3b9db389a1" fragment="3" gd:fragmentGUID="5c4ae797-c647-4cdd-9f2f-d5ecdc75a709">składki reasekuracyjne;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/146__art_10__ust_2a__pkt_3" gd:GUID="5bbe9da3-a32d-4394-b962-0755bb499c88">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="e5ad7ab5-84d1-4529-8193-4f3b9db389a1" fragment="4" gd:fragmentGUID="dfa1fae6-f9bb-4cca-b443-2ec0584ff43c">zwroty składek;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/146__art_10__ust_2a__pkt_4" gd:GUID="5bf4f86f-75ff-4945-a221-f8b10c4fc0b9">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="e5ad7ab5-84d1-4529-8193-4f3b9db389a1" fragment="5" gd:fragmentGUID="3dc99566-cf55-4d59-94a7-8e31cea778eb">koszty postępowań windykacyjnych i regresowych;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/146__art_10__ust_2a__pkt_5" gd:GUID="217b599d-9f9e-47e4-bde2-52e06363dfe1">
+                <nr>5</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="e5ad7ab5-84d1-4529-8193-4f3b9db389a1" fragment="6" gd:fragmentGUID="e0f54e10-0a88-4437-90a6-81285e0231af">koszty likwidacji szkód;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/146__art_10__ust_2a__pkt_6" gd:GUID="4ff17761-9433-4d45-b633-36c3c8936578">
+                <nr>6</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="e5ad7ab5-84d1-4529-8193-4f3b9db389a1" fragment="7" gd:fragmentGUID="f70d99d9-3f9c-4e9c-b3f8-3111cd957d50">wydatki na utworzenie lokat;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/146__art_10__ust_2a__pkt_7" gd:GUID="e2b37470-fe30-445c-b9c8-38ad7f0517da">
+                <nr>7</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="e5ad7ab5-84d1-4529-8193-4f3b9db389a1" fragment="8" gd:fragmentGUID="d97094ca-e5be-48ed-a991-b14227c24d01">(uchylony)</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/146__art_10__ust_2a__pkt_8" gd:GUID="223a4ded-770b-4673-91a2-ec305950608b">
+                <nr>8</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="e5ad7ab5-84d1-4529-8193-4f3b9db389a1" fragment="9" gd:fragmentGUID="4777d71f-95d6-433f-8427-a1feeb534f3d">(uchylony)</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/146__art_10__ust_2a__pkt_9" gd:GUID="6d02e988-bf03-4a24-8ff7-8744d7a34690">
+                <nr>9</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="e5ad7ab5-84d1-4529-8193-4f3b9db389a1" fragment="10" gd:fragmentGUID="6472e70e-c816-4a86-b4bc-79fb1e6e512c">spłaty pożyczek otrzymanych zgodnie z art. 13 ust. 1;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/146__art_10__ust_2a__pkt_10" gd:GUID="e3d0e7b0-1b45-4a0a-9306-6f2042f5f3ff">
+                <nr>10</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="e5ad7ab5-84d1-4529-8193-4f3b9db389a1" fragment="11" gd:fragmentGUID="1b743695-4855-4892-b80e-c443e613a543">środki przekazane do budżetu państwa;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/146__art_10__ust_2a__pkt_11" gd:GUID="bca8c585-b947-463d-a843-8395fb1c5c0c">
+                <nr>11</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="e5ad7ab5-84d1-4529-8193-4f3b9db389a1" fragment="12" gd:fragmentGUID="9a936d7b-d3f6-4ebc-8829-e9d8278ea03c">wynagrodzenie i wynagrodzenie dodatkowe za prowadzenie ubezpieczeń gwarantowanych, o których mowa w art. 14 ust. 1;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/146__art_10__ust_2a__pkt_12" gd:GUID="605ae8a8-d864-4e0a-9162-d3bd8a2f3a8f">
+                <nr>12</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="e5ad7ab5-84d1-4529-8193-4f3b9db389a1" fragment="13" gd:fragmentGUID="5b8da31c-8a31-461e-a0f7-7297ee96932d">ujemne różnice kursowe;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/146__art_10__ust_2a__pkt_13" gd:GUID="767f378f-d195-4ef0-9f20-5eb02298ed9c">
+                <nr>13</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="e5ad7ab5-84d1-4529-8193-4f3b9db389a1" fragment="14" gd:fragmentGUID="f6f79283-84b3-42e7-9d99-966ff2981d94">opłaty bankowe;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/146__art_10__ust_2a__pkt_14" gd:GUID="9380f05e-f842-47f0-9c37-5315a9ce1df7">
+                <nr>14</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="e5ad7ab5-84d1-4529-8193-4f3b9db389a1" fragment="15" gd:fragmentGUID="66d27250-12ca-464b-b035-a475c13e6c2f">pozostałe wydatki.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2026/146__art_10__ust_3" gd:GUID="856ac5be-2d13-4749-870c-d6714faaf4da">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="3f4444e6-296f-47a8-8698-5fa8a46bf9e8" fragment="1" gd:fragmentGUID="918d3835-24b7-48a3-b7fb-682f02c82f5d">Środki zgromadzone na wyodrębnionym rachunku bankowym nie stanowią przychodu Korporacji w rozumieniu przepisów o podatku dochodowym od osób prawnych.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/146__art_10__ust_4" gd:GUID="adafef71-241e-46e6-84a8-0341f6684fb1">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="e846875f-b6fe-4a62-aaed-2bab6298c46d" fragment="1" gd:fragmentGUID="b24e1cb4-cf2b-485d-84da-4db0c7093a66">Korporacja za zgodą ministra właściwego do spraw gospodarki może dokonywać lokaty wolnych środków; środki uzyskane z dochodów od tych lokat wpływają na rachunek, o którym mowa w ust. 1.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/146__art_10__ust_5" gd:GUID="821e6cae-01ee-41ba-96c9-3cebec1be83d">
+              <nr>5</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="8e12bbac-ed3a-4983-86f5-22d2d0717428" fragment="1" gd:fragmentGUID="3e183fe2-6adf-4276-8f20-0f91f2182c3b">Nadwyżka środków na rachunku, o którym mowa w ust. 1, na wniosek ministra właściwego do spraw gospodarki jest przekazywana do budżetu państwa.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/146__art_10__ust_6" gd:GUID="a8ead175-139e-4e54-ba85-acd727a0c3d4">
+              <nr>6</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="21388456-3e53-487a-947d-c809ac02cb70" fragment="1" gd:fragmentGUID="1982fedb-997d-4fb3-a910-4b7b95be88c0">W przypadku ogłoszenia upadłości Korporacji, środki pieniężne zgromadzone na rachunku, o którym mowa w ust. 1, nie wchodzą do masy upadłościowej.</zdanie>
+                <zdanie nr="2" gd:zdGUID="9b57de7c-a4b1-4a04-b400-be674fcad212" fragment="1" gd:fragmentGUID="3bd10ff5-45c9-40bf-a8d0-1c9f14e39d6b">Środki te minister właściwy do spraw gospodarki przeznacza na zaspokojenie zawartych przez Korporację umów ubezpieczeń gwarantowanych, nadwyżkę zaś przekazuje do budżetu państwa.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/146__art_10__ust_7" gd:GUID="4976dd61-ac28-4560-870a-6ca192882823">
+              <nr>7</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ab533ea6-7945-4063-8175-c03911b58f01" fragment="1" gd:fragmentGUID="2449ea30-f1d0-4385-9ac0-a3285be0c02c">Czynności, o których mowa w ust. 5 i 6, dokonywane są po zasięgnięciu opinii ministra właściwego do spraw finansów publicznych.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/146__art_11" gd:GUID="e6dd1021-0a62-466a-b7ac-fb3f7b5cd0be">
+            <nr>11</nr>
+            <ustep eId="DU/2026/146__art_11__ust_1" gd:GUID="3354c575-f44a-4d57-a2f5-fccd0fb7308c">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="20befa81-44fe-4efe-9c91-59206990b495" fragment="1" gd:fragmentGUID="3d08b0d4-cb2e-4022-80f3-3500e0e5d199">W razie powstania szkody objętej ubezpieczeniem, ubezpieczający zobowiązany jest bez nieuzasadnionej zwłoki udzielić Korporacji wszelkich wiadomości oraz przedstawia dokumenty i inne dowody niezbędne do ustalenia okoliczności powstania szkody i jej rozmiarów.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/146__art_11__ust_2" gd:GUID="22f24dd8-3283-4279-adeb-79d8f83c8ae4">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ce45c50c-6a1a-4c03-8e87-2033da73f25f" fragment="1" gd:fragmentGUID="3f59e777-86d6-4bc9-8577-5886944acc75">W razie wątpliwości, czy powstała szkoda jest następstwem ryzyka określonego w art. 2–<i>4</i>, ciężar udowodnienia tego faktu spoczywa na ubezpieczającym.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/146__art_12" gd:GUID="6951d236-2dbe-4065-926b-5cca8c20f0e6">
+            <nr>12</nr>
+            <ustep eId="DU/2026/146__art_12__ust_1" gd:GUID="13c2594f-a88f-4fa7-9a8d-98ed81e77375">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ee6814f1-6d3e-43a9-a723-88997c5db2c7" fragment="1" gd:fragmentGUID="97b54e10-adf3-4f5c-abaa-a11df30dbcfb">Z chwilą zapłaty odszkodowania ubezpieczeniowego na Korporację przechodzą wszelkie wierzytelności oraz inne prawa przysługujące ubezpieczającemu lub podmiotowi uprawnionemu do otrzymania odszkodowania w stosunku do dłużników lub podmiotów udzielających zabezpieczenia, do wysokości zapłaconego odszkodowania.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/146__art_12__ust_2" gd:GUID="50275a78-07bb-4842-bcdf-a8af467aec0d">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="2e1360e3-c65c-4705-a5e6-8b9e9c812dfd" fragment="1" gd:fragmentGUID="b4388be6-36a2-457d-a07d-b466d8560ead">Ubezpieczający oraz podmiot uprawniony do otrzymania odszkodowania są zobowiązani przekazać Korporacji dokumenty i informacje oraz dokonać innych czynności potrzebnych do skutecznego dochodzenia praw, o których mowa w ust. 1, przez Korporację.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/146__art_12__ust_3" gd:GUID="be94541b-ead8-4b20-b93c-a31ed635c5ad">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="43b24799-28a7-4cf6-b8c3-8e8a38988521" fragment="1" gd:fragmentGUID="3f0ec0f1-507c-4e2b-85dd-1a451a77cc34">Zrzeczenie się przez ubezpieczającego albo podmiot uprawniony do otrzymania odszkodowania, bez zgody Korporacji, wierzytelności i praw, o których mowa w ust. 1, zwalnia Korporację od obowiązku zapłaty odszkodowania.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/146__art_12a" gd:GUID="8ad9abf7-63f3-4c92-8c3d-27527e96841b">
+            <nr>12a</nr>
+            <ustep eId="DU/2026/146__art_12a__ust_1" gd:GUID="6ba1da56-aae0-4041-b4a9-4993c803a0f3">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ba48b0bc-db92-44b2-a843-482defb18095" fragment="1" gd:fragmentGUID="911f3228-c7aa-4944-b908-c5da7319e52c">Z chwilą wypłaty kwoty gwarancji ubezpieczeniowej Korporacja realizuje prawa w stosunku do zleceniodawcy gwarancji.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/146__art_12a__ust_2" gd:GUID="de301d0d-a922-4066-9507-6f6a7f025b93">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="4e2a6b08-fa5c-4533-b267-517afbfc191a" fragment="1" gd:fragmentGUID="73122ced-6059-4a76-9fa8-d1637ac747f1">W przypadku gwarancji ubezpieczeniowej, której beneficjentem oraz zleceniodawcą jest ten sam podmiot, przepis art. 12 stosuje się odpowiednio.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/146__art_13" gd:GUID="acc93590-309a-4b79-8b1e-62153e7057b3">
+            <nr>13</nr>
+            <ustep eId="DU/2026/146__art_13__ust_1" gd:GUID="3455089e-6348-4c0e-8a2e-bd154702f616">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="6f0a4032-e974-4fc4-9c07-1b426e08e900" fragment="1" gd:fragmentGUID="e5182eea-ff74-4900-bb2c-1a9d0db0a771">Pokrycie dokonywanych przez Korporację wydatków z rachunku, o którym mowa w art. 10 ust. 1, jest gwarantowane przez Skarb Państwa poprzez udzielanie pożyczek ze środków budżetu państwa.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/146__art_13__ust_2" gd:GUID="ebf779b5-038f-4eac-b4f0-971396aa7471">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="22ec4b47-d8f0-4f2c-9bcd-17ef13898fa1" fragment="1" gd:fragmentGUID="df7fafb2-4d84-4d16-973c-e3957b9f96c7">Minister właściwy do spraw finansów publicznych w porozumieniu z ministrem właściwym do spraw gospodarki może w szczególnie uzasadnionych wypadkach umorzyć pożyczki, o których mowa w ust. 1.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/146__art_13__ust_3" gd:GUID="fb4a3a42-75fb-4a88-a531-fe13ab49c370">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="a0ce17ee-e189-4788-93c1-a03aa4c248ee" fragment="1" gd:fragmentGUID="f860116a-feeb-4718-9f52-822e57506c4a">Rada Ministrów może określić, w drodze rozporządzenia, warunki i tryb udzielania i umarzania pożyczek, o których mowa w ust. 1, mając na względzie zapewnienie w odpowiednim czasie środków na pokrycie wydatków, o których mowa w ust. 1, oraz stan i prognozowane zasilenia rachunku, o którym mowa w art. 10 ust. 1.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/146__art_14" gd:GUID="c3d31fe9-0d69-4aec-be23-86f4a9741b32">
+            <nr>14</nr>
+            <ustep eId="DU/2026/146__art_14__ust_1" gd:GUID="b6e7b6bf-10bb-4185-9c1b-d99099906f57">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="83c4f0e2-5589-455c-a399-69bd5f6aed24" fragment="1" gd:fragmentGUID="fd19200f-89a2-4e71-95d9-227fd1610d4c">Za prowadzenie działalności określonej niniejszą ustawą Korporacji przysługuje wynagrodzenie pokrywające koszty i wydatki ponoszone przez nią w związku z wykonywaniem tej działalności, z wyjątkiem wydatków określonych w art. 10 ust. 2a, oraz wynagrodzenie dodatkowe.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/146__art_14__ust_2" gd:GUID="72ff2a35-e96c-4a0f-abbc-b2d1baa626ee">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="419764f8-9538-4751-84e0-e46364c9df5b" fragment="1" gd:fragmentGUID="6ab5d76b-fa28-4f53-9445-182fbc0f7a41">Wysokość wynagrodzenia i wynagrodzenia dodatkowego oraz sposób ich finansowania określa umowa zawarta między ministrem właściwym do spraw gospodarki a Korporacją.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/146__art_14__ust_3" gd:GUID="ce710a7e-93aa-414b-bcf2-55c52b24f023">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="8ca5a25a-51f2-4f5a-bdd7-dd610870b063" fragment="1" gd:fragmentGUID="3a2d13c0-9d3f-4c4f-96ea-540fdd894bf7">Umowa, o której mowa w ust. 2, określa w szczególności specyfikację pokrywanych przez Skarb Państwa kosztów i wydatków, o których mowa w ust. 1, oraz warunki przyznania wynagrodzenia dodatkowego, a także tryb przekazywania wynagrodzenia i wynagrodzenia dodatkowego.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/146__art_15" gd:GUID="43015bfc-569d-4477-abe7-365e0b9a1b63">
+            <nr>15</nr>
+            <ustep eId="DU/2026/146__art_15__ust_1" gd:GUID="cf8daac1-3f63-4cf8-a9b4-c296ff6f3801">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="89a12df3-0b04-4fa8-8966-5f9347448603" fragment="1" gd:fragmentGUID="ea0cce16-14ff-4580-93c4-bad484bdacaf"><odnosnik id-odnosnika="5" symbol="5" gd:GUID="ff002350-493a-4911-8622-ae3cb1df7309"><p><zdanie nr="1" gd:zdGUID="5b76ad70-063c-4e1c-9185-4a658022bdf1" fragment="1" gd:fragmentGUID="92246086-cb51-499f-a211-3adbe5e89a33">W brzmieniu ustalonym przez art. 1 pkt 1 ustawy z dnia 25 czerwca 2025 r. o zmianie niektórych ustaw w związku z zapewnieniem operacyjnej odporności cyfrowej sektora finansowego oraz emitowaniem europejskich zielonych obligacji (Dz. U. poz. 1069), która weszła w życie z dniem 7 sierpnia 2025 r.</zdanie></p></odnosnik> Nadzór nad działalnością Korporacji, z wyjątkiem nadzoru, o którym mowa w ust. 1a, sprawuje minister właściwy do spraw gospodarki na zasadach określonych w niniejszej ustawie.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/146__art_15__ust_1a" gd:GUID="f3fbb14d-6588-4c93-ad58-2780ef294cb9">
+              <nr>1a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="175ba7a6-ce35-418e-bb19-a6e841891787" fragment="1" gd:fragmentGUID="fca074da-e4ca-4f71-8b16-ffb4eac7bf45"><odnosnik id-odnosnika="6" symbol="6" gd:GUID="0ab79446-4af2-4636-90f1-f380c92197c6"><p><zdanie nr="1" gd:zdGUID="9b103abc-969c-471e-8ba9-b95a8799a322" fragment="1" gd:fragmentGUID="bc7abf35-d5a4-4217-a74c-a6bb74e2e628">Dodany przez art. 1 pkt 2 ustawy, o której mowa w odnośniku 5.</zdanie></p></odnosnik> Nadzór nad działalnością Korporacji w zakresie przewidzianym przepisami rozporządzenia Parlamentu Europejskiego i Rady (UE) 2022/2554 z dnia 14 grudnia 2022 r. w sprawie operacyjnej odporności cyfrowej sektora finansowego i zmieniającego rozporządzenia (WE) nr 1060/2009, (UE) nr 648/2012, (UE) nr 600/2014, (UE) nr 909/2014 oraz (UE) 2016/1011 (Dz. Urz. UE L 333 z 27.12.2022, str. 1, z późn. zm.<odnosnik id-odnosnika="7" symbol="7" gd:GUID="e0ebf99c-131f-4913-8b79-fcf5a609200f"><p><zdanie nr="1" gd:zdGUID="9a01e2da-4051-435a-b104-d31c0b6629c4" fragment="1" gd:fragmentGUID="daa9cd4a-cf85-44c9-9722-a7671c6f7578">Zmiana wymienionego rozporządzenia została ogłoszona w Dz. Urz. UE L 2024/90177 z 12.03.2024.</zdanie></p></odnosnik>) sprawuje Komisja Nadzoru Finansowego na zasadach określonych w ustawie z dnia 21 lipca 2006 r. o nadzorze nad rynkiem finansowym (Dz. U. z 2025 r. poz. 640 i 1069).</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/146__art_15__ust_2" gd:GUID="d8640352-cf96-42c4-8194-0f38c1039bac">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="2fd76ec4-1ad0-4601-9e48-9e845144082b" fragment="1" gd:fragmentGUID="6a888897-f4c4-428c-a62b-22c3b3752d0e">Nadzór ministra właściwego do spraw gospodarki w zakresie ubezpieczeń gwarantowanych obejmuje:</zdanie>
+              </p>
+              <punkt eId="DU/2026/146__art_15__ust_2__pkt_1" gd:GUID="f56a1e0f-984e-40e2-9a29-fd415937b288">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="2fd76ec4-1ad0-4601-9e48-9e845144082b" fragment="2" gd:fragmentGUID="51cb3774-2a40-47da-9910-c4150011604f">przeprowadzanie kontroli w Korporacji;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/146__art_15__ust_2__pkt_2" gd:GUID="785677fb-916a-4f1f-b6ae-a9e08b913f2d">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="2fd76ec4-1ad0-4601-9e48-9e845144082b" fragment="3" gd:fragmentGUID="117e8096-acf1-4de8-bab2-dfa13013d657">występowanie do Korporacji z żądaniem przekazania w wyznaczonym terminie pisemnych informacji i wyjaśnień, w tym dotyczących poszczególnych umów ubezpieczenia;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/146__art_15__ust_2__pkt_3" gd:GUID="27cb8344-dd2b-4b85-8543-054e7ff4aad0">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="2fd76ec4-1ad0-4601-9e48-9e845144082b" fragment="4" gd:fragmentGUID="0c1254df-3d08-4e6c-9c86-86a87b215d6c">żądanie usunięcia w wyznaczonym terminie stwierdzonych nieprawidłowości.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2026/146__art_15__ust_3" gd:GUID="63e91025-2555-4b28-89e8-1308fb79a4e6">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="8d319588-e968-45a1-8bb4-1ee52de8d6a3" fragment="1" gd:fragmentGUID="cdf90cdf-376d-40f5-b03c-4c795b3fd65f">Kontrolę przeprowadzają co najmniej raz w roku pracownicy urzędu obsługującego ministra właściwego do spraw gospodarki, zwani dalej „kontrolerami”, na podstawie upoważnienia ministra właściwego do spraw gospodarki do przeprowadzenia kontroli oraz po okazaniu legitymacji służbowej upoważniającej do przeprowadzenia kontroli.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/146__art_15__ust_4" gd:GUID="ac2c8de9-9928-41e2-8c47-d8a6aa986f21">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="63e423fc-9e53-4b71-a599-f7e3d21865f5" fragment="1" gd:fragmentGUID="40648f76-2d69-48f3-b5c3-401ac5a64ddf">Upoważnienie, o którym mowa w ust. 3, zawiera:</zdanie>
+              </p>
+              <punkt eId="DU/2026/146__art_15__ust_4__pkt_1" gd:GUID="b539990b-ad21-41dd-99df-90d7ef2522f6">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="63e423fc-9e53-4b71-a599-f7e3d21865f5" fragment="2" gd:fragmentGUID="50d4a702-ee94-4739-ba21-1b22113f4d06">wskazanie podstawy prawnej do przeprowadzenia kontroli;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/146__art_15__ust_4__pkt_2" gd:GUID="2a69ba42-7c53-4978-a2b0-e79dc70212f9">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="63e423fc-9e53-4b71-a599-f7e3d21865f5" fragment="3" gd:fragmentGUID="5a8c395e-ce50-4083-8fb0-113490f5e551">datę i miejsce wystawienia;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/146__art_15__ust_4__pkt_3" gd:GUID="bf95b8da-ec77-4811-a45d-5a1581ef4cff">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="63e423fc-9e53-4b71-a599-f7e3d21865f5" fragment="4" gd:fragmentGUID="bbd20cce-db08-4d87-b48c-74d95a3482f6">imiona i nazwiska pracowników organu kontroli uprawnionych do wykonania kontroli oraz numery ich legitymacji służbowych;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/146__art_15__ust_4__pkt_4" gd:GUID="f9049188-4329-4608-97e9-5d9270a91073">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="63e423fc-9e53-4b71-a599-f7e3d21865f5" fragment="5" gd:fragmentGUID="98ff6e74-ccf6-4f47-92b3-27d9643e685c">imię i nazwisko przewodniczącego kontroli;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/146__art_15__ust_4__pkt_5" gd:GUID="2c765e12-def3-45fa-ae77-6992aaaf9a8f">
+                <nr>5</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="63e423fc-9e53-4b71-a599-f7e3d21865f5" fragment="6" gd:fragmentGUID="c707c8dd-39e3-4a84-bba0-860a016a8109">zakres przedmiotowy kontroli;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/146__art_15__ust_4__pkt_6" gd:GUID="06585051-f822-447a-b9a5-57b6db7e1bc0">
+                <nr>6</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="63e423fc-9e53-4b71-a599-f7e3d21865f5" fragment="7" gd:fragmentGUID="fd4e3037-1335-4a12-b1db-693245db96cf">datę rozpoczęcia i przewidywanego terminu zakończenia kontroli;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/146__art_15__ust_4__pkt_7" gd:GUID="5191f964-14d1-4b00-b4cb-52f60b2a3838">
+                <nr>7</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="63e423fc-9e53-4b71-a599-f7e3d21865f5" fragment="8" gd:fragmentGUID="9b317646-40ba-4068-b69b-970b18177503">podpis osoby udzielającej upoważnienia;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/146__art_15__ust_4__pkt_8" gd:GUID="7e9b50dd-f85e-4071-97a1-7cfff6012653">
+                <nr>8</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="63e423fc-9e53-4b71-a599-f7e3d21865f5" fragment="9" gd:fragmentGUID="8d49807b-0286-48d7-a851-93ba542c2a1f">pouczenie o prawach i obowiązkach kontrolowanego.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2026/146__art_15__ust_5" gd:GUID="df0e796b-e0fc-4aa3-b9f9-9c224fa35352">
+              <nr>5</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="26717fcb-7eba-470e-b0fc-42fe30c4203e" fragment="1" gd:fragmentGUID="efa7712c-8b6e-4cfa-8366-e1f3fb3a725a">Kontroler podlega wyłączeniu, na wniosek lub z urzędu, z postępowania kontrolnego, jeżeli wyniki kontroli mogłyby oddziaływać na jego prawa lub obowiązki, na prawa lub obowiązki jego małżonka albo osoby pozostającej z nim faktycznie we wspólnym pożyciu, krewnych i powinowatych do drugiego stopnia bądź osób związanych z nim z tytułu przysposobienia, opieki lub kurateli.</zdanie>
+                <zdanie nr="2" gd:zdGUID="fa185003-237e-4871-80c6-5c0828f420ba" fragment="1" gd:fragmentGUID="38957259-638b-4919-95a3-d49da2fe8b09">Powody wyłączenia kontrolera trwają także po ustaniu małżeństwa, przysposobienia, opieki lub kurateli.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/146__art_15__ust_6" gd:GUID="01759eb6-0a3e-4f75-862f-284df79643bf">
+              <nr>6</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="044b8f48-ebde-41ff-9cf9-0b1aba7ac751" fragment="1" gd:fragmentGUID="e2227f9b-cdf1-4205-b5bd-03b25966d86b">Kontroler może być wyłączony, na wniosek lub z urzędu, z postępowania kontrolnego w każdym czasie, jeżeli zachodzą uzasadnione wątpliwości co do jego bezstronności.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/146__art_15__ust_7" gd:GUID="1dc98950-6688-4ddd-8636-0929cf5239e0">
+              <nr>7</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="193addf1-318c-4175-873d-e7d8618919cf" fragment="1" gd:fragmentGUID="f44454f1-f0d1-4829-ba87-b0aab995d3bd">O przyczynach powodujących wyłączenie kontroler lub Prezes Zarządu Korporacji niezwłocznie zawiadamia ministra właściwego do spraw gospodarki.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/146__art_15__ust_8" gd:GUID="4a6c3c76-568d-4560-8336-25c325a5fc15">
+              <nr>8</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="8fe59f76-7de8-4495-990a-ed52966d6933" fragment="1" gd:fragmentGUID="26600b98-0a97-4ddf-9e0f-48c9c7df0fa0">O wyłączeniu postanawia minister właściwy do spraw gospodarki; postanowienie to jest ostateczne.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/146__art_15__ust_9" gd:GUID="e7961090-ad47-44e7-a382-7c2f0218a230">
+              <nr>9</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="48281b6c-3bf7-4d01-ac03-025cc82580e5" fragment="1" gd:fragmentGUID="4723c63a-6ce6-4b95-92d1-bf4e6cdfe350">Do czasu wydania postanowienia, o którym mowa w ust. 8, kontroler podejmuje jedynie czynności niecierpiące zwłoki.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/146__art_15__ust_10" gd:GUID="5dc0d181-ccc0-4ea2-bf22-e7ec2bc9d18f">
+              <nr>10</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="0d1df990-bfd6-4e9d-87f2-a4a6b8add86f" fragment="1" gd:fragmentGUID="8170d100-6fc8-4fed-9673-f24c26a3800d">Minister właściwy do spraw gospodarki może w toku przeprowadzania kontroli wydłużyć czas trwania, zmienić zakres lub miejsce przeprowadzenia kontroli, a także upoważnić do podjęcia dodatkowych czynności kontrolnych.</zdanie>
+                <zdanie nr="2" gd:zdGUID="3b2ae244-f75b-46d6-b733-71ebaa69c144" fragment="1" gd:fragmentGUID="f9b40282-8d67-4b01-88a5-a36c28200a8c">W tym celu dokonuje odpowiednich zmian w upoważnieniu do przeprowadzenia kontroli, załączając uzasadnienie na piśmie, i niezwłocznie informuje o tym Korporację.</zdanie>
+                <zdanie nr="3" gd:zdGUID="aee448d8-0335-4eed-8f07-ae72696adfbf" fragment="1" gd:fragmentGUID="8735ebad-768c-45bd-ab0f-ebfbaed73260">Łączny czas trwania kontroli nie może przekraczać 4 tygodni w roku.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/146__art_15__ust_11" gd:GUID="5ae07e9d-be2f-4a29-9ec8-0b5177ddbdde">
+              <nr>11</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="3ae0bd43-f9d9-48ce-8c6c-40bf9332ff21" fragment="1" gd:fragmentGUID="0ffaa661-eb60-4b91-a2f4-bb00e712001b">Jeżeli wyniki kontroli wykazały naruszenie prawa przez Korporację, można przeprowadzić w danym roku kalendarzowym powtórną kontrolę w tym samym zakresie przedmiotowym, a czasu jej trwania nie wlicza się do czasu, o którym mowa w ust. 10.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/146__art_15__ust_12" gd:GUID="09e7c4e0-f782-489b-ab50-b49f0aa1e7d3">
+              <nr>12</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ed9d499a-ecd6-4dfc-9a9f-02cb319ae8fd" fragment="1" gd:fragmentGUID="76b2e42a-0893-4bbc-8f16-77e67f44e093">Członkowie Zarządu Korporacji oraz pracownicy Korporacji są obowiązani:</zdanie>
+              </p>
+              <punkt eId="DU/2026/146__art_15__ust_12__pkt_1" gd:GUID="2f3f1e3a-792c-42b6-b872-f194a9343042">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="ed9d499a-ecd6-4dfc-9a9f-02cb319ae8fd" fragment="2" gd:fragmentGUID="8f16468d-cae7-45d2-a474-42a7480099bb">umożliwić kontrolerowi swobodny wstęp do pomieszczeń Korporacji, w których prowadzona jest działalność określona w ustawie;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/146__art_15__ust_12__pkt_2" gd:GUID="11cac01b-5731-453e-b40d-b197545c0034">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="ed9d499a-ecd6-4dfc-9a9f-02cb319ae8fd" fragment="3" gd:fragmentGUID="373a3794-0e8b-4a57-a8c6-c7ec2160057d">udostępnić oddzielne pomieszczenie z odpowiednim wyposażeniem umożliwiającym prowadzenie czynności kontrolnych oraz udostępnić kontrolerowi posiadane urządzenia techniczne służące usprawnieniu wykonywania czynności kontrolnych;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/146__art_15__ust_12__pkt_3" gd:GUID="ce98465f-c6d8-46c8-856a-4ed1df8abf14">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="ed9d499a-ecd6-4dfc-9a9f-02cb319ae8fd" fragment="4" gd:fragmentGUID="7095c05a-7441-46f9-bc3b-a7aa0b06d734">udzielić pisemnych i ustnych informacji i wyjaśnień, okazać wszelkie dokumenty, w tym również mające formę zapisu elektronicznego, związane z działalnością Korporacji;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/146__art_15__ust_12__pkt_4" gd:GUID="4575694b-8fe8-4568-bb6a-30da5b2af164">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="ed9d499a-ecd6-4dfc-9a9f-02cb319ae8fd" fragment="5" gd:fragmentGUID="84e53e9a-1b5e-4b93-873c-12d0b605589c">na żądanie kontrolera sporządzać na koszt Korporacji kopie informacji i dokumentów niezbędnych do przeprowadzenia kontroli wymienionych w pkt 3 oraz</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/146__art_15__ust_12__pkt_5" gd:GUID="872659e0-b9aa-4acd-8a92-9b4672efeed1">
+                <nr>5</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="ed9d499a-ecd6-4dfc-9a9f-02cb319ae8fd" fragment="6" gd:fragmentGUID="fd5d8efa-5d2d-4a1c-83d9-2010c6403669">udzielić kontrolerowi wszechstronnej pomocy w wykonywaniu czynności kontrolnych.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2026/146__art_15__ust_13" gd:GUID="540c54c6-3976-4d51-8d7a-6fb3be4ea297">
+              <nr>13</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="f7e94463-bc9a-487e-b7bb-affb0f0425ca" fragment="1" gd:fragmentGUID="93c94276-daae-4ecf-b0da-4a6bcd57f39e">Wyniki kontroli przedstawia się w protokole kontroli.</zdanie>
+                <zdanie nr="2" gd:zdGUID="c31b005b-3b79-4ffd-a5a6-8dd7668d46e3" fragment="1" gd:fragmentGUID="efc33620-fad8-440c-afff-cf45a69449a1">Protokół sporządza się w dwóch egzemplarzach, które podpisuje przewodniczący kontroli lub upoważniony przez niego kontroler i Prezes Zarządu Korporacji.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/146__art_15__ust_14" gd:GUID="a9e36c27-7d7e-40ae-9c57-d4c7ecfc2e0d">
+              <nr>14</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="8a6355cf-32e1-4f95-b607-198a30fbc889" fragment="1" gd:fragmentGUID="cfeee7b2-00a3-40c7-aa70-5c39ccbb86a7">Prezesowi Zarządu Korporacji przysługuje uprawnienie do:</zdanie>
+              </p>
+              <punkt eId="DU/2026/146__art_15__ust_14__pkt_1" gd:GUID="8271dc13-26aa-4d94-9671-bf0897b1e799">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="8a6355cf-32e1-4f95-b607-198a30fbc889" fragment="2" gd:fragmentGUID="192ea87d-6d4a-4fa5-9428-a9811b0bf18e">zgłoszenia do przewodniczącego kontroli, w terminie 7 dni od dnia doręczenia protokołu kontroli, przed podpisaniem protokołu kontroli, umotywowanych zastrzeżeń do protokołu;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/146__art_15__ust_14__pkt_2" gd:GUID="30bf60f0-0797-420b-a9f0-17ee0a5c5d36">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="8a6355cf-32e1-4f95-b607-198a30fbc889" fragment="3" gd:fragmentGUID="cc1c5e3d-cd7c-4aa6-be93-734c465691fc">odmowy podpisania protokołu kontroli, z podaniem na piśmie przyczyny odmowy.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2026/146__art_15__ust_15" gd:GUID="487f28fb-d5f7-48c9-bfe0-771954e63075">
+              <nr>15</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="c8acafe7-6294-461a-88f2-dace475f6c29" fragment="1" gd:fragmentGUID="15071119-b93f-4f2c-abd3-18d54ae4328d">Na podstawie ustaleń kontroli, w przypadku stwierdzenia nieprawidłowości, minister właściwy do spraw gospodarki żąda ich usunięcia w wyznaczonym terminie niedłuższym niż 6 miesięcy.</zdanie>
+                <zdanie nr="2" gd:zdGUID="fe79990d-9461-4565-806a-2abfa6e93ce6" fragment="1" gd:fragmentGUID="e06690f5-35e3-4d47-ae59-3797f147b23a">Żądanie doręcza się Prezesowi Zarządu Korporacji.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/146__art_15__ust_16" gd:GUID="d64b22e0-6b93-4060-9360-a034d13d7ce5">
+              <nr>16</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="2f447d25-9571-4e20-8478-7bd5baa596f9" fragment="1" gd:fragmentGUID="8b5be5ad-1bf3-4bd8-afc6-05377d92e689">Bieg terminu do usunięcia przez Korporację nieprawidłowości wskazanych w żądaniu, o których mowa w ust. 15, rozpoczyna się w dniu następującym po dniu doręczenia tego żądania.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/146__art_15__ust_17" gd:GUID="72e5f4d5-d77d-47e3-a962-15b2fc826521">
+              <nr>17</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="dd951ddd-29d0-474d-8592-bf05a82da16d" fragment="1" gd:fragmentGUID="412252ce-9222-4691-bce2-623adcf2e218">Prezes Zarządu Korporacji niezwłocznie, niepóźniej niż w dniu następującym po upływie terminu do usunięcia nieprawidłowości wskazanych w żądaniu, przekazuje ministrowi właściwemu do spraw gospodarki informację o ich usunięciu, wskazując szczegółowy sposób usunięcia stwierdzonych nieprawidłowości.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/146__art_15__ust_18" gd:GUID="9c80456c-e8f1-47d1-a278-151527e2094f">
+              <nr>18</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="4ed8b48f-bee8-4823-ae37-38e1deccf93c" fragment="1" gd:fragmentGUID="9c99ea64-5061-49a4-9c9c-ae7d7c92fc78">Odmowa podpisania protokołu kontroli nie zwalnia Korporacji z obowiązku spełnienia żądań ministra właściwego do spraw gospodarki, o czym przewodniczący kontroli informuje Prezesa Zarządu Korporacji.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/146__art_15__ust_19" gd:GUID="6826aff8-98a4-459e-ad02-9edba8c06a96">
+              <nr>19</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="992b37db-269b-4845-81aa-186047845d69" fragment="1" gd:fragmentGUID="7e57ba1b-df41-4b82-a0b3-ba4bd5ee661f">Minister właściwy do spraw gospodarki określi, w drodze rozporządzenia, szczegółowy sposób przeprowadzania kontroli, mając na względzie:</zdanie>
+              </p>
+              <punkt eId="DU/2026/146__art_15__ust_19__pkt_1" gd:GUID="c26bb752-f2ef-4ec1-a8a8-93048401430d">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="992b37db-269b-4845-81aa-186047845d69" fragment="2" gd:fragmentGUID="99a0ce5c-952b-4760-a479-30d2a59edda4">zapewnienie obiektywnego ustalenia stanu faktycznego oraz rzetelnego jego udokumentowania, pozwalającego na ocenę sposobu działania Korporacji, a w razie stwierdzenia nieprawidłowości ustalenie ich zakresu i przyczyn oraz osób odpowiedzialnych za ich powstanie;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/146__art_15__ust_19__pkt_2" gd:GUID="8542e153-cafc-45b7-ad97-d3f0b2d29b52">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="992b37db-269b-4845-81aa-186047845d69" fragment="3" gd:fragmentGUID="94a5df3c-0d1a-4cc9-988c-d6a3e921f95a">niezakłócanie w istotnym stopniu działalności gospodarczej prowadzonej przez Korporację, w szczególności realizacji jej zobowiązań wobec osób trzecich.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/146__art_15a" gd:GUID="30c4f68e-614d-42b3-ae45-0d5d191d8fff">
+            <nr>15a</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="3438fa51-8a0c-4c4e-b35d-d32171747f75">
+              <p>
+                <zdanie nr="1" gd:zdGUID="425a0ae7-4c92-41d3-b163-6e5a17ec0b84" fragment="1" gd:fragmentGUID="03460d91-9b29-4f0e-b97a-ba824ea95c0b">(uchylony)</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2026/146__art_16" gd:GUID="c2e779cf-efce-4900-9104-8d40e556dbbb">
+            <nr>16</nr>
+            <ustep eId="DU/2026/146__art_16__ust_1" gd:GUID="bcf33f8c-7696-48f2-9fa1-b022db5b4436">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="077866e0-3fd8-4627-bcf1-b0416bcb303a" fragment="1" gd:fragmentGUID="c259a163-6b49-481e-8c31-fd460d71b882">Korporacja przedstawia okresowe sprawozdania o stanie rachunku, o którym mowa w art. 10 ust. 1, zawartych umowach ubezpieczenia gwarantowanego i dokonanych z tego tytułu wypłatach:</zdanie>
+              </p>
+              <punkt eId="DU/2026/146__art_16__ust_1__pkt_1" gd:GUID="9b436070-c6af-4521-9d8d-b2f2ff3cf51c">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="077866e0-3fd8-4627-bcf1-b0416bcb303a" fragment="2" gd:fragmentGUID="06f1d913-d088-4fa1-acf3-ac1e82e8865d">kwartalne – ministrowi właściwemu do spraw finansów publicznych oraz ministrowi właściwemu do spraw gospodarki;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/146__art_16__ust_1__pkt_2" gd:GUID="87683e96-c11c-4e8d-9040-e5fdb3cb412b">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="077866e0-3fd8-4627-bcf1-b0416bcb303a" fragment="3" gd:fragmentGUID="653e91ef-b0c0-4f86-9e29-61919897982c">roczne – Radzie Ministrów, po uzyskaniu opinii ministra właściwego do spraw finansów publicznych i ministra właściwego do spraw gospodarki.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2026/146__art_16__ust_2" gd:GUID="f519ea05-ba0a-48d6-8d24-912ae883b348">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ef0a4066-45d3-455f-b8cf-7a942870440d" fragment="1" gd:fragmentGUID="d442f9b8-ba11-469a-95dd-ed40ec1d82f1">Zakres, formę i terminy składania sprawozdań oraz kontrolowanie ich prawidłowości określa, w drodze zarządzenia, minister właściwy do spraw gospodarki w porozumieniu z ministrem właściwym do spraw finansów publicznych.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+        </oddzial-n>
+      </rozdzial>
+      <rozdzial eId="DU/2026/146__rozdz_3" gd:GUID="f79b6050-a2c3-4fbb-aba3-854e09ee7e25">
+        <naglowek-rozdzialu>
+          <nr>3</nr>
+          <p>Przepisy przejściowe i końcowe</p>
+        </naglowek-rozdzialu>
+        <oddzial-n brak-eid="jednostka-nieoznaczona" gd:GUID="f34bf709-d1b4-42b1-97f1-28c807c72bb1">
+          <artykul eId="DU/2026/146__art_17" gd:GUID="1dc7bbfd-6869-40ff-9d5f-6127642be13a">
+            <nr>17</nr>
+            <ustep eId="DU/2026/146__art_17__ust_1" gd:GUID="e0a38178-827f-4853-984a-05ec6b0360b3">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="aad80abd-7faa-427c-b727-e856d7a3ac93" fragment="1" gd:fragmentGUID="41e199cb-45b2-418d-b25a-fb5683f7bc8e">Do umów zawieranych w zakresie uregulowanym niniejszą ustawą nie stosuje się przepisów:</zdanie>
+              </p>
+              <punkt eId="DU/2026/146__art_17__ust_1__pkt_1" gd:GUID="2fcac5e3-ebc5-4a85-8fd7-d2ea56301399">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="aad80abd-7faa-427c-b727-e856d7a3ac93" fragment="2" gd:fragmentGUID="24575007-7de2-4897-9637-565b4a626691">art. 807 § 1, art. 810 oraz art. 811 Kodeksu cywilnego;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/146__art_17__ust_1__pkt_2" gd:GUID="74107ace-c0ba-4cb8-b2f2-2ea07b4304c3">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="aad80abd-7faa-427c-b727-e856d7a3ac93" fragment="3" gd:fragmentGUID="ae5ba19f-4900-4a73-b963-ef6b3c127926"><i>ustawy z dnia 22 maja 2003 r. o działalności ubezpieczeniowej (Dz. U. z 2015 r. poz. 1206, 1273 i 1348)</i><odnosnik id-odnosnika="8" symbol="8" gd:GUID="cba4e913-747e-45a4-8f85-f9a6ba4e255f"><p><zdanie nr="1" gd:zdGUID="3c8b0b9d-bf60-4ec0-bf0b-42f6962fddbc" fragment="1" gd:fragmentGUID="2bbe6e00-5208-43a6-be3c-34d5791f58d8">Ustawa utraciła moc z dniem 1 stycznia 2016 r. na podstawie art. 503 ustawy z dnia 11 września 2015 r. o działalności ubezpieczeniowej i reasekuracyjnej (Dz. U. z 2019 r. poz. 381), która weszła w życie z dniem 1 stycznia 2016 r.</zdanie></p></odnosnik>.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2026/146__art_17__ust_2" gd:GUID="491a33e9-2592-4720-8163-853bc8a4822d">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="d0fb7334-8fdd-450d-8ba0-9d5276c945e4" fragment="1" gd:fragmentGUID="bbad3713-e778-4479-9e8e-ad9b48b11afd">Do firmy Korporacji nie stosuje się <i>art. 6 ust. 3 ustawy z dnia 22 maja 2003 r. o działalności ubezpieczeniowej</i>.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/146__art_17__ust_3" gd:GUID="bf8353db-e356-49f6-bb14-0bdc920ed4d6">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="fd3e20e6-25ca-479a-b1e5-8756f18e7bdb" fragment="1" gd:fragmentGUID="a3c595b0-b25e-456a-ade6-2b6b5c01ac8d">Do działalności Korporacji w zakresie uregulowanym niniejszą ustawą nie stosuje się przepisów:</zdanie>
+              </p>
+              <punkt eId="DU/2026/146__art_17__ust_3__pkt_1" gd:GUID="df45742a-c58a-48d5-b1da-c04e851534a0">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="fd3e20e6-25ca-479a-b1e5-8756f18e7bdb" fragment="2" gd:fragmentGUID="ab53ad55-850b-481c-b2a3-9da1ba9afd77">art. 17 ustawy z dnia 16 grudnia 2016 r. o zasadach zarządzania mieniem państwowym (Dz. U. z 2024 r. poz. 125, 834, 1823, 1897 i 1940);</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/146__art_17__ust_3__pkt_2" gd:GUID="6e5df242-4fad-4e6f-8720-5678018564b9">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="fd3e20e6-25ca-479a-b1e5-8756f18e7bdb" fragment="3" gd:fragmentGUID="e42ce71c-cefa-4e47-893c-c78d0bdc2e85">art. 380<sup>1</sup> § 1 pkt 4 i 5 oraz art. 384<sup>1</sup> ustawy z dnia 15 września 2000 r. – Kodeks spółek handlowych (Dz. U. z 2024 r. poz. 18 i 96).</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/146__art_18" gd:GUID="95c1e9a0-305c-4e0d-9a92-ae09f0bfc3eb">
+            <nr>18</nr>
+            <ustep eId="DU/2026/146__art_18__ust_1" gd:GUID="2e4e8ea3-9050-4610-b237-700375f5b5e0">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="b2d0d13a-b648-4b7f-a65b-bc565963b8b7" fragment="1" gd:fragmentGUID="bcbd3ec2-d19c-4962-b398-029370893d17">Ustala się limit ubezpieczenia kontraktów eksportowych na rok 1994 w wysokości 2 miliardy 500 mln złotych.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/146__art_18__ust_2" gd:GUID="0e278ae1-679b-4d37-8953-98855918d0d4">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="dfb284e1-109c-412c-b504-37ba12ab032d" fragment="1" gd:fragmentGUID="de1c12ac-a977-46b5-bc1c-1e2e68518d3c">Środki uzyskane z tytułu dotychczas prowadzonej, w porozumieniu z ministrem właściwym do spraw finansów publicznych, działalności w zakresie ubezpieczania kontraktów eksportowych od ryzyka niehandlowego Korporacja przekaże na rachunek, o którym mowa w art. 10 ust. 1.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/146__art_19" gd:GUID="74d63170-ab64-4e81-9ee9-fc6fa1572861">
+            <nr>19</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="6b4a27a7-5fe3-41f4-9df4-6cf0cb983b02">
+              <p>
+                <zdanie nr="1" gd:zdGUID="8b979ce4-1554-4c40-bbea-b7c01169d654" fragment="1" gd:fragmentGUID="04aa9012-1437-4f14-ae38-dc9832828965">Minister właściwy do spraw finansów publicznych może przekazać Korporacji środki będące w jego dyspozycji z tytułu umów dwustronnych, zawartych z państwami – uczestnikami Polskiego Funduszu Stabilizacyjnego.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2026/146__art_20" gd:GUID="e8e37da7-c858-45b4-99db-ccb1704a291d">
+            <nr>20</nr>
+            <ustep eId="DU/2026/146__art_20__ust_1" gd:GUID="3c19c85b-9b5c-43c3-add5-9f0588a325b9">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="3451b5b9-50b3-47a5-b77c-678738a5899b" fragment="1" gd:fragmentGUID="84020cea-7bb6-475a-9f6e-6ea2b40645f7">Minister właściwy do spraw członkostwa Rzeczypospolitej Polskiej w Unii Europejskiej może przekazać Korporacji, na wydzielone rachunki, środki uzyskane z Unii Europejskiej lub z innych źródeł na wspieranie eksportu do krajów nienależących do OECD, z przeznaczeniem na finansowanie przedsięwzięć eksportowych.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/146__art_20__ust_2" gd:GUID="5a6dd3cb-91c5-4ac3-8cdb-25127856e2af">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="e5cb9a3e-a5df-4717-80a3-3d3aba7cffc0" fragment="1" gd:fragmentGUID="5d289de3-4837-4b22-a070-60f32086e865">Rada Ministrów może zlecić właściwym ministrom przekazanie Korporacji na rachunki, o których mowa w ust. 1, środków będących w ich dyspozycji w wyniku prywatyzacji przedsiębiorstw.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/146__art_20__ust_3" gd:GUID="80ed1bcb-c4e5-47b6-8b57-14cb2473a1d6">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="3c00c6df-d1e1-418b-b349-dfab8ad56fcf" fragment="1" gd:fragmentGUID="3e9f8b33-ac9b-4519-93a5-36823fae03de">Środki, wykazane na wydzielonych rachunkach z tytułów wymienionych w ust. 1 i 2, nie stanowią przychodu Korporacji w rozumieniu przepisów o podatku dochodowym od osób prawnych.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/146__art_21" gd:GUID="5ccfa171-7be7-4595-a60c-aa75dc21dab1">
+            <nr>21</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="f5a31090-b587-4e12-b45e-d75da200427a">
+              <p>
+                <zdanie nr="1" gd:zdGUID="de23403f-34d2-4448-acd5-c270344fc133" fragment="1" gd:fragmentGUID="4be9bdba-cb7e-4f7c-a846-568da88334d7">Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia<odnosnik id-odnosnika="9" symbol="9" gd:GUID="d2525834-58d7-4d2a-a228-9e5a4ce0c935"><p><zdanie nr="1" gd:zdGUID="65d6e703-9c05-4995-baef-4636cfd83712" fragment="1" gd:fragmentGUID="baabd869-d066-4806-94f3-a07e05294151">Ustawa została ogłoszona w dniu 5 sierpnia 1994 r.</zdanie></p></odnosnik>.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+        </oddzial-n>
+      </rozdzial>
+    </ustawa>
+  </obwieszczenie>
+</akt-prawny>

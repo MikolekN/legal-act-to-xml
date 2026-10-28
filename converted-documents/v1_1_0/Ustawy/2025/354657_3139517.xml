@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <ustawa>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/1854</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>6c05219b-17da-417d-abfc-b74500dd024f</gd:GUIDwersji>
+      <AdresISAP>WDU20250001854</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>1854</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 1854</AdresWyswietlany>
+      <Tytul>Ustawa z dnia 21 listopada 2025 r. o zmianie ustawy o podatku od spadków i darowizn</Tytul>
+      <Rodzaj>USTAWA</Rodzaj>
+      <DataOgloszenia>2025-12-23</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-11-21</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2026-01-07_DU-2025-1854_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2026-01-07" warunek="po upływie 14 dni od dnia ogłoszenia" podstawa="art. 3" zrodlo="https://eli.gov.pl/eli/DU/2025/1854" dowod="DU/2025/1854__art_3" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2026-01-07_DU-2025-1854_domyslne.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2026-01-07_DU-2025-1854_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="58c0464d-c393-42d4-b4d2-38188246d93f" rola="wydajacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Sejm">
+          <Nazwa>SEJM</Nazwa>
+        </Organ>
+        <Organ gd:GUID="846dfee2-b69c-4751-b061-8b3e45fdec86" rola="podpisujacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Prezydent">
+          <Nazwa>Prezydent Rzeczypospolitej Polskiej</Nazwa>
+          <OrganPodpisujacy>Prezydent Rzeczypospolitej Polskiej</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>K.</imie> <nazwisko>Nawrocki</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Ustawa</rodzaj-aktu>
+    <data>z dnia 21 listopada 2025 r.</data>
+    <tytul>o zmianie ustawy o podatku od spadków i darowizn</tytul>
+    <artykul eId="DU/2025/1854__art_1" gd:GUID="8f5093f6-7a16-44bb-a632-1ce2b154d3eb" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-07_DU-2025-1854_domyslne.x" wejscie-w-zycie="2026-01-07">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="040eefa9-ffe0-4ed4-8dbb-7e3040c90774" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-07_DU-2025-1854_domyslne.x" wejscie-w-zycie="2026-01-07">
+        <p>
+          <zdanie nr="1" gd:zdGUID="e0cb6880-b60b-43c5-8f69-736fef55da45" fragment="1" gd:fragmentGUID="07ac8f7e-70d0-42b3-8ee8-5eefd72dde80" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-07_DU-2025-1854_domyslne.x" wejscie-w-zycie="2026-01-07">W ustawie z dnia 28 lipca 1983 r. o podatku od spadków i darowizn (Dz. U. z 2024 r. poz. 1837 oraz z 2025 r. poz. 769 i 1064) wprowadza się następujące zmiany:</zdanie>
+        </p>
+        <punkt eId="DU/2025/1854__art_1__pkt_1" gd:GUID="315a75c6-4f90-4a37-8222-20c294ba09a7" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-07_DU-2025-1854_domyslne.x" wejscie-w-zycie="2026-01-07">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="e0cb6880-b60b-43c5-8f69-736fef55da45" fragment="2" gd:fragmentGUID="2475d7e4-03c8-4c28-8a76-664b4dd7100d" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-07_DU-2025-1854_domyslne.x" wejscie-w-zycie="2026-01-07">po art. 4b dodaje się art. 4c w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/1837" cudzyslowy="oba" gd:nowGUID="2a7c4bfb-58a2-400e-bb93-f0359f23dd34" element-eId="DU/2024/1837__art_4b" funkcja="dodaj-po"><artykul eId="DU/2024/1837__art_4c" gd:GUID="c9baad33-499f-4441-84c6-2e1c2691c506" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-07_DU-2025-1854_domyslne.x" wejscie-w-zycie="2026-01-07"><nr>4c</nr><ustep eId="DU/2024/1837__art_4c__ust_1" gd:GUID="a181f61b-027d-437b-b85a-901945936dba" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-07_DU-2025-1854_domyslne.x" wejscie-w-zycie="2026-01-07"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="56a48d6e-984e-4fd0-9352-9ccbf190aafe" fragment="1" gd:fragmentGUID="e632624d-4241-42d8-a0b9-848fa72e793a" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-07_DU-2025-1854_domyslne.x" wejscie-w-zycie="2026-01-07">Terminy określone w art. 4a ust. 1 pkt 1 i ust. 2 oraz art. 4b ust. 1 pkt 1 przywraca się na wniosek podatnika, jeżeli uprawdopodobni, że uchybienie terminu nastąpiło bez jego winy.</zdanie><zdanie nr="2" gd:zdGUID="31920c58-63a3-46de-a44e-0335409ed1aa" fragment="1" gd:fragmentGUID="484a8c04-f33f-4da6-adf8-2ad3dd7bed69" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-07_DU-2025-1854_domyslne.x" wejscie-w-zycie="2026-01-07">Do przywrócenia terminu stosuje się odpowiednio przepisy art. 162 § 2 i 3 oraz art. 163 § 1 i 3 ustawy z dnia 29 sierpnia 1997 r. – Ordynacja podatkowa (Dz. U. z 2025 r. poz. 111, z późn. zm.<odnosnik id-odnosnika="1" symbol="1" gd:GUID="6b294781-8d82-46ff-bac0-abecf26f9ccf"><p><zdanie nr="1" gd:zdGUID="2e634f31-1592-4b7d-88ff-48892b0932c9" fragment="1" gd:fragmentGUID="706bac48-7c2e-482e-9f42-d59a4002d998">Zmiany tekstu jednolitego wymienionej ustawy zostały ogłoszone w Dz. U. z 2025 r. poz. 497, 621, 622, 769, 820, 1203, 1235, 1414, 1417, 1669 i 1804.</zdanie></p></odnosnik>).</zdanie></p></ustep><ustep eId="DU/2024/1837__art_4c__ust_2" gd:GUID="5532cc36-4099-4819-81e3-70c238a9a338" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-07_DU-2025-1854_domyslne.x" wejscie-w-zycie="2026-01-07"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="d802db11-4430-451f-93a9-41925afe7d40" fragment="1" gd:fragmentGUID="972746d8-eebc-4dc9-9507-87dc4143e3ef" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-07_DU-2025-1854_domyslne.x" wejscie-w-zycie="2026-01-07">W przypadku przywrócenia terminu do złożenia zgłoszenia, o którym mowa w art. 4a ust. 1 pkt 1 i ust. 2 oraz art. 4b ust. 1 pkt 1, w wyniku wniesienia do sądu administracyjnego skargi na postanowienie o odmowie przywrócenia terminu, organ podatkowy uchyla decyzję w sprawie podatku od spadków i darowizn, o ile ją wydał, oraz umarza postępowanie podatkowe.</zdanie></p></ustep></artykul></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1854__art_1__pkt_2" gd:GUID="a64a0f3a-98fa-4d0b-b512-b5509e7eabb7" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-07_DU-2025-1854_domyslne.x" wejscie-w-zycie="2026-01-07">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="e0cb6880-b60b-43c5-8f69-736fef55da45" fragment="3" gd:fragmentGUID="2b4bbc50-afd0-4a25-bd09-b34d53a80792" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-07_DU-2025-1854_domyslne.x" wejscie-w-zycie="2026-01-07">w art. 6:</zdanie>
+          </p>
+          <litera eId="DU/2025/1854__art_1__pkt_2__lit_a" gd:GUID="be6a013e-6871-40b4-ad78-b352f39bc0e2" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-07_DU-2025-1854_domyslne.x" wejscie-w-zycie="2026-01-07">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="e0cb6880-b60b-43c5-8f69-736fef55da45" fragment="4" gd:fragmentGUID="9048755c-0742-4176-bd65-d20e2894e3ba" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-07_DU-2025-1854_domyslne.x" wejscie-w-zycie="2026-01-07">w ust. 1 pkt 1 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/1837" cudzyslowy="oba" gd:nowGUID="43a46f4f-c3e6-49b2-9a55-289dbf751595" element-eId="DU/2024/1837__art_6__ust_1__pkt_1" funkcja="zastap"><punkt eId="DU/2024/1837__art_6__ust_1__pkt_1" gd:GUID="fa290a1c-a43c-4a48-86c9-bacf60f6cb7d" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-07_DU-2025-1854_domyslne.x" wejscie-w-zycie="2026-01-07"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="c0f775e7-dbc0-4778-a6b7-dd8f080bd199" fragment="1" gd:fragmentGUID="179b9cd2-5b25-4b9d-9399-afb394073614" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-07_DU-2025-1854_domyslne.x" wejscie-w-zycie="2026-01-07">przy nabyciu w drodze dziedziczenia – z chwilą uprawomocnienia się orzeczenia sądu stwierdzającego nabycie spadku, zarejestrowania aktu poświadczenia dziedziczenia lub wydania europejskiego poświadczenia spadkowego;</zdanie></p></punkt></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1854__art_1__pkt_2__lit_b" gd:GUID="88cdce51-a56d-4ebf-8840-6693f5ff11cb" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-07_DU-2025-1854_domyslne.x" wejscie-w-zycie="2026-01-07">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="e0cb6880-b60b-43c5-8f69-736fef55da45" fragment="5" gd:fragmentGUID="fc967b94-ea68-4757-adb3-6fd3e7eb0b2a" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-07_DU-2025-1854_domyslne.x" wejscie-w-zycie="2026-01-07">po ust. 1b dodaje się ust. 1c w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/1837" cudzyslowy="oba" gd:nowGUID="59c7e697-78ed-4c72-a4ba-2bdfc6ce6633" element-eId="DU/2024/1837__art_6__ust_1b" funkcja="dodaj-po"><ustep eId="DU/2024/1837__art_6__ust_1c" gd:GUID="a04bab7b-8263-437c-b9b0-6fe158b20da0" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-07_DU-2025-1854_domyslne.x" wejscie-w-zycie="2026-01-07"><nr>1c</nr><p><zdanie nr="1" gd:zdGUID="12760741-2fc2-49f6-aedd-9ed8ae8c9e60" fragment="1" gd:fragmentGUID="889ac658-535e-4d3a-b780-d91820b209ab" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-07_DU-2025-1854_domyslne.x" wejscie-w-zycie="2026-01-07">Jeżeli stwierdzenie nabycia spadku jest dokonywane przez inny niż sąd organ państwa obcego, za zarejestrowanie aktu poświadczenia dziedziczenia w rozumieniu ustawy uważa się również wydanie dokumentu stwierdzającego nabycie spadku przez ten organ.</zdanie></p></ustep></cytat-strukt>;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2025/1854__art_1__pkt_3" gd:GUID="4dbafe42-b22a-445a-93d7-cf97543a13c3" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-07_DU-2025-1854_domyslne.x" wejscie-w-zycie="2026-01-07">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="e0cb6880-b60b-43c5-8f69-736fef55da45" fragment="6" gd:fragmentGUID="dad5c5cf-d63f-4f23-acbf-61d7e4499ee0" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-07_DU-2025-1854_domyslne.x" wejscie-w-zycie="2026-01-07">w art. 17a:</zdanie>
+          </p>
+          <litera eId="DU/2025/1854__art_1__pkt_3__lit_a" gd:GUID="cda0ab91-a166-440b-81cb-2462aae51538" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-07_DU-2025-1854_domyslne.x" wejscie-w-zycie="2026-01-07">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="e0cb6880-b60b-43c5-8f69-736fef55da45" fragment="7" gd:fragmentGUID="4dd621bd-f93c-472f-b2d8-6926cc2a4602" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-07_DU-2025-1854_domyslne.x" wejscie-w-zycie="2026-01-07">w ust. 1 zdanie pierwsze otrzymuje brzmienie:<cytat-w-tekscie now:akt="https://eli.gov.pl/eli/DU/2024/1837" cudzyslowy="oba" gd:nowGUID="4171c618-32b6-4fb5-b13a-7b29ea0c24b1" element-eId="DU/2024/1837__art_17a__ust_1__zdn_1" funkcja="zastap-tekst"><zdanie nr="1" gd:zdGUID="faaf9839-d3af-43b1-83a2-da75d9ad0781" fragment="1" gd:fragmentGUID="eefc66ae-3fb4-4f54-8978-7dc5d4bfdeba" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-07_DU-2025-1854_domyslne.x" wejscie-w-zycie="2026-01-07">Podatnicy podatku są obowiązani złożyć w terminie miesiąca od dnia powstania obowiązku podatkowego, w tym na podstawie art. 6 ust. 4, właściwemu naczelnikowi urzędu skarbowego zeznanie podatkowe o nabyciu rzeczy lub praw majątkowych według ustalonego wzoru.</zdanie></cytat-w-tekscie>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1854__art_1__pkt_3__lit_b" gd:GUID="6c4274b4-c7bd-474b-ac7a-8b5572d1f670" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-07_DU-2025-1854_domyslne.x" wejscie-w-zycie="2026-01-07">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="e0cb6880-b60b-43c5-8f69-736fef55da45" fragment="8" gd:fragmentGUID="b3326bde-c13f-4e6e-a6a2-0b11d90c8b05" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-07_DU-2025-1854_domyslne.x" wejscie-w-zycie="2026-01-07">po ust. 1 dodaje się ust. 1a w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/1837" cudzyslowy="oba" gd:nowGUID="8df7b5cd-aee1-41c2-b48c-edce8a7f9cb4" element-eId="DU/2024/1837__art_17a__ust_1" funkcja="dodaj-po"><ustep eId="DU/2024/1837__art_17a__ust_1a" gd:GUID="948e4d51-fed5-4e4c-aa8b-a5ddb5f34fba" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-07_DU-2025-1854_domyslne.x" wejscie-w-zycie="2026-01-07"><nr>1a</nr><p><zdanie nr="1" gd:zdGUID="675dead9-e8de-46a1-8260-1ada91654438" fragment="1" gd:fragmentGUID="a9b5e8c6-f1bd-44f5-9582-64279c987f66" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-07_DU-2025-1854_domyslne.x" wejscie-w-zycie="2026-01-07">W przypadku niezgłoszenia nabycia własności rzeczy lub praw majątkowych w terminie, o którym mowa w art. 4a ust. 1 pkt 1 albo ust. 2 albo art. 4b ust. 1 pkt 1, termin do złożenia zeznania podatkowego wynosi miesiąc od dnia upływu tego terminu, a w przypadku złożenia przez podatnika wniosku o przywrócenie terminu do złożenia zgłoszenia, termin do złożenia zeznania podatkowego wynosi miesiąc od dnia, w którym postanowienie o odmowie przywrócenia terminu stało się ostateczne.</zdanie></p></ustep></cytat-strukt>.</zdanie>
+            </p>
+          </litera>
+        </punkt>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2025/1854__art_2" gd:GUID="ca0fe212-2b97-47b6-b605-4f47f65274c4" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-07_DU-2025-1854_domyslne.x" wejscie-w-zycie="2026-01-07">
+      <nr>2</nr>
+      <ustep eId="DU/2025/1854__art_2__ust_1" gd:GUID="a0b79327-be61-49ea-85ed-ea76aac20ed2" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-07_DU-2025-1854_domyslne.x" wejscie-w-zycie="2026-01-07">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="16257878-05a9-402d-b62f-3c7bcd148253" fragment="1" gd:fragmentGUID="53e6050d-e725-4b16-9980-5602f060b807" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-07_DU-2025-1854_domyslne.x" wejscie-w-zycie="2026-01-07">Przepisy art. 4c i art. 17a ust. 1a ustawy zmienianej w art. 1 mają zastosowanie do nabycia własności rzeczy lub praw majątkowych, które nastąpiło:</zdanie>
+        </p>
+        <punkt eId="DU/2025/1854__art_2__ust_1__pkt_1" gd:GUID="c827c13a-646e-448d-a266-87753eb43c9f" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-07_DU-2025-1854_domyslne.x" wejscie-w-zycie="2026-01-07">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="16257878-05a9-402d-b62f-3c7bcd148253" fragment="2" gd:fragmentGUID="5b3daaa0-8f0e-4296-ab93-2e8929bd4d1d" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-07_DU-2025-1854_domyslne.x" wejscie-w-zycie="2026-01-07">od dnia wejścia w życie niniejszej ustawy;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1854__art_2__ust_1__pkt_2" gd:GUID="259d641d-5f6c-4e5e-ba58-39fc856e1740" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-07_DU-2025-1854_domyslne.x" wejscie-w-zycie="2026-01-07">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="16257878-05a9-402d-b62f-3c7bcd148253" fragment="3" gd:fragmentGUID="ade2a8f4-c690-4d5c-8152-03474012c542" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-07_DU-2025-1854_domyslne.x" wejscie-w-zycie="2026-01-07">przed dniem wejścia w życie niniejszej ustawy – o ile termin do zgłoszenia tego nabycia określony w art. 4a ust. 1 pkt 1 i ust. 2 oraz art. 4b ust. 1 pkt 1 ustawy zmienianej w art. 1 nie upłynął do dnia wejścia w życie niniejszej ustawy.</zdanie>
+          </p>
+        </punkt>
+      </ustep>
+      <ustep eId="DU/2025/1854__art_2__ust_2" gd:GUID="74906723-ecbe-4eea-8fe7-be9213dd2f32" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-07_DU-2025-1854_domyslne.x" wejscie-w-zycie="2026-01-07">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="5a078dba-8454-4df0-b7f8-2f2edb0c0f00" fragment="1" gd:fragmentGUID="4b67761b-eb2d-41bc-abcb-5ff9fbe62fee" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-07_DU-2025-1854_domyslne.x" wejscie-w-zycie="2026-01-07">Przepisy art. 6 ust. 1 pkt 1 i ust. 1c ustawy zmienianej w art. 1, w brzmieniu nadanym niniejszą ustawą, mają zastosowanie do nabycia własności rzeczy lub praw majątkowych w drodze dziedziczenia, w przypadku którego uprawomocnienie się orzeczenia sądu stwierdzającego nabycie spadku, zarejestrowanie aktu poświadczenia dziedziczenia, wydanie europejskiego poświadczenia spadkowego lub wydanie dokumentu stwierdzającego nabycie spadku przez inny niż sąd organ państwa obcego nastąpiło od dnia wejścia w życie niniejszej ustawy.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/1854__art_2__ust_3" gd:GUID="b9cdca2c-6c1a-4c91-a383-ea88d4ce0c34" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-07_DU-2025-1854_domyslne.x" wejscie-w-zycie="2026-01-07">
+        <nr>3</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="6d49e470-21f0-4668-9f69-5dab40540ff0" fragment="1" gd:fragmentGUID="b966cf11-b8e0-401d-964b-c946f05d1e5d" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-07_DU-2025-1854_domyslne.x" wejscie-w-zycie="2026-01-07">Przepis art. 17a ust. 1 ustawy zmienianej w art. 1, w brzmieniu nadanym niniejszą ustawą, ma zastosowanie do nabycia własności rzeczy lub praw majątkowych, z tytułu którego obowiązek podatkowy, w tym także obowiązek podatkowy, o którym mowa w art. 6 ust. 4 ustawy zmienianej w art. 1, powstał od dnia wejścia w życie niniejszej ustawy.</zdanie>
+        </p>
+      </ustep>
+    </artykul>
+    <artykul eId="DU/2025/1854__art_3" gd:GUID="14c3d333-9e9e-4c54-9d4d-7e731d4533bb" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-07_DU-2025-1854_domyslne.x" wejscie-w-zycie="2026-01-07">
+      <nr>3</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="10927ad6-936b-4cf4-938a-7fa46d87a21b" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-07_DU-2025-1854_domyslne.x" wejscie-w-zycie="2026-01-07">
+        <p>
+          <zdanie nr="1" gd:zdGUID="2e333f9f-e143-45df-82ce-4df4f1f09313" fragment="1" gd:fragmentGUID="ba22ed31-580c-4634-82e7-d42194777624" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-07_DU-2025-1854_domyslne.x" wejscie-w-zycie="2026-01-07">Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <organ-podpisujacy>Prezydent Rzeczypospolitej Polskiej: <i><osoba podpisujacy="true" gd:osobaGUID="3df1c69d-7ecd-4e1a-9f40-92a424b19c09"><imie>K.</imie> <nazwisko>Nawrocki</nazwisko></osoba></i></organ-podpisujacy>
+  </ustawa>
+</akt-prawny>

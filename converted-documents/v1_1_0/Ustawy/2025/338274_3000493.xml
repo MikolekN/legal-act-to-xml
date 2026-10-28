@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <ustawa>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/1162</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>452eb9fc-cc05-49a6-9a7e-79cc68ce7237</gd:GUIDwersji>
+      <AdresISAP>WDU20250001162</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>1162</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 1162</AdresWyswietlany>
+      <Tytul>Ustawa z dnia 9 lipca 2025 r. o zmianie ustawy – Prawo o szkolnictwie wyższym i nauce</Tytul>
+      <Rodzaj>USTAWA</Rodzaj>
+      <DataOgloszenia>2025-08-25</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-07-09</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2025-09-09_DU-2025-1162_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2025-09-09" warunek="po upływie 14 dni od dnia ogłoszenia" podstawa="art. 2" zrodlo="https://eli.gov.pl/eli/DU/2025/1162" dowod="DU/2025/1162__art_2" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2025-09-09_DU-2025-1162_domyslne.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2025-09-09_DU-2025-1162_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="ef5ac0ff-c5c3-47c6-ac2a-a08fbc83c6ee" rola="wydajacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Sejm">
+          <Nazwa>SEJM</Nazwa>
+        </Organ>
+        <Organ gd:GUID="26d7fbbf-a0af-4119-b3f1-3c99fad24069" rola="podpisujacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Prezydent">
+          <Nazwa>Prezydent Rzeczypospolitej Polskiej</Nazwa>
+          <OrganPodpisujacy>Prezydent Rzeczypospolitej Polskiej</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>K.</imie> <nazwisko>Nawrocki</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Ustawa</rodzaj-aktu>
+    <data>z dnia 9 lipca 2025 r.</data>
+    <tytul>o zmianie ustawy – Prawo o szkolnictwie wyższym i nauce</tytul>
+    <artykul eId="DU/2025/1162__art_1" gd:GUID="f1d98f5d-36a7-4f36-b89b-46e63df3ce17" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-09_DU-2025-1162_domyslne.x" wejscie-w-zycie="2025-09-09">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="d916baaa-ebcc-4b7f-a146-de8169314cda" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-09_DU-2025-1162_domyslne.x" wejscie-w-zycie="2025-09-09">
+        <p>
+          <zdanie nr="1" gd:zdGUID="092e7d5b-103c-446a-9442-51b3dcea5933" fragment="1" gd:fragmentGUID="cf5f474b-8488-4712-aa0b-92d0725ad308" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-09_DU-2025-1162_domyslne.x" wejscie-w-zycie="2025-09-09">W ustawie z dnia 20 lipca 2018 r. – Prawo o szkolnictwie wyższym i nauce (Dz. U. z 2024 r. poz. 1571, z późn. zm.<odnosnik id-odnosnika="1" symbol="1" gd:GUID="1e4f0924-d7fe-4461-8875-f5e0797f4325"><p><zdanie nr="1" gd:zdGUID="488f0e22-7682-4458-b6e4-de4c11894d53" fragment="1" gd:fragmentGUID="746f4496-36f3-4c2d-9f87-565ac62ef2e9">Zmiany tekstu jednolitego wymienionej ustawy zostały ogłoszone w Dz. U. z 2024 r. poz. 1871 i 1897 oraz z 2025 r. poz. 619, 620, 621 i 622.</zdanie></p></odnosnik>) w art. 346 w ust. 1 pkt 14 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/1571" cudzyslowy="oba" gd:nowGUID="ca956722-bc0c-4532-96f3-df37653aba84" element-eId="DU/2024/1571__art_346__ust_1__pkt_14" funkcja="zastap"><punkt eId="DU/2024/1571__art_346__ust_1__pkt_14" gd:GUID="aa58a901-355f-44d0-a4b8-b7c85d0ff914" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-09_DU-2025-1162_domyslne.x" wejscie-w-zycie="2025-09-09"><nr>14</nr><p><zdanie nr="1" gd:zdGUID="bc30fdfe-33e8-4f3e-9b9b-562a27669c56" fragment="1" gd:fragmentGUID="7ae8e8c0-6a81-4ede-ad55-1a250aa122bf" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-09_DU-2025-1162_domyslne.x" wejscie-w-zycie="2025-09-09">inwestycjach o wartości przekraczającej 100 000 zł;</zdanie></p></punkt></cytat-strukt>.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2025/1162__art_2" gd:GUID="9553750f-c8ee-432c-a13f-de0d12fbcad5" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-09_DU-2025-1162_domyslne.x" wejscie-w-zycie="2025-09-09">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="5dda4181-4e38-40ce-b9ba-4509f0489ddd" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-09_DU-2025-1162_domyslne.x" wejscie-w-zycie="2025-09-09">
+        <p>
+          <zdanie nr="1" gd:zdGUID="8ea682e2-97a0-4cb2-af3a-c25ca5e4c0e2" fragment="1" gd:fragmentGUID="c93e1d62-ccbb-4e0e-b1ae-ecd9daccbe57" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-09_DU-2025-1162_domyslne.x" wejscie-w-zycie="2025-09-09">Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <organ-podpisujacy>Prezydent Rzeczypospolitej Polskiej: <i><osoba podpisujacy="true" gd:osobaGUID="016d2495-def8-4522-9aef-a6e5f2081765"><imie>K.</imie> <nazwisko>Nawrocki</nazwisko></osoba></i></organ-podpisujacy>
+  </ustawa>
+</akt-prawny>

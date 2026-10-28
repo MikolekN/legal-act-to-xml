@@ -1,0 +1,549 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <obwieszczenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/1565</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>983a6580-32ac-43f6-af65-b0b9bb5dcd29</gd:GUIDwersji>
+      <AdresISAP>WDU20250001565</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>1565</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 1565</AdresWyswietlany>
+      <Tytul>Obwieszczenie Marszałka Sejmu Rzeczypospolitej Polskiej z dnia 7 listopada 2025 r. w sprawie ogłoszenia jednolitego tekstu ustawy o zaopatrzeniu z tytułu wypadków lub chorób zawodowych powstałych w szczególnych okolicznościach</Tytul>
+      <Rodzaj>OBW_TJ</Rodzaj>
+      <DataOgloszenia>2025-11-17</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-11-07</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_ujednolicenie_2025-11-17_DU-2025-1565_domyslne" rodzaj="ujednolicenie" pochodzenie="domyslne-z-aktu" data="2025-11-17" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_ujednolicenie.zdarz_ujednolicenie_2025-11-17_DU-2025-1565_domyslne" glowna="true">
+          <Przedzial rodzaj="ujednolicenie" od="zdarz_ujednolicenie_2025-11-17_DU-2025-1565_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <DataObowiazywaniaWersji>
+        <Od>zdarz_ujednolicenie_2025-11-17_DU-2025-1565_domyslne</Od>
+      </DataObowiazywaniaWersji>
+      <Organy>
+        <Organ gd:GUID="7d9c12f8-bfb6-4272-82e9-dfedcd5543ae" rola="wydajacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/MSEJMU">
+          <Nazwa>Marszałek Sejmu</Nazwa>
+          <OrganPodpisujacy>Marszałek Sejmu</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>S.</imie> <nazwisko>Hołownia</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Obwieszczenie</rodzaj-aktu>
+    <autor-aktu>Marszałka Sejmu Rzeczypospolitej Polskiej</autor-aktu>
+    <data>z dnia 7 listopada 2025 r.</data>
+    <tytul>w sprawie ogłoszenia jednolitego tekstu ustawy o zaopatrzeniu z tytułu wypadków lub chorób zawodowych powstałych w szczególnych okolicznościach</tytul>
+    <punkt-OTJ eId="DU/2025/1565__pkt_1" gd:GUID="750e7a04-9226-42e8-80fd-7bbf821c600e">
+      <nr>1</nr>
+      <p>
+        <zdanie nr="1" gd:zdGUID="3e7a05df-86f7-4f9b-ba94-ab2200c45fff" fragment="1" gd:fragmentGUID="0493de6a-ee03-4a69-86aa-a3302d914ba1">Na podstawie art. 16 ust. 1 zdanie pierwsze ustawy z dnia 20 lipca 2000 r. o ogłaszaniu aktów normatywnych i niektórych innych aktów prawnych (Dz. U. z 2019 r. poz. 1461) ogłasza się w załączniku do niniejszego obwieszczenia jednolity tekst ustawy z dnia 30 października 2002 r. o zaopatrzeniu z tytułu wypadków lub chorób zawodowych powstałych w szczególnych okolicznościach (Dz. U. z 2025 r. poz. 173), z uwzględnieniem zmiany wprowadzonej ustawą z dnia 20 marca 2025 r. o rynku pracy i służbach zatrudnienia (Dz. U. poz. 620) oraz zmian wynikających z przepisów ogłoszonych przed dniem 5 listopada 2025 r.</zdanie>
+      </p>
+    </punkt-OTJ>
+    <punkt-OTJ eId="DU/2025/1565__pkt_2" gd:GUID="2660accd-f15d-4c94-8a9c-ac7e845696e2">
+      <nr>2</nr>
+      <p>
+        <zdanie nr="1" gd:zdGUID="7409cda6-b993-46bc-aecc-85e06b2f4b9d" fragment="1" gd:fragmentGUID="37d01563-802e-40ed-84b3-da922ebbcf7b">Podany w załączniku do niniejszego obwieszczenia tekst jednolity ustawy nie obejmuje art. 461 ustawy z dnia 20 marca 2025 r. o rynku pracy i służbach zatrudnienia (Dz. U. poz. 620), który stanowi:<tresc-strukt cudzyslowy="oba" gd:GUID="3518bbb7-da18-443c-862c-5cdf7ecf02a0"><artykul eId="DU/2025/620__art_461" gd:GUID="407d9f30-6ecc-4b03-a9b0-36edabd32af9"><nr>461</nr><ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="7d41cffc-4bf7-4051-805c-3d66b9991721"><p><zdanie nr="1" gd:zdGUID="e4079813-bdb6-41c8-9f43-a73c8423719a" fragment="1" gd:fragmentGUID="63118760-070d-4d65-bda4-66479e63adb0">Ustawa wchodzi w życie pierwszego dnia miesiąca następującego po upływie 14 dni od dnia ogłoszenia, z wyjątkiem:</zdanie></p><punkt eId="DU/2025/620__art_461__pkt_1" gd:GUID="ff5f1c6f-8f6d-4a79-847a-6b923b5cbb31"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="e4079813-bdb6-41c8-9f43-a73c8423719a" fragment="2" gd:fragmentGUID="40c751fd-36a6-4577-9a59-02fe43879c26">art. 392 pkt 2 lit. b oraz art. 458, które wchodzą w życie z dniem następującym po dniu ogłoszenia;</zdanie></p></punkt><punkt eId="DU/2025/620__art_461__pkt_2" gd:GUID="d1dfb56f-28d7-4a68-8862-f3bbe3f9a7b5"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="e4079813-bdb6-41c8-9f43-a73c8423719a" fragment="3" gd:fragmentGUID="7c94b969-229f-43f5-a96a-4efddbc4fba3">art. 106, art. 128 ust. 2, art. 203 oraz art. 300 ust. 3 pkt 11, które wchodzą w życie z dniem 1 stycznia 2026 r.</zdanie></p></punkt></ustep-n></artykul></tresc-strukt>.</zdanie>
+      </p>
+    </punkt-OTJ>
+    <organ-podpisujacy>Marszałek Sejmu: <i><osoba podpisujacy="true" gd:osobaGUID="310d1cf5-a01f-49a5-949e-106f3765d2df"><imie>S.</imie> <nazwisko>Hołownia</nazwisko></osoba></i></organ-podpisujacy>
+    <ustawa>
+      <zalacznik-do>Załącznik do obwieszczenia Marszałka Sejmu Rzeczypospolitej Polskiej z dnia 7 listopada 2025 r. (Dz. U. poz. 1565)</zalacznik-do>
+      <rodzaj-aktu>Ustawa</rodzaj-aktu>
+      <data>z dnia 30 października 2002 r.</data>
+      <tytul>o zaopatrzeniu z tytułu wypadków lub chorób zawodowych powstałych w szczególnych okolicznościach</tytul>
+      <artykul eId="DU/2025/1565__art_1" gd:GUID="758752df-c944-4583-9698-1da8a2406f07">
+        <nr>1</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="b01dff2b-b098-4161-819b-681cae2a0265">
+          <p>
+            <zdanie nr="1" gd:zdGUID="86641f6d-ee28-492b-a425-7cfa36c039c9" fragment="1" gd:fragmentGUID="38804646-24c1-4b75-8a91-91021a9c5135">Ustawa określa:</zdanie>
+          </p>
+          <punkt eId="DU/2025/1565__art_1__pkt_1" gd:GUID="fd60d711-6a2c-4f59-ab45-dbae6b2628d9">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="86641f6d-ee28-492b-a425-7cfa36c039c9" fragment="2" gd:fragmentGUID="29f663ad-ee51-4806-b369-9e5fdd4e1922">rodzaje wypadków powstałych w szczególnych okolicznościach, uzasadniających przyznanie świadczeń;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/1565__art_1__pkt_2" gd:GUID="60ce5326-47af-4337-a875-036aba33e3e5">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="86641f6d-ee28-492b-a425-7cfa36c039c9" fragment="3" gd:fragmentGUID="8c23f718-15fa-4821-ad96-ffc96e4bc5d9">rodzaje świadczeń z tytułu wypadków i chorób zawodowych powstałych w szczególnych okolicznościach;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/1565__art_1__pkt_3" gd:GUID="82ebc049-ac0a-4dc8-a36f-1eac283d5843">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="86641f6d-ee28-492b-a425-7cfa36c039c9" fragment="4" gd:fragmentGUID="be856a61-b71f-433b-842a-407abd20b897">zasady przyznawania świadczeń, ustalania ich wysokości oraz zasady wypłaty świadczeń;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/1565__art_1__pkt_4" gd:GUID="b0ce6af5-195a-45d5-b5e3-fb86a6e4a80f">
+            <nr>4</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="86641f6d-ee28-492b-a425-7cfa36c039c9" fragment="5" gd:fragmentGUID="d3dc961e-628e-45f1-b58d-52ea0a2ee387">zasady finansowania świadczeń.</zdanie>
+            </p>
+          </punkt>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2025/1565__art_2" gd:GUID="2c0338fb-dd5c-420b-9ded-42eb63ad930e">
+        <nr>2</nr>
+        <ustep eId="DU/2025/1565__art_2__ust_1" gd:GUID="cb49ddec-051f-475d-93c0-08415bf87be4">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="480b7ba7-a202-4dbf-822c-5b9776e941c4" fragment="1" gd:fragmentGUID="7172430b-d948-4497-bd07-3b649e1c5f63">Za wypadek uzasadniający przyznanie świadczeń uważa się nagłe zdarzenie wywołane przyczyną zewnętrzną, powodujące uraz lub śmierć, które nastąpiło:</zdanie>
+          </p>
+          <punkt eId="DU/2025/1565__art_2__ust_1__pkt_1" gd:GUID="19385858-809f-4541-833a-264775ef2775">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="480b7ba7-a202-4dbf-822c-5b9776e941c4" fragment="2" gd:fragmentGUID="d537d5a3-ae33-4b33-9866-77636b1f814e">przy ratowaniu innych osób od grożącego ich życiu niebezpieczeństwa;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/1565__art_2__ust_1__pkt_2" gd:GUID="cf6c531e-f64d-43df-b8da-e63ec86d98f2">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="480b7ba7-a202-4dbf-822c-5b9776e941c4" fragment="3" gd:fragmentGUID="1476a69e-a841-4b05-9a15-b99f5a2ace26">przy chronieniu własności publicznej przed grożącą jej szkodą;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/1565__art_2__ust_1__pkt_3" gd:GUID="f1baf117-ef0f-4640-910a-4058d209720f">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="480b7ba7-a202-4dbf-822c-5b9776e941c4" fragment="4" gd:fragmentGUID="0fdcd599-f09e-4823-a7a9-d438c32f9e4d">przy udzielaniu przedstawicielowi organu państwowego lub organu samorządu terytorialnego pomocy przy spełnianiu czynności urzędowych;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/1565__art_2__ust_1__pkt_3a" gd:GUID="8af87483-a198-4077-aeaa-59da8a8fad4d">
+            <nr>3a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="480b7ba7-a202-4dbf-822c-5b9776e941c4" fragment="5" gd:fragmentGUID="5c31acd8-ea5f-4bee-b765-c4d69ca2afb9">przy wykonywaniu prac związanych ze spisami powszechnymi;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/1565__art_2__ust_1__pkt_4" gd:GUID="cfe8a81a-08c8-42f7-a1ab-f810ff820693">
+            <nr>4</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="480b7ba7-a202-4dbf-822c-5b9776e941c4" fragment="6" gd:fragmentGUID="d983c146-2b31-43ff-89a8-12fa0b11176b">przy ściganiu lub ujęciu osób podejrzanych o popełnienie przestępstwa lub przy chronieniu innych osób przed napaścią;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/1565__art_2__ust_1__pkt_5" gd:GUID="91bc27a6-926f-4648-8b19-9d099c24ba1e">
+            <nr>5</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="480b7ba7-a202-4dbf-822c-5b9776e941c4" fragment="7" gd:fragmentGUID="276b83d3-c87b-4475-ba12-1cf6a92a4e16">przy wykonywaniu funkcji radnego lub członka komisji rady wszystkich jednostek samorządu terytorialnego albo przy wykonywaniu przez sołtysa czynności związanych z tym stanowiskiem;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/1565__art_2__ust_1__pkt_6" gd:GUID="83d47312-3b30-4261-b0ef-f77af2f22473">
+            <nr>6</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="480b7ba7-a202-4dbf-822c-5b9776e941c4" fragment="8" gd:fragmentGUID="d7583272-4662-4c39-a53a-99f381105614">przy wykonywaniu funkcji ławnika w sądzie;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/1565__art_2__ust_1__pkt_7" gd:GUID="669eb0c2-2a5a-4245-b274-48edd16c621f">
+            <nr>7</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="480b7ba7-a202-4dbf-822c-5b9776e941c4" fragment="9" gd:fragmentGUID="ce04aa04-9aaa-4d0d-8487-cdbe5261f590">w czasie zajęć dydaktycznych, wychowawczych lub opiekuńczych realizowanych przez jednostki organizacyjne systemu oświaty, zajęć w szkole wyższej lub zajęć na studiach doktoranckich albo w czasie odbywania praktyki przewidzianej organizacją studiów lub nauki;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/1565__art_2__ust_1__pkt_8" gd:GUID="607b73d5-14eb-4ef6-8cdb-ee7fd207a96b">
+            <nr>8</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="480b7ba7-a202-4dbf-822c-5b9776e941c4" fragment="10" gd:fragmentGUID="62268ff3-ed67-42ee-be80-fe09e2668c77">przy pracy w Ochotniczych Hufcach Pracy na innej podstawie niż umowa o pracę;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/1565__art_2__ust_1__pkt_9" gd:GUID="ac47505d-4ffb-4538-a8bd-156ce116206c">
+            <nr>9</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="480b7ba7-a202-4dbf-822c-5b9776e941c4" fragment="11" gd:fragmentGUID="fc1996b7-8562-4f6d-84ff-3b2619b10968">przy pracy wykonywanej w ramach terapii zajęciowej w jednostkach organizacyjnych pomocy społecznej oraz podmiotach leczniczych niebędących przedsiębiorcami, o których mowa w przepisach o działalności leczniczej;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/1565__art_2__ust_1__pkt_10" gd:GUID="ffac8221-b085-4f7e-ac1f-d5abef235431">
+            <nr>10</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="480b7ba7-a202-4dbf-822c-5b9776e941c4" fragment="12" gd:fragmentGUID="0ca23dad-eb52-4581-8ab8-4de565bb9bba">przy wykonywaniu bezpośredniej ochrony przed klęskami żywiołowymi;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/1565__art_2__ust_1__pkt_11" gd:GUID="3d8d0030-e254-4c70-9e4b-9bd7aef2705b">
+            <nr>11</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="480b7ba7-a202-4dbf-822c-5b9776e941c4" fragment="13" gd:fragmentGUID="da075728-011f-4f1f-b2fb-b80f84e1d2f4">przy wykonywaniu funkcji członka komisji powołanej przez organ państwowy lub organ samorządu terytorialnego do przeprowadzenia wyborów lub referendum;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/1565__art_2__ust_1__pkt_12" gd:GUID="3f105a2d-883c-43e1-839b-1d3c49e0b26e">
+            <nr>12</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="480b7ba7-a202-4dbf-822c-5b9776e941c4" fragment="14" gd:fragmentGUID="34621d08-9975-464d-ac05-2ccaebd2c62e">przy wykonywaniu świadczeń przez wolontariusza, o którym mowa w art. 2 pkt 3 ustawy z dnia 24 kwietnia 2003 r. o działalności pożytku publicznego i o wolontariacie (Dz. U. z 2025 r. poz. 1338);</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/1565__art_2__ust_1__pkt_13" gd:GUID="fa23d437-16b0-4ff6-a846-3600da6bfbf5">
+            <nr>13</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="480b7ba7-a202-4dbf-822c-5b9776e941c4" fragment="15" gd:fragmentGUID="5a0e005f-6cf8-40cf-87e5-99a8f29bbb02">w trakcie uczestnictwa w centrum integracji społecznej;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/1565__art_2__ust_1__pkt_14" gd:GUID="b8e1ff3e-950d-485e-b1f6-f91dd0307119">
+            <nr>14</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="480b7ba7-a202-4dbf-822c-5b9776e941c4" fragment="16" gd:fragmentGUID="f7040554-7c9d-493e-8f05-9392c81ddb0c"><odnosnik id-odnosnika="1" symbol="1" gd:GUID="64b760c3-5bba-4f0f-b378-6d24d74bdb34"><p><zdanie nr="1" gd:zdGUID="363377a7-f6b4-4a57-bad2-e6bf3a50af10" fragment="1" gd:fragmentGUID="043f17b5-0575-4514-9a54-d055976599ff">W brzmieniu ustalonym przez art. 387 ustawy z dnia 20 marca 2025 r. o rynku pracy i służbach zatrudnienia (Dz. U. poz. 620), która weszła w życie z dniem 1 czerwca 2025 r.</zdanie></p></odnosnik> przy wykonywaniu przez bezrobotnego prac społecznie użytecznych, o których mowa w art. 142 ustawy z dnia 20 marca 2025 r. o rynku pracy i służbach zatrudnienia (Dz. U. poz. 620);</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/1565__art_2__ust_1__pkt_15" gd:GUID="2c1c54c4-0a41-4226-9cb2-2e9979b2b351">
+            <nr>15</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="480b7ba7-a202-4dbf-822c-5b9776e941c4" fragment="17" gd:fragmentGUID="03889142-f8b7-45f3-9bd2-57cd552a5c83">przy odbywaniu praktyki absolwenckiej w rozumieniu ustawy z dnia 17 lipca 2009 r. o praktykach absolwenckich (Dz. U. z 2018 r. poz. 1244 oraz z 2025 r. poz. 620);</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/1565__art_2__ust_1__pkt_16" gd:GUID="3a2a2af9-7e44-4a35-b936-08bf93f2c3b1">
+            <nr>16</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="480b7ba7-a202-4dbf-822c-5b9776e941c4" fragment="18" gd:fragmentGUID="919f37e5-a501-4666-84e3-9ac74a2ab27c">przy odbywaniu stażu uczniowskiego, o którym mowa w art. 121a ustawy z dnia 14 grudnia 2016 r. – Prawo oświatowe (Dz. U. z 2025 r. poz. 1043 i 1160).</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/1565__art_2__ust_2" gd:GUID="9696004e-0920-499a-8418-ba253d0cc647">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="3830b4d8-a607-43c3-b3f6-fca3bbf4d47e" fragment="1" gd:fragmentGUID="b44e5e86-b1ad-4d66-84a6-262797cd81b3">Za chorobę zawodową uprawniającą do świadczeń przewidzianych w ustawie uważa się chorobę określoną w art. 235<sup>1</sup> Kodeksu pracy, powstałą przy wykonywaniu zajęć lub pracy, o których mowa w ust. 1 pkt 7 i 8.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/1565__art_3" gd:GUID="3c2f37b9-9e55-469a-93b9-767af27e3d3a">
+        <nr>3</nr>
+        <ustep eId="DU/2025/1565__art_3__ust_1" gd:GUID="b8d3d003-3b62-417c-9b36-324dfcc2f3e3">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="d3fdf994-b359-4fad-8692-e0422b22b5ae" fragment="1" gd:fragmentGUID="f26618d5-3d46-4fb5-b135-03bb03773c6d">Osobom, które stały się niezdolne do pracy wskutek wypadku w szczególnych okolicznościach, o których mowa w art. 2 ust. 1, przysługuje:</zdanie>
+          </p>
+          <punkt eId="DU/2025/1565__art_3__ust_1__pkt_1" gd:GUID="b4ef3de5-9e4c-4c13-aff4-f6c2b8ace0f7">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="d3fdf994-b359-4fad-8692-e0422b22b5ae" fragment="2" gd:fragmentGUID="ec607e2b-fb9d-4f5e-afed-e5ab18b6cb5c">renta z tytułu niezdolności do pracy;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/1565__art_3__ust_1__pkt_2" gd:GUID="383b250f-2168-464d-b8f7-75bbb8ba29c3">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="d3fdf994-b359-4fad-8692-e0422b22b5ae" fragment="3" gd:fragmentGUID="421b41ed-ae9f-4c11-83a2-ed78b86e9838">jednorazowe odszkodowanie;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/1565__art_3__ust_1__pkt_3" gd:GUID="fd012668-c8d7-4859-afd0-ecadf4a46586">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="d3fdf994-b359-4fad-8692-e0422b22b5ae" fragment="4" gd:fragmentGUID="79f9d455-9b05-44af-97bb-1e6832eb1658">świadczenia opieki zdrowotnej określone w przepisach o świadczeniach opieki zdrowotnej finansowanych ze środków publicznych, w zakresie niezbędnym do leczenia następstw wypadku lub choroby zawodowej, pod warunkiem że osoby te nie są objęte ubezpieczeniem zdrowotnym.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/1565__art_3__ust_2" gd:GUID="04be58bc-8eac-4159-b58c-73f9e56187ce">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="bd22d36d-81b9-4f73-a2ea-6036d4d1b677" fragment="1" gd:fragmentGUID="b2b47ccb-b143-4e72-8938-20b454f8da1d">Osobie, która poniosła koszty pogrzebu osoby poszkodowanej wskutek wypadku lub choroby zawodowej albo osoby pobierającej rentę na podstawie ustawy, przysługuje zasiłek pogrzebowy.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1565__art_3__ust_3" gd:GUID="52959ec1-8795-4f26-b1eb-b70cab65e87a">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="11c73f42-7a4d-4d4e-bce3-13e8fb1b65fe" fragment="1" gd:fragmentGUID="6c70e005-29af-4865-9811-3072ce7ad6c8">Świadczenia określone w ust. 1 przysługują również osobie, która stała się niezdolna do pracy wskutek choroby zawodowej powstałej w związku z wykonywaniem zajęć lub pracy, o których mowa w art. 2 ust. 1 pkt 7 i 8.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1565__art_3__ust_4" gd:GUID="272644f3-3e85-456f-afc9-2aed064a8509">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="847c54fa-7e86-4b15-b629-7d2abeed0d34" fragment="1" gd:fragmentGUID="0af1c12b-64e7-4fcd-8367-8e596af0e505">Członkom rodziny osób, które zmarły wskutek wypadków, o których mowa w art. 2 ust. 1, oraz członkom rodziny osób, które zmarły wskutek choroby zawodowej, przysługuje renta rodzinna i jednorazowe odszkodowanie.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1565__art_3__ust_5" gd:GUID="c4574a66-070f-4451-ae1d-5b6de256d66e">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="cd5a1ece-92be-4871-8888-f1d6e55863ab" fragment="1" gd:fragmentGUID="7bc86f40-86e0-4a7f-b035-116e9a31aa12">Członkami rodziny są małżonek, dzieci własne, dzieci drugiego małżonka, dzieci przysposobione, przyjęte na wychowanie i utrzymanie przed osiągnięciem pełnoletności wnuki, rodzeństwo i inne dzieci, w tym również w ramach rodziny zastępczej, rodzice, osoby przysposabiające, ojczym i macocha, jeżeli spełniają warunki do uzyskania renty rodzinnej w myśl przepisów ustawy z dnia 17 grudnia 1998 r. o emeryturach i rentach z Funduszu Ubezpieczeń Społecznych (Dz. U. z 2024 r. poz. 1631 i 1674 oraz z 2025 r. poz. 718, 769 i 1159) zwanej dalej „ustawą o emeryturach i rentach z FUS”.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1565__art_3__ust_6" gd:GUID="16bdd75c-7a0a-4319-83b9-b64c771ab6dc">
+          <nr>6</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="1255ef2e-cdfc-4a13-85d0-8df28a1ca0a2" fragment="1" gd:fragmentGUID="1f9ac412-3a3e-430b-8215-6719aac02910">Prawo do jednorazowego odszkodowania przysługuje członkom rodziny spełniającym warunki do uzyskania renty rodzinnej w dniu śmierci osoby, która uległa wypadkowi lub zachorowała na chorobę zawodową.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/1565__art_4" gd:GUID="35a3ba44-9d6d-4403-a85a-6ae8b3e72f02">
+        <nr>4</nr>
+        <ustep eId="DU/2025/1565__art_4__ust_1" gd:GUID="72d90da2-3af2-4013-a422-d89cab68e6c0">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="26525efa-d7b2-4549-b519-0108f724a308" fragment="1" gd:fragmentGUID="07af3065-19e9-410c-80f4-68ed2aea951b">Osobie, która stała się niezdolna do pracy całkowicie lub częściowo wskutek wypadku w szczególnych okolicznościach, o których mowa w art. 2 ust. 1, przysługuje renta z tytułu niezdolności do pracy: na stałe – jeżeli niezdolność do pracy jest trwała, lub na okres wskazany w decyzji organu rentowego – jeżeli niezdolność do pracy jest okresowa.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1565__art_4__ust_2" gd:GUID="f84d1dd2-0241-447d-9ba4-0be176148abc">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="fe677d51-f3c4-49f4-b73b-979d8ee69e1d" fragment="1" gd:fragmentGUID="71c4c852-8753-4037-bb39-ad4b5e5a1278">Osobie, która doznała stałego lub długotrwałego uszczerbku na zdrowiu spowodowanego wypadkiem w szczególnych okolicznościach, o których mowa w art. 2 ust. 1, przysługuje jednorazowe odszkodowanie z tytułu tego uszczerbku, jeżeli osoba ta wskutek wypadku stała się całkowicie niezdolna do pracy.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1565__art_4__ust_3" gd:GUID="9b61fbb6-cfb1-488a-a387-0a09b35edfcc">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="b9004389-5f71-416b-910e-548f1ae693d5" fragment="1" gd:fragmentGUID="f4091ce0-1b0b-40b7-8d41-f8358fb48c34">Renta i jednorazowe odszkodowanie, na warunkach, o których mowa w ust. 1 i 2, przysługuje również osobie, która zachorowała na chorobę zawodową w związku z wykonywaniem zajęć lub pracy, o których mowa w art. 2 ust. 1 pkt 7 i 8.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1565__art_4__ust_4" gd:GUID="bdd37d98-e3e4-498c-b95d-f17b8d197035">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="1387f39e-a0e7-4567-a11d-ca5e72d685bb" fragment="1" gd:fragmentGUID="97910829-28dd-484a-a985-d769a84a630c">W sprawach nieuregulowanych w ustawie do jednorazowego odszkodowania przysługującego osobie, która uległa wypadkowi w szczególnych okolicznościach lub zachorowała na chorobę zawodową, albo członkom rodziny pozostałym po osobie, która zmarła wskutek wypadku lub choroby zawodowej, stosuje się przepisy ustawy z dnia 30 października 2002 r. o ubezpieczeniu społecznym z tytułu wypadków przy pracy i chorób zawodowych (Dz. U. z 2025 r. poz. 257, 620 i 1083).</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/1565__art_5" gd:GUID="10890f9a-0b11-4fa1-8b9d-a1b625997bf0">
+        <nr>5</nr>
+        <ustep eId="DU/2025/1565__art_5__ust_1" gd:GUID="8a775ee7-7a98-43ca-bda0-f233657d40d0">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="1be5e247-3b43-40d0-952b-0e37ac3adcab" fragment="1" gd:fragmentGUID="b15b5811-d267-452c-8f37-329a4a4a8589">Zasiłek pogrzebowy przysługuje osobie, która poniosła koszty pogrzebu:</zdanie>
+          </p>
+          <punkt eId="DU/2025/1565__art_5__ust_1__pkt_1" gd:GUID="4b0f0667-6e4d-4041-bdcd-743a1d1d26d1">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="1be5e247-3b43-40d0-952b-0e37ac3adcab" fragment="2" gd:fragmentGUID="06e5690a-6d09-4ff7-bb54-ee75ce50c316">osoby, która zmarła wskutek wypadku lub choroby zawodowej;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/1565__art_5__ust_1__pkt_2" gd:GUID="fa86850e-b5b0-4835-9da3-ba77f08d35bd">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="1be5e247-3b43-40d0-952b-0e37ac3adcab" fragment="3" gd:fragmentGUID="0a3db2bd-a937-4895-af46-22fa5e021814">osoby pobierającej rentę na podstawie ustawy lub członka jej rodziny.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/1565__art_5__ust_2" gd:GUID="3b0be821-d815-4e75-bf01-20fc7c915daa">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="58f2837c-0d53-4cc4-861c-c5a49d749313" fragment="1" gd:fragmentGUID="ee53be78-9910-41f7-bfe0-3caa4435060a">Od członków rodziny, o których mowa w ust. 1 pkt 2, nie wymaga się spełnienia warunków do uzyskania renty rodzinnej.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1565__art_5__ust_3" gd:GUID="d5d6357a-61d7-4903-8d1b-80fa0ce67396">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="afed7e89-6a3a-4612-83e5-adbaabf2f6e2" fragment="1" gd:fragmentGUID="cd292b07-65c5-428d-bbaf-ae2f29c43cdf">W razie zbiegu prawa do zasiłku pogrzebowego na podstawie ustawy z prawem do zasiłku pogrzebowego lub do świadczenia w wysokości zasiłku pogrzebowego na podstawie odrębnych przepisów – zasiłek pogrzebowy lub świadczenie pieniężne przysługuje na podstawie przepisów odrębnych.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1565__art_5__ust_4" gd:GUID="31b8e143-c3aa-4a0c-a51c-3803f40bb324">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="3927215a-5016-45e3-bb97-8f56e9ea730d" fragment="1" gd:fragmentGUID="d6d60584-c543-46f9-9443-987f34d3c4dd">W sprawach nieuregulowanych w ustawie do zasiłku pogrzebowego stosuje się ustawę o emeryturach i rentach z FUS.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/1565__art_6" gd:GUID="f8cd2a66-ab28-40ab-a290-23380234c8b9">
+        <nr>6</nr>
+        <ustep eId="DU/2025/1565__art_6__ust_1" gd:GUID="c928ae66-3dc7-4642-b102-1f2a5bda750a">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="206bb332-a2bf-4552-85bd-3b8eada27ff7" fragment="1" gd:fragmentGUID="05b93ff6-40bd-482d-bdaf-a2c338d0099b">Świadczenia, o których mowa w art. 3 ust. 1 pkt 1 i 2, nie przysługują osobie poszkodowanej wskutek wypadku, który nastąpił z winy umyślnej lub rażącego niedbalstwa tej osoby.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1565__art_6__ust_2" gd:GUID="c86ed4dc-7f4b-4bdf-9146-472a5708d809">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a5fad7ce-b007-4a25-8f50-50c144c37102" fragment="1" gd:fragmentGUID="4accbae0-cc39-43ea-b876-5e7c44289406">Świadczenia, o których mowa w art. 3 ust. 1 pkt 1 i 2, nie przysługują również osobie poszkodowanej, która będąc w stanie nietrzeźwości lub pod wpływem środków odurzających lub substancji psychotropowych przyczyniła się w znacznym stopniu do spowodowania wypadku, o ile powyższy stan został udokumentowany w aktach sprawy przez odpowiednie organy policji lub prokuratury.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/1565__art_7" gd:GUID="e29917e1-8122-49e8-bb71-6c4aa5d15eef">
+        <nr>7</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="0cb7911c-120d-46ab-b4ca-9c3d0e307e1b">
+          <p>
+            <zdanie nr="1" gd:zdGUID="7a7ee2f9-d6ab-4bac-bdf4-c2e6d7543399" fragment="1" gd:fragmentGUID="9fa04ef9-8822-4bc0-b792-147e2893e8a5">Renta z tytułu niezdolności do pracy spowodowanej wypadkiem w szczególnych okolicznościach, o których mowa w art. 2 ust. 1, lub chorobą zawodową, o której mowa w art. 2 ust. 2, oraz renta rodzinna wynosi 120 % kwoty najniższej odpowiedniej renty ustalonej i podwyższonej zgodnie z ustawą o emeryturach i rentach z FUS.</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2025/1565__art_8" gd:GUID="5951d1c3-8dfc-412e-a996-8f4a0a1be42e">
+        <nr>8</nr>
+        <ustep eId="DU/2025/1565__art_8__ust_1" gd:GUID="cd86d3c3-ad57-423a-b321-4dcd021ef333">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="df52fd67-82fe-4930-b516-f2b4b36a200b" fragment="1" gd:fragmentGUID="ba1f1d51-95f3-4767-9174-8e186ad5245e">W razie zbiegu prawa do rent określonych w ustawie wypłaca się jedną rentę – wyższą lub wybraną przez osobę uprawnioną.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1565__art_8__ust_2" gd:GUID="a18f7730-5d2d-4e55-88de-02514e796a25">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="0cb41b22-9204-4e82-a173-fa436e2f3ade" fragment="1" gd:fragmentGUID="f42b4b86-85c3-4530-98b2-260d1901ce11">W razie zbiegu prawa do renty określonej w ustawie z prawem do emerytury lub renty przysługującej na podstawie odrębnych przepisów wypłaca się jedno świadczenie – wyższe lub wybrane przez osobę uprawnioną.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1565__art_8__ust_3" gd:GUID="c0de4663-e219-4c33-976e-f8bbd205eb24">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="ea47c587-e0af-4a69-906a-cb0dc9159eda" fragment="1" gd:fragmentGUID="830fa432-9df5-489d-a3f0-906056eb7079">Przepis ust. 2 stosuje się odpowiednio do osób pobierających uposażenie w stanie spoczynku przyznane ze względu na wiek, z powodu choroby lub utraty sił albo uposażenie rodzinne.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1565__art_8__ust_4" gd:GUID="10ad69e4-af1f-4204-a4a6-769ef0566069">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="6d73fdce-e35b-4a08-adc2-2cf1ee6ba357" fragment="1" gd:fragmentGUID="36f1aa5e-be6f-4c2b-ac8d-0cf4d9acadde">Osobie uprawnionej do renty z tytułu niezdolności do pracy spowodowanej wypadkiem w szczególnych okolicznościach, o których mowa w art. 2 ust. 1, lub chorobą zawodową, o której mowa w art. 2 ust. 2, oraz do renty rodzinnej na podstawie ustawy albo na podstawie odrębnych przepisów wypłaca się, jeśli prawo do niej nabyła z tytułu bycia wdową lub wdowcem pozostałym po osobie wskazanej w tych przepisach, zależnie od jej wyboru:</zdanie>
+          </p>
+          <punkt eId="DU/2025/1565__art_8__ust_4__pkt_1" gd:GUID="09604d98-a2af-4b05-b2a8-df02d14f19a4">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="6d73fdce-e35b-4a08-adc2-2cf1ee6ba357" fragment="2" gd:fragmentGUID="c9ce8fcb-c38f-48ca-a27f-26a05c59d5c3">przysługującą rentę z tytułu niezdolności do pracy oraz 25 % renty rodzinnej albo</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/1565__art_8__ust_4__pkt_2" gd:GUID="e10ca673-8dda-46c7-809b-6b7140701883">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="6d73fdce-e35b-4a08-adc2-2cf1ee6ba357" fragment="3" gd:fragmentGUID="ba85997b-8688-4c4c-b9e7-64dad3f091f0">przysługującą rentę rodzinną oraz 25 % renty z tytułu niezdolności do pracy.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/1565__art_8__ust_5" gd:GUID="bb5b6b50-afa1-4d94-bc0e-7dcfff5c0f72">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="222421bf-6db1-4a03-b09d-6a5e67007178" fragment="1" gd:fragmentGUID="3d5ae400-9afb-4ed7-90c5-bb3a3e61ab12">Osobie uprawnionej do renty rodzinnej z ubezpieczenia wypadkowego, jeśli prawo do niej nabyła z tytułu bycia wdową lub wdowcem pozostałym po osobie wskazanej w tych przepisach, oraz do przysługującej na podstawie odrębnych przepisów renty z tytułu niezdolności do pracy, wojskowej renty inwalidzkiej albo policyjnej renty inwalidzkiej wypłaca się, zależnie od jej wyboru:</zdanie>
+          </p>
+          <punkt eId="DU/2025/1565__art_8__ust_5__pkt_1" gd:GUID="1e030ae9-ebf4-4e9a-87de-5f67520c2c4e">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="222421bf-6db1-4a03-b09d-6a5e67007178" fragment="2" gd:fragmentGUID="2972f625-a11d-4e2a-bcd8-db4432cad0da">przysługującą rentę rodzinną oraz 25 % przysługującej na podstawie odrębnych przepisów renty z tytułu niezdolności do pracy, wojskowej renty inwalidzkiej albo policyjnej renty inwalidzkiej, albo</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/1565__art_8__ust_5__pkt_2" gd:GUID="cf7623a4-37eb-4048-9ed6-4ba892f3c7f6">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="222421bf-6db1-4a03-b09d-6a5e67007178" fragment="3" gd:fragmentGUID="bcf1abe6-f474-4233-a332-cf75433d2b02">przysługującą na podstawie odrębnych przepisów rentę z tytułu niezdolności do pracy, wojskową rentę inwalidzką albo policyjną rentę inwalidzką, oraz 25 % renty rodzinnej.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/1565__art_9" gd:GUID="d2656f8b-3d03-4e16-a61f-888c76810288">
+        <nr>9</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="ee861fec-5c3f-4f6c-bb22-c1f4f8eaf368">
+          <p>
+            <zdanie nr="1" gd:zdGUID="aa77a897-f95f-4cb4-bbe9-0089ed092f35" fragment="1" gd:fragmentGUID="fd6206b4-38a9-44d1-a4b7-f235c12a2215">W sprawach rent z tytułu niezdolności do pracy oraz rent rodzinnych nieuregulowanych ustawą stosuje się odpowiednio przepisy o emeryturach i rentach z FUS dotyczące:</zdanie>
+          </p>
+          <punkt eId="DU/2025/1565__art_9__pkt_1" gd:GUID="33c22bdb-d00a-41d4-afb4-241701dee8dc">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="aa77a897-f95f-4cb4-bbe9-0089ed092f35" fragment="2" gd:fragmentGUID="1e08b1f2-ea98-41f5-8108-4c0137dc4575">postępowania w sprawach rent i wypłaty rent;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/1565__art_9__pkt_2" gd:GUID="ed34c755-2c6d-4672-8ba4-9f5309b6026d">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="aa77a897-f95f-4cb4-bbe9-0089ed092f35" fragment="3" gd:fragmentGUID="6c7d8e7a-10b7-498b-8907-44ed3f63b57c">orzekania o niezdolności do pracy;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/1565__art_9__pkt_3" gd:GUID="055fdc87-1d49-4c3d-a62f-2f65004dc8b4">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="aa77a897-f95f-4cb4-bbe9-0089ed092f35" fragment="4" gd:fragmentGUID="00fedf27-4995-407a-bfc5-8c573320a7fa">powstania i ustania prawa do rent;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/1565__art_9__pkt_4" gd:GUID="0f730b99-724b-4fa9-a3f8-9ef62346cdff">
+            <nr>4</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="aa77a897-f95f-4cb4-bbe9-0089ed092f35" fragment="5" gd:fragmentGUID="ee3f0bae-7197-4b8b-96d9-89830ed1783b">zmian w prawie do rent;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/1565__art_9__pkt_5" gd:GUID="098b2dea-8a1f-4ada-92e4-2801892b9d76">
+            <nr>5</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="aa77a897-f95f-4cb4-bbe9-0089ed092f35" fragment="6" gd:fragmentGUID="e65ffb00-7e2e-40a8-9ba1-fbf72f9be5c2">egzekucji, potrąceń ze świadczeń oraz zwrotu nienależnie pobranych rent;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/1565__art_9__pkt_6" gd:GUID="a9f84f44-8299-4402-a523-209bd6a6c97c">
+            <nr>6</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="aa77a897-f95f-4cb4-bbe9-0089ed092f35" fragment="7" gd:fragmentGUID="e85af599-2867-4f13-9e72-aa525fa70aae">zawieszania lub zmniejszania rent;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/1565__art_9__pkt_7" gd:GUID="d44dc8e2-5dc9-4010-938f-b4a7f7874a8d">
+            <nr>7</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="aa77a897-f95f-4cb4-bbe9-0089ed092f35" fragment="8" gd:fragmentGUID="9690cf35-0fdd-4237-b4fb-45f585a366ff">(uchylony)</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/1565__art_9__pkt_8" gd:GUID="dcbb4926-43ad-4a86-ad4a-251336075a05">
+            <nr>8</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="aa77a897-f95f-4cb4-bbe9-0089ed092f35" fragment="9" gd:fragmentGUID="c4e238e7-f86b-456d-aa61-a3606860b895">podziału renty rodzinnej oraz przywrócenia prawa do renty rodzinnej, jeżeli prawo do tej renty uzależnione jest od stwierdzenia niezdolności do pracy.</zdanie>
+            </p>
+          </punkt>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2025/1565__art_10" gd:GUID="78f38cc6-ea78-4971-8d0f-e9e3750dc7ba">
+        <nr>10</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="69473e82-9ee0-48fd-8f2d-c56abb2919f9">
+          <p>
+            <zdanie nr="1" gd:zdGUID="9b643e9f-fc58-4f7b-89ab-23eeb3542478" fragment="1" gd:fragmentGUID="99fe4969-8340-48bb-97b8-ec56ef33eed0">Niezdolność do pracy oraz jej związek z wypadkiem w szczególnych okolicznościach, o których mowa w art. 2 ust. 1, lub chorobą zawodową, o której mowa w art. 2 ust. 2, związek śmierci z takim wypadkiem lub chorobą ustala lekarz orzecznik Zakładu Ubezpieczeń Społecznych lub komisja lekarska Zakładu Ubezpieczeń Społecznych.</zdanie>
+            <zdanie nr="2" gd:zdGUID="565a6a17-cbba-4065-9611-8ea6e144bd3d" fragment="1" gd:fragmentGUID="7ae17025-e23c-4c91-8d37-62e26610aed3">Lekarz orzecznik lub komisja lekarska Zakładu Ubezpieczeń Społecznych ustala również stały lub długotrwały uszczerbek na zdrowiu oraz jego związek z takim wypadkiem lub chorobą zawodową w trybie określonym w przepisach o emeryturach i rentach z FUS.</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2025/1565__art_11" gd:GUID="b2c27405-fea2-4db8-b720-e3706db5ca40">
+        <nr>11</nr>
+        <ustep eId="DU/2025/1565__art_11__ust_1" gd:GUID="65c0b5ef-0bb2-4856-bde2-b823a54662b1">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="8b214ef2-1f1b-4036-a2ff-4a1b1f7df900" fragment="1" gd:fragmentGUID="55a98479-5f2d-492d-a12a-299bb4c3b387">Osoba ubiegająca się o świadczenia z tytułu wypadku w szczególnych okolicznościach, o których mowa w art. 2 ust. 1, zobowiązana jest dołączyć do wniosku dokumentację wypadku, a osoba ubiegająca się o świadczenie z tytułu choroby zawodowej – decyzję o stwierdzeniu choroby zawodowej.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1565__art_11__ust_2" gd:GUID="5af08d59-fb92-4709-aa83-f8083ed421e5">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="5ccaba93-0a9e-48ec-b1ce-eeafc590e605" fragment="1" gd:fragmentGUID="b89cd97a-bb5f-473f-8e37-922bb3cfc741">W sprawach zgłaszania i stwierdzania chorób zawodowych w stosunku do osób, które zachorowały na chorobę zawodową w związku z wykonywaniem zajęć lub pracy, o których mowa w art. 2 ust. 1 pkt 7 i 8, stosuje się przepisy Kodeksu pracy oraz przepisy wydane na podstawie art. 237 § 1 pkt 3–6 Kodeksu pracy.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1565__art_11__ust_3" gd:GUID="a8ba8a38-eedc-47f7-926b-2b171e9f5805">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="fae1f8c5-59b9-42e4-8978-395c4b8b4225" fragment="1" gd:fragmentGUID="ca0a04d2-d904-48cc-84d3-fe7dad7285ce">Zakład Ubezpieczeń Społecznych dokonuje oceny okoliczności i przyczyn wypadku w szczególnych okolicznościach oraz wydaje decyzję w sprawie świadczeń przewidzianych w ustawie.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1565__art_11__ust_4" gd:GUID="7e2e20da-140e-41cf-83fe-e986dfb64468">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="cf597f93-a022-46f5-9266-5645b5570f3f" fragment="1" gd:fragmentGUID="7c17cf74-762b-41f0-9740-20277886de41">Przepis ust. 3 stosuje się odpowiednio do wniosku o przyznanie świadczeń z tytułu choroby zawodowej.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/1565__art_12" gd:GUID="85150775-c3dc-4d45-a23b-f0179a7b2c92">
+        <nr>12</nr>
+        <ustep eId="DU/2025/1565__art_12__ust_1" gd:GUID="4b7c2448-0b13-4a36-895a-3957675b39b0">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="8367970c-7046-42c6-bbd5-8461de6cb6f4" fragment="1" gd:fragmentGUID="ef9fd761-d878-4472-a21a-47e5b25bec0e">Świadczenia określone w ustawie są finansowane ze środków budżetu państwa.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1565__art_12__ust_2" gd:GUID="12a1058f-3028-473d-8981-748d736a68c2">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="e216e95c-86e3-44eb-a76a-c9eb39c9d6a6" fragment="1" gd:fragmentGUID="1e716338-dbdb-4c5b-9382-3858058e59d3">Świadczenia, o których mowa w art. 3 ust. 1 pkt 1 i 2, w ust. 4 oraz w art. 5, przyznaje i wypłaca Zakład Ubezpieczeń Społecznych na wniosek osoby uprawnionej do tych świadczeń.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1565__art_12__ust_3" gd:GUID="5ea883fd-b0e8-4d92-8319-bcf51f3faa99">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="604601a8-85cf-486c-8245-4527a5810eba" fragment="1" gd:fragmentGUID="93df90f1-8283-44bb-aa19-8384700933c6">Wniosek w imieniu uprawnionego może zgłosić również jego pełnomocnik.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1565__art_12__ust_4" gd:GUID="60d4e9e7-9c83-4e0d-87ff-fdc09ff91d1c">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="d11faa27-a37d-4ff4-b875-9f8f0e8e90a4" fragment="1" gd:fragmentGUID="8652d726-0c44-452d-ab32-8251a3f3b6d8">Od decyzji Zakładu Ubezpieczeń Społecznych przysługuje odwołanie do właściwego sądu w terminie i według zasad określonych w przepisach Kodeksu postępowania cywilnego.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1565__art_12__ust_5" gd:GUID="8c7d5325-e194-4faa-b464-1e777a2393d3">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="160d0d4a-0340-4900-9e02-98784b7a488b" fragment="1" gd:fragmentGUID="2cbd6182-de76-4e52-9e8d-26671775cbb9">Świadczenia, o których mowa w art. 3 ust. 1 pkt 3, są finansowane ze środków pozostających w dyspozycji ministra właściwego do spraw zdrowia.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/1565__art_13" gd:GUID="b3657473-d6f7-47eb-8802-d68aee8a13b1">
+        <nr>13</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="2ba6cb92-9d0e-4d20-b605-6aced806c7ab">
+          <p>
+            <zdanie nr="1" gd:zdGUID="1530c2c3-ed87-4d9b-a50b-9fa92d9ef7cc" fragment="1" gd:fragmentGUID="dcd2c735-606e-4c60-96d7-612d9f2ebcbd">Ustawa wchodzi w życie z dniem 1 stycznia 2003 r.</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+    </ustawa>
+  </obwieszczenie>
+</akt-prawny>

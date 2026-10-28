@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <ustawa>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/1157</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>b2fc6044-6366-462c-94c1-17fc96768e14</gd:GUIDwersji>
+      <AdresISAP>WDU20250001157</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>1157</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 1157</AdresWyswietlany>
+      <Tytul>Ustawa z dnia 25 lipca 2025 r. o zmianie ustawy o kosztach sądowych w sprawach cywilnych</Tytul>
+      <Rodzaj>USTAWA</Rodzaj>
+      <DataOgloszenia>2025-08-22</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-07-25</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2025-09-23_DU-2025-1157_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2025-09-23" warunek="po upływie miesiąca od dnia ogłoszenia" podstawa="art. 3" zrodlo="https://eli.gov.pl/eli/DU/2025/1157" dowod="DU/2025/1157__art_3" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2025-09-23_DU-2025-1157_domyslne.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2025-09-23_DU-2025-1157_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="1027cce3-403f-4ddb-bc76-98a4f541b0ab" rola="wydajacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Sejm">
+          <Nazwa>SEJM</Nazwa>
+        </Organ>
+        <Organ gd:GUID="1f8be4b2-db5c-4f71-b8ba-ab6d3182e71d" rola="podpisujacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Prezydent">
+          <Nazwa>Prezydent Rzeczypospolitej Polskiej</Nazwa>
+          <OrganPodpisujacy>Prezydent Rzeczypospolitej Polskiej</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>K.</imie> <nazwisko>Nawrocki</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Ustawa</rodzaj-aktu>
+    <data>z dnia 25 lipca 2025 r.</data>
+    <tytul>o zmianie ustawy o kosztach sądowych w sprawach cywilnych</tytul>
+    <artykul eId="DU/2025/1157__art_1" gd:GUID="19b82d75-bfdf-4b13-bf2f-90ea3dad4d44" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-23_DU-2025-1157_domyslne.x" wejscie-w-zycie="2025-09-23">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="884174af-0977-49b4-8b9d-83d678a97b14" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-23_DU-2025-1157_domyslne.x" wejscie-w-zycie="2025-09-23">
+        <p>
+          <zdanie nr="1" gd:zdGUID="40e3525b-d955-441b-8dc3-82e44417eb97" fragment="1" gd:fragmentGUID="b9041a29-f0db-4c05-b325-9d41ac6874c3" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-23_DU-2025-1157_domyslne.x" wejscie-w-zycie="2025-09-23">W ustawie z dnia 28 lipca 2005 r. o kosztach sądowych w sprawach cywilnych (Dz. U. z 2024 r. poz. 959 i 1237 oraz z 2025 r. poz. 769) wprowadza się następujące zmiany:</zdanie>
+        </p>
+        <punkt eId="DU/2025/1157__art_1__pkt_1" gd:GUID="82d7d2ea-d2ce-4547-82b9-9d36cdde9462" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-23_DU-2025-1157_domyslne.x" wejscie-w-zycie="2025-09-23">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="40e3525b-d955-441b-8dc3-82e44417eb97" fragment="2" gd:fragmentGUID="78584fb5-995d-429c-b77f-0e8280e4ab3f" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-23_DU-2025-1157_domyslne.x" wejscie-w-zycie="2025-09-23">w art. 13 ust. 2 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/959" cudzyslowy="oba" gd:nowGUID="8aa7f60a-02e4-4b5e-851f-e2b528f67e89" element-eId="DU/2024/959__art_13__ust_2" funkcja="zastap"><ustep eId="DU/2024/959__art_13__ust_2" gd:GUID="7368d4bf-a5f5-430c-8a1e-c593d0e56c97" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-23_DU-2025-1157_domyslne.x" wejscie-w-zycie="2025-09-23"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="9305a5d0-41d4-4072-a596-b25b9abac86a" fragment="1" gd:fragmentGUID="588dcb00-fdc8-451c-a95b-97656492227e" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-23_DU-2025-1157_domyslne.x" wejscie-w-zycie="2025-09-23">W sprawach o prawa majątkowe przy wartości przedmiotu sporu lub wartości przedmiotu zaskarżenia ponad 20 000 złotych pobiera się od pisma opłatę stosunkową wynoszącą 5 % tej wartości, nie więcej jednak niż 100 000 złotych.</zdanie></p></ustep></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1157__art_1__pkt_2" gd:GUID="213bc123-6076-45e4-86f6-a84a655eb458" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-23_DU-2025-1157_domyslne.x" wejscie-w-zycie="2025-09-23">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="40e3525b-d955-441b-8dc3-82e44417eb97" fragment="3" gd:fragmentGUID="9af03817-5286-43a9-98f1-f3b94c7ac066" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-23_DU-2025-1157_domyslne.x" wejscie-w-zycie="2025-09-23">w art. 103:</zdanie>
+          </p>
+          <litera eId="DU/2025/1157__art_1__pkt_2__lit_a" gd:GUID="492b720e-ac4c-4478-b529-0093d9e0b261" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-23_DU-2025-1157_domyslne.x" wejscie-w-zycie="2025-09-23">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="40e3525b-d955-441b-8dc3-82e44417eb97" fragment="4" gd:fragmentGUID="b0d135ee-efe0-4daa-9514-7dc298d8cdc6" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-23_DU-2025-1157_domyslne.x" wejscie-w-zycie="2025-09-23">ust. 2 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/959" cudzyslowy="oba" gd:nowGUID="ef54d184-b560-4db6-87e8-11d47f46b8f3" element-eId="DU/2024/959__art_103__ust_2" funkcja="zastap"><ustep eId="DU/2024/959__art_103__ust_2" gd:GUID="5dbd341d-685b-4bf6-b2bb-966c31264f55" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-23_DU-2025-1157_domyslne.x" wejscie-w-zycie="2025-09-23"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="bf61b50b-698c-4c2d-8de8-268176ad62d9" fragment="1" gd:fragmentGUID="598e0e99-3fed-4371-83f1-f245677a70b7" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-23_DU-2025-1157_domyslne.x" wejscie-w-zycie="2025-09-23">Spółka osobowa powinna wykazać również, że jej wspólnicy, którzy ponoszą odpowiedzialność za jej zobowiązania, nie mają dostatecznych środków na zwiększenie majątku spółki lub udzielenie spółce pożyczki.</zdanie></p></ustep></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1157__art_1__pkt_2__lit_b" gd:GUID="94a69d02-db09-41a6-88c3-2f3dd6000835" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-23_DU-2025-1157_domyslne.x" wejscie-w-zycie="2025-09-23">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="40e3525b-d955-441b-8dc3-82e44417eb97" fragment="5" gd:fragmentGUID="6282bc78-2162-4599-a7b8-f9959b217864" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-23_DU-2025-1157_domyslne.x" wejscie-w-zycie="2025-09-23"><now:uchyl akt="https://eli.gov.pl/eli/DU/2024/959" element-eId="DU/2024/959__art_103__ust_3" gd:nowGUID="d82bdb8e-a01d-4831-99dd-fb7a6932fbbd" />uchyla się ust. 3.</zdanie>
+            </p>
+          </litera>
+        </punkt>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2025/1157__art_2" gd:GUID="118d9cae-9430-4afb-8554-a9583620c58b" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-23_DU-2025-1157_domyslne.x" wejscie-w-zycie="2025-09-23">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="a27b26e6-fe36-4ca1-8fa0-1addd2dc2f83" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-23_DU-2025-1157_domyslne.x" wejscie-w-zycie="2025-09-23">
+        <p>
+          <zdanie nr="1" gd:zdGUID="fa658350-4556-434a-ae4c-2db728b92dad" fragment="1" gd:fragmentGUID="fa451105-7158-4014-a528-2302644822da" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-23_DU-2025-1157_domyslne.x" wejscie-w-zycie="2025-09-23">Do pism wniesionych przed dniem wejścia w życie niniejszej ustawy oraz wniosków spółek handlowych o zwolnienie od kosztów sądowych złożonych przed tym dniem stosuje się przepisy dotychczasowe.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2025/1157__art_3" gd:GUID="53626e02-e866-4714-b70a-6e5be7c8f414" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-23_DU-2025-1157_domyslne.x" wejscie-w-zycie="2025-09-23">
+      <nr>3</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="f2b98521-b053-446f-bec0-2e4d1a3c87e9" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-23_DU-2025-1157_domyslne.x" wejscie-w-zycie="2025-09-23">
+        <p>
+          <zdanie nr="1" gd:zdGUID="a2a22028-1ee5-4793-aa14-7ecfd68c750c" fragment="1" gd:fragmentGUID="419b484c-0c35-4a48-a820-1a8f5c09e168" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-23_DU-2025-1157_domyslne.x" wejscie-w-zycie="2025-09-23">Ustawa wchodzi w życie po upływie miesiąca od dnia ogłoszenia.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <organ-podpisujacy>Prezydent Rzeczypospolitej Polskiej: <i><osoba podpisujacy="true" gd:osobaGUID="ab52c632-873b-496d-945b-b35b459156b1"><imie>K.</imie> <nazwisko>Nawrocki</nazwisko></osoba></i></organ-podpisujacy>
+  </ustawa>
+</akt-prawny>

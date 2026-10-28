@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <ustawa>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/1679</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>d9cbdc10-c0c8-47c9-862e-552b6a1e854b</gd:GUIDwersji>
+      <AdresISAP>WDU20250001679</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>1679</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 1679</AdresWyswietlany>
+      <Tytul>Ustawa z dnia 17 października 2025 r. o zmianie ustawy o rzecznikach patentowych</Tytul>
+      <Rodzaj>USTAWA</Rodzaj>
+      <DataOgloszenia>2025-12-02</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-10-17</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2026-02-03_DU-2025-1679_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2026-02-03" warunek="po upływie 2 miesięcy od dnia ogłoszenia" podstawa="art. 3" zrodlo="https://eli.gov.pl/eli/DU/2025/1679" dowod="DU/2025/1679__art_3" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2026-02-03_DU-2025-1679_domyslne.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2026-02-03_DU-2025-1679_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="efd4cee4-edfa-414f-9c87-144414211d63" rola="wydajacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Sejm">
+          <Nazwa>SEJM</Nazwa>
+        </Organ>
+        <Organ gd:GUID="7e3ea09a-d62c-4fe2-9443-3bdd26b1e16f" rola="podpisujacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Prezydent">
+          <Nazwa>Prezydent Rzeczypospolitej Polskiej</Nazwa>
+          <OrganPodpisujacy>Prezydent Rzeczypospolitej Polskiej</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>K.</imie> <nazwisko>Nawrocki</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Ustawa</rodzaj-aktu>
+    <data>z dnia 17 października 2025 r.</data>
+    <tytul>o zmianie ustawy o rzecznikach patentowych</tytul>
+    <artykul eId="DU/2025/1679__art_1" gd:GUID="86ba95db-4dda-4592-b571-351b25f53074" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-03_DU-2025-1679_domyslne.x" wejscie-w-zycie="2026-02-03">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="4ee3747f-5ae1-402a-9261-070fe3d20d59" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-03_DU-2025-1679_domyslne.x" wejscie-w-zycie="2026-02-03">
+        <p>
+          <zdanie nr="1" gd:zdGUID="17c32696-2491-4253-951f-eb6380ef2d31" fragment="1" gd:fragmentGUID="9864f2ea-4066-4330-b478-f76faa89c81e" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-03_DU-2025-1679_domyslne.x" wejscie-w-zycie="2026-02-03">W ustawie z dnia 11 kwietnia 2001 r. o rzecznikach patentowych (Dz. U. z 2024 r. poz. 749 oraz z 2025 r. poz. 1172) wprowadza się następujące zmiany:</zdanie>
+        </p>
+        <punkt eId="DU/2025/1679__art_1__pkt_1" gd:GUID="64fdda7d-3b93-4070-81a5-86355c05d0f9" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-03_DU-2025-1679_domyslne.x" wejscie-w-zycie="2026-02-03">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="17c32696-2491-4253-951f-eb6380ef2d31" fragment="2" gd:fragmentGUID="bec024c3-6244-4065-b26f-56210cbd7a6c" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-03_DU-2025-1679_domyslne.x" wejscie-w-zycie="2026-02-03"><now:zamien-tekst stary-tekst="aplikantów rzecznikowskich" nowy-tekst="aplikantów rzecznikowskich, zwanych dalej „aplikantami”," element-eId="DU/2024/749__art_7__ust_1" akt="https://eli.gov.pl/eli/DU/2024/749" gd:nowGUID="508e1a85-ac6e-48f7-ae75-927e1fba8cbd" />w art. 7 w ust. 1 po wyrazach „aplikantów rzecznikowskich” dodaje się wyrazy „ , zwanych dalej „aplikantami”,”;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1679__art_1__pkt_2" gd:GUID="8f55cea6-40e7-4509-a165-bddeed81275e" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-03_DU-2025-1679_domyslne.x" wejscie-w-zycie="2026-02-03">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="17c32696-2491-4253-951f-eb6380ef2d31" fragment="3" gd:fragmentGUID="0b258c5b-df31-4f15-987e-5b3691f76572" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-03_DU-2025-1679_domyslne.x" wejscie-w-zycie="2026-02-03">w art. 18 w ust. 2 po pkt 2 dodaje się pkt 2a w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/749" cudzyslowy="oba" gd:nowGUID="e8de37e0-280b-4bc2-8e8a-2981a9f7dbdc" element-eId="DU/2024/749__art_18__ust_2__pkt_2" funkcja="dodaj-po"><punkt eId="DU/2024/749__art_18__ust_2__pkt_2a" gd:GUID="c0f04a63-82be-451c-865b-fec836c0a169" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-03_DU-2025-1679_domyslne.x" wejscie-w-zycie="2026-02-03"><nr>2a</nr><p><zdanie nr="1" gd:zdGUID="c784fe56-60d8-4cb0-8c2b-c21cee363823" fragment="1" gd:fragmentGUID="2e303488-cccd-4cd8-82e8-336c38f3e120" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-03_DU-2025-1679_domyslne.x" wejscie-w-zycie="2026-02-03">numer PESEL, o ile rzecznik patentowy go posiada;</zdanie></p></punkt></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1679__art_1__pkt_3" gd:GUID="54482b31-eac3-4497-adde-4de69187553f" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-03_DU-2025-1679_domyslne.x" wejscie-w-zycie="2026-02-03">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="17c32696-2491-4253-951f-eb6380ef2d31" fragment="4" gd:fragmentGUID="1f44252c-dba2-44d8-8684-e593d90b6d1d" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-03_DU-2025-1679_domyslne.x" wejscie-w-zycie="2026-02-03">w art. 25a ust. 1 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/749" cudzyslowy="oba" gd:nowGUID="61da9fb2-4409-44b3-8a7a-8c7c38221280" element-eId="DU/2024/749__art_25a__ust_1" funkcja="zastap"><ustep eId="DU/2024/749__art_25a__ust_1" gd:GUID="2e7fd1b0-3254-40a5-b157-0f06f29f6149" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-03_DU-2025-1679_domyslne.x" wejscie-w-zycie="2026-02-03"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="3c861704-7178-4a64-9406-fa71211f2100" fragment="1" gd:fragmentGUID="24193822-fdc1-42ca-92c5-30682b740134" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-03_DU-2025-1679_domyslne.x" wejscie-w-zycie="2026-02-03">Na podstawie aktualnych informacji przekazywanych przez Krajową Radę Rzeczników Patentowych Urząd Patentowy prowadzi w systemie teleinformatycznym listę rzeczników patentowych oraz aplikantów, która zawiera imię i nazwisko rzecznika patentowego lub aplikanta, numer PESEL, o ile rzecznik patentowy albo aplikant go posiada, datę uchwały o wpisie na listę i numer wpisu na listę oraz datę skreślenia z listy, informację o zawieszeniu prawa wykonywania zawodu rzecznika patentowego, a w przypadku aplikantów – także rok aplikacji rzecznikowskiej.</zdanie></p></ustep></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1679__art_1__pkt_4" gd:GUID="1aaefe64-ab88-49fb-bd8c-d649468b026e" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-03_DU-2025-1679_domyslne.x" wejscie-w-zycie="2026-02-03">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="17c32696-2491-4253-951f-eb6380ef2d31" fragment="5" gd:fragmentGUID="19f2d2b7-d35a-4b29-aafc-51f348dc379c" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-03_DU-2025-1679_domyslne.x" wejscie-w-zycie="2026-02-03">w art. 29 w ust. 7 zdanie drugie otrzymuje brzmienie:<cytat-w-tekscie now:akt="https://eli.gov.pl/eli/DU/2024/749" cudzyslowy="oba" gd:nowGUID="0b375657-e931-4bff-a3f9-f61dc9345982" element-eId="DU/2024/749__art_29__ust_7__zdn_2" funkcja="zastap-tekst"><zdanie nr="1" gd:zdGUID="4e981c69-383f-4e42-ba36-a89d6b45106c" fragment="1" gd:fragmentGUID="049fd56e-b85b-4fd1-b054-749c2f68f9a8" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-03_DU-2025-1679_domyslne.x" wejscie-w-zycie="2026-02-03">Informacje obejmują imię i nazwisko aplikanta, numer PESEL, o ile aplikant go posiada, datę uchwały o wpisie na listę i numer wpisu na listę, rok aplikacji oraz datę skreślenia z listy.</zdanie></cytat-w-tekscie>.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2025/1679__art_2" gd:GUID="1900067b-f162-4f8a-ac50-5146272987b4" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-03_DU-2025-1679_domyslne.x" wejscie-w-zycie="2026-02-03">
+      <nr>2</nr>
+      <ustep eId="DU/2025/1679__art_2__ust_1" gd:GUID="574747fa-0882-4372-a90a-e764c999c77c" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-03_DU-2025-1679_domyslne.x" wejscie-w-zycie="2026-02-03">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="b8dc50ac-0cbc-4f9e-a06b-835d63a84e5b" fragment="1" gd:fragmentGUID="4b8a7c81-f027-402e-9660-ac140294447d" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-03_DU-2025-1679_domyslne.x" wejscie-w-zycie="2026-02-03">Rzecznik patentowy wpisany na listę rzeczników patentowych, o której mowa w art. 18 ust. 2 ustawy zmienianej w art. 1, informuje pisemnie Urząd Patentowy Rzeczypospolitej Polskiej o posiadanym numerze PESEL w terminie 30 dni od dnia wejścia w życie niniejszej ustawy.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/1679__art_2__ust_2" gd:GUID="74d04253-9a0c-48f7-b2c0-4d657a1525e4" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-03_DU-2025-1679_domyslne.x" wejscie-w-zycie="2026-02-03">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="ac38386a-be40-4873-9e59-49b81eba13b4" fragment="1" gd:fragmentGUID="eae69b17-0c99-406c-bb32-6b3ec1503cea" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-03_DU-2025-1679_domyslne.x" wejscie-w-zycie="2026-02-03">Aplikant rzecznikowski wpisany na listę aplikantów rzecznikowskich, o której mowa w art. 51a ust. 1 pkt 3 ustawy zmienianej w art. 1, informuje pisemnie Prezesa Polskiej Izby Rzeczników Patentowych o posiadanym numerze PESEL w terminie 30 dni od dnia wejścia w życie niniejszej ustawy.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/1679__art_2__ust_3" gd:GUID="8e8362d1-0850-4511-a294-12db4066f9b8" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-03_DU-2025-1679_domyslne.x" wejscie-w-zycie="2026-02-03">
+        <nr>3</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="25f40cbe-49fc-4c7b-8184-0a55f76f6b00" fragment="1" gd:fragmentGUID="27c07486-7d5f-4f47-9172-6867b57a16b0" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-03_DU-2025-1679_domyslne.x" wejscie-w-zycie="2026-02-03">Urząd Patentowy Rzeczypospolitej Polskiej oraz Prezes Polskiej Izby Rzeczników Patentowych uzupełniają dane w systemach teleinformatycznych, w których prowadzone są listy, o których mowa w ust. 1 i 2, o numer PESEL niezwłocznie po uzyskaniu informacji, o której mowa w ust. 1 albo 2.</zdanie>
+        </p>
+      </ustep>
+    </artykul>
+    <artykul eId="DU/2025/1679__art_3" gd:GUID="04c07f90-628d-4729-bffe-e0ae0439acd2" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-03_DU-2025-1679_domyslne.x" wejscie-w-zycie="2026-02-03">
+      <nr>3</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="4cf38cad-7048-478c-a017-4307cafc87da" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-03_DU-2025-1679_domyslne.x" wejscie-w-zycie="2026-02-03">
+        <p>
+          <zdanie nr="1" gd:zdGUID="5fb0409a-f7db-43ea-9ab1-51a6b9b1d59a" fragment="1" gd:fragmentGUID="5be22dd6-4bb7-4157-b828-d3da152a913a" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-03_DU-2025-1679_domyslne.x" wejscie-w-zycie="2026-02-03">Ustawa wchodzi w życie po upływie 2 miesięcy od dnia ogłoszenia.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <organ-podpisujacy>Prezydent Rzeczypospolitej Polskiej: <i><osoba podpisujacy="true" gd:osobaGUID="4bced333-bb98-4fc1-a7f6-d6055907ecce"><imie>K.</imie> <nazwisko>Nawrocki</nazwisko></osoba></i></organ-podpisujacy>
+  </ustawa>
+</akt-prawny>

@@ -1,0 +1,289 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <ustawa>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2024/1853</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>f047541b-91d2-4aa5-8595-cf1d3a156b98</gd:GUIDwersji>
+      <AdresISAP>WDU20240001853</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2024</Rok>
+      <Pozycja>1853</Pozycja>
+      <AdresWyswietlany>Dz.U. 2024 poz. 1853</AdresWyswietlany>
+      <Tytul>Ustawa z dnia 21 listopada 2024 r. o zmianie ustawy o elektromobilności i paliwach alternatywnych oraz niektórych innych ustaw</Tytul>
+      <Rodzaj>USTAWA</Rodzaj>
+      <DataOgloszenia>2024-12-16</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2024-11-21</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2024-12-31_DU-2024-1853_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2024-12-31" warunek="po upływie 14 dni od dnia ogłoszenia" podstawa="art. 6" zrodlo="https://eli.gov.pl/eli/DU/2024/1853" dowod="DU/2024/1853__art_6" />
+          <Zdarzenie id="zdarz_wejscie_2025-01-01_DU-2024-1853_odczytane" rodzaj="wejscie-w-zycie" pochodzenie="odczytane" data="2025-01-01" podstawa="art. 6 pkt 1" zrodlo="https://eli.gov.pl/eli/DU/2024/1853" dowod="DU/2024/1853__art_6__pkt_1">
+            <JednostkaAktu eId="DU/2024/1853__art_1__pkt_2" />
+            <JednostkaAktu eId="DU/2024/1853__art_4__pkt_1__lit_b">
+              <JednostkaWZakresie eId="DU/2021/2269__art_1__pkt_20" />
+            </JednostkaAktu>
+            <JednostkaAktu eId="DU/2024/1853__art_4__pkt_2">
+              <JednostkaWZakresie eId="DU/2021/2269__art_41__pkt_3a" />
+            </JednostkaAktu>
+          </Zdarzenie>
+          <Zdarzenie id="zdarz_wejscie_2026-01-01_DU-2024-1853_odczytane" rodzaj="wejscie-w-zycie" pochodzenie="odczytane" data="2026-01-01" podstawa="art. 6 pkt 2" zrodlo="https://eli.gov.pl/eli/DU/2024/1853" dowod="DU/2024/1853__art_6__pkt_2">
+            <JednostkaAktu eId="DU/2024/1853__art_1__pkt_1" />
+            <JednostkaAktu eId="DU/2024/1853__art_1__pkt_3" />
+            <JednostkaAktu eId="DU/2024/1853__art_1__pkt_4" />
+            <JednostkaAktu eId="DU/2024/1853__art_4__pkt_1__lit_a" />
+            <JednostkaAktu eId="DU/2024/1853__art_4__pkt_1__lit_b">
+              <JednostkaWZakresie eId="DU/2021/2269__art_1__pkt_21" />
+            </JednostkaAktu>
+            <JednostkaAktu eId="DU/2024/1853__art_4__pkt_2">
+              <JednostkaWZakresie eId="DU/2021/2269__art_41__pkt_5" />
+            </JednostkaAktu>
+            <JednostkaAktu eId="DU/2024/1853__art_5" />
+          </Zdarzenie>
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1853_domyslne.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2024-12-31_DU-2024-1853_domyslne" />
+        </GrupaCzasowa>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1853_odczytane.x" glowna="false">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2025-01-01_DU-2024-1853_odczytane" />
+        </GrupaCzasowa>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2024-1853_odczytane.x" glowna="false">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2026-01-01_DU-2024-1853_odczytane" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="476f1eaf-f93d-4589-b8f9-cf53feeac6e1" rola="wydajacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Sejm">
+          <Nazwa>SEJM</Nazwa>
+        </Organ>
+        <Organ gd:GUID="a1d74515-17c5-41e7-bdec-35565a0f6e59" rola="podpisujacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Prezydent">
+          <Nazwa>Prezydent Rzeczypospolitej Polskiej</Nazwa>
+          <OrganPodpisujacy>Prezydent Rzeczypospolitej Polskiej</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>A.</imie> <nazwisko>Duda</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Ustawa</rodzaj-aktu>
+    <data>z dnia 21 listopada 2024 r.</data>
+    <tytul>o zmianie ustawy o elektromobilności i paliwach alternatywnych oraz niektórych innych ustaw<odnosnik id-odnosnika="1" symbol="1" gd:GUID="10279b4d-4d9a-4040-89ca-6b5df6c885bb"><p><zdanie nr="1" gd:zdGUID="aba5611a-e674-425b-8a78-866f8c5c4163" fragment="1" gd:fragmentGUID="5ca6569b-d248-4a4d-b575-01493f25b6c0">Niniejszą ustawą zmienia się ustawy: ustawę z dnia 27 kwietnia 2001 r. – Prawo ochrony środowiska, ustawę z dnia 16 grudnia 2010 r. o publicznym transporcie zbiorowym oraz ustawę z dnia 2 grudnia 2021 r. o zmianie ustawy o elektromobilności i paliwach alternatywnych oraz niektórych innych ustaw.</zdanie></p></odnosnik></tytul>
+    <artykul eId="DU/2024/1853__art_1" gd:GUID="2583b08c-5d22-4c95-afdc-cd1174be8e84" okres="okr_obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1853_domyslne.x" wejscie-w-zycie="2024-12-31">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="d569bd78-971c-4fb7-8e45-184d79ac6e7d" okres="okr_obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1853_domyslne.x" wejscie-w-zycie="2024-12-31">
+        <p>
+          <zdanie nr="1" gd:zdGUID="7e739678-d810-4357-a9b9-fe11054dde04" fragment="1" gd:fragmentGUID="52491d92-fb7e-4be7-8c6c-614d29c2c5e1" okres="okr_obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1853_domyslne.x" wejscie-w-zycie="2024-12-31">W ustawie z dnia 11 stycznia 2018 r. o elektromobilności i paliwach alternatywnych (Dz. U. z 2024 r. poz. 1289) wprowadza się następujące zmiany:</zdanie>
+        </p>
+        <punkt eId="DU/2024/1853__art_1__pkt_1" gd:GUID="5614c7c5-3ec7-4614-bd20-138d7fce8432" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2024-1853_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="7e739678-d810-4357-a9b9-fe11054dde04" fragment="2" gd:fragmentGUID="b6c9b0d2-b57b-4b94-8584-66d3acb79a3c" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2024-1853_odczytane.x" wejscie-w-zycie="2026-01-01">w art. 34:</zdanie>
+          </p>
+          <litera eId="DU/2024/1853__art_1__pkt_1__lit_a" gd:GUID="73b38206-ecc0-4c80-8e35-3d79d06f0d8e" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2024-1853_odczytane.x" wejscie-w-zycie="2026-01-01">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="7e739678-d810-4357-a9b9-fe11054dde04" fragment="3" gd:fragmentGUID="a0292795-f926-4257-877d-59bb67d289ba" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2024-1853_odczytane.x" wejscie-w-zycie="2026-01-01">ust. 1 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/1289" cudzyslowy="oba" gd:nowGUID="8ce94c61-576d-48c0-aa4f-198524d5f113" element-eId="DU/2024/1289__art_34__ust_1" funkcja="zastap"><ustep eId="DU/2024/1289__art_34__ust_1" gd:GUID="3fd05518-a771-4292-a252-5b229b289e39" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2024-1853_odczytane.x" wejscie-w-zycie="2026-01-01"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="0ebaf082-30fd-4b47-90a8-1a7ed2e78a71" fragment="1" gd:fragmentGUID="25c1b9a6-f547-449d-a5bd-e191eb121d06" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2024-1853_odczytane.x" wejscie-w-zycie="2026-01-01">Naczelne i centralne organy administracji państwowej zapewniają, aby udział pojazdów elektrycznych we flocie użytkowanych pojazdów samochodowych w rozumieniu art. 2 pkt 33 ustawy z dnia 20 czerwca 1997 r. – Prawo o ruchu drogowym w obsługującym je urzędzie lub instytucji gospodarki budżetowej, lub innym podmiocie zapewniającym obsługę w zakresie transportu osób wynosił co najmniej 22 % liczby użytkowanych pojazdów samochodowych w rozumieniu tej ustawy.</zdanie></p></ustep></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2024/1853__art_1__pkt_1__lit_b" gd:GUID="7fbd2218-5963-4f94-8a62-b2b23547b475" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2024-1853_odczytane.x" wejscie-w-zycie="2026-01-01">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="7e739678-d810-4357-a9b9-fe11054dde04" fragment="4" gd:fragmentGUID="64774f81-03d2-477d-92e7-0edb9563c90d" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2024-1853_odczytane.x" wejscie-w-zycie="2026-01-01">w ust. 2 po pkt 6 dodaje się pkt 6a w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/1289" cudzyslowy="oba" gd:nowGUID="f6c63c11-1ca4-40d1-9b6e-829e1e315b6d" element-eId="DU/2024/1289__art_34__ust_2__pkt_6" funkcja="dodaj-po"><punkt eId="DU/2024/1289__art_34__ust_2__pkt_6a" gd:GUID="7efb1064-a610-43b5-9920-39a5b801e29c" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2024-1853_odczytane.x" wejscie-w-zycie="2026-01-01"><nr>6a</nr><p><zdanie nr="1" gd:zdGUID="c439f68f-0612-46ac-9b18-77a3ffae446f" fragment="1" gd:fragmentGUID="bbde1200-a078-4b32-ac4d-0d543de26cad" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2024-1853_odczytane.x" wejscie-w-zycie="2026-01-01">Ministra Obrony Narodowej oraz instytucji i podmiotów zapewniających realizację zadań w zakresie transportu osób w obsługującym go urzędzie, a także jednostek Sił Zbrojnych Rzeczypospolitej Polskiej;</zdanie></p></punkt></cytat-strukt>;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2024/1853__art_1__pkt_2" gd:GUID="f65a1293-07f8-47e2-9a97-d58897fcde55" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1853_odczytane.x" wejscie-w-zycie="2025-01-01">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="7e739678-d810-4357-a9b9-fe11054dde04" fragment="5" gd:fragmentGUID="7825ffcb-5763-4173-bcce-606dc8faf305" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1853_odczytane.x" wejscie-w-zycie="2025-01-01">w art. 35:</zdanie>
+          </p>
+          <litera eId="DU/2024/1853__art_1__pkt_2__lit_a" gd:GUID="b9ef996a-6112-4b87-ac66-4f4e178df9d5" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1853_odczytane.x" wejscie-w-zycie="2025-01-01">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="7e739678-d810-4357-a9b9-fe11054dde04" fragment="6" gd:fragmentGUID="1b4e999e-ce1e-4367-9bd1-03e97a58de6a" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1853_odczytane.x" wejscie-w-zycie="2025-01-01">ust. 1 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/1289" cudzyslowy="oba" gd:nowGUID="ca47fcee-5fa8-4c20-aea5-7c055b2b7679" element-eId="DU/2024/1289__art_35__ust_1" funkcja="zastap"><ustep eId="DU/2024/1289__art_35__ust_1" gd:GUID="45af7d67-f553-4fbe-84d1-f225bcddff3c" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1853_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="79fa1034-19e6-4035-9f61-988f23775d8e" fragment="1" gd:fragmentGUID="91aebc33-9cb7-436c-a2f0-4e6cbd84dccf" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1853_odczytane.x" wejscie-w-zycie="2025-01-01">Jednostka samorządu terytorialnego, z wyłączeniem gmin i powiatów, których liczba mieszkańców nie przekracza 50 000, zapewnia, aby udział pojazdów elektrycznych we flocie użytkowanych pojazdów samochodowych w rozumieniu art. 2 pkt 33 ustawy z dnia 20 czerwca 1997 r. – Prawo o ruchu drogowym w obsługującym ją urzędzie wynosił co najmniej 22 % liczby użytkowanych pojazdów samochodowych w rozumieniu tej ustawy.</zdanie></p></ustep></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2024/1853__art_1__pkt_2__lit_b" gd:GUID="0716acf8-9a0a-4adf-9a36-07d3ecfc2ebf" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1853_odczytane.x" wejscie-w-zycie="2025-01-01">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="7e739678-d810-4357-a9b9-fe11054dde04" fragment="7" gd:fragmentGUID="028a97f6-59dc-4824-b002-e5b8d62f7991" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1853_odczytane.x" wejscie-w-zycie="2025-01-01"><now:uchyl akt="https://eli.gov.pl/eli/DU/2024/1289" element-eId="DU/2024/1289__art_35__ust_2" gd:nowGUID="f718b2b3-b146-45d5-a5d3-8dcc00527e03" /><now:uchyl akt="https://eli.gov.pl/eli/DU/2024/1289" element-eId="DU/2024/1289__art_35__ust_3" gd:nowGUID="39cc59df-b91c-41bf-9120-736e001393f7" />uchyla się ust. 2 i 3;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2024/1853__art_1__pkt_3" gd:GUID="75336a1c-c7fd-460a-be4f-1afdefe645fb" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2024-1853_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="7e739678-d810-4357-a9b9-fe11054dde04" fragment="8" gd:fragmentGUID="696fa985-5bee-413b-90be-5f72cb8cf6b1" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2024-1853_odczytane.x" wejscie-w-zycie="2026-01-01">art. 36 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/1289" cudzyslowy="oba" gd:nowGUID="ab7bd89f-76c2-4d8f-9a7c-0d6ffe857ec8" element-eId="DU/2024/1289__art_36" funkcja="zastap"><artykul eId="DU/2024/1289__art_36" gd:GUID="324300a6-c43c-4307-8d0b-d2387f72117d" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2024-1853_odczytane.x" wejscie-w-zycie="2026-01-01"><nr>36</nr><ustep eId="DU/2024/1289__art_36__ust_1" gd:GUID="ede42ec6-716e-4832-a04f-51d91e3f6883" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2024-1853_odczytane.x" wejscie-w-zycie="2026-01-01"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="a1a94ad9-2b0b-4858-b0c6-86208c8558a0" fragment="1" gd:fragmentGUID="437ab7d9-767e-4ceb-8f05-944d296c0601" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2024-1853_odczytane.x" wejscie-w-zycie="2026-01-01">Gmina, w której liczba mieszkańców jest większa niż 50 000, wykonuje przewozy pasażerskie w transporcie drogowym, w ramach komunikacji miejskiej w rozumieniu art. 4 ust. 1 pkt 4 ustawy z dnia 16 grudnia 2010 r. o publicznym transporcie zbiorowym (Dz. U. z 2023 r. poz. 2778 oraz z 2024 r. poz. 1853), z przynajmniej częściowym wykorzystaniem autobusów zeroemisyjnych lub autobusów napędzanych gazem ziemnym pochodzącym z biometanu lub zleca, lub powierza wykonywanie takich przewozów podmiotom, które we flocie pojazdów przeznaczonych do wykonywania przewozów na jej obszarze przynajmniej częściowo wykorzystują autobusy zeroemisyjne lub autobusy napędzane gazem ziemnym pochodzącym z biometanu.</zdanie></p></ustep><ustep eId="DU/2024/1289__art_36__ust_2" gd:GUID="2308ee76-b94c-46b9-b77d-d613c633e17f" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2024-1853_odczytane.x" wejscie-w-zycie="2026-01-01"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="4380547e-8439-437d-9f83-cfa05919c63a" fragment="1" gd:fragmentGUID="48fda636-f85a-48d0-a5a9-50a0b94c5203" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2024-1853_odczytane.x" wejscie-w-zycie="2026-01-01">Gmina, w której liczba mieszkańców jest większa niż 100 000, oraz podmiot, któremu ta gmina zleciła lub powierzyła wykonywanie przewozów pasażerskich w transporcie drogowym w ramach komunikacji miejskiej w rozumieniu art. 4 ust. 1 pkt 4 ustawy z dnia 16 grudnia 2010 r. o publicznym transporcie zbiorowym, nabywają na podstawie umowy sprzedaży, leasingu, najmu lub dzierżawy z opcją zakupu wyłącznie autobusy zeroemisyjne służące do wykonywania takich przewozów na obszarze tej gminy.</zdanie></p></ustep><ustep eId="DU/2024/1289__art_36__ust_3" gd:GUID="e296dfe3-0898-4151-9ea6-b406ba339bf9" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2024-1853_odczytane.x" wejscie-w-zycie="2026-01-01"><nr>3</nr><p><zdanie nr="1" gd:zdGUID="9fb79ff8-f5c5-4108-9c6f-749821eb159a" fragment="1" gd:fragmentGUID="f5b16095-f1b6-4f67-9447-24a597051c0d" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2024-1853_odczytane.x" wejscie-w-zycie="2026-01-01">Obowiązku, o którym mowa w ust. 2, nie stosuje się do nabywania autobusów służących do realizacji przewozów pasażerskich w transporcie drogowym w ramach komunikacji miejskiej w rozumieniu art. 4 ust. 1 pkt 4 ustawy z dnia 16 grudnia 2010 r. o publicznym transporcie zbiorowym:</zdanie></p><punkt eId="DU/2024/1289__art_36__ust_3__pkt_1" gd:GUID="d2ff7574-c6f8-4ecb-b4f4-b814fd6ebf2b" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2024-1853_odczytane.x" wejscie-w-zycie="2026-01-01"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="9fb79ff8-f5c5-4108-9c6f-749821eb159a" fragment="2" gd:fragmentGUID="7d49f914-799b-4dd4-8d40-b94648eb2b71" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2024-1853_odczytane.x" wejscie-w-zycie="2026-01-01">które wykraczają poza granice administracyjne miasta, w którym liczba mieszkańców jest większa niż 100 000;</zdanie></p></punkt><punkt eId="DU/2024/1289__art_36__ust_3__pkt_2" gd:GUID="5dfc2061-8188-4a88-971e-e5a25c9b558d" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2024-1853_odczytane.x" wejscie-w-zycie="2026-01-01"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="9fb79ff8-f5c5-4108-9c6f-749821eb159a" fragment="3" gd:fragmentGUID="1ae3b4d3-cbf7-4d3b-9c3c-827c191bf0cd" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2024-1853_odczytane.x" wejscie-w-zycie="2026-01-01">których organizatorem jest gmina, w której liczba mieszkańców jest większa niż 100 000, realizowanych na terenie gminy o liczbie mieszkańców mniejszej niż 100 000 albo gmin o liczbie mieszkańców mniejszej niż 100 000 każda.</zdanie></p></punkt></ustep></artykul></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2024/1853__art_1__pkt_4" gd:GUID="f0215885-b9df-4ceb-9555-6704151af1a4" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2024-1853_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="7e739678-d810-4357-a9b9-fe11054dde04" fragment="9" gd:fragmentGUID="7d868bd4-e02f-4ab0-b531-81b4d404bb2c" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2024-1853_odczytane.x" wejscie-w-zycie="2026-01-01"><now:zamien-tekst stary-tekst="art. 34–36, art. 68 i art. 68a" nowy-tekst="art. 34, art. 35 ust. 1, art. 68 i art. 68a" element-eId="DU/2024/1289__art_36a" akt="https://eli.gov.pl/eli/DU/2024/1289" gd:nowGUID="97636478-929b-45c8-b2fa-65e9169797d8" />w art. 36a wyrazy „art. 34–36, art. 68 i art. 68a” zastępuje się wyrazami „art. 34, art. 35 ust. 1, art. 68 i art. 68a”;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2024/1853__art_1__pkt_5" gd:GUID="1cf4ae91-1009-430a-b307-21649fb13584" okres="okr_obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1853_domyslne.x" wejscie-w-zycie="2024-12-31">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="7e739678-d810-4357-a9b9-fe11054dde04" fragment="10" gd:fragmentGUID="8aab8d6c-7c51-40c6-8474-c764aead873c" okres="okr_obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1853_domyslne.x" wejscie-w-zycie="2024-12-31"><now:uchyl akt="https://eli.gov.pl/eli/DU/2024/1289" element-eId="DU/2024/1289__art_37" gd:nowGUID="218ff549-389f-4cb3-b881-77a1c23463ea" />uchyla się art. 37;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2024/1853__art_1__pkt_6" gd:GUID="d7f30940-5cb3-426f-af57-cf9524057e93" okres="okr_obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1853_domyslne.x" wejscie-w-zycie="2024-12-31">
+          <nr>6</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="7e739678-d810-4357-a9b9-fe11054dde04" fragment="11" gd:fragmentGUID="749dc253-7009-47e6-b4d8-0e2653909ed8" okres="okr_obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1853_domyslne.x" wejscie-w-zycie="2024-12-31">art. 38 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/1289" cudzyslowy="oba" gd:nowGUID="7b1db681-32a4-4e1a-811f-f2a7abcdbf66" element-eId="DU/2024/1289__art_38" funkcja="zastap"><artykul eId="DU/2024/1289__art_38" gd:GUID="8bf1b812-5606-4c09-b3e9-18825007ad56" okres="okr_obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1853_domyslne.x" wejscie-w-zycie="2024-12-31"><nr>38</nr><ustep eId="DU/2024/1289__art_38__ust_1" gd:GUID="b11c2c19-15c9-40d7-a3d7-9f219232c8fc" okres="okr_obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1853_domyslne.x" wejscie-w-zycie="2024-12-31"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="efb8f237-188e-496e-881e-a78d7457e934" fragment="1" gd:fragmentGUID="19e710b9-009e-4dd3-ba17-09fc18d9098e" okres="okr_obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1853_domyslne.x" wejscie-w-zycie="2024-12-31">Podmioty, o których mowa w art. 34 i art. 35 ust. 1, do dnia 31 stycznia każdego roku przekazują ministrowi właściwemu do spraw energii oraz ministrowi właściwemu do spraw klimatu informację o liczbie pojazdów samochodowych w rozumieniu art. 2 pkt 33 ustawy z dnia 20 czerwca 1997 r. – Prawo o ruchu drogowym we flocie wykorzystywanej do obsługi urzędu, z uwzględnieniem liczby oraz udziału procentowego pojazdów elektrycznych, według stanu na dzień 31 grudnia roku poprzedzającego przekazanie tej informacji.</zdanie></p></ustep><ustep eId="DU/2024/1289__art_38__ust_2" gd:GUID="fdc4729e-d68b-4824-bc17-12780c05e589" okres="okr_obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1853_domyslne.x" wejscie-w-zycie="2024-12-31"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="141d942e-1f1a-4c51-ad12-a0234278cdcf" fragment="1" gd:fragmentGUID="4f3a2ba3-2b42-4e11-84d7-ccd503fedc31" okres="okr_obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1853_domyslne.x" wejscie-w-zycie="2024-12-31">Gmina, o której mowa w art. 36 ust. 1, do dnia 31 stycznia każdego roku przekazuje ministrowi właściwemu do spraw energii oraz ministrowi właściwemu do spraw klimatu informację o liczbie autobusów we flocie wykorzystywanej do wykonywania przewozów pasażerskich w transporcie drogowym w ramach komunikacji miejskiej w rozumieniu art. 4 ust. 1 pkt 4 ustawy z dnia 16 grudnia 2010 r. o publicznym transporcie zbiorowym, z uwzględnieniem liczby oraz udziału procentowego autobusów zeroemisyjnych oraz autobusów napędzanych gazem ziemnym pochodzącym z biometanu, według stanu na dzień 31 grudnia roku poprzedzającego przekazanie tej informacji.</zdanie></p></ustep></artykul></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2024/1853__art_1__pkt_7" gd:GUID="aa818e77-66d3-469f-8e87-d981c394a57b" okres="okr_obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1853_domyslne.x" wejscie-w-zycie="2024-12-31">
+          <nr>7</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="7e739678-d810-4357-a9b9-fe11054dde04" fragment="12" gd:fragmentGUID="02071f42-32be-4bf1-ac42-9e72697b29d1" okres="okr_obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1853_domyslne.x" wejscie-w-zycie="2024-12-31">w art. 39:</zdanie>
+          </p>
+          <litera eId="DU/2024/1853__art_1__pkt_7__lit_a" gd:GUID="4161f17e-d9d6-4b94-808f-036c4f597e78" okres="okr_obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1853_domyslne.x" wejscie-w-zycie="2024-12-31">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="7e739678-d810-4357-a9b9-fe11054dde04" fragment="13" gd:fragmentGUID="c8225f31-ec02-49e1-bb17-ac1b614c29d1" okres="okr_obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1853_domyslne.x" wejscie-w-zycie="2024-12-31">po ust. 3 dodaje się ust. 3a i 3b w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/1289" cudzyslowy="oba" gd:nowGUID="e1a27711-a03c-4a6f-9214-f2077c0713fc" element-eId="DU/2024/1289__art_39__ust_3" funkcja="dodaj-po"><ustep eId="DU/2024/1289__art_39__ust_3a" gd:GUID="8d0ea86c-1c3e-4bc0-9cd8-427a848343aa" okres="okr_obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1853_domyslne.x" wejscie-w-zycie="2024-12-31"><nr>3a</nr><p><zdanie nr="1" gd:zdGUID="6c41194c-c86a-4d2e-b66a-11f5bf01bc48" fragment="1" gd:fragmentGUID="514ca1ac-081e-4e06-a1c5-7f1a350f43cd" okres="okr_obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1853_domyslne.x" wejscie-w-zycie="2024-12-31">Jeżeli ocena poziomów substancji w powietrzu, o której mowa w art. 89 ust. 1 ustawy z dnia 27 kwietnia 2001 r. – Prawo ochrony środowiska (Dz. U. z 2024 r. poz. 54, 834, 1089, 1222, 1847 i 1853), wykazała przekroczenie średniorocznego poziomu dopuszczalnego dwutlenku azotu w mieście, w którym liczba mieszkańców jest większa niż 100 000, to od dnia 1 stycznia roku następującego po roku, w którym prezydent tego miasta otrzymał wyniki oceny zgodnie z art. 89 ust. 1a tej ustawy, rada gminy ustanawia w drodze uchwały strefę czystego transportu w tym mieście.</zdanie></p></ustep><ustep eId="DU/2024/1289__art_39__ust_3b" gd:GUID="9f6f042d-c606-42e4-b741-f99b142e5f5d" okres="okr_obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1853_domyslne.x" wejscie-w-zycie="2024-12-31"><nr>3b</nr><p><zdanie nr="1" gd:zdGUID="4cb6319a-4363-4c25-92f2-06a1995e5c1e" fragment="1" gd:fragmentGUID="3bee2fb3-d937-494d-802a-1dea7df3e7dc" okres="okr_obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1853_domyslne.x" wejscie-w-zycie="2024-12-31">Strefa czystego transportu, o której mowa w ust. 3a, może zostać zniesiona, jeżeli ocena poziomów substancji w powietrzu, o której mowa w art. 89 ust. 1 ustawy z dnia 27 kwietnia 2001 r. – Prawo ochrony środowiska, w kolejnych trzech latach nie wykaże przekroczenia średniorocznego poziomu dopuszczalnego dwutlenku azotu w mieście, w którym ustanowiono strefę czystego transportu.</zdanie></p></ustep></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2024/1853__art_1__pkt_7__lit_b" gd:GUID="37d5834b-f1b8-47e0-b7ad-c4940123f632" okres="okr_obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1853_domyslne.x" wejscie-w-zycie="2024-12-31">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="7e739678-d810-4357-a9b9-fe11054dde04" fragment="14" gd:fragmentGUID="9f1957be-862d-4148-b8b7-c8ee2b205d7a" okres="okr_obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1853_domyslne.x" wejscie-w-zycie="2024-12-31">ust. 5 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/1289" cudzyslowy="oba" gd:nowGUID="d1ff286d-4901-4085-8e85-f5228a23989d" element-eId="DU/2024/1289__art_39__ust_5" funkcja="zastap"><ustep eId="DU/2024/1289__art_39__ust_5" gd:GUID="81a16a0c-8e87-405b-9db8-b75f64c377c0" okres="okr_obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1853_domyslne.x" wejscie-w-zycie="2024-12-31"><nr>5</nr><p><zdanie nr="1" gd:zdGUID="72b28bbf-6cf3-4dd6-9b55-a757cefb1a27" fragment="1" gd:fragmentGUID="69de0ac8-b312-4668-88ff-7baaf035c8f6" okres="okr_obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1853_domyslne.x" wejscie-w-zycie="2024-12-31">Rada gminy, w uchwale ustanawiającej strefę czystego transportu, może dopuścić wjazd do strefy, w godzinach określonych w tej uchwale, w okresie nie dłuższym niż 3 lata od dnia ustanowienia strefy, pojazdów innych niż określone w ust. 1 i 2 oraz korzystających z wyłączeń na podstawie ust. 4, pod warunkiem uiszczenia opłaty.</zdanie></p></ustep></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2024/1853__art_1__pkt_7__lit_c" gd:GUID="ac3e9e35-7ff7-4a2e-82a8-908ddfd68ac8" okres="okr_obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1853_domyslne.x" wejscie-w-zycie="2024-12-31">
+            <nr>c</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="7e739678-d810-4357-a9b9-fe11054dde04" fragment="15" gd:fragmentGUID="d4ddf07a-598d-488f-b3d0-c2822dec7af1" okres="okr_obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1853_domyslne.x" wejscie-w-zycie="2024-12-31"><now:uchyl akt="https://eli.gov.pl/eli/DU/2024/1289" element-eId="DU/2024/1289__art_39__ust_6__pkt_5" gd:nowGUID="35e5d270-4e65-4939-8ef2-5b667100b571" />w ust. 6 uchyla się pkt 5;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2024/1853__art_1__pkt_8" gd:GUID="7d97119c-f6ad-47dc-91cd-e21c3074982d" okres="okr_obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1853_domyslne.x" wejscie-w-zycie="2024-12-31">
+          <nr>8</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="7e739678-d810-4357-a9b9-fe11054dde04" fragment="16" gd:fragmentGUID="67fc6c51-d641-4976-871d-524725ccc17a" okres="okr_obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1853_domyslne.x" wejscie-w-zycie="2024-12-31">po art. 40 dodaje się art. 40a w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/1289" cudzyslowy="oba" gd:nowGUID="8a335080-faef-460d-981e-2c4bf697ee25" element-eId="DU/2024/1289__art_40" funkcja="dodaj-po"><artykul eId="DU/2024/1289__art_40a" gd:GUID="c8d76025-ab82-4300-a301-1f5bc6e7c62f" okres="okr_obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1853_domyslne.x" wejscie-w-zycie="2024-12-31"><nr>40a</nr><ustep eId="DU/2024/1289__art_40a__ust_1" gd:GUID="80a1ded5-d0a6-4579-b065-494d929eb7af" okres="okr_obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1853_domyslne.x" wejscie-w-zycie="2024-12-31"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="b893fb49-070e-4772-ac5d-437df642e435" fragment="1" gd:fragmentGUID="320b5639-34e9-4e67-8804-d787b2b1ef8e" okres="okr_obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1853_domyslne.x" wejscie-w-zycie="2024-12-31">W celu ograniczenia negatywnego oddziaływania emisji zanieczyszczeń z transportu na zdrowie ludzi i środowisko, dyrektor parku narodowego może ustalić, w drodze zarządzenia, o którym mowa w art. 8e ust. 1 ustawy z dnia 16 kwietnia 2004 r. o ochronie przyrody (Dz. U. z 2024 r. poz. 1478), że działalność edukacyjna parku narodowego oraz udostępnianie obszaru parku narodowego będą realizowane przy użyciu pojazdów, o których mowa w art. 39 ust. 1 pkt 1–3.</zdanie></p></ustep><ustep eId="DU/2024/1289__art_40a__ust_2" gd:GUID="a40e6312-dc1c-45e3-8061-782f197e5543" okres="okr_obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1853_domyslne.x" wejscie-w-zycie="2024-12-31"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="026f2cd8-9948-44d7-9978-be53dbe5cf35" fragment="1" gd:fragmentGUID="177d75b4-3311-4762-b795-373bf4806185" okres="okr_obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1853_domyslne.x" wejscie-w-zycie="2024-12-31">Do realizacji zadań w ramach działalności edukacyjnej parku narodowego oraz udostępniania obszaru parku narodowego przy użyciu pojazdów, o których mowa w ust. 1, nie mają zastosowania ograniczenia oraz zakazy ruchu ustanowione przez zarządcę drogi na odcinkach dróg publicznych znajdujących się na obszarze parku narodowego.</zdanie><zdanie nr="2" gd:zdGUID="aeae76df-f535-4445-a4f2-09c801e0261a" fragment="1" gd:fragmentGUID="abe1e522-9fb6-4e27-9d5b-f9a1809f8eea" okres="okr_obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1853_domyslne.x" wejscie-w-zycie="2024-12-31">Pojazdy, o których mowa w ust. 1, użytkuje się, uwzględniając w szczególności konieczność zapewnienia bezpieczeństwa wszystkim uczestnikom ruchu w rozumieniu art. 2 pkt 17 ustawy z dnia 20 czerwca 1997 r. – Prawo o ruchu drogowym.</zdanie></p></ustep></artykul></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2024/1853__art_1__pkt_9" gd:GUID="cdd455a7-7dd9-4abf-82ab-26164f1f6dac" okres="okr_obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1853_domyslne.x" wejscie-w-zycie="2024-12-31">
+          <nr>9</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="7e739678-d810-4357-a9b9-fe11054dde04" fragment="17" gd:fragmentGUID="13222756-86a2-4a97-8528-e76148b091ba" okres="okr_obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1853_domyslne.x" wejscie-w-zycie="2024-12-31"><now:uchyl akt="https://eli.gov.pl/eli/DU/2024/1289" element-eId="DU/2024/1289__art_68__ust_2" element-do-eId="DU/2024/1289__art_68__ust_4" gd:nowGUID="e943263e-dd2e-432b-94c2-f51fc48048f2" />w art. 68 uchyla się ust. 2–4;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2024/1853__art_1__pkt_10" gd:GUID="e2bae0c8-3472-4bf2-9cfd-41f38edb6ba3" okres="okr_obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1853_domyslne.x" wejscie-w-zycie="2024-12-31">
+          <nr>10</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="7e739678-d810-4357-a9b9-fe11054dde04" fragment="18" gd:fragmentGUID="8f98e6a8-fe21-40a1-a5d5-bcde327345aa" okres="okr_obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1853_domyslne.x" wejscie-w-zycie="2024-12-31"><now:uchyl akt="https://eli.gov.pl/eli/DU/2024/1289" element-eId="DU/2024/1289__art_76__ust_2" gd:nowGUID="61ad1cd2-ba54-45f6-8d94-514365bba95d" />w art. 76 uchyla się ust. 2;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2024/1853__art_1__pkt_11" gd:GUID="d775947a-aa13-41e5-9a6e-0733b5fc2852" okres="okr_obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1853_domyslne.x" wejscie-w-zycie="2024-12-31">
+          <nr>11</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="7e739678-d810-4357-a9b9-fe11054dde04" fragment="19" gd:fragmentGUID="bb2e85eb-ec8c-499c-b979-d20804506bc4" okres="okr_obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1853_domyslne.x" wejscie-w-zycie="2024-12-31"><now:zamien-tekst stary-tekst="1 stycznia 2028 r." nowy-tekst="1 stycznia 2026 r." element-eId="DU/2024/1289__art_86__pkt_4" akt="https://eli.gov.pl/eli/DU/2024/1289" gd:nowGUID="2a3b37c6-4ecd-4fa1-8497-31d1ca2a42b9" />w art. 86 w pkt 4 wyrazy „1 stycznia 2028 r.” zastępuje się wyrazami „1 stycznia 2026 r.”.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2024/1853__art_2" gd:GUID="932c9877-ae5f-477f-a685-40bb04eca028" okres="okr_obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1853_domyslne.x" wejscie-w-zycie="2024-12-31">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="29109cf9-6915-423f-a523-bca63d450bc0" okres="okr_obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1853_domyslne.x" wejscie-w-zycie="2024-12-31">
+        <p>
+          <zdanie nr="1" gd:zdGUID="70bf7271-9119-4b7a-8468-a2e3308ff0cb" fragment="1" gd:fragmentGUID="bc3370da-7d47-418b-9a79-c99a414927ac" okres="okr_obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1853_domyslne.x" wejscie-w-zycie="2024-12-31">W ustawie z dnia 27 kwietnia 2001 r. – Prawo ochrony środowiska (Dz. U. z 2024 r. poz. 54, 834, 1089, 1222 i 1847) w art. 89 ust. 1a otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/54" cudzyslowy="oba" gd:nowGUID="c779dfbe-6944-4ba9-b199-898668317460" element-eId="DU/2024/54__art_89__ust_1a" funkcja="zastap"><ustep eId="DU/2024/54__art_89__ust_1a" gd:GUID="34ff9902-4d3c-4442-b79b-0a692aa639b0" okres="okr_obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1853_domyslne.x" wejscie-w-zycie="2024-12-31"><nr>1a</nr><p><zdanie nr="1" gd:zdGUID="daaf478f-c369-492e-8226-af1eb7240b09" fragment="1" gd:fragmentGUID="b447fc74-aa21-4887-b65b-36d74ceed999" okres="okr_obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1853_domyslne.x" wejscie-w-zycie="2024-12-31">Wyniki oceny oraz klasyfikację stref, o których mowa w ust. 1, Główny Inspektor Ochrony Środowiska niezwłocznie przekazuje ministrowi właściwemu do spraw klimatu oraz zarządowi województwa.</zdanie><zdanie nr="2" gd:zdGUID="2c837a3b-a81b-4775-bcf0-d97187a25858" fragment="1" gd:fragmentGUID="d13e8c3c-0020-48a6-9f0c-fe20bcca13f1" okres="okr_obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1853_domyslne.x" wejscie-w-zycie="2024-12-31">Jeżeli ocena wykazała przekroczenie średniorocznego poziomu dopuszczalnego dwutlenku azotu w mieście, w którym liczba mieszkańców jest większa niż 100 000, Główny Inspektor Ochrony Środowiska przekazuje niezwłocznie wyniki tej oceny także prezydentowi tego miasta.</zdanie></p></ustep></cytat-strukt>.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2024/1853__art_3" gd:GUID="5747edbe-cccb-4ed9-84fb-8301d5da67d6" okres="okr_obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1853_domyslne.x" wejscie-w-zycie="2024-12-31">
+      <nr>3</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="9afaf2c5-2819-4ba2-b9d7-77fc53b5bd83" okres="okr_obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1853_domyslne.x" wejscie-w-zycie="2024-12-31">
+        <p>
+          <zdanie nr="1" gd:zdGUID="eeaaa7f6-ee5a-4c0f-8279-ce652f52ac06" fragment="1" gd:fragmentGUID="f49f341c-2397-4d7f-ad20-a74fb45436c7" okres="okr_obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1853_domyslne.x" wejscie-w-zycie="2024-12-31">W ustawie z dnia 16 grudnia 2010 r. o publicznym transporcie zbiorowym (Dz. U. z 2023 r. poz. 2778) wprowadza się następujące zmiany:</zdanie>
+        </p>
+        <punkt eId="DU/2024/1853__art_3__pkt_1" gd:GUID="f0b9f089-7c74-48a6-8244-1c7539704f39" okres="okr_obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1853_domyslne.x" wejscie-w-zycie="2024-12-31">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="eeaaa7f6-ee5a-4c0f-8279-ce652f52ac06" fragment="2" gd:fragmentGUID="2cb52226-09ea-445f-a975-90a2811f56ac" okres="okr_obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1853_domyslne.x" wejscie-w-zycie="2024-12-31">w art. 12:</zdanie>
+          </p>
+          <litera eId="DU/2024/1853__art_3__pkt_1__lit_a" gd:GUID="ad960784-cd12-493d-8697-597e3f66d7e6" okres="okr_obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1853_domyslne.x" wejscie-w-zycie="2024-12-31">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="eeaaa7f6-ee5a-4c0f-8279-ce652f52ac06" fragment="3" gd:fragmentGUID="5d43743c-5d54-453e-bb64-f52cb4893afd" okres="okr_obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1853_domyslne.x" wejscie-w-zycie="2024-12-31"><now:uchyl akt="https://eli.gov.pl/eli/DU/2023/2778" element-eId="DU/2023/2778__art_12__ust_2a" gd:nowGUID="89932b7f-4f7f-4dac-b5cf-4926480cc461" />uchyla się ust. 2a,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2024/1853__art_3__pkt_1__lit_b" gd:GUID="da6c500e-ca52-4221-85b4-a56dddf6e3e2" okres="okr_obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1853_domyslne.x" wejscie-w-zycie="2024-12-31">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="eeaaa7f6-ee5a-4c0f-8279-ce652f52ac06" fragment="4" gd:fragmentGUID="dee18564-1b3d-4657-87fa-9cb6ed874a77" okres="okr_obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1853_domyslne.x" wejscie-w-zycie="2024-12-31">ust. 2b otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/2778" cudzyslowy="oba" gd:nowGUID="548d1f44-049a-4d6f-a0a1-37b49ddf6b6a" element-eId="DU/2023/2778__art_12__ust_2b" funkcja="zastap"><ustep eId="DU/2023/2778__art_12__ust_2b" gd:GUID="ec55f1a8-8db6-4d8a-86cc-69294d6c056d" okres="okr_obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1853_domyslne.x" wejscie-w-zycie="2024-12-31"><nr>2b</nr><p><zdanie nr="1" gd:zdGUID="6772c6e1-99f7-4f8a-a0ea-20fdd2e98238" fragment="1" gd:fragmentGUID="0b4c8878-8c64-4d60-93ba-592ee0d2313a" okres="okr_obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1853_domyslne.x" wejscie-w-zycie="2024-12-31">Jeżeli plan transportowy przewiduje wykorzystanie autobusów zeroemisyjnych lub autobusów napędzanych gazem ziemnym, to podlega on konsultacjom odpowiednio z operatorem systemu dystrybucyjnego elektroenergetycznego oraz z operatorem systemu dystrybucyjnego gazowego, w rozumieniu przepisów ustawy z dnia 10 kwietnia 1997 r. – Prawo energetyczne, w zakresie wykorzystania autobusów zeroemisyjnych lub autobusów napędzanych gazem ziemnym przy wykonywaniu przewozów pasażerskich w transporcie drogowym w ramach komunikacji miejskiej.</zdanie></p></ustep></cytat-strukt>;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2024/1853__art_3__pkt_2" gd:GUID="39c0caa5-9044-4494-b901-271004d781b5" okres="okr_obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1853_domyslne.x" wejscie-w-zycie="2024-12-31">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="eeaaa7f6-ee5a-4c0f-8279-ce652f52ac06" fragment="5" gd:fragmentGUID="91ecbf4a-d178-4917-bd8e-0ab63acfddd1" okres="okr_obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1853_domyslne.x" wejscie-w-zycie="2024-12-31"><now:zamien-tekst stary-tekst="art. 12 ust. 1–4" nowy-tekst="art. 12 ust. 1–2 i 2b–4" element-eId="DU/2023/2778__art_14" akt="https://eli.gov.pl/eli/DU/2023/2778" gd:nowGUID="0e334ef7-f29f-42cc-903a-1670ae92c680" />w art. 14 wyrazy „art. 12 ust. 1–4” zastępuje się wyrazami „art. 12 ust. 1–2 i 2b–4”.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2024/1853__art_4" gd:GUID="11a5aa46-140c-4c7c-82cd-c033295a85c2" okres="okr_obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1853_domyslne.x" wejscie-w-zycie="2024-12-31">
+      <nr>4</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="34feb4db-878a-4725-bb9f-cc86bab71bcc" okres="okr_obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1853_domyslne.x" wejscie-w-zycie="2024-12-31">
+        <p>
+          <zdanie nr="1" gd:zdGUID="3f6f19b8-8429-4c01-bc2a-1c856a1ffbf3" fragment="1" gd:fragmentGUID="7b196d3f-3ce8-4a90-9bab-7f5108eb04c2" okres="okr_obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1853_domyslne.x" wejscie-w-zycie="2024-12-31">W ustawie z dnia 2 grudnia 2021 r. o zmianie ustawy o elektromobilności i paliwach alternatywnych oraz niektórych innych ustaw (Dz. U. poz. 2269, z 2023 r. poz. 1681 oraz z 2024 r. poz. 1006) wprowadza się następujące zmiany:</zdanie>
+        </p>
+        <punkt eId="DU/2024/1853__art_4__pkt_1" gd:GUID="8addf94a-0721-412d-a2c9-50fd697097e9" okres="okr_obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1853_domyslne.x" wejscie-w-zycie="2024-12-31">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="3f6f19b8-8429-4c01-bc2a-1c856a1ffbf3" fragment="2" gd:fragmentGUID="b16158ae-edf2-47bf-9db4-eb372fe3ee3c" okres="okr_obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1853_domyslne.x" wejscie-w-zycie="2024-12-31">w art. 1:</zdanie>
+          </p>
+          <litera eId="DU/2024/1853__art_4__pkt_1__lit_a" gd:GUID="e00dd7dd-7370-4cb7-a56a-2bc8f4e3cfde" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2024-1853_odczytane.x" wejscie-w-zycie="2026-01-01">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="3f6f19b8-8429-4c01-bc2a-1c856a1ffbf3" fragment="3" gd:fragmentGUID="9bc8ce5c-b201-47ee-a17d-5a9d0816540c" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2024-1853_odczytane.x" wejscie-w-zycie="2026-01-01"><now:uchyl akt="https://eli.gov.pl/eli/DU/2021/2269" element-eId="DU/2021/2269__art_1__pkt_19__lit_a" gd:nowGUID="8c647a1f-e057-4538-b250-dd5006c9bb58" />w pkt 19 uchyla się lit. a,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2024/1853__art_4__pkt_1__lit_b" gd:GUID="0eabd9b0-54c4-4b6e-a87f-8b5f9af6d761" okres="okr_obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1853_domyslne.x" wejscie-w-zycie="2024-12-31">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="3f6f19b8-8429-4c01-bc2a-1c856a1ffbf3" fragment="4" gd:fragmentGUID="f358a632-ee45-47f8-a0c6-345972660e17" okres="okr_obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1853_domyslne.x" wejscie-w-zycie="2024-12-31"><now:uchyl akt="https://eli.gov.pl/eli/DU/2021/2269" element-eId="DU/2021/2269__art_1__pkt_20" gd:nowGUID="5727afae-dcef-48ba-ad5f-62b8331a7c32" /><now:uchyl akt="https://eli.gov.pl/eli/DU/2021/2269" element-eId="DU/2021/2269__art_1__pkt_21" gd:nowGUID="1a85d859-42dd-4f07-8fd5-e06ca900c683" />uchyla się pkt 20 i 21;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2024/1853__art_4__pkt_2" gd:GUID="3a1e3b0b-0497-4fc7-9540-8d3fcc4beeb8" okres="okr_obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1853_domyslne.x" wejscie-w-zycie="2024-12-31">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="3f6f19b8-8429-4c01-bc2a-1c856a1ffbf3" fragment="5" gd:fragmentGUID="df841242-34a4-4ec7-a6b0-767bc3542112" okres="okr_obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1853_domyslne.x" wejscie-w-zycie="2024-12-31"><now:uchyl akt="https://eli.gov.pl/eli/DU/2021/2269" element-eId="DU/2021/2269__art_41__pkt_3a" gd:nowGUID="ac3ebe92-7472-4184-9a58-4c9bb57571da" /><now:uchyl akt="https://eli.gov.pl/eli/DU/2021/2269" element-eId="DU/2021/2269__art_41__pkt_5" gd:nowGUID="96cbfddc-5998-480b-a0b6-a9d5873c9916" />w art. 41 uchyla się pkt 3a i 5.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2024/1853__art_5" gd:GUID="266d9f21-4c7a-4cd0-b057-4583af40b43b" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2024-1853_odczytane.x" wejscie-w-zycie="2026-01-01">
+      <nr>5</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="702f6b7d-eadc-45f2-8d78-4f8e5d257f77" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2024-1853_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="a97b3f28-dfa8-457a-a249-6f7849eb707c" fragment="1" gd:fragmentGUID="48d5ffa9-e44e-41ad-a781-4aa3f7088f69" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2024-1853_odczytane.x" wejscie-w-zycie="2026-01-01">Do postępowań o udzielenie zamówienia publicznego dotyczących nabycia autobusów przeznaczonych do wykonywania przewozów pasażerskich w transporcie drogowym, w ramach komunikacji miejskiej w rozumieniu art. 4 ust. 1 pkt 4 ustawy zmienianej w art. 3, wszczętych i niezakończonych przed dniem wejścia w życie niniejszego przepisu, nie stosuje się wymogu nabywania wyłącznie autobusów zeroemisyjnych, o którym mowa w art. 36 ust. 2 ustawy zmienianej w art. 1, w brzmieniu nadanym niniejszą ustawą.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2024/1853__art_6" gd:GUID="7f3815a1-1b36-4c52-8ef2-88a96c173188" okres="okr_obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1853_domyslne.x" wejscie-w-zycie="2024-12-31">
+      <nr>6</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="1f885259-05d5-4974-a9d3-62afe1520779" okres="okr_obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1853_domyslne.x" wejscie-w-zycie="2024-12-31">
+        <p>
+          <zdanie nr="1" gd:zdGUID="7f1289a2-a518-4a2e-a304-9056d7b19777" fragment="1" gd:fragmentGUID="2226efd3-24b2-402b-af2d-d9d3cb7678b1" okres="okr_obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1853_domyslne.x" wejscie-w-zycie="2024-12-31">Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia, z wyjątkiem:</zdanie>
+        </p>
+        <punkt eId="DU/2024/1853__art_6__pkt_1" gd:GUID="02194ee5-a9ac-4ee7-8a51-bfa05641dc67" okres="okr_obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1853_domyslne.x" wejscie-w-zycie="2024-12-31">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="7f1289a2-a518-4a2e-a304-9056d7b19777" fragment="2" gd:fragmentGUID="6469a7bb-9a14-4b25-bb80-1a151462614b" okres="okr_obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1853_domyslne.x" wejscie-w-zycie="2024-12-31">art. 1 pkt 2, art. 4 pkt 1 lit. b w zakresie uchylanego pkt 20 i art. 4 pkt 2 w zakresie uchylanego pkt 3a, które wchodzą w życie z dniem 1 stycznia 2025 r.;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2024/1853__art_6__pkt_2" gd:GUID="fe54aff8-680d-4cd9-aa30-dc5efb3010c7" okres="okr_obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1853_domyslne.x" wejscie-w-zycie="2024-12-31">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="7f1289a2-a518-4a2e-a304-9056d7b19777" fragment="3" gd:fragmentGUID="620bb964-0af6-4229-b682-c19781913041" okres="okr_obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1853_domyslne.x" wejscie-w-zycie="2024-12-31">art. 1 pkt 1, 3 i 4, art. 4 pkt 1 lit. a oraz lit. b w zakresie uchylanego pkt 21, art. 4 pkt 2 w zakresie uchylanego pkt 5 i art. 5, które wchodzą w życie z dniem 1 stycznia 2026 r.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </artykul>
+    <organ-podpisujacy>Prezydent Rzeczypospolitej Polskiej: <i><osoba podpisujacy="true" gd:osobaGUID="a8d465d8-8613-46c4-948a-3c235ef3a2f4"><imie>A.</imie> <nazwisko>Duda</nazwisko></osoba></i></organ-podpisujacy>
+  </ustawa>
+</akt-prawny>

@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <rozporzadzenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/1579</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>41b6b294-4515-46e7-a537-952a73c06c4a</gd:GUIDwersji>
+      <AdresISAP>WDU20250001579</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>1579</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 1579</AdresWyswietlany>
+      <Tytul>Rozporządzenie Ministra Zdrowia z dnia 17 listopada 2025 r. zmieniające rozporządzenie w sprawie podstawowych warunków prowadzenia apteki</Tytul>
+      <Rodzaj>ROZP</Rodzaj>
+      <DataOgloszenia>2025-11-19</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-11-17</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2025-12-03_DU-2025-1579_odczytane" rodzaj="wejscie-w-zycie" pochodzenie="odczytane" data="2025-12-03" podstawa="§ 2" zrodlo="https://eli.gov.pl/eli/DU/2025/1579" dowod="DU/2025/1579__art_2" />
+          <Zdarzenie id="zdarz_wejscie_2026-03-03_DU-2025-1579_odczytane" rodzaj="wejscie-w-zycie" pochodzenie="odczytane" data="2026-03-03" podstawa="§ 2" zrodlo="https://eli.gov.pl/eli/DU/2025/1579" dowod="DU/2025/1579__art_2">
+            <JednostkaAktu eId="DU/2025/1579__art_1__pkt_2" />
+          </Zdarzenie>
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2025-12-03_DU-2025-1579_odczytane.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2025-12-03_DU-2025-1579_odczytane" />
+        </GrupaCzasowa>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2026-03-03_DU-2025-1579_odczytane.x" glowna="false">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2026-03-03_DU-2025-1579_odczytane" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="74c4f69e-c8fd-4877-a5b8-ecdd5e1d1103" rola="wydajacy">
+          <Nazwa>Minister Zdrowia</Nazwa>
+          <OrganPodpisujacy>Minister Zdrowia</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>K.</imie> <nazwisko>Kacperczyk</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Rozporządzenie</rodzaj-aktu>
+    <autor-aktu>Ministra Zdrowia<odnosnik id-odnosnika="1" symbol="1" gd:GUID="01ac021c-70c2-4206-a4fb-91234523b315"><p><zdanie nr="1" gd:zdGUID="83af1297-dac3-4320-93a5-f36826f1d959" fragment="1" gd:fragmentGUID="fe9cffe1-cc75-46b3-97e4-5d41cee05518">Minister Zdrowia kieruje działem administracji rządowej – zdrowie, na podstawie § 1 ust. 2 rozporządzenia Prezesa Rady Ministrów z dnia 25 lipca 2025 r. w sprawie szczegółowego zakresu działania Ministra Zdrowia (Dz. U. poz. 1004).</zdanie></p></odnosnik></autor-aktu>
+    <data>z dnia 17 listopada 2025 r.</data>
+    <tytul>zmieniające rozporządzenie w sprawie podstawowych warunków prowadzenia apteki</tytul>
+    <podstawa-prawna>Na podstawie art. 95 ust. 4 ustawy z dnia 6 września 2001 r. – Prawo farmaceutyczne (Dz. U. z 2025 r. poz. 750, 905, 924, 1416 i 1537) zarządza się, co następuje:</podstawa-prawna>
+    <paragraf eId="DU/2025/1579__art_1" gd:GUID="09ed7579-88c5-45d5-9d63-5e704d243918" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-03_DU-2025-1579_odczytane.x" wejscie-w-zycie="2025-12-03">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="3433b6ca-e488-49b1-9c18-abf76e654a3b" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-03_DU-2025-1579_odczytane.x" wejscie-w-zycie="2025-12-03">
+        <p>
+          <zdanie nr="1" gd:zdGUID="067f865e-4b1f-4938-a926-cdd7dc389fc8" fragment="1" gd:fragmentGUID="78c13a93-defe-4dbf-a83e-c89dc88aa0b5" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-03_DU-2025-1579_odczytane.x" wejscie-w-zycie="2025-12-03">W rozporządzeniu Ministra Zdrowia z dnia 27 października 2022 r. w sprawie podstawowych warunków prowadzenia apteki (Dz. U. z 2024 r. poz. 154) wprowadza się następujące zmiany:</zdanie>
+        </p>
+        <punkt eId="DU/2025/1579__art_1__pkt_1" gd:GUID="001fb48f-abf8-4d2e-99e7-2b94404a8827" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-03_DU-2025-1579_odczytane.x" wejscie-w-zycie="2025-12-03">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="067f865e-4b1f-4938-a926-cdd7dc389fc8" fragment="2" gd:fragmentGUID="835248f1-1ac0-46f4-96b9-bb95adff39b5" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-03_DU-2025-1579_odczytane.x" wejscie-w-zycie="2025-12-03">w § 2 ust. 2 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/154" cudzyslowy="oba" gd:nowGUID="77abc199-3c6b-4167-ab28-64e2137e23be" element-eId="DU/2024/154__art_2__ust_2" funkcja="zastap"><ustep eId="DU/2024/154__art_2__ust_2" gd:GUID="290f804c-acb6-48b0-8532-031687abe400" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-03_DU-2025-1579_odczytane.x" wejscie-w-zycie="2025-12-03"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="7594dfff-3ade-4ebe-b43b-9adc1466eaa0" fragment="1" gd:fragmentGUID="8d2d5b34-e9ce-4a98-b6d2-95e5fa4fa01d" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-03_DU-2025-1579_odczytane.x" wejscie-w-zycie="2025-12-03">W urządzeniach chłodniczych, będących na wyposażeniu apteki, służących do przechowywania produktów leczniczych, środków spożywczych specjalnego przeznaczenia żywieniowego, surowców farmaceutycznych i wyrobów medycznych, zapewnia się wyposażenie mające świadectwo wzorcowania, umożliwiające co najmniej odczyt wartości minimalnych i maksymalnych temperatury osiągniętych pomiędzy kolejnymi odczytami.</zdanie></p></ustep></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1579__art_1__pkt_2" gd:GUID="fc2b32a1-2c94-4afb-ab90-22050e21c9ef" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-03_DU-2025-1579_odczytane.x" wejscie-w-zycie="2026-03-03">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="067f865e-4b1f-4938-a926-cdd7dc389fc8" fragment="3" gd:fragmentGUID="0fa6fcfc-42b8-49b5-8eb4-dc2be9a5a6c6" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-03_DU-2025-1579_odczytane.x" wejscie-w-zycie="2026-03-03">w § 4 ust. 1 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/154" cudzyslowy="oba" gd:nowGUID="2efb990c-2a30-4d18-9122-7bd150e96e52" element-eId="DU/2024/154__art_4__ust_1" funkcja="zastap"><ustep eId="DU/2024/154__art_4__ust_1" gd:GUID="b8bab3e4-d43e-4736-844e-1540b5141009" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-03_DU-2025-1579_odczytane.x" wejscie-w-zycie="2026-03-03"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="153de97d-e5b1-4cf6-900e-459666fc5262" fragment="1" gd:fragmentGUID="753b0601-6e80-4b57-a795-90ff1bf4140c" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-03_DU-2025-1579_odczytane.x" wejscie-w-zycie="2026-03-03">Produkty lecznicze, środki spożywcze specjalnego przeznaczenia żywieniowego, surowce farmaceutyczne i wyroby medyczne przechowuje się w sposób staranny, w oddaleniu od ścian, podłóg i instalacji grzewczych, tak aby zapewniać ich ciągłą wentylację, oraz w sposób zabezpieczający je przed czynnikami wpływającymi negatywnie na ich jakość i bezpieczeństwo stosowania.</zdanie></p></ustep></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1579__art_1__pkt_3" gd:GUID="9e5fdbe1-d95a-4fda-ae11-21c6861851cd" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-03_DU-2025-1579_odczytane.x" wejscie-w-zycie="2025-12-03">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="067f865e-4b1f-4938-a926-cdd7dc389fc8" fragment="4" gd:fragmentGUID="2fd82443-3dba-4bcc-9afc-d3f700bfc001" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-03_DU-2025-1579_odczytane.x" wejscie-w-zycie="2025-12-03">w § 10:</zdanie>
+          </p>
+          <litera eId="DU/2025/1579__art_1__pkt_3__lit_a" gd:GUID="2739b826-2c7c-495d-a503-4e01d3cf7000" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-03_DU-2025-1579_odczytane.x" wejscie-w-zycie="2025-12-03">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="067f865e-4b1f-4938-a926-cdd7dc389fc8" fragment="5" gd:fragmentGUID="3aed4784-67bc-4eff-8804-5d4e94f71490" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-03_DU-2025-1579_odczytane.x" wejscie-w-zycie="2025-12-03">pkt 7 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/154" cudzyslowy="oba" gd:nowGUID="dc335d97-d6a0-4c81-9558-600856b5b17f" element-eId="DU/2024/154__art_10__pkt_7" funkcja="zastap"><punkt eId="DU/2024/154__art_10__pkt_7" gd:GUID="8789e0f1-1fb6-44ef-ad90-188f25412a0d" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-03_DU-2025-1579_odczytane.x" wejscie-w-zycie="2025-12-03"><nr>7</nr><p><zdanie nr="1" gd:zdGUID="f0b79cb6-1acf-4200-96e0-5ee4763cf591" fragment="1" gd:fragmentGUID="f0e0465a-ea58-407d-b0be-f8b9798eeada" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-03_DU-2025-1579_odczytane.x" wejscie-w-zycie="2025-12-03">potwierdzające kontrolę warunków sporządzania leków recepturowych i aptecznych oraz produktów leczniczych homeopatycznych oraz, jeżeli dotyczy, kontrolę warunków przechowywania produktów leczniczych, środków spożywczych specjalnego przeznaczenia żywieniowego, surowców farmaceutycznych i wyrobów medycznych i transportu, w zakresie parametrów temperatury, obejmujące:</zdanie></p><litera eId="DU/2024/154__art_10__pkt_7__lit_a" gd:GUID="e6c4a510-4fb4-4ab6-bd4d-58a8f0b0d1a7" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-03_DU-2025-1579_odczytane.x" wejscie-w-zycie="2025-12-03"><nr>a</nr><p><zdanie nr="1" gd:zdGUID="f0b79cb6-1acf-4200-96e0-5ee4763cf591" fragment="2" gd:fragmentGUID="2fa93cae-1fa0-4b87-8e07-a39aea43514b" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-03_DU-2025-1579_odczytane.x" wejscie-w-zycie="2025-12-03">datę i godzinę odczytu,</zdanie></p></litera><litera eId="DU/2024/154__art_10__pkt_7__lit_b" gd:GUID="1b956bc5-ddbc-4f94-965d-6e6e69015b4b" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-03_DU-2025-1579_odczytane.x" wejscie-w-zycie="2025-12-03"><nr>b</nr><p><zdanie nr="1" gd:zdGUID="f0b79cb6-1acf-4200-96e0-5ee4763cf591" fragment="3" gd:fragmentGUID="3e846f9b-dd9e-485b-9b18-0d675b3f80d3" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-03_DU-2025-1579_odczytane.x" wejscie-w-zycie="2025-12-03">wskazanie rodzaju lub nazwy urządzenia chłodniczego, a w przypadku transportu – dane środka transportu,</zdanie></p></litera><litera eId="DU/2024/154__art_10__pkt_7__lit_c" gd:GUID="047a2f3e-c693-4f61-b3f3-316dca3c72e1" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-03_DU-2025-1579_odczytane.x" wejscie-w-zycie="2025-12-03"><nr>c</nr><p><zdanie nr="1" gd:zdGUID="f0b79cb6-1acf-4200-96e0-5ee4763cf591" fragment="4" gd:fragmentGUID="cad9b281-e0a3-4d36-a88c-5bb16341b8ce" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-03_DU-2025-1579_odczytane.x" wejscie-w-zycie="2025-12-03">dane dotyczące wskazań w zakresie parametrów temperatury obejmujące ich przekroczenia,</zdanie></p></litera><litera eId="DU/2024/154__art_10__pkt_7__lit_d" gd:GUID="0a357240-edc2-4d93-9010-21aa116bbbb0" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-03_DU-2025-1579_odczytane.x" wejscie-w-zycie="2025-12-03"><nr>d</nr><p><zdanie nr="1" gd:zdGUID="f0b79cb6-1acf-4200-96e0-5ee4763cf591" fragment="5" gd:fragmentGUID="d2bfb163-8b43-44dd-9127-4d84eec3c27d" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-03_DU-2025-1579_odczytane.x" wejscie-w-zycie="2025-12-03">podpis oraz naniesione w postaci nadruku albo pieczątki imię (imiona) i nazwisko farmaceuty lub technika farmaceutycznego w przypadku prowadzenia ewidencji w postaci papierowej;</zdanie></p></litera></punkt></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1579__art_1__pkt_3__lit_b" gd:GUID="80f1aca5-cbf5-4562-88fa-ceadc99b2e8d" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-03_DU-2025-1579_odczytane.x" wejscie-w-zycie="2025-12-03">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="067f865e-4b1f-4938-a926-cdd7dc389fc8" fragment="6" gd:fragmentGUID="325a5b61-5dbc-4f9c-a14b-4b0f56d16aaf" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-03_DU-2025-1579_odczytane.x" wejscie-w-zycie="2025-12-03">po pkt 7 dodaje się pkt 7a w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/154" cudzyslowy="oba" gd:nowGUID="c0866313-4d97-42a4-a9ef-5abc1b6ad280" element-eId="DU/2024/154__art_10__pkt_7" funkcja="dodaj-po"><punkt eId="DU/2024/154__art_10__pkt_7a" gd:GUID="c37eb216-96d9-478f-b219-57bbb9db3a29" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-03_DU-2025-1579_odczytane.x" wejscie-w-zycie="2025-12-03"><nr>7a</nr><p><zdanie nr="1" gd:zdGUID="90a11429-da8e-4257-b690-cd83f8319a20" fragment="1" gd:fragmentGUID="0a393007-239f-44a2-9589-83c93f39e578" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-03_DU-2025-1579_odczytane.x" wejscie-w-zycie="2025-12-03">dotyczące stwierdzenia przekroczenia progów dopuszczalnych wartości dla przechowywanych w urządzeniach chłodniczych produktów leczniczych, środków spożywczych specjalnego przeznaczenia żywieniowego, surowców farmaceutycznych lub wyrobów medycznych, obejmujące:</zdanie></p><litera eId="DU/2024/154__art_10__pkt_7a__lit_a" gd:GUID="cb554d56-bc98-48d3-bb6c-420668da74f0" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-03_DU-2025-1579_odczytane.x" wejscie-w-zycie="2025-12-03"><nr>a</nr><p><zdanie nr="1" gd:zdGUID="90a11429-da8e-4257-b690-cd83f8319a20" fragment="2" gd:fragmentGUID="2f68771f-76f8-4272-acb5-93a970cf94a9" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-03_DU-2025-1579_odczytane.x" wejscie-w-zycie="2025-12-03">analizę naruszenia warunków przechowywania i jego skutków sporządzaną na podstawie wiedzy fachowej osób zatrudnionych w aptece oraz dokumentacji dotyczącej danego produktu leczniczego, środka spożywczego specjalnego przeznaczenia żywieniowego, surowca farmaceutycznego lub wyrobu medycznego,</zdanie></p></litera><litera eId="DU/2024/154__art_10__pkt_7a__lit_b" gd:GUID="f3a77159-f25c-451a-bb20-ac478ca7d42d" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-03_DU-2025-1579_odczytane.x" wejscie-w-zycie="2025-12-03"><nr>b</nr><p><zdanie nr="1" gd:zdGUID="90a11429-da8e-4257-b690-cd83f8319a20" fragment="3" gd:fragmentGUID="7695defa-93cb-4893-87a7-742de9627e39" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-03_DU-2025-1579_odczytane.x" wejscie-w-zycie="2025-12-03">decyzję co do dalszego postępowania z produktem leczniczym, środkiem spożywczym specjalnego przeznaczenia żywieniowego, surowcem farmaceutycznym lub wyrobem medycznym;</zdanie></p></litera></punkt></cytat-strukt>;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2025/1579__art_1__pkt_4" gd:GUID="19ff19b1-665b-43ff-88e1-938aa71c58a8" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-03_DU-2025-1579_odczytane.x" wejscie-w-zycie="2025-12-03">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="067f865e-4b1f-4938-a926-cdd7dc389fc8" fragment="7" gd:fragmentGUID="48724015-1a3a-4fad-a838-afc68b4204c3" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-03_DU-2025-1579_odczytane.x" wejscie-w-zycie="2025-12-03">w § 16 pkt 2 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/154" cudzyslowy="oba" gd:nowGUID="8b2466f9-ca8c-4435-a979-43a715150501" element-eId="DU/2024/154__art_16__pkt_2" funkcja="zastap"><punkt eId="DU/2024/154__art_16__pkt_2" gd:GUID="557a2e45-aecc-4d34-9127-c16552d37d08" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-03_DU-2025-1579_odczytane.x" wejscie-w-zycie="2025-12-03"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="ca7d1005-c0cf-47db-83fd-af84ce96f23b" fragment="1" gd:fragmentGUID="b58efa6d-f820-4e6c-bca5-e1c11e4b45d0" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-03_DU-2025-1579_odczytane.x" wejscie-w-zycie="2025-12-03">§ 2 ust. 2 i 3 oraz § 10 pkt 7 i 7a – w terminie do dnia 3 marca 2026 r.</zdanie></p></punkt></cytat-strukt>.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2025/1579__art_2" gd:GUID="02471692-e842-4774-8113-ec10667a8ca0" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-03_DU-2025-1579_odczytane.x" wejscie-w-zycie="2025-12-03">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="6208e3d6-d33d-4fa0-b250-053c4d9699db" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-03_DU-2025-1579_odczytane.x" wejscie-w-zycie="2025-12-03">
+        <p>
+          <zdanie nr="1" gd:zdGUID="75edab6b-b2c2-4411-a4fb-e5b0b8dc7c66" fragment="1" gd:fragmentGUID="6070117b-63f2-4ff6-8283-ae3cd698d524" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-03_DU-2025-1579_odczytane.x" wejscie-w-zycie="2025-12-03">Rozporządzenie wchodzi w życie z dniem 3 grudnia 2025 r., z wyjątkiem § 1 pkt 2, który wchodzi w życie z dniem 3 marca 2026 r.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <organ-podpisujacy>Minister Zdrowia: wz. <i><osoba podpisujacy="true" gd:osobaGUID="94d035a0-5d01-4aeb-8ffb-9ca8191a6f75"><imie>K.</imie> <nazwisko>Kacperczyk</nazwisko></osoba></i></organ-podpisujacy>
+  </rozporzadzenie>
+</akt-prawny>

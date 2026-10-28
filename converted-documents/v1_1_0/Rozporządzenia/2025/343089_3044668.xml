@@ -1,0 +1,516 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <rozporzadzenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/1343</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>f6366e05-9d9e-48a1-afe2-2e9a4c0e83b2</gd:GUIDwersji>
+      <AdresISAP>WDU20250001343</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>1343</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 1343</AdresWyswietlany>
+      <Tytul>Rozporządzenie Ministra Energii z dnia 19 września 2025 r. zmieniające rozporządzenie w sprawie ratownictwa górniczego</Tytul>
+      <Rodzaj>ROZP</Rodzaj>
+      <DataOgloszenia>2025-10-06</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-09-19</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2025-10-21" warunek="po upływie 14 dni od dnia ogłoszenia" podstawa="§ 3" zrodlo="https://eli.gov.pl/eli/DU/2025/1343" dowod="DU/2025/1343__art_3" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="df4b4211-9800-4ac1-8cf0-92d4c8d9596e" rola="wydajacy">
+          <Nazwa>Minister Energii</Nazwa>
+          <OrganPodpisujacy>Minister Energii</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>M.</imie> <nazwisko>Motyka</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Rozporządzenie</rodzaj-aktu>
+    <autor-aktu>Ministra Energii<odnosnik id-odnosnika="1" symbol="1" gd:GUID="5a3725b9-51ae-43c7-9fc6-32fe1c16e0f7"><p><zdanie nr="1" gd:zdGUID="d1133d91-4ab6-4705-8f0d-cfbbcab176df" fragment="1" gd:fragmentGUID="eb212cde-5edd-4e1d-8668-418d21d60350">Minister Energii kieruje działem administracji rządowej – gospodarka surowcami energetycznymi, na podstawie § 1 ust. 2 pkt 2 rozporządzenia Prezesa Rady Ministrów z dnia 25 lipca 2025 r. w sprawie szczegółowego zakresu działania Ministra Energii (Dz. U. poz. 1206).</zdanie></p></odnosnik></autor-aktu>
+    <data>z dnia 19 września 2025 r.</data>
+    <tytul>zmieniające rozporządzenie w sprawie ratownictwa górniczego</tytul>
+    <podstawa-prawna>Na podstawie art. 124 ustawy z dnia 9 czerwca 2011 r. – Prawo geologiczne i górnicze (Dz. U. z 2024 r. poz. 1290 oraz z 2025 r. poz. 769 i 1023) zarządza się, co następuje:</podstawa-prawna>
+    <paragraf eId="DU/2025/1343__art_1" gd:GUID="2d99d1e1-86a5-4883-980a-dd72fa8029dd" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="d5084592-3509-4bb0-b040-92e52a27f76a" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">
+        <p>
+          <zdanie nr="1" gd:zdGUID="cc442e5b-3584-4c42-b875-ad89bdf012e4" fragment="1" gd:fragmentGUID="8e77b252-6096-40db-ac62-4ed03a5d9067" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">W rozporządzeniu Ministra Energii z dnia 16 marca 2017 r. w sprawie ratownictwa górniczego (Dz. U. z 2022 r. poz. 1418) wprowadza się następujące zmiany:</zdanie>
+        </p>
+        <punkt eId="DU/2025/1343__art_1__pkt_1" gd:GUID="bfa22c4a-4f73-4103-a32d-b20ee85ce4b4" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="cc442e5b-3584-4c42-b875-ad89bdf012e4" fragment="2" gd:fragmentGUID="04041f73-7c53-480f-b52a-b04880b509d7" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">§ 2 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2022/1418" cudzyslowy="oba" gd:nowGUID="36af63a7-0329-4546-a550-2aa150fa46c0" element-eId="DU/2022/1418__art_2" funkcja="zastap"><paragraf eId="DU/2022/1418__art_2" gd:GUID="928585aa-7367-487e-9a99-94a4afadb122" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21"><nr>2</nr><ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="56fdd897-0de1-43da-8d9a-dcc9f1c6eb0b" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21"><p><zdanie nr="1" gd:zdGUID="78e86064-17ac-474f-94d5-7dcc6147b546" fragment="1" gd:fragmentGUID="9e388b7e-789e-4087-81d0-781ff37406eb" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">Przepisów rozdziałów 2–5 nie stosuje się do zakładów górniczych wydobywających kopaliny metodą odkrywkową.</zdanie></p></ustep-n></paragraf></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1343__art_1__pkt_2" gd:GUID="836eeb02-6f70-450b-8d2f-627a39a19f5c" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="cc442e5b-3584-4c42-b875-ad89bdf012e4" fragment="3" gd:fragmentGUID="0b1f10d9-804d-40f4-b595-9bd252395897" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">w § 7 w ust. 1:</zdanie>
+          </p>
+          <litera eId="DU/2025/1343__art_1__pkt_2__lit_a" gd:GUID="60dd41b5-d46a-4765-82af-ee884efa291a" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="cc442e5b-3584-4c42-b875-ad89bdf012e4" fragment="4" gd:fragmentGUID="aed88a83-799e-4949-8bb6-2c463ecee378" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21"><now:zamien-tekst stary-tekst="liczby osób przebywających" nowy-tekst="łącznej liczby pracowników zakładu górniczego oraz pracowników podmiotów, o których mowa w art. 121 ust. 1 ustawy, zatrudnionych" element-eId="DU/2022/1418__art_7__ust_1" akt="https://eli.gov.pl/eli/DU/2022/1418" gd:nowGUID="6ae87f8e-4010-4c98-8aa4-f3675c04daec" />we wprowadzeniu do wyliczenia wyrazy „liczby osób przebywających” zastępuje się wyrazami „łącznej liczby pracowników zakładu górniczego oraz pracowników podmiotów, o których mowa w art. 121 ust. 1 ustawy, zatrudnionych”,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1343__art_1__pkt_2__lit_b" gd:GUID="009e7820-367c-4648-9369-17a63ebc0134" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="cc442e5b-3584-4c42-b875-ad89bdf012e4" fragment="5" gd:fragmentGUID="59ddeb2d-c434-4136-ad68-32364b272b0e" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21"><now:zamien-tekst stary-tekst="50" nowy-tekst="80" element-eId="DU/2022/1418__art_7__ust_1__pkt_2" akt="https://eli.gov.pl/eli/DU/2022/1418" gd:nowGUID="ce2e04fd-3e86-44da-b0fd-cd12e7b033e5" />w pkt 2 liczbę „50” zastępuje się liczbą „80”,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1343__art_1__pkt_2__lit_c" gd:GUID="0e71aa0c-525f-44eb-b094-ef3f49250544" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">
+            <nr>c</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="cc442e5b-3584-4c42-b875-ad89bdf012e4" fragment="6" gd:fragmentGUID="8f76c3d6-5cf4-4183-8eec-7dbd42ba97a6" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21"><now:zamien-tekst stary-tekst="80" nowy-tekst="120" element-eId="DU/2022/1418__art_7__ust_1__pkt_3" akt="https://eli.gov.pl/eli/DU/2022/1418" gd:nowGUID="2f478241-61bb-4abb-a195-b19f3d964202" />w pkt 3 liczbę „80” zastępuje się liczbą „120”;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2025/1343__art_1__pkt_3" gd:GUID="453181bb-12bc-4934-aee9-6a17af005092" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="cc442e5b-3584-4c42-b875-ad89bdf012e4" fragment="7" gd:fragmentGUID="0c7ef4ec-e01b-4568-8f80-ecb6e48aca5b" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">w § 10 w ust. 2 wprowadzenie do wyliczenia otrzymuje brzmienie:<cytat-w-tekscie now:akt="https://eli.gov.pl/eli/DU/2022/1418" cudzyslowy="oba" gd:nowGUID="4d85f86f-31e3-4d47-99e7-6c07478fde83" element-eId="DU/2022/1418__art_10__ust_2" funkcja="zastap-tekst"><zdanie nr="1" gd:zdGUID="03b0c9bf-a0b5-4b22-b3d4-f523fdacff3d" fragment="1" gd:fragmentGUID="e788448a-a922-4831-851b-18a2dee7f3df" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">Kierownikiem kopalnianej stacji ratownictwa górniczego albo zakładowej stacji ratownictwa górniczego w zakładach górniczych albo zakładach, o których mowa w § 8 i § 9, jest osoba kierownictwa lub wyższego dozoru ruchu zakładu górniczego albo zakładu:</zdanie></cytat-w-tekscie>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1343__art_1__pkt_4" gd:GUID="99725287-a550-463d-b8a7-3710571df138" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="cc442e5b-3584-4c42-b875-ad89bdf012e4" fragment="8" gd:fragmentGUID="9cf3c6ea-2267-48e8-a1f9-c15f2b916967" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">w § 11 w ust. 1:</zdanie>
+          </p>
+          <litera eId="DU/2025/1343__art_1__pkt_4__lit_a" gd:GUID="606a5df5-22c1-49c5-a81c-4d392862fd23" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="cc442e5b-3584-4c42-b875-ad89bdf012e4" fragment="9" gd:fragmentGUID="b837a254-d619-41de-9996-d3ec9c4175a6" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">pkt 8 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2022/1418" cudzyslowy="oba" gd:nowGUID="b45908c0-0914-49b4-8ea9-380184d51f13" element-eId="DU/2022/1418__art_11__ust_1__pkt_8" funkcja="zastap"><punkt eId="DU/2022/1418__art_11__ust_1__pkt_8" gd:GUID="677d69b4-87e5-40b2-a089-b14397da9c5f" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21"><nr>8</nr><p><zdanie nr="1" gd:zdGUID="94a1d3f6-3285-4bf5-803b-8148fb59a8df" fragment="1" gd:fragmentGUID="e7f7869e-ac42-4a3d-a8f8-f3797e99a464" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">prowadzenie, z zastrzeżeniem § 14 ust. 3, ewidencji członków drużyny ratowniczej i dokumentowanie w niej:</zdanie></p><litera eId="DU/2022/1418__art_11__ust_1__pkt_8__lit_a" gd:GUID="c77f602d-5d1d-4580-8eea-87d61091939a" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21"><nr>a</nr><p><zdanie nr="1" gd:zdGUID="94a1d3f6-3285-4bf5-803b-8148fb59a8df" fragment="2" gd:fragmentGUID="0061b254-0c22-4eef-81d0-ca677cc720a0" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">badań lekarskich,</zdanie></p></litera><litera eId="DU/2022/1418__art_11__ust_1__pkt_8__lit_b" gd:GUID="d6c2c724-695f-4a88-aeb0-cc429e166c9d" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21"><nr>b</nr><p><zdanie nr="1" gd:zdGUID="94a1d3f6-3285-4bf5-803b-8148fb59a8df" fragment="3" gd:fragmentGUID="032de87a-cd1d-4b49-8ddc-ad6f11c2f622" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">ćwiczeń,</zdanie></p></litera><litera eId="DU/2022/1418__art_11__ust_1__pkt_8__lit_c" gd:GUID="be067c07-c815-46c3-9058-989dd003e3e3" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21"><nr>c</nr><p><zdanie nr="1" gd:zdGUID="94a1d3f6-3285-4bf5-803b-8148fb59a8df" fragment="4" gd:fragmentGUID="849147b3-3dc9-4018-ab00-8536b39123bc" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">dyżurów,</zdanie></p></litera><litera eId="DU/2022/1418__art_11__ust_1__pkt_8__lit_d" gd:GUID="c8ce74ca-6f4f-4c11-b0c1-a84b0d22a3aa" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21"><nr>d</nr><p><zdanie nr="1" gd:zdGUID="94a1d3f6-3285-4bf5-803b-8148fb59a8df" fragment="5" gd:fragmentGUID="cf1720c3-be8c-447e-9b6b-4cf86609ad85" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">szkoleń,</zdanie></p></litera><litera eId="DU/2022/1418__art_11__ust_1__pkt_8__lit_e" gd:GUID="f650a4a7-376a-4e31-8c3f-0a3f42c42bb0" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21"><nr>e</nr><p><zdanie nr="1" gd:zdGUID="94a1d3f6-3285-4bf5-803b-8148fb59a8df" fragment="6" gd:fragmentGUID="94eb0141-711e-43e6-a971-13fb49f7a144" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">udziału w akcjach ratowniczych;</zdanie></p></litera></punkt></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1343__art_1__pkt_4__lit_b" gd:GUID="5ccd5c52-6282-414b-b55e-9321ca09f5ed" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="cc442e5b-3584-4c42-b875-ad89bdf012e4" fragment="10" gd:fragmentGUID="95385dca-1fd8-4599-a909-d414e9c84f5a" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">dodaje się pkt 9 w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2022/1418" cudzyslowy="oba" gd:nowGUID="15ad9004-89dd-4b02-886e-9f1de9f3dd5c" element-eId="DU/2022/1418__art_11__ust_1" funkcja="dodaj-w"><punkt eId="DU/2022/1418__art_11__ust_1__pkt_9" gd:GUID="0028e06c-c5c3-4283-9957-91e0223d7a85" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21"><nr>9</nr><p><zdanie nr="1" gd:zdGUID="5a80732d-cd54-45bf-a0c7-39ffb0c383c3" fragment="1" gd:fragmentGUID="86d732da-bad4-4256-91d0-10499d688d8a" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">prowadzenie ewidencji następujących osób przeszkolonych w zakresie ratownictwa górniczego:</zdanie></p><litera eId="DU/2022/1418__art_11__ust_1__pkt_9__lit_a" gd:GUID="0f7ede48-52f5-41ee-bcaa-b614da93d3e9" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21"><nr>a</nr><p><zdanie nr="1" gd:zdGUID="5a80732d-cd54-45bf-a0c7-39ffb0c383c3" fragment="2" gd:fragmentGUID="d265bb9a-988d-4f29-8c30-05e1b409f07d" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">kierowników akcji ratowniczej,</zdanie></p></litera><litera eId="DU/2022/1418__art_11__ust_1__pkt_9__lit_b" gd:GUID="57e8b28a-75b0-4616-bfab-cb57138c022b" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21"><nr>b</nr><p><zdanie nr="1" gd:zdGUID="5a80732d-cd54-45bf-a0c7-39ffb0c383c3" fragment="3" gd:fragmentGUID="bcaa1ec7-4177-4656-8a8d-4bc116a8432e" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">kierowników akcji pod ziemią lub w obiekcie,</zdanie></p></litera><litera eId="DU/2022/1418__art_11__ust_1__pkt_9__lit_c" gd:GUID="ff55d121-b0a6-4a31-ac66-d5e94ef906a4" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21"><nr>c</nr><p><zdanie nr="1" gd:zdGUID="5a80732d-cd54-45bf-a0c7-39ffb0c383c3" fragment="4" gd:fragmentGUID="df3dbbce-3a09-40c1-b598-1aadaa995d8c" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">kierowników bazy ratowniczej,</zdanie></p></litera><litera eId="DU/2022/1418__art_11__ust_1__pkt_9__lit_d" gd:GUID="f1779dc5-d08c-41fd-86ba-d97ec410983c" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21"><nr>d</nr><p><zdanie nr="1" gd:zdGUID="5a80732d-cd54-45bf-a0c7-39ffb0c383c3" fragment="5" gd:fragmentGUID="593fda19-078e-4a59-9d0b-f92efd61204d" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">kierowników sztabu akcji ratowniczej,</zdanie></p></litera><litera eId="DU/2022/1418__art_11__ust_1__pkt_9__lit_e" gd:GUID="618897fa-066c-43d6-aa30-14fcebbbafd7" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21"><nr>e</nr><p><zdanie nr="1" gd:zdGUID="5a80732d-cd54-45bf-a0c7-39ffb0c383c3" fragment="6" gd:fragmentGUID="3380fbca-ef1e-40b2-a75e-0ccaf2cf9023" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">osób dozoru ruchu zakładu górniczego albo zakładu, które nie wchodzą w skład drużyny ratowniczej.</zdanie></p></litera></punkt></cytat-strukt>;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2025/1343__art_1__pkt_5" gd:GUID="f4dc236f-0041-4b5e-9294-da8501ac05ed" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="cc442e5b-3584-4c42-b875-ad89bdf012e4" fragment="11" gd:fragmentGUID="11e30a67-de98-4f34-aae2-4e0651f5c802" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">w § 12 w ust. 3 wprowadzenie do wyliczenia otrzymuje brzmienie:<cytat-w-tekscie now:akt="https://eli.gov.pl/eli/DU/2022/1418" cudzyslowy="oba" gd:nowGUID="1994687d-e6ee-4c6f-9dfd-f8ee14500d33" element-eId="DU/2022/1418__art_12__ust_3" funkcja="zastap-tekst"><zdanie nr="1" gd:zdGUID="c7a18849-974c-46f4-a16c-1a3e9dc74824" fragment="1" gd:fragmentGUID="864a7b06-5d09-4e43-a3f6-78637a74ceab" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">Funkcję kierownika kopalnianej stacji ratownictwa górniczego oraz jego zastępcy pełni osoba, która:</zdanie></cytat-w-tekscie>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1343__art_1__pkt_6" gd:GUID="5c54e8d2-253c-4357-8312-87ac2e2cec1f" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">
+          <nr>6</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="cc442e5b-3584-4c42-b875-ad89bdf012e4" fragment="12" gd:fragmentGUID="0cbf0cfb-89b1-4f29-83b3-80298e4299c5" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">w § 14:</zdanie>
+          </p>
+          <litera eId="DU/2025/1343__art_1__pkt_6__lit_a" gd:GUID="b9f09544-cedf-49d1-a8d2-9e4705b338eb" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="cc442e5b-3584-4c42-b875-ad89bdf012e4" fragment="13" gd:fragmentGUID="7e96ed20-8012-4187-8320-5e88b53a751f" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21"><now:zamien-tekst stary-tekst="kurs" nowy-tekst="kurs podstawowy" element-eId="DU/2022/1418__art_14__ust_1__pkt_2" akt="https://eli.gov.pl/eli/DU/2022/1418" gd:nowGUID="df2f6da3-d61d-4bc8-bee7-5a8bfd727999" />w ust. 1 w pkt 2 po wyrazie „kurs” dodaje się wyraz „podstawowy”,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1343__art_1__pkt_6__lit_b" gd:GUID="72724667-c600-426e-812f-062cbedeaeba" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="cc442e5b-3584-4c42-b875-ad89bdf012e4" fragment="14" gd:fragmentGUID="982a2e87-f678-4c92-8cd1-a53de3670fa2" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">w ust. 2:</zdanie>
+            </p>
+            <tiret eId="DU/2025/1343__art_1__pkt_6__lit_b__tir_1" gd:GUID="ae46ce61-c640-41a2-81f0-01a3baaf1913" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">
+              <p>
+                <zdanie nr="1" gd:zdGUID="cc442e5b-3584-4c42-b875-ad89bdf012e4" fragment="15" gd:fragmentGUID="9917326d-3583-49c7-9e5a-4e0594e8c766" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21"><now:zamien-tekst stary-tekst="planie ratownictwa" nowy-tekst="planie ratownictwa górniczego" element-eId="DU/2022/1418__art_14__ust_2__pkt_2" akt="https://eli.gov.pl/eli/DU/2022/1418" gd:nowGUID="5d716c47-46f4-4b08-9fd1-62df8c3d0101" />w pkt 2 po wyrazach „planie ratownictwa” dodaje się wyraz „górniczego”,</zdanie>
+              </p>
+            </tiret>
+            <tiret eId="DU/2025/1343__art_1__pkt_6__lit_b__tir_2" gd:GUID="d5099842-3ee0-468e-9959-3226c8286ea5" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">
+              <p>
+                <zdanie nr="1" gd:zdGUID="cc442e5b-3584-4c42-b875-ad89bdf012e4" fragment="16" gd:fragmentGUID="3ca1c4d4-6893-4029-9e2e-afe5cec2761b" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">pkt 3 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2022/1418" cudzyslowy="oba" gd:nowGUID="e46dffc0-788d-47be-a98e-47feab5d5454" element-eId="DU/2022/1418__art_14__ust_2__pkt_3" funkcja="zastap"><punkt eId="DU/2022/1418__art_14__ust_2__pkt_3" gd:GUID="80f94046-0867-4e74-a79a-4d9c3b8c66f3" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21"><nr>3</nr><p><zdanie nr="1" gd:zdGUID="ba2763f5-5f1b-4ed1-baca-4f2e651f9307" fragment="1" gd:fragmentGUID="72042458-cb32-4a6c-afca-d35ec6e66119" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">poddaje się specjalistycznym badaniom lekarskim oraz specjalistycznym badaniom psychologicznym, zgodnie z wymaganiami określonymi w załączniku nr 1 do rozporządzenia;</zdanie></p></punkt></cytat-strukt>,</zdanie>
+              </p>
+            </tiret>
+          </litera>
+          <litera eId="DU/2025/1343__art_1__pkt_6__lit_c" gd:GUID="49305b0e-3ab5-4690-83e6-01feaca63753" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">
+            <nr>c</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="cc442e5b-3584-4c42-b875-ad89bdf012e4" fragment="17" gd:fragmentGUID="144f15c4-3f29-4ef2-bade-d9205e31eec1" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">po ust. 2 dodaje się ust. 2a w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2022/1418" cudzyslowy="oba" gd:nowGUID="78b6dd75-1d9b-4259-be46-7b1962b9b243" element-eId="DU/2022/1418__art_14__ust_2" funkcja="dodaj-po"><ustep eId="DU/2022/1418__art_14__ust_2a" gd:GUID="b2c8023c-6f14-4ebb-82d4-fcb737eefa9b" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21"><nr>2a</nr><p><zdanie nr="1" gd:zdGUID="1798ef4a-4c42-4df7-b143-219267ad467a" fragment="1" gd:fragmentGUID="9473069b-da57-4395-9322-8fe1c3311976" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">Jeżeli ratownik górniczy nie wywiązuje się z obowiązków, o których mowa w ust. 2, z przyczyn przez niego zawinionych, kierownik kopalnianej stacji ratownictwa górniczego wprowadza w ewidencji, o której mowa w § 11 ust. 1 pkt 8, wpis o czasowym, trwającym 30 dni od dnia wprowadzenia wpisu, braku gotowości do wykonywania pracy ratownika górniczego, niezwłocznie informując o tym ratownika górniczego.</zdanie></p></ustep></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1343__art_1__pkt_6__lit_d" gd:GUID="fcd38c35-86f6-4fd7-a9b3-ec3ff4edc100" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">
+            <nr>d</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="cc442e5b-3584-4c42-b875-ad89bdf012e4" fragment="18" gd:fragmentGUID="22c8043a-128a-4d3d-9b08-1d0ccc2575c1" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">ust. 3 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2022/1418" cudzyslowy="oba" gd:nowGUID="c56ebde5-e83f-4b15-a2f2-ecb8469d37d1" element-eId="DU/2022/1418__art_14__ust_3" funkcja="zastap"><ustep eId="DU/2022/1418__art_14__ust_3" gd:GUID="cd96b7e4-7e35-4da6-bd15-4c6bb95d54c3" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21"><nr>3</nr><p><zdanie nr="1" gd:zdGUID="c081078b-b259-4a0b-9ff1-9f56fb3f872a" fragment="1" gd:fragmentGUID="0eb16225-9ccc-42ce-bc60-d7307ea0f187" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">Jeżeli w terminie 30 dni od dnia wprowadzenia wpisu, o którym mowa w ust. 2a, nie ustąpi jego przyczyna, kierownik ruchu zakładu górniczego skreśla ratownika górniczego z ewidencji, o której mowa w § 11 ust. 1 pkt 8, niezwłocznie informując o tym ratownika górniczego.</zdanie></p></ustep></cytat-strukt>;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2025/1343__art_1__pkt_7" gd:GUID="72eff256-d395-458e-a852-00b28729fc6f" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">
+          <nr>7</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="cc442e5b-3584-4c42-b875-ad89bdf012e4" fragment="19" gd:fragmentGUID="5eec7058-1f29-4387-afe6-9b1744ced062" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21"><now:zamien-tekst stary-tekst="kurs" nowy-tekst="kurs podstawowy" element-eId="DU/2022/1418__art_15__ust_1__pkt_1" akt="https://eli.gov.pl/eli/DU/2022/1418" gd:nowGUID="ca1e9901-57d2-4113-a710-03fb4321167d" />w § 15 w ust. 1 w pkt 1 po wyrazie „kurs” dodaje się wyraz „podstawowy”;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1343__art_1__pkt_8" gd:GUID="d7563d1c-0511-4bf6-9ac6-8defdca10628" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">
+          <nr>8</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="cc442e5b-3584-4c42-b875-ad89bdf012e4" fragment="20" gd:fragmentGUID="c16f683a-bb8f-4cf3-a305-7c9bcbcee49a" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">w § 27 ust. 3 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2022/1418" cudzyslowy="oba" gd:nowGUID="817be9d7-7e60-40ba-9999-a4d1d8ee135a" element-eId="DU/2022/1418__art_27__ust_3" funkcja="zastap"><ustep eId="DU/2022/1418__art_27__ust_3" gd:GUID="362d180c-89d9-4fd8-b76a-b070e86e6c78" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21"><nr>3</nr><p><zdanie nr="1" gd:zdGUID="a49a43cd-3e73-4b0f-91d3-4cf35d917561" fragment="1" gd:fragmentGUID="46f02134-9232-4e03-bbf1-7f1f0caa6445" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">Szczegółowe wymagania w zakresie wyposażenia kopalnianej stacji ratownictwa górniczego i służby ratownictwa górniczego w zakładzie górniczym określa się w planie ratownictwa górniczego, uwzględniając rodzaj zagrożeń występujących w zakładzie górniczym, a w podziemnym zakładzie górniczym – także łączną liczbę pracowników zakładu górniczego oraz pracowników podmiotów, o których mowa w art. 121 ust. 1 ustawy, zatrudnionych w ciągu doby pod ziemią.</zdanie></p></ustep></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1343__art_1__pkt_9" gd:GUID="f52ecad5-e586-4f6e-9ea4-5d102930a656" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">
+          <nr>9</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="cc442e5b-3584-4c42-b875-ad89bdf012e4" fragment="21" gd:fragmentGUID="beab8347-7230-43f3-a674-70b190ba9d7e" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21"><now:uchyl akt="https://eli.gov.pl/eli/DU/2022/1418" element-eId="DU/2022/1418__art_28__ust_5" gd:nowGUID="6bde1d10-3b0b-4940-bc9d-7691f728a8e1" /><now:uchyl akt="https://eli.gov.pl/eli/DU/2022/1418" element-eId="DU/2022/1418__art_28__ust_6" gd:nowGUID="c50f32db-b116-48b8-b80e-70633ec9e5b4" />w § 28 uchyla się ust. 5 i 6;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1343__art_1__pkt_10" gd:GUID="43199949-44b3-4822-ae04-5a3a637e36b7" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">
+          <nr>10</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="cc442e5b-3584-4c42-b875-ad89bdf012e4" fragment="22" gd:fragmentGUID="e464abd7-95e7-4bbb-a813-9cd0ac30a6ca" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21"><now:zamien-tekst stary-tekst="oraz" nowy-tekst="" element-eId="DU/2022/1418__art_34__ust_5" akt="https://eli.gov.pl/eli/DU/2022/1418" gd:nowGUID="15bcf51d-e8c4-45cc-9a10-c78434d5ac83" />w § 34 w ust. 5 skreśla się wyraz „oraz”;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1343__art_1__pkt_11" gd:GUID="e91d05ca-0763-4566-8e7f-3a5869c8a5fd" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">
+          <nr>11</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="cc442e5b-3584-4c42-b875-ad89bdf012e4" fragment="23" gd:fragmentGUID="2130ef55-adb4-402e-8860-7405638c3c6f" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">w § 36:</zdanie>
+          </p>
+          <litera eId="DU/2025/1343__art_1__pkt_11__lit_a" gd:GUID="67f62b3b-18b6-4760-8502-a9a755b0a442" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="cc442e5b-3584-4c42-b875-ad89bdf012e4" fragment="24" gd:fragmentGUID="535afe4c-87a2-4519-bfaf-4eabda9e5588" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21"><now:zamien-tekst stary-tekst="CO, CO2, CH4" nowy-tekst="tlenku węgla, dwutlenku węgla i metanu" element-eId="DU/2022/1418__art_36__ust_1__pkt_2" akt="https://eli.gov.pl/eli/DU/2022/1418" gd:nowGUID="9d8f3a0e-aa93-4ea6-a1e2-ea9ebbd49e8d" />w ust. 1 w pkt 2 wyrazy „CO, CO<sub>2</sub>, CH<sub>4</sub>” zastępuje się wyrazami „tlenku węgla, dwutlenku węgla i metanu”,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1343__art_1__pkt_11__lit_b" gd:GUID="cce91cf8-8463-4108-bf01-c38e40aff223" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="cc442e5b-3584-4c42-b875-ad89bdf012e4" fragment="25" gd:fragmentGUID="ed76cb16-40cd-4876-92bb-2c8ce0129fdf" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21"><now:uchyl akt="https://eli.gov.pl/eli/DU/2022/1418" element-eId="DU/2022/1418__art_36__ust_3" gd:nowGUID="4c46b595-78b2-430d-9fb2-a5496219516d" />uchyla się ust. 3;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2025/1343__art_1__pkt_12" gd:GUID="64ec340a-69ef-4fc1-87e4-e2bc878cf6e7" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">
+          <nr>12</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="cc442e5b-3584-4c42-b875-ad89bdf012e4" fragment="26" gd:fragmentGUID="992e03dd-e29f-4f41-892c-2404ab285814" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">w § 37:</zdanie>
+          </p>
+          <litera eId="DU/2025/1343__art_1__pkt_12__lit_a" gd:GUID="607c8a0b-cae0-4d74-8bcd-34ce6f8884f6" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="cc442e5b-3584-4c42-b875-ad89bdf012e4" fragment="27" gd:fragmentGUID="08b08d80-a4ba-427e-a41e-39a5b6484899" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21"><now:zamien-tekst stary-tekst="zgłasza się dyspozytorowi" nowy-tekst="zgłasza się dyspozytorowi ruchu" element-eId="DU/2022/1418__art_37__ust_1" akt="https://eli.gov.pl/eli/DU/2022/1418" gd:nowGUID="4c2e8e7d-6bca-4c4b-9cda-a156badf764b" />w ust. 1 po wyrazach „zgłasza się dyspozytorowi” dodaje się wyraz „ruchu”,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1343__art_1__pkt_12__lit_b" gd:GUID="72026986-acd2-4b75-81e3-c7ced76c0f41" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="cc442e5b-3584-4c42-b875-ad89bdf012e4" fragment="28" gd:fragmentGUID="5c1a7d06-f9b2-4bb6-b4f5-3b767c8c6d71" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">dodaje się ust. 3 i 4 w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2022/1418" cudzyslowy="oba" gd:nowGUID="4e4f4846-de9e-45af-86f8-b0ce4ee87889" element-eId="DU/2022/1418__art_37" funkcja="dodaj-w"><ustep eId="DU/2022/1418__art_37__ust_3" gd:GUID="929c8d4b-6cb5-4d3a-9616-5050eddaa93b" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21"><nr>3</nr><p><zdanie nr="1" gd:zdGUID="c31e2634-8703-4bca-95b5-9f759b732e8a" fragment="1" gd:fragmentGUID="91a7b7f8-9930-4d33-967f-4a035cddbb28" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">Treść nakazu, o którym mowa w ust. 2, podlega niezwłocznemu zgłoszeniu dyspozytorowi ruchu zakładu górniczego.</zdanie></p></ustep><ustep eId="DU/2022/1418__art_37__ust_4" gd:GUID="86d5dcdc-1654-485c-83cf-b9c4abaa1f21" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21"><nr>4</nr><p><zdanie nr="1" gd:zdGUID="cd8469e2-5980-4eaa-a9ce-0abfc58b5b7c" fragment="1" gd:fragmentGUID="74519542-2e3a-41c5-b8bd-4678fae64df8" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">Treść nakazu, o którym mowa w ust. 2, oraz zgłoszenie, o którym mowa w ust. 3, podlegają niezwłocznemu odnotowaniu w dzienniku kopalnianej stacji ratownictwa górniczego.</zdanie></p></ustep></cytat-strukt>;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2025/1343__art_1__pkt_13" gd:GUID="3fa5cf37-a958-4431-9725-a9d155b973ca" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">
+          <nr>13</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="cc442e5b-3584-4c42-b875-ad89bdf012e4" fragment="29" gd:fragmentGUID="da018c1f-accc-421f-9241-65686c5ab432" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">po § 37 dodaje się § 37a w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2022/1418" cudzyslowy="oba" gd:nowGUID="c8d60001-2215-4660-bab5-8a569edb644e" element-eId="DU/2022/1418__art_37" funkcja="dodaj-po"><paragraf eId="DU/2022/1418__art_37a" gd:GUID="9cb760fc-0a6c-43ae-843e-896b3874d5db" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21"><nr>37a</nr><ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="f4c143c5-3640-47c0-b096-27698f1d7e5c" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21"><p><zdanie nr="1" gd:zdGUID="0f3cb8cd-7aa7-4962-ac3c-372e1a45bde5" fragment="1" gd:fragmentGUID="571d7797-7336-49f2-ae19-8d465ba1a66c" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">Ratowników górniczych:</zdanie></p><punkt eId="DU/2022/1418__art_37a__pkt_1" gd:GUID="30359fc8-908e-43a5-bf6a-98fd0bddf741" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="0f3cb8cd-7aa7-4962-ac3c-372e1a45bde5" fragment="2" gd:fragmentGUID="2a10b36b-7ea2-44d0-a90a-8c8aab0cf927" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">w dyżurującym zastępie ratowniczym,</zdanie></p></punkt><punkt eId="DU/2022/1418__art_37a__pkt_2" gd:GUID="c42ef055-eb24-48dc-b83b-3ee43d051b9f" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="0f3cb8cd-7aa7-4962-ac3c-372e1a45bde5" fragment="3" gd:fragmentGUID="03d3f707-362a-4337-ad88-c2d8437e4429" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">biorących udział w akcji ratowniczej</zdanie></p></punkt><czesc-wspolna-punkt eId="DU/2022/1418__art_37a__czw" gd:GUID="6a6c824c-0b34-4149-9f1c-3ec9c2761f8b" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21"><p><zdanie nr="1" gd:zdGUID="0f3cb8cd-7aa7-4962-ac3c-372e1a45bde5" fragment="4" gd:fragmentGUID="57f9dc7e-9334-44fb-8259-eaf22da0ce62" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">– wyposaża się w optyczno-akustyczne sygnalizatory bezruchu, w których uruchomienie alarmu następuje automatycznie oraz przez użytkownika.</zdanie></p></czesc-wspolna-punkt></ustep-n></paragraf></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1343__art_1__pkt_14" gd:GUID="43d1b45c-11c5-4121-b8fa-ef90ca4ceb3f" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">
+          <nr>14</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="cc442e5b-3584-4c42-b875-ad89bdf012e4" fragment="30" gd:fragmentGUID="d1d85165-c4fc-449d-98f6-37f36d525624" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">po § 43 dodaje się § 43a w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2022/1418" cudzyslowy="oba" gd:nowGUID="2d62800a-24bf-4606-b23a-d791a2059087" element-eId="DU/2022/1418__art_43" funkcja="dodaj-po"><paragraf eId="DU/2022/1418__art_43a" gd:GUID="e7036e62-698d-4a35-8c64-489c0245f01d" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21"><nr>43a</nr><ustep eId="DU/2022/1418__art_43a__ust_1" gd:GUID="f16649cb-12ea-495c-8cb0-5d842fe78806" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="f1b5e6fc-d4e5-4c76-848f-da0c91359a73" fragment="1" gd:fragmentGUID="09e5c050-1cdd-46ec-86ef-b0062ab6e54e" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">Jednostka ratownictwa zapewnia ratownikom górniczym wchodzącym w skład zastępów ratowniczych, o których mowa w § 43 ust. 3:</zdanie></p><punkt eId="DU/2022/1418__art_43a__ust_1__pkt_1" gd:GUID="c8e1ffbb-6ada-4e13-9f2a-0ab4e8516673" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="f1b5e6fc-d4e5-4c76-848f-da0c91359a73" fragment="2" gd:fragmentGUID="5d0fa24d-9cc4-4189-97fb-3e68e99e234a" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">badania lekarskie przed każdorazowym rozpoczęciem dyżurów w jednostce ratownictwa;</zdanie></p></punkt><punkt eId="DU/2022/1418__art_43a__ust_1__pkt_2" gd:GUID="052c66c9-103e-47a5-98ab-0ae403a47ef5" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="f1b5e6fc-d4e5-4c76-848f-da0c91359a73" fragment="3" gd:fragmentGUID="f6117bef-62a5-4c3d-8bac-63abbf746448" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">w okresie pełnienia dyżuru w jednostce ratownictwa:</zdanie></p><litera eId="DU/2022/1418__art_43a__ust_1__pkt_2__lit_a" gd:GUID="aa65d511-b80a-4d19-a5b2-f2f46dbac5c1" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21"><nr>a</nr><p><zdanie nr="1" gd:zdGUID="f1b5e6fc-d4e5-4c76-848f-da0c91359a73" fragment="4" gd:fragmentGUID="04154840-0a81-474e-aa43-f8e35090e833" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">pomoc ambulatoryjną,</zdanie></p></litera><litera eId="DU/2022/1418__art_43a__ust_1__pkt_2__lit_b" gd:GUID="988906cf-73c2-4cec-a8a4-2373944397e2" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21"><nr>b</nr><p><zdanie nr="1" gd:zdGUID="f1b5e6fc-d4e5-4c76-848f-da0c91359a73" fragment="5" gd:fragmentGUID="e814df79-79f2-472c-92e4-00ef10189b8e" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">sprawdzanie stanu zdrowia bezpośrednio przed przystąpieniem do akcji ratowniczej i po jej zakończeniu,</zdanie></p></litera><litera eId="DU/2022/1418__art_43a__ust_1__pkt_2__lit_c" gd:GUID="43bcdf95-763c-468d-b581-18350fcc31b4" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21"><nr>c</nr><p><zdanie nr="1" gd:zdGUID="f1b5e6fc-d4e5-4c76-848f-da0c91359a73" fragment="6" gd:fragmentGUID="28c63ef9-b880-49e1-9b7b-24c96d3b32b8" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">pomoc lekarską i psychologiczną w trakcie akcji ratowniczych.</zdanie></p></litera></punkt></ustep><ustep eId="DU/2022/1418__art_43a__ust_2" gd:GUID="1ff8df4e-1f0f-4125-b141-dee888083aea" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="727696bf-cfc9-47bd-a01e-5881fd990489" fragment="1" gd:fragmentGUID="9183dd2d-5e59-4423-b116-6282d1725f0d" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">Przepisu ust. 1 pkt 1 nie stosuje się do zakładów górniczych oraz zakładów, o których mowa w § 8 i § 9.</zdanie></p></ustep></paragraf></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1343__art_1__pkt_15" gd:GUID="794d3369-dfc2-40d9-9967-34231a35685e" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">
+          <nr>15</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="cc442e5b-3584-4c42-b875-ad89bdf012e4" fragment="31" gd:fragmentGUID="9a212fc1-fbe6-4fe4-9507-04a2831b02bd" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21"><now:zamien-tekst stary-tekst="§ 52 pkt 2" nowy-tekst="§ 43a ust. 1 pkt 2 lit. a oraz § 64b ust. 1 pkt 2" element-eId="DU/2022/1418__art_48__pkt_4" akt="https://eli.gov.pl/eli/DU/2022/1418" gd:nowGUID="9de654a5-e5f4-46bf-b67d-377d15234caf" />w § 48 w pkt 4 wyrazy „§ 52 pkt 2” zastępuje się wyrazami „§ 43a ust. 1 pkt 2 lit. a oraz § 64b ust. 1 pkt 2”;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1343__art_1__pkt_16" gd:GUID="a99e18dc-5041-4ed9-8af5-5a2c45c84a14" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">
+          <nr>16</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="cc442e5b-3584-4c42-b875-ad89bdf012e4" fragment="32" gd:fragmentGUID="7fbcaa30-2665-4c38-8f11-80630414b4d3" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21"><now:uchyl akt="https://eli.gov.pl/eli/DU/2022/1418" element-eId="DU/2022/1418__art_52" gd:nowGUID="0df15902-e787-4001-9c34-4bfb770e2afc" />uchyla się § 52;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1343__art_1__pkt_17" gd:GUID="c8b6ce51-65ed-488f-906b-681ffdc8185f" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">
+          <nr>17</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="cc442e5b-3584-4c42-b875-ad89bdf012e4" fragment="33" gd:fragmentGUID="5f01c34b-fa87-4de3-9bbb-1ce8ccdb17a3" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21"><now:zamien-tekst stary-tekst="kierownik kopalnianej stacji ratownictwa górniczego" nowy-tekst="kierownik ruchu zakładu górniczego" element-eId="DU/2022/1418__art_53__ust_4" akt="https://eli.gov.pl/eli/DU/2022/1418" gd:nowGUID="16101610-b09d-4d4c-9cd2-932ec7b037a4" />w § 53 w ust. 4 wyrazy „kierownik kopalnianej stacji ratownictwa górniczego” zastępuje się wyrazami „kierownik ruchu zakładu górniczego”;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1343__art_1__pkt_18" gd:GUID="e746e9f7-f4db-47cb-9f68-4109cb8c40fc" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">
+          <nr>18</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="cc442e5b-3584-4c42-b875-ad89bdf012e4" fragment="34" gd:fragmentGUID="d139ea15-7f26-42ef-885b-7c793b8ba26b" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21"><now:zamien-tekst stary-tekst="zakładów" nowy-tekst="zakładów górniczych albo zakładów" element-eId="DU/2022/1418__art_62__ust_2__zdn_1" akt="https://eli.gov.pl/eli/DU/2022/1418" gd:nowGUID="3ecd0e47-b678-43dd-9249-4b8a68d8f35d" />w § 62 w ust. 2 w zdaniu pierwszym po wyrazie „zakładów” dodaje się wyrazy „górniczych albo zakładów”;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1343__art_1__pkt_19" gd:GUID="8355b6c5-9a4b-4fd9-81b6-a31747a22d72" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">
+          <nr>19</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="cc442e5b-3584-4c42-b875-ad89bdf012e4" fragment="35" gd:fragmentGUID="0e3dd68a-2571-4c9b-a365-d5013bdeaa26" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">w § 64:</zdanie>
+          </p>
+          <litera eId="DU/2025/1343__art_1__pkt_19__lit_a" gd:GUID="b1756dbe-def9-42de-a13d-b9ac9455d77a" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="cc442e5b-3584-4c42-b875-ad89bdf012e4" fragment="36" gd:fragmentGUID="e95dc9fd-d8c6-4fbd-b261-7754dc0474d7" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">w ust. 3:</zdanie>
+            </p>
+            <tiret eId="DU/2025/1343__art_1__pkt_19__lit_a__tir_1" gd:GUID="c510d8aa-ac3b-473a-be4f-f7a822e19524" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">
+              <p>
+                <zdanie nr="1" gd:zdGUID="cc442e5b-3584-4c42-b875-ad89bdf012e4" fragment="37" gd:fragmentGUID="9f0f16a0-07e7-4389-bfd2-49c0bcecb728" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21"><now:zamien-tekst stary-tekst="w trakcie roku, nie rzadziej niż co 2 miesiące" nowy-tekst="rozłożonych równomiernie w trakcie roku" element-eId="DU/2022/1418__art_64__ust_3__pkt_1" akt="https://eli.gov.pl/eli/DU/2022/1418" gd:nowGUID="fdf6b9a6-dc6a-490b-9d14-b047c750cd57" />w pkt 1 we wprowadzeniu do wyliczenia wyrazy „w trakcie roku, nie rzadziej niż co 2 miesiące” zastępuje się wyrazami „rozłożonych równomiernie w trakcie roku”,</zdanie>
+              </p>
+            </tiret>
+            <tiret eId="DU/2025/1343__art_1__pkt_19__lit_a__tir_2" gd:GUID="38bf2ac3-ce09-423c-afe5-449bf08a1bab" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">
+              <p>
+                <zdanie nr="1" gd:zdGUID="cc442e5b-3584-4c42-b875-ad89bdf012e4" fragment="38" gd:fragmentGUID="2518baba-1ab9-41ec-9415-f5345cd933dd" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21"><now:zamien-tekst stary-tekst="odbywa cztery ćwiczenia w jednostce ratownictwa w trakcie roku" nowy-tekst="bierze udział w czterech ćwiczeniach w jednostce ratownictwa rozłożonych równomiernie w trakcie roku" element-eId="DU/2022/1418__art_64__ust_3__pkt_2" akt="https://eli.gov.pl/eli/DU/2022/1418" gd:nowGUID="c9ff856c-7afa-43a9-a8e8-3c7a91a262cc" />w pkt 2 wyrazy „odbywa cztery ćwiczenia w jednostce ratownictwa w trakcie roku” zastępuje się wyrazami „bierze udział w czterech ćwiczeniach w jednostce ratownictwa rozłożonych równomiernie w trakcie roku”,</zdanie>
+              </p>
+            </tiret>
+          </litera>
+          <litera eId="DU/2025/1343__art_1__pkt_19__lit_b" gd:GUID="f59796f5-464f-430b-b423-a32c9365f6d3" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="cc442e5b-3584-4c42-b875-ad89bdf012e4" fragment="39" gd:fragmentGUID="03a26d2d-12c7-4e89-b896-1a50c9e6aaaa" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">po ust. 5 dodaje się ust. 5a w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2022/1418" cudzyslowy="oba" gd:nowGUID="2ef4d5ed-114a-49b6-b6a8-447cdd972928" element-eId="DU/2022/1418__art_64__ust_5" funkcja="dodaj-po"><ustep eId="DU/2022/1418__art_64__ust_5a" gd:GUID="1f79225c-875d-4d37-800a-e2d375fdd1d1" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21"><nr>5a</nr><p><zdanie nr="1" gd:zdGUID="5ed3bbeb-1513-4633-b000-3a4365b5ee4f" fragment="1" gd:fragmentGUID="7ec92489-440d-4378-adcc-56b292aec472" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">Jeżeli w podziemnym zakładzie górniczym występują warunki organizacyjno-techniczne umożliwiające przeprowadzenie ćwiczeń, o których mowa w ust. 3 pkt 1 lit. a, dopuszcza się możliwość ich przeprowadzenia poza właściwą jednostką ratownictwa, na warunkach uzgodnionych z tą jednostką.</zdanie></p></ustep></cytat-strukt>;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2025/1343__art_1__pkt_20" gd:GUID="599c8b71-5e40-448f-aa60-960d9be24798" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">
+          <nr>20</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="cc442e5b-3584-4c42-b875-ad89bdf012e4" fragment="40" gd:fragmentGUID="2de9f76b-6bc8-402f-9d9f-363e2b79fabc" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">po § 64a dodaje się § 64b w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2022/1418" cudzyslowy="oba" gd:nowGUID="68b2b0f9-7551-4263-b36c-f645fd41c081" element-eId="DU/2022/1418__art_64a" funkcja="dodaj-po"><paragraf eId="DU/2022/1418__art_64b" gd:GUID="2f3b1cb9-04fc-4feb-aeb9-363bb1a40e79" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21"><nr>64b</nr><ustep eId="DU/2022/1418__art_64b__ust_1" gd:GUID="e0aea76d-8c07-44f1-bf98-891de1b4537a" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="6420d1a8-d456-4c2e-9798-233cc238a07f" fragment="1" gd:fragmentGUID="1d6074ac-b284-4149-94e2-37874042686a" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">Jednostka ratownictwa dla podziemnych zakładów górniczych zapewnia ratownikom górniczym:</zdanie></p><punkt eId="DU/2022/1418__art_64b__ust_1__pkt_1" gd:GUID="25e038bf-8221-461d-acba-689be2314e8d" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="6420d1a8-d456-4c2e-9798-233cc238a07f" fragment="2" gd:fragmentGUID="a01a2b5b-7fba-4091-ad96-be33f70af6a8" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">badania lekarskie przed ćwiczeniami okresowymi, o których mowa w § 64 ust. 3 pkt 1 lit. a;</zdanie></p></punkt><punkt eId="DU/2022/1418__art_64b__ust_1__pkt_2" gd:GUID="83320e92-2d60-487a-bbbe-bb3ea10ad034" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="6420d1a8-d456-4c2e-9798-233cc238a07f" fragment="3" gd:fragmentGUID="38b1c1e6-d366-41b3-ab6a-855e9f48ec9f" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">pomoc ambulatoryjną w trakcie odbywania ćwiczeń w jednostce ratownictwa.</zdanie></p></punkt></ustep><ustep eId="DU/2022/1418__art_64b__ust_2" gd:GUID="0f0ab459-8c25-43ba-8bf6-127bd2e353e6" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="88438b08-58ef-4f27-b85b-f796c20eb14b" fragment="1" gd:fragmentGUID="d6d2d2cf-2902-47de-9152-978b6e4541b0" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">Jednostka ratownictwa dla zakładów górniczych wydobywających kopaliny otworami wiertniczymi zapewnia ratownikom górniczym pomoc ambulatoryjną w trakcie odbywania ćwiczeń w jednostce ratownictwa.</zdanie></p></ustep></paragraf></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1343__art_1__pkt_21" gd:GUID="d9ec4604-c207-4ff6-8f79-853f76a4ac20" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">
+          <nr>21</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="cc442e5b-3584-4c42-b875-ad89bdf012e4" fragment="41" gd:fragmentGUID="a6f48638-189e-4be3-b785-23b40aaa2587" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">w § 66:</zdanie>
+          </p>
+          <litera eId="DU/2025/1343__art_1__pkt_21__lit_a" gd:GUID="c24fe50f-f9d4-4abb-8cef-e71ccd695d25" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="cc442e5b-3584-4c42-b875-ad89bdf012e4" fragment="42" gd:fragmentGUID="f0c2e10a-d8bd-46fc-a92e-3d0df3c36633" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21"><now:zamien-tekst stary-tekst=", z uwzględnieniem imion i nazwisk psychologów, psychoterapeutów i lekarzy psychiatrów, ich miejsca pracy oraz numerów telefonów" nowy-tekst="" element-eId="DU/2022/1418__art_66__pkt_4" akt="https://eli.gov.pl/eli/DU/2022/1418" gd:nowGUID="908686ea-d63b-4637-bdf2-04d319bb9488" />w pkt 4 skreśla się wyrazy „ , z uwzględnieniem imion i nazwisk psychologów, psychoterapeutów i lekarzy psychiatrów, ich miejsca pracy oraz numerów telefonów”,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1343__art_1__pkt_21__lit_b" gd:GUID="024d0129-0885-4cf8-b4d6-c5317ed90659" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="cc442e5b-3584-4c42-b875-ad89bdf012e4" fragment="43" gd:fragmentGUID="21da4d7d-2bf6-4142-ae3d-21f3827a157e" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">w pkt 5:</zdanie>
+            </p>
+            <tiret eId="DU/2025/1343__art_1__pkt_21__lit_b__tir_1" gd:GUID="63713bf2-1ba4-4dc7-9977-8112a3a0bc77" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">
+              <p>
+                <zdanie nr="1" gd:zdGUID="cc442e5b-3584-4c42-b875-ad89bdf012e4" fragment="44" gd:fragmentGUID="f423560f-e4b7-45dc-8d0d-9e2ac18f5003" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21"><now:uchyl akt="https://eli.gov.pl/eli/DU/2022/1418" element-eId="DU/2022/1418__art_66__pkt_5__lit_a__tir_1" gd:nowGUID="cc073724-4178-4f61-b622-cdb0a038b4f7" />w lit. a uchyla się tiret pierwsze,</zdanie>
+              </p>
+            </tiret>
+            <tiret eId="DU/2025/1343__art_1__pkt_21__lit_b__tir_2" gd:GUID="4a613e18-8433-46ad-a179-909ce19ce677" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">
+              <p>
+                <zdanie nr="1" gd:zdGUID="cc442e5b-3584-4c42-b875-ad89bdf012e4" fragment="45" gd:fragmentGUID="01aae0d4-7221-4dab-ad2d-a141a6ac501c" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">po lit. c dodaje się lit. ca w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2022/1418" cudzyslowy="oba" gd:nowGUID="0c8440c1-c4fc-4490-ac30-8087d03a97ff" element-eId="DU/2022/1418__art_66__pkt_5__lit_c" funkcja="dodaj-po"><litera eId="DU/2022/1418__art_66__pkt_5__lit_ca" gd:GUID="30ec2a09-678d-406b-b1c9-33a74329d5d8" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21"><nr>ca</nr><p><zdanie nr="1" gd:zdGUID="30fb80c3-9e0f-4b9b-ac17-0fb4bd51cb80" fragment="1" gd:fragmentGUID="6b2b4b74-08d4-4375-96c6-7cac50699b73" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">sposobu prowadzenia akcji ratowniczej, w przypadku połączenia wentylacyjnego sąsiednich zakładów górniczych,</zdanie></p></litera></cytat-strukt>;</zdanie>
+              </p>
+            </tiret>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2025/1343__art_1__pkt_22" gd:GUID="94978695-ab30-4348-bb27-0d322f54132c" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">
+          <nr>22</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="cc442e5b-3584-4c42-b875-ad89bdf012e4" fragment="46" gd:fragmentGUID="7433cef2-2cbb-442d-a6f3-822323ecdb51" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">w § 71:</zdanie>
+          </p>
+          <litera eId="DU/2025/1343__art_1__pkt_22__lit_a" gd:GUID="93c82693-e441-4e66-b944-4478494a3e07" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="cc442e5b-3584-4c42-b875-ad89bdf012e4" fragment="47" gd:fragmentGUID="b4981862-ad93-48c7-b733-65a3c540d707" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">w ust. 1:</zdanie>
+            </p>
+            <tiret eId="DU/2025/1343__art_1__pkt_22__lit_a__tir_1" gd:GUID="02d1eeb5-d305-402b-b22c-9120d488361f" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">
+              <p>
+                <zdanie nr="1" gd:zdGUID="cc442e5b-3584-4c42-b875-ad89bdf012e4" fragment="48" gd:fragmentGUID="9f7f00db-9d59-49e6-985d-e7a7516bc3df" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">pkt 1 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2022/1418" cudzyslowy="oba" gd:nowGUID="05076307-3d31-4eca-b6af-2992a2b611c8" element-eId="DU/2022/1418__art_71__ust_1__pkt_1" funkcja="zastap"><punkt eId="DU/2022/1418__art_71__ust_1__pkt_1" gd:GUID="3f886aed-703e-4fa6-b40a-22402f27f659" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="495b386b-8b0f-4bcc-b82d-35fded81f91b" fragment="1" gd:fragmentGUID="c5e4e855-450d-4890-b577-227c235b7e96" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">likwidacji stanu zagrożenia pożarowego, gdy:</zdanie></p><litera eId="DU/2022/1418__art_71__ust_1__pkt_1__lit_a" gd:GUID="d0062797-acd7-4818-8b22-6a04be732b72" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21"><nr>a</nr><p><zdanie nr="1" gd:zdGUID="495b386b-8b0f-4bcc-b82d-35fded81f91b" fragment="2" gd:fragmentGUID="3131679a-e89f-4abe-919c-1d49c383926e" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">10 &lt; V_CO ≤ 25 dm<sup>3</sup>/min, gdzie V_CO to wskaźnik ilości tlenku węgla, obliczany według wzorów określonych w przepisach wydanych na podstawie art. 120 ust. 1 ustawy w zakresie prowadzenia ruchu podziemnych zakładów górniczych, dotyczących wczesnego wykrywania pożarów endogenicznych, lub</zdanie></p></litera><litera eId="DU/2022/1418__art_71__ust_1__pkt_1__lit_b" gd:GUID="452b886f-57ed-4fc4-ba83-c131c13335af" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21"><nr>b</nr><p><zdanie nr="1" gd:zdGUID="495b386b-8b0f-4bcc-b82d-35fded81f91b" fragment="3" gd:fragmentGUID="49d0f46b-4237-4b1f-8eb3-91c237036390" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">0,0070 &lt; G ≤ 0,0300, gdzie G to wskaźnik Grahama, obliczany według wzoru określonego w przepisach wydanych na podstawie art. 120 ust. 1 ustawy w zakresie prowadzenia ruchu podziemnych zakładów górniczych, dotyczących wczesnego wykrywania pożarów endogenicznych;</zdanie></p></litera></punkt></cytat-strukt>,</zdanie>
+              </p>
+            </tiret>
+            <tiret eId="DU/2025/1343__art_1__pkt_22__lit_a__tir_2" gd:GUID="2fb84462-83c6-4e75-b4e9-e5a307dc6041" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">
+              <p>
+                <zdanie nr="1" gd:zdGUID="cc442e5b-3584-4c42-b875-ad89bdf012e4" fragment="49" gd:fragmentGUID="072ef508-5379-47b3-958c-eb0b6ed3ac2a" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">po pkt 1 dodaje się pkt 1a i 1b w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2022/1418" cudzyslowy="oba" gd:nowGUID="57ae6841-bfd8-429c-86d1-2b060aae6bf8" element-eId="DU/2022/1418__art_71__ust_1__pkt_1" funkcja="dodaj-po"><punkt eId="DU/2022/1418__art_71__ust_1__pkt_1a" gd:GUID="450b3369-5069-45b2-bcc6-632efa4f9a52" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21"><nr>1a</nr><p><zdanie nr="1" gd:zdGUID="20a4bce9-f238-446d-a154-b4f11da21408" fragment="1" gd:fragmentGUID="5b89a571-b2e4-49d7-82e3-56b8101c361f" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">budowy tam o konstrukcji przeciwwybuchowej;</zdanie></p></punkt><punkt eId="DU/2022/1418__art_71__ust_1__pkt_1b" gd:GUID="07bc5179-7d44-47f2-acb6-85650060fc13" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21"><nr>1b</nr><p><zdanie nr="1" gd:zdGUID="20a4bce9-f238-446d-a154-b4f11da21408" fragment="2" gd:fragmentGUID="85c44a4b-c054-42dd-80e2-2db3f9e08563" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">uszczelniania tam i zrobów;</zdanie></p></punkt></cytat-strukt>,</zdanie>
+              </p>
+            </tiret>
+            <tiret eId="DU/2025/1343__art_1__pkt_22__lit_a__tir_3" gd:GUID="6a6f5510-0f6b-4f87-8887-98e2b536fd20" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">
+              <p>
+                <zdanie nr="1" gd:zdGUID="cc442e5b-3584-4c42-b875-ad89bdf012e4" fragment="50" gd:fragmentGUID="0245fb84-7e7b-4e85-9715-e289d9a14106" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21"><now:zamien-tekst stary-tekst="oraz przy pracach w podziemnych magazynach węglowodorów" nowy-tekst="" element-eId="DU/2022/1418__art_71__ust_1__pkt_5" akt="https://eli.gov.pl/eli/DU/2022/1418" gd:nowGUID="7d740c1a-feab-4165-ba43-d254623a0d3c" />w pkt 5 skreśla się wyrazy „oraz przy pracach w podziemnych magazynach węglowodorów”,</zdanie>
+              </p>
+            </tiret>
+            <tiret eId="DU/2025/1343__art_1__pkt_22__lit_a__tir_4" gd:GUID="57915488-876b-4ebe-9388-e8830236290d" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">
+              <p>
+                <zdanie nr="1" gd:zdGUID="cc442e5b-3584-4c42-b875-ad89bdf012e4" fragment="51" gd:fragmentGUID="41ce89a9-da6c-4390-a732-3cccfb38ae61" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21"><now:zamien-tekst stary-tekst="." nowy-tekst=";" element-eId="DU/2022/1418__art_71__ust_1__pkt_8" akt="https://eli.gov.pl/eli/DU/2022/1418" now:wystapienie="ostatnie" gd:nowGUID="999aa456-da7c-4f09-8e95-9061c5d1bb57" />w pkt 8 kropkę zastępuje się średnikiem i dodaje się pkt 9 w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2022/1418" cudzyslowy="oba" gd:nowGUID="82e39e68-865b-46d4-9876-fca7b6833c83" element-eId="DU/2022/1418__art_71__ust_1__pkt_8" funkcja="dodaj-po"><punkt eId="DU/2022/1418__art_71__ust_1__pkt_9" gd:GUID="0f92da4d-b2f0-4ed5-a26b-6da2a2250107" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21"><nr>9</nr><p><zdanie nr="1" gd:zdGUID="6737d215-cd81-4bf9-8f94-5f16cd386be9" fragment="1" gd:fragmentGUID="ca6daed4-56f2-4494-a4c2-fd84026c522c" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">zidentyfikowania przez kierownika ruchu zakładu górniczego konieczności zapobieżenia bezpośredniemu zagrożeniu bezpieczeństwa osób lub ruchu zakładu górniczego ze względu na inne okoliczności lub w innych miejscach niż określone w pkt 1–8.</zdanie></p></punkt></cytat-strukt>,</zdanie>
+              </p>
+            </tiret>
+          </litera>
+          <litera eId="DU/2025/1343__art_1__pkt_22__lit_b" gd:GUID="1ef6da7b-cabc-4aaa-96a0-37ede4ac22b0" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="cc442e5b-3584-4c42-b875-ad89bdf012e4" fragment="52" gd:fragmentGUID="87a6e473-0bd9-4370-aafa-dd7fcbe20956" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21"><now:zamien-tekst stary-tekst="ustala się" nowy-tekst="ustala kierownik ruchu zakładu albo zakładu górniczego" element-eId="DU/2022/1418__art_71__ust_2" akt="https://eli.gov.pl/eli/DU/2022/1418" gd:nowGUID="a38e22d8-a2e8-4291-9e86-a3b037eb9ef0" />w ust. 2 wyrazy „ustala się” zastępuje się wyrazami „ustala kierownik ruchu zakładu albo zakładu górniczego”;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2025/1343__art_1__pkt_23" gd:GUID="fd7c3998-4cae-4cd7-b332-415f61047ee0" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">
+          <nr>23</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="cc442e5b-3584-4c42-b875-ad89bdf012e4" fragment="53" gd:fragmentGUID="a3b12304-b86b-4886-acd3-202c4071011d" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21"><now:zamien-tekst stary-tekst="zakładów górniczych" nowy-tekst="zakładów górniczych oraz zakładów" element-eId="DU/2022/1418__art_90__ust_2__pkt_10" akt="https://eli.gov.pl/eli/DU/2022/1418" gd:nowGUID="d9aee56e-7ab2-4a35-90b1-c337ed7fdba5" />w § 90 w ust. 2 w pkt 10 po wyrazach „zakładów górniczych” dodaje się wyrazy „oraz zakładów”;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1343__art_1__pkt_24" gd:GUID="b258db9a-b11f-4052-ab7a-5b8a7a248f3c" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">
+          <nr>24</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="cc442e5b-3584-4c42-b875-ad89bdf012e4" fragment="54" gd:fragmentGUID="2fb5a83e-da34-4dc4-afc7-f8a89bb1c5cb" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21"><now:zamien-tekst stary-tekst="CO, CO2, CH4" nowy-tekst="tlenku węgla, dwutlenku węgla i metanu" element-eId="DU/2022/1418__art_106__ust_1__pkt_2" akt="https://eli.gov.pl/eli/DU/2022/1418" gd:nowGUID="c457b008-e92b-4ef7-a0c6-72d40e1fa104" />w § 106 w ust. 1 w pkt 2 wyrazy „CO, CO<sub>2</sub>, CH<sub>4</sub>” zastępuje się wyrazami „tlenku węgla, dwutlenku węgla i metanu”;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1343__art_1__pkt_25" gd:GUID="98c73c46-5cc7-4243-a608-dd565f6dbdbb" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">
+          <nr>25</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="cc442e5b-3584-4c42-b875-ad89bdf012e4" fragment="55" gd:fragmentGUID="886bcc76-f4a5-4aae-8008-08605b29cffc" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21"><now:uchyl akt="https://eli.gov.pl/eli/DU/2022/1418" element-eId="DU/2022/1418__art_112__pkt_3" gd:nowGUID="a4fdb8c1-b810-42e1-82e3-5c356d9a4f6b" />w § 112 uchyla się pkt 3;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1343__art_1__pkt_26" gd:GUID="7582b7e0-8838-4b0b-bd7d-2259b44d9eb4" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">
+          <nr>26</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="cc442e5b-3584-4c42-b875-ad89bdf012e4" fragment="56" gd:fragmentGUID="ba33a484-aa7e-423e-ab36-290a0ddc596f" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">po § 112 dodaje się § 112a w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2022/1418" cudzyslowy="oba" gd:nowGUID="22692db4-dec9-4056-a068-a39deca84f88" element-eId="DU/2022/1418__art_112" funkcja="dodaj-po"><paragraf eId="DU/2022/1418__art_112a" gd:GUID="9f42ddc9-85f1-40e8-9c69-263fcc36298e" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21"><nr>112a</nr><ustep eId="DU/2022/1418__art_112a__ust_1" gd:GUID="5279e967-81e8-4d8a-8191-28261b0f4978" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="7ca867ea-5175-4604-b2fe-4cdcd13da5fc" fragment="1" gd:fragmentGUID="ffa3c3e3-4e68-4c01-b6a9-482836a522bd" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">Jeżeli zaistniał wypadek podczas używania aparatu regeneracyjnego lub powietrznego butlowego lub sprzętu ochrony układu oddechowego, kierownik kopalnianej stacji ratownictwa górniczego lub jednostki ratownictwa zabezpiecza używany aparat oraz sprzęt wraz z maską twarzową w szczelnym opakowaniu.</zdanie></p></ustep><ustep eId="DU/2022/1418__art_112a__ust_2" gd:GUID="550e3d5c-57d0-4080-bcd9-9ff05076cca6" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="d59c8862-eb17-49e3-a729-8b1d1e76291c" fragment="1" gd:fragmentGUID="25de47a6-9a0e-4cc2-941b-26c6ba3ff831" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">Jeżeli zaistniał wypadek podczas używania aparatu regeneracyjnego, kierownik kopalnianej stacji ratownictwa górniczego lub jednostki ratownictwa zabezpiecza dodatkowo trzy sztuki nieużywanych i zaplombowanych pochłaniaczy dwutlenku węgla tej samej partii, serii i daty produkcji, jakich użyto w tym aparacie.</zdanie></p></ustep><ustep eId="DU/2022/1418__art_112a__ust_3" gd:GUID="267a2ca8-6f69-49ca-9507-0a24d34768de" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21"><nr>3</nr><p><zdanie nr="1" gd:zdGUID="c11e779c-957f-4125-b371-2b3668bad5e1" fragment="1" gd:fragmentGUID="e3b44e70-3be9-49c7-956b-98babd24e1e4" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">Aparat i pochłaniacze, o których mowa w ust. 2, do czasu przekazania jednostce oceniającej zgodność w rozumieniu przepisów o systemach oceny zgodności i nadzoru rynku są zabezpieczane przez kierownika kopalnianej stacji ratownictwa górniczego lub jednostki ratownictwa w zamkniętym pomieszczeniu.</zdanie></p></ustep><ustep eId="DU/2022/1418__art_112a__ust_4" gd:GUID="417462f8-b034-4dd8-9492-a3fc3b40ad2e" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21"><nr>4</nr><p><zdanie nr="1" gd:zdGUID="3f11a95f-43be-4383-9f40-d90fbebeebfa" fragment="1" gd:fragmentGUID="c2c548af-94c1-4b70-907e-06065c9fbe82" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">Jeżeli zaistniał wypadek w zakładach górniczych albo zakładach, o których mowa w § 8 i § 9, podczas używania filtropochłaniaczy, kierownik kopalnianej stacji ratownictwa górniczego albo zakładowej stacji ratownictwa górniczego zabezpiecza używany filtropochłaniacz wraz z maską w szczelnym opakowaniu.</zdanie></p></ustep></paragraf></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1343__art_1__pkt_27" gd:GUID="afd32958-1b55-4ae5-9c55-49756afaf29c" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">
+          <nr>27</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="cc442e5b-3584-4c42-b875-ad89bdf012e4" fragment="57" gd:fragmentGUID="d6cc25a5-d8dc-4328-9ab0-5f50c69671f8" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">w załączniku nr 1 do rozporządzenia:</zdanie>
+          </p>
+          <litera eId="DU/2025/1343__art_1__pkt_27__lit_a" gd:GUID="ddae0924-ad36-44a4-be07-cdf086de5b1e" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="cc442e5b-3584-4c42-b875-ad89bdf012e4" fragment="58" gd:fragmentGUID="ae42a942-5fd7-476e-a9e3-aed4cfd2d600" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">w pkt 5 po wyrazach „zakładów górniczych” dodaje się wyrazy „oraz zakładów”,<cytat-w-tekscie now:akt="https://eli.gov.pl/eli/DU/2022/1418" cudzyslowy="oba" gd:nowGUID="9cddad75-7aa0-4805-9c06-791d0e038d97" element-eId="DU/2022/1418__zal_1__pkt_5" funkcja="zastap-recznie"><tekst>zakładów górniczych oraz zakładów</tekst></cytat-w-tekscie></zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1343__art_1__pkt_27__lit_b" gd:GUID="6c27ad94-1569-4548-87fc-da9ac57f98ee" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="cc442e5b-3584-4c42-b875-ad89bdf012e4" fragment="59" gd:fragmentGUID="59447db2-5e3e-4f33-b67e-a818a724857c" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">w pkt 6 po wyrazach „zakładach górniczych” dodaje się wyrazy „oraz zakładach”,<cytat-w-tekscie now:akt="https://eli.gov.pl/eli/DU/2022/1418" cudzyslowy="oba" gd:nowGUID="175c5648-fe60-40ba-be91-1c9ece8cf682" element-eId="DU/2022/1418__zal_1__pkt_6" funkcja="zastap-recznie"><tekst>zakładach górniczych oraz zakładach</tekst></cytat-w-tekscie></zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1343__art_1__pkt_27__lit_c" gd:GUID="397d85fe-ef5e-4e26-b6a0-3c96e7d2635a" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">
+            <nr>c</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="cc442e5b-3584-4c42-b875-ad89bdf012e4" fragment="60" gd:fragmentGUID="0152f2b8-94ad-4dcb-8400-60c061c3bb4b" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">w pkt 7 po wyrazach „zakładów górniczych” dodaje się wyrazy „oraz zakładów”,<cytat-w-tekscie now:akt="https://eli.gov.pl/eli/DU/2022/1418" cudzyslowy="oba" gd:nowGUID="6257bdea-59bb-4fc0-9c11-c85b22e883a7" element-eId="DU/2022/1418__zal_1__pkt_7" funkcja="zastap-recznie"><tekst>zakładów górniczych oraz zakładów</tekst></cytat-w-tekscie></zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1343__art_1__pkt_27__lit_d" gd:GUID="a43fd2d7-2a65-4b95-9c61-f03d65e46dcf" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">
+            <nr>d</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="cc442e5b-3584-4c42-b875-ad89bdf012e4" fragment="61" gd:fragmentGUID="ba2d47d9-c9e3-4448-a65f-629c496da3d3" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">w pkt 8 po wyrazach „zakładach górniczych” dodaje się wyrazy „oraz zakładach”,<cytat-w-tekscie now:akt="https://eli.gov.pl/eli/DU/2022/1418" cudzyslowy="oba" gd:nowGUID="d6ac2791-ebc2-4771-b370-957db3df34fd" element-eId="DU/2022/1418__zal_1__pkt_8" funkcja="zastap-recznie"><tekst>zakładach górniczych oraz zakładach</tekst></cytat-w-tekscie></zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1343__art_1__pkt_27__lit_e" gd:GUID="7bbef3e7-a93c-4d98-9c4c-a96c936db774" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">
+            <nr>e</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="cc442e5b-3584-4c42-b875-ad89bdf012e4" fragment="62" gd:fragmentGUID="5db09744-6024-4c54-b6c1-248af5b8c3be" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">w pkt 15 w ppkt 6 po wyrazach „zakładów górniczych” dodaje się wyrazy „oraz zakładów”;<cytat-w-tekscie now:akt="https://eli.gov.pl/eli/DU/2022/1418" cudzyslowy="oba" gd:nowGUID="536f88aa-cbfd-4749-bf7e-2b11095b5b03" element-eId="DU/2022/1418__zal_1__pkt_15" funkcja="zastap-recznie"><tekst>zakładów górniczych oraz zakładów</tekst></cytat-w-tekscie></zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2025/1343__art_1__pkt_28" gd:GUID="da333ca2-d9f7-47f0-944e-50cebc6e69fd" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">
+          <nr>28</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="cc442e5b-3584-4c42-b875-ad89bdf012e4" fragment="63" gd:fragmentGUID="514f424b-a96a-4132-bd9b-b645fe768bb1" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">w załączniku nr 2 do rozporządzenia:</zdanie>
+          </p>
+          <litera eId="DU/2025/1343__art_1__pkt_28__lit_a" gd:GUID="f7db8f08-843d-4358-9b97-d730bca3b163" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="cc442e5b-3584-4c42-b875-ad89bdf012e4" fragment="64" gd:fragmentGUID="0392a8b0-7949-41e1-9301-3fd25ec3a558" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">w pkt 1.3 ppkt 1 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2022/1418" cudzyslowy="oba" gd:nowGUID="d6d626aa-2f7d-4294-aa5f-0d7d250f02a8" element-eId="DU/2022/1418__zal_2" funkcja="zastap-recznie"><punkt eId="DU/2022/1418__zal_2__pkt_1" gd:GUID="63c0a072-b07d-44d2-8572-33a56bfc2fa8" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="de388e98-bca0-4792-91df-421167ac8232" fragment="1" gd:fragmentGUID="d59a28cf-6dfa-4dc4-94d1-70d1be51018f" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">datę oraz rejon lub miejsce:</zdanie></p><litera eId="DU/2022/1418__zal_2__pkt_1__lit_a" gd:GUID="24d3fdad-40a6-4ea9-8c9f-be417ec3fdeb" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21"><nr>a</nr><p><zdanie nr="1" gd:zdGUID="de388e98-bca0-4792-91df-421167ac8232" fragment="2" gd:fragmentGUID="183061d1-2a27-4940-9d3d-17255b68caf8" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">wykonywania pracy,</zdanie></p></litera><litera eId="DU/2022/1418__zal_2__pkt_1__lit_b" gd:GUID="027c7f31-14d0-452a-878d-3e44e55002fd" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21"><nr>b</nr><p><zdanie nr="1" gd:zdGUID="de388e98-bca0-4792-91df-421167ac8232" fragment="3" gd:fragmentGUID="2c72029a-8904-49e5-99b4-7029aee0ad98" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">pełnienia stałego dyżuru, o którym mowa w § 37 ust. 2 rozporządzenia,</zdanie></p></litera><litera eId="DU/2022/1418__zal_2__pkt_1__lit_c" gd:GUID="966adf38-ccd3-4ac1-a7e6-ba20be3a7ea9" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21"><nr>c</nr><p><zdanie nr="1" gd:zdGUID="de388e98-bca0-4792-91df-421167ac8232" fragment="4" gd:fragmentGUID="ccd055c6-479a-4b44-9737-33135deeaa9f" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">wykonywania prac profilaktycznych,</zdanie></p></litera><litera eId="DU/2022/1418__zal_2__pkt_1__lit_d" gd:GUID="4846a93a-9521-4640-a1c9-2f5603343524" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21"><nr>d</nr><p><zdanie nr="1" gd:zdGUID="de388e98-bca0-4792-91df-421167ac8232" fragment="5" gd:fragmentGUID="935dae73-6b4c-4afd-a271-3f9aeeba2526" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">prowadzenia akcji ratowniczej;</zdanie></p></litera></punkt></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1343__art_1__pkt_28__lit_b" gd:GUID="59c8482c-5ba2-4e7f-aec5-4cd265d0a362" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="cc442e5b-3584-4c42-b875-ad89bdf012e4" fragment="65" gd:fragmentGUID="1dc09834-a9b9-47b2-bcd6-44d91d5d341e" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">w pkt 7.1 w zdaniu drugim po wyrazach „zakładów górniczych” dodaje się wyrazy „oraz zakładów”,<cytat-w-tekscie now:akt="https://eli.gov.pl/eli/DU/2022/1418" cudzyslowy="oba" gd:nowGUID="c2a3481e-fbd7-41e7-9b26-d57e2a164d16" element-eId="DU/2022/1418__zal_2" funkcja="zastap-recznie"><tekst>zakładów górniczych oraz zakładów</tekst></cytat-w-tekscie></zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1343__art_1__pkt_28__lit_c" gd:GUID="d81ce4f7-890d-431e-95af-baae966c3b2e" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">
+            <nr>c</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="cc442e5b-3584-4c42-b875-ad89bdf012e4" fragment="66" gd:fragmentGUID="da398d0f-79d2-4dc3-bd23-d5b3f13f7a7e" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">w pkt 16.2 w ppkt 5 po wyrazach „planie ratownictwa” dodaje się wyraz „górniczego”,<cytat-w-tekscie now:akt="https://eli.gov.pl/eli/DU/2022/1418" cudzyslowy="oba" gd:nowGUID="e0c81279-35d7-49a8-b6ba-a7683d5d46fb" element-eId="DU/2022/1418__zal_2" funkcja="zastap-recznie"><tekst>planie ratownictwa górniczego</tekst></cytat-w-tekscie></zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1343__art_1__pkt_28__lit_d" gd:GUID="b5018036-e784-4223-b712-d4306007ac5c" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">
+            <nr>d</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="cc442e5b-3584-4c42-b875-ad89bdf012e4" fragment="67" gd:fragmentGUID="706adb33-45c5-40ce-ad87-4a0dba364485" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">w pkt 20.3 ppkt 8 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2022/1418" cudzyslowy="oba" gd:nowGUID="27cbd33d-18a2-47a8-9fce-33b7561f5307" element-eId="DU/2022/1418__zal_2" funkcja="zastap-recznie"><punkt eId="DU/2022/1418__zal_2__pkt_8" gd:GUID="250861fa-35d8-458b-9e60-4d08ed2c9509" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21"><nr>8</nr><p><zdanie nr="1" gd:zdGUID="14677347-8822-4f95-a20f-37e5468e8330" fragment="1" gd:fragmentGUID="1bd610aa-9430-4242-a293-6f16b92a8b0a" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">wyróżnień;</zdanie></p></punkt></cytat-strukt>;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2025/1343__art_1__pkt_29" gd:GUID="90574dd0-dbd1-4913-a42a-8dd10dee5dd1" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">
+          <nr>29</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="cc442e5b-3584-4c42-b875-ad89bdf012e4" fragment="68" gd:fragmentGUID="1c1c93c9-3865-4d84-b0be-6bc9c62d63ea" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">w załączniku nr 3 do rozporządzenia:</zdanie>
+          </p>
+          <litera eId="DU/2025/1343__art_1__pkt_29__lit_a" gd:GUID="9bd1501b-0a74-4378-930e-99aa214db0a3" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="cc442e5b-3584-4c42-b875-ad89bdf012e4" fragment="69" gd:fragmentGUID="7c026380-8623-4034-bb57-d7b77ff21747" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">w pkt 1.5:</zdanie>
+            </p>
+            <tiret eId="DU/2025/1343__art_1__pkt_29__lit_a__tir_1" gd:GUID="6cbf9079-3a77-49bc-b2bd-0e5a9decec1a" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">
+              <p>
+                <zdanie nr="1" gd:zdGUID="cc442e5b-3584-4c42-b875-ad89bdf012e4" fragment="70" gd:fragmentGUID="a1a8f556-4e0f-44be-a9a9-0ac3421acf89" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">uchyla się ppkt 4 i 5,<cytat-w-tekscie now:akt="https://eli.gov.pl/eli/DU/2022/1418" cudzyslowy="brak" gd:nowGUID="c32e935d-353c-4c21-a32b-b0cf743e41d6" element-eId="DU/2022/1418__zal_3" funkcja="uchyl-recznie"><tekst>ppkt 4 i 5</tekst></cytat-w-tekscie></zdanie>
+              </p>
+            </tiret>
+            <tiret eId="DU/2025/1343__art_1__pkt_29__lit_a__tir_2" gd:GUID="3a694d69-ccea-4c3d-998d-5687dfa4cc9b" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">
+              <p>
+                <zdanie nr="1" gd:zdGUID="cc442e5b-3584-4c42-b875-ad89bdf012e4" fragment="71" gd:fragmentGUID="d333373c-590a-4f7d-8a00-722464250ba9" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">w ppkt 6 wyrazy „O<sub>2</sub>, CO, CO<sub>2</sub> i CH<sub>4</sub>” zastępuje się wyrazami „tlenu, tlenku węgla, dwutlenku węgla i metanu”,<cytat-w-tekscie now:akt="https://eli.gov.pl/eli/DU/2022/1418" cudzyslowy="oba" gd:nowGUID="f4f4f5a6-309c-46f8-a300-42ab2beaf301" element-eId="DU/2022/1418__zal_3" funkcja="zastap-recznie"><tekst>tlenu, tlenku węgla, dwutlenku węgla i metanu</tekst></cytat-w-tekscie></zdanie>
+              </p>
+            </tiret>
+          </litera>
+          <litera eId="DU/2025/1343__art_1__pkt_29__lit_b" gd:GUID="a654d0f8-07ea-4098-a6d7-3aab82136fe0" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="cc442e5b-3584-4c42-b875-ad89bdf012e4" fragment="72" gd:fragmentGUID="96dc658d-fdc6-4938-9771-f94140e6cd78" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">w pkt 3:</zdanie>
+            </p>
+            <tiret eId="DU/2025/1343__art_1__pkt_29__lit_b__tir_1" gd:GUID="ba4b7a75-04b5-4643-b65d-49fb8537383d" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">
+              <p>
+                <zdanie nr="1" gd:zdGUID="cc442e5b-3584-4c42-b875-ad89bdf012e4" fragment="73" gd:fragmentGUID="7391c1b6-f924-470f-9f40-60f538774c37" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">w tabeli nr 1 w lp. 2 w kolumnie „Rodzaj czynności” wyrazy „kąt 50” zastępuje się wyrazami „kąt 5”,<cytat-w-tekscie now:akt="https://eli.gov.pl/eli/DU/2022/1418" cudzyslowy="oba" gd:nowGUID="27abe0e6-e46a-4311-b3ac-bff25609edcd" element-eId="DU/2022/1418__zal_3__pkt_3" funkcja="zastap-recznie"><tekst>kąt 5</tekst></cytat-w-tekscie></zdanie>
+              </p>
+            </tiret>
+            <tiret eId="DU/2025/1343__art_1__pkt_29__lit_b__tir_2" gd:GUID="71836ab5-1353-4e79-b67f-a053cb7eeb09" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">
+              <p>
+                <zdanie nr="1" gd:zdGUID="cc442e5b-3584-4c42-b875-ad89bdf012e4" fragment="74" gd:fragmentGUID="f0f5a5b7-ad13-491b-b937-c77501f534b8" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">w tabeli nr 4 wiersze 2–4 otrzymują brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2022/1418" cudzyslowy="brak" gd:nowGUID="0a44d296-14d0-41da-ad65-f5619cb65cab" element-eId="DU/2022/1418__zal_3__pkt_3" funkcja="zastap-recznie"><tabela gd:GUID="c21b5124-07d7-4e4c-bfb2-c6f55837539a"><tbody><tr gd:GUID="15dc9a8c-3396-4d2c-b1bd-a3d18bf24335"><td gd:GUID="8ef2338c-2565-4d53-bc2f-4f54b4127469"><tekst-zwykly gd:GUID="fa3545f7-e78e-4555-a7b3-97d169e4940f">Rodzaj</tekst-zwykly><tekst-zwykly gd:GUID="cce4da50-5e08-4363-b389-ca948d3fea5d">aparatu</tekst-zwykly></td><td gd:GUID="ec88b752-0141-4a32-ab73-d16304db02fe"><tekst-zwykly gd:GUID="0e1181e7-94b2-43e2-8f23-6fed4140fbbc">W-70</tekst-zwykly></td><td gd:GUID="942738fc-0f42-49af-8699-15c781f2087e"><tekst-zwykly gd:GUID="6b095ab5-e91d-4fcd-bece-892ee8163e0b">W-70 + SAT+ kamizelka</tekst-zwykly></td><td gd:GUID="c77ddf9b-4c7f-4332-aafc-bf390dc82195"><tekst-zwykly gd:GUID="5a38338b-682a-4bbf-a2c9-2a48c15f6a83">BG-4* + kamizelka</tekst-zwykly></td><td gd:GUID="d829cb9b-69bc-4563-b32c-1948ffa7a01c"><tekst-zwykly gd:GUID="602f3060-430d-4bbf-b3a6-69532d005400">Aparat</tekst-zwykly><tekst-zwykly gd:GUID="facc556f-331c-462b-8e26-6e153a7b03d6">powietrzny butlowy**</tekst-zwykly></td><td gd:GUID="e74de34c-fd34-4a7d-ad23-933f1221c3c7"><tekst-zwykly gd:GUID="b67cc30e-c607-46c9-b70b-d4226be2d268">W-70</tekst-zwykly></td><td gd:GUID="c0c7981b-d6a9-45f1-bbf4-6ac83ffd2bb0"><tekst-zwykly gd:GUID="2c6b5fa7-a6e1-4d37-84fe-95b03d0206de">W-70 + SAT+ kamizelka</tekst-zwykly></td><td gd:GUID="01da4115-9ec7-4476-b389-9b2300cd7722"><tekst-zwykly gd:GUID="6a9daf4d-d1a8-41fa-aaee-0d437051f77c">BG-4* + kamizelka</tekst-zwykly></td><td gd:GUID="667cfe4c-1628-4da5-9c2d-562400ac884e"><tekst-zwykly gd:GUID="5d3336aa-8acf-4cfe-b7ae-7fb657a46b22">Aparat</tekst-zwykly><tekst-zwykly gd:GUID="3f3c24a6-7d9d-4a5f-8808-40de75a7d30a">powietrzny butlowy**</tekst-zwykly></td><td gd:GUID="465c13cc-37cd-45ea-a4e3-a6384fbdd67d"><tekst-zwykly gd:GUID="0d8adf03-56e2-4cd9-bf43-ff6a46401b52">W-70</tekst-zwykly></td><td gd:GUID="4e01a9cd-6a56-413c-b71e-5f1786a33f33"><tekst-zwykly gd:GUID="00998ded-d667-4dc2-9041-383876f90a4d">W-70 + SAT+ kamizelka</tekst-zwykly></td><td gd:GUID="4e70d2c2-3281-4e71-8da3-af2b7c690ac5"><tekst-zwykly gd:GUID="44384b21-a1c3-44a8-bc38-a0c12d02caac">BG-4* + kamizelka</tekst-zwykly></td><td gd:GUID="0a730846-725d-493f-9a06-69e4b09f6b3f"><tekst-zwykly gd:GUID="477f3046-6484-4440-9db2-e88205bc2b95">Aparat</tekst-zwykly><tekst-zwykly gd:GUID="d3fd4996-2d65-40ef-9e98-f3a0b36fb1af">powietrzny butlowy**</tekst-zwykly></td></tr><tr gd:GUID="f73992b2-b17f-4a18-815b-63d286f5449a"><td gd:GUID="1750c864-5a99-4300-98e5-bd0d49b64f21"><tekst-zwykly gd:GUID="c3bbc59f-4f19-4fd6-852a-90225216e8ab" /></td><td colspan="12" gd:GUID="4a03f91e-2f15-46c3-9c83-f05fd2e7bc5b"><tekst-zwykly gd:GUID="98055f65-47d8-4406-9b75-ccd433d31f17">wilgotność względna</tekst-zwykly></td></tr><tr gd:GUID="9fbfd1bf-d68c-4498-a114-7fe136a68469"><td gd:GUID="ad501ca8-7da2-4cae-ae7c-57db0a3094c8"><tekst-zwykly gd:GUID="82a05232-781d-415a-a3f7-050ce69df42e">Temperatura</tekst-zwykly><tekst-zwykly gd:GUID="45717f72-c931-4497-b30b-3cdeadfad1fd">[C]</tekst-zwykly></td><td colspan="4" gd:GUID="1e7078db-469c-4c80-8a3b-a0cccab63498"><tekst-zwykly gd:GUID="ee40ac1e-9da7-4c5c-b537-c8cc221b6248">95 %</tekst-zwykly></td><td colspan="4" gd:GUID="51924ecb-0014-4e65-82ff-46f342099968"><tekst-zwykly gd:GUID="f58e07b7-3a79-4897-8e44-45a17e4d37cb">85 %</tekst-zwykly></td><td colspan="4" gd:GUID="677f8725-f71a-4272-8deb-dd795637d6e1"><tekst-zwykly gd:GUID="5490ad1e-3de8-490e-8154-0d5756e48661">70 %</tekst-zwykly></td></tr></tbody></tabela></cytat-strukt></zdanie>
+              </p>
+            </tiret>
+            <tiret eId="DU/2025/1343__art_1__pkt_29__lit_b__tir_3" gd:GUID="aad11235-8171-4132-8223-bf2bb2133277" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">
+              <p>
+                <zdanie nr="1" gd:zdGUID="cc442e5b-3584-4c42-b875-ad89bdf012e4" fragment="75" gd:fragmentGUID="f5c51b3c-c4ce-412e-ade6-20621d1d892e" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">objaśnienie oznaczone symbolem * otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2022/1418" cudzyslowy="oba" gd:nowGUID="205bd1cc-70c5-45ff-9d8d-32c0b91718e1" element-eId="DU/2022/1418__zal_3__pkt_3" funkcja="zastap"><nie-ztp-punkt brak-eid="jednostka-nieoznaczona" gd:GUID="7da40173-6f21-428e-8f0f-361e8295857a" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21"><nr></nr><p><zdanie nr="1" gd:zdGUID="5a818d13-2918-4bc1-b296-536eaf0bfa9a" fragment="1" gd:fragmentGUID="49361823-90e9-4098-a8a1-3d86b7825ca3" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">* Dotyczy aparatów BG-4 z wkładem chłodzącym.</zdanie></p></nie-ztp-punkt></cytat-strukt>,</zdanie>
+              </p>
+            </tiret>
+          </litera>
+          <litera eId="DU/2025/1343__art_1__pkt_29__lit_c" gd:GUID="e7ec67b5-396a-43a4-9a7b-0e76d66518d9" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">
+            <nr>c</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="cc442e5b-3584-4c42-b875-ad89bdf012e4" fragment="76" gd:fragmentGUID="bad2e6e6-ce73-436e-997b-2149825b7a97" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">w pkt 8.1 w ppkt 2 wyraz „H<sub>2</sub>S” zastępuje się wyrazem „siarkowodór”,<cytat-w-tekscie now:akt="https://eli.gov.pl/eli/DU/2022/1418" cudzyslowy="oba" gd:nowGUID="5f04a5f4-e75d-40d6-b19b-52e85949b25c" element-eId="DU/2022/1418__zal_3" funkcja="zastap-recznie"><tekst>siarkowodór</tekst></cytat-w-tekscie></zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1343__art_1__pkt_29__lit_d" gd:GUID="67bcd657-8541-4df5-b1cf-dfb0cbc61c53" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">
+            <nr>d</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="cc442e5b-3584-4c42-b875-ad89bdf012e4" fragment="77" gd:fragmentGUID="33d0bc04-744e-4e3a-8c59-6c8d220d3792" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">w pkt 8.5 w ppkt 4 po wyrazach „planem ratownictwa” dodaje się wyraz „górniczego”.<cytat-w-tekscie now:akt="https://eli.gov.pl/eli/DU/2022/1418" cudzyslowy="oba" gd:nowGUID="bc9d83d1-d4d3-442f-9da4-001d6b87ea76" element-eId="DU/2022/1418__zal_3" funkcja="zastap-recznie"><tekst>planem ratownictwa górniczego</tekst></cytat-w-tekscie></zdanie>
+            </p>
+          </litera>
+        </punkt>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2025/1343__art_2" gd:GUID="8a3fe0b8-b702-410c-a89a-7c94c354d440" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">
+      <nr>2</nr>
+      <ustep eId="DU/2025/1343__art_2__ust_1" gd:GUID="a0f2572d-5daa-49cb-8c2c-82ed224a4053" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="b992022f-3144-4637-9f03-5cb2d3ac360f" fragment="1" gd:fragmentGUID="9f4b6320-3529-49d2-9500-88320600f772" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">Osoba, której po dniu 30 czerwca 2017 r. powierzono pełnienie funkcji zastępcy kierownika kopalnianej stacji ratownictwa górniczego, a która w dniu wejścia w życie niniejszego rozporządzenia nie spełnia wymagań, o których mowa w § 12 ust. 3 pkt 1 i 2 rozporządzenia zmienianego w § 1, w brzmieniu nadanym niniejszym rozporządzeniem, może nadal pełnić tę funkcję.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/1343__art_2__ust_2" gd:GUID="ea32e364-8954-4ae1-9e92-85d3f7cf9adb" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="2b1daaff-f0e8-4fbb-a4ab-2428849d6eae" fragment="1" gd:fragmentGUID="d2eb75da-a5e3-4dcc-a6c8-7ef8e42a2396" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">Jeżeli funkcję zastępców kierownika kopalnianej stacji ratownictwa górniczego pełnią wyłącznie osoby, o których mowa w ust. 1, kierownik ruchu zakładu górniczego niezwłocznie wyznacza zastępcę kierownika kopalnianej stacji ratownictwa górniczego spośród osób spełniających wymagania, o których mowa w § 12 ust. 3 pkt 1 i 2 rozporządzenia zmienianego w § 1, w brzmieniu nadanym niniejszym rozporządzeniem.</zdanie>
+        </p>
+      </ustep>
+    </paragraf>
+    <paragraf eId="DU/2025/1343__art_3" gd:GUID="e200c3d6-a75c-4f60-a4e2-9987a3fd1091" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">
+      <nr>3</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="7e5c9f7b-c809-46dc-8b1a-706897f70639" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">
+        <p>
+          <zdanie nr="1" gd:zdGUID="a589a9c7-6aee-4105-9d43-c4292fabcc5f" fragment="1" gd:fragmentGUID="efe0cf48-68ad-46f7-a29e-cf0ef3dcb311" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-21_DU-2025-1343_domyslne.x" wejscie-w-zycie="2025-10-21">Rozporządzenie wchodzi w życie po upływie 14 dni od dnia ogłoszenia.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <organ-podpisujacy>Minister Energii: <i><osoba podpisujacy="true" gd:osobaGUID="0c689d4f-2b53-4e8d-a80e-f119401bf467"><imie>M.</imie> <nazwisko>Motyka</nazwisko></osoba></i></organ-podpisujacy>
+  </rozporzadzenie>
+</akt-prawny>

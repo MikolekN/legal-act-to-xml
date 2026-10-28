@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <rozporzadzenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2026/92</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>f2d603d0-e159-4bc0-b8a1-8759e87375ae</gd:GUIDwersji>
+      <AdresISAP>WDU20260000092</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2026</Rok>
+      <Pozycja>92</Pozycja>
+      <AdresWyswietlany>Dz.U. 2026 poz. 92</AdresWyswietlany>
+      <Tytul>Rozporządzenie Ministra Zdrowia z dnia 22 stycznia 2026 r. zmieniające rozporządzenie w sprawie rezerwy szczepionek oraz innych immunologicznych produktów leczniczych, stosowanych w razie wystąpienia zagrożenia epidemicznego lub epidemii</Tytul>
+      <Rodzaj>ROZP</Rodzaj>
+      <DataOgloszenia>2026-01-28</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2026-01-22</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2026-02-12_DU-2026-92_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2026-02-12" warunek="po upływie 14 dni od dnia ogłoszenia" podstawa="§ 3" zrodlo="https://eli.gov.pl/eli/DU/2026/92" dowod="DU/2026/92__art_3" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2026-02-12_DU-2026-92_domyslne.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2026-02-12_DU-2026-92_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="77ac521d-373e-4877-a2e9-b176e436262d" rola="wydajacy">
+          <Nazwa>Minister Zdrowia</Nazwa>
+          <OrganPodpisujacy>Minister Zdrowia</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>K.</imie> <nazwisko>Kęcka</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Rozporządzenie</rodzaj-aktu>
+    <autor-aktu>Ministra Zdrowia<odnosnik id-odnosnika="1" symbol="1" gd:GUID="8c4f8768-0242-46a6-a50f-4e9c04b85cda"><p><zdanie nr="1" gd:zdGUID="f0678397-2756-4b97-8c12-6fcf7367c232" fragment="1" gd:fragmentGUID="3d031245-9bac-441b-95ee-d9b507ac240f">Minister Zdrowia kieruje działem administracji rządowej – zdrowie, na podstawie § 1 ust. 2 rozporządzenia Prezesa Rady Ministrów z dnia 25 lipca 2025 r. w sprawie szczegółowego zakresu działania Ministra Zdrowia (Dz. U. poz. 1004).</zdanie></p></odnosnik></autor-aktu>
+    <data>z dnia 22 stycznia 2026 r.</data>
+    <tytul>zmieniające rozporządzenie w sprawie rezerwy szczepionek oraz innych immunologicznych produktów leczniczych, stosowanych w razie wystąpienia zagrożenia epidemicznego lub epidemii</tytul>
+    <podstawa-prawna>Na podstawie art. 18a ust. 4 ustawy z dnia 5 grudnia 2008 r. o zapobieganiu oraz zwalczaniu zakażeń i chorób zakaźnych u ludzi (Dz. U. z 2025 r. poz. 1675 oraz z 2026 r. poz. 26) zarządza się, co następuje:</podstawa-prawna>
+    <paragraf eId="DU/2026/92__art_1" gd:GUID="80dd90d9-070d-44dc-9337-68687ae5f500" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-12_DU-2026-92_domyslne.x" wejscie-w-zycie="2026-02-12">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="35a597d6-0429-4465-8c8d-c3a8a58e3620" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-12_DU-2026-92_domyslne.x" wejscie-w-zycie="2026-02-12">
+        <p>
+          <zdanie nr="1" gd:zdGUID="7224f21c-428a-4151-bd0f-26c64143a670" fragment="1" gd:fragmentGUID="a28551da-c45a-4bd3-83e2-00e97eee2ed7" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-12_DU-2026-92_domyslne.x" wejscie-w-zycie="2026-02-12">W rozporządzeniu Ministra Zdrowia z dnia 29 marca 2017 r. w sprawie rezerwy szczepionek oraz innych immuno- logicznych produktów leczniczych, stosowanych w razie wystąpienia zagrożenia epidemicznego lub epidemii (Dz. U. z 2023 r. poz. 502) wprowadza się następujące zmiany:</zdanie>
+        </p>
+        <punkt eId="DU/2026/92__art_1__pkt_1" gd:GUID="2915b0ce-7bdb-43fc-8b40-b3a11da597d4" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-12_DU-2026-92_domyslne.x" wejscie-w-zycie="2026-02-12">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="7224f21c-428a-4151-bd0f-26c64143a670" fragment="2" gd:fragmentGUID="2d788752-eb88-40a6-b21a-3ae61c01d992" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-12_DU-2026-92_domyslne.x" wejscie-w-zycie="2026-02-12">w § 2:</zdanie>
+          </p>
+          <litera eId="DU/2026/92__art_1__pkt_1__lit_a" gd:GUID="cedd31fa-ab56-426e-b538-ec37cf99ef5f" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-12_DU-2026-92_domyslne.x" wejscie-w-zycie="2026-02-12">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="7224f21c-428a-4151-bd0f-26c64143a670" fragment="3" gd:fragmentGUID="436c3b35-f408-44f1-a7ac-454f451e5529" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-12_DU-2026-92_domyslne.x" wejscie-w-zycie="2026-02-12">pkt 2 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/502" cudzyslowy="oba" gd:nowGUID="3c860d8e-bd71-4b68-9463-d5c25f0e3a33" element-eId="DU/2023/502__art_2__pkt_2" funkcja="zastap"><punkt eId="DU/2023/502__art_2__pkt_2" gd:GUID="28885c47-1605-4c9e-8073-aa10a829451f" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-12_DU-2026-92_domyslne.x" wejscie-w-zycie="2026-02-12"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="5478e19a-db83-447a-9107-4ecb0b2f217e" fragment="1" gd:fragmentGUID="c316a087-ceda-4825-8979-31a53a7f1560" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-12_DU-2026-92_domyslne.x" wejscie-w-zycie="2026-02-12">durowi brzusznemu – niemniej niż 2600 dawek;</zdanie></p></punkt></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2026/92__art_1__pkt_1__lit_b" gd:GUID="fd4232e6-20b8-4626-819f-9ea5382bb614" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-12_DU-2026-92_domyslne.x" wejscie-w-zycie="2026-02-12">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="7224f21c-428a-4151-bd0f-26c64143a670" fragment="4" gd:fragmentGUID="5fdfb9eb-a148-449b-b237-0542e18d5779" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-12_DU-2026-92_domyslne.x" wejscie-w-zycie="2026-02-12"><now:uchyl akt="https://eli.gov.pl/eli/DU/2023/502" element-eId="DU/2023/502__art_2__pkt_3" gd:nowGUID="da06f71f-97f3-4cb3-b734-47c86782eecb" /><now:uchyl akt="https://eli.gov.pl/eli/DU/2023/502" element-eId="DU/2023/502__art_2__pkt_4" gd:nowGUID="41aae634-0526-43e6-8fd7-ae8e7e1ecc71" />uchyla się pkt 3 i 4,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2026/92__art_1__pkt_1__lit_c" gd:GUID="4a449476-c93a-4868-b632-73addc90b44a" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-12_DU-2026-92_domyslne.x" wejscie-w-zycie="2026-02-12">
+            <nr>c</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="7224f21c-428a-4151-bd0f-26c64143a670" fragment="5" gd:fragmentGUID="d4e18211-2ce4-4d54-92e0-f609ff57a424" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-12_DU-2026-92_domyslne.x" wejscie-w-zycie="2026-02-12">pkt 7 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/502" cudzyslowy="oba" gd:nowGUID="99f54e44-17eb-4c7f-b293-b7902fb57a2d" element-eId="DU/2023/502__art_2__pkt_7" funkcja="zastap"><punkt eId="DU/2023/502__art_2__pkt_7" gd:GUID="9dc67f7a-4cf6-4477-9070-d04c352d7884" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-12_DU-2026-92_domyslne.x" wejscie-w-zycie="2026-02-12"><nr>7</nr><p><zdanie nr="1" gd:zdGUID="f84de2e0-0ed8-4e73-ab8f-4e315abe3152" fragment="1" gd:fragmentGUID="9cabc936-9f13-40ab-ad8b-9be68795c56d" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-12_DU-2026-92_domyslne.x" wejscie-w-zycie="2026-02-12">wirusowemu zapaleniu wątroby typu A – niemniej niż 4000 dawek, w tym niemniej niż 2000 dawek dla dzieci oraz niemniej niż 2000 dawek dla dorosłych;</zdanie></p></punkt></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2026/92__art_1__pkt_1__lit_d" gd:GUID="4e4a5398-cad4-4925-9a98-fd621b340cfc" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-12_DU-2026-92_domyslne.x" wejscie-w-zycie="2026-02-12">
+            <nr>d</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="7224f21c-428a-4151-bd0f-26c64143a670" fragment="6" gd:fragmentGUID="7ba217cc-9afa-484e-aad7-860804414a46" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-12_DU-2026-92_domyslne.x" wejscie-w-zycie="2026-02-12">po pkt 7 dodaje się pkt 8 w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/502" cudzyslowy="oba" gd:nowGUID="0bc432dc-407b-435f-8597-a06ae7be7770" element-eId="DU/2023/502__art_2__pkt_7" funkcja="dodaj-po"><punkt eId="DU/2023/502__art_2__pkt_8" gd:GUID="d19b0adb-a2d9-42be-aaa5-5fc7861990a0" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-12_DU-2026-92_domyslne.x" wejscie-w-zycie="2026-02-12"><nr>8</nr><p><zdanie nr="1" gd:zdGUID="e222beb6-c20d-4737-98d5-4ee91cba5248" fragment="1" gd:fragmentGUID="cdfdb992-4749-4103-a533-e267fbef7fa5" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-12_DU-2026-92_domyslne.x" wejscie-w-zycie="2026-02-12">ospie małpiej (mpox) – niemniej niż 1000 dawek.</zdanie></p></punkt></cytat-strukt>;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2026/92__art_1__pkt_2" gd:GUID="9ed164ea-ac75-49b5-93e6-98e9ac305ac0" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-12_DU-2026-92_domyslne.x" wejscie-w-zycie="2026-02-12">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="7224f21c-428a-4151-bd0f-26c64143a670" fragment="7" gd:fragmentGUID="04a6151c-f750-4572-9251-ec9afcd466b8" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-12_DU-2026-92_domyslne.x" wejscie-w-zycie="2026-02-12">po § 2 dodaje się § 2a w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/502" cudzyslowy="oba" gd:nowGUID="95a19319-8d79-49ea-93ae-bbc38d787166" element-eId="DU/2023/502__art_2" funkcja="dodaj-po"><paragraf eId="DU/2023/502__art_2a" gd:GUID="cd1a1e0a-75e3-4cb0-8a25-7ea45082d2dd" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-12_DU-2026-92_domyslne.x" wejscie-w-zycie="2026-02-12"><nr>2a</nr><ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="d9137250-aa40-43bd-92a7-3cb36bfd4c69" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-12_DU-2026-92_domyslne.x" wejscie-w-zycie="2026-02-12"><p><zdanie nr="1" gd:zdGUID="845adc8b-689e-477c-a6d7-23e99b19ea0f" fragment="1" gd:fragmentGUID="f602653a-c284-484a-9dea-3fabfeeb5c28" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-12_DU-2026-92_domyslne.x" wejscie-w-zycie="2026-02-12">W skład rezerwy wchodzą:</zdanie></p><punkt eId="DU/2023/502__art_2a__pkt_1" gd:GUID="9d265e41-93ab-4147-8dae-1e21a11eae27" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-12_DU-2026-92_domyslne.x" wejscie-w-zycie="2026-02-12"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="845adc8b-689e-477c-a6d7-23e99b19ea0f" fragment="2" gd:fragmentGUID="7afb34ce-1236-4859-9602-57facf201de7" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-12_DU-2026-92_domyslne.x" wejscie-w-zycie="2026-02-12">antytoksyna błonicza – niemniej niż 1000 dawek;</zdanie></p></punkt><punkt eId="DU/2023/502__art_2a__pkt_2" gd:GUID="941f456f-427a-4071-8080-94f5bee88e03" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-12_DU-2026-92_domyslne.x" wejscie-w-zycie="2026-02-12"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="845adc8b-689e-477c-a6d7-23e99b19ea0f" fragment="3" gd:fragmentGUID="34631ca4-3bdc-43a3-82e6-d8ce88867348" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-12_DU-2026-92_domyslne.x" wejscie-w-zycie="2026-02-12">antytoksyna botulinowa – niemniej niż 500 dawek.</zdanie></p></punkt></ustep-n></paragraf></cytat-strukt>.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2026/92__art_2" gd:GUID="92c8fc53-f2ea-4796-a25a-57a6ec7b40a8" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-12_DU-2026-92_domyslne.x" wejscie-w-zycie="2026-02-12">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="7e03444d-b31e-4bf5-8d39-f28359404b6d" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-12_DU-2026-92_domyslne.x" wejscie-w-zycie="2026-02-12">
+        <p>
+          <zdanie nr="1" gd:zdGUID="428d0c48-78b7-4122-a9be-b53c73898bf9" fragment="1" gd:fragmentGUID="af3fb7c1-9f5a-4283-aa58-ffd00cded217" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-12_DU-2026-92_domyslne.x" wejscie-w-zycie="2026-02-12">Szczepionki przeciw durowi i tężcowi (TyT) oraz przeciw błonicy (D i d), wchodzące w skład rezerwy szczepionek oraz innych immunologicznych produktów leczniczych, stosowanych w razie wystąpienia zagrożenia epidemicznego lub epidemii, o których mowa w § 2 pkt 3 i 4 rozporządzenia zmienianego w § 1, w brzmieniu dotychczasowym, mogą być stosowane do wyczerpania zapasów, chyba że wcześniej upłynął termin ich ważności.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2026/92__art_3" gd:GUID="c01366a5-c9e5-4de2-8946-e1d439846374" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-12_DU-2026-92_domyslne.x" wejscie-w-zycie="2026-02-12">
+      <nr>3</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="3a5b7150-3f79-48f5-b2c9-4f0af99f2f73" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-12_DU-2026-92_domyslne.x" wejscie-w-zycie="2026-02-12">
+        <p>
+          <zdanie nr="1" gd:zdGUID="a6d2f834-1599-47c3-8d6e-b93505614a96" fragment="1" gd:fragmentGUID="570fc80b-72a2-48e1-aa74-bcab55dcf374" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-12_DU-2026-92_domyslne.x" wejscie-w-zycie="2026-02-12">Rozporządzenie wchodzi w życie po upływie 14 dni od dnia ogłoszenia.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <organ-podpisujacy>Minister Zdrowia: wz. <i><osoba podpisujacy="true" gd:osobaGUID="e4217c37-d986-48ce-b815-4c7672e277d2"><imie>K.</imie> <nazwisko>Kęcka</nazwisko></osoba></i></organ-podpisujacy>
+  </rozporzadzenie>
+</akt-prawny>

@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <rozporzadzenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/1101</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>3d042a87-a582-4e41-9d6a-66fc370db97e</gd:GUIDwersji>
+      <AdresISAP>WDU20250001101</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>1101</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 1101</AdresWyswietlany>
+      <Tytul>Rozporządzenie Ministra Finansów i Gospodarki z dnia 1 sierpnia 2025 r. zmieniające rozporządzenie w sprawie pobierania podatku od spadków i darowizn przez płatników</Tytul>
+      <Rodzaj>ROZP</Rodzaj>
+      <DataOgloszenia>2025-08-12</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-08-01</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2025-08-13_DU-2025-1101_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2025-08-13" warunek="z dniem następującym po dniu ogłoszenia" podstawa="§ 2" zrodlo="https://eli.gov.pl/eli/DU/2025/1101" dowod="DU/2025/1101__art_2" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2025-08-13_DU-2025-1101_domyslne.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2025-08-13_DU-2025-1101_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="e323e4d4-340f-4dc7-876d-25336575b70f" rola="wydajacy">
+          <Nazwa>Minister Finansów i Gospodarki</Nazwa>
+          <OrganPodpisujacy>Minister Finansów i Gospodarki</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>J.</imie> <nazwisko>Drop</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Rozporządzenie</rodzaj-aktu>
+    <autor-aktu>Ministra Finansów i Gospodarki<odnosnik id-odnosnika="1" symbol="1" gd:GUID="6c1f7235-f5d7-40b3-9fe1-d19e0e55a8dd"><p><zdanie nr="1" gd:zdGUID="cf6b9bd3-37b0-4658-8456-ab89c7bdafcf" fragment="1" gd:fragmentGUID="d1dd1898-2868-4c05-a010-416ef41cb700">Minister Finansów i Gospodarki kieruje działem administracji rządowej – finanse publiczne, na podstawie § 1 ust. 2 pkt 3 rozporządzenia Prezesa Rady Ministrów z dnia 25 lipca 2025 r. w sprawie szczegółowego zakresu działania Ministra Finansów i Gospodarki (Dz. U. poz. 997).</zdanie></p></odnosnik></autor-aktu>
+    <data>z dnia 1 sierpnia 2025 r.</data>
+    <tytul>zmieniające rozporządzenie w sprawie pobierania podatku od spadków i darowizn przez płatników</tytul>
+    <podstawa-prawna>Na podstawie art. 18 ust. 5 ustawy z dnia 28 lipca 1983 r. o podatku od spadków i darowizn (Dz. U. z 2024 r. poz. 1837 oraz z 2025 r. poz. 769 i 1064) zarządza się, co następuje:</podstawa-prawna>
+    <paragraf eId="DU/2025/1101__art_1" gd:GUID="b4fa2ab7-a5fb-4f3e-94b4-5d8d137c82b9" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-13_DU-2025-1101_domyslne.x" wejscie-w-zycie="2025-08-13">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="51bf7a11-32d5-4c83-a716-0330aebe38fa" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-13_DU-2025-1101_domyslne.x" wejscie-w-zycie="2025-08-13">
+        <p>
+          <zdanie nr="1" gd:zdGUID="e02c7952-7211-46c0-a734-3d6c3024b638" fragment="1" gd:fragmentGUID="b6287d4c-d69b-4717-9cac-672a0c21d82b" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-13_DU-2025-1101_domyslne.x" wejscie-w-zycie="2025-08-13"><now:zamien-tekst stary-tekst="art. 15 ustawy z dnia 13 listopada 2003 r. o dochodach jednostek samorządu terytorialnego (Dz. U. z 2022 r. poz. 2267 oraz z 2023 r. poz. 1586 i 2005)" nowy-tekst="art. 19 ustawy z dnia 1 października 2024 r. o dochodach jednostek samorządu terytorialnego (Dz. U. poz. 1572 i 1717)" element-eId="DU/2023/2532__art_5__pkt_7" akt="https://eli.gov.pl/eli/DU/2023/2532" gd:nowGUID="0d91b907-653c-4a72-a244-781e65721ad2" />W rozporządzeniu Ministra Finansów z dnia 17 listopada 2023 r. w sprawie pobierania podatku od spadków i darowizn przez płatników (Dz. U. poz. 2532) w § 5 w pkt 7 we wprowadzeniu do wyliczenia wyrazy „art. 15 ustawy z dnia 13 listopada 2003 r. o dochodach jednostek samorządu terytorialnego (Dz. U. z 2022 r. poz. 2267 oraz z 2023 r. poz. 1586 i 2005)” zastępuje się wyrazami „art. 19 ustawy z dnia 1 października 2024 r. o dochodach jednostek samorządu terytorialnego (Dz. U. poz. 1572 i 1717)”.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2025/1101__art_2" gd:GUID="d5260eee-83ec-49f2-9fb9-16945e81cf5d" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-13_DU-2025-1101_domyslne.x" wejscie-w-zycie="2025-08-13">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="6e5afc15-cfe2-4c9a-a696-1722c3b9da2d" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-13_DU-2025-1101_domyslne.x" wejscie-w-zycie="2025-08-13">
+        <p>
+          <zdanie nr="1" gd:zdGUID="d90ff72a-2949-498c-84e5-37266a270316" fragment="1" gd:fragmentGUID="17570674-25e6-4c1f-8a1a-eb780f70d984" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-13_DU-2025-1101_domyslne.x" wejscie-w-zycie="2025-08-13">Rozporządzenie wchodzi w życie z dniem następującym po dniu ogłoszenia.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <organ-podpisujacy>Minister Finansów i Gospodarki: wz. <i><osoba podpisujacy="true" gd:osobaGUID="376a8ea9-c828-474a-bfd5-5eaf938c3d7f"><imie>J.</imie> <nazwisko>Drop</nazwisko></osoba></i></organ-podpisujacy>
+  </rozporzadzenie>
+</akt-prawny>

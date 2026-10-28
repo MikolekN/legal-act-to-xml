@@ -1,0 +1,922 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <obwieszczenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/677</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>f6e1ac39-05cd-4bf2-8afa-f2c831536323</gd:GUIDwersji>
+      <AdresISAP>WDU20250000677</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>677</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 677</AdresWyswietlany>
+      <Tytul>Obwieszczenie Marszałka Sejmu Rzeczypospolitej Polskiej z dnia 21 maja 2025 r. w sprawie ogłoszenia jednolitego tekstu ustawy o działalności lobbingowej w procesie stanowienia prawa</Tytul>
+      <Rodzaj>OBW_TJ</Rodzaj>
+      <DataOgloszenia>2025-05-26</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-05-21</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_ujednolicenie_2025-05-26_DU-2025-677_domyslne" rodzaj="ujednolicenie" pochodzenie="domyslne-z-aktu" data="2025-05-26" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_ujednolicenie.zdarz_ujednolicenie_2025-05-26_DU-2025-677_domyslne" glowna="true">
+          <Przedzial rodzaj="ujednolicenie" od="zdarz_ujednolicenie_2025-05-26_DU-2025-677_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <DataObowiazywaniaWersji>
+        <Od>zdarz_ujednolicenie_2025-05-26_DU-2025-677_domyslne</Od>
+      </DataObowiazywaniaWersji>
+      <Organy>
+        <Organ gd:GUID="31bbbfda-f0ac-4b8f-b2c4-3f07cb2f5924" rola="wydajacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/MSEJMU">
+          <Nazwa>Marszałek Sejmu</Nazwa>
+          <OrganPodpisujacy>Marszałek Sejmu</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>S.</imie> <nazwisko>Hołownia</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Obwieszczenie</rodzaj-aktu>
+    <autor-aktu>Marszałka Sejmu Rzeczypospolitej Polskiej</autor-aktu>
+    <data>z dnia 21 maja 2025 r.</data>
+    <tytul>w sprawie ogłoszenia jednolitego tekstu ustawy o działalności lobbingowej w procesie stanowienia prawa</tytul>
+    <punkt-OTJ eId="DU/2025/677__pkt_1" gd:GUID="a1f82f82-d9a3-444a-a5a9-e55bc21b1fc9">
+      <nr>1</nr>
+      <p>
+        <zdanie nr="1" gd:zdGUID="8132f8a0-831d-40fc-865e-012a2068e2ba" fragment="1" gd:fragmentGUID="e2d06b99-f0a9-4f1c-8908-8a26c2940936">Na podstawie art. 16 ust. 1 zdanie pierwsze ustawy z dnia 20 lipca 2000 r. o ogłaszaniu aktów normatywnych i niektórych innych aktów prawnych (Dz. U. z 2019 r. poz. 1461) ogłasza się w załączniku do niniejszego obwieszczenia jednolity tekst ustawy z dnia 7 lipca 2005 r. o działalności lobbingowej w procesie stanowienia prawa (Dz. U. z 2017 r. poz. 248), z uwzględnieniem zmian wprowadzonych ustawą z dnia 25 września 2024 r. o zmianie ustawy o działalności lobbingowej w procesie stanowienia prawa (Dz. U. poz. 1535) oraz zmian wynikających z przepisów ogłoszonych przed dniem 14 maja 2025 r.</zdanie>
+      </p>
+    </punkt-OTJ>
+    <punkt-OTJ eId="DU/2025/677__pkt_2" gd:GUID="0bcbd2da-0934-4601-a6e0-ce26c03986d5">
+      <nr>2</nr>
+      <p>
+        <zdanie nr="1" gd:zdGUID="872494fd-9b35-44fb-ae97-97b8e5e066f2" fragment="1" gd:fragmentGUID="961506d1-1109-4528-b9f2-e0e5807a3284">Podany w załączniku do niniejszego obwieszczenia tekst jednolity ustawy nie obejmuje art. 2 ustawy z dnia 25 września 2024 r. o zmianie ustawy o działalności lobbingowej w procesie stanowienia prawa (Dz. U. poz. 1535), który stanowi:<tresc-strukt cudzyslowy="oba" gd:GUID="5f329b26-c468-43ad-bddf-0b360696438d"><artykul eId="DU/2024/1535__art_2" gd:GUID="5ec31ca8-127c-420b-9997-6f42cabd903e"><nr>2</nr><ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="a2775329-4a20-49f3-a5b2-a964bde4eb9d"><p><zdanie nr="1" gd:zdGUID="3b00927a-ed01-41e3-8bac-5291d49bf752" fragment="1" gd:fragmentGUID="1b420675-4761-421e-a3fc-595c81356f7d">Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.</zdanie></p></ustep-n></artykul></tresc-strukt>.</zdanie>
+      </p>
+    </punkt-OTJ>
+    <organ-podpisujacy>Marszałek Sejmu: <i><osoba podpisujacy="true" gd:osobaGUID="74826e34-8a67-4c11-91ce-1b47a42c4acb"><imie>S.</imie> <nazwisko>Hołownia</nazwisko></osoba></i></organ-podpisujacy>
+    <ustawa>
+      <zalacznik-do>Załącznik do obwieszczenia Marszałka Sejmu Rzeczypospolitej Polskiej z dnia 21 maja 2025 r. (Dz. U. poz. 677)</zalacznik-do>
+      <rodzaj-aktu>Ustawa</rodzaj-aktu>
+      <data>z dnia 7 lipca 2005 r.</data>
+      <tytul>o działalności lobbingowej w procesie stanowienia prawa</tytul>
+      <rozdzial eId="DU/2025/677__rozdz_1" gd:GUID="028edebe-2b28-442f-8c9b-79504145bc68">
+        <naglowek-rozdzialu>
+          <nr>1</nr>
+          <p>Przepisy ogólne</p>
+        </naglowek-rozdzialu>
+        <oddzial-n brak-eid="jednostka-nieoznaczona" gd:GUID="de02f45e-8c5d-4ab5-bbc9-52a77cd410ad">
+          <artykul eId="DU/2025/677__art_1" gd:GUID="b6a81717-813b-425e-866e-b4dbfba6b39f">
+            <nr>1</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="76ddbe7b-3d76-4fa3-acdd-c040b4cb9e73">
+              <p>
+                <zdanie nr="1" gd:zdGUID="7a2229fc-acff-417e-be7a-90709e12ca55" fragment="1" gd:fragmentGUID="c59d5275-a881-4a06-b92d-5e8742f19bda">Ustawa określa zasady jawności działalności lobbingowej w procesie stanowienia prawa, zasady wykonywania zawodowej działalności lobbingowej, formy kontroli zawodowej działalności lobbingowej oraz zasady prowadzenia rejestru podmiotów wykonujących zawodową działalność lobbingową.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2025/677__art_2" gd:GUID="03daeb2c-4e00-480d-8210-834f49fd8900">
+            <nr>2</nr>
+            <ustep eId="DU/2025/677__art_2__ust_1" gd:GUID="dd343c97-b2e5-4eb2-a49b-b3a940ea1a61">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="2d285050-ae91-4b76-9478-26a4ba2633e9" fragment="1" gd:fragmentGUID="cd88bbe9-5166-4c94-b53c-099615fdc70d">W rozumieniu ustawy działalnością lobbingową jest każde działanie prowadzone metodami prawnie dozwolonymi zmierzające do wywarcia wpływu na organy władzy publicznej w procesie stanowienia prawa.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/677__art_2__ust_2" gd:GUID="c42c3215-c49c-4f83-ac75-3f09772dcc25">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="f42b73f7-30af-4522-9deb-4cf77cb2e839" fragment="1" gd:fragmentGUID="cec8e3e5-85c5-4ef7-b980-3d6c54a64598">W rozumieniu ustawy zawodową działalnością lobbingową jest zarobkowa działalność lobbingowa prowadzona na rzecz osób trzecich w celu uwzględnienia w procesie stanowienia prawa interesów tych osób.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/677__art_2__ust_3" gd:GUID="5cb22559-ed27-4440-9285-790ad996f5ed">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ffa87888-bd10-416c-afc4-945e4df000c8" fragment="1" gd:fragmentGUID="22fe5bee-4034-4730-97f0-4cf4bcb58730">Zawodowa działalność lobbingowa może być wykonywana przez przedsiębiorcę albo przez osobę fizyczną niebędącą przedsiębiorcą na podstawie umowy cywilnoprawnej.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+        </oddzial-n>
+      </rozdzial>
+      <rozdzial eId="DU/2025/677__rozdz_2" gd:GUID="04cb60cb-7c89-4fbd-8c0b-e60dae6e7b24">
+        <naglowek-rozdzialu>
+          <nr>2</nr>
+          <p>Zasady jawności działalności lobbingowej w procesie stanowienia prawa</p>
+        </naglowek-rozdzialu>
+        <oddzial-n brak-eid="jednostka-nieoznaczona" gd:GUID="dda42930-0d68-4012-abc8-433468763908">
+          <artykul eId="DU/2025/677__art_3" gd:GUID="5300a1cd-4a29-451c-a971-d9338ebb2794">
+            <nr>3</nr>
+            <ustep eId="DU/2025/677__art_3__ust_1" gd:GUID="677325a8-5746-4747-8e45-19e242765cb4">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="8252ec36-b60f-4c26-ad3c-a6f5a4bbf02f" fragment="1" gd:fragmentGUID="da35d277-8891-43bc-8564-a2fa531554a3">Rada Ministrów prowadzi wykaz prac legislacyjnych Rady Ministrów, zwany dalej „wykazem”, obejmujący:</zdanie>
+              </p>
+              <punkt eId="DU/2025/677__art_3__ust_1__pkt_1" gd:GUID="0dd067e8-6240-406a-b3a0-ced57249dafc">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="8252ec36-b60f-4c26-ad3c-a6f5a4bbf02f" fragment="2" gd:fragmentGUID="cd1d16a2-e43c-42e9-b2b3-5a39e57bab2c">projekty założeń projektów ustaw;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/677__art_3__ust_1__pkt_2" gd:GUID="3dfa3d65-7965-4a9a-a244-318ee9f61e82">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="8252ec36-b60f-4c26-ad3c-a6f5a4bbf02f" fragment="3" gd:fragmentGUID="d511c640-0640-46af-8738-347d5288d888">projekty ustaw;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/677__art_3__ust_1__pkt_3" gd:GUID="e507b7e7-237e-4928-9bd1-2224fdd0beb2">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="8252ec36-b60f-4c26-ad3c-a6f5a4bbf02f" fragment="4" gd:fragmentGUID="5a65bc30-1adb-41af-b948-4a09c360cc6a">projekty rozporządzeń Rady Ministrów.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2025/677__art_3__ust_2" gd:GUID="91529813-998c-4911-a3ea-aa45dd1f0f14">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="fc4d614c-f014-4e8a-a62f-446e91bd865a" fragment="1" gd:fragmentGUID="c4f1fb8b-fbe9-4eff-9540-21d2f0cee2b0">Wykaz zawiera w szczególności:</zdanie>
+              </p>
+              <punkt eId="DU/2025/677__art_3__ust_2__pkt_1" gd:GUID="520f1464-e22d-4a5f-9ae1-43ad8cd51e2a">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="fc4d614c-f014-4e8a-a62f-446e91bd865a" fragment="2" gd:fragmentGUID="be970e74-e46d-4cfe-b0b6-053ab5bd34ec">zwięzłą informację o przyczynach i potrzebie wprowadzenia rozwiązań, które planuje się zawrzeć w projekcie;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/677__art_3__ust_2__pkt_2" gd:GUID="fdc7d286-cf8d-44c4-a017-76d114a21b8f">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="fc4d614c-f014-4e8a-a62f-446e91bd865a" fragment="3" gd:fragmentGUID="362e9940-3899-4c66-a5cf-bdd435d22fc6">wskazanie istoty rozwiązań, które planuje się zawrzeć w projekcie;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/677__art_3__ust_2__pkt_3" gd:GUID="d86aa640-f86c-4e94-9aeb-db72d3d6c997">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="fc4d614c-f014-4e8a-a62f-446e91bd865a" fragment="4" gd:fragmentGUID="edc8b590-87aa-496b-b864-0beec37c107c">wskazanie organu odpowiedzialnego za opracowanie projektu;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/677__art_3__ust_2__pkt_4" gd:GUID="626f9502-2a4d-4015-9335-51d2104cfe3c">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="fc4d614c-f014-4e8a-a62f-446e91bd865a" fragment="5" gd:fragmentGUID="dfbd860b-0fd7-48d2-a380-7ae862fb8d25">imię i nazwisko oraz stanowisko lub funkcję osoby odpowiedzialnej za opracowanie projektu;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/677__art_3__ust_2__pkt_5" gd:GUID="57bea022-942d-4f9d-bdda-62c4779fbb63">
+                <nr>5</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="fc4d614c-f014-4e8a-a62f-446e91bd865a" fragment="6" gd:fragmentGUID="bc6bf93e-12d2-4e33-b880-c3f31a403ecb">wskazanie organu odpowiedzialnego za przedłożenie projektu Radzie Ministrów;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/677__art_3__ust_2__pkt_6" gd:GUID="39f53fdd-883d-4ec6-b7af-7d76c6715987">
+                <nr>6</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="fc4d614c-f014-4e8a-a62f-446e91bd865a" fragment="7" gd:fragmentGUID="9b8fe638-b41a-48a2-9ed2-db8a8fa30b19">informację o rezygnacji z prac nad projektem, z uwzględnieniem przyczyny tej rezygnacji – w przypadku rezygnacji z prac nad projektem.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2025/677__art_3__ust_3" gd:GUID="e30d6ee2-8c17-4f0c-87ea-86e0a564c4ba">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="989682c0-d80f-420a-b6c5-73b9ce3da483" fragment="1" gd:fragmentGUID="3d3a4a10-9fbc-459e-9891-679721e4fde5">Wykaz podlega udostępnieniu w Biuletynie Informacji Publicznej.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2025/677__art_3a" gd:GUID="84a5cecc-a509-44bf-b994-e5bba4758363">
+            <nr>3a</nr>
+            <ustep eId="DU/2025/677__art_3a__ust_1" gd:GUID="fd806e18-8d03-49e9-968b-e297035bb4b7">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="b5063fa3-c187-4295-83cc-7699246f4b1d" fragment="1" gd:fragmentGUID="80cd56ad-20ae-45b9-ad8c-64d5e5324804">Rada Ministrów lub jej organ pomocniczy może określić termin planowanego przyjęcia przez Radę Ministrów projektu objętego wykazem.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/677__art_3a__ust_2" gd:GUID="8d3dc889-7c1d-4bdb-8d2f-8eb762aea677">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="068096b7-1305-4eb8-9b0a-86873bd4aa25" fragment="1" gd:fragmentGUID="9380f52d-79e1-4ed6-9cf5-13988575d5e1">Rada Ministrów przedstawia Sejmowi, raz na 6 miesięcy roku kalendarzowego, wykaz w zakresie projektów ustaw, co do których określono planowany termin ich przyjęcia przez Radę Ministrów.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2025/677__art_4" gd:GUID="18e1fdca-a96b-427f-969b-9724554fa9e5">
+            <nr>4</nr>
+            <ustep eId="DU/2025/677__art_4__ust_1" gd:GUID="84c4823e-2834-4e72-ac22-05e8e501767b">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="4587c698-f278-4e9a-9761-1aa099a0871d" fragment="1" gd:fragmentGUID="10be841d-3ad0-4975-8598-b59c7ded4a9b">Prezes Rady Ministrów i ministrowie prowadzą odpowiednio wykazy prac legislacyjnych obejmujące projekty rozporządzeń Prezesa Rady Ministrów i ministrów.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/677__art_4__ust_2" gd:GUID="2a754a41-f8ca-4bf6-bb05-7bf78d35110a">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="faac4a00-8dd3-4f3d-83d8-a0ab047db96b" fragment="1" gd:fragmentGUID="dabe03d1-7845-40be-9446-b9814fd3e25e">W wykazach, o których mowa w ust. 1, określa się planowany termin wydania rozporządzenia.</zdanie>
+                <zdanie nr="2" gd:zdGUID="889c097f-ae98-4a61-9ba9-1007c1087f3c" fragment="1" gd:fragmentGUID="36e53968-ed38-456f-870c-9f7b09df98bb">Przepisy art. 3 ust. 2 pkt 1, 2, 4 i 6 oraz ust. 3 stosuje się odpowiednio.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2025/677__art_5" gd:GUID="e9403666-376b-4b59-8baf-eca020ce8fdd">
+            <nr>5</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="e93df339-a09a-49d1-9c98-eb5fd4a8336c">
+              <p>
+                <zdanie nr="1" gd:zdGUID="c5915b7d-4439-4cbc-8333-5baea7160e1b" fragment="1" gd:fragmentGUID="1acb8c57-97c4-497a-9b93-4e1b6f3a8d36">Projekty założeń projektów ustaw, projekty ustaw oraz projekty rozporządzeń podlegają udostępnieniu w Biuletynie Informacji Publicznej z chwilą przekazania projektów do uzgodnień z członkami Rady Ministrów.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2025/677__art_6" gd:GUID="700eab3a-5888-4c1a-a1ae-56e3d8178f06">
+            <nr>6</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="f702ed0f-52ed-4dba-a8eb-96424d04ed81">
+              <p>
+                <zdanie nr="1" gd:zdGUID="a764084f-3736-43db-8573-3e7976f5d992" fragment="1" gd:fragmentGUID="1f50c201-41ea-4eb0-a173-e1aef9ff0ba8">Z chwilą udostępnienia w Biuletynie Informacji Publicznej wykazów, o których mowa w art. 3 i art. 4, albo – w przypadku gdy projekt nie był zawarty w żadnym z tych wykazów – z chwilą udostępnienia projektu w Biuletynie Informacji Publicznej, udostępnieniu w Biuletynie Informacji Publicznej podlegają również wszelkie dokumenty dotyczące prac nad projektem.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2025/677__art_7" gd:GUID="9c0cd673-53bd-4662-acf0-20c8a896f122">
+            <nr>7</nr>
+            <ustep eId="DU/2025/677__art_7__ust_1" gd:GUID="68189fd2-cf58-446b-819e-60b126706956">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="63a62c62-df18-44ff-b722-ac0ccd61d4a8" fragment="1" gd:fragmentGUID="5217b9c5-03c0-428c-96a7-50b91b3a8378">Z chwilą udostępnienia w Biuletynie Informacji Publicznej wykazów, o których mowa w art. 3 i art. 4, albo – w przypadku gdy projekt nie był zawarty w żadnym z tych wykazów – z chwilą udostępnienia projektu w Biuletynie Informacji Publicznej, każdy może zgłosić zainteresowanie pracami nad projektem założeń projektu ustawy, projektem ustawy lub projektem rozporządzenia.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/677__art_7__ust_2" gd:GUID="f79527d2-2d4a-494d-8c44-1b0154449a1e">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="231b37ba-1dbe-46f9-aa0c-a1cf55e2d73e" fragment="1" gd:fragmentGUID="224d3055-bb80-43ac-8026-7e7f4fa6ab33">Zgłoszenie, o którym mowa w ust. 1, wnosi się na urzędowym formularzu do organu odpowiedzialnego za:</zdanie>
+              </p>
+              <punkt eId="DU/2025/677__art_7__ust_2__pkt_1" gd:GUID="8bdf597a-d5f1-4c70-830c-47aa0411642b">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="231b37ba-1dbe-46f9-aa0c-a1cf55e2d73e" fragment="2" gd:fragmentGUID="c2ca8214-6167-4c96-a859-09028c3fb365">przedłożenie projektu założeń projektu ustawy lub projektu ustawy Radzie Ministrów;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/677__art_7__ust_2__pkt_2" gd:GUID="9c0ea59f-5880-49e9-9c00-4bf986bff683">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="231b37ba-1dbe-46f9-aa0c-a1cf55e2d73e" fragment="3" gd:fragmentGUID="83ecebff-04fc-4767-9584-2ae76252f465">opracowanie projektu rozporządzenia.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2025/677__art_7__ust_3" gd:GUID="e35e5cc7-c6c1-4e8f-b5b8-e64cd45a77d1">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="b4e9a92e-960b-4a3d-abe4-b0ce6e464e67" fragment="1" gd:fragmentGUID="473630bb-8430-4ce5-9421-ed5df7fe744c">Zgłoszenie, o którym mowa w ust. 1, podlega udostępnieniu, z wyjątkiem adresów osób fizycznych, w Biuletynie Informacji Publicznej jako dokument dotyczący prac nad projektem założeń projektu ustawy, projektem ustawy albo projektem rozporządzenia.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/677__art_7__ust_4" gd:GUID="890973a1-30f0-4866-aeb4-f793e8ad8db8">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="97f85024-de80-4ac2-9466-6a7efc5f9ba2" fragment="1" gd:fragmentGUID="4f07a1c6-1d21-49ef-b969-77ca9ddd6b9c">Podmiot dokonujący zgłoszenia, o którym mowa w ust. 1, podaje w zgłoszeniu:</zdanie>
+              </p>
+              <punkt eId="DU/2025/677__art_7__ust_4__pkt_1" gd:GUID="42901af3-2bb7-4b20-a139-986c807c9892">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="97f85024-de80-4ac2-9466-6a7efc5f9ba2" fragment="2" gd:fragmentGUID="7877ee43-704e-407f-9e3c-0b0dee134939">imiona i nazwiska oraz adresy osób uprawnionych do reprezentowania tego podmiotu w pracach nad projektem założeń projektu ustawy, projektem ustawy lub projektem rozporządzenia;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/677__art_7__ust_4__pkt_2" gd:GUID="68ae59d6-5467-46d1-9789-5070d74d9506">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="97f85024-de80-4ac2-9466-6a7efc5f9ba2" fragment="3" gd:fragmentGUID="10829d23-9f1e-4da9-ba88-1553f154ab51">jeżeli występuje na rzecz osoby prawnej – nazwę i siedzibę tej osoby;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/677__art_7__ust_4__pkt_3" gd:GUID="9c6ff29a-6f61-4e7a-a2e4-ba112a0d107a">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="97f85024-de80-4ac2-9466-6a7efc5f9ba2" fragment="4" gd:fragmentGUID="55ee2fb7-fc1f-4b2a-a774-1778fb334448">jeżeli występuje na rzecz podmiotu innego niż osoba prawna – odpowiednio, jego imię i nazwisko oraz adres albo jego nazwę i siedzibę;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/677__art_7__ust_4__pkt_4" gd:GUID="5b5d9481-0f4b-4d00-88e7-2e77fedfa86b">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="97f85024-de80-4ac2-9466-6a7efc5f9ba2" fragment="5" gd:fragmentGUID="652f3d9f-f146-4be9-9667-b50a8c86ff26">interes, który w odniesieniu do danej regulacji zamierza chronić, oraz rozwiązanie prawne, o którego uwzględnienie będzie zabiegać.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2025/677__art_7__ust_5" gd:GUID="cc6e9dae-2ae1-45eb-b77b-609e68ffa9f8">
+              <nr>5</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="9a093b02-a2de-466b-90d9-15c1e88cbb8d" fragment="1" gd:fragmentGUID="8f08efee-40fb-40a2-a7a7-377bd6f12101">Do zgłoszenia, o którym mowa w ust. 1, załącza się:</zdanie>
+              </p>
+              <punkt eId="DU/2025/677__art_7__ust_5__pkt_1" gd:GUID="c850c9e5-4514-47be-be81-18d206e52c50">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="9a093b02-a2de-466b-90d9-15c1e88cbb8d" fragment="2" gd:fragmentGUID="e5da5988-0e42-4237-a8c0-7cb3519f7375">w przypadku gdy podmiot dokonujący zgłoszenia występuje w ramach zawodowej działalności lobbingowej – zaświadczenie albo oświadczenie o wpisie do rejestru podmiotów wykonujących zawodową działalność lobbingową;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/677__art_7__ust_5__pkt_2" gd:GUID="82952646-9461-4c9b-bd86-7a38e92a8b0e">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="9a093b02-a2de-466b-90d9-15c1e88cbb8d" fragment="3" gd:fragmentGUID="c098a64a-71a4-494d-9171-c462904074a5">w przypadku gdy podmiot dokonujący zgłoszenia występuje na rzecz osoby prawnej zarejestrowanej w Krajowym Rejestrze Sądowym – wyciąg albo oświadczenie o wpisie do rejestru przedsiębiorców w Krajowym Rejestrze Sądowym dotyczącym tej osoby prawnej.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2025/677__art_7__ust_5a" gd:GUID="8dfffd48-d8d0-4c16-9cd3-6a628728f9a3">
+              <nr>5a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="555b3dfc-59e5-4b39-ac1b-fe444dd63e63" fragment="1" gd:fragmentGUID="f178a8d9-476a-4407-a854-d2602d2125b2">Oświadczenia, o których mowa w ust. 5, składa się pod rygorem odpowiedzialności karnej za składanie fałszywych zeznań.</zdanie>
+                <zdanie nr="2" gd:zdGUID="932ffedd-23e8-4b4e-a730-ed312f7e4dce" fragment="1" gd:fragmentGUID="ff54b6a3-a1a1-468b-a2b7-eb38ab0d0c6c">Składający oświadczenie jest obowiązany do zawarcia w nim klauzuli następującej treści: „Jestem świadomy odpowiedzialności karnej za złożenie fałszywego oświadczenia.”.</zdanie>
+                <zdanie nr="3" gd:zdGUID="065f6844-a10e-4e01-bcd7-5535d176366c" fragment="1" gd:fragmentGUID="39248101-dd79-4ff1-bcbd-4b7d388938c7">Klauzula ta zastępuje pouczenie organu o odpowiedzialności karnej za składanie fałszywych zeznań.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/677__art_7__ust_6" gd:GUID="34aeed63-5187-426f-8d35-598e5482034e">
+              <nr>6</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="9a2b957e-9870-4e18-abfa-d8ba923d31c9" fragment="1" gd:fragmentGUID="76a70917-916a-4970-a0fc-5aacfc45254b">Podmioty, które zgłosiły zainteresowanie pracami nad projektem założeń projektu ustawy, projektem ustawy lub projektem rozporządzenia, są obowiązane zgłosić zmiany danych podlegających zgłoszeniu w terminie 7 dni od dnia ich wystąpienia odpowiednio organowi odpowiedzialnemu za:</zdanie>
+              </p>
+              <punkt eId="DU/2025/677__art_7__ust_6__pkt_1" gd:GUID="20687d6d-187a-47d8-be88-14ea559b04eb">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="9a2b957e-9870-4e18-abfa-d8ba923d31c9" fragment="2" gd:fragmentGUID="28bdaac6-6366-4d56-b1b6-60a475d09f47">przedłożenie projektu założeń projektu ustawy lub projektu ustawy Radzie Ministrów;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/677__art_7__ust_6__pkt_2" gd:GUID="a40ff41f-8074-45ea-a6c2-8665807db068">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="9a2b957e-9870-4e18-abfa-d8ba923d31c9" fragment="3" gd:fragmentGUID="10b3078a-3b9b-4434-b2e0-f983117a4a13">opracowanie projektu rozporządzenia.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2025/677__art_7__ust_7" gd:GUID="e9001018-0536-4787-a903-7c5833481eb7">
+              <nr>7</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="2abe22e9-eea0-4cc9-9320-d4954f149295" fragment="1" gd:fragmentGUID="7812964e-3a1a-4548-85bb-33021632a76c">Rada Ministrów określi, w drodze rozporządzenia:</zdanie>
+              </p>
+              <punkt eId="DU/2025/677__art_7__ust_7__pkt_1" gd:GUID="c75910be-8898-4602-bf28-200971f4b597">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="2abe22e9-eea0-4cc9-9320-d4954f149295" fragment="2" gd:fragmentGUID="9a2c37be-08ef-4f92-8fca-7a5db7ac72e9">tryb zgłaszania zainteresowania pracami nad projektem założeń projektu ustawy, projektem ustawy lub projektem rozporządzenia,</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/677__art_7__ust_7__pkt_2" gd:GUID="48dcbfce-b0d1-4ed1-9af1-0e05158d7f1a">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="2abe22e9-eea0-4cc9-9320-d4954f149295" fragment="3" gd:fragmentGUID="8e80738b-c2bc-447f-ac5f-7337b21d8cef">wzór urzędowego formularza zgłoszenia zainteresowania pracami nad projektem założeń projektu ustawy, projektem ustawy lub projektem rozporządzenia</zdanie>
+                </p>
+              </punkt>
+              <czesc-wspolna-punkt eId="DU/2025/677__art_7__ust_7__czw" gd:GUID="da6c65c0-e49b-46e3-b426-a23b597109f8">
+                <p>
+                  <zdanie nr="1" gd:zdGUID="2abe22e9-eea0-4cc9-9320-d4954f149295" fragment="4" gd:fragmentGUID="6d1486c8-48d3-4b4d-8f92-5ccbcde45225">– kierując się potrzebą ułatwienia dokonywania zgłoszeń.</zdanie>
+                </p>
+              </czesc-wspolna-punkt>
+            </ustep>
+          </artykul>
+        </oddzial-n>
+      </rozdzial>
+      <rozdzial eId="DU/2025/677__rozdz_2a" gd:GUID="ffd2a787-9fac-44d5-bf51-dfb60e812b6f">
+        <naglowek-rozdzialu>
+          <nr>2a</nr>
+          <odnosnik id-odnosnika="1" symbol="1" gd:GUID="561901d7-53c8-4882-909c-3eebb1b59349">
+            <p>
+              <zdanie nr="1" gd:zdGUID="a3aa5b4a-d7d6-4daf-bc2f-281061af5fee" fragment="1" gd:fragmentGUID="b45ef2d3-8c55-4225-9f15-ffe29eeebab2">Oznaczenie i tytuł rozdziału dodane przez art. 1 pkt 1 ustawy z dnia 25 września 2024 r. o zmianie ustawy o działalności lobbingowej w procesie stanowienia prawa (Dz. U. poz. 1535), która weszła w życie z dniem 31 października 2024 r.</zdanie>
+            </p>
+          </odnosnik>
+          <p>Wysłuchanie publiczne oraz konsultacje społeczne</p>
+        </naglowek-rozdzialu>
+        <oddzial-n brak-eid="jednostka-nieoznaczona" gd:GUID="ae6b8732-b341-4229-b9d9-ff2aa70ffef4">
+          <artykul eId="DU/2025/677__art_8" gd:GUID="456b6ab2-b869-4aa1-b129-11c9e061618e">
+            <nr>8</nr>
+            <ustep eId="DU/2025/677__art_8__ust_1" gd:GUID="10b788c0-da74-4325-9338-6bc538a297bd">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="34469393-3278-416b-be1b-32489fe73a29" fragment="1" gd:fragmentGUID="3759e79f-6aea-4064-9136-ed03fa10a646">Po wniesieniu projektu ustawy do Sejmu może zostać przeprowadzone, na zasadach określonych w regulaminie Sejmu, wysłuchanie publiczne dotyczące tego projektu.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/677__art_8__ust_2" gd:GUID="5baee490-b8eb-405d-958a-2616523e0dbc">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="751aa6d1-7c48-4a28-8257-79d497a62858" fragment="1" gd:fragmentGUID="55e4dd9d-2ccc-45b8-9845-26c32612e843">Podmiot, który zgłosił zainteresowanie pracami nad projektem ustawy, może, na zasadach określonych w regulaminie Sejmu, wziąć udział w wysłuchaniu publicznym dotyczącym tego projektu.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2025/677__art_9" gd:GUID="17ec203e-1c86-467b-943a-6608f6bc2056">
+            <nr>9</nr>
+            <ustep eId="DU/2025/677__art_9__ust_1" gd:GUID="af835475-1399-4de2-aa7b-1706776ff16e">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="58bd8661-c5d3-4df6-af5b-cf3691a7b035" fragment="1" gd:fragmentGUID="cd9abfc0-3a9d-42a2-abb9-5e3c42936d29">Podmiot odpowiedzialny za opracowanie projektu rozporządzenia może przeprowadzić wysłuchanie publiczne dotyczące tego projektu.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/677__art_9__ust_2" gd:GUID="abdc41f1-4c63-41f4-9df0-086af486c6e2">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="6e07663f-13dd-4f84-bde1-19bac169414b" fragment="1" gd:fragmentGUID="43cf3d13-b1b2-45fb-8745-a1f10596b82c">Informacja o terminie wysłuchania publicznego dotyczącego projektu rozporządzenia podlega udostępnieniu w Biuletynie Informacji Publicznej co najmniej na 7 dni przed dniem wysłuchania publicznego.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/677__art_9__ust_3" gd:GUID="f3e69b25-b361-49cc-ad21-670ec4917e9b">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="5cedb002-6567-488c-a9b5-d3c7f51068bc" fragment="1" gd:fragmentGUID="8a9229a2-d495-4393-b428-4f0551231616">Prawo wzięcia udziału w wysłuchaniu publicznym, o którym mowa w ust. 1, ma każdy podmiot, który zgłosił zainteresowanie pracami nad projektem rozporządzenia co najmniej na 3 dni przed dniem wysłuchania publicznego.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/677__art_9__ust_4" gd:GUID="70ddcd2a-1d5b-43e1-953b-8b161563c6d6">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="155fed28-dff2-4cf5-a954-9a63e58e91b5" fragment="1" gd:fragmentGUID="c62a0bb1-a17f-4174-8838-d6cab895616e">Jeżeli ze względów lokalowych lub technicznych, w szczególności ze względu na liczbę osób chętnych do wzięcia udziału w wysłuchaniu publicznym, nie jest możliwe zorganizowanie wysłuchania publicznego dotyczącego projektu rozporządzenia, podmiot uprawniony do jego organizacji może:</zdanie>
+              </p>
+              <punkt eId="DU/2025/677__art_9__ust_4__pkt_1" gd:GUID="09440abc-82dc-434a-87b2-008896666cbf">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="155fed28-dff2-4cf5-a954-9a63e58e91b5" fragment="2" gd:fragmentGUID="1f2535af-bbe4-4a3e-8a1b-250fb5268787">zmienić termin lub miejsce wysłuchania publicznego, podając w Biuletynie Informacji Publicznej przyczyny tej zmiany oraz nowy termin lub miejsce wysłuchania publicznego;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/677__art_9__ust_4__pkt_2" gd:GUID="be790670-fa2c-4409-a6a9-ac0db6fe17fe">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="155fed28-dff2-4cf5-a954-9a63e58e91b5" fragment="3" gd:fragmentGUID="1d1ab938-f110-40c9-9895-3be6d6d0de5a">odwołać wysłuchanie publiczne, podając w Biuletynie Informacji Publicznej przyczyny odwołania.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2025/677__art_9__ust_5" gd:GUID="fef0ffb8-5f00-4773-8fe5-44f120bc13d2">
+              <nr>5</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="df4a70bc-0bdc-4087-8709-eff0ddf2a982" fragment="1" gd:fragmentGUID="592d1bae-446d-4102-901e-cc6709b65c82">Podmiot organizujący wysłuchanie publiczne w szczególności:</zdanie>
+              </p>
+              <punkt eId="DU/2025/677__art_9__ust_5__pkt_1" gd:GUID="cd3d3b49-ab23-45eb-ae7a-6d9ddb98f4c7">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="df4a70bc-0bdc-4087-8709-eff0ddf2a982" fragment="2" gd:fragmentGUID="29c64a17-964a-42b9-9958-9a604bbbe4f1">kieruje przebiegiem wysłuchania publicznego;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/677__art_9__ust_5__pkt_2" gd:GUID="25dcd74e-b50b-4e3a-941f-c55de2e0466b">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="df4a70bc-0bdc-4087-8709-eff0ddf2a982" fragment="3" gd:fragmentGUID="1dcd60d6-3197-4dee-8385-e8a40d08b6be">zapewnia niezakłócony przebieg wysłuchania publicznego;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/677__art_9__ust_5__pkt_3" gd:GUID="bf2089c5-85d7-4e0a-9836-77d6dbe14863">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="df4a70bc-0bdc-4087-8709-eff0ddf2a982" fragment="4" gd:fragmentGUID="c6aa85ee-3c9f-4714-a507-65c490edbd07">udziela głosu uczestnikom wysłuchania publicznego.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2025/677__art_9__ust_6" gd:GUID="84f552a7-33db-48d1-b8b8-77ab19effc7f">
+              <nr>6</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="fa69654b-0e5e-4147-a4f3-e249527efa82" fragment="1" gd:fragmentGUID="3af6abc9-f8bb-46b3-9bd3-4c1f6d6bd9cf">Rada Ministrów określi, w drodze rozporządzenia, tryb przeprowadzania wysłuchania publicznego dotyczącego projektów rozporządzeń i sposób dokumentowania jego przebiegu, mając na uwadze zapewnienie identyfikacji osób uczestniczących w wysłuchaniu publicznym, swobody prezentacji racji i argumentów uczestników wysłuchania publicznego oraz sprawnego przebiegu wysłuchania.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2025/677__art_9a" gd:GUID="86ca900e-c780-4167-a5be-3ec470add85a">
+            <nr>9a</nr>
+            <ustep eId="DU/2025/677__art_9a__ust_1" gd:GUID="7936f61d-b558-4318-9040-dbf3626238fd">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="3cb205e0-a92b-4df0-bf4b-6f43e599dbb5" fragment="1" gd:fragmentGUID="64e09df5-4b30-47b9-8b94-248349b8df8c"><odnosnik id-odnosnika="2" symbol="2" gd:GUID="855e95e1-3b8f-475d-b596-301d9009be1a"><p><zdanie nr="1" gd:zdGUID="5759d59a-4634-4b4e-9b12-5a159fe950d7" fragment="1" gd:fragmentGUID="6c59ca94-a1f6-4a11-9267-3c8608cbb2d0">Dodany przez art. 1 pkt 2 ustawy, o której mowa w odnośniku 1.</zdanie></p></odnosnik> Po wniesieniu projektu ustawy do Sejmu mogą zostać przeprowadzone, na zasadach określonych w regulaminie Sejmu, konsultacje społeczne tego projektu.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/677__art_9a__ust_2" gd:GUID="0b6418a4-28b6-490e-9d7c-675a478f9e0a">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="f6efeba0-983f-4cef-83b8-3a4e88d0594c" fragment="1" gd:fragmentGUID="0268cf18-b543-4a8f-b13c-32f3196ca3a9">Konsultacje społeczne polegają na zgłoszeniu uwag do projektu ustawy.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/677__art_9a__ust_3" gd:GUID="d906b1f7-a387-44ff-8301-12cb950a171e">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="3dfdf45d-fc43-4c6c-9acc-17e29aab2ebc" fragment="1" gd:fragmentGUID="972b92bb-a18e-4339-952f-e72b1b998ab8">Uwagi mogą być zgłoszone przez osobę fizyczną we własnym imieniu albo na rzecz osoby prawnej lub podmiotu innego niż osoba prawna.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2025/677__art_9b" gd:GUID="44db4b27-7011-41b0-96bb-1951a6104082">
+            <nr>9b</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="8a5802fa-4fae-44c9-8540-874ae3e1f8ed">
+              <p>
+                <zdanie nr="1" gd:zdGUID="693f5acb-7b1a-4d27-b9a7-702a4a22aebf" fragment="1" gd:fragmentGUID="ad8e7363-4016-42e6-9527-fc03a1b92bc4"><odsylacz-do-odnosnika id-odnosnika="2" symbol="2" /> Zgłoszenia uwag dokonuje się z wykorzystaniem usługi elektronicznej udostępnionej przez ministra właściwego do spraw informatyzacji na podstawie porozumienia, o którym mowa w art. 19c ust. 1 pkt 1 ustawy z dnia 17 lutego 2005 r. o informatyzacji działalności podmiotów realizujących zadania publiczne (Dz. U. z 2024 r. poz. 1557 i 1717), po uwierzytelnieniu osoby zgłaszającej uwagi w sposób określony w art. 20a ust. 1 tej ustawy.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2025/677__art_9c" gd:GUID="4d246254-d2af-46f9-accc-6d76219ed416">
+            <nr>9c</nr>
+            <ustep eId="DU/2025/677__art_9c__ust_1" gd:GUID="0f7b3e4b-7988-410b-ac85-43bd24cf6a7d">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="942186ad-e873-4d0c-befe-0e4c48fa021b" fragment="1" gd:fragmentGUID="66fd26ff-f5a1-49ef-85fe-6fde351f6d3b"><odsylacz-do-odnosnika id-odnosnika="2" symbol="2" /> W celu zapewnienia jawności procesu stanowienia prawa, w tym konsultacji społecznych, zgłoszone uwagi udostępnia się w trybie określonym w regulaminie Sejmu, z tym że dane obejmujące:</zdanie>
+              </p>
+              <punkt eId="DU/2025/677__art_9c__ust_1__pkt_1" gd:GUID="11a889f8-6136-43eb-b9f5-ab32f1488fd9">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="942186ad-e873-4d0c-befe-0e4c48fa021b" fragment="2" gd:fragmentGUID="f5501203-98d0-4040-9754-b5c9394d9cd0">imię (imiona) oraz nazwisko osoby zgłaszającej uwagi,</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/677__art_9c__ust_1__pkt_2" gd:GUID="fdd956b2-2678-41aa-94d7-3967af159b96">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="942186ad-e873-4d0c-befe-0e4c48fa021b" fragment="3" gd:fragmentGUID="76cc9c05-7a11-43aa-ab1f-86e5e3f14a23">imię (imiona) oraz nazwisko albo nazwę i siedzibę – w przypadku zgłoszenia uwag na rzecz innego podmiotu</zdanie>
+                </p>
+              </punkt>
+              <czesc-wspolna-punkt eId="DU/2025/677__art_9c__ust_1__czw" gd:GUID="71460adf-d721-443d-88ed-8ecb886cedc7">
+                <p>
+                  <zdanie nr="1" gd:zdGUID="942186ad-e873-4d0c-befe-0e4c48fa021b" fragment="4" gd:fragmentGUID="dfdffb46-e4d4-44d0-999d-39864b7e00a5">– udostępnia się do zakończenia kadencji Sejmu, w której odbywają się prace nad projektem ustawy.</zdanie>
+                </p>
+              </czesc-wspolna-punkt>
+            </ustep>
+            <ustep eId="DU/2025/677__art_9c__ust_2" gd:GUID="bbf25e8b-c83c-45f6-94c5-57bc8fd5d421">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="9229d60e-8a1a-42ec-99b8-613c1b7ac53c" fragment="1" gd:fragmentGUID="4e2ad2bb-f116-40f9-b9a6-da8ec8568478">Nie udostępnia się uwag, które zawierają treści niezgodne z prawem, w szczególności treści naruszające dobra osobiste, tajemnice prawnie chronione lub przepisy karne.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2025/677__art_9d" gd:GUID="14ddde15-6c41-4c4a-85e2-6b07a761d1df">
+            <nr>9d</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="a1be5a22-13fa-4de1-860c-5c49f7adebfe">
+              <p>
+                <zdanie nr="1" gd:zdGUID="f9ff255d-50f1-47af-939b-628149865084" fragment="1" gd:fragmentGUID="e9e96890-a9d3-443c-be0e-c73986fe3a4a"><odsylacz-do-odnosnika id-odnosnika="2" symbol="2" /> Kancelaria Sejmu, w celu przeprowadzenia konsultacji społecznych oraz do celów statystycznych, przetwarza dane obejmujące:</zdanie>
+              </p>
+              <punkt eId="DU/2025/677__art_9d__pkt_1" gd:GUID="b04bd226-5695-48c5-b842-86de3e48ee0d">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="f9ff255d-50f1-47af-939b-628149865084" fragment="2" gd:fragmentGUID="7828a25e-a643-490e-8633-c130dc80071c">imię (imiona), nazwisko oraz numer PESEL osoby zgłaszającej uwagi;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/677__art_9d__pkt_2" gd:GUID="a9465e42-56c0-476d-ae28-2de95d04b83f">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="f9ff255d-50f1-47af-939b-628149865084" fragment="3" gd:fragmentGUID="9687f054-1855-4df0-aa2b-7943a903067c">imię (imiona) i nazwisko albo nazwę i siedzibę podmiotu, na rzecz którego są zgłaszane uwagi.</zdanie>
+                </p>
+              </punkt>
+            </ustep-n>
+          </artykul>
+        </oddzial-n>
+      </rozdzial>
+      <rozdzial eId="DU/2025/677__rozdz_3" gd:GUID="f3b311a5-c854-4a60-aa81-ffc43cdd99fe">
+        <naglowek-rozdzialu>
+          <nr>3</nr>
+          <p>Rejestr podmiotów wykonujących zawodową działalność lobbingową oraz zasady wykonywania zawodowej działalności lobbingowej</p>
+        </naglowek-rozdzialu>
+        <oddzial-n brak-eid="jednostka-nieoznaczona" gd:GUID="f2356826-5ffc-4701-a90a-210fe6eca98a">
+          <artykul eId="DU/2025/677__art_10" gd:GUID="6b81629b-7c17-4efd-9407-12f6f85a4f0b">
+            <nr>10</nr>
+            <ustep eId="DU/2025/677__art_10__ust_1" gd:GUID="e55bb438-1cd9-4729-aff5-7aa856c86c5e">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ac7ed210-42c2-4fc4-ad60-5212a85c1353" fragment="1" gd:fragmentGUID="a15af177-a7a2-4af4-86c0-24e8ae7afb61">Tworzy się rejestr podmiotów wykonujących zawodową działalność lobbingową, zwany dalej „rejestrem”.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/677__art_10__ust_2" gd:GUID="d4379539-57cd-4b12-be82-e8ba0fbf237b">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="a04f4cc8-08ea-43e9-9432-737a74564269" fragment="1" gd:fragmentGUID="dc5bf75a-d9ed-4429-8a03-ecb39b4622d4">Minister właściwy do spraw administracji publicznej prowadzi rejestr w postaci bazy danych zapisanej na informatycznych nośnikach danych w rozumieniu przepisów ustawy z dnia 17 lutego 2005 r. o informatyzacji działalności podmiotów realizujących zadania publiczne.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/677__art_10__ust_3" gd:GUID="eabb0ace-f0fc-44c4-a59d-8f9160ad8ac4">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="f7bc0195-d893-4a61-86ac-5eb07c21b2fc" fragment="1" gd:fragmentGUID="7e354cfb-659a-4a33-bf0c-c649f3435122">Rejestr zawiera następujące dane:</zdanie>
+              </p>
+              <punkt eId="DU/2025/677__art_10__ust_3__pkt_1" gd:GUID="219a1b43-0af8-4bd3-b625-e0fbe31b743b">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="f7bc0195-d893-4a61-86ac-5eb07c21b2fc" fragment="2" gd:fragmentGUID="4c181be5-f482-4170-aeca-bcd68afa8a1a">firmę, siedzibę i adres przedsiębiorcy wykonującego zawodową działalność lobbingową albo imię, nazwisko i adres osoby fizycznej niebędącej przedsiębiorcą wykonującej zawodową działalność lobbingową;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/677__art_10__ust_3__pkt_2" gd:GUID="6ff43070-6fbc-4a79-af13-b133288e51a6">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="f7bc0195-d893-4a61-86ac-5eb07c21b2fc" fragment="3" gd:fragmentGUID="2ab4902c-8246-4985-a1a1-2484cd673f59">w przypadku przedsiębiorców wykonujących zawodową działalność lobbingową – numer w rejestrze przedsiębiorców w Krajowym Rejestrze Sądowym, o ile taki numer posiadają, oraz numer identyfikacji podatkowej (NIP).</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2025/677__art_10__ust_4" gd:GUID="6612d3df-934b-4ed1-8b2b-04095f57db2f">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="2a0e93ea-602b-4109-a8b5-e825b7b385ec" fragment="1" gd:fragmentGUID="03718a66-da56-4d66-a95c-9e7047452b80">Rejestr jest jawny.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/677__art_10__ust_5" gd:GUID="abc77bd5-3ec4-4b17-8d1c-a0efb51d8d1f">
+              <nr>5</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="90be7ca3-6632-4528-a99f-d66256b2f64e" fragment="1" gd:fragmentGUID="cb0553d9-7cd5-42f7-af08-6c53c8846387">Informacje zawarte w rejestrze podlegają udostępnieniu w Biuletynie Informacji Publicznej, z wyjątkiem adresów osób fizycznych.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2025/677__art_11" gd:GUID="4a181277-7340-4133-9abc-3c6f0f168ade">
+            <nr>11</nr>
+            <ustep eId="DU/2025/677__art_11__ust_1" gd:GUID="8c4bfc7f-fb55-4ddc-b60b-b9b51e4e2094">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="3a773ce5-0611-4441-a7dc-1c76314ec359" fragment="1" gd:fragmentGUID="a4c62148-01fd-4f12-b165-1aa8b65e6ad0">Wpis do rejestru jest dokonywany na podstawie zgłoszenia.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/677__art_11__ust_2" gd:GUID="6c77550f-e1c9-4e7a-a534-7255bc259c12">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="44bda3ea-e572-49f8-a8b2-c1f5ca931b40" fragment="1" gd:fragmentGUID="515afdcf-4a0a-4f7c-a6d6-30c20cdaa87c">Zgłoszenie, o którym mowa w ust. 1, wnosi się na urzędowym formularzu i podaje się w nim:</zdanie>
+              </p>
+              <punkt eId="DU/2025/677__art_11__ust_2__pkt_1" gd:GUID="ab57f83c-8719-487f-b464-09a64946dc31">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="44bda3ea-e572-49f8-a8b2-c1f5ca931b40" fragment="2" gd:fragmentGUID="f5acf65a-6669-427c-9cd3-ef9f6f2f3932">firmę, siedzibę i adres przedsiębiorcy wykonującego zawodową działalność lobbingową albo imię, nazwisko i adres osoby fizycznej niebędącej przedsiębiorcą wykonującej zawodową działalność lobbingową;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/677__art_11__ust_2__pkt_2" gd:GUID="e1649725-dba3-42ee-89ed-fd72884aad1b">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="44bda3ea-e572-49f8-a8b2-c1f5ca931b40" fragment="3" gd:fragmentGUID="f7e6a754-bb7f-435d-9c3d-689de06d6511">w przypadku przedsiębiorców wykonujących zawodową działalność lobbingową – numer w rejestrze przedsiębiorców w Krajowym Rejestrze Sądowym, o ile taki numer posiadają, oraz numer identyfikacji podatkowej (NIP).</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2025/677__art_11__ust_3" gd:GUID="c1f45617-c367-4d51-bd36-1331652177e0">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="4bc1da08-5567-459d-8144-c22fb4f72365" fragment="1" gd:fragmentGUID="6432e45d-793c-4909-bb91-0d9ce056e37b">Do zgłoszenia, o którym mowa w ust. 1, załącza się:</zdanie>
+              </p>
+              <punkt eId="DU/2025/677__art_11__ust_3__pkt_1" gd:GUID="d5e94414-f2cf-44e7-8cb9-9ea41c5f0609">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="4bc1da08-5567-459d-8144-c22fb4f72365" fragment="2" gd:fragmentGUID="745b5809-d34f-401a-8558-e0261e7f6872">dowód wniesienia opłaty za dokonanie wpisu do rejestru lub jego kopię;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/677__art_11__ust_3__pkt_2" gd:GUID="19d2a86c-36d5-42c9-af21-ddde837c1ff0">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="4bc1da08-5567-459d-8144-c22fb4f72365" fragment="3" gd:fragmentGUID="693bfccc-3341-44b4-8d67-ae4d17c0298e">kopie stron dokumentu potwierdzającego tożsamość – w przypadku osób fizycznych niebędących przedsiębiorcami, wykonujących zawodową działalność lobbingową na podstawie umowy cywilnoprawnej.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2025/677__art_11__ust_4" gd:GUID="107636da-085f-4df2-992c-af088fe7e466">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="467290bf-9cdf-4572-a3ee-59b73c01a2c8" fragment="1" gd:fragmentGUID="15192840-4bb8-4e7d-b6d5-02f44d8f354e">W przypadku stwierdzenia w zgłoszeniu, o którym mowa w ust. 1, braków formalnych, organ prowadzący rejestr wzywa podmiot dokonujący zgłoszenia do usunięcia braków.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/677__art_11__ust_5" gd:GUID="efdf232d-c7b2-49d3-91ef-9895f9e9b413">
+              <nr>5</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="2a0fde06-d18f-440f-8d26-63f49a68fe9d" fragment="1" gd:fragmentGUID="8767c23f-5cd9-466d-b327-936719fc9dee">W przypadku oczywistej bezzasadności zgłoszenia lub nieusunięcia, w terminie 7 dni, pomimo wezwania organu prowadzącego rejestr, braków formalnych zgłoszenia, organ prowadzący rejestr odmawia dokonania wpisu do rejestru.</zdanie>
+                <zdanie nr="2" gd:zdGUID="2053a6f5-fd9b-4371-8afc-c05da15c1a1c" fragment="1" gd:fragmentGUID="cb7735e6-6904-4580-aee6-0d6cc82a16b8">Odmowa dokonania wpisu następuje w drodze decyzji administracyjnej.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/677__art_11__ust_6" gd:GUID="ed4bbd54-bbe4-4d56-a501-b03860047d76">
+              <nr>6</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="7be13245-282a-4fb9-b53f-0a6261d8bfc1" fragment="1" gd:fragmentGUID="6495a6b2-cd7f-488d-8ac5-a38ad9e69609">Wpis do rejestru jest odpłatny.</zdanie>
+                <zdanie nr="2" gd:zdGUID="9d116990-397f-4cfb-9d1f-02a0e558aadd" fragment="1" gd:fragmentGUID="88d370dc-a421-4ee5-8c76-efb3396b5d97">Opłatę za wpis do rejestru uiszcza się, dokonując zgłoszenia.</zdanie>
+                <zdanie nr="3" gd:zdGUID="4676b6e2-9567-45c4-9312-ab2fe6093849" fragment="1" gd:fragmentGUID="35ab9e7a-f07e-4088-b055-139fea18be84">Opłata nie może przekroczyć 100 zł.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/677__art_11__ust_7" gd:GUID="33c76e30-f1c5-40dd-8880-6136cfbe3242">
+              <nr>7</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="5dad5a76-4986-4da0-ab62-69bff5264a1a" fragment="1" gd:fragmentGUID="55bd2a16-b71b-497f-8133-e8bbd4cf1301">Podmioty wpisane do rejestru mają obowiązek zgłosić organowi prowadzącemu rejestr zmiany danych podlegających wpisowi do rejestru w terminie 7 dni od dnia ich wystąpienia.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/677__art_11__ust_8" gd:GUID="591015a8-a23c-4169-8b5e-a5013b3aff2d">
+              <nr>8</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="839e0318-6cdf-445f-b8eb-e5342f8f2b2a" fragment="1" gd:fragmentGUID="9d5acb45-fa01-408d-9bb5-d9b2142dceff">Organ prowadzący rejestr wydaje na żądanie podmiotu wpisanego do rejestru zaświadczenie o wpisie do rejestru.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/677__art_11__ust_9" gd:GUID="ecbfcf05-152b-429e-b056-c12596c06e18">
+              <nr>9</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ffefa582-6f84-4404-b599-58419193951e" fragment="1" gd:fragmentGUID="f2218230-0629-4965-a14f-e32eb130f683">Organ prowadzący rejestr na wniosek podmiotu wpisanego do rejestru wykreśla ten podmiot z rejestru.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/677__art_11__ust_10" gd:GUID="988a6f6e-700e-41b2-a1bb-b2c2918436de">
+              <nr>10</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="27ae9c65-8d41-4e2c-ac97-ad635335e144" fragment="1" gd:fragmentGUID="7f2178b1-29b6-412a-b9b1-0c01e40acbf1">Minister właściwy do spraw administracji publicznej określi, w drodze rozporządzenia:</zdanie>
+              </p>
+              <punkt eId="DU/2025/677__art_11__ust_10__pkt_1" gd:GUID="8008f216-6dec-4d0d-88e7-6adc817b49ba">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="27ae9c65-8d41-4e2c-ac97-ad635335e144" fragment="2" gd:fragmentGUID="c2343655-752c-4618-a517-b4d56d02e70e">sposób zgłaszania i dokonywania wpisów w rejestrze i ich aktualizacji, w tym wzór formularza zgłoszenia,</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/677__art_11__ust_10__pkt_2" gd:GUID="9b14c908-128d-4aab-b4f2-f04bdb6c54f8">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="27ae9c65-8d41-4e2c-ac97-ad635335e144" fragment="3" gd:fragmentGUID="d2296396-e657-4a2d-b268-db9dae1e7615">(uchylony)</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/677__art_11__ust_10__pkt_3" gd:GUID="c363bbf6-6947-4efb-96c5-0393f8033712">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="27ae9c65-8d41-4e2c-ac97-ad635335e144" fragment="4" gd:fragmentGUID="7c336405-a548-46f6-a031-25d0960d1f83">wzór zaświadczenia o wpisie do rejestru,</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/677__art_11__ust_10__pkt_4" gd:GUID="230c6743-5000-4e20-bf51-fd996438be74">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="27ae9c65-8d41-4e2c-ac97-ad635335e144" fragment="5" gd:fragmentGUID="982b19af-e6a8-4cfd-9e54-328cf2d7e56b">wysokość opłaty za wpis do rejestru, ustalonej na poziomie niestanowiącym ograniczenia w zgłaszaniu zawodowej działalności lobbingowej do rejestru</zdanie>
+                </p>
+              </punkt>
+              <czesc-wspolna-punkt eId="DU/2025/677__art_11__ust_10__czw" gd:GUID="9144d0e2-c6dd-4eb5-9658-326477aa140e">
+                <p>
+                  <zdanie nr="1" gd:zdGUID="27ae9c65-8d41-4e2c-ac97-ad635335e144" fragment="6" gd:fragmentGUID="697451b0-e826-4ee0-8f31-f39c23ec97bb">– kierując się potrzebą ułatwienia dokonywania zgłoszeń.</zdanie>
+                </p>
+              </czesc-wspolna-punkt>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2025/677__art_12" gd:GUID="f00a670b-b528-4924-9c44-5defd9dce8cd">
+            <nr>12</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="ae8e3510-af4b-4fd2-9f5f-89c6332b4159">
+              <p>
+                <zdanie nr="1" gd:zdGUID="dce1898e-8a6a-405d-b196-6451386a6d10" fragment="1" gd:fragmentGUID="37c74399-9196-4c67-91b3-5f7a1f0d0d32">Zawodowa działalność lobbingowa może być wykonywana po uzyskaniu wpisu do rejestru.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2025/677__art_13" gd:GUID="2a030a3a-6861-4b60-a69e-2acb85b6c194">
+            <nr>13</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="3c6fe5eb-dda4-4f98-9089-46e535beb9a5">
+              <p>
+                <zdanie nr="1" gd:zdGUID="95ad23d2-dfa0-400b-9be8-c48056245529" fragment="1" gd:fragmentGUID="cb1a6c65-1ba6-4170-bb30-b35021864575">W przypadku wydania na podstawie art. 41 Kodeksu karnego prawomocnego orzeczenia zakazującego wykonywania zawodowej działalności lobbingowej, organ prowadzący rejestr wykreśla z rejestru przedsiębiorcę albo osobę fizyczną, których dotyczy to orzeczenie.<odnosnik id-odnosnika="3" symbol="3" gd:GUID="f90a2675-be90-4def-b4f8-61d90a9e0c3c"><p><zdanie nr="1" gd:zdGUID="67223979-fafc-452c-a990-ba014a66d85d" fragment="1" gd:fragmentGUID="f7b33bcf-7910-4a42-ae6f-9f329bb4217c">Zdanie pierwsze ze zmianą wprowadzoną przez art. 1 pkt 3 ustawy, o której mowa w odnośniku 1.</zdanie></p></odnosnik></zdanie>
+                <zdanie nr="2" gd:zdGUID="2a38b37d-3a87-4bb5-8574-e68768649840" fragment="1" gd:fragmentGUID="426a7335-5b6d-44e9-9d9d-821e2b059edb">Wykreślenie z rejestru następuje w drodze decyzji administracyjnej.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2025/677__art_14" gd:GUID="cc4fc226-8e2a-40ce-8974-1dda1975ffb0">
+            <nr>14</nr>
+            <ustep eId="DU/2025/677__art_14__ust_1" gd:GUID="011c4a0b-fbed-44e9-9306-580674917142">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="209b4162-dcd0-4a20-9f00-c46245060cb1" fragment="1" gd:fragmentGUID="234549e7-0c73-40d7-a4ef-071dc401424c">Podmiot wykonujący zawodową działalność lobbingową ma prawo wykonywać tę działalność także w siedzibie urzędu obsługującego organ władzy publicznej.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/677__art_14__ust_2" gd:GUID="88cae4be-bed9-43a7-861d-f2aa4a5cb5be">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="d43aa142-967b-47bb-9c7e-79ba12353536" fragment="1" gd:fragmentGUID="c2b5f0b1-1e0b-4e27-aaf6-ec7ae3f440f9">Kierownik urzędu, o którym mowa w ust. 1, zapewnia podmiotom wykonującym zawodową działalność lobbingową wpisanym do rejestru dostęp do kierowanego przez siebie urzędu w celu umożliwienia właściwego reprezentowania interesów podmiotów, na rzecz których jest wykonywana ta działalność.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/677__art_14__ust_3" gd:GUID="be3b89ed-3468-42ad-954d-b05a00471e39">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="d712cd8f-d2f5-4a70-a8f0-f27d9d4a31ef" fragment="1" gd:fragmentGUID="aa69e6f9-9a64-4adb-bf2f-5e2ab20c3b0a">Zasady wykonywania zawodowej działalności lobbingowej na terenie Sejmu i Senatu określają odpowiednio regulamin Sejmu i regulamin Senatu.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2025/677__art_15" gd:GUID="1864c3c8-a272-4f3f-bdff-11486e6cf3a1">
+            <nr>15</nr>
+            <ustep eId="DU/2025/677__art_15__ust_1" gd:GUID="a8456760-ffdd-4878-b03c-c3c10b111ba8">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="6a715fe1-c62d-43c8-ad56-ee9965fca071" fragment="1" gd:fragmentGUID="561f81c0-4cd3-4623-b54d-2959fa7bfbe0">Podmiot wykonujący zawodową działalność lobbingową jest obowiązany doręczyć organowi władzy publicznej lub pracownikowi urzędu obsługującego organ władzy publicznej, przed którym występuje, zaświadczenie albo oświadczenie o wpisie do rejestru, o którym mowa w art. 11, oraz oświadczenie wskazujące podmioty, na rzecz których wykonuje tę działalność.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/677__art_15__ust_2" gd:GUID="8b3006c6-06d4-4cc6-87b6-1409a11ff088">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="f05839c1-6901-4d11-995d-833d340976fb" fragment="1" gd:fragmentGUID="643cd349-4765-45a0-9689-787fe8975ee4">Do oświadczeń, o których mowa w ust. 1, przepis art. 7 ust. 5a stosuje się odpowiednio.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+        </oddzial-n>
+      </rozdzial>
+      <rozdzial eId="DU/2025/677__rozdz_4" gd:GUID="eccde66e-5bb4-4c09-820f-dd703a0c4416">
+        <naglowek-rozdzialu>
+          <nr>4</nr>
+          <p>Kontrola zawodowej działalności lobbingowej</p>
+        </naglowek-rozdzialu>
+        <oddzial-n brak-eid="jednostka-nieoznaczona" gd:GUID="9e74806b-14f5-46e4-800b-07ee4a1841f5">
+          <artykul eId="DU/2025/677__art_16" gd:GUID="a4a16a38-9440-4b1d-bd81-66b4e32656ac">
+            <nr>16</nr>
+            <ustep eId="DU/2025/677__art_16__ust_1" gd:GUID="16a629b8-4c4e-4cc2-9052-aac24e981101">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="de53dac7-ef42-4ab3-8b7e-5a3338368941" fragment="1" gd:fragmentGUID="4f55a8ad-7b3f-44e8-b48a-d1ffde3fc8ae">Organy władzy publicznej są obowiązane niezwłocznie udostępniać w Biuletynie Informacji Publicznej informacje o działaniach podejmowanych wobec nich przez podmioty wykonujące zawodową działalność lobbingową, wraz ze wskazaniem oczekiwanego przez te podmioty sposobu rozstrzygnięcia.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/677__art_16__ust_2" gd:GUID="462130a2-2669-477b-b592-c22f9fcad3fc">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="2a28278c-8882-44a1-a6dd-e55f66d6f205" fragment="1" gd:fragmentGUID="7db17762-5285-4aa3-9c5f-fe683b775adf">Kierownicy urzędów obsługujących organy władzy publicznej, każdy w zakresie swojego działania, określą szczegółowy sposób postępowania pracowników podległego urzędu z podmiotami wykonującymi zawodową działalność lobbingową oraz z podmiotami wykonującymi bez wpisu do rejestru czynności z zakresu zawodowej działalności lobbingowej, w tym sposób dokumentowania podejmowanych kontaktów.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2025/677__art_17" gd:GUID="1f4991af-6ee6-432d-ae54-d2a36bc0e259">
+            <nr>17</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="bcc7180b-b686-4ff2-bc0d-ece793f6e90f">
+              <p>
+                <zdanie nr="1" gd:zdGUID="95ccfbd5-97ce-4f9e-9a9a-a877feb73306" fragment="1" gd:fragmentGUID="16e597d6-f61a-4ae1-8032-6003fde1ca2e">W przypadku stwierdzenia, że czynności wchodzące w zakres zawodowej działalności lobbingowej są wykonywane przez podmiot niewpisany do rejestru, właściwy organ władzy publicznej niezwłocznie informuje o tym na piśmie ministra właściwego do spraw administracji publicznej.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2025/677__art_18" gd:GUID="36697f83-a935-400b-8cf3-eab3824c2b23">
+            <nr>18</nr>
+            <ustep eId="DU/2025/677__art_18__ust_1" gd:GUID="d9d17a98-d1df-4ef3-bc10-2854954beb62">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="d732bad9-8ec8-4092-b1bf-802eee286f57" fragment="1" gd:fragmentGUID="24221632-e035-4c87-95a5-eff213b1b690">Kierownicy urzędów obsługujących organy władzy publicznej opracowują raz w roku, do końca lutego, informację o działaniach podejmowanych wobec tych organów w roku poprzednim przez podmioty wykonujące zawodową działalność lobbingową.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/677__art_18__ust_2" gd:GUID="1a59fdb9-9cd5-4492-92ec-91c0eee709ff">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="6dc92245-89c7-41b3-b82d-b313f5a51e15" fragment="1" gd:fragmentGUID="68fb029f-7592-41e8-84f3-a4216a199797">Informacja, o której mowa w ust. 1, zawiera:</zdanie>
+              </p>
+              <punkt eId="DU/2025/677__art_18__ust_2__pkt_1" gd:GUID="0614f71c-5172-4968-80e1-0340682dadb3">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="6dc92245-89c7-41b3-b82d-b313f5a51e15" fragment="2" gd:fragmentGUID="48d60849-05cc-4a4e-9506-41c70c96d79b">określenie spraw, w których zawodowa działalność lobbingowa była podejmowana;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/677__art_18__ust_2__pkt_2" gd:GUID="87d1d19c-db3b-4aee-9272-0297582d1f5e">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="6dc92245-89c7-41b3-b82d-b313f5a51e15" fragment="3" gd:fragmentGUID="71c2aeb0-48b0-4f10-8bdc-eb4dc7223041">wskazanie podmiotów, które wykonywały zawodową działalność lobbingową;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/677__art_18__ust_2__pkt_3" gd:GUID="340d3232-be26-4618-994e-38736913451c">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="6dc92245-89c7-41b3-b82d-b313f5a51e15" fragment="4" gd:fragmentGUID="edd2cb9c-affd-4fef-a582-9fbb6f5446e3">określenie form podjętej zawodowej działalności lobbingowej, wraz ze wskazaniem, czy polegała ona na wspieraniu określonych projektów, czy też na występowaniu przeciwko tym projektom;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/677__art_18__ust_2__pkt_4" gd:GUID="3d6be234-47b4-46d3-a779-17358e7b1fad">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="6dc92245-89c7-41b3-b82d-b313f5a51e15" fragment="5" gd:fragmentGUID="abd6894e-89af-4a5a-97fe-fc5b7771649a">określenie wpływu, jaki wywarł podmiot wykonujący zawodową działalność lobbingową w procesie stanowienia prawa w danej sprawie.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2025/677__art_18__ust_3" gd:GUID="d449e21e-2ad8-48a8-bbf8-9cc1d0807ecc">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="46c72996-c272-4018-ab13-dc75b3f51956" fragment="1" gd:fragmentGUID="5643e386-fd9f-4ffc-a573-5570e5762eb0">Informacja, o której mowa w ust. 1, podlega niezwłocznie udostępnieniu w Biuletynie Informacji Publicznej.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+        </oddzial-n>
+      </rozdzial>
+      <rozdzial eId="DU/2025/677__rozdz_5" gd:GUID="180267ef-5272-482f-b838-530a38bb3904">
+        <naglowek-rozdzialu>
+          <nr>5</nr>
+          <p>Sankcje za naruszenie przepisów ustawy</p>
+        </naglowek-rozdzialu>
+        <oddzial-n brak-eid="jednostka-nieoznaczona" gd:GUID="f00c84a8-172a-4da4-85c9-eac1321321e7">
+          <artykul eId="DU/2025/677__art_19" gd:GUID="37f58c5c-a985-4664-a8fe-8b46eb526733">
+            <nr>19</nr>
+            <ustep eId="DU/2025/677__art_19__ust_1" gd:GUID="324af57d-6939-4dab-8e0a-303cade82c1c">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="36426483-d237-4887-9868-b65fb48c9f17" fragment="1" gd:fragmentGUID="090cf56d-ce32-401d-9d5e-99ce9e87d047">Podmiot, który wykonuje czynności wchodzące w zakres zawodowej działalności lobbingowej bez wpisu do rejestru, <sankcja-karna>podlega karze pieniężnej w wysokości od 3000 zł do 50 000 zł</sankcja-karna>.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/677__art_19__ust_2" gd:GUID="cb3ee508-c28d-4335-aca9-13793fab1b7c">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="0eed2027-84da-4943-bd8d-d1926a7890b7" fragment="1" gd:fragmentGUID="9e191c1c-13c4-443c-b359-af75521feb05">Karę, o której mowa w ust. 1, nakłada w drodze decyzji administracyjnej minister właściwy do spraw administracji publicznej.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/677__art_19__ust_3" gd:GUID="5b84f859-3c06-490d-a444-ef9293fffd78">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="cb33206e-7c26-4b26-b654-2913baedfb91" fragment="1" gd:fragmentGUID="bfc5aece-8fac-40bb-b402-f8289da04d0a">Przy ustalaniu wysokości kary pieniężnej uwzględnia się stopień wpływu podmiotu, o którym mowa w ust. 1, na określone rozstrzygnięcie organu władzy publicznej dotyczące stanowienia prawa oraz zakres i charakter podjętych przez ten podmiot czynności z zakresu zawodowej działalności lobbingowej.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/677__art_19__ust_4" gd:GUID="b0a68a46-90df-4463-8a25-182d1533cc02">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="11a1721f-25c7-4848-97bf-c5237dfeaeff" fragment="1" gd:fragmentGUID="f086ff29-a552-47c8-99dc-b22c7e1f9102">Karę pieniężną można nakładać wielokrotnie, jeżeli czynności z zakresu zawodowej działalności lobbingowej są kontynuowane bez wpisu do rejestru.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2025/677__art_20" gd:GUID="6fe096fd-cbe6-4d25-bfd1-4af940079d3a">
+            <nr>20</nr>
+            <ustep eId="DU/2025/677__art_20__ust_1" gd:GUID="ae1cc6b6-da57-4e1b-8fcd-95f5fc942e18">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="e1e904a7-f0dd-4e69-95c9-392501df22cf" fragment="1" gd:fragmentGUID="349269da-4e58-4fda-b055-b7153f1ccb92">Środki finansowe uzyskane z kar pieniężnych, o których mowa w art. 19, stanowią dochód budżetu państwa.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/677__art_20__ust_2" gd:GUID="dd7faa81-cc73-4c31-90a8-028c1fad69ef">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="7a0254bb-3878-493b-bd08-f87c33d6f48b" fragment="1" gd:fragmentGUID="81f32bea-2ccb-4791-abea-727d1a1c8e95">Karę pieniężną uiszcza się w terminie 14 dni od dnia, w którym decyzja ministra właściwego do spraw administracji publicznej stała się ostateczna, na rachunek bankowy urzędu obsługującego ten organ.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/677__art_20__ust_3" gd:GUID="f9ba7610-737b-4d28-baa3-21beaf24c16f">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="10a8225d-cef7-4c8d-9b70-e1efdd5ab138" fragment="1" gd:fragmentGUID="06320d28-d97f-4c15-ad9e-426fa2eaa2c5">Koszty związane z uiszczeniem kary pieniężnej pokrywa wpłacający.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+        </oddzial-n>
+      </rozdzial>
+      <rozdzial eId="DU/2025/677__rozdz_6" gd:GUID="8b378cc2-54ee-4a20-bf75-df27e88c45d6">
+        <naglowek-rozdzialu>
+          <nr>6</nr>
+          <p>Zmiany w przepisach obowiązujących, przepisy przejściowe i końcowe</p>
+        </naglowek-rozdzialu>
+        <oddzial-n brak-eid="jednostka-nieoznaczona" gd:GUID="4d3dc8fc-1d3d-4b06-86e1-672e021ece1f">
+          <artykul eId="DU/2025/677__art_21" gd:GUID="9155456b-3ed2-4737-b97d-c9ed241c37f3">
+            <nr />
+            <nr-od>21</nr-od>
+            <nr-do>23</nr-do>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="8ff12c1c-0497-4fbf-a240-b4c281e22f27">
+              <p>
+                <zdanie nr="1" gd:zdGUID="f2205594-5548-4e55-9636-a456b2b9e95e" fragment="1" gd:fragmentGUID="f8d0eb09-1d67-455b-ab2e-fb7f6357e403">(pominięte)</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2025/677__art_24" gd:GUID="35b21232-0384-4518-82c6-45b978154870">
+            <nr>24</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="f326a33d-8b87-4835-8ca7-e6fde4630943">
+              <p>
+                <zdanie nr="1" gd:zdGUID="7c58b654-1f17-4668-b809-f538da45dbda" fragment="1" gd:fragmentGUID="7c164871-38a1-481e-8d2a-690bbe35432a">Ustawa wchodzi w życie po upływie 6 miesięcy od dnia ogłoszenia<odnosnik id-odnosnika="4" symbol="4" gd:GUID="c1b5f7d4-e52b-4f6c-8c75-437b0ae662f0"><p><zdanie nr="1" gd:zdGUID="f417b1c1-437a-4d59-bf9b-4ff0f135813d" fragment="1" gd:fragmentGUID="7b6e565c-1dfa-4145-8882-513d917a6399">Ustawa została ogłoszona w dniu 6 września 2005 r.</zdanie></p></odnosnik>.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+        </oddzial-n>
+      </rozdzial>
+    </ustawa>
+  </obwieszczenie>
+</akt-prawny>

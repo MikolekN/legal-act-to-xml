@@ -1,0 +1,848 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <obwieszczenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2026/238</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>59610fa6-3551-49e6-9857-26dfccf3a8cf</gd:GUIDwersji>
+      <AdresISAP>WDU20260000238</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2026</Rok>
+      <Pozycja>238</Pozycja>
+      <AdresWyswietlany>Dz.U. 2026 poz. 238</AdresWyswietlany>
+      <Tytul>Obwieszczenie Marszałka Sejmu Rzeczypospolitej Polskiej z dnia 20 lutego 2026 r. w sprawie ogłoszenia jednolitego tekstu ustawy o wspieraniu przedsiębiorców dotkniętych skutkami powodzi z 2010 r.</Tytul>
+      <Rodzaj>OBW_TJ</Rodzaj>
+      <DataOgloszenia>2026-02-27</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2026-02-20</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_ujednolicenie_2026-02-27_DU-2026-238_domyslne" rodzaj="ujednolicenie" pochodzenie="domyslne-z-aktu" data="2026-02-27" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_ujednolicenie.zdarz_ujednolicenie_2026-02-27_DU-2026-238_domyslne" glowna="true">
+          <Przedzial rodzaj="ujednolicenie" od="zdarz_ujednolicenie_2026-02-27_DU-2026-238_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <DataObowiazywaniaWersji>
+        <Od>zdarz_ujednolicenie_2026-02-27_DU-2026-238_domyslne</Od>
+      </DataObowiazywaniaWersji>
+      <Organy>
+        <Organ gd:GUID="dece9782-61e7-4d42-88ba-f798d3492325" rola="wydajacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/MSEJMU">
+          <Nazwa>Marszałek Sejmu</Nazwa>
+          <OrganPodpisujacy>Marszałek Sejmu</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>W.</imie> <nazwisko>Czarzasty</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Obwieszczenie</rodzaj-aktu>
+    <autor-aktu>Marszałka Sejmu Rzeczypospolitej Polskiej</autor-aktu>
+    <data>z dnia 20 lutego 2026 r.</data>
+    <tytul>w sprawie ogłoszenia jednolitego tekstu ustawy o wspieraniu przedsiębiorców dotkniętych skutkami powodzi z 2010 r.</tytul>
+    <punkt-OTJ eId="DU/2026/238__pkt_1" gd:GUID="3706fbb7-5b9a-4c52-8bda-3fb38a8aaa43">
+      <nr>1</nr>
+      <p>
+        <zdanie nr="1" gd:zdGUID="8d772fdf-00a2-415d-8d9b-140f06dd78ef" fragment="1" gd:fragmentGUID="18222401-256f-4696-b37b-70a32ff29ac4">Na podstawie art. 16 ust. 1 zdanie pierwsze ustawy z dnia 20 lipca 2000 r. o ogłaszaniu aktów normatywnych i niektórych innych aktów prawnych (Dz. U. z 2019 r. poz. 1461) ogłasza się w załączniku do niniejszego obwieszczenia jednolity tekst ustawy z dnia 12 sierpnia 2010 r. o wspieraniu przedsiębiorców dotkniętych skutkami powodzi z 2010 r. (Dz. U. z 2025 r. poz. 453), z uwzględnieniem zmiany wprowadzonej ustawą z dnia 9 maja 2025 r. o zmianie ustawy o szczególnych rozwiązaniach związanych z usuwaniem skutków powodzi oraz niektórych innych ustaw (Dz. U. poz. 680) oraz zmian wynikających z przepisów ogłoszonych przed dniem 19 lutego 2026 r.</zdanie>
+      </p>
+    </punkt-OTJ>
+    <punkt-OTJ eId="DU/2026/238__pkt_2" gd:GUID="c9769568-6293-40b7-a3a9-3e79d75448f2">
+      <nr>2</nr>
+      <p>
+        <zdanie nr="1" gd:zdGUID="547d0470-f132-4368-875a-6d3c09132624" fragment="1" gd:fragmentGUID="f409d9e5-2424-4bc2-bfd5-85075676d4e7">Podany w załączniku do niniejszego obwieszczenia tekst jednolity ustawy nie obejmuje art. 38 ustawy z dnia 9 maja 2025 r. o zmianie ustawy o szczególnych rozwiązaniach związanych z usuwaniem skutków powodzi oraz niektórych innych ustaw (Dz. U. poz. 680), który stanowi:<tresc-strukt cudzyslowy="oba" gd:GUID="b062b8d7-bf22-44ec-8242-6614e0d067d2"><artykul eId="DU/2025/680__art_38" gd:GUID="67e4fe39-1218-48a1-b2bb-f0655d15448c"><nr>38</nr><ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="76511c7d-8000-4c3b-b194-59d91dadb904"><p><zdanie nr="1" gd:zdGUID="92e85f2c-9ca0-4f95-b2dd-0a329365878f" fragment="1" gd:fragmentGUID="63d934d0-4894-4850-921c-c50543c27da5">Ustawa wchodzi w życie z dniem następującym po dniu ogłoszenia, z wyjątkiem art. 1 pkt 6 oraz art. 23, które wchodzą w życie po upływie 21 dni od dnia ogłoszenia.</zdanie></p></ustep-n></artykul></tresc-strukt>.</zdanie>
+      </p>
+    </punkt-OTJ>
+    <organ-podpisujacy>Marszałek Sejmu: <i><osoba podpisujacy="true" gd:osobaGUID="cc757b56-ee74-4596-9ba4-576f9c7a5f60"><imie>W.</imie> <nazwisko>Czarzasty</nazwisko></osoba></i></organ-podpisujacy>
+    <ustawa>
+      <zalacznik-do>Załącznik do obwieszczenia Marszałka Sejmu Rzeczypospolitej Polskiej z dnia 20 lutego 2026 r. (Dz. U. poz. 238)</zalacznik-do>
+      <rodzaj-aktu>Ustawa</rodzaj-aktu>
+      <data>z dnia 12 sierpnia 2010 r.</data>
+      <tytul>o wspieraniu przedsiębiorców dotkniętych skutkami powodzi z 2010 r.</tytul>
+      <rozdzial eId="DU/2026/238__rozdz_1" gd:GUID="31cd7c09-5320-47a0-9991-120e6083a2d0">
+        <naglowek-rozdzialu>
+          <nr>1</nr>
+          <p>Przepisy ogólne</p>
+        </naglowek-rozdzialu>
+        <oddzial-n brak-eid="jednostka-nieoznaczona" gd:GUID="06af535f-a46e-4af3-b669-21f6bc2cc42e">
+          <artykul eId="DU/2026/238__art_1" gd:GUID="4984cc24-a29a-4154-820a-f2d9db7cc1db">
+            <nr>1</nr>
+            <ustep eId="DU/2026/238__art_1__ust_1" gd:GUID="9d9ad8f5-f1b3-442e-8922-7d00587cef42">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="4db99d38-0ad5-40c3-aefe-5bf6bc99f5f2" fragment="1" gd:fragmentGUID="4c358243-c4c2-40cb-847f-bd04b284f63f">Ustawa reguluje udzielanie pomocy przedsiębiorcom, w rozumieniu art. 4 <i>ustawy z dnia 2 lipca 2004 r. o swobodzie działalności gospodarczej (Dz. U. z 2017 r. poz. 2168, 2290 i 2486 oraz z 2018 r. poz. 107 i 398)</i><odnosnik id-odnosnika="1" symbol="1" gd:GUID="bbb10b75-0c97-4ff8-b998-63906cb68735"><p><zdanie nr="1" gd:zdGUID="941d1c93-2b13-44a0-837d-907dd631dd75" fragment="1" gd:fragmentGUID="0b9f872b-4d56-4139-a559-cbd2b19a3ed5">Ustawa utraciła moc z dniem 30 kwietnia 2018 r. na podstawie art. 192 ustawy z dnia 6 marca 2018 r. – Przepisy wprowadzające ustawę – Prawo przedsiębiorców oraz inne ustawy dotyczące działalności gospodarczej (Dz. U. poz. 650), która weszła w życie z dniem 30 kwietnia 2018 r.</zdanie></p></odnosnik>, którzy ponieśli szkodę w wyniku powodzi z 2010 r., zwanej dalej „powodzią”, z wyłączeniem przedsiębiorców wykonujących działalność wytwórczą w rolnictwie w zakresie upraw rolnych oraz chowu i hodowli zwierząt, ogrodnictwa, warzywnictwa, leśnictwa i rybactwa śródlądowego.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/238__art_1__ust_2" gd:GUID="6128da07-ac37-407a-981a-28bce2fe4452">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="6e202d34-efcb-4aa0-b1dc-e8a7943af165" fragment="1" gd:fragmentGUID="a0d959f6-14aa-40bf-bff6-a995525dadc3">Przepisy ustawy stosuje się również w przypadkach poniesienia szkody w wyniku osunięć ziemi wywołanych opadami atmosferycznymi, które miały miejsce w 2010 r.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/238__art_2" gd:GUID="ee4248d8-2c08-4de1-9b8c-1615bccad4a2">
+            <nr>2</nr>
+            <ustep eId="DU/2026/238__art_2__ust_1" gd:GUID="56e80557-8251-4541-b90f-4d24699303c8">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="184d2aa5-9263-4090-b331-85eb29eb41ca" fragment="1" gd:fragmentGUID="f6abb290-b237-4e55-ae1d-a8b3a8c670db">Pomoc, o której mowa w art. 1, polega na udzieleniu pożyczki na zasadach określonych w ustawie.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/238__art_2__ust_2" gd:GUID="bacbab8a-4525-486a-88aa-a3d2144641c1">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="9112134e-75d6-4f33-83af-31d879f02582" fragment="1" gd:fragmentGUID="c2cb0c9d-c458-44fd-bcdd-350767487f16">Pożyczkę przedsiębiorca przeznacza na usuwanie szkód w rzeczowych aktywach trwałych lub obrotowych powstałych w wyniku powodzi w miejscu faktycznego wykonywania działalności gospodarczej.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/238__art_3" gd:GUID="6ccb0fef-bc9c-4de7-9a6f-6004f35bbe60">
+            <nr>3</nr>
+            <ustep eId="DU/2026/238__art_3__ust_1" gd:GUID="a671fad0-0442-4260-ad7b-d2dce6cb0829">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="5e4bbd31-e960-486f-8fbd-600799c36d52" fragment="1" gd:fragmentGUID="53171d2d-20a5-4a17-850e-56e6ec8459c8">O udzielenie pożyczki ubiegać się może przedsiębiorca, który w dniu wystąpienia powodzi:</zdanie>
+              </p>
+              <punkt eId="DU/2026/238__art_3__ust_1__pkt_1" gd:GUID="24bc0bed-e128-48eb-ac1e-7006d06cf978">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="5e4bbd31-e960-486f-8fbd-600799c36d52" fragment="2" gd:fragmentGUID="785c8ce6-84e7-4bc6-af59-6bf7c28e06f2"><odnosnik id-odnosnika="2" symbol="2" gd:GUID="1be8ec63-2c8a-4069-b512-8b84c62d3104"><p><zdanie nr="1" gd:zdGUID="858871ca-d42b-42ac-9186-a53355722d97" fragment="1" gd:fragmentGUID="1f2bbca3-b98e-43d9-bcba-77c2a8cee388">W brzmieniu ustalonym przez art. 12 ustawy z dnia 9 maja 2025 r. o zmianie ustawy o szczególnych rozwiązaniach związanych z usuwaniem skutków powodzi oraz niektórych innych ustaw (Dz. U. poz. 680), która weszła w życie z dniem 27 maja 2025 r.</zdanie></p></odnosnik> wykonywał działalność gospodarczą na obszarze gmin lub miejscowości określonych w przepisach wydanych na podstawie art. 2 ustawy z dnia 11 sierpnia 2001 r. o szczególnych zasadach odbudowy, remontów, przebudowy i rozbiórek obiektów budowlanych zniszczonych lub uszkodzonych w wyniku działania żywiołu (Dz. U. z 2025 r. poz. 1094);</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/238__art_3__ust_1__pkt_2" gd:GUID="b065fc32-a02f-45f5-9313-66235ca712e7">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="5e4bbd31-e960-486f-8fbd-600799c36d52" fragment="3" gd:fragmentGUID="282858b1-fe06-40dc-9e3e-ddf938c80989">zatrudniał niewięcej niż 50 pracowników;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/238__art_3__ust_1__pkt_3" gd:GUID="91a546fe-c647-4364-be79-2f489f30d95c">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="5e4bbd31-e960-486f-8fbd-600799c36d52" fragment="4" gd:fragmentGUID="0bf73353-f06b-4adb-943a-a3c4408e44d5">nie spełniał kryteriów przedsiębiorstwa zagrożonego w rozumieniu pkt 9–11 Komunikatu Komisji Wytyczne wspólnotowe dotyczące pomocy państwa w celu ratowania i restrukturyzacji zagrożonych przedsiębiorstw (Dz. Urz. UE C 244 z 01.10.2004, str. 2, z późn. zm.);</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/238__art_3__ust_1__pkt_4" gd:GUID="405f1ec0-a031-42d6-ab0f-6549f3bd90b3">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="5e4bbd31-e960-486f-8fbd-600799c36d52" fragment="5" gd:fragmentGUID="7c75fc31-fbbe-4d70-bd20-9b555141062c">nie korzystał z innej pomocy udzielanej ze środków publicznych na pokrycie tych samych szkód powstałych w wyniku powodzi.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2026/238__art_3__ust_2" gd:GUID="20a24711-0ac4-4b53-94fa-b932132684bf">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="4bc7dfc2-92ff-4690-a87f-ab09b746f0d6" fragment="1" gd:fragmentGUID="57b6e9db-d69a-445a-8faa-028d331d6261">O udzielenie pożyczki ubiegać się może również przedsiębiorca, który zawiesił wykonywanie działalności gospodarczej.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/238__art_4" gd:GUID="dd231eb2-5813-4fc6-b584-c667bbd8670d">
+            <nr>4</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="94652b7c-dd70-465f-b7a8-bc8735f958f4">
+              <p>
+                <zdanie nr="1" gd:zdGUID="66b63926-9953-4732-b3c7-fea11ecb5a9c" fragment="1" gd:fragmentGUID="9ef1b7ef-a4f2-4f61-8c07-9c85274d5a3a">Pomoc, o której mowa w art. 1, nie może być udzielana przedsiębiorcom, na których ciąży obowiązek zwrotu uzyskanej przez nich wcześniej pomocy publicznej, wynikający z decyzji Komisji Europejskiej uznającej tę pomoc za niezgodną z prawem lub ze wspólnym rynkiem.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2026/238__art_5" gd:GUID="66745999-aa48-421f-99a1-9ad502f82734">
+            <nr>5</nr>
+            <ustep eId="DU/2026/238__art_5__ust_1" gd:GUID="79d3c604-82ef-4875-bd25-dfbcaa0dbe3c">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="97448c5c-be64-44be-9ad1-36b6f50a3a7b" fragment="1" gd:fragmentGUID="47fef955-f605-4bdd-89a4-6ed12d4e2b0b">Pożyczek udzielają wybrane fundusze pożyczkowe.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/238__art_5__ust_2" gd:GUID="9e58df3a-bf82-42f8-8039-3a4a9df7a514">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="a28c1d79-000c-4908-8cbc-260462059fe1" fragment="1" gd:fragmentGUID="2a068d9b-7d60-4be9-a679-4e4e2845ff0e">Środki finansowe na realizację ustawy pochodzą ze środków rezerwy celowej budżetu państwa przeznaczonej na przeciwdziałanie i usuwanie skutków klęsk żywiołowych.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+        </oddzial-n>
+      </rozdzial>
+      <rozdzial eId="DU/2026/238__rozdz_2" gd:GUID="dd142787-7844-4006-a2d3-4c18f1394e8b">
+        <naglowek-rozdzialu>
+          <nr>2</nr>
+          <p>Zasady udzielania pożyczek</p>
+        </naglowek-rozdzialu>
+        <oddzial-n brak-eid="jednostka-nieoznaczona" gd:GUID="5c21af1f-b950-43d2-a5c2-ff423a01619d">
+          <artykul eId="DU/2026/238__art_6" gd:GUID="b2093b5f-15ec-48a0-8c69-5a1a3d58f5e0">
+            <nr>6</nr>
+            <ustep eId="DU/2026/238__art_6__ust_1" gd:GUID="ffd120d1-011f-4621-b1fc-acf5059f18db">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="b6a33fd5-33e6-4c53-a587-7774c0849e69" fragment="1" gd:fragmentGUID="86ec48b1-6119-44a3-bc79-09265a1909cc">Pożyczka może być udzielona przedsiębiorcy jednokrotnie do wysokości poniesionej szkody, lecz niewięcej niż 50 000 zł.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/238__art_6__ust_2" gd:GUID="950b4842-8030-4975-8982-0cfd585f9308">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="0d81d512-7245-417f-938b-4383c8699adc" fragment="1" gd:fragmentGUID="e9d939c4-6b42-41b5-b809-3f95d9f6621d">W przypadku, gdy przedsiębiorca posiadał w dniu wystąpienia powodzi umowę ubezpieczenia przedsiębiorstwa od następstw klęsk żywiołowych, kwota pożyczki nie może przekraczać różnicy między wysokością poniesionych szkód a wysokością odszkodowania określoną w umowie ubezpieczenia.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/238__art_7" gd:GUID="4bab340d-ecf7-4699-a0a5-483945587e0f">
+            <nr>7</nr>
+            <ustep eId="DU/2026/238__art_7__ust_1" gd:GUID="656a68d2-bde2-422e-8630-1f7e178751aa">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="6f90aa24-5f2a-450f-bac9-f51afbd0c96d" fragment="1" gd:fragmentGUID="5651d869-7db8-4990-ad83-c5a35b09992d">Wniosek o udzielenie pożyczki przedsiębiorca składa do funduszu pożyczkowego, w terminie 6 miesięcy od dnia wystąpienia szkody powstałej w wyniku powodzi.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/238__art_7__ust_2" gd:GUID="b6acdd56-d969-440c-860d-19a221987ede">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="d4b4e097-2be8-4f37-9ac9-6b1dbdcbd29c" fragment="1" gd:fragmentGUID="c1730872-2c19-49c4-b1dd-80a42568ef80">W przypadku przedsiębiorcy, który poniósł szkodę przed dniem wejścia w życie ustawy, termin, o którym mowa w ust. 1, liczy się od dnia jej wejścia w życie.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/238__art_7__ust_3" gd:GUID="7ad6fb66-7e76-42f6-b01b-97659baa3f2c">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="3d992465-0420-4884-b0c0-09b2b11b2932" fragment="1" gd:fragmentGUID="07a47257-c911-4c1a-8e0e-32fed2e8a295">Do wniosku o udzielenie pożyczki przedsiębiorca dołącza:</zdanie>
+              </p>
+              <punkt eId="DU/2026/238__art_7__ust_3__pkt_1" gd:GUID="b06fa9f3-7f4d-4ebc-879a-a4418842c74f">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="3d992465-0420-4884-b0c0-09b2b11b2932" fragment="2" gd:fragmentGUID="02c16770-42c8-44d9-b28a-503c4914a492">zaświadczenie wydane przez wójta gminy, burmistrza lub prezydenta miasta, właściwego dla miejsca faktycznego wykonywania przez poszkodowanego przedsiębiorcę działalności gospodarczej, potwierdzające, że w okresie wskazanym w zaświadczeniu przedsiębiorca poniósł szkodę w wyniku powodzi;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/238__art_7__ust_3__pkt_2" gd:GUID="fac59a2f-4424-4ebd-ae8c-4c936c11093e">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="3d992465-0420-4884-b0c0-09b2b11b2932" fragment="3" gd:fragmentGUID="cbb7e8e4-2340-4ca1-9223-2189a32f1f08">oświadczenie przedsiębiorcy o:</zdanie>
+                </p>
+                <litera eId="DU/2026/238__art_7__ust_3__pkt_2__lit_a" gd:GUID="3d8734e7-9173-4c91-9a81-f8a20119d41d">
+                  <nr>a</nr>
+                  <p>
+                    <zdanie nr="1" gd:zdGUID="3d992465-0420-4884-b0c0-09b2b11b2932" fragment="4" gd:fragmentGUID="9f989b57-7088-46c7-a52c-1e7430c6542f">spełnianiu warunków, o których mowa w art. 3 ust. 1 pkt 2–4,</zdanie>
+                  </p>
+                </litera>
+                <litera eId="DU/2026/238__art_7__ust_3__pkt_2__lit_b" gd:GUID="3b28a621-b9f5-4d8e-aa9e-c8ad5c17f12d">
+                  <nr>b</nr>
+                  <p>
+                    <zdanie nr="1" gd:zdGUID="3d992465-0420-4884-b0c0-09b2b11b2932" fragment="5" gd:fragmentGUID="5c5de480-df38-4e4c-84a0-6cab97c9cc93">faktycznym wykonywaniu działalności gospodarczej w dniu wystąpienia powodzi albo jej zawieszeniu,</zdanie>
+                  </p>
+                </litera>
+                <litera eId="DU/2026/238__art_7__ust_3__pkt_2__lit_c" gd:GUID="63af38ef-944e-4dc9-9e45-6357308d4a7c">
+                  <nr>c</nr>
+                  <p>
+                    <zdanie nr="1" gd:zdGUID="3d992465-0420-4884-b0c0-09b2b11b2932" fragment="6" gd:fragmentGUID="26133c50-5191-43f4-b91f-fe2c7109d0cf">tym, czy w dniu wystąpienia powodzi posiadał umowę ubezpieczenia przedsiębiorstwa od następstw klęsk żywiołowych.</zdanie>
+                  </p>
+                </litera>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2026/238__art_7__ust_4" gd:GUID="9c5968a5-1d7b-4ce6-86a2-3f00ae4ad546">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="88acd5b0-4102-4664-a11d-0fd5ad6d1db1" fragment="1" gd:fragmentGUID="649ecfff-4399-4390-9ece-e237e6e05a8c">W przypadku posiadania przez przedsiębiorcę w dniu wystąpienia powodzi umowy ubezpieczenia przedsiębiorstwa od następstw klęsk żywiołowych przedsiębiorca dołącza jej kopię do wniosku o udzielenie pożyczki.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/238__art_7__ust_5" gd:GUID="d75cf6a7-b18c-4c00-8257-e1073825365e">
+              <nr>5</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ae0d869d-ac72-4c69-9a30-af783801a533" fragment="1" gd:fragmentGUID="dcfa61aa-c86e-405e-953e-64a308033919">Wzór zaświadczenia, o którym mowa w ust. 3 pkt 1, stanowi załącznik do ustawy.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/238__art_8" gd:GUID="05e2e8c5-6362-4905-93d7-8d8f11f34516">
+            <nr>8</nr>
+            <ustep eId="DU/2026/238__art_8__ust_1" gd:GUID="05df3c34-9762-4046-9d2c-50ba6b088082">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="00ce19f5-9cf1-4ff4-abbc-2e5b9499e8b0" fragment="1" gd:fragmentGUID="3424ca85-354c-48eb-97d5-4a1cdac3bea5">Fundusz pożyczkowy jest obowiązany do zawarcia umowy pożyczki z przedsiębiorcą spełniającym warunki, o których mowa w art. 3, w terminie niedłuższym niż 14 dni od dnia złożenia kompletnego wniosku o udzielenie pożyczki przez przedsiębiorcę, z zastrzeżeniem ust. 2.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/238__art_8__ust_2" gd:GUID="7e286b79-5eb8-42b4-af14-41f3a7e89a28">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="e41b8eae-9799-4e3d-83d3-b8be7235c664" fragment="1" gd:fragmentGUID="5d6d50df-65a4-4027-8ff1-75a502c3ead3">W przypadku wniosków złożonych przed dniem ogłoszenia pozytywnej decyzji Komisji Europejskiej o zgodności pomocy publicznej przewidzianej w ustawie z rynkiem wewnętrznym, termin, o którym mowa w ust. 1, biegnie od dnia ogłoszenia tej decyzji.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/238__art_8__ust_3" gd:GUID="3ddb0c35-7f18-499f-92f7-c46517fae724">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="42b69162-4a6f-4ee1-a1c0-f60e260d1448" fragment="1" gd:fragmentGUID="482cdb75-d540-425d-bd41-b8810e1fec42">W przypadku braków formalnych we wniosku złożonym przez przedsiębiorcę fundusz pożyczkowy, w terminie 3 dni od dnia jego złożenia, informuje przedsiębiorcę o konieczności uzupełnienia tego wniosku.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/238__art_8__ust_4" gd:GUID="6baf57f6-1f41-443b-a0c2-837abd9469c6">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="551b8120-c5d9-49bd-976e-9892303eccc6" fragment="1" gd:fragmentGUID="2a8e3f97-ed3c-482c-9162-3a36739b9156">Wnioski o udzielenie pożyczki fundusz pożyczkowy rozpatruje w kolejności ich złożenia.</zdanie>
+                <zdanie nr="2" gd:zdGUID="885980d1-ddb6-4142-a6a6-272c1908bee5" fragment="1" gd:fragmentGUID="3e549e96-b8ba-4f08-a964-af361ff581c6">W przypadku konieczności uzupełnienia wniosku za datę jego złożenia przyjmuje się datę złożenia uzupełnionego kompletnego wniosku.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/238__art_8__ust_5" gd:GUID="24a16ed9-3670-47da-a54d-74c63266365d">
+              <nr>5</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="5d316bcb-07d7-4a79-b0da-a8f97c907a07" fragment="1" gd:fragmentGUID="9301d4b7-00c4-4c4c-801f-868b6ec1a69e">Wypłata pożyczki następuje niezwłocznie po zawarciu umowy pożyczki.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/238__art_9" gd:GUID="9ba731cf-a5d5-43be-80e5-d08f15433669">
+            <nr>9</nr>
+            <ustep eId="DU/2026/238__art_9__ust_1" gd:GUID="dd64a4f3-8648-44e8-ba29-c446ffc09418">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="3d94690c-b11b-4b3c-9f58-d13ee6da1adc" fragment="1" gd:fragmentGUID="9bab1707-540b-4eeb-8d6a-440152920ad0">Oszacowania szkód poniesionych przez przedsiębiorcę dokonuje rzeczoznawca majątkowy lub komisja powołana przez fundusz pożyczkowy.</zdanie>
+                <zdanie nr="2" gd:zdGUID="5b9185c1-b49c-4509-8e93-046e578dfc96" fragment="1" gd:fragmentGUID="474aca74-cf85-4c42-9612-e40ff0e03a14">Koszt związany z oszacowaniem tych szkód może zostać pokryty ze środków finansowych uzyskanych w ramach pożyczki.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/238__art_9__ust_2" gd:GUID="ccd9345d-ac36-4b5e-8f35-44875050e112">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="b8d1e853-905a-43d9-b560-44c9c6f0bb8e" fragment="1" gd:fragmentGUID="36f45d91-e9da-4b85-b79f-bff689023dbb">W przypadku przedsiębiorcy posiadającego umowę ubezpieczenia przedsiębiorstwa od następstw klęsk żywiołowych podstawę oszacowania szkody może stanowić oszacowanie dokonane przez ubezpieczyciela, doręczone funduszowi pożyczkowemu.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/238__art_10" gd:GUID="a0c8beb5-4460-4538-8ac3-52d7be2d9a5b">
+            <nr>10</nr>
+            <ustep eId="DU/2026/238__art_10__ust_1" gd:GUID="756bed71-da83-48cc-98fc-c37587262bf2">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="50ce20a4-7a42-4452-911c-224d7decac31" fragment="1" gd:fragmentGUID="c8204329-cea9-4b79-9d7d-72eef87b1156">Przedsiębiorca przed upływem 6 miesięcy od dnia zawarcia umowy z funduszem pożyczkowym jest obowiązany do wykorzystania i przedstawienia rozliczenia otrzymanej pożyczki.</zdanie>
+                <zdanie nr="2" gd:zdGUID="353c7a76-5eb6-41d7-9fdd-6c62e6735a71" fragment="1" gd:fragmentGUID="e66bd16b-5a28-4721-8e6c-6204d96a53e8">W uzasadnionych przypadkach okres ten może być przedłużony przez fundusz pożyczkowy o kolejne 3 miesiące.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/238__art_10__ust_2" gd:GUID="70f28634-c956-402e-bf9f-d6c5c64633c3">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="e96fd412-aebe-4f78-97c9-dcbb11988cfb" fragment="1" gd:fragmentGUID="2d16e2e4-652b-442a-b8e9-2f2d7a2b3e41">Za wykorzystanie pożyczki uznaje się również wydatki na cele określone w art. 2 ust. 2 poniesione przez przedsiębiorców przed udzieleniem pożyczki.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/238__art_10__ust_3" gd:GUID="271d90f6-c9ba-4b51-87df-13f69669dc43">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="6284857d-9d75-4b14-aca7-118e47ce040f" fragment="1" gd:fragmentGUID="1cb428c5-132c-4987-99fd-8c3f8f25179c">Podstawę rozliczenia otrzymanej pożyczki stanowią rachunki lub faktury wystawione na przedsiębiorcę.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/238__art_11" gd:GUID="4200e363-b718-4b3b-ab45-672ee1d3aab3">
+            <nr>11</nr>
+            <ustep eId="DU/2026/238__art_11__ust_1" gd:GUID="4d6e863b-6284-4495-843a-a30c79485987">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="5d71c65a-067f-4b40-85e8-b481dba68acd" fragment="1" gd:fragmentGUID="a35bcfc4-ccee-4ceb-ba36-e5132809e7f8">Pożyczka wykorzystana i rozliczona zgodnie z ustawą podlega umorzeniu z dniem złożenia do funduszu pożyczkowego rozliczenia, o którym mowa w art. 10 ust. 1.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/238__art_11__ust_2" gd:GUID="851a2a86-c63c-4e02-be84-7eb5869a4b69">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="7ef6d0f1-7b78-41a7-92f9-17d74e891542" fragment="1" gd:fragmentGUID="b779b829-d9c1-4aac-a8aa-576f85787149">Decyzję o umorzeniu wydaje fundusz pożyczkowy po dokonaniu kontroli poniesionych przez przedsiębiorcę wydatków.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/238__art_11__ust_3" gd:GUID="f570e674-f3c8-4f6d-a190-72172a2e7a17">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="4d417e06-b4be-4adc-aa5b-51e342201cfe" fragment="1" gd:fragmentGUID="c55dc5f8-b813-404c-bfb3-733d316c65c4">W przypadku przedsiębiorcy nieposiadającego w dniu wystąpienia powodzi umowy ubezpieczenia przedsiębiorstwa od następstw klęsk żywiołowych, który wykorzystał otrzymaną pożyczkę zgodnie z celem określonym w art. 2 ust. 2, umorzeniu podlega 75 % udzielonej pożyczki.</zdanie>
+                <zdanie nr="2" gd:zdGUID="2421b1fa-a1ab-433e-a17d-073754af097b" fragment="1" gd:fragmentGUID="218c2f6f-1b60-4295-ae51-53eac9cd3bb0">Pozostałe do spłaty 25 % kwoty pożyczki nie podlega oprocentowaniu.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/238__art_11__ust_4" gd:GUID="85437331-4eed-4980-8e2c-fbcd96ce80b6">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="62c80cf6-a029-4054-9209-d1a2f3dc093f" fragment="1" gd:fragmentGUID="5362dd56-190d-44da-b92e-59819df3d3a8">Fundusz pożyczkowy odmawia umorzenia pożyczki:</zdanie>
+              </p>
+              <punkt eId="DU/2026/238__art_11__ust_4__pkt_1" gd:GUID="51928c8d-9bb3-491d-9eac-10830f16a9ab">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="62c80cf6-a029-4054-9209-d1a2f3dc093f" fragment="2" gd:fragmentGUID="1951576a-4dc9-40d7-8401-29a6ac63a8c4">niewykorzystanej lub nierozliczonej w sposób oraz w terminach określonych w art. 10;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/238__art_11__ust_4__pkt_2" gd:GUID="8d56b2a7-e504-4b5b-8ad1-a476029a7c27">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="62c80cf6-a029-4054-9209-d1a2f3dc093f" fragment="3" gd:fragmentGUID="3cb73e08-0e0c-452d-a4f0-445a0458a394">w przypadkach, o których mowa w art. 13 ust. 2–4.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2026/238__art_11__ust_5" gd:GUID="76412f2f-736e-43ef-bca4-3969ba50b090">
+              <nr>5</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="919498b4-0d2c-4908-be50-cbf89dfdbb9f" fragment="1" gd:fragmentGUID="d7b3338a-bf68-4896-a72c-9fee058dab59">Od decyzji o odmowie umorzenia pożyczki przedsiębiorcy, w terminie 14 dni od dnia jej doręczenia, przysługuje odwołanie do ministra właściwego do spraw gospodarki.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/238__art_12" gd:GUID="602bb45d-8d48-4d72-88cf-655485e8a3cd">
+            <nr>12</nr>
+            <ustep eId="DU/2026/238__art_12__ust_1" gd:GUID="65b0aec0-d1f5-4147-bcb7-78fbcac3e11b">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="83f00e34-fd46-4bf8-8882-7f8e28690569" fragment="1" gd:fragmentGUID="95a8cfd4-0164-4590-96b4-1fb0d330eb1a">Okres spłaty pożyczki przez przedsiębiorcę nie może przekroczyć 3 lat od dnia zawarcia umowy pożyczki.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/238__art_12__ust_2" gd:GUID="b1d06f20-5935-4c35-8123-ba8cf1f60239">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="36606919-6408-458e-9407-757a7fc6e220" fragment="1" gd:fragmentGUID="592a5552-000a-4ad9-b124-1d6b0c868b19">Okres karencji spłaty pożyczki wynosi 9 miesięcy i jest liczony od dnia zawarcia umowy pożyczki.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/238__art_13" gd:GUID="21779c85-717d-43ea-bcd7-f2923b69d2a7">
+            <nr>13</nr>
+            <ustep eId="DU/2026/238__art_13__ust_1" gd:GUID="772f146b-d78c-4d1e-9860-e34af28b6baf">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="58d5fa6b-4ec8-44f3-a42f-4df34e122a26" fragment="1" gd:fragmentGUID="0699ef25-792e-4a61-a221-4e5f12a45d3a">W ramach kontroli, o której mowa w art. 11 ust. 2, przedsiębiorca jest obowiązany, na wniosek funduszu pożyczkowego, udostępnić dokumentację związaną z wykorzystaniem udzielonej pożyczki oraz umożliwić funduszowi dokonanie czynności niezbędnych do ustalenia prawidłowości wykorzystania pożyczki.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/238__art_13__ust_2" gd:GUID="39072a07-2d62-4806-85d2-aab2be6ab38e">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="c11be39b-cff3-4f18-bb5a-aa09b96b90b7" fragment="1" gd:fragmentGUID="fbeba85f-0aa8-4a10-979d-4a3c66dd27b8">W przypadku odmowy umożliwienia funduszowi pożyczkowemu przeprowadzenia czynności, o których mowa w ust. 1, przedsiębiorca jest obowiązany do zwrotu otrzymanej pożyczki wraz z odsetkami ustawowymi za opóźnienie liczonymi od dnia zawarcia umowy pożyczki.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/238__art_13__ust_3" gd:GUID="8ed58b0f-5421-49f3-b937-5ad9376f2f68">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="d1a85504-b501-4193-ba9c-3a4c4ee1cc6b" fragment="1" gd:fragmentGUID="dce99389-c5d9-4bb0-bbfa-b7521dc4c15d">W przypadku stwierdzenia w ramach kontroli przez fundusz pożyczkowy, że pożyczka lub jej część została wykorzystana niezgodnie z celem określonym w art. 2 ust. 2, przedsiębiorca jest obowiązany do spłaty wykorzystanej niezgodnie z przeznaczeniem kwoty pożyczki powiększonej o odsetki ustawowe za opóźnienie liczone od dnia zawarcia umowy pożyczki.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/238__art_13__ust_4" gd:GUID="50821fa6-83dd-485c-ba70-7a146c52c1bd">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="a59d0804-7649-4c9b-bbe9-5a570eed8e6a" fragment="1" gd:fragmentGUID="515bdf2a-97e0-4b6e-b4cf-7d93cd0a2c7d">W przypadku złożenia nieprawdziwego oświadczenia, o którym mowa w art. 7 ust. 3 pkt 2, przedsiębiorca jest obowiązany do zwrotu otrzymanej pożyczki wraz z odsetkami ustawowymi za opóźnienie liczonymi od dnia zawarcia umowy pożyczki.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/238__art_13__ust_5" gd:GUID="146ea863-ea4d-4224-92f8-3d6aff190aaf">
+              <nr>5</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="2dc7767c-3c83-4331-bbe7-f9ed160c879d" fragment="1" gd:fragmentGUID="ce7865a0-197d-4ac5-952a-f55149aca477">Zwrotu otrzymanej pożyczki, o którym mowa w ust. 2 i 4, przedsiębiorca dokonuje w terminie 14 dni od dnia doręczenia mu decyzji funduszu pożyczkowego.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/238__art_13a" gd:GUID="762e4050-5f3b-4a3f-b946-d5c30369ec9e">
+            <nr>13a</nr>
+            <ustep eId="DU/2026/238__art_13a__ust_1" gd:GUID="e2e58d2a-dbb4-42ea-8d26-cb3854f34a60">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="3f3cd91c-103f-4bd8-a591-502c72e4a733" fragment="1" gd:fragmentGUID="843f2a51-3ec3-440c-b10f-c967fb82cf83">Należności funduszu pożyczkowego z tytułu niespłaconych lub niezwróconych pożyczek mogą zostać umorzone w całości lub w części, jeżeli:</zdanie>
+              </p>
+              <punkt eId="DU/2026/238__art_13a__ust_1__pkt_1" gd:GUID="5de9e5ee-c450-4e7e-82b0-16468b28248b">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="3f3cd91c-103f-4bd8-a591-502c72e4a733" fragment="2" gd:fragmentGUID="cdb4d2c9-4320-40db-83db-bc0ac8e9527c">przedsiębiorca będący osobą fizyczną zmarł, nie pozostawiając żadnego majątku albo majątek pozostawiony nie podlega egzekucji na podstawie ustawy z dnia 17 czerwca 1966 r. o postępowaniu egzekucyjnym w administracji (Dz. U. z 2025 r. poz. 132, 620 i 1302) lub ustawy z dnia 17 listopada 1964 r. – Kodeks postępowania cywilnego (Dz. U. z 2024 r. poz. 1568, z późn. zm.<odnosnik id-odnosnika="3" symbol="3" gd:GUID="49e1aec4-fbaa-47f3-bf4a-8bc372e2bafc"><p><zdanie nr="1" gd:zdGUID="90f14285-1357-4ed4-a01b-c7a20e68a432" fragment="1" gd:fragmentGUID="3bcb799f-d1ab-4e6d-a626-9c078bba7cdd">Zmiany tekstu jednolitego wymienionej ustawy zostały ogłoszone w Dz. U. z 2024 r. poz. 1841, z 2025 r. poz. 620, 1172, 1302, 1518 i 1661 oraz z 2026 r. poz. 26.</zdanie></p></odnosnik>), albo pozostawił jedynie przedmioty codziennego użytku domowego;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/238__art_13a__ust_1__pkt_2" gd:GUID="a4398101-184e-4a7f-a41b-89772e30b022">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="3f3cd91c-103f-4bd8-a591-502c72e4a733" fragment="3" gd:fragmentGUID="851e11e6-b287-4332-ad1c-7f1517c49d11">przedsiębiorca będący osobą prawną został wykreślony z właściwego rejestru osób prawnych przy jednoczesnym braku majątku, z którego można by egzekwować należność, a odpowiedzialność z tytułu należności nie przechodzi z mocy prawa na osoby trzecie;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/238__art_13a__ust_1__pkt_3" gd:GUID="31a734f3-ca9c-4419-87e9-6849caa8f204">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="3f3cd91c-103f-4bd8-a591-502c72e4a733" fragment="4" gd:fragmentGUID="b8fdd5cb-bd0f-4c91-a453-560023d24d5d">zachodzi uzasadnione przypuszczenie, że w postępowaniu egzekucyjnym nie uzyska się kwoty wyższej od kosztów dochodzenia i egzekucji tej należności lub postępowanie egzekucyjne okazało się nieskuteczne;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/238__art_13a__ust_1__pkt_4" gd:GUID="71f4653d-b601-49f0-8f40-8c97db6f230f">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="3f3cd91c-103f-4bd8-a591-502c72e4a733" fragment="5" gd:fragmentGUID="426e497a-3fa0-48a2-a006-74ab43fca486">przedsiębiorca będący jednostką organizacyjną niebędącą osobą prawną uległ likwidacji;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/238__art_13a__ust_1__pkt_5" gd:GUID="deb9ae6e-a07f-43ce-9085-f5fb53d6d4a6">
+                <nr>5</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="3f3cd91c-103f-4bd8-a591-502c72e4a733" fragment="6" gd:fragmentGUID="d301872f-24cb-48a0-9b2f-0d29ee643beb">zachodzi ważny interes dłużnika lub interes publiczny.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2026/238__art_13a__ust_2" gd:GUID="9547deb0-3610-4655-94c8-95ac92cce21a">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="a9fa8ca7-2d13-489a-93b7-98fbcf094bf2" fragment="1" gd:fragmentGUID="8825fbed-94f7-41c7-acfe-41b8e442dfd1">Decyzję w sprawie umorzenia należności, o których mowa w ust. 1, wydaje fundusz pożyczkowy.</zdanie>
+                <zdanie nr="2" gd:zdGUID="202c8e19-7743-47e3-899d-2e645876e649" fragment="1" gd:fragmentGUID="28b80403-bd5c-4f59-97ca-a2296d33340a">W przypadku gdy należność funduszu pożyczkowego przekracza 5000 zł, decyzja w sprawie jej umorzenia wymaga zgody ministra właściwego do spraw gospodarki.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/238__art_13a__ust_3" gd:GUID="7979ff28-a3fb-4421-91bc-c02e98d6d30c">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="823e0b80-c226-4e01-b1e4-054f7e8d47f6" fragment="1" gd:fragmentGUID="e74fcfab-96e9-4c57-91a2-3a4ea3c2f330">Do decyzji w sprawie umorzenia należności, o których mowa w ust. 1, stosuje się przepisy ustawy z dnia 14 czerwca 1960 r. – Kodeks postępowania administracyjnego (Dz. U. z 2025 r. poz. 1691).</zdanie>
+                <zdanie nr="2" gd:zdGUID="e153d5d0-b78f-45bc-9e92-c79a276207fd" fragment="1" gd:fragmentGUID="5a94253f-ee95-4cf7-a589-077a1f9a7c71">Od decyzji wydanej przez fundusz pożyczkowy przysługuje odwołanie do ministra właściwego do spraw gospodarki.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/238__art_13a__ust_4" gd:GUID="494b8ab9-0982-4f99-9a4e-c0fa964f15ca">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="962cc7b5-e3fd-46d4-9395-ef0a53b425b6" fragment="1" gd:fragmentGUID="cdc7a30f-26ff-4a34-9c23-01eca094ac7d">Umorzenie należności funduszu pożyczkowego na podstawie ust. 1 pkt 5 stanowi dla przedsiębiorcy pomoc <i>de minimis</i> udzielaną w zakresie i na zasadach określonych w bezpośrednio obowiązujących aktach prawa Unii Europejskiej dotyczących pomocy w ramach zasady <i>de minimis</i>.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/238__art_13b" gd:GUID="6d0f8803-3d8a-47b4-95c1-2810b4fdbaaa">
+            <nr>13b</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="87064440-3430-4e06-b6ad-9ed9725cf141">
+              <p>
+                <zdanie nr="1" gd:zdGUID="aa9ba787-1727-4c5b-9cae-bd96d6c6ab34" fragment="1" gd:fragmentGUID="c6a8c3d7-81e3-4094-944b-825a1a9cce76">Przed wydaniem decyzji o umorzeniu należności funduszu pożyczkowego na podstawie art. 13a ust. 1 pkt 5 fundusz pożyczkowy jest obowiązany wystąpić do przedsiębiorcy o przedłożenie dokumentacji, o której mowa w art. 37 ust. 1 i ust. 2 pkt 1 ustawy z dnia 30 kwietnia 2004 r. o postępowaniu w sprawach dotyczących pomocy publicznej (Dz. U. z 2025 r. poz. 468 i 1652).</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2026/238__art_14" gd:GUID="0e6bfecc-375f-46e7-989b-ec7727a37032">
+            <nr>14</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="f3fd075a-8763-4e4b-8005-354174185b53">
+              <p>
+                <zdanie nr="1" gd:zdGUID="beff8b18-5033-408c-99a2-e3f264c556f7" fragment="1" gd:fragmentGUID="98adb639-5566-4b07-8ea7-b97415f0e21c">Spłata, o której mowa w art. 11 ust. 3 i art. 13 ust. 3, oraz zwrot, o którym mowa w art. 13 ust. 2 i 4, są dokonywane na rachunek bankowy funduszu pożyczkowego.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2026/238__art_14a" gd:GUID="c30bf1f3-595d-43a3-aa78-57b5da928340">
+            <nr>14a</nr>
+            <ustep eId="DU/2026/238__art_14a__ust_1" gd:GUID="7c8e5ea9-6f33-4719-8746-24fd1b738f58">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="fa70aeb3-6407-4617-b1ee-bc26f52dad42" fragment="1" gd:fragmentGUID="d8da56b0-4131-4b61-8166-a974c5223e06">Do należności funduszu pożyczkowego z tytułu spłaty lub zwrotu pożyczki lub jej części, w zakresie nieuregulowanym w niniejszej ustawie, stosuje się odpowiednio przepisy działu III ustawy z dnia 29 sierpnia 1997 r. – Ordynacja podatkowa (Dz. U. z 2025 r. poz. 111, z późn. zm.<odnosnik id-odnosnika="4" symbol="4" gd:GUID="38d89cb7-2a94-4201-838d-d6cafd63eadb"><p><zdanie nr="1" gd:zdGUID="537418cc-95c5-400d-964c-8943f77c91c2" fragment="1" gd:fragmentGUID="ac208d14-b7e7-4dfa-9285-d8aabad81ac2">Zmiany tekstu jednolitego wymienionej ustawy zostały ogłoszone w Dz. U. z 2025 r. poz. 497, 621, 622, 769, 820, 1203, 1235, 1414, 1417, 1669, 1804 i 1863.</zdanie></p></odnosnik>).</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/238__art_14a__ust_2" gd:GUID="1c1b8d96-37cc-41f9-86d6-dfe0d359fade">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="38809cfb-517d-4692-be51-bd01d830cc6c" fragment="1" gd:fragmentGUID="6cbde523-249c-49d8-b394-0232d4d6dda3">Do dochodzenia należności funduszu pożyczkowego z tytułu spłaty lub zwrotu pożyczki lub jej części, stosuje się przepisy ustawy z dnia 17 czerwca 1966 r. o postępowaniu egzekucyjnym w administracji.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/238__art_14b" gd:GUID="89dfe6d5-5a94-4dca-8b04-f6b4f675363f">
+            <nr>14b</nr>
+            <ustep eId="DU/2026/238__art_14b__ust_1" gd:GUID="6ea1af49-1b93-412b-8466-787298d86e31">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="a5cfc7bd-291e-4704-b9c9-71ff52c945f5" fragment="1" gd:fragmentGUID="6305c25f-b184-418d-8376-16420a6b78bf">Zobowiązanie przedsiębiorcy do spłaty lub zwrotu pożyczki w całości lub w części przedawnia się z upływem 5 lat, licząc od pierwszego dnia roku następującego po roku, w którym pożyczka powinna zostać spłacona lub w którym powinien nastąpić zwrot pożyczki.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/238__art_14b__ust_2" gd:GUID="a5d80062-ca7b-44bc-b458-9becd9f1237c">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="2fe34066-6cc9-4aef-81f5-27b705228331" fragment="1" gd:fragmentGUID="a7491df1-f7ae-453d-bd1f-1cdcc96ea5b1">Bieg terminu przedawnienia nie rozpoczyna się, a rozpoczęty ulega zawieszeniu z dniem:</zdanie>
+              </p>
+              <punkt eId="DU/2026/238__art_14b__ust_2__pkt_1" gd:GUID="840d8371-1a7f-4cad-a1db-8526e1741582">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="2fe34066-6cc9-4aef-81f5-27b705228331" fragment="2" gd:fragmentGUID="66c3d960-428c-49ae-bcd6-8d5f5c3f4f5c">wniesienia skargi do sądu administracyjnego na decyzję wydaną w trybie art. 11 ust. 5;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/238__art_14b__ust_2__pkt_2" gd:GUID="2b29dc10-896b-4cad-823c-e5a6f8df58c8">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="2fe34066-6cc9-4aef-81f5-27b705228331" fragment="3" gd:fragmentGUID="7f346dcf-f572-4d9d-9bdd-5e2beeb398bb">wszczęcia administracyjnego postępowania egzekucyjnego, mającego na celu egzekucję należności funduszu pożyczkowego.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/238__art_15" gd:GUID="44a64397-e84f-49db-9ddf-34378826c57f">
+            <nr>15</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="84fc1b17-91b8-4c83-8fac-6c133d86a25e">
+              <p>
+                <zdanie nr="1" gd:zdGUID="7c51ea99-7df2-4c7a-bcc7-007547693948" fragment="1" gd:fragmentGUID="608c8c4e-e7b9-4de0-9a73-3041a2968223">Zabezpieczeniem zaciąganej pożyczki jest weksel in blanco.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+        </oddzial-n>
+      </rozdzial>
+      <rozdzial eId="DU/2026/238__rozdz_3" gd:GUID="dc0dda37-0d14-4c85-9701-5f6de470fd31">
+        <naglowek-rozdzialu>
+          <nr>3</nr>
+          <p>Fundusz pożyczkowy</p>
+        </naglowek-rozdzialu>
+        <oddzial-n brak-eid="jednostka-nieoznaczona" gd:GUID="d768acc4-4fab-4459-97ff-9c455d218217">
+          <artykul eId="DU/2026/238__art_16" gd:GUID="86f07e7a-73cd-4442-ad9f-59198313e902">
+            <nr>16</nr>
+            <ustep eId="DU/2026/238__art_16__ust_1" gd:GUID="0340a1ac-8242-4484-9dfc-9fb0a1c9aa77">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="61a81e2d-29ed-4587-83ca-427e476850c2" fragment="1" gd:fragmentGUID="4eefa6b7-ab84-477b-ac2c-259f5125bfb8">Przez fundusz pożyczkowy rozumie się osobę prawną, która:</zdanie>
+              </p>
+              <punkt eId="DU/2026/238__art_16__ust_1__pkt_1" gd:GUID="4d5f7d89-ff3c-40aa-a802-e7e1a41a0d83">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="61a81e2d-29ed-4587-83ca-427e476850c2" fragment="2" gd:fragmentGUID="23e6a5c8-0587-415e-b4b8-00edb5e19721">nie działa w celu osiągnięcia zysku lub przeznacza zysk na cele statutowe;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/238__art_16__ust_1__pkt_2" gd:GUID="5292def7-a33c-4024-8d2b-56df239f0f01">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="61a81e2d-29ed-4587-83ca-427e476850c2" fragment="3" gd:fragmentGUID="879cec83-31c1-41dd-88cf-0aff372274c5">uchwałą właściwego organu utworzyła fundusz pożyczkowy przeznaczony wyłącznie na udzielanie pożyczek przedsiębiorcom.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2026/238__art_16__ust_2" gd:GUID="49c9587f-6add-401f-9578-c4aa75330139">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="bfc178dc-d7c0-4669-b875-35b9d8432f9c" fragment="1" gd:fragmentGUID="a948b31e-30ff-491d-ac99-262570e8eabf">O udzielanie pożyczek przedsiębiorcom dotkniętym skutkami powodzi może ubiegać się fundusz pożyczkowy, który:</zdanie>
+              </p>
+              <punkt eId="DU/2026/238__art_16__ust_2__pkt_1" gd:GUID="8fe6f202-07a7-4f3b-af9e-ce842bf73517">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="bfc178dc-d7c0-4669-b875-35b9d8432f9c" fragment="2" gd:fragmentGUID="6eb3ee55-b795-4864-8568-2f26c23c4258">w poprzednim roku rozliczeniowym nie poniósł straty;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/238__art_16__ust_2__pkt_2" gd:GUID="cd5fc29e-ad1e-4bc0-811c-cad57b54e426">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="bfc178dc-d7c0-4669-b875-35b9d8432f9c" fragment="3" gd:fragmentGUID="57d03aa1-87d6-4e9a-96c0-e369b340d98b">na ostatni dzień miesiąca poprzedzającego wystąpienie powodzi nie zalegał ze zobowiązaniami publicznoprawnymi.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/238__art_17" gd:GUID="5a2d9df8-3df3-4ee7-9664-b3e5c46e67ae">
+            <nr>17</nr>
+            <ustep eId="DU/2026/238__art_17__ust_1" gd:GUID="06472d49-3620-4115-8b28-438a047aa238">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="d528a0b4-5eb2-4ff1-86dc-5acfe8a137fa" fragment="1" gd:fragmentGUID="c9ab8eef-ee9f-475d-8d73-98f0efd34bee">Wyboru funduszu pożyczkowego minister właściwy do spraw gospodarki dokonuje w drodze konkursu.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/238__art_17__ust_2" gd:GUID="e8bd3936-6809-40fe-bcc9-6a3fa53edd58">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ea38ef61-b197-453a-bab2-ce314d1540e1" fragment="1" gd:fragmentGUID="12b790e5-9525-4637-8343-3e4bc46653b6">Informacja o konkursie jest zamieszczana na stronie internetowej Biuletynu Informacji Publicznej oraz urzędu obsługującego ministra właściwego do spraw gospodarki.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/238__art_17__ust_3" gd:GUID="1fbf410f-6d27-4cf2-ad40-31e60c7425fd">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="cc0fb9de-0a46-4a88-8b47-42b173df83bd" fragment="1" gd:fragmentGUID="08d05cf4-4d4b-4439-bb89-8aff5a976b1e">W informacji, o której mowa w ust. 2, minister właściwy do spraw gospodarki podaje obszar, na którym mają być udzielane pożyczki, szacunkową liczbę przedsiębiorców dotkniętych powodzią oraz zasady oceny ofert składanych przez fundusze pożyczkowe.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/238__art_17__ust_4" gd:GUID="374bd264-5d1c-457e-9a91-0e2c7a9fcbb0">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="375afedd-97b2-404a-a72b-3069e604c8d8" fragment="1" gd:fragmentGUID="11009f85-98f5-41de-b224-18b74ff0ae77">Termin składania ofert przez fundusze pożyczkowe wynosi 5 dni roboczych od dnia zamieszczenia informacji, o której mowa w ust. 2.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/238__art_18" gd:GUID="869eddcc-494b-497b-b25e-9108aed911da">
+            <nr>18</nr>
+            <ustep eId="DU/2026/238__art_18__ust_1" gd:GUID="db11f28a-bcc4-47b7-abf7-fa050907c268">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="52b54a95-a2df-46be-9e23-940cd9032d4b" fragment="1" gd:fragmentGUID="50f08233-a597-4ed5-a2c9-dbf8cca4b770">Wybór funduszu pożyczkowego jest dokonywany na podstawie następujących kryteriów:</zdanie>
+              </p>
+              <punkt eId="DU/2026/238__art_18__ust_1__pkt_1" gd:GUID="d3c2e266-2fa5-4e1f-89c0-51193843c2e1">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="52b54a95-a2df-46be-9e23-940cd9032d4b" fragment="2" gd:fragmentGUID="3b947000-bf83-4530-8e4a-179fa90202c4">zaproponowanego terminu rozpoczęcia udzielania pożyczek;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/238__art_18__ust_1__pkt_2" gd:GUID="960d390d-54c5-4d07-aa7a-b0ba1e402694">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="52b54a95-a2df-46be-9e23-940cd9032d4b" fragment="3" gd:fragmentGUID="6e6a2c12-24b2-4d8e-9362-258c11dfe953">organizacji udzielania pożyczek;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/238__art_18__ust_1__pkt_3" gd:GUID="c0ba45f2-4f71-46ca-8b6a-cb597db68d34">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="52b54a95-a2df-46be-9e23-940cd9032d4b" fragment="4" gd:fragmentGUID="42fe274c-a5ee-4eb4-92c0-b867ff7ae2dc">zasobów kadrowych przewidzianych do udzielania pożyczek;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/238__art_18__ust_1__pkt_4" gd:GUID="d3e8be07-2af6-4ee9-9bb7-754cf57398ce">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="52b54a95-a2df-46be-9e23-940cd9032d4b" fragment="5" gd:fragmentGUID="2036642c-ec4f-42d1-8959-1ed06ddc9035">wysokości kosztów operacyjnych związanych z obsługą pożyczek;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/238__art_18__ust_1__pkt_5" gd:GUID="2c9dae66-3ff4-48e9-bae9-f1f1c9109538">
+                <nr>5</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="52b54a95-a2df-46be-9e23-940cd9032d4b" fragment="6" gd:fragmentGUID="fbaa5b46-ad59-4260-a9e6-e53c6b5dee05">miejsca prowadzenia działalności statutowej przez fundusz pożyczkowy.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2026/238__art_18__ust_2" gd:GUID="471636df-de54-4bc4-b6e7-5bac8bfd7309">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="d816780a-42cd-4695-98ef-d9cc2759e372" fragment="1" gd:fragmentGUID="179c22ad-455f-4cc7-abcf-e6c05d2f590a">Do oferty fundusz pożyczkowy dołącza:</zdanie>
+              </p>
+              <punkt eId="DU/2026/238__art_18__ust_2__pkt_1" gd:GUID="3a58ea01-0ecd-4665-8834-8ddc16b816fd">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="d816780a-42cd-4695-98ef-d9cc2759e372" fragment="2" gd:fragmentGUID="7b01bd25-9eb1-4fc5-a77e-6984fbca789e">kopię sprawozdania finansowego za ostatni zamknięty rok bilansowy;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/238__art_18__ust_2__pkt_2" gd:GUID="38b23c06-bc1a-4c0d-bb2f-776fa5acf1e1">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="d816780a-42cd-4695-98ef-d9cc2759e372" fragment="3" gd:fragmentGUID="8edc38ec-4c6e-4b9a-b43b-3cdaeba6819f">odpis z Krajowego Rejestru Sądowego lub innego równoważnego rejestru;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/238__art_18__ust_2__pkt_3" gd:GUID="e4c2a12e-2a80-4659-a070-2b29bf0e19ef">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="d816780a-42cd-4695-98ef-d9cc2759e372" fragment="4" gd:fragmentGUID="9b96c89e-bd1a-46c3-be2c-ddedae4899d5">oświadczenie o spełnieniu warunku, o którym mowa w art. 16 ust. 2 pkt 2.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2026/238__art_18__ust_3" gd:GUID="02aa30fe-cd07-499a-bda7-27d0165aa886">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="8470b874-5dca-48ab-a71f-7e415d59e31f" fragment="1" gd:fragmentGUID="b82e78d8-da63-4119-a8ad-f1fc1edc45a5">Minister właściwy do spraw gospodarki, na stronie internetowej Biuletynu Informacji Publicznej oraz urzędu obsługującego ministra właściwego do spraw gospodarki, ogłasza wynik konkursu.</zdanie>
+                <zdanie nr="2" gd:zdGUID="480fef2b-1ee1-4e20-b570-7965a0d792bb" fragment="1" gd:fragmentGUID="87b54d98-196d-4db2-98bd-b5052df3bac0">Ogłoszenie zawiera listę funduszy pożyczkowych, które złożyły ofertę, wraz z danymi teleadresowymi.</zdanie>
+                <zdanie nr="3" gd:zdGUID="64608006-e128-4581-b644-abb9b81b2029" fragment="1" gd:fragmentGUID="95d790d2-ac21-4864-ac05-7dd0979d0226">Odwołanie od wyników konkursu nie przysługuje.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/238__art_19" gd:GUID="8123d30a-169e-4ceb-856d-7d3d9a8c02b9">
+            <nr>19</nr>
+            <ustep eId="DU/2026/238__art_19__ust_1" gd:GUID="cf1c44ff-82ac-4161-b3ac-aa6ec24d9687">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="b0f59ce3-8968-4cc0-86b7-0a50cb77374f" fragment="1" gd:fragmentGUID="fd2aae2b-777b-445a-ba22-34dcced335b5">Z funduszem pożyczkowym, który wygrał konkurs, o którym mowa w art. 17, minister właściwy do spraw gospodarki zawiera umowę określającą termin przekazania i rozliczenia dotacji oraz sposób i tryb informowania o wykorzystaniu środków dotacji.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/238__art_19__ust_2" gd:GUID="c3f1cb8a-6209-44a1-91ee-bc28d768edc5">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="b408e128-b643-4968-a28e-df9400537517" fragment="1" gd:fragmentGUID="59e2b7db-4ed0-431d-8248-7e0743a188b0">W przypadku niepodpisania z wybranym na podstawie przeprowadzonego konkursu funduszem pożyczkowym umowy, o której mowa w ust. 1, jest ona podpisywana z kolejnym funduszem pożyczkowym spełniającym kryteria, o których mowa w art. 18, bez konieczności powtórnego ogłaszania konkursu.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/238__art_19__ust_3" gd:GUID="773f1ad6-84fe-436d-b764-d98b49b430bd">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="62e7b629-c73a-4a11-b114-c6302586ef55" fragment="1" gd:fragmentGUID="06e1a5a8-dd8f-47d0-a189-f51be4620989">Umowa, o której mowa w ust. 1, określa zasady składania przez fundusz pożyczkowy ministrowi właściwemu do spraw gospodarki sprawozdania o wykorzystaniu dotacji przekazanej funduszowi pożyczkowemu i o realizacji umów z przedsiębiorcami.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/238__art_20" gd:GUID="a88cffae-3949-45ac-a464-67bc60701e97">
+            <nr>20</nr>
+            <ustep eId="DU/2026/238__art_20__ust_1" gd:GUID="298fbb50-6f8c-4a41-92fb-cdb7020fd50e">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="bfc46552-f2ec-4d9c-a44e-32d1f7f8e812" fragment="1" gd:fragmentGUID="ca3d8141-b6bc-45ff-9164-a133ee2d17e1">Dotacja jest gromadzona na wyodrębnionym rachunku funduszu pożyczkowego i podlega rozliczeniu po upływie terminu określonego w umowie, o której mowa w art. 19 ust. 1.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/238__art_20__ust_2" gd:GUID="bfe216e5-7ac3-428e-85eb-c4aa4fdeb03f">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="5381e056-33e2-46ba-9401-294ab8722903" fragment="1" gd:fragmentGUID="093c10a2-5316-440f-982c-6fe7c524b535">Kwota dotacji niewypłacona przedsiębiorcom oraz odsetki powstające na rachunku, o którym mowa w ust. 1, podlegają zwrotowi do budżetu państwa.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/238__art_21" gd:GUID="16308205-4b32-4194-a3b5-4dd75dcfb7f1">
+            <nr>21</nr>
+            <ustep eId="DU/2026/238__art_21__ust_1" gd:GUID="f5bb949e-0601-4992-a2fc-6f1402094bc7">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="30007092-ea07-46f4-9b3d-2b380827052e" fragment="1" gd:fragmentGUID="a134e043-6b66-4939-a944-3fcc3e49b8fb">Część dotacji przekazanej funduszowi pożyczkowemu może być przeznaczona na pokrycie kosztów operacyjnych tego funduszu ponoszonych w związku z udzielaniem pożyczek realizowanym na podstawie umowy, o której mowa w art. 19.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/238__art_21__ust_2" gd:GUID="d6cc9903-f906-464d-91e9-2c18bd4117ef">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="5a99c66d-d697-4348-8c56-c106e610cd66" fragment="1" gd:fragmentGUID="9bbbc745-8218-4587-8912-e09fbc472d52">Kosztami operacyjnymi są:</zdanie>
+              </p>
+              <punkt eId="DU/2026/238__art_21__ust_2__pkt_1" gd:GUID="5742f227-0ba8-4c22-af4a-2d750b4d1b91">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="5a99c66d-d697-4348-8c56-c106e610cd66" fragment="2" gd:fragmentGUID="1aa1c059-6884-4be0-adfe-05462181dc37">wynagrodzenia ogółem pracowników funduszu pożyczkowego;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/238__art_21__ust_2__pkt_2" gd:GUID="653f50c8-e415-4201-ac3a-655393cf92f3">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="5a99c66d-d697-4348-8c56-c106e610cd66" fragment="3" gd:fragmentGUID="fcd3d02c-b326-48b4-bf16-15ad0f76a8a9">zakup materiałów i artykułów biurowych;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/238__art_21__ust_2__pkt_3" gd:GUID="432f0462-b370-405c-850c-1249a3cbd435">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="5a99c66d-d697-4348-8c56-c106e610cd66" fragment="4" gd:fragmentGUID="9c594033-f1b7-4266-950e-37a228eb88a6">zakup usług zewnętrznych związanych z obsługą udzielanych pożyczek;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/238__art_21__ust_2__pkt_4" gd:GUID="22c267c6-ecc8-47c9-8c4c-7ac38a811321">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="5a99c66d-d697-4348-8c56-c106e610cd66" fragment="5" gd:fragmentGUID="43d6126e-fc40-4820-b650-beedc1871804">koszty działalności komisji, o której mowa w art. 9 ust. 1.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2026/238__art_21__ust_3" gd:GUID="7178af4b-d6e7-45e6-ac79-317cdae514d4">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="424628c1-aebb-43c6-93f1-a5f57ae75db0" fragment="1" gd:fragmentGUID="53f329f7-f94f-4a61-954b-76631df626a6">Środki dotacji przeznaczane na pokrycie kosztów operacyjnych funduszu pożyczkowego nie mogą przekraczać wysokości 5 % kwoty wypłaconych przez ten fundusz pożyczek.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2026/238__art_22" gd:GUID="4b8bf82f-44c2-4d33-944b-1d12d8028c26">
+            <nr>22</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="18ba361d-8d05-487f-83b8-3c4bf33ee867">
+              <p>
+                <zdanie nr="1" gd:zdGUID="1bfc742d-f7ec-4507-b25b-8600a75a48e5" fragment="1" gd:fragmentGUID="b4a10c00-0679-4104-a1e8-03b04f8233ae">Środki otrzymane przez fundusze pożyczkowe ze spłaty i zwrotu pożyczek oraz odsetki spłacane przez przedsiębiorców podlegają zwrotowi do budżetu państwa.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+        </oddzial-n>
+      </rozdzial>
+      <rozdzial eId="DU/2026/238__rozdz_4" gd:GUID="9ae26ed6-291c-42af-9aaa-36e0c6be463f">
+        <naglowek-rozdzialu>
+          <nr>4</nr>
+          <p>Szczególne rozwiązania podatkowe</p>
+        </naglowek-rozdzialu>
+        <oddzial-n brak-eid="jednostka-nieoznaczona" gd:GUID="062cadbc-7590-464d-88ac-ab7334e62478">
+          <artykul eId="DU/2026/238__art_23" gd:GUID="667f48c9-a746-41d8-86b9-2895ec67a004">
+            <nr>23</nr>
+            <ustep eId="DU/2026/238__art_23__ust_1" gd:GUID="c4f061b7-de2f-4f96-b302-559376379505">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="724eee24-361e-4eff-a53d-a877624e2c51" fragment="1" gd:fragmentGUID="5fb87ce0-936e-4cb4-a8f2-147ed74e2614">Zwalnia się od podatku dochodowego:</zdanie>
+              </p>
+              <punkt eId="DU/2026/238__art_23__ust_1__pkt_1" gd:GUID="c1d9f5e6-3cff-468a-b6ef-1504a79260db">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="724eee24-361e-4eff-a53d-a877624e2c51" fragment="2" gd:fragmentGUID="84ebd5a2-3d80-49e4-8932-2350c228bef4">kwoty umorzonych pożyczek przyznanych przedsiębiorcom, o których mowa w art. 1, w trybie i na zasadach określonych ustawą;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2026/238__art_23__ust_1__pkt_2" gd:GUID="4c8a1e1d-6acb-4a0a-8854-49f7eacd620b">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="724eee24-361e-4eff-a53d-a877624e2c51" fragment="3" gd:fragmentGUID="4c64b768-2295-4fe4-9c50-c19cd1c554c7">dotacje, o których mowa w art. 19, otrzymane przez fundusze pożyczkowe.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2026/238__art_23__ust_2" gd:GUID="06215295-e93f-4a9f-ba3a-692d048621ef">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="20248c12-b304-464a-b9cd-9c7c38254280" fragment="1" gd:fragmentGUID="757a529a-c052-4a03-8774-b73d9629d001">Nie uważa się za koszty uzyskania przychodów w rozumieniu ustawy z dnia 15 lutego 1992 r. o podatku dochodowym od osób prawnych (Dz. U. z 2025 r. poz. 278, z późn. zm.<odnosnik id-odnosnika="5" symbol="5" gd:GUID="4c8cc96c-f42a-4910-8f55-be6b790ecbdd"><p><zdanie nr="1" gd:zdGUID="147f0ebf-74c1-4ebc-bd3d-8562abd2fa61" fragment="1" gd:fragmentGUID="cc99b1b0-66fd-4c5f-9194-81b7e3844fcf">Zmiany tekstu jednolitego wymienionej ustawy zostały ogłoszone w Dz. U. z 2025 r. poz. 340, 620, 680, 1022, 1074, 1218, 1301, 1426, 1657, 1658, 1804, 1817 i 1846.</zdanie></p></odnosnik>) wydatków i kosztów bezpośrednio sfinansowanych z dotacji, o których mowa w art. 19, otrzymanych przez fundusze pożyczkowe.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2026/238__art_23__ust_3" gd:GUID="cb38d02a-5f3c-4195-a6df-322df33c395c">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="aa6cb672-c58b-4039-8771-9f993b8e7c8d" fragment="1" gd:fragmentGUID="28931134-b29a-447f-8dcd-8d664d3e7e7f">Do zwolnienia, o którym mowa w ust. 1 pkt 1, przepisy art. 8 ustawy z dnia 26 lipca 1991 r. o podatku dochodowym od osób fizycznych (Dz. U. z 2025 r. poz. 163, z późn. zm.<odnosnik id-odnosnika="6" symbol="6" gd:GUID="86b15ae8-4648-4959-ac71-fdde6bf3f709"><p><zdanie nr="1" gd:zdGUID="0baa8305-628b-47ca-b132-0087d7d6ed42" fragment="1" gd:fragmentGUID="b6a5544a-8d1e-4be5-ba2a-a0228af18e7f">Zmiany tekstu jednolitego wymienionej ustawy zostały ogłoszone w Dz. U. z 2025 r. poz. 340, 368, 620, 680, 1022, 1180, 1301, 1302, 1366, 1795, 1804, 1817, 1822, 1823, 1838 i 1858.</zdanie></p></odnosnik>) oraz art. 5 ustawy z dnia 15 lutego 1992 r. o podatku dochodowym od osób prawnych stosuje się odpowiednio.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+        </oddzial-n>
+      </rozdzial>
+      <rozdzial eId="DU/2026/238__rozdz_5" gd:GUID="f7d1a4f8-5b48-45d5-852b-a69f8aa4deff">
+        <naglowek-rozdzialu>
+          <nr>5</nr>
+          <p>Przepis końcowy</p>
+        </naglowek-rozdzialu>
+        <oddzial-n brak-eid="jednostka-nieoznaczona" gd:GUID="7a6f9958-53f1-45d1-aea7-984ea3d7966a">
+          <artykul eId="DU/2026/238__art_24" gd:GUID="1bafb10f-812f-4a4c-b987-fea691754b1c">
+            <nr>24</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="f4da3901-d390-4dee-9daa-9f0fd48ae63a">
+              <p>
+                <zdanie nr="1" gd:zdGUID="f27c78f7-4625-4c7f-80e0-44d00177f419" fragment="1" gd:fragmentGUID="d1ba4392-82eb-45fc-a633-28f5929cc664">Ustawa wchodzi w życie z dniem ogłoszenia<odnosnik id-odnosnika="7" symbol="7" gd:GUID="fa833690-131b-4c44-9356-8332445a9a5f"><p><zdanie nr="1" gd:zdGUID="bc9b9e6a-816c-4043-9dd9-212353fd0d24" fragment="1" gd:fragmentGUID="de34b93d-53a3-44cf-b1eb-a0282a4405c7">Ustawa została ogłoszona w dniu 13 sierpnia 2010 r.</zdanie></p></odnosnik>.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+        </oddzial-n>
+      </rozdzial>
+      <zalacznik eId="DU/2026/238__zal_1" gd:GUID="444627ac-f8f8-4cd8-9a3e-14c7bfea1299">
+        <zalacznik-do gd:GUID="cf07cb0b-2240-4f81-a1d5-af48176bcd3d">Załącznik do ustawy z dnia 12 sierpnia 2010 r.</zalacznik-do>
+        <zalacznik-do gd:GUID="fbec6c5c-dc4e-4f6c-9c2c-da6866e33164">(Dz. U. z 2026 r. poz. 238)</zalacznik-do>
+        <tytul-zalacznika gd:GUID="3c236e15-f787-4c30-b19e-7dcf034b2211">WZÓR</tytul-zalacznika>
+        <segment-zalacznika gd:GUID="ce27c847-27cc-4c94-898d-fae1df55cd61" orientacja="pionowa">
+          <tekst-zwykly gd:GUID="60ba1f60-ab9e-4d3b-bb4f-e009fc385f92">(pieczęć organu)</tekst-zwykly>
+          <tekst-zwykly gd:GUID="497e3dfc-5a1c-42c6-a14f-cf3acdfaf547">Zaświadczenie</tekst-zwykly>
+          <tekst-zwykly gd:GUID="3f762b89-0144-42a2-8659-dddc4c5a8730">Na podstawie art. 7 ust. 3 pkt 1 ustawy z dnia 12 sierpnia 2010 r. o wspieraniu przedsiębiorców dotkniętych skutkami powodzi z 2010 r. (Dz. U. z 2026 r. poz. 238) potwierdzam, że przedsiębiorca</tekst-zwykly>
+          <tekst-zwykly gd:GUID="a74a9486-7364-412e-be5a-26154f155690">(nazwa / imię i nazwisko oraz adres przedsiębiorcy)</tekst-zwykly>
+          <tekst-zwykly gd:GUID="8d2fd45f-5066-4422-98b7-601d2e02e898">(numer REGON, NIP)</tekst-zwykly>
+          <tekst-zwykly gd:GUID="d883557b-13fa-4e7a-a1cc-412cc398d0e3">w okresie 2010 r.</tekst-zwykly>
+          <tekst-zwykly gd:GUID="835c6f30-5a9e-4a48-920d-9614491dfdb4">poniósł szkodę w wyniku powodzi, która wystąpiła na terenie</tekst-zwykly>
+          <tekst-zwykly gd:GUID="6d7611e5-8c90-4b83-bd68-6db4d7a471a8">(nazwa miasta/gminy)</tekst-zwykly>
+          <tekst-zwykly gd:GUID="85d67653-0d27-47b4-9d10-5e92ff30d448">(podpis organu)</tekst-zwykly>
+        </segment-zalacznika>
+      </zalacznik>
+    </ustawa>
+  </obwieszczenie>
+</akt-prawny>

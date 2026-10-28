@@ -1,0 +1,467 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <obwieszczenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/1591</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>95058467-587d-4e66-9d04-1f5006452eb5</gd:GUIDwersji>
+      <AdresISAP>WDU20250001591</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>1591</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 1591</AdresWyswietlany>
+      <Tytul>Obwieszczenie Marszałka Sejmu Rzeczypospolitej Polskiej z dnia 7 listopada 2025 r. w sprawie ogłoszenia jednolitego tekstu ustawy o nadzorze ubezpieczeniowym i emerytalnym</Tytul>
+      <Rodzaj>OBW_TJ</Rodzaj>
+      <DataOgloszenia>2025-11-21</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-11-07</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_ujednolicenie_2025-11-21_DU-2025-1591_domyslne" rodzaj="ujednolicenie" pochodzenie="domyslne-z-aktu" data="2025-11-21" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_ujednolicenie.zdarz_ujednolicenie_2025-11-21_DU-2025-1591_domyslne" glowna="true">
+          <Przedzial rodzaj="ujednolicenie" od="zdarz_ujednolicenie_2025-11-21_DU-2025-1591_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <DataObowiazywaniaWersji>
+        <Od>zdarz_ujednolicenie_2025-11-21_DU-2025-1591_domyslne</Od>
+      </DataObowiazywaniaWersji>
+      <Organy>
+        <Organ gd:GUID="7ca99b8e-379e-4462-ba02-bd7d3858011f" rola="wydajacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/MSEJMU">
+          <Nazwa>Marszałek Sejmu</Nazwa>
+          <OrganPodpisujacy>Marszałek Sejmu</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>S.</imie> <nazwisko>Hołownia</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Obwieszczenie</rodzaj-aktu>
+    <autor-aktu>Marszałka Sejmu Rzeczypospolitej Polskiej</autor-aktu>
+    <data>z dnia 7 listopada 2025 r.</data>
+    <tytul>w sprawie ogłoszenia jednolitego tekstu ustawy o nadzorze ubezpieczeniowym i emerytalnym</tytul>
+    <punkt-OTJ eId="DU/2025/1591__pkt_1" gd:GUID="861e39b6-3602-43cd-856e-f3aa2f54f8f5">
+      <nr>1</nr>
+      <p>
+        <zdanie nr="1" gd:zdGUID="7771c1f3-af25-45e3-99c2-78b0987d0814" fragment="1" gd:fragmentGUID="2bfb02e5-40d1-4599-aac5-71a481653131">Na podstawie art. 16 ust. 1 zdanie pierwsze ustawy z dnia 20 lipca 2000 r. o ogłaszaniu aktów normatywnych i niektórych innych aktów prawnych (Dz. U. z 2019 r. poz. 1461) ogłasza się w załączniku do niniejszego obwieszczenia jednolity tekst ustawy z dnia 22 maja 2003 r. o nadzorze ubezpieczeniowym i emerytalnym (Dz. U. z 2024 r. poz. 583), z uwzględnieniem zmiany wprowadzonej ustawą z dnia 5 sierpnia 2025 r. o uchyleniu ustawy o Centralnej Informacji Emerytalnej (Dz. U. poz. 1216) oraz zmian wynikających z przepisów ogłoszonych przed dniem 6 listopada 2025 r.</zdanie>
+      </p>
+    </punkt-OTJ>
+    <punkt-OTJ eId="DU/2025/1591__pkt_2" gd:GUID="7aa4185a-ef4a-4b56-af32-69afbc535533">
+      <nr>2</nr>
+      <p>
+        <zdanie nr="1" gd:zdGUID="197ac0c8-8ce3-472b-b853-a61a4e737e72" fragment="1" gd:fragmentGUID="05efdbce-e4bb-4783-9819-ae4e78ee2492">Podany w załączniku do niniejszego obwieszczenia tekst jednolity ustawy nie obejmuje art. 15 ustawy z dnia 5 sierpnia 2025 r. o uchyleniu ustawy o Centralnej Informacji Emerytalnej (Dz. U. poz. 1216), który stanowi:<tresc-strukt cudzyslowy="oba" gd:GUID="a2b11db6-e0c2-49c8-92f9-17ab4d4401b9"><artykul eId="DU/2025/1216__art_15" gd:GUID="12f08314-6b62-44b7-98fc-ff31822f33a4"><nr>15</nr><ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="ce512f46-fa6a-4133-9d9f-8cd50b230f0f"><p><zdanie nr="1" gd:zdGUID="21231aa3-4135-4095-a77e-892163c862fe" fragment="1" gd:fragmentGUID="4118ddbe-2463-484d-b2a8-0d3677e1cda3">Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia, z wyjątkiem art. 2 pkt 6, art. 3 pkt 2, art. 4 pkt 2 lit. c i pkt 3, art. 6 pkt 4, art. 7 pkt 5 i art. 12 pkt 2 lit. b, które wchodzą w życie z dniem 1 stycznia 2026 r.</zdanie></p></ustep-n></artykul></tresc-strukt>.</zdanie>
+      </p>
+    </punkt-OTJ>
+    <organ-podpisujacy>Marszałek Sejmu: <i><osoba podpisujacy="true" gd:osobaGUID="6b349e25-bc95-45e6-b16a-86ef9e263b64"><imie>S.</imie> <nazwisko>Hołownia</nazwisko></osoba></i></organ-podpisujacy>
+    <ustawa>
+      <zalacznik-do>Załącznik do obwieszczenia Marszałka Sejmu Rzeczypospolitej Polskiej z dnia 7 listopada 2025 r. (Dz. U. poz. 1591)</zalacznik-do>
+      <rodzaj-aktu>Ustawa</rodzaj-aktu>
+      <data>z dnia 22 maja 2003 r.</data>
+      <tytul>o nadzorze ubezpieczeniowym i emerytalnym<odnosnik id-odnosnika="1" symbol="1" gd:GUID="88bb1659-f1fb-4e19-bf44-774f07fc11a7"><p><zdanie nr="1" gd:zdGUID="6fe4bf15-98c2-4dd0-a60a-75f059857302" fragment="1" gd:fragmentGUID="c9b2da86-c8f5-44d0-8df0-f656e72defc2">Niniejsza ustawa dokonuje w zakresie swojej regulacji wdrożenia następujących dyrektyw Wspólnot Europejskich:</zdanie></p><punkt-odnosnik><nr>1</nr><p><zdanie nr="1" gd:zdGUID="6fe4bf15-98c2-4dd0-a60a-75f059857302" fragment="2" gd:fragmentGUID="9003ed51-2957-4bf8-b664-6e160a2fb2f0">dyrektywy 92/49/EWG z dnia 18 lipca 1992 r. w sprawie koordynacji przepisów ustawowych, wykonawczych i administracyjnych odnoszących się do ubezpieczeń bezpośrednich innych niż ubezpieczenia na życie oraz zmieniająca dyrektywy 73/239/EWG i 88/357/EWG (trzecia dyrektywa w sprawie ubezpieczeń innych niż ubezpieczenia na życie) (Dz. Urz. WE L 228 z 11.08.1992);</zdanie></p></punkt-odnosnik><punkt-odnosnik><nr>2</nr><p><zdanie nr="1" gd:zdGUID="6fe4bf15-98c2-4dd0-a60a-75f059857302" fragment="3" gd:fragmentGUID="9e56afd6-3d12-4f8c-813a-6d5c68a46915">dyrektywy 98/78/WE z dnia 27 października 1998 r. w sprawie dodatkowego nadzoru nad zakładami ubezpieczeń w grupach ubezpieczeniowych (Dz. Urz. WE L 230 z 05.12.1998);</zdanie></p></punkt-odnosnik><punkt-odnosnik><nr>3</nr><p><zdanie nr="1" gd:zdGUID="6fe4bf15-98c2-4dd0-a60a-75f059857302" fragment="4" gd:fragmentGUID="d1b3ed40-b972-4b18-bbf0-5e2c35f81564">dyrektywy 2002/83/WE z dnia 5 listopada 2002 r. dotyczącej ubezpieczeń na życie (Dz. Urz. WE L 345 z 19.12.2002).</zdanie></p></punkt-odnosnik><fragment-odnosnik><p><zdanie nr="1" gd:zdGUID="cac6fe3e-1e77-4994-91db-2a27da63c8fc" fragment="1" gd:fragmentGUID="e30c49a3-3577-4121-aa97-b48d960d8e12">Dane dotyczące ogłoszenia aktów prawa Unii Europejskiej, zamieszczone w niniejszej ustawie – z dniem uzyskania przez Rzeczpospolitą Polską członkostwa w Unii Europejskiej – dotyczą ogłoszenia tych aktów w Dzienniku Urzędowym Unii Europejskiej – wydanie specjalne.</zdanie></p></fragment-odnosnik></odnosnik></tytul>
+      <rozdzial eId="DU/2025/1591__rozdz_1" gd:GUID="971f6c29-e000-48b9-a7c4-a43ff27e4717">
+        <naglowek-rozdzialu>
+          <nr>1</nr>
+          <p>(oznaczenie rozdziału 1 i tytuł – uchylone)</p>
+        </naglowek-rozdzialu>
+        <oddzial-n brak-eid="jednostka-nieoznaczona" gd:GUID="3eb1a652-a616-40f4-b1f9-cc9898cd3e39" />
+      </rozdzial>
+      <artykul eId="DU/2025/1591__art_1" gd:GUID="8197cf39-fd34-4c74-af43-4f4cfc695a07">
+        <nr>1</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="c6042e8b-7e96-42a5-83c1-e0c4042f45e4">
+          <p>
+            <zdanie nr="1" gd:zdGUID="45b635cb-47af-4f3e-8e55-9b4841efce53" fragment="1" gd:fragmentGUID="02856ffa-a33f-4407-a6b0-e4648e1e493b">Ustawa określa organizację nadzoru ubezpieczeniowego i emerytalnego.</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2025/1591__art_2" gd:GUID="03a2b817-e805-46c4-a82f-68da4a562364">
+        <nr>2</nr>
+        <ustep eId="DU/2025/1591__art_2__ust_1" gd:GUID="b5c3d461-4fe9-4861-b1c2-b2e275d30420">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="728f1590-5217-4728-9e19-daefef3e2f18" fragment="1" gd:fragmentGUID="9abde01c-b876-470d-81e8-8bc935174a4b">Nadzorem ubezpieczeniowym i emerytalnym, zwanym dalej „nadzorem”, jest objęta działalność:</zdanie>
+          </p>
+          <punkt eId="DU/2025/1591__art_2__ust_1__pkt_1" gd:GUID="302add5a-c04b-4057-832c-a29bdb6b4dfa">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="728f1590-5217-4728-9e19-daefef3e2f18" fragment="2" gd:fragmentGUID="0fb1785e-889f-4d0b-88e2-691fa1ba9021">ubezpieczeniowa i reasekuracyjna, o której mowa w przepisach o działalności ubezpieczeniowej i reasekuracyjnej;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/1591__art_2__ust_1__pkt_2" gd:GUID="abaf4644-34db-465c-80a4-527e13899ff2">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="728f1590-5217-4728-9e19-daefef3e2f18" fragment="3" gd:fragmentGUID="cfaed804-b6ef-45c9-b6ce-270292bbd10e">w zakresie pośrednictwa ubezpieczeniowego, o której mowa w przepisach o pośrednictwie ubezpieczeniowym;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/1591__art_2__ust_1__pkt_3" gd:GUID="c6a5e33f-9265-47fe-8c65-9005b376fa21">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="728f1590-5217-4728-9e19-daefef3e2f18" fragment="4" gd:fragmentGUID="59015077-1b51-488c-80fa-b59bb70563de">w zakresie funduszy emerytalnych, o której mowa w przepisach o organizacji i funkcjonowaniu funduszy emerytalnych;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/1591__art_2__ust_1__pkt_4" gd:GUID="6c0a1d7f-e8c5-42c3-9cf5-004b6850bb97">
+            <nr>4</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="728f1590-5217-4728-9e19-daefef3e2f18" fragment="5" gd:fragmentGUID="3ba8d54b-ff90-406e-9b52-cc2001519844">w zakresie pracowniczych programów emerytalnych, o której mowa w przepisach o pracowniczych programach emerytalnych;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/1591__art_2__ust_1__pkt_5" gd:GUID="d260ca49-4ab1-4fe5-b926-c585c7990f7a">
+            <nr>5</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="728f1590-5217-4728-9e19-daefef3e2f18" fragment="6" gd:fragmentGUID="718bcec7-b762-4e69-a2a4-c3c2a03e58fa">w zakresie pracowniczych planów kapitałowych, o której mowa w przepisach o pracowniczych planach kapitałowych;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/1591__art_2__ust_1__pkt_6" gd:GUID="d9d558ca-9f58-43c6-903a-5a0811557b08">
+            <nr>6</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="728f1590-5217-4728-9e19-daefef3e2f18" fragment="7" gd:fragmentGUID="3b829566-b282-479c-89b9-84300a11c1a0">w zakresie ogólnoeuropejskich indywidualnych produktów emerytalnych, o której mowa w przepisach o ogólnoeuropejskim indywidualnym produkcie emerytalnym.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/1591__art_2__ust_2" gd:GUID="ec83f224-6f0c-495e-8196-de57158457b0">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="88d6e5c5-f038-44b2-abb7-6a42a55cda72" fragment="1" gd:fragmentGUID="86311b09-14bf-49c0-8b2e-85173204c245">Nadzorowi podlegają podmioty prowadzące działalność w zakresie, o którym mowa w ust. 1, w szczególności zakłady ubezpieczeń, zakłady reasekuracji, pośrednicy ubezpieczeniowi, fundusze emerytalne i towarzystwa emerytalne, zwane dalej „podmiotami nadzorowanymi”.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1591__art_2__ust_3" gd:GUID="bf275cb2-b09c-4c5f-8778-3747d8145c5b">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="551628b3-6d78-4fb0-9c86-aaf6a8af6df3" fragment="1" gd:fragmentGUID="a0291975-3fe8-4c4e-93f5-bc9e6c2314dd">Organem nadzoru jest Komisja Nadzoru Finansowego, o której mowa w ustawie z dnia 21 lipca 2006 r. o nadzorze nad rynkiem finansowym (Dz. U. z 2025 r. poz. 640 i 1069), zwana dalej „Komisją”.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/1591__art_3" gd:GUID="21aceb9c-83ab-4951-9110-852ac9ee7e94">
+        <nr>3</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="b9048c5c-593d-496f-b1b5-8b46112a500c">
+          <p>
+            <zdanie nr="1" gd:zdGUID="764d1927-e827-41d7-9d54-decc24cf59a5" fragment="1" gd:fragmentGUID="c0c2effe-fac7-4079-ab02-b764a7078bb7">Celem nadzoru jest ochrona interesów osób ubezpieczających, ubezpieczonych, uposażonych lub uprawnionych z umów ubezpieczenia, członków funduszy emerytalnych, uczestników pracowniczych programów emerytalnych, osób otrzymujących emeryturę kapitałową lub osób przez nie uposażonych.</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2025/1591__art_4" gd:GUID="fe141ae3-5dfa-4a06-9a81-5e3ea93f7411">
+        <nr>4</nr>
+        <ustep eId="DU/2025/1591__art_4__ust_1" gd:GUID="3762e16c-7d63-46a4-b49f-3dab5cac9760">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="34623f23-8777-410e-a839-94aedd98cb98" fragment="1" gd:fragmentGUID="5e5185f1-416c-454d-90c4-c998f2fbc400">W celu realizacji ustawowych zadań organ nadzoru współpracuje w szczególności z Prezesem Urzędu Ochrony Konkurencji i Konsumentów oraz organami nadzoru innych państw.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1591__art_4__ust_2" gd:GUID="1e49bc90-cc1c-489e-ae3a-89fa788fdb16">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="69dd58f3-2ece-4b8a-8bb4-3d861d3bce34" fragment="1" gd:fragmentGUID="11097dd6-9e6c-491b-90ae-1de4195d902d">Komisja współpracuje z Szefem Krajowego Centrum Informacji Kryminalnych w zakresie niezbędnym do realizacji jego zadań ustawowych.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/1591__art_4a" gd:GUID="6b7c3e86-dfc1-4f97-a8e3-36d95310bfe2">
+        <nr>4a</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="477518ee-0b05-47c8-a8d3-32e29bb306cc">
+          <p>
+            <zdanie nr="1" gd:zdGUID="97e7e873-9af6-4e2d-b1fc-168638c87dea" fragment="1" gd:fragmentGUID="4211bcc1-2c81-4920-9fd4-1d5a26c32227">(uchylony)<odnosnik id-odnosnika="2" symbol="2" gd:GUID="1105e3d5-d846-4087-afeb-7be5550ec668"><p><zdanie nr="1" gd:zdGUID="5d646975-161e-4417-b86d-ea54bce364a1" fragment="1" gd:fragmentGUID="b30f7e28-a102-4fab-98f5-af8bbb48452f">Przez art. 5 ustawy z dnia 5 sierpnia 2025 r. o uchyleniu ustawy o Centralnej Informacji Emerytalnej (Dz. U. poz. 1216), która weszła w życie z dniem 18 września 2025 r.</zdanie></p></odnosnik></zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2025/1591__art_5" gd:GUID="88f2398e-4c67-44f6-8664-c06c00b5a33c">
+        <nr>5</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="e611a3b6-d264-4d8d-839f-5651db64f995">
+          <p>
+            <zdanie nr="1" gd:zdGUID="d335f6a3-710f-4272-bdf8-94f6850ceb38" fragment="1" gd:fragmentGUID="70cf8919-3057-4118-8e1f-4fa5fb5355e7">(uchylony)</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2025/1591__art_6" gd:GUID="1d0be8a2-70d3-4ddb-aad3-171e539e6a1b">
+        <nr>6</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="e4f657db-1788-47e0-a7fa-005aed809255">
+          <p>
+            <zdanie nr="1" gd:zdGUID="f24e29ee-6635-4524-a84c-cd7a567536c3" fragment="1" gd:fragmentGUID="52db73a3-8156-4feb-902f-ba894c88a2fd">(uchylony)</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+      <rozdzial eId="DU/2025/1591__rozdz_2" gd:GUID="3ee17c00-b253-442e-b52d-4ce2632c8e1c">
+        <naglowek-rozdzialu>
+          <nr>2</nr>
+          <p>(oznaczenie rozdziału 2 i tytuł – uchylone)</p>
+        </naglowek-rozdzialu>
+        <oddzial-n brak-eid="jednostka-nieoznaczona" gd:GUID="8a926268-dd1e-4448-bdf8-1a84e827b8ff" />
+      </rozdzial>
+      <artykul eId="DU/2025/1591__art_7" gd:GUID="827930ff-40be-4266-a046-f2924d9ba3c4">
+        <nr>7</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="0a8bae36-eec7-47f5-9837-ec46138d9b2b">
+          <p>
+            <zdanie nr="1" gd:zdGUID="86cd25fa-c6d7-49c0-be6f-106bbf5cfc20" fragment="1" gd:fragmentGUID="f5e62312-a0e1-4fe6-8b00-df47a37e3561">(uchylony)</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2025/1591__art_8" gd:GUID="a1080586-cad2-4f9c-95f9-4a066394ff8f">
+        <nr>8</nr>
+        <ustep eId="DU/2025/1591__art_8__ust_1" gd:GUID="248784c6-a00b-4458-866b-3fe2b5e2d61f">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="45e25b33-fb44-418c-87a8-e0e60f8ccdac" fragment="1" gd:fragmentGUID="289efa19-768c-49da-ab6e-bd49e370a001">Zadaniem Komisji jest:</zdanie>
+          </p>
+          <punkt eId="DU/2025/1591__art_8__ust_1__pkt_1" gd:GUID="019b1d91-2196-438d-a566-10ed8ae48085">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="45e25b33-fb44-418c-87a8-e0e60f8ccdac" fragment="2" gd:fragmentGUID="24d7de12-bb7b-4e2f-b1ab-f3e3e759122f">podejmowanie określonych w odrębnych przepisach działań mających na celu zapewnienie zgodności działalności podmiotów nadzorowanych z przepisami prawa;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/1591__art_8__ust_1__pkt_2" gd:GUID="214bb31a-7cd8-4964-a8a8-6be30f23e7d1">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="45e25b33-fb44-418c-87a8-e0e60f8ccdac" fragment="3" gd:fragmentGUID="1a4eb4c6-b639-4e1a-8ec5-6c621e9f33d7">kontrola działalności i stanu majątkowego podmiotów nadzorowanych;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/1591__art_8__ust_1__pkt_3" gd:GUID="18cb01bd-b46e-4096-bc8e-89d85f2be390">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="45e25b33-fb44-418c-87a8-e0e60f8ccdac" fragment="4" gd:fragmentGUID="7e273c82-1241-42a3-9b6b-07753db534e2">podejmowanie innych zadań określonych ustawami.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/1591__art_8__ust_2" gd:GUID="796ae996-42b9-40d6-a505-3e2771b5ff67">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="2af1ed8c-3695-4246-b950-798d0ad338d9" fragment="1" gd:fragmentGUID="5dda8b54-2edd-4d8a-89f5-d85600568398">Zakres nadzoru i szczegółowe zadania Komisji określają odrębne przepisy.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/1591__art_9" gd:GUID="c8381178-e8c0-4353-aa9d-b364ba755702">
+        <nr />
+        <nr-od>9</nr-od>
+        <nr-do>13</nr-do>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="8c076511-99c6-4418-914a-76a3fd8b698d">
+          <p>
+            <zdanie nr="1" gd:zdGUID="0b00ebac-1114-4a9f-8d36-17345a72837c" fragment="1" gd:fragmentGUID="3a082c1e-ae83-4c84-8cf4-911d47f2f1ba">(uchylone)</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2025/1591__art_14" gd:GUID="b5a48e3b-ad76-48fa-abf2-2e182555f016">
+        <nr>14</nr>
+        <ustep eId="DU/2025/1591__art_14__ust_1" gd:GUID="ea174f9d-e16f-4d94-928f-70de0b775d9b">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="3ae0df9b-62fe-4055-ac7a-68703d3b9bf2" fragment="1" gd:fragmentGUID="e3d9d3de-fd62-4c46-b914-7c26791b8c33">Koszty nadzoru ponoszą:</zdanie>
+          </p>
+          <punkt eId="DU/2025/1591__art_14__ust_1__pkt_1" gd:GUID="150c71c6-d50e-469a-bec4-d89bd9cf3956">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="3ae0df9b-62fe-4055-ac7a-68703d3b9bf2" fragment="2" gd:fragmentGUID="0050325a-4c5e-45c2-a3f7-815aca062b2b">zakłady ubezpieczeń i zakłady reasekuracji do wysokości 0,14 % zbioru składek brutto;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/1591__art_14__ust_1__pkt_2" gd:GUID="eb88f996-caaa-47fc-b6d5-44446170205c">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="3ae0df9b-62fe-4055-ac7a-68703d3b9bf2" fragment="3" gd:fragmentGUID="197c7412-d0ad-47ff-b619-8c4a395ba293">powszechne towarzystwa emerytalne w wysokości stanowiącej iloczyn średniej rocznej wartości aktywów otwartego funduszu emerytalnego zarządzanego przez dane powszechne towarzystwo emerytalne i stawki nieprzekraczającej 0,016 %; średnią roczną wartość aktywów otwartego funduszu emerytalnego wylicza się na podstawie wartości aktywów otwartego funduszu emerytalnego ustalanej na ostatni dzień roboczy każdego miesiąca danego roku kalendarzowego.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/1591__art_14__ust_1a" gd:GUID="6903daa0-1f66-4e8b-901a-3f3463d2ca01">
+          <nr>1a</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="27f6dab3-ce79-4e75-96b2-af1858bfcf74" fragment="1" gd:fragmentGUID="9c2b5251-d166-4ce4-9206-d9ab82c6bfb2">Z wpłat, o których mowa w ust. 1 pkt 1, pokrywa się także 1,5 % wartości kosztów, o których mowa w art. 17 ust. 1 ustawy z dnia 29 lipca 2005 r. o nadzorze nad rynkiem kapitałowym (Dz. U. z 2024 r. poz. 1161 i 1222 oraz z 2025 r. poz. 146 i 1069).</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1591__art_14__ust_2" gd:GUID="bb1c8ffa-1c9c-4a7c-b853-c082c15468f2">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="8740ac00-b620-48f7-b6ef-354a57bfb08b" fragment="1" gd:fragmentGUID="c00210c2-cec8-4e62-a158-ae67263fb1c5">Należności, o których mowa w ust. 1, podlegają egzekucji w trybie przepisów o postępowaniu egzekucyjnym w administracji.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1591__art_14__ust_3" gd:GUID="3d4ed9f3-7e32-4a2c-ad7a-599bd70b421e">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="90dce5b6-d187-4bd3-8984-c9b36872f592" fragment="1" gd:fragmentGUID="bcf9e041-9b63-4a0b-938b-d4b48d467afe">Prezes Rady Ministrów określi, w drodze rozporządzenia, terminy uiszczania, wysokość i sposób obliczania wpłat, o których mowa w ust. 1, oraz sposób pokrywania z wpłat, o których mowa w ust. 1, kosztów nadzoru, a w odniesieniu do wpłat, o których mowa w ust. 1 pkt 1, także sposób pokrywania udziału w kosztach, o których mowa w ust. 1a, mając na względzie zapewnienie skuteczności sprawowanego nadzoru.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1591__art_14__ust_4" gd:GUID="75da98cb-b84c-4bcb-91d6-c5f74f708b74">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="7e1b57d1-e25f-4426-a908-21429f953da0" fragment="1" gd:fragmentGUID="d22457d3-0c7d-45dd-8935-1714c179f193">(uchylony)</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/1591__art_15" gd:GUID="1ae09ee5-1f89-4df6-95bb-e43defae8264">
+        <nr>15</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="f6419aaf-55f8-4d50-8876-73c99f03ef05">
+          <p>
+            <zdanie nr="1" gd:zdGUID="7d647bb6-ec3e-4c15-adb6-874a0d6bc137" fragment="1" gd:fragmentGUID="5190da7a-36e0-4f4c-a859-ef340569ebf5">(uchylony)</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2025/1591__art_16" gd:GUID="8a4eac55-3fae-47e9-ba37-5da255e9fcdb">
+        <nr>16</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="097c15d2-28f3-4c2c-b455-2cd630b83f11">
+          <p>
+            <zdanie nr="1" gd:zdGUID="42f18010-62a4-4d0c-8eb4-4d40a76acea1" fragment="1" gd:fragmentGUID="a00b18e6-4721-4f6f-b33b-6fbb2a9c3a42">(uchylony)</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2025/1591__art_17" gd:GUID="17016f37-3686-4ff6-86a4-99ee9afb09b5">
+        <nr>17</nr>
+        <ustep eId="DU/2025/1591__art_17__ust_1" gd:GUID="0ba44326-4d01-4537-a72d-db5905c37c20">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="d135effe-efb9-4a92-8124-8521f74100a4" fragment="1" gd:fragmentGUID="395857b7-16ce-4874-9d2b-db8a75a829be">Komisja może zawierać z organami nadzoru ubezpieczeniowego i emerytalnego innych państw porozumienia o współdziałaniu w zakresie nadzoru.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1591__art_17__ust_2" gd:GUID="269dedc4-c7e3-42df-b485-e2295a08f6d4">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="1d49babf-5eb3-41e4-9ee4-b8ad71fa109d" fragment="1" gd:fragmentGUID="1a040796-891a-42a0-bb1b-f15b8af8d725">Komisja może udzielać organom nadzorującym działalność instytucji finansowych w innych państwach informacji posiadanych w związku z wykonywaniem ustawowych zadań, jeżeli:</zdanie>
+          </p>
+          <punkt eId="DU/2025/1591__art_17__ust_2__pkt_1" gd:GUID="781b0215-652d-46a8-8097-2f053e336900">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="1d49babf-5eb3-41e4-9ee4-b8ad71fa109d" fragment="2" gd:fragmentGUID="b73948ec-013b-4162-9966-bcbc9c194809">informacje zostaną wykorzystane wyłącznie na potrzeby wykonywanych przez te organy zadań z zakresu nadzoru;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/1591__art_17__ust_2__pkt_2" gd:GUID="28a8112f-a886-4c3a-9217-97a5cedee051">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="1d49babf-5eb3-41e4-9ee4-b8ad71fa109d" fragment="3" gd:fragmentGUID="781bc455-8cb3-4e2c-8622-1b7d026e0f5a">przekazywanie udzielonych informacji poza te organy następuje wyłącznie po uprzednim uzyskaniu zgody Komisji.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/1591__art_17__ust_2a" gd:GUID="49a7580f-b6b4-45a0-bd3c-7ce52e96564b">
+          <nr>2a</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="7f4c913c-241d-4c19-bc63-7e5a3a4a9646" fragment="1" gd:fragmentGUID="33249f4e-3f5c-4481-bb9e-3e06ffe0c347">Komisja może występować do organów nadzorujących działalność instytucji finansowych państw członkowskich Unii Europejskiej o udostępnienie informacji potrzebnych do wykonywania zadań z zakresu nadzoru.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1591__art_17__ust_2b" gd:GUID="6100e233-6ede-4f5d-ba3b-474e19ecbeed">
+          <nr>2b</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="bcd5aee8-90e7-4d4a-9c07-e17d42f57be0" fragment="1" gd:fragmentGUID="aa1312dd-49c8-489c-b4b3-8ad3b0556f55">Informacje uzyskane w trybie, o którym mowa w ust. 2a, Komisja może:</zdanie>
+          </p>
+          <punkt eId="DU/2025/1591__art_17__ust_2b__pkt_1" gd:GUID="700772ec-21aa-478c-9410-30edac0ec26c">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="bcd5aee8-90e7-4d4a-9c07-e17d42f57be0" fragment="2" gd:fragmentGUID="40dc42c0-6670-42ca-b340-110dcd50db47">wykorzystać wyłącznie na potrzeby wykonywania zadań z zakresu nadzoru;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/1591__art_17__ust_2b__pkt_2" gd:GUID="95f52354-0622-4e2a-ad30-b3e4027e95c7">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="bcd5aee8-90e7-4d4a-9c07-e17d42f57be0" fragment="3" gd:fragmentGUID="ae8a2c76-4707-439f-a259-ead7f2dd5d6f">przekazać poza Komisję wyłącznie po uprzednim uzyskaniu zgody organu, który je udostępnił i w zakresie udzielonej zgody.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/1591__art_17__ust_3" gd:GUID="ce55825c-f77c-4dbf-bb83-ad3eeda6771c">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="7050282c-8add-4477-88e6-a3b15e53cffd" fragment="1" gd:fragmentGUID="97bf8284-168c-4819-a914-590cdd1541d6">Komisja:</zdanie>
+          </p>
+          <punkt eId="DU/2025/1591__art_17__ust_3__pkt_1" gd:GUID="6650eea2-79ea-4d42-bf09-2edd95a0c154">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="7050282c-8add-4477-88e6-a3b15e53cffd" fragment="2" gd:fragmentGUID="490416e3-34ea-4df9-af50-5a153a71f526">udziela właściwym organom innych niż Rzeczpospolita Polska państw członkowskich Unii Europejskiej informacji w sprawach dystrybucji ubezpieczeń i dystrybucji reasekuracji, w szczególności dotyczących zastosowanych środków, o których mowa w art. 84 ust. 1 i 2 ustawy z dnia 15 grudnia 2017 r. o dystrybucji ubezpieczeń (Dz. U. z 2024 r. poz. 1214 oraz z 2025 r. poz. 1069), oraz informacji w zakresie art. 19 ust. 1 pkt 3 i 5 i art. 34 ust. 4 pkt 1 lit. e i f albo ust. 8 lub 9 tej ustawy;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/1591__art_17__ust_3__pkt_2" gd:GUID="9a5b0a81-9034-4aaf-9bcc-a217bf33a320">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="7050282c-8add-4477-88e6-a3b15e53cffd" fragment="3" gd:fragmentGUID="fea6327f-7842-407b-a363-51844cd949b5">może występować do właściwych organów innych niż Rzeczpospolita Polska państw członkowskich Unii Europejskiej o udzielenie informacji w sprawach dystrybucji ubezpieczeń i dystrybucji reasekuracji, w szczególności dotyczących zastosowanych przez te organy środków w zakresie analogicznym do środków, o których mowa w art. 84 ust. 1 i 2 ustawy z dnia 15 grudnia 2017 r. o dystrybucji ubezpieczeń, oraz informacji w zakresie spełniania przez osoby wykonujące w tych państwach działalność w zakresie pośrednictwa ubezpieczeniowego wymogów dotyczących posiadania przez nie dobrej reputacji oraz wiedzy fachowej i kompetencji zawodowych.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/1591__art_17__ust_4" gd:GUID="b3f24532-f59a-40ef-89c7-ece7f4619b7f">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="57fd0589-40bd-4bd6-8ca3-269b1da5821d" fragment="1" gd:fragmentGUID="16b52d90-2ad7-43dc-9a11-7f890c16564f">W przypadku organów nadzoru państw niebędących państwami członkowskimi Unii Europejskiej udzielanie informacji, na zasadach określonych w ust. 2, może następować wyłącznie na zasadzie wzajemności.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1591__art_17__ust_5" gd:GUID="414c8721-7d5a-4247-ba77-6909380e021b">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="c7ee91b7-85c5-4583-bf0e-56bb4f2b17a5" fragment="1" gd:fragmentGUID="21a0a04e-0221-40c3-b02b-8c1a0a495ebd">Komisja może udzielać zagranicznym organom państw członkowskich Unii Europejskiej informacji posiadanych w związku z wykonywaniem zadań z zakresu nadzoru nad działalnością zakładów ubezpieczeń i zakładów reasekuracji w zakresie związanym z wykonywaniem zadań z zakresu nadzoru uzupełniającego, o którym mowa w ustawie z dnia 15 kwietnia 2005 r. o nadzorze uzupełniającym nad instytucjami kredytowymi, zakładami ubezpieczeń, zakładami reasekuracji i firmami inwestycyjnymi wchodzącymi w skład konglomeratu finansowego (Dz. U. z 2020 r. poz. 1413).</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/1591__art_17__ust_6" gd:GUID="e85715d0-92fe-47d7-beaa-14b0fcafbe17">
+          <nr>6</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="07f0dad2-62a6-44ef-ae0d-8d8a7146eeda" fragment="1" gd:fragmentGUID="501a8ca7-8995-45c0-a1da-57a47a136d76">Komisja może udzielać informacji posiadanych w związku z wykonywaniem ustawowych zadań bankom centralnym lub innym instytucjom państw członkowskich Unii Europejskiej wykonującym zadania z zakresu polityki monetarnej oraz innym organom publicznym wykonującym zadania z zakresu nadzoru nad systemami płatności, jeżeli informacje te zostaną wykorzystane wyłącznie na potrzeby wykonywanych zadań przez te podmioty.</zdanie>
+            <zdanie nr="2" gd:zdGUID="180c2ce4-2fe4-46a9-83cd-96ca4a6acd58" fragment="1" gd:fragmentGUID="602711a3-9ca1-41ea-b695-8038db2723d1">Przekazywanie udzielonych informacji poza te podmioty następuje wyłącznie po uprzednim uzyskaniu zgody Komisji.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/1591__art_18" gd:GUID="4f4e92f9-58e1-4c30-b376-0e10935169cf">
+        <nr>18</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="00d2fb1f-176b-4583-a7f6-1cfb482d0829">
+          <p>
+            <zdanie nr="1" gd:zdGUID="524a1e4a-c1eb-41bd-bd96-4caa8bd8c3eb" fragment="1" gd:fragmentGUID="35849605-23e8-4b32-bd01-36acbd65b104">(uchylony)</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+      <rozdzial eId="DU/2025/1591__rozdz_3" gd:GUID="1b277dd1-d2f0-4f78-be31-72acd77a0b6b">
+        <naglowek-rozdzialu>
+          <nr>3</nr>
+          <p>(uchylony)</p>
+        </naglowek-rozdzialu>
+        <oddzial-n brak-eid="jednostka-nieoznaczona" gd:GUID="c61c4512-5090-422e-afe7-6036fd153cfe" />
+      </rozdzial>
+      <rozdzial eId="DU/2025/1591__rozdz_4" gd:GUID="3af7db3c-366b-4b00-b2a6-286a9f8c9568">
+        <naglowek-rozdzialu>
+          <nr>4</nr>
+          <p>(oznaczenie rozdziału 4 i tytuł – uchylone)</p>
+        </naglowek-rozdzialu>
+        <oddzial-n brak-eid="jednostka-nieoznaczona" gd:GUID="05e348a4-1878-4f7e-8512-6016873c4c1d" />
+      </rozdzial>
+      <artykul eId="DU/2025/1591__art_31" gd:GUID="016b2a1f-25d9-4af2-b978-ddd65cfa2661">
+        <nr>31</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="8af7178f-3a36-4160-a05b-a0ac37490a8a">
+          <p>
+            <zdanie nr="1" gd:zdGUID="685d977c-602f-433b-8bd7-eac3772d36b1" fragment="1" gd:fragmentGUID="151c202d-494e-4386-8c5e-2ff73f1480b7">(pominięty)</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2025/1591__art_32" gd:GUID="3e17d32a-8ef6-4c76-bdb2-1c90f905803b">
+        <nr>32</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="ba511bf2-3cf7-4bea-87bf-41c85d63cb32">
+          <p>
+            <zdanie nr="1" gd:zdGUID="62592489-95ab-45d4-8c99-7c94b1451edd" fragment="1" gd:fragmentGUID="4dd22afc-cbc9-4f0f-9883-b360eda0f144">(pominięty)</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2025/1591__art_33" gd:GUID="a8fcbd9e-9fe9-48aa-bb2f-7ade799e025b">
+        <nr>33</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="3286ef9c-21de-4312-a8dc-b29fa520e09f">
+          <p>
+            <zdanie nr="1" gd:zdGUID="f8169157-9a19-48a1-afa7-4d0182e8c41a" fragment="1" gd:fragmentGUID="64c0a7d5-4d3d-43da-afa5-da094ccfb6f8">(pominięty)</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+      <rozdzial eId="DU/2025/1591__rozdz_5" gd:GUID="aaf5d019-12a7-4667-9937-863868999ca9">
+        <naglowek-rozdzialu>
+          <nr>5</nr>
+          <p>(oznaczenie rozdziału 5 i tytuł – uchylone)</p>
+        </naglowek-rozdzialu>
+        <oddzial-n brak-eid="jednostka-nieoznaczona" gd:GUID="5f9d3a2d-f92b-4573-adeb-6343dd299597" />
+      </rozdzial>
+      <artykul eId="DU/2025/1591__art_34" gd:GUID="d918b8be-a808-40a9-8706-83ce8e0f240d">
+        <nr>34</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="4696dbbd-5ca9-49c8-af9d-c000d7ee5725">
+          <p>
+            <zdanie nr="1" gd:zdGUID="ec610de4-e819-4db0-8bcd-70c869834481" fragment="1" gd:fragmentGUID="63021528-9c9e-4425-89e2-becdf461c82e">(pominięty)</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2025/1591__art_35" gd:GUID="022d8832-fb02-4beb-b670-e8266b3e388f">
+        <nr>35</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="3f51cf70-619a-45f7-9145-decbbebde1b9">
+          <p>
+            <zdanie nr="1" gd:zdGUID="4e963b2b-664d-444c-8a0d-b0e5a6bfdc25" fragment="1" gd:fragmentGUID="f8f6b95b-1d37-4115-aaf8-39e0455a3e4c">(pominięty)</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2025/1591__art_36" gd:GUID="7e31df8b-69ed-4a89-8b63-b9d3f80ddd1d">
+        <nr>36</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="e4873209-1ed5-42a6-ad46-1b7c447aae66">
+          <p>
+            <zdanie nr="1" gd:zdGUID="69a5acb3-1e2b-4a57-9b81-ac1fcf68f3bf" fragment="1" gd:fragmentGUID="d2d8c2f9-b8c7-46da-863c-10c26491d7a4">Ustawa wchodzi w życie z dniem 1 stycznia 2004 r.</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+    </ustawa>
+  </obwieszczenie>
+</akt-prawny>

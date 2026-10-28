@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <ustawa>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2026/35</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>d85cd2a9-f3f9-4659-aa03-3669d822f2fa</gd:GUIDwersji>
+      <AdresISAP>WDU20260000035</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2026</Rok>
+      <Pozycja>35</Pozycja>
+      <AdresWyswietlany>Dz.U. 2026 poz. 35</AdresWyswietlany>
+      <Tytul>Ustawa z dnia 17 grudnia 2025 r. o zmianie ustawy o dostępie do zasobów genetycznych i podziale korzyści z ich wykorzystania</Tytul>
+      <Rodzaj>USTAWA</Rodzaj>
+      <DataOgloszenia>2026-01-13</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-12-17</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2026-01-14_DU-2026-35_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2026-01-14" warunek="z dniem następującym po dniu ogłoszenia" podstawa="art. 2" zrodlo="https://eli.gov.pl/eli/DU/2026/35" dowod="DU/2026/35__art_2" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2026-01-14_DU-2026-35_domyslne.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2026-01-14_DU-2026-35_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="df6abaf8-9cc7-4bbc-9365-ba65a8570aee" rola="wydajacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Sejm">
+          <Nazwa>SEJM</Nazwa>
+        </Organ>
+        <Organ gd:GUID="0dc658ea-d6a0-4192-8d05-dd69890429f8" rola="podpisujacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Prezydent">
+          <Nazwa>Prezydent Rzeczypospolitej Polskiej</Nazwa>
+          <OrganPodpisujacy>Prezydent Rzeczypospolitej Polskiej</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>K.</imie> <nazwisko>Nawrocki</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Ustawa</rodzaj-aktu>
+    <data>z dnia 17 grudnia 2025 r.</data>
+    <tytul>o zmianie ustawy o dostępie do zasobów genetycznych i podziale korzyści z ich wykorzystania</tytul>
+    <artykul eId="DU/2026/35__art_1" gd:GUID="ba0000a6-837c-43be-9487-99506d606831" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-14_DU-2026-35_domyslne.x" wejscie-w-zycie="2026-01-14">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="1c21295a-3e5a-4402-91c0-b4fa618ca3df" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-14_DU-2026-35_domyslne.x" wejscie-w-zycie="2026-01-14">
+        <p>
+          <zdanie nr="1" gd:zdGUID="d0d9c646-089a-4766-8b25-e7354db3ddcf" fragment="1" gd:fragmentGUID="5e932871-ed63-4f3d-8445-73e0e62e8de0" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-14_DU-2026-35_domyslne.x" wejscie-w-zycie="2026-01-14">W ustawie z dnia 19 lipca 2016 r. o dostępie do zasobów genetycznych i podziale korzyści z ich wykorzystania (Dz. U. z 2019 r. poz. 1594) w art. 24:</zdanie>
+        </p>
+        <punkt eId="DU/2026/35__art_1__pkt_1" gd:GUID="e1a02eb6-f118-41c0-8d5c-c1503ec23d97" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-14_DU-2026-35_domyslne.x" wejscie-w-zycie="2026-01-14">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="d0d9c646-089a-4766-8b25-e7354db3ddcf" fragment="2" gd:fragmentGUID="87fe33af-49fd-4203-b8ea-8db788a4c750" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-14_DU-2026-35_domyslne.x" wejscie-w-zycie="2026-01-14">po ust. 1 dodaje się ust. 1a w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2019/1594" cudzyslowy="oba" gd:nowGUID="f8013398-e370-4652-b33a-0fa423218d1c" element-eId="DU/2019/1594__art_24__ust_1" funkcja="dodaj-po"><ustep eId="DU/2019/1594__art_24__ust_1a" gd:GUID="95cfd723-bc2b-494c-8f68-1c4bbd2c7750" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-14_DU-2026-35_domyslne.x" wejscie-w-zycie="2026-01-14"><nr>1a</nr><p><zdanie nr="1" gd:zdGUID="a1410024-8cdc-4590-a0fc-7d97f16642f4" fragment="1" gd:fragmentGUID="7762ac28-bcf2-45e0-8b5b-774bb1ff6f1d" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-14_DU-2026-35_domyslne.x" wejscie-w-zycie="2026-01-14">W latach 2026–2035 maksymalny limit wydatków budżetu państwa będący skutkiem finansowym ustawy wynosi w roku:</zdanie></p><punkt eId="DU/2019/1594__art_24__ust_1a__pkt_1" gd:GUID="9fabb9ce-b124-4cb1-847a-e21f9cc1309c" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-14_DU-2026-35_domyslne.x" wejscie-w-zycie="2026-01-14"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="a1410024-8cdc-4590-a0fc-7d97f16642f4" fragment="2" gd:fragmentGUID="8f40349a-631c-4a6f-81fd-be1beae07e02" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-14_DU-2026-35_domyslne.x" wejscie-w-zycie="2026-01-14">2026 r. – 2 822 042 zł;</zdanie></p></punkt><punkt eId="DU/2019/1594__art_24__ust_1a__pkt_2" gd:GUID="ebd01cec-a2bc-4bfb-8b13-3bd2cfa7b9b1" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-14_DU-2026-35_domyslne.x" wejscie-w-zycie="2026-01-14"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="a1410024-8cdc-4590-a0fc-7d97f16642f4" fragment="3" gd:fragmentGUID="b8502ab0-011b-4bb5-98fd-79695b137ecf" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-14_DU-2026-35_domyslne.x" wejscie-w-zycie="2026-01-14">2027 r. – 3 079 694 zł;</zdanie></p></punkt><punkt eId="DU/2019/1594__art_24__ust_1a__pkt_3" gd:GUID="13498f9e-d095-4470-94cf-bb752c920770" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-14_DU-2026-35_domyslne.x" wejscie-w-zycie="2026-01-14"><nr>3</nr><p><zdanie nr="1" gd:zdGUID="a1410024-8cdc-4590-a0fc-7d97f16642f4" fragment="4" gd:fragmentGUID="2a2d2a1c-4a1e-4f99-b280-dba095cd12dd" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-14_DU-2026-35_domyslne.x" wejscie-w-zycie="2026-01-14">2028 r. – 2 898 593 zł;</zdanie></p></punkt><punkt eId="DU/2019/1594__art_24__ust_1a__pkt_4" gd:GUID="b7fae6d6-09c1-4d80-9de4-603f86160c1b" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-14_DU-2026-35_domyslne.x" wejscie-w-zycie="2026-01-14"><nr>4</nr><p><zdanie nr="1" gd:zdGUID="a1410024-8cdc-4590-a0fc-7d97f16642f4" fragment="5" gd:fragmentGUID="fbb43230-1d7a-4c58-a2ab-bfc341f5aec4" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-14_DU-2026-35_domyslne.x" wejscie-w-zycie="2026-01-14">2029 r. – 2 968 487 zł;</zdanie></p></punkt><punkt eId="DU/2019/1594__art_24__ust_1a__pkt_5" gd:GUID="0dfe5c38-5c2c-49de-aa0e-baf8d9c89794" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-14_DU-2026-35_domyslne.x" wejscie-w-zycie="2026-01-14"><nr>5</nr><p><zdanie nr="1" gd:zdGUID="a1410024-8cdc-4590-a0fc-7d97f16642f4" fragment="6" gd:fragmentGUID="04e3a939-f6af-427a-9722-d0c01f81e4d5" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-14_DU-2026-35_domyslne.x" wejscie-w-zycie="2026-01-14">2030 r. – 3 042 594 zł;</zdanie></p></punkt><punkt eId="DU/2019/1594__art_24__ust_1a__pkt_6" gd:GUID="4c1f9ef4-b438-4bf7-b66a-d45a724b85dc" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-14_DU-2026-35_domyslne.x" wejscie-w-zycie="2026-01-14"><nr>6</nr><p><zdanie nr="1" gd:zdGUID="a1410024-8cdc-4590-a0fc-7d97f16642f4" fragment="7" gd:fragmentGUID="4e5d1e81-c0cc-4386-82ce-5797ddd196ff" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-14_DU-2026-35_domyslne.x" wejscie-w-zycie="2026-01-14">2031 r. – 3 118 584 zł;</zdanie></p></punkt><punkt eId="DU/2019/1594__art_24__ust_1a__pkt_7" gd:GUID="5d773434-87bc-4b02-b945-cc92e067b1f0" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-14_DU-2026-35_domyslne.x" wejscie-w-zycie="2026-01-14"><nr>7</nr><p><zdanie nr="1" gd:zdGUID="a1410024-8cdc-4590-a0fc-7d97f16642f4" fragment="8" gd:fragmentGUID="79b36dd4-15aa-442b-9ade-74c3347cd898" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-14_DU-2026-35_domyslne.x" wejscie-w-zycie="2026-01-14">2032 r. – 3 196 494 zł;</zdanie></p></punkt><punkt eId="DU/2019/1594__art_24__ust_1a__pkt_8" gd:GUID="960184e9-5399-46f8-bb73-2a1790f29321" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-14_DU-2026-35_domyslne.x" wejscie-w-zycie="2026-01-14"><nr>8</nr><p><zdanie nr="1" gd:zdGUID="a1410024-8cdc-4590-a0fc-7d97f16642f4" fragment="9" gd:fragmentGUID="18ed35ef-ee0b-491b-8efe-df12dfa941f3" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-14_DU-2026-35_domyslne.x" wejscie-w-zycie="2026-01-14">2033 r. – 3 276 421 zł;</zdanie></p></punkt><punkt eId="DU/2019/1594__art_24__ust_1a__pkt_9" gd:GUID="e93f99b5-4afb-434f-9913-f5f979c970c2" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-14_DU-2026-35_domyslne.x" wejscie-w-zycie="2026-01-14"><nr>9</nr><p><zdanie nr="1" gd:zdGUID="a1410024-8cdc-4590-a0fc-7d97f16642f4" fragment="10" gd:fragmentGUID="41ad1b0f-3624-4238-a8a1-576784c89a21" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-14_DU-2026-35_domyslne.x" wejscie-w-zycie="2026-01-14">2034 r. – 3 358 311 zł;</zdanie></p></punkt><punkt eId="DU/2019/1594__art_24__ust_1a__pkt_10" gd:GUID="3fd626b4-f929-4db6-975c-6a2bcae92a57" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-14_DU-2026-35_domyslne.x" wejscie-w-zycie="2026-01-14"><nr>10</nr><p><zdanie nr="1" gd:zdGUID="a1410024-8cdc-4590-a0fc-7d97f16642f4" fragment="11" gd:fragmentGUID="66de3319-babb-4372-994b-8e6a14d0f82b" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-14_DU-2026-35_domyslne.x" wejscie-w-zycie="2026-01-14">2035 r. – 3 442 166 zł.</zdanie></p></punkt></ustep></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/35__art_1__pkt_2" gd:GUID="7f21df5b-9aa9-4a7b-b1e2-99a61ccda3c2" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-14_DU-2026-35_domyslne.x" wejscie-w-zycie="2026-01-14">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="d0d9c646-089a-4766-8b25-e7354db3ddcf" fragment="3" gd:fragmentGUID="402b0c1e-88f9-4f05-ab24-3b15cc5c4e56" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-14_DU-2026-35_domyslne.x" wejscie-w-zycie="2026-01-14">po ust. 2 dodaje się ust. 2a w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2019/1594" cudzyslowy="oba" gd:nowGUID="e3bf46f3-afee-48f3-b7d8-adb01cc6baf5" element-eId="DU/2019/1594__art_24__ust_2" funkcja="dodaj-po"><ustep eId="DU/2019/1594__art_24__ust_2a" gd:GUID="65c6cf0b-2dbe-408e-85a2-bc47bbcadab9" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-14_DU-2026-35_domyslne.x" wejscie-w-zycie="2026-01-14"><nr>2a</nr><p><zdanie nr="1" gd:zdGUID="53a4e312-5fef-4dd8-af7e-f3c3074fa126" fragment="1" gd:fragmentGUID="8351b695-f721-408a-9fdc-ef5dfc204429" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-14_DU-2026-35_domyslne.x" wejscie-w-zycie="2026-01-14">W przypadku zagrożenia przekroczenia limitu wydatków, o którym mowa w ust. 1a, na dany rok budżetowy zostanie zastosowany mechanizm korygujący polegający na obniżeniu wymiaru czasu pracy w stosunku do osób zatrudnionych do realizacji zadań określonych ustawą.</zdanie></p></ustep></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/35__art_1__pkt_3" gd:GUID="33b45044-7257-4154-8332-014ae7a9e798" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-14_DU-2026-35_domyslne.x" wejscie-w-zycie="2026-01-14">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="d0d9c646-089a-4766-8b25-e7354db3ddcf" fragment="4" gd:fragmentGUID="190af097-d019-440b-b0b8-b2cd9fdf5119" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-14_DU-2026-35_domyslne.x" wejscie-w-zycie="2026-01-14">po ust. 3 dodaje się ust. 3a w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2019/1594" cudzyslowy="oba" gd:nowGUID="5b16dfc0-b185-48a7-9b9e-a647d9f0b65a" element-eId="DU/2019/1594__art_24__ust_3" funkcja="dodaj-po"><ustep eId="DU/2019/1594__art_24__ust_3a" gd:GUID="2966f320-2536-41e4-a892-c8b61e9b6c4f" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-14_DU-2026-35_domyslne.x" wejscie-w-zycie="2026-01-14"><nr>3a</nr><p><zdanie nr="1" gd:zdGUID="3bc34eb9-3fe0-442d-830a-a66c5f600392" fragment="1" gd:fragmentGUID="a2d9ac94-5bba-452e-b50b-053addeabca1" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-14_DU-2026-35_domyslne.x" wejscie-w-zycie="2026-01-14">Organami właściwymi do wdrożenia mechanizmu korygującego, o którym mowa w ust. 2a, są minister właściwy do spraw środowiska, minister właściwy do spraw klimatu i wojewodowie.</zdanie></p></ustep></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/35__art_1__pkt_4" gd:GUID="0d86281c-5cab-4f3f-a635-51c7adc27eec" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-14_DU-2026-35_domyslne.x" wejscie-w-zycie="2026-01-14">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="d0d9c646-089a-4766-8b25-e7354db3ddcf" fragment="5" gd:fragmentGUID="892c10aa-b626-49a2-b018-3cfc2e0ba541" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-14_DU-2026-35_domyslne.x" wejscie-w-zycie="2026-01-14">dodaje się ust. 5 w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2019/1594" cudzyslowy="oba" gd:nowGUID="43b3fd96-66bb-4732-83ab-bd967bec643e" element-eId="DU/2019/1594__art_24" funkcja="dodaj-w"><ustep eId="DU/2019/1594__art_24__ust_5" gd:GUID="0289993a-ff2e-4fa4-9bd4-2dd600247377" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-14_DU-2026-35_domyslne.x" wejscie-w-zycie="2026-01-14"><nr>5</nr><p><zdanie nr="1" gd:zdGUID="4c07ef2c-e6c6-46c8-bc4a-e066e2afa16a" fragment="1" gd:fragmentGUID="84a36603-461a-435e-9a4f-1158fc268176" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-14_DU-2026-35_domyslne.x" wejscie-w-zycie="2026-01-14">Organem właściwym do monitorowania wykorzystania limitu wydatków, o którym mowa w ust. 1a, jest minister właściwy do spraw środowiska w porozumieniu z ministrem właściwym do spraw klimatu lub wojewodami.</zdanie></p></ustep></cytat-strukt>.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2026/35__art_2" gd:GUID="c04ff101-930c-43dd-b37b-ee271d9f962d" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-14_DU-2026-35_domyslne.x" wejscie-w-zycie="2026-01-14">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="e40584c0-82dd-4f7c-9fce-d28da6e09231" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-14_DU-2026-35_domyslne.x" wejscie-w-zycie="2026-01-14">
+        <p>
+          <zdanie nr="1" gd:zdGUID="7cb6c26c-24cf-4b78-9c65-8c31b78800dc" fragment="1" gd:fragmentGUID="7a420e1b-e84c-4d1d-a6fd-6662b891d5de" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-14_DU-2026-35_domyslne.x" wejscie-w-zycie="2026-01-14">Ustawa wchodzi w życie z dniem następującym po dniu ogłoszenia.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <organ-podpisujacy>Prezydent Rzeczypospolitej Polskiej: <i><osoba podpisujacy="true" gd:osobaGUID="45b765c6-6af2-41d8-b11b-2decfda3c6e8"><imie>K.</imie> <nazwisko>Nawrocki</nazwisko></osoba></i></organ-podpisujacy>
+  </ustawa>
+</akt-prawny>

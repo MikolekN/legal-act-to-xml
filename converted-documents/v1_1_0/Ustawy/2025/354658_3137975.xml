@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <ustawa>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/1838</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>05fb6690-ae76-4ec2-99b7-13284a76dfe4</gd:GUIDwersji>
+      <AdresISAP>WDU20250001838</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>1838</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 1838</AdresWyswietlany>
+      <Tytul>Ustawa z dnia 21 listopada 2025 r. o zmianie ustawy o podatku dochodowym od osób fizycznych</Tytul>
+      <Rodzaj>USTAWA</Rodzaj>
+      <DataOgloszenia>2025-12-22</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-11-21</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2026-01-01_DU-2025-1838_odczytane" rodzaj="wejscie-w-zycie" pochodzenie="odczytane" data="2026-01-01" podstawa="art. 3" zrodlo="https://eli.gov.pl/eli/DU/2025/1838" dowod="DU/2025/1838__art_3" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1838_odczytane.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2026-01-01_DU-2025-1838_odczytane" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="d6cb7e92-508e-437a-93c9-5a4d94560c3d" rola="wydajacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Sejm">
+          <Nazwa>SEJM</Nazwa>
+        </Organ>
+        <Organ gd:GUID="c3a5abf8-2e65-4a59-9e4f-6bd86a7d308c" rola="podpisujacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Prezydent">
+          <Nazwa>Prezydent Rzeczypospolitej Polskiej</Nazwa>
+          <OrganPodpisujacy>Prezydent Rzeczypospolitej Polskiej</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>K.</imie> <nazwisko>Nawrocki</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Ustawa</rodzaj-aktu>
+    <data>z dnia 21 listopada 2025 r.</data>
+    <tytul>o zmianie ustawy o podatku dochodowym od osób fizycznych</tytul>
+    <artykul eId="DU/2025/1838__art_1" gd:GUID="d1a87eb4-b0a6-47d8-825b-947545bb983c" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1838_odczytane.x" wejscie-w-zycie="2026-01-01">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="5ce57b4e-39bc-4968-a588-6b51a123b502" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1838_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="c76de54d-87a8-46fe-97a4-7e752ff0203e" fragment="1" gd:fragmentGUID="34e54018-222a-4a60-b815-eecd043a4757" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1838_odczytane.x" wejscie-w-zycie="2026-01-01">W ustawie z dnia 26 lipca 1991 r. o podatku dochodowym od osób fizycznych (Dz. U. z 2025 r. poz. 163, z późn. zm.<odnosnik id-odnosnika="1" symbol="1" gd:GUID="8f3e2d4b-9b74-4785-8e0e-32fe767b8760"><p><zdanie nr="1" gd:zdGUID="c0aa7fa7-14da-4c6d-9ec4-ea855335ae53" fragment="1" gd:fragmentGUID="b70c1721-5d95-40af-88b0-bcaf99eb16f0">Zmiany tekstu jednolitego wymienionej ustawy zostały ogłoszone w Dz. U. z 2025 r. poz. 340, 368, 620, 680, 1022, 1180, 1301, 1302, 1366, 1795, 1804, 1817, 1822 i 1823.</zdanie></p></odnosnik>) w art. 22 po ust. 1u dodaje się ust. 1v w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2025/163" cudzyslowy="oba" gd:nowGUID="c88448d6-24cd-44c3-baec-2881024f9f3b" element-eId="DU/2025/163__art_22__ust_1u" funkcja="dodaj-po"><ustep eId="DU/2025/163__art_22__ust_1v" gd:GUID="9950189b-f55f-4c74-8436-9236603e679f" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1838_odczytane.x" wejscie-w-zycie="2026-01-01"><nr>1v</nr><p><zdanie nr="1" gd:zdGUID="48abc5c0-e50c-448e-b58e-8dd711feb8f4" fragment="1" gd:fragmentGUID="5bc07ad4-f878-4d21-9d27-0e0008411979" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1838_odczytane.x" wejscie-w-zycie="2026-01-01">W przypadku umorzenia akcji lub innych papierów wartościowych na podstawie decyzji wydanej przez Bankowy Fundusz Gwarancyjny przyjmuje się, że nastąpiło ich odpłatne zbycie, przy czym wydatki na objęcie lub nabycie tych akcji lub innych papierów wartościowych w części niezaliczonej wcześniej w jakiejkolwiek formie do kosztów uzyskania przychodów:</zdanie></p><punkt eId="DU/2025/163__art_22__ust_1v__pkt_1" gd:GUID="56f69bfe-0b36-41b2-88e7-21b6986f0806" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1838_odczytane.x" wejscie-w-zycie="2026-01-01"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="48abc5c0-e50c-448e-b58e-8dd711feb8f4" fragment="2" gd:fragmentGUID="841e3bce-6fc9-4ede-82ae-70ae228836d3" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1838_odczytane.x" wejscie-w-zycie="2026-01-01">uważa się za koszty uzyskania przychodów poniesione w roku podatkowym, w którym te akcje lub inne papiery wartościowe zostały umorzone, choćby w tym roku podatnik nie uzyskał przychodów opodatkowanych zgodnie z art. 30b ust. 1, oraz</zdanie></p></punkt><punkt eId="DU/2025/163__art_22__ust_1v__pkt_2" gd:GUID="1d43f84f-4b7b-4475-826d-453ca17aa199" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1838_odczytane.x" wejscie-w-zycie="2026-01-01"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="48abc5c0-e50c-448e-b58e-8dd711feb8f4" fragment="3" gd:fragmentGUID="befa87af-4713-4ede-bb67-39134f53dff0" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1838_odczytane.x" wejscie-w-zycie="2026-01-01">uwzględnia się w roku podatkowym, o którym mowa w pkt 1, przy określaniu:</zdanie></p><litera eId="DU/2025/163__art_22__ust_1v__pkt_2__lit_a" gd:GUID="86b5f822-8a99-4310-85dd-5dba58172422" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1838_odczytane.x" wejscie-w-zycie="2026-01-01"><nr>a</nr><p><zdanie nr="1" gd:zdGUID="48abc5c0-e50c-448e-b58e-8dd711feb8f4" fragment="4" gd:fragmentGUID="5db1a908-c093-4a2f-9721-b329e60c5a86" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1838_odczytane.x" wejscie-w-zycie="2026-01-01">dochodu z odpłatnego zbycia papierów wartościowych, o którym mowa w art. 30b ust. 2 pkt 1, albo</zdanie></p></litera><litera eId="DU/2025/163__art_22__ust_1v__pkt_2__lit_b" gd:GUID="c7d5faf6-4da1-4f79-ba59-c799cfc3b779" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1838_odczytane.x" wejscie-w-zycie="2026-01-01"><nr>b</nr><p><zdanie nr="1" gd:zdGUID="48abc5c0-e50c-448e-b58e-8dd711feb8f4" fragment="5" gd:fragmentGUID="220ac665-c200-4a15-9741-9330dbf9b91c" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1838_odczytane.x" wejscie-w-zycie="2026-01-01">dochodu z odpłatnego zbycia akcji, o którym mowa w art. 30b ust. 2 pkt 4.</zdanie></p></litera></punkt></ustep></cytat-strukt>.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2025/1838__art_2" gd:GUID="f700b747-c117-4177-9a4b-25757e775585" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1838_odczytane.x" wejscie-w-zycie="2026-01-01">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="9f12cbe4-456e-48c5-b8eb-22724ad42733" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1838_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="51fb940a-c6b5-48de-9fac-1cedd12d212b" fragment="1" gd:fragmentGUID="7f179d70-cd47-4571-aba3-eb5827d45183" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1838_odczytane.x" wejscie-w-zycie="2026-01-01">Przepis art. 22 ust. 1v ustawy zmienianej w art. 1 ma zastosowanie do wydatków poniesionych przez podatnika na objęcie lub nabycie akcji lub innych papierów wartościowych, których umorzenie nastąpiło na podstawie decyzji wydanej po dniu 31 grudnia 2025 r.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2025/1838__art_3" gd:GUID="9b9e9197-0759-4dfd-b88c-83fefa331cce" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1838_odczytane.x" wejscie-w-zycie="2026-01-01">
+      <nr>3</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="cd5f43fc-efab-4c4b-8494-3fe288aad62b" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1838_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="d37d2e28-3136-4f87-924e-cdc1e6ce5906" fragment="1" gd:fragmentGUID="ad2b12c5-211f-4227-b842-5d14efa0f7a8" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1838_odczytane.x" wejscie-w-zycie="2026-01-01">Ustawa wchodzi w życie z dniem 1 stycznia 2026 r.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <organ-podpisujacy>Prezydent Rzeczypospolitej Polskiej: <i><osoba podpisujacy="true" gd:osobaGUID="1e1793e7-b8ac-4eab-94b6-c43cf151e161"><imie>K.</imie> <nazwisko>Nawrocki</nazwisko></osoba></i></organ-podpisujacy>
+  </ustawa>
+</akt-prawny>

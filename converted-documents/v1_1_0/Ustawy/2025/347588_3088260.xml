@@ -1,0 +1,370 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <ustawa>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/1556</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>7901a399-837c-4145-878a-5681291eee3c</gd:GUIDwersji>
+      <AdresISAP>WDU20250001556</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>1556</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 1556</AdresWyswietlany>
+      <Tytul>Ustawa z dnia 26 września 2025 r. o zmianie ustawy o Krajowym Rejestrze Sądowym oraz niektórych innych ustaw</Tytul>
+      <Rodzaj>USTAWA</Rodzaj>
+      <DataOgloszenia>2025-11-14</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-09-26</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2025-11-29" warunek="po upływie 14 dni od dnia ogłoszenia" podstawa="art. 11" zrodlo="https://eli.gov.pl/eli/DU/2025/1556" dowod="DU/2025/1556__art_11" />
+          <Zdarzenie id="zdarz_wejscie_2027-04-01_DU-2025-1556_odczytane" rodzaj="wejscie-w-zycie" pochodzenie="odczytane" data="2027-04-01" podstawa="art. 11" zrodlo="https://eli.gov.pl/eli/DU/2025/1556" dowod="DU/2025/1556__art_11">
+            <JednostkaAktu eId="DU/2025/1556__art_1__pkt_3" />
+            <JednostkaAktu eId="DU/2025/1556__art_1__pkt_7" />
+            <JednostkaAktu eId="DU/2025/1556__art_10__pkt_2" />
+          </Zdarzenie>
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne" />
+        </GrupaCzasowa>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2027-04-01_DU-2025-1556_odczytane.x" glowna="false">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2027-04-01_DU-2025-1556_odczytane" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="dfe4faa5-01e3-47de-a412-6706938ae125" rola="wydajacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Sejm">
+          <Nazwa>SEJM</Nazwa>
+        </Organ>
+        <Organ gd:GUID="8f195402-09ee-4518-8f4e-1263f018b9fe" rola="podpisujacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Prezydent">
+          <Nazwa>Prezydent Rzeczypospolitej Polskiej</Nazwa>
+          <OrganPodpisujacy>Prezydent Rzeczypospolitej Polskiej</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>K.</imie> <nazwisko>Nawrocki</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Ustawa</rodzaj-aktu>
+    <data>z dnia 26 września 2025 r.</data>
+    <tytul>o zmianie ustawy o Krajowym Rejestrze Sądowym oraz niektórych innych ustaw<odnosnik id-odnosnika="1" symbol="1" gd:GUID="7a815b8e-d2db-4b63-a2db-34398692bfce"><p><zdanie nr="1" gd:zdGUID="d1971853-b6d7-4252-9b3e-ba21e67c5ed6" fragment="1" gd:fragmentGUID="1c3feb99-0664-4679-9017-0f162eb42380">Niniejszą ustawą zmienia się ustawy: ustawę z dnia 16 września 1982 r. – Prawo spółdzielcze, ustawę z dnia 22 grudnia 1995 r. o wydawaniu Monitora Sądowego i Gospodarczego, ustawę z dnia 9 września 2000 r. o podatku od czynności cywilnoprawnych, ustawę z dnia 4 marca 2005 r. o europejskim zgrupowaniu interesów gospodarczych i spółce europejskiej, ustawę z dnia 29 lipca 2005 r. o obrocie instrumentami finansowymi, ustawę z dnia 27 kwietnia 2006 r. o spółdzielniach socjalnych oraz ustawę z dnia 22 lipca 2006 r. o spółdzielni europejskiej.</zdanie></p></odnosnik></tytul>
+    <artykul eId="DU/2025/1556__art_1" gd:GUID="d1485c56-c83f-4f57-b932-03678df0d3b9" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="3c7a961a-38dd-4ac0-8d87-4537cb98b0f6" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29">
+        <p>
+          <zdanie nr="1" gd:zdGUID="469c86f2-865c-43b9-9b26-23a2ef0b0844" fragment="1" gd:fragmentGUID="0b1927c2-4a70-4b69-aff7-ced8e9a31c54" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29">W ustawie z dnia 20 sierpnia 1997 r. o Krajowym Rejestrze Sądowym (Dz. U. z 2025 r. poz. 869) wprowadza się następujące zmiany:</zdanie>
+        </p>
+        <punkt eId="DU/2025/1556__art_1__pkt_1" gd:GUID="b94b2068-8373-4123-9f1e-78c23973fa07" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="469c86f2-865c-43b9-9b26-23a2ef0b0844" fragment="2" gd:fragmentGUID="55357cdc-7f6a-48c0-8605-f3c589b6f8e4" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29"><now:uchyl akt="https://eli.gov.pl/eli/DU/2025/869" element-eId="DU/2025/869__art_2__ust_2" gd:nowGUID="5e339869-2d07-456f-b23f-ff587879a1f2" /><now:uchyl akt="https://eli.gov.pl/eli/DU/2025/869" element-eId="DU/2025/869__art_2__ust_3" gd:nowGUID="41a6910e-4fe5-443c-82ab-28897adef663" />w art. 2 uchyla się ust. 2 i 3;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1556__art_1__pkt_2" gd:GUID="9f575b5f-f1f5-43cc-969d-32e2d660d953" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="469c86f2-865c-43b9-9b26-23a2ef0b0844" fragment="3" gd:fragmentGUID="8af06b81-780b-492e-9cdb-98b6ba962673" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29">w art. 4 po ust. 4b dodaje się ust. 4c–4m w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2025/869" cudzyslowy="oba" gd:nowGUID="ee285433-3cb6-439a-b11d-3c29d0a97c21" element-eId="DU/2025/869__art_4__ust_4b" funkcja="dodaj-po"><ustep eId="DU/2025/869__art_4__ust_4c" gd:GUID="d10e6c6b-98ad-4523-acbf-198928d70937" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29"><nr>4c</nr><p><zdanie nr="1" gd:zdGUID="a18d8b34-0f3a-4a76-ac67-71e54248f8c7" fragment="1" gd:fragmentGUID="078cf0aa-c41f-4a9d-9235-4c02347039bc" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29">Centralna Informacja udostępnia podmiotom, które uzyskały zgodę, o której mowa w ust. 4d, bezpłatnie informacje z Rejestru za pośrednictwem usług sieciowych.</zdanie></p></ustep><ustep eId="DU/2025/869__art_4__ust_4d" gd:GUID="a03b4301-5675-488a-b031-7818d1e0e978" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29"><nr>4d</nr><p><zdanie nr="1" gd:zdGUID="cb084952-f46a-4c35-a696-f339c55d8344" fragment="1" gd:fragmentGUID="cbbba250-220f-4ea3-a8a1-1bc2496d9c62" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29">Minister Sprawiedliwości, w drodze decyzji administracyjnej, wyraża zgodę na udostępnianie informacji z Rejestru za pośrednictwem usług sieciowych.</zdanie></p></ustep><ustep eId="DU/2025/869__art_4__ust_4e" gd:GUID="ef482ab9-4e5e-48ad-8983-0bdaa829febc" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29"><nr>4e</nr><p><zdanie nr="1" gd:zdGUID="736e1fe3-3cdf-40b6-84c1-893766fcb79a" fragment="1" gd:fragmentGUID="54fb609d-fcc2-4c8e-b1bc-7fc0d84992e4" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29">Podmiot publiczny w rozumieniu art. 2 ust. 1 ustawy z dnia 17 lutego 2005 r. o informatyzacji działalności podmiotów realizujących zadania publiczne (Dz. U. z 2024 r. poz. 1557 i 1717 oraz z 2025 r. poz. 1006, 1019, 1158 i 1301) albo podmiot niebędący podmiotem publicznym, który realizuje zadania publiczne na podstawie odrębnych przepisów albo na skutek powierzenia lub zlecenia przez podmiot publiczny ich realizacji, może wystąpić z wnioskiem o wyrażenie zgody, o której mowa w ust. 4d, jeżeli:</zdanie></p><punkt eId="DU/2025/869__art_4__ust_4e__pkt_1" gd:GUID="58f0010c-01a7-4de1-bfd7-74e6dd78ef44" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="736e1fe3-3cdf-40b6-84c1-893766fcb79a" fragment="2" gd:fragmentGUID="70c2ca8d-bcc6-40a0-8e47-cae70ea3ca8a" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29">jest to niezbędne do realizacji przez ten podmiot zadań publicznych;</zdanie></p></punkt><punkt eId="DU/2025/869__art_4__ust_4e__pkt_2" gd:GUID="62e45bbc-ea75-458d-a43a-bf6a91140a4a" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="736e1fe3-3cdf-40b6-84c1-893766fcb79a" fragment="3" gd:fragmentGUID="90867e66-3667-4b81-ba4b-7d82b6b885d9" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29">podmiot posiada i stosuje urządzenia lub systemy teleinformatyczne umożliwiające identyfikację osoby uzyskującej informacje z Rejestru, zakresu informacji oraz daty ich uzyskania;</zdanie></p></punkt><punkt eId="DU/2025/869__art_4__ust_4e__pkt_3" gd:GUID="b00c4412-4e8b-437a-bcb0-b80100ab4460" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29"><nr>3</nr><p><zdanie nr="1" gd:zdGUID="736e1fe3-3cdf-40b6-84c1-893766fcb79a" fragment="4" gd:fragmentGUID="7cc63000-936f-4be4-8e40-974d76933929" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29">podmiot ma wdrożone zabezpieczenia techniczne i organizacyjne adekwatne do oszacowanego ryzyka, zapewniające poufność, integralność, dostępność i autentyczność przetwarzanych danych.</zdanie></p></punkt></ustep><ustep eId="DU/2025/869__art_4__ust_4f" gd:GUID="c264ccf0-d1e9-4bd7-a09e-afd324393a10" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29"><nr>4f</nr><p><zdanie nr="1" gd:zdGUID="edb55f1c-6e16-46f4-8bb6-1630925bcf5d" fragment="1" gd:fragmentGUID="3528f49a-c890-447c-a873-6c8ff1637c18" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29">O zgodę, o której mowa w ust. 4d, może wystąpić także podmiot uprawniony do występowania w imieniu grupy podmiotów.</zdanie></p></ustep><ustep eId="DU/2025/869__art_4__ust_4g" gd:GUID="d40f0bf1-e207-4c00-b3ae-57a5c038f031" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29"><nr>4g</nr><p><zdanie nr="1" gd:zdGUID="433e0aeb-080e-462b-adf9-fc84050827d6" fragment="1" gd:fragmentGUID="aaa7b215-5dd5-4d11-addf-8cc76c0b004e" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29">Wniosek, o którym mowa w ust. 4e, zawiera:</zdanie></p><punkt eId="DU/2025/869__art_4__ust_4g__pkt_1" gd:GUID="9bec0ca5-64c9-4e00-9161-f0198ee3d0c8" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="433e0aeb-080e-462b-adf9-fc84050827d6" fragment="2" gd:fragmentGUID="088487ca-3075-4b42-8998-a590e5363486" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29">oznaczenie wnioskodawcy;</zdanie></p></punkt><punkt eId="DU/2025/869__art_4__ust_4g__pkt_2" gd:GUID="963ced96-cb02-4bee-bc80-6450fe9965c6" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="433e0aeb-080e-462b-adf9-fc84050827d6" fragment="3" gd:fragmentGUID="66d15acb-6a3d-44bd-aeed-0192b0beb33e" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29">oznaczenie podmiotu, którego dotyczy wniosek;</zdanie></p></punkt><punkt eId="DU/2025/869__art_4__ust_4g__pkt_3" gd:GUID="09de1267-5414-4a97-8bbd-d56e813da18c" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29"><nr>3</nr><p><zdanie nr="1" gd:zdGUID="433e0aeb-080e-462b-adf9-fc84050827d6" fragment="4" gd:fragmentGUID="2fee151a-00bc-44a7-a1be-f42ce169e45e" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29">wskazanie zadań, o których mowa w ust. 4e pkt 1, z przywołaniem przepisów, z których wynikają te zadania lub kompetencja do ich powierzenia lub zlecenia;</zdanie></p></punkt><punkt eId="DU/2025/869__art_4__ust_4g__pkt_4" gd:GUID="8c0daded-870d-4680-a415-137d33ee15c7" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29"><nr>4</nr><p><zdanie nr="1" gd:zdGUID="433e0aeb-080e-462b-adf9-fc84050827d6" fragment="5" gd:fragmentGUID="3a253d4c-3714-4c34-9c32-8f3bf8665368" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29">uzasadnienie spełnienia przesłanki niezbędności, o której mowa w ust. 4e pkt 1;</zdanie></p></punkt><punkt eId="DU/2025/869__art_4__ust_4g__pkt_5" gd:GUID="2bb0ba93-61ec-43fd-9976-f4fae401ea4c" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29"><nr>5</nr><p><zdanie nr="1" gd:zdGUID="433e0aeb-080e-462b-adf9-fc84050827d6" fragment="6" gd:fragmentGUID="5e3389b0-0e6f-4226-8bc2-95c0b2bf5439" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29">oświadczenie wnioskodawcy o:</zdanie></p><litera eId="DU/2025/869__art_4__ust_4g__pkt_5__lit_a" gd:GUID="f29c307f-026a-49c6-8c4e-8edfc25954e3" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29"><nr>a</nr><p><zdanie nr="1" gd:zdGUID="433e0aeb-080e-462b-adf9-fc84050827d6" fragment="7" gd:fragmentGUID="69c02f91-1a59-4795-bc33-ee645a58396d" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29">posiadaniu i stosowaniu urządzenia lub systemu teleinformatycznego umożliwiającego identyfikację osoby uzyskującej informacje z Rejestru, zakresu informacji oraz daty ich uzyskania,</zdanie></p></litera><litera eId="DU/2025/869__art_4__ust_4g__pkt_5__lit_b" gd:GUID="12339206-551a-4e1d-9e12-32703bb08a11" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29"><nr>b</nr><p><zdanie nr="1" gd:zdGUID="433e0aeb-080e-462b-adf9-fc84050827d6" fragment="8" gd:fragmentGUID="1c31bdf6-a319-4246-94b1-3e3ae11a9e30" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29">wdrożeniu zabezpieczeń technicznych i organizacyjnych, adekwatnych do oszacowanego ryzyka, zapewniających poufność, integralność, dostępność i autentyczność przetwarzanych danych,</zdanie></p></litera><litera eId="DU/2025/869__art_4__ust_4g__pkt_5__lit_c" gd:GUID="ce242b4b-df93-4e92-ad30-67609c503391" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29"><nr>c</nr><p><zdanie nr="1" gd:zdGUID="433e0aeb-080e-462b-adf9-fc84050827d6" fragment="9" gd:fragmentGUID="4493e148-27bc-43d1-806b-836111391a97" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29">wykorzystywaniu dostępu wyłącznie w celu określonym w ustawie,</zdanie></p></litera><litera eId="DU/2025/869__art_4__ust_4g__pkt_5__lit_d" gd:GUID="2bcb55c8-21d7-4b4e-9b5c-1dff490f3ce3" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29"><nr>d</nr><p><zdanie nr="1" gd:zdGUID="433e0aeb-080e-462b-adf9-fc84050827d6" fragment="10" gd:fragmentGUID="3c747bdc-b454-4465-96f4-744a328dd3a5" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29">zabezpieczeniu uzyskanych informacji;</zdanie></p></litera></punkt><punkt eId="DU/2025/869__art_4__ust_4g__pkt_6" gd:GUID="a9e50d88-8932-4d21-b0ce-9709591c1a9b" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29"><nr>6</nr><p><zdanie nr="1" gd:zdGUID="433e0aeb-080e-462b-adf9-fc84050827d6" fragment="11" gd:fragmentGUID="eee60c0d-f87a-4a32-855c-5ac0e9d2a0ff" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29">wskazanie osoby umocowanej do rozwiązywania technicznych problemów w zakresie uzyskiwania informacji z Rejestru za pośrednictwem usług sieciowych;</zdanie></p></punkt><punkt eId="DU/2025/869__art_4__ust_4g__pkt_7" gd:GUID="e69fe9f4-40eb-4afb-b5bc-1c425cd01557" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29"><nr>7</nr><p><zdanie nr="1" gd:zdGUID="433e0aeb-080e-462b-adf9-fc84050827d6" fragment="12" gd:fragmentGUID="afbae3e1-a4df-4e27-87c5-8ff23ced9a0d" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29">uzasadnienie uprawnienia do występowania w imieniu grupy podmiotów – jeśli wnioskodawca składa wniosek w imieniu grupy podmiotów.</zdanie></p></punkt></ustep><ustep eId="DU/2025/869__art_4__ust_4h" gd:GUID="bbd7c3cd-3177-4667-bec5-06acfe8d9bc6" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29"><nr>4h</nr><p><zdanie nr="1" gd:zdGUID="ff078f7b-cf99-4346-a5ab-b6df66029859" fragment="1" gd:fragmentGUID="d192e262-46ae-44eb-8b61-a4da95261d93" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29">Minister Sprawiedliwości może żądać szczegółowego wykazania spełnienia przesłanek, o których mowa w ust. 4e.</zdanie></p></ustep><ustep eId="DU/2025/869__art_4__ust_4i" gd:GUID="fb32347e-cd35-42a7-ba3e-d63c038fbbfc" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29"><nr>4i</nr><p><zdanie nr="1" gd:zdGUID="ac2e19d5-014f-4850-8507-c9dac97b59f6" fragment="1" gd:fragmentGUID="59056ab3-ebb6-4312-a420-54dcd6a87cb1" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29">Minister Sprawiedliwości odmawia, w drodze decyzji administracyjnej, wyrażenia zgody, o której mowa w ust. 4d, jeżeli nie zostały spełnione przesłanki, o których mowa w ust. 4e, lub Centralna Informacja nie posiada odpowiednich do uruchomienia usługi warunków technicznych.</zdanie></p></ustep><ustep eId="DU/2025/869__art_4__ust_4j" gd:GUID="37c7c259-5e9c-4c51-b225-c00e1f1fe076" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29"><nr>4j</nr><p><zdanie nr="1" gd:zdGUID="c7b089d2-f3b1-4b46-91f1-33ca8f94965b" fragment="1" gd:fragmentGUID="87f7e802-5b11-4059-bebd-2afa9777b80f" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29">Podmiot, któremu Minister Sprawiedliwości wyraził zgodę, o której mowa w ust. 4d, jest obowiązany niezwłocznie poinformować Ministra Sprawiedliwości o:</zdanie></p><punkt eId="DU/2025/869__art_4__ust_4j__pkt_1" gd:GUID="4f4842ba-2e1d-4f68-80fa-85da64e29c48" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="c7b089d2-f3b1-4b46-91f1-33ca8f94965b" fragment="2" gd:fragmentGUID="2c568688-4514-4a5f-9fb4-879e35dfb5c0" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29">zaprzestaniu realizacji zadań publicznych uzasadniających dostęp do informacji z Rejestru za pośrednictwem usług sieciowych;</zdanie></p></punkt><punkt eId="DU/2025/869__art_4__ust_4j__pkt_2" gd:GUID="8f81b221-4799-4452-8eae-d842179c1f51" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="c7b089d2-f3b1-4b46-91f1-33ca8f94965b" fragment="3" gd:fragmentGUID="216159b7-2647-44df-936b-fd214dd030b3" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29">zmianie stosowanych urządzeń lub systemów teleinformatycznych umożliwiających identyfikację osoby uzyskującej informacje z Rejestru, zakresu informacji oraz daty ich uzyskania, mającej wpływ na sposób tej identyfikacji;</zdanie></p></punkt><punkt eId="DU/2025/869__art_4__ust_4j__pkt_3" gd:GUID="90a07583-bb12-45b6-a603-81c05d481217" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29"><nr>3</nr><p><zdanie nr="1" gd:zdGUID="c7b089d2-f3b1-4b46-91f1-33ca8f94965b" fragment="4" gd:fragmentGUID="7f19b4b7-af51-41c9-8dd4-64d45f22cabd" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29">zmianie wdrożonych zabezpieczeń technicznych i organizacyjnych, adekwatnych do oszacowanego ryzyka, zapewniających poufność, integralność, dostępność i autentyczność przetwarzanych danych.</zdanie></p></punkt></ustep><ustep eId="DU/2025/869__art_4__ust_4k" gd:GUID="c0ee1785-d804-47a7-9502-38a7e0c2646b" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29"><nr>4k</nr><p><zdanie nr="1" gd:zdGUID="1995938e-1a4a-4415-876c-5d4b55396016" fragment="1" gd:fragmentGUID="c5ef3e0d-a606-4b56-82a5-c4b1dc51747b" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29">Informacja, o której mowa w ust. 4j pkt 2 lub 3, zawiera oświadczenie podmiotu, czy:</zdanie></p><punkt eId="DU/2025/869__art_4__ust_4k__pkt_1" gd:GUID="38a75133-1b57-4a3d-9cf0-0d3d3bcf1b5d" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="1995938e-1a4a-4415-876c-5d4b55396016" fragment="2" gd:fragmentGUID="3edd1c67-31e4-4c3c-8a87-5bf4bd66885c" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29">urządzenia lub systemy teleinformatyczne, o których mowa w ust. 4j pkt 2, umożliwiają identyfikację osoby uzyskującej informacje z Rejestru, zakresu informacji oraz daty ich uzyskania;</zdanie></p></punkt><punkt eId="DU/2025/869__art_4__ust_4k__pkt_2" gd:GUID="498b694e-e5d8-443b-ac3c-0903eac46d0b" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="1995938e-1a4a-4415-876c-5d4b55396016" fragment="3" gd:fragmentGUID="358e4c20-2050-4c4e-9f33-a5d8b04075d4" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29">wdrożone zabezpieczenia techniczne i organizacyjne, o których mowa w ust. 4j pkt 3, zapewniają poufność, integralność, dostępność i autentyczność przetwarzanych danych.</zdanie></p></punkt></ustep><ustep eId="DU/2025/869__art_4__ust_4l" gd:GUID="cd26a32b-9470-46eb-a306-83d4415d93ec" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29"><nr>4l</nr><p><zdanie nr="1" gd:zdGUID="38110b62-8d01-48a9-9334-5179ab7c6d03" fragment="1" gd:fragmentGUID="02142de2-9758-4b6a-8714-cfbb7715ac18" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29">Podmiot, któremu Minister Sprawiedliwości wyraził zgodę, o której mowa w ust. 4d, jest obowiązany do powstrzymania się od korzystania z dostępu do danych za pośrednictwem usług sieciowych w sytuacji niespełnienia którejkolwiek z przesłanek, o których mowa w ust. 4e.</zdanie></p></ustep><ustep eId="DU/2025/869__art_4__ust_4m" gd:GUID="502f64ea-3d2d-45d4-b156-c8b9f976110e" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29"><nr>4m</nr><p><zdanie nr="1" gd:zdGUID="dd3df2fa-2058-4646-b183-36dfac9178b9" fragment="1" gd:fragmentGUID="1f6dc929-26ec-4bf7-8895-5f881931b4e1" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29">Minister Sprawiedliwości cofa, w drodze decyzji administracyjnej, zgodę, o której mowa w ust. 4d, jeżeli przestała istnieć którakolwiek z przesłanek, o których mowa w ust. 4e, a także gdy Centralna Informacja przestała posiadać odpowiednie warunki techniczne do utrzymywania usługi.</zdanie></p></ustep></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1556__art_1__pkt_3" gd:GUID="86108bb8-3a1a-4c8d-af99-347be53e369a" okres="okr_obowiazywanie.zdarz_wejscie_2027-04-01_DU-2025-1556_odczytane.x" wejscie-w-zycie="2027-04-01">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="469c86f2-865c-43b9-9b26-23a2ef0b0844" fragment="4" gd:fragmentGUID="7b7bab7f-df51-4c10-b2ca-1f6f739c07a5" okres="okr_obowiazywanie.zdarz_wejscie_2027-04-01_DU-2025-1556_odczytane.x" wejscie-w-zycie="2027-04-01">w art. 9:</zdanie>
+          </p>
+          <litera eId="DU/2025/1556__art_1__pkt_3__lit_a" gd:GUID="fdd5bf90-6483-4b80-9922-7dc27fa8960b" okres="okr_obowiazywanie.zdarz_wejscie_2027-04-01_DU-2025-1556_odczytane.x" wejscie-w-zycie="2027-04-01">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="469c86f2-865c-43b9-9b26-23a2ef0b0844" fragment="5" gd:fragmentGUID="7f4acdb7-7eb2-498a-b114-5e8cf330a272" okres="okr_obowiazywanie.zdarz_wejscie_2027-04-01_DU-2025-1556_odczytane.x" wejscie-w-zycie="2027-04-01">w ust. 1 zdanie drugie otrzymuje brzmienie:<cytat-w-tekscie now:akt="https://eli.gov.pl/eli/DU/2025/869" cudzyslowy="oba" gd:nowGUID="cd8c5b9e-4922-4f60-839c-be999ee1c14b" element-eId="DU/2025/869__art_9__ust_1__zdn_2" funkcja="zastap-tekst"><zdanie nr="1" gd:zdGUID="b3cec856-20c3-4a81-b897-b14776b6cc59" fragment="1" gd:fragmentGUID="c6fc4ae8-08be-43ab-bde6-63a1614adb85" okres="okr_obowiazywanie.zdarz_wejscie_2027-04-01_DU-2025-1556_odczytane.x" wejscie-w-zycie="2027-04-01">Akta rejestrowe dla podmiotów wpisanych do rejestru, o którym mowa w art. 1 ust. 2 pkt 1, lub do rejestru, o którym mowa w art. 1 ust. 2 pkt 2, prowadzi się wyłącznie w systemie teleinformatycznym.</zdanie></cytat-w-tekscie>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1556__art_1__pkt_3__lit_b" gd:GUID="36390651-1abf-4476-b5aa-9647f564fbc6" okres="okr_obowiazywanie.zdarz_wejscie_2027-04-01_DU-2025-1556_odczytane.x" wejscie-w-zycie="2027-04-01">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="469c86f2-865c-43b9-9b26-23a2ef0b0844" fragment="6" gd:fragmentGUID="e399a6e7-89be-4bc3-b0ed-a4737051d271" okres="okr_obowiazywanie.zdarz_wejscie_2027-04-01_DU-2025-1556_odczytane.x" wejscie-w-zycie="2027-04-01">ust. 1a otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2025/869" cudzyslowy="oba" gd:nowGUID="b74c5dcd-a3e4-48c7-a155-40952ceb8486" element-eId="DU/2025/869__art_9__ust_1a" funkcja="zastap"><ustep eId="DU/2025/869__art_9__ust_1a" gd:GUID="21b3806b-1fe7-4130-8bdb-2ec7d6019229" okres="okr_obowiazywanie.zdarz_wejscie_2027-04-01_DU-2025-1556_odczytane.x" wejscie-w-zycie="2027-04-01"><nr>1a</nr><p><zdanie nr="1" gd:zdGUID="1e3b7a85-ac4b-4900-a19e-053c0940a499" fragment="1" gd:fragmentGUID="89f05519-2485-4f63-89cc-841642f8e00a" okres="okr_obowiazywanie.zdarz_wejscie_2027-04-01_DU-2025-1556_odczytane.x" wejscie-w-zycie="2027-04-01">Przepis ust. 1 zdanie drugie stosuje się również do akt spraw o wpis do rejestru, o którym mowa w art. 1 ust. 2 pkt 1, lub do rejestru, o którym mowa w art. 1 ust. 2 pkt 2, jeżeli wniosek został prawomocnie zwrócony, odrzucony albo oddalony lub postępowanie umorzono, oraz do innych spraw należących do właściwości sądu rejestrowego.</zdanie></p></ustep></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1556__art_1__pkt_3__lit_c" gd:GUID="12eab516-5aa6-4253-8085-ef50d5ca5877" okres="okr_obowiazywanie.zdarz_wejscie_2027-04-01_DU-2025-1556_odczytane.x" wejscie-w-zycie="2027-04-01">
+            <nr>c</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="469c86f2-865c-43b9-9b26-23a2ef0b0844" fragment="7" gd:fragmentGUID="adf5825e-a066-45b7-885b-3ee1ce9ca420" okres="okr_obowiazywanie.zdarz_wejscie_2027-04-01_DU-2025-1556_odczytane.x" wejscie-w-zycie="2027-04-01"><now:uchyl akt="https://eli.gov.pl/eli/DU/2025/869" element-eId="DU/2025/869__art_9__ust_5" gd:nowGUID="75d2d3e3-5a50-40aa-9973-29716336f933" />uchyla się ust. 5,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1556__art_1__pkt_3__lit_d" gd:GUID="b83feedd-69d2-41c8-8914-13a4dc55d32c" okres="okr_obowiazywanie.zdarz_wejscie_2027-04-01_DU-2025-1556_odczytane.x" wejscie-w-zycie="2027-04-01">
+            <nr>d</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="469c86f2-865c-43b9-9b26-23a2ef0b0844" fragment="8" gd:fragmentGUID="365f50fc-732d-4c27-9a31-91785b6ae62d" okres="okr_obowiazywanie.zdarz_wejscie_2027-04-01_DU-2025-1556_odczytane.x" wejscie-w-zycie="2027-04-01">w ust. 6 zdanie pierwsze otrzymuje brzmienie:<cytat-w-tekscie now:akt="https://eli.gov.pl/eli/DU/2025/869" cudzyslowy="oba" gd:nowGUID="350825c1-b521-4d3e-adca-97cdbf0b0dfc" element-eId="DU/2025/869__art_9__ust_6__zdn_1" funkcja="zastap-tekst"><zdanie nr="1" gd:zdGUID="de0a35ad-2a94-418a-aff0-a10892dc40f2" fragment="1" gd:fragmentGUID="f1b22b2b-e6a5-4a94-83c8-4d89bbec8e8b" okres="okr_obowiazywanie.zdarz_wejscie_2027-04-01_DU-2025-1556_odczytane.x" wejscie-w-zycie="2027-04-01">Dla podmiotu wpisanego do rejestru, o którym mowa w art. 1 ust. 2 pkt 1, lub do rejestru, o którym mowa w art. 1 ust. 2 pkt 2, prowadzi się zbiór dokumentów obejmujący dokumenty wytworzone w postaci papierowej.</zdanie></cytat-w-tekscie>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1556__art_1__pkt_3__lit_e" gd:GUID="11e13f1e-9c0b-401a-8b6e-20d48d4a11ef" okres="okr_obowiazywanie.zdarz_wejscie_2027-04-01_DU-2025-1556_odczytane.x" wejscie-w-zycie="2027-04-01">
+            <nr>e</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="469c86f2-865c-43b9-9b26-23a2ef0b0844" fragment="9" gd:fragmentGUID="5766a40e-b33d-4d5e-8b28-2fb0820cc4ea" okres="okr_obowiazywanie.zdarz_wejscie_2027-04-01_DU-2025-1556_odczytane.x" wejscie-w-zycie="2027-04-01">w ust. 7 zdanie pierwsze otrzymuje brzmienie:<cytat-w-tekscie now:akt="https://eli.gov.pl/eli/DU/2025/869" cudzyslowy="oba" gd:nowGUID="4ce64375-73d1-4930-99f0-1202e531cd7a" element-eId="DU/2025/869__art_9__ust_7__zdn_1" funkcja="zastap-tekst"><zdanie nr="1" gd:zdGUID="ec2f7218-6992-41ef-90a1-6d5e687c2958" fragment="1" gd:fragmentGUID="b9d71fb4-0122-41f7-b7b7-78422a1e3888" okres="okr_obowiazywanie.zdarz_wejscie_2027-04-01_DU-2025-1556_odczytane.x" wejscie-w-zycie="2027-04-01">Dokument w postaci papierowej, dotyczący podmiotu wpisanego do rejestru, o którym mowa w art. 1 ust. 2 pkt 1, lub do rejestru, o którym mowa w art. 1 ust. 2 pkt 2, stanowiący podstawę do podjęcia przez sąd czynności z urzędu, przetwarza się na postać elektroniczną oraz składa do zbioru dokumentów, o którym mowa w ust. 6.</zdanie></cytat-w-tekscie>;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2025/1556__art_1__pkt_4" gd:GUID="8c70748d-bd82-4b7a-b086-8cf8035ba213" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="469c86f2-865c-43b9-9b26-23a2ef0b0844" fragment="10" gd:fragmentGUID="72242294-eea6-4462-994d-7e3d51a094ae" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29"><now:uchyl akt="https://eli.gov.pl/eli/DU/2025/869" element-eId="DU/2025/869__art_13" gd:nowGUID="e96c618e-4d1a-40ce-bb9c-6d2d6d4679bb" />uchyla się art. 13;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1556__art_1__pkt_5" gd:GUID="e040b700-d424-4adb-919d-223b5cf697e0" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="469c86f2-865c-43b9-9b26-23a2ef0b0844" fragment="11" gd:fragmentGUID="5ded16d4-a302-4037-8526-5398675db41d" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29">w art. 15:</zdanie>
+          </p>
+          <litera eId="DU/2025/1556__art_1__pkt_5__lit_a" gd:GUID="d96bbfe4-3685-46b5-a393-5b689ad5d141" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="469c86f2-865c-43b9-9b26-23a2ef0b0844" fragment="12" gd:fragmentGUID="75a669f6-a053-4280-89f9-c116d50b3920" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29">ust. 1 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2025/869" cudzyslowy="oba" gd:nowGUID="c30c4eec-9043-4d1b-94b2-be4d5985acd8" element-eId="DU/2025/869__art_15__ust_1" funkcja="zastap"><ustep eId="DU/2025/869__art_15__ust_1" gd:GUID="ce7a52b7-1256-4a22-ba06-f4300213a2dc" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="427289bd-a7cd-4f6d-8aea-2698495d7d87" fragment="1" gd:fragmentGUID="6addb7e9-e634-4854-9f35-c012f6889caa" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29">Od dnia dokonania wpisu w Rejestrze nikt nie może zasłaniać się nieznajomością ujawnionych wpisów.</zdanie><zdanie nr="2" gd:zdGUID="9cb0a28e-7c33-493f-85d9-165810befb3a" fragment="1" gd:fragmentGUID="6909e53d-6de8-4a9a-b422-e4c594d7fc7b" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29">Jednakże w odniesieniu do czynności dokonanych przed upływem szesnastego dnia od dnia dokonania wpisu podmiot wpisany do Rejestru nie może powoływać się na wpis wobec osoby trzeciej, jeżeli ta udowodni, że nie mogła wiedzieć o treści wpisu.</zdanie></p></ustep></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1556__art_1__pkt_5__lit_b" gd:GUID="016e86c5-9ff2-42cd-ac01-e476dd1575fd" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="469c86f2-865c-43b9-9b26-23a2ef0b0844" fragment="13" gd:fragmentGUID="bf778432-696a-442c-9cd4-ed7aebc25880" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29"><now:uchyl akt="https://eli.gov.pl/eli/DU/2025/869" element-eId="DU/2025/869__art_15__ust_2" gd:nowGUID="5c230af1-01cc-48f2-a8b9-17358f34db19" />uchyla się ust. 2,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1556__art_1__pkt_5__lit_c" gd:GUID="4a47add4-6f2d-4e02-820b-cb172da077e5" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29">
+            <nr>c</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="469c86f2-865c-43b9-9b26-23a2ef0b0844" fragment="14" gd:fragmentGUID="da23920d-284e-4030-9b7f-66954935a7d3" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29">ust. 3 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2025/869" cudzyslowy="oba" gd:nowGUID="ee70dce6-c12d-403b-83a8-c9f4005f0eb4" element-eId="DU/2025/869__art_15__ust_3" funkcja="zastap"><ustep eId="DU/2025/869__art_15__ust_3" gd:GUID="a3083953-8a84-43b2-a975-85e45ffed919" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29"><nr>3</nr><p><zdanie nr="1" gd:zdGUID="6e0810c8-da01-4bf0-9847-34fe5cc63ff5" fragment="1" gd:fragmentGUID="7be31734-bde0-47bf-b228-93066c0b0a85" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29">Osoba trzecia może się powoływać na dokumenty i dane, w odniesieniu do których nie dopełniono jeszcze obowiązku ujawnienia w Rejestrze, jeżeli brak ujawnienia nie pozbawia ich skutków prawnych.</zdanie></p></ustep></cytat-strukt>;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2025/1556__art_1__pkt_6" gd:GUID="f1bd63ec-bfb3-4b4f-8c58-99f65402a45a" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29">
+          <nr>6</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="469c86f2-865c-43b9-9b26-23a2ef0b0844" fragment="15" gd:fragmentGUID="b4fecc2d-6f96-4008-bffb-9b6cb8d8f00f" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29"><now:uchyl akt="https://eli.gov.pl/eli/DU/2025/869" element-eId="DU/2025/869__art_16" gd:nowGUID="a49cfe0f-5095-40e1-9604-0549be002c87" />uchyla się art. 16;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1556__art_1__pkt_7" gd:GUID="16812f2a-6e79-430d-b079-7eb7e3682a57" okres="okr_obowiazywanie.zdarz_wejscie_2027-04-01_DU-2025-1556_odczytane.x" wejscie-w-zycie="2027-04-01">
+          <nr>7</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="469c86f2-865c-43b9-9b26-23a2ef0b0844" fragment="16" gd:fragmentGUID="2f7514eb-dc21-41aa-89d7-d4cae78d909c" okres="okr_obowiazywanie.zdarz_wejscie_2027-04-01_DU-2025-1556_odczytane.x" wejscie-w-zycie="2027-04-01">w art. 19:</zdanie>
+          </p>
+          <litera eId="DU/2025/1556__art_1__pkt_7__lit_a" gd:GUID="f5a7defc-7bec-40ec-bd30-56bc4c5277b0" okres="okr_obowiazywanie.zdarz_wejscie_2027-04-01_DU-2025-1556_odczytane.x" wejscie-w-zycie="2027-04-01">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="469c86f2-865c-43b9-9b26-23a2ef0b0844" fragment="17" gd:fragmentGUID="b9c8fc36-09f3-4032-945c-c40d1ec5a7b6" okres="okr_obowiazywanie.zdarz_wejscie_2027-04-01_DU-2025-1556_odczytane.x" wejscie-w-zycie="2027-04-01">ust. 2 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2025/869" cudzyslowy="oba" gd:nowGUID="a3ee0cfa-e7fd-4a17-aa87-0f6dc8c85149" element-eId="DU/2025/869__art_19__ust_2" funkcja="zastap"><ustep eId="DU/2025/869__art_19__ust_2" gd:GUID="fea2b351-30d2-446d-a706-0fa520bcbc85" okres="okr_obowiazywanie.zdarz_wejscie_2027-04-01_DU-2025-1556_odczytane.x" wejscie-w-zycie="2027-04-01"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="ed08db77-d57f-4501-8965-17408925b23d" fragment="1" gd:fragmentGUID="bccc1d91-5c25-46b4-952e-41d356f37c3c" okres="okr_obowiazywanie.zdarz_wejscie_2027-04-01_DU-2025-1556_odczytane.x" wejscie-w-zycie="2027-04-01">Wnioski dotyczące podmiotu podlegającego wpisowi do rejestru, o którym mowa w art. 1 ust. 2 pkt 1, lub do rejestru, o którym mowa w art. 1 ust. 2 pkt 2, składa się wyłącznie za pośrednictwem systemu teleinformatycznego.</zdanie></p></ustep></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1556__art_1__pkt_7__lit_b" gd:GUID="02049a5c-9439-4eba-a9ac-197ca1f54951" okres="okr_obowiazywanie.zdarz_wejscie_2027-04-01_DU-2025-1556_odczytane.x" wejscie-w-zycie="2027-04-01">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="469c86f2-865c-43b9-9b26-23a2ef0b0844" fragment="18" gd:fragmentGUID="a8edd300-c77b-45d0-b3f6-ceeb4d47146d" okres="okr_obowiazywanie.zdarz_wejscie_2027-04-01_DU-2025-1556_odczytane.x" wejscie-w-zycie="2027-04-01"><now:uchyl akt="https://eli.gov.pl/eli/DU/2025/869" element-eId="DU/2025/869__art_19__ust_3" gd:nowGUID="42aae9dd-f85d-491d-b15d-6287ef67cb84" /><now:uchyl akt="https://eli.gov.pl/eli/DU/2025/869" element-eId="DU/2025/869__art_19__ust_4" gd:nowGUID="4d753d48-6a71-4ff3-8583-6bfaad2e8620" />uchyla się ust. 3 i 4,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1556__art_1__pkt_7__lit_c" gd:GUID="44543e5f-94e3-418e-b511-6f7777740415" okres="okr_obowiazywanie.zdarz_wejscie_2027-04-01_DU-2025-1556_odczytane.x" wejscie-w-zycie="2027-04-01">
+            <nr>c</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="469c86f2-865c-43b9-9b26-23a2ef0b0844" fragment="19" gd:fragmentGUID="0d3c4c2b-14d1-4eae-b344-278eefb5ff73" okres="okr_obowiazywanie.zdarz_wejscie_2027-04-01_DU-2025-1556_odczytane.x" wejscie-w-zycie="2027-04-01">ust. 7 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2025/869" cudzyslowy="oba" gd:nowGUID="33c37098-5eeb-4bd3-8f44-e903ba9e5c0c" element-eId="DU/2025/869__art_19__ust_7" funkcja="zastap"><ustep eId="DU/2025/869__art_19__ust_7" gd:GUID="06382c64-0898-4bec-8320-e31054ab6d76" okres="okr_obowiazywanie.zdarz_wejscie_2027-04-01_DU-2025-1556_odczytane.x" wejscie-w-zycie="2027-04-01"><nr>7</nr><p><zdanie nr="1" gd:zdGUID="e5639bb9-6f59-4226-be4f-b32ad86786e6" fragment="1" gd:fragmentGUID="88990a02-dd3d-4bc8-a13d-0bcc9c3d43d8" okres="okr_obowiazywanie.zdarz_wejscie_2027-04-01_DU-2025-1556_odczytane.x" wejscie-w-zycie="2027-04-01">Wniosek o wpis w rejestrze, o którym mowa w art. 1 ust. 2 pkt 3, złożony z naruszeniem ust. 5 podlega zwróceniu bez wzywania do uzupełnienia braków.</zdanie></p></ustep></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1556__art_1__pkt_7__lit_d" gd:GUID="c7d021e8-6297-4e70-80dd-ae61a14d4327" okres="okr_obowiazywanie.zdarz_wejscie_2027-04-01_DU-2025-1556_odczytane.x" wejscie-w-zycie="2027-04-01">
+            <nr>d</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="469c86f2-865c-43b9-9b26-23a2ef0b0844" fragment="20" gd:fragmentGUID="28d5ba86-6b01-4847-ae04-26f18ededd27" okres="okr_obowiazywanie.zdarz_wejscie_2027-04-01_DU-2025-1556_odczytane.x" wejscie-w-zycie="2027-04-01"><now:uchyl akt="https://eli.gov.pl/eli/DU/2025/869" element-eId="DU/2025/869__art_19__ust_9" gd:nowGUID="d0a41396-e70c-473b-b8cb-a59f5c6e04d2" />uchyla się ust. 9,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1556__art_1__pkt_7__lit_e" gd:GUID="8aae1949-f422-4eb2-893a-f4f6f2215c45" okres="okr_obowiazywanie.zdarz_wejscie_2027-04-01_DU-2025-1556_odczytane.x" wejscie-w-zycie="2027-04-01">
+            <nr>e</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="469c86f2-865c-43b9-9b26-23a2ef0b0844" fragment="21" gd:fragmentGUID="433f9f74-d009-4a99-b5bf-23f3f137232d" okres="okr_obowiazywanie.zdarz_wejscie_2027-04-01_DU-2025-1556_odczytane.x" wejscie-w-zycie="2027-04-01">w ust. 10 zdanie pierwsze otrzymuje brzmienie:<cytat-w-tekscie now:akt="https://eli.gov.pl/eli/DU/2025/869" cudzyslowy="oba" gd:nowGUID="37d3f876-822f-4279-a1b8-56f40a56c6b9" element-eId="DU/2025/869__art_19__ust_10__zdn_1" funkcja="zastap-tekst"><zdanie nr="1" gd:zdGUID="18358f4f-d48e-413b-8207-adcfef6c6dd4" fragment="1" gd:fragmentGUID="cacc7cb9-6981-4d14-bc08-e7bd935249b8" okres="okr_obowiazywanie.zdarz_wejscie_2027-04-01_DU-2025-1556_odczytane.x" wejscie-w-zycie="2027-04-01">W razie zwrócenia wniosku zgodnie z ust. 7 i 8 może on być ponownie złożony w terminie 7 dni od daty doręczenia zarządzenia o zwrocie.</zdanie></cytat-w-tekscie>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1556__art_1__pkt_7__lit_f" gd:GUID="8da1a1ea-5ea2-479b-a8d8-3e5b548a685b" okres="okr_obowiazywanie.zdarz_wejscie_2027-04-01_DU-2025-1556_odczytane.x" wejscie-w-zycie="2027-04-01">
+            <nr>f</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="469c86f2-865c-43b9-9b26-23a2ef0b0844" fragment="22" gd:fragmentGUID="681b60ed-4a67-4100-989c-9bf04d339824" okres="okr_obowiazywanie.zdarz_wejscie_2027-04-01_DU-2025-1556_odczytane.x" wejscie-w-zycie="2027-04-01"><now:uchyl akt="https://eli.gov.pl/eli/DU/2025/869" element-eId="DU/2025/869__art_19__ust_11" gd:nowGUID="ca1f7682-cf17-4761-871b-d6c448865754" />uchyla się ust. 11;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2025/1556__art_1__pkt_8" gd:GUID="5e2cf6a3-906d-40de-9e00-5e82454373aa" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29">
+          <nr>8</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="469c86f2-865c-43b9-9b26-23a2ef0b0844" fragment="23" gd:fragmentGUID="7236ab2d-21e8-4efd-86f1-2ea997558393" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29"><now:zamien-tekst stary-tekst="i opłacie za ogłoszenie w Monitorze Sądowym i Gospodarczym" nowy-tekst="" element-eId="DU/2025/869__art_19a__ust_6__zdn_1" akt="https://eli.gov.pl/eli/DU/2025/869" gd:nowGUID="74efb730-cf81-425b-ab51-f694bd777b80" />w art. 19a w ust. 6 w zdaniu pierwszym skreśla się wyrazy „i opłacie za ogłoszenie w Monitorze Sądowym i Gospodarczym”;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1556__art_1__pkt_9" gd:GUID="d9dacdaa-bbb9-409d-9113-cf576827b21d" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29">
+          <nr>9</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="469c86f2-865c-43b9-9b26-23a2ef0b0844" fragment="24" gd:fragmentGUID="a15fe310-5893-4403-b8e4-cf80e99281ef" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29">w art. 20:</zdanie>
+          </p>
+          <litera eId="DU/2025/1556__art_1__pkt_9__lit_a" gd:GUID="739e82ae-fb4e-4cd1-a3e0-cd63a3d32fce" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="469c86f2-865c-43b9-9b26-23a2ef0b0844" fragment="25" gd:fragmentGUID="96cf1067-5d03-4a6f-b717-96aba474340c" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29"><now:zamien-tekst stary-tekst="i ogłoszeniu w Monitorze Sądowym i Gospodarczym" nowy-tekst="" element-eId="DU/2025/869__art_20__ust_1d" akt="https://eli.gov.pl/eli/DU/2025/869" gd:nowGUID="1ba3f8e9-9acb-400a-8456-36048b3d6b0b" />w ust. 1d skreśla się wyrazy „i ogłoszeniu w Monitorze Sądowym i Gospodarczym”,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1556__art_1__pkt_9__lit_b" gd:GUID="e6cc3ced-df71-4628-9642-0ffcfb945e11" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="469c86f2-865c-43b9-9b26-23a2ef0b0844" fragment="26" gd:fragmentGUID="9dc022e8-090a-4a9c-b38b-3ca334e1d205" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29"><now:uchyl akt="https://eli.gov.pl/eli/DU/2025/869" element-eId="DU/2025/869__art_20__ust_1i" gd:nowGUID="b6f77bd6-54fa-45f6-8f9d-97e80565fcca" />uchyla się ust. 1i,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1556__art_1__pkt_9__lit_c" gd:GUID="e75f1c8c-c580-4aad-b62a-61086f6e7b1b" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29">
+            <nr>c</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="469c86f2-865c-43b9-9b26-23a2ef0b0844" fragment="27" gd:fragmentGUID="7f929049-d2a7-44ca-bd0b-a03e8d8e32d1" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29"><now:uchyl akt="https://eli.gov.pl/eli/DU/2025/869" element-eId="DU/2025/869__art_20__ust_3__zdn_2" gd:nowGUID="14512c35-9307-435c-8d01-cf53365c3444" />w ust. 3 skreśla się zdanie drugie;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2025/1556__art_1__pkt_10" gd:GUID="0d5cd031-c9c0-43d8-a2ca-0503d315b219" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29">
+          <nr>10</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="469c86f2-865c-43b9-9b26-23a2ef0b0844" fragment="28" gd:fragmentGUID="c75cdd76-274f-49a7-9171-c87777724c84" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29"><now:uchyl akt="https://eli.gov.pl/eli/DU/2025/869" element-eId="DU/2025/869__art_20c__ust_3__zdn_2" gd:nowGUID="097d81b6-4ed5-4ee7-846b-5756f0e8abe6" />w art. 20c w ust. 3 skreśla się zdanie drugie;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1556__art_1__pkt_11" gd:GUID="62f2f74b-4763-4971-956e-92643f860633" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29">
+          <nr>11</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="469c86f2-865c-43b9-9b26-23a2ef0b0844" fragment="29" gd:fragmentGUID="edf214db-15bc-4687-93b4-9e6846e825a9" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29"><now:zamien-tekst stary-tekst=", a wpisy tych danych nie podlegają obowiązkowi ogłoszenia w Monitorze Sądowym i Gospodarczym" nowy-tekst="" element-eId="DU/2025/869__art_42" akt="https://eli.gov.pl/eli/DU/2025/869" gd:nowGUID="54a3ccc7-e32f-4157-bb6a-76ff237acb67" />w art. 42 skreśla się wyrazy „ , a wpisy tych danych nie podlegają obowiązkowi ogłoszenia w Monitorze Sądowym i Gospodarczym”;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1556__art_1__pkt_12" gd:GUID="74cf089b-92c8-4252-b252-d937d79e9b27" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29">
+          <nr>12</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="469c86f2-865c-43b9-9b26-23a2ef0b0844" fragment="30" gd:fragmentGUID="475baa98-7232-49c3-849a-3f73ce819b5f" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29">w art. 47a ust. 4 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2025/869" cudzyslowy="oba" gd:nowGUID="c6e36de5-3b63-453e-8b9d-cfe42ba425e0" element-eId="DU/2025/869__art_47a__ust_4" funkcja="zastap"><ustep eId="DU/2025/869__art_47a__ust_4" gd:GUID="49d476d3-051a-4799-8298-599a7fdc1a2d" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29"><nr>4</nr><p><zdanie nr="1" gd:zdGUID="34239f79-61b2-412b-8417-646d5827c8e1" fragment="1" gd:fragmentGUID="76539476-8d11-49e7-9d82-7844585f40ac" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29">W przypadku różnic między wpisem w Rejestrze a dobrowolnie ogłoszonymi informacjami, jak też między treścią dokumentów złożonych do akt rejestrowych w języku polskim a treścią dokumentów ogłoszonych dobrowolnie, treść ogłoszeń dobrowolnych nie może stanowić zarzutu wobec osób trzecich.</zdanie><zdanie nr="2" gd:zdGUID="93cc0b6a-0db8-4776-9dcc-ae6537d2d2cc" fragment="1" gd:fragmentGUID="4f42d46c-9fbd-48cf-af46-e1acc2be86f7" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29">Osoby trzecie mogą powoływać się na dobrowolne ogłoszenia, chyba że spółka udowodni, że osoba trzecia wiedziała o treści wpisu w Rejestrze.</zdanie></p></ustep></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1556__art_1__pkt_13" gd:GUID="930b9b17-9a59-40c5-ba83-d099314a49d2" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29">
+          <nr>13</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="469c86f2-865c-43b9-9b26-23a2ef0b0844" fragment="31" gd:fragmentGUID="d06d7418-6135-4442-9ab3-aa64b21316d0" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29"><now:uchyl akt="https://eli.gov.pl/eli/DU/2025/869" element-eId="DU/2025/869__art_49__ust_2" gd:nowGUID="8fcc5b3f-6413-4b0a-bf36-a8d9808d24c4" />w art. 49 uchyla się ust. 2;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1556__art_1__pkt_14" gd:GUID="80bc0534-0693-48d1-b883-e80508e17362" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29">
+          <nr>14</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="469c86f2-865c-43b9-9b26-23a2ef0b0844" fragment="32" gd:fragmentGUID="75d57c3f-3160-4ca0-aa39-c70f8463cd92" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29"><now:uchyl akt="https://eli.gov.pl/eli/DU/2025/869" element-eId="DU/2025/869__art_58" gd:nowGUID="48b3963f-7544-4827-a07d-58c6e8d021a1" />uchyla się art. 58;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1556__art_1__pkt_15" gd:GUID="8ef3acb3-5fdd-482b-96c3-54925fb0ce8b" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29">
+          <nr>15</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="469c86f2-865c-43b9-9b26-23a2ef0b0844" fragment="33" gd:fragmentGUID="43ddf35c-c8e8-4a0d-85e7-b3219452a292" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29">po rozdziale 4 dodaje się rozdział 4a w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2025/869" cudzyslowy="oba" gd:nowGUID="e5cbc5c3-fba1-4d45-81ee-24caa0a2ec3c" element-eId="DU/2025/869__rozdz_4" funkcja="dodaj-po"><rozdzial eId="DU/2025/869__rozdz_4a" gd:GUID="54567212-550c-4b3b-810a-9b428ef0c407" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29"><naglowek-rozdzialu><nr>4a</nr><p>Przepis karny</p></naglowek-rozdzialu><oddzial-n brak-eid="jednostka-nieoznaczona" gd:GUID="7108fef5-b7d6-4194-b5f4-79c9ceb15292" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29"><artykul eId="DU/2025/869__art_60a" gd:GUID="e15fc2e0-b246-4e35-a45b-3b7dc47066de" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29"><nr>60a</nr><ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="96e2cc9f-0981-41c9-be9e-ae1366fa4173" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29"><p><zdanie nr="1" gd:zdGUID="ce09d0c8-2a75-40c8-861f-38274cba10a8" fragment="1" gd:fragmentGUID="65fff457-0cdf-48dc-9176-e9f50060c572" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29">Kto bez uprawnienia uzyskuje z Rejestru informację za pośrednictwem usług sieciowych, <sankcja-karna>podlega grzywnie, karze ograniczenia wolności albo pozbawienia wolności do lat 2</sankcja-karna>.</zdanie></p></ustep-n></artykul></oddzial-n></rozdzial></cytat-strukt>.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2025/1556__art_2" gd:GUID="293902ec-b9a3-4c04-b271-ef681168a78e" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="a66b3096-02eb-4eac-b840-3176f73e4413" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29">
+        <p>
+          <zdanie nr="1" gd:zdGUID="da6bed2e-4c29-4541-a3b2-fdf392a755f5" fragment="1" gd:fragmentGUID="995e5f5c-9a0d-40de-8edc-bc32e7ebf9cb" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29"><now:uchyl akt="https://eli.gov.pl/eli/DU/2024/593" element-eId="DU/2024/593__art_126__par_3__zdn_2" gd:nowGUID="4d3ec0c5-0cb0-4482-8d7e-c1aee2009415" />W ustawie z dnia 16 września 1982 r. – Prawo spółdzielcze (Dz. U. z 2024 r. poz. 593) w art. 126 w § 3 skreśla się zdanie drugie.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2025/1556__art_3" gd:GUID="13cf56a5-dbe8-4d8f-bb00-92a6e0829ac6" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29">
+      <nr>3</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="bd34bbf7-f84e-4d23-9b72-3c5e58b78879" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29">
+        <p>
+          <zdanie nr="1" gd:zdGUID="be2e367e-e2a3-43eb-a503-646886545c3b" fragment="1" gd:fragmentGUID="c1500295-0124-4605-b7fb-e7b40e38bc08" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29">W ustawie z dnia 22 grudnia 1995 r. o wydawaniu Monitora Sądowego i Gospodarczego (Dz. U. z 2023 r. poz. 1395) w art. 1:</zdanie>
+        </p>
+        <punkt eId="DU/2025/1556__art_3__pkt_1" gd:GUID="b544b1e3-1e78-4103-a954-8cb0e77a5e23" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="be2e367e-e2a3-43eb-a503-646886545c3b" fragment="2" gd:fragmentGUID="1c91dd68-7091-4a77-858f-7bd38a95619b" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29"><now:uchyl akt="https://eli.gov.pl/eli/DU/2023/1395" element-eId="DU/2023/1395__art_1__ust_3__pkt_1" gd:nowGUID="d74f896a-7982-44b3-9a57-a6e1bed99647" />w ust. 3 uchyla się pkt 1;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1556__art_3__pkt_2" gd:GUID="5cd030b2-2cf3-43ac-9695-b5f163fcb04e" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="be2e367e-e2a3-43eb-a503-646886545c3b" fragment="3" gd:fragmentGUID="1422d507-2402-4320-95e7-c8a1fa0e259c" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29">ust. 3a otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/1395" cudzyslowy="oba" gd:nowGUID="590cc7b9-a959-41e2-be62-d7b46ae8a1b7" element-eId="DU/2023/1395__art_1__ust_3a" funkcja="zastap"><ustep eId="DU/2023/1395__art_1__ust_3a" gd:GUID="8ca1831d-417a-490c-90a3-4b8916338ccb" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29"><nr>3a</nr><p><zdanie nr="1" gd:zdGUID="5615950d-9063-4c70-90cf-4f9ffc4b170f" fragment="1" gd:fragmentGUID="905a3cf0-e9f8-4340-8ef7-3daab5a2b612" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29">Zamieszczanie obwieszczeń i ogłoszeń w Monitorze Sądowym i Gospodarczym podlega opłacie, chyba że ustawa stanowi inaczej.</zdanie></p></ustep></cytat-strukt>.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2025/1556__art_4" gd:GUID="2604cf21-b391-422a-920e-64c006c4dc95" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29">
+      <nr>4</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="8c7be390-a3f6-4b65-bc08-b488a18c105b" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29">
+        <p>
+          <zdanie nr="1" gd:zdGUID="b7e89999-d2f3-4af1-8cde-cd96f9ede00b" fragment="1" gd:fragmentGUID="801c58af-72f5-4a22-ba4c-cd0ad5bf8bf8" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29"><now:uchyl akt="https://eli.gov.pl/eli/DU/2024/295" element-eId="DU/2024/295__art_6__ust_9__pkt_3" gd:nowGUID="1f0caa3d-9234-4fce-990e-a10f3486ee5a" />W ustawie z dnia 9 września 2000 r. o podatku od czynności cywilnoprawnych (Dz. U. z 2024 r. poz. 295 oraz z 2025 r. poz. 680) w art. 6 w ust. 9 uchyla się pkt 3.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2025/1556__art_5" gd:GUID="711b13d8-4e11-4d50-a920-63e5807ed0bf" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29">
+      <nr>5</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="04fc8c90-c1fd-4b3d-b465-06285a500d26" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29">
+        <p>
+          <zdanie nr="1" gd:zdGUID="94459c5a-1d54-4835-bc6a-b4513782e4f2" fragment="1" gd:fragmentGUID="11e25626-17c6-4251-b02c-070d6c0d906b" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29">W ustawie z dnia 4 marca 2005 r. o europejskim zgrupowaniu interesów gospodarczych i spółce europejskiej (Dz. U. z 2022 r. poz. 259) wprowadza się następujące zmiany:</zdanie>
+        </p>
+        <punkt eId="DU/2025/1556__art_5__pkt_1" gd:GUID="5e507108-4e15-471e-b3b9-31cf5010c936" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="94459c5a-1d54-4835-bc6a-b4513782e4f2" fragment="2" gd:fragmentGUID="b7ba3c61-0dbd-4db4-8dcf-ec8ef7474ed2" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29">art. 5 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2022/259" cudzyslowy="oba" gd:nowGUID="01529ea7-db8d-4c17-aa49-f0b69034dace" element-eId="DU/2022/259__art_5" funkcja="zastap"><artykul eId="DU/2022/259__art_5" gd:GUID="7ac5714a-9008-4ab7-afc5-d74f0c4fd3c7" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29"><nr>5</nr><ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="7eb41fcf-2d34-4bbd-84cc-379635f809bb" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29"><p><zdanie nr="1" gd:zdGUID="e8841033-ea9e-46dd-8124-df3d2b8d433e" fragment="1" gd:fragmentGUID="8292ac05-a80f-47c1-9f22-a7e89b7163c9" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29">Centralna Informacja Krajowego Rejestru Sądowego przekazuje dane, które zgodnie z art. 11 rozporządzenia 2137/85 albo art. 14 rozporządzenia 2157/2001 podlegają ogłoszeniu w Dzienniku Urzędowym Unii Europejskiej, do Urzędu Oficjalnych Publikacji Unii Europejskiej w terminie miesiąca od dnia ich wpisu do rejestru.</zdanie></p></ustep-n></artykul></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1556__art_5__pkt_2" gd:GUID="e3f1aedb-e3c2-4a4f-af53-2e0e9b8eda7c" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="94459c5a-1d54-4835-bc6a-b4513782e4f2" fragment="3" gd:fragmentGUID="bef93cbb-6838-4b25-87b3-cf6d2ff96582" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29"><now:uchyl akt="https://eli.gov.pl/eli/DU/2022/259" element-eId="DU/2022/259__art_122__ust_2" gd:nowGUID="db89e3d2-0647-4d33-9059-738486befa57" />w art. 122 uchyla się ust. 2.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2025/1556__art_6" gd:GUID="9ce16fb5-5f70-4ab0-9ca7-d70f7c53da67" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29">
+      <nr>6</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="daa0e27c-25f1-48ad-92e7-3cbe4d456c87" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29">
+        <p>
+          <zdanie nr="1" gd:zdGUID="c9c284f8-2460-408d-b8f6-14fc4ea20bf7" fragment="1" gd:fragmentGUID="4c21bcc4-9f96-415d-a0c8-d038e3bc1114" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29"><now:zamien-tekst stary-tekst="oraz opłaty za ogłoszenie wpisu w Monitorze Sądowym i Gospodarczym" nowy-tekst="" element-eId="DU/2024/722__art_110zf__ust_9__zdn_2" akt="https://eli.gov.pl/eli/DU/2024/722" gd:nowGUID="cb79a2b3-ae97-4981-a813-aff6d5d813cd" />W ustawie z dnia 29 lipca 2005 r. o obrocie instrumentami finansowymi (Dz. U. z 2024 r. poz. 722, z późn. zm.<odnosnik id-odnosnika="2" symbol="2" gd:GUID="878ceb07-83f0-438b-a61a-6a9879a27cff"><p><zdanie nr="1" gd:zdGUID="3a6d3481-9d3b-4c7e-af14-71ab37416728" fragment="1" gd:fragmentGUID="558b5b01-e957-4476-bfc6-05ffa9b98dc6">Zmiany tekstu jednolitego wymienionej ustawy zostały ogłoszone w Dz. U. z 2024 r. poz. 1863 oraz z 2025 r. poz. 146, 820, 923, 1014, 1069 i 1216.</zdanie></p></odnosnik>) w art. 110zf w ust. 9 w zdaniu drugim skreśla się wyrazy „oraz opłaty za ogłoszenie wpisu w Monitorze Sądowym i Gospodarczym”.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2025/1556__art_7" gd:GUID="1bcbd664-6240-45d3-9f48-1a9de15fca87" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29">
+      <nr>7</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="e47aa878-9a7d-4080-83b5-6acc0046b1ab" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29">
+        <p>
+          <zdanie nr="1" gd:zdGUID="e824f251-1f31-429e-98db-922f58706f8d" fragment="1" gd:fragmentGUID="563e5e2e-c4f4-4558-a377-382be61f70ee" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29"><now:zamien-tekst stary-tekst="oraz nie uiszcza opłaty za ogłoszenie tych wpisów w Monitorze Sądowym i Gospodarczym" nowy-tekst="" element-eId="DU/2025/178__art_6__ust_3" akt="https://eli.gov.pl/eli/DU/2025/178" gd:nowGUID="08c5d31d-127e-453b-a8a4-9b7afc34ab76" />W ustawie z dnia 27 kwietnia 2006 r. o spółdzielniach socjalnych (Dz. U. z 2025 r. poz. 178 i 620) w art. 6 w ust. 3 skreśla się wyrazy „oraz nie uiszcza opłaty za ogłoszenie tych wpisów w Monitorze Sądowym i Gospodarczym”.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2025/1556__art_8" gd:GUID="f079a9a5-5809-44d6-a69b-7db23790323c" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29">
+      <nr>8</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="40f1f523-8b9c-40e5-9ba8-153d57307d48" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29">
+        <p>
+          <zdanie nr="1" gd:zdGUID="d3a07334-01fa-4d95-a97f-e25ba37ff8d2" fragment="1" gd:fragmentGUID="c7bc9b7f-f3df-4554-89b8-1e3a167c15f5" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29">W ustawie z dnia 22 lipca 2006 r. o spółdzielni europejskiej (Dz. U. z 2018 r. poz. 2043) art. 5 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2018/2043" cudzyslowy="oba" gd:nowGUID="b7f8fe06-6048-4d24-b371-b7d3a2f69556" element-eId="DU/2018/2043__art_5" funkcja="zastap"><artykul eId="DU/2018/2043__art_5" gd:GUID="9c17bb70-9f45-4cf2-8ada-658b0c8c8b04" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29"><nr>5</nr><ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="739b5fd6-17f5-4d89-be04-2773a33e9d02" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29"><p><zdanie nr="1" gd:zdGUID="7ef14dfd-f5c8-43ad-a560-02fd9a6aec6a" fragment="1" gd:fragmentGUID="7dd6cf6a-881f-4a4a-b909-40fbbbe9a363" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29">Centralna Informacja Krajowego Rejestru Sądowego przekazuje dane, które zgodnie z art. 13 rozporządzenia podlegają ogłoszeniu w Dzienniku Urzędowym Unii Europejskiej, do Urzędu Oficjalnych Publikacji Unii Europejskiej w terminie miesiąca od dnia ich wpisu do rejestru.</zdanie></p></ustep-n></artykul></cytat-strukt>.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2025/1556__art_9" gd:GUID="2c7c9eef-8e04-4e8d-b79f-857a1996e646" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29">
+      <nr>9</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="f6ecc0d6-af25-49af-adaa-cbea76c883bd" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29">
+        <p>
+          <zdanie nr="1" gd:zdGUID="1c02f316-ce0b-44a6-ba66-1c94828109e6" fragment="1" gd:fragmentGUID="4f21b9cf-cbbf-43b5-8412-82c5fa43a6ca" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29">W przypadku rozbieżności między wpisem do Krajowego Rejestru Sądowego a ogłoszeniem w Monitorze Sądowym i Gospodarczym opublikowanym przed dniem wejścia w życie niniejszej ustawy, obowiązuje wpis w Krajowym Rejestrze Sądowym.</zdanie>
+          <zdanie nr="2" gd:zdGUID="4355831b-5cdd-422e-ba48-e76bc221eb3b" fragment="1" gd:fragmentGUID="a9ccd964-0794-4a8c-a9c7-93a686b227c7" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29">Osoba trzecia może powoływać się na treść ogłoszenia, chyba że podmiot wpisany do Krajowego Rejestru Sądowego udowodni, że osoba trzecia wiedziała o treści wpisu.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2025/1556__art_10" gd:GUID="1a3e8a9e-d7a4-45b3-aaf0-54190f0144f1" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29">
+      <nr>10</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="619508e2-649c-45ab-aa9c-bf8b89eca2f9" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29">
+        <p>
+          <zdanie nr="1" gd:zdGUID="d2bd1ee9-7b59-4122-ba34-e0495fb76726" fragment="1" gd:fragmentGUID="c516df72-f422-4e95-abae-f21d0be4e887" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29">Do postępowań przed sądem rejestrowym wszczętych i niezakończonych przed dniem wejścia w życie:</zdanie>
+        </p>
+        <punkt eId="DU/2025/1556__art_10__pkt_1" gd:GUID="9cb7be94-cd06-4b08-b6a7-a7aa9ae116d1" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="d2bd1ee9-7b59-4122-ba34-e0495fb76726" fragment="2" gd:fragmentGUID="048eb3df-64fa-4a8f-8309-a4133a2f0efe" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29">niniejszej ustawy stosuje się przepisy dotychczasowe;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1556__art_10__pkt_2" gd:GUID="1bea6b9c-5d29-424a-9c1c-3cc88cbd1036" okres="okr_obowiazywanie.zdarz_wejscie_2027-04-01_DU-2025-1556_odczytane.x" wejscie-w-zycie="2027-04-01">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="d2bd1ee9-7b59-4122-ba34-e0495fb76726" fragment="3" gd:fragmentGUID="406b8760-58e2-4cbb-a3cf-8c11bcf616b0" okres="okr_obowiazywanie.zdarz_wejscie_2027-04-01_DU-2025-1556_odczytane.x" wejscie-w-zycie="2027-04-01">art. 1 pkt 3 i 7 stosuje się przepisy art. 9 i art. 19 ustawy zmienianej w art. 1, w brzmieniu dotychczasowym.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2025/1556__art_11" gd:GUID="21c249e5-4764-4278-81bd-48d42696d9f5" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29">
+      <nr>11</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="dbd5d4ee-d62b-4ebf-bb3a-8e5c63013bcf" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29">
+        <p>
+          <zdanie nr="1" gd:zdGUID="ce9f7b65-008b-4c4c-acd5-5faeb2ea27db" fragment="1" gd:fragmentGUID="b7abaecc-4936-4ec4-8764-cc0d10b8f1fa" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-29_DU-2025-1556_domyslne.x" wejscie-w-zycie="2025-11-29">Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia, z wyjątkiem art. 1 pkt 3 i 7 oraz art. 10 pkt 2, które wchodzą w życie z dniem 1 kwietnia 2027 r.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <organ-podpisujacy>Prezydent Rzeczypospolitej Polskiej: <i><osoba podpisujacy="true" gd:osobaGUID="0e4d588f-f1d7-4276-b4ad-8890da3b1d05"><imie>K.</imie> <nazwisko>Nawrocki</nazwisko></osoba></i></organ-podpisujacy>
+  </ustawa>
+</akt-prawny>

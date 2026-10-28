@@ -1,0 +1,693 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <obwieszczenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/74</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>dc0ea7aa-2317-4024-8ccf-f4eb5274316c</gd:GUIDwersji>
+      <AdresISAP>WDU20250000074</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>74</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 74</AdresWyswietlany>
+      <Tytul>Obwieszczenie Marszałka Sejmu Rzeczypospolitej Polskiej z dnia 15 stycznia 2025 r. w sprawie ogłoszenia jednolitego tekstu ustawy o dotacji przeznaczonej dla niektórych podmiotów</Tytul>
+      <Rodzaj>OBW_TJ</Rodzaj>
+      <DataOgloszenia>2025-01-21</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-01-15</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_ujednolicenie_2025-01-21_DU-2025-74_domyslne" rodzaj="ujednolicenie" pochodzenie="domyslne-z-aktu" data="2025-01-21" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_ujednolicenie.zdarz_ujednolicenie_2025-01-21_DU-2025-74_domyslne" glowna="true">
+          <Przedzial rodzaj="ujednolicenie" od="zdarz_ujednolicenie_2025-01-21_DU-2025-74_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <DataObowiazywaniaWersji>
+        <Od>zdarz_ujednolicenie_2025-01-21_DU-2025-74_domyslne</Od>
+      </DataObowiazywaniaWersji>
+      <Organy>
+        <Organ gd:GUID="4cd00b35-22c2-4284-9da3-0dcaca5c4129" rola="wydajacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/MSEJMU">
+          <Nazwa>Marszałek Sejmu</Nazwa>
+          <OrganPodpisujacy>Marszałek Sejmu</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>S.</imie> <nazwisko>Hołownia</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Obwieszczenie</rodzaj-aktu>
+    <autor-aktu>Marszałka Sejmu Rzeczypospolitej Polskiej</autor-aktu>
+    <data>z dnia 15 stycznia 2025 r.</data>
+    <tytul>w sprawie ogłoszenia jednolitego tekstu ustawy o dotacji przeznaczonej dla niektórych podmiotów</tytul>
+    <punkt-OTJ eId="DU/2025/74__pkt_1" gd:GUID="b7dddc0f-c7d3-4406-be92-d8a993f7c019">
+      <nr>1</nr>
+      <p>
+        <zdanie nr="1" gd:zdGUID="8277b4fd-49ce-4961-b4b9-89d0a62554f3" fragment="1" gd:fragmentGUID="44654a43-1d40-4d5b-9636-8dba3c35bd10">Na podstawie art. 16 ust. 1 zdanie pierwsze ustawy z dnia 20 lipca 2000 r. o ogłaszaniu aktów normatywnych i niektórych innych aktów prawnych (Dz. U. z 2019 r. poz. 1461) ogłasza się w załączniku do niniejszego obwieszczenia jednolity tekst ustawy z dnia 30 sierpnia 2013 r. o dotacji przeznaczonej dla niektórych podmiotów (Dz. U. z 2021 r. poz. 1747), z uwzględnieniem zmian wprowadzonych ustawą z dnia 15 maja 2024 r. o zmianie niektórych ustaw związanych z funkcjonowaniem administracji rządowej (Dz. U. poz. 834) oraz zmian wynikających z przepisów ogłoszonych przed dniem 10 stycznia 2025 r.</zdanie>
+      </p>
+    </punkt-OTJ>
+    <punkt-OTJ eId="DU/2025/74__pkt_2" gd:GUID="008da4b8-f812-43ed-85e8-53d34e1662c8">
+      <nr>2</nr>
+      <p>
+        <zdanie nr="1" gd:zdGUID="308c8ae7-3e95-44b6-8c7f-8bb0254600db" fragment="1" gd:fragmentGUID="fc0a4456-91aa-48a4-bb9f-1b41c0cc8c7c">Podany w załączniku do niniejszego obwieszczenia tekst jednolity ustawy nie obejmuje art. 84 ustawy z dnia 15 maja 2024 r. o zmianie niektórych ustaw związanych z funkcjonowaniem administracji rządowej (Dz. U. poz. 834), który stanowi:<tresc-strukt cudzyslowy="oba" gd:GUID="8e683c91-5e54-4260-b330-e3537c5328a0"><artykul eId="DU/2024/834__art_84" gd:GUID="02e943fd-c268-4fe2-abf9-ed576edfba27"><nr>84</nr><ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="1edc097c-9e5c-42be-bb36-c41f3b016b1a"><p><zdanie nr="1" gd:zdGUID="3e6e13fa-3134-42bc-8533-7c60de8cc225" fragment="1" gd:fragmentGUID="6fa6f3b9-f462-403f-a711-b110b650f429">Ustawa wchodzi w życie pierwszego dnia miesiąca następującego po miesiącu ogłoszenia, z wyjątkiem:</zdanie></p><punkt eId="DU/2024/834__art_84__pkt_1" gd:GUID="42abdee9-eebb-4244-bec5-558e5c95daee"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="3e6e13fa-3134-42bc-8533-7c60de8cc225" fragment="2" gd:fragmentGUID="a437b341-a97f-4f00-a479-1d678e87b086">art. 65 ust. 2 i art. 73 ust. 2, które wchodzą w życie z dniem ogłoszenia;</zdanie></p></punkt><punkt eId="DU/2024/834__art_84__pkt_2" gd:GUID="e652b702-8861-4af7-a242-4ec5863e3556"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="3e6e13fa-3134-42bc-8533-7c60de8cc225" fragment="3" gd:fragmentGUID="39afea10-ab41-4cee-8b3b-88569329d886">art. 47 i art. 82, które wchodzą w życie z dniem następującym po dniu ogłoszenia.</zdanie></p></punkt></ustep-n></artykul></tresc-strukt>.</zdanie>
+      </p>
+    </punkt-OTJ>
+    <organ-podpisujacy>Marszałek Sejmu: <i><osoba podpisujacy="true" gd:osobaGUID="49d277c7-759f-479b-b732-4161c8259304"><imie>S.</imie> <nazwisko>Hołownia</nazwisko></osoba></i></organ-podpisujacy>
+    <ustawa>
+      <zalacznik-do>Załącznik do obwieszczenia Marszałka Sejmu Rzeczypospolitej Polskiej z dnia 15 stycznia 2025 r. (Dz. U. poz. 74)</zalacznik-do>
+      <rodzaj-aktu>Ustawa</rodzaj-aktu>
+      <data>z dnia 30 sierpnia 2013 r.</data>
+      <tytul>o dotacji przeznaczonej dla niektórych podmiotów</tytul>
+      <artykul eId="DU/2025/74__art_1" gd:GUID="57221fae-3d4d-4c02-bdc6-b2c14869534c">
+        <nr>1</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="37384fdb-b060-4694-b7d2-bda2162c70c4">
+          <p>
+            <zdanie nr="1" gd:zdGUID="274a10b2-977c-4d62-9c7d-f3c97320bfca" fragment="1" gd:fragmentGUID="f64316f8-1fa4-45cd-9bcb-00cc60e7bc6e">Ustawa określa cel i zakres wykorzystania oraz sposób udzielania dotacji przeznaczonej dla następujących podmiotów:</zdanie>
+          </p>
+          <punkt eId="DU/2025/74__art_1__pkt_1" gd:GUID="21c15e61-91be-4e90-b4c3-aaa201d4c219">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="274a10b2-977c-4d62-9c7d-f3c97320bfca" fragment="2" gd:fragmentGUID="3aa8070f-bca8-487d-abc6-86adc09be071">Kopalni Soli Bochnia Spółka z ograniczoną odpowiedzialnością z siedzibą w Bochni,</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/74__art_1__pkt_2" gd:GUID="2a7e0e81-bcc0-414e-993f-5c119410e0b7">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="274a10b2-977c-4d62-9c7d-f3c97320bfca" fragment="3" gd:fragmentGUID="4b219958-d8ca-4fd9-a36c-bcf29bbb2472">Kopalni Soli „Wieliczka” Spółka Akcyjna w Wieliczce,</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/74__art_1__pkt_3" gd:GUID="e9dcb01c-4a1b-4975-95bb-67b3c04fce5d">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="274a10b2-977c-4d62-9c7d-f3c97320bfca" fragment="4" gd:fragmentGUID="19140d0a-7d04-474a-9ede-a3f1ffd02b2a">Spółki Restrukturyzacji Kopalń Spółka Akcyjna w Bytomiu,</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/74__art_1__pkt_4" gd:GUID="67c076df-a368-4cfd-a95b-fc6a6eec53ff">
+            <nr>4</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="274a10b2-977c-4d62-9c7d-f3c97320bfca" fragment="5" gd:fragmentGUID="0c3e1fe4-e7e1-45cf-bac7-7381881a5865">Muzeum Górnictwa Węglowego w Zabrzu,</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/74__art_1__pkt_5" gd:GUID="0487cea1-2cf1-4ada-8a33-8dbd1d18e471">
+            <nr>5</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="274a10b2-977c-4d62-9c7d-f3c97320bfca" fragment="6" gd:fragmentGUID="24fc3c4f-e98c-41fa-b684-d45a07ec05ba">Kopalni Siarki „Machów” Spółka Akcyjna w likwidacji w Tarnobrzegu</zdanie>
+            </p>
+          </punkt>
+          <czesc-wspolna-punkt eId="DU/2025/74__art_1__czw" gd:GUID="cf437f25-a87c-4d8a-adcc-6e5cb6a0786b">
+            <p>
+              <zdanie nr="1" gd:zdGUID="274a10b2-977c-4d62-9c7d-f3c97320bfca" fragment="7" gd:fragmentGUID="5f036a92-21df-4fdb-b2fa-634a545dc599">– lub następców prawnych tych podmiotów.</zdanie>
+            </p>
+          </czesc-wspolna-punkt>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2025/74__art_2" gd:GUID="a64efa15-7d17-480e-a7d4-2f1abf2ff5d6">
+        <nr>2</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="926c89ca-d4da-4997-a7eb-ebe05d243862">
+          <p>
+            <zdanie nr="1" gd:zdGUID="7cc743b8-26f8-4f41-91bf-9a39bcb4af21" fragment="1" gd:fragmentGUID="587e0e1e-2eb8-42de-b807-ac08c6500353">Użyte w ustawie określenia oznaczają:</zdanie>
+          </p>
+          <punkt eId="DU/2025/74__art_2__pkt_1" gd:GUID="34273b03-a895-46da-9f47-7e5ee6a8b7e8">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="7cc743b8-26f8-4f41-91bf-9a39bcb4af21" fragment="2" gd:fragmentGUID="5474338b-4075-4575-9915-9363ccf8aac9">zakład górniczy – zakład górniczy w rozumieniu art. 6 ust. 1 pkt 18 ustawy z dnia 9 czerwca 2011 r. – Prawo geologiczne i górnicze (Dz. U. z 2024 r. poz. 1290);</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/74__art_2__pkt_2" gd:GUID="fd631268-a0b1-4729-ac55-6b5586260083">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="7cc743b8-26f8-4f41-91bf-9a39bcb4af21" fragment="3" gd:fragmentGUID="2ee02c36-d681-4a56-b4f3-0ed6913ff792">dotacja – dotację w rozumieniu przepisów o finansach publicznych, która – w przypadku gdy stanowi pomoc publiczną – jest zgodna z rynkiem wewnętrznym na podstawie bezpośrednio obowiązujących przepisów Unii Europejskiej dotyczących pomocy publicznej lub została uznana za zgodną z rynkiem wewnętrznym przez Komisję Europejską;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/74__art_2__pkt_3" gd:GUID="e1447d7a-1cda-401f-842a-9058de6b164a">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="7cc743b8-26f8-4f41-91bf-9a39bcb4af21" fragment="4" gd:fragmentGUID="0e7af5bf-3ebe-4b64-b914-4d8d34279766">wyrobisko górnicze – wyrobisko górnicze w rozumieniu art. 6 ust. 1 pkt 17 ustawy z dnia 9 czerwca 2011 r. – Prawo geologiczne i górnicze.</zdanie>
+            </p>
+          </punkt>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2025/74__art_3" gd:GUID="671c7a3f-d142-4df4-b385-a487c545af88">
+        <nr>3</nr>
+        <ustep eId="DU/2025/74__art_3__ust_1" gd:GUID="3bd9cacb-861a-4b04-b2bc-4aa50559db7e">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="f135eb1b-ad22-457d-9435-d0bc6df79a37" fragment="1" gd:fragmentGUID="2c3ed3b8-7e4c-4652-81de-e230b9398554">Dotację przeznacza się na finansowanie:</zdanie>
+          </p>
+          <punkt eId="DU/2025/74__art_3__ust_1__pkt_1" gd:GUID="15e0de78-4c33-4f32-9b98-b654363b3027">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="f135eb1b-ad22-457d-9435-d0bc6df79a37" fragment="2" gd:fragmentGUID="03c272f0-b294-45f6-a4be-46dee60ea512">zadań w zakresie:</zdanie>
+            </p>
+            <litera eId="DU/2025/74__art_3__ust_1__pkt_1__lit_a" gd:GUID="bbc0395f-7193-4926-b121-c65630830ea8">
+              <nr>a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="f135eb1b-ad22-457d-9435-d0bc6df79a37" fragment="3" gd:fragmentGUID="b7d3f0b1-baa4-4133-87ad-be183a8cd6dc">całkowitej likwidacji zakładu górniczego „Siedlec-Moszczenica” oraz niezabytkowej części zakładu górniczego „Bochnia”, a także utrzymania, zabezpieczenia i ratowania zabytkowych części zakładu górniczego „Bochnia” – wchodzących w skład podmiotu, o którym mowa w art. 1 pkt 1,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/74__art_3__ust_1__pkt_1__lit_b" gd:GUID="eda1f011-01f1-4d29-a499-0054df3aaaef">
+              <nr>b</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="f135eb1b-ad22-457d-9435-d0bc6df79a37" fragment="4" gd:fragmentGUID="f2efe0c5-28f4-4730-8706-26076433f7d5">całkowitej likwidacji niezabytkowej części zakładu górniczego „Wieliczka”, a także utrzymania, zabezpieczenia i ratowania zabytkowych części zakładu górniczego „Wieliczka” – wchodzących w skład podmiotu, o którym mowa w art. 1 pkt 2,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/74__art_3__ust_1__pkt_1__lit_c" gd:GUID="cefea45a-bfc9-4d4d-b251-7627cfa97327">
+              <nr>c</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="f135eb1b-ad22-457d-9435-d0bc6df79a37" fragment="5" gd:fragmentGUID="9d4b82c3-25a2-416c-a5a6-42da64d3da68">utrzymania, zabezpieczenia i ratowania zabytkowych części zakładu górniczego Kopalnia Węgla Kamiennego „Guido” w Zabrzu i zakładu górniczego Kopalnia Węgla Kamiennego „Królowa Luiza” w Zabrzu – wchodzących w skład podmiotu, o którym mowa w art. 1 pkt 4;</zdanie>
+              </p>
+            </litera>
+          </punkt>
+          <punkt eId="DU/2025/74__art_3__ust_1__pkt_2" gd:GUID="8c683277-016b-4bd3-9948-d7382461cf94">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="f135eb1b-ad22-457d-9435-d0bc6df79a37" fragment="6" gd:fragmentGUID="4071dccd-b335-45eb-ad78-567fa85f3021">działań wykonywanych po zakończeniu likwidacji zakładu górniczego wchodzącego w skład byłych Zakładów Górniczo-Hutniczych „Orzeł Biały” w Bytomiu, realizowanych przez podmiot, o którym mowa w art. 1 pkt 3;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/74__art_3__ust_1__pkt_3" gd:GUID="42dd7426-4546-422b-b891-5f67bff4e935">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="f135eb1b-ad22-457d-9435-d0bc6df79a37" fragment="7" gd:fragmentGUID="be0bc56a-7d33-429b-85d8-f7688e951db9">działań wykonywanych po zakończeniu prac likwidacyjnych w wyrobisku górniczym Piaseczno, realizowanych przez podmiot, o którym mowa w art. 1 pkt 5.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/74__art_3__ust_2" gd:GUID="0294c240-7c40-48c0-a895-3a0a1b40546d">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="995dd9fe-2eb1-4c96-bb5f-5c3dafa0d96b" fragment="1" gd:fragmentGUID="b79a4e24-46d9-4bbe-99c1-c00172a33b41">Przez zadania, o których mowa w ust. 1 pkt 1 lit. a i b, rozumie się:</zdanie>
+          </p>
+          <punkt eId="DU/2025/74__art_3__ust_2__pkt_1" gd:GUID="5310107c-c7dc-425a-ba9c-4fccc2fdf82a">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="995dd9fe-2eb1-4c96-bb5f-5c3dafa0d96b" fragment="2" gd:fragmentGUID="1445b6a8-664b-4774-815e-fcda34c31067">likwidację otworów eksploatacyjnych oraz wyrobisk górniczych;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/74__art_3__ust_2__pkt_2" gd:GUID="5d8a0890-064c-4187-92ee-901777f5a310">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="995dd9fe-2eb1-4c96-bb5f-5c3dafa0d96b" fragment="3" gd:fragmentGUID="1c4ed1f3-983f-4e59-b461-05085b742247">likwidację zbędnych instalacji, budynków oraz demontaż maszyn i urządzeń;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/74__art_3__ust_2__pkt_3" gd:GUID="cafa401d-df7d-42b5-9f2a-44f5dcb416d6">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="995dd9fe-2eb1-4c96-bb5f-5c3dafa0d96b" fragment="4" gd:fragmentGUID="a88fccb5-52f4-4272-af9e-d907db99a305">naprawianie szkód wyrządzonych ruchem zakładu górniczego;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/74__art_3__ust_2__pkt_4" gd:GUID="ca70a4fb-d219-4e59-af30-ebfde39846b6">
+            <nr>4</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="995dd9fe-2eb1-4c96-bb5f-5c3dafa0d96b" fragment="5" gd:fragmentGUID="ce68efe2-f642-4200-ba49-70e34575f0ae">rekultywację terenów pogórniczych;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/74__art_3__ust_2__pkt_5" gd:GUID="6324ea2c-c516-4ff9-b67d-dabc9ab3c92a">
+            <nr>5</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="995dd9fe-2eb1-4c96-bb5f-5c3dafa0d96b" fragment="6" gd:fragmentGUID="293207cc-745f-4bc7-bfa3-d13a105b7afc">wykonywanie prac zabezpieczających oraz przedsięwzięć zapobiegających, związanych z likwidowanym zakładem górniczym;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/74__art_3__ust_2__pkt_6" gd:GUID="cf00f452-73e6-426d-a455-37f05bbf04a1">
+            <nr>6</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="995dd9fe-2eb1-4c96-bb5f-5c3dafa0d96b" fragment="7" gd:fragmentGUID="574660a8-a88e-4d83-b984-3bdfe94d5d83">utylizację solanki;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/74__art_3__ust_2__pkt_7" gd:GUID="cd8f4e47-a57d-4337-9130-b69dee1e5c7c">
+            <nr>7</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="995dd9fe-2eb1-4c96-bb5f-5c3dafa0d96b" fragment="8" gd:fragmentGUID="8988144b-680e-4c1a-ba84-a343287c64f5">zabezpieczenie części zabytkowych, renowację zabytkowych wyrobisk, maszyn i urządzeń;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/74__art_3__ust_2__pkt_8" gd:GUID="89c869ee-7abd-463b-ac97-5dc8a8263dbf">
+            <nr>8</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="995dd9fe-2eb1-4c96-bb5f-5c3dafa0d96b" fragment="9" gd:fragmentGUID="750a61fd-7fe1-4ae3-90d1-3c715e8c0b47">opracowanie projektów, dokumentacji, opinii, ekspertyz i analiz związanych z zakresem zadań wymienionych w pkt 1–7;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/74__art_3__ust_2__pkt_9" gd:GUID="90c26454-224b-4660-a2cb-21ad7f3bab34">
+            <nr>9</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="995dd9fe-2eb1-4c96-bb5f-5c3dafa0d96b" fragment="10" gd:fragmentGUID="02af47f4-e203-40ce-b756-222698ef4a07">sprawowanie ogólnego zarządu.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/74__art_3__ust_3" gd:GUID="4c2f58b0-d22a-436b-a177-9e29e2d6d232">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="beaf1c8f-7d0b-4618-8879-b6258ae2528f" fragment="1" gd:fragmentGUID="586014bb-ebdf-486d-b4c8-e7768063a18b">Przez zadania, o których mowa w ust. 1 pkt 1 lit. c, rozumie się:</zdanie>
+          </p>
+          <punkt eId="DU/2025/74__art_3__ust_3__pkt_1" gd:GUID="f0522c49-db0b-47c0-bb73-ebd3822c6cb0">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="beaf1c8f-7d0b-4618-8879-b6258ae2528f" fragment="2" gd:fragmentGUID="67f7ada9-b862-472d-9c3f-a5b2298dc607">rekultywację terenów pogórniczych;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/74__art_3__ust_3__pkt_2" gd:GUID="b56a5cda-f5e7-4741-a438-85fa48ba6766">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="beaf1c8f-7d0b-4618-8879-b6258ae2528f" fragment="3" gd:fragmentGUID="cd8b537c-38db-4aad-8140-5fe44c29d524">zabezpieczenie części zabytkowych, renowację zabytkowych wyrobisk, maszyn i urządzeń;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/74__art_3__ust_3__pkt_3" gd:GUID="89b61d23-baec-4c9b-ab08-1f1d7d7234c0">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="beaf1c8f-7d0b-4618-8879-b6258ae2528f" fragment="4" gd:fragmentGUID="36d71427-c208-4be4-9712-b77c57c66a7f">opracowanie projektów, dokumentacji, opinii, ekspertyz i analiz związanych z zakresem zadań wymienionych w pkt 1 i 2;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/74__art_3__ust_3__pkt_4" gd:GUID="839529ca-cbe8-4802-9091-167748393636">
+            <nr>4</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="beaf1c8f-7d0b-4618-8879-b6258ae2528f" fragment="5" gd:fragmentGUID="d6993ef1-0f3b-4b17-af43-b6056e6930d5">(uchylony)</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/74__art_3__ust_3__pkt_5" gd:GUID="f7f5a2cc-0d10-4e57-8ba8-680fc32fa5c1">
+            <nr>5</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="beaf1c8f-7d0b-4618-8879-b6258ae2528f" fragment="6" gd:fragmentGUID="4f57d944-e79e-4052-b52b-5f03649514a7">sprawowanie ogólnego zarządu.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/74__art_3__ust_4" gd:GUID="cf0c84a2-bdba-4098-a588-158679a37ea8">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="81e39321-abad-4e13-8683-28958a54ffe0" fragment="1" gd:fragmentGUID="7dcf1ca1-eda4-4ee7-ad4a-7292f64dcd2c">Przez działania, o których mowa w ust. 1 pkt 2, rozumie się:</zdanie>
+          </p>
+          <punkt eId="DU/2025/74__art_3__ust_4__pkt_1" gd:GUID="1072f545-b453-4806-9b5c-b1df373dd7a3">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="81e39321-abad-4e13-8683-28958a54ffe0" fragment="2" gd:fragmentGUID="121d2150-f842-4692-bf30-9596f576b3f2">zabezpieczenie kopalń sąsiednich przed zagrożeniem wodnym;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/74__art_3__ust_4__pkt_2" gd:GUID="20d9ccda-cf8f-4683-9ab0-27c6550a7c19">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="81e39321-abad-4e13-8683-28958a54ffe0" fragment="3" gd:fragmentGUID="2776987d-c34d-4680-9fa4-bb0844303a35">likwidację zbędnej infrastruktury związanej z wykonywaniem działania, o którym mowa w pkt 1;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/74__art_3__ust_4__pkt_3" gd:GUID="f9282b5a-0fdf-4558-9a56-a5f2c66973d2">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="81e39321-abad-4e13-8683-28958a54ffe0" fragment="4" gd:fragmentGUID="48244740-753a-473d-aebf-347e7272d633">naprawianie szkód powstałych w wyniku wykonywania działań, o których mowa w pkt 1 i 2;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/74__art_3__ust_4__pkt_4" gd:GUID="34642955-099d-4689-9584-1af6a14b32ff">
+            <nr>4</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="81e39321-abad-4e13-8683-28958a54ffe0" fragment="5" gd:fragmentGUID="59f51359-244f-4d89-87f6-19c93522b99d">opracowanie, wymaganych na podstawie odrębnych przepisów, projektów, dokumentacji, opinii, ekspertyz i analiz związanych z zakresem działań wymienionych w pkt 1–3;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/74__art_3__ust_4__pkt_5" gd:GUID="9c333c0e-a16b-4081-901d-e351fef193d1">
+            <nr>5</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="81e39321-abad-4e13-8683-28958a54ffe0" fragment="6" gd:fragmentGUID="ca987a90-843a-4c58-b627-e9a8b2fa55ad">sprawowanie ogólnego zarządu.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/74__art_3__ust_5" gd:GUID="edb97137-0904-4d87-bc04-15e801283c3b">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="b2f6c9ff-d0ac-4c21-ab97-fa76dd6e8ae2" fragment="1" gd:fragmentGUID="3baa84bb-2a26-427c-a9ee-128be3c188e0">Przez działania, o których mowa w ust. 1 pkt 3, rozumie się:</zdanie>
+          </p>
+          <punkt eId="DU/2025/74__art_3__ust_5__pkt_1" gd:GUID="2f72f607-6957-44b4-89b7-2b90aed77010">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="b2f6c9ff-d0ac-4c21-ab97-fa76dd6e8ae2" fragment="2" gd:fragmentGUID="acfe3efe-f79d-487a-9c0e-a64480e690d6">zabezpieczenie terenów zlokalizowanych w sąsiedztwie wyrobiska przed zmianą stosunków wodnych;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/74__art_3__ust_5__pkt_2" gd:GUID="8f018a65-4952-49a4-a136-fef359b88376">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="b2f6c9ff-d0ac-4c21-ab97-fa76dd6e8ae2" fragment="3" gd:fragmentGUID="432e51b9-3d52-44ff-9a73-3d579b4e9fb1">likwidację zbędnych instalacji, budynków oraz demontaż maszyn i urządzeń związanych z wykonywaniem działania, o którym mowa w pkt 1;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/74__art_3__ust_5__pkt_3" gd:GUID="5683de63-71bd-46fa-9096-77758d89ae3c">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="b2f6c9ff-d0ac-4c21-ab97-fa76dd6e8ae2" fragment="4" gd:fragmentGUID="13bbaa89-ed0f-40a8-a238-d0e87c752c7e">rekultywację terenów pogórniczych związanych z wykonywaniem działania, o którym mowa w pkt 1;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/74__art_3__ust_5__pkt_4" gd:GUID="2b6fd88e-83d1-4fe1-80f1-d58ff95ed464">
+            <nr>4</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="b2f6c9ff-d0ac-4c21-ab97-fa76dd6e8ae2" fragment="5" gd:fragmentGUID="2d0289c0-cf8d-4e09-ace7-41e5d95c25b5">wykonywanie prac zabezpieczających oraz przedsięwzięć zapobiegających związanych z wykonywaniem działania, o którym mowa w pkt 1;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/74__art_3__ust_5__pkt_5" gd:GUID="3969ee5b-2a45-4df6-b505-57ad2112f9eb">
+            <nr>5</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="b2f6c9ff-d0ac-4c21-ab97-fa76dd6e8ae2" fragment="6" gd:fragmentGUID="9419872a-af02-4340-a95e-711df55de588">opracowanie projektów, dokumentacji, opinii, ekspertyz i analiz związanych z wykonywaniem działań wymienionych w pkt 1–4;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/74__art_3__ust_5__pkt_6" gd:GUID="a75170b9-0a18-4704-805d-28e9dffbbe8d">
+            <nr>6</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="b2f6c9ff-d0ac-4c21-ab97-fa76dd6e8ae2" fragment="7" gd:fragmentGUID="db0a3c5e-5b96-4628-b352-881b37efebf5">sprawowanie ogólnego zarządu.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/74__art_4" gd:GUID="7bc7ab01-eb4b-4b4e-bf89-3909dce06ced">
+        <nr>4</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="005cef52-660f-4c80-b2aa-9b073a7dcee2">
+          <p>
+            <zdanie nr="1" gd:zdGUID="3b2e2cc4-7f8c-4353-9245-407ba3d19559" fragment="1" gd:fragmentGUID="e5b0de12-573c-4b97-b578-b524d30cc76a">Dotację przeznacza się również na finansowanie:</zdanie>
+          </p>
+          <punkt eId="DU/2025/74__art_4__pkt_1" gd:GUID="149cc48e-8d51-4aa0-8020-a882c5857d2a">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="3b2e2cc4-7f8c-4353-9245-407ba3d19559" fragment="2" gd:fragmentGUID="c7d41b15-2c2e-4c9b-9b72-4dbd61bb9fb4">ekwiwalentu pieniężnego z tytułu prawa do bezpłatnego węgla dla osób, o których mowa w art. 8;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/74__art_4__pkt_2" gd:GUID="d7fd82e2-c185-408b-9a82-d63f4d0f8fb5">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="3b2e2cc4-7f8c-4353-9245-407ba3d19559" fragment="3" gd:fragmentGUID="f4748c43-08c0-44a5-aa2e-534785475a4f">roszczeń byłych pracowników całkowicie likwidowanych zakładów górniczych, dotyczących rent wyrównawczych oraz jednorazowych odszkodowań pieniężnych z tytułu wypadków przy pracy i chorób zawodowych.</zdanie>
+            </p>
+          </punkt>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2025/74__art_5" gd:GUID="47904bbf-5410-41d8-896c-f2ca133a47cc">
+        <nr>5</nr>
+        <ustep eId="DU/2025/74__art_5__ust_1" gd:GUID="c89a4acf-d3ec-457b-b64f-0d92e6de9c74">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="823e0649-6b98-46dc-b070-17916e1b1d4a" fragment="1" gd:fragmentGUID="297d4b0c-c959-461a-a230-ffecb8c3696a">Dotację na realizację zadań, o których mowa w art. 3 ust. 1 pkt 1 lit. a i b oraz art. 4, przyznaje się na wniosek podmiotów, o których mowa w art. 1 pkt 1 i 2, w przypadku spełnienia następujących warunków:</zdanie>
+          </p>
+          <punkt eId="DU/2025/74__art_5__ust_1__pkt_1" gd:GUID="006c861d-303e-4a27-aaf8-37cfadcb7425">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="823e0649-6b98-46dc-b070-17916e1b1d4a" fragment="2" gd:fragmentGUID="a796d732-fda9-4aa4-bdf8-e13d91310fe2">podjęcia decyzji albo uchwały o rozpoczęciu likwidacji zakładu górniczego przez ich właściwy organ;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/74__art_5__ust_1__pkt_2" gd:GUID="f55b0ecc-d33a-47b7-81b5-93e2ac896378">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="823e0649-6b98-46dc-b070-17916e1b1d4a" fragment="3" gd:fragmentGUID="864c471b-1e4b-4623-9e60-238e3d1026a2">zaakceptowania przez ministra właściwego do spraw gospodarki surowcami energetycznymi:<odnosnik id-odnosnika="1" symbol="1" gd:GUID="592c1914-f98c-4f69-8e54-0ee0f82c02f9"><p><zdanie nr="1" gd:zdGUID="7c6a47b5-8306-4f65-83ad-6858ef5e68d6" fragment="1" gd:fragmentGUID="7ffa7074-5251-4019-824a-a52b8be4e303">Wprowadzenie do wyliczenia ze zmianą wprowadzoną przez art. 37 ustawy z dnia 15 maja 2024 r. o zmianie niektórych ustaw związanych z funkcjonowaniem administracji rządowej (Dz. U. poz. 834), która weszła w życie z dniem 1 lipca 2024 r.</zdanie></p></odnosnik></zdanie>
+            </p>
+            <litera eId="DU/2025/74__art_5__ust_1__pkt_2__lit_a" gd:GUID="c9030a27-35d9-4ee4-97b1-99fdbad6be61">
+              <nr>a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="823e0649-6b98-46dc-b070-17916e1b1d4a" fragment="4" gd:fragmentGUID="56714d7f-5361-4e63-91d1-720e3ba71ce3">programu całkowitej likwidacji zakładu górniczego, obejmującego w szczególności zabezpieczenie zabytkowych części w podmiotach, o których mowa w art. 1 pkt 1 i 2,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/74__art_5__ust_1__pkt_2__lit_b" gd:GUID="e6ad003f-4658-4d8c-8ee7-e3d2c87b0b76">
+              <nr>b</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="823e0649-6b98-46dc-b070-17916e1b1d4a" fragment="5" gd:fragmentGUID="4fd828d3-8a81-4fcf-87ec-82c4679cb0fe">rocznego planu zadań obejmującego, w podziale na miesiące:</zdanie>
+              </p>
+              <tiret eId="DU/2025/74__art_5__ust_1__pkt_2__lit_b__tir_1" gd:GUID="0f0bc005-f2a8-43ad-865c-c000e282a2ba">
+                <p>
+                  <zdanie nr="1" gd:zdGUID="823e0649-6b98-46dc-b070-17916e1b1d4a" fragment="6" gd:fragmentGUID="ca6af698-bf23-4906-858d-b8ef815b9746">zakres rzeczowy i finansowy zadań oraz harmonogram ich realizacji, ujmujący także zabezpieczenie zabytkowych części w podmiotach, o których mowa w art. 1 pkt 1 i 2,</zdanie>
+                </p>
+              </tiret>
+              <tiret eId="DU/2025/74__art_5__ust_1__pkt_2__lit_b__tir_2" gd:GUID="6c8f44db-2961-493b-b695-6258e54d77e7">
+                <p>
+                  <zdanie nr="1" gd:zdGUID="823e0649-6b98-46dc-b070-17916e1b1d4a" fragment="7" gd:fragmentGUID="036fb8c2-26b4-4a5f-94b1-104030dce3f5">przychody z likwidacji majątku zakładu górniczego oraz innych źródeł.</zdanie>
+                </p>
+              </tiret>
+            </litera>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/74__art_5__ust_2" gd:GUID="5d006eee-3583-47a7-9702-97a49962d5cf">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="c8435c38-6fa4-4c9a-bd4b-ab774e04119c" fragment="1" gd:fragmentGUID="4fb149b4-6062-4db8-baac-d3d7c81815e5"><odnosnik id-odnosnika="2" symbol="2" gd:GUID="d8ccb1aa-61b7-4894-9364-1b647c85f89d"><p><zdanie nr="1" gd:zdGUID="487c4435-8148-443b-a6b3-2230375865fc" fragment="1" gd:fragmentGUID="f6cf8ea9-0b43-4485-bda8-cee957a29b1a">Ze zmianą wprowadzoną przez art. 37 ustawy, o której mowa w odnośniku 1.</zdanie></p></odnosnik> Dotację na realizację zadań, o których mowa w art. 3 ust. 1 pkt 1 lit. c, przyznaje się na wniosek podmiotu, o którym mowa w art. 1 pkt 4, po zaakceptowaniu przez ministra właściwego do spraw gospodarki surowcami energetycznymi rocznego planu zadań obejmującego, w podziale na miesiące, jego zakres rzeczowy i finansowy.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/74__art_5__ust_3" gd:GUID="4d9295b9-2abe-49d9-8154-17dcac534b3b">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="498edf50-f906-4854-998d-db3ef2495d20" fragment="1" gd:fragmentGUID="3323cd7c-b419-40d4-93be-be683c8b6dc3"><odsylacz-do-odnosnika id-odnosnika="2" symbol="2" /> Dotację na wykonanie działań, o których mowa w art. 3 ust. 1 pkt 2, przyznaje się na wniosek podmiotu, o którym mowa w art. 1 pkt 3, po zaakceptowaniu przez ministra właściwego do spraw gospodarki surowcami energetycznymi rocznego planu tych działań obejmującego, w podziale na miesiące, jego zakres rzeczowy i finansowy.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/74__art_5__ust_3a" gd:GUID="0aecf0d0-39f4-4b9e-b5a6-d2344f2534b4">
+          <nr>3a</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="b5f5e4c2-c00f-4d54-824f-046ebe963836" fragment="1" gd:fragmentGUID="59afc475-5970-44a0-b798-a945053b6f51"><odsylacz-do-odnosnika id-odnosnika="2" symbol="2" /> Dotację na wykonanie działań, o których mowa w art. 3 ust. 5, przyznaje się na wniosek podmiotu, o którym mowa w art. 1 pkt 5, po zaakceptowaniu przez ministra właściwego do spraw gospodarki surowcami energetycznymi rocznego planu tych działań obejmującego, w podziale na miesiące, jego zakres rzeczowy i finansowy.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/74__art_5__ust_4" gd:GUID="7147fa28-7405-471d-a78e-ae0746ee996e">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="e30f815e-0ebd-4f65-8e6d-dee8f01a735c" fragment="1" gd:fragmentGUID="8af4a9e8-a6d3-4b09-b40c-1766340f3d6a">Wniosek, o którym mowa w ust. 1‒3a, powinien zawierać:</zdanie>
+          </p>
+          <punkt eId="DU/2025/74__art_5__ust_4__pkt_1" gd:GUID="5dd11448-d15c-496a-8386-ebb0601adb50">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="e30f815e-0ebd-4f65-8e6d-dee8f01a735c" fragment="2" gd:fragmentGUID="eef85bec-2a74-4104-94f7-2fa8be54946f">oznaczenie wnioskodawcy;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/74__art_5__ust_4__pkt_2" gd:GUID="083894e7-51c5-4acc-a7ed-3b0cf65d9ef9">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="e30f815e-0ebd-4f65-8e6d-dee8f01a735c" fragment="3" gd:fragmentGUID="a4576feb-6aed-4408-bfe2-1f5d55303e6d">określenie:</zdanie>
+            </p>
+            <litera eId="DU/2025/74__art_5__ust_4__pkt_2__lit_a" gd:GUID="e35cd82d-6138-4610-a078-f9079c82aad8">
+              <nr>a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="e30f815e-0ebd-4f65-8e6d-dee8f01a735c" fragment="4" gd:fragmentGUID="806d81cb-4300-4913-ad4c-f9b1bc43d537">zadań przewidzianych do realizacji, o których mowa w art. 3 ust. 1 pkt 1, a w przypadku podmiotów, o których mowa w art. 1 pkt 1 i 2 – również w art. 4, albo</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/74__art_5__ust_4__pkt_2__lit_b" gd:GUID="b6f700c6-e9cd-412e-af76-b188ce1f87ab">
+              <nr>b</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="e30f815e-0ebd-4f65-8e6d-dee8f01a735c" fragment="5" gd:fragmentGUID="0974f8b9-9386-470b-9edf-9f21bd59e0dc">działań przewidzianych do wykonania, o których mowa w art. 3 ust. 1 pkt 2 i 3;</zdanie>
+              </p>
+            </litera>
+          </punkt>
+          <punkt eId="DU/2025/74__art_5__ust_4__pkt_3" gd:GUID="9c2c965e-6420-4cb1-b122-ecc5f3802e82">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="e30f815e-0ebd-4f65-8e6d-dee8f01a735c" fragment="6" gd:fragmentGUID="97d9290a-a2c5-493d-8544-4dd4ac7640f0">preliminarz środków planowanych na realizację zadań albo na wykonanie działań w danym roku kalendarzowym;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/74__art_5__ust_4__pkt_4" gd:GUID="f5db60c2-02d7-44f6-a426-8c335d10bb93">
+            <nr>4</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="e30f815e-0ebd-4f65-8e6d-dee8f01a735c" fragment="7" gd:fragmentGUID="9947aa84-c896-46f2-80b2-fbe1e545e1b2">w przypadku podmiotów, o których mowa w art. 1 pkt 1 i 2 – określenie stanu zaawansowania prac związanych z likwidacją zakładu górniczego;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/74__art_5__ust_4__pkt_5" gd:GUID="e596f443-a0e7-42e2-abc0-7bc020a8e177">
+            <nr>5</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="e30f815e-0ebd-4f65-8e6d-dee8f01a735c" fragment="8" gd:fragmentGUID="15adedfc-cad4-45e0-863c-f0ad219938c2">w przypadku podmiotu, o którym mowa w art. 1 pkt 4 – określenie stanu zaawansowania prac związanych z realizacją zadań, o których mowa w art. 3 ust. 1 pkt 1 lit. c;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/74__art_5__ust_4__pkt_6" gd:GUID="d137c663-f2af-4ec8-9c59-011fb4a2c7d1">
+            <nr>6</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="e30f815e-0ebd-4f65-8e6d-dee8f01a735c" fragment="9" gd:fragmentGUID="1d87cc2d-6ff5-4ed2-b572-233fa88b38c2">w przypadku podmiotu, o którym mowa w art. 1 pkt 3 – określenie stanu wykonania działań, o których mowa w art. 3 ust. 1 pkt 2;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/74__art_5__ust_4__pkt_7" gd:GUID="594a0f47-3401-44f0-b8f9-c1ddf11aac78">
+            <nr>7</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="e30f815e-0ebd-4f65-8e6d-dee8f01a735c" fragment="10" gd:fragmentGUID="07d22f6a-87dd-4292-ab4e-a519e697f117">w przypadku podmiotu, o którym mowa w art. 1 pkt 5, określenie stanu wykonania działań, o których mowa w art. 3 ust. 1 pkt 3.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/74__art_6" gd:GUID="44efb742-14c7-4c32-98be-5217608c2775">
+        <nr>6</nr>
+        <ustep eId="DU/2025/74__art_6__ust_1" gd:GUID="00a60529-0f5f-4268-b4c1-9ff75c8d6b35">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="fface160-53b8-4e8a-952f-84c38b4d06e1" fragment="1" gd:fragmentGUID="91484b18-c067-428c-96d7-023b4c874362"><odsylacz-do-odnosnika id-odnosnika="2" symbol="2" /> Podstawą przyznania dotacji na realizację zadań i wykonanie działań określonych w ustawie jest umowa zawarta między ministrem właściwym do spraw gospodarki surowcami energetycznymi a podmiotem, o którym mowa w art. 1.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/74__art_6__ust_2" gd:GUID="fbb9d36c-ce50-428c-9e46-d11042a38fe7">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="cdc4a01d-3c4e-4b94-a9fd-6b2138e3211c" fragment="1" gd:fragmentGUID="726bd4bd-a3f9-4a84-83ab-8b2844f8d6bb">Umowa, o której mowa w ust. 1, określa w szczególności opis zadania lub działania, w tym cel, na jaki dotacja została przyznana, termin jego wykonania, wysokość udzielonej dotacji, termin wykorzystania dotacji, termin i sposób rozliczenia udzielonej dotacji, termin zwrotu niewykorzystanej części dotacji oraz tryb kontroli wykonania zadań lub działań.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/74__art_7" gd:GUID="ad78b0a7-f4da-4e7f-8638-11a548400c84">
+        <nr>7</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="75f01133-6f61-4f1f-8314-062f19fc326e">
+          <p>
+            <zdanie nr="1" gd:zdGUID="dee25132-73de-42dc-8ea3-f7da8988c119" fragment="1" gd:fragmentGUID="f56bcba6-48db-4f1b-a0b6-a3de57f13964">Dotacje na realizację zadań i wykonywanie działań określonych w ustawie przyznawane są z uwzględnieniem innej pomocy, w tym pomocy <i>de minimis</i> oraz pomocy ze środków pochodzących z budżetu Unii Europejskiej, udzielonej na realizację tych zadań lub wykonywanie tych działań, niezależnie od formy i źródła, oraz przychodów z likwidacji majątku zakładu górniczego.</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2025/74__art_8" gd:GUID="0564282d-5ddf-4e2f-927a-70eafd994f3b">
+        <nr>8</nr>
+        <ustep eId="DU/2025/74__art_8__ust_1" gd:GUID="e6605b82-9954-48ab-80b8-73c0b76d2394">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="e38b025e-c3ef-4060-99f4-1901401a8564" fragment="1" gd:fragmentGUID="73e5fb21-4e02-43ed-9e2d-3e5cd6b7da51">Podmioty, o których mowa w art. 1 pkt 1 i 2, otrzymują dotację na finansowanie ekwiwalentu pieniężnego z tytułu prawa do bezpłatnego węgla na zasadach określonych w zakładowym układzie zbiorowym pracy dla emerytów lub rencistów uprawnionych do bezpłatnego węgla.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/74__art_8__ust_2" gd:GUID="b9151d16-bd66-4189-a44f-236dadce50bb">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="e7c3c2a5-52eb-442f-9392-fe09a6d05616" fragment="1" gd:fragmentGUID="311b9d4c-9e32-4116-b729-b5939b3b299d">Uprawnienie, o którym mowa w ust. 1, przysługuje również wdowom, wdowcom i sierotom po emerytach lub rencistach, jeżeli spełniają warunki do otrzymania renty rodzinnej.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/74__art_8__ust_3" gd:GUID="1383b25d-ee78-4eb4-84d7-d2ac8079d418">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="9bc03c01-688b-4884-abf8-18cf8affb6fb" fragment="1" gd:fragmentGUID="93e454b5-b914-4210-9616-839b06f1df4a">W przypadku gdy prawo do bezpłatnego węgla wynika z renty rodzinnej – wszystkim osobom do niej uprawnionym przysługuje łącznie jeden ekwiwalent pieniężny z tytułu prawa do bezpłatnego węgla.</zdanie>
+            <zdanie nr="2" gd:zdGUID="ea2ae3ed-db45-4066-ad49-dbae638d26c5" fragment="1" gd:fragmentGUID="17e90423-e94d-453b-aa99-fa79dc6f4d87">W razie podziału renty rodzinnej ekwiwalent ten ulega podziałowi w częściach równych, odpowiednio do liczby uprawnionych.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/74__art_9" gd:GUID="6510453a-93de-4e51-9e7b-467a870f76ed">
+        <nr>9</nr>
+        <ustep eId="DU/2025/74__art_9__ust_1" gd:GUID="fd5a28bb-8ba4-4873-9e09-642722509a4e">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="28cdd3e4-8245-42ed-a58e-03656d0e927a" fragment="1" gd:fragmentGUID="8793e722-7b7f-4147-812a-94a5a0203daf"><odsylacz-do-odnosnika id-odnosnika="2" symbol="2" /> Przyznana przez ministra właściwego do spraw gospodarki surowcami energetycznymi dotacja jest wypłacana w transzach, na specjalnie w tym celu wyodrębniony przez podmiot, o którym mowa w art. 1, rachunek bankowy.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/74__art_9__ust_2" gd:GUID="a05b87e1-352c-4761-a13e-46a10c338d87">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="86e30d43-7d94-48c7-8dda-141c2d6f7868" fragment="1" gd:fragmentGUID="db60cd8f-1db2-4fb9-b720-2b5bb73a7121">Podstawę do wypłacenia transzy dotacji stanowi przedstawienie przez podmiot, o którym mowa w art. 1:</zdanie>
+          </p>
+          <punkt eId="DU/2025/74__art_9__ust_2__pkt_1" gd:GUID="361490b7-45f5-4000-86fd-8178f13b7514">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="86e30d43-7d94-48c7-8dda-141c2d6f7868" fragment="2" gd:fragmentGUID="796abe18-2450-435a-8964-cdc41ed37daf">wniosku o wypłacenie transzy dotacji wynikającej z:</zdanie>
+            </p>
+            <litera eId="DU/2025/74__art_9__ust_2__pkt_1__lit_a" gd:GUID="4fd1336c-4503-41a4-966e-dacba75005d5">
+              <nr>a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="86e30d43-7d94-48c7-8dda-141c2d6f7868" fragment="3" gd:fragmentGUID="182c6405-e96c-473f-9016-cde8e11c5ae5">rocznego planu zadań, o którym mowa w art. 5 ust. 1 pkt 2 lit. b i ust. 2, albo</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/74__art_9__ust_2__pkt_1__lit_b" gd:GUID="57621f20-1973-4d49-a8d6-36c007e2597b">
+              <nr>b</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="86e30d43-7d94-48c7-8dda-141c2d6f7868" fragment="4" gd:fragmentGUID="4c3951a2-b9e6-48eb-a7b4-3007d1c9501e">rocznego planu działań, o którym mowa w art. 5 ust. 3 i 3a;</zdanie>
+              </p>
+            </litera>
+          </punkt>
+          <punkt eId="DU/2025/74__art_9__ust_2__pkt_2" gd:GUID="c7263ff1-49c6-4f93-a2e7-aafc7b07ee63">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="86e30d43-7d94-48c7-8dda-141c2d6f7868" fragment="5" gd:fragmentGUID="448c84bd-03ee-47bc-b17f-f105bac11ba1">sprawozdania, o którym mowa w art. 10 ust. 1.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/74__art_10" gd:GUID="d5ee1b19-53b0-497c-82c5-238bc32734c0">
+        <nr>10</nr>
+        <ustep eId="DU/2025/74__art_10__ust_1" gd:GUID="f20b8578-0ae0-446e-b622-e637673b170c">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="7dd1a68e-ab81-4045-805f-b4ba75932610" fragment="1" gd:fragmentGUID="92177a6f-139a-4405-a702-6e9c2a2e8c88"><odsylacz-do-odnosnika id-odnosnika="2" symbol="2" /> Podmiot, o którym mowa w art. 1, składa ministrowi właściwemu do spraw gospodarki surowcami energetycznymi sprawozdanie miesięczne zawierające rozliczenie rzeczowo-finansowe zrealizowanych zadań lub wykonanych działań, w terminie do 25. dnia miesiąca następującego po miesiącu, objętym tym sprawozdaniem.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/74__art_10__ust_2" gd:GUID="81b5834b-020f-45b4-a3a6-ff0681c050da">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="f9bbb730-045f-4d49-95fb-2c0a816012e3" fragment="1" gd:fragmentGUID="4a5d9098-d5fc-4c50-a957-78f6650b8a06">(uchylony)</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/74__art_10__ust_3" gd:GUID="b024e804-ad75-42db-b24f-9eaf98da3fcf">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="55530573-39fa-48ec-9995-f000757a550b" fragment="1" gd:fragmentGUID="0fad9286-c940-45fa-b315-12489a257b61">Podmiot, o którym mowa w art. 1, przedstawia ministrowi właściwemu do spraw gospodarki surowcami energetycznymi, w terminie do dnia 20 lutego roku następnego, wraz z rocznym rozliczeniem rzeczowo-finansowym, sprawozdanie z realizacji:<odsylacz-do-odnosnika id-odnosnika="1" symbol="1" /></zdanie>
+          </p>
+          <punkt eId="DU/2025/74__art_10__ust_3__pkt_1" gd:GUID="2f426dcd-86a4-41ee-bf0f-6fd342e08404">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="55530573-39fa-48ec-9995-f000757a550b" fragment="2" gd:fragmentGUID="24d5059e-052a-4cb9-974b-d20e4c5734f8">rocznego planu zadań, o którym mowa w art. 5 ust. 1 pkt 2 lit. b i ust. 2, albo</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/74__art_10__ust_3__pkt_2" gd:GUID="566291b5-aa80-46b9-9db9-19fd325e91e5">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="55530573-39fa-48ec-9995-f000757a550b" fragment="3" gd:fragmentGUID="2dd22cf5-7010-43db-bdd5-552f91bdef95">rocznego planu działań, o którym mowa w art. 5 ust. 3 i 3a.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/74__art_10__ust_4" gd:GUID="2a917cf9-4dfd-4b9c-885b-1e593f0938e8">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="5e0349cf-b43e-49f5-992a-44610b0d072e" fragment="1" gd:fragmentGUID="fa83a751-99ae-411d-aae4-822c273118bb"><odsylacz-do-odnosnika id-odnosnika="2" symbol="2" /> W przypadku gdy podmiot, o którym mowa w art. 1, nie zrealizował zadań albo nie wykonał działań, o których mowa w art. 5 ust. 4 pkt 2, lub nie przedstawił sprawozdań, o których mowa w ust. 1 i 3, minister właściwy do spraw gospodarki surowcami energetycznymi wstrzymuje przekazywanie kolejnych rat dotacji do czasu ustania przyczyn wstrzymania.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/74__art_11" gd:GUID="a45d4e66-a621-497b-804c-6b60df362605">
+        <nr>11</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="aaec3425-def8-432d-8836-0de559a58d73">
+          <p>
+            <zdanie nr="1" gd:zdGUID="2da8e766-44e0-404d-a936-d20b7d8d7321" fragment="1" gd:fragmentGUID="9b0ec721-f740-44f4-8152-46462d672f42"><odsylacz-do-odnosnika id-odnosnika="2" symbol="2" /> Dysponentem dotacji na realizację zadań i wykonanie działań określonych w ustawie jest minister właściwy do spraw gospodarki surowcami energetycznymi.</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2025/74__art_12" gd:GUID="ff41d220-39f1-406c-9039-6ff9d08709b5">
+        <nr>12</nr>
+        <ustep eId="DU/2025/74__art_12__ust_1" gd:GUID="9d839b85-e50f-4aaa-9a9c-25ac78d2e36c">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="6d7d0306-eb3b-4b63-9c7c-95d66ba53291" fragment="1" gd:fragmentGUID="d3c2e6c6-a2ad-421b-ac4c-3b0808490f5e"><odsylacz-do-odnosnika id-odnosnika="2" symbol="2" /> Agencja Rozwoju Przemysłu Spółka Akcyjna z siedzibą w Warszawie, na zlecenie ministra właściwego do spraw gospodarki surowcami energetycznymi, realizuje zadania związane z monitorowaniem prawidłowości wykorzystania dotacji przeznaczonej na cele określone w ustawie.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/74__art_12__ust_2" gd:GUID="e1afb256-673f-4b44-8aad-03b74c07b926">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="af4b58cc-8815-4519-ba8b-505f177280fb" fragment="1" gd:fragmentGUID="a11b2b2d-1c0f-45fa-9bdf-84cd4e15cb54">Zadania, o których mowa w ust. 1, są finansowane z dotacji z budżetu państwa.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/74__art_12__ust_3" gd:GUID="0c978c86-8feb-4e62-84dd-c6fbe254c84f">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="f033a1b2-f01b-4766-90d0-cebdf923e295" fragment="1" gd:fragmentGUID="08b5c273-4b4d-4e8f-930b-fd5adef0a29f"><odsylacz-do-odnosnika id-odnosnika="2" symbol="2" /> Podstawą przyznania dotacji na realizację zadań, o których mowa w ust. 1, jest umowa zawarta między ministrem właściwym do spraw gospodarki surowcami energetycznymi a Agencją Rozwoju Przemysłu Spółką Akcyjną z siedzibą w Warszawie.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/74__art_12a" gd:GUID="12724393-5e32-4730-8d2b-183f39e32c82">
+        <nr>12a</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="61194531-fbf3-4368-8dd6-bc07b4544cab">
+          <p>
+            <zdanie nr="1" gd:zdGUID="d75f0f1a-fd85-49fc-aff6-f0ff1f2cbc8f" fragment="1" gd:fragmentGUID="613fc967-2619-4418-873e-ff2ac51acab4">(uchylony)</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2025/74__art_13" gd:GUID="0511a1ea-8d14-41bc-91f4-322feb4d2049">
+        <nr>13</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="f394d105-8268-4830-8b27-b7e4e18b9063">
+          <p>
+            <zdanie nr="1" gd:zdGUID="8e8247c9-490e-43ad-8539-8a6a0a68e9bf" fragment="1" gd:fragmentGUID="35295d79-3a51-4310-9e0c-6cdc35cb56c3">Dotacje na zadania określone w ustawie są przekazywane podmiotom, o których mowa w art. 1, do dnia 31 grudnia 2027 r.</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2025/74__art_14" gd:GUID="dd3bb330-d9e6-4ecb-9109-59d9528481e9">
+        <nr>14</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="d41feab0-02fc-472e-9d3a-9ba2ee6157bf">
+          <p>
+            <zdanie nr="1" gd:zdGUID="96439c01-fcfd-461c-a9ec-760eab2a81a2" fragment="1" gd:fragmentGUID="45c56952-d943-48fd-ba88-53a451899268">Przepisy ustawy w zakresie dotyczącym dotacji dla poszczególnych podmiotów, o których mowa w art. 1, w przypadku gdy konieczna jest zgoda Komisji Europejskiej, stosuje się od dnia ogłoszenia przez Komisję Europejską decyzji o zgodności tej dotacji z rynkiem wewnętrznym.</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2025/74__art_15" gd:GUID="d947899b-d02a-4ed6-a58f-a21c3269a5f2">
+        <nr>15</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="7fe8b68d-aad3-434b-8f11-0080e22df9d2">
+          <p>
+            <zdanie nr="1" gd:zdGUID="0781d49c-4492-401e-9971-1cecdbff483d" fragment="1" gd:fragmentGUID="dcf5038b-7246-421a-ae5c-7b5a9f9a6308">Do dotacji przyznanych na podstawie ustawy uchylanej w art. 16 stosuje się przepisy dotychczasowe.</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2025/74__art_16" gd:GUID="f9c2aee9-f2c4-476a-bdd3-6d10581a54da">
+        <nr>16</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="3cd1c96c-d1ce-49aa-8155-f882ede16090">
+          <p>
+            <zdanie nr="1" gd:zdGUID="2db6b43b-c240-4eb1-861f-8b4300301539" fragment="1" gd:fragmentGUID="9f244623-fa64-42aa-a2d8-eee22130518b">Traci moc ustawa z dnia 17 lutego 2006 r. o dotacji przeznaczonej dla niektórych podmiotów (Dz. U. poz. 446, z 2009 r. poz. 339 oraz z 2011 r. poz. 981).</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2025/74__art_17" gd:GUID="19b81488-cdde-41f8-ad36-1695b1b1b7aa">
+        <nr>17</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="d3790017-522c-4b73-bbeb-e2a08ce7101e">
+          <p>
+            <zdanie nr="1" gd:zdGUID="59218100-c7fc-4fdf-aebf-a93862a0c295" fragment="1" gd:fragmentGUID="d657875b-e114-4023-b481-fc3ae6bb8c75">Ustawa wchodzi w życie z dniem 1 stycznia 2014 r.</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+    </ustawa>
+  </obwieszczenie>
+</akt-prawny>

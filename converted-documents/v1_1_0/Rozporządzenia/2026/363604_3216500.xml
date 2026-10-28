@@ -1,0 +1,279 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <rozporzadzenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2026/288</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>c558e3e4-22aa-47e3-b62f-b97f8bdb89fb</gd:GUIDwersji>
+      <AdresISAP>WDU20260000288</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2026</Rok>
+      <Pozycja>288</Pozycja>
+      <AdresWyswietlany>Dz.U. 2026 poz. 288</AdresWyswietlany>
+      <Tytul>Rozporządzenie Ministra Rolnictwa i Rozwoju Wsi z dnia 5 marca 2026 r. w sprawie określenia chorób innych niż choroby umieszczone w wykazie, podlegających obowiązkowi powiadamiania</Tytul>
+      <Rodzaj>ROZP</Rodzaj>
+      <DataOgloszenia>2026-03-09</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2026-03-05</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2026-03-18_DU-2026-288_odczytane" rodzaj="wejscie-w-zycie" pochodzenie="odczytane" data="2026-03-18" podstawa="§ 2" zrodlo="https://eli.gov.pl/eli/DU/2026/288" dowod="DU/2026/288__art_2" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2026-03-18_DU-2026-288_odczytane.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2026-03-18_DU-2026-288_odczytane" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="38fa7436-990c-404a-9d87-27f16d243a1a" rola="wydajacy">
+          <Nazwa>Minister Rolnictwa i Rozwoju Wsi</Nazwa>
+          <OrganPodpisujacy>Minister Rolnictwa i Rozwoju Wsi</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>J.</imie> <nazwisko>Czerniak</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Rozporządzenie</rodzaj-aktu>
+    <autor-aktu>Ministra Rolnictwa i Rozwoju Wsi<odnosnik id-odnosnika="1" symbol="1" gd:GUID="ae886e58-38b0-4a07-80f7-83ed4a4a58e6"><p><zdanie nr="1" gd:zdGUID="7918eccd-6c9e-424b-a3b8-9d44d0cda55c" fragment="1" gd:fragmentGUID="18f38699-e736-418a-9c91-3a8d5dd92b96">Minister Rolnictwa i Rozwoju Wsi kieruje działem administracji rządowej – rolnictwo, na podstawie § 1 ust. 2 pkt 1 rozporządzenia Prezesa Rady Ministrów z dnia 25 lipca 2025 r. w sprawie szczegółowego zakresu działania Ministra Rolnictwa i Rozwoju Wsi (Dz. U. poz. 1000).</zdanie></p></odnosnik></autor-aktu>
+    <data>z dnia 5 marca 2026 r.</data>
+    <tytul>w sprawie określenia chorób innych niż choroby umieszczone w wykazie, podlegających obowiązkowi powiadamiania</tytul>
+    <podstawa-prawna>Na podstawie art. 10 ust. 7 pkt 2 ustawy z dnia 21 listopada 2025 r. o zdrowiu zwierząt (Dz. U. poz. 1795) zarządza się, co następuje:</podstawa-prawna>
+    <paragraf eId="DU/2026/288__art_1" gd:GUID="ead708f6-e60e-498c-b2d5-7d94daaffb74" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-18_DU-2026-288_odczytane.x" wejscie-w-zycie="2026-03-18">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="7f920cf5-cf66-4162-a0d4-50169a4dd476" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-18_DU-2026-288_odczytane.x" wejscie-w-zycie="2026-03-18">
+        <p>
+          <zdanie nr="1" gd:zdGUID="4a6c6f77-a12e-48fb-905e-a053097a79d7" fragment="1" gd:fragmentGUID="fc1664c7-f857-46f3-be0e-d1fa0a2fe851" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-18_DU-2026-288_odczytane.x" wejscie-w-zycie="2026-03-18">Określa się choroby inne niż choroby umieszczone w wykazie, które na terytorium Rzeczypospolitej Polskiej podlegają obowiązkowi powiadamiania na zasadach określonych w art. 18 ust. 1 rozporządzenia Parlamentu Europejskiego i Rady (UE) 2016/429 z dnia 9 marca 2016 r. w sprawie przenośnych chorób zwierząt oraz zmieniającego i uchylającego niektóre akty w dziedzinie zdrowia zwierząt („Prawo o zdrowiu zwierząt”) (Dz. Urz. UE L 84 z 31.03.2016, str. 1, z późn. zm.<odnosnik id-odnosnika="2" symbol="2" gd:GUID="3a535217-5d05-4423-82d8-6d22ea37ebe8"><p><zdanie nr="1" gd:zdGUID="5a375710-d555-4d25-bf8c-e2cf436796a9" fragment="1" gd:fragmentGUID="443b1bd8-4fa4-437c-b4d2-52dcb7e36264">Zmiany wymienionego rozporządzenia zostały ogłoszone w Dz. Urz. UE L 57 z 03.03.2017, str. 65, Dz. Urz. UE L 95 z 07.04.2017, str. 1, Dz. Urz. UE L 137 z 24.05.2017, str. 40, Dz. Urz. UE L 272 z 31.10.2018, str. 11 oraz Dz. Urz. UE L 48 z 11.02.2021, str. 3.</zdanie></p></odnosnik>), które są wymienione w załączniku do rozporządzenia.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2026/288__art_2" gd:GUID="afbf62c7-1efd-4b58-8fd2-60f48fb8d22e" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-18_DU-2026-288_odczytane.x" wejscie-w-zycie="2026-03-18">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="63482538-98c5-4c2e-a32b-104032632cda" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-18_DU-2026-288_odczytane.x" wejscie-w-zycie="2026-03-18">
+        <p>
+          <zdanie nr="1" gd:zdGUID="caf3c5e3-4589-4e2b-ad0f-7b046a255f53" fragment="1" gd:fragmentGUID="77cb30d2-e472-40b7-8a3a-e600f86d17d6" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-18_DU-2026-288_odczytane.x" wejscie-w-zycie="2026-03-18">Rozporządzenie wchodzi w życie z dniem 18 marca 2026 r.<odnosnik id-odnosnika="3" symbol="3" gd:GUID="d28d60d2-4846-4f5e-8af8-c229506c2a98"><p><zdanie nr="1" gd:zdGUID="c56e90c2-75e7-45cb-8f45-ef1a9289690b" fragment="1" gd:fragmentGUID="fc09c476-61c3-4d54-82d0-6048bfd9f9c1">Niniejsze rozporządzenie było poprzedzone rozporządzeniem Ministra Rolnictwa i Rozwoju Wsi z dnia 19 listopada 2012 r. w sprawie określenia wykazu chorób zakaźnych zwierząt podlegających obowiązkowi rejestracji (Dz. U. z 2021 r. poz. 243), które traci moc z dniem 18 marca 2026 r. w związku z wejściem w życie ustawy z dnia 21 listopada 2025 r. o zdrowiu zwierząt (Dz. U. poz. 1795).</zdanie></p></odnosnik></zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <organ-podpisujacy>Minister Rolnictwa i Rozwoju Wsi: wz. <i><osoba podpisujacy="true" gd:osobaGUID="04717ed0-c739-49ff-a9b4-fd0abefcb0bd"><imie>J.</imie> <nazwisko>Czerniak</nazwisko></osoba></i></organ-podpisujacy>
+    <zalacznik eId="DU/2026/288__zal_1" gd:GUID="e590bef1-535f-44a1-bd60-a9b3c2506a52">
+      <zalacznik-do gd:GUID="d547ef62-b2c8-475b-966a-955e9981de9e">Załącznik do rozporządzenia Ministra Rolnictwa i Rozwoju Wsi z dnia 5 marca 2026 r. (Dz. U. poz. 288)</zalacznik-do>
+      <tytul-zalacznika gd:GUID="7903e8f4-f3a1-4d6b-8347-a6669bc25489">ChorObY innE niż choroby umieszczone w wykazie, KTÓRE NA TERYTORIUM RZECZYPOSPOLITEJ POLSKIEJ podlegają obowiązkowi powiadamiania NA ZASADACH określonych w art. 18 ust. 1 rozporządzenia Parlamentu Europejskiego i Rady (UE) 2016/429 z dnia 9 marca 2016 r. w sprawie przenośnych chorób zwierząt oraz zmieniającego i uchylającego niektóre akty w dziedzinie zdrowia zwierząt („Prawo o zdrowiu zwierząt”)</tytul-zalacznika>
+      <segment-zalacznika gd:GUID="b55657b2-e1e5-4579-bc8e-a88200352e1b" orientacja="pionowa">
+        <punkt eId="DU/2026/288__zal_1__pkt_1" gd:GUID="26257d77-0c65-4ff3-867b-3f99db7c379d" wejscie-w-zycie="2026-03-18">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="d0d0ff0a-faa6-4db1-99a5-95a325a3c426" fragment="1" gd:fragmentGUID="8673a050-4559-4150-8d22-9fec1b66a7c1" wejscie-w-zycie="2026-03-18">wirusowe zapalenie żołądka i jelit świń (Transmissible gastroenteritis – TGE);</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/288__zal_1__pkt_2" gd:GUID="1c8bbae1-9e57-4917-a74f-940b163426e3" wejscie-w-zycie="2026-03-18">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="fa17dace-f727-4049-9035-cbe66bb54597" fragment="1" gd:fragmentGUID="73d586eb-c02f-42e6-b8cf-a630cb207ec2" wejscie-w-zycie="2026-03-18">enterowirusowe zapalenie mózgu i rdzenia świń (choroba cieszyńska lub talfańska);</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/288__zal_1__pkt_3" gd:GUID="6e48db8b-aa7b-4f46-864f-ab4ce0701ff7" wejscie-w-zycie="2026-03-18">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="ffc739d1-9b2c-4a40-8d47-89f2db9e118e" fragment="1" gd:fragmentGUID="ff7fdb61-923d-4f8a-8d22-c6bf0c3683bc" wejscie-w-zycie="2026-03-18">zakaźne zanikowe zapalenie nosa (ZZZN);</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/288__zal_1__pkt_4" gd:GUID="e03adf4a-aaf7-4cfa-abcf-f3bcf261830a" wejscie-w-zycie="2026-03-18">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="f5349fa0-d5ff-44bc-8c19-af6b4889fc3c" fragment="1" gd:fragmentGUID="c6967eed-c173-4f0d-9f44-3339801e2371" wejscie-w-zycie="2026-03-18">choroba pęcherzykowa świń (Swine vesicular disease);</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/288__zal_1__pkt_5" gd:GUID="dcf548d7-9f09-4b0e-a2dc-97a42a380b33" wejscie-w-zycie="2026-03-18">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="b78bb314-e323-4002-87fa-0186820a96b2" fragment="1" gd:fragmentGUID="a8b8641d-2443-472c-a8c4-112613a05680" wejscie-w-zycie="2026-03-18">pęcherzykowe zapalenie jamy ustnej (Vesicular stomatitis);</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/288__zal_1__pkt_6" gd:GUID="05f32362-b227-4cbf-88b7-cdbee4eeabb5" wejscie-w-zycie="2026-03-18">
+          <nr>6</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a48bff89-7708-4878-9dc8-860e1d29fc72" fragment="1" gd:fragmentGUID="7c905463-9e04-4a18-9824-0a525b38acff" wejscie-w-zycie="2026-03-18">zakaźna bezmleczność u owiec i kóz (Contagious agalactia);</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/288__zal_1__pkt_7" gd:GUID="21b4648c-6df3-4697-bfba-c8aa1f84940b" wejscie-w-zycie="2026-03-18">
+          <nr>7</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="3ebf5295-3fa8-42ce-9bb2-2962e362c1bf" fragment="1" gd:fragmentGUID="ec9e4d0a-c02a-44dc-be55-789e419b7abc" wejscie-w-zycie="2026-03-18">choroba maedi-visna (Maedi-visna disease);</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/288__zal_1__pkt_8" gd:GUID="cef17f23-dfa6-4b5c-874b-375126a5b2e4" wejscie-w-zycie="2026-03-18">
+          <nr>8</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a469e546-5606-4e23-995c-ec0652c98630" fragment="1" gd:fragmentGUID="5d2ef3ee-2ba6-415e-b7f5-500368615f3d" wejscie-w-zycie="2026-03-18">wirusowe zapalenia stawów i mózgu kóz (Caprine arthritis/encephalitis – CAE);</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/288__zal_1__pkt_9" gd:GUID="a72dd869-674f-470b-a701-08be3e233ef8" wejscie-w-zycie="2026-03-18">
+          <nr>9</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="7722cd61-ad71-4aad-9968-6a46d402bb4f" fragment="1" gd:fragmentGUID="4b71e2a1-1ab4-4f27-bc05-2d1a704c8b64" wejscie-w-zycie="2026-03-18">gruczolakowatość płuc u owiec i kóz (Ovine pulmonary adenomatosis);</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/288__zal_1__pkt_10" gd:GUID="99713089-2c0a-4f53-b6a6-d763c0c0e919" wejscie-w-zycie="2026-03-18">
+          <nr>10</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="9c82f686-4701-4bb3-93b1-1233a8bb03ac" fragment="1" gd:fragmentGUID="711cc9ae-17c1-438d-bb27-bf8e6f240c71" wejscie-w-zycie="2026-03-18">serowaciejące zapalenie węzłów chłonnych (Caseus lymphadenitis – CLA);</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/288__zal_1__pkt_11" gd:GUID="07865745-407d-4981-8660-38269f762e6b" wejscie-w-zycie="2026-03-18">
+          <nr>11</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="6b1ad419-821f-454e-a4ac-cbfb2f804a81" fragment="1" gd:fragmentGUID="c93231d3-b447-4445-af9b-b9d57c706a77" wejscie-w-zycie="2026-03-18">zakaźne zapalenie torby Fabrycjusza (choroba Gumboro)/Infectious bursal disease (Gumboro disease);</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/288__zal_1__pkt_12" gd:GUID="058e7525-75b5-4eef-b991-db2274dcc60e" wejscie-w-zycie="2026-03-18">
+          <nr>12</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="6fc484e9-eabe-4f27-9238-0861db6d218a" fragment="1" gd:fragmentGUID="6d638f4b-315d-41ff-8a54-03f863724af0" wejscie-w-zycie="2026-03-18">zakaźne zapalenie mózgu i rdzenia kręgowego u drobiu (AE);</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/288__zal_1__pkt_13" gd:GUID="04a9a666-70ad-41c1-9b9a-fa5add398f3d" wejscie-w-zycie="2026-03-18">
+          <nr>13</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="d6d6fdb1-c652-4582-bec5-3d13112c29a5" fragment="1" gd:fragmentGUID="a5e3bc1e-f560-413f-a374-eac0e501f07d" wejscie-w-zycie="2026-03-18">choroba Mareka (Marek’s disease);</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/288__zal_1__pkt_14" gd:GUID="0c86667f-e181-4794-b584-15678b1fa383" wejscie-w-zycie="2026-03-18">
+          <nr>14</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="b51d184e-5c38-43a6-a9db-ea39471adb73" fragment="1" gd:fragmentGUID="1575d53b-b635-4670-9d91-13d79d13696e" wejscie-w-zycie="2026-03-18">choroba Derzsyego (Derzsy’s disease);</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/288__zal_1__pkt_15" gd:GUID="130a5498-1668-4e3e-a1cc-65d3802b084a" wejscie-w-zycie="2026-03-18">
+          <nr>15</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="cacc7abb-7601-4e89-8549-fe766572da19" fragment="1" gd:fragmentGUID="c045c85b-c399-4894-a4a4-c188cc0fdbb9" wejscie-w-zycie="2026-03-18">zakaźne zapalenie krtani i tchawicy u drobiu (ILT);</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/288__zal_1__pkt_16" gd:GUID="0e8654e8-00c4-4002-bc78-23981476e42d" wejscie-w-zycie="2026-03-18">
+          <nr>16</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="449943df-9d94-457b-9b2f-41bddfdbad82" fragment="1" gd:fragmentGUID="84f19575-5471-4a03-88ec-d82f3dc8c1c9" wejscie-w-zycie="2026-03-18">zakaźne zapalenie nosa i tchawicy indyków (TRT);</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/288__zal_1__pkt_17" gd:GUID="c279cdfb-a544-4f72-9af8-df8159ad6bf7" wejscie-w-zycie="2026-03-18">
+          <nr>17</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="7f4fe04b-59c0-4aac-b394-a2d473b09dad" fragment="1" gd:fragmentGUID="806c9e63-9924-4b9a-80db-c68f1d58cc4d" wejscie-w-zycie="2026-03-18">zakaźne zapalenie oskrzeli kur (IB);</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/288__zal_1__pkt_18" gd:GUID="c6708b0d-93d4-43d0-a69f-2ea541d717af" wejscie-w-zycie="2026-03-18">
+          <nr>18</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="30c490fb-8ed4-42c2-861b-21bb1ba27fb1" fragment="1" gd:fragmentGUID="08b546eb-1572-49f7-97ba-74f8bee7e65f" wejscie-w-zycie="2026-03-18">wirusowe zapalenie jelit u norek (Mink viral enteritis);</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/288__zal_1__pkt_19" gd:GUID="cf08a1e8-448b-49c5-9b06-13b3c157549f" wejscie-w-zycie="2026-03-18">
+          <nr>19</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a4ff69be-fdae-4941-99e3-9c6868f35b6f" fragment="1" gd:fragmentGUID="9d2d2110-5118-439e-88f7-069db96b0677" wejscie-w-zycie="2026-03-18">choroba aleucka (Aleutian disease);</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/288__zal_1__pkt_20" gd:GUID="2bc04c88-a5dc-4659-b79f-fb5be9d8a818" wejscie-w-zycie="2026-03-18">
+          <nr>20</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="2c8a2606-3932-4c3b-88ce-05ab1ea88a6e" fragment="1" gd:fragmentGUID="0b9faa77-185b-483f-ac38-f2a3264b9ce8" wejscie-w-zycie="2026-03-18">myksomatoza (Myxomatosis);</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/288__zal_1__pkt_21" gd:GUID="dccacf37-7e5b-48ef-8b3e-77b9b82529f0" wejscie-w-zycie="2026-03-18">
+          <nr>21</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="4d9c97d0-19a1-4e2e-b7ae-b6f9a4142211" fragment="1" gd:fragmentGUID="069a170d-7ffe-4e9f-9bb1-d9613d53a979" wejscie-w-zycie="2026-03-18">krwotoczna choroba królików (Rabbit haemorrhagic disease);</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/288__zal_1__pkt_22" gd:GUID="76b07e13-690c-4164-a0b4-a1cd8b5a4457" wejscie-w-zycie="2026-03-18">
+          <nr>22</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="e173689f-c738-432e-918e-2d60b2e73b07" fragment="1" gd:fragmentGUID="b4e74838-e551-44e0-819a-98654a791fa5" wejscie-w-zycie="2026-03-18">tularemia (Tularaemia);</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/288__zal_1__pkt_23" gd:GUID="3afd832a-6ec1-4028-b301-3d5e73981aa8" wejscie-w-zycie="2026-03-18">
+          <nr>23</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="9e726e9e-4eba-45b3-9244-3ca0164dee2b" fragment="1" gd:fragmentGUID="ce0a6017-8628-438c-9d92-64079d02b877" wejscie-w-zycie="2026-03-18">toksoplazmoza;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/288__zal_1__pkt_24" gd:GUID="29422b69-a026-4832-a913-f27c52aaa65c" wejscie-w-zycie="2026-03-18">
+          <nr>24</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="903c0509-3436-40b2-9e5a-675135fbb06a" fragment="1" gd:fragmentGUID="f91a48ab-7257-4303-b3e5-3f88863e233c" wejscie-w-zycie="2026-03-18">listerioza;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/288__zal_1__pkt_25" gd:GUID="a54d6232-bf30-436e-94ad-290c2bc0d5c5" wejscie-w-zycie="2026-03-18">
+          <nr>25</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="1495516d-bcf1-46ae-b457-a5b0819de0aa" fragment="1" gd:fragmentGUID="948b2e2f-9970-479b-9e29-f2ff7bf31cc2" wejscie-w-zycie="2026-03-18">zakażenia pałeczkami Escherichia coli (szczepy werotoksyczne);</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/288__zal_1__pkt_26" gd:GUID="cad3f5de-02fd-4da5-97b8-0616f9624bfd" wejscie-w-zycie="2026-03-18">
+          <nr>26</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="ad2e1b70-c0d3-49b3-9fdb-0e6aa51c70b7" fragment="1" gd:fragmentGUID="f10517f5-6ca0-4ffd-b972-c240a7fd3148" wejscie-w-zycie="2026-03-18">włośnica (<i>Trichinellosis</i>);</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/288__zal_1__pkt_27" gd:GUID="0d2767d9-c280-4bf0-8e64-4d2cbe88fcbd" wejscie-w-zycie="2026-03-18">
+          <nr>27</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="02fed836-4e2b-4813-94a8-a015bfc275d6" fragment="1" gd:fragmentGUID="3930777f-cf12-4a73-93f8-c4a4eafe570b" wejscie-w-zycie="2026-03-18">salmonellozy bydła i świń (Salmonellosis of cattle and pigs);</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/288__zal_1__pkt_28" gd:GUID="51812079-dc51-44e0-af21-5bfb2d1f8c01" wejscie-w-zycie="2026-03-18">
+          <nr>28</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="8e9e01dc-0d6e-4df7-ab66-a76dfea81058" fragment="1" gd:fragmentGUID="476967cf-c112-43e4-a713-22ebde738250" wejscie-w-zycie="2026-03-18">kampylobakterioza;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/288__zal_1__pkt_29" gd:GUID="038c1650-e8d8-4225-989d-4d0a7542c6da" wejscie-w-zycie="2026-03-18">
+          <nr>29</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="580857b2-6e45-47f2-aa1a-ef9a567922ca" fragment="1" gd:fragmentGUID="40fd3b9a-9a91-4cb9-8d76-a497080af5a3" wejscie-w-zycie="2026-03-18">bąblowica i jej czynniki chorobotwórcze;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/288__zal_1__pkt_30" gd:GUID="5460b50a-80d5-4547-a6b3-da6ca63e9e53" wejscie-w-zycie="2026-03-18">
+          <nr>30</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="6579f187-a5a3-4924-aed1-e4912ccb1654" fragment="1" gd:fragmentGUID="7e44d89c-7bf2-4e9d-86a0-71b3bfef40b4" wejscie-w-zycie="2026-03-18">choroba roztoczowa (Acariosis of bees);</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/288__zal_1__pkt_31" gd:GUID="741f9175-c027-4e0e-85b2-07c78e7b0c50" wejscie-w-zycie="2026-03-18">
+          <nr>31</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="ae2ad257-2ff8-4e55-98b3-431283eba97e" fragment="1" gd:fragmentGUID="157522ac-1dae-4f39-a5fb-2aab20d5f2ef" wejscie-w-zycie="2026-03-18">zgnilec europejski (European foulbrood);</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/288__zal_1__pkt_32" gd:GUID="165069c1-028d-4069-9e18-548accad40ae" wejscie-w-zycie="2026-03-18">
+          <nr>32</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="938fb7b1-a229-42ad-b911-7e8f7d1a14eb" fragment="1" gd:fragmentGUID="dd73e583-a777-4042-99ff-b7c2565e8f3a" wejscie-w-zycie="2026-03-18">wiosenna wiremia karpi (SVC);</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/288__zal_1__pkt_33" gd:GUID="54a70668-c6e9-4ced-916d-9966a7c34414" wejscie-w-zycie="2026-03-18">
+          <nr>33</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="e5819262-6a0b-4800-bfe6-8436ea53e785" fragment="1" gd:fragmentGUID="c8150829-a364-4123-9cad-5b707130e728" wejscie-w-zycie="2026-03-18">alfawirus ryb łososiowatych (SAV);</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/288__zal_1__pkt_34" gd:GUID="3b23291f-56f9-4ee6-9f3f-8235991c5a77" wejscie-w-zycie="2026-03-18">
+          <nr>34</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="ab1a9022-376e-483e-80af-33cfefa4e9dc" fragment="1" gd:fragmentGUID="448ed1da-c0b2-4d32-b3c9-8be2b85dc2d5" wejscie-w-zycie="2026-03-18">zakażenie SARS CoV-2;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/288__zal_1__pkt_35" gd:GUID="a573da59-7ccb-4186-8c93-3027bf9f89ad" wejscie-w-zycie="2026-03-18">
+          <nr>35</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="2c1dd764-6c97-4a4c-b0cf-8a3e376eb889" fragment="1" gd:fragmentGUID="cd2b424c-8e16-4f4e-aa97-972103ce241a" wejscie-w-zycie="2026-03-18">salmonellozy drobiu, z wyłączeniem <i>S</i>.</zdanie>
+            <zdanie nr="2" gd:zdGUID="3d2c4cfd-f3aa-44f5-8abd-895c01cb0fb4" fragment="1" gd:fragmentGUID="b83f1e10-ba71-4e2b-aa77-b0dbe10e45d4" wejscie-w-zycie="2026-03-18">Galinarum, <i>S</i>.</zdanie>
+            <zdanie nr="3" gd:zdGUID="05647d22-a492-4a79-9199-22542b67a16b" fragment="1" gd:fragmentGUID="3e1922a8-0faa-46d7-a443-6b0649f725ae" wejscie-w-zycie="2026-03-18">Pullorum, <i>S</i>.</zdanie>
+            <zdanie nr="4" gd:zdGUID="c8d4d886-7496-4c64-8026-c1456c074efb" fragment="1" gd:fragmentGUID="95cbe112-a479-44ff-a98e-e9c3892560be" wejscie-w-zycie="2026-03-18">Arizonae u gatunków <i>Gallus gallus</i>, <i>Meleagris gallopavo</i>, <i>Numida meleagris</i>, <i>Coturnix coturnix</i>, <i>Phasianus colchicus</i>, <i>Perdix perdix</i>, <i>Anas</i> spp.</zdanie>
+          </p>
+        </punkt>
+      </segment-zalacznika>
+    </zalacznik>
+  </rozporzadzenie>
+</akt-prawny>

@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <ustawa>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/531</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>dc1b5800-eb0f-401f-8ebe-c418e865affc</gd:GUIDwersji>
+      <AdresISAP>WDU20250000531</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>531</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 531</AdresWyswietlany>
+      <Tytul>Ustawa z dnia 4 kwietnia 2025 r. o zmianie ustawy o Narodowym Instytucie Wolności – Centrum Rozwoju Społeczeństwa Obywatelskiego</Tytul>
+      <Rodzaj>USTAWA</Rodzaj>
+      <DataOgloszenia>2025-04-24</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-04-04</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2025-04-25_DU-2025-531_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2025-04-25" warunek="z dniem następującym po dniu ogłoszenia" podstawa="art. 2" zrodlo="https://eli.gov.pl/eli/DU/2025/531" dowod="DU/2025/531__art_2" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2025-04-25_DU-2025-531_domyslne.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2025-04-25_DU-2025-531_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="4841925e-f720-42a4-8bc7-85723224bfa3" rola="wydajacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Sejm">
+          <Nazwa>SEJM</Nazwa>
+        </Organ>
+        <Organ gd:GUID="ef983f36-6989-4815-8268-a59cb559d235" rola="podpisujacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Prezydent">
+          <Nazwa>Prezydent Rzeczypospolitej Polskiej</Nazwa>
+          <OrganPodpisujacy>Prezydent Rzeczypospolitej Polskiej</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>A.</imie> <nazwisko>Duda</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Ustawa</rodzaj-aktu>
+    <data>z dnia 4 kwietnia 2025 r.</data>
+    <tytul>o zmianie ustawy o Narodowym Instytucie Wolności – Centrum Rozwoju Społeczeństwa Obywatelskiego</tytul>
+    <artykul eId="DU/2025/531__art_1" gd:GUID="a921deac-3ee8-4ead-8ee8-cf1c26727fc3" okres="okr_obowiazywanie.zdarz_wejscie_2025-04-25_DU-2025-531_domyslne.x" wejscie-w-zycie="2025-04-25">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="ab9cd1e8-1a0c-4e98-b923-8befda3dfc6e" okres="okr_obowiazywanie.zdarz_wejscie_2025-04-25_DU-2025-531_domyslne.x" wejscie-w-zycie="2025-04-25">
+        <p>
+          <zdanie nr="1" gd:zdGUID="0885cb3e-f69a-42a7-96ae-449a969975c4" fragment="1" gd:fragmentGUID="2a3120e1-223d-433c-a7af-93a11ef45ca0" okres="okr_obowiazywanie.zdarz_wejscie_2025-04-25_DU-2025-531_domyslne.x" wejscie-w-zycie="2025-04-25">W ustawie z dnia 15 września 2017 r. o Narodowym Instytucie Wolności – Centrum Rozwoju Społeczeństwa Obywatelskiego (Dz. U. z 2023 r. poz. 1618) wprowadza się następujące zmiany:</zdanie>
+        </p>
+        <punkt eId="DU/2025/531__art_1__pkt_1" gd:GUID="253ee561-897c-497b-a418-3a28097e5907" okres="okr_obowiazywanie.zdarz_wejscie_2025-04-25_DU-2025-531_domyslne.x" wejscie-w-zycie="2025-04-25">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="0885cb3e-f69a-42a7-96ae-449a969975c4" fragment="2" gd:fragmentGUID="95d7eae7-efa8-46ac-9b54-63fcc929ac6a" okres="okr_obowiazywanie.zdarz_wejscie_2025-04-25_DU-2025-531_domyslne.x" wejscie-w-zycie="2025-04-25">w art. 24 w ust. 3 pkt 12 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/1618" cudzyslowy="oba" gd:nowGUID="77c50289-c6e5-413c-a5bb-9f61ec88200e" element-eId="DU/2023/1618__art_24__ust_3__pkt_12" funkcja="zastap"><punkt eId="DU/2023/1618__art_24__ust_3__pkt_12" gd:GUID="c81bacbd-45fe-47d1-92cd-74b5dbd9a2cc" okres="okr_obowiazywanie.zdarz_wejscie_2025-04-25_DU-2025-531_domyslne.x" wejscie-w-zycie="2025-04-25"><nr>12</nr><p><zdanie nr="1" gd:zdGUID="16f1d105-ddb4-4138-aea1-1264c771f29a" fragment="1" gd:fragmentGUID="45b7f543-2e2b-4a32-ab61-8501becacf87" okres="okr_obowiazywanie.zdarz_wejscie_2025-04-25_DU-2025-531_domyslne.x" wejscie-w-zycie="2025-04-25">realizacja innych zadań zlecanych przez Przewodniczącego Komitetu lub ministra kierującego określonym działem administracji rządowej, przy jednoczesnym zapewnieniu na ich realizację środków finansowych, o których mowa w art. 32 ust. 1 pkt 1 lit. b.</zdanie></p></punkt></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/531__art_1__pkt_2" gd:GUID="27c3aa82-1b27-4f42-ac7a-5d42dafb1e95" okres="okr_obowiazywanie.zdarz_wejscie_2025-04-25_DU-2025-531_domyslne.x" wejscie-w-zycie="2025-04-25">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="0885cb3e-f69a-42a7-96ae-449a969975c4" fragment="3" gd:fragmentGUID="c0f875c9-954c-4841-91c4-aa01ba84cb8a" okres="okr_obowiazywanie.zdarz_wejscie_2025-04-25_DU-2025-531_domyslne.x" wejscie-w-zycie="2025-04-25">w art. 46:</zdanie>
+          </p>
+          <litera eId="DU/2025/531__art_1__pkt_2__lit_a" gd:GUID="c6cdc256-5088-4c2e-9fb8-5c11ebdec9cd" okres="okr_obowiazywanie.zdarz_wejscie_2025-04-25_DU-2025-531_domyslne.x" wejscie-w-zycie="2025-04-25">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="0885cb3e-f69a-42a7-96ae-449a969975c4" fragment="4" gd:fragmentGUID="56dc691e-d08c-4e86-99b9-b9c4543f9a12" okres="okr_obowiazywanie.zdarz_wejscie_2025-04-25_DU-2025-531_domyslne.x" wejscie-w-zycie="2025-04-25">w ust. 1:</zdanie>
+            </p>
+            <tiret eId="DU/2025/531__art_1__pkt_2__lit_a__tir_1" gd:GUID="ad2571bf-b2af-4924-beb5-b8d7b08833ae" okres="okr_obowiazywanie.zdarz_wejscie_2025-04-25_DU-2025-531_domyslne.x" wejscie-w-zycie="2025-04-25">
+              <p>
+                <zdanie nr="1" gd:zdGUID="0885cb3e-f69a-42a7-96ae-449a969975c4" fragment="5" gd:fragmentGUID="d91acb94-9807-4a05-b342-736beca7545a" okres="okr_obowiazywanie.zdarz_wejscie_2025-04-25_DU-2025-531_domyslne.x" wejscie-w-zycie="2025-04-25"><now:zamien-tekst stary-tekst="wynosi 1 374 580 000 zł" nowy-tekst="wynosi 1 490 880 000 zł" element-eId="DU/2023/1618__art_46__ust_1" akt="https://eli.gov.pl/eli/DU/2023/1618" gd:nowGUID="0a92d8d5-0bd8-488f-a557-716214471a46" />we wprowadzeniu do wyliczenia wyrazy „wynosi 1 374 580 000 zł” zastępuje się wyrazami „wynosi 1 490 880 000 zł”,</zdanie>
+              </p>
+            </tiret>
+            <tiret eId="DU/2025/531__art_1__pkt_2__lit_a__tir_2" gd:GUID="e6d93dd2-6c5c-451a-8d4f-118725dfe241" okres="okr_obowiazywanie.zdarz_wejscie_2025-04-25_DU-2025-531_domyslne.x" wejscie-w-zycie="2025-04-25">
+              <p>
+                <zdanie nr="1" gd:zdGUID="0885cb3e-f69a-42a7-96ae-449a969975c4" fragment="6" gd:fragmentGUID="512b2fea-2026-4ffc-b87e-61bd05ab3e97" okres="okr_obowiazywanie.zdarz_wejscie_2025-04-25_DU-2025-531_domyslne.x" wejscie-w-zycie="2025-04-25">pkt 9 i 10 otrzymują brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/1618" cudzyslowy="otwierajacy" gd:nowGUID="3b7a0443-693b-461b-aec2-6ffe36ff30c3" element-eId="DU/2023/1618__art_46__ust_1__pkt_9" funkcja="zastap"><punkt eId="DU/2023/1618__art_46__ust_1__pkt_9" gd:GUID="fcf416fc-56e0-46bd-926a-c3da65ccb732" okres="okr_obowiazywanie.zdarz_wejscie_2025-04-25_DU-2025-531_domyslne.x" wejscie-w-zycie="2025-04-25"><nr>9</nr><p><zdanie nr="1" gd:zdGUID="1fa24bb3-831e-4d4d-b955-39bf111d4eff" fragment="1" gd:fragmentGUID="e8a9b7ac-00d9-4614-ba7b-a533e4fb6fe8" okres="okr_obowiazywanie.zdarz_wejscie_2025-04-25_DU-2025-531_domyslne.x" wejscie-w-zycie="2025-04-25">2025 – 309 000 000 zł;</zdanie></p></punkt></cytat-strukt><cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/1618" cudzyslowy="zamykajacy" gd:nowGUID="05bce200-1b3a-4ed5-becf-3ff4e9c72351" element-eId="DU/2023/1618__art_46__ust_1__pkt_10" funkcja="zastap"><punkt eId="DU/2023/1618__art_46__ust_1__pkt_10" gd:GUID="697ce8c4-d4b9-4521-9fd5-1763e29834d0" okres="okr_obowiazywanie.zdarz_wejscie_2025-04-25_DU-2025-531_domyslne.x" wejscie-w-zycie="2025-04-25"><nr>10</nr><p><zdanie nr="1" gd:zdGUID="a18a1fe1-0b15-4423-bb03-6c977f16a8e2" fragment="1" gd:fragmentGUID="4435880e-6dfb-4543-81e5-37d68cd4cf88" okres="okr_obowiazywanie.zdarz_wejscie_2025-04-25_DU-2025-531_domyslne.x" wejscie-w-zycie="2025-04-25">2026 – 234 300 000 zł.</zdanie></p></punkt></cytat-strukt>,</zdanie>
+              </p>
+            </tiret>
+          </litera>
+          <litera eId="DU/2025/531__art_1__pkt_2__lit_b" gd:GUID="0c3e2422-0b30-4b05-9a92-693ece591076" okres="okr_obowiazywanie.zdarz_wejscie_2025-04-25_DU-2025-531_domyslne.x" wejscie-w-zycie="2025-04-25">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="0885cb3e-f69a-42a7-96ae-449a969975c4" fragment="7" gd:fragmentGUID="385580be-5bc8-462d-a8ce-85d8b28578f6" okres="okr_obowiazywanie.zdarz_wejscie_2025-04-25_DU-2025-531_domyslne.x" wejscie-w-zycie="2025-04-25">po ust. 1 dodaje się ust. 1a w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/1618" cudzyslowy="oba" gd:nowGUID="28eb06c9-302d-4e2d-a492-8c075bef328d" element-eId="DU/2023/1618__art_46__ust_1" funkcja="dodaj-po"><ustep eId="DU/2023/1618__art_46__ust_1a" gd:GUID="49e3eb25-a85a-43d3-9046-72c7e73008a6" okres="okr_obowiazywanie.zdarz_wejscie_2025-04-25_DU-2025-531_domyslne.x" wejscie-w-zycie="2025-04-25"><nr>1a</nr><p><zdanie nr="1" gd:zdGUID="0b4b7543-9f95-4e33-9b52-9d3fd874595e" fragment="1" gd:fragmentGUID="dbc2ffe6-6562-47fc-b9c3-af70e5c6a3f4" okres="okr_obowiazywanie.zdarz_wejscie_2025-04-25_DU-2025-531_domyslne.x" wejscie-w-zycie="2025-04-25">Maksymalny limit wydatków budżetu państwa będący skutkiem finansowania ustawy na lata 2027–2036 wynosi 2 426 000 000 zł, z tym że w roku:</zdanie></p><punkt eId="DU/2023/1618__art_46__ust_1a__pkt_1" gd:GUID="425b2146-a3ea-43af-af3f-80fdf6805a35" okres="okr_obowiazywanie.zdarz_wejscie_2025-04-25_DU-2025-531_domyslne.x" wejscie-w-zycie="2025-04-25"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="0b4b7543-9f95-4e33-9b52-9d3fd874595e" fragment="2" gd:fragmentGUID="33ca9d5f-0752-40b8-ac0e-c23f5bca069a" okres="okr_obowiazywanie.zdarz_wejscie_2025-04-25_DU-2025-531_domyslne.x" wejscie-w-zycie="2025-04-25">2027 – 236 300 000 zł;</zdanie></p></punkt><punkt eId="DU/2023/1618__art_46__ust_1a__pkt_2" gd:GUID="f6e0a98d-69f1-4da2-9f2c-e02b93eea162" okres="okr_obowiazywanie.zdarz_wejscie_2025-04-25_DU-2025-531_domyslne.x" wejscie-w-zycie="2025-04-25"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="0b4b7543-9f95-4e33-9b52-9d3fd874595e" fragment="3" gd:fragmentGUID="b2fad670-e47c-4819-a3a9-f81be6b03d82" okres="okr_obowiazywanie.zdarz_wejscie_2025-04-25_DU-2025-531_domyslne.x" wejscie-w-zycie="2025-04-25">2028 – 235 300 000 zł;</zdanie></p></punkt><punkt eId="DU/2023/1618__art_46__ust_1a__pkt_3" gd:GUID="ff76ab23-997e-4c95-b2b2-3bff4e94dfe5" okres="okr_obowiazywanie.zdarz_wejscie_2025-04-25_DU-2025-531_domyslne.x" wejscie-w-zycie="2025-04-25"><nr>3</nr><p><zdanie nr="1" gd:zdGUID="0b4b7543-9f95-4e33-9b52-9d3fd874595e" fragment="4" gd:fragmentGUID="eecae13e-77e7-4025-8346-c7a2d0a3bb3d" okres="okr_obowiazywanie.zdarz_wejscie_2025-04-25_DU-2025-531_domyslne.x" wejscie-w-zycie="2025-04-25">2029 – 237 300 000 zł;</zdanie></p></punkt><punkt eId="DU/2023/1618__art_46__ust_1a__pkt_4" gd:GUID="5ef10ba9-fef4-4392-9929-547ce4e7f71c" okres="okr_obowiazywanie.zdarz_wejscie_2025-04-25_DU-2025-531_domyslne.x" wejscie-w-zycie="2025-04-25"><nr>4</nr><p><zdanie nr="1" gd:zdGUID="0b4b7543-9f95-4e33-9b52-9d3fd874595e" fragment="5" gd:fragmentGUID="8cc2b76a-d7d1-41b4-bc84-3ada17fd2dee" okres="okr_obowiazywanie.zdarz_wejscie_2025-04-25_DU-2025-531_domyslne.x" wejscie-w-zycie="2025-04-25">2030 – 239 300 000 zł;</zdanie></p></punkt><punkt eId="DU/2023/1618__art_46__ust_1a__pkt_5" gd:GUID="60794d0e-d8b1-4daa-bfcd-493f1c81ae3e" okres="okr_obowiazywanie.zdarz_wejscie_2025-04-25_DU-2025-531_domyslne.x" wejscie-w-zycie="2025-04-25"><nr>5</nr><p><zdanie nr="1" gd:zdGUID="0b4b7543-9f95-4e33-9b52-9d3fd874595e" fragment="6" gd:fragmentGUID="ab649fe2-a440-4c3f-a485-2e455596093d" okres="okr_obowiazywanie.zdarz_wejscie_2025-04-25_DU-2025-531_domyslne.x" wejscie-w-zycie="2025-04-25">2031 – 241 300 000 zł;</zdanie></p></punkt><punkt eId="DU/2023/1618__art_46__ust_1a__pkt_6" gd:GUID="68f8b622-1b3f-43bd-881d-5f5fc7f1e0ec" okres="okr_obowiazywanie.zdarz_wejscie_2025-04-25_DU-2025-531_domyslne.x" wejscie-w-zycie="2025-04-25"><nr>6</nr><p><zdanie nr="1" gd:zdGUID="0b4b7543-9f95-4e33-9b52-9d3fd874595e" fragment="7" gd:fragmentGUID="3edf0e12-667f-490f-af96-883ab20b89cd" okres="okr_obowiazywanie.zdarz_wejscie_2025-04-25_DU-2025-531_domyslne.x" wejscie-w-zycie="2025-04-25">2032 – 243 300 000 zł;</zdanie></p></punkt><punkt eId="DU/2023/1618__art_46__ust_1a__pkt_7" gd:GUID="87ae2c7e-9b16-4a66-aca3-5a3f62fc1db5" okres="okr_obowiazywanie.zdarz_wejscie_2025-04-25_DU-2025-531_domyslne.x" wejscie-w-zycie="2025-04-25"><nr>7</nr><p><zdanie nr="1" gd:zdGUID="0b4b7543-9f95-4e33-9b52-9d3fd874595e" fragment="8" gd:fragmentGUID="4625f0cf-6167-40db-bc3f-64f9cab9517c" okres="okr_obowiazywanie.zdarz_wejscie_2025-04-25_DU-2025-531_domyslne.x" wejscie-w-zycie="2025-04-25">2033 – 245 300 000 zł;</zdanie></p></punkt><punkt eId="DU/2023/1618__art_46__ust_1a__pkt_8" gd:GUID="fa66c9eb-c023-47e7-8163-a5e285c34760" okres="okr_obowiazywanie.zdarz_wejscie_2025-04-25_DU-2025-531_domyslne.x" wejscie-w-zycie="2025-04-25"><nr>8</nr><p><zdanie nr="1" gd:zdGUID="0b4b7543-9f95-4e33-9b52-9d3fd874595e" fragment="9" gd:fragmentGUID="7ff35704-3894-4fb9-87ca-a140e061ab4e" okres="okr_obowiazywanie.zdarz_wejscie_2025-04-25_DU-2025-531_domyslne.x" wejscie-w-zycie="2025-04-25">2034 – 247 300 000 zł;</zdanie></p></punkt><punkt eId="DU/2023/1618__art_46__ust_1a__pkt_9" gd:GUID="4633309e-c92a-468c-9859-a7e2df2512ba" okres="okr_obowiazywanie.zdarz_wejscie_2025-04-25_DU-2025-531_domyslne.x" wejscie-w-zycie="2025-04-25"><nr>9</nr><p><zdanie nr="1" gd:zdGUID="0b4b7543-9f95-4e33-9b52-9d3fd874595e" fragment="10" gd:fragmentGUID="16a4797e-842e-4c47-96d3-ae02dbd1de76" okres="okr_obowiazywanie.zdarz_wejscie_2025-04-25_DU-2025-531_domyslne.x" wejscie-w-zycie="2025-04-25">2035 – 249 300 000 zł;</zdanie></p></punkt><punkt eId="DU/2023/1618__art_46__ust_1a__pkt_10" gd:GUID="7e568c9b-3b70-4643-94a0-c458f6a26f36" okres="okr_obowiazywanie.zdarz_wejscie_2025-04-25_DU-2025-531_domyslne.x" wejscie-w-zycie="2025-04-25"><nr>10</nr><p><zdanie nr="1" gd:zdGUID="0b4b7543-9f95-4e33-9b52-9d3fd874595e" fragment="11" gd:fragmentGUID="63285b37-cc58-4f82-ba3f-7952fe0c584b" okres="okr_obowiazywanie.zdarz_wejscie_2025-04-25_DU-2025-531_domyslne.x" wejscie-w-zycie="2025-04-25">2036 – 251 300 000 zł.</zdanie></p></punkt></ustep></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/531__art_1__pkt_2__lit_c" gd:GUID="37b4cb85-14ec-4c34-a7ad-0af3a633087a" okres="okr_obowiazywanie.zdarz_wejscie_2025-04-25_DU-2025-531_domyslne.x" wejscie-w-zycie="2025-04-25">
+            <nr>c</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="0885cb3e-f69a-42a7-96ae-449a969975c4" fragment="8" gd:fragmentGUID="4661dae8-9cd8-4930-94a2-541db26b50ea" okres="okr_obowiazywanie.zdarz_wejscie_2025-04-25_DU-2025-531_domyslne.x" wejscie-w-zycie="2025-04-25"><now:zamien-tekst stary-tekst="ust. 1" nowy-tekst="ust. 1 i 1a" element-eId="DU/2023/1618__art_46__ust_2" akt="https://eli.gov.pl/eli/DU/2023/1618" gd:nowGUID="ad3237e0-8823-4cc3-a7fd-c48bc010c434" />w ust. 2 po wyrazach „ust. 1” dodaje się wyrazy „i 1a”,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/531__art_1__pkt_2__lit_d" gd:GUID="8c6c7b1e-0388-4ca6-b5e7-229627595f0a" okres="okr_obowiazywanie.zdarz_wejscie_2025-04-25_DU-2025-531_domyslne.x" wejscie-w-zycie="2025-04-25">
+            <nr>d</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="0885cb3e-f69a-42a7-96ae-449a969975c4" fragment="9" gd:fragmentGUID="07941a09-b37e-41d6-84e8-8b9884bdebb4" okres="okr_obowiazywanie.zdarz_wejscie_2025-04-25_DU-2025-531_domyslne.x" wejscie-w-zycie="2025-04-25"><now:zamien-tekst stary-tekst="ust. 1" nowy-tekst="ust. 1 i 1a" element-eId="DU/2023/1618__art_46__ust_4" akt="https://eli.gov.pl/eli/DU/2023/1618" gd:nowGUID="4e73b435-2d72-42d1-81d0-21e5568b5ae8" />w ust. 4 po wyrazach „ust. 1” dodaje się wyrazy „i 1a”.</zdanie>
+            </p>
+          </litera>
+        </punkt>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2025/531__art_2" gd:GUID="b2f4d956-2a6b-46cb-b9b6-1f8d6d7864d9" okres="okr_obowiazywanie.zdarz_wejscie_2025-04-25_DU-2025-531_domyslne.x" wejscie-w-zycie="2025-04-25">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="34f6f6ab-3276-4999-a4f7-b904e7d8fcc0" okres="okr_obowiazywanie.zdarz_wejscie_2025-04-25_DU-2025-531_domyslne.x" wejscie-w-zycie="2025-04-25">
+        <p>
+          <zdanie nr="1" gd:zdGUID="13091cd3-7199-4b96-ae48-77e4366c76ef" fragment="1" gd:fragmentGUID="78f0e0ec-1168-433f-a8e9-31dd76978e1c" okres="okr_obowiazywanie.zdarz_wejscie_2025-04-25_DU-2025-531_domyslne.x" wejscie-w-zycie="2025-04-25">Ustawa wchodzi w życie z dniem następującym po dniu ogłoszenia.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <organ-podpisujacy>Prezydent Rzeczypospolitej Polskiej: <i><osoba podpisujacy="true" gd:osobaGUID="eb80e43c-b054-48d2-aaa6-2a296dfce2fe"><imie>A.</imie> <nazwisko>Duda</nazwisko></osoba></i></organ-podpisujacy>
+  </ustawa>
+</akt-prawny>

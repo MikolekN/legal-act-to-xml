@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <ustawa>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/28</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>60584da7-fdcf-4855-9af6-17252c8654cb</gd:GUIDwersji>
+      <AdresISAP>WDU20250000028</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>28</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 28</AdresWyswietlany>
+      <Tytul>Ustawa z dnia 5 grudnia 2024 r. o zmianie ustawy o sporcie</Tytul>
+      <Rodzaj>USTAWA</Rodzaj>
+      <DataOgloszenia>2025-01-09</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2024-12-05</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2025-04-01_DU-2025-28_odczytane" rodzaj="wejscie-w-zycie" pochodzenie="odczytane" data="2025-04-01" podstawa="art. 3" zrodlo="https://eli.gov.pl/eli/DU/2025/28" dowod="DU/2025/28__art_3" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2025-04-01_DU-2025-28_odczytane.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2025-04-01_DU-2025-28_odczytane" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="e24be924-daca-4c99-bfd8-d9a5eef5c785" rola="wydajacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Sejm">
+          <Nazwa>SEJM</Nazwa>
+        </Organ>
+        <Organ gd:GUID="107ee71a-fdd5-4468-996b-d2f743a7a472" rola="podpisujacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Prezydent">
+          <Nazwa>Prezydent Rzeczypospolitej Polskiej</Nazwa>
+          <OrganPodpisujacy>Prezydent Rzeczypospolitej Polskiej</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>A.</imie> <nazwisko>Duda</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Ustawa</rodzaj-aktu>
+    <data>z dnia 5 grudnia 2024 r.</data>
+    <tytul>o zmianie ustawy o sporcie</tytul>
+    <artykul eId="DU/2025/28__art_1" gd:GUID="07eae0c8-853c-4041-9fcc-6cc810a1b74b" okres="okr_obowiazywanie.zdarz_wejscie_2025-04-01_DU-2025-28_odczytane.x" wejscie-w-zycie="2025-04-01">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="c96a097c-a892-41ec-9886-f8f3e45bcd2f" okres="okr_obowiazywanie.zdarz_wejscie_2025-04-01_DU-2025-28_odczytane.x" wejscie-w-zycie="2025-04-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="f7b00fa0-af7f-484e-9a67-12e0b3fc5f0d" fragment="1" gd:fragmentGUID="44651802-e2d2-43a4-9d45-01747924b8b4" okres="okr_obowiazywanie.zdarz_wejscie_2025-04-01_DU-2025-28_odczytane.x" wejscie-w-zycie="2025-04-01">W ustawie z dnia 25 czerwca 2010 r. o sporcie (Dz. U. z 2024 r. poz. 1488) w art. 36 w ust. 1 po pkt 1a dodaje się pkt 1b w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/1488" cudzyslowy="oba" gd:nowGUID="16cdd1a3-0714-4268-815e-b32a706e34ff" element-eId="DU/2024/1488__art_36__ust_1__pkt_1a" funkcja="dodaj-po"><punkt eId="DU/2024/1488__art_36__ust_1__pkt_1b" gd:GUID="c7a8f7f9-094e-4e1c-b431-bfd4f0f66da9" okres="okr_obowiazywanie.zdarz_wejscie_2025-04-01_DU-2025-28_odczytane.x" wejscie-w-zycie="2025-04-01"><nr>1b</nr><p><zdanie nr="1" gd:zdGUID="1b03ce55-2c9d-4dd1-b023-673ee75c09ce" fragment="1" gd:fragmentGUID="474d23df-6c45-4804-bf12-e318c8bd23fb" okres="okr_obowiazywanie.zdarz_wejscie_2025-04-01_DU-2025-28_odczytane.x" wejscie-w-zycie="2025-04-01">na Igrzyskach Dobrej Woli,</zdanie></p></punkt></cytat-strukt>.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2025/28__art_2" gd:GUID="774b6b8f-1c8f-4552-88c0-2470944ffb98" okres="okr_obowiazywanie.zdarz_wejscie_2025-04-01_DU-2025-28_odczytane.x" wejscie-w-zycie="2025-04-01">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="4b4254b6-fd45-4948-9b21-60b71c51f4ae" okres="okr_obowiazywanie.zdarz_wejscie_2025-04-01_DU-2025-28_odczytane.x" wejscie-w-zycie="2025-04-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="5103d596-0743-494a-b419-437a010b6fae" fragment="1" gd:fragmentGUID="67c60b8d-c02d-4fb4-a40d-c0bc79484090" okres="okr_obowiazywanie.zdarz_wejscie_2025-04-01_DU-2025-28_odczytane.x" wejscie-w-zycie="2025-04-01">Świadczenie, o którym mowa w art. 36 ust. 1 ustawy zmienianej w art. 1, przysługuje osobom wskazanym w art. 36 ust. 1 pkt 1b ustawy zmienianej w art. 1, które spełniły kryteria, o których mowa w art. 36 ust. 2 ustawy zmienianej w art. 1, przed dniem wejścia w życie niniejszej ustawy.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2025/28__art_3" gd:GUID="b8ea616f-33f3-4e7f-831d-31d3dda2fa1a" okres="okr_obowiazywanie.zdarz_wejscie_2025-04-01_DU-2025-28_odczytane.x" wejscie-w-zycie="2025-04-01">
+      <nr>3</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="06d7c889-4e44-43a1-b8b0-34b86d967235" okres="okr_obowiazywanie.zdarz_wejscie_2025-04-01_DU-2025-28_odczytane.x" wejscie-w-zycie="2025-04-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="e691c09d-f0b3-487b-bb3c-75260f7efa9a" fragment="1" gd:fragmentGUID="288a3e3e-d200-49aa-b678-867b85caee01" okres="okr_obowiazywanie.zdarz_wejscie_2025-04-01_DU-2025-28_odczytane.x" wejscie-w-zycie="2025-04-01">Ustawa wchodzi w życie z dniem 1 kwietnia 2025 r.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <organ-podpisujacy>Prezydent Rzeczypospolitej Polskiej: <i><osoba podpisujacy="true" gd:osobaGUID="79face72-3b90-49d3-a379-cc7b11d59bea"><imie>A.</imie> <nazwisko>Duda</nazwisko></osoba></i></organ-podpisujacy>
+  </ustawa>
+</akt-prawny>

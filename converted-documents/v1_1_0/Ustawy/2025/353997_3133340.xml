@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <ustawa>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/1818</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>08b19d1d-d605-49ed-ad56-2788d4cf4004</gd:GUIDwersji>
+      <AdresISAP>WDU20250001818</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>1818</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 1818</AdresWyswietlany>
+      <Tytul>Ustawa z dnia 7 listopada 2025 r. o zmianie ustawy – Kodeks karny, ustawy – Kodeks wykroczeń oraz ustawy – Kodeks postępowania w sprawach o wykroczenia</Tytul>
+      <Rodzaj>USTAWA</Rodzaj>
+      <DataOgloszenia>2025-12-18</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-11-07</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2026-01-02_DU-2025-1818_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2026-01-02" warunek="po upływie 14 dni od dnia ogłoszenia" podstawa="art. 5" zrodlo="https://eli.gov.pl/eli/DU/2025/1818" dowod="DU/2025/1818__art_5" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2026-01-02_DU-2025-1818_domyslne.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2026-01-02_DU-2025-1818_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="3fe3031f-8c2e-4705-aab6-126f5aa03ef8" rola="wydajacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Sejm">
+          <Nazwa>SEJM</Nazwa>
+        </Organ>
+        <Organ gd:GUID="5da096a5-0cf1-4307-a005-f6b96792767d" rola="podpisujacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Prezydent">
+          <Nazwa>Prezydent Rzeczypospolitej Polskiej</Nazwa>
+          <OrganPodpisujacy>Prezydent Rzeczypospolitej Polskiej</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>K.</imie> <nazwisko>Nawrocki</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Ustawa</rodzaj-aktu>
+    <data>z dnia 7 listopada 2025 r.</data>
+    <tytul>o zmianie ustawy – Kodeks karny, ustawy – Kodeks wykroczeń oraz ustawy – Kodeks postępowania w sprawach o wykroczenia</tytul>
+    <artykul eId="DU/2025/1818__art_1" gd:GUID="72f9f2c6-3e32-4b29-925c-383902eac94d" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-02_DU-2025-1818_domyslne.x" wejscie-w-zycie="2026-01-02">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="7c950e16-14d6-4d75-b4d5-1711a74308e8" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-02_DU-2025-1818_domyslne.x" wejscie-w-zycie="2026-01-02">
+        <p>
+          <zdanie nr="1" gd:zdGUID="e8986e61-2fe5-423b-aa01-eddaf8b08acb" fragment="1" gd:fragmentGUID="55b7af90-f9d5-41e2-9bcc-7c421a72c3d2" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-02_DU-2025-1818_domyslne.x" wejscie-w-zycie="2026-01-02">W ustawie z dnia 6 czerwca 1997 r. – Kodeks karny (Dz. U. z 2025 r. poz. 383) wprowadza się następujące zmiany:</zdanie>
+        </p>
+        <punkt eId="DU/2025/1818__art_1__pkt_1" gd:GUID="0d084250-dd50-4db9-a22f-98cb001a808b" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-02_DU-2025-1818_domyslne.x" wejscie-w-zycie="2026-01-02">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="e8986e61-2fe5-423b-aa01-eddaf8b08acb" fragment="2" gd:fragmentGUID="26c09c83-641f-4e96-8b87-da514fdd3686" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-02_DU-2025-1818_domyslne.x" wejscie-w-zycie="2026-01-02"><now:dodaj-paragraf element-eId="DU/2025/383__art_217a" akt="https://eli.gov.pl/eli/DU/2025/383" gd:nowGUID="ea1086ad-e7f9-41e0-9026-83608b954c4c" />w art. 217a dotychczasową treść oznacza się jako § 1 i dodaje się § 2 w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2025/383" cudzyslowy="oba" gd:nowGUID="1f0a8fb8-1a1b-4d9f-86e7-58b49baca855" element-eId="DU/2025/383__art_217a__par_1" funkcja="dodaj-po"><paragraf-kodeksu eId="DU/2025/383__art_217a__par_2" gd:GUID="fa2081aa-c0ce-4018-ba79-dac887c51b94" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-02_DU-2025-1818_domyslne.x" wejscie-w-zycie="2026-01-02"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="c5c6932d-e02b-4d65-8f44-cdc94c3e09af" fragment="1" gd:fragmentGUID="4831789f-efce-41bf-a42f-f1c7e3ee1e24" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-02_DU-2025-1818_domyslne.x" wejscie-w-zycie="2026-01-02">Jeżeli sprawca czynu określonego w § 1 naraża pokrzywdzonego na bezpośrednie niebezpieczeństwo utraty życia albo ciężkiego uszczerbku na zdrowiu, <sankcja-karna>podlega karze pozbawienia wolności od 3 miesięcy do lat 5</sankcja-karna>.</zdanie></p></paragraf-kodeksu></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1818__art_1__pkt_2" gd:GUID="27f7d23d-54ae-4617-a39d-42ccf10902c8" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-02_DU-2025-1818_domyslne.x" wejscie-w-zycie="2026-01-02">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="e8986e61-2fe5-423b-aa01-eddaf8b08acb" fragment="3" gd:fragmentGUID="47a22bbf-a46e-4a5f-abb1-723ad9235c0d" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-02_DU-2025-1818_domyslne.x" wejscie-w-zycie="2026-01-02">w art. 222:</zdanie>
+          </p>
+          <litera eId="DU/2025/1818__art_1__pkt_2__lit_a" gd:GUID="f0d11474-929d-4a57-bc8e-f04f2f9d1172" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-02_DU-2025-1818_domyslne.x" wejscie-w-zycie="2026-01-02">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="e8986e61-2fe5-423b-aa01-eddaf8b08acb" fragment="4" gd:fragmentGUID="fd5d4ba3-b0f3-480c-a114-3e114f78cbc8" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-02_DU-2025-1818_domyslne.x" wejscie-w-zycie="2026-01-02">po § 1 dodaje się § 1a w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2025/383" cudzyslowy="oba" gd:nowGUID="f797868a-9f8b-4fe1-bfdf-152ed9309409" element-eId="DU/2025/383__art_222__par_1" funkcja="dodaj-po"><paragraf-kodeksu eId="DU/2025/383__art_222__par_1a" gd:GUID="04a14156-c9e4-4b88-a288-121907ca24aa" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-02_DU-2025-1818_domyslne.x" wejscie-w-zycie="2026-01-02"><nr>1a</nr><p><zdanie nr="1" gd:zdGUID="7ee01d6c-53fb-4b16-a755-caf7c94d89f2" fragment="1" gd:fragmentGUID="6e1b22a7-a93f-4c1a-9acb-dbff64fdd24b" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-02_DU-2025-1818_domyslne.x" wejscie-w-zycie="2026-01-02">Jeżeli sprawca czynu określonego w § 1 naraża pokrzywdzonego na bezpośrednie niebezpieczeństwo utraty życia albo ciężkiego uszczerbku na zdrowiu, <sankcja-karna>podlega karze pozbawienia wolności od 3 miesięcy do lat 5</sankcja-karna>.</zdanie></p></paragraf-kodeksu></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1818__art_1__pkt_2__lit_b" gd:GUID="c0d32798-329a-4c2d-b9cb-decabbd4c43a" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-02_DU-2025-1818_domyslne.x" wejscie-w-zycie="2026-01-02">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="e8986e61-2fe5-423b-aa01-eddaf8b08acb" fragment="5" gd:fragmentGUID="ca05d018-aff3-45b1-ad00-f66b5640814f" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-02_DU-2025-1818_domyslne.x" wejscie-w-zycie="2026-01-02">§ 2 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2025/383" cudzyslowy="oba" gd:nowGUID="93ec7f66-0d0b-4169-add0-76fd72fe8933" element-eId="DU/2025/383__art_222__par_2" funkcja="zastap"><paragraf-kodeksu eId="DU/2025/383__art_222__par_2" gd:GUID="ae95d5ad-a874-4986-83a0-770091cf8b7c" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-02_DU-2025-1818_domyslne.x" wejscie-w-zycie="2026-01-02"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="85156c22-43e4-4e63-a68a-068ff0c97029" fragment="1" gd:fragmentGUID="3fe400c2-d421-4911-b617-b78c7e774fff" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-02_DU-2025-1818_domyslne.x" wejscie-w-zycie="2026-01-02">Jeżeli czyn określony w § 1 lub 1a wywołało niewłaściwe zachowanie się funkcjonariusza lub osoby do pomocy mu przybranej, sąd może zastosować nadzwyczajne złagodzenie kary, a nawet odstąpić od jej wymierzenia.</zdanie></p></paragraf-kodeksu></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1818__art_1__pkt_2__lit_c" gd:GUID="4daddac8-2da7-41ea-b4d8-797006b81561" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-02_DU-2025-1818_domyslne.x" wejscie-w-zycie="2026-01-02">
+            <nr>c</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="e8986e61-2fe5-423b-aa01-eddaf8b08acb" fragment="6" gd:fragmentGUID="6e23ca3b-0dfb-48cf-8ce2-29371c574609" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-02_DU-2025-1818_domyslne.x" wejscie-w-zycie="2026-01-02">dodaje się § 3 w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2025/383" cudzyslowy="oba" gd:nowGUID="e0f2c317-dca9-4dc3-a88e-b2812420ddc7" element-eId="DU/2025/383__art_222" funkcja="dodaj-w"><paragraf-kodeksu eId="DU/2025/383__art_222__par_3" gd:GUID="5bb49da0-389d-4bca-bbb2-a1c8e8f3fe9d" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-02_DU-2025-1818_domyslne.x" wejscie-w-zycie="2026-01-02"><nr>3</nr><p><zdanie nr="1" gd:zdGUID="d21064fc-add9-4da7-ab89-d13073573e0a" fragment="1" gd:fragmentGUID="816d7d04-e85a-43e9-9dec-a374cce8bf31" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-02_DU-2025-1818_domyslne.x" wejscie-w-zycie="2026-01-02">Na wniosek pokrzywdzonego sąd orzeka podanie wyroku skazującego do publicznej wiadomości.</zdanie></p></paragraf-kodeksu></cytat-strukt>;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2025/1818__art_1__pkt_3" gd:GUID="e4d0a168-3810-40da-8f9b-7d73c5c8c8a4" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-02_DU-2025-1818_domyslne.x" wejscie-w-zycie="2026-01-02">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="e8986e61-2fe5-423b-aa01-eddaf8b08acb" fragment="7" gd:fragmentGUID="8dde2d6f-42ec-42d6-8d18-8a956ff81969" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-02_DU-2025-1818_domyslne.x" wejscie-w-zycie="2026-01-02">w art. 223 dodaje się § 3 w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2025/383" cudzyslowy="oba" gd:nowGUID="415fbeae-0846-45d3-91ab-5b9c961cb889" element-eId="DU/2025/383__art_223" funkcja="dodaj-w"><paragraf-kodeksu eId="DU/2025/383__art_223__par_3" gd:GUID="737d50a6-d5d2-4056-8590-1e70a6555891" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-02_DU-2025-1818_domyslne.x" wejscie-w-zycie="2026-01-02"><nr>3</nr><p><zdanie nr="1" gd:zdGUID="c8cd4ebb-f9ca-4dfb-846e-9b84de6c6124" fragment="1" gd:fragmentGUID="67f39b1c-dd3f-424f-bce1-be442aad2bcb" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-02_DU-2025-1818_domyslne.x" wejscie-w-zycie="2026-01-02">Na wniosek pokrzywdzonego sąd orzeka podanie wyroku skazującego do publicznej wiadomości.</zdanie></p></paragraf-kodeksu></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1818__art_1__pkt_4" gd:GUID="b94ff9f5-7c92-4723-a30c-1630f9507455" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-02_DU-2025-1818_domyslne.x" wejscie-w-zycie="2026-01-02">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="e8986e61-2fe5-423b-aa01-eddaf8b08acb" fragment="8" gd:fragmentGUID="7a735655-ac2d-4890-b1a1-3d6ae1deb090" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-02_DU-2025-1818_domyslne.x" wejscie-w-zycie="2026-01-02">w art. 231b:</zdanie>
+          </p>
+          <litera eId="DU/2025/1818__art_1__pkt_4__lit_a" gd:GUID="2bfa38fd-7a21-4db7-b13d-35355459ce3a" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-02_DU-2025-1818_domyslne.x" wejscie-w-zycie="2026-01-02">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="e8986e61-2fe5-423b-aa01-eddaf8b08acb" fragment="9" gd:fragmentGUID="26722b50-e99c-4e43-93e7-d73c136ae017" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-02_DU-2025-1818_domyslne.x" wejscie-w-zycie="2026-01-02"><now:uchyl akt="https://eli.gov.pl/eli/DU/2025/383" element-eId="DU/2025/383__art_231b__par_2" gd:nowGUID="c39fe5e8-4e1a-47fc-88d4-277e28157169" />uchyla się § 2,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1818__art_1__pkt_4__lit_b" gd:GUID="34968cba-10e1-4ef0-8190-0cbd731cf084" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-02_DU-2025-1818_domyslne.x" wejscie-w-zycie="2026-01-02">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="e8986e61-2fe5-423b-aa01-eddaf8b08acb" fragment="10" gd:fragmentGUID="fa71d419-527e-4b90-b1f9-64a17682ab4f" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-02_DU-2025-1818_domyslne.x" wejscie-w-zycie="2026-01-02">dodaje się § 3 w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2025/383" cudzyslowy="oba" gd:nowGUID="4c43b090-45a3-4de3-ad25-18e7ceedb737" element-eId="DU/2025/383__art_231b" funkcja="dodaj-w"><paragraf-kodeksu eId="DU/2025/383__art_231b__par_3" gd:GUID="7f74a839-ff37-47af-b1e7-427c35e1d4d4" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-02_DU-2025-1818_domyslne.x" wejscie-w-zycie="2026-01-02"><nr>3</nr><p><zdanie nr="1" gd:zdGUID="2caeb553-d71d-4868-8a96-16a0af161ea4" fragment="1" gd:fragmentGUID="5a1ad888-d141-4dd0-ab32-450da3f2894d" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-02_DU-2025-1818_domyslne.x" wejscie-w-zycie="2026-01-02">Jeżeli czyn sprawcy zamachu skierowany przeciwko osobie odpierającej zamach godzi wyłącznie w cześć lub godność tej osoby, ściganie następuje na wniosek pokrzywdzonego.</zdanie></p></paragraf-kodeksu></cytat-strukt>.</zdanie>
+            </p>
+          </litera>
+        </punkt>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2025/1818__art_2" gd:GUID="7ee1266d-73a2-4fe8-a2bb-97207031e910" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-02_DU-2025-1818_domyslne.x" wejscie-w-zycie="2026-01-02">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="46c4cce5-31f9-46cc-83a7-456fd27a375c" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-02_DU-2025-1818_domyslne.x" wejscie-w-zycie="2026-01-02">
+        <p>
+          <zdanie nr="1" gd:zdGUID="a0e3bb2f-5c14-4afd-b326-7291d3bf9a01" fragment="1" gd:fragmentGUID="d38a75b6-6826-4030-9b8f-4876aa6bd0ec" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-02_DU-2025-1818_domyslne.x" wejscie-w-zycie="2026-01-02">W ustawie z dnia 20 maja 1971 r. – Kodeks wykroczeń (Dz. U. z 2025 r. poz. 734, 1676 i 1814) w art. 51:</zdanie>
+        </p>
+        <punkt eId="DU/2025/1818__art_2__pkt_1" gd:GUID="d4316d48-a024-4e18-8d73-83e650587559" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-02_DU-2025-1818_domyslne.x" wejscie-w-zycie="2026-01-02">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a0e3bb2f-5c14-4afd-b326-7291d3bf9a01" fragment="2" gd:fragmentGUID="2187f288-59a1-4d62-ba8a-a508b7683669" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-02_DU-2025-1818_domyslne.x" wejscie-w-zycie="2026-01-02"><now:zamien-tekst stary-tekst="podlega karze aresztu, ograniczenia wolności albo grzywny" nowy-tekst="podlega karze aresztu, ograniczenia wolności albo grzywny nie niższej niż 1000 złotych" element-eId="DU/2025/734__art_51__par_2" akt="https://eli.gov.pl/eli/DU/2025/734" gd:nowGUID="4b14715e-359c-45f0-8dd3-94d7d62b82ba" />w § 2 wyrazy „podlega karze aresztu, ograniczenia wolności albo grzywny” zastępuje się wyrazami „podlega karze aresztu, ograniczenia wolności albo grzywny nie niższej niż 1000 złotych”;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1818__art_2__pkt_2" gd:GUID="631fb8aa-7095-4908-aebf-a2c3718cff10" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-02_DU-2025-1818_domyslne.x" wejscie-w-zycie="2026-01-02">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a0e3bb2f-5c14-4afd-b326-7291d3bf9a01" fragment="3" gd:fragmentGUID="c7dd328c-dfb8-4b52-aef2-8b6ca66a27dc" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-02_DU-2025-1818_domyslne.x" wejscie-w-zycie="2026-01-02">po § 2 dodaje się § 2a w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2025/734" cudzyslowy="oba" gd:nowGUID="e9400562-5b8d-43c7-805b-725db7dd7ccf" element-eId="DU/2025/734__art_51__par_2" funkcja="dodaj-po"><paragraf-kodeksu eId="DU/2025/734__art_51__par_2a" gd:GUID="971ebbd3-17a5-442a-9921-8d28d2d6b6ed" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-02_DU-2025-1818_domyslne.x" wejscie-w-zycie="2026-01-02"><nr>2a</nr><p><zdanie nr="1" gd:zdGUID="296a6cd8-0b7f-4e10-ba20-122d2d46a12c" fragment="1" gd:fragmentGUID="69ef2603-42a5-443b-8515-15dd07a6ac9b" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-02_DU-2025-1818_domyslne.x" wejscie-w-zycie="2026-01-02">Tej samej karze podlega, kto dopuszcza się czynu określonego w § 1 w zakładzie leczniczym w rozumieniu ustawy z dnia 15 kwietnia 2011 r. o działalności leczniczej (Dz. U. z 2025 r. poz. 450, 620, 637 i 1211) lub w trakcie akcji medycznej w rozumieniu ustawy z dnia 8 września 2006 r. o Państwowym Ratownictwie Medycznym (Dz. U. z 2025 r. poz. 91 i 637), lub w siedzibie organu administracji rządowej, innego organu państwowego lub samorządu terytorialnego.</zdanie></p></paragraf-kodeksu></cytat-strukt>.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2025/1818__art_3" gd:GUID="66ca6217-e065-4891-ba19-4934eb6f7588" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-02_DU-2025-1818_domyslne.x" wejscie-w-zycie="2026-01-02">
+      <nr>3</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="4750cb18-1e69-4429-84af-437ab0869480" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-02_DU-2025-1818_domyslne.x" wejscie-w-zycie="2026-01-02">
+        <p>
+          <zdanie nr="1" gd:zdGUID="0148c49f-f43a-4b96-8670-bad31871c64c" fragment="1" gd:fragmentGUID="4de48734-a48f-4361-bd9a-ddfa1028b570" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-02_DU-2025-1818_domyslne.x" wejscie-w-zycie="2026-01-02">W ustawie z dnia 24 sierpnia 2001 r. – Kodeks postępowania w sprawach o wykroczenia (Dz. U. z 2025 r. poz. 860, 1178, 1661 i 1814) wprowadza się następujące zmiany:</zdanie>
+        </p>
+        <punkt eId="DU/2025/1818__art_3__pkt_1" gd:GUID="ad0c573a-99c4-43f1-b88f-1a8c55b8ff93" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-02_DU-2025-1818_domyslne.x" wejscie-w-zycie="2026-01-02">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="0148c49f-f43a-4b96-8670-bad31871c64c" fragment="2" gd:fragmentGUID="0c44a597-71f1-4f1f-99cb-f86dad5fa438" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-02_DU-2025-1818_domyslne.x" wejscie-w-zycie="2026-01-02">w art. 90 § 2a otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2025/860" cudzyslowy="oba" gd:nowGUID="5541e354-8394-4252-8b02-d2ba1078cb6e" element-eId="DU/2025/860__art_90__par_2a" funkcja="zastap"><paragraf-kodeksu eId="DU/2025/860__art_90__par_2a" gd:GUID="d82ba26e-9252-4471-b65f-5889ecffd0b8" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-02_DU-2025-1818_domyslne.x" wejscie-w-zycie="2026-01-02"><nr>2a</nr><p><zdanie nr="1" gd:zdGUID="f1636247-b3a9-4f7b-b6b9-eb227d2017b9" fragment="1" gd:fragmentGUID="2d627904-334b-4d15-a50d-a96a053f98dc" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-02_DU-2025-1818_domyslne.x" wejscie-w-zycie="2026-01-02">Postępowanie przyspieszone stosuje się także wobec sprawców wykroczenia, o którym mowa w art. 51 § 2a oraz art. 66b Kodeksu wykroczeń.</zdanie></p></paragraf-kodeksu></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1818__art_3__pkt_2" gd:GUID="7a27d880-61a1-42e6-91ee-ed75ec558e82" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-02_DU-2025-1818_domyslne.x" wejscie-w-zycie="2026-01-02">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="0148c49f-f43a-4b96-8670-bad31871c64c" fragment="3" gd:fragmentGUID="4ed24582-04f1-4a97-bf08-9a83bd67758f" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-02_DU-2025-1818_domyslne.x" wejscie-w-zycie="2026-01-02">w art. 96 po § 1af dodaje się § 1ag w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2025/860" cudzyslowy="oba" gd:nowGUID="d8ea48aa-5b59-47bd-9c78-a0dddb6db9cf" element-eId="DU/2025/860__art_96__par_1af" funkcja="dodaj-po"><paragraf-kodeksu eId="DU/2025/860__art_96__par_1ag" gd:GUID="231fc6c8-3112-484c-99c6-f08291066456" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-02_DU-2025-1818_domyslne.x" wejscie-w-zycie="2026-01-02"><nr>1ag</nr><p><zdanie nr="1" gd:zdGUID="392f4bfa-0c8b-4d49-948f-f4016bba6fd5" fragment="1" gd:fragmentGUID="094182bd-bc1d-4756-a4db-90a0b0ee1d33" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-02_DU-2025-1818_domyslne.x" wejscie-w-zycie="2026-01-02">W postępowaniu mandatowym w sprawie o wykroczenie określone w art. 51 § 2 lub 2a Kodeksu wykroczeń można nałożyć grzywnę w wysokości 1000 zł.</zdanie></p></paragraf-kodeksu></cytat-strukt>.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2025/1818__art_4" gd:GUID="8c463b0e-72b9-4cc7-9813-e4df7a7ee786" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-02_DU-2025-1818_domyslne.x" wejscie-w-zycie="2026-01-02">
+      <nr>4</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="e1943e51-c295-4e3e-b901-2043eef2dc77" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-02_DU-2025-1818_domyslne.x" wejscie-w-zycie="2026-01-02">
+        <p>
+          <zdanie nr="1" gd:zdGUID="67162d1b-20be-4e3f-9cc9-c34a8d4cc704" fragment="1" gd:fragmentGUID="1c3b90e7-48ad-431c-a68e-91895421cfd3" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-02_DU-2025-1818_domyslne.x" wejscie-w-zycie="2026-01-02">Przepis art. 231b § 2 ustawy zmienianej w art. 1 w brzmieniu dotychczasowym stosuje się do czynów popełnionych przed dniem wejścia w życie niniejszej ustawy.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2025/1818__art_5" gd:GUID="eb08831e-1487-4470-818a-401f95ca2390" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-02_DU-2025-1818_domyslne.x" wejscie-w-zycie="2026-01-02">
+      <nr>5</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="1a8f998f-9ca3-4547-8625-a866c3f5c5f4" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-02_DU-2025-1818_domyslne.x" wejscie-w-zycie="2026-01-02">
+        <p>
+          <zdanie nr="1" gd:zdGUID="bda2c539-1ed3-4f6c-93b4-bc5a657d3689" fragment="1" gd:fragmentGUID="7f4665a5-ffb9-466f-8cc9-28454f096356" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-02_DU-2025-1818_domyslne.x" wejscie-w-zycie="2026-01-02">Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <organ-podpisujacy>Prezydent Rzeczypospolitej Polskiej: <i><osoba podpisujacy="true" gd:osobaGUID="ddfe8794-c276-4e40-a5a8-06bc244ddd55"><imie>K.</imie> <nazwisko>Nawrocki</nazwisko></osoba></i></organ-podpisujacy>
+  </ustawa>
+</akt-prawny>

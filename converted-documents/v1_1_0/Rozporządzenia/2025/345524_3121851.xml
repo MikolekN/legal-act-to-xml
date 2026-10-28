@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <rozporzadzenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/1751</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>fb2a377c-8661-4771-8549-d63b10b50918</gd:GUIDwersji>
+      <AdresISAP>WDU20250001751</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>1751</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 1751</AdresWyswietlany>
+      <Tytul>Rozporządzenie Ministra Rolnictwa i Rozwoju Wsi z dnia 2 grudnia 2025 r. zmieniające rozporządzenie w sprawie krajowych laboratoriów referencyjnych</Tytul>
+      <Rodzaj>ROZP</Rodzaj>
+      <DataOgloszenia></DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-12-02</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2026-01-01_DU-2025-1751_odczytane" rodzaj="wejscie-w-zycie" pochodzenie="odczytane" data="2026-01-01" podstawa="§ 2" zrodlo="https://eli.gov.pl/eli/DU/2025/1751" dowod="DU/2025/1751__art_2" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1751_odczytane.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2026-01-01_DU-2025-1751_odczytane" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="8d5b667a-0e44-440e-a76e-f11f919a6233" rola="wydajacy">
+          <Nazwa>Minister Rolnictwa i Rozwoju Wsi</Nazwa>
+          <OrganPodpisujacy>Minister Rolnictwa i Rozwoju Wsi</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>S.</imie> <nazwisko>Krajewski</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Rozporządzenie</rodzaj-aktu>
+    <autor-aktu>Ministra Rolnictwa i Rozwoju Wsi<odnosnik id-odnosnika="1" symbol="1" gd:GUID="73191ae1-336f-43bb-ad08-c9a0ddcfff86"><p><zdanie nr="1" gd:zdGUID="ab9a47f2-98bf-43c1-91a6-abf3c8a38265" fragment="1" gd:fragmentGUID="fda1f2ca-3e79-430d-a21a-9dfefc7c5dcc">Minister Rolnictwa i Rozwoju Wsi kieruje działem administracji rządowej – rolnictwo, na podstawie § 1 ust. 2 pkt 1 rozporządzenia Prezesa Rady Ministrów z dnia 25 lipca 2025 r. w sprawie szczegółowego zakresu działania Ministra Rolnictwa i Rozwoju Wsi (Dz. U. poz. 1000).</zdanie></p></odnosnik></autor-aktu>
+    <data>z dnia 2 grudnia 2025 r.</data>
+    <tytul>zmieniające rozporządzenie w sprawie krajowych laboratoriów referencyjnych</tytul>
+    <podstawa-prawna>Na podstawie art. 25b ust. 6 pkt 1 ustawy z dnia 29 stycznia 2004 r. o Inspekcji Weterynaryjnej (Dz. U. z 2024 r. poz. 12) zarządza się, co następuje:</podstawa-prawna>
+    <paragraf eId="DU/2025/1751__art_1" gd:GUID="405618de-df29-44af-b7b2-74f638588c9b" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1751_odczytane.x" wejscie-w-zycie="2026-01-01">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="ca909a21-c9bb-4fff-becb-377bf10197e6" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1751_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="97ab5c01-19bc-406f-ba44-f92254c33602" fragment="1" gd:fragmentGUID="dd9516dd-b3ba-4a2c-a760-ca8577cdf871" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1751_odczytane.x" wejscie-w-zycie="2026-01-01"><now:zastap akt="https://eli.gov.pl/eli/DU/2022/1667" element-eId="DU/2022/1667__zal_1" akt-nowelizujacy="https://eli.gov.pl/eli/DU/2025/1751" nowelizujacy-element-eId="DU/2025/1751__zal_1" gd:nowGUID="33933529-7ace-416b-8a98-ffb77a128bcf" /><now:zastap akt="https://eli.gov.pl/eli/DU/2022/1667" element-eId="DU/2022/1667__zal_2" akt-nowelizujacy="https://eli.gov.pl/eli/DU/2025/1751" nowelizujacy-element-eId="DU/2025/1751__zal_2" gd:nowGUID="cc068546-dbea-4ad7-9f14-03c5b2b265c6" />W rozporządzeniu Ministra Rolnictwa i Rozwoju Wsi z dnia 27 lipca 2022 r. w sprawie krajowych laboratoriów referencyjnych (Dz. U. poz. 1667 oraz z 2024 r. poz. 1274) załączniki nr 1 i 2 do rozporządzenia otrzymują brzmienie okreś- lone odpowiednio w załącznikach nr 1 i 2 do niniejszego rozporządzenia.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2025/1751__art_2" gd:GUID="838b72d1-45dc-43bd-b5e1-218ecb859b88" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1751_odczytane.x" wejscie-w-zycie="2026-01-01">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="ac83b829-c7e4-4964-8e25-4159aadba779" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1751_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="e742a969-f060-4f43-be15-06753f9685ca" fragment="1" gd:fragmentGUID="03edee4a-d634-409b-a125-2cdfcf0bc2ab" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1751_odczytane.x" wejscie-w-zycie="2026-01-01">Rozporządzenie wchodzi w życie z dniem 1 stycznia 2026 r.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <organ-podpisujacy>Minister Rolnictwa i Rozwoju Wsi: <i><osoba podpisujacy="true" gd:osobaGUID="4cce8108-2455-42b6-ac4f-0f0e345c901e"><imie>S.</imie> <nazwisko>Krajewski</nazwisko></osoba></i></organ-podpisujacy>
+    <zalacznik eId="DU/2025/1751__zal_1" gd:GUID="f03bab67-6ea1-444e-a0b9-3861d1050526">
+      <zalacznik-do gd:GUID="6e3847a6-cb0d-43e7-ad01-632282b7c87a">Załączniki do rozporządzenia Ministra Rolnictwa i Rozwoju Wsi z dnia 2 grudnia 2025 r. (Dz. U. poz. 1751)</zalacznik-do>
+      <zalacznik-nr gd:GUID="9f2257d4-34c5-4e9c-861c-6e42cea6d7af">
+        <nr>1</nr>
+      </zalacznik-nr>
+      <tytul-zalacznika gd:GUID="168c324b-752b-4e73-b31f-77ec6008149d">KRAJOWE LABORATORIA REFERENCYJNE, O KTÓRYCH MOWA W ART. 100 UST. 1 ROZPORZĄDZENIA 2017/625<odnosnik id-odnosnika="2" symbol="2" gd:GUID="ad720e97-16b4-4501-882c-62e1134398db"><p><zdanie nr="1" gd:zdGUID="f6c631db-f319-430a-83a1-37346fb84d38" fragment="1" gd:fragmentGUID="e0402e2a-0ba6-4674-916c-97e39eda9168">Rozporządzenie Parlamentu Europejskiego i Rady (UE) 2017/625 z dnia 15 marca 2017 r. w sprawie kontroli urzędowych i innych czynności urzędowych przeprowadzanych w celu zapewnienia stosowania prawa żywnościowego i paszowego oraz zasad dotyczących zdrowia i dobrostanu zwierząt, zdrowia roślin i środków ochrony roślin, zmieniające rozporządzenia Parlamentu Europejskiego i Rady (WE) nr 999/2001, (WE) nr 396/2005, (WE) nr 1069/2009, (WE) nr 1107/2009, (UE) nr 1151/2012, (UE) nr 652/2014, (UE) 2016/429 i (UE) 2016/2031, rozporządzenia Rady (WE) nr 1/2005 i (WE) nr 1099/2009 oraz dyrektywy Rady 98/58/WE, 1999/74/WE, 2007/43/WE, 2008/119/WE i 2008/120/WE, oraz uchylające rozporządzenia Parlamentu Europejskiego i Rady (WE) nr 854/2004 i (WE) nr 882/2004, dyrektywy Rady 89/608/EWG, 89/662/EWG, 90/425/EWG, 91/496/EWG, 96/23/WE, 96/93/WE i 97/78/WE oraz decyzję Rady 92/438/EWG (rozporządzenie w sprawie kontroli urzędowych) (Dz. Urz. UE L 95 z 07.04.2017, str. 1, z późn. zm.).</zdanie></p></odnosnik>, WŁAŚCIWE DLA BADAŃ PROWADZONYCH W KIERUNKU ROZPOZNAWANIA CHORÓB ZAKAŹNYCH ZWIERZĄT ORAZ CHORÓB ODZWIERZĘCYCH</tytul-zalacznika>
+    </zalacznik>
+    <zalacznik eId="DU/2025/1751__zal_2" gd:GUID="37e658d3-147b-44de-9dd7-7ec854d376b5">
+      <zalacznik-nr gd:GUID="ed09a061-6c0d-4476-94dd-c883b85e0346">
+        <nr>2</nr>
+      </zalacznik-nr>
+      <tytul-zalacznika gd:GUID="74db962c-4933-431e-ae1b-039ba5b2f676">KRAJOWE LABORATORIA REFERENCYJNE, O KTÓRYCH MOWA W ART. 100 UST. 1 ROZPORZĄDZENIA 2017/625<odnosnik id-odnosnika="3" symbol="3" gd:GUID="05da799e-5a51-42ba-8498-50b58168aab4"><p><zdanie nr="1" gd:zdGUID="0340bcc0-b5a1-4ba8-967f-c2a2c64b02bc" fragment="1" gd:fragmentGUID="c5761262-9107-4532-aebf-31a4a09e216c">Rozporządzenie Parlamentu Europejskiego i Rady (UE) 2017/625 z dnia 15 marca 2017 r. w sprawie kontroli urzędowych i innych czynności urzędowych przeprowadzanych w celu zapewnienia stosowania prawa żywnościowego i paszowego oraz zasad dotyczących zdrowia i dobrostanu zwierząt, zdrowia roślin i środków ochrony roślin, zmieniające rozporządzenia Parlamentu Europejskiego i Rady (WE) nr 999/2001, (WE) nr 396/2005, (WE) nr 1069/2009, (WE) nr 1107/2009, (UE) nr 1151/2012, (UE) nr 652/2014, (UE) 2016/429 i (UE) 2016/2031, rozporządzenia Rady (WE) nr 1/2005 i (WE) nr 1099/2009 oraz dyrektywy Rady 98/58/WE, 1999/74/WE, 2007/43/WE, 2008/119/WE i 2008/120/WE, oraz uchylające rozporządzenia Parlamentu Europejskiego i Rady (WE) nr 854/2004 i (WE) nr 882/2004, dyrektywy Rady 89/608/EWG, 89/662/EWG, 90/425/EWG, 91/496/EWG, 96/23/WE, 96/93/WE i 97/78/WE oraz decyzję Rady 92/438/EWG (rozporządzenie w sprawie kontroli urzędowych) (Dz. Urz. UE L 95 z 07.04.2017, str. 1, z późn. zm.).</zdanie></p></odnosnik>, WŁAŚCIWE DLA BADAŃ PRODUKTÓW POCHODZENIA ZWIERZĘCEGO LUB PASZ</tytul-zalacznika>
+    </zalacznik>
+  </rozporzadzenie>
+</akt-prawny>

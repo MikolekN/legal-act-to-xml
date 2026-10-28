@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <ustawa>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/1415</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>d017e83f-666d-494b-b96a-0573263f414f</gd:GUIDwersji>
+      <AdresISAP>WDU20250001415</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>1415</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 1415</AdresWyswietlany>
+      <Tytul>Ustawa z dnia 12 września 2025 r. o zmianie ustawy o zwrocie podatku akcyzowego zawartego w cenie oleju napędowego wykorzystywanego do produkcji rolnej</Tytul>
+      <Rodzaj>USTAWA</Rodzaj>
+      <DataOgloszenia>2025-10-20</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-09-12</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2025-11-04_DU-2025-1415_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2025-11-04" warunek="po upływie 14 dni od dnia ogłoszenia" podstawa="art. 2" zrodlo="https://eli.gov.pl/eli/DU/2025/1415" dowod="DU/2025/1415__art_2" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2025-11-04_DU-2025-1415_domyslne.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2025-11-04_DU-2025-1415_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="0964e979-9417-4b89-b8ad-2cae475796c9" rola="wydajacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Sejm">
+          <Nazwa>SEJM</Nazwa>
+        </Organ>
+        <Organ gd:GUID="ed1392db-5163-409f-9f80-e69cff61b52c" rola="podpisujacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Prezydent">
+          <Nazwa>Prezydent Rzeczypospolitej Polskiej</Nazwa>
+          <OrganPodpisujacy>Prezydent Rzeczypospolitej Polskiej</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>K.</imie> <nazwisko>Nawrocki</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Ustawa</rodzaj-aktu>
+    <data>z dnia 12 września 2025 r.</data>
+    <tytul>o zmianie ustawy o zwrocie podatku akcyzowego zawartego w cenie oleju napędowego wykorzystywanego do produkcji rolnej</tytul>
+    <artykul eId="DU/2025/1415__art_1" gd:GUID="82e6f99c-7aa8-4b22-9ae8-dc3abf71824a" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-04_DU-2025-1415_domyslne.x" wejscie-w-zycie="2025-11-04">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="e388d271-5c8b-4edd-8b37-1307548857a8" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-04_DU-2025-1415_domyslne.x" wejscie-w-zycie="2025-11-04">
+        <p>
+          <zdanie nr="1" gd:zdGUID="ac3733a6-c0d9-46cf-a15b-8fb92f5443f8" fragment="1" gd:fragmentGUID="2ea6eadf-244b-4d51-b70e-4e07b152e84e" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-04_DU-2025-1415_domyslne.x" wejscie-w-zycie="2025-11-04">W ustawie z dnia 10 marca 2006 r. o zwrocie podatku akcyzowego zawartego w cenie oleju napędowego wykorzystywanego do produkcji rolnej (Dz. U. z 2023 r. poz. 1948) w art. 6:</zdanie>
+        </p>
+        <punkt eId="DU/2025/1415__art_1__pkt_1" gd:GUID="ffaf2d05-f389-425e-85dd-64ca912750a2" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-04_DU-2025-1415_domyslne.x" wejscie-w-zycie="2025-11-04">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="ac3733a6-c0d9-46cf-a15b-8fb92f5443f8" fragment="2" gd:fragmentGUID="75e12315-fc9c-493b-b5c4-f28e09cf1ff3" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-04_DU-2025-1415_domyslne.x" wejscie-w-zycie="2025-11-04">w ust. 3 pkt 2–6 otrzymują brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/1948" cudzyslowy="oba" gd:nowGUID="a47ce92e-0899-4a8a-918c-1482c2e703b9" element-eId="DU/2023/1948__art_6__ust_3__pkt_2" element-do-eId="DU/2023/1948__art_6__ust_3__pkt_6" funkcja="zastap"><punkt eId="DU/2023/1948__art_6__ust_3__pkt_2" gd:GUID="08bde368-2fe4-4d9f-b26e-1c16c5acaf77" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-04_DU-2025-1415_domyslne.x" wejscie-w-zycie="2025-11-04"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="30f6cd5f-5766-43a5-a5e1-7754d9d5406d" fragment="1" gd:fragmentGUID="1492d52c-54f9-46c2-9c45-0bc4c4b4d569" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-04_DU-2025-1415_domyslne.x" wejscie-w-zycie="2025-11-04">dokument wydany przez kierownika biura powiatowego Agencji Restrukturyzacji i Modernizacji Rolnictwa albo dokument wygenerowany z komputerowej bazy danych prowadzonej na podstawie ustawy z dnia 4 listopada 2022 r. o systemie identyfikacji i rejestracji zwierząt (Dz. U. z 2023 r. poz. 1815) zawierający informacje o liczbie dużych jednostek przeliczeniowych bydła będącego w posiadaniu producenta rolnego, w odniesieniu do każdej siedziby stada tego producenta, w ostatnim dniu każdego miesiąca roku poprzedzającego rok, w którym został złożony wniosek o zwrot podatku, ustalonej z uwzględnieniem wartości współczynników przeliczeniowych sztuk bydła na duże jednostki przeliczeniowe określonych w załączniku do ustawy – w przypadku ubiegania się przez producenta rolnego o zwrot podatku w odniesieniu do bydła;</zdanie></p></punkt><punkt eId="DU/2023/1948__art_6__ust_3__pkt_3" gd:GUID="79423441-e15b-4e59-852b-68ad99102ea6" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-04_DU-2025-1415_domyslne.x" wejscie-w-zycie="2025-11-04"><nr>3</nr><p><zdanie nr="1" gd:zdGUID="30f6cd5f-5766-43a5-a5e1-7754d9d5406d" fragment="2" gd:fragmentGUID="59da04a3-ea53-4727-8733-12388b829b06" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-04_DU-2025-1415_domyslne.x" wejscie-w-zycie="2025-11-04">dokument wydany przez kierownika biura powiatowego Agencji Restrukturyzacji i Modernizacji Rolnictwa albo dokument wygenerowany z komputerowej bazy danych prowadzonej na podstawie ustawy z dnia 4 listopada 2022 r. o systemie identyfikacji i rejestracji zwierząt zawierający informacje o liczbie świń będących w posiadaniu producenta rolnego, w odniesieniu do każdej siedziby stada tego producenta, w ostatnim dniu każdego miesiąca roku poprzedzającego rok, w którym został złożony wniosek o zwrot podatku – w przypadku ubiegania się przez producenta rolnego o zwrot podatku w odniesieniu do świń;</zdanie></p></punkt><punkt eId="DU/2023/1948__art_6__ust_3__pkt_4" gd:GUID="960b24ec-5b0d-416f-b8d3-7e5e6472def0" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-04_DU-2025-1415_domyslne.x" wejscie-w-zycie="2025-11-04"><nr>4</nr><p><zdanie nr="1" gd:zdGUID="30f6cd5f-5766-43a5-a5e1-7754d9d5406d" fragment="3" gd:fragmentGUID="0070c9f5-cbb2-4e3e-ba2b-32c63227d205" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-04_DU-2025-1415_domyslne.x" wejscie-w-zycie="2025-11-04">dokument wydany przez kierownika biura powiatowego Agencji Restrukturyzacji i Modernizacji Rolnictwa albo dokument wygenerowany z komputerowej bazy danych prowadzonej na podstawie ustawy z dnia 4 listopada 2022 r. o systemie identyfikacji i rejestracji zwierząt zawierający informacje o liczbie dużych jednostek przeliczeniowych owiec będących w posiadaniu producenta rolnego, w odniesieniu do każdej siedziby stada tego producenta, w ostatnim dniu każdego miesiąca roku poprzedzającego rok, w którym został złożony wniosek o zwrot podatku, ustalonej z uwzględnieniem wartości współczynników przeliczeniowych sztuk owiec na duże jednostki przeliczeniowe określonych w załączniku do ustawy – w przypadku ubiegania się przez producenta rolnego o zwrot podatku w odniesieniu do owiec;</zdanie></p></punkt><punkt eId="DU/2023/1948__art_6__ust_3__pkt_5" gd:GUID="1691454a-090c-477a-bd9d-ebe348203647" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-04_DU-2025-1415_domyslne.x" wejscie-w-zycie="2025-11-04"><nr>5</nr><p><zdanie nr="1" gd:zdGUID="30f6cd5f-5766-43a5-a5e1-7754d9d5406d" fragment="4" gd:fragmentGUID="643edac4-51f2-4834-ae0c-83d49cfcaf87" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-04_DU-2025-1415_domyslne.x" wejscie-w-zycie="2025-11-04">dokument wydany przez kierownika biura powiatowego Agencji Restrukturyzacji i Modernizacji Rolnictwa albo dokument wygenerowany z komputerowej bazy danych prowadzonej na podstawie ustawy z dnia 4 listopada 2022 r. o systemie identyfikacji i rejestracji zwierząt zawierający informacje o liczbie dużych jednostek przeliczeniowych kóz będących w posiadaniu producenta rolnego, w odniesieniu do każdej siedziby stada tego producenta, w ostatnim dniu każdego miesiąca roku poprzedzającego rok, w którym został złożony wniosek o zwrot podatku, ustalonej z uwzględnieniem wartości współczynników przeliczeniowych sztuk kóz na duże jednostki przeliczeniowe określonych w załączniku do ustawy – w przypadku ubiegania się przez producenta rolnego o zwrot podatku w odniesieniu do kóz;</zdanie></p></punkt><punkt eId="DU/2023/1948__art_6__ust_3__pkt_6" gd:GUID="5bc42362-b143-45d0-aa1b-6339a6a1e036" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-04_DU-2025-1415_domyslne.x" wejscie-w-zycie="2025-11-04"><nr>6</nr><p><zdanie nr="1" gd:zdGUID="30f6cd5f-5766-43a5-a5e1-7754d9d5406d" fragment="5" gd:fragmentGUID="8849b971-3522-42e3-8176-2991fefb0d89" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-04_DU-2025-1415_domyslne.x" wejscie-w-zycie="2025-11-04">dokument wydany przez kierownika biura powiatowego Agencji Restrukturyzacji i Modernizacji Rolnictwa albo dokument wygenerowany z komputerowej bazy danych prowadzonej na podstawie ustawy z dnia 4 listopada 2022 r. o systemie identyfikacji i rejestracji zwierząt zawierający informacje o liczbie dużych jednostek przeliczeniowych koni będących w posiadaniu producenta rolnego, w odniesieniu do każdej siedziby stada tego producenta, w ostatnim dniu każdego miesiąca roku poprzedzającego rok, w którym został złożony wniosek o zwrot podatku, ustalonej z uwzględnieniem wartości współczynników przeliczeniowych sztuk koni na duże jednostki przeliczeniowe określonych w załączniku do ustawy – w przypadku ubiegania się przez producenta rolnego o zwrot podatku w odniesieniu do koni.</zdanie></p></punkt></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1415__art_1__pkt_2" gd:GUID="2402392c-c336-40b1-8aa2-a616a423ad48" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-04_DU-2025-1415_domyslne.x" wejscie-w-zycie="2025-11-04">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="ac3733a6-c0d9-46cf-a15b-8fb92f5443f8" fragment="3" gd:fragmentGUID="05a612e9-524c-4649-858f-31496e89237e" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-04_DU-2025-1415_domyslne.x" wejscie-w-zycie="2025-11-04">w ust. 3a dodaje się zdanie drugie w brzmieniu:<cytat-w-tekscie now:akt="https://eli.gov.pl/eli/DU/2023/1948" cudzyslowy="oba" gd:nowGUID="18f299c8-ab5f-4e43-9480-f927fa76e887" element-eId="DU/2023/1948__art_6__ust_3a__zdn_1" funkcja="dodaj-po"><zdanie nr="1" gd:zdGUID="02abb90f-0d92-40b5-bc3d-b5f9b86b146a" fragment="1" gd:fragmentGUID="605899d5-46a7-4039-a70d-edeb5f20d373" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-04_DU-2025-1415_domyslne.x" wejscie-w-zycie="2025-11-04">Agencja Restrukturyzacji i Modernizacji Rolnictwa umożliwia producentowi rolnemu wygenerowanie z komputerowej bazy danych prowadzonej na podstawie ustawy z dnia 4 listopada 2022 r. o systemie identyfikacji i rejestracji zwierząt dokumentów, o których mowa w ust. 3 pkt 2–6.</zdanie></cytat-w-tekscie>.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2025/1415__art_2" gd:GUID="da9965e3-de87-4c5d-be4d-6e063e8fe451" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-04_DU-2025-1415_domyslne.x" wejscie-w-zycie="2025-11-04">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="f3ad8932-eec1-4d2e-a083-a782ebd54718" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-04_DU-2025-1415_domyslne.x" wejscie-w-zycie="2025-11-04">
+        <p>
+          <zdanie nr="1" gd:zdGUID="fa7ac7b3-cc04-4134-90a7-7f0c7c7d433a" fragment="1" gd:fragmentGUID="42f7f34d-5f6a-4bac-ae25-4fc66203c50c" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-04_DU-2025-1415_domyslne.x" wejscie-w-zycie="2025-11-04">Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <organ-podpisujacy>Prezydent Rzeczypospolitej Polskiej: <i><osoba podpisujacy="true" gd:osobaGUID="40b27f18-c04f-438d-b524-41bbb4a17fae"><imie>K.</imie> <nazwisko>Nawrocki</nazwisko></osoba></i></organ-podpisujacy>
+  </ustawa>
+</akt-prawny>

@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <ustawa>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2026/177</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>0469dd28-0142-4623-b534-92cdb67acc38</gd:GUIDwersji>
+      <AdresISAP>WDU20260000177</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2026</Rok>
+      <Pozycja>177</Pozycja>
+      <AdresWyswietlany>Dz.U. 2026 poz. 177</AdresWyswietlany>
+      <Tytul>Ustawa z dnia 9 stycznia 2026 r. o zmianie ustawy o ograniczeniu prowadzenia działalności gospodarczej przez osoby pełniące funkcje publiczne</Tytul>
+      <Rodzaj>USTAWA</Rodzaj>
+      <DataOgloszenia>2026-02-17</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2026-01-09</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2026-03-04_DU-2026-177_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2026-03-04" warunek="po upływie 14 dni od dnia ogłoszenia" podstawa="art. 3" zrodlo="https://eli.gov.pl/eli/DU/2026/177" dowod="DU/2026/177__art_3" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2026-03-04_DU-2026-177_domyslne.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2026-03-04_DU-2026-177_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="0f96090e-5619-4ee8-b23e-b71377f94b08" rola="wydajacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Sejm">
+          <Nazwa>SEJM</Nazwa>
+        </Organ>
+        <Organ gd:GUID="495f3054-a1bc-4ce3-b4f0-83d7bee6d032" rola="podpisujacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Prezydent">
+          <Nazwa>Prezydent Rzeczypospolitej Polskiej</Nazwa>
+          <OrganPodpisujacy>Prezydent Rzeczypospolitej Polskiej</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>K.</imie> <nazwisko>Nawrocki</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Ustawa</rodzaj-aktu>
+    <data>z dnia 9 stycznia 2026 r.</data>
+    <tytul>o zmianie ustawy o ograniczeniu prowadzenia działalności gospodarczej przez osoby pełniące funkcje publiczne</tytul>
+    <artykul eId="DU/2026/177__art_1" gd:GUID="2117ff08-28e3-45bd-a02e-0ffbdc5f7bed" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-04_DU-2026-177_domyslne.x" wejscie-w-zycie="2026-03-04">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="6b8a1842-f0f4-424d-8a1d-719bbc822e10" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-04_DU-2026-177_domyslne.x" wejscie-w-zycie="2026-03-04">
+        <p>
+          <zdanie nr="1" gd:zdGUID="c0b91b2f-af53-4092-91e4-d69c76bfc416" fragment="1" gd:fragmentGUID="9075c935-f0f1-4503-8f1f-fb06421b2c40" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-04_DU-2026-177_domyslne.x" wejscie-w-zycie="2026-03-04">W ustawie z dnia 21 sierpnia 1997 r. o ograniczeniu prowadzenia działalności gospodarczej przez osoby pełniące funkcje publiczne (Dz. U. z 2025 r. poz. 499 oraz z 2026 r. poz. 160) wprowadza się następujące zmiany:</zdanie>
+        </p>
+        <punkt eId="DU/2026/177__art_1__pkt_1" gd:GUID="753d9987-eae5-4d1f-a6df-86e99ce027fd" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-04_DU-2026-177_domyslne.x" wejscie-w-zycie="2026-03-04">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="c0b91b2f-af53-4092-91e4-d69c76bfc416" fragment="2" gd:fragmentGUID="f64fceb5-1b11-4d10-adde-cc20b7231a52" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-04_DU-2026-177_domyslne.x" wejscie-w-zycie="2026-03-04">w art. 8:</zdanie>
+          </p>
+          <litera eId="DU/2026/177__art_1__pkt_1__lit_a" gd:GUID="39e3a1e3-d81c-4d08-96cd-edeb90c2570c" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-04_DU-2026-177_domyslne.x" wejscie-w-zycie="2026-03-04">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="c0b91b2f-af53-4092-91e4-d69c76bfc416" fragment="3" gd:fragmentGUID="1f2374ab-8782-4bc7-828f-f757224b4078" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-04_DU-2026-177_domyslne.x" wejscie-w-zycie="2026-03-04"><now:zamien-tekst stary-tekst="Rzecznik Praw Obywatelskich," nowy-tekst="Rzecznik Praw Obywatelskich, Rzecznik Praw Dziecka," element-eId="DU/2025/499__art_8__ust_3" akt="https://eli.gov.pl/eli/DU/2025/499" gd:nowGUID="15329f63-b8dc-4640-b071-cd6a9734b7e3" />w ust. 3 po wyrazach „Rzecznik Praw Obywatelskich,” dodaje się wyrazy „Rzecznik Praw Dziecka,”,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2026/177__art_1__pkt_1__lit_b" gd:GUID="f1c94078-6493-44e3-bfbe-2f69bb34e7ee" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-04_DU-2026-177_domyslne.x" wejscie-w-zycie="2026-03-04">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="c0b91b2f-af53-4092-91e4-d69c76bfc416" fragment="4" gd:fragmentGUID="d44ba787-9806-45c5-b8ac-150bb8b7e9cd" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-04_DU-2026-177_domyslne.x" wejscie-w-zycie="2026-03-04"><now:zamien-tekst stary-tekst="Rzecznika Praw Obywatelskich," nowy-tekst="Rzecznika Praw Obywatelskich, Rzecznika Praw Dziecka," element-eId="DU/2025/499__art_8__ust_4" akt="https://eli.gov.pl/eli/DU/2025/499" gd:nowGUID="23516a3e-8b2d-4f77-96b2-8143cd3267cb" />w ust. 4 po wyrazach „Rzecznika Praw Obywatelskich,” dodaje się wyrazy „Rzecznika Praw Dziecka,”;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2026/177__art_1__pkt_2" gd:GUID="fd0d6b5b-27d2-4352-8038-9c828b1b13d3" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-04_DU-2026-177_domyslne.x" wejscie-w-zycie="2026-03-04">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="c0b91b2f-af53-4092-91e4-d69c76bfc416" fragment="5" gd:fragmentGUID="45bd90b2-b0c9-4df2-a7de-11acfd9fdbce" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-04_DU-2026-177_domyslne.x" wejscie-w-zycie="2026-03-04">w art. 10:</zdanie>
+          </p>
+          <litera eId="DU/2026/177__art_1__pkt_2__lit_a" gd:GUID="a90665c5-6a4f-466d-bdca-ed28f7a50775" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-04_DU-2026-177_domyslne.x" wejscie-w-zycie="2026-03-04">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="c0b91b2f-af53-4092-91e4-d69c76bfc416" fragment="6" gd:fragmentGUID="5ce400f0-9c42-4f91-9b86-02df574a19cb" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-04_DU-2026-177_domyslne.x" wejscie-w-zycie="2026-03-04"><now:zamien-tekst stary-tekst="Rzecznik Praw Obywatelskich," nowy-tekst="Rzecznik Praw Obywatelskich, Rzecznik Praw Dziecka," element-eId="DU/2025/499__art_10__ust_5" akt="https://eli.gov.pl/eli/DU/2025/499" gd:nowGUID="cd8181f6-5209-434a-9342-ba1801968785" />w ust. 5 po wyrazach „Rzecznik Praw Obywatelskich,” dodaje się wyrazy „Rzecznik Praw Dziecka,”,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2026/177__art_1__pkt_2__lit_b" gd:GUID="33e8d852-ac51-4b09-ac4d-9ead6bad9dc6" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-04_DU-2026-177_domyslne.x" wejscie-w-zycie="2026-03-04">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="c0b91b2f-af53-4092-91e4-d69c76bfc416" fragment="7" gd:fragmentGUID="5eb48a3d-8007-4019-b35d-e5face7e0cdf" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-04_DU-2026-177_domyslne.x" wejscie-w-zycie="2026-03-04"><now:zamien-tekst stary-tekst="Ministrowi Finansów" nowy-tekst="ministrowi właściwemu do spraw finansów publicznych" element-eId="DU/2025/499__art_10__ust_6__pkt_3" akt="https://eli.gov.pl/eli/DU/2025/499" gd:nowGUID="4c7b30f7-2c06-4e2c-a264-65da30595e8c" />w ust. 6 w pkt 3 wyrazy „Ministrowi Finansów” zastępuje się wyrazami „ministrowi właściwemu do spraw finansów publicznych”.</zdanie>
+            </p>
+          </litera>
+        </punkt>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2026/177__art_2" gd:GUID="3eacc0e0-b8f9-46fa-b2f1-a11dabfc13c8" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-04_DU-2026-177_domyslne.x" wejscie-w-zycie="2026-03-04">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="694b7a35-1635-4f1b-98c7-c6a1b0ed23c8" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-04_DU-2026-177_domyslne.x" wejscie-w-zycie="2026-03-04">
+        <p>
+          <zdanie nr="1" gd:zdGUID="019b1952-543e-456a-bb21-fb84c8478faa" fragment="1" gd:fragmentGUID="ea95177b-8043-4edf-a688-db723df90f73" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-04_DU-2026-177_domyslne.x" wejscie-w-zycie="2026-03-04">Przepisy art. 8 ust. 3 i 4 oraz art. 10 ust. 5 ustawy zmienianej w art. 1, w brzmieniu nadanym niniejszą ustawą, stosuje się do oświadczeń, o których mowa w art. 8 ust. 1 i art. 10 ust. 1 ustawy zmienianej w art. 1, składanych przez Rzecznika Praw Dziecka od dnia wejścia w życie niniejszej ustawy.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2026/177__art_3" gd:GUID="aab11505-9464-4e1f-804b-e674e449bd59" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-04_DU-2026-177_domyslne.x" wejscie-w-zycie="2026-03-04">
+      <nr>3</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="04923e48-5471-48d8-90cb-814ce93ce648" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-04_DU-2026-177_domyslne.x" wejscie-w-zycie="2026-03-04">
+        <p>
+          <zdanie nr="1" gd:zdGUID="78f597e5-76f6-40b1-8524-4541bc833373" fragment="1" gd:fragmentGUID="1e62bd22-21dd-4bf1-9c05-31f5ecaa43f2" okres="okr_obowiazywanie.zdarz_wejscie_2026-03-04_DU-2026-177_domyslne.x" wejscie-w-zycie="2026-03-04">Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <organ-podpisujacy>Prezydent Rzeczypospolitej Polskiej: <i><osoba podpisujacy="true" gd:osobaGUID="0e935716-51fe-4043-8a3d-a5757afdf2ed"><imie>K.</imie> <nazwisko>Nawrocki</nazwisko></osoba></i></organ-podpisujacy>
+  </ustawa>
+</akt-prawny>

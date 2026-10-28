@@ -1,0 +1,643 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <obwieszczenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/301</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>c44ada94-2cbd-4b53-8309-7a3ee3ff4ec8</gd:GUIDwersji>
+      <AdresISAP>WDU20250000301</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>301</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 301</AdresWyswietlany>
+      <Tytul>Obwieszczenie Marszałka Sejmu Rzeczypospolitej Polskiej z dnia 6 marca 2025 r. w sprawie ogłoszenia jednolitego tekstu ustawy o ograniczeniu handlu w niedziele i święta oraz w niektóre inne dni</Tytul>
+      <Rodzaj>OBW_TJ</Rodzaj>
+      <DataOgloszenia>2025-03-11</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-03-06</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_ujednolicenie_2025-03-11_DU-2025-301_domyslne" rodzaj="ujednolicenie" pochodzenie="domyslne-z-aktu" data="2025-03-11" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_ujednolicenie.zdarz_ujednolicenie_2025-03-11_DU-2025-301_domyslne" glowna="true">
+          <Przedzial rodzaj="ujednolicenie" od="zdarz_ujednolicenie_2025-03-11_DU-2025-301_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <DataObowiazywaniaWersji>
+        <Od>zdarz_ujednolicenie_2025-03-11_DU-2025-301_domyslne</Od>
+      </DataObowiazywaniaWersji>
+      <Organy>
+        <Organ gd:GUID="e8e742de-452a-4272-987e-b9627b35be0b" rola="wydajacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/MSEJMU">
+          <Nazwa>Marszałek Sejmu</Nazwa>
+          <OrganPodpisujacy>Marszałek Sejmu</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>S.</imie> <nazwisko>Hołownia</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Obwieszczenie</rodzaj-aktu>
+    <autor-aktu>Marszałka Sejmu Rzeczypospolitej Polskiej</autor-aktu>
+    <data>z dnia 6 marca 2025 r.</data>
+    <tytul>w sprawie ogłoszenia jednolitego tekstu ustawy o ograniczeniu handlu w niedziele i święta oraz w niektóre inne dni</tytul>
+    <punkt-OTJ eId="DU/2025/301__pkt_1" gd:GUID="58b44814-be38-4f69-9c6f-be8d6fcea8f4">
+      <nr>1</nr>
+      <p>
+        <zdanie nr="1" gd:zdGUID="1a0ad0c8-78eb-43e9-abd4-461b3cad3d58" fragment="1" gd:fragmentGUID="e0a44bc9-2232-47bb-9afb-d92e4789cc3a">Na podstawie art. 16 ust. 1 zdanie pierwsze ustawy z dnia 20 lipca 2000 r. o ogłaszaniu aktów normatywnych i niektórych innych aktów prawnych (Dz. U. z 2019 r. poz. 1461) ogłasza się w załączniku do niniejszego obwieszczenia jednolity tekst ustawy z dnia 10 stycznia 2018 r. o ograniczeniu handlu w niedziele i święta oraz w niektóre inne dni (Dz. U. z 2024 r. poz. 449), z uwzględnieniem zmian wprowadzonych ustawą z dnia 6 grudnia 2024 r. o zmianie ustawy o dniach wolnych od pracy oraz niektórych innych ustaw (Dz. U. poz. 1965) oraz zmian wynikających z przepisów ogłoszonych przed dniem 21 lutego 2025 r.</zdanie>
+      </p>
+    </punkt-OTJ>
+    <punkt-OTJ eId="DU/2025/301__pkt_2" gd:GUID="7f1d745d-325b-427d-a6d6-579e0fe1e243">
+      <nr>2</nr>
+      <p>
+        <zdanie nr="1" gd:zdGUID="ea5e7ed2-0792-4097-9cfc-0ee5b8a0a8ed" fragment="1" gd:fragmentGUID="6d9b3dfb-024f-4201-a8ac-2995ad87e755">Podany w załączniku do niniejszego obwieszczenia tekst jednolity ustawy nie obejmuje art. 5 ustawy z dnia 6 grudnia 2024 r. o zmianie ustawy o dniach wolnych od pracy oraz niektórych innych ustaw (Dz. U. poz. 1965), który stanowi:<tresc-strukt cudzyslowy="oba" gd:GUID="7c9d5115-3f7d-4f6f-9a93-2e2004853d6a"><artykul eId="DU/2024/1965__art_5" gd:GUID="6376ec28-1020-4799-a2ad-226cdebab545"><nr>5</nr><ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="62e32a1a-f78f-42dc-9ba8-c6f5446f1a11"><p><zdanie nr="1" gd:zdGUID="7ad99876-1b3b-4f9a-8905-8539765d13f1" fragment="1" gd:fragmentGUID="eee7cd9e-4fc8-4005-9092-491b15d3ea7b">Ustawa wchodzi w życie z dniem 1 lutego 2025 r.</zdanie></p></ustep-n></artykul></tresc-strukt>.</zdanie>
+      </p>
+    </punkt-OTJ>
+    <organ-podpisujacy>Marszałek Sejmu: <i><osoba podpisujacy="true" gd:osobaGUID="b6956d70-ff12-4d8c-8bec-40d7d3ce7e98"><imie>S.</imie> <nazwisko>Hołownia</nazwisko></osoba></i></organ-podpisujacy>
+    <ustawa>
+      <zalacznik-do>Załącznik do obwieszczenia Marszałka Sejmu Rzeczypospolitej Polskiej z dnia 6 marca 2025 r. (Dz. U. poz. 301)</zalacznik-do>
+      <rodzaj-aktu>Ustawa</rodzaj-aktu>
+      <data>z dnia 10 stycznia 2018 r.</data>
+      <tytul>o ograniczeniu handlu w niedziele i święta oraz w niektóre inne dni</tytul>
+      <rozdzial eId="DU/2025/301__rozdz_1" gd:GUID="89bf2e26-c361-47a2-87ee-8fc49ef4dae1">
+        <naglowek-rozdzialu>
+          <nr>1</nr>
+          <p>Przepisy ogólne</p>
+        </naglowek-rozdzialu>
+        <oddzial-n brak-eid="jednostka-nieoznaczona" gd:GUID="c838cc5f-8abf-4d10-a4e6-f2cca4a7219a">
+          <artykul eId="DU/2025/301__art_1" gd:GUID="39e0c9ea-a572-432d-91a6-3ad48fb30657">
+            <nr>1</nr>
+            <ustep eId="DU/2025/301__art_1__ust_1" gd:GUID="401cb952-4459-4a40-9ce9-4224173efc20">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="751b3687-c84b-49c3-a993-ba7f9b1271b6" fragment="1" gd:fragmentGUID="175c00e9-9776-4b9f-9d04-65661f994333"><odnosnik id-odnosnika="1" symbol="1" gd:GUID="7394e674-a4c0-44ff-99ff-ad41e1ee340b"><p><zdanie nr="1" gd:zdGUID="23ea3d17-f798-409e-94bd-e1fb77f6e92f" fragment="1" gd:fragmentGUID="9d175630-86ad-4b15-9331-3bd55d47a248">W brzmieniu ustalonym przez art. 4 pkt 1 ustawy z dnia 6 grudnia 2024 r. o zmianie ustawy o dniach wolnych od pracy oraz niektórych innych ustaw (Dz. U. poz. 1965), która weszła w życie z dniem 1 lutego 2025 r.</zdanie></p></odnosnik> Ustawa określa zasady dotyczące ograniczenia handlu oraz wykonywania czynności związanych z handlem w placówkach handlowych w niedziele i święta oraz w sobotę bezpośrednio poprzedzającą pierwszy dzień Wielkiej Nocy.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/301__art_1__ust_2" gd:GUID="d1910945-8e00-4776-a4ea-cc12239a93a8">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="7d789b55-0a17-4f2a-90ab-5d7d6ac55711" fragment="1" gd:fragmentGUID="aa043182-5ac5-4ad4-bb81-d69fcb4ad45f">Przepisy ustawy stosuje się do przedsiębiorców w rozumieniu przepisów ustawy z dnia 6 marca 2018 r. – Prawo przedsiębiorców (Dz. U. z 2024 r. poz. 236, 1222 i 1871) wykonujących zarobkową działalność handlową.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2025/301__art_2" gd:GUID="24a68080-dc5f-4b1d-b0a9-6614beb3c679">
+            <nr>2</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="291ef0fb-cf2a-4fc3-b7a8-fea0098a33fa">
+              <p>
+                <zdanie nr="1" gd:zdGUID="83c3b604-aed0-4671-91ca-2c8b27b1f49b" fragment="1" gd:fragmentGUID="45dbf824-9bec-4afd-b931-0cd2e02caadd">W zakresie nieuregulowanym w ustawie do wykonywania pracy przez pracowników w placówkach handlowych w niedziele i święta stosuje się przepisy ustawy z dnia 26 czerwca 1974 r. – Kodeks pracy (Dz. U. z 2023 r. poz. 1465 oraz z 2024 r. poz. 878, 1222, 1871 i 1965).</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2025/301__art_3" gd:GUID="3f53be6a-7897-4395-8327-8910ec165d04">
+            <nr>3</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="1e2d83d5-34a5-48c2-a596-7d75cfa49b25">
+              <p>
+                <zdanie nr="1" gd:zdGUID="23338776-d51e-4ae8-b13f-a6f2f42faab7" fragment="1" gd:fragmentGUID="69c1294c-958b-4f1a-a5e0-92e8c2b70d56">Ilekroć w ustawie jest mowa o:</zdanie>
+              </p>
+              <punkt eId="DU/2025/301__art_3__pkt_1" gd:GUID="cd865b9e-0270-4793-8bf5-380cfe4afe96">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="23338776-d51e-4ae8-b13f-a6f2f42faab7" fragment="2" gd:fragmentGUID="488e2ac4-ab42-44af-bf8e-209c3ffc2567">placówce handlowej – należy przez to rozumieć obiekt, w którym jest prowadzony handel oraz są wykonywane czynności związane z handlem, w szczególności: sklep, stoisko, stragan, hurtownię, skład węgla, skład materiałów budowlanych, dom towarowy, dom wysyłkowy, biuro zbytu – jeżeli w takiej placówce praca jest wykonywana przez pracowników lub zatrudnionych;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/301__art_3__pkt_2" gd:GUID="eacff6fe-4741-41cf-a7ac-a039a94b1ca1">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="23338776-d51e-4ae8-b13f-a6f2f42faab7" fragment="3" gd:fragmentGUID="238fbef2-8aaf-46ad-be95-d213347f0edd">handlu – należy przez to rozumieć proces sprzedaży polegający na wymianie towaru lub wyrobu na środki pieniężne;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/301__art_3__pkt_3" gd:GUID="9d6f82aa-f2cc-4009-8a34-bf196805128b">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="23338776-d51e-4ae8-b13f-a6f2f42faab7" fragment="4" gd:fragmentGUID="00f3c5be-45e3-44e8-b735-51ab2e3939d2">wykonywaniu czynności związanych z handlem – należy przez to rozumieć wykonywanie w placówce handlowej czynności bezpośrednio związanych z handlem przez pracownika lub zatrudnionego, a także wykonywanie w takiej placówce przez pracownika lub zatrudnionego czynności związanych z magazynowaniem towarów lub ich inwentaryzacją;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/301__art_3__pkt_4" gd:GUID="3748e2ef-8ee5-4306-87d1-97870a7dcef0">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="23338776-d51e-4ae8-b13f-a6f2f42faab7" fragment="5" gd:fragmentGUID="ef39cde4-d21a-4ec6-b781-42807558b059">pracowniku – należy przez to rozumieć osobę zatrudnioną w placówce handlowej, zgodnie z przepisami ustawy z dnia 26 czerwca 1974 r. – Kodeks pracy, a także osobę skierowaną do wykonywania w placówce handlowej pracy tymczasowej na podstawie umowy o pracę, zgodnie z przepisami o zatrudnianiu pracowników tymczasowych;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/301__art_3__pkt_5" gd:GUID="1cc43ec7-3202-4b33-9b60-ebfbcf3b7b53">
+                <nr>5</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="23338776-d51e-4ae8-b13f-a6f2f42faab7" fragment="6" gd:fragmentGUID="158a6e25-8d05-4a46-9896-ad963a45348c">zatrudnionym – należy przez to rozumieć osobę fizyczną, wykonującą w placówce handlowej pracę na podstawie umów prawa cywilnego, a także osobę skierowaną do wykonywania w placówce handlowej pracy tymczasowej na podstawie umowy prawa cywilnego, zgodnie z przepisami o zatrudnianiu pracowników tymczasowych;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/301__art_3__pkt_6" gd:GUID="d13a6ef3-45a2-485c-a1ee-afc927dd85ef">
+                <nr>6</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="23338776-d51e-4ae8-b13f-a6f2f42faab7" fragment="7" gd:fragmentGUID="f637bb75-7fb1-417b-9ca1-2b42f2ab436d">święcie – należy przez to rozumieć dni wymienione w art. 1 pkt 1 ustawy z dnia 18 stycznia 1951 r. o dniach wolnych od pracy (Dz. U. z 2020 r. poz. 1920 oraz z 2024 r. poz. 1965);</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/301__art_3__pkt_7" gd:GUID="196a8ecf-071a-46b7-9423-5959a4545b35">
+                <nr>7</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="23338776-d51e-4ae8-b13f-a6f2f42faab7" fragment="8" gd:fragmentGUID="06d1fef5-182c-43f7-a4ec-05c64482aed3">wykonywaniu pracy w handlu oraz wykonywaniu czynności związanych z handlem w niedziele i święta w placówkach handlowych – należy przez to rozumieć wykonywanie takiej pracy lub takich czynności przez pracownika lub zatrudnionego w okresie 24 kolejnych godzin przypadających odpowiednio między godziną 24.00 w sobotę a godziną 24.00 w niedzielę, i między godziną 24.00 w dniu bezpośrednio poprzedzającym święto a godziną 24.00 w święto;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/301__art_3__pkt_8" gd:GUID="27fc11e4-2414-4e24-afdf-f7c6cbebb3b4">
+                <nr>8</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="23338776-d51e-4ae8-b13f-a6f2f42faab7" fragment="9" gd:fragmentGUID="5a84bd0d-2415-410b-a590-422f08012027">stacji paliw płynnych – należy przez to rozumieć obiekt budowlany, spełniający warunki przewidziane w obowiązujących przepisach dotyczących warunków technicznych, jakim powinny odpowiadać bazy i stacje paliw płynnych, w obrębie którego dokonywana jest sprzedaż produktów naftowych na podstawie ważnej koncesji udzielonej w oparciu o przepisy ustawy z dnia 10 kwietnia 1997 r. – Prawo energetyczne (Dz. U. z 2024 r. poz. 266, 834, 859, 1847 i 1881).</zdanie>
+                </p>
+              </punkt>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2025/301__art_4" gd:GUID="ebe176e0-e0ed-4e1a-86a5-9056d3bae5b0">
+            <nr>4</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="2cb6c9ff-30ee-4ecc-8f96-a284e5d65d6b">
+              <p>
+                <zdanie nr="1" gd:zdGUID="9e7dd3be-ba58-4995-b565-49e880189b39" fragment="1" gd:fragmentGUID="e711decf-33f0-43fd-ba72-ef3d18f26218"><odnosnik id-odnosnika="2" symbol="2" gd:GUID="d276777c-ad67-4daf-9f5b-81da51b1c6ff"><p><zdanie nr="1" gd:zdGUID="9806049d-209b-4703-940b-0cf047dc745a" fragment="1" gd:fragmentGUID="350980d7-399e-4905-b9c4-60937a21e1d4">W brzmieniu ustalonym przez art. 4 pkt 2 ustawy, o której mowa w odnośniku 1.</zdanie></p></odnosnik> Powierzanie wykonywania pracy w handlu lub wykonywania czynności związanych z handlem nieodpłatnie w placówkach handlowych w niedziele i święta, a także w sobotę bezpośrednio poprzedzającą pierwszy dzień Wielkiej Nocy – jest zakazane.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+        </oddzial-n>
+      </rozdzial>
+      <rozdzial eId="DU/2025/301__rozdz_2" gd:GUID="52f69dfb-73b3-4850-956e-9506b2f6ac79">
+        <naglowek-rozdzialu>
+          <nr>2</nr>
+          <p>Ograniczenia handlu oraz wykonywania czynności związanych z handlem w niedziele i święta</p>
+        </naglowek-rozdzialu>
+        <oddzial-n brak-eid="jednostka-nieoznaczona" gd:GUID="a83080ad-a9f2-4771-944b-de62e44dd126">
+          <artykul eId="DU/2025/301__art_5" gd:GUID="feb24c75-696d-49dc-877a-f7f1fdd3b59c">
+            <nr>5</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="ff631bdb-e8c1-4fed-8ee6-2a55780bffd4">
+              <p>
+                <zdanie nr="1" gd:zdGUID="6afaa9e1-d275-4c8f-a6e9-919af7e0e3d0" fragment="1" gd:fragmentGUID="bca155c4-881e-457e-a2b2-c0c294835a94">W niedziele i święta w placówkach handlowych:</zdanie>
+              </p>
+              <punkt eId="DU/2025/301__art_5__pkt_1" gd:GUID="19d6e1ec-aec7-4ebc-b93b-274f601ef0cb">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="6afaa9e1-d275-4c8f-a6e9-919af7e0e3d0" fragment="2" gd:fragmentGUID="471471d6-9993-4fc2-be68-4d9c03af303f">handel oraz wykonywanie czynności związanych z handlem,</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/301__art_5__pkt_2" gd:GUID="dbae1155-614d-4437-9208-46c3834d10e1">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="6afaa9e1-d275-4c8f-a6e9-919af7e0e3d0" fragment="3" gd:fragmentGUID="7aeec96a-cae4-4b1a-b1a9-f0162af51798">powierzanie pracownikowi lub zatrudnionemu wykonywania pracy w handlu oraz wykonywania czynności związanych z handlem</zdanie>
+                </p>
+              </punkt>
+              <czesc-wspolna-punkt eId="DU/2025/301__art_5__czw" gd:GUID="500d6ac6-9d43-4ae4-919a-84f6ba483fcf">
+                <p>
+                  <zdanie nr="1" gd:zdGUID="6afaa9e1-d275-4c8f-a6e9-919af7e0e3d0" fragment="4" gd:fragmentGUID="a058309c-2dbd-4531-adf7-b8b9093d6d4d">– są zakazane.</zdanie>
+                </p>
+              </czesc-wspolna-punkt>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2025/301__art_6" gd:GUID="c91cce17-cb1f-4380-bbef-cc7d66157208">
+            <nr>6</nr>
+            <ustep eId="DU/2025/301__art_6__ust_1" gd:GUID="94a4888c-05bf-4622-aa98-9a50ab11afbe">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="c0f97bac-6dac-4398-8918-9a6d7d3ead2d" fragment="1" gd:fragmentGUID="bd51565f-d8d6-4fd3-b7de-d59e25b095fb">Zakaz, o którym mowa w art. 5, nie obowiązuje:</zdanie>
+              </p>
+              <punkt eId="DU/2025/301__art_6__ust_1__pkt_1" gd:GUID="ecbcc43d-8e3f-49f5-a55f-4cea60ca1834">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="c0f97bac-6dac-4398-8918-9a6d7d3ead2d" fragment="2" gd:fragmentGUID="df48a397-9f68-497a-8f08-1e2f0948836e">na stacjach paliw płynnych;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/301__art_6__ust_1__pkt_2" gd:GUID="a22ba33f-c8ca-45eb-9a28-4ed262a1c54b">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="c0f97bac-6dac-4398-8918-9a6d7d3ead2d" fragment="3" gd:fragmentGUID="23778cfd-1c11-4c4f-b0a5-c0c8dba5cf29">w placówkach handlowych, w których przeważająca działalność polega na handlu kwiatami;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/301__art_6__ust_1__pkt_3" gd:GUID="a812ca37-ed69-4313-8b1c-6cab68f17cbe">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="c0f97bac-6dac-4398-8918-9a6d7d3ead2d" fragment="4" gd:fragmentGUID="2f882ed2-9994-46bb-89a5-83470d485cca">w aptekach i punktach aptecznych;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/301__art_6__ust_1__pkt_4" gd:GUID="32fb07dd-6b9f-4c2d-9023-f28660c6aa32">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="c0f97bac-6dac-4398-8918-9a6d7d3ead2d" fragment="5" gd:fragmentGUID="0ddaa58c-34be-4360-a80c-4be78249b867">w zakładach leczniczych dla zwierząt;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/301__art_6__ust_1__pkt_5" gd:GUID="8cfc90c8-38ef-4a01-addb-7beaf98743cc">
+                <nr>5</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="c0f97bac-6dac-4398-8918-9a6d7d3ead2d" fragment="6" gd:fragmentGUID="7729d6f9-6353-4613-b254-d30685c441b6">w placówkach handlowych, w których przeważająca działalność polega na handlu pamiątkami lub dewocjonaliami;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/301__art_6__ust_1__pkt_6" gd:GUID="98a1da3f-adcc-496b-a30e-b539263b99eb">
+                <nr>6</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="c0f97bac-6dac-4398-8918-9a6d7d3ead2d" fragment="7" gd:fragmentGUID="080b1e3d-cc3e-49bd-a631-61402a47618c">w placówkach handlowych, w których przeważająca działalność polega na handlu prasą, biletami komunikacji miejskiej, wyrobami tytoniowymi, kuponami gier losowych i zakładów wzajemnych;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/301__art_6__ust_1__pkt_7" gd:GUID="364fb401-3b6e-4eeb-9722-aa2a45aa3a10">
+                <nr>7</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="c0f97bac-6dac-4398-8918-9a6d7d3ead2d" fragment="8" gd:fragmentGUID="2e71e038-f6e1-4e01-8c04-4ff4c87cd057">w placówkach pocztowych w rozumieniu art. 3 pkt 15 ustawy z dnia 23 listopada 2012 r. – Prawo pocztowe (Dz. U. z 2023 r. poz. 1640 oraz z 2024 r. poz. 467, 1222 i 1717), w których przeważająca działalność polega na świadczeniu usług pocztowych, o których mowa w art. 2 ust. 1 tej ustawy;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/301__art_6__ust_1__pkt_8" gd:GUID="60649819-e7cd-4198-998b-c10b6cc033f4">
+                <nr>8</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="c0f97bac-6dac-4398-8918-9a6d7d3ead2d" fragment="9" gd:fragmentGUID="8d415f82-78fc-4f0c-ab84-0f84c3b20fb2">w placówkach handlowych w obiektach infrastruktury krytycznej, o której mowa w ustawie z dnia 26 kwietnia 2007 r. o zarządzaniu kryzysowym (Dz. U. z 2023 r. poz. 122 oraz z 2024 r. poz. 834, 1222, 1473, 1572 i 1907);</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/301__art_6__ust_1__pkt_9" gd:GUID="6814194a-b5f9-4b39-aee0-78b4c22ee22b">
+                <nr>9</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="c0f97bac-6dac-4398-8918-9a6d7d3ead2d" fragment="10" gd:fragmentGUID="04753b8e-9f09-4f09-915a-03ee968bc079">w placówkach handlowych w zakładach hotelarskich;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/301__art_6__ust_1__pkt_10" gd:GUID="f6047384-5664-4f17-bfc1-42c510211651">
+                <nr>10</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="c0f97bac-6dac-4398-8918-9a6d7d3ead2d" fragment="11" gd:fragmentGUID="750d1cb4-0e5b-487b-85e9-61035e7612d9">w placówkach handlowych w zakładach prowadzących działalność w zakresie kultury, sportu, oświaty, turystyki i wypoczynku;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/301__art_6__ust_1__pkt_11" gd:GUID="eb09cf26-7ec5-499e-9351-4216152d2394">
+                <nr>11</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="c0f97bac-6dac-4398-8918-9a6d7d3ead2d" fragment="12" gd:fragmentGUID="c4f8b3ee-cbc2-40fe-accb-1b4d973eb37e">w placówkach handlowych organizowanych wyłącznie na potrzeby festynów, jarmarków i innych imprez okolicznościowych, tematycznych lub sportowo-rekreacyjnych, także gdy są one zlokalizowane w halach targowych;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/301__art_6__ust_1__pkt_12" gd:GUID="79c1f654-b669-4567-aac2-e692299b5bbe">
+                <nr>12</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="c0f97bac-6dac-4398-8918-9a6d7d3ead2d" fragment="13" gd:fragmentGUID="733c3680-cd8c-4d17-aa46-df777288264b">w placówkach handlowych w zakładach leczniczych podmiotów leczniczych i innych placówkach służby zdrowia przeznaczonych dla osób, których stan zdrowia wymaga całodobowych lub całodziennych świadczeń zdrowotnych;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/301__art_6__ust_1__pkt_13" gd:GUID="3f360abf-a70a-4b02-bd2d-a08e0824ea79">
+                <nr>13</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="c0f97bac-6dac-4398-8918-9a6d7d3ead2d" fragment="14" gd:fragmentGUID="3de3704e-4eba-40df-a30a-385c2817b391">w placówkach handlowych na dworcach w rozumieniu ustawy z dnia 16 grudnia 2010 r. o publicznym transporcie zbiorowym (Dz. U. z 2023 r. poz. 2778 oraz z 2024 r. poz. 1853), w portach i przystaniach morskich w rozumieniu ustawy z dnia 20 grudnia 1996 r. o portach i przystaniach morskich (Dz. U. z 2023 r. poz. 1796) oraz w portach i przystaniach w rozumieniu ustawy z dnia 21 grudnia 2000 r. o żegludze śródlądowej (Dz. U. z 2025 r. poz. 18) – w zakresie związanym z bezpośrednią obsługą podróżnych;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/301__art_6__ust_1__pkt_14" gd:GUID="c399380a-f91e-4b60-8ee0-22e7886b94a3">
+                <nr>14</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="c0f97bac-6dac-4398-8918-9a6d7d3ead2d" fragment="15" gd:fragmentGUID="9d753d26-9075-40a5-a596-0fab2122a97a">w przypadku sprzedaży ryb w gospodarstwach rybackich, ze statku rybackiego i w placówkach handlowych zajmujących się wyłącznie odbiorem produktów rybnych;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/301__art_6__ust_1__pkt_15" gd:GUID="62b12d08-3ea7-47b3-9cd6-5fe9e647b4ff">
+                <nr>15</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="c0f97bac-6dac-4398-8918-9a6d7d3ead2d" fragment="16" gd:fragmentGUID="fae66606-29f9-4a1d-9ac8-b88bd1441aae">w placówkach handlowych w portach lotniczych w rozumieniu ustawy z dnia 3 lipca 2002 r. – Prawo lotnicze (Dz. U. z 2023 r. poz. 2110, z 2024 r. poz. 731 i 1222 oraz z 2025 r. poz. 31 i 179);</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/301__art_6__ust_1__pkt_16" gd:GUID="1a53c998-4872-4a52-808d-45fb3312c2bb">
+                <nr>16</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="c0f97bac-6dac-4398-8918-9a6d7d3ead2d" fragment="17" gd:fragmentGUID="7b76b5b0-4719-4ab7-b09a-160059f1e4ca">w strefach wolnocłowych;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/301__art_6__ust_1__pkt_17" gd:GUID="4032765f-301b-4c22-b92b-219d716b7d12">
+                <nr>17</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="c0f97bac-6dac-4398-8918-9a6d7d3ead2d" fragment="18" gd:fragmentGUID="bbbe0f78-9c3e-400a-990c-af0dd01c1234">w środkach transportu, na statkach, a także na morskich statkach handlowych, statkach powietrznych, platformach wiertniczych i innych morskich budowlach hydrotechnicznych;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/301__art_6__ust_1__pkt_18" gd:GUID="ba6a9958-d3b9-48d4-a478-b01a87aaa3f5">
+                <nr>18</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="c0f97bac-6dac-4398-8918-9a6d7d3ead2d" fragment="19" gd:fragmentGUID="baaa2223-ed3d-4f4b-a965-af7f548d0b19">na terenie jednostek penitencjarnych;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/301__art_6__ust_1__pkt_19" gd:GUID="ab4d60c7-771b-467f-b247-48f91b9adb4b">
+                <nr>19</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="c0f97bac-6dac-4398-8918-9a6d7d3ead2d" fragment="20" gd:fragmentGUID="a01629e8-d193-42f2-8f90-ab32f41dc2d8">w placówkach handlowych na terenie jednostek wojskowych;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/301__art_6__ust_1__pkt_20" gd:GUID="5b5c7988-7449-4401-aea3-4b66666ba88b">
+                <nr>20</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="c0f97bac-6dac-4398-8918-9a6d7d3ead2d" fragment="21" gd:fragmentGUID="0bfaf732-275e-43e8-9589-ee639a7de877">w sklepach internetowych i na platformach internetowych;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/301__art_6__ust_1__pkt_21" gd:GUID="9989d21f-fcd9-4385-a6ce-893609d7021e">
+                <nr>21</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="c0f97bac-6dac-4398-8918-9a6d7d3ead2d" fragment="22" gd:fragmentGUID="e0ef6e80-2d21-47c8-9b90-35834d5139f4">w przypadku handlu towarami z automatów;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/301__art_6__ust_1__pkt_22" gd:GUID="827891ce-df13-497e-90e3-48b5f19a89b0">
+                <nr>22</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="c0f97bac-6dac-4398-8918-9a6d7d3ead2d" fragment="23" gd:fragmentGUID="1e857f9d-a350-46f7-a7c6-340d6e04aaf5">w przypadku rolniczego handlu detalicznego w rozumieniu ustawy z dnia 25 sierpnia 2006 r. o bezpieczeństwie żywności i żywienia (Dz. U. z 2023 r. poz. 1448);</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/301__art_6__ust_1__pkt_23" gd:GUID="4ec1e81f-d7ec-4066-af5b-9fc9e18bc417">
+                <nr>23</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="c0f97bac-6dac-4398-8918-9a6d7d3ead2d" fragment="24" gd:fragmentGUID="f2cb2cf7-6cd8-4c41-8744-66820e3e33f4">w hurtowniach farmaceutycznych;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/301__art_6__ust_1__pkt_24" gd:GUID="d65e4d01-8002-4d33-8000-94280c01dcd9">
+                <nr>24</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="c0f97bac-6dac-4398-8918-9a6d7d3ead2d" fragment="25" gd:fragmentGUID="1898fedf-18f1-4751-ab9c-d47fee83b2dd">w okresie od dnia 1 czerwca do dnia 30 września każdego roku kalendarzowego – w placówkach handlowych prowadzących handel wyłącznie maszynami rolniczymi, częściami zamiennymi do tych maszyn, materiałami eksploatacyjnymi do maszyn rolniczych, materiałami używanymi w trakcie bieżącej pracy maszyn rolniczych lub narzędziami do wymiany części zamiennych w maszynach rolniczych;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/301__art_6__ust_1__pkt_25" gd:GUID="66dd7ec1-86ad-4ad3-9637-f4879a05e434">
+                <nr>25</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="c0f97bac-6dac-4398-8918-9a6d7d3ead2d" fragment="26" gd:fragmentGUID="9dadfae3-9afc-49eb-92f2-67a45105b7c4">w przypadku handlu kwiatami, wiązankami, wieńcami i zniczami przy cmentarzach;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/301__art_6__ust_1__pkt_26" gd:GUID="232d19f0-aacd-47dc-b17c-8442c6fbd306">
+                <nr>26</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="c0f97bac-6dac-4398-8918-9a6d7d3ead2d" fragment="27" gd:fragmentGUID="5d83da15-447d-4e00-8426-9b9e00d31550">w zakładach pogrzebowych;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/301__art_6__ust_1__pkt_27" gd:GUID="e653a842-2fc4-426b-acd8-bab6d6964906">
+                <nr>27</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="c0f97bac-6dac-4398-8918-9a6d7d3ead2d" fragment="28" gd:fragmentGUID="b286b60f-7afc-4e3c-a5c3-5a427740088f">w placówkach handlowych, w których handel jest prowadzony przez przedsiębiorcę będącego osobą fizyczną wyłącznie osobiście, we własnym imieniu i na własny rachunek;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/301__art_6__ust_1__pkt_28" gd:GUID="41f088f5-91e8-43a3-ae47-8c6478d4a4eb">
+                <nr>28</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="c0f97bac-6dac-4398-8918-9a6d7d3ead2d" fragment="29" gd:fragmentGUID="94274b8c-3828-483b-b374-560c504ef17f">w piekarniach, cukierniach i lodziarniach, w których przeważająca działalność polega na handlu wyrobami piekarniczymi i cukierniczymi;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/301__art_6__ust_1__pkt_29" gd:GUID="81eaeb63-5da0-4fd8-9d52-d8013d2d0e1c">
+                <nr>29</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="c0f97bac-6dac-4398-8918-9a6d7d3ead2d" fragment="30" gd:fragmentGUID="e4ec1100-1705-4bff-9689-cc138a89c656">w placówkach handlowych, w których przeważającą działalnością jest działalność gastronomiczna;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/301__art_6__ust_1__pkt_30" gd:GUID="d6d790b0-b279-4776-ba2a-ca423aed9667">
+                <nr>30</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="c0f97bac-6dac-4398-8918-9a6d7d3ead2d" fragment="31" gd:fragmentGUID="c517f93f-f4bc-46e2-a6bd-28c2de92ab56">na terenie rolno-spożywczych rynków hurtowych prowadzonych przez spółki prawa handlowego, których przeważająca działalność polega na wynajmie i zarządzaniu nieruchomościami na użytek handlu hurtowego artykułami rolno-spożywczymi;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/301__art_6__ust_1__pkt_31" gd:GUID="57cee28e-c7b9-48d8-8c13-a8d5b464d688">
+                <nr>31</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="c0f97bac-6dac-4398-8918-9a6d7d3ead2d" fragment="32" gd:fragmentGUID="67b6714e-e50b-43c1-829f-badf6f17c96b">w placówkach handlowych prowadzonych przez podmioty nabywające towary na terenie rolno-spożywczych rynków hurtowych, o których mowa w pkt 30, w zakresie czynności związanych z handlem oraz powierzania pracownikowi lub zatrudnionemu wykonywania tych czynności;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/301__art_6__ust_1__pkt_32" gd:GUID="0259e324-23da-4ba7-811e-2b23c7b30667">
+                <nr>32</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="c0f97bac-6dac-4398-8918-9a6d7d3ead2d" fragment="33" gd:fragmentGUID="9ef56999-d9e5-40fe-ad3d-83c944615d4e">w placówkach handlowych, w których jest prowadzony wyłącznie skup produktów pochodzenia rolniczego, w szczególności zboża, rzepaku, rzepiku, buraków cukrowych, roślin białkowych, innych upraw polowych, owoców, warzyw, mleka surowego lub runa leśnego.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2025/301__art_6__ust_2" gd:GUID="2e7f700f-1ff4-4822-a964-ef0e18887ae9">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="3b24e1b8-3dfd-42bd-a59d-a178040e441a" fragment="1" gd:fragmentGUID="458c65e8-5c20-4ace-8422-4916371889ea">Przeważająca działalność, o której mowa w ust. 1 pkt 2, 5–7, 28 i 29, oznacza rodzaj przeważającej działalności wskazany we wniosku o wpis do krajowego rejestru urzędowego podmiotów gospodarki narodowej, o którym mowa w ustawie z dnia 29 czerwca 1995 r. o statystyce publicznej (Dz. U. z 2024 r. poz. 1799), jeżeli działalność ta jest wykonywana w danej placówce handlowej i stanowi co najmniej 40 % miesięcznego przychodu ze sprzedaży detalicznej w rozumieniu ustawy z dnia 6 lipca 2016 r. o podatku od sprzedaży detalicznej (Dz. U. z 2023 r. poz. 148).</zdanie>
+                <zdanie nr="2" gd:zdGUID="1d3fc906-4f97-4375-a34e-156c09b3e84b" fragment="1" gd:fragmentGUID="1c0363d1-6285-4b6d-ad32-e2f845651f22">W przypadku, o którym mowa w ust. 1 pkt 30, przepis zdania pierwszego stosuje się odpowiednio.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/301__art_6__ust_3" gd:GUID="31850f8b-4119-48bd-af70-73a4a987ba8a">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="53618fe9-0982-4354-9425-bce33df70623" fragment="1" gd:fragmentGUID="679a3a37-9852-471a-98fa-c65b6f1ee0a5">Placówki handlowe, korzystające z wyłączeń, o których mowa w ust. 1 pkt 2, 5–7 i 28–30, są obowiązane do prowadzenia ewidencji miesięcznego przychodu ze sprzedaży, z podziałem na przychód z działalności określonej w ust. 1 pkt 2, 5–7 i 28–30 oraz przychód z pozostałej działalności.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/301__art_6__ust_4" gd:GUID="4cdea3be-cbd5-4456-a118-382aed0389a4">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="a13d9ebe-470d-4a63-88e5-7dc36cdd0253" fragment="1" gd:fragmentGUID="a2035918-c0bb-4142-9d3f-6bb5b2ad05ce">Przedsiębiorca, o którym mowa w ust. 1 pkt 27, może korzystać z nieodpłatnej pomocy małżonka, dzieci własnych, dzieci małżonka, dzieci przysposobionych, rodziców, macochy, ojczyma, rodzeństwa, wnuków, dziadków.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/301__art_6__ust_5" gd:GUID="23227e93-5434-426c-bafa-8c0cad4ac773">
+              <nr>5</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="4dcd4f1f-4ca4-421d-911c-92bbad5e6d70" fragment="1" gd:fragmentGUID="1edf3520-8765-472f-887e-703aa0838c87">Osoby, o których mowa w ust. 4, nie mogą być pracownikami lub zatrudnionymi w placówce handlowej u przedsiębiorcy, który korzysta z ich nieodpłatnej pomocy.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/301__art_6__ust_6" gd:GUID="ae6afe4d-c34a-405f-af4a-e7ea2859fac6">
+              <nr>6</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="028f8a17-a64b-4cfe-8970-efce753747f0" fragment="1" gd:fragmentGUID="01cd3daa-d455-43b5-adf8-ffbe4c52f091">Minister właściwy do spraw finansów publicznych określi, w drodze rozporządzenia, sposób prowadzenia ewidencji, o której mowa w ust. 3, wzór tej ewidencji oraz szczegółową treść wpisów w tej ewidencji, biorąc pod uwagę konieczność zapewnienia prawidłowego prowadzenia tej ewidencji oraz przejrzystości, kompletności i dostępności zawartych w niej danych.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/301__art_6__ust_7" gd:GUID="63c232de-9b21-4e40-b85c-432045c716ab">
+              <nr>7</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="37d6ae08-ae78-48ae-8bd0-82591a08b75a" fragment="1" gd:fragmentGUID="a7e11761-e09a-4ab6-83ee-26ddefe6ca9f">W toku postępowania kontrolnego inspektor pracy ma prawo żądania przedłożenia ewidencji, o której mowa w ust. 3.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2025/301__art_7" gd:GUID="4fbaf78d-3e33-4f32-9efb-20844f1853ef">
+            <nr>7</nr>
+            <ustep eId="DU/2025/301__art_7__ust_1" gd:GUID="506e229e-a5b0-4d98-9fee-de7378d36c1a">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="0c362406-540d-4d14-b282-a0b4b74256bf" fragment="1" gd:fragmentGUID="152b1863-32f5-4329-9034-21d228596232"><odnosnik id-odnosnika="3" symbol="3" gd:GUID="0ea3f5f0-36a5-4cd7-ab94-384e4737d863"><p><zdanie nr="1" gd:zdGUID="05fc91f7-ef52-42b9-a60c-006799eb19f2" fragment="1" gd:fragmentGUID="6d405f00-f7a1-40cc-9094-7bc3b4525135">W brzmieniu ustalonym przez art. 4 pkt 3 lit. a ustawy, o której mowa w odnośniku 1.</zdanie></p></odnosnik> Zakaz, o którym mowa w art. 5, nie obowiązuje w:</zdanie>
+              </p>
+              <punkt eId="DU/2025/301__art_7__ust_1__pkt_1" gd:GUID="8dd0eea6-fb4d-49b8-bf9f-a1fbfcd46f9b">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="0c362406-540d-4d14-b282-a0b4b74256bf" fragment="2" gd:fragmentGUID="41a91cd5-baf7-4662-8a86-2446ae8067a2">kolejne trzy niedziele poprzedzające Wigilię Bożego Narodzenia;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/301__art_7__ust_1__pkt_2" gd:GUID="8dd188b5-39c3-45cd-8aee-7824f5746082">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="0c362406-540d-4d14-b282-a0b4b74256bf" fragment="3" gd:fragmentGUID="59307cce-de63-44e2-a477-bb8b0b4552c9">niedzielę bezpośrednio poprzedzającą pierwszy dzień Wielkiej Nocy;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/301__art_7__ust_1__pkt_3" gd:GUID="827f6305-dc63-4f9f-864d-12e5161ea166">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="0c362406-540d-4d14-b282-a0b4b74256bf" fragment="4" gd:fragmentGUID="901e18df-1e32-4844-b14a-f1d3cd585302">ostatnią niedzielę przypadającą w styczniu, kwietniu, czerwcu i sierpniu.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2025/301__art_7__ust_1a" gd:GUID="3b893b1a-43e2-40fb-9870-912f00bf4115">
+              <nr>1a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="d2ae41c6-35ae-4e70-a806-954b7e1b04cf" fragment="1" gd:fragmentGUID="6dc54e49-c4f7-4c31-a14a-bf428a13a8b7">(uchylony)<odnosnik id-odnosnika="4" symbol="4" gd:GUID="2e66a6fb-8ebd-496b-9d6b-c221aab4145c"><p><zdanie nr="1" gd:zdGUID="b0617a30-4778-472d-988d-6398438c9607" fragment="1" gd:fragmentGUID="c09c56dc-a518-4eb6-a49f-c3ae17c2e145">Przez art. 4 pkt 3 lit. b ustawy, o której mowa w odnośniku 1.</zdanie></p></odnosnik></zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/301__art_7__ust_1b" gd:GUID="ff567c42-5906-4e8c-b617-809fced9a905">
+              <nr>1b</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="26afe1cf-f46d-4bab-ae37-ccf5e893401d" fragment="1" gd:fragmentGUID="8b3dcdaf-4aa2-48ab-a06b-da009a8ecb4d"><odnosnik id-odnosnika="5" symbol="5" gd:GUID="63eb244d-7186-4183-89bc-1b77757c7dc1"><p><zdanie nr="1" gd:zdGUID="77b855ed-d66d-486d-bf91-776ae7f5e699" fragment="1" gd:fragmentGUID="ff7cc6ea-5e18-4a5c-9778-55e95e13e579">Dodany przez art. 4 pkt 3 lit. c ustawy, o której mowa w odnośniku 1.</zdanie></p></odnosnik> W przypadku, o którym mowa w ust. 1 pkt 1, pracownik lub zatrudniony może wykonywać pracę w handlu oraz wykonywać czynności związane z handlem nie więcej niż w dwie niedziele.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/301__art_7__ust_2" gd:GUID="a213bbbf-789b-41d9-b21f-6cd8891f7152">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="9f432f80-2cc3-4506-8d14-a1fe1abd4fca" fragment="1" gd:fragmentGUID="baa78992-aeaf-464a-b7b7-5358931c4c0e">Jeżeli w niedzielę, o której mowa w ust. 1 pkt 3, przypada święto, przepis art. 5 stosuje się.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+        </oddzial-n>
+      </rozdzial>
+      <rozdzial eId="DU/2025/301__rozdz_3" gd:GUID="86e03d18-e02b-4e81-b193-e1ab4cdf6e42">
+        <naglowek-rozdzialu>
+          <nr>3</nr>
+          <p>Ograniczenia handlu oraz wykonywania czynności związanych z handlem w sobotę bezpośrednio poprzedzającą pierwszy dzień Wielkiej Nocy<odnosnik id-odnosnika="6" symbol="6" gd:GUID="eb5a2d1f-fc4c-4228-b1f4-6b11be5ed7d6"><p><zdanie nr="1" gd:zdGUID="9d7e30db-379d-48cb-8fb7-7798a891aef8" fragment="1" gd:fragmentGUID="821cfdc0-ab4f-4c3f-bb6e-c924b3f36dbc">Tytuł rozdziału ze zmianą wprowadzoną przez art. 4 pkt 4 ustawy, o której mowa w odnośniku 1.</zdanie></p></odnosnik></p>
+        </naglowek-rozdzialu>
+        <oddzial-n brak-eid="jednostka-nieoznaczona" gd:GUID="318bce6a-1e55-4d2a-af5e-991f97f17e0f">
+          <artykul eId="DU/2025/301__art_8" gd:GUID="f25e226c-a57d-4dd1-aa42-f47131fdce0e">
+            <nr>8</nr>
+            <ustep eId="DU/2025/301__art_8__ust_1" gd:GUID="d7d02291-3efd-44b1-a653-c50d691d108b">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="81beeca5-436a-4a31-bacc-6ac8241582ae" fragment="1" gd:fragmentGUID="f1b4cc65-15c2-4dde-9430-8858c6afac36"><odnosnik id-odnosnika="7" symbol="7" gd:GUID="85f7e74c-bd76-4fbd-84f6-36d20de43bf9"><p><zdanie nr="1" gd:zdGUID="e8fe9810-8632-4161-8cfc-cfc12c0b923a" fragment="1" gd:fragmentGUID="c507a650-5885-4123-a716-82c1a8ae7da7">W brzmieniu ustalonym przez art. 4 pkt 5 lit. a ustawy, o której mowa w odnośniku 1.</zdanie></p></odnosnik> W sobotę bezpośrednio poprzedzającą pierwszy dzień Wielkiej Nocy w placówkach handlowych:</zdanie>
+              </p>
+              <punkt eId="DU/2025/301__art_8__ust_1__pkt_1" gd:GUID="45b82bcc-6534-4a63-9b9c-998eb415cd55">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="81beeca5-436a-4a31-bacc-6ac8241582ae" fragment="2" gd:fragmentGUID="aa35c8a0-6944-4721-ba57-aae754887016">handel oraz wykonywanie czynności związanych z handlem,</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/301__art_8__ust_1__pkt_2" gd:GUID="0cd16f68-c6d3-47de-81eb-e8460c42bb2c">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="81beeca5-436a-4a31-bacc-6ac8241582ae" fragment="3" gd:fragmentGUID="b4d1cc16-9ec1-4fae-8ac2-720d0bf10398">powierzanie pracownikowi lub zatrudnionemu wykonywania pracy w handlu oraz wykonywania czynności związanych z handlem</zdanie>
+                </p>
+              </punkt>
+              <czesc-wspolna-punkt eId="DU/2025/301__art_8__ust_1__czw" gd:GUID="c3a7a4c4-f267-4287-a0f5-b1403c7ca068">
+                <p>
+                  <zdanie nr="1" gd:zdGUID="81beeca5-436a-4a31-bacc-6ac8241582ae" fragment="4" gd:fragmentGUID="1e7a7307-1a5e-4c5b-8720-3317d1624edd">– po godzinie 14.00 są zakazane, z wyjątkiem przypadków określonych w art. 6.</zdanie>
+                </p>
+              </czesc-wspolna-punkt>
+            </ustep>
+            <ustep eId="DU/2025/301__art_8__ust_2" gd:GUID="f92231ca-74a2-41a8-afb9-188f304b8418">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="6e7f9c71-914a-49fb-88e8-315d1694fd28" fragment="1" gd:fragmentGUID="985805f0-8d23-48d0-b5e1-5944d60b6167">(uchylony)</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/301__art_8__ust_3" gd:GUID="5f10ae16-017e-4bff-b2c8-8e4ad5814032">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ff1e10df-1946-4f94-bbae-f53f64990e24" fragment="1" gd:fragmentGUID="3887aae9-fb84-437f-a9e5-ab9c47a380e3">(uchylony)<odnosnik id-odnosnika="8" symbol="8" gd:GUID="8137bafa-6aa6-4a5f-89e6-a84269d694ae"><p><zdanie nr="1" gd:zdGUID="28d9d041-92e7-4dbc-819b-7936b183d5a6" fragment="1" gd:fragmentGUID="80648640-58fb-480a-a339-90d2683f0761">Przez art. 4 pkt 5 lit. b ustawy, o której mowa w odnośniku 1.</zdanie></p></odnosnik></zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2025/301__art_9" gd:GUID="21a638ed-c3f4-4204-8ca6-ea0495df80e6">
+            <nr>9</nr>
+            <ustep eId="DU/2025/301__art_9__ust_1" gd:GUID="bb168427-2192-46ca-9a0b-870219032845">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="6fda8dc9-7d31-4d82-984b-e1e73e5c2097" fragment="1" gd:fragmentGUID="0cc1d02e-22a9-4803-8463-8cb65d40c6a2"><odnosnik id-odnosnika="9" symbol="9" gd:GUID="162ed1d1-3f9d-415f-8e6c-9d83db257f19"><p><zdanie nr="1" gd:zdGUID="5f945f84-675e-4e9f-9b01-6891de7f1afa" fragment="1" gd:fragmentGUID="be152ea9-5950-4e65-89c9-e81626a2c22c">W brzmieniu ustalonym przez art. 4 pkt 6 ustawy, o której mowa w odnośniku 1.</zdanie></p></odnosnik> Pracownik zachowuje prawo do wynagrodzenia za czas nieprzepracowany w związku ze zmniejszeniem wymiaru jego czasu pracy z powodu wykonywania pracy w sobotę bezpośrednio poprzedzającą pierwszy dzień Wielkiej Nocy do godziny 14.00.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/301__art_9__ust_2" gd:GUID="ee68dee3-21f9-41f7-af51-c27c2c6e30ff">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="03fa5d2d-c0e7-45cb-b68f-3d0f6ae99a18" fragment="1" gd:fragmentGUID="8489c04e-2e91-4866-a76d-dc99a7cd9efa">Wynagrodzenie, o którym mowa w ust. 1, oblicza się stosując zasady obowiązujące przy ustalaniu wynagrodzenia za czas urlopu wypoczynkowego.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+        </oddzial-n>
+      </rozdzial>
+      <rozdzial eId="DU/2025/301__rozdz_4" gd:GUID="54b4d4dd-5247-4de7-b7b8-96f74a928624">
+        <naglowek-rozdzialu>
+          <nr>4</nr>
+          <p>Przepisy karne</p>
+        </naglowek-rozdzialu>
+        <oddzial-n brak-eid="jednostka-nieoznaczona" gd:GUID="cc8b3e98-52c7-44e5-9df9-5b9600552874">
+          <artykul eId="DU/2025/301__art_10" gd:GUID="7125417d-b327-4741-ba0c-8d9d5c592d5a">
+            <nr>10</nr>
+            <ustep eId="DU/2025/301__art_10__ust_1" gd:GUID="824c7aa6-9d2f-4eb2-92bf-eac79e3aa37e">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="69f50e7e-b2d8-44c5-b6c3-6d7caaecee30" fragment="1" gd:fragmentGUID="c2474eae-57ac-4ec4-8972-775c6730f7ae">Kto, wbrew zakazowi handlu oraz wykonywania czynności związanych z handlem w niedziele lub święta, powierza wykonywanie pracy w handlu lub wykonywanie czynności związanych z handlem pracownikowi lub zatrudnionemu, <sankcja-karna>podlega karze grzywny w wysokości od 1000 do 100 000 zł</sankcja-karna>.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/301__art_10__ust_2" gd:GUID="841b17a6-1eb4-4ace-a220-a517133955da">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="cdb2d610-268d-43cd-a4e5-e135ac25fd8a" fragment="1" gd:fragmentGUID="bd664820-4ce8-4e4e-b593-d12f9236978f">Tej samej karze podlega, kto:</zdanie>
+              </p>
+              <punkt eId="DU/2025/301__art_10__ust_2__pkt_1" gd:GUID="029df195-c221-4ed8-8225-548f543eef4d">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="cdb2d610-268d-43cd-a4e5-e135ac25fd8a" fragment="2" gd:fragmentGUID="f11fc2b9-2916-4b96-b1cb-175cefce9420"><odnosnik id-odnosnika="10" symbol="10" gd:GUID="f6b9ac5b-7c02-412e-818e-135fbbef4870"><p><zdanie nr="1" gd:zdGUID="ad917ddb-09b2-411a-8f64-f8d83c863b83" fragment="1" gd:fragmentGUID="0a36f7a1-d7b4-49db-8903-f1a3adeef49d">W brzmieniu ustalonym przez art. 4 pkt 7 ustawy, o której mowa w odnośniku 1.</zdanie></p></odnosnik> wbrew zakazowi handlu oraz wykonywania czynności związanych z handlem po godzinie 14.00 w sobotę bezpośrednio poprzedzającą pierwszy dzień Wielkiej Nocy, powierza pracownikowi lub zatrudnionemu wykonywanie pracy w handlu lub wykonywanie czynności związanych z handlem;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/301__art_10__ust_2__pkt_2" gd:GUID="a5c27308-96a2-4b56-b0d5-b44cc85f206d">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="cdb2d610-268d-43cd-a4e5-e135ac25fd8a" fragment="3" gd:fragmentGUID="3e1932e4-9201-4e12-853a-1a8340f74d77">wbrew obowiązkowi określonemu w art. 6 ust. 3 nie prowadzi ewidencji miesięcznego przychodu placówki albo tę ewidencję prowadzi w sposób niezgodny z przepisami wydanymi na podstawie art. 6 ust. 6.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2025/301__art_11" gd:GUID="4d16472d-bed5-47b1-b110-73b4ba1332cf">
+            <nr>11</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="1e114741-529e-474f-900e-545c2307c197">
+              <p>
+                <zdanie nr="1" gd:zdGUID="888750e8-2728-42e8-97a6-0e43664b1d55" fragment="1" gd:fragmentGUID="3d4fceae-214c-40cc-9962-ec08cbb463f5">Orzekanie w sprawach o czyny, o których mowa w art. 10, następuje w trybie przepisów ustawy z dnia 24 sierpnia 2001 r. – Kodeks postępowania w sprawach o wykroczenia (Dz. U. z 2024 r. poz. 977 i 1544).</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+        </oddzial-n>
+      </rozdzial>
+      <rozdzial eId="DU/2025/301__rozdz_5" gd:GUID="affb5bec-96ef-4d56-b30f-dbcc0ca69fc8">
+        <naglowek-rozdzialu>
+          <nr>5</nr>
+          <p>Zmiany w przepisach obowiązujących i przepis końcowy</p>
+        </naglowek-rozdzialu>
+        <oddzial-n brak-eid="jednostka-nieoznaczona" gd:GUID="7230d894-253d-49b4-a0c0-6132312c4fac">
+          <artykul eId="DU/2025/301__art_12" gd:GUID="458d0047-4d4c-4f1a-a2ba-bf118d8218d4">
+            <nr />
+            <nr-od>12</nr-od>
+            <nr-do>15</nr-do>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="37c17b94-499e-4213-9337-5e3e966fef21">
+              <p>
+                <zdanie nr="1" gd:zdGUID="4ce753c3-3791-4d4d-b3ee-53f30c775d4e" fragment="1" gd:fragmentGUID="1c7c2082-357c-4797-acf0-934542c5a677">(pominięte)</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2025/301__art_16" gd:GUID="63c92b66-faee-4c22-90fe-1b1582c8bc9a">
+            <nr>16</nr>
+            <ustep eId="DU/2025/301__art_16__ust_1" gd:GUID="266bc72d-386e-40ec-b3ce-83b40ed827b5">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="e948e288-fd49-4803-8cfc-eb841360c7fb" fragment="1" gd:fragmentGUID="587c42db-8699-444c-8de5-7f8c87dcbc24">W okresie od dnia 1 marca do dnia 31 grudnia 2018 r. zakaz, o którym mowa w art. 5, nie obowiązuje w pierwszą i ostatnią niedzielę każdego miesiąca kalendarzowego.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/301__art_16__ust_2" gd:GUID="8f9d20c8-ee1e-44e2-8af5-2d53e5850d0a">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="237bc4f0-0cca-4619-92bc-c98707ecae3a" fragment="1" gd:fragmentGUID="4f013818-7591-40af-8be5-9b3a9918b4f2">Jeżeli w pierwszą lub w ostatnią niedzielę miesiąca kalendarzowego przypada święto, przepis art. 5 stosuje się.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2025/301__art_17" gd:GUID="67c2e8a3-c338-47cd-afa0-4038e9dc2a04">
+            <nr>17</nr>
+            <ustep eId="DU/2025/301__art_17__ust_1" gd:GUID="91f6fd5a-cb5e-44c3-ac21-3104b2bff221">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="cfcf28a8-0bf4-4e4c-aa4e-843a2ccecd74" fragment="1" gd:fragmentGUID="36d6d25d-25ee-4551-9fa2-4a2def36ca91">W okresie od dnia 1 stycznia do dnia 31 grudnia 2019 r. zakaz, o którym mowa w art. 5, nie obowiązuje w ostatnią niedzielę każdego miesiąca kalendarzowego.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/301__art_17__ust_2" gd:GUID="56e46bbe-31aa-4534-a01d-251ca397b43d">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="05f1badb-7b27-4411-97a6-90d58eefc0e1" fragment="1" gd:fragmentGUID="083ef2e8-93d6-427f-9694-1d561385fafd">Jeżeli w ostatnią niedzielę miesiąca kalendarzowego przypada święto, przepis art. 5 stosuje się.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2025/301__art_17a" gd:GUID="6905402c-8ab8-4bf1-81ed-90eeb830bbe8">
+            <nr>17a</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="990ed088-1222-454e-be78-5cdc8a97ce47">
+              <p>
+                <zdanie nr="1" gd:zdGUID="70a049a4-ed93-4b97-b3f4-c13285d070bf" fragment="1" gd:fragmentGUID="b08c9533-e5d2-4525-9426-a23b7157806f">W dniu 6 grudnia 2020 r. zakaz, o którym mowa w art. 5, nie obowiązuje.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2025/301__art_18" gd:GUID="c3065e09-e946-45a9-8381-be01df808194">
+            <nr>18</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="1bbea47d-f18a-4d06-a06c-782fd1cc9b50">
+              <p>
+                <zdanie nr="1" gd:zdGUID="2ba1918d-de59-4f52-b41a-4cd3c8dbbbfa" fragment="1" gd:fragmentGUID="f667bf90-d7a2-4cb1-8466-57fe3d83f0f7">Ustawa wchodzi w życie z dniem 1 marca 2018 r.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+        </oddzial-n>
+      </rozdzial>
+    </ustawa>
+  </obwieszczenie>
+</akt-prawny>

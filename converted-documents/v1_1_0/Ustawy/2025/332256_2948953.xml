@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <ustawa>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/896</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>272565c9-8e14-4cd2-a99e-7e4fe3ba1669</gd:GUIDwersji>
+      <AdresISAP>WDU20250000896</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>896</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 896</AdresWyswietlany>
+      <Tytul>Ustawa z dnia 24 czerwca 2025 r. o zmianie ustawy o podatku od towarów i usług</Tytul>
+      <Rodzaj>USTAWA</Rodzaj>
+      <DataOgloszenia>2025-07-07</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-06-24</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2026-01-01_DU-2025-896_odczytane" rodzaj="wejscie-w-zycie" pochodzenie="odczytane" data="2026-01-01" podstawa="art. 3" zrodlo="https://eli.gov.pl/eli/DU/2025/896" dowod="DU/2025/896__art_3" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-896_odczytane.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2026-01-01_DU-2025-896_odczytane" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="2096a7b5-c6bf-4ce0-858c-e24804a15ee3" rola="wydajacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Sejm">
+          <Nazwa>SEJM</Nazwa>
+        </Organ>
+        <Organ gd:GUID="95158ed8-fa9e-40bc-a7e3-836e51587ed2" rola="podpisujacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Prezydent">
+          <Nazwa>Prezydent Rzeczypospolitej Polskiej</Nazwa>
+          <OrganPodpisujacy>Prezydent Rzeczypospolitej Polskiej</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>A.</imie> <nazwisko>Duda</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Ustawa</rodzaj-aktu>
+    <data>z dnia 24 czerwca 2025 r.</data>
+    <tytul>o zmianie ustawy o podatku od towarów i usług</tytul>
+    <artykul eId="DU/2025/896__art_1" gd:GUID="f0ccd652-9e48-4f19-b3c9-8bd292714fcb" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-896_odczytane.x" wejscie-w-zycie="2026-01-01">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="151698c1-02a2-44bd-b6c8-9e37b131afd9" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-896_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="98d93f0a-8ecf-41da-b936-33b7a618a6c2" fragment="1" gd:fragmentGUID="6856c1c7-0149-4c61-a5cd-0cfea23acae5" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-896_odczytane.x" wejscie-w-zycie="2026-01-01"><now:zamien-tekst stary-tekst="kwoty 200 000 zł" nowy-tekst="kwoty 240 000 zł" element-eId="DU/2025/775__art_113__ust_1" akt="https://eli.gov.pl/eli/DU/2025/775" gd:nowGUID="e9495abb-663f-4a1d-bedf-7f25b459e4f9" />W ustawie z dnia 11 marca 2004 r. o podatku od towarów i usług (Dz. U. z 2025 r. poz. 775 i 894) w art. 113 w ust. 1 wyrazy „kwoty 200 000 zł” zastępuje się wyrazami „kwoty 240 000 zł”.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2025/896__art_2" gd:GUID="d7bda2d5-6781-4693-8706-85fbf51fc06e" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-896_odczytane.x" wejscie-w-zycie="2026-01-01">
+      <nr>2</nr>
+      <ustep eId="DU/2025/896__art_2__ust_1" gd:GUID="2026e6b9-0872-4ca3-a881-30dc706f58f6" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-896_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="934a6d86-7e77-465e-af47-574a6e99f8a4" fragment="1" gd:fragmentGUID="a7d45d10-a47d-4120-b986-598458ae9f8a" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-896_odczytane.x" wejscie-w-zycie="2026-01-01">Podatnicy posiadający siedzibę działalności gospodarczej na terytorium kraju, u których wartość sprzedaży w 2025 r. była wyższa niż 200 000 zł i nie przekroczyła 240 000 zł, mogą skorzystać ze zwolnienia, o którym mowa w art. 113 ust. 1 ustawy zmienianej w art. 1, w brzmieniu nadanym niniejszą ustawą.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/896__art_2__ust_2" gd:GUID="3bf17e93-2f49-41fa-aae9-f3f0495c9451" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-896_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="46cf064c-1a7e-4b91-a3c7-0d11b3d6a4cb" fragment="1" gd:fragmentGUID="1954008a-a4e9-4d9c-9323-9c8817bd7ff3" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-896_odczytane.x" wejscie-w-zycie="2026-01-01">Podatnicy posiadający siedzibę działalności gospodarczej na terytorium kraju, którzy rozpoczęli w 2025 r. wykonywanie czynności określonych w art. 5 ustawy zmienianej w art. 1, u których wartość sprzedaży, w proporcji do okresu prowadzonej działalności gospodarczej, przekroczyła 200 000 zł i nie przekroczyła 240 000 zł, mogą skorzystać ze zwolnienia, o którym mowa w art. 113 ust. 1 ustawy zmienianej w art. 1, w brzmieniu nadanym niniejszą ustawą.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/896__art_2__ust_3" gd:GUID="43d0755d-d879-45c8-b1b3-986bd09f8d4b" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-896_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <nr>3</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="0a4663a6-ea9c-464e-9848-e391b7bce37a" fragment="1" gd:fragmentGUID="76cfc33b-98ef-4511-b3a1-2c9c2631f945" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-896_odczytane.x" wejscie-w-zycie="2026-01-01">Przepisy ust. 1 i 2 stosuje się odpowiednio w przypadku sprzedaży dokonywanej przez podatników, o których mowa w art. 113a ustawy zmienianej w art. 1.</zdanie>
+        </p>
+      </ustep>
+    </artykul>
+    <artykul eId="DU/2025/896__art_3" gd:GUID="be4ece98-417c-43db-a38f-300547e6a041" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-896_odczytane.x" wejscie-w-zycie="2026-01-01">
+      <nr>3</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="19694ff5-683b-4eb2-a64c-71dffd5164e0" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-896_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="58f318c1-d29e-4dc7-9a66-b811d1a6d844" fragment="1" gd:fragmentGUID="37ade129-3d36-4668-968e-6d0bce6697cc" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-896_odczytane.x" wejscie-w-zycie="2026-01-01">Ustawa wchodzi w życie z dniem 1 stycznia 2026 r.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <organ-podpisujacy>Prezydent Rzeczypospolitej Polskiej: <i><osoba podpisujacy="true" gd:osobaGUID="c1ba197c-a616-4614-8903-a087ffa57fc5"><imie>A.</imie> <nazwisko>Duda</nazwisko></osoba></i></organ-podpisujacy>
+  </ustawa>
+</akt-prawny>

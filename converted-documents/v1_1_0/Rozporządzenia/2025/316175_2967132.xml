@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <rozporzadzenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/974</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>ec04d341-3d69-49e2-b1a6-0d1ec9f23f78</gd:GUIDwersji>
+      <AdresISAP>WDU20250000974</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>974</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 974</AdresWyswietlany>
+      <Tytul>Rozporządzenie Ministra Finansów z dnia 5 lipca 2025 r. zmieniające rozporządzenie w sprawie szczegółowych warunków, jakie musi spełniać rynek regulowany oraz platforma aukcyjna</Tytul>
+      <Rodzaj>ROZP</Rodzaj>
+      <DataOgloszenia>2025-07-23</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-07-05</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2025-08-07_DU-2025-974_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2025-08-07" warunek="po upływie 14 dni od dnia ogłoszenia" podstawa="§ 2" zrodlo="https://eli.gov.pl/eli/DU/2025/974" dowod="DU/2025/974__art_2" />
+          <Zdarzenie id="zdarz_wejscie_2025-09-29_DU-2025-974_odczytane" rodzaj="wejscie-w-zycie" pochodzenie="odczytane" data="2025-09-29" podstawa="§ 2" zrodlo="https://eli.gov.pl/eli/DU/2025/974" dowod="DU/2025/974__art_2">
+            <JednostkaAktu eId="DU/2025/974__art_1__pkt_3" />
+            <JednostkaAktu eId="DU/2025/974__art_1__pkt_4__lit_b" />
+          </Zdarzenie>
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2025-08-07_DU-2025-974_domyslne.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2025-08-07_DU-2025-974_domyslne" />
+        </GrupaCzasowa>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2025-09-29_DU-2025-974_odczytane.x" glowna="false">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2025-09-29_DU-2025-974_odczytane" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="527cc482-4dfc-45a7-8143-0d0814b4ba8d" rola="wydajacy">
+          <Nazwa>Minister Finansów</Nazwa>
+          <OrganPodpisujacy>Minister Finansów</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>A.</imie> <nazwisko>Domański</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Rozporządzenie</rodzaj-aktu>
+    <autor-aktu>Ministra Finansów<odnosnik id-odnosnika="1" symbol="1" gd:GUID="999c3be3-caaa-436e-a565-0377a3db9baf"><p><zdanie nr="1" gd:zdGUID="a1904541-e6df-4809-964e-5a3c88b1849b" fragment="1" gd:fragmentGUID="daa8ccdb-6154-441c-ad7f-855d59e3ee1a">Minister Finansów kieruje działem administracji rządowej – instytucje finansowe, na podstawie § 1 ust. 2 pkt 3 rozporządzenia Prezesa Rady Ministrów z dnia 18 grudnia 2023 r. w sprawie szczegółowego zakresu działania Ministra Finansów (Dz. U. poz. 2710).</zdanie></p></odnosnik></autor-aktu>
+    <data>z dnia 5 lipca 2025 r.</data>
+    <tytul>zmieniające rozporządzenie w sprawie szczegółowych warunków, jakie musi spełniać rynek regulowany oraz platforma aukcyjna<odnosnik id-odnosnika="2" symbol="2" gd:GUID="3e7c0019-2e40-46cd-8b72-db50dfbd6cef"><p><zdanie nr="1" gd:zdGUID="38e293c9-1caa-4dd5-b49d-3016b4ca0411" fragment="1" gd:fragmentGUID="07706f84-a577-43ce-8794-49377d2a8f03">Niniejsze rozporządzenie w zakresie swojej regulacji wdraża:</zdanie></p><punkt-odnosnik><nr>1</nr><p><zdanie nr="1" gd:zdGUID="38e293c9-1caa-4dd5-b49d-3016b4ca0411" fragment="2" gd:fragmentGUID="7ab63822-8dd1-4eee-b298-0a9adba1cf23">dyrektywę Parlamentu Europejskiego i Rady (UE) 2022/2556 z dnia 14 grudnia 2022 r. w sprawie zmiany dyrektyw 2009/65/WE, 2009/138/WE, 2011/61/UE, 2013/36/UE, 2014/59/UE, 2014/65/UE, (UE) 2015/2366 oraz (UE) 2016/2341 w odniesieniu do operacyjnej odporności cyfrowej sektora finansowego (Dz. Urz. UE L 333 z 27.12.2022, str. 153);</zdanie></p></punkt-odnosnik><punkt-odnosnik><nr>2</nr><p><zdanie nr="1" gd:zdGUID="38e293c9-1caa-4dd5-b49d-3016b4ca0411" fragment="3" gd:fragmentGUID="f6746693-d530-498c-b43e-e7456a9aff4d">dyrektywę Parlamentu Europejskiego i Rady (UE) 2024/790 z dnia 28 lutego 2024 r. zmieniającą dyrektywę 2014/65/UE w sprawie rynków instrumentów finansowych (Dz. Urz. UE L 2024/790 z 08.03.2024).</zdanie></p></punkt-odnosnik></odnosnik></tytul>
+    <podstawa-prawna>Na podstawie art. 17 ust. 1 pkt 1 ustawy z dnia 29 lipca 2005 r. o obrocie instrumentami finansowymi (Dz. U. z 2024 r. poz. 722 i 1863 oraz z 2025 r. poz. 146, 820 i 923) zarządza się, co następuje:</podstawa-prawna>
+    <paragraf eId="DU/2025/974__art_1" gd:GUID="cf6536e5-4919-4456-b45f-ea787ba8213d" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-07_DU-2025-974_domyslne.x" wejscie-w-zycie="2025-08-07">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="2e410aef-4b2e-4ccc-9a41-a8c45982f7ab" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-07_DU-2025-974_domyslne.x" wejscie-w-zycie="2025-08-07">
+        <p>
+          <zdanie nr="1" gd:zdGUID="72f87419-af83-4f6a-8d62-66c4bcfc059b" fragment="1" gd:fragmentGUID="b6a06038-8393-4f9d-98e9-1d177d99cebc" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-07_DU-2025-974_domyslne.x" wejscie-w-zycie="2025-08-07">W rozporządzeniu Ministra Finansów z dnia 12 kwietnia 2019 r. w sprawie szczegółowych warunków, jakie musi spełniać rynek regulowany oraz platforma aukcyjna (Dz. U. poz. 726) wprowadza się następujące zmiany:</zdanie>
+        </p>
+        <punkt eId="DU/2025/974__art_1__pkt_1" gd:GUID="173c5a38-d380-4fb6-a2fe-e007936235ae" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-07_DU-2025-974_domyslne.x" wejscie-w-zycie="2025-08-07">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="72f87419-af83-4f6a-8d62-66c4bcfc059b" fragment="2" gd:fragmentGUID="b18c19bf-ed24-4e42-9611-27b8fccf734d" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-07_DU-2025-974_domyslne.x" wejscie-w-zycie="2025-08-07">w § 4:</zdanie>
+          </p>
+          <litera eId="DU/2025/974__art_1__pkt_1__lit_a" gd:GUID="93c68063-a185-4879-8f8a-cb0e3a7510fa" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-07_DU-2025-974_domyslne.x" wejscie-w-zycie="2025-08-07">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="72f87419-af83-4f6a-8d62-66c4bcfc059b" fragment="3" gd:fragmentGUID="2c393e58-2be1-46dd-82f5-49bed0a92097" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-07_DU-2025-974_domyslne.x" wejscie-w-zycie="2025-08-07">w ust. 1 wprowadzenie do wyliczenia otrzymuje brzmienie:<cytat-w-tekscie now:akt="https://eli.gov.pl/eli/DU/2019/726" cudzyslowy="oba" gd:nowGUID="26f52eb1-7f19-4238-8a1e-7767a0988255" element-eId="DU/2019/726__art_4__ust_1" funkcja="zastap-tekst"><zdanie nr="1" gd:zdGUID="9ca0f095-0f91-4768-8514-08a5b41c6f2c" fragment="1" gd:fragmentGUID="8dc08ad9-82d8-49ae-9e7b-f1841657723e" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-07_DU-2025-974_domyslne.x" wejscie-w-zycie="2025-08-07">Spółka prowadząca rynek regulowany zarządza ryzykiem operacyjnym, na które jest narażony prowadzony przez nią rynek regulowany, w tym ryzykiem związanym z wykorzystaniem technologii informacyjno-komunikacyjnych, zwanych dalej „ICT”, zgodnie z wymogami określonymi w rozdziale II rozporządzenia Parlamentu Europejskiego i Rady (UE) 2022/2554 z dnia 14 grudnia 2022 r. w sprawie operacyjnej odporności cyfrowej sektora finansowego i zmieniającego rozporządzenia (WE) nr 1060/2009, (UE) nr 648/2012, (UE) nr 600/2014, (UE) nr 909/2014 oraz (UE) 2016/1011 (Dz. Urz. UE L 333 z 27.12.2022, str. 1, z późn. zm.<odnosnik id-odnosnika="3" symbol="3" gd:GUID="5eb6050b-3d82-429b-9f86-69ab58f6605c"><p><zdanie nr="1" gd:zdGUID="0f93fb90-a66d-4785-bf04-e8f9330dce59" fragment="1" gd:fragmentGUID="f6e948bf-20ad-49ce-8cb6-c07df808056e">Zmiana wymienionego rozporządzenia została ogłoszona w Dz. Urz. UE L 2024/90177 z 12.03.2024.</zdanie></p></odnosnik>), zwanego dalej „rozporządzeniem 2022/2554”, a w szczególności:</zdanie></cytat-w-tekscie>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/974__art_1__pkt_1__lit_b" gd:GUID="557c4b80-acc0-4c0a-ae15-892fa59bcd9a" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-07_DU-2025-974_domyslne.x" wejscie-w-zycie="2025-08-07">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="72f87419-af83-4f6a-8d62-66c4bcfc059b" fragment="4" gd:fragmentGUID="e0539f25-67f8-4d52-a55d-26c7ecc34924" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-07_DU-2025-974_domyslne.x" wejscie-w-zycie="2025-08-07"><now:uchyl akt="https://eli.gov.pl/eli/DU/2019/726" element-eId="DU/2019/726__art_4__ust_2__pkt_1" gd:nowGUID="3048ef10-2a92-445c-8728-c36fc30706ec" />w ust. 2 uchyla się pkt 1;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2025/974__art_1__pkt_2" gd:GUID="ad372213-9d34-4f49-b08b-480e3ff01632" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-07_DU-2025-974_domyslne.x" wejscie-w-zycie="2025-08-07">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="72f87419-af83-4f6a-8d62-66c4bcfc059b" fragment="5" gd:fragmentGUID="d6b06a9d-eccc-4e69-a21b-ea97f4abc093" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-07_DU-2025-974_domyslne.x" wejscie-w-zycie="2025-08-07">po § 4 dodaje się § 4a w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2019/726" cudzyslowy="oba" gd:nowGUID="3d1306a5-95d4-475a-b1a5-f58ade5832a5" element-eId="DU/2019/726__art_4" funkcja="dodaj-po"><paragraf eId="DU/2019/726__art_4a" gd:GUID="150bc6f0-1d73-4a3d-b6e3-0162a7f0a563" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-07_DU-2025-974_domyslne.x" wejscie-w-zycie="2025-08-07"><nr>4a</nr><ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="641117c3-f740-4f2a-b767-67f93c280f3c" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-07_DU-2025-974_domyslne.x" wejscie-w-zycie="2025-08-07"><p><zdanie nr="1" gd:zdGUID="8a1d359f-0091-49e1-bf23-c74080ed10bc" fragment="1" gd:fragmentGUID="40adb5fd-8683-4a49-b421-25d0c9407938" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-07_DU-2025-974_domyslne.x" wejscie-w-zycie="2025-08-07">Spółka prowadząca rynek regulowany posiada rozwiązania techniczne i organizacyjne zapewniające:</zdanie></p><punkt eId="DU/2019/726__art_4a__pkt_1" gd:GUID="47c10d51-647c-4b53-953c-48b1083417e8" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-07_DU-2025-974_domyslne.x" wejscie-w-zycie="2025-08-07"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="8a1d359f-0091-49e1-bf23-c74080ed10bc" fragment="2" gd:fragmentGUID="221e8072-c51a-49d9-98be-ffe3f914e402" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-07_DU-2025-974_domyslne.x" wejscie-w-zycie="2025-08-07">odporność operacyjną zgodnie z wymogami określonymi w rozdziale II rozporządzenia 2022/2554, w tym:</zdanie></p><litera eId="DU/2019/726__art_4a__pkt_1__lit_a" gd:GUID="5bf2dcfe-14b0-4520-8720-3aae147b9ecf" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-07_DU-2025-974_domyslne.x" wejscie-w-zycie="2025-08-07"><nr>a</nr><p><zdanie nr="1" gd:zdGUID="8a1d359f-0091-49e1-bf23-c74080ed10bc" fragment="3" gd:fragmentGUID="aa4fbaec-9f78-4fe5-90a9-4d8fc92429b2" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-07_DU-2025-974_domyslne.x" wejscie-w-zycie="2025-08-07">odporność systemów transakcyjnych rynku regulowanego,</zdanie></p></litera><litera eId="DU/2019/726__art_4a__pkt_1__lit_b" gd:GUID="ed7de29d-67d3-4bfb-b0f5-efa7df9d3f4e" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-07_DU-2025-974_domyslne.x" wejscie-w-zycie="2025-08-07"><nr>b</nr><p><zdanie nr="1" gd:zdGUID="8a1d359f-0091-49e1-bf23-c74080ed10bc" fragment="4" gd:fragmentGUID="0a736e1d-c7da-47db-88e5-c08e7ec06cf7" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-07_DU-2025-974_domyslne.x" wejscie-w-zycie="2025-08-07">wydajność systemów transakcyjnych rynku regulowanego pozwalającą na obsłużenie znacznego wolumenu zleceń lub komunikatów,</zdanie></p></litera><litera eId="DU/2019/726__art_4a__pkt_1__lit_c" gd:GUID="1d1e5c9c-e1b1-4364-9418-0e5132227463" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-07_DU-2025-974_domyslne.x" wejscie-w-zycie="2025-08-07"><nr>c</nr><p><zdanie nr="1" gd:zdGUID="8a1d359f-0091-49e1-bf23-c74080ed10bc" fragment="5" gd:fragmentGUID="f0a5724b-7fbe-4055-ab42-549eff722f68" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-07_DU-2025-974_domyslne.x" wejscie-w-zycie="2025-08-07">prawidłowy obrót instrumentami finansowymi w przypadku zaistnienia warunków dużych napięć rynkowych,</zdanie></p></litera><litera eId="DU/2019/726__art_4a__pkt_1__lit_d" gd:GUID="da410f4d-040b-41cf-9435-3b85580d27f7" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-07_DU-2025-974_domyslne.x" wejscie-w-zycie="2025-08-07"><nr>d</nr><p><zdanie nr="1" gd:zdGUID="8a1d359f-0091-49e1-bf23-c74080ed10bc" fragment="6" gd:fragmentGUID="5b2e2383-1138-4236-a49e-af87a4ec2731" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-07_DU-2025-974_domyslne.x" wejscie-w-zycie="2025-08-07">przeprowadzanie pełnych testów spełniania warunków, o których mowa w lit. a–c;</zdanie></p></litera></punkt><punkt eId="DU/2019/726__art_4a__pkt_2" gd:GUID="e356ea83-464d-43e9-8564-de92b9ee5304" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-07_DU-2025-974_domyslne.x" wejscie-w-zycie="2025-08-07"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="8a1d359f-0091-49e1-bf23-c74080ed10bc" fragment="7" gd:fragmentGUID="0b7cceae-6cc2-4247-b5b4-47677a5df6a1" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-07_DU-2025-974_domyslne.x" wejscie-w-zycie="2025-08-07">ciągłość działania, w tym strategię na rzecz ciągłości działania w zakresie ICT i plany reagowania i przywracania sprawności ICT ustanowione zgodnie z art. 11 rozporządzenia 2022/2554, zapewniające ciągłość świadczenia usług w przypadku awarii systemów transakcyjnych rynku regulowanego.</zdanie></p></punkt></ustep-n></paragraf></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/974__art_1__pkt_3" gd:GUID="4215eda1-1dbf-4b16-b3e7-86b6a19b66d6" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-29_DU-2025-974_odczytane.x" wejscie-w-zycie="2025-09-29">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="72f87419-af83-4f6a-8d62-66c4bcfc059b" fragment="6" gd:fragmentGUID="c9bf182b-92fc-44ad-ae67-4deb94b40517" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-29_DU-2025-974_odczytane.x" wejscie-w-zycie="2025-09-29">po § 5 dodaje się § 5a w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2019/726" cudzyslowy="oba" gd:nowGUID="480a771b-862e-41da-9bf8-7b7fafe143f0" element-eId="DU/2019/726__art_5" funkcja="dodaj-po"><paragraf eId="DU/2019/726__art_5a" gd:GUID="39b3b972-618a-40eb-8df5-4aac02873eda" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-29_DU-2025-974_odczytane.x" wejscie-w-zycie="2025-09-29"><nr>5a</nr><ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="51b11fb6-8ab5-4675-a9c9-ac14b74d5aa1" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-29_DU-2025-974_odczytane.x" wejscie-w-zycie="2025-09-29"><p><zdanie nr="1" gd:zdGUID="9639cb16-a770-4b65-abcb-5ec986835bcb" fragment="1" gd:fragmentGUID="141be220-02f0-4b41-8370-b9b32ea23a72" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-29_DU-2025-974_odczytane.x" wejscie-w-zycie="2025-09-29">Spółka prowadząca rynek regulowany, która przekazuje dane do centrum danych dostawcy informacji skonsolidowanych, o którym mowa w art. 2 ust. 1 pkt 35 rozporządzenia Parlamentu Europejskiego i Rady (UE) nr 600/2014 z dnia 15 maja 2014 r. w sprawie rynków instrumentów finansowych oraz zmieniającego rozporządzenie (UE) nr 648/2012, ustanawia mechanizmy zapewniające spełnianie standardów jakości danych zgodnie z art. 22b tego rozporządzenia.</zdanie></p></ustep-n></paragraf></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/974__art_1__pkt_4" gd:GUID="2f5f4618-d969-429e-baf0-3d0936ef484c" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-07_DU-2025-974_domyslne.x" wejscie-w-zycie="2025-08-07">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="72f87419-af83-4f6a-8d62-66c4bcfc059b" fragment="7" gd:fragmentGUID="c53cfc69-fa18-4bde-bba9-a3ef77ccbf9f" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-07_DU-2025-974_domyslne.x" wejscie-w-zycie="2025-08-07">w § 8:</zdanie>
+          </p>
+          <litera eId="DU/2025/974__art_1__pkt_4__lit_a" gd:GUID="26319035-208b-43b3-aab7-b8ac8cc59fb5" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-07_DU-2025-974_domyslne.x" wejscie-w-zycie="2025-08-07">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="72f87419-af83-4f6a-8d62-66c4bcfc059b" fragment="8" gd:fragmentGUID="cf5ab3fe-c921-4f94-bcee-7019b9d5b8f3" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-07_DU-2025-974_domyslne.x" wejscie-w-zycie="2025-08-07"><now:zamien-tekst stary-tekst="niebędący firmą inwestycyjną," nowy-tekst="niebędący firmą inwestycyjną, bankiem państwowym prowadzącym działalność maklerską," element-eId="DU/2019/726__art_8__ust_2__pkt_4" akt="https://eli.gov.pl/eli/DU/2019/726" gd:nowGUID="73978f64-feb6-4cb8-857b-962ecb15b7d9" />w ust. 2 w pkt 4 po wyrazach „niebędący firmą inwestycyjną,” dodaje się wyrazy „bankiem państwowym prowadzącym działalność maklerską,”,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/974__art_1__pkt_4__lit_b" gd:GUID="80c6e1f3-7c26-40f1-9c1f-fd90d5a85d3b" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-29_DU-2025-974_odczytane.x" wejscie-w-zycie="2025-09-29">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="72f87419-af83-4f6a-8d62-66c4bcfc059b" fragment="9" gd:fragmentGUID="6869157c-9b73-4cb4-aabb-f6f3c4ef85bb" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-29_DU-2025-974_odczytane.x" wejscie-w-zycie="2025-09-29">po ust. 2 dodaje się ust. 2a w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2019/726" cudzyslowy="oba" gd:nowGUID="fbbda3a8-d226-4520-a6cb-9bc0ae98bc10" element-eId="DU/2019/726__art_8__ust_2" funkcja="dodaj-po"><ustep eId="DU/2019/726__art_8__ust_2a" gd:GUID="b5538404-a656-4148-bdd2-34a71bfa20d5" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-29_DU-2025-974_odczytane.x" wejscie-w-zycie="2025-09-29"><nr>2a</nr><p><zdanie nr="1" gd:zdGUID="3ff93a56-5329-4d64-881d-ecd15f58a5f6" fragment="1" gd:fragmentGUID="0289e6e9-ed32-4fee-b5ee-a5068c0bef38" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-29_DU-2025-974_odczytane.x" wejscie-w-zycie="2025-09-29">Spółka prowadząca rynek regulowany zapewnia, aby status członka danego rynku regulowanego posiadało co najmniej trzech członków wykazujących się znacznym stopniem aktywności, z których każdy ma możliwość interakcji ze wszystkimi pozostałymi członkami, w odniesieniu do kształtowania się cen na tym rynku regulowanym.</zdanie></p></ustep></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/974__art_1__pkt_4__lit_c" gd:GUID="e0008ded-717e-49e1-bd93-f8b44648d606" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-07_DU-2025-974_domyslne.x" wejscie-w-zycie="2025-08-07">
+            <nr>c</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="72f87419-af83-4f6a-8d62-66c4bcfc059b" fragment="10" gd:fragmentGUID="d6269b9e-060a-45a5-84d2-257aa98afb72" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-07_DU-2025-974_domyslne.x" wejscie-w-zycie="2025-08-07">w ust. 3 po pkt 1 dodaje się pkt 1a w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2019/726" cudzyslowy="oba" gd:nowGUID="9a11b455-750e-431f-bceb-78811208f08a" element-eId="DU/2019/726__art_8__ust_3__pkt_1" funkcja="dodaj-po"><punkt eId="DU/2019/726__art_8__ust_3__pkt_1a" gd:GUID="725561d4-0790-4e16-8f84-1de1ed1382fc" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-07_DU-2025-974_domyslne.x" wejscie-w-zycie="2025-08-07"><nr>1a</nr><p><zdanie nr="1" gd:zdGUID="0562f643-9231-4241-a692-b273c1491d70" fragment="1" gd:fragmentGUID="3ca30460-56e6-46f5-8a17-19d9f81c0505" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-07_DU-2025-974_domyslne.x" wejscie-w-zycie="2025-08-07">bankowi państwowemu prowadzącemu działalność maklerską;</zdanie></p></punkt></cytat-strukt>;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2025/974__art_1__pkt_5" gd:GUID="3853a915-dbff-428d-a974-b8d0b5166e0d" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-07_DU-2025-974_domyslne.x" wejscie-w-zycie="2025-08-07">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="72f87419-af83-4f6a-8d62-66c4bcfc059b" fragment="11" gd:fragmentGUID="68890e22-a18b-4cde-be46-d0ff903849e4" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-07_DU-2025-974_domyslne.x" wejscie-w-zycie="2025-08-07">w § 10:</zdanie>
+          </p>
+          <litera eId="DU/2025/974__art_1__pkt_5__lit_a" gd:GUID="a823dbae-fd45-4c20-ab68-08d8db6c8ed8" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-07_DU-2025-974_domyslne.x" wejscie-w-zycie="2025-08-07">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="72f87419-af83-4f6a-8d62-66c4bcfc059b" fragment="12" gd:fragmentGUID="906d61b5-5c69-482b-8cd4-556dcafff5f5" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-07_DU-2025-974_domyslne.x" wejscie-w-zycie="2025-08-07"><now:zamien-tekst stary-tekst="wyłącznie firmy inwestycyjne" nowy-tekst="wyłącznie firmy inwestycyjne, banki państwowe prowadzące działalność maklerską" element-eId="DU/2019/726__art_10__ust_1__pkt_1" akt="https://eli.gov.pl/eli/DU/2019/726" gd:nowGUID="a6044224-3529-4834-8602-8b0e9a288eb5" />w ust. 1 w pkt 1 po wyrazach „wyłącznie firmy inwestycyjne” dodaje się wyrazy „ , banki państwowe prowadzące działalność maklerską”,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/974__art_1__pkt_5__lit_b" gd:GUID="585122ca-4052-4d93-acb1-4f3141f5219b" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-07_DU-2025-974_domyslne.x" wejscie-w-zycie="2025-08-07">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="72f87419-af83-4f6a-8d62-66c4bcfc059b" fragment="13" gd:fragmentGUID="7dc3e9b2-8fae-4c62-aef0-43771b4ce6d9" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-07_DU-2025-974_domyslne.x" wejscie-w-zycie="2025-08-07"><now:zamien-tekst stary-tekst="firm inwestycyjnych i zagranicznych firmy inwestycyjnych" nowy-tekst="firm inwestycyjnych, banków państwowych prowadzących działalność maklerską i zagranicznych firm inwestycyjnych" element-eId="DU/2019/726__art_10__ust_2" akt="https://eli.gov.pl/eli/DU/2019/726" gd:nowGUID="ca81a6d3-6e79-44d6-9190-3e1ed1baa9f6" />w ust. 2 wyrazy „firm inwestycyjnych i zagranicznych firmy inwestycyjnych” zastępuje się wyrazami „firm inwestycyjnych, banków państwowych prowadzących działalność maklerską i zagranicznych firm inwestycyjnych”,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/974__art_1__pkt_5__lit_c" gd:GUID="e4c0f8b8-b1be-4982-90b2-e0b2e59dffa5" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-07_DU-2025-974_domyslne.x" wejscie-w-zycie="2025-08-07">
+            <nr>c</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="72f87419-af83-4f6a-8d62-66c4bcfc059b" fragment="14" gd:fragmentGUID="e4f6db49-cfd4-4879-b275-4f1e7af58ac3" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-07_DU-2025-974_domyslne.x" wejscie-w-zycie="2025-08-07">ust. 4 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2019/726" cudzyslowy="oba" gd:nowGUID="07f3f01f-0871-490f-b968-82d7d5c1d6f2" element-eId="DU/2019/726__art_10__ust_4" funkcja="zastap"><ustep eId="DU/2019/726__art_10__ust_4" gd:GUID="782bc115-fd4d-4481-a751-5428ba03690b" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-07_DU-2025-974_domyslne.x" wejscie-w-zycie="2025-08-07"><nr>4</nr><p><zdanie nr="1" gd:zdGUID="582ad15d-13cb-409f-b1e4-91a099a5ba65" fragment="1" gd:fragmentGUID="b3a6b45e-0c00-43b5-9c84-0f4f81c3e598" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-07_DU-2025-974_domyslne.x" wejscie-w-zycie="2025-08-07">Spółka prowadząca rynek regulowany, o której mowa w ust. 1, wdraża odpowiednie rozwiązania umożliwiające jej odróżnienie zleceń składanych z wykorzystaniem bezpośredniego dostępu elektronicznego i transakcji zawieranych wskutek takich zleceń od zleceń i transakcji realizowanych przez samą firmę inwestycyjną, sam bank państwowy prowadzący działalność maklerską albo samą zagraniczną firmę inwestycyjną nieprowadzącą działalności maklerskiej na terytorium Rzeczypospolitej Polskiej, które udostępniły możliwość składania takich zleceń i zawierania transakcji, oraz, w razie konieczności, wstrzymanie realizacji zleceń składanych z wykorzystaniem bezpośredniego dostępu elektronicznego i transakcji zawieranych wskutek takich zleceń niezależnie od zleceń i transakcji realizowanych przez firmę inwestycyjną, bank państwowy prowadzący działalność maklerską albo zagraniczną firmę inwestycyjną nieprowadzącą działalności maklerskiej na terytorium Rzeczypospolitej Polskiej, które udostępniły możliwość składania takich zleceń i zawierania transakcji.</zdanie></p></ustep></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/974__art_1__pkt_5__lit_d" gd:GUID="ec66873e-9695-4029-99e4-13057f0a4e49" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-07_DU-2025-974_domyslne.x" wejscie-w-zycie="2025-08-07">
+            <nr>d</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="72f87419-af83-4f6a-8d62-66c4bcfc059b" fragment="15" gd:fragmentGUID="7fbc36d8-8e91-4c73-be36-38d6d5f8a238" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-07_DU-2025-974_domyslne.x" wejscie-w-zycie="2025-08-07"><now:zamien-tekst stary-tekst="klientowi firmy inwestycyjnej" nowy-tekst="klientowi firmy inwestycyjnej, banku państwowego prowadzącego działalność maklerską" element-eId="DU/2019/726__art_10__ust_5" akt="https://eli.gov.pl/eli/DU/2019/726" gd:nowGUID="ae66ab7f-fc14-43ce-b22c-3c355e27ccc7" />w ust. 5 po wyrazach „klientowi firmy inwestycyjnej” dodaje się wyrazy „ , banku państwowego prowadzącego działalność maklerską”;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2025/974__art_1__pkt_6" gd:GUID="4039fb76-c51b-4eb3-9c5d-49ac306d9416" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-07_DU-2025-974_domyslne.x" wejscie-w-zycie="2025-08-07">
+          <nr>6</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="72f87419-af83-4f6a-8d62-66c4bcfc059b" fragment="16" gd:fragmentGUID="6ad7d976-1c90-481f-82b7-a9a6d3c0d7d2" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-07_DU-2025-974_domyslne.x" wejscie-w-zycie="2025-08-07">po § 10 dodaje się § 10a w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2019/726" cudzyslowy="oba" gd:nowGUID="705f381d-8e4c-4175-b6aa-22928fe84a9e" element-eId="DU/2019/726__art_10" funkcja="dodaj-po"><paragraf eId="DU/2019/726__art_10a" gd:GUID="0dda937c-e5a7-4864-8ec4-1886d4af6e23" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-07_DU-2025-974_domyslne.x" wejscie-w-zycie="2025-08-07"><nr>10a</nr><ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="d93e9f90-0bbc-4cb5-99ce-2f18fb1b1bb1" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-07_DU-2025-974_domyslne.x" wejscie-w-zycie="2025-08-07"><p><zdanie nr="1" gd:zdGUID="362faa31-ed3b-481a-bc75-f06f52dbc565" fragment="1" gd:fragmentGUID="4f4ecd8a-72ed-4eed-a808-19719695f549" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-07_DU-2025-974_domyslne.x" wejscie-w-zycie="2025-08-07">Spółka prowadząca rynek regulowany, która umożliwia składanie zleceń z wykorzystaniem handlu algorytmicznego, posiada rozwiązania i procedury, zgodne z wymogami rozporządzenia delegowanego Komisji (UE) nr 2017/584 z dnia 14 lipca 2016 r. uzupełniającego dyrektywę Parlamentu Europejskiego i Rady 2014/65/UE w odniesieniu do regulacyjnych standardów technicznych określających wymogi organizacyjne w zakresie systemów obrotu, zapewniające, że handel algorytmiczny nie będzie prowadził lub przyczyniał się do powstania na tym rynku zakłóceń obrotu instrumentami finansowymi oraz zapewniające zarządzanie zakłóceniami obrotu instrumentami finansowymi, które wynikają z takiego handlu algorytmicznego, w tym:</zdanie></p><punkt eId="DU/2019/726__art_10a__pkt_1" gd:GUID="d9950203-846a-4beb-b050-004359bb4b27" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-07_DU-2025-974_domyslne.x" wejscie-w-zycie="2025-08-07"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="362faa31-ed3b-481a-bc75-f06f52dbc565" fragment="2" gd:fragmentGUID="5353cfb2-63f8-4ea7-b24e-07e3f5c31cd0" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-07_DU-2025-974_domyslne.x" wejscie-w-zycie="2025-08-07">zobowiązujące członka rynku regulowanego do przeprowadzania odpowiednich testów algorytmów oraz zapewniające warunki ułatwiające przeprowadzenie takich testów, zgodnie z wymogami określonymi w rozdziałach II i IV rozporządzenia 2022/2554;</zdanie></p></punkt><punkt eId="DU/2019/726__art_10a__pkt_2" gd:GUID="59789f9e-abbe-41c1-8a15-d1809087b46e" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-07_DU-2025-974_domyslne.x" wejscie-w-zycie="2025-08-07"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="362faa31-ed3b-481a-bc75-f06f52dbc565" fragment="3" gd:fragmentGUID="a14101f5-44af-466a-8115-91bc61e65d65" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-07_DU-2025-974_domyslne.x" wejscie-w-zycie="2025-08-07">umożliwiające ograniczenie liczby niewykonanych zleceń w stosunku do liczby transakcji, które członek tego rynku regulowanego może wprowadzić;</zdanie></p></punkt><punkt eId="DU/2019/726__art_10a__pkt_3" gd:GUID="702717cd-c5c8-4a4e-9af8-23fccd5d44a4" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-07_DU-2025-974_domyslne.x" wejscie-w-zycie="2025-08-07"><nr>3</nr><p><zdanie nr="1" gd:zdGUID="362faa31-ed3b-481a-bc75-f06f52dbc565" fragment="4" gd:fragmentGUID="ae4b95bf-8a4b-4b59-af68-eff1b5c9de2a" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-07_DU-2025-974_domyslne.x" wejscie-w-zycie="2025-08-07">umożliwiające spowolnienie przekazywania zleceń w przypadku ryzyka osiągnięcia przez system transakcyjny maksymalnej wydajności oraz ograniczenia minimalnej wielkości zmiany ceny, jakiej można dokonywać na danym rynku regulowanym.</zdanie></p></punkt></ustep-n></paragraf></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/974__art_1__pkt_7" gd:GUID="debdc91f-8733-437a-bab1-1f09edbd326f" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-07_DU-2025-974_domyslne.x" wejscie-w-zycie="2025-08-07">
+          <nr>7</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="72f87419-af83-4f6a-8d62-66c4bcfc059b" fragment="17" gd:fragmentGUID="e8a31b07-e33c-42ca-b667-69d4ad988edd" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-07_DU-2025-974_domyslne.x" wejscie-w-zycie="2025-08-07"><now:uchyl akt="https://eli.gov.pl/eli/DU/2019/726" element-eId="DU/2019/726__art_12" gd:nowGUID="4feecc53-31c1-4cbc-a5ff-8ed89d475def" />uchyla się § 12.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2025/974__art_2" gd:GUID="6fbde2ba-8c28-4e8d-b7b9-690be8ad215b" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-07_DU-2025-974_domyslne.x" wejscie-w-zycie="2025-08-07">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="a3b36288-49ab-4c31-9de9-e18a80d30d71" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-07_DU-2025-974_domyslne.x" wejscie-w-zycie="2025-08-07">
+        <p>
+          <zdanie nr="1" gd:zdGUID="6f2e7b94-ddec-4fec-97eb-fe5f3b7cdea8" fragment="1" gd:fragmentGUID="84d70167-0e7e-444b-b903-6c5427804804" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-07_DU-2025-974_domyslne.x" wejscie-w-zycie="2025-08-07">Rozporządzenie wchodzi w życie po upływie 14 dni od dnia ogłoszenia, z wyjątkiem § 1 pkt 3 i pkt 4 lit. b, które wchodzą w życie z dniem 29 września 2025 r.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <organ-podpisujacy>Minister Finansów: <i><osoba podpisujacy="true" gd:osobaGUID="3ef98404-16f8-4dc8-bcf0-97a3585e4da0"><imie>A.</imie> <nazwisko>Domański</nazwisko></osoba></i></organ-podpisujacy>
+  </rozporzadzenie>
+</akt-prawny>

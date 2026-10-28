@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <rozporzadzenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/1236</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>7fde0af8-c7ab-4c3e-b7aa-5aad60a8f897</gd:GUIDwersji>
+      <AdresISAP>WDU20250001236</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>1236</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 1236</AdresWyswietlany>
+      <Tytul>Rozporządzenie Ministra Zdrowia z dnia 10 września 2025 r. zmieniające rozporządzenie w sprawie programu pilotażowego leczenia gruźlicy wielolekoopornej w warunkach ambulatoryjnych</Tytul>
+      <Rodzaj>ROZP</Rodzaj>
+      <DataOgloszenia>2025-09-11</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-09-10</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2025-09-12_DU-2025-1236_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2025-09-12" warunek="z dniem następującym po dniu ogłoszenia" podstawa="§ 2" zrodlo="https://eli.gov.pl/eli/DU/2025/1236" dowod="DU/2025/1236__art_2" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2025-09-12_DU-2025-1236_domyslne.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2025-09-12_DU-2025-1236_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="ad0b75bd-d08a-4ce8-a263-4727358be511" rola="wydajacy">
+          <Nazwa>Minister Zdrowia</Nazwa>
+          <OrganPodpisujacy>Minister Zdrowia</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>J.</imie> <nazwisko>Sobierańska-Grenda</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Rozporządzenie</rodzaj-aktu>
+    <autor-aktu>Ministra Zdrowia<odnosnik id-odnosnika="1" symbol="1" gd:GUID="d65d3ffd-b55c-4498-98a5-b94bf6ac6508"><p><zdanie nr="1" gd:zdGUID="2547dde3-0e2b-4807-b3b2-c34cc35eff45" fragment="1" gd:fragmentGUID="f46bce8b-d51d-43ca-8d5c-140d5164d638">Minister Zdrowia kieruje działem administracji rządowej – zdrowie, na podstawie § 1 ust. 2 rozporządzenia Prezesa Rady Ministrów z dnia 25 lipca 2025 r. w sprawie szczegółowego zakresu działania Ministra Zdrowia (Dz. U. poz. 1004).</zdanie></p></odnosnik></autor-aktu>
+    <data>z dnia 10 września 2025 r.</data>
+    <tytul>zmieniające rozporządzenie w sprawie programu pilotażowego leczenia gruźlicy wielolekoopornej w warunkach ambulatoryjnych</tytul>
+    <podstawa-prawna>Na podstawie art. 48e ust. 5 ustawy z dnia 27 sierpnia 2004 r. o świadczeniach opieki zdrowotnej finansowanych ze środków publicznych (Dz. U. z 2024 r. poz. 146, z późn. zm.<odnosnik id-odnosnika="2" symbol="2" gd:GUID="e2618770-e3e3-45c9-a999-e06b9fa679b9"><p><zdanie nr="1" gd:zdGUID="a9502c84-ea7c-477a-88e5-5ff6cb68a0c1" fragment="1" gd:fragmentGUID="d7520203-54bc-4445-b380-a1e824f11535">Zmiany tekstu jednolitego wymienionej ustawy zostały ogłoszone w Dz. U. z 2024 r. poz. 858, 1222, 1593, 1615 i 1915 oraz z 2025 r. poz. 129, 304, 620, 637, 779, 1083, 1192 i 1211.</zdanie></p></odnosnik>) zarządza się, co następuje:</podstawa-prawna>
+    <paragraf eId="DU/2025/1236__art_1" gd:GUID="7b522514-e425-4d69-8187-5e4d0914e2b6" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-12_DU-2025-1236_domyslne.x" wejscie-w-zycie="2025-09-12">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="5c4b036a-72c5-4324-bed5-fbe08e78c572" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-12_DU-2025-1236_domyslne.x" wejscie-w-zycie="2025-09-12">
+        <p>
+          <zdanie nr="1" gd:zdGUID="325a29d2-85c6-44ce-9460-60abfd270028" fragment="1" gd:fragmentGUID="cf8a8939-5eec-43c2-ab8d-7da4c87c75ba" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-12_DU-2025-1236_domyslne.x" wejscie-w-zycie="2025-09-12">W rozporządzeniu Ministra Zdrowia z dnia 28 września 2022 r. w sprawie programu pilotażowego leczenia gruźlicy wielolekoopornej w warunkach ambulatoryjnych (Dz. U. z 2024 r. poz. 268) w § 4 w ust. 1 w:</zdanie>
+        </p>
+        <punkt eId="DU/2025/1236__art_1__pkt_1" gd:GUID="389cf9f7-16e1-42f1-87af-62353b2d62a9" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-12_DU-2025-1236_domyslne.x" wejscie-w-zycie="2025-09-12">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="325a29d2-85c6-44ce-9460-60abfd270028" fragment="2" gd:fragmentGUID="82b57617-e35e-4bfd-bc62-c92e00d81568" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-12_DU-2025-1236_domyslne.x" wejscie-w-zycie="2025-09-12"><now:zamien-tekst stary-tekst="30 września 2025 r." nowy-tekst="30 czerwca 2026 r." element-eId="DU/2024/268__art_4__ust_1__pkt_1" akt="https://eli.gov.pl/eli/DU/2024/268" gd:nowGUID="3ffcb118-b5fa-4120-9652-b04fa8471b92" />pkt 1 wyrazy „30 września 2025 r.” zastępuje się wyrazami „30 czerwca 2026 r.”;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1236__art_1__pkt_2" gd:GUID="cd458d39-bb3e-4529-870d-39bca156ab98" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-12_DU-2025-1236_domyslne.x" wejscie-w-zycie="2025-09-12">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="325a29d2-85c6-44ce-9460-60abfd270028" fragment="3" gd:fragmentGUID="67b7ba6f-b8d6-4da8-a733-aa3443527af6" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-12_DU-2025-1236_domyslne.x" wejscie-w-zycie="2025-09-12"><now:zamien-tekst stary-tekst="zakończenia etapu realizacji programu pilotażowego." nowy-tekst="15 września 2025 r." element-eId="DU/2024/268__art_4__ust_1__pkt_2" akt="https://eli.gov.pl/eli/DU/2024/268" gd:nowGUID="5244fe52-a354-4bf0-8fea-476889bd5d2b" />pkt 2 wyrazy „zakończenia etapu realizacji programu pilotażowego.” zastępuje się wyrazami „15 września 2025 r.”.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2025/1236__art_2" gd:GUID="229433c8-6516-4f9c-a545-d2472a14b4a3" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-12_DU-2025-1236_domyslne.x" wejscie-w-zycie="2025-09-12">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="944e5f2f-7ef5-4a58-af84-f67f5573f655" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-12_DU-2025-1236_domyslne.x" wejscie-w-zycie="2025-09-12">
+        <p>
+          <zdanie nr="1" gd:zdGUID="2e3ff06a-b751-4a0f-b0d9-195012ff3e04" fragment="1" gd:fragmentGUID="d1f238c8-62e7-4196-a7d5-80052070d1ff" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-12_DU-2025-1236_domyslne.x" wejscie-w-zycie="2025-09-12">Rozporządzenie wchodzi w życie z dniem następującym po dniu ogłoszenia.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <organ-podpisujacy>Minister Zdrowia: <i><osoba podpisujacy="true" gd:osobaGUID="1ebef919-15de-4899-8f03-ea327d523fbe"><imie>J.</imie> <nazwisko>Sobierańska-Grenda</nazwisko></osoba></i></organ-podpisujacy>
+  </rozporzadzenie>
+</akt-prawny>

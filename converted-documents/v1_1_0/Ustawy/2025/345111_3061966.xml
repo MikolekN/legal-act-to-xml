@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <ustawa>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/1427</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>4d926564-f1e9-41be-9940-3741c7206548</gd:GUIDwersji>
+      <AdresISAP>WDU20250001427</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>1427</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 1427</AdresWyswietlany>
+      <Tytul>Ustawa z dnia 12 września 2025 r. o zmianie ustawy – Prawo o postępowaniu przed sądami administracyjnymi</Tytul>
+      <Rodzaj>USTAWA</Rodzaj>
+      <DataOgloszenia>2025-10-21</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-09-12</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2025-11-05_DU-2025-1427_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2025-11-05" warunek="po upływie 14 dni od dnia ogłoszenia" podstawa="art. 3" zrodlo="https://eli.gov.pl/eli/DU/2025/1427" dowod="DU/2025/1427__art_3" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2025-11-05_DU-2025-1427_domyslne.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2025-11-05_DU-2025-1427_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="838d25b7-8d64-4c51-b7a0-b3c58490581a" rola="wydajacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Sejm">
+          <Nazwa>SEJM</Nazwa>
+        </Organ>
+        <Organ gd:GUID="2a71ff5a-1d86-42bd-9c14-1eb7156f277e" rola="podpisujacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Prezydent">
+          <Nazwa>Prezydent Rzeczypospolitej Polskiej</Nazwa>
+          <OrganPodpisujacy>Prezydent Rzeczypospolitej Polskiej</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>K.</imie> <nazwisko>Nawrocki</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Ustawa</rodzaj-aktu>
+    <data>z dnia 12 września 2025 r.</data>
+    <tytul>o zmianie ustawy – Prawo o postępowaniu przed sądami administracyjnymi</tytul>
+    <artykul eId="DU/2025/1427__art_1" gd:GUID="625493fe-76f7-40af-a18b-eae2fafd1387" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-05_DU-2025-1427_domyslne.x" wejscie-w-zycie="2025-11-05">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="09dad123-c3b1-4e55-81b8-b7336622ffa6" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-05_DU-2025-1427_domyslne.x" wejscie-w-zycie="2025-11-05">
+        <p>
+          <zdanie nr="1" gd:zdGUID="421ce17e-5e18-4fc9-b9e7-5d4c55d2b8a6" fragment="1" gd:fragmentGUID="08fb0a9a-955b-47c1-a61a-d20e8c532de0" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-05_DU-2025-1427_domyslne.x" wejscie-w-zycie="2025-11-05">W ustawie z dnia 30 sierpnia 2002 r. – Prawo o postępowaniu przed sądami administracyjnymi (Dz. U. z 2024 r. poz. 935 i 1685 oraz z 2025 r. poz. 769) wprowadza się następujące zmiany:</zdanie>
+        </p>
+        <punkt eId="DU/2025/1427__art_1__pkt_1" gd:GUID="f1348af3-54ea-482a-9eca-2a5ffa4c72dc" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-05_DU-2025-1427_domyslne.x" wejscie-w-zycie="2025-11-05">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="421ce17e-5e18-4fc9-b9e7-5d4c55d2b8a6" fragment="2" gd:fragmentGUID="6bd000d1-5307-4fc1-827d-06c3964f6148" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-05_DU-2025-1427_domyslne.x" wejscie-w-zycie="2025-11-05">art. 29 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/935" cudzyslowy="oba" gd:nowGUID="6c7bbc43-3ed7-4871-8055-a5fd4ecd09f6" element-eId="DU/2024/935__art_29" funkcja="zastap"><artykul eId="DU/2024/935__art_29" gd:GUID="89584d2d-c087-4cbf-b7f1-8f455b142e07" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-05_DU-2025-1427_domyslne.x" wejscie-w-zycie="2025-11-05"><nr>29</nr><ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="ac1778c2-39db-4d37-9f55-5bb90ae45850" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-05_DU-2025-1427_domyslne.x" wejscie-w-zycie="2025-11-05"><p><zdanie nr="1" gd:zdGUID="01ea8998-b0b8-45fa-b8dd-b31964b11f87" fragment="1" gd:fragmentGUID="c80661f6-a730-4c91-857d-3f129da50e5c" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-05_DU-2025-1427_domyslne.x" wejscie-w-zycie="2025-11-05">Przedstawiciel ustawowy lub organ albo osoby, o których mowa w art. 28, mają obowiązek wykazać swoje umocowanie dokumentem przy pierwszej czynności w postępowaniu.</zdanie><zdanie nr="2" gd:zdGUID="f4357759-9683-430a-ba98-bc560b39c78c" fragment="1" gd:fragmentGUID="c7a2aee1-df03-4966-a434-ad68280bf637" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-05_DU-2025-1427_domyslne.x" wejscie-w-zycie="2025-11-05">Złożenie dokumentu wykazującego umocowanie lub jego uwierzytelnionego odpisu nie jest wymagane, jeżeli stwierdzenie przez sąd umocowania jest możliwe na podstawie wykazu lub innego rejestru, do którego sąd ma dostęp drogą elektroniczną.</zdanie><zdanie nr="3" gd:zdGUID="20fa0fe7-21ab-48a9-a855-d8715e48e65d" fragment="1" gd:fragmentGUID="925868f9-7c2c-4625-81ad-b581d7bbfc6c" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-05_DU-2025-1427_domyslne.x" wejscie-w-zycie="2025-11-05">Podmioty te mają jednak obowiązek wskazać podstawę swojego umocowania.</zdanie></p></ustep-n></artykul></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1427__art_1__pkt_2" gd:GUID="97d9aab6-e4fe-455c-9fd8-66d60e7d2db9" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-05_DU-2025-1427_domyslne.x" wejscie-w-zycie="2025-11-05">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="421ce17e-5e18-4fc9-b9e7-5d4c55d2b8a6" fragment="3" gd:fragmentGUID="8825a38b-ba0b-4d42-8979-a62a17f274fb" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-05_DU-2025-1427_domyslne.x" wejscie-w-zycie="2025-11-05">w art. 37 w § 1 dodaje się zdanie czwarte w brzmieniu:<cytat-w-tekscie now:akt="https://eli.gov.pl/eli/DU/2024/935" cudzyslowy="oba" gd:nowGUID="7ff8afbc-5970-4ebe-8f92-3afef2512b93" element-eId="DU/2024/935__art_37__par_1__zdn_3" funkcja="dodaj-po"><zdanie nr="1" gd:zdGUID="6837c6a9-d4d4-4e2a-bff3-23db828cd56b" fragment="1" gd:fragmentGUID="e0e1fa34-a087-4574-94d1-bba3f3f2e8a0" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-05_DU-2025-1427_domyslne.x" wejscie-w-zycie="2025-11-05">Złożenie dokumentu wykazującego umocowanie lub jego uwierzytelnionego odpisu nie jest wymagane, jeżeli stwierdzenie przez sąd umocowania jest możliwe na podstawie wykazu lub innego rejestru, do którego sąd ma dostęp drogą elektroniczną.</zdanie></cytat-w-tekscie>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1427__art_1__pkt_3" gd:GUID="08b7f3b3-5c0d-4307-9066-c2eede852714" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-05_DU-2025-1427_domyslne.x" wejscie-w-zycie="2025-11-05">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="421ce17e-5e18-4fc9-b9e7-5d4c55d2b8a6" fragment="4" gd:fragmentGUID="dfce8101-8796-4139-997c-af7b4eeb9d2d" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-05_DU-2025-1427_domyslne.x" wejscie-w-zycie="2025-11-05">w art. 46 w § 3 dodaje się zdanie drugie w brzmieniu:<cytat-w-tekscie now:akt="https://eli.gov.pl/eli/DU/2024/935" cudzyslowy="oba" gd:nowGUID="d6e7e0f2-c201-45c7-ac5d-4043bb20dcd0" element-eId="DU/2024/935__art_46__par_3__zdn_1" funkcja="dodaj-po"><zdanie nr="1" gd:zdGUID="7ff91b0d-effb-4eeb-b6ae-3ca7cc6c0c1e" fragment="1" gd:fragmentGUID="f07c9b3c-cd33-4c2f-9c2b-a650b87e6a6d" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-05_DU-2025-1427_domyslne.x" wejscie-w-zycie="2025-11-05">Złożenie dokumentu wykazującego umocowanie lub jego uwierzytelnionego odpisu nie jest wymagane, jeżeli stwierdzenie przez sąd umocowania jest możliwe na podstawie wykazu lub innego rejestru, do którego sąd ma dostęp drogą elektroniczną.</zdanie></cytat-w-tekscie>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1427__art_1__pkt_4" gd:GUID="dc3aaf1a-5d1b-4619-b290-cb63f6b126ca" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-05_DU-2025-1427_domyslne.x" wejscie-w-zycie="2025-11-05">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="421ce17e-5e18-4fc9-b9e7-5d4c55d2b8a6" fragment="5" gd:fragmentGUID="15f76b2e-f9ec-4ce7-9aed-be55b3db6406" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-05_DU-2025-1427_domyslne.x" wejscie-w-zycie="2025-11-05">w art. 106 po § 3 dodaje się § 3a w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/935" cudzyslowy="oba" gd:nowGUID="b534de94-db00-46c9-81fe-cc78c3fddc75" element-eId="DU/2024/935__art_106__par_3" funkcja="dodaj-po"><paragraf-kodeksu eId="DU/2024/935__art_106__par_3a" gd:GUID="9b70effa-dd39-48a8-8cd9-8caa80b2b940" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-05_DU-2025-1427_domyslne.x" wejscie-w-zycie="2025-11-05"><nr>3a</nr><p><zdanie nr="1" gd:zdGUID="7450d8c4-0e09-4341-8131-a8fb0513a626" fragment="1" gd:fragmentGUID="2365e017-105b-4696-bafa-6606d6ba11fa" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-05_DU-2025-1427_domyslne.x" wejscie-w-zycie="2025-11-05">Sąd może z urzędu zwrócić się do organizacji społecznej lub organu administracji publicznej o przedstawienie sądowi istotnego dla sprawy poglądu, jeżeli uzna to za przydatne do wyjaśnienia istotnych wątpliwości i nie spowoduje to nadmiernego przedłużenia postępowania w sprawie.</zdanie></p></paragraf-kodeksu></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1427__art_1__pkt_5" gd:GUID="c76ad76e-5118-4590-8edc-5d4d5ca6f415" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-05_DU-2025-1427_domyslne.x" wejscie-w-zycie="2025-11-05">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="421ce17e-5e18-4fc9-b9e7-5d4c55d2b8a6" fragment="6" gd:fragmentGUID="e302e8f1-54ae-4f46-aad8-1691a8d5f049" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-05_DU-2025-1427_domyslne.x" wejscie-w-zycie="2025-11-05">w art. 111 § 1 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/935" cudzyslowy="oba" gd:nowGUID="770e8a47-7381-4989-a074-9cb12033b58d" element-eId="DU/2024/935__art_111__par_1" funkcja="zastap"><paragraf-kodeksu eId="DU/2024/935__art_111__par_1" gd:GUID="60d0767c-682b-487d-95cb-c99acbc934f8" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-05_DU-2025-1427_domyslne.x" wejscie-w-zycie="2025-11-05"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="fd2ff3c8-b655-4999-be59-d7b54921de10" fragment="1" gd:fragmentGUID="1f70c15a-eae5-45b1-b58b-7e3e1666e912" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-05_DU-2025-1427_domyslne.x" wejscie-w-zycie="2025-11-05">Sąd zarządza połączenie kilku oddzielnych spraw toczących się przed nim w celu ich łącznego rozpoznania lub także rozstrzygnięcia, jeżeli mogły być objęte jedną skargą i nie spowoduje to nadmiernego przedłużenia postępowania w sprawie.</zdanie></p></paragraf-kodeksu></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1427__art_1__pkt_6" gd:GUID="1226e7d3-45cd-43f6-bab4-40f511b8cd7f" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-05_DU-2025-1427_domyslne.x" wejscie-w-zycie="2025-11-05">
+          <nr>6</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="421ce17e-5e18-4fc9-b9e7-5d4c55d2b8a6" fragment="7" gd:fragmentGUID="7802bb51-fdcb-42d4-bc39-b8b0b755b59c" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-05_DU-2025-1427_domyslne.x" wejscie-w-zycie="2025-11-05">w art. 232 w § 1 pkt 2 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/935" cudzyslowy="oba" gd:nowGUID="6cd0f37e-16b5-49db-b4f7-f419860a940e" element-eId="DU/2024/935__art_232__par_1__pkt_2" funkcja="zastap"><punkt eId="DU/2024/935__art_232__par_1__pkt_2" gd:GUID="08b33df0-598e-42f3-8a96-4b79062e3ff3" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-05_DU-2025-1427_domyslne.x" wejscie-w-zycie="2025-11-05"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="5daa969c-c26f-465d-a71b-45acb55abcc8" fragment="1" gd:fragmentGUID="32a210cb-70c7-4852-b0f5-de9214227581" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-05_DU-2025-1427_domyslne.x" wejscie-w-zycie="2025-11-05">zażalenia na postanowienie, jeżeli zażalenie zostało uwzględnione.</zdanie></p></punkt></cytat-strukt>.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2025/1427__art_2" gd:GUID="b40a3878-fa4f-416a-b2f2-daa10b39cce2" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-05_DU-2025-1427_domyslne.x" wejscie-w-zycie="2025-11-05">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="3fc5d64d-c9bb-4ab0-9f83-32692a788f53" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-05_DU-2025-1427_domyslne.x" wejscie-w-zycie="2025-11-05">
+        <p>
+          <zdanie nr="1" gd:zdGUID="0bac1d3d-c0c6-42d9-a884-10a81da88c6f" fragment="1" gd:fragmentGUID="67fb7090-a579-4b3f-8ff8-3b4bf4c5b176" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-05_DU-2025-1427_domyslne.x" wejscie-w-zycie="2025-11-05">Do postępowań prowadzonych na podstawie ustawy zmienianej w art. 1, wszczętych i niezakończonych przed dniem wejścia w życie niniejszej ustawy, stosuje się przepisy dotychczasowe, z tym że do zażaleń uwzględnionych od dnia wejścia w życie niniejszej ustawy stosuje się przepis art. 232 § 1 pkt 2 ustawy zmienianej w art. 1, w brzmieniu nadanym niniejszą ustawą.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2025/1427__art_3" gd:GUID="98ddcd7a-75f1-44d9-af2b-2047cf32a968" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-05_DU-2025-1427_domyslne.x" wejscie-w-zycie="2025-11-05">
+      <nr>3</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="b2d1fa3e-0aa3-435b-a092-fa06004469e4" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-05_DU-2025-1427_domyslne.x" wejscie-w-zycie="2025-11-05">
+        <p>
+          <zdanie nr="1" gd:zdGUID="bd9a622c-70f2-4a42-8338-f48ea5961e99" fragment="1" gd:fragmentGUID="4e5b3106-9754-4e6e-a077-16f077cd0df6" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-05_DU-2025-1427_domyslne.x" wejscie-w-zycie="2025-11-05">Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <organ-podpisujacy>Prezydent Rzeczypospolitej Polskiej: <i><osoba podpisujacy="true" gd:osobaGUID="d0e20316-d415-4513-8099-e077f99603ce"><imie>K.</imie> <nazwisko>Nawrocki</nazwisko></osoba></i></organ-podpisujacy>
+  </ustawa>
+</akt-prawny>

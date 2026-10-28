@@ -1,0 +1,360 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <rozporzadzenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>UNKNOWN/0000/000</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>352f0f65-ac56-46f3-8413-a2fba115474f</gd:GUIDwersji>
+      <Wydawnictwo></Wydawnictwo>
+      <Rok></Rok>
+      <Pozycja> </Pozycja>
+      <Tytul>Rozporządzenie Ministra Energii z dnia 4 grudnia 2025 r. w sprawie wzoru rocznego zbiorczego raportu dotyczącego jakości paliw ciekłych, biopaliw ciekłych i innych paliw odnawialnych oraz gazu skroplonego (LPG), sprężonego gazu ziemnego (CNG), skroplonego gazu ziemnego (LNG) i wodoru, a także sposobu monitorowania jakości paliw ciekłych i biopaliw ciekłych</Tytul>
+      <Rodzaj>ROZP</Rodzaj>
+      <DataOgloszenia></DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-12-04</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2026-01-01_odczytane" rodzaj="wejscie-w-zycie" pochodzenie="odczytane" data="2026-01-01" podstawa="§ 10" dowod="art_10" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2026-01-01_odczytane" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="384370ba-62be-4bd8-a09f-ea2d12886f03" rola="wydajacy">
+          <Nazwa>Minister Energii</Nazwa>
+          <OrganPodpisujacy>Minister Energii</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>M.</imie> <nazwisko>Motyka</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Rozporządzenie</rodzaj-aktu>
+    <autor-aktu>Ministra Energii<odnosnik id-odnosnika="1" symbol="1" gd:GUID="c66b9d6e-11d3-4ea3-af34-733f60d76f91"><p><zdanie nr="1" gd:zdGUID="2400fe21-257e-42d8-83e8-efd508e6e82e" fragment="1" gd:fragmentGUID="cac42933-32ae-4059-a337-32dc17510dca">Minister Energii kieruje działem administracji rządowej – gospodarka surowcami energetycznymi, na podstawie § 1 ust. 2 pkt 2 rozporządzenia Prezesa Rady Ministrów z dnia 25 lipca 2025 r. w sprawie szczegółowego zakresu działania Ministra Energii (Dz. U. poz. 1206).</zdanie></p></odnosnik></autor-aktu>
+    <data>z dnia 4 grudnia 2025 r.</data>
+    <tytul>w sprawie wzoru rocznego zbiorczego raportu dotyczącego jakości paliw ciekłych, biopaliw ciekłych i innych paliw odnawialnych oraz gazu skroplonego (LPG), sprężonego gazu ziemnego (CNG), skroplonego gazu ziemnego (LNG) i wodoru, a także sposobu monitorowania jakości paliw ciekłych i biopaliw ciekłych<odnosnik id-odnosnika="2" symbol="2" gd:GUID="465dd318-08b4-4573-88c0-5fecce359714"><p><zdanie nr="1" gd:zdGUID="83f6f5d7-00f5-4a07-b3ef-87764c20e599" fragment="1" gd:fragmentGUID="690b9679-2f0d-41b4-8abe-83efbb84bfe3">Niniejsze rozporządzenie w zakresie swojej regulacji wdraża dyrektywę 98/70/WE Parlamentu Europejskiego i Rady z dnia 13 października 1998 r. odnoszącą się do jakości benzyny i olejów napędowych oraz zmieniającą dyrektywę Rady 93/12/EWG (Dz. Urz. WE L 350 z 28.12.1998, str. 58 – Dz. Urz. UE Polskie wydanie specjalne, rozdz. 13, t. 23, str. 182, Dz. Urz. WE L 287 z 14.11.2000, str. 46 – Dz. Urz. UE Polskie wydanie specjalne, rozdz. 13, t. 26, str. 65, Dz. Urz. UE L 76 z 22.03.2003, str. 10 – Dz. Urz. UE Polskie wydanie specjalne, rozdz. 13, t. 31, str. 160, Dz. Urz. UE L 284 z 31.10.2003, str. 1 – Dz. Urz. UE Polskie wydanie specjalne, rozdz. 1, t. 4, str. 447, Dz. Urz. UE L 140 z 05.06.2009, str. 88, Dz. Urz. UE L 147 z 02.06.2011, str. 15, Dz. Urz. UE L 170 z 11.06.2014, str. 62, Dz. Urz. UE L 116 z 07.05.2015, str. 25, Dz. Urz. UE L 239 z 15.09.2015, str. 1, Dz. Urz. UE L 328 z 21.12.2018, str. 1, Dz. Urz. UE L 261 z 14.10.2019, str. 100, Dz. Urz. UE L 2023/2413 z 31.10.2023 oraz Dz. Urz. UE L 2024/90085 z 07.02.2024).</zdanie></p></odnosnik></tytul>
+    <podstawa-prawna>Na podstawie art. 30 ustawy z dnia 25 sierpnia 2006 r. o systemie monitorowania i kontrolowania jakości paliw (Dz. U. z 2025 r. poz. 1529) zarządza się, co następuje:</podstawa-prawna>
+    <paragraf eId="art_1" gd:GUID="d459359f-69b2-44a7-9d22-7942f24cb12f" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="74d88b4a-bb91-4a96-9d55-c52c796fe25c" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="bb79c39b-f8a1-4299-a6fd-aeb8fb394761" fragment="1" gd:fragmentGUID="09a8d7dd-c397-4d61-b6b4-9829f752ad3a" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">Rozporządzenie określa:</zdanie>
+        </p>
+        <punkt eId="art_1__pkt_1" gd:GUID="38979043-e5e1-44d4-b122-fbb7803a0f8d" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="bb79c39b-f8a1-4299-a6fd-aeb8fb394761" fragment="2" gd:fragmentGUID="13c6a85d-e01c-4c97-900d-268ef07d17fe" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">wzór rocznego zbiorczego raportu dotyczącego jakości paliw ciekłych, biopaliw ciekłych i innych paliw odnawialnych oraz gazu skroplonego (LPG), sprężonego gazu ziemnego (CNG), skroplonego gazu ziemnego (LNG) i wodoru, o którym mowa w art. 29 ust. 1 ustawy z dnia 25 sierpnia 2006 r. o systemie monitorowania i kontrolowania jakości paliw, zwanego dalej „raportem dla Rady Ministrów”;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="art_1__pkt_2" gd:GUID="ef4120a3-1be2-4063-b0db-2e6a88dafa9d" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="bb79c39b-f8a1-4299-a6fd-aeb8fb394761" fragment="3" gd:fragmentGUID="27e7139d-ba85-458f-809f-7a0981b491a6" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">sposób monitorowania jakości paliw ciekłych i biopaliw ciekłych w celu sporządzenia zbiorczego raportu dotyczącego jakości paliw ciekłych i biopaliw ciekłych, o którym mowa w art. 29 ust. 5 ustawy z dnia 25 sierpnia 2006 r. o systemie monitorowania i kontrolowania jakości paliw, zwanego dalej „raportem dla Komisji Europejskiej”, a w szczególności:</zdanie>
+          </p>
+          <litera eId="art_1__pkt_2__lit_a" gd:GUID="f1ab1935-6a4d-41cc-80dd-d8d583be4ab8" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="bb79c39b-f8a1-4299-a6fd-aeb8fb394761" fragment="4" gd:fragmentGUID="61bd0774-ff18-4206-a154-cb496e13be10" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">sposób doboru stacji paliwowych i stacji zakładowych, w których będzie dokonywana kontrola, w tym minimalną liczbę tych stacji,</zdanie>
+            </p>
+          </litera>
+          <litera eId="art_1__pkt_2__lit_b" gd:GUID="6bda02ce-d25e-4e8e-94ea-5576cb5dfd14" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="bb79c39b-f8a1-4299-a6fd-aeb8fb394761" fragment="5" gd:fragmentGUID="ccc06632-e2bb-4e0d-9ff5-6ce355bd75dc" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">okresy monitorowania jakości paliw ciekłych i biopaliw ciekłych,</zdanie>
+            </p>
+          </litera>
+          <litera eId="art_1__pkt_2__lit_c" gd:GUID="d86dc102-8538-4620-a9ba-9207f689ea52" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+            <nr>c</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="bb79c39b-f8a1-4299-a6fd-aeb8fb394761" fragment="6" gd:fragmentGUID="dcc4a5b9-d2e0-4583-a307-9860401bb58e" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">sposób podziału terytorium Rzeczypospolitej Polskiej do celów monitorowania jakości paliw ciekłych i biopaliw ciekłych,</zdanie>
+            </p>
+          </litera>
+          <litera eId="art_1__pkt_2__lit_d" gd:GUID="9f9a3f06-e55f-437d-be78-13c215f03761" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+            <nr>d</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="bb79c39b-f8a1-4299-a6fd-aeb8fb394761" fragment="7" gd:fragmentGUID="f21051b0-3bc8-4583-b6bf-16913df0f430" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">wzór raportu dla Komisji Europejskiej.</zdanie>
+            </p>
+          </litera>
+        </punkt>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="art_2" gd:GUID="f0d04a8a-a6c6-4a18-965d-743decff5be3" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="1c94ac4e-43d4-4fa8-94c5-98d8528466e6" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="046ded70-251a-417d-83e9-1e023fa439d0" fragment="1" gd:fragmentGUID="fe22c64c-431d-46be-9a9c-7f51fbdaa6fd" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">Użyte w rozporządzeniu określenia oznaczają:</zdanie>
+        </p>
+        <punkt eId="art_2__pkt_1" gd:GUID="178c1776-430c-4ed7-9a21-37165c842417" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="046ded70-251a-417d-83e9-1e023fa439d0" fragment="2" gd:fragmentGUID="cad39c9d-85a3-48ab-8654-96b26882e96d" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">biopaliwa ciekłe flotowe – biopaliwa ciekłe przeznaczone do stosowania tylko w wybranych flotach;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="art_2__pkt_2" gd:GUID="e0661757-6155-4645-af21-375b22ac7912" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="046ded70-251a-417d-83e9-1e023fa439d0" fragment="3" gd:fragmentGUID="e16dc314-9c3a-4e18-a7e3-e8722dc5deb7" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">biopaliwa ciekłe nieflotowe – biopaliwa ciekłe przeznaczone do wprowadzania do obrotu.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="art_3" gd:GUID="c7c68f73-8bd6-474f-b6fe-da381419aeac" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+      <nr>3</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="1f03db8e-7e5f-4245-a0f6-90d4aab289f3" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="1bd9ac23-ca9b-46f1-8f7b-8c62ad0a3ad1" fragment="1" gd:fragmentGUID="87b9d4de-d4f7-4670-86ff-e2a92eb6af95" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">Wzór raportu dla Rady Ministrów jest określony w załączniku nr 1 do rozporządzenia.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="art_4" gd:GUID="d9e82bbd-85e5-4a8b-b634-138c88d8176c" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+      <nr>4</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="914e09f3-da24-4637-97c6-65577d86b465" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="0501bc2f-fced-4d25-857e-3ab3307fca44" fragment="1" gd:fragmentGUID="f457f449-ba3b-43eb-b32e-18a37fdbd2d4" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">Okresami monitorowania jakości:</zdanie>
+        </p>
+        <punkt eId="art_4__pkt_1" gd:GUID="9c289798-c8d6-4211-81b4-d4c1bc4ea4e2" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="0501bc2f-fced-4d25-857e-3ab3307fca44" fragment="2" gd:fragmentGUID="ff44a33b-2a6c-44ed-b4c0-05a5009bd23c" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">benzyn silnikowych są:</zdanie>
+          </p>
+          <litera eId="art_4__pkt_1__lit_a" gd:GUID="36188561-a8f8-47c5-8225-5a37862fe00b" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="0501bc2f-fced-4d25-857e-3ab3307fca44" fragment="3" gd:fragmentGUID="1f0e3610-a79b-4974-83a4-009785c0e8c7" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">okres letni, trwający od dnia 1 maja do dnia 30 września,</zdanie>
+            </p>
+          </litera>
+          <litera eId="art_4__pkt_1__lit_b" gd:GUID="41c7300e-1703-4f69-8876-ad79c402bc7a" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="0501bc2f-fced-4d25-857e-3ab3307fca44" fragment="4" gd:fragmentGUID="44ae921b-d6c3-44bc-a0db-2c5c5a429adb" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">okres zimowy, trwający od dnia 1 października do dnia 30 kwietnia;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="art_4__pkt_2" gd:GUID="21120f2d-b939-421f-9acc-f00a3ad7ab3c" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="0501bc2f-fced-4d25-857e-3ab3307fca44" fragment="5" gd:fragmentGUID="8c5b1837-603c-4d9e-a864-6370cda95e23" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">oleju napędowego są:</zdanie>
+          </p>
+          <litera eId="art_4__pkt_2__lit_a" gd:GUID="955e97e0-e7a8-408f-a899-bb327735f321" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="0501bc2f-fced-4d25-857e-3ab3307fca44" fragment="6" gd:fragmentGUID="55b2b85b-b38d-428a-840f-1f0a7351220a" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">okres letni, trwający od dnia 16 kwietnia do dnia 30 września,</zdanie>
+            </p>
+          </litera>
+          <litera eId="art_4__pkt_2__lit_b" gd:GUID="a4291274-b8ac-401c-93fd-867558eacf10" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="0501bc2f-fced-4d25-857e-3ab3307fca44" fragment="7" gd:fragmentGUID="fda08bdb-5b3d-42f8-9cd6-85763682ccce" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">okres zimowy, trwający od dnia 1 października do dnia 15 kwietnia;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="art_4__pkt_3" gd:GUID="b0a7eed8-79d0-48dd-bd64-4ad561b6b2eb" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="0501bc2f-fced-4d25-857e-3ab3307fca44" fragment="8" gd:fragmentGUID="3d14353d-66f5-4d78-92db-18ca42edae2a" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">biopaliw ciekłych są lata kalendarzowe.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="art_5" gd:GUID="e4413074-1d01-47b3-b6e7-e0bcc94a2843" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+      <nr>5</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="b8a8927b-de9e-47aa-bfaf-ff562658eb0a" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="fd4a3483-5704-437e-ba6c-49ede4b53350" fragment="1" gd:fragmentGUID="8c9866bc-dbd8-4a13-93d9-b8d4c0691e82" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">Terytorium Rzeczypospolitej Polskiej do celów monitorowania jakości:</zdanie>
+        </p>
+        <punkt eId="art_5__pkt_1" gd:GUID="d2265df7-b2e8-4fa6-999b-c2966313c5e8" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="fd4a3483-5704-437e-ba6c-49ede4b53350" fragment="2" gd:fragmentGUID="17a58651-44f7-4adc-a061-17e10a23eb79" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">paliw ciekłych i biopaliw ciekłych nieflotowych – dzieli się na obszary odpowiadające województwom, zgodnie z podziałem administracyjnym kraju, zwane dalej „województwami”;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="art_5__pkt_2" gd:GUID="174907e9-e5f2-4781-8cc2-cb4d568659fa" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="fd4a3483-5704-437e-ba6c-49ede4b53350" fragment="3" gd:fragmentGUID="076c1336-d90b-4e45-99ca-af5e42a46010" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">biopaliw ciekłych flotowych – stanowi jeden obszar monitorowania jakości.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="art_6" gd:GUID="d8d04903-3289-439f-a859-af0a080ed7a8" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+      <nr>6</nr>
+      <ustep eId="art_6__ust_1" gd:GUID="9b47bd19-5514-4541-8871-9bec63114492" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="88b7ffe8-35b3-494c-b603-60049eb0d96e" fragment="1" gd:fragmentGUID="8c10fcdc-e940-46c5-bc4b-d1f381290704" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">Dobór stacji paliwowych i stacji zakładowych, zwanych dalej „stacjami”, w których będzie dokonywana kontrola jakości danego gatunku paliwa ciekłego lub biopaliwa ciekłego nieflotowego, polega na wyznaczeniu ich losowo spośród stacji znajdujących się w dniu wyznaczenia w wykazie, o którym mowa w art. 12 ust. 2 pkt 1 lit. b ustawy z dnia 25 sierpnia 2006 r. o systemie monitorowania i kontrolowania jakości paliw, zwanej dalej „ustawą”, zlokalizowanych na obszarach, o których mowa w § 5 pkt 1:</zdanie>
+        </p>
+        <punkt eId="art_6__ust_1__pkt_1" gd:GUID="62ad9fd6-e9a8-4d8c-875a-589c50515bb9" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="88b7ffe8-35b3-494c-b603-60049eb0d96e" fragment="2" gd:fragmentGUID="bcb9340d-a0c6-4f54-877d-6460642a2e54" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">w liczbie wyznaczonej zgodnie z ust. 3–8;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="art_6__ust_1__pkt_2" gd:GUID="018c78fb-fd60-40d8-aa62-b931280e1ab3" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="88b7ffe8-35b3-494c-b603-60049eb0d96e" fragment="3" gd:fragmentGUID="aece9bc1-f4f5-4aa7-ba9f-599db0559fed" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">w liczbie 10 % liczby stacji wyznaczonej zgodnie z ust. 3–8, w których dodatkowo będzie dokonywana kontrola, jeżeli jedna lub więcej stacji wylosowanych na podstawie pkt 1 byłyby czasowo nieczynne lub zlikwidowane w okresie monitorowania jakości.</zdanie>
+          </p>
+        </punkt>
+      </ustep>
+      <ustep eId="art_6__ust_2" gd:GUID="520ed5f1-4012-47e7-8f02-d148871301e0" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="95d488a7-2ceb-4589-ba6a-4e03e3c844bd" fragment="1" gd:fragmentGUID="5aa77b03-0716-4c9d-bbd8-7b8f53994e5a" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">Wyznaczenie, o którym mowa w ust. 1, następuje odrębnie dla poszczególnych województw, poszczególnych okresów monitorowania jakości oraz następujących gatunków paliwa ciekłego albo biopaliwa ciekłego nieflotowego:</zdanie>
+        </p>
+        <punkt eId="art_6__ust_2__pkt_1" gd:GUID="cf0847ab-61a0-4768-938b-bd5b641a2157" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="95d488a7-2ceb-4589-ba6a-4e03e3c844bd" fragment="2" gd:fragmentGUID="1d930684-10c6-489f-8630-d933d5fb15d6" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">benzyn silnikowych, o których mowa w art. 2 ust. 1 pkt 4 lit. a ustawy;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="art_6__ust_2__pkt_2" gd:GUID="c5e15aba-c925-4ca5-bf9f-6ba859a89d69" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="95d488a7-2ceb-4589-ba6a-4e03e3c844bd" fragment="3" gd:fragmentGUID="20da325c-f5f0-48fd-a900-32e7c5a07c12" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">oleju napędowego, o którym mowa w art. 2 ust. 1 pkt 4 lit. b ustawy;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="art_6__ust_2__pkt_3" gd:GUID="66251526-2ca2-417a-b814-6bd54be2a09d" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="95d488a7-2ceb-4589-ba6a-4e03e3c844bd" fragment="4" gd:fragmentGUID="051b3538-2892-4a5f-83dc-83ca10a0befb" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">biopaliw ciekłych, o których mowa w art. 2 ust. 1 pkt 5 ustawy.</zdanie>
+          </p>
+        </punkt>
+      </ustep>
+      <ustep eId="art_6__ust_3" gd:GUID="929ec023-fe72-44eb-a539-15e94fdcce2c" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <nr>3</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="b98502f3-08d7-4f43-b5b4-b60dd2c2b9af" fragment="1" gd:fragmentGUID="1a82f216-4361-485c-841e-d3506b22505e" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">Liczbę stacji w danym województwie, w których będzie dokonywana kontrola jakości każdego gatunku paliwa ciekłego i biopaliwa ciekłego nieflotowego, wyznacza się, mnożąc liczbę stacji, w których będzie dokonywana kontrola danego gatunku na terytorium Rzeczypospolitej Polskiej, przez ilościowy udział sprzedaży tego gatunku w danym województwie w sprzedaży tego gatunku na terytorium Rzeczypospolitej Polskiej.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="art_6__ust_4" gd:GUID="d598bcf3-badd-444e-8445-a8e618330c86" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <nr>4</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="2a8bd98e-2350-4821-82d4-d9b14d7a4e1a" fragment="1" gd:fragmentGUID="08804fa4-b90e-4dc1-93e4-4f60a7058007" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">Liczbę stacji w poszczególnych województwach, do celów wyznaczenia stacji, w których będzie dokonywana kontrola jakości paliwa ciekłego i biopaliwa ciekłego nieflotowego, wyznacza się na podstawie informacji znajdujących się w dniu tego wyznaczenia w wykazie, o którym mowa w art. 12 ust. 2 pkt 1 lit. b ustawy.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="art_6__ust_5" gd:GUID="3cf413cb-f8e2-4f0d-9eb1-a23ad7dcdcf8" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <nr>5</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="43692d54-9d43-4017-acc2-80f9ee04d541" fragment="1" gd:fragmentGUID="61cffc47-b55a-4ea5-9f13-bfea1f9e11d1" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">Wielkość sprzedaży danego gatunku paliwa ciekłego w okresie monitorowania jakości rozpoczynającym się w danym roku kalendarzowym przyjmuje się, do celów wyznaczenia stacji, w których będzie dokonywana kontrola jakości tego gatunku, na podstawie danych na koniec roku kalendarzowego poprzedzającego rozpoczęcie okresu monitorowania jakości.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="art_6__ust_6" gd:GUID="7fcb3787-5cbd-4401-808c-9b1dce9909c2" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <nr>6</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="70ce01a8-62a8-43e3-8270-c694a4854ff3" fragment="1" gd:fragmentGUID="82c62e90-8c5f-46e1-81b0-f94ff435b9c6" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">Wielkość sprzedaży danego gatunku biopaliwa ciekłego nieflotowego w okresie monitorowania jakości przyjmuje się, do celów wyznaczenia stacji, w których będzie dokonywana kontrola jakości tego gatunku, na podstawie danych na koniec roku kalendarzowego poprzedzającego rozpoczęcie okresu monitorowania jakości.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="art_6__ust_7" gd:GUID="9f6e14e1-02d8-4da1-b3b8-18ef4cdb5094" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <nr>7</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="883b82ea-56d1-4e34-951a-de13408c21f1" fragment="1" gd:fragmentGUID="6a8f6973-1d6c-47b4-9622-9f8d180fdb3f" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">W przypadku braku wystarczających informacji na temat wielkości sprzedaży danego gatunku paliwa ciekłego albo biopaliwa ciekłego nieflotowego w danym województwie, liczbę stacji w poszczególnych województwach, w których będzie dokonywana kontrola jakości tego gatunku, wyznacza się, mnożąc liczbę stacji, w których będzie dokonywana kontrola tego gatunku na terytorium Rzeczypospolitej Polskiej, przez udział liczby stacji, zaopatrujących w paliwa ciekłe albo biopaliwa ciekłe nieflotowe w danym województwie, w liczbie stacji na terytorium Rzeczypospolitej Polskiej, zaopatrujących w paliwa ciekłe albo biopaliwa ciekłe nieflotowe.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="art_6__ust_8" gd:GUID="3c397b67-6a94-4b2d-bcf8-2a3620bc464e" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <nr>8</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="9b2cfa0c-c3ae-4a32-94ba-66e1388c11e6" fragment="1" gd:fragmentGUID="f39b74e7-621f-4c0c-a985-44704fe470fb" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">Jeżeli liczba stacji dla danego województwa wyznaczona zgodnie z ust. 3 lub 7 nie jest liczbą całkowitą, stosuje się zasadę zaokrąglenia w górę do pełnej liczby.</zdanie>
+        </p>
+      </ustep>
+    </paragraf>
+    <paragraf eId="art_7" gd:GUID="84ce3a4d-ed4b-43bc-a544-220169a5fbb2" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+      <nr>7</nr>
+      <ustep eId="art_7__ust_1" gd:GUID="464f75f3-d08e-44f1-ac29-a7c1b7d22643" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="f636f574-19c9-412d-bca8-a3ea07c23409" fragment="1" gd:fragmentGUID="47df570d-1aa6-4541-948e-bfdc471a7c9d" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">Dobór stacji zakładowych, w których będzie dokonywana kontrola jakości danego gatunku biopaliwa ciekłego flotowego, polega na wyznaczeniu ich losowo spośród stacji znajdujących się w dniu wyznaczenia w wykazie, o którym mowa w art. 12 ust. 2 pkt 2 ustawy, zlokalizowanych na obszarze, o którym mowa w § 5 pkt 2.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="art_7__ust_2" gd:GUID="ba5a6e63-9f17-454c-9267-ecb38cc22328" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="13df0926-69e9-456f-b8cf-64d99f1d02fa" fragment="1" gd:fragmentGUID="085405fa-7eda-4eff-b5f3-2ba7a370f890" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">Wyznaczenie, o którym mowa w ust. 1, następuje odrębnie dla poszczególnych gatunków biopaliwa ciekłego flotowego.</zdanie>
+        </p>
+      </ustep>
+    </paragraf>
+    <paragraf eId="art_8" gd:GUID="608a3fc2-c4d9-4da7-8e96-50690df68085" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+      <nr>8</nr>
+      <ustep eId="art_8__ust_1" gd:GUID="f4d2507e-a15a-4f96-a903-e4491596a9aa" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="52d2e75a-3f6a-494d-a082-ccd3ec850397" fragment="1" gd:fragmentGUID="388f0a44-1e15-4219-8623-10cc51e39d99" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">Minimalna liczba stacji, w których będzie dokonywana kontrola jakości dla całego terytorium Rzeczypospolitej Polskiej, w każdym z okresów monitorowania jakości wynosi dla:</zdanie>
+        </p>
+        <punkt eId="art_8__ust_1__pkt_1" gd:GUID="7e135977-7830-4de6-b099-d9e06e76dd22" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="52d2e75a-3f6a-494d-a082-ccd3ec850397" fragment="2" gd:fragmentGUID="06b48863-03b8-408e-8f83-233252a4b351" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">benzyny silnikowej o badawczej liczbie oktanowej RON 98 – 60;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="art_8__ust_1__pkt_2" gd:GUID="ca43c7bd-7338-4214-9d5f-0662ecb2357f" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="52d2e75a-3f6a-494d-a082-ccd3ec850397" fragment="3" gd:fragmentGUID="04d47ae9-c569-43c3-be9f-d12f5d972cda" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">benzyny silnikowej o badawczej liczbie oktanowej RON 95 – 200;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="art_8__ust_1__pkt_3" gd:GUID="13dc7abc-8f96-4374-8c5e-5f64d391b70f" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="52d2e75a-3f6a-494d-a082-ccd3ec850397" fragment="4" gd:fragmentGUID="ea517fef-41f8-4f8f-b6ff-092c59cf9830" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">oleju napędowego – 200;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="art_8__ust_1__pkt_4" gd:GUID="974ea48a-c7b2-402e-a50d-ae8e3bed17a5" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="52d2e75a-3f6a-494d-a082-ccd3ec850397" fragment="5" gd:fragmentGUID="67ed3496-04c9-494c-9afb-afcff8adffc5" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">każdego gatunku biopaliwa ciekłego nieflotowego – 100;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="art_8__ust_1__pkt_5" gd:GUID="ab7ca6c1-4685-4c9f-a082-8c4713aecdc9" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="52d2e75a-3f6a-494d-a082-ccd3ec850397" fragment="6" gd:fragmentGUID="a5105d8d-cd7f-4407-a6bb-06ca3dbcf8f2" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">biopaliw ciekłych flotowych – 30.</zdanie>
+          </p>
+        </punkt>
+      </ustep>
+      <ustep eId="art_8__ust_2" gd:GUID="604c4a1f-b7a9-479c-8d4b-32f5b2d2d688" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="39ccaca3-c6fa-4700-ac3d-593a86ab9a1a" fragment="1" gd:fragmentGUID="3d4cb35b-f4d4-41bc-b49c-43a77ac87d7c" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">Jeżeli liczba stacji zaopatrujących w dany gatunek biopaliwa ciekłego nieflotowego jest mniejsza niż 100, kontrola jakości tego gatunku jest dokonywana w każdym z okresów monitorowania jakości we wszystkich stacjach zaopatrujących w ten gatunek.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="art_8__ust_3" gd:GUID="69e22bc7-5c4b-4128-ac38-70db87aa93ed" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <nr>3</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="f41b750a-8211-45e6-bfc0-64b7e8346c64" fragment="1" gd:fragmentGUID="bf0621dd-00de-491a-bf09-a24b9397ad9d" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">Jeżeli liczba stacji zakładowych zaopatrujących w biopaliwo ciekłe flotowe jest mniejsza niż 30, kontrola jakości tego biopaliwa jest dokonywana w każdym z okresów monitorowania jakości we wszystkich stacjach zakładowych zaopatrujących w to biopaliwo.</zdanie>
+        </p>
+      </ustep>
+    </paragraf>
+    <paragraf eId="art_9" gd:GUID="de27d120-64f5-479b-b25b-47ce40e3ce18" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+      <nr>9</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="de8e4d5d-13df-44bc-befd-fb9522e8c256" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="99d76584-b0f0-4174-813d-f77f268dcf15" fragment="1" gd:fragmentGUID="d09e8a8c-a18d-4624-87d7-025f2accfdcf" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">Wzór raportu dla Komisji Europejskiej jest określony w załączniku nr 2 do rozporządzenia.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="art_10" gd:GUID="b1394ff2-5af3-4267-bb72-569d69876c2a" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+      <nr>10</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="fb7934e9-14c4-45cf-ac60-9b6e9d2091b1" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="0e6c5b8f-9aa1-4a1c-9bbf-3e2dfc3daa45" fragment="1" gd:fragmentGUID="a3d5f26e-2098-453f-93a4-d292026ae54b" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">Rozporządzenie wchodzi w życie z dniem 1 stycznia 2026 r.<odnosnik id-odnosnika="3" symbol="3" gd:GUID="15143166-61f7-44d0-b191-746994ace70e"><p><zdanie nr="1" gd:zdGUID="d720441a-e008-44cb-bc9c-e81740fcc099" fragment="1" gd:fragmentGUID="f4429aaa-b89d-4b7d-aabd-8ca8d81f69ab">Niniejsze rozporządzenie było poprzedzone rozporządzeniem Ministra Gospodarki z dnia 21 września 2007 r. w sprawie sposobu monitorowania jakości paliw ciekłych, biopaliw ciekłych, a także wzorów raportów dotyczących tych paliw oraz gazu skroplonego (LPG) i sprężonego gazu ziemnego (CNG) (Dz. U. z 2019 r. poz. 641), które utraciło moc z dniem 23 września 2024 r. zgodnie z art. 18 ustawy z dnia 11 sierpnia 2021 r. o zmianie ustawy o systemie monitorowania i kontrolowania jakości paliw oraz niektórych innych ustaw (Dz. U. poz. 1642 oraz z 2022 r. poz. 2687).</zdanie></p></odnosnik></zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <organ-podpisujacy>Minister Energii: <i><osoba podpisujacy="true" gd:osobaGUID="ade5544d-7a44-44da-944c-21c7904e49b4"><imie>M.</imie> <nazwisko>Motyka</nazwisko></osoba></i></organ-podpisujacy>
+    <zalacznik eId="zal_1" gd:GUID="46415333-ef3b-4d00-861b-090d77ab332a">
+      <zalacznik-do gd:GUID="68504c6a-6bd8-4346-9af8-e00307ee6633">Załączniki do rozporządzenia Ministra Energii z dnia 4 grudnia 2025 r. (Dz. U. poz. …)</zalacznik-do>
+      <zalacznik-nr gd:GUID="41b35f92-cf43-4f35-90cb-9b24718eb495">
+        <nr>1</nr>
+      </zalacznik-nr>
+      <tytul-zalacznika gd:GUID="18a05982-1b1f-4e4a-9293-13a4f400c2d0">WZÓR RAPORTU DLA RADY MINISTRÓW</tytul-zalacznika>
+    </zalacznik>
+    <zalacznik eId="zal_2" gd:GUID="41d97387-5813-40fe-92ba-e624d6075a80">
+      <zalacznik-nr gd:GUID="28363999-aa79-475f-bb09-9a205ad992dc">
+        <nr>2</nr>
+      </zalacznik-nr>
+      <tytul-zalacznika gd:GUID="9864f5eb-fd08-4796-9b26-0ee399418fe0">WZÓR RAPORTU DLA KOMISJI EUROPEJSKIEJ</tytul-zalacznika>
+    </zalacznik>
+  </rozporzadzenie>
+</akt-prawny>

@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <ustawa>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/641</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>6a720a2b-3a9e-4792-81e8-caab83e5313e</gd:GUIDwersji>
+      <AdresISAP>WDU20250000641</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>641</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 641</AdresWyswietlany>
+      <Tytul>Ustawa z dnia 4 kwietnia 2025 r. o zmianie ustawy o drogach publicznych</Tytul>
+      <Rodzaj>USTAWA</Rodzaj>
+      <DataOgloszenia>2025-05-16</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-04-04</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2025-06-16_DU-2025-641_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2025-06-16" warunek="po upływie 30 dni od dnia ogłoszenia" podstawa="art. 2" zrodlo="https://eli.gov.pl/eli/DU/2025/641" dowod="DU/2025/641__art_2" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2025-06-16_DU-2025-641_domyslne.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2025-06-16_DU-2025-641_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="b9488a7a-588b-4eb5-94de-9caec43b9b2f" rola="wydajacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Sejm">
+          <Nazwa>SEJM</Nazwa>
+        </Organ>
+        <Organ gd:GUID="7ef6105d-1903-49a5-b858-3df24d30cb6f" rola="podpisujacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Prezydent">
+          <Nazwa>Prezydent Rzeczypospolitej Polskiej</Nazwa>
+          <OrganPodpisujacy>Prezydent Rzeczypospolitej Polskiej</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>A.</imie> <nazwisko>Duda</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Ustawa</rodzaj-aktu>
+    <data>z dnia 4 kwietnia 2025 r.</data>
+    <tytul>o zmianie ustawy o drogach publicznych</tytul>
+    <artykul eId="DU/2025/641__art_1" gd:GUID="e7aa5cf2-e100-4363-b397-c5db36426d87" okres="okr_obowiazywanie.zdarz_wejscie_2025-06-16_DU-2025-641_domyslne.x" wejscie-w-zycie="2025-06-16">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="13caea6d-6847-43b0-bfb1-70acba1aa569" okres="okr_obowiazywanie.zdarz_wejscie_2025-06-16_DU-2025-641_domyslne.x" wejscie-w-zycie="2025-06-16">
+        <p>
+          <zdanie nr="1" gd:zdGUID="45f074ec-e7d7-4c25-b22a-16a55aa2a419" fragment="1" gd:fragmentGUID="23b115a1-227e-480f-8fca-d66136dd7191" okres="okr_obowiazywanie.zdarz_wejscie_2025-06-16_DU-2025-641_domyslne.x" wejscie-w-zycie="2025-06-16">W ustawie z dnia 21 marca 1985 r. o drogach publicznych (Dz. U. z 2024 r. poz. 320 i 1222) w art. 13b ust. 2a otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/320" cudzyslowy="oba" gd:nowGUID="344632bb-30cb-4759-98f7-1863060cfefd" element-eId="DU/2024/320__art_13b__ust_2a" funkcja="zastap"><ustep eId="DU/2024/320__art_13b__ust_2a" gd:GUID="9d9369b4-7eba-4e5f-84c6-435b14dfdd57" okres="okr_obowiazywanie.zdarz_wejscie_2025-06-16_DU-2025-641_domyslne.x" wejscie-w-zycie="2025-06-16"><nr>2a</nr><p><zdanie nr="1" gd:zdGUID="7517edd1-c240-4260-a864-78755604d9f5" fragment="1" gd:fragmentGUID="bcf53a0f-5d10-4700-98f0-facbe8d55fe6" okres="okr_obowiazywanie.zdarz_wejscie_2025-06-16_DU-2025-641_domyslne.x" wejscie-w-zycie="2025-06-16">Śródmiejską strefę płatnego parkowania ustala się na obszarach zgrupowania intensywnej zabudowy funkcjonalnego śródmieścia, które stanowi faktyczne centrum miasta lub dzielnicy, lub na obszarze uzdrowiska (strefa ochrony uzdrowiskowej A i B) lub obszarze ochrony uzdrowiskowej (strefa ochrony uzdrowiskowej A i B), jeżeli spełnione są warunki, o których mowa w ust. 2, a ustanowienie strefy płatnego parkowania może nie być wystarczające do realizacji lokalnej polityki transportowej lub polityki ochrony środowiska.</zdanie></p></ustep></cytat-strukt>.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2025/641__art_2" gd:GUID="450094b7-0637-41ef-8bce-b8962eec9a11" okres="okr_obowiazywanie.zdarz_wejscie_2025-06-16_DU-2025-641_domyslne.x" wejscie-w-zycie="2025-06-16">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="d9b445e5-611b-421e-88c0-de2818e914a3" okres="okr_obowiazywanie.zdarz_wejscie_2025-06-16_DU-2025-641_domyslne.x" wejscie-w-zycie="2025-06-16">
+        <p>
+          <zdanie nr="1" gd:zdGUID="30f2935a-629c-4eb9-8fb5-b8ba93db38bf" fragment="1" gd:fragmentGUID="c664ef88-5726-42f8-8453-a7ac203db2e9" okres="okr_obowiazywanie.zdarz_wejscie_2025-06-16_DU-2025-641_domyslne.x" wejscie-w-zycie="2025-06-16">Ustawa wchodzi w życie po upływie 30 dni od dnia ogłoszenia.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <organ-podpisujacy>Prezydent Rzeczypospolitej Polskiej: <i><osoba podpisujacy="true" gd:osobaGUID="6dfc8445-e98e-44e3-a93a-5fb91653ecd7"><imie>A.</imie> <nazwisko>Duda</nazwisko></osoba></i></organ-podpisujacy>
+  </ustawa>
+</akt-prawny>

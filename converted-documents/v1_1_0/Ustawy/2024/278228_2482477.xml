@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <ustawa>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2024/227</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>f9d3002a-ea09-4fb1-ace7-ef9e48899078</gd:GUIDwersji>
+      <AdresISAP>WDU20240000227</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2024</Rok>
+      <Pozycja>227</Pozycja>
+      <AdresWyswietlany>Dz.U. 2024 poz. 227</AdresWyswietlany>
+      <Tytul>Ustawa z dnia 26 stycznia 2024 r. o zmianie ustawy o Narodowym Centrum Badań i Rozwoju oraz ustawy – Prawo o szkolnictwie wyższym i nauce</Tytul>
+      <Rodzaj>USTAWA</Rodzaj>
+      <DataOgloszenia>2024-02-21</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2024-01-26</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2024-02-22_DU-2024-227_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2024-02-22" warunek="z dniem następującym po dniu ogłoszenia" podstawa="art. 10" zrodlo="https://eli.gov.pl/eli/DU/2024/227" dowod="DU/2024/227__art_10">
+            <JednostkaAktu eId="DU/2024/227__art_3__ust_2" />
+            <JednostkaAktu eId="DU/2024/227__art_3__ust_3" />
+          </Zdarzenie>
+          <Zdarzenie id="zdarz_wejscie_2024-03-07_DU-2024-227_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2024-03-07" warunek="po upływie 14 dni od dnia ogłoszenia" podstawa="art. 10" zrodlo="https://eli.gov.pl/eli/DU/2024/227" dowod="DU/2024/227__art_10" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2024-02-22_DU-2024-227_domyslne.x" glowna="false">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2024-02-22_DU-2024-227_domyslne" />
+        </GrupaCzasowa>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2024-03-07_DU-2024-227_domyslne.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2024-03-07_DU-2024-227_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="e0d87c74-918f-4725-9d52-76057c865ef5" rola="wydajacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Sejm">
+          <Nazwa>SEJM</Nazwa>
+        </Organ>
+        <Organ gd:GUID="8404a5d1-d269-4d78-9ccd-eaf1e102b7fe" rola="podpisujacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Prezydent">
+          <Nazwa>Prezydent Rzeczypospolitej Polskiej</Nazwa>
+          <OrganPodpisujacy>Prezydent Rzeczypospolitej Polskiej</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>A.</imie> <nazwisko>Duda</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Ustawa</rodzaj-aktu>
+    <data>z dnia 26 stycznia 2024 r.</data>
+    <tytul>o zmianie ustawy o Narodowym Centrum Badań i Rozwoju oraz ustawy – Prawo o szkolnictwie wyższym i nauce</tytul>
+    <artykul eId="DU/2024/227__art_1" gd:GUID="f4a2da3a-5c71-40b2-a163-6f84cb12feed" okres="okr_obowiazywanie.zdarz_wejscie_2024-03-07_DU-2024-227_domyslne.x" wejscie-w-zycie="2024-03-07">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="d28526b6-e298-4adf-820f-2484435a5a93" okres="okr_obowiazywanie.zdarz_wejscie_2024-03-07_DU-2024-227_domyslne.x" wejscie-w-zycie="2024-03-07">
+        <p>
+          <zdanie nr="1" gd:zdGUID="cb2d69f5-9ba4-47a5-820c-293a61422778" fragment="1" gd:fragmentGUID="0c8b903c-e725-466d-9797-b09b3ea8c495" okres="okr_obowiazywanie.zdarz_wejscie_2024-03-07_DU-2024-227_domyslne.x" wejscie-w-zycie="2024-03-07">W ustawie z dnia 30 kwietnia 2010 r. o Narodowym Centrum Badań i Rozwoju (Dz. U. z 2022 r. poz. 2279) wprowadza się następujące zmiany:</zdanie>
+        </p>
+        <punkt eId="DU/2024/227__art_1__pkt_1" gd:GUID="9bcdad1e-ba38-4965-8ac2-880de488f53b" okres="okr_obowiazywanie.zdarz_wejscie_2024-03-07_DU-2024-227_domyslne.x" wejscie-w-zycie="2024-03-07">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="cb2d69f5-9ba4-47a5-820c-293a61422778" fragment="2" gd:fragmentGUID="f3084641-3c5e-4906-b78f-ed789c360bd8" okres="okr_obowiazywanie.zdarz_wejscie_2024-03-07_DU-2024-227_domyslne.x" wejscie-w-zycie="2024-03-07">użyte w art. 1 w ust. 5 we wprowadzeniu do wyliczenia, w art. 4 w ust. 1 i 8, w art. 11 w ust. 6, w art. 14 w ust. 8, w art. 16 w ust. 1 w pkt 1, w art. 18 w ust. 7, w art. 19 w ust. 3, w art. 28 w ust. 3, w art. 33 w ust. 2 we wprowadzeniu do wyliczenia i w art. 45, w różnym przypadku, wyrazy „minister właściwy do spraw rozwoju regionalnego” zastępuje się użytymi w odpowiednim przypadku wyrazami „minister właściwy do spraw szkolnictwa wyższego i nauki”;<cytat-w-tekscie now:akt="https://eli.gov.pl/eli/DU/2022/2279" cudzyslowy="oba" gd:nowGUID="f4d10243-f249-4e1d-a54e-447666f0125e" element-eId="DU/2022/2279__art_1__ust_5" funkcja="zastap-recznie"><tekst>minister właściwy do spraw szkolnictwa wyższego i nauki</tekst></cytat-w-tekscie><cytat-w-tekscie now:akt="https://eli.gov.pl/eli/DU/2022/2279" cudzyslowy="oba" gd:nowGUID="88b55bbc-ad0f-4ed3-b4b5-b3305a50b2df" element-eId="DU/2022/2279__art_4__ust_1" funkcja="zastap-recznie"><tekst>minister właściwy do spraw szkolnictwa wyższego i nauki</tekst></cytat-w-tekscie><cytat-w-tekscie now:akt="https://eli.gov.pl/eli/DU/2022/2279" cudzyslowy="oba" gd:nowGUID="d20f3198-e71f-4bc7-a666-d8103f26be9c" element-eId="DU/2022/2279__art_4__ust_8" funkcja="zastap-recznie"><tekst>minister właściwy do spraw szkolnictwa wyższego i nauki</tekst></cytat-w-tekscie><cytat-w-tekscie now:akt="https://eli.gov.pl/eli/DU/2022/2279" cudzyslowy="oba" gd:nowGUID="71a15a1e-7b42-4ea8-b6c5-c3a61269ce2f" element-eId="DU/2022/2279__art_11__ust_6" funkcja="zastap-recznie"><tekst>minister właściwy do spraw szkolnictwa wyższego i nauki</tekst></cytat-w-tekscie><cytat-w-tekscie now:akt="https://eli.gov.pl/eli/DU/2022/2279" cudzyslowy="oba" gd:nowGUID="73598e14-8a52-4c3c-b1d9-018b42afa278" element-eId="DU/2022/2279__art_14__ust_8" funkcja="zastap-recznie"><tekst>minister właściwy do spraw szkolnictwa wyższego i nauki</tekst></cytat-w-tekscie><cytat-w-tekscie now:akt="https://eli.gov.pl/eli/DU/2022/2279" cudzyslowy="oba" gd:nowGUID="3ea7be71-2359-4df6-91be-d9d70d348b33" element-eId="DU/2022/2279__art_16__ust_1__pkt_1" funkcja="zastap-recznie"><tekst>minister właściwy do spraw szkolnictwa wyższego i nauki</tekst></cytat-w-tekscie><cytat-w-tekscie now:akt="https://eli.gov.pl/eli/DU/2022/2279" cudzyslowy="oba" gd:nowGUID="a8d3b5fa-867b-44f7-8742-6fb16751dac4" element-eId="DU/2022/2279__art_18__ust_7" funkcja="zastap-recznie"><tekst>minister właściwy do spraw szkolnictwa wyższego i nauki</tekst></cytat-w-tekscie><cytat-w-tekscie now:akt="https://eli.gov.pl/eli/DU/2022/2279" cudzyslowy="oba" gd:nowGUID="8e27e077-1765-45d8-beb6-8ee4c9de1e03" element-eId="DU/2022/2279__art_19__ust_3" funkcja="zastap-recznie"><tekst>minister właściwy do spraw szkolnictwa wyższego i nauki</tekst></cytat-w-tekscie><cytat-w-tekscie now:akt="https://eli.gov.pl/eli/DU/2022/2279" cudzyslowy="oba" gd:nowGUID="52d0f432-218f-4a71-8f62-122657621dba" element-eId="DU/2022/2279__art_28__ust_3" funkcja="zastap-recznie"><tekst>minister właściwy do spraw szkolnictwa wyższego i nauki</tekst></cytat-w-tekscie><cytat-w-tekscie now:akt="https://eli.gov.pl/eli/DU/2022/2279" cudzyslowy="oba" gd:nowGUID="8fd3982d-6e8b-4ebc-b9b9-87a43b3527cd" element-eId="DU/2022/2279__art_33__ust_2" funkcja="zastap-recznie"><tekst>minister właściwy do spraw szkolnictwa wyższego i nauki</tekst></cytat-w-tekscie><cytat-w-tekscie now:akt="https://eli.gov.pl/eli/DU/2022/2279" cudzyslowy="oba" gd:nowGUID="4eef2066-2422-42cb-a80a-7acf7a81a761" element-eId="DU/2022/2279__art_45" funkcja="zastap-recznie"><tekst>minister właściwy do spraw szkolnictwa wyższego i nauki</tekst></cytat-w-tekscie></zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2024/227__art_1__pkt_2" gd:GUID="6ffb4d54-a8bd-4fbd-9919-3f4885c15ab6" okres="okr_obowiazywanie.zdarz_wejscie_2024-03-07_DU-2024-227_domyslne.x" wejscie-w-zycie="2024-03-07">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="cb2d69f5-9ba4-47a5-820c-293a61422778" fragment="3" gd:fragmentGUID="5994555c-e39f-4426-98c1-7ed2f581a23f" okres="okr_obowiazywanie.zdarz_wejscie_2024-03-07_DU-2024-227_domyslne.x" wejscie-w-zycie="2024-03-07">w art. 30a w ust. 1 pkt 2 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2022/2279" cudzyslowy="oba" gd:nowGUID="f61486df-dd0b-4a0d-9da7-f9905fe2ab08" element-eId="DU/2022/2279__art_30a__ust_1__pkt_2" funkcja="zastap"><punkt eId="DU/2022/2279__art_30a__ust_1__pkt_2" gd:GUID="7074074c-00a0-4b2a-a606-bbd0ccb2e020" okres="okr_obowiazywanie.zdarz_wejscie_2024-03-07_DU-2024-227_domyslne.x" wejscie-w-zycie="2024-03-07"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="f6df0222-0678-4a29-9ca4-2068f79cff0c" fragment="1" gd:fragmentGUID="dd2d4ffb-6112-47cd-90dd-7c4d39f98721" okres="okr_obowiazywanie.zdarz_wejscie_2024-03-07_DU-2024-227_domyslne.x" wejscie-w-zycie="2024-03-07">za zgodą Ministra tworzyć spółki, obejmować oraz nabywać udziały i akcje, a także obejmować warranty subskrypcyjne uprawniające do zapisu lub objęcia akcji w spółkach mających siedzibę na terytorium Rzeczypospolitej Polskiej albo za granicą;</zdanie></p></punkt></cytat-strukt>.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2024/227__art_2" gd:GUID="0bb6e2ac-dc06-4469-a632-8fed907df2cc" okres="okr_obowiazywanie.zdarz_wejscie_2024-03-07_DU-2024-227_domyslne.x" wejscie-w-zycie="2024-03-07">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="c2244606-b84c-449b-ba43-ec348b585d27" okres="okr_obowiazywanie.zdarz_wejscie_2024-03-07_DU-2024-227_domyslne.x" wejscie-w-zycie="2024-03-07">
+        <p>
+          <zdanie nr="1" gd:zdGUID="26aa73d8-8b8b-4023-8ca7-72b5b31bac8a" fragment="1" gd:fragmentGUID="49769355-e3ef-424e-a348-e4bfb4d03ae7" okres="okr_obowiazywanie.zdarz_wejscie_2024-03-07_DU-2024-227_domyslne.x" wejscie-w-zycie="2024-03-07">W ustawie z dnia 20 lipca 2018 r. – Prawo o szkolnictwie wyższym i nauce (Dz. U. z 2023 r. poz. 742, z późn. zm.<odnosnik id-odnosnika="1" symbol="1" gd:GUID="22eaf4e7-b622-4ad9-be22-e7b692967c3a"><p><zdanie nr="1" gd:zdGUID="ec68e3ae-e1f3-4e77-9ed7-a3607fdf1b73" fragment="1" gd:fragmentGUID="f14d8ed6-98cf-464e-aa3a-68cfaca27838">Zmiany tekstu jednolitego wymienionej ustawy zostały ogłoszone w Dz. U. z 2023 r. poz. 1088, 1234, 1672, 1872 i 2005 oraz z 2024 r. poz. 124.</zdanie></p></odnosnik>) wprowadza się następujące zmiany:</zdanie>
+        </p>
+        <punkt eId="DU/2024/227__art_2__pkt_1" gd:GUID="168d623c-e7ad-4533-8459-03a485fe7d18" okres="okr_obowiazywanie.zdarz_wejscie_2024-03-07_DU-2024-227_domyslne.x" wejscie-w-zycie="2024-03-07">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="26aa73d8-8b8b-4023-8ca7-72b5b31bac8a" fragment="2" gd:fragmentGUID="66dfd086-dff3-4cef-ade1-6e027bab5488" okres="okr_obowiazywanie.zdarz_wejscie_2024-03-07_DU-2024-227_domyslne.x" wejscie-w-zycie="2024-03-07">w art. 370 pkt 2 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/742" cudzyslowy="oba" gd:nowGUID="a01c57ca-9ce5-4d81-bae7-480318e1e156" element-eId="DU/2023/742__art_370__pkt_2" funkcja="zastap"><punkt eId="DU/2023/742__art_370__pkt_2" gd:GUID="653446ff-a2fe-4aa8-94a1-0f61121594a9" okres="okr_obowiazywanie.zdarz_wejscie_2024-03-07_DU-2024-227_domyslne.x" wejscie-w-zycie="2024-03-07"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="1edc7277-c582-4a5e-a24c-a4af814f20db" fragment="1" gd:fragmentGUID="3fc6cfd0-345e-407d-8499-8dcd243e3c6c" okres="okr_obowiazywanie.zdarz_wejscie_2024-03-07_DU-2024-227_domyslne.x" wejscie-w-zycie="2024-03-07">NCBiR – środki finansowe, o których mowa w art. 365 pkt 4 lit. c, pkt 9 i 11 oraz pkt 13 lit. b;</zdanie></p></punkt></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2024/227__art_2__pkt_2" gd:GUID="17451301-6d0b-4c3e-812b-5d2c2a8799ec" okres="okr_obowiazywanie.zdarz_wejscie_2024-03-07_DU-2024-227_domyslne.x" wejscie-w-zycie="2024-03-07">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="26aa73d8-8b8b-4023-8ca7-72b5b31bac8a" fragment="3" gd:fragmentGUID="aff245d3-9dbf-4cb3-8534-f1b2c62e6fb8" okres="okr_obowiazywanie.zdarz_wejscie_2024-03-07_DU-2024-227_domyslne.x" wejscie-w-zycie="2024-03-07"><now:uchyl akt="https://eli.gov.pl/eli/DU/2023/742" element-eId="DU/2023/742__art_370a" gd:nowGUID="3c0b8cd7-7bfe-4bcb-bfaf-110ca59c46f6" />uchyla się art. 370a.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2024/227__art_3" gd:GUID="cf5af7b5-379a-4b3d-b36d-8a0f5e8c6724" okres="okr_obowiazywanie.zdarz_wejscie_2024-03-07_DU-2024-227_domyslne.x" wejscie-w-zycie="2024-03-07">
+      <nr>3</nr>
+      <ustep eId="DU/2024/227__art_3__ust_1" gd:GUID="1a6b3798-f1ff-49f7-bf85-4cfc1fce2673" okres="okr_obowiazywanie.zdarz_wejscie_2024-03-07_DU-2024-227_domyslne.x" wejscie-w-zycie="2024-03-07">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="5f654ec7-7a3f-4f6b-a00e-cca3d560b32f" fragment="1" gd:fragmentGUID="459c5cc7-7edc-4b1b-942a-174af3556104" okres="okr_obowiazywanie.zdarz_wejscie_2024-03-07_DU-2024-227_domyslne.x" wejscie-w-zycie="2024-03-07">Z dniem wejścia w życie niniejszej ustawy pracownicy zatrudnieni w urzędzie obsługującym ministra właściwego do spraw rozwoju regionalnego i realizujący do tego dnia zadania, które zostają przekazane niniejszą ustawą ministrowi właściwemu do spraw szkolnictwa wyższego i nauki, stają się pracownikami urzędu obsługującego ministra właściwego do spraw szkolnictwa wyższego i nauki.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2024/227__art_3__ust_2" gd:GUID="c2999b6f-552d-460b-92bf-c05ccb33fc6f" okres="okr_obowiazywanie.zdarz_wejscie_2024-02-22_DU-2024-227_domyslne.x" wejscie-w-zycie="2024-02-22">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="7d1713ac-df77-40bb-b4be-3df58de5f623" fragment="1" gd:fragmentGUID="0edb9f71-bdde-44af-85a5-f31f58e391a1" okres="okr_obowiazywanie.zdarz_wejscie_2024-02-22_DU-2024-227_domyslne.x" wejscie-w-zycie="2024-02-22">Dotychczasowy pracodawca jest obowiązany, w terminie 14 dni od dnia wejścia w życie niniejszego przepisu, zawiadomić na piśmie pracowników, o których mowa w ust. 1, o zmianach, jakie mają nastąpić w zakresie ich stosunków pracy.</zdanie>
+          <zdanie nr="2" gd:zdGUID="9049f0d0-5ea3-4eec-b70f-0cd9c29b2825" fragment="1" gd:fragmentGUID="f9003ee7-527d-45e1-acf3-f2b3e8395365" okres="okr_obowiazywanie.zdarz_wejscie_2024-02-22_DU-2024-227_domyslne.x" wejscie-w-zycie="2024-02-22">Przepis art. 23<sup>1</sup> § 4 ustawy z dnia 26 czerwca 1974 r. – Kodeks pracy (Dz. U. z 2023 r. poz. 1465) stosuje się odpowiednio.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2024/227__art_3__ust_3" gd:GUID="2ef559c9-1d7d-4a83-83d2-dbcb35b9d033" okres="okr_obowiazywanie.zdarz_wejscie_2024-02-22_DU-2024-227_domyslne.x" wejscie-w-zycie="2024-02-22">
+        <nr>3</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="80b7e066-145a-4336-a9ee-8dc9e7b6383e" fragment="1" gd:fragmentGUID="d7042972-6f5d-422e-a653-3c8b732791ad" okres="okr_obowiazywanie.zdarz_wejscie_2024-02-22_DU-2024-227_domyslne.x" wejscie-w-zycie="2024-02-22">Przepisu ust. 2 zdanie drugie nie stosuje się do urzędników służby cywilnej, do których stosuje się przepisy ustawy z dnia 21 listopada 2008 r. o służbie cywilnej (Dz. U. z 2022 r. poz. 1691 oraz z 2023 r. poz. 1195 i 1598).</zdanie>
+        </p>
+      </ustep>
+    </artykul>
+    <artykul eId="DU/2024/227__art_4" gd:GUID="b9a905c7-d924-4067-b27e-00593ece84bf" okres="okr_obowiazywanie.zdarz_wejscie_2024-03-07_DU-2024-227_domyslne.x" wejscie-w-zycie="2024-03-07">
+      <nr>4</nr>
+      <ustep eId="DU/2024/227__art_4__ust_1" gd:GUID="986cb848-988c-4cb1-a4aa-86ec21a37858" okres="okr_obowiazywanie.zdarz_wejscie_2024-03-07_DU-2024-227_domyslne.x" wejscie-w-zycie="2024-03-07">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="7520ee56-1a12-471a-803a-0a279a6047a6" fragment="1" gd:fragmentGUID="cc9eab2c-68f0-4b5a-bfb1-e8b018a53aab" okres="okr_obowiazywanie.zdarz_wejscie_2024-03-07_DU-2024-227_domyslne.x" wejscie-w-zycie="2024-03-07">W celu wykonania przepisów niniejszej ustawy Prezes Rady Ministrów dokona, w drodze rozporządzenia, przeniesienia planowanych dochodów i wydatków budżetowych, w tym wynagrodzeń, między częściami, działami i rozdziałami budżetu państwa, z zachowaniem przeznaczenia środków publicznych wynikającego z ustawy budżetowej.</zdanie>
+          <zdanie nr="2" gd:zdGUID="c5518df8-25a7-4f46-8e77-e277c0353b06" fragment="1" gd:fragmentGUID="15b312a0-83ca-4e49-b17d-60132538912f" okres="okr_obowiazywanie.zdarz_wejscie_2024-03-07_DU-2024-227_domyslne.x" wejscie-w-zycie="2024-03-07">Do dnia wejścia w życie tego rozporządzenia dochody i wydatki mogą być realizowane w ramach dotychczasowych części, działów i rozdziałów.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2024/227__art_4__ust_2" gd:GUID="5c622549-47e9-4ff0-86ec-68881b4b0a0d" okres="okr_obowiazywanie.zdarz_wejscie_2024-03-07_DU-2024-227_domyslne.x" wejscie-w-zycie="2024-03-07">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="8326e67a-ca6f-4e77-90ab-5332fc5734f0" fragment="1" gd:fragmentGUID="16c4d05d-4c17-43c0-8187-7fe02f1056a1" okres="okr_obowiazywanie.zdarz_wejscie_2024-03-07_DU-2024-227_domyslne.x" wejscie-w-zycie="2024-03-07">W przypadku braku możliwości wskazania osób, o których mowa w art. 3 ust. 1, Prezes Rady Ministrów, wydając rozporządzenie, o którym mowa w ust. 1, dokonuje przeniesienia planowanych dochodów i wydatków budżetowych w zakresie wynagrodzeń i wydatków rzeczowych proporcjonalnie do przejmowanych zadań.</zdanie>
+        </p>
+      </ustep>
+    </artykul>
+    <artykul eId="DU/2024/227__art_5" gd:GUID="477a58a8-cd93-4148-b410-aea9ef3541c9" okres="okr_obowiazywanie.zdarz_wejscie_2024-03-07_DU-2024-227_domyslne.x" wejscie-w-zycie="2024-03-07">
+      <nr>5</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="df1f5f8a-c1b2-432d-bbe7-730c282ae76d" okres="okr_obowiazywanie.zdarz_wejscie_2024-03-07_DU-2024-227_domyslne.x" wejscie-w-zycie="2024-03-07">
+        <p>
+          <zdanie nr="1" gd:zdGUID="de638e47-b154-4d7e-984c-6ef7e262442c" fragment="1" gd:fragmentGUID="078c5f95-8043-4807-b849-4e2b706e85b8" okres="okr_obowiazywanie.zdarz_wejscie_2024-03-07_DU-2024-227_domyslne.x" wejscie-w-zycie="2024-03-07">Prezes Rady Ministrów określi, w drodze zarządzenia, przeznaczenie składników majątkowych będących przed dniem wejścia w życie niniejszej ustawy w posiadaniu ministra właściwego do spraw rozwoju regionalnego, przeznaczonych do realizacji zadań, które zostają przekazane niniejszą ustawą ministrowi właściwemu do spraw szkolnictwa wyższego i nauki.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2024/227__art_6" gd:GUID="886c9d66-6e4f-4b08-a5eb-efd07eae7702" okres="okr_obowiazywanie.zdarz_wejscie_2024-03-07_DU-2024-227_domyslne.x" wejscie-w-zycie="2024-03-07">
+      <nr>6</nr>
+      <ustep eId="DU/2024/227__art_6__ust_1" gd:GUID="2a2d9360-ae4c-431c-91ce-b7eea12f0969" okres="okr_obowiazywanie.zdarz_wejscie_2024-03-07_DU-2024-227_domyslne.x" wejscie-w-zycie="2024-03-07">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="50a57e5e-842f-4e9a-a785-0438dd82fb72" fragment="1" gd:fragmentGUID="190489f9-98b1-42cf-b123-adc38f35806c" okres="okr_obowiazywanie.zdarz_wejscie_2024-03-07_DU-2024-227_domyslne.x" wejscie-w-zycie="2024-03-07">Z dniem wejścia w życie niniejszej ustawy minister właściwy do spraw szkolnictwa wyższego i nauki przejmuje prawa oraz obowiązki ministra właściwego do spraw rozwoju regionalnego określone w ustawach zmienianych w art. 1 i art. 2, w tym wynikające z zawartych umów i porozumień, z wyjątkiem prawa do wskazywania członka Rady Narodowego Centrum Badań i Rozwoju zgodnie z art. 12 ust. 1 pkt 3 ustawy zmienianej w art. 1.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2024/227__art_6__ust_2" gd:GUID="d7a990b9-761f-45a1-a29f-614772f58a02" okres="okr_obowiazywanie.zdarz_wejscie_2024-03-07_DU-2024-227_domyslne.x" wejscie-w-zycie="2024-03-07">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="30aed09d-cb84-4818-9bb3-2a249febc413" fragment="1" gd:fragmentGUID="2c281938-50d7-4a24-9d60-cdb2f994031f" okres="okr_obowiazywanie.zdarz_wejscie_2024-03-07_DU-2024-227_domyslne.x" wejscie-w-zycie="2024-03-07">Do wynikających z przejęcia praw oraz obowiązków, o którym mowa w ust. 1, spraw wszczętych i niezakończonych przed dniem wejścia w życie niniejszej ustawy stosuje się przepisy dotychczasowe, z tym że sprawy te toczą się przed ministrem właściwym do spraw szkolnictwa wyższego i nauki.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2024/227__art_6__ust_3" gd:GUID="49c92fdb-9395-4812-8f49-31b246f5e81f" okres="okr_obowiazywanie.zdarz_wejscie_2024-03-07_DU-2024-227_domyslne.x" wejscie-w-zycie="2024-03-07">
+        <nr>3</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="1c57f014-ede2-401a-bbea-5285378beeab" fragment="1" gd:fragmentGUID="f790fffd-c86e-4f47-ba2a-7b947aa0a9be" okres="okr_obowiazywanie.zdarz_wejscie_2024-03-07_DU-2024-227_domyslne.x" wejscie-w-zycie="2024-03-07">Czynności dokonane przed dniem wejścia w życie niniejszej ustawy przez ministra właściwego do spraw rozwoju regionalnego w sprawach wynikających z praw oraz obowiązków przejmowanych przez ministra właściwego do spraw szkolnictwa wyższego i nauki oraz dokumenty sporządzone przez ministra właściwego do spraw rozwoju regionalnego albo przy jego udziale przed dniem wejścia w życie niniejszej ustawy, w szczególności powołania, ustalenia, zatwierdzenia i zgody, zachowują ważność, przy czym dokumenty wydane na czas określony zachowują ważność do końca okresu, na który zostały wydane.</zdanie>
+        </p>
+      </ustep>
+    </artykul>
+    <artykul eId="DU/2024/227__art_7" gd:GUID="58fadeb3-0fc8-4263-bccd-8636937cb398" okres="okr_obowiazywanie.zdarz_wejscie_2024-03-07_DU-2024-227_domyslne.x" wejscie-w-zycie="2024-03-07">
+      <nr>7</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="748cb3f4-6102-47a6-b8f1-89cc44f7c117" okres="okr_obowiazywanie.zdarz_wejscie_2024-03-07_DU-2024-227_domyslne.x" wejscie-w-zycie="2024-03-07">
+        <p>
+          <zdanie nr="1" gd:zdGUID="3b793da8-5621-4daf-a1ff-51bee958899c" fragment="1" gd:fragmentGUID="c49d9d80-f3d9-41aa-8e7a-7b7610040c5a" okres="okr_obowiazywanie.zdarz_wejscie_2024-03-07_DU-2024-227_domyslne.x" wejscie-w-zycie="2024-03-07">Dyrektor generalny urzędu obsługującego ministra właściwego do spraw rozwoju regionalnego, w terminie 30 dni od dnia wejścia w życie niniejszej ustawy, przekaże protokolarnie dyrektorowi generalnemu urzędu obsługującego ministra właściwego do spraw szkolnictwa wyższego i nauki dokumentację, w tym w postaci informatycznych nośników danych, związaną z wykonywaniem praw oraz obowiązków przejętych zgodnie z art. 6 ust. 1, w tym dotyczącą spraw wszczętych i niezakończonych przed dniem wejścia w życie niniejszej ustawy.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2024/227__art_8" gd:GUID="30c49fec-865e-4625-8279-a2e7df657f3a" okres="okr_obowiazywanie.zdarz_wejscie_2024-03-07_DU-2024-227_domyslne.x" wejscie-w-zycie="2024-03-07">
+      <nr>8</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="c96dd4f3-b5d3-4c99-87c6-72b928bb544d" okres="okr_obowiazywanie.zdarz_wejscie_2024-03-07_DU-2024-227_domyslne.x" wejscie-w-zycie="2024-03-07">
+        <p>
+          <zdanie nr="1" gd:zdGUID="38139418-efc9-4680-a7f0-3a6baa50fb19" fragment="1" gd:fragmentGUID="c0b581d2-07e8-444d-a488-3509babb71ed" okres="okr_obowiazywanie.zdarz_wejscie_2024-03-07_DU-2024-227_domyslne.x" wejscie-w-zycie="2024-03-07">Dyrektor Narodowego Centrum Badań i Rozwoju oraz członek Komitetu Sterującego do spraw badań naukowych i prac rozwojowych w obszarze bezpieczeństwa i obronności państwa będący przedstawicielem ministra właściwego do spraw rozwoju regionalnego pełnią swoje funkcje do końca kadencji, jeżeli w terminie 2 miesięcy od dnia wejścia w życie niniejszej ustawy nie zostaną odwołani przez ministra właściwego do spraw szkolnictwa wyższego i nauki.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2024/227__art_9" gd:GUID="7f5a1a1a-946c-4564-a133-5a1cf559fe51" okres="okr_obowiazywanie.zdarz_wejscie_2024-03-07_DU-2024-227_domyslne.x" wejscie-w-zycie="2024-03-07">
+      <nr>9</nr>
+      <ustep eId="DU/2024/227__art_9__ust_1" gd:GUID="8e0c97a9-d3d2-437a-9dcb-5ecd9a706a0b" okres="okr_obowiazywanie.zdarz_wejscie_2024-03-07_DU-2024-227_domyslne.x" wejscie-w-zycie="2024-03-07">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="96064c11-c53b-49ed-be13-671a0273cabb" fragment="1" gd:fragmentGUID="74317eba-5f55-4e69-b5be-efa78eb4b12d" okres="okr_obowiazywanie.zdarz_wejscie_2024-03-07_DU-2024-227_domyslne.x" wejscie-w-zycie="2024-03-07">Minister właściwy do spraw szkolnictwa wyższego i nauki może wystąpić do Dyrektora Narodowego Centrum Badań i Rozwoju z wnioskiem o dokonanie zmian w rocznym planie działalności Narodowego Centrum Badań i Rozwoju na rok 2024 zatwierdzonym przez ministra właściwego do spraw rozwoju regionalnego.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2024/227__art_9__ust_2" gd:GUID="f31d3c6a-b6bb-4fa1-9a00-fe08015f6e0d" okres="okr_obowiazywanie.zdarz_wejscie_2024-03-07_DU-2024-227_domyslne.x" wejscie-w-zycie="2024-03-07">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="5e60f7b3-ce5c-46ac-9f53-9bccd607464b" fragment="1" gd:fragmentGUID="bd60a5d3-debb-4037-a228-1026150abff0" okres="okr_obowiazywanie.zdarz_wejscie_2024-03-07_DU-2024-227_domyslne.x" wejscie-w-zycie="2024-03-07">We wniosku, o którym mowa w ust. 1, minister właściwy do spraw szkolnictwa wyższego i nauki wskazuje zakres wnioskowanych zmian w rocznym planie działalności Narodowego Centrum Badań i Rozwoju na rok 2024 i termin ich przedłożenia do zatwierdzenia.</zdanie>
+        </p>
+      </ustep>
+    </artykul>
+    <artykul eId="DU/2024/227__art_10" gd:GUID="94befa92-c753-4b9e-a2b1-755a4ad29425" okres="okr_obowiazywanie.zdarz_wejscie_2024-03-07_DU-2024-227_domyslne.x" wejscie-w-zycie="2024-03-07">
+      <nr>10</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="a2844201-af9c-43b0-86a1-967dea7d2c38" okres="okr_obowiazywanie.zdarz_wejscie_2024-03-07_DU-2024-227_domyslne.x" wejscie-w-zycie="2024-03-07">
+        <p>
+          <zdanie nr="1" gd:zdGUID="e7da8301-add8-43b4-be68-2f4121358548" fragment="1" gd:fragmentGUID="f686f2b6-3ef2-4edc-a808-62000684c7c9" okres="okr_obowiazywanie.zdarz_wejscie_2024-03-07_DU-2024-227_domyslne.x" wejscie-w-zycie="2024-03-07">Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia, z wyjątkiem art. 3 ust. 2 i 3, które wchodzą w życie z dniem następującym po dniu ogłoszenia.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <organ-podpisujacy>Prezydent Rzeczypospolitej Polskiej: <i><osoba podpisujacy="true" gd:osobaGUID="98656e3d-74ad-4e54-840e-30f708b578b4"><imie>A.</imie> <nazwisko>Duda</nazwisko></osoba></i></organ-podpisujacy>
+  </ustawa>
+</akt-prawny>

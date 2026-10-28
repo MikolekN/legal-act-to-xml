@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <ustawa>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/1056</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>180db68a-4f47-4798-810b-066a2e045f4d</gd:GUIDwersji>
+      <AdresISAP>WDU20250001056</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>1056</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 1056</AdresWyswietlany>
+      <Tytul>Ustawa z dnia 25 lipca 2025 r. o zmianie ustawy o restrukturyzacji zadłużenia podmiotów prowadzących gospodarstwa rolne</Tytul>
+      <Rodzaj>USTAWA</Rodzaj>
+      <DataOgloszenia>2025-08-04</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-07-25</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2025-08-19_DU-2025-1056_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2025-08-19" warunek="po upływie 14 dni od dnia ogłoszenia" podstawa="art. 3" zrodlo="https://eli.gov.pl/eli/DU/2025/1056" dowod="DU/2025/1056__art_3" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2025-08-19_DU-2025-1056_domyslne.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2025-08-19_DU-2025-1056_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="2a0dcd0b-ca5d-4e61-94c0-2e760c5a9a95" rola="wydajacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Sejm">
+          <Nazwa>SEJM</Nazwa>
+        </Organ>
+        <Organ gd:GUID="5d2cc995-2cae-4d62-9ee1-6cc468a45bc0" rola="podpisujacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Prezydent">
+          <Nazwa>Prezydent Rzeczypospolitej Polskiej</Nazwa>
+          <OrganPodpisujacy>Prezydent Rzeczypospolitej Polskiej</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>A.</imie> <nazwisko>Duda</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Ustawa</rodzaj-aktu>
+    <data>z dnia 25 lipca 2025 r.</data>
+    <tytul>o zmianie ustawy o restrukturyzacji zadłużenia podmiotów prowadzących gospodarstwa rolne</tytul>
+    <artykul eId="DU/2025/1056__art_1" gd:GUID="ddf396f8-ea4c-4c48-abc3-7d2e2767be25" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-19_DU-2025-1056_domyslne.x" wejscie-w-zycie="2025-08-19">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="6180272b-fdc4-47a1-9cf6-e150793130b0" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-19_DU-2025-1056_domyslne.x" wejscie-w-zycie="2025-08-19">
+        <p>
+          <zdanie nr="1" gd:zdGUID="94f63306-6b95-4135-ad3f-831e18d15656" fragment="1" gd:fragmentGUID="9383a27b-df5a-4679-b762-7e3c5966158f" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-19_DU-2025-1056_domyslne.x" wejscie-w-zycie="2025-08-19">W ustawie z dnia 9 listopada 2018 r. o restrukturyzacji zadłużenia podmiotów prowadzących gospodarstwa rolne (Dz. U. z 2019 r. poz. 33) w art. 7 po ust. 6 dodaje się ust. 6a w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2019/33" cudzyslowy="oba" gd:nowGUID="577d8d05-7c66-4dfc-b986-5013bc21de44" element-eId="DU/2019/33__art_7__ust_6" funkcja="dodaj-po"><ustep eId="DU/2019/33__art_7__ust_6a" gd:GUID="eb574010-b639-4544-8946-2fbfbfd82a04" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-19_DU-2025-1056_domyslne.x" wejscie-w-zycie="2025-08-19"><nr>6a</nr><p><zdanie nr="1" gd:zdGUID="dd6efe75-4f36-4fcf-a985-960758d67158" fragment="1" gd:fragmentGUID="8129f4e5-a0c4-444c-b354-e8efd9d8ee44" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-19_DU-2025-1056_domyslne.x" wejscie-w-zycie="2025-08-19">Złożenie wniosku o przejęcie długu, o którym mowa w ust. 1, powoduje zawieszenie postępowań egzekucyjnych prowadzonych w sprawach długu objętego wnioskiem do czasu odpowiednio rozpatrzenia albo pozostawienia bez rozpatrzenia tego wniosku.</zdanie><zdanie nr="2" gd:zdGUID="e343417f-4267-4b06-b392-f1ddeb8366dc" fragment="1" gd:fragmentGUID="a8072579-f75f-48bf-94ff-1f5f32cf644c" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-19_DU-2025-1056_domyslne.x" wejscie-w-zycie="2025-08-19">Kolejne wnioski o przejęcie tego samego długu nie powodują zawieszenia postępowań egzekucyjnych prowadzonych w sprawach długu objętego tymi wnioskami.</zdanie></p></ustep></cytat-strukt>.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2025/1056__art_2" gd:GUID="45a8bf8c-9e3d-4c05-99c7-56bcbf2cb7df" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-19_DU-2025-1056_domyslne.x" wejscie-w-zycie="2025-08-19">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="42fed930-bf30-43dc-90e8-422f4a9a5fe8" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-19_DU-2025-1056_domyslne.x" wejscie-w-zycie="2025-08-19">
+        <p>
+          <zdanie nr="1" gd:zdGUID="4e3d85d7-86a6-4c4c-8ac4-9643cc9ddc09" fragment="1" gd:fragmentGUID="4edd1448-0a28-44e4-b83a-e1a316733345" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-19_DU-2025-1056_domyslne.x" wejscie-w-zycie="2025-08-19">Przepis art. 7 ust. 6a ustawy zmienianej w art. 1 stosuje się także do wniosków o przejęcie długu, o których mowa w art. 7 ust. 2 ustawy zmienianej w art. 1, złożonych i nierozpatrzonych przed dniem wejścia w życie niniejszej ustawy.</zdanie>
+          <zdanie nr="2" gd:zdGUID="c19ae0a1-8f01-45fe-bdbb-46eaca116dfc" fragment="1" gd:fragmentGUID="01e41570-afcf-4d1a-a792-b395ea8fbdc1" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-19_DU-2025-1056_domyslne.x" wejscie-w-zycie="2025-08-19">W tym przypadku zawieszenie postępowania egzekucyjnego następuje z dniem wejścia w życie niniejszej ustawy.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2025/1056__art_3" gd:GUID="093a94fb-1901-476a-896a-9eccf06a0851" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-19_DU-2025-1056_domyslne.x" wejscie-w-zycie="2025-08-19">
+      <nr>3</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="1bed12c0-4b6c-4597-8ae7-d5500c5ff7fe" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-19_DU-2025-1056_domyslne.x" wejscie-w-zycie="2025-08-19">
+        <p>
+          <zdanie nr="1" gd:zdGUID="ac0c39dc-4ccc-4d07-b24b-60c22895e5a9" fragment="1" gd:fragmentGUID="373d923f-7342-49d3-980c-a27d770f31c0" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-19_DU-2025-1056_domyslne.x" wejscie-w-zycie="2025-08-19">Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <organ-podpisujacy>Prezydent Rzeczypospolitej Polskiej: <i><osoba podpisujacy="true" gd:osobaGUID="d56621b9-925b-49c4-afdd-cf7a20c812a5"><imie>A.</imie> <nazwisko>Duda</nazwisko></osoba></i></organ-podpisujacy>
+  </ustawa>
+</akt-prawny>

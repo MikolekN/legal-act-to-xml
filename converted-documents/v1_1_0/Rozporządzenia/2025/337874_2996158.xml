@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <rozporzadzenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/1148</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>de0d4f53-6aef-4cb3-9068-7312c8fc3285</gd:GUIDwersji>
+      <AdresISAP>WDU20250001148</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>1148</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 1148</AdresWyswietlany>
+      <Tytul>Rozporządzenie Ministra Finansów i Gospodarki z dnia 18 sierpnia 2025 r. zmieniające rozporządzenie w sprawie środków skażających alkohol etylowy</Tytul>
+      <Rodzaj>ROZP</Rodzaj>
+      <DataOgloszenia>2025-08-20</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-08-18</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2025-08-21_DU-2025-1148_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2025-08-21" warunek="z dniem następującym po dniu ogłoszenia" podstawa="§ 2" zrodlo="https://eli.gov.pl/eli/DU/2025/1148" dowod="DU/2025/1148__art_2">
+            <JednostkaAktu eId="DU/2025/1148__art_1__pkt_2">
+              <JednostkaWZakresie eId="DU/2023/426__art_2__pkt_3e" />
+            </JednostkaAktu>
+          </Zdarzenie>
+          <Zdarzenie id="zdarz_wejscie_2026-02-21_DU-2025-1148_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2026-02-21" warunek="po upływie 6 miesięcy od dnia ogłoszenia" podstawa="§ 2" zrodlo="https://eli.gov.pl/eli/DU/2025/1148" dowod="DU/2025/1148__art_2" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2025-08-21_DU-2025-1148_domyslne.x" glowna="false">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2025-08-21_DU-2025-1148_domyslne" />
+        </GrupaCzasowa>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2026-02-21_DU-2025-1148_domyslne.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2026-02-21_DU-2025-1148_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="25419065-f874-4c55-9cd1-5b50b58b0eeb" rola="wydajacy">
+          <Nazwa>Minister Finansów i Gospodarki</Nazwa>
+          <OrganPodpisujacy>Minister Finansów i Gospodarki</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>A.</imie> <nazwisko>Domański</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Rozporządzenie</rodzaj-aktu>
+    <autor-aktu>Ministra Finansów i Gospodarki<odnosnik id-odnosnika="1" symbol="1" gd:GUID="5c31b7e3-6557-488b-8517-53ed25e90cdc"><p><zdanie nr="1" gd:zdGUID="c8c96ced-52e1-43c7-b430-1e168ab58ced" fragment="1" gd:fragmentGUID="da0bd48b-1a7f-49d1-a33c-a28d4848c14c">Minister Finansów i Gospodarki kieruje działem administracji rządowej – finanse publiczne, na podstawie § 1 ust. 2 pkt 3 rozporządzenia Prezesa Rady Ministrów z dnia 25 lipca 2025 r. w sprawie szczegółowego zakresu działania Ministra Finansów i Gospodarki (Dz. U. poz. 997).</zdanie></p></odnosnik></autor-aktu>
+    <data>z dnia 18 sierpnia 2025 r.</data>
+    <tytul>zmieniające rozporządzenie w sprawie środków skażających alkohol etylowy</tytul>
+    <podstawa-prawna>Na podstawie art. 38 ust. 1 pkt 3 ustawy z dnia 6 grudnia 2008 r. o podatku akcyzowym (Dz. U. z 2025 r. poz. 126, 222 i 340) zarządza się, co następuje:</podstawa-prawna>
+    <paragraf eId="DU/2025/1148__art_1" gd:GUID="60f48b10-ea18-479b-9eb0-4e17187c6008" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-21_DU-2025-1148_domyslne.x" wejscie-w-zycie="2026-02-21">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="0548d600-329c-42e5-81c9-c9f498f2e76e" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-21_DU-2025-1148_domyslne.x" wejscie-w-zycie="2026-02-21">
+        <p>
+          <zdanie nr="1" gd:zdGUID="2a56ae8d-bd57-42c9-801e-5ced70caea0e" fragment="1" gd:fragmentGUID="eec9410f-30ef-47de-873e-05d7bea30eed" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-21_DU-2025-1148_domyslne.x" wejscie-w-zycie="2026-02-21">W rozporządzeniu Ministra Finansów z dnia 31 października 2018 r. w sprawie środków skażających alkohol etylowy (Dz. U. z 2023 r. poz. 426 i 521 oraz z 2025 r. poz. 218) w § 2:</zdanie>
+        </p>
+        <punkt eId="DU/2025/1148__art_1__pkt_1" gd:GUID="29623c6f-dd0b-4139-b18f-0aa2085f8a0d" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-21_DU-2025-1148_domyslne.x" wejscie-w-zycie="2026-02-21">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="2a56ae8d-bd57-42c9-801e-5ced70caea0e" fragment="2" gd:fragmentGUID="2189deb4-81f5-46f2-b628-df9e5614aed4" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-21_DU-2025-1148_domyslne.x" wejscie-w-zycie="2026-02-21"><now:zamien-tekst stary-tekst="lub alkohol izopropylowy 10 000 ml" nowy-tekst="" element-eId="DU/2023/426__art_2__pkt_3" akt="https://eli.gov.pl/eli/DU/2023/426" gd:nowGUID="12305377-2a04-4c00-8b8d-ffd9bf1f8313" />w pkt 3 we wprowadzeniu do wyliczenia skreśla się wyrazy „lub alkohol izopropylowy 10 000 ml”;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1148__art_1__pkt_2" gd:GUID="d1fb48be-a09d-4457-88b7-2f25331650eb" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-21_DU-2025-1148_domyslne.x" wejscie-w-zycie="2026-02-21">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="2a56ae8d-bd57-42c9-801e-5ced70caea0e" fragment="3" gd:fragmentGUID="073c4bce-b501-4a52-a85d-928d97be0992" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-21_DU-2025-1148_domyslne.x" wejscie-w-zycie="2026-02-21">po pkt 3a dodaje się pkt 3b–3e w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/426" cudzyslowy="oba" gd:nowGUID="557632f5-1130-4ae2-ac0f-2b58f07e408b" element-eId="DU/2023/426__art_2__pkt_3a" funkcja="dodaj-po"><punkt eId="DU/2023/426__art_2__pkt_3b" gd:GUID="24d2b6ec-b9bf-41a5-8556-b9a38a8a065a" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-21_DU-2025-1148_domyslne.x" wejscie-w-zycie="2026-02-21"><nr>3b</nr><p><zdanie nr="1" gd:zdGUID="6cbbee5f-f2c9-43a6-876e-123da1c3fe2b" fragment="1" gd:fragmentGUID="762aebde-26c6-4852-ba3f-a13757cf6e44" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-21_DU-2025-1148_domyslne.x" wejscie-w-zycie="2026-02-21">alkohol izopropylowy 10 000 ml, w ilości minimalnej na 1 hl alkoholu 100 % vol, w przypadku produkcji produktów biobójczych, o których mowa w pkt 3 lit. a, w postaci:</zdanie></p><litera eId="DU/2023/426__art_2__pkt_3b__lit_a" gd:GUID="861fe6cf-649e-4a09-9640-4c175e6975d7" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-21_DU-2025-1148_domyslne.x" wejscie-w-zycie="2026-02-21"><nr>a</nr><p><zdanie nr="1" gd:zdGUID="6cbbee5f-f2c9-43a6-876e-123da1c3fe2b" fragment="2" gd:fragmentGUID="2ef2df67-0d80-4089-9d2a-aa552f8d82fc" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-21_DU-2025-1148_domyslne.x" wejscie-w-zycie="2026-02-21">płynu pakowanego w opakowania jednostkowe, o pojemności do 5000 ml,</zdanie></p></litera><litera eId="DU/2023/426__art_2__pkt_3b__lit_b" gd:GUID="59e5448f-2ab0-4ad6-91bf-f11afc3a674c" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-21_DU-2025-1148_domyslne.x" wejscie-w-zycie="2026-02-21"><nr>b</nr><p><zdanie nr="1" gd:zdGUID="6cbbee5f-f2c9-43a6-876e-123da1c3fe2b" fragment="3" gd:fragmentGUID="9bb67abe-43fd-4930-bd25-9fcf9b73098a" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-21_DU-2025-1148_domyslne.x" wejscie-w-zycie="2026-02-21">żeli, kremów i chusteczek do dezynfekcji, pakowanych w opakowania jednostkowe, o dowolnej pojemności;</zdanie></p></litera></punkt><punkt eId="DU/2023/426__art_2__pkt_3c" gd:GUID="9c3968ab-a090-4a21-b450-86226e21bde2" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-21_DU-2025-1148_domyslne.x" wejscie-w-zycie="2026-02-21"><nr>3c</nr><p><zdanie nr="1" gd:zdGUID="6cbbee5f-f2c9-43a6-876e-123da1c3fe2b" fragment="4" gd:fragmentGUID="9cb1d0d1-a704-4f25-9379-f93b5fecd935" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-21_DU-2025-1148_domyslne.x" wejscie-w-zycie="2026-02-21">alkohol izopropylowy 10 000 ml, w ilości minimalnej na 1 hl alkoholu 100 % vol, w przypadku produkcji produktów biobójczych, o których mowa w pkt 3 lit. b;</zdanie></p></punkt><punkt eId="DU/2023/426__art_2__pkt_3d" gd:GUID="a4c96b74-15e7-4e0d-a169-8bd36e85cf24" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-21_DU-2025-1148_domyslne.x" wejscie-w-zycie="2026-02-21"><nr>3d</nr><p><zdanie nr="1" gd:zdGUID="6cbbee5f-f2c9-43a6-876e-123da1c3fe2b" fragment="5" gd:fragmentGUID="592e4a70-13e4-47cc-9823-aa378f8de61f" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-21_DU-2025-1148_domyslne.x" wejscie-w-zycie="2026-02-21">alkohol izopropylowy 10 000 ml, w ilości minimalnej na 1 hl alkoholu 100 % vol, w przypadku produkcji produktów biobójczych, o których mowa w pkt 3, spełniających wymagania dla wyrobów medycznych określone w pkt 4;</zdanie></p></punkt><punkt eId="DU/2023/426__art_2__pkt_3e" gd:GUID="3d1da634-656c-471e-acca-2f32cf49cef0" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-21_DU-2025-1148_domyslne.x" wejscie-w-zycie="2025-08-21"><nr>3e</nr><p><zdanie nr="1" gd:zdGUID="6cbbee5f-f2c9-43a6-876e-123da1c3fe2b" fragment="6" gd:fragmentGUID="80dab6c3-65fa-46d6-a437-d91874cfb74d" okres="okr_obowiazywanie.zdarz_wejscie_2025-08-21_DU-2025-1148_domyslne.x" wejscie-w-zycie="2025-08-21">keton etylowo-metylowy 1000 ml, w ilości minimalnej na 1 hl alkoholu etylowego 100 % vol, w przypadku produkcji produktów biobójczych, o których mowa w pkt 3, w postaci żeli i kremów, pakowanych w opakowania jednostkowe o pojemności do 500 ml;</zdanie></p></punkt></cytat-strukt>.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2025/1148__art_2" gd:GUID="395d31db-0191-49d8-bdaa-744cf07da6ca" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-21_DU-2025-1148_domyslne.x" wejscie-w-zycie="2026-02-21">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="c0328d79-5e57-4686-89f4-f4b0c2c439bb" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-21_DU-2025-1148_domyslne.x" wejscie-w-zycie="2026-02-21">
+        <p>
+          <zdanie nr="1" gd:zdGUID="4bb644af-ad5f-4547-8652-8ef8a4cad713" fragment="1" gd:fragmentGUID="e5b373b6-4a29-408e-8e6d-c4ebe3bc6e5b" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-21_DU-2025-1148_domyslne.x" wejscie-w-zycie="2026-02-21">Rozporządzenie wchodzi w życie po upływie 6 miesięcy od dnia ogłoszenia, z wyjątkiem § 1 pkt 2 w zakresie § 2 pkt 3e, który wchodzi w życie z dniem następującym po dniu ogłoszenia.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <organ-podpisujacy>Minister Finansów i Gospodarki: <i><osoba podpisujacy="true" gd:osobaGUID="04c326ee-8d77-48e5-8d0d-a8ddc34f719a"><imie>A.</imie> <nazwisko>Domański</nazwisko></osoba></i></organ-podpisujacy>
+  </rozporzadzenie>
+</akt-prawny>

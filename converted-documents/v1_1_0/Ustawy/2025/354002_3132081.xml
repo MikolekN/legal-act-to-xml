@@ -1,0 +1,335 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <ustawa>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/1807</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>574f9201-5793-49b2-b0ba-5ad637f6bd1f</gd:GUIDwersji>
+      <AdresISAP>WDU20250001807</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>1807</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 1807</AdresWyswietlany>
+      <Tytul>Ustawa z dnia 21 listopada 2025 r. o zmianie ustawy o Centralnym Azylu dla Zwierząt</Tytul>
+      <Rodzaj>USTAWA</Rodzaj>
+      <DataOgloszenia>2025-12-17</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-11-21</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2026-01-01" warunek="po upływie 14 dni od dnia ogłoszenia" podstawa="art. 2" zrodlo="https://eli.gov.pl/eli/DU/2025/1807" dowod="DU/2025/1807__art_2" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="059a73ee-4812-46b5-921f-f4ee8f9a63c7" rola="wydajacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Sejm">
+          <Nazwa>SEJM</Nazwa>
+        </Organ>
+        <Organ gd:GUID="cfe35880-90c3-4615-8b2c-04f390082ec6" rola="podpisujacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Prezydent">
+          <Nazwa>Prezydent Rzeczypospolitej Polskiej</Nazwa>
+          <OrganPodpisujacy>Prezydent Rzeczypospolitej Polskiej</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>K.</imie> <nazwisko>Nawrocki</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Ustawa</rodzaj-aktu>
+    <data>z dnia 21 listopada 2025 r.</data>
+    <tytul>o zmianie ustawy o Centralnym Azylu dla Zwierząt</tytul>
+    <artykul eId="DU/2025/1807__art_1" gd:GUID="1b919440-4a83-471c-9220-7cf5c2f3b8c6" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="5c5196fd-b77d-4f11-a9d7-4cb77e9acd74" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="7bb55a86-da5b-4393-a9b4-cbce2d9716ec" fragment="1" gd:fragmentGUID="34089e1c-fd81-41bd-865a-71c1f57beb5a" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">W ustawie z dnia 4 listopada 2022 r. o Centralnym Azylu dla Zwierząt (Dz. U. poz. 2375 oraz z 2025 r. poz. 1795) wprowadza się następujące zmiany:</zdanie>
+        </p>
+        <punkt eId="DU/2025/1807__art_1__pkt_1" gd:GUID="f592bfc9-51f7-475a-9ab4-50693b4d6108" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="7bb55a86-da5b-4393-a9b4-cbce2d9716ec" fragment="2" gd:fragmentGUID="4abaab89-7b2c-4e8d-af00-b285d8b72656" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">w art. 4:</zdanie>
+          </p>
+          <litera eId="DU/2025/1807__art_1__pkt_1__lit_a" gd:GUID="f133dabf-eba2-4c82-95c4-673b729f02da" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="7bb55a86-da5b-4393-a9b4-cbce2d9716ec" fragment="3" gd:fragmentGUID="c420e9d0-a819-450a-8d04-a8cc862afc53" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01"><now:zamien-tekst stary-tekst="transport i" nowy-tekst="" element-eId="DU/2022/2375__art_4__pkt_2" akt="https://eli.gov.pl/eli/DU/2022/2375" gd:nowGUID="813e66c3-3799-4f73-b4ed-889dad571b79" />w pkt 2 skreśla się wyrazy „transport i”,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1807__art_1__pkt_1__lit_b" gd:GUID="730a7cc1-94ed-4db9-a376-0308847c1b6e" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="7bb55a86-da5b-4393-a9b4-cbce2d9716ec" fragment="4" gd:fragmentGUID="1259af60-38a0-4784-bbdb-c42e060c3c3f" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">po pkt 3 dodaje się pkt 3a w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2022/2375" cudzyslowy="oba" gd:nowGUID="9dfaaef8-70c5-4833-a0f3-e99763fbab06" element-eId="DU/2022/2375__art_4__pkt_3" funkcja="dodaj-po"><punkt eId="DU/2022/2375__art_4__pkt_3a" gd:GUID="3b904582-4dd2-49bd-a82f-f0cba5c9cd2a" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01"><nr>3a</nr><p><zdanie nr="1" gd:zdGUID="b4270dee-6f5a-421e-b879-6f9d699b5a6a" fragment="1" gd:fragmentGUID="95b1a42c-d5c4-4fa5-9e69-c4934d0a49fa" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">transport okazów gatunków zwierząt, o których mowa w pkt 2 i 3, po uzyskaniu zgody Dyrektora Centralnego Azylu;</zdanie></p></punkt></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1807__art_1__pkt_1__lit_c" gd:GUID="84be7530-f62d-4b6c-8285-586191d5695a" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">
+            <nr>c</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="7bb55a86-da5b-4393-a9b4-cbce2d9716ec" fragment="5" gd:fragmentGUID="6bbafd79-56c7-4dac-8218-416736eaa3fb" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01"><now:zamien-tekst stary-tekst="zwierząt" nowy-tekst="zwierząt przyjętych do Centralnego Azylu" element-eId="DU/2022/2375__art_4__pkt_5" akt="https://eli.gov.pl/eli/DU/2022/2375" gd:nowGUID="eb6be255-37dc-4e79-bf49-c4eaf1d97a84" />w pkt 5 po wyrazie „zwierząt” dodaje się wyrazy „przyjętych do Centralnego Azylu”,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1807__art_1__pkt_1__lit_d" gd:GUID="4e3cf5a4-2a65-474b-ae36-b50788ebe56b" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">
+            <nr>d</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="7bb55a86-da5b-4393-a9b4-cbce2d9716ec" fragment="6" gd:fragmentGUID="b0207a81-74af-4199-b9e1-253fd0e2b0b7" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01"><now:zamien-tekst stary-tekst="." nowy-tekst=";" element-eId="DU/2022/2375__art_4__pkt_8" akt="https://eli.gov.pl/eli/DU/2022/2375" now:wystapienie="ostatnie" gd:nowGUID="c481b6b9-c55c-419a-9780-9a0951b9fb67" />w pkt 8 kropkę zastępuje się średnikiem i dodaje się pkt 9 w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2022/2375" cudzyslowy="oba" gd:nowGUID="f9db17e2-703f-4a68-9178-b236d2ef0800" element-eId="DU/2022/2375__art_4__pkt_8" funkcja="dodaj-po"><punkt eId="DU/2022/2375__art_4__pkt_9" gd:GUID="53d6cd6c-1158-470a-be85-714b11b329dd" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01"><nr>9</nr><p><zdanie nr="1" gd:zdGUID="11096a7b-84cb-4729-80b3-9f897b3abcc7" fragment="1" gd:fragmentGUID="8318345c-7a8f-469a-8998-8332d468be29" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">ochrona przyrody i edukacja w zakresie działalności Centralnego Azylu.</zdanie></p></punkt></cytat-strukt>;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2025/1807__art_1__pkt_2" gd:GUID="f363bae2-00d9-4e8f-a3c5-e8c3021bb829" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="7bb55a86-da5b-4393-a9b4-cbce2d9716ec" fragment="7" gd:fragmentGUID="a8b25104-3322-45cd-913e-0339a06fe54b" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">po art. 4 dodaje się art. 4a i art. 4b w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2022/2375" cudzyslowy="oba" gd:nowGUID="e4b8c40e-0555-4855-ae33-2e0292daf3d6" element-eId="DU/2022/2375__art_4" funkcja="dodaj-po"><artykul eId="DU/2022/2375__art_4a" gd:GUID="1ffc37c4-4b9a-4795-99c5-e7add47edeea" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01"><nr>4a</nr><ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="dd2ef439-500b-444c-840b-2c91cba60fec" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01"><p><zdanie nr="1" gd:zdGUID="c418a00c-f25a-407c-9d12-98ed28d12a68" fragment="1" gd:fragmentGUID="e707f858-858d-4a15-9e5b-90b6ee5fca12" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">Zadania Centralnego Azylu, o których mowa w art. 4 pkt 1–5, mogą być wykonywane przez inne podmioty na podstawie porozumień lub umów określających zakres zadań planowanych do wykonania, jeżeli przemawiają za tym względy ekonomiczne lub organizacyjne.</zdanie></p></ustep-n></artykul><artykul eId="DU/2022/2375__art_4b" gd:GUID="7e6944b1-7bec-490d-84c1-64806346be01" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01"><nr>4b</nr><ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="0523a026-0131-49f0-bbd1-db3da56fde66" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01"><p><zdanie nr="1" gd:zdGUID="7800e271-e683-4d7d-bf17-69864ab2ac5a" fragment="1" gd:fragmentGUID="f38c3da0-af48-41df-befc-4a04e119f73d" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">W przypadku gdy wykonanie zadania, o którym mowa w art. 4 pkt 1, nie jest możliwe ze względu na:</zdanie></p><punkt eId="DU/2022/2375__art_4b__pkt_1" gd:GUID="597caa2c-5e74-4c12-ac51-286d19fc4f36" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="7800e271-e683-4d7d-bf17-69864ab2ac5a" fragment="2" gd:fragmentGUID="2d9bab36-a5d4-47ce-aefc-41b17403108a" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">brak możliwości zapewnienia w Centralnym Azylu właściwych warunków do przetrzymywania zwierząt i opieki nad nimi, odpowiadających ich potrzebom biologicznym oraz mających wpływ na ich zdrowie i dobrostan,</zdanie></p></punkt><punkt eId="DU/2022/2375__art_4b__pkt_2" gd:GUID="e79247f0-39eb-404a-a869-5358130e343a" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="7800e271-e683-4d7d-bf17-69864ab2ac5a" fragment="3" gd:fragmentGUID="3e9bfa09-2c60-44ce-bd0a-5bd3fe55e0dd" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">bieżące obłożenie Centralnego Azylu uniemożliwiające zachowanie jego przepustowości i operacyjności,</zdanie></p></punkt><punkt eId="DU/2022/2375__art_4b__pkt_3" gd:GUID="c5fa6391-3d08-4c7d-b6f4-0750f70059ec" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01"><nr>3</nr><p><zdanie nr="1" gd:zdGUID="7800e271-e683-4d7d-bf17-69864ab2ac5a" fragment="4" gd:fragmentGUID="bc524f48-3865-4eeb-888e-84ad80bcd7ca" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">ryzyko przekroczenia limitu wydatków, o którym mowa w art. 36 ust. 1</zdanie></p></punkt><czesc-wspolna-punkt eId="DU/2022/2375__art_4b__czw" gd:GUID="e2aac9aa-1d3a-4895-b045-211c93ee7eaa" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01"><p><zdanie nr="1" gd:zdGUID="7800e271-e683-4d7d-bf17-69864ab2ac5a" fragment="5" gd:fragmentGUID="9e15e6fa-2140-4240-bd85-078e7b8ab8a7" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">– Centralny Azyl podejmuje czynności zmierzające do umieszczenia zwierzęcia w ogrodzie zoologicznym, ośrodku rehabilitacji zwierząt lub azylu dla zwierząt.</zdanie></p></czesc-wspolna-punkt></ustep-n></artykul></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1807__art_1__pkt_3" gd:GUID="fdf65be0-7fca-457c-9bce-986b1f8ba350" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="7bb55a86-da5b-4393-a9b4-cbce2d9716ec" fragment="8" gd:fragmentGUID="67c10c67-bf42-4d04-801e-303a755f11bf" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">w art. 5 pkt 4 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2022/2375" cudzyslowy="oba" gd:nowGUID="3cb3dff7-845f-40aa-a8cc-ebbcc0e66b36" element-eId="DU/2022/2375__art_5__pkt_4" funkcja="zastap"><punkt eId="DU/2022/2375__art_5__pkt_4" gd:GUID="bbb6fd45-25a3-4829-9ba8-ea64c703907c" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01"><nr>4</nr><p><zdanie nr="1" gd:zdGUID="48b3f3f7-0009-42b9-bad9-8a8660e43875" fragment="1" gd:fragmentGUID="1b474a9f-ed49-4259-b2c4-1ab29a5a5c65" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">ogrodami zoologicznymi, ośrodkami rehabilitacji zwierząt, azylami dla zwierząt w rozumieniu przepisów ustawy z dnia 16 kwietnia 2004 r. o ochronie przyrody, instytucjami naukowymi oraz innymi podmiotami – na podstawie umów i porozumień zawartych w zakresie realizacji zadań Centralnego Azylu, o których mowa w art. 4 pkt 1–5, 7 i 9.</zdanie></p></punkt></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1807__art_1__pkt_4" gd:GUID="f55be1f8-2d6b-4d60-b2f4-9cd7cccf9b52" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="7bb55a86-da5b-4393-a9b4-cbce2d9716ec" fragment="9" gd:fragmentGUID="cc4d3a8e-feec-4dd3-a5d7-bc5a0f877103" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">w art. 6:</zdanie>
+          </p>
+          <litera eId="DU/2025/1807__art_1__pkt_4__lit_a" gd:GUID="4014280a-c875-42be-84ec-6c18a7e69e61" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="7bb55a86-da5b-4393-a9b4-cbce2d9716ec" fragment="10" gd:fragmentGUID="8eb0987a-4052-42f2-8ab9-0ba5fb854584" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01"><now:zamien-tekst stary-tekst="protokołem przyjęcia" nowy-tekst="protokołem przyjęcia sporządzonym na piśmie utrwalonym w postaci papierowej, opatrzonym podpisem własnoręcznym, albo na piśmie utrwalonym w postaci elektronicznej, przy użyciu środków komunikacji elektronicznej w rozumieniu art. 2 pkt 5 ustawy z dnia 18 lipca 2002 r. o świadczeniu usług drogą elektroniczną (Dz. U. z 2024 r. poz. 1513), opatrzonym kwalifikowanym podpisem elektronicznym, podpisem zaufanym albo podpisem osobistym" element-eId="DU/2022/2375__art_6__ust_1" akt="https://eli.gov.pl/eli/DU/2022/2375" gd:nowGUID="74b37488-7bfa-47fd-8c8c-c21f658bc479" />w ust. 1 po wyrazach „protokołem przyjęcia” dodaje się wyrazy „sporządzonym na piśmie utrwalonym w postaci papierowej, opatrzonym podpisem własnoręcznym, albo na piśmie utrwalonym w postaci elektronicznej, przy użyciu środków komunikacji elektronicznej w rozumieniu art. 2 pkt 5 ustawy z dnia 18 lipca 2002 r. o świadczeniu usług drogą elektroniczną (Dz. U. z 2024 r. poz. 1513), opatrzonym kwalifikowanym podpisem elektronicznym, podpisem zaufanym albo podpisem osobistym”,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1807__art_1__pkt_4__lit_b" gd:GUID="d3b79305-0b1f-4c6a-b866-83af0c34ad07" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="7bb55a86-da5b-4393-a9b4-cbce2d9716ec" fragment="11" gd:fragmentGUID="430650f9-e77b-40a4-977c-24b710cc7843" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">w ust. 2 po pkt 3 dodaje się pkt 3a w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2022/2375" cudzyslowy="oba" gd:nowGUID="a49ae4ee-8ae9-41ae-bc35-2a91ef8a5f5d" element-eId="DU/2022/2375__art_6__ust_2__pkt_3" funkcja="dodaj-po"><punkt eId="DU/2022/2375__art_6__ust_2__pkt_3a" gd:GUID="f6699fd8-704e-43f7-a607-4ea6123afa4f" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01"><nr>3a</nr><p><zdanie nr="1" gd:zdGUID="467c766d-143c-46c3-9eaa-067c99e649ce" fragment="1" gd:fragmentGUID="f50d7e8f-68b2-4ec7-a88a-46d4d748bc20" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">nazwę, siedzibę i adres albo imię, nazwisko, miejsce zamieszkania i adres podmiotu, który czasowo przetrzymuje zwierzę;</zdanie></p></punkt></cytat-strukt>;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2025/1807__art_1__pkt_5" gd:GUID="b8d96f40-b630-492d-a8df-a8184667f64b" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="7bb55a86-da5b-4393-a9b4-cbce2d9716ec" fragment="12" gd:fragmentGUID="a9c20acd-0e98-4c0d-9fec-07394801f2f9" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">w art. 7:</zdanie>
+          </p>
+          <litera eId="DU/2025/1807__art_1__pkt_5__lit_a" gd:GUID="cfeaf350-cf4c-427b-a83f-3623c2387a92" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="7bb55a86-da5b-4393-a9b4-cbce2d9716ec" fragment="13" gd:fragmentGUID="753d9101-d72a-4a16-bce2-6cfb8ab9aafb" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">ust. 1 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2022/2375" cudzyslowy="oba" gd:nowGUID="ac831e3c-e434-468a-8dfc-751fef4d82bb" element-eId="DU/2022/2375__art_7__ust_1" funkcja="zastap"><ustep eId="DU/2022/2375__art_7__ust_1" gd:GUID="ed8245bd-17b4-425a-8bf0-c9d8bad8df3e" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="2e4d912a-17b3-4c92-9572-6304cb4d1495" fragment="1" gd:fragmentGUID="685abe0a-c05d-464d-90ac-b57bf1a557ad" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">Prośbę o przyjęcie zwierzęcia do Centralnego Azylu lub prośbę o transport zwierzęcia, które ma zostać przyjęte do Centralnego Azylu, składa się na piśmie utrwalonym w postaci papierowej, opatrzonym podpisem własnoręcznym, albo na piśmie utrwalonym w postaci elektronicznej, przy użyciu środków komunikacji elektronicznej w rozumieniu art. 2 pkt 5 ustawy z dnia 18 lipca 2002 r. o świadczeniu usług drogą elektroniczną, opatrzonym kwalifikowanym podpisem elektronicznym, podpisem zaufanym albo podpisem osobistym.</zdanie><zdanie nr="2" gd:zdGUID="8978e965-1b5a-4cf9-88c9-c8db8b856a45" fragment="1" gd:fragmentGUID="c01935c6-393e-4c10-b072-4be2eb00e343" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">Prośba zawiera nazwę, siedzibę i adres albo imię, nazwisko, miejsce zamieszkania i adres składającego prośbę o przyjęcie zwierzęcia oraz, jeżeli są dostępne, informacje, o których mowa w art. 6 ust. 2 pkt 2 i 4–9.</zdanie></p></ustep></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1807__art_1__pkt_5__lit_b" gd:GUID="50094039-cec5-433b-89c2-a1587544f171" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="7bb55a86-da5b-4393-a9b4-cbce2d9716ec" fragment="14" gd:fragmentGUID="91a58e46-1573-4b33-a0db-8ac5dde05316" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01"><now:zamien-tekst stary-tekst="azylu dla zwierząt" nowy-tekst="azylu dla zwierząt, wynikającej z zakresu działalności tych podmiotów" element-eId="DU/2022/2375__art_7__ust_5__pkt_2" akt="https://eli.gov.pl/eli/DU/2022/2375" gd:nowGUID="ce8fa202-9078-4841-a0bd-8d996f909a09" />w ust. 5 w pkt 2 po wyrazach „azylu dla zwierząt” dodaje się wyrazy „ , wynikającej z zakresu działalności tych podmiotów”,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1807__art_1__pkt_5__lit_c" gd:GUID="12e675b1-5d37-4844-b056-69ebc6a28616" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">
+            <nr>c</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="7bb55a86-da5b-4393-a9b4-cbce2d9716ec" fragment="15" gd:fragmentGUID="9ce0e74e-0641-45d9-abd5-312448e78ad5" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01"><now:zamien-tekst stary-tekst="protokołu odmowy przyjęcia" nowy-tekst="protokołu odmowy przyjęcia sporządzonego na piśmie utrwalonym w postaci papierowej, opatrzonym podpisem własnoręcznym, albo na piśmie utrwalonym w postaci elektronicznej, przy użyciu środków komunikacji elektronicznej w rozumieniu art. 2 pkt 5 ustawy z dnia 18 lipca 2002 r. o świadczeniu usług drogą elektroniczną, opatrzonym kwalifikowanym podpisem elektronicznym, podpisem zaufanym albo podpisem osobistym" element-eId="DU/2022/2375__art_7__ust_6" akt="https://eli.gov.pl/eli/DU/2022/2375" gd:nowGUID="ae66ec1a-d24e-4e44-84f3-30a1b2af18b8" />w ust. 6 po wyrazach „protokołu odmowy przyjęcia” dodaje się wyrazy „sporządzonego na piśmie utrwalonym w postaci papierowej, opatrzonym podpisem własnoręcznym, albo na piśmie utrwalonym w postaci elektronicznej, przy użyciu środków komunikacji elektronicznej w rozumieniu art. 2 pkt 5 ustawy z dnia 18 lipca 2002 r. o świadczeniu usług drogą elektroniczną, opatrzonym kwalifikowanym podpisem elektronicznym, podpisem zaufanym albo podpisem osobistym”,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1807__art_1__pkt_5__lit_d" gd:GUID="eb1b8d5c-50a1-4d5a-a777-9d33e03958f3" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">
+            <nr>d</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="7bb55a86-da5b-4393-a9b4-cbce2d9716ec" fragment="16" gd:fragmentGUID="ad5165de-9100-44f3-81ab-3c6dbd04a5db" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01"><now:uchyl akt="https://eli.gov.pl/eli/DU/2022/2375" element-eId="DU/2022/2375__art_7__ust_7__pkt_4" gd:nowGUID="55bf0215-76fa-4f6e-9f68-181bb6f8d088" /><now:uchyl akt="https://eli.gov.pl/eli/DU/2022/2375" element-eId="DU/2022/2375__art_7__ust_7__pkt_5" gd:nowGUID="2648f6b2-4709-4790-a0a6-8451e13ab866" />w ust. 7 uchyla się pkt 4 i 5,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1807__art_1__pkt_5__lit_e" gd:GUID="7ee2e883-184c-4353-b9ca-2432e4f631fe" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">
+            <nr>e</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="7bb55a86-da5b-4393-a9b4-cbce2d9716ec" fragment="17" gd:fragmentGUID="2eabd07e-0cc0-47bf-ab6b-a32134ac1721" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01"><now:zamien-tekst stary-tekst="w formie pisemnej" nowy-tekst="na piśmie utrwalonym w postaci papierowej, opatrzonym podpisem własnoręcznym, albo na piśmie utrwalonym w postaci elektronicznej, przy użyciu środków komunikacji elektronicznej w rozumieniu art. 2 pkt 5 ustawy z dnia 18 lipca 2002 r. o świadczeniu usług drogą elektroniczną, opatrzonym kwalifikowanym podpisem elektronicznym, podpisem zaufanym albo podpisem osobistym" element-eId="DU/2022/2375__art_7__ust_9" akt="https://eli.gov.pl/eli/DU/2022/2375" gd:nowGUID="4b1864c0-6cac-424d-bbb9-dcd5c221879b" />w ust. 9 wyrazy „w formie pisemnej” zastępuje się wyrazami „na piśmie utrwalonym w postaci papierowej, opatrzonym podpisem własnoręcznym, albo na piśmie utrwalonym w postaci elektronicznej, przy użyciu środków komunikacji elektronicznej w rozumieniu art. 2 pkt 5 ustawy z dnia 18 lipca 2002 r. o świadczeniu usług drogą elektroniczną, opatrzonym kwalifikowanym podpisem elektronicznym, podpisem zaufanym albo podpisem osobistym”;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2025/1807__art_1__pkt_6" gd:GUID="773678fa-9436-477e-b9e0-f96f16035845" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">
+          <nr>6</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="7bb55a86-da5b-4393-a9b4-cbce2d9716ec" fragment="18" gd:fragmentGUID="f10bf634-bfac-4c93-8cd6-6706a807bebf" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">po art. 7 dodaje się art. 7a i art. 7b w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2022/2375" cudzyslowy="oba" gd:nowGUID="837a4108-9079-46c1-ba5b-751a9c97f1aa" element-eId="DU/2022/2375__art_7" funkcja="dodaj-po"><artykul eId="DU/2022/2375__art_7a" gd:GUID="431cfdc5-ea52-41c4-b076-4b73ccf1a86c" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01"><nr>7a</nr><ustep eId="DU/2022/2375__art_7a__ust_1" gd:GUID="a13389c8-628c-4060-a862-04ea6fe36c1a" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="b0c88a37-d3f9-4690-a264-b169170a4c28" fragment="1" gd:fragmentGUID="3aa115f7-5e7f-430d-b711-68437fa0b3e9" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">Dyrektor Centralnego Azylu udziela zgody na transport zwierzęcia, które ma zostać przyjęte do Centralnego Azylu, na piśmie utrwalonym w postaci papierowej, opatrzonym podpisem własnoręcznym, albo na piśmie utrwalonym w postaci elektronicznej, przy użyciu środków komunikacji elektronicznej w rozumieniu art. 2 pkt 5 ustawy z dnia 18 lipca 2002 r. o świadczeniu usług drogą elektroniczną, opatrzonym kwalifikowanym podpisem elektronicznym, podpisem zaufanym albo podpisem osobistym.</zdanie></p></ustep><ustep eId="DU/2022/2375__art_7a__ust_2" gd:GUID="77bbf4ce-6e90-4b4e-bc25-bd89c64d7fbc" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="4093545b-f488-4b69-b3ab-e8b77e8d9158" fragment="1" gd:fragmentGUID="6cb8ea9e-1957-42c5-970c-cbacfbcaa750" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">Dyrektor Centralnego Azylu odmawia udzielenia zgody na transport zwierzęcia, które ma zostać przyjęte do Centralnego Azylu, w przypadku:</zdanie></p><punkt eId="DU/2022/2375__art_7a__ust_2__pkt_1" gd:GUID="10d0e345-e4be-4a25-9b7c-f996a644802c" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="4093545b-f488-4b69-b3ab-e8b77e8d9158" fragment="2" gd:fragmentGUID="8ab8a081-7d15-42a3-a2a1-609a4c194ee5" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">braku zgody właściwego powiatowego lekarza weterynarii na transport zwierzęcia;</zdanie></p></punkt><punkt eId="DU/2022/2375__art_7a__ust_2__pkt_2" gd:GUID="7de7bdfe-07f9-44e2-b5c4-84d1b9f6e736" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="4093545b-f488-4b69-b3ab-e8b77e8d9158" fragment="3" gd:fragmentGUID="e72d97a4-4477-4bfc-87c7-892b9fe681ff" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">braku możliwości realizacji transportu zwierzęcia pojazdem Centralnego Azylu lub pojazdem podmiotu, o którym mowa w art. 4a;</zdanie></p></punkt><punkt eId="DU/2022/2375__art_7a__ust_2__pkt_3" gd:GUID="00c0de8f-e235-4d43-8122-ada376943a46" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01"><nr>3</nr><p><zdanie nr="1" gd:zdGUID="4093545b-f488-4b69-b3ab-e8b77e8d9158" fragment="4" gd:fragmentGUID="f457d796-1d67-474e-a011-fd0f2adadbed" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">ryzyka przekroczenia limitu wydatków budżetu państwa, o którym mowa w art. 36 ust. 1, w danym roku.</zdanie></p></punkt></ustep><ustep eId="DU/2022/2375__art_7a__ust_3" gd:GUID="48a2d6a3-cc47-4a41-98ff-aaa87b3199f3" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01"><nr>3</nr><p><zdanie nr="1" gd:zdGUID="5d0f431c-b4cc-4973-9199-e42c7cbf7452" fragment="1" gd:fragmentGUID="d9945287-2c6d-4eee-b5fd-e0f1061523dc" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">Odmowy udzielenia zgody na transport zwierzęcia, które ma zostać przyjęte do Centralnego Azylu, udziela się na piśmie utrwalonym w postaci papierowej, opatrzonym podpisem własnoręcznym, albo na piśmie utrwalonym w postaci elektronicznej, przy użyciu środków komunikacji elektronicznej w rozumieniu art. 2 pkt 5 ustawy z dnia 18 lipca 2002 r. o świadczeniu usług drogą elektroniczną, opatrzonym kwalifikowanym podpisem elektronicznym, podpisem zaufanym albo podpisem osobistym.</zdanie></p></ustep></artykul><artykul eId="DU/2022/2375__art_7b" gd:GUID="a1c1c091-fb3d-48ca-b4d0-f74250f285ae" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01"><nr>7b</nr><ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="611152e1-be7b-4322-ab1f-e701ae6c546e" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01"><p><zdanie nr="1" gd:zdGUID="509c62b9-3d1a-4da9-8ecf-56309ed05be1" fragment="1" gd:fragmentGUID="2921a02c-5ffa-4814-8a5f-80597b781d98" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">Udzielenie zgody oraz odmowa udzielenia zgody przez Dyrektora Centralnego Azylu, o których mowa odpowiednio w art. 7 i art. 7a, nie są decyzjami administracyjnymi w rozumieniu ustawy z dnia 14 czerwca 1960 r. – Kodeks postępowania administracyjnego (Dz. U. z 2025 r. poz. 1691).</zdanie></p></ustep-n></artykul></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1807__art_1__pkt_7" gd:GUID="fac8ad25-d0c0-4e0f-a331-db7cfe96c370" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">
+          <nr>7</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="7bb55a86-da5b-4393-a9b4-cbce2d9716ec" fragment="19" gd:fragmentGUID="90755e5c-25cd-405b-8178-dd7a0ea6ca09" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">w art. 8:</zdanie>
+          </p>
+          <litera eId="DU/2025/1807__art_1__pkt_7__lit_a" gd:GUID="53ac9924-503e-4def-bd1d-80d3c3053ac8" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="7bb55a86-da5b-4393-a9b4-cbce2d9716ec" fragment="20" gd:fragmentGUID="5a72de83-219c-46c3-9270-da1fd6b9ad1f" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">w ust. 1:</zdanie>
+            </p>
+            <tiret eId="DU/2025/1807__art_1__pkt_7__lit_a__tir_1" gd:GUID="cf86e695-6fac-4c14-88d5-cdfe97977037" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">
+              <p>
+                <zdanie nr="1" gd:zdGUID="7bb55a86-da5b-4393-a9b4-cbce2d9716ec" fragment="21" gd:fragmentGUID="f2e79073-ac82-44d9-8abf-e52aa0e96555" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">pkt 6 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2022/2375" cudzyslowy="oba" gd:nowGUID="4c7fa6b7-38c6-4425-b642-b25e9f1f31aa" element-eId="DU/2022/2375__art_8__ust_1__pkt_6" funkcja="zastap"><punkt eId="DU/2022/2375__art_8__ust_1__pkt_6" gd:GUID="e2434816-b76f-4c17-98d4-e91439c64bdf" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01"><nr>6</nr><p><zdanie nr="1" gd:zdGUID="7c766ca1-0325-4a0e-8711-b47169f278dc" fragment="1" gd:fragmentGUID="63136231-dc24-4b3a-a785-bbcc4ee743b9" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">uśmiercenia zwierzęcia;</zdanie></p></punkt></cytat-strukt>,</zdanie>
+              </p>
+            </tiret>
+            <tiret eId="DU/2025/1807__art_1__pkt_7__lit_a__tir_2" gd:GUID="4484e921-b79b-414b-8e0c-f1e77bf6bdfa" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">
+              <p>
+                <zdanie nr="1" gd:zdGUID="7bb55a86-da5b-4393-a9b4-cbce2d9716ec" fragment="22" gd:fragmentGUID="946ed5de-369b-4ef8-aba2-97ab12d55d76" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">dodaje się pkt 7 i 8 w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2022/2375" cudzyslowy="oba" gd:nowGUID="d0950ca6-3665-4158-89ed-ee9170f4c90b" element-eId="DU/2022/2375__art_8__ust_1" funkcja="dodaj-w"><punkt eId="DU/2022/2375__art_8__ust_1__pkt_7" gd:GUID="edf61eb5-9b7d-400f-bebd-c3ed1c6b5671" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01"><nr>7</nr><p><zdanie nr="1" gd:zdGUID="355ac695-8c5f-4e2b-9fdc-73cd550ed8fe" fragment="1" gd:fragmentGUID="548014c6-44f8-4d3f-831f-4efe46f884a2" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">zwrotu zwierzęcia, jeżeli sąd nie orzeknie przepadku zwierzęcia na podstawie art. 129 pkt 1 ustawy z dnia 16 kwietnia 2004 r. o ochronie przyrody albo na podstawie art. 35 ust. 2 ustawy z dnia 11 sierpnia 2021 r. o gatunkach obcych albo jeżeli postępowanie karne albo postępowanie w sprawach o wykroczenia w tej sprawie zostanie umorzone;</zdanie></p></punkt><punkt eId="DU/2022/2375__art_8__ust_1__pkt_8" gd:GUID="14191f3c-f882-4862-86f3-cba91588a501" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01"><nr>8</nr><p><zdanie nr="1" gd:zdGUID="355ac695-8c5f-4e2b-9fdc-73cd550ed8fe" fragment="2" gd:fragmentGUID="03722810-06b8-4269-a27c-af4dc1574a1c" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">zwrotu zwierzęcia w przypadku określonym w art. 7 ust. 6 ustawy z dnia 21 sierpnia 1997 r. o ochronie zwierząt.</zdanie></p></punkt></cytat-strukt>,</zdanie>
+              </p>
+            </tiret>
+          </litera>
+          <litera eId="DU/2025/1807__art_1__pkt_7__lit_b" gd:GUID="d7b27621-fe27-421e-a8dc-81debc2cfd3e" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="7bb55a86-da5b-4393-a9b4-cbce2d9716ec" fragment="23" gd:fragmentGUID="e7fea676-ff07-458c-ab37-1e8102fea765" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01"><now:zamien-tekst stary-tekst="zwierzęcia" nowy-tekst="zwierzęcia przyjętego do Centralnego Azylu" element-eId="DU/2022/2375__art_8__ust_2__pkt_3" akt="https://eli.gov.pl/eli/DU/2022/2375" gd:nowGUID="3b5fcc58-4f8a-4659-8701-3bc5cafa0e72" />w ust. 2 w pkt 3 po wyrazie „zwierzęcia” dodaje się wyrazy „przyjętego do Centralnego Azylu”;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2025/1807__art_1__pkt_8" gd:GUID="61430c80-83e6-4e8f-8c67-ec4708080fae" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">
+          <nr>8</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="7bb55a86-da5b-4393-a9b4-cbce2d9716ec" fragment="24" gd:fragmentGUID="6d7d8d10-838b-46e0-b983-7758f429fcd9" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01"><now:uchyl akt="https://eli.gov.pl/eli/DU/2022/2375" element-eId="DU/2022/2375__art_10__pkt_2" gd:nowGUID="3d9c3cfa-ba0d-4eb4-bf93-8197f8e482c4" />w art. 10 uchyla się pkt 2;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1807__art_1__pkt_9" gd:GUID="a5ca1b75-6787-42d2-b3e8-94a922920fc1" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">
+          <nr>9</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="7bb55a86-da5b-4393-a9b4-cbce2d9716ec" fragment="25" gd:fragmentGUID="e16462bf-574d-49ad-a889-54f3c6fd7051" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01"><now:zamien-tekst stary-tekst="zwierząt należących do gatunków niebezpiecznych" nowy-tekst="zwierząt należących do gatunków niebezpiecznych lub inwazyjnych gatunków obcych" element-eId="DU/2022/2375__art_11__ust_3__pkt_2" akt="https://eli.gov.pl/eli/DU/2022/2375" gd:nowGUID="a8e6de9d-de43-4cc6-ad13-e767c7852078" />w art. 11 w ust. 3 w pkt 2 po wyrazach „zwierząt należących do gatunków niebezpiecznych” dodaje się wyrazy „lub inwazyjnych gatunków obcych”;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1807__art_1__pkt_10" gd:GUID="64c8d36a-124d-4aff-96e7-6eacfc37d2a0" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">
+          <nr>10</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="7bb55a86-da5b-4393-a9b4-cbce2d9716ec" fragment="26" gd:fragmentGUID="1bbde5a5-7e10-40ee-ba72-e1677faa9722" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01"><now:zamien-tekst stary-tekst="o których mowa w" nowy-tekst="o których mowa w art. 4a i" element-eId="DU/2022/2375__art_12__ust_2" akt="https://eli.gov.pl/eli/DU/2022/2375" gd:nowGUID="234587f9-249e-4901-8983-88934f45d963" />w art. 12 w ust. 2 po wyrazach „o których mowa w” dodaje się wyrazy „art. 4a i”;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1807__art_1__pkt_11" gd:GUID="2227c481-8267-491b-9ec7-06a5f98228ef" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">
+          <nr>11</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="7bb55a86-da5b-4393-a9b4-cbce2d9716ec" fragment="27" gd:fragmentGUID="9fcefcf0-abf2-4118-b68f-2b1afb4d932c" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">w art. 13 ust. 2 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2022/2375" cudzyslowy="oba" gd:nowGUID="d210a758-c531-4cf8-b49d-b00a5b8a9bf4" element-eId="DU/2022/2375__art_13__ust_2" funkcja="zastap"><ustep eId="DU/2022/2375__art_13__ust_2" gd:GUID="3ee0bd4d-a2ac-4ccc-ad85-3f3d3daa71ae" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="be2a161b-936f-4dcb-b6a3-f5d1ae4d8c68" fragment="1" gd:fragmentGUID="add2e3fe-6dd2-4dca-97fb-3891eb865a25" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">Zwierzę, o którym mowa w ust. 1, wprowadza się do środowiska przyrodniczego po uzyskaniu zezwolenia, o którym mowa w art. 56 ust. 1, 2 lub 2b ustawy z dnia 16 kwietnia 2004 r. o ochronie przyrody.</zdanie></p></ustep></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1807__art_1__pkt_12" gd:GUID="65909e11-a22a-4e70-955d-9bf5c9c0c867" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">
+          <nr>12</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="7bb55a86-da5b-4393-a9b4-cbce2d9716ec" fragment="28" gd:fragmentGUID="2c08f0ce-ac3f-474d-97dd-21edd96f1524" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">w art. 14:</zdanie>
+          </p>
+          <litera eId="DU/2025/1807__art_1__pkt_12__lit_a" gd:GUID="6c40e827-4627-48ce-8bb7-d5149dede8db" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="7bb55a86-da5b-4393-a9b4-cbce2d9716ec" fragment="29" gd:fragmentGUID="0d75e811-d45e-43f5-9d88-182c6831d171" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">po ust. 4 dodaje się ust. 4a w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2022/2375" cudzyslowy="oba" gd:nowGUID="1ece0225-85e8-4de4-b94a-cec6a2189abe" element-eId="DU/2022/2375__art_14__ust_4" funkcja="dodaj-po"><ustep eId="DU/2022/2375__art_14__ust_4a" gd:GUID="2373a8b4-b28d-480c-8207-58f8b9b219cb" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01"><nr>4a</nr><p><zdanie nr="1" gd:zdGUID="f0aa4ae4-6b6c-4c80-b1b1-3a5555af13db" fragment="1" gd:fragmentGUID="8c79a4db-f9c5-49db-8f21-53aa243569cc" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">Protokół przekazania, o którym mowa w ust. 4, sporządza się na piśmie utrwalonym w postaci papierowej, opatrzonym podpisem własnoręcznym, albo na piśmie utrwalonym w postaci elektronicznej, przy użyciu środków komunikacji elektronicznej w rozumieniu art. 2 pkt 5 ustawy z dnia 18 lipca 2002 r. o świadczeniu usług drogą elektroniczną, opatrzonym kwalifikowanym podpisem elektronicznym, podpisem zaufanym albo podpisem osobistym.</zdanie></p></ustep></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1807__art_1__pkt_12__lit_b" gd:GUID="70203885-8d65-4842-ada0-f862837ada28" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="7bb55a86-da5b-4393-a9b4-cbce2d9716ec" fragment="30" gd:fragmentGUID="b119ef2e-5dfb-4645-847f-04f054b3ad4e" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01"><now:zamien-tekst stary-tekst="2 lat" nowy-tekst="3 lat" element-eId="DU/2022/2375__art_14__ust_9__pkt_2" akt="https://eli.gov.pl/eli/DU/2022/2375" gd:nowGUID="b2d10cb7-3a94-49c2-9ba8-82abee37bbe8" />w ust. 9 w pkt 2 wyrazy „2 lat” zastępuje się wyrazami „3 lat”;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2025/1807__art_1__pkt_13" gd:GUID="3581db35-0f27-4ae5-b39b-c3d6dd9d6a3b" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">
+          <nr>13</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="7bb55a86-da5b-4393-a9b4-cbce2d9716ec" fragment="31" gd:fragmentGUID="962d3801-249b-453a-87db-754088b1ce66" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">w art. 15:</zdanie>
+          </p>
+          <litera eId="DU/2025/1807__art_1__pkt_13__lit_a" gd:GUID="8d646b64-51e7-4f88-ba55-e37155a9403e" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="7bb55a86-da5b-4393-a9b4-cbce2d9716ec" fragment="32" gd:fragmentGUID="b64681be-4ca1-416d-a15a-fcbf0b2deb90" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">po ust. 1 dodaje się ust. 1a–1d w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2022/2375" cudzyslowy="oba" gd:nowGUID="dff2a808-0534-404b-a59a-3b6bda005db3" element-eId="DU/2022/2375__art_15__ust_1" funkcja="dodaj-po"><ustep eId="DU/2022/2375__art_15__ust_1a" gd:GUID="b01aa4ae-aa39-4405-9800-8f911d2cba87" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01"><nr>1a</nr><p><zdanie nr="1" gd:zdGUID="ea484ff9-4aa6-4e7c-9da6-e50c2dcf0aea" fragment="1" gd:fragmentGUID="81e3f75e-80c1-48dc-bad0-39a266428041" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">Uśmiercenie zwierząt przyjętych do Centralnego Azylu należących do gatunków chronionych następuje po uzyskaniu zezwolenia, o którym mowa w art. 56 ust. 1 lub 2 ustawy z dnia 16 kwietnia 2004 r. o ochronie przyrody.</zdanie></p></ustep><ustep eId="DU/2022/2375__art_15__ust_1b" gd:GUID="57e94e0e-a030-4eb2-b23d-55e1956edb5c" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01"><nr>1b</nr><p><zdanie nr="1" gd:zdGUID="f952402d-33dd-4f5b-a23a-c1c30f691bb9" fragment="1" gd:fragmentGUID="b4afa652-4148-44f4-b2e3-5127f23bcfac" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">Zezwolenie, o którym mowa w ust. 1a, może być wydane na wniosek Dyrektora Centralnego Azylu.</zdanie></p></ustep><ustep eId="DU/2022/2375__art_15__ust_1c" gd:GUID="c9fa977f-10a7-4fa4-a0d9-2b4c4331cde8" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01"><nr>1c</nr><p><zdanie nr="1" gd:zdGUID="fcbe9df7-624d-4cad-a6cf-0e01a0e2dc61" fragment="1" gd:fragmentGUID="0c9a7efe-31cb-4330-8dcf-61b280e885db" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">Uśmiercenie zwierząt przyjętych do Centralnego Azylu należących do gatunków CITES, z wyłączeniem gatunków należących jednocześnie do gatunków chronionych, w przypadkach, o których mowa w ust. 1 pkt 2 lit. d, wymaga zezwolenia ministra właściwego do spraw środowiska wydawanego na wniosek Dyrektora Centralnego Azylu.</zdanie></p></ustep><ustep eId="DU/2022/2375__art_15__ust_1d" gd:GUID="1802e414-3d55-4026-beef-020a18f93c56" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01"><nr>1d</nr><p><zdanie nr="1" gd:zdGUID="b6187bc0-8545-4750-a289-b718fb48fe10" fragment="1" gd:fragmentGUID="a93df036-b29b-41a7-9d5e-eb324bc64964" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">W przypadku, o którym mowa w ust. 1c, minister właściwy do spraw środowiska wydaje zezwolenie na uśmiercenie zwierzęcia w terminie 30 dni od dnia otrzymania wniosku o wydanie tego zezwolenia.</zdanie></p></ustep></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1807__art_1__pkt_13__lit_b" gd:GUID="536db686-e411-4e59-847b-b819ad7a04b8" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="7bb55a86-da5b-4393-a9b4-cbce2d9716ec" fragment="33" gd:fragmentGUID="a0d608f7-9b4f-40d7-9ecc-1e49abe3c9f2" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01"><now:uchyl akt="https://eli.gov.pl/eli/DU/2022/2375" element-eId="DU/2022/2375__art_15__ust_2" element-do-eId="DU/2022/2375__art_15__ust_5" gd:nowGUID="eb11b611-aad9-4b8a-8024-6057af5ef244" />uchyla się ust. 2–5;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2025/1807__art_1__pkt_14" gd:GUID="fe828dde-d062-4b73-af36-e7b91ec328da" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">
+          <nr>14</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="7bb55a86-da5b-4393-a9b4-cbce2d9716ec" fragment="34" gd:fragmentGUID="8cffa459-7489-42c6-850c-77dddae06e8a" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01"><now:uchyl akt="https://eli.gov.pl/eli/DU/2022/2375" element-eId="DU/2022/2375__art_17__ust_7" gd:nowGUID="f5cfaf71-89c8-4def-9096-4fb85448f4ae" />w art. 17 uchyla się ust. 7;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1807__art_1__pkt_15" gd:GUID="b3afb1cf-b377-4732-82fc-db289a24ab28" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">
+          <nr>15</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="7bb55a86-da5b-4393-a9b4-cbce2d9716ec" fragment="35" gd:fragmentGUID="07bf4f42-9af1-4e45-8939-ca9da04b0c98" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">w art. 18:</zdanie>
+          </p>
+          <litera eId="DU/2025/1807__art_1__pkt_15__lit_a" gd:GUID="fd70ea7d-fb4b-41e9-a7b0-2a74447e3758" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="7bb55a86-da5b-4393-a9b4-cbce2d9716ec" fragment="36" gd:fragmentGUID="3fa0b2fe-0e12-463b-a999-fcd739f11786" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01"><now:zamien-tekst stary-tekst="art. 15 ust. 2" nowy-tekst="art. 15 ust. 1a i 1c" element-eId="DU/2022/2375__art_18__pkt_7" akt="https://eli.gov.pl/eli/DU/2022/2375" gd:nowGUID="9255b08e-9656-493f-9739-e1fa34812412" />w pkt 7 wyrazy „art. 15 ust. 2” zastępuje się wyrazami „art. 15 ust. 1a i 1c”,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1807__art_1__pkt_15__lit_b" gd:GUID="5fdbbb25-a142-43c1-9690-fc5246b6bd92" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="7bb55a86-da5b-4393-a9b4-cbce2d9716ec" fragment="37" gd:fragmentGUID="247d87c1-3a53-46b3-a4de-0dd07853a322" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">po pkt 8 dodaje się pkt 8a w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2022/2375" cudzyslowy="oba" gd:nowGUID="0a2477b7-6def-49bf-9bae-ef6e87a51f57" element-eId="DU/2022/2375__art_18__pkt_8" funkcja="dodaj-po"><punkt eId="DU/2022/2375__art_18__pkt_8a" gd:GUID="5b71214d-00ff-4500-a93e-9f411c37ac5b" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01"><nr>8a</nr><p><zdanie nr="1" gd:zdGUID="1e528725-8b60-49d2-a26e-ab362c9a9d78" fragment="1" gd:fragmentGUID="83a706f7-ffb0-4a68-a34e-fb660ba57776" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">udziela zgody na transport zwierzęcia, które ma zostać przyjęte do Centralnego Azylu, albo odmawia udzielenia zgody na transport zwierzęcia, które ma zostać przyjęte do Centralnego Azylu;</zdanie></p></punkt></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1807__art_1__pkt_15__lit_c" gd:GUID="d56c4dc4-e78f-45b8-8dad-ffd2a7683919" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">
+            <nr>c</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="7bb55a86-da5b-4393-a9b4-cbce2d9716ec" fragment="38" gd:fragmentGUID="1c8e409c-80ba-4fe0-aa86-9ac0d5bf9240" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">po pkt 9 dodaje się pkt 9a w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2022/2375" cudzyslowy="oba" gd:nowGUID="684bea88-52cd-4937-b818-97f7dcd47c9c" element-eId="DU/2022/2375__art_18__pkt_9" funkcja="dodaj-po"><punkt eId="DU/2022/2375__art_18__pkt_9a" gd:GUID="cbf54c5d-5baa-4dca-b5ac-2559fa336ca3" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01"><nr>9a</nr><p><zdanie nr="1" gd:zdGUID="e209c088-06ad-41d9-875d-0a928e58c4fd" fragment="1" gd:fragmentGUID="30a89e71-a940-4fec-89df-602dc0c54a4f" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">dokonuje zwrotu zwierzęcia w przypadkach, o których mowa w art. 8 ust. 1 pkt 7 i 8;</zdanie></p></punkt></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1807__art_1__pkt_15__lit_d" gd:GUID="3fe630a1-a460-4dc4-9010-7ab900822009" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">
+            <nr>d</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="7bb55a86-da5b-4393-a9b4-cbce2d9716ec" fragment="39" gd:fragmentGUID="504fcf4b-81e5-4df2-855d-da3e92b5a66d" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01"><now:zamien-tekst stary-tekst=";" nowy-tekst="." element-eId="DU/2022/2375__art_18__pkt_12" akt="https://eli.gov.pl/eli/DU/2022/2375" now:wystapienie="ostatnie" gd:nowGUID="23ba1c75-6211-4abf-89bd-01addf644bf1" /><now:uchyl akt="https://eli.gov.pl/eli/DU/2022/2375" element-eId="DU/2022/2375__art_18__pkt_13" gd:nowGUID="53c7c97a-1de2-402b-880f-1466d1f2161c" />w pkt 12 średnik zastępuje się kropką i uchyla się pkt 13;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2025/1807__art_1__pkt_16" gd:GUID="725f07db-aa9c-4223-95f3-7845dbef21cf" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">
+          <nr>16</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="7bb55a86-da5b-4393-a9b4-cbce2d9716ec" fragment="40" gd:fragmentGUID="da7ec3e7-b41b-4b24-bdc2-1d51efd1308f" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">w art. 20:</zdanie>
+          </p>
+          <litera eId="DU/2025/1807__art_1__pkt_16__lit_a" gd:GUID="ab18e4f7-fe30-43fa-b596-0cf299934429" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="7bb55a86-da5b-4393-a9b4-cbce2d9716ec" fragment="41" gd:fragmentGUID="09d36129-fdf2-411d-9c21-6e153fb2ffaa" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">pkt 2 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2022/2375" cudzyslowy="oba" gd:nowGUID="4c10c3c0-cebd-4b03-91a9-a3057abc44a7" element-eId="DU/2022/2375__art_20__pkt_2" funkcja="zastap"><punkt eId="DU/2022/2375__art_20__pkt_2" gd:GUID="0456d616-a3b2-47fc-a092-920db1c79ae3" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="74c77e2b-f12c-4cdc-a83d-777fa774411a" fragment="1" gd:fragmentGUID="480beec3-4e23-4ab4-baa0-ed266c37910b" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">wykaz zwierząt przetrzymywanych w Centralnym Azylu według stanu na koniec roku sprawozdawczego, ze wskazaniem nazwy naukowej oraz nazwy polskiej, jeżeli taka istnieje, oraz z opisem trwałego oznakowania zwierzęcia, w tym z numerem i umiejscowieniem mikroczipa, jeżeli zwierzę zostało oznakowane przez wszczepienie mikroczipa;</zdanie></p></punkt></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1807__art_1__pkt_16__lit_b" gd:GUID="04f04f20-5e6b-4f6d-87f9-5e131821a3e4" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="7bb55a86-da5b-4393-a9b4-cbce2d9716ec" fragment="42" gd:fragmentGUID="75dee35d-0858-4b87-a5ff-d229c00882fc" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01"><now:zamien-tekst stary-tekst=";" nowy-tekst="," element-eId="DU/2022/2375__art_20__pkt_3__lit_e" akt="https://eli.gov.pl/eli/DU/2022/2375" now:wystapienie="ostatnie" gd:nowGUID="885924fa-0343-4038-9f4d-3bdb356f6122" />w pkt 3 w lit. e średnik zastępuje się przecinkiem i dodaje się lit. f w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2022/2375" cudzyslowy="oba" gd:nowGUID="ec4bc074-d1f2-4c81-83e8-0e2457c303ce" element-eId="DU/2022/2375__art_20__pkt_3__lit_e" funkcja="dodaj-po"><litera eId="DU/2022/2375__art_20__pkt_3__lit_f" gd:GUID="a2756918-c7eb-4180-985e-71aea7693324" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01"><nr>f</nr><p><zdanie nr="1" gd:zdGUID="197bf698-4301-4c63-af59-0c993cd0cc53" fragment="1" gd:fragmentGUID="a6ed856b-3973-4dd0-869d-3cf540a82d71" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">wprowadzonych do środowiska przyrodniczego;</zdanie></p></litera></cytat-strukt>;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2025/1807__art_1__pkt_17" gd:GUID="f5830d79-7e39-484f-8681-8d820170cebf" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">
+          <nr>17</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="7bb55a86-da5b-4393-a9b4-cbce2d9716ec" fragment="43" gd:fragmentGUID="ef38f33c-4b02-4c52-90dd-fd32d69711d2" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01"><now:uchyl akt="https://eli.gov.pl/eli/DU/2022/2375" element-eId="DU/2022/2375__art_22" gd:nowGUID="5d333021-0a6d-4526-a664-c5bd823740c6" />uchyla się art. 22;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1807__art_1__pkt_18" gd:GUID="c971436d-e765-4ef3-84e3-6895d9d24644" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">
+          <nr>18</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="7bb55a86-da5b-4393-a9b4-cbce2d9716ec" fragment="44" gd:fragmentGUID="e3ee211b-cb74-427c-a559-f5f207c387d6" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01"><now:zamien-tekst stary-tekst="o których mowa w" nowy-tekst="o których mowa w art. 4a i" element-eId="DU/2022/2375__art_25__ust_1" akt="https://eli.gov.pl/eli/DU/2022/2375" gd:nowGUID="38201535-f248-4d7e-8734-b67f4662fb28" />w art. 25 w ust. 1 po wyrazach „o których mowa w” dodaje się wyrazy „art. 4a i”;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1807__art_1__pkt_19" gd:GUID="7e020df9-8530-4a83-a942-bdc73a8baf05" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">
+          <nr>19</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="7bb55a86-da5b-4393-a9b4-cbce2d9716ec" fragment="45" gd:fragmentGUID="38766f7c-6a60-4c1a-8b7f-822735e52706" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">w art. 36 w ust. 1:</zdanie>
+          </p>
+          <litera eId="DU/2025/1807__art_1__pkt_19__lit_a" gd:GUID="1a39c79a-b957-4f0e-9c88-6a07567b78ca" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="7bb55a86-da5b-4393-a9b4-cbce2d9716ec" fragment="46" gd:fragmentGUID="fef46bca-3b55-4a99-870e-02bc32933586" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01"><now:zamien-tekst stary-tekst="77,374 mln zł" nowy-tekst="133,154 mln zł" element-eId="DU/2022/2375__art_36__ust_1" akt="https://eli.gov.pl/eli/DU/2022/2375" gd:nowGUID="cb07c2a1-d96f-4a4f-a6fe-1c91bfd21efd" />we wprowadzeniu do wyliczenia wyrazy „77,374 mln zł” zastępuje się wyrazami „133,154 mln zł”,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1807__art_1__pkt_19__lit_b" gd:GUID="ddf6e8c0-2396-4ffe-b73c-7e0d264785f3" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="7bb55a86-da5b-4393-a9b4-cbce2d9716ec" fragment="47" gd:fragmentGUID="47d2b907-ed6d-457b-b7ef-93a7f6166819" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">pkt 5–10 otrzymują brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2022/2375" cudzyslowy="oba" gd:nowGUID="53c82541-a129-4964-998a-85d5849cfec2" element-eId="DU/2022/2375__art_36__ust_1__pkt_5" element-do-eId="DU/2022/2375__art_36__ust_1__pkt_10" funkcja="zastap"><punkt eId="DU/2022/2375__art_36__ust_1__pkt_5" gd:GUID="7cbca5fb-9929-4b15-8a87-857fd4c592ef" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01"><nr>5</nr><p><zdanie nr="1" gd:zdGUID="d0971925-013c-4c1b-bba9-4808efcea890" fragment="1" gd:fragmentGUID="240efbff-90a4-43b1-aaef-8c2dd9cf1461" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">2026 r. – 4,931 mln zł;</zdanie></p></punkt><punkt eId="DU/2022/2375__art_36__ust_1__pkt_6" gd:GUID="f2fad4e7-de6a-4db3-ba30-6bf46966cf7c" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01"><nr>6</nr><p><zdanie nr="1" gd:zdGUID="d0971925-013c-4c1b-bba9-4808efcea890" fragment="2" gd:fragmentGUID="cc789bdf-ee53-4848-80aa-b36435854de7" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">2027 r. – 5,729 mln zł;</zdanie></p></punkt><punkt eId="DU/2022/2375__art_36__ust_1__pkt_7" gd:GUID="2710c048-3345-4ef9-a677-ad80fe59f269" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01"><nr>7</nr><p><zdanie nr="1" gd:zdGUID="d0971925-013c-4c1b-bba9-4808efcea890" fragment="3" gd:fragmentGUID="9885609e-d1a1-46ef-b2fb-b21700eca1a1" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">2028 r. – 4,089 mln zł;</zdanie></p></punkt><punkt eId="DU/2022/2375__art_36__ust_1__pkt_8" gd:GUID="810339df-eab4-45a3-aa64-d8560e4bb821" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01"><nr>8</nr><p><zdanie nr="1" gd:zdGUID="d0971925-013c-4c1b-bba9-4808efcea890" fragment="4" gd:fragmentGUID="c84fa9ac-94af-4fe4-90f5-829cf7742084" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">2029 r. – 12,555 mln zł;</zdanie></p></punkt><punkt eId="DU/2022/2375__art_36__ust_1__pkt_9" gd:GUID="c22f31cb-1a0f-4e96-b017-b12d6944e64c" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01"><nr>9</nr><p><zdanie nr="1" gd:zdGUID="d0971925-013c-4c1b-bba9-4808efcea890" fragment="5" gd:fragmentGUID="f2ae124f-8637-4c93-983d-2092159a3ee2" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">2030 r. – 30,249 mln zł;</zdanie></p></punkt><punkt eId="DU/2022/2375__art_36__ust_1__pkt_10" gd:GUID="ad58e690-7950-41df-b1ca-eef44e2658fc" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01"><nr>10</nr><p><zdanie nr="1" gd:zdGUID="d0971925-013c-4c1b-bba9-4808efcea890" fragment="6" gd:fragmentGUID="19f71a7a-25be-4f32-8ae2-da08a2431d3d" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">2031 r. – 32,079 mln zł.</zdanie></p></punkt></cytat-strukt>.</zdanie>
+            </p>
+          </litera>
+        </punkt>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2025/1807__art_2" gd:GUID="59c76c77-969b-4abe-88e1-98052e4788d2" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="6a52b753-d94c-4b9d-9556-7aba79f99fc4" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="a10eeed2-0809-4c9b-b8b6-ddbbef72bda4" fragment="1" gd:fragmentGUID="d8bb1bfc-29b1-4168-882e-08f11309a79c" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1807_domyslne.x" wejscie-w-zycie="2026-01-01">Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <organ-podpisujacy>Prezydent Rzeczypospolitej Polskiej: <i><osoba podpisujacy="true" gd:osobaGUID="460ad03d-4a2b-429a-8d33-a7c5aec078cc"><imie>K.</imie> <nazwisko>Nawrocki</nazwisko></osoba></i></organ-podpisujacy>
+  </ustawa>
+</akt-prawny>

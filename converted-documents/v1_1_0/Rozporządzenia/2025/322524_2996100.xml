@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <rozporzadzenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/1145</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>b7872acc-60da-46dd-98bf-f1c0858593ca</gd:GUIDwersji>
+      <AdresISAP>WDU20250001145</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>1145</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 1145</AdresWyswietlany>
+      <Tytul>Rozporządzenie Ministra Finansów i Gospodarki z dnia 10 sierpnia 2025 r. zmieniające rozporządzenie w sprawie niektórych podatników i płatników, w odniesieniu do których zadania są wykonywane przez naczelnika urzędu skarbowego innego niż właściwy miejscowo</Tytul>
+      <Rodzaj>ROZP</Rodzaj>
+      <DataOgloszenia>2025-08-20</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-08-10</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2025-09-04_DU-2025-1145_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2025-09-04" warunek="po upływie 14 dni od dnia ogłoszenia" podstawa="§ 5" zrodlo="https://eli.gov.pl/eli/DU/2025/1145" dowod="DU/2025/1145__art_5">
+            <JednostkaAktu eId="DU/2025/1145__art_1__pkt_4" />
+            <JednostkaAktu eId="DU/2025/1145__art_3" />
+            <JednostkaAktu eId="DU/2025/1145__art_4" />
+          </Zdarzenie>
+          <Zdarzenie id="zdarz_wejscie_2026-01-01_DU-2025-1145_odczytane" rodzaj="wejscie-w-zycie" pochodzenie="odczytane" data="2026-01-01" podstawa="§ 5" zrodlo="https://eli.gov.pl/eli/DU/2025/1145" dowod="DU/2025/1145__art_5" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2025-09-04_DU-2025-1145_domyslne.x" glowna="false">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2025-09-04_DU-2025-1145_domyslne" />
+        </GrupaCzasowa>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1145_odczytane.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2026-01-01_DU-2025-1145_odczytane" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="71b5285d-fa05-4d46-baea-4478eb7d73b5" rola="wydajacy">
+          <Nazwa>Minister Finansów i Gospodarki</Nazwa>
+          <OrganPodpisujacy>Minister Finansów i Gospodarki</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>A.</imie> <nazwisko>Domański</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Rozporządzenie</rodzaj-aktu>
+    <autor-aktu>Ministra Finansów i Gospodarki<odnosnik id-odnosnika="1" symbol="1" gd:GUID="5e928b81-fb35-487b-843e-d2ffa1166f6f"><p><zdanie nr="1" gd:zdGUID="dc99c680-7c34-4102-b499-4941b3f2ba8a" fragment="1" gd:fragmentGUID="609a1385-e32c-44f4-9e14-8d8335f6c283">Minister Finansów i Gospodarki kieruje działem administracji rządowej – finanse publiczne, na podstawie § 1 ust. 2 pkt 3 rozporządzenia Prezesa Rady Ministrów z dnia 25 lipca 2025 r. w sprawie szczegółowego zakresu działania Ministra Finansów i Gospodarki (Dz. U. poz. 997).</zdanie></p></odnosnik></autor-aktu>
+    <data>z dnia 10 sierpnia 2025 r.</data>
+    <tytul>zmieniające rozporządzenie w sprawie niektórych podatników i płatników, w odniesieniu do których zadania są wykonywane przez naczelnika urzędu skarbowego innego niż właściwy miejscowo</tytul>
+    <podstawa-prawna>Na podstawie art. 11 ust. 6 ustawy z dnia 16 listopada 2016 r. o Krajowej Administracji Skarbowej (Dz. U. z 2025 r. poz. 615) zarządza się, co następuje:</podstawa-prawna>
+    <paragraf eId="DU/2025/1145__art_1" gd:GUID="003ff3a2-53a3-4cad-a139-07c19604cdb4" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1145_odczytane.x" wejscie-w-zycie="2026-01-01">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="0034cd21-1377-4e75-a1da-e4fae5a5308c" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1145_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="63097f09-70c9-4b39-bef5-ef2c93abc5e1" fragment="1" gd:fragmentGUID="1fccdf5b-73a8-49a4-b318-e094b7a9220d" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1145_odczytane.x" wejscie-w-zycie="2026-01-01">W rozporządzeniu Ministra Finansów, Funduszy i Polityki Regionalnej z dnia 28 grudnia 2020 r. w sprawie niektórych podatników i płatników, w odniesieniu do których zadania są wykonywane przez naczelnika urzędu skarbowego innego niż właściwy miejscowo (Dz. U. poz. 2456) wprowadza się następujące zmiany:</zdanie>
+        </p>
+        <punkt eId="DU/2025/1145__art_1__pkt_1" gd:GUID="eac913fc-c200-48bb-930a-d29f490324e2" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1145_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="63097f09-70c9-4b39-bef5-ef2c93abc5e1" fragment="2" gd:fragmentGUID="450c44e0-4cdb-41b8-9fb9-701ee19ae341" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1145_odczytane.x" wejscie-w-zycie="2026-01-01">w § 2:</zdanie>
+          </p>
+          <litera eId="DU/2025/1145__art_1__pkt_1__lit_a" gd:GUID="394ca89b-c15a-4f83-acc3-e913e3523a50" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1145_odczytane.x" wejscie-w-zycie="2026-01-01">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="63097f09-70c9-4b39-bef5-ef2c93abc5e1" fragment="3" gd:fragmentGUID="c367ecca-c487-4b99-8463-75d7cd827e78" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1145_odczytane.x" wejscie-w-zycie="2026-01-01">w ust. 1:</zdanie>
+            </p>
+            <tiret eId="DU/2025/1145__art_1__pkt_1__lit_a__tir_1" gd:GUID="23905366-128d-4b8b-9a3b-965d302ede05" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1145_odczytane.x" wejscie-w-zycie="2026-01-01">
+              <p>
+                <zdanie nr="1" gd:zdGUID="63097f09-70c9-4b39-bef5-ef2c93abc5e1" fragment="4" gd:fragmentGUID="79923417-28cc-4da4-ba50-91c58928d38d" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1145_odczytane.x" wejscie-w-zycie="2026-01-01">po pkt 8 dodaje się pkt 8a w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2020/2456" cudzyslowy="oba" gd:nowGUID="78d2885a-6ec1-4f29-b6b7-02a911c52040" element-eId="DU/2020/2456__art_2__ust_1__pkt_8" funkcja="dodaj-po"><punkt eId="DU/2020/2456__art_2__ust_1__pkt_8a" gd:GUID="1f30037f-d1bc-4370-97ef-822f599b8aba" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1145_odczytane.x" wejscie-w-zycie="2026-01-01"><nr>8a</nr><p><zdanie nr="1" gd:zdGUID="125a7787-1f3d-40e6-8e0b-3c507861e203" fragment="1" gd:fragmentGUID="2b0c3345-f4c1-4f7b-a008-7c1a228ff723" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1145_odczytane.x" wejscie-w-zycie="2026-01-01">podatnicy będący stroną umowy o współdziałanie, o której mowa w art. 20s ustawy z dnia 29 sierpnia 1997 r. – Ordynacja podatkowa (Dz. U. z 2025 r. poz. 111, 497, 621, 622, 769 i 820), zwanej dalej „umową o współdziałanie”,</zdanie></p></punkt></cytat-strukt>,</zdanie>
+              </p>
+            </tiret>
+            <tiret eId="DU/2025/1145__art_1__pkt_1__lit_a__tir_2" gd:GUID="739dd399-4c56-47fb-8936-e18d826f8374" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1145_odczytane.x" wejscie-w-zycie="2026-01-01">
+              <p>
+                <zdanie nr="1" gd:zdGUID="63097f09-70c9-4b39-bef5-ef2c93abc5e1" fragment="5" gd:fragmentGUID="c7797cc1-3c60-47f2-8b64-ebd24efa861a" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1145_odczytane.x" wejscie-w-zycie="2026-01-01"><now:zamien-tekst stary-tekst="50 mln euro" nowy-tekst="100 mln euro" element-eId="DU/2020/2456__art_2__ust_1__pkt_15" akt="https://eli.gov.pl/eli/DU/2020/2456" gd:nowGUID="a6c31da1-01e7-4ca0-bad1-7041594cd1e2" />w pkt 15 wyrazy „50 mln euro” zastępuje się wyrazami „100 mln euro”,</zdanie>
+              </p>
+            </tiret>
+            <tiret eId="DU/2025/1145__art_1__pkt_1__lit_a__tir_3" gd:GUID="de534471-0497-47fe-8040-1f207cb61c89" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1145_odczytane.x" wejscie-w-zycie="2026-01-01">
+              <p>
+                <zdanie nr="1" gd:zdGUID="63097f09-70c9-4b39-bef5-ef2c93abc5e1" fragment="6" gd:fragmentGUID="eba70f6e-06e7-478b-8b98-392b0214b442" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1145_odczytane.x" wejscie-w-zycie="2026-01-01"><now:zamien-tekst stary-tekst="50 mln euro" nowy-tekst="100 mln euro" element-eId="DU/2020/2456__art_2__ust_1__pkt_16" akt="https://eli.gov.pl/eli/DU/2020/2456" gd:nowGUID="9c801fd9-9e3b-433d-93fb-68ef15de94c6" />w pkt 16 wyrazy „50 mln euro” zastępuje się wyrazami „100 mln euro”,</zdanie>
+              </p>
+            </tiret>
+          </litera>
+          <litera eId="DU/2025/1145__art_1__pkt_1__lit_b" gd:GUID="a31cf2c9-bbec-4229-b529-2227272148c3" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1145_odczytane.x" wejscie-w-zycie="2026-01-01">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="63097f09-70c9-4b39-bef5-ef2c93abc5e1" fragment="7" gd:fragmentGUID="7700d395-9350-480e-a40e-53c90023cd2d" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1145_odczytane.x" wejscie-w-zycie="2026-01-01"><now:zamien-tekst stary-tekst="na ostatni dzień roku podatkowego" nowy-tekst="w ostatnim dniu roboczym roku podatkowego" element-eId="DU/2020/2456__art_2__ust_2" akt="https://eli.gov.pl/eli/DU/2020/2456" gd:nowGUID="de960e6d-66fe-47e7-ba81-119123b40e70" />w ust. 2 wyrazy „na ostatni dzień roku podatkowego” zastępuje się wyrazami „w ostatnim dniu roboczym roku podatkowego”;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2025/1145__art_1__pkt_2" gd:GUID="6852ff7f-0bcb-4d1f-ae74-4bab7bd9b1d5" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1145_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="63097f09-70c9-4b39-bef5-ef2c93abc5e1" fragment="8" gd:fragmentGUID="7738b657-366e-4971-892c-6a8058100899" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1145_odczytane.x" wejscie-w-zycie="2026-01-01">w § 4 po pkt 2 dodaje się pkt 2a w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2020/2456" cudzyslowy="oba" gd:nowGUID="0ad45235-49f8-476d-adb6-44179afa94e1" element-eId="DU/2020/2456__art_4__pkt_2" funkcja="dodaj-po"><punkt eId="DU/2020/2456__art_4__pkt_2a" gd:GUID="9582c31d-5e0e-4496-8219-ec8e42cec2af" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1145_odczytane.x" wejscie-w-zycie="2026-01-01"><nr>2a</nr><p><zdanie nr="1" gd:zdGUID="d4c0da10-fa5b-4077-afff-0a0f9c1ad166" fragment="1" gd:fragmentGUID="d88f1edb-d7dc-415d-86e9-72cebbb60ed3" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1145_odczytane.x" wejscie-w-zycie="2026-01-01">pkt 8a, następuje z dniem zawarcia umowy o współdziałanie;</zdanie></p></punkt></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1145__art_1__pkt_3" gd:GUID="523e21e5-9ccd-4281-9da0-4a8b0a7a10a0" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1145_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="63097f09-70c9-4b39-bef5-ef2c93abc5e1" fragment="9" gd:fragmentGUID="c4075e51-99e9-4151-b824-8aa6de07c825" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1145_odczytane.x" wejscie-w-zycie="2026-01-01">w § 5 po pkt 2 dodaje się pkt 2a w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2020/2456" cudzyslowy="oba" gd:nowGUID="62a9acfa-a686-4346-bc6f-045d342d45be" element-eId="DU/2020/2456__art_5__pkt_2" funkcja="dodaj-po"><punkt eId="DU/2020/2456__art_5__pkt_2a" gd:GUID="22cfc49a-0f29-4f58-8192-f924ad05749a" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1145_odczytane.x" wejscie-w-zycie="2026-01-01"><nr>2a</nr><p><zdanie nr="1" gd:zdGUID="12dc2ff5-005d-4754-9270-bbcbbc8ecb76" fragment="1" gd:fragmentGUID="e1288ca6-6b3d-4d0c-946a-fd32e51fc5e2" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1145_odczytane.x" wejscie-w-zycie="2026-01-01">pkt 8a, następuje z dniem 1 stycznia roku następującego po zakończeniu roku kalendarzowego, w którym nastąpiło rozwiązanie umowy o współdziałanie;</zdanie></p></punkt></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1145__art_1__pkt_4" gd:GUID="a312a147-2f7d-461d-8daa-7cffac385b22" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-04_DU-2025-1145_domyslne.x" wejscie-w-zycie="2025-09-04">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="63097f09-70c9-4b39-bef5-ef2c93abc5e1" fragment="10" gd:fragmentGUID="c0696e35-cda6-4737-b34a-c66b76dc509e" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-04_DU-2025-1145_domyslne.x" wejscie-w-zycie="2025-09-04">po § 7 dodaje się § 7a w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2020/2456" cudzyslowy="oba" gd:nowGUID="20164c48-047b-4a07-b055-55eb6b86e7b0" element-eId="DU/2020/2456__art_7" funkcja="dodaj-po"><paragraf eId="DU/2020/2456__art_7a" gd:GUID="6010c554-25c3-440c-a6ed-dfb56f508654" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-04_DU-2025-1145_domyslne.x" wejscie-w-zycie="2025-09-04"><nr>7a</nr><ustep eId="DU/2020/2456__art_7a__ust_1" gd:GUID="73ddee17-a0e8-466a-8212-ad9c3677846b" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-04_DU-2025-1145_domyslne.x" wejscie-w-zycie="2025-09-04"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="5d327d0c-ba9d-4879-9e13-bc2f7d1596e9" fragment="1" gd:fragmentGUID="96e9d3ea-ef1d-413a-84f7-84d5002ba777" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-04_DU-2025-1145_domyslne.x" wejscie-w-zycie="2025-09-04">Do kategorii podatników i płatników, o których mowa w § 1 pkt 1, należą również osoby prawne lub jednostki organizacyjne nieposiadające osobowości prawnej, należące na dzień 31 grudnia 2025 r. do kategorii, o której mowa w § 2 ust. 1 pkt 16, z wyłączeniem podatników będących stroną umowy o współdziałanie, jeżeli przynajmniej w jednym z dwóch kolejnych lat podatkowych, które rozpoczęły się po roku 2021, przy czym ostatni rok podatkowy zakończył się po roku 2023, w ramach prowadzonej przez siebie działalności gospodarczej osiągnęły przychód netto ze sprzedaży towarów, wyrobów i usług o równowartości w walucie polskiej co najmniej 50 mln euro i nieprzekraczającej 100 mln euro.</zdanie></p></ustep><ustep eId="DU/2020/2456__art_7a__ust_2" gd:GUID="e53edea8-da62-454a-b770-1561f27a7911" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-04_DU-2025-1145_domyslne.x" wejscie-w-zycie="2025-09-04"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="f3cb9659-5959-4f6a-9fdf-10e35ce936de" fragment="1" gd:fragmentGUID="ea8d5883-de16-4f4d-a6f7-c93e60aff4ce" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-04_DU-2025-1145_domyslne.x" wejscie-w-zycie="2025-09-04">Kwotę wyrażoną w euro, o której mowa w ust. 1, przelicza się na walutę polską po średnim kursie ogłaszanym przez Narodowy Bank Polski na ostatni dzień roku podatkowego.</zdanie></p></ustep><ustep eId="DU/2020/2456__art_7a__ust_3" gd:GUID="254f023a-6f89-45b0-a3a5-bae4fcc987d8" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-04_DU-2025-1145_domyslne.x" wejscie-w-zycie="2025-09-04"><nr>3</nr><p><zdanie nr="1" gd:zdGUID="e3947841-9be0-4d68-bcf8-16c0d7acc9a9" fragment="1" gd:fragmentGUID="bf519581-5ae0-41e1-9e28-9376f1f59ead" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-04_DU-2025-1145_domyslne.x" wejscie-w-zycie="2025-09-04">Do ustalania przychodu, o którym mowa w ust. 1, przepisy § 3 ust. 1 pkt 3, ust. 2 pkt 2 i ust. 3 stosuje się odpowiednio.</zdanie></p></ustep><ustep eId="DU/2020/2456__art_7a__ust_4" gd:GUID="1d415c49-98b7-4a1e-b42a-24672b0d0a0c" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-04_DU-2025-1145_domyslne.x" wejscie-w-zycie="2025-09-04"><nr>4</nr><p><zdanie nr="1" gd:zdGUID="9ac814c1-0ea1-4b14-9c22-92437c2a1168" fragment="1" gd:fragmentGUID="13cbafbc-5624-4ef9-94c9-6ef363b5b8f2" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-04_DU-2025-1145_domyslne.x" wejscie-w-zycie="2025-09-04">Osoby prawne lub jednostki organizacyjne nieposiadające osobowości prawnej, zaliczone do kategorii podatników i płatników, o których mowa w § 1 pkt 1, na podstawie ust. 1, mogą złożyć do dnia 15 października oświadczenie, w formie pisemnej, o wyłączeniu z tej kategorii do dotychczas właściwego naczelnika urzędu skarbowego.</zdanie></p></ustep><ustep eId="DU/2020/2456__art_7a__ust_5" gd:GUID="5541c7d5-d399-420a-948b-977d86999a09" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-04_DU-2025-1145_domyslne.x" wejscie-w-zycie="2025-09-04"><nr>5</nr><p><zdanie nr="1" gd:zdGUID="23421e54-fd7e-40f6-b8ca-f2c7e19a2f0b" fragment="1" gd:fragmentGUID="864b69f2-a45a-4a88-bcd2-918c41fcc297" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-04_DU-2025-1145_domyslne.x" wejscie-w-zycie="2025-09-04">Wyłączenie z kategorii, o której mowa w ust. 1, następuje z dniem 1 stycznia:</zdanie></p><punkt eId="DU/2020/2456__art_7a__ust_5__pkt_1" gd:GUID="b1def338-e698-4478-8e42-47845bafb84a" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-04_DU-2025-1145_domyslne.x" wejscie-w-zycie="2025-09-04"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="23421e54-fd7e-40f6-b8ca-f2c7e19a2f0b" fragment="2" gd:fragmentGUID="30ed7bd9-d64a-47d1-b4a4-5dbd4c3f1c97" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-04_DU-2025-1145_domyslne.x" wejscie-w-zycie="2025-09-04">drugiego roku następującego po upływie dwóch kolejnych lat podatkowych, w których nie został spełniony warunek określony w ust. 1, albo</zdanie></p></punkt><punkt eId="DU/2020/2456__art_7a__ust_5__pkt_2" gd:GUID="9245b78c-e888-4a1d-a9d8-a4fa20eddef7" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-04_DU-2025-1145_domyslne.x" wejscie-w-zycie="2025-09-04"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="23421e54-fd7e-40f6-b8ca-f2c7e19a2f0b" fragment="3" gd:fragmentGUID="79d701b2-e4b2-45c3-a6d4-5fae30f06b15" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-04_DU-2025-1145_domyslne.x" wejscie-w-zycie="2025-09-04">roku następującego po roku, w którym zostało złożone oświadczenie, o którym mowa w ust. 4.</zdanie></p></punkt></ustep><ustep eId="DU/2020/2456__art_7a__ust_6" gd:GUID="102ff9d5-4c18-4d67-b22f-9a7adc197292" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-04_DU-2025-1145_domyslne.x" wejscie-w-zycie="2025-09-04"><nr>6</nr><p><zdanie nr="1" gd:zdGUID="e0823dd4-1891-47f4-a7f5-c65ab75d1842" fragment="1" gd:fragmentGUID="55527817-a4d5-47bc-98b7-5a76e2638525" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-04_DU-2025-1145_domyslne.x" wejscie-w-zycie="2025-09-04">W przypadku, o którym mowa w ust. 1, właściwym dla podatników i płatników jest Naczelnik Pierwszego Mazowieckiego Urzędu Skarbowego w Warszawie.</zdanie></p></ustep><ustep eId="DU/2020/2456__art_7a__ust_7" gd:GUID="705338da-6f98-4e43-ad84-f9d3b2b17360" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-04_DU-2025-1145_domyslne.x" wejscie-w-zycie="2025-09-04"><nr>7</nr><p><zdanie nr="1" gd:zdGUID="51fa09d3-c4bb-486d-a780-993fa8c8af64" fragment="1" gd:fragmentGUID="1f1671bb-3e61-478f-80dc-dc2723c95b61" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-04_DU-2025-1145_domyslne.x" wejscie-w-zycie="2025-09-04">W przypadku, o którym mowa w ust. 5 pkt 1, podatnicy i płatnicy zawiadamiają, w formie pisemnej, o zmianie właściwości dotychczas właściwego naczelnika urzędu skarbowego w terminie do dnia 15 października roku poprzedzającego rok, od którego nastąpi zaliczenie do kategorii, o której mowa w § 2 ust. 1 pkt 15, albo wyłączenie z kategorii podatników i płatników, o których mowa w § 1 pkt 1.</zdanie></p></ustep></paragraf></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1145__art_1__pkt_5" gd:GUID="c549afcc-70ad-43bd-92d3-7612522a239b" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1145_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="63097f09-70c9-4b39-bef5-ef2c93abc5e1" fragment="11" gd:fragmentGUID="8f444f10-3930-4eea-a626-4de32e990414" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1145_odczytane.x" wejscie-w-zycie="2026-01-01">w załączniku do rozporządzenia lp. 7 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2020/2456" cudzyslowy="brak" gd:nowGUID="7ba76201-b8b0-415e-8880-2fcd6ff4e2b6" element-eId="DU/2020/2456__zal_1" funkcja="zastap-recznie"><tabela gd:GUID="25148a50-b119-4ae7-93b8-2f83c7a9fde5"><tbody><tr gd:GUID="5d6aceff-ac03-4ce6-b1db-e95140831f6f"><td gd:GUID="18ad7b00-6614-4abf-94b9-52fc6ffcf7f1"><liczba gd:GUID="433d5c79-7797-40c2-992a-cb0f871ebd32">7</liczba></td><td gd:GUID="8cc70e58-abdf-4529-a1bc-930d5dc8ee99"><tekst-zwykly gd:GUID="2f562a9b-3c7e-4fdb-b416-f712b2f1d9ea">Naczelnik Pierwszego Mazowieckiego Urzędu Skarbowego w Warszawie</tekst-zwykly></td><td gd:GUID="98fba1d8-9b54-4d3c-b874-d985ec32f108"><tekst-zwykly gd:GUID="e0232f39-231a-4131-b4ee-858de35dd6e9"><b>podatnicy i płatnicy, o których mowa w § 2 ust. 1 pkt 1</b>–<b>4, 7</b>–<b>8a i 16</b></tekst-zwykly></td><td gd:GUID="b107aceb-64d1-48ba-8c27-a5122ed3247c"><tekst-zwykly gd:GUID="19312cc1-d6f7-445c-bada-8ec277c3e326">obszar całego kraju</tekst-zwykly></td></tr></tbody></tabela></cytat-strukt></zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2025/1145__art_2" gd:GUID="c73b338e-6070-4503-8720-1e6a929261c3" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1145_odczytane.x" wejscie-w-zycie="2026-01-01">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="074b6d9d-263d-49ae-99e2-5c617094b18e" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1145_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="5054d818-51ff-4a0b-8cd9-488393172e33" fragment="1" gd:fragmentGUID="e5bddb0e-c495-4fb3-ae51-f489731e95fc" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1145_odczytane.x" wejscie-w-zycie="2026-01-01">W przypadku podatnika, który na dzień 1 stycznia 2026 r. jest stroną umowy o współdziałanie, o której mowa w art. 20s ustawy z dnia 29 sierpnia 1997 r. – Ordynacja podatkowa (Dz. U. z 2025 r. poz. 111, 497, 621, 622, 769 i 820), zaliczenie do kategorii, o której mowa w § 2 ust. 1 pkt 8a rozporządzenia zmienianego w § 1, następuje z dniem 1 stycznia 2026 r.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2025/1145__art_3" gd:GUID="99d611af-52f1-49f0-a22c-52f0351ea507" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-04_DU-2025-1145_domyslne.x" wejscie-w-zycie="2025-09-04">
+      <nr>3</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="c3355b6d-82e0-4c56-bf05-7da163b7a521" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-04_DU-2025-1145_domyslne.x" wejscie-w-zycie="2025-09-04">
+        <p>
+          <zdanie nr="1" gd:zdGUID="27ec2910-61ae-4fa3-8a72-ae0f07c82763" fragment="1" gd:fragmentGUID="cd276d70-e654-40d8-9955-c242f738d298" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-04_DU-2025-1145_domyslne.x" wejscie-w-zycie="2025-09-04">Do przeliczenia kwoty przychodu netto ze sprzedaży towarów, wyrobów i usług wyrażonej w euro, o której mowa w § 2 ust. 1 pkt 13–16 i § 7a ust. 1 rozporządzenia zmienianego w § 1 w brzmieniu nadanym niniejszym rozporządzeniem, na walutę polską, za rok podatkowy, który zakończył się w 2022 r. oraz w 2023 r., stosuje się przepis § 2 ust. 2 rozporządzenia zmienianego w § 1 w brzmieniu dotychczasowym.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2025/1145__art_4" gd:GUID="8fcf1662-7659-4ba1-8343-53db374dbf50" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-04_DU-2025-1145_domyslne.x" wejscie-w-zycie="2025-09-04">
+      <nr>4</nr>
+      <ustep eId="DU/2025/1145__art_4__ust_1" gd:GUID="435db5fb-00e1-4191-9dd8-6f71711ac470" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-04_DU-2025-1145_domyslne.x" wejscie-w-zycie="2025-09-04">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="e587997f-14ae-4ee0-989d-bb8d03bff5db" fragment="1" gd:fragmentGUID="dc6c92c9-18bd-4899-8aa6-a9977ca7a444" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-04_DU-2025-1145_domyslne.x" wejscie-w-zycie="2025-09-04">Zaliczenie do kategorii, o której mowa w § 7a ust. 1 rozporządzenia zmienianego w § 1, następuje z dniem 1 stycznia 2026 r.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/1145__art_4__ust_2" gd:GUID="7b6bd71e-b005-4d63-b75e-2c419a896ad1" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-04_DU-2025-1145_domyslne.x" wejscie-w-zycie="2025-09-04">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="a3e124ed-0b6a-4cc4-a983-70f20eb4d55a" fragment="1" gd:fragmentGUID="b3d4055b-238d-418d-b03b-c7ae315914b1" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-04_DU-2025-1145_domyslne.x" wejscie-w-zycie="2025-09-04">Przepisu ust. 1 nie stosuje się, jeżeli do dnia 15 października 2025 r. osoby prawne lub jednostki organizacyjne nieposiadające osobowości prawnej, o których mowa w § 7a ust. 1 rozporządzenia zmienianego w § 1, złożą oświadczenie, w formie pisemnej, o niezaliczaniu ich do kategorii, o której mowa w § 7a ust. 1 rozporządzenia zmienianego w § 1, do dotychczas właściwego naczelnika urzędu skarbowego.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/1145__art_4__ust_3" gd:GUID="9b801db2-d55d-4c07-be78-f60364425a5b" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-04_DU-2025-1145_domyslne.x" wejscie-w-zycie="2025-09-04">
+        <nr>3</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="e4bba29d-b4e5-4870-b58e-76e897479e25" fragment="1" gd:fragmentGUID="8e2258a7-37cc-43e1-9500-da7b85160758" okres="okr_obowiazywanie.zdarz_wejscie_2025-09-04_DU-2025-1145_domyslne.x" wejscie-w-zycie="2025-09-04">W przypadku, o którym mowa w ust. 2, podatnicy i płatnicy nie zawiadamiają o zmianie właściwości dotychczas właściwego naczelnika urzędu skarbowego.</zdanie>
+        </p>
+      </ustep>
+    </paragraf>
+    <paragraf eId="DU/2025/1145__art_5" gd:GUID="e268f4eb-8ec2-4e37-9493-b1c0d58d555d" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1145_odczytane.x" wejscie-w-zycie="2026-01-01">
+      <nr>5</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="ad6256ef-b734-4f31-a81d-bdb366134e77" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1145_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="9d6d6fe0-7c84-4420-b9b7-790ef7f5435f" fragment="1" gd:fragmentGUID="391ff6c3-2fb5-448d-bc4d-53d1ff2f7706" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1145_odczytane.x" wejscie-w-zycie="2026-01-01">Rozporządzenie wchodzi w życie z dniem 1 stycznia 2026 r., z wyjątkiem § 1 pkt 4, § 3 i § 4, które wchodzą w życie po upływie 14 dni od dnia ogłoszenia.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <organ-podpisujacy>Minister Finansów i Gospodarki: <i><osoba podpisujacy="true" gd:osobaGUID="a3959b23-2623-43c1-91c1-ef0ca64df82b"><imie>A.</imie> <nazwisko>Domański</nazwisko></osoba></i></organ-podpisujacy>
+  </rozporzadzenie>
+</akt-prawny>

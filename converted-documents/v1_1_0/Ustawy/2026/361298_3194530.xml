@@ -1,0 +1,951 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <ustawa>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2026/176</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>63883018-4cc9-4ad1-b104-7311eb23bc2c</gd:GUIDwersji>
+      <AdresISAP>WDU20260000176</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2026</Rok>
+      <Pozycja>176</Pozycja>
+      <AdresWyswietlany>Dz.U. 2026 poz. 176</AdresWyswietlany>
+      <Tytul>Ustawa z dnia 23 stycznia 2026 r. o zmianie ustawy – Kodeks spółek handlowych oraz niektórych innych ustaw</Tytul>
+      <Rodzaj>USTAWA</Rodzaj>
+      <DataOgloszenia>2026-02-17</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2026-01-23</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2026-02-28_DU-2026-176_odczytane" rodzaj="wejscie-w-zycie" pochodzenie="odczytane" data="2026-02-28" podstawa="art. 35" zrodlo="https://eli.gov.pl/eli/DU/2026/176" dowod="DU/2026/176__art_35">
+            <JednostkaAktu eId="DU/2026/176__art_28" />
+            <JednostkaAktu eId="DU/2026/176__art_33" />
+          </Zdarzenie>
+          <Zdarzenie id="zdarz_wejscie_2027-02-18_DU-2026-176_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2027-02-18" warunek="po upływie 12 miesięcy od dnia ogłoszenia" podstawa="art. 35" zrodlo="https://eli.gov.pl/eli/DU/2026/176" dowod="DU/2026/176__art_35" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2026-02-28_DU-2026-176_odczytane.x" glowna="false">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2026-02-28_DU-2026-176_odczytane" />
+        </GrupaCzasowa>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2027-02-18_DU-2026-176_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="d85176e7-c15d-4ef8-a648-6e4628f58c06" rola="wydajacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Sejm">
+          <Nazwa>SEJM</Nazwa>
+        </Organ>
+        <Organ gd:GUID="a4feaf43-e880-47c9-b4c0-35bfbdf4b1fa" rola="podpisujacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Prezydent">
+          <Nazwa>Prezydent Rzeczypospolitej Polskiej</Nazwa>
+          <OrganPodpisujacy>Prezydent Rzeczypospolitej Polskiej</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>K.</imie> <nazwisko>Nawrocki</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Ustawa</rodzaj-aktu>
+    <data>z dnia 23 stycznia 2026 r.</data>
+    <tytul>o zmianie ustawy – Kodeks spółek handlowych oraz niektórych innych ustaw<odnosnik id-odnosnika="1" symbol="1" gd:GUID="22fcf83d-fdd4-49bb-971b-33b4e7039131"><p><zdanie nr="1" gd:zdGUID="56920cbc-8cf2-4dd5-8650-b6e814d377ed" fragment="1" gd:fragmentGUID="1a425c69-37cb-4a29-8fca-aa7ddc6b3f37">Niniejszą ustawą zmienia się ustawy: ustawę z dnia 14 lutego 1991 r. ‒ Prawo o notariacie, ustawę z dnia 5 lipca 1996 r. o doradztwie podatkowym, ustawę z dnia 20 grudnia 1996 r. o portach i przystaniach morskich, ustawę z dnia 20 sierpnia 1997 r. o Krajowym Rejestrze Sądowym, ustawę z dnia 28 sierpnia 1997 r. o organizacji i funkcjonowaniu funduszy emerytalnych, ustawę z dnia 29 sierpnia 1997 r. – Prawo bankowe, ustawę z dnia 26 października 2000 r. o Polskim Rejestrze Statków, ustawę z dnia 26 października 2000 r. o giełdach towarowych, ustawę z dnia 11 kwietnia 2001 r. o rzecznikach patentowych, ustawę z dnia 27 kwietnia 2001 r. ‒ Prawo ochrony środowiska, ustawę z dnia 11 maja 2001 r. o obowiązkach przedsiębiorców w zakresie gospodarowania niektórymi odpadami oraz o opłacie produktowej, ustawę z dnia 3 lipca 2002 r. ‒ Prawo lotnicze, ustawę z dnia 30 października 2002 r. o pomocy publicznej dla przedsiębiorców o szczególnym znaczeniu dla rynku pracy, ustawę z dnia 27 maja 2004 r. o funduszach inwestycyjnych i zarządzaniu alternatywnymi funduszami inwestycyjnymi, ustawę z dnia 29 lipca 2005 r. o obrocie instrumentami finansowymi, ustawę z dnia 29 lipca 2005 r. o ofercie publicznej i warunkach wprowadzania instrumentów finansowych do zorganizowanego systemu obrotu oraz o spółkach publicznych, ustawę z dnia 12 stycznia 2007 r. o drogowych spółkach specjalnego przeznaczenia, ustawę z dnia 29 czerwca 2007 r. o zasadach pokrywania kosztów powstałych u wytwórców w związku z przedterminowym rozwiązaniem umów długoterminowych sprzedaży mocy i energii elektrycznej, ustawę z dnia 19 listopada 2009 r. o grach hazardowych, ustawę z dnia 12 lutego 2010 r. o rekapitalizacji niektórych instytucji oraz o rządowych instrumentach stabilizacji finansowej, ustawę z dnia 9 kwietnia 2010 r. o udostępnianiu informacji gospodarczych i wymianie danych gospodarczych, ustawę z dnia 13 czerwca 2013 r. o gospodarce opakowaniami i odpadami opakowaniowymi, ustawę z dnia 15 maja 2015 r. ‒ Prawo restrukturyzacyjne, ustawę z dnia 11 września 2015 r. o zużytym sprzęcie elektrycznym i elektronicznym, ustawę z dnia 11 września 2015 r. o działalności ubezpieczeniowej i reasekuracyjnej, ustawę z dnia 10 czerwca 2016 r. o Bankowym Funduszu Gwarancyjnym, systemie gwarantowania depozytów oraz przymusowej restrukturyzacji oraz ustawę z dnia 30 sierpnia 2019 r. o zmianie ustawy – Kodeks spółek handlowych oraz niektórych innych ustaw.</zdanie></p></odnosnik></tytul>
+    <artykul eId="DU/2026/176__art_1" gd:GUID="4b58a2ca-30a2-4858-ae37-90348b75d533" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="0b4c168a-a58e-461a-b9d6-3c6fee530c17" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+        <p>
+          <zdanie nr="1" gd:zdGUID="03a9144e-7a5f-4aa0-aa4d-6f5af786089b" fragment="1" gd:fragmentGUID="141d9d6d-e69e-4a3e-a0a0-b4bc2e5910e4" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">W ustawie z dnia 15 września 2000 r. – Kodeks spółek handlowych (Dz. U. z 2024 r. poz. 18 i 96) wprowadza się następujące zmiany:</zdanie>
+        </p>
+        <punkt eId="DU/2026/176__art_1__pkt_1" gd:GUID="893181bd-d40b-4130-8eea-70bca13857fb" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="03a9144e-7a5f-4aa0-aa4d-6f5af786089b" fragment="2" gd:fragmentGUID="b27ab3d3-dcdf-4f64-9dd6-e9aab868bf3c" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">w art. 130 pkt 5 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/18" cudzyslowy="oba" gd:nowGUID="a5997dd0-9410-4827-8d66-41d6e914a4b8" element-eId="DU/2024/18__art_130__pkt_5" funkcja="zastap"><punkt eId="DU/2024/18__art_130__pkt_5" gd:GUID="6cf161a5-f637-485a-85ae-4238ffb01c6d" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><nr>5</nr><p><zdanie nr="1" gd:zdGUID="790c765d-e5e1-4b65-a171-313dd400e9a1" fragment="1" gd:fragmentGUID="4796fb25-8cb7-4aff-a63c-149116343e59" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">wysokość kapitału zakładowego, sposób jego zebrania oraz wartość nominalną akcji i ich liczbę;</zdanie></p></punkt></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/176__art_1__pkt_2" gd:GUID="93ad23f3-87d5-40ef-b2fa-0c3a632f0055" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="03a9144e-7a5f-4aa0-aa4d-6f5af786089b" fragment="3" gd:fragmentGUID="f33e4f3a-6c33-4158-a871-58f7b5cd6a97" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">w art. 300<sup>32</sup>:</zdanie>
+          </p>
+          <litera eId="DU/2026/176__art_1__pkt_2__lit_a" gd:GUID="52a5104c-16ca-4d38-8735-42fca228d3f2" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="03a9144e-7a5f-4aa0-aa4d-6f5af786089b" fragment="4" gd:fragmentGUID="b71b117e-2d75-4b39-b06a-d328317d3b42" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">po § 1 dodaje się § 1<sup>1</sup>–1<sup>3</sup> w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/18" cudzyslowy="oba" gd:nowGUID="cc48a110-bb78-4e84-9778-7003f10303f0" element-eId="DU/2024/18__art_300[32]__par_1" funkcja="dodaj-po"><paragraf-kodeksu eId="DU/2024/18__art_300[32]__par_1[1]" gd:GUID="0dc328b1-beb3-491f-a171-6e735c2a5229" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><nr>1[1]</nr><p><zdanie nr="1" gd:zdGUID="dbfa55db-8e65-44cf-b05b-1335d95b6acd" fragment="1" gd:fragmentGUID="bd91d0f8-c3c5-41b0-b85c-a1efd20ecbdb" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">Zarząd zgłasza zawarcie umowy, o której mowa w § 1, do sądu rejestrowego.</zdanie></p></paragraf-kodeksu><paragraf-kodeksu eId="DU/2024/18__art_300[32]__par_1[2]" gd:GUID="cbb2ed3b-2604-4493-aaac-9009a7ec465d" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><nr>1[2]</nr><p><zdanie nr="1" gd:zdGUID="6b902756-befb-4a05-ab0c-6374ae564263" fragment="1" gd:fragmentGUID="ac9f07a8-51ba-49b0-b85e-51be333fedaa" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">Zgłoszenie zawiera, w przypadku zawarcia umowy z:</zdanie></p><punkt eId="DU/2024/18__art_300[32]__par_1[2]__pkt_1" gd:GUID="c3e77916-3fee-4ad1-a90f-dda8e3c6f674" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="6b902756-befb-4a05-ab0c-6374ae564263" fragment="2" gd:fragmentGUID="bf3756e0-2013-4e08-91b5-324b5fe55cb3" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">podmiotem, który na podstawie ustawy z dnia 29 lipca 2005 r. o obrocie instrumentami finansowymi jest uprawniony do prowadzenia rachunków papierów wartościowych – jego firmę (nazwę), numer we właściwym rejestrze i nazwę tego rejestru oraz numer identyfikacji podatkowej (NIP);</zdanie></p></punkt><punkt eId="DU/2024/18__art_300[32]__par_1[2]__pkt_2" gd:GUID="ffe5c11e-d716-4095-ad26-fbc4427fc6a8" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="6b902756-befb-4a05-ab0c-6374ae564263" fragment="3" gd:fragmentGUID="1306da54-289c-47e4-8309-b42681a7acd9" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">notariuszem prowadzącym kancelarię notarialną na terytorium Rzeczypospolitej Polskiej – imię i nazwisko notariusza oraz siedzibę i adres jego kancelarii, a jeżeli umowę zawarła osoba wyznaczona do zastępstwa notariusza albo upoważniona do dokonywania czynności notarialnych ‒ ponadto imię i nazwisko tej osoby.</zdanie></p></punkt></paragraf-kodeksu><paragraf-kodeksu eId="DU/2024/18__art_300[32]__par_1[3]" gd:GUID="c99bc43f-56af-4dd5-b1bc-5003013f0b32" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><nr>1[3]</nr><p><zdanie nr="1" gd:zdGUID="21e6a8ac-a9d3-41c3-b0f2-6bf862484efd" fragment="1" gd:fragmentGUID="15ee85cf-6c7e-4fa8-899e-ea7c8ad11724" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">Do zgłoszenia należy dołączyć oświadczenie zarządu potwierdzające zawarcie takiej umowy.</zdanie></p></paragraf-kodeksu></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2026/176__art_1__pkt_2__lit_b" gd:GUID="ca2eeffe-076c-4f46-874d-47203ca0c43e" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="03a9144e-7a5f-4aa0-aa4d-6f5af786089b" fragment="5" gd:fragmentGUID="a0c9c4e1-26c3-44e1-abd6-5ea1245dc1db" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">dodaje się § 3 w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/18" cudzyslowy="oba" gd:nowGUID="de6b4976-8f6f-417b-9174-184152bea511" element-eId="DU/2024/18__art_300[32]" funkcja="dodaj-w"><paragraf-kodeksu eId="DU/2024/18__art_300[32]__par_3" gd:GUID="5fcc95bc-3fa1-48ca-ae3e-f9d61f280a50" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><nr>3</nr><p><zdanie nr="1" gd:zdGUID="87494225-dfc8-4d85-8bd7-9582914a8ac3" fragment="1" gd:fragmentGUID="a8d76623-3972-4448-9e09-318d3db9e400" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">Podmiot prowadzący rejestr akcjonariuszy zawiadamia sąd rejestrowy za pośrednictwem systemu teleinformatycznego o wygaśnięciu albo rozwiązaniu umowy, o której mowa w § 1, ze wskazaniem daty jej wygaśnięcia albo rozwiązania, w terminie siedmiu dni od tej daty.</zdanie></p></paragraf-kodeksu></cytat-strukt>;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2026/176__art_1__pkt_3" gd:GUID="e4f68392-b117-4ec7-a3cd-51c49aa29960" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="03a9144e-7a5f-4aa0-aa4d-6f5af786089b" fragment="6" gd:fragmentGUID="fe8c79b0-3537-4b27-894b-6c450f08a735" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">w art. 300<sup>33</sup>:</zdanie>
+          </p>
+          <litera eId="DU/2026/176__art_1__pkt_3__lit_a" gd:GUID="353a274c-3b66-4c25-ad25-15f01c0a886e" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="03a9144e-7a5f-4aa0-aa4d-6f5af786089b" fragment="7" gd:fragmentGUID="81bd2893-3b29-48a9-a26b-2bf4f9ec5e33" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">w § 1 pkt 5 i 6 otrzymują brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/18" cudzyslowy="otwierajacy" gd:nowGUID="8c05d78e-1d9e-4983-a54b-06a34fc485ea" element-eId="DU/2024/18__art_300[33]__par_1__pkt_5" funkcja="zastap"><punkt eId="DU/2024/18__art_300[33]__par_1__pkt_5" gd:GUID="a209025d-87c6-419b-bd73-b1f613983bdf" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><nr>5</nr><p><zdanie nr="1" gd:zdGUID="88bd362f-424b-47d0-842a-98d1d452fde0" fragment="1" gd:fragmentGUID="3d5328f1-2f79-4a2a-b16b-c388d73e4f50" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">nazwisko, imię, numer PESEL albo datę urodzenia akcjonariusza, a w przypadku osoby niebędącej osobą fizyczną ‒ firmę (nazwę) oraz numer akcjonariusza we właściwym rejestrze i nazwę tego rejestru, jeżeli akcjonariusz jest wpisany do rejestru – adres jego zamieszkania albo siedziby albo inny adres do doręczeń albo adres do doręczeń elektronicznych, a także adres poczty elektronicznej, jeżeli akcjonariusz wyraził zgodę na komunikację przy wykorzystaniu poczty elektronicznej w stosunkach ze spółką i podmiotem prowadzącym rejestr akcjonariuszy; w przypadku współwłasności akcji także imię, nazwisko albo firmę (nazwę) pozostałych współwłaścicieli, rodzaj współwłasności, a w przypadku współwłasności w częściach ułamkowych ‒ wielkość udziału akcjonariusza;</zdanie></p></punkt></cytat-strukt><cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/18" cudzyslowy="zamykajacy" gd:nowGUID="63e59eca-f17c-44b3-82d7-bdea2d21771b" element-eId="DU/2024/18__art_300[33]__par_1__pkt_6" funkcja="zastap"><punkt eId="DU/2024/18__art_300[33]__par_1__pkt_6" gd:GUID="86fc6016-4b2d-4ae7-a910-19d3b529d5be" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><nr>6</nr><p><zdanie nr="1" gd:zdGUID="697222e2-e9a7-446e-bd46-1faa8f04331f" fragment="1" gd:fragmentGUID="a3ba53b1-cd02-4ec4-b126-202679da84a3" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">na żądanie osoby mającej interes prawny – wpis o przejściu akcji lub praw zastawniczych na inną osobę albo ustanowieniu na akcji ograniczonego prawa rzeczowego wraz z datą wpisu oraz ze wskazaniem następujących danych:</zdanie></p><litera eId="DU/2024/18__art_300[33]__par_1__pkt_6__lit_a" gd:GUID="bc7b2d66-2516-4d56-898d-c380f5c53371" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><nr>a</nr><p><zdanie nr="1" gd:zdGUID="697222e2-e9a7-446e-bd46-1faa8f04331f" fragment="2" gd:fragmentGUID="ecbcb725-07fb-48d1-8262-caa1a3cf0693" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">nazwiska, imienia, numeru PESEL albo daty urodzenia nabywcy albo zastawnika lub użytkownika, a w przypadku osoby niebędącej osobą fizyczną ‒ firmy (nazwy), numeru we właściwym rejestrze oraz nazwy tego rejestru w przypadku gdy osoba ta jest wpisana do rejestru,</zdanie></p></litera><litera eId="DU/2024/18__art_300[33]__par_1__pkt_6__lit_b" gd:GUID="38b3b7c6-15b5-4f83-b8dc-7f2fa218e4e0" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><nr>b</nr><p><zdanie nr="1" gd:zdGUID="697222e2-e9a7-446e-bd46-1faa8f04331f" fragment="3" gd:fragmentGUID="9e114892-848e-4696-8fc6-44fbf18146a4" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">adresu zamieszkania albo siedziby albo innych adresów do doręczeń albo adresów do doręczeń elektronicznych nabywcy albo zastawnika lub użytkownika, a także adresu poczty elektronicznej, jeżeli osoba ta wyraziła zgodę na komunikację przy wykorzystaniu poczty elektronicznej w stosunkach ze spółką i podmiotem prowadzącym rejestr akcjonariuszy,</zdanie></p></litera><litera eId="DU/2024/18__art_300[33]__par_1__pkt_6__lit_c" gd:GUID="4492ac30-5251-418b-8724-71105a16a58b" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><nr>c</nr><p><zdanie nr="1" gd:zdGUID="697222e2-e9a7-446e-bd46-1faa8f04331f" fragment="4" gd:fragmentGUID="57f79721-5925-4c2f-bd21-f19a71bd822b" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">liczby, rodzaju, serii i numerów nabytych albo obciążonych akcji;</zdanie></p></litera></punkt></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2026/176__art_1__pkt_3__lit_b" gd:GUID="1be985da-de5a-4a5a-a0f8-844adf540c54" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="03a9144e-7a5f-4aa0-aa4d-6f5af786089b" fragment="8" gd:fragmentGUID="b69c982f-e170-4d24-94f7-37f7a3f625b2" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">dodaje się § 3 w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/18" cudzyslowy="oba" gd:nowGUID="fd1cb055-1dd3-49a3-88b0-dda35c59c66d" element-eId="DU/2024/18__art_300[33]" funkcja="dodaj-w"><paragraf-kodeksu eId="DU/2024/18__art_300[33]__par_3" gd:GUID="4938903b-0710-41e8-b178-ce56a5af0d20" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><nr>3</nr><p><zdanie nr="1" gd:zdGUID="bcec7fee-ef9c-4530-986e-40cf0e8133f5" fragment="1" gd:fragmentGUID="f6943577-6d16-4417-84d1-eb7b16ee9ca9" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">Wszelkie zmiany danych, o których mowa w § 1 pkt 1‒4 oraz 9‒11, zarząd zgłasza podmiotowi prowadzącemu rejestr akcjonariuszy w terminie siedmiu dni od dnia wystąpienia zdarzenia uzasadniającego dokonanie wpisu.</zdanie></p></paragraf-kodeksu></cytat-strukt>;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2026/176__art_1__pkt_4" gd:GUID="8a37ea05-7c6c-4501-ac87-faa983abedcb" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="03a9144e-7a5f-4aa0-aa4d-6f5af786089b" fragment="9" gd:fragmentGUID="656e8128-6d90-4a47-85b2-48f702deffcf" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">w art. 300<sup>34</sup>:</zdanie>
+          </p>
+          <litera eId="DU/2026/176__art_1__pkt_4__lit_a" gd:GUID="30db528d-2e9f-4082-b277-377ba21004f7" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="03a9144e-7a5f-4aa0-aa4d-6f5af786089b" fragment="10" gd:fragmentGUID="0168fe7f-e1c6-4acd-835c-c3f1f83e288b" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><now:zamien-tekst stary-tekst="siedmiu dni" nowy-tekst="tygodnia" element-eId="DU/2024/18__art_300[34]__par_1" akt="https://eli.gov.pl/eli/DU/2024/18" gd:nowGUID="8e06f005-c0ff-45cd-bf27-980878744ff9" />użyte w § 1 wyrazy „siedmiu dni” zastępuje się wyrazem „tygodnia”,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2026/176__art_1__pkt_4__lit_b" gd:GUID="8e02d3f5-5700-4ebc-9dce-2ea9c67794e9" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="03a9144e-7a5f-4aa0-aa4d-6f5af786089b" fragment="11" gd:fragmentGUID="703b7f81-d317-4bf4-bfed-5ff72d38e550" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">w § 3 dodaje się zdanie drugie w brzmieniu:<cytat-w-tekscie now:akt="https://eli.gov.pl/eli/DU/2024/18" cudzyslowy="oba" gd:nowGUID="915df98e-1eb7-4c1b-9e08-8da50ffe6b4b" element-eId="DU/2024/18__art_300[34]__par_3__zdn_1" funkcja="dodaj-po"><zdanie nr="1" gd:zdGUID="4135d6f8-fc25-4c15-b437-c1a8ee3ff8e0" fragment="1" gd:fragmentGUID="86e3ff22-dd03-4d0a-90b1-c699353ac296" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">Zgodę na wpis składa się w formie pisemnej z podpisem notarialnie poświadczonym albo w formie pisemnej w obecności osoby upoważnionej przez podmiot prowadzący rejestr akcjonariuszy, która potwierdza swoją obecność podpisem, albo w postaci elektronicznej opatrzonej kwalifikowanym podpisem elektronicznym, podpisem zaufanym albo podpisem osobistym.</zdanie></cytat-w-tekscie>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2026/176__art_1__pkt_4__lit_c" gd:GUID="c49dcb56-d418-483f-bbb7-ec5e17d91a4b" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+            <nr>c</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="03a9144e-7a5f-4aa0-aa4d-6f5af786089b" fragment="12" gd:fragmentGUID="23adada3-ef96-4815-b397-b0ab08b82252" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">dodaje się § 9 w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/18" cudzyslowy="oba" gd:nowGUID="5257aff4-1091-48f1-8c5c-3c6eea71ba58" element-eId="DU/2024/18__art_300[34]" funkcja="dodaj-w"><paragraf-kodeksu eId="DU/2024/18__art_300[34]__par_9" gd:GUID="d479ba18-61fe-4870-8331-0f193e272ad2" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><nr>9</nr><p><zdanie nr="1" gd:zdGUID="4e93b883-a312-437b-9ab6-107f02bc8593" fragment="1" gd:fragmentGUID="daf78416-12e9-4c28-a3d5-53bb0ff63423" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">Powiadomienia, o których mowa w § 3 zdanie pierwsze oraz § 7 zdanie pierwsze, mogą być automatycznie przesyłane na żądanie ich adresata za pośrednictwem systemu teleinformatycznego podmiotu prowadzącego rejestr akcjonariuszy na konto adresata w tym systemie lub wskazany przez niego adres poczty elektronicznej, adres do doręczeń elektronicznych albo inny adres umożliwiający odbiór korespondencji w postaci elektronicznej.</zdanie></p></paragraf-kodeksu></cytat-strukt>;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2026/176__art_1__pkt_5" gd:GUID="ee38c4f1-3ca6-48e1-b880-b26efdc607f6" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="03a9144e-7a5f-4aa0-aa4d-6f5af786089b" fragment="13" gd:fragmentGUID="7303a884-fb59-408f-981b-19d246b5ba92" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">w art. 300<sup>35</sup>:</zdanie>
+          </p>
+          <litera eId="DU/2026/176__art_1__pkt_5__lit_a" gd:GUID="73195249-85c4-480c-98db-0b031fd0ec4a" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="03a9144e-7a5f-4aa0-aa4d-6f5af786089b" fragment="14" gd:fragmentGUID="e6d08173-1b29-4db6-9fe9-252ca4f60321" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">po § 1 dodaje się § 1<sup>1</sup> w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/18" cudzyslowy="oba" gd:nowGUID="15228ade-73f0-4705-bdd4-270c87965779" element-eId="DU/2024/18__art_300[35]__par_1" funkcja="dodaj-po"><paragraf-kodeksu eId="DU/2024/18__art_300[35]__par_1[1]" gd:GUID="1d9b4421-3e84-4d7a-9529-be95e494bb85" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><nr>1[1]</nr><p><zdanie nr="1" gd:zdGUID="ae5229f3-653e-4d53-a864-195b8facb573" fragment="1" gd:fragmentGUID="035022fb-37d1-4339-985f-6f97e32daf87" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">Informacji o numerze PESEL, dacie urodzenia ani adresie zamieszkania akcjonariusza nie udostępnia się pozostałym akcjonariuszom.</zdanie></p></paragraf-kodeksu></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2026/176__art_1__pkt_5__lit_b" gd:GUID="d6f5416b-267a-4473-82c6-2f788312cd49" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="03a9144e-7a5f-4aa0-aa4d-6f5af786089b" fragment="15" gd:fragmentGUID="47c08022-a9a5-470f-b813-c50f96b9be54" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">dodaje się § 4 w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/18" cudzyslowy="oba" gd:nowGUID="8057c6bd-2080-489d-9f56-5e2ccbe7e52e" element-eId="DU/2024/18__art_300[35]" funkcja="dodaj-w"><paragraf-kodeksu eId="DU/2024/18__art_300[35]__par_4" gd:GUID="623e1626-da37-45a4-9d7d-9d446b57491b" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><nr>4</nr><p><zdanie nr="1" gd:zdGUID="2aeb9f6f-355e-41c1-9ca3-7e2cfcf0cf55" fragment="1" gd:fragmentGUID="cf9036d1-4e38-476c-8bc3-00543653a9a7" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">Przepisy § 1, 2 i 3 stosuje się odpowiednio do sądów, prokuratury, komorników sądowych oraz administracyjnych organów egzekucyjnych w związku z toczącymi się przed nimi postępowaniami.</zdanie></p></paragraf-kodeksu></cytat-strukt>;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2026/176__art_1__pkt_6" gd:GUID="236d279e-59ed-4e76-add0-baac712c681a" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+          <nr>6</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="03a9144e-7a5f-4aa0-aa4d-6f5af786089b" fragment="16" gd:fragmentGUID="731a2c72-bc1e-4ca5-930b-3ea0ea3b202f" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">w art. 300<sup>37</sup> § 2 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/18" cudzyslowy="oba" gd:nowGUID="4fe42f2f-0129-4f6d-a238-8c6b89221fe8" element-eId="DU/2024/18__art_300[37]__par_2" funkcja="zastap"><paragraf-kodeksu eId="DU/2024/18__art_300[37]__par_2" gd:GUID="a20aa8f2-a651-4a57-b0a6-7f154cd25bc9" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="6a8eea66-68d8-4a8f-a297-04a0898e7a78" fragment="1" gd:fragmentGUID="fbfdb807-0e36-4ea9-9da9-f834f60a3031" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">Przepisu § 1 nie stosuje się w przypadku objęcia akcji, z wyjątkiem art. 300<sup>118</sup>, a także powołania do spadku, zapisu windykacyjnego, wniesienia akcji jako wkładu niepieniężnego do spółki, połączenia, podziału lub przekształcenia spółki lub zajścia innego zdarzenia prawnego powodującego z mocy prawa przejście akcji lub ustanowionego na niej ograniczonego prawa rzeczowego na inną osobę albo ustanowienia na akcji ograniczonego prawa rzeczowego w wyniku wpisu w rejestrze, o którym mowa w art. 43 § 1 ustawy z dnia 29 sierpnia 1997 r. – Ordynacja podatkowa (Dz. U. z 2025 r. poz. 111, z późn. zm.<odnosnik id-odnosnika="2" symbol="2" gd:GUID="d2a26196-d0d6-4182-b11e-3d76f7df1d44"><p><zdanie nr="1" gd:zdGUID="66a0beb9-095a-4a10-9767-cb77a3d680d8" fragment="1" gd:fragmentGUID="fbeb16c9-fd8e-46e0-aec2-5d9090dfd824">Zmiany tekstu jednolitego wymienionej ustawy zostały ogłoszone w Dz. U. z 2025 r. poz. 497, 621, 622, 769, 820, 1203, 1235, 1414, 1417, 1669, 1804 i 1863.</zdanie></p></odnosnik>), albo w rejestrze, o którym mowa w ustawie z dnia 6 grudnia 1996 r. o zastawie rejestrowym i rejestrze zastawów (Dz. U. z 2018 r. poz. 2017 oraz z 2025 r. poz. 1792).</zdanie><zdanie nr="2" gd:zdGUID="80e69ecb-2145-4a48-b694-74a479103715" fragment="1" gd:fragmentGUID="1aebaf35-2e22-481b-96a0-de4f9c6197ab" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">Przepis art. 300<sup>38</sup> § 1 stosuje się.</zdanie></p></paragraf-kodeksu></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/176__art_1__pkt_7" gd:GUID="2292a442-bc55-4c1e-ab37-b8c41e0039a0" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+          <nr>7</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="03a9144e-7a5f-4aa0-aa4d-6f5af786089b" fragment="17" gd:fragmentGUID="7ab24fc0-c4a9-4210-8458-fdd6c68a7f3c" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">w art. 304 w § 1 pkt 5 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/18" cudzyslowy="oba" gd:nowGUID="2ab84a01-48ef-4c15-9fea-8a51ef55b50a" element-eId="DU/2024/18__art_304__par_1__pkt_5" funkcja="zastap"><punkt eId="DU/2024/18__art_304__par_1__pkt_5" gd:GUID="fc04af5f-47e9-45cb-bc38-1c7f3d5c2cd6" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><nr>5</nr><p><zdanie nr="1" gd:zdGUID="f409a40b-ae65-4b9b-957f-bc01f64a287e" fragment="1" gd:fragmentGUID="1b82caa2-7d11-415d-8e6b-b8dcb91964ca" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">wartość nominalną akcji i ich liczbę;</zdanie></p></punkt></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/176__art_1__pkt_8" gd:GUID="dc058455-de68-4bb5-be14-c5e41d75446b" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+          <nr>8</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="03a9144e-7a5f-4aa0-aa4d-6f5af786089b" fragment="18" gd:fragmentGUID="fe75db36-b074-4dbb-8d73-8418aca4e710" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">w art. 328<sup>2</sup>:</zdanie>
+          </p>
+          <litera eId="DU/2026/176__art_1__pkt_8__lit_a" gd:GUID="b2a7b4b9-d2a9-448e-a86e-c48dfd63f067" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="03a9144e-7a5f-4aa0-aa4d-6f5af786089b" fragment="19" gd:fragmentGUID="d3c6b269-a5e0-45cf-b71b-6116ee62d77b" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">po § 1 dodaje się § 1<sup>1</sup>–1<sup>3</sup> w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/18" cudzyslowy="oba" gd:nowGUID="960d462d-54a1-4d75-a12a-7cbfc250f9c3" element-eId="DU/2024/18__art_328[2]__par_1" funkcja="dodaj-po"><paragraf-kodeksu eId="DU/2024/18__art_328[2]__par_1[1]" gd:GUID="6333b4cf-5fce-4bbe-babf-ecd55f9e187d" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><nr>1[1]</nr><p><zdanie nr="1" gd:zdGUID="a382ebef-eeaf-41c9-ae8f-86e0f2754384" fragment="1" gd:fragmentGUID="d386fb2e-9947-4610-a3f0-21bcba877452" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">Zarząd zgłasza zawarcie umowy o prowadzenie rejestru akcjonariuszy do sądu rejestrowego.</zdanie></p></paragraf-kodeksu><paragraf-kodeksu eId="DU/2024/18__art_328[2]__par_1[2]" gd:GUID="3d461e25-36ae-470f-9ca0-f85d5b876867" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><nr>1[2]</nr><p><zdanie nr="1" gd:zdGUID="c8534770-f8d1-4bd9-be45-586e2bf74ca1" fragment="1" gd:fragmentGUID="cdd863e5-5850-4166-b1cc-b726860a2c72" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">Zgłoszenie zawiera:</zdanie></p><punkt eId="DU/2024/18__art_328[2]__par_1[2]__pkt_1" gd:GUID="a2c80125-c32f-4240-aec5-0cf65d1f4063" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="c8534770-f8d1-4bd9-be45-586e2bf74ca1" fragment="2" gd:fragmentGUID="d9088066-b3f0-4370-af58-e9f5b1a32c93" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">firmę (nazwę) podmiotu, z którym zawarto umowę o prowadzenie rejestru akcjonariuszy;</zdanie></p></punkt><punkt eId="DU/2024/18__art_328[2]__par_1[2]__pkt_2" gd:GUID="9b6bb74d-5674-4ada-8e36-3e7e930c1e63" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="c8534770-f8d1-4bd9-be45-586e2bf74ca1" fragment="3" gd:fragmentGUID="f92547dc-a9b1-4285-85a2-e965fb4023a8" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">numer podmiotu, o którym mowa w pkt 1, we właściwym rejestrze i nazwę tego rejestru oraz numer identyfikacji podatkowej (NIP) tego podmiotu.</zdanie></p></punkt></paragraf-kodeksu><paragraf-kodeksu eId="DU/2024/18__art_328[2]__par_1[3]" gd:GUID="2e493504-49aa-4c5b-b916-9437133ef5bb" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><nr>1[3]</nr><p><zdanie nr="1" gd:zdGUID="b883702b-363e-404e-abcc-2c3ae9285e30" fragment="1" gd:fragmentGUID="f6242a81-3e8b-4071-8d3f-73ff819fa54a" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">Do zgłoszenia należy dołączyć oświadczenie zarządu potwierdzające zawarcie takiej umowy.</zdanie></p></paragraf-kodeksu></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2026/176__art_1__pkt_8__lit_b" gd:GUID="8bfd7597-09e6-4ad3-adc5-1e06b9daaa74" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="03a9144e-7a5f-4aa0-aa4d-6f5af786089b" fragment="20" gd:fragmentGUID="972225ea-5861-4dbf-91af-076af0670249" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">po § 2 dodaje się § 2<sup>1</sup> w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/18" cudzyslowy="oba" gd:nowGUID="815933d3-6512-4f48-be0c-52e875e39342" element-eId="DU/2024/18__art_328[2]__par_2" funkcja="dodaj-po"><paragraf-kodeksu eId="DU/2024/18__art_328[2]__par_2[1]" gd:GUID="6a89041f-c5f0-47e5-8f64-659d55c0c8f2" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><nr>2[1]</nr><p><zdanie nr="1" gd:zdGUID="39018369-b1f5-4445-8c2a-36d1c9f1f615" fragment="1" gd:fragmentGUID="33ae1981-29c8-4884-a888-6b1e458df976" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">Podmiot prowadzący rejestr akcjonariuszy zawiadamia sąd rejestrowy za pośrednictwem systemu teleinformatycznego o wygaśnięciu albo rozwiązaniu umowy, o której mowa w § 1, ze wskazaniem daty jej wygaśnięcia albo rozwiązania, w terminie siedmiu dni od tej daty.</zdanie></p></paragraf-kodeksu></cytat-strukt>;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2026/176__art_1__pkt_9" gd:GUID="1e112569-c58c-4d2a-aaa1-d3f99f70a2e5" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+          <nr>9</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="03a9144e-7a5f-4aa0-aa4d-6f5af786089b" fragment="21" gd:fragmentGUID="aeb2c5fa-75e7-4487-a147-64a1c4d76212" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">w art. 328<sup>3</sup>:</zdanie>
+          </p>
+          <litera eId="DU/2026/176__art_1__pkt_9__lit_a" gd:GUID="456dbb70-9760-4496-aafa-612911697427" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="03a9144e-7a5f-4aa0-aa4d-6f5af786089b" fragment="22" gd:fragmentGUID="4ffc2cd1-76a6-4523-858a-8482b2cd83ec" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">w § 1 pkt 5 i 6 otrzymują brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/18" cudzyslowy="otwierajacy" gd:nowGUID="b8078bb2-a4c0-4b6a-8886-d67a07bd30e9" element-eId="DU/2024/18__art_328[3]__par_1__pkt_5" funkcja="zastap"><punkt eId="DU/2024/18__art_328[3]__par_1__pkt_5" gd:GUID="5f7d2b69-1dd5-4f4c-9784-7e1c379a9e1e" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><nr>5</nr><p><zdanie nr="1" gd:zdGUID="152b54af-29cf-4631-ae0a-a38799b423ae" fragment="1" gd:fragmentGUID="43b1806d-0079-482b-adb9-67fbdec2503b" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">nazwisko, imię, numer PESEL albo datę urodzenia akcjonariusza, a w przypadku osoby niebędącej osobą fizyczną ‒ firmę (nazwę) oraz numer akcjonariusza we właściwym rejestrze i nazwę tego rejestru; jeżeli akcjonariusz jest wpisany do rejestru ‒ adres jego zamieszkania albo siedziby albo inny adres do doręczeń albo adres do doręczeń elektronicznych, a także adres poczty elektronicznej, jeżeli akcjonariusz wyraził zgodę na komunikację przy wykorzystaniu poczty elektronicznej w stosunkach ze spółką i podmiotem prowadzącym rejestr akcjonariuszy; w przypadku współwłasności akcji także imię, nazwisko albo firmę (nazwę) pozostałych współwłaścicieli, rodzaj współwłasności, a w przypadku współwłasności w częściach ułamkowych ‒ wielkość udziału akcjonariusza;</zdanie></p></punkt></cytat-strukt><cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/18" cudzyslowy="zamykajacy" gd:nowGUID="fcfccbb0-d98f-4c11-b16e-48678609c6e4" element-eId="DU/2024/18__art_328[3]__par_1__pkt_6" funkcja="zastap"><punkt eId="DU/2024/18__art_328[3]__par_1__pkt_6" gd:GUID="4a82e5e0-27ab-4d7d-8325-269161f2b3ef" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><nr>6</nr><p><zdanie nr="1" gd:zdGUID="f8af894e-9f0f-4cc5-951a-6ae28640cfe2" fragment="1" gd:fragmentGUID="38654637-0804-4ecd-81ac-5b8581664484" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">na żądanie osoby mającej interes prawny – wpis o przejściu akcji lub praw zastawniczych na inną osobę albo ustanowieniu na akcji ograniczonego prawa rzeczowego wraz z datą wpisu oraz ze wskazaniem następujących danych:</zdanie></p><litera eId="DU/2024/18__art_328[3]__par_1__pkt_6__lit_a" gd:GUID="e05df7b1-d09b-4fce-b195-239785ef395e" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><nr>a</nr><p><zdanie nr="1" gd:zdGUID="f8af894e-9f0f-4cc5-951a-6ae28640cfe2" fragment="2" gd:fragmentGUID="8f6f024a-dda0-4e6e-8282-3055dda13746" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">nazwiska, imienia, numeru PESEL albo daty urodzenia nabywcy albo zastawnika lub użytkownika, a w przypadku osoby niebędącej osobą fizyczną ‒ firmy (nazwy), numeru we właściwym rejestrze oraz nazwy tego rejestru w przypadku gdy osoba ta jest wpisana do rejestru,</zdanie></p></litera><litera eId="DU/2024/18__art_328[3]__par_1__pkt_6__lit_b" gd:GUID="68a56868-9a8f-436e-9f7b-c9649719786a" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><nr>b</nr><p><zdanie nr="1" gd:zdGUID="f8af894e-9f0f-4cc5-951a-6ae28640cfe2" fragment="3" gd:fragmentGUID="d55b8935-01c3-4816-8e64-544bc961ba29" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">adresu zamieszkania albo siedziby albo innych adresów do doręczeń albo adresów do doręczeń elektronicznych nabywcy albo zastawnika lub użytkownika, a także adresu poczty elektronicznej, jeżeli osoba ta wyraziła zgodę na komunikację przy wykorzystaniu poczty elektronicznej w stosunkach ze spółką i podmiotem prowadzącym rejestr akcjonariuszy,</zdanie></p></litera><litera eId="DU/2024/18__art_328[3]__par_1__pkt_6__lit_c" gd:GUID="8a463163-ea26-42c1-9838-2e7cb49cb634" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><nr>c</nr><p><zdanie nr="1" gd:zdGUID="f8af894e-9f0f-4cc5-951a-6ae28640cfe2" fragment="4" gd:fragmentGUID="395300d3-db12-463b-8f20-1577e182527c" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">liczby, rodzaju, serii i numerów nabytych albo obciążonych akcji;</zdanie></p></litera></punkt></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2026/176__art_1__pkt_9__lit_b" gd:GUID="e26a61c7-57ab-4150-ad15-eda24acb99e8" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="03a9144e-7a5f-4aa0-aa4d-6f5af786089b" fragment="23" gd:fragmentGUID="d930f56c-6393-4cbf-90e1-9da83c71c153" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">dodaje się § 4 w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/18" cudzyslowy="oba" gd:nowGUID="172a143e-3329-46c7-b409-d5fd963dd58c" element-eId="DU/2024/18__art_328[3]" funkcja="dodaj-w"><paragraf-kodeksu eId="DU/2024/18__art_328[3]__par_4" gd:GUID="b4055dbd-dfa7-46ba-8353-f3acd0c17571" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><nr>4</nr><p><zdanie nr="1" gd:zdGUID="313d242b-bf4b-4c7f-8cc5-be8cecf50bf5" fragment="1" gd:fragmentGUID="47cd74b6-9cd3-4a1c-82e6-f6781362276c" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">Wszelkie zmiany danych, o których mowa w § 1 pkt 1‒4 oraz 9‒11, zarząd zgłasza podmiotowi prowadzącemu rejestr akcjonariuszy w terminie siedmiu dni od dnia wystąpienia zdarzenia uzasadniającego dokonanie wpisu.</zdanie></p></paragraf-kodeksu></cytat-strukt>;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2026/176__art_1__pkt_10" gd:GUID="a90e5dc3-2e21-44fa-bdc6-3f03ff56f702" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+          <nr>10</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="03a9144e-7a5f-4aa0-aa4d-6f5af786089b" fragment="24" gd:fragmentGUID="979244eb-99e1-469b-8f19-6801f3b1785c" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">w art. 328<sup>4</sup>:</zdanie>
+          </p>
+          <litera eId="DU/2026/176__art_1__pkt_10__lit_a" gd:GUID="aed22dcf-a8f4-471e-98a1-88e333ed09ca" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="03a9144e-7a5f-4aa0-aa4d-6f5af786089b" fragment="25" gd:fragmentGUID="8883cf38-8e60-404e-867a-c616ba0fa912" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">w § 3 dodaje się zdanie drugie w brzmieniu:<cytat-w-tekscie now:akt="https://eli.gov.pl/eli/DU/2024/18" cudzyslowy="oba" gd:nowGUID="ec838dd2-0f80-4cb7-a6a4-a4ed90061ea4" element-eId="DU/2024/18__art_328[4]__par_3__zdn_1" funkcja="dodaj-po"><zdanie nr="1" gd:zdGUID="ed2e48a3-40f0-45dc-8773-54ddf100b3a9" fragment="1" gd:fragmentGUID="b1adbbfb-9790-4241-b057-e113a06e6a68" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">Zgodę na wpis składa się w formie pisemnej z podpisem notarialnie poświadczonym albo w formie pisemnej w obecności osoby upoważnionej przez podmiot prowadzący rejestr akcjonariuszy, która potwierdza swoją obecność podpisem, albo w postaci elektronicznej opatrzonej kwalifikowanym podpisem elektronicznym, podpisem zaufanym albo podpisem osobistym.</zdanie></cytat-w-tekscie>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2026/176__art_1__pkt_10__lit_b" gd:GUID="38158c26-bc75-4b1a-a988-a2622cbc78f8" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="03a9144e-7a5f-4aa0-aa4d-6f5af786089b" fragment="26" gd:fragmentGUID="48ee8eef-647f-4174-8b8e-bad984adcd30" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">dodaje się § 8 w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/18" cudzyslowy="oba" gd:nowGUID="e3acbca8-3821-4e5a-be25-f4925ad20b27" element-eId="DU/2024/18__art_328[4]" funkcja="dodaj-w"><paragraf-kodeksu eId="DU/2024/18__art_328[4]__par_8" gd:GUID="6a29af93-6b54-4723-9458-d5d12575ad5f" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><nr>8</nr><p><zdanie nr="1" gd:zdGUID="9afd5766-c63a-4645-b35e-3bb7496f4878" fragment="1" gd:fragmentGUID="6c082462-5d67-4ce9-8dc0-66227084f827" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">Powiadomienia, o których mowa w § 3 zdanie pierwsze oraz § 7 zdanie pierwsze, mogą być automatycznie przesyłane na żądanie ich adresata za pośrednictwem systemu teleinformatycznego podmiotu prowadzącego rejestr akcjonariuszy na konto adresata w tym systemie lub wskazany przez niego adres poczty elektronicznej, adres do doręczeń elektronicznych lub inny adres umożliwiający odbiór korespondencji w postaci elektronicznej.</zdanie></p></paragraf-kodeksu></cytat-strukt>;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2026/176__art_1__pkt_11" gd:GUID="c77dbb9a-7da6-4d3a-95bb-ff2ff1914529" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+          <nr>11</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="03a9144e-7a5f-4aa0-aa4d-6f5af786089b" fragment="27" gd:fragmentGUID="7081cb98-3366-4dbd-a524-c1c8bce74eee" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">w art. 328<sup>5</sup>:</zdanie>
+          </p>
+          <litera eId="DU/2026/176__art_1__pkt_11__lit_a" gd:GUID="11d9e4a7-2d44-46cb-9a7e-fbb42aa4c861" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="03a9144e-7a5f-4aa0-aa4d-6f5af786089b" fragment="28" gd:fragmentGUID="3a9459c6-bd03-4bd4-83a7-c7d0f691e8cc" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">po § 1 dodaje się § 1<sup>1</sup> w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/18" cudzyslowy="oba" gd:nowGUID="81ea279f-6c00-4ac9-ad64-d0b79ce9d59e" element-eId="DU/2024/18__art_328[5]__par_1" funkcja="dodaj-po"><paragraf-kodeksu eId="DU/2024/18__art_328[5]__par_1[1]" gd:GUID="d976c749-0c93-4e9b-907a-165bbf44b838" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><nr>1[1]</nr><p><zdanie nr="1" gd:zdGUID="ebcee2ca-740d-43bb-9747-8400082605d0" fragment="1" gd:fragmentGUID="38d9d372-4015-4abc-af47-818d7eec2299" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">Informacji o numerze PESEL, dacie urodzenia ani adresie zamieszkania akcjonariusza nie udostępnia się pozostałym akcjonariuszom.</zdanie></p></paragraf-kodeksu></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2026/176__art_1__pkt_11__lit_b" gd:GUID="06586ab9-6391-420e-a7f1-62c8a59e9d1c" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="03a9144e-7a5f-4aa0-aa4d-6f5af786089b" fragment="29" gd:fragmentGUID="dba7e16b-e053-472c-8087-c843a71fd8ca" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">dodaje się § 4 w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/18" cudzyslowy="oba" gd:nowGUID="14d3290e-0db1-4f08-87e4-b38a9c2f3ab7" element-eId="DU/2024/18__art_328[5]" funkcja="dodaj-w"><paragraf-kodeksu eId="DU/2024/18__art_328[5]__par_4" gd:GUID="0f74761a-446c-42ee-854f-085390d1add0" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><nr>4</nr><p><zdanie nr="1" gd:zdGUID="bb114e16-a5fb-48e5-8621-779e1697c621" fragment="1" gd:fragmentGUID="481551ef-9813-475a-9aaa-e51374502612" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">Przepisy § 1, 2 i 3 stosuje się odpowiednio do sądów, prokuratury, komorników sądowych oraz administracyjnych organów egzekucyjnych w związku z toczącymi się przed nimi postępowaniami.</zdanie></p></paragraf-kodeksu></cytat-strukt>;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2026/176__art_1__pkt_12" gd:GUID="400141b5-6bdb-477b-8486-91a2508c1131" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+          <nr>12</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="03a9144e-7a5f-4aa0-aa4d-6f5af786089b" fragment="30" gd:fragmentGUID="c81b125c-0059-4515-a109-42f16541694f" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">w art. 328<sup>8</sup> w § 1 po pkt 2 dodaje się pkt 2<sup>1</sup> w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/18" cudzyslowy="oba" gd:nowGUID="42b6b945-74be-4d5c-8b88-5b378dcee46c" element-eId="DU/2024/18__art_328[8]__par_1__pkt_2" funkcja="dodaj-po"><punkt eId="DU/2024/18__art_328[8]__par_1__pkt_2[1]" gd:GUID="8f75c759-dc3c-489f-8889-cc135c27af04" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><nr>2[1]</nr><p><zdanie nr="1" gd:zdGUID="2053f9f8-3dca-4d7f-89c3-b128413320ae" fragment="1" gd:fragmentGUID="685930a2-e4c2-4800-993f-9f84605ba80c" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">wygaśnięcie zastawu z innej przyczyny niż wskazana w pkt 2 ‒ w przypadku świadectwa rejestrowego dotyczącego tych akcji, wystawionego zastawnikowi;</zdanie></p></punkt></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/176__art_1__pkt_13" gd:GUID="7b4ad1a5-b1a8-429c-bfaa-446876516192" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+          <nr>13</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="03a9144e-7a5f-4aa0-aa4d-6f5af786089b" fragment="31" gd:fragmentGUID="7287eff2-40fe-481e-8d07-d2a5e6bbaba6" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">w art. 328<sup>9</sup> § 2 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/18" cudzyslowy="oba" gd:nowGUID="dc7b2152-012c-4b29-9770-a4d1708881a8" element-eId="DU/2024/18__art_328[9]__par_2" funkcja="zastap"><paragraf-kodeksu eId="DU/2024/18__art_328[9]__par_2" gd:GUID="164f5f11-105e-4108-8556-fd091d61520e" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="2d6819fc-38d8-4bb3-8e65-fa1a1513c2e6" fragment="1" gd:fragmentGUID="ab269b8e-aeb6-44f6-9a79-280b6550e3e7" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">Przepisu § 1 nie stosuje się w przypadku objęcia akcji, z wyjątkiem art. 452 § 1, a także powołania do spadku, zapisu windykacyjnego, wniesienia akcji jako wkładu niepieniężnego do spółki, połączenia, podziału lub przekształcenia spółki lub zajścia innego zdarzenia prawnego powodującego z mocy prawa przejście akcji lub ustanowionego na niej ograniczonego prawa rzeczowego na inną osobę albo ustanowienia na akcji ograniczonego prawa rzeczowego w wyniku wpisu w rejestrze, o którym mowa w art. 43 § 1 ustawy z dnia 29 sierpnia 1997 r. – Ordynacja podatkowa, albo w rejestrze, o którym mowa w ustawie z dnia 6 grudnia 1996 r. o zastawie rejestrowym i rejestrze zastawów.</zdanie><zdanie nr="2" gd:zdGUID="f8863b9c-f958-41ae-996a-62a6e2e0f982" fragment="1" gd:fragmentGUID="f6d72131-d252-45de-bf72-59f6943b9e1a" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">Przepis art. 343 § 1 stosuje się.</zdanie></p></paragraf-kodeksu></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/176__art_1__pkt_14" gd:GUID="a6b08bf3-64ae-46f6-8691-d0e5cf0012c8" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+          <nr>14</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="03a9144e-7a5f-4aa0-aa4d-6f5af786089b" fragment="32" gd:fragmentGUID="7559d84d-bb7e-471e-a881-d1635669c383" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">w art. 328<sup>11</sup> dodaje się § 3 w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/18" cudzyslowy="oba" gd:nowGUID="754f599c-a68b-444d-be73-08cb35b13e43" element-eId="DU/2024/18__art_328[11]" funkcja="dodaj-w"><paragraf-kodeksu eId="DU/2024/18__art_328[11]__par_3" gd:GUID="e691fbd1-61d5-434a-8744-8f4f8bf35f80" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><nr>3</nr><p><zdanie nr="1" gd:zdGUID="5e0f8f59-aca3-4009-b460-570f8e654c76" fragment="1" gd:fragmentGUID="670b85d0-849b-4042-9a07-f17132b9ccf5" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">Przepisy art. 328<sup>2</sup> § 1<sup>1</sup>–1<sup>3</sup> stosuje się odpowiednio.</zdanie></p></paragraf-kodeksu></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/176__art_1__pkt_15" gd:GUID="841d0458-e91c-4a25-9205-bf6b88fd0d6d" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+          <nr>15</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="03a9144e-7a5f-4aa0-aa4d-6f5af786089b" fragment="33" gd:fragmentGUID="51afba95-b3a9-4774-93e8-bbfd58f22c34" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">w art. 328<sup>13</sup>:</zdanie>
+          </p>
+          <litera eId="DU/2026/176__art_1__pkt_15__lit_a" gd:GUID="690b9960-5217-4b4d-aa82-048910d9cd31" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="03a9144e-7a5f-4aa0-aa4d-6f5af786089b" fragment="34" gd:fragmentGUID="08dfda00-7d1a-4be5-bf2e-74c44ec12683" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">w § 1 pkt 1 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/18" cudzyslowy="oba" gd:nowGUID="98f81ca1-4f3c-472a-ba32-f07566da0ee7" element-eId="DU/2024/18__art_328[13]__par_1__pkt_1" funkcja="zastap"><punkt eId="DU/2024/18__art_328[13]__par_1__pkt_1" gd:GUID="2291a435-ffab-4112-ac42-fac2e072abf5" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="db94a071-12aa-4ef2-bbc2-125e038c744a" fragment="1" gd:fragmentGUID="33572544-f143-421c-a30f-66f83235bb4a" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">imiona i nazwiska albo firmy (nazwy), miejsca zamieszkania albo siedziby oraz adresy albo adresy do doręczeń akcjonariuszy spółki, przy czym informacji o adresie zamieszkania akcjonariusza nie udostępnia się pozostałym akcjonariuszom;</zdanie></p></punkt></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2026/176__art_1__pkt_15__lit_b" gd:GUID="726bcef2-b155-4598-b035-facf5b294cd7" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="03a9144e-7a5f-4aa0-aa4d-6f5af786089b" fragment="35" gd:fragmentGUID="8eae3c0e-352c-430d-a093-b9af0a48cc8e" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">w § 3 dodaje się zdanie drugie w brzmieniu:<cytat-w-tekscie now:akt="https://eli.gov.pl/eli/DU/2024/18" cudzyslowy="oba" gd:nowGUID="09c331f1-ec3b-4be6-89e5-9a49d622d30e" element-eId="DU/2024/18__art_328[13]__par_3__zdn_1" funkcja="dodaj-po"><zdanie nr="1" gd:zdGUID="31fd079c-cab1-4293-a5fa-5d916a95193e" fragment="1" gd:fragmentGUID="a522a1f9-31f5-4d8c-997c-416552bc2f5a" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">W żądaniu określa się dzień, według stanu na który mają zostać sporządzone informacje, o których mowa w § 1, przypadający niewcześniej niż dzień złożenia żądania.</zdanie></cytat-w-tekscie>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2026/176__art_1__pkt_15__lit_c" gd:GUID="cc32f941-16ac-4202-b486-910a101c0a58" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+            <nr>c</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="03a9144e-7a5f-4aa0-aa4d-6f5af786089b" fragment="36" gd:fragmentGUID="39972079-894d-40b3-b912-c1138fcf401b" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">dodaje się § 5 i 6 w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/18" cudzyslowy="oba" gd:nowGUID="09148441-c0d8-4e91-902b-535374a37820" element-eId="DU/2024/18__art_328[13]" funkcja="dodaj-w"><paragraf-kodeksu eId="DU/2024/18__art_328[13]__par_5" gd:GUID="cee665d5-8302-4a96-8fb8-44b352511704" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><nr>5</nr><p><zdanie nr="1" gd:zdGUID="884e7630-e4c9-4dac-90ce-a74d125b8ecd" fragment="1" gd:fragmentGUID="3ff82558-53fc-495e-8b70-1689e754e937" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">W terminie sześciu dni roboczych od dnia złożenia żądania, o którym mowa w § 1, Krajowy Depozyt Papierów Wartościowych S.A. udostępnia spółce niebędącej spółką publiczną lub jej akcjonariuszowi, przy wykorzystaniu środków komunikacji elektronicznej, informacje, o których mowa w § 1, otrzymane od podmiotów prowadzących rachunki papierów wartościowych, a także sporządzone na podstawie zapisów na rachunkach papierów wartościowych oraz rachunkach zbiorczych prowadzonych przez Krajowy Depozyt Papierów Wartościowych S.A.</zdanie></p></paragraf-kodeksu><paragraf-kodeksu eId="DU/2024/18__art_328[13]__par_6" gd:GUID="9e3eee98-dee9-4e0b-bb43-29bc273a5451" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><nr>6</nr><p><zdanie nr="1" gd:zdGUID="844c2a1b-38e4-4ce8-8756-d8aa77e4e744" fragment="1" gd:fragmentGUID="2f0c4e6f-a3a7-42e4-ad2c-d4f49801b871" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">Przepisy § 1‒5 w zakresie dotyczącym Krajowego Depozytu Papierów Wartościowych S.A. stosuje się odpowiednio do spółki, której Krajowy Depozyt Papierów Wartościowych S.A. przekazał wykonywanie czynności z zakresu zadań, o których mowa w art. 48 ust. 1 pkt 1 ustawy z dnia 29 lipca 2005 r. o obrocie instrumentami finansowymi.</zdanie></p></paragraf-kodeksu></cytat-strukt>;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2026/176__art_1__pkt_16" gd:GUID="8279c3d7-0241-41df-92d0-ec7a7edbb276" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+          <nr>16</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="03a9144e-7a5f-4aa0-aa4d-6f5af786089b" fragment="37" gd:fragmentGUID="974a5b59-2acf-40f9-b420-62340ead485e" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><now:uchyl akt="https://eli.gov.pl/eli/DU/2024/18" element-eId="DU/2024/18__art_334" gd:nowGUID="bcf75090-2298-485a-975e-d6df3429b328" />uchyla się art. 334;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/176__art_1__pkt_17" gd:GUID="1d254757-2281-4670-ab1a-3e73d20924fb" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+          <nr>17</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="03a9144e-7a5f-4aa0-aa4d-6f5af786089b" fragment="38" gd:fragmentGUID="4229df7c-7759-4b5b-851b-81048d6a53cd" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">w art. 337:</zdanie>
+          </p>
+          <litera eId="DU/2026/176__art_1__pkt_17__lit_a" gd:GUID="7ad016be-3ab6-4f10-b96d-db231d431854" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="03a9144e-7a5f-4aa0-aa4d-6f5af786089b" fragment="39" gd:fragmentGUID="a5d37393-b4f4-4b05-9774-26a43b15e0c4" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">§ 2 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/18" cudzyslowy="oba" gd:nowGUID="7cfc3de7-d8f9-4da8-859b-d1f7ace99c66" element-eId="DU/2024/18__art_337__par_2" funkcja="zastap"><paragraf-kodeksu eId="DU/2024/18__art_337__par_2" gd:GUID="67cab3df-ae79-41f2-9ac7-694a0017515a" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="250b7a8a-c814-4774-b637-79a972ab6766" fragment="1" gd:fragmentGUID="a56bf355-ecf9-4a7a-8862-a26772ff66f5" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">Statut może uzależnić rozporządzenie akcjami od zgody spółki albo w inny sposób ograniczyć możliwość rozporządzenia akcjami.</zdanie><zdanie nr="2" gd:zdGUID="ed605b8f-9a2e-4e41-8bcb-5c8861f0bb82" fragment="1" gd:fragmentGUID="c7da117f-889e-4e29-bab1-901b10342edd" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">Nie dotyczy to akcji dopuszczonych do obrotu na rynku regulowanym albo wprowadzonych do obrotu w alternatywnym systemie obrotu.</zdanie></p></paragraf-kodeksu></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2026/176__art_1__pkt_17__lit_b" gd:GUID="d257d4bb-8f88-43b4-9eaf-b28906867d0f" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="03a9144e-7a5f-4aa0-aa4d-6f5af786089b" fragment="40" gd:fragmentGUID="59cb4c76-a5c5-4851-bb48-5d2c34e4a731" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">po § 2 dodaje się § 2<sup>1</sup> w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/18" cudzyslowy="oba" gd:nowGUID="00a7457d-99ff-4fe7-9ae0-57c667192d77" element-eId="DU/2024/18__art_337__par_2" funkcja="dodaj-po"><paragraf-kodeksu eId="DU/2024/18__art_337__par_2[1]" gd:GUID="67e0b9ff-931c-4ce7-a21a-9da61ed98f0d" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><nr>2[1]</nr><p><zdanie nr="1" gd:zdGUID="d4039017-ed72-465e-a987-4eb3522e27bf" fragment="1" gd:fragmentGUID="47fce61d-07ea-437e-bdc7-cba1c8021c17" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">Akcje, o których mowa w § 2 zdanie pierwsze, oznacza się w statucie przez podanie ich liczby oraz odrębnego oznaczenia, o którym mowa w art. 55 ustawy z dnia 29 lipca 2005 r. o obrocie instrumentami finansowymi, a jeżeli nie zostało im nadane odrębne oznaczenie, oznacza się je przez podanie ich serii i numerów.</zdanie></p></paragraf-kodeksu></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2026/176__art_1__pkt_17__lit_c" gd:GUID="4de4ffcc-8198-442e-898b-94b71dff7016" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+            <nr>c</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="03a9144e-7a5f-4aa0-aa4d-6f5af786089b" fragment="41" gd:fragmentGUID="b7ca80b8-cdd2-4621-ab90-4dce92f3fb78" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><now:zamien-tekst stary-tekst="imienna" nowy-tekst="" element-eId="DU/2024/18__art_337__par_4__zdn_3" akt="https://eli.gov.pl/eli/DU/2024/18" gd:nowGUID="0bee35df-f89d-4364-8b69-129dd075a78e" />w § 4 w zdaniu trzecim skreśla się wyraz „imienna”;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2026/176__art_1__pkt_18" gd:GUID="e1013038-6180-46f1-b1a5-0795361fdc21" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+          <nr>18</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="03a9144e-7a5f-4aa0-aa4d-6f5af786089b" fragment="42" gd:fragmentGUID="51f15e38-f4f8-4897-8a18-12ea13d12f32" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">w art. 351:</zdanie>
+          </p>
+          <litera eId="DU/2026/176__art_1__pkt_18__lit_a" gd:GUID="7e52d48d-f2a1-4956-b64c-fb87f4f7a8fb" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="03a9144e-7a5f-4aa0-aa4d-6f5af786089b" fragment="43" gd:fragmentGUID="dbf177f5-fff8-4b8e-9e8b-9ce3be726537" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">§ 1 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/18" cudzyslowy="oba" gd:nowGUID="c99dd789-8b47-41e8-8810-756379cea7df" element-eId="DU/2024/18__art_351__par_1" funkcja="zastap"><paragraf-kodeksu eId="DU/2024/18__art_351__par_1" gd:GUID="6598028c-858f-4d32-9a04-9c7e9dd1860b" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="bc759d22-4615-44eb-af1f-49d1d260d25d" fragment="1" gd:fragmentGUID="4ad40a96-ea38-4019-9246-82a46a51a8b4" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">Jeżeli statut przewiduje akcje o szczególnych uprawnieniach, uprawnienia te określa się w statucie (akcje uprzywilejowane).</zdanie><zdanie nr="2" gd:zdGUID="de99eaa6-46fb-415a-b26d-f885f1584053" fragment="1" gd:fragmentGUID="9272758b-d04b-48f9-80cd-d24c9d61fb1f" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">Akcje uprzywilejowane oznacza się w statucie przez podanie ich liczby oraz odrębnego oznaczenia, o którym mowa w art. 55 ustawy z dnia 29 lipca 2005 r. o obrocie instrumentami finansowymi, a jeżeli nie zostało im nadane odrębne oznaczenie, oznacza się je przez podanie ich serii i numerów.</zdanie></p></paragraf-kodeksu></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2026/176__art_1__pkt_18__lit_b" gd:GUID="e55c20d2-e304-4bdb-8025-2606e419f125" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="03a9144e-7a5f-4aa0-aa4d-6f5af786089b" fragment="44" gd:fragmentGUID="3bdccdf1-10f5-414d-bd54-a741a68e9502" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">dodaje się § 5 w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/18" cudzyslowy="oba" gd:nowGUID="fa331525-e0d3-4217-9c5a-bde2c700bc8e" element-eId="DU/2024/18__art_351" funkcja="dodaj-w"><paragraf-kodeksu eId="DU/2024/18__art_351__par_5" gd:GUID="ebc867c5-77ef-4f68-b6a8-e9f20158f0ec" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><nr>5</nr><p><zdanie nr="1" gd:zdGUID="a4bf10b4-2ed0-4847-9412-a4e8fcbc730b" fragment="1" gd:fragmentGUID="fd2326c8-bc49-4ea2-a959-bd1f18405a9f" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">Zamiana akcji uprzywilejowanych na akcje nieuprzywilejowane może być dokonana na żądanie akcjonariusza, jeżeli ustawa lub statut nie stanowią inaczej.</zdanie><zdanie nr="2" gd:zdGUID="3c536b26-7733-4814-b72f-6f4662bc4d9b" fragment="1" gd:fragmentGUID="78ecd61b-c7fe-42c1-a465-ad1c4d0401d0" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">Z chwilą dokonania takiej zamiany uprzywilejowanie akcji wygasa.</zdanie></p></paragraf-kodeksu></cytat-strukt>;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2026/176__art_1__pkt_19" gd:GUID="5c6616f2-17ba-42af-abe9-7c5a041e49c7" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+          <nr>19</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="03a9144e-7a5f-4aa0-aa4d-6f5af786089b" fragment="45" gd:fragmentGUID="ab4bf816-5572-4beb-9ffa-4eafb561af61" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">w art. 352 zdanie drugie otrzymuje brzmienie:<cytat-w-tekscie now:akt="https://eli.gov.pl/eli/DU/2024/18" cudzyslowy="oba" gd:nowGUID="0967adad-11be-450c-afd0-2b20cb607c56" element-eId="DU/2024/18__art_352__zdn_2" funkcja="zastap-tekst"><zdanie nr="1" gd:zdGUID="c0392640-f81c-4e16-b254-610e5c1bf8a2" fragment="1" gd:fragmentGUID="5a6c0b06-b899-48d1-943f-6e9f277e2259" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">W przypadku jej zbycia wbrew zastrzeżonym warunkom uprzywilejowanie to wygasa.</zdanie></cytat-w-tekscie>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/176__art_1__pkt_20" gd:GUID="09a6b290-aa0f-4430-9593-cd8c8edb0b03" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+          <nr>20</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="03a9144e-7a5f-4aa0-aa4d-6f5af786089b" fragment="46" gd:fragmentGUID="ca2b359b-3b6c-4802-b9fc-298e79c21fd0" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">w art. 356 § 1 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/18" cudzyslowy="oba" gd:nowGUID="787288ec-23a3-4209-a4b7-45aa876c81f3" element-eId="DU/2024/18__art_356__par_1" funkcja="zastap"><paragraf-kodeksu eId="DU/2024/18__art_356__par_1" gd:GUID="7cf3da79-9f64-4baa-ba79-fec15a85e0a5" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="0abe645e-1294-47f0-89c0-04f9d3c0a7d3" fragment="1" gd:fragmentGUID="eb2608b4-ef94-4011-9c6c-f49e765debd6" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">Z akcją może być związany obowiązek powtarzających się świadczeń niepieniężnych.</zdanie><zdanie nr="2" gd:zdGUID="587a0c2d-4c1b-474b-920b-385fed89794f" fragment="1" gd:fragmentGUID="2ac1e8f5-fea4-4922-b538-210f6b515b69" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">Akcje takie oznacza się w statucie przez podanie ich liczby oraz odrębnego oznaczenia, o którym mowa w art. 55 ustawy z dnia 29 lipca 2005 r. o obrocie instrumentami finansowymi, a jeżeli nie zostało im nadane odrębne oznaczenie, oznacza się je przez podanie ich serii i numerów.</zdanie></p></paragraf-kodeksu></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/176__art_1__pkt_21" gd:GUID="9787ddfc-7126-47f3-9653-bed12093939e" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+          <nr>21</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="03a9144e-7a5f-4aa0-aa4d-6f5af786089b" fragment="47" gd:fragmentGUID="40fab4f1-5fd3-4446-a395-0e72d88206d5" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><now:uchyl akt="https://eli.gov.pl/eli/DU/2024/18" element-eId="DU/2024/18__art_361__par_1__zdn_2" gd:nowGUID="c9657260-a5ab-40ea-abe5-b1e9cafe7fb5" />w art. 361 w § 1 skreśla się zdanie drugie;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/176__art_1__pkt_22" gd:GUID="ee0f5819-eac1-4435-bb7e-ed4825ebf06a" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+          <nr>22</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="03a9144e-7a5f-4aa0-aa4d-6f5af786089b" fragment="48" gd:fragmentGUID="db811336-cffd-4421-a22a-530557b26cec" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><now:zamien-tekst stary-tekst="art. 406[1]" nowy-tekst="art. 406[1] § 1" element-eId="DU/2024/18__art_402[2]__pkt_3" akt="https://eli.gov.pl/eli/DU/2024/18" gd:nowGUID="01b7d1da-4610-4ac4-b33e-548d7b307514" />w art. 402<sup>2</sup> w pkt 3 wyrazy „art. 406<sup>1</sup>” zastępuje się wyrazami „art. 406<sup>1</sup> § 1”;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/176__art_1__pkt_23" gd:GUID="c2cc62fe-9835-4d20-9da5-45a753434484" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+          <nr>23</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="03a9144e-7a5f-4aa0-aa4d-6f5af786089b" fragment="49" gd:fragmentGUID="b6003e09-c83b-489d-b176-f45ad85b83db" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><now:uchyl akt="https://eli.gov.pl/eli/DU/2024/18" element-eId="DU/2024/18__art_406[1]__par_2" gd:nowGUID="bc47e1d5-8e95-4047-a4a1-c89039a22c6c" />w art. 406<sup>1</sup> uchyla się § 2;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/176__art_1__pkt_24" gd:GUID="3ee376bc-b32a-4986-ab4e-7d646013e9f9" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+          <nr>24</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="03a9144e-7a5f-4aa0-aa4d-6f5af786089b" fragment="50" gd:fragmentGUID="97052325-6961-4cef-a28c-eec0b02c9bbc" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><now:uchyl akt="https://eli.gov.pl/eli/DU/2024/18" element-eId="DU/2024/18__art_432__par_1__pkt_2" gd:nowGUID="1e5132f2-6817-411e-aa6f-c099a10dfda7" />w art. 432 w § 1 uchyla się pkt 2;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/176__art_1__pkt_25" gd:GUID="48807a3c-588a-458f-9528-166e39071272" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+          <nr>25</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="03a9144e-7a5f-4aa0-aa4d-6f5af786089b" fragment="51" gd:fragmentGUID="04affa23-bc2f-43a6-a26d-77a321dc31cf" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">w art. 434 w § 3 zdanie pierwsze otrzymuje brzmienie:<cytat-w-tekscie now:akt="https://eli.gov.pl/eli/DU/2024/18" cudzyslowy="oba" gd:nowGUID="532ea046-dd66-4706-b218-bf82aa666539" element-eId="DU/2024/18__art_434__par_3__zdn_1" funkcja="zastap-tekst"><zdanie nr="1" gd:zdGUID="51f3f169-2e8e-4529-aaf0-b79ec9e27b0b" fragment="1" gd:fragmentGUID="dd3c0e89-b189-4bc2-a521-be7105a4ee27" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">Zarząd spółki niebędącej spółką publiczną może zrezygnować z dokonywania ogłoszeń o prawie poboru.</zdanie></cytat-w-tekscie>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/176__art_1__pkt_26" gd:GUID="f1c0de53-7b30-46df-9259-d7d690f5db2b" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+          <nr>26</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="03a9144e-7a5f-4aa0-aa4d-6f5af786089b" fragment="52" gd:fragmentGUID="88b00227-2e8a-48e5-b0d7-3ba85f8cbbc7" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><now:zamien-tekst stary-tekst="imienne lub na okaziciela" nowy-tekst="" element-eId="DU/2024/18__art_453__par_2" akt="https://eli.gov.pl/eli/DU/2024/18" gd:nowGUID="cce6c420-f1b5-4e7f-803d-0a9e5be64e8a" />w art. 453 w § 2 skreśla się wyrazy „imienne lub na okaziciela”;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/176__art_1__pkt_27" gd:GUID="25918476-8c5f-4aad-848c-2d8c1f5ad083" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+          <nr>27</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="03a9144e-7a5f-4aa0-aa4d-6f5af786089b" fragment="53" gd:fragmentGUID="22da2603-f968-4755-9d4c-ab268e6d7817" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">w art. 476:</zdanie>
+          </p>
+          <litera eId="DU/2026/176__art_1__pkt_27__lit_a" gd:GUID="9dff7a07-f75c-4bf5-96f0-921e993854c3" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="03a9144e-7a5f-4aa0-aa4d-6f5af786089b" fragment="54" gd:fragmentGUID="b4c33e36-36f8-4a39-8f20-4b47c97d2a7b" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">po § 1 dodaje się § 1<sup>1</sup> w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/18" cudzyslowy="oba" gd:nowGUID="394818b4-d176-4be3-b115-68e8a815c925" element-eId="DU/2024/18__art_476__par_1" funkcja="dodaj-po"><paragraf-kodeksu eId="DU/2024/18__art_476__par_1[1]" gd:GUID="df6b08ce-b66c-43bd-8947-b7842fca5990" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><nr>1[1]</nr><p><zdanie nr="1" gd:zdGUID="5ae8a25c-f8dd-4652-9e27-0662a925f96e" fragment="1" gd:fragmentGUID="0cc41d3f-8781-495d-8a99-e21802c5de8e" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">Do wniosku o wykreślenie spółki z rejestru dołącza się wykaz akcjonariuszy spółki sporządzony na podstawie informacji, o których mowa w:</zdanie></p><punkt eId="DU/2024/18__art_476__par_1[1]__pkt_1" gd:GUID="deac1ebc-2763-43fa-b62b-d0cf97da9330" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="5ae8a25c-f8dd-4652-9e27-0662a925f96e" fragment="2" gd:fragmentGUID="dd587aa9-6906-491d-b569-7af80413bd89" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">art. 91 ust. 15 ustawy z dnia 29 lipca 2005 r. o ofercie publicznej i warunkach wprowadzania instrumentów finansowych do zorganizowanego systemu obrotu oraz o spółkach publicznych albo</zdanie></p></punkt><punkt eId="DU/2024/18__art_476__par_1[1]__pkt_2" gd:GUID="5b551407-e57d-4de1-b53d-cff52a06dd5a" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="5ae8a25c-f8dd-4652-9e27-0662a925f96e" fragment="3" gd:fragmentGUID="37e7f4dd-45c0-44c8-9fe0-8b8255ed7082" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">art. 328<sup>13</sup> § 1 według stanu po zatwierdzeniu sprawozdania likwidacyjnego</zdanie></p><fragment gd:GUID="470c7548-a961-4761-ac1f-f8ededd9726d">‒ zawierający informacje o ich imionach i nazwiskach albo firmach (nazwach), miejscach zamieszkania albo siedzibach oraz adresach albo innych adresach do doręczeń albo adresach do doręczeń elektronicznych oraz o liczbie, seriach i numerach albo odrębnych oznaczeniach, o których mowa w art. 55 ustawy z dnia 29 lipca 2005 r. o obrocie instrumentami finansowymi, posiadanych przez nich akcji.</fragment></punkt></paragraf-kodeksu></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2026/176__art_1__pkt_27__lit_b" gd:GUID="423b1daf-d97e-4047-916b-7ac0facde1b4" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="03a9144e-7a5f-4aa0-aa4d-6f5af786089b" fragment="55" gd:fragmentGUID="7963dc37-e33b-4d60-a84d-7bec4cfb386e" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">po § 2 dodaje się § 2<sup>1</sup> w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/18" cudzyslowy="oba" gd:nowGUID="376980ef-292d-48f6-aaba-54564881d71c" element-eId="DU/2024/18__art_476__par_2" funkcja="dodaj-po"><paragraf-kodeksu eId="DU/2024/18__art_476__par_2[1]" gd:GUID="bc3f3279-98d6-42a6-92ef-2cc66c039ac9" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><nr>2[1]</nr><p><zdanie nr="1" gd:zdGUID="e5a3cd99-c8de-4578-8972-883dc710f57b" fragment="1" gd:fragmentGUID="87dde086-280d-4781-9484-e6f12638ce90" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">W przypadku zgłoszenia wniosku o wykreślenie spółki z rejestru bez zatwierdzenia sprawozdania likwidacyjnego, wykaz akcjonariuszy spółki, o którym mowa w § 1<sup>1</sup>, sporządza się na podstawie informacji, o których mowa w art. 328<sup>13</sup> § 1, według stanu po dniu, na który walne zgromadzenie w celu zatwierdzenia sprawozdania zostało zwołane.</zdanie></p></paragraf-kodeksu></cytat-strukt>;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2026/176__art_1__pkt_28" gd:GUID="8b29b92c-9aa8-4f52-a333-6653db1d1cb5" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+          <nr>28</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="03a9144e-7a5f-4aa0-aa4d-6f5af786089b" fragment="56" gd:fragmentGUID="e10ac2c4-40ae-4854-a53b-822389afa594" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">w art. 592:</zdanie>
+          </p>
+          <litera eId="DU/2026/176__art_1__pkt_28__lit_a" gd:GUID="cedc095b-e942-474a-9438-8b33b0b142d4" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="03a9144e-7a5f-4aa0-aa4d-6f5af786089b" fragment="57" gd:fragmentGUID="18ef82a7-a805-4ca1-b39b-8c37a5846740" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><now:uchyl akt="https://eli.gov.pl/eli/DU/2024/18" element-eId="DU/2024/18__art_592__par_1" gd:nowGUID="fa059ecb-0cbd-4d79-981e-8a86a5246d0e" />uchyla się § 1,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2026/176__art_1__pkt_28__lit_b" gd:GUID="8c876950-9341-4168-a38e-ac7a2aa4bcd9" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="03a9144e-7a5f-4aa0-aa4d-6f5af786089b" fragment="58" gd:fragmentGUID="1e8b6aeb-845a-4a78-bd87-b97a2611d3ec" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">§ 2 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/18" cudzyslowy="oba" gd:nowGUID="fb7154bc-2467-41b8-9bf2-6532cb61a0f3" element-eId="DU/2024/18__art_592__par_2" funkcja="zastap"><paragraf-kodeksu eId="DU/2024/18__art_592__par_2" gd:GUID="fe58cb9d-791e-4cda-9c49-f27f14d1fd48" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="9e597ca0-bef2-4731-9252-9d6074ee3738" fragment="1" gd:fragmentGUID="bb5fe75b-1c42-41f9-b049-6660054b2c2b" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">Kto, będąc uprawnionym samodzielnie lub łącznie z innymi osobami na podstawie ustawy lub statutu do prowadzenia spraw i reprezentowania spółki akcyjnej albo spółki komandytowo-akcyjnej, dopuszcza do zarejestrowania akcji w rejestrze akcjonariuszy albo depozycie papierów wartościowych przed zarejestrowaniem:</zdanie></p><punkt eId="DU/2024/18__art_592__par_2__pkt_1" gd:GUID="bf985d12-9d40-4566-b23b-8794e9a89cb9" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="9e597ca0-bef2-4731-9252-9d6074ee3738" fragment="2" gd:fragmentGUID="413c3e19-476b-40aa-abd7-347024ab6315" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">spółki,</zdanie></p></punkt><punkt eId="DU/2024/18__art_592__par_2__pkt_2" gd:GUID="c5d992d0-c429-4933-8ef2-cd0e9d6b3168" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="9e597ca0-bef2-4731-9252-9d6074ee3738" fragment="3" gd:fragmentGUID="45ee5ef5-97d1-4e2e-b3c1-5cc0c6f6809c" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">podwyższenia kapitału zakładowego w przypadku jego podwyższenia</zdanie></p></punkt><czesc-wspolna-punkt eId="DU/2024/18__art_592__par_2__czw" gd:GUID="80799868-be8a-4172-91b6-47efc6cafbee" rola="sankcja-karna" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><p><zdanie nr="1" gd:zdGUID="9e597ca0-bef2-4731-9252-9d6074ee3738" fragment="4" gd:fragmentGUID="4e95c6c6-426f-44bd-bbef-26f70016b996" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">‒ podlega grzywnie, karze ograniczenia wolności albo pozbawienia wolności do roku.</zdanie></p></czesc-wspolna-punkt></paragraf-kodeksu></cytat-strukt>;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2026/176__art_1__pkt_29" gd:GUID="5020d568-c2a7-4df2-a14f-135d2b0bd545" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+          <nr>29</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="03a9144e-7a5f-4aa0-aa4d-6f5af786089b" fragment="59" gd:fragmentGUID="cf837969-71d9-4755-95c8-3ffee9e118b0" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><now:zamien-tekst stary-tekst="art. 586–592" nowy-tekst="art. 586–591 i art. 592 § 2 i 3" element-eId="DU/2024/18__art_593" akt="https://eli.gov.pl/eli/DU/2024/18" gd:nowGUID="1a748fc0-f03f-406d-b1d5-06c38468043c" />w art. 593 wyrazy „art. 586–592” zastępuje się wyrazami „art. 586–591 i art. 592 § 2 i 3”;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/176__art_1__pkt_30" gd:GUID="043c8792-7500-4c93-aacd-5209cd82a2c9" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+          <nr>30</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="03a9144e-7a5f-4aa0-aa4d-6f5af786089b" fragment="60" gd:fragmentGUID="cacd90cc-d9a0-4e8a-871c-4199056e5d6e" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">w art. 594 w § 1:</zdanie>
+          </p>
+          <litera eId="DU/2026/176__art_1__pkt_30__lit_a" gd:GUID="c6c480e9-7b6e-4fad-aa27-af9f6359535b" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="03a9144e-7a5f-4aa0-aa4d-6f5af786089b" fragment="61" gd:fragmentGUID="cf431c68-6a2d-40a9-b93a-d86e2ff292e5" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><now:zamien-tekst stary-tekst="albo nie prowadzi księgi akcyjnej zgodnie z art. 341 § 1," nowy-tekst="" element-eId="DU/2024/18__art_594__par_1__pkt_2" akt="https://eli.gov.pl/eli/DU/2024/18" gd:nowGUID="d9655b09-71b1-4a96-99cc-b19886f9f1d3" />w pkt 2 skreśla się wyrazy „albo nie prowadzi księgi akcyjnej zgodnie z art. 341 § 1,”,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2026/176__art_1__pkt_30__lit_b" gd:GUID="a2dc5217-f7d3-4718-a66c-68f43c23e1ea" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="03a9144e-7a5f-4aa0-aa4d-6f5af786089b" fragment="62" gd:fragmentGUID="e19108a4-3782-4d2a-8317-b39410b53632" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">po pkt 2 dodaje się pkt 2<sup>1</sup> w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/18" cudzyslowy="oba" gd:nowGUID="20ed3330-f5b1-44ac-8658-4001bce03bfc" element-eId="DU/2024/18__art_594__par_1__pkt_2" funkcja="dodaj-po"><punkt eId="DU/2024/18__art_594__par_1__pkt_2[1]" gd:GUID="488b6d2f-aab2-4045-83bc-dcbb7d6e8efd" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><nr>2[1]</nr><p><zdanie nr="1" gd:zdGUID="6329062e-ef4e-49d4-a791-506e07ca9f4a" fragment="1" gd:fragmentGUID="230f6ed0-f39a-4667-9d50-0e60420540aa" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">nie zgłasza zmian, o których mowa w art. 300<sup>33</sup> § 3 albo art. 328<sup>3</sup> § 4,</zdanie></p></punkt></cytat-strukt>.</zdanie>
+            </p>
+          </litera>
+        </punkt>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2026/176__art_2" gd:GUID="2f2e9028-0260-496c-ad41-818fb67e20c7" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="b50689d7-8a56-4bf2-9117-4ad766acb2a5" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+        <p>
+          <zdanie nr="1" gd:zdGUID="1fd664f5-8c3c-476f-abd1-d0ab0d48363b" fragment="1" gd:fragmentGUID="ec5c44cf-506e-4070-b0d0-889e16619497" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">W ustawie z dnia 14 lutego 1991 r. ‒ Prawo o notariacie (Dz. U. z 2024 r. poz. 1001, z 2025 r. poz. 479, 1669 i 1793 oraz z 2026 r. poz. 26) w art. 90a w § 1 zdanie pierwsze otrzymuje brzmienie:<cytat-w-tekscie now:akt="https://eli.gov.pl/eli/DU/2024/1001" cudzyslowy="oba" gd:nowGUID="0306d5a0-678d-4337-a217-f489e26890e9" element-eId="DU/2024/1001__art_90a__par_1__zdn_1" funkcja="zastap-tekst"><zdanie nr="1" gd:zdGUID="f68b88e9-d025-4202-b361-37f800185e08" fragment="1" gd:fragmentGUID="cc03c0ed-96a6-47d2-9b1c-5cb1c6d09273" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">Z chwilą zaprzestania prowadzenia działalności kancelarii dokumenty obejmujące dokonanie czynności notarialnych, o których mowa w art. 79 pkt 6a, wraz z rejestrem akcjonariuszy prostej spółki akcyjnej notariusz przekazuje radzie właściwej izby notarialnej, o czym prezes tej rady niezwłocznie zawiadamia spółkę oraz sąd rejestrowy właściwy ze względu na jej siedzibę.</zdanie></cytat-w-tekscie>.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2026/176__art_3" gd:GUID="4b49cc91-126e-42ef-8331-4633ca02a46a" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+      <nr>3</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="f8c4c674-629f-4068-962e-5d126bc91713" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+        <p>
+          <zdanie nr="1" gd:zdGUID="bbc9c231-e193-4db6-aef8-4669346f152d" fragment="1" gd:fragmentGUID="a494b2c7-5f00-4dee-bdc1-af85cc7c306c" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><now:uchyl akt="https://eli.gov.pl/eli/DU/2021/2117" element-eId="DU/2021/2117__art_4__ust_1__pkt_3__lit_c" gd:nowGUID="1fc27734-0da9-45ee-982f-5671c1cbdcf6" />W ustawie z dnia 5 lipca 1996 r. o doradztwie podatkowym (Dz. U. z 2021 r. poz. 2117 oraz z 2025 r. poz. 1882) w art. 4 w ust. 1 w pkt 3 uchyla się lit. c.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2026/176__art_4" gd:GUID="29d3d974-e3b0-4bee-a88f-c392d42bf513" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+      <nr>4</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="006d1c82-3cf3-49d7-8f6a-c461648fdc6a" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+        <p>
+          <zdanie nr="1" gd:zdGUID="f9f863fe-5428-4358-a66e-6689de9edfc4" fragment="1" gd:fragmentGUID="0bf5b386-25fc-4cbf-b3e6-4bbec08bb921" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">W ustawie z dnia 20 grudnia 1996 r. o portach i przystaniach morskich (Dz. U. z 2023 r. poz. 1796) w art. 13 ust. 4 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/1796" cudzyslowy="oba" gd:nowGUID="3dc3ad1c-32e4-4cc3-9385-0c195a88cf76" element-eId="DU/2023/1796__art_13__ust_4" funkcja="zastap"><ustep eId="DU/2023/1796__art_13__ust_4" gd:GUID="f735dbd1-b1f3-4567-b9f4-7831e0766bee" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><nr>4</nr><p><zdanie nr="1" gd:zdGUID="d1fa9565-38d7-4dc4-bd59-9854709ff696" fragment="1" gd:fragmentGUID="50df49f3-00d5-4b32-a413-b750fef3a3f0" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">Akcje Skarbu Państwa i gmin, o których mowa w ust. 1–3, są uprzywilejowane w zakresie pierwszeństwa przy podziale majątku spółki w razie jej likwidacji.</zdanie></p></ustep></cytat-strukt>.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2026/176__art_5" gd:GUID="7b3ec933-b654-4a69-8ac7-871d68fd495a" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+      <nr>5</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="86579e11-6c93-43be-a7f3-5682cf27e825" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+        <p>
+          <zdanie nr="1" gd:zdGUID="a2807698-205b-4e97-bc8a-97cb349ac1d8" fragment="1" gd:fragmentGUID="3e1d1b56-d01c-4325-8891-40c1e0f5de17" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">W ustawie z dnia 20 sierpnia 1997 r. o Krajowym Rejestrze Sądowym (Dz. U. z 2025 r. poz. 869, 1556 i 1792 oraz z 2026 r. poz. 119) wprowadza się następujące zmiany:</zdanie>
+        </p>
+        <punkt eId="DU/2026/176__art_5__pkt_1" gd:GUID="b27b9a51-801d-4a57-9363-c80b431e3f16" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a2807698-205b-4e97-bc8a-97cb349ac1d8" fragment="2" gd:fragmentGUID="6a96a66a-64ac-464d-8f50-dff8af2fdbe9" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><now:zamien-tekst stary-tekst="." nowy-tekst=";" element-eId="DU/2025/869__art_10__ust_4a__pkt_3" akt="https://eli.gov.pl/eli/DU/2025/869" now:wystapienie="ostatnie" gd:nowGUID="94da866f-461b-4305-a440-d22e4da3071d" />w art. 10 w ust. 4a w pkt 3 kropkę zastępuje się średnikiem i dodaje się pkt 4 w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2025/869" cudzyslowy="oba" gd:nowGUID="9a90e2a7-360f-4158-8244-2db93324ee25" element-eId="DU/2025/869__art_10__ust_4a__pkt_3" funkcja="dodaj-po"><punkt eId="DU/2025/869__art_10__ust_4a__pkt_4" gd:GUID="9d41a479-b2a8-4108-9122-4bc2dcd52531" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><nr>4</nr><p><zdanie nr="1" gd:zdGUID="89001067-70b5-4ada-8f2b-032267a90759" fragment="1" gd:fragmentGUID="77c63c11-e33b-45f0-85ea-9c5e3e1dcf8a" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">wykazu akcjonariuszy spółki, o którym mowa w art. 25da, oraz wykazu akcjonariuszy spółki, o którym mowa w art. 476 § 1<sup>1</sup> ustawy z dnia 15 września 2000 r. ‒ Kodeks spółek handlowych.</zdanie></p></punkt></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/176__art_5__pkt_2" gd:GUID="7432649e-bb16-43c4-91f1-532d70025da6" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a2807698-205b-4e97-bc8a-97cb349ac1d8" fragment="3" gd:fragmentGUID="2b2f1255-d65a-4568-9e46-7ee03fd342ee" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">po art. 25d dodaje się art. 25da w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2025/869" cudzyslowy="oba" gd:nowGUID="7e53263b-181b-4a73-a678-bf706dd65e00" element-eId="DU/2025/869__art_25d" funkcja="dodaj-po"><artykul eId="DU/2025/869__art_25da" gd:GUID="e5676fab-40cf-4201-849a-8b2c7b8b9581" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><nr>25da</nr><ustep eId="DU/2025/869__art_25da__ust_1" gd:GUID="c517fcf1-904e-4611-a845-6a4dbc0e17b4" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="cf0e4b28-4515-4cb1-bcfa-6c51843ddd34" fragment="1" gd:fragmentGUID="9afbd356-c557-4f03-a849-0d6f3e43dcb8" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">Po wydaniu postanowienia o rozwiązaniu bez przeprowadzania postępowania likwidacyjnego spółki komandytowo-akcyjnej, prostej spółki akcyjnej, spółki akcyjnej albo spółki europejskiej sąd rejestrowy wzywa podmiot prowadzący rejestr akcjonariuszy rozwiązanej spółki, a jeżeli akcje spółki są zarejestrowane w depozycie papierów wartościowych ‒ podmiot prowadzący rachunek papierów wartościowych za pośrednictwem Krajowego Depozytu Papierów Wartościowych S.A., do przekazania wykazu akcjonariuszy spółki zawierającego informacje o ich imionach i nazwiskach albo firmach (nazwach), miejscach zamieszkania albo siedzibach oraz adresach albo innych adresach do doręczeń albo adresach do doręczeń elektronicznych oraz o liczbie, seriach i numerach albo odrębnych oznaczeniach, o których mowa w art. 55 ustawy z dnia 29 lipca 2005 r. o obrocie instrumentami finansowymi (Dz. U. z 2024 r. poz. 722, z późn. zm.<odnosnik id-odnosnika="3" symbol="3" gd:GUID="e45b3bb8-c479-459a-a8db-9869a3a4bb15"><p><zdanie nr="1" gd:zdGUID="b46ae23a-d205-4e00-86e1-9e4420321784" fragment="1" gd:fragmentGUID="f6c8ecf9-4e53-41a1-acee-7b9c516b408a">Zmiany tekstu jednolitego wymienionej ustawy zostały ogłoszone w Dz. U. z 2024 r. poz. 1863, z 2025 r. poz. 146, 820, 923, 1014, 1069, 1216 i 1556 oraz z 2026 r. poz. 176.</zdanie></p></odnosnik>), posiadanych przez nich akcji.</zdanie><zdanie nr="2" gd:zdGUID="a1242e6f-4c67-4fd9-ab81-a5f9107a2404" fragment="1" gd:fragmentGUID="05fdb136-dacf-4901-87bc-178a386645b7" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">Sąd rejestrowy wskazuje dzień, według stanu na który wykaz ten ma zostać sporządzony.</zdanie></p></ustep><ustep eId="DU/2025/869__art_25da__ust_2" gd:GUID="d7d1dde1-c22d-4cb1-942c-c3a12fc89641" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="85ffe5dc-9184-42b9-968a-89d4b885c812" fragment="1" gd:fragmentGUID="01a66900-02db-426a-ac1d-a8ddc5a1c8a6" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">Wezwany podmiot w terminie 14 dni od dnia otrzymania wezwania, o którym mowa w ust. 1, sporządza i przekazuje sądowi rejestrowemu wykaz akcjonariuszy rozwiązanej spółki.</zdanie><zdanie nr="2" gd:zdGUID="695c97ea-1e85-406f-9246-c737dbcd450b" fragment="1" gd:fragmentGUID="0f20b338-06f6-4856-b180-0e07c6353fcc" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">Jeżeli akcje, których dotyczy wezwanie, są zapisane na rachunku zbiorczym, a podmiot prowadzący ten rachunek nie posiada informacji, o których mowa w ust. 1, dotyczących osób uprawnionych z tych akcji, w wykazie akcjonariuszy rozwiązanej spółki zamieszcza się informacje o ogólnej liczbie oraz odrębnych oznaczeniach, o których mowa w art. 55 ustawy z dnia 29 lipca 2005 r. o obrocie instrumentami finansowymi, akcji zapisanych na tym rachunku.</zdanie></p></ustep><ustep eId="DU/2025/869__art_25da__ust_3" gd:GUID="3eff8d6e-9c74-46b2-a2bc-d02c4b197624" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><nr>3</nr><p><zdanie nr="1" gd:zdGUID="b761d7b6-d380-49cf-9f09-411318b82ccc" fragment="1" gd:fragmentGUID="311a1976-b62e-4b07-85da-c79265bd676d" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">W zakresie, w jakim akcje, których dotyczy wezwanie sądu rejestrowego, są zapisane na rachunku papierów wartościowych lub rachunku zbiorczym prowadzonym przez Krajowy Depozyt Papierów Wartościowych S.A., wykaz akcjonariuszy uprawnionych z tych akcji sporządza i przekazuje sądowi rejestrowemu Krajowy Depozyt Papierów Wartościowych S.A.</zdanie><zdanie nr="2" gd:zdGUID="9b33f3d8-8126-43a1-bc73-a710c232326c" fragment="1" gd:fragmentGUID="a5a66ff9-30dc-4f48-bf2d-d46fafb6be93" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">Przepis ust. 2 zdanie drugie stosuje się.</zdanie></p></ustep></artykul></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/176__art_5__pkt_3" gd:GUID="3284a3fd-4f90-445f-b61c-ab424b78fbf3" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a2807698-205b-4e97-bc8a-97cb349ac1d8" fragment="4" gd:fragmentGUID="a59e485d-7472-45b1-b063-334a01a60422" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">w art. 38:</zdanie>
+          </p>
+          <litera eId="DU/2026/176__art_5__pkt_3__lit_a" gd:GUID="33edde93-eb73-4a60-83ae-592ade5be353" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="a2807698-205b-4e97-bc8a-97cb349ac1d8" fragment="5" gd:fragmentGUID="e35ce2e9-72fa-44be-ae6a-0e22da4e4244" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><now:zamien-tekst stary-tekst=";" nowy-tekst="," element-eId="DU/2025/869__art_38__pkt_7__lit_g" akt="https://eli.gov.pl/eli/DU/2025/869" now:wystapienie="ostatnie" gd:nowGUID="4c1035b6-f11e-4ede-9c94-9ba5632705d6" />w pkt 7 w lit. g średnik zastępuje się przecinkiem i dodaje się lit. h w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2025/869" cudzyslowy="oba" gd:nowGUID="5bb2f9b0-35d0-4a85-9b4e-8ebebca28e7a" element-eId="DU/2025/869__art_38__pkt_7__lit_g" funkcja="dodaj-po"><litera eId="DU/2025/869__art_38__pkt_7__lit_h" gd:GUID="d1b278a4-b4b6-4174-b73c-d945b9c70333" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><nr>h</nr><p><zdanie nr="1" gd:zdGUID="4146d951-0d27-46ec-8892-d6968f4cafcf" fragment="1" gd:fragmentGUID="e0428ce8-095c-4785-a9a3-7fc144dc08e3" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">dane podmiotu prowadzącego rejestr akcjonariuszy spółki albo depozyt papierów wartościowych, w których są zarejestrowane akcje, ze wskazaniem oznaczenia tego podmiotu;</zdanie></p></litera></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2026/176__art_5__pkt_3__lit_b" gd:GUID="18acc307-f8a4-4bae-8229-087454817f78" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="a2807698-205b-4e97-bc8a-97cb349ac1d8" fragment="6" gd:fragmentGUID="6d1b2c1f-c647-43df-b83b-65564431aa30" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><now:zamien-tekst stary-tekst=";" nowy-tekst="," element-eId="DU/2025/869__art_38__pkt_8a__lit_i" akt="https://eli.gov.pl/eli/DU/2025/869" now:wystapienie="ostatnie" gd:nowGUID="52b21cd3-3a5e-41fc-abe9-4866935356f9" />w pkt 8a w lit. i średnik zastępuje się przecinkiem i dodaje się lit. j w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2025/869" cudzyslowy="oba" gd:nowGUID="35950ca1-ecc0-41d7-a4f4-660dc936b5f7" element-eId="DU/2025/869__art_38__pkt_8a__lit_i" funkcja="dodaj-po"><litera eId="DU/2025/869__art_38__pkt_8a__lit_j" gd:GUID="1a4b237c-1380-416e-9ead-1ad86057bf3b" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><nr>j</nr><p><zdanie nr="1" gd:zdGUID="5b9db347-5769-435c-b64d-65e1cbb7745b" fragment="1" gd:fragmentGUID="f3466512-fca4-469d-8d00-0166296701ba" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">dane podmiotu prowadzącego rejestr akcjonariuszy spółki ze wskazaniem oznaczenia tego podmiotu;</zdanie></p></litera></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2026/176__art_5__pkt_3__lit_c" gd:GUID="ac69648f-d791-4ce5-992e-2b4761c7aede" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+            <nr>c</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="a2807698-205b-4e97-bc8a-97cb349ac1d8" fragment="7" gd:fragmentGUID="30be13a6-e7b7-4680-b7f0-e1a9dc41b5e9" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><now:zamien-tekst stary-tekst=";" nowy-tekst="," element-eId="DU/2025/869__art_38__pkt_9__lit_k" akt="https://eli.gov.pl/eli/DU/2025/869" now:wystapienie="ostatnie" gd:nowGUID="5940855d-32f0-4b86-bd23-24e2074389a5" />w pkt 9 w lit. k średnik zastępuje się przecinkiem i dodaje się lit. l w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2025/869" cudzyslowy="oba" gd:nowGUID="82e4fc7d-fdd9-463c-b85a-2942ccabe11f" element-eId="DU/2025/869__art_38__pkt_9__lit_k" funkcja="dodaj-po"><litera eId="DU/2025/869__art_38__pkt_9__lit_l" gd:GUID="dea14a45-3aa8-4215-a477-4711bf5f019b" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><nr>l</nr><p><zdanie nr="1" gd:zdGUID="2201ab7a-47bf-4e48-8f8c-5a8a0cc7f273" fragment="1" gd:fragmentGUID="129af0b9-5d88-4817-a0a6-5b257c8b1f3b" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">dane podmiotu prowadzącego rejestr akcjonariuszy spółki albo depozyt papierów wartościowych, w których są zarejestrowane akcje, ze wskazaniem oznaczenia tego podmiotu;</zdanie></p></litera></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2026/176__art_5__pkt_3__lit_d" gd:GUID="ea6c277d-6f84-4073-99d1-0e77241d44ea" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+            <nr>d</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="a2807698-205b-4e97-bc8a-97cb349ac1d8" fragment="8" gd:fragmentGUID="65643d79-5350-40ac-a127-fdd31051dea3" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><now:zamien-tekst stary-tekst=";" nowy-tekst="," element-eId="DU/2025/869__art_38__pkt_9a__lit_j" akt="https://eli.gov.pl/eli/DU/2025/869" now:wystapienie="ostatnie" gd:nowGUID="5c4de3a4-e8f9-4df6-aa1a-6ceeec9cde34" />w pkt 9a w lit. j średnik zastępuje się przecinkiem i dodaje się lit. k w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2025/869" cudzyslowy="oba" gd:nowGUID="3d04bc61-87e0-4a57-90bd-80ae280f3e2a" element-eId="DU/2025/869__art_38__pkt_9a__lit_j" funkcja="dodaj-po"><litera eId="DU/2025/869__art_38__pkt_9a__lit_k" gd:GUID="937ec55f-c92a-4e16-869e-c8845c9bc316" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><nr>k</nr><p><zdanie nr="1" gd:zdGUID="d7b07773-d0de-4b26-a932-8e3d0d619b52" fragment="1" gd:fragmentGUID="fcd1f3f7-87fd-4c26-b180-0849f45a21cd" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">dane podmiotu prowadzącego rejestr akcjonariuszy spółki albo depozyt papierów wartościowych, w których są zarejestrowane akcje, ze wskazaniem oznaczenia tego podmiotu;</zdanie></p></litera></cytat-strukt>.</zdanie>
+            </p>
+          </litera>
+        </punkt>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2026/176__art_6" gd:GUID="12e1194e-a5ea-4667-a3a6-d6d7eba2a188" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+      <nr>6</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="1c6a8c7e-60d5-4dda-ada4-1f20902c5d5c" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+        <p>
+          <zdanie nr="1" gd:zdGUID="01605e63-88bc-4704-85af-6be8bb171231" fragment="1" gd:fragmentGUID="24e3cddf-688e-4c8f-92a2-603d20816bec" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><now:uchyl akt="https://eli.gov.pl/eli/DU/2024/1113" element-eId="DU/2024/1113__art_30__ust_2" gd:nowGUID="00dd1193-b0ef-436c-8633-583fee7aad87" />W ustawie z dnia 28 sierpnia 1997 r. o organizacji i funkcjonowaniu funduszy emerytalnych (Dz. U. z 2024 r. poz. 1113 oraz z 2025 r. poz. 1069, 1216 i 1425) w art. 30 uchyla się ust. 2.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2026/176__art_7" gd:GUID="08f71b2f-6e95-4ceb-b5be-f2794709a2bc" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+      <nr>7</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="5950af0f-7008-497b-bab7-5e3f7366e8dc" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+        <p>
+          <zdanie nr="1" gd:zdGUID="f497efb5-123f-4e81-9294-6d37ffee9213" fragment="1" gd:fragmentGUID="450fd915-b8bb-464b-b596-557ef9cb477d" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><now:uchyl akt="https://eli.gov.pl/eli/DU/2026/38" element-eId="DU/2026/38__art_28" gd:nowGUID="79cade46-e8c1-4f52-8333-add87c5b543a" />W ustawie z dnia 29 sierpnia 1997 r. – Prawo bankowe (Dz. U. z 2026 r. poz. 38) uchyla się art. 28.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2026/176__art_8" gd:GUID="9876628f-8932-4299-b1f5-acbaa1cb7865" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+      <nr>8</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="fe06be21-3b02-4e17-861f-fa4f47e772fb" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+        <p>
+          <zdanie nr="1" gd:zdGUID="5439877c-e0e2-45de-8417-a68a6fed153a" fragment="1" gd:fragmentGUID="5c7e5995-d161-457a-8f96-f83a898096f1" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><now:uchyl akt="https://eli.gov.pl/eli/DU/2023/966" element-eId="DU/2023/966__art_16__ust_1" gd:nowGUID="db298928-6b47-4072-a9da-ca36ad2fdf59" />W ustawie z dnia 26 października 2000 r. o Polskim Rejestrze Statków (Dz. U. z 2023 r. poz. 966) w art. 16 uchyla się ust. 1.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2026/176__art_9" gd:GUID="7062b24f-8a8c-4eb8-a0ba-ead98700acd0" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+      <nr>9</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="f33e58f1-69e0-48ec-823b-848f8f042571" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+        <p>
+          <zdanie nr="1" gd:zdGUID="f10f10a9-2be5-4947-8570-b47c488f4880" fragment="1" gd:fragmentGUID="55ed46ee-20bd-430f-9137-9c46bb67ea95" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">W ustawie z dnia 26 października 2000 r. o giełdach towarowych (Dz. U. z 2025 r. poz. 1119) wprowadza się następujące zmiany:</zdanie>
+        </p>
+        <punkt eId="DU/2026/176__art_9__pkt_1" gd:GUID="e934f689-676e-4915-9c78-2e41582dfcd6" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="f10f10a9-2be5-4947-8570-b47c488f4880" fragment="2" gd:fragmentGUID="fe953207-3668-4cc1-a0a9-1f2be7d44ee8" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">w art. 6:</zdanie>
+          </p>
+          <litera eId="DU/2026/176__art_9__pkt_1__lit_a" gd:GUID="548814fd-b2cf-407b-a5a6-a8e11a06594d" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="f10f10a9-2be5-4947-8570-b47c488f4880" fragment="3" gd:fragmentGUID="a232299f-4f37-4766-a331-5a066b66c6f9" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><now:uchyl akt="https://eli.gov.pl/eli/DU/2025/1119" element-eId="DU/2025/1119__art_6__ust_1" gd:nowGUID="7f3580a6-7d21-4c85-aa63-b0e628c485f9" />uchyla się ust. 1,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2026/176__art_9__pkt_1__lit_b" gd:GUID="fe93435b-03e9-4240-ad66-6e3e82c823e6" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="f10f10a9-2be5-4947-8570-b47c488f4880" fragment="4" gd:fragmentGUID="59def824-f775-454b-92f4-5e9010aa259f" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><now:uchyl akt="https://eli.gov.pl/eli/DU/2025/1119" element-eId="DU/2025/1119__art_6__ust_6" gd:nowGUID="9fd17344-2b4a-4e0b-bc45-4b17613e5ad5" />uchyla się ust. 6;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2026/176__art_9__pkt_2" gd:GUID="3c1a1031-415b-4f8f-9677-e844d11ca9ad" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="f10f10a9-2be5-4947-8570-b47c488f4880" fragment="5" gd:fragmentGUID="e75c44bb-ea8b-44e2-8bc6-0188023dc7e4" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><now:uchyl akt="https://eli.gov.pl/eli/DU/2025/1119" element-eId="DU/2025/1119__art_37__ust_2" gd:nowGUID="f2525c68-d824-4dc4-9e56-9022f9604e83" />w art. 37 uchyla się ust. 2.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2026/176__art_10" gd:GUID="0e01aab9-63ab-4145-ad70-345b81bf6a21" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+      <nr>10</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="54eeed15-9576-470a-b2c3-bc3043c2ee8a" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+        <p>
+          <zdanie nr="1" gd:zdGUID="4348b708-4f94-4329-be1e-d1bb4b9d34f0" fragment="1" gd:fragmentGUID="888fb42f-3924-404e-b6ef-032d0a647bd4" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><now:uchyl akt="https://eli.gov.pl/eli/DU/2024/749" element-eId="DU/2024/749__art_5__ust_1__pkt_5__lit_d" gd:nowGUID="fe46f393-a3a1-4751-bb13-a0ac9756c53c" />W ustawie z dnia 11 kwietnia 2001 r. o rzecznikach patentowych (Dz. U. z 2024 r. poz. 749 oraz z 2025 r. poz. 1172 i 1679) w art. 5 w ust. 1 w pkt 5 uchyla się lit. d.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2026/176__art_11" gd:GUID="af5f8199-b92f-4a07-8fe4-0d5e9075b4ab" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+      <nr>11</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="93718d32-4a8c-4a2e-a86c-6e412127e83d" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+        <p>
+          <zdanie nr="1" gd:zdGUID="25be9273-b5f6-4759-924d-4206d54a04d4" fragment="1" gd:fragmentGUID="1c2fe7ef-bc3d-41ad-9c12-58d6137c75e0" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">W ustawie z dnia 27 kwietnia 2001 r. ‒ Prawo ochrony środowiska (Dz. U. z 2025 r. poz. 647, 1080, 1812 i 1863) w art. 421d:</zdanie>
+        </p>
+        <punkt eId="DU/2026/176__art_11__pkt_1" gd:GUID="fd4df1da-31ca-4c23-ae36-83c6c4c9ba10" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="25be9273-b5f6-4759-924d-4206d54a04d4" fragment="2" gd:fragmentGUID="3c896a5a-5595-460e-8f19-1c476b744b6f" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><now:uchyl akt="https://eli.gov.pl/eli/DU/2025/647" element-eId="DU/2025/647__art_421d__ust_1" gd:nowGUID="350865ff-6306-4ceb-a522-309c7d44f239" />uchyla się ust. 1;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/176__art_11__pkt_2" gd:GUID="9545bd97-13af-4dd2-8e0c-9080e1644cff" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="25be9273-b5f6-4759-924d-4206d54a04d4" fragment="3" gd:fragmentGUID="9d286c71-b2d2-4a71-9a19-a1a137d8c4aa" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><now:zamien-tekst stary-tekst="imienne" nowy-tekst="" element-eId="DU/2025/647__art_421d__ust_3" akt="https://eli.gov.pl/eli/DU/2025/647" gd:nowGUID="c1d0a3dc-4e53-469b-8fd9-2586525b9ea6" />w ust. 3 skreśla się wyraz „imienne”;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/176__art_11__pkt_3" gd:GUID="0f8707a1-d43a-4cf2-b4f8-a135b7d5e687" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="25be9273-b5f6-4759-924d-4206d54a04d4" fragment="4" gd:fragmentGUID="edf6a576-6497-4179-841a-8a72fa610487" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><now:zamien-tekst stary-tekst="ust. 1–3" nowy-tekst="ust. 2 i 3" element-eId="DU/2025/647__art_421d__ust_4" akt="https://eli.gov.pl/eli/DU/2025/647" gd:nowGUID="2ee86421-638f-46bd-94d4-eaef9f234a69" />w ust. 4 wyrazy „ust. 1–3” zastępuje się wyrazami „ust. 2 i 3”;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/176__art_11__pkt_4" gd:GUID="78dcc506-96f4-4ef2-a087-c458dfae57f1" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="25be9273-b5f6-4759-924d-4206d54a04d4" fragment="5" gd:fragmentGUID="184fbefd-f0ce-46e5-b0c3-00eb2aa410bd" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><now:zamien-tekst stary-tekst="imiennych" nowy-tekst="" element-eId="DU/2025/647__art_421d__ust_5" akt="https://eli.gov.pl/eli/DU/2025/647" gd:nowGUID="7620a3ae-5cb9-4c1b-994b-1afc58300a29" />w ust. 5 skreśla się wyraz „imiennych”.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2026/176__art_12" gd:GUID="de298f8f-3f14-469b-9b11-d89270126f79" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+      <nr>12</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="e97a7110-914b-4ad9-9c69-079d994d367d" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+        <p>
+          <zdanie nr="1" gd:zdGUID="65adcc1d-b322-4fe0-8f82-c8c5f0ebbef4" fragment="1" gd:fragmentGUID="cc99bbf7-84f9-44bc-9283-a8aff62451bb" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><now:uchyl akt="https://eli.gov.pl/eli/DU/2024/433" element-eId="DU/2024/433__art_6__ust_5" gd:nowGUID="79cd9e83-e540-49ec-ada0-849201bfa13c" />W ustawie z dnia 11 maja 2001 r. o obowiązkach przedsiębiorców w zakresie gospodarowania niektórymi odpadami oraz o opłacie produktowej (Dz. U. z 2024 r. poz. 433) w art. 6 uchyla się ust. 5.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2026/176__art_13" gd:GUID="35fae6dd-d33c-40f8-b1c6-d3c5a865fc30" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+      <nr>13</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="ce68c04c-8f16-47d5-9909-5f450f73030f" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+        <p>
+          <zdanie nr="1" gd:zdGUID="1332b105-695b-4f41-b51e-d924a9976bfc" fragment="1" gd:fragmentGUID="13da2278-9d8e-4725-94eb-efe6b6b0d7a0" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><now:uchyl akt="https://eli.gov.pl/eli/DU/2025/1431" element-eId="DU/2025/1431__art_164__ust_1a" gd:nowGUID="0bdef2b5-a257-48c8-ab27-ade707b5727d" />W ustawie z dnia 3 lipca 2002 r. ‒ Prawo lotnicze (Dz. U. z 2025 r. poz. 1431 i 1668) w art. 164 uchyla się ust. 1a.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2026/176__art_14" gd:GUID="75fdf923-4e75-4915-ab3e-8c662caeb908" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+      <nr>14</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="3b37d86f-9d26-4f01-9c38-6c1d6c53df94" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+        <p>
+          <zdanie nr="1" gd:zdGUID="bce22e67-36bf-45f2-b543-390dd8810945" fragment="1" gd:fragmentGUID="f41ad491-6190-4004-b261-9d943ae53c9b" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><now:zamien-tekst stary-tekst="imiennych" nowy-tekst="" element-eId="DU/2026/96__art_13__ust_2__pkt_2" akt="https://eli.gov.pl/eli/DU/2026/96" gd:nowGUID="ac93b85b-59fd-4bd3-8b0e-a7458620dcdf" />W ustawie z dnia 30 października 2002 r. o pomocy publicznej dla przedsiębiorców o szczególnym znaczeniu dla rynku pracy (Dz. U. z 2026 r. poz. 96) w art. 13 w ust. 2 w pkt 2 skreśla się wyraz „imiennych”.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2026/176__art_15" gd:GUID="9361796b-055c-4bb6-971c-3cea58dcb715" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+      <nr>15</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="b431a465-bda1-4384-a0b0-3e866f7620b2" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+        <p>
+          <zdanie nr="1" gd:zdGUID="77286680-018c-4e38-bf43-b7a35a40146b" fragment="1" gd:fragmentGUID="b4e144ec-e413-4bb9-857f-3375c3a35bb5" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">W ustawie z dnia 27 maja 2004 r. o funduszach inwestycyjnych i zarządzaniu alternatywnymi funduszami inwestycyjnymi (Dz. U. z 2026 r. poz. 60) wprowadza się następujące zmiany:</zdanie>
+        </p>
+        <punkt eId="DU/2026/176__art_15__pkt_1" gd:GUID="01016540-90ba-4764-a010-4b6b6e7e9d54" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="77286680-018c-4e38-bf43-b7a35a40146b" fragment="2" gd:fragmentGUID="ff34741d-e372-428b-ad3f-38b1d8fac74d" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><now:uchyl akt="https://eli.gov.pl/eli/DU/2026/60" element-eId="DU/2026/60__art_53" gd:nowGUID="03f0afd8-b5a2-44d7-9fba-ac2464054f98" />uchyla się art. 53;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/176__art_15__pkt_2" gd:GUID="b6552c6a-a9e6-4815-bc77-1b846d40705b" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="77286680-018c-4e38-bf43-b7a35a40146b" fragment="3" gd:fragmentGUID="f6c8f92a-7c82-4aac-8e52-4296cbf47fba" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><now:zamien-tekst stary-tekst=", art. 52 i art. 53" nowy-tekst="i art. 52" element-eId="DU/2026/60__art_59__ust_1" akt="https://eli.gov.pl/eli/DU/2026/60" gd:nowGUID="86fe5b6e-99b4-4e5f-8ba5-0ab2e37c958e" />w art. 59 w ust. 1 wyrazy „ , art. 52 i art. 53” zastępuje się wyrazami „i art. 52”;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/176__art_15__pkt_3" gd:GUID="0c4bc2ba-a1a9-420c-8f8c-4e5e01602db0" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="77286680-018c-4e38-bf43-b7a35a40146b" fragment="4" gd:fragmentGUID="fd39f720-b261-4a65-bcc5-97485d88536e" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><now:uchyl akt="https://eli.gov.pl/eli/DU/2026/60" element-eId="DU/2026/60__art_70q__ust_4" gd:nowGUID="8aeac371-4bf7-4070-aaa9-b2275ea52777" />w art. 70q uchyla się ust. 4.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2026/176__art_16" gd:GUID="f37d9e84-8429-48da-a2e7-63b0007f8272" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+      <nr>16</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="a3463521-36e4-4f77-8c85-2ce46f181484" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+        <p>
+          <zdanie nr="1" gd:zdGUID="40a46e82-1af9-42cf-bbca-c22a79e1051f" fragment="1" gd:fragmentGUID="63704f13-218a-40be-a5fb-09d22c4379a2" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">W ustawie z dnia 29 lipca 2005 r. o obrocie instrumentami finansowymi (Dz. U. z 2024 r. poz. 722, z późn. zm.<odnosnik id-odnosnika="4" symbol="4" gd:GUID="652d6ad9-7877-439d-8152-4bcd91e3269e"><p><zdanie nr="1" gd:zdGUID="2b556b25-67b7-4f31-b532-998437dc17fc" fragment="1" gd:fragmentGUID="3e59965d-5af7-4899-8224-d52e29e292c1">Zmiany tekstu jednolitego wymienionej ustawy zostały ogłoszone w Dz. U. z 2024 r. poz. 1863 oraz z 2025 r. poz. 146, 820, 923, 1014, 1069, 1216 i 1556.</zdanie></p></odnosnik>) wprowadza się następujące zmiany:</zdanie>
+        </p>
+        <punkt eId="DU/2026/176__art_16__pkt_1" gd:GUID="892c471f-deed-48b8-8819-886c1248d8d1" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="40a46e82-1af9-42cf-bbca-c22a79e1051f" fragment="2" gd:fragmentGUID="00f55880-6e5f-4ebe-8245-c2d33727ac7b" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">w art. 22:</zdanie>
+          </p>
+          <litera eId="DU/2026/176__art_16__pkt_1__lit_a" gd:GUID="3cdfecb3-3c78-4a5f-aa0f-d306330f2b21" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="40a46e82-1af9-42cf-bbca-c22a79e1051f" fragment="3" gd:fragmentGUID="43f974bf-8519-4777-84d3-b7c5c4c1cf1f" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><now:uchyl akt="https://eli.gov.pl/eli/DU/2024/722" element-eId="DU/2024/722__art_22__ust_1" gd:nowGUID="f92d9ad1-f548-4529-83f4-4c7999ec2e0d" />uchyla się ust. 1,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2026/176__art_16__pkt_1__lit_b" gd:GUID="0a7d86b5-42fb-4034-b75e-adf8cbc342b9" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="40a46e82-1af9-42cf-bbca-c22a79e1051f" fragment="4" gd:fragmentGUID="775d3cd2-783a-4d29-8e2a-1670910dcd7d" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">w ust. 3 wprowadzenie do wyliczenia otrzymuje brzmienie:<cytat-w-tekscie now:akt="https://eli.gov.pl/eli/DU/2024/722" cudzyslowy="oba" gd:nowGUID="07adbfc7-70c9-436d-9033-a1d0d5cea4fc" element-eId="DU/2024/722__art_22__ust_3" funkcja="zastap-tekst"><zdanie nr="1" gd:zdGUID="50de0354-2d4f-4701-95e1-dc37dee6d98e" fragment="1" gd:fragmentGUID="3130c62b-b388-4bd3-83ec-9a6beb1fd579" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">Przepisu ust. 2 nie stosuje się, w przypadku gdy:</zdanie></cytat-w-tekscie>;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2026/176__art_16__pkt_2" gd:GUID="c1028dc9-4603-4236-bc9c-ea44f24174a4" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="40a46e82-1af9-42cf-bbca-c22a79e1051f" fragment="5" gd:fragmentGUID="52c3770e-b3d5-4a3e-bf98-2f4407d6b7fa" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><now:uchyl akt="https://eli.gov.pl/eli/DU/2024/722" element-eId="DU/2024/722__art_46__ust_2" gd:nowGUID="61ffb5e8-b23b-44f8-82bb-cb02b9a225f0" />w art. 46 uchyla się ust. 2;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/176__art_16__pkt_3" gd:GUID="4241cc0e-b803-4ea0-a705-0135a0221d3e" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="40a46e82-1af9-42cf-bbca-c22a79e1051f" fragment="6" gd:fragmentGUID="c69e97cb-9203-41f9-98f4-1b6bc043d840" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">w art. 83a po ust. 4ab dodaje się ust. 4ac w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/722" cudzyslowy="oba" gd:nowGUID="cc97c09b-dacf-413c-ad52-c9b5e511b236" element-eId="DU/2024/722__art_83a__ust_4ab" funkcja="dodaj-po"><ustep eId="DU/2024/722__art_83a__ust_4ac" gd:GUID="e6da4e0a-5ac9-46a6-8795-6fee37b353a9" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><nr>4ac</nr><p><zdanie nr="1" gd:zdGUID="01396ff1-1969-4e4d-b043-5a6ca38e43e7" fragment="1" gd:fragmentGUID="775e240a-5daa-4376-a4ea-b3980f095efb" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">Po rozwiązaniu umowy o prowadzenie rejestru akcjonariuszy obowiązek, o którym mowa w ust. 4, dotyczy kopii tego rejestru oraz kopii dokumentów związanych z jego prowadzeniem.</zdanie><zdanie nr="2" gd:zdGUID="36157b5a-b0b2-49eb-97a1-53716dcee75b" fragment="1" gd:fragmentGUID="a0fea2de-960e-409b-b47f-5d4076433628" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">Firma inwestycyjna po rozwiązaniu umowy o prowadzenie rejestru akcjonariuszy przekazuje rejestr akcjonariuszy oraz dokumenty związane z jego prowadzeniem podmiotowi prowadzącemu rejestr akcjonariuszy wskazanemu przez spółkę.</zdanie></p></ustep></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/176__art_16__pkt_4" gd:GUID="0ba43400-1e40-4068-9d3a-5445cd906493" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="40a46e82-1af9-42cf-bbca-c22a79e1051f" fragment="7" gd:fragmentGUID="4b08f7e8-21e8-4a22-9371-f16e88f1a065" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><now:uchyl akt="https://eli.gov.pl/eli/DU/2024/722" element-eId="DU/2024/722__art_95__ust_4" gd:nowGUID="624b97d6-1a48-44f1-82bb-1b239ba806e6" />w art. 95 uchyla się ust. 4;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/176__art_16__pkt_5" gd:GUID="60defa87-7320-4998-8423-e98cb427bf31" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="40a46e82-1af9-42cf-bbca-c22a79e1051f" fragment="8" gd:fragmentGUID="b73b5dc9-005d-40f6-8212-19eb061d916b" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">w art. 149 w ust. 1 pkt 3 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/722" cudzyslowy="oba" gd:nowGUID="a7afb774-4596-4477-b623-06395b3f7c98" element-eId="DU/2024/722__art_149__ust_1__pkt_3" funkcja="zastap"><punkt eId="DU/2024/722__art_149__ust_1__pkt_3" gd:GUID="f1203203-e6ab-4af2-a313-623bde30bdb8" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><nr>3</nr><p><zdanie nr="1" gd:zdGUID="5f1c97fc-d7ed-414a-b2fd-418f422142d3" fragment="1" gd:fragmentGUID="68809f93-d1f4-4de8-924c-3661e054e0ac" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">sądu w związku z toczącym się postępowaniem cywilnym w sprawie, w której stroną jest podmiot będący stroną umowy lub innej czynności objętej tą tajemnicą ‒ w zakresie informacji dotyczących tego podmiotu albo w związku z toczącym się postępowaniem, o którym mowa w art. 25a ust. 1 ustawy z dnia 20 sierpnia 1997 r. o Krajowym Rejestrze Sądowym (Dz. U. z 2025 r. poz. 869, 1556 i 1792 oraz z 2026 r. poz. 119 i 176) ‒ w zakresie informacji, o których mowa w art. 25da tej ustawy.</zdanie></p></punkt></cytat-strukt>.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2026/176__art_17" gd:GUID="5f07a05b-3554-4f79-a549-12bb6bbf63d0" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+      <nr>17</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="39e21877-f6e8-40b2-a0c0-62f74b7a229d" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+        <p>
+          <zdanie nr="1" gd:zdGUID="8c83eba5-e5f6-4e10-8984-f13fe0ddb3d9" fragment="1" gd:fragmentGUID="37e3cc24-c480-47a1-b3a2-486dc19ddc0a" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">W ustawie z dnia 29 lipca 2005 r. o ofercie publicznej i warunkach wprowadzania instrumentów finansowych do zorganizowanego systemu obrotu oraz o spółkach publicznych (Dz. U. z 2025 r. poz. 592) w art. 91 ust. 14‒16 otrzymują brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2025/592" cudzyslowy="oba" gd:nowGUID="77a9fceb-7ac5-44c2-9851-443bd84f7578" element-eId="DU/2025/592__art_91__ust_14" element-do-eId="DU/2025/592__art_91__ust_16" funkcja="zastap"><ustep eId="DU/2025/592__art_91__ust_14" gd:GUID="d2e2aa4c-166e-4e81-b099-45da04e3bbdf" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><nr>14</nr><p><zdanie nr="1" gd:zdGUID="5226fe12-2e99-4c70-8a9d-ac3e935a28ce" fragment="1" gd:fragmentGUID="02ee4d85-d176-4a5f-8a58-2cddf0a5a6ac" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">W przypadku wycofania lub wykluczenia akcji z obrotu na rynku regulowanym lub w alternatywnym systemie obrotu albo podjęcia przez walne zgromadzenie spółki niebędącej spółką publiczną uchwały o rejestracji akcji w rejestrze akcjonariuszy, o którym mowa w art. 328<sup>1</sup> § 1 ustawy z dnia 15 września 2000 r. ‒ Kodeks spółek handlowych, a także po zakończeniu likwidacji spółki, spółka może rozwiązać umowę o rejestrację akcji w depozycie papierów wartościowych zawartą z Krajowym Depozytem lub spółką, której Krajowy Depozyt przekazał wykonywanie czynności z zakresu zadań, o których mowa w art. 48 ust. 1 pkt 1‒6 ustawy o obrocie instrumentami finansowymi.</zdanie><zdanie nr="2" gd:zdGUID="ebfe37c0-f96c-4acb-9a79-7095b222baaa" fragment="1" gd:fragmentGUID="ab3ca0bf-b3bd-4bdc-93a6-aacdf4686bd5" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">Rozwiązanie umowy następuje z upływem 14 dni od dnia złożenia przez spółkę oświadczenia o jej rozwiązaniu.</zdanie><zdanie nr="3" gd:zdGUID="57791d6c-66af-4458-8098-089d36b1faa9" fragment="1" gd:fragmentGUID="1452e3e2-1c96-418e-ae39-5b0df47db865" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">Z dniem rozwiązania umowy następuje wyrejestrowanie akcji z depozytu papierów wartościowych.</zdanie></p></ustep><ustep eId="DU/2025/592__art_91__ust_15" gd:GUID="dda98770-ce4d-4b4f-b64f-ede4cd3542e1" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><nr>15</nr><p><zdanie nr="1" gd:zdGUID="d20001e7-e006-40b1-9c67-3879c98c4ff4" fragment="1" gd:fragmentGUID="69bc9b07-75d1-49cf-800e-aed1098e9eec" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">W razie rozwiązania umowy o rejestrację akcji w depozycie papierów wartościowych uczestnicy Krajowego Depozytu lub spółki, której Krajowy Depozyt przekazał wykonywanie czynności z zakresu zadań, o których mowa w art. 48 ust. 1 pkt 1‒6 ustawy o obrocie instrumentami finansowymi, przekazują spółce, a w przypadku spółki w upadłości ‒ jej syndykowi, w terminie wskazanym przez Krajowy Depozyt lub spółkę, której Krajowy Depozyt przekazał wykonywanie czynności z zakresu zadań, o których mowa w art. 48 ust. 1 pkt 1‒6 ustawy o obrocie instrumentami finansowymi, dane osobowe akcjonariuszy, ze wskazaniem liczby akcji posiadanych przez każdego z nich oraz odrębnych oznaczeń tych akcji, o których mowa w art. 55 ustawy o obrocie instrumentami finansowymi, a także obciążeń ustanowionych na tych akcjach oraz danych osobowych osób, na których rzecz obciążenia te ustanowiono.</zdanie><zdanie nr="2" gd:zdGUID="58c2d5ba-a100-48ed-927c-54a42327ab5a" fragment="1" gd:fragmentGUID="81466ab3-8159-4a11-9372-d78c9f48472d" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">Informacje te są sporządzane według stanu na dzień wyrejestrowania akcji z depozytu papierów wartościowych, na podstawie zapisów dokonanych na prowadzonych przez uczestników rachunkach papierów wartościowych i rachunkach zbiorczych oraz na podstawie wskazań dokonanych przez posiadaczy rachunków zbiorczych zgodnie z art. 8a ust. 4 ustawy o obrocie instrumentami finansowymi.</zdanie></p></ustep><ustep eId="DU/2025/592__art_91__ust_16" gd:GUID="45236608-5c67-4fc8-82d5-71dd1e69c383" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><nr>16</nr><p><zdanie nr="1" gd:zdGUID="f36bb490-322f-4c52-a494-2b432f5adefb" fragment="1" gd:fragmentGUID="61f0cd9c-9b3d-4fa7-a58e-50209f268b5a" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">W zakresie, w jakim akcje są zapisane na rachunku papierów wartościowych lub rachunku zbiorczym prowadzonym przez Krajowy Depozyt, informacje, o których mowa w ust. 15, są przekazywane spółce przez Krajowy Depozyt.</zdanie></p></ustep></cytat-strukt>.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2026/176__art_18" gd:GUID="65ef65a1-bd0a-4334-8636-9e668b2ea6e5" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+      <nr>18</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="019babb4-0b57-4f54-af1d-6cee05f6f839" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+        <p>
+          <zdanie nr="1" gd:zdGUID="34c66ffd-565d-48a2-9208-1cfd0a16f54f" fragment="1" gd:fragmentGUID="a118b3c9-7170-4b03-b91a-26d422cc7a2e" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><now:uchyl akt="https://eli.gov.pl/eli/DU/2021/1469" element-eId="DU/2021/1469__art_3__ust_4" gd:nowGUID="9c0f845b-2fdf-44ba-9971-194d4736bb43" />W ustawie z dnia 12 stycznia 2007 r. o drogowych spółkach specjalnego przeznaczenia (Dz. U. z 2021 r. poz. 1469) w art. 3 uchyla się ust. 4.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2026/176__art_19" gd:GUID="31d000c8-24fe-43af-bbc3-746d01b48e7f" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+      <nr>19</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="6b45c1b6-5bca-4a05-9d17-6874c905a14c" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+        <p>
+          <zdanie nr="1" gd:zdGUID="15c8b0aa-ebdc-4ec0-b33f-212c00c23b22" fragment="1" gd:fragmentGUID="2c187418-9a66-4248-969d-044cffa39275" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">W ustawie z dnia 29 czerwca 2007 r. o zasadach pokrywania kosztów powstałych u wytwórców w związku z przedterminowym rozwiązaniem umów długoterminowych sprzedaży mocy i energii elektrycznej (Dz. U. z 2022 r. poz. 311) w art. 50:</zdanie>
+        </p>
+        <punkt eId="DU/2026/176__art_19__pkt_1" gd:GUID="ab12a9d7-7f24-4a6b-817d-3aea4cdcd951" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="15c8b0aa-ebdc-4ec0-b33f-212c00c23b22" fragment="2" gd:fragmentGUID="b85ab66a-d3a5-4fd1-a19a-54d1189d5734" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><now:uchyl akt="https://eli.gov.pl/eli/DU/2022/311" element-eId="DU/2022/311__art_50__ust_3" gd:nowGUID="ba0f9e86-f7aa-4284-b1a9-7e727b06f953" />uchyla się ust. 3;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/176__art_19__pkt_2" gd:GUID="c61d7a5c-6ec4-46d1-9348-5e68e9e32a42" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="15c8b0aa-ebdc-4ec0-b33f-212c00c23b22" fragment="3" gd:fragmentGUID="2f4c4d07-e096-4821-83b9-48f9f08568f0" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><now:zamien-tekst stary-tekst="ust. 1‒3" nowy-tekst="ust. 1 i 2" element-eId="DU/2022/311__art_50__ust_4" akt="https://eli.gov.pl/eli/DU/2022/311" gd:nowGUID="8ee0716b-eea8-473e-aa59-e0b0f8543353" />w ust. 4 wyrazy „ust. 1‒3” zastępuje się wyrazami „ust. 1 i 2”.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2026/176__art_20" gd:GUID="7504bdf2-ca9b-4afc-a9de-758088f95d12" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+      <nr>20</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="93762c5b-7144-44b4-827c-7f38151d52c1" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+        <p>
+          <zdanie nr="1" gd:zdGUID="dd746783-2979-4173-a5c3-a82f1101c5c4" fragment="1" gd:fragmentGUID="7403a775-5041-4dc7-8331-bee470f8d9b9" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">W ustawie z dnia 19 listopada 2009 r. o grach hazardowych (Dz. U. z 2025 r. poz. 595) wprowadza się następujące zmiany:</zdanie>
+        </p>
+        <punkt eId="DU/2026/176__art_20__pkt_1" gd:GUID="c9c73656-16cb-4368-9d39-cfe05d752bb8" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="dd746783-2979-4173-a5c3-a82f1101c5c4" fragment="2" gd:fragmentGUID="3f15a6e1-e49b-4196-9f93-c26aa61023ae" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><now:uchyl akt="https://eli.gov.pl/eli/DU/2025/595" element-eId="DU/2025/595__art_10__ust_5" gd:nowGUID="15c24a92-8e39-4186-8495-f12fcdfc24b4" />w art. 10 uchyla się ust. 5;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/176__art_20__pkt_2" gd:GUID="75b18d4e-5b53-4e45-914a-92f74140f885" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="dd746783-2979-4173-a5c3-a82f1101c5c4" fragment="3" gd:fragmentGUID="421531e1-741d-42a9-afe8-5351a8e616a6" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><now:zamien-tekst stary-tekst="imiennych" nowy-tekst="" element-eId="DU/2025/595__art_42__pkt_2" akt="https://eli.gov.pl/eli/DU/2025/595" gd:nowGUID="5a846d1e-26d4-46aa-b387-7dd0450b63cd" />w art. 42 w pkt 2 skreśla się wyraz „imiennych”;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/176__art_20__pkt_3" gd:GUID="f596f865-37c3-43a0-acdf-3d8064362aaf" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="dd746783-2979-4173-a5c3-a82f1101c5c4" fragment="4" gd:fragmentGUID="cbd6857c-bc90-4deb-a354-0c180ad9edc3" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><now:zamien-tekst stary-tekst="imiennych" nowy-tekst="" element-eId="DU/2025/595__art_43__ust_1__pkt_2" akt="https://eli.gov.pl/eli/DU/2025/595" gd:nowGUID="6e723fc2-2edf-4b91-aa35-1aa1ded2ccd6" />w art. 43 w ust. 1 w pkt 2 skreśla się wyraz „imiennych”.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2026/176__art_21" gd:GUID="2707a131-f8ef-47eb-a2b8-51d5d3888644" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+      <nr>21</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="c7561a65-c833-4ee2-bbd4-f3bcce238a66" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+        <p>
+          <zdanie nr="1" gd:zdGUID="09359f1e-7f38-4ddf-b557-a5c4167c905e" fragment="1" gd:fragmentGUID="41551b67-f034-4665-b2cc-fe6f34d00cad" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><now:uchyl akt="https://eli.gov.pl/eli/DU/2024/505" element-eId="DU/2024/505__art_19d__ust_1a__pkt_3" gd:nowGUID="b3be5d1d-5a5f-456a-ab70-59240d36eed1" />W ustawie z dnia 12 lutego 2010 r. o rekapitalizacji niektórych instytucji oraz o rządowych instrumentach stabilizacji finansowej (Dz. U. z 2024 r. poz. 505) w art. 19d w ust. 1a uchyla się pkt 3.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2026/176__art_22" gd:GUID="ef8ed1db-ddd4-4016-ab58-4b2701019c66" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+      <nr>22</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="533c7446-44e6-4dfa-ae45-7dcc1cec5a28" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+        <p>
+          <zdanie nr="1" gd:zdGUID="7c8d8f5d-d21f-4e8b-b2d4-bcf1c8743c8a" fragment="1" gd:fragmentGUID="ee85ba50-17de-486d-8e14-d3a5820f1a9a" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><now:uchyl akt="https://eli.gov.pl/eli/DU/2025/85" element-eId="DU/2025/85__art_5__ust_2" gd:nowGUID="27b3d375-add7-4976-b342-4efecf002848" />W ustawie z dnia 9 kwietnia 2010 r. o udostępnianiu informacji gospodarczych i wymianie danych gospodarczych (Dz. U. z 2025 r. poz. 85) w art. 5 uchyla się ust. 2.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2026/176__art_23" gd:GUID="2801017d-45fa-4d1e-b211-2b67a6d38a7a" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+      <nr>23</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="1e69a89f-e496-46f4-847e-4618bd751f80" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+        <p>
+          <zdanie nr="1" gd:zdGUID="28518269-5b71-44c1-a3db-e4b56bf3623d" fragment="1" gd:fragmentGUID="66d2e9df-ff31-4042-931c-f525a0ff7bdf" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">W ustawie z dnia 13 czerwca 2013 r. o gospodarce opakowaniami i odpadami opakowaniowymi (Dz. U. z 2025 r. poz. 870 i 1812 oraz z 2026 r. poz. 174) wprowadza się następujące zmiany:</zdanie>
+        </p>
+        <punkt eId="DU/2026/176__art_23__pkt_1" gd:GUID="593b889f-1325-4f87-95c2-803a13d26e20" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="28518269-5b71-44c1-a3db-e4b56bf3623d" fragment="2" gd:fragmentGUID="a5766c0c-0663-4d6d-b80f-7de3f6e3526a" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><now:uchyl akt="https://eli.gov.pl/eli/DU/2025/870" element-eId="DU/2025/870__art_29__ust_5" gd:nowGUID="a49eb500-5900-4c30-95d5-4228503004d1" />w art. 29 uchyla się ust. 5;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/176__art_23__pkt_2" gd:GUID="3883b752-eebb-4480-9ebb-96019b760690" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="28518269-5b71-44c1-a3db-e4b56bf3623d" fragment="3" gd:fragmentGUID="a47bb604-b843-4c75-8200-dca329eccb58" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><now:uchyl akt="https://eli.gov.pl/eli/DU/2025/870" element-eId="DU/2025/870__art_40g__ust_7" gd:nowGUID="2ff2f060-3617-4266-8dae-7b5c2f0a681d" />w art. 40g uchyla się ust. 7.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2026/176__art_24" gd:GUID="45f7bde9-2b9b-481b-9490-654ec08b84bf" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+      <nr>24</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="6e4562a5-d220-45e8-b98d-5d19397a97cd" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+        <p>
+          <zdanie nr="1" gd:zdGUID="a27eb666-d9e3-44ee-9237-9559fe15fd1d" fragment="1" gd:fragmentGUID="8298dc65-5296-4a82-93fd-249c2e1a7277" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><now:uchyl akt="https://eli.gov.pl/eli/DU/2024/1428" element-eId="DU/2024/1428__art_156__ust_5__pkt_4" gd:nowGUID="c74ab762-0783-445c-a5c2-dae00ac72a6a" />W ustawie z dnia 15 maja 2015 r. ‒ Prawo restrukturyzacyjne (Dz. U. z 2024 r. poz. 1428 oraz z 2025 r. poz. 1085, 1170 i 1172) w art. 156 w ust. 5 uchyla się pkt 4.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2026/176__art_25" gd:GUID="8c6363ff-198e-4742-a48d-3b7f990875f8" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+      <nr>25</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="babb0ecb-b20e-4de2-bfcd-eadc2d351ddc" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+        <p>
+          <zdanie nr="1" gd:zdGUID="9a91b48f-3f17-4506-812c-b8e854c83ed7" fragment="1" gd:fragmentGUID="63fd3203-1581-4359-9b14-503f93a29696" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><now:uchyl akt="https://eli.gov.pl/eli/DU/2024/573" element-eId="DU/2024/573__art_63__ust_5" gd:nowGUID="67cd3a16-301c-44ce-8456-8f4039e5dc62" />W ustawie z dnia 11 września 2015 r. o zużytym sprzęcie elektrycznym i elektronicznym (Dz. U. z 2024 r. poz. 573) w art. 63 uchyla się ust. 5.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2026/176__art_26" gd:GUID="551bc828-39d0-44aa-8ec9-a147403b4d44" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+      <nr>26</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="b3dca6d1-275a-4d05-a2bf-577fa6456e2d" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+        <p>
+          <zdanie nr="1" gd:zdGUID="bf9234d1-0cc7-4cf3-95e4-7c35ea9eba6c" fragment="1" gd:fragmentGUID="4005c7fd-f81c-4a0f-bb6c-56d6b73a43d4" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">W ustawie z dnia 11 września 2015 r. o działalności ubezpieczeniowej i reasekuracyjnej (Dz. U. z 2025 r. poz. 1526) w art. 81:</zdanie>
+        </p>
+        <punkt eId="DU/2026/176__art_26__pkt_1" gd:GUID="a27ae3f5-6aa0-4a74-8fca-c7c1a430fe5b" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="bf9234d1-0cc7-4cf3-95e4-7c35ea9eba6c" fragment="2" gd:fragmentGUID="3e259747-577d-4784-a286-b512c3b511b2" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><now:uchyl akt="https://eli.gov.pl/eli/DU/2025/1526" element-eId="DU/2025/1526__art_81__ust_1" gd:nowGUID="15855e9d-6c9e-4cbb-8cb6-75ef7d657aba" />uchyla się ust. 1;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/176__art_26__pkt_2" gd:GUID="e2707e96-d94f-4935-9c73-8333c64514de" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="bf9234d1-0cc7-4cf3-95e4-7c35ea9eba6c" fragment="3" gd:fragmentGUID="88805f8f-9444-42f2-b886-0313c272bb38" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">w ust. 2:</zdanie>
+          </p>
+          <litera eId="DU/2026/176__art_26__pkt_2__lit_a" gd:GUID="1092b06b-975d-4820-9173-13f5c0e13b03" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="bf9234d1-0cc7-4cf3-95e4-7c35ea9eba6c" fragment="4" gd:fragmentGUID="8f297f58-7352-4641-a9a5-140b96281474" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><now:zamien-tekst stary-tekst="imiennych" nowy-tekst="" element-eId="DU/2025/1526__art_81__ust_2__zdn_1" akt="https://eli.gov.pl/eli/DU/2025/1526" gd:nowGUID="78514e17-e3e9-468f-a3c2-c9646d9b2ad2" />w zdaniu pierwszym skreśla się wyraz „imiennych”,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2026/176__art_26__pkt_2__lit_b" gd:GUID="95eac050-b1a3-484d-bec5-348681786924" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="bf9234d1-0cc7-4cf3-95e4-7c35ea9eba6c" fragment="5" gd:fragmentGUID="efdb983d-db4f-4fd6-b752-4f88b1ca6a29" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><now:zamien-tekst stary-tekst="tych" nowy-tekst="" element-eId="DU/2025/1526__art_81__ust_2__zdn_2" akt="https://eli.gov.pl/eli/DU/2025/1526" gd:nowGUID="fb6575ba-2d01-4089-8d7e-18ca95e78ddc" />w zdaniu drugim skreśla się wyraz „tych”;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2026/176__art_26__pkt_3" gd:GUID="ef66a3d4-3b97-450f-8286-9d9a81620024" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="bf9234d1-0cc7-4cf3-95e4-7c35ea9eba6c" fragment="6" gd:fragmentGUID="9e4af97f-6085-4d45-a5db-9a0eed815449" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><now:uchyl akt="https://eli.gov.pl/eli/DU/2025/1526" element-eId="DU/2025/1526__art_81__ust_5" gd:nowGUID="a4f28f5c-3113-423d-a946-db19c36e0c8d" />uchyla się ust. 5.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2026/176__art_27" gd:GUID="8c6c6340-676f-40d5-92a2-85a9f681f4ae" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+      <nr>27</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="8872e2cc-9310-43f0-9525-18e8a53d2c57" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+        <p>
+          <zdanie nr="1" gd:zdGUID="d888947b-28e2-4a99-b5bf-80482a1763a8" fragment="1" gd:fragmentGUID="5669632a-e713-42e5-b214-934d29b212a5" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">W ustawie z dnia 10 czerwca 2016 r. o Bankowym Funduszu Gwarancyjnym, systemie gwarantowania depozytów oraz przymusowej restrukturyzacji (Dz. U. z 2025 r. poz. 643, 1069 i 1844) wprowadza się następujące zmiany:</zdanie>
+        </p>
+        <punkt eId="DU/2026/176__art_27__pkt_1" gd:GUID="46e73b27-1faa-4bc7-8838-c81957b1e400" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="d888947b-28e2-4a99-b5bf-80482a1763a8" fragment="2" gd:fragmentGUID="3e9d7e5c-7ff8-43cb-b789-aea95100aaa3" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><now:uchyl akt="https://eli.gov.pl/eli/DU/2025/643" element-eId="DU/2025/643__art_70a__ust_1__pkt_4" gd:nowGUID="4dd4dec1-472c-4ca9-8942-25fbbc3302f6" />w art. 70a w ust. 1 uchyla się pkt 4;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/176__art_27__pkt_2" gd:GUID="60a38699-6207-45dc-9edf-9c8dbab1df11" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="d888947b-28e2-4a99-b5bf-80482a1763a8" fragment="3" gd:fragmentGUID="f890363a-89c0-4495-b217-a5baed72fbbc" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18"><now:uchyl akt="https://eli.gov.pl/eli/DU/2025/643" element-eId="DU/2025/643__art_212a__ust_1__pkt_4" gd:nowGUID="ade5f8b5-314d-4f8f-9ad4-3b3642276a3e" />w art. 212a w ust. 1 uchyla się pkt 4.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2026/176__art_28" gd:GUID="4fd28d00-f51c-443b-9210-ff12b909fbc5" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-28_DU-2026-176_odczytane.x" wejscie-w-zycie="2026-02-28">
+      <nr>28</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="89b72881-2901-4a8b-bc17-e88abf48b9c3" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-28_DU-2026-176_odczytane.x" wejscie-w-zycie="2026-02-28">
+        <p>
+          <zdanie nr="1" gd:zdGUID="bd23a895-6049-46cd-b260-ca6ce7e9bab1" fragment="1" gd:fragmentGUID="212120f9-5b82-4a92-89b3-81eebc6cead7" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-28_DU-2026-176_odczytane.x" wejscie-w-zycie="2026-02-28">W ustawie z dnia 30 sierpnia 2019 r. o zmianie ustawy – Kodeks spółek handlowych oraz niektórych innych ustaw (Dz. U. poz. 1798, z późn. zm.<odnosnik id-odnosnika="5" symbol="5" gd:GUID="22870cd5-0cdd-4ac7-b672-f062b5f59b01"><p><zdanie nr="1" gd:zdGUID="e64756b1-d57f-4e25-8d09-c02639eae5d7" fragment="1" gd:fragmentGUID="4c158bda-a2b0-4a7c-9fb0-4f6a2dd30c63">Zmiany wymienionej ustawy zostały ogłoszone w Dz. U. z 2020 r. poz. 288, 875 i 1086 oraz z 2021 r. poz. 187, 355 i 1090.</zdanie></p></odnosnik>) wprowadza się następujące zmiany:</zdanie>
+        </p>
+        <punkt eId="DU/2026/176__art_28__pkt_1" gd:GUID="1922ce20-5909-4cf2-822f-0572b08f11fc" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-28_DU-2026-176_odczytane.x" wejscie-w-zycie="2026-02-28">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="bd23a895-6049-46cd-b260-ca6ce7e9bab1" fragment="2" gd:fragmentGUID="cba2434f-20ef-4728-a4b7-379569104298" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-28_DU-2026-176_odczytane.x" wejscie-w-zycie="2026-02-28">w art. 15 ust. 2 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2019/1798" cudzyslowy="oba" gd:nowGUID="7baeab6d-1dc2-4423-bd27-06d903b001d3" element-eId="DU/2019/1798__art_15__ust_2" funkcja="zastap"><ustep eId="DU/2019/1798__art_15__ust_2" gd:GUID="e9dd7aad-8583-4f8a-9343-5a4441b8cdb0" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-28_DU-2026-176_odczytane.x" wejscie-w-zycie="2026-02-28"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="ff3479bc-c6da-4654-ae1b-8dda949202e6" fragment="1" gd:fragmentGUID="35c25262-679d-44a9-9dd1-c44917ce2247" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-28_DU-2026-176_odczytane.x" wejscie-w-zycie="2026-02-28">Dokument akcji zachowuje moc dowodową wyłącznie w zakresie wykazywania przez akcjonariusza wobec spółki, że przysługują mu prawa udziałowe, przez okres siedmiu lat od dnia wejścia w życie niniejszej ustawy.</zdanie></p></ustep></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/176__art_28__pkt_2" gd:GUID="f500f6ac-1ada-4a67-876f-14ae8f6cf28f" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-28_DU-2026-176_odczytane.x" wejscie-w-zycie="2026-02-28">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="bd23a895-6049-46cd-b260-ca6ce7e9bab1" fragment="3" gd:fragmentGUID="a412f1fd-bf67-4648-9366-34df0a9ebfd8" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-28_DU-2026-176_odczytane.x" wejscie-w-zycie="2026-02-28">w art. 18 dodaje się ust. 3 w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2019/1798" cudzyslowy="oba" gd:nowGUID="f75ed33a-07d3-48c9-acab-996f3d4fe533" element-eId="DU/2019/1798__art_18" funkcja="dodaj-w"><ustep eId="DU/2019/1798__art_18__ust_3" gd:GUID="0685260e-2965-4b91-bf27-f7b6817c8130" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-28_DU-2026-176_odczytane.x" wejscie-w-zycie="2026-02-28"><nr>3</nr><p><zdanie nr="1" gd:zdGUID="636a1b6a-236a-435a-99a2-010e2895a1d8" fragment="1" gd:fragmentGUID="d5b7a83f-360a-4fb9-af5f-47aaa5a2d961" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-28_DU-2026-176_odczytane.x" wejscie-w-zycie="2026-02-28">Grzywnę nakłada sąd rejestrowy.</zdanie></p></ustep></cytat-strukt>.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2026/176__art_29" gd:GUID="a8314a7d-a309-4c76-8c46-b4b16c5c76c6" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+      <nr>29</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="d3934414-ef48-44d3-b284-224c31309a27" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+        <p>
+          <zdanie nr="1" gd:zdGUID="e9107ab6-4b80-4dde-a2d7-35629baa6b36" fragment="1" gd:fragmentGUID="32edcdae-c816-4829-b841-a8e001c419d3" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">Spółki, dla których w dniu wejścia w życie niniejszej ustawy jest prowadzony rejestr akcjonariuszy oraz spółki, których akcje przed dniem wejścia w życie niniejszej ustawy zostały zarejestrowane w depozycie papierów wartościowych, składają do sądu rejestrowego wniosek o wpis danych, o których mowa w art. 38 pkt 7 lit. h, pkt 8a lit. j, pkt 9 lit. l, pkt 9a lit. k ustawy zmienianej w art. 5, w brzmieniu nadanym niniejszą ustawą, w terminie 3 miesięcy od dnia wejścia w życie niniejszej ustawy.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2026/176__art_30" gd:GUID="3835e49b-e5d1-4d36-bf73-ff1857758bbd" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+      <nr>30</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="9d3485fd-9c88-4421-82b4-c9dfebfd94a0" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+        <p>
+          <zdanie nr="1" gd:zdGUID="3e4c7537-cf57-4814-bb82-a2cb03f47f91" fragment="1" gd:fragmentGUID="2aee585a-3be4-4ceb-8faf-b4e5cdcf6667" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">Informacje o numerze PESEL albo dacie urodzenia akcjonariusza, zastawnika oraz użytkownika, a także informacje o numerze akcjonariusza, zastawnika oraz użytkownika we właściwym rejestrze oraz nazwie tego rejestru, jeżeli są wpisani do rejestru, oraz w przypadku współwłasności akcji informacje o imieniu, nazwisku albo firmie (nazwie) pozostałych współwłaścicieli akcji, rodzaju współwłasności akcji, a w przypadku współwłasności w częściach ułamkowych ‒ o wielkości udziału akcjonariusza, wpisuje się do rejestru akcjonariuszy w wyniku żądań lub zdarzeń uzasadniających wpis, które miały miejsce po dniu wejścia w życie niniejszej ustawy.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2026/176__art_31" gd:GUID="367093a7-ebb4-46b6-b600-73bceb23088f" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+      <nr>31</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="0940681d-c267-41ba-8aca-10c590603ea6" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+        <p>
+          <zdanie nr="1" gd:zdGUID="c68b37ab-6248-4ed3-a033-4de765fcf6b7" fragment="1" gd:fragmentGUID="7212e0aa-9316-4adf-b5aa-c67e510be8c4" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">Do akcji niezarejestrowanych w dniu wejścia w życie niniejszej ustawy w rejestrze akcjonariuszy albo depozycie papierów wartościowych stosuje się do dnia ich rejestracji dotychczasowe przepisy o akcjach imiennych albo akcjach na okaziciela.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2026/176__art_32" gd:GUID="e57d13c6-5194-4b9f-b0cf-4af785e1a27f" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+      <nr>32</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="4ce358da-94c9-4c0c-8d46-f0c3e59550cf" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+        <p>
+          <zdanie nr="1" gd:zdGUID="a644c02e-4c16-48c1-9f27-0036df09a6ea" fragment="1" gd:fragmentGUID="a5171676-8e93-4c75-b605-ec54de85a7ca" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">W sprawach o wykreślenie spółki z rejestru, wszczętych i niezakończonych przed dniem wejścia w życie niniejszej ustawy, stosuje się art. 476 § 1<sup>1</sup> ustawy zmienianej w art. 1 oraz art. 25da ustawy zmienianej w art. 5, jeżeli nie rozpoczęło się posiedzenie, na które sprawa została skierowana.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2026/176__art_33" gd:GUID="9f6140a0-8235-4c56-bb70-2a6f69bc7d21" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-28_DU-2026-176_odczytane.x" wejscie-w-zycie="2026-02-28">
+      <nr>33</nr>
+      <ustep eId="DU/2026/176__art_33__ust_1" gd:GUID="a5bb8ed1-6213-4562-ab34-1d51efb4841d" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-28_DU-2026-176_odczytane.x" wejscie-w-zycie="2026-02-28">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="fc7f323a-2ded-4d42-bd4d-0aea65e4cb8f" fragment="1" gd:fragmentGUID="50866142-8bba-4e69-b40f-069ee16cf194" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-28_DU-2026-176_odczytane.x" wejscie-w-zycie="2026-02-28">Sądy prowadzące sprawy o nałożenie grzywny na podstawie art. 18 ust. 1 lub 2 ustawy zmienianej w art. 28 wszczęte i niezakończone przed dniem 28 lutego 2026 r. pozostają właściwe do ich rozpoznania do dnia ich zakończenia.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2026/176__art_33__ust_2" gd:GUID="412473fa-f3de-4f5e-8ef2-73a8b7152f76" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-28_DU-2026-176_odczytane.x" wejscie-w-zycie="2026-02-28">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="f7853629-89dd-43d1-81df-f61d9519b004" fragment="1" gd:fragmentGUID="9607a687-0ad1-4dc2-a77c-4da3df047702" okres="okr_obowiazywanie.zdarz_wejscie_2026-02-28_DU-2026-176_odczytane.x" wejscie-w-zycie="2026-02-28">Sądy, o których mowa w ust. 1, które wydały orzeczenia w pierwszej instancji, pozostają właściwe również w postępowaniach dotyczących wykonania tych orzeczeń.</zdanie>
+        </p>
+      </ustep>
+    </artykul>
+    <artykul eId="DU/2026/176__art_34" gd:GUID="4bd61831-c2ab-4d3c-8c94-8d5877b6299f" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+      <nr>34</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="12e72960-b4cb-4974-a9d4-ede5a7a057fb" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+        <p>
+          <zdanie nr="1" gd:zdGUID="67348256-3ab2-4561-85a4-cbf81423c4ef" fragment="1" gd:fragmentGUID="9cbbe40a-dd47-4496-afd5-cf19176bcde2" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">Spółki akcyjne, spółki komandytowo-akcyjne, proste spółki akcyjne i spółki europejskie istniejące w dniu wejścia w życie niniejszej ustawy dostosują postanowienia swoich umów, aktów założycielskich oraz statutów do zmian wynikających z jej przepisów niepóźniej niż w terminie 2 lat od dnia wejścia w życie niniejszej ustawy.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2026/176__art_35" gd:GUID="a795e770-2611-4563-8090-8f4a36a82faa" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+      <nr>35</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="e2cfddd7-2fad-4d41-b057-881d0388d429" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">
+        <p>
+          <zdanie nr="1" gd:zdGUID="8ffc8193-4706-4efe-a0b9-3c9ac8bf6b90" fragment="1" gd:fragmentGUID="c155d191-7159-4de4-bd79-d5869a2e062a" okres="okr_obowiazywanie.zdarz_wejscie_2027-02-18_DU-2026-176_domyslne.x" wejscie-w-zycie="2027-02-18">Ustawa wchodzi w życie po upływie 12 miesięcy od dnia ogłoszenia, z wyjątkiem art. 28 i art. 33, które wchodzą w życie z dniem 28 lutego 2026 r.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <organ-podpisujacy>Prezydent Rzeczypospolitej Polskiej: <i><osoba podpisujacy="true" gd:osobaGUID="068d6c7e-57ba-47f9-8f63-a80f9b01fc2e"><imie>K.</imie> <nazwisko>Nawrocki</nazwisko></osoba></i></organ-podpisujacy>
+  </ustawa>
+</akt-prawny>

@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <ustawa>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2026/25</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>e3cca18f-fed9-4c83-9f91-b84964d57616</gd:GUIDwersji>
+      <AdresISAP>WDU20260000025</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2026</Rok>
+      <Pozycja>25</Pozycja>
+      <AdresWyswietlany>Dz.U. 2026 poz. 25</AdresWyswietlany>
+      <Tytul>Ustawa z dnia 4 grudnia 2025 r. o zmianie ustawy – Kodeks pracy oraz ustawy o zakładowym funduszu świadczeń socjalnych</Tytul>
+      <Rodzaj>USTAWA</Rodzaj>
+      <DataOgloszenia>2026-01-12</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-12-04</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2026-01-27_DU-2026-25_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2026-01-27" warunek="po upływie 14 dni od dnia ogłoszenia" podstawa="art. 3" zrodlo="https://eli.gov.pl/eli/DU/2026/25" dowod="DU/2026/25__art_3" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-25_domyslne.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2026-01-27_DU-2026-25_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="74cd3d0d-fb47-483e-8fe3-9f85bbe9c9b4" rola="wydajacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Sejm">
+          <Nazwa>SEJM</Nazwa>
+        </Organ>
+        <Organ gd:GUID="d6abb357-d9f1-4d60-a7ea-797c1d81ffcc" rola="podpisujacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Prezydent">
+          <Nazwa>Prezydent Rzeczypospolitej Polskiej</Nazwa>
+          <OrganPodpisujacy>Prezydent Rzeczypospolitej Polskiej</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>K.</imie> <nazwisko>Nawrocki</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Ustawa</rodzaj-aktu>
+    <data>z dnia 4 grudnia 2025 r.</data>
+    <tytul>o zmianie ustawy – Kodeks pracy oraz ustawy o zakładowym funduszu świadczeń socjalnych</tytul>
+    <artykul eId="DU/2026/25__art_1" gd:GUID="e7280795-90eb-4997-8e40-28afbfb982a3" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-25_domyslne.x" wejscie-w-zycie="2026-01-27">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="bd0a4e15-ca6b-4e3c-8f43-6df7b45e4526" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-25_domyslne.x" wejscie-w-zycie="2026-01-27">
+        <p>
+          <zdanie nr="1" gd:zdGUID="72c3370b-2fee-4ff2-a98d-7c0a278946e2" fragment="1" gd:fragmentGUID="f2459a18-d1db-47f2-874b-41cc1b69baed" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-25_domyslne.x" wejscie-w-zycie="2026-01-27">W ustawie z dnia 26 czerwca 1974 r. – Kodeks pracy (Dz. U. z 2025 r. poz. 277, 807, 1423 i 1661) wprowadza się następujące zmiany:</zdanie>
+        </p>
+        <punkt eId="DU/2026/25__art_1__pkt_1" gd:GUID="377e499f-1d66-4643-8736-2229935afd64" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-25_domyslne.x" wejscie-w-zycie="2026-01-27">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="72c3370b-2fee-4ff2-a98d-7c0a278946e2" fragment="2" gd:fragmentGUID="c53cff90-b040-479b-ae35-25638a5cedba" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-25_domyslne.x" wejscie-w-zycie="2026-01-27"><now:zamien-tekst stary-tekst="na piśmie" nowy-tekst="w postaci papierowej lub elektronicznej" element-eId="DU/2025/277__art_22[2]__par_8" akt="https://eli.gov.pl/eli/DU/2025/277" gd:nowGUID="cee156dc-2781-4b00-89b2-5bc83dfc1dfe" /><now:zamien-tekst stary-tekst="na piśmie" nowy-tekst="w postaci papierowej lub elektronicznej" element-eId="DU/2025/277__art_23[1]__par_3" akt="https://eli.gov.pl/eli/DU/2025/277" gd:nowGUID="8c229074-804f-4c28-aa9a-de11e8b987f2" />użyte w art. 22<sup>2</sup> w § 8 i w art. 23<sup>1</sup> w § 3 wyrazy „na piśmie” zastępuje się wyrazami „w postaci papierowej lub elektronicznej”;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/25__art_1__pkt_2" gd:GUID="8bd397cb-f6bf-4296-9934-019182f37d77" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-25_domyslne.x" wejscie-w-zycie="2026-01-27">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="72c3370b-2fee-4ff2-a98d-7c0a278946e2" fragment="3" gd:fragmentGUID="c759c585-e4ae-4815-9028-28e841ea2851" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-25_domyslne.x" wejscie-w-zycie="2026-01-27">w art. 38:</zdanie>
+          </p>
+          <litera eId="DU/2026/25__art_1__pkt_2__lit_a" gd:GUID="dd5ec457-d99d-45e7-bcad-b038f9737d30" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-25_domyslne.x" wejscie-w-zycie="2026-01-27">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="72c3370b-2fee-4ff2-a98d-7c0a278946e2" fragment="4" gd:fragmentGUID="5bb4079f-c651-4a86-9fd1-7b57f4483a97" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-25_domyslne.x" wejscie-w-zycie="2026-01-27"><now:zamien-tekst stary-tekst="na piśmie" nowy-tekst="w postaci papierowej lub elektronicznej" element-eId="DU/2025/277__art_38__par_1" akt="https://eli.gov.pl/eli/DU/2025/277" gd:nowGUID="bd1d18f8-39bf-444f-a27a-fcd0bcc76996" />w § 1 wyrazy „na piśmie” zastępuje się wyrazami „w postaci papierowej lub elektronicznej”,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2026/25__art_1__pkt_2__lit_b" gd:GUID="ded94f77-ac5f-463a-af51-8eaeadaca4ba" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-25_domyslne.x" wejscie-w-zycie="2026-01-27">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="72c3370b-2fee-4ff2-a98d-7c0a278946e2" fragment="5" gd:fragmentGUID="8668bde0-ff04-4834-a9ca-624e7098b834" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-25_domyslne.x" wejscie-w-zycie="2026-01-27"><now:zamien-tekst stary-tekst="na piśmie" nowy-tekst="" element-eId="DU/2025/277__art_38__par_2" akt="https://eli.gov.pl/eli/DU/2025/277" gd:nowGUID="7fefdf89-a6f3-44b2-b34a-2c7dc340787a" /><now:zamien-tekst stary-tekst="pracodawcy" nowy-tekst="pracodawcy w postaci papierowej lub elektronicznej" element-eId="DU/2025/277__art_38__par_2" akt="https://eli.gov.pl/eli/DU/2025/277" gd:nowGUID="b2345b8d-dc6a-4bed-b660-6470594a7551" />w § 2 skreśla się wyrazy „na piśmie” i po wyrazie „pracodawcy” dodaje się wyrazy „w postaci papierowej lub elektronicznej”;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2026/25__art_1__pkt_3" gd:GUID="69ccd337-9bfd-47d4-a60b-782e02951b6a" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-25_domyslne.x" wejscie-w-zycie="2026-01-27">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="72c3370b-2fee-4ff2-a98d-7c0a278946e2" fragment="6" gd:fragmentGUID="217d520a-b425-4b52-895a-1e2eb42be82a" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-25_domyslne.x" wejscie-w-zycie="2026-01-27">w art. 129:</zdanie>
+          </p>
+          <litera eId="DU/2026/25__art_1__pkt_3__lit_a" gd:GUID="b247324d-158d-4031-96fe-018318894314" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-25_domyslne.x" wejscie-w-zycie="2026-01-27">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="72c3370b-2fee-4ff2-a98d-7c0a278946e2" fragment="7" gd:fragmentGUID="c65de85f-1aa9-4121-8c56-266366ffd205" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-25_domyslne.x" wejscie-w-zycie="2026-01-27"><now:zamien-tekst stary-tekst="w formie pisemnej lub elektronicznej" nowy-tekst="w postaci papierowej lub elektronicznej" element-eId="DU/2025/277__art_129__par_3" akt="https://eli.gov.pl/eli/DU/2025/277" gd:nowGUID="fd9ef3d8-7d57-4ff3-90b8-9e38bb480f25" />w § 3 wyrazy „w formie pisemnej lub elektronicznej” zastępuje się wyrazami „w postaci papierowej lub elektronicznej”,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2026/25__art_1__pkt_3__lit_b" gd:GUID="0ae523b3-bbdd-4c40-8a23-7b97f72ca54b" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-25_domyslne.x" wejscie-w-zycie="2026-01-27">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="72c3370b-2fee-4ff2-a98d-7c0a278946e2" fragment="8" gd:fragmentGUID="1e1feeec-30dc-4043-8ec9-a972f20fc769" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-25_domyslne.x" wejscie-w-zycie="2026-01-27"><now:zamien-tekst stary-tekst="pisemny" nowy-tekst="" element-eId="DU/2025/277__art_129__par_4__pkt_3" akt="https://eli.gov.pl/eli/DU/2025/277" gd:nowGUID="b53f046e-df25-4d14-90ed-90af34932f64" /><now:zamien-tekst stary-tekst="pisemny" nowy-tekst="" element-eId="DU/2025/277__art_129__par_4__pkt_4" akt="https://eli.gov.pl/eli/DU/2025/277" gd:nowGUID="3dfceba4-3843-436b-8569-0e10003af896" /><now:zamien-tekst stary-tekst="pracownika" nowy-tekst="pracownika złożony w postaci papierowej lub elektronicznej" element-eId="DU/2025/277__art_129__par_4__pkt_3" akt="https://eli.gov.pl/eli/DU/2025/277" gd:nowGUID="800b40b3-f18a-4f95-9701-e2607f589ce8" /><now:zamien-tekst stary-tekst="pracownika" nowy-tekst="pracownika złożony w postaci papierowej lub elektronicznej" element-eId="DU/2025/277__art_129__par_4__pkt_4" akt="https://eli.gov.pl/eli/DU/2025/277" gd:nowGUID="11814712-1b9b-45c8-923a-9267ef402c40" />w § 4 w pkt 3 i 4 skreśla się wyraz „pisemny” i po wyrazie „pracownika” dodaje się wyrazy „złożony w postaci papierowej lub elektronicznej”;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2026/25__art_1__pkt_4" gd:GUID="e78b539d-f724-4e94-bb62-67b3eba71681" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-25_domyslne.x" wejscie-w-zycie="2026-01-27">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="72c3370b-2fee-4ff2-a98d-7c0a278946e2" fragment="9" gd:fragmentGUID="1c7243a2-a4c4-47f0-bbed-360bbffa53a4" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-25_domyslne.x" wejscie-w-zycie="2026-01-27"><now:zamien-tekst stary-tekst="pisemny" nowy-tekst="" element-eId="DU/2025/277__art_142" akt="https://eli.gov.pl/eli/DU/2025/277" gd:nowGUID="ab4b62b4-fd5f-460e-858e-e4a155a16e96" /><now:zamien-tekst stary-tekst="pisemny" nowy-tekst="" element-eId="DU/2025/277__art_143" akt="https://eli.gov.pl/eli/DU/2025/277" gd:nowGUID="c94bae9e-2c3f-4868-9b86-262bd64dfbd5" /><now:zamien-tekst stary-tekst="pisemny" nowy-tekst="" element-eId="DU/2025/277__art_144" akt="https://eli.gov.pl/eli/DU/2025/277" gd:nowGUID="1e67b5c6-5f40-4b47-84ef-0dd2cc573364" /><now:zamien-tekst stary-tekst="pisemny" nowy-tekst="" element-eId="DU/2025/277__art_150__par_5" akt="https://eli.gov.pl/eli/DU/2025/277" gd:nowGUID="a794d0bf-1dc5-4e21-93ac-b4137ad1ecec" /><now:zamien-tekst stary-tekst="pracownika" nowy-tekst="pracownika złożony w postaci papierowej lub elektronicznej" element-eId="DU/2025/277__art_142" akt="https://eli.gov.pl/eli/DU/2025/277" gd:nowGUID="bd029660-c7b4-4cca-8a26-38e26e71af83" /><now:zamien-tekst stary-tekst="pracownika" nowy-tekst="pracownika złożony w postaci papierowej lub elektronicznej" element-eId="DU/2025/277__art_143" akt="https://eli.gov.pl/eli/DU/2025/277" gd:nowGUID="264fda01-da29-4257-a392-4baac9930d92" /><now:zamien-tekst stary-tekst="pracownika" nowy-tekst="pracownika złożony w postaci papierowej lub elektronicznej" element-eId="DU/2025/277__art_144" akt="https://eli.gov.pl/eli/DU/2025/277" gd:nowGUID="7b8f0d27-c134-4f42-be4d-295450f64d3d" /><now:zamien-tekst stary-tekst="pracownika" nowy-tekst="pracownika złożony w postaci papierowej lub elektronicznej" element-eId="DU/2025/277__art_150__par_5" akt="https://eli.gov.pl/eli/DU/2025/277" gd:nowGUID="470d0643-c493-4b0a-95d2-f3a2273d9a5c" />w art. 142, w art. 143, w art. 144 i w art. 150 w § 5 skreśla się wyraz „pisemny” i po wyrazie „pracownika” dodaje się wyrazy „złożony w postaci papierowej lub elektronicznej”;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/25__art_1__pkt_5" gd:GUID="54117828-8678-4fe2-90a5-8ee9f58db66f" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-25_domyslne.x" wejscie-w-zycie="2026-01-27">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="72c3370b-2fee-4ff2-a98d-7c0a278946e2" fragment="10" gd:fragmentGUID="8ee6f4ad-ed46-4993-af80-19e3d503805b" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-25_domyslne.x" wejscie-w-zycie="2026-01-27"><now:zamien-tekst stary-tekst="pisemny" nowy-tekst="" element-eId="DU/2025/277__art_151__par_2[1]__zdn_1" akt="https://eli.gov.pl/eli/DU/2025/277" gd:nowGUID="0edbf5c0-2682-4d57-b716-c7419079b7f4" /><now:zamien-tekst stary-tekst="wniosek" nowy-tekst="wniosek złożony w postaci papierowej lub elektronicznej" element-eId="DU/2025/277__art_151__par_2[1]__zdn_1" akt="https://eli.gov.pl/eli/DU/2025/277" gd:nowGUID="5f7cbbc0-9df4-4279-83eb-78f06b495f8c" />w art. 151 w § 2<sup>1</sup> w zdaniu pierwszym skreśla się wyraz „pisemny” i po wyrazie „wniosek” dodaje się wyrazy „złożony w postaci papierowej lub elektronicznej”;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/25__art_1__pkt_6" gd:GUID="97fef261-d36b-446e-8c92-8cc5e6117352" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-25_domyslne.x" wejscie-w-zycie="2026-01-27">
+          <nr>6</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="72c3370b-2fee-4ff2-a98d-7c0a278946e2" fragment="11" gd:fragmentGUID="3e492daa-2617-4818-9fb4-598168300912" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-25_domyslne.x" wejscie-w-zycie="2026-01-27"><now:zamien-tekst stary-tekst="pisemny" nowy-tekst="" element-eId="DU/2025/277__art_151[2]__par_1" akt="https://eli.gov.pl/eli/DU/2025/277" gd:nowGUID="7a959149-c743-423b-84c6-74d4305fe028" /><now:zamien-tekst stary-tekst="pracownika" nowy-tekst="pracownika złożony w postaci papierowej lub elektronicznej" element-eId="DU/2025/277__art_151[2]__par_1" akt="https://eli.gov.pl/eli/DU/2025/277" gd:nowGUID="f1b78638-bc12-43f5-b550-9c40c55d507c" />w art. 151<sup>2</sup> w § 1 skreśla się wyraz „pisemny” i po wyrazie „pracownika” dodaje się wyrazy „złożony w postaci papierowej lub elektronicznej”;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/25__art_1__pkt_7" gd:GUID="d98c010e-7a7d-4a30-908c-14696d0b14ba" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-25_domyslne.x" wejscie-w-zycie="2026-01-27">
+          <nr>7</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="72c3370b-2fee-4ff2-a98d-7c0a278946e2" fragment="12" gd:fragmentGUID="54c88fba-7acc-40c2-a590-240b44f590cb" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-25_domyslne.x" wejscie-w-zycie="2026-01-27"><now:zamien-tekst stary-tekst="pisemny" nowy-tekst="" element-eId="DU/2025/277__art_151[7]__par_6" akt="https://eli.gov.pl/eli/DU/2025/277" gd:nowGUID="f740aa2e-b4cf-4ef7-93c6-7e11f297c51b" /><now:zamien-tekst stary-tekst="wniosek" nowy-tekst="wniosek złożony w postaci papierowej lub elektronicznej przez" element-eId="DU/2025/277__art_151[7]__par_6" akt="https://eli.gov.pl/eli/DU/2025/277" gd:nowGUID="8a0daf00-1a65-450d-93d1-97aa70c3616c" />w art. 151<sup>7</sup> w § 6 skreśla się wyraz „pisemny” i po wyrazie „wniosek” dodaje się wyrazy „złożony w postaci papierowej lub elektronicznej przez”;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/25__art_1__pkt_8" gd:GUID="97ae0b37-7cae-4263-8f2e-6a750c85d237" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-25_domyslne.x" wejscie-w-zycie="2026-01-27">
+          <nr>8</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="72c3370b-2fee-4ff2-a98d-7c0a278946e2" fragment="13" gd:fragmentGUID="1c6b0dda-7742-4c78-99ee-aa918912647a" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-25_domyslne.x" wejscie-w-zycie="2026-01-27">w art. 171 po § 3 dodaje się § 4 i 5 w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2025/277" cudzyslowy="oba" gd:nowGUID="edc4347b-9fa9-47b1-b303-ed689e22a2e8" element-eId="DU/2025/277__art_171__par_3" funkcja="dodaj-po"><paragraf-kodeksu eId="DU/2025/277__art_171__par_4" gd:GUID="64cc0746-ee33-428f-a38b-9ea37829c31b" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-25_domyslne.x" wejscie-w-zycie="2026-01-27"><nr>4</nr><p><zdanie nr="1" gd:zdGUID="89570756-35a3-488b-8fb2-ed8288b34c50" fragment="1" gd:fragmentGUID="193988c3-9da6-45d5-9954-20b57407dc0a" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-25_domyslne.x" wejscie-w-zycie="2026-01-27">Pracodawca dokonuje wypłaty ekwiwalentu pieniężnego, o którym mowa w § 1, w terminie wypłaty wynagrodzenia ustalonym zgodnie z art. 85.</zdanie></p></paragraf-kodeksu><paragraf-kodeksu eId="DU/2025/277__art_171__par_5" gd:GUID="667f1bc3-2be3-419e-8118-574fea357df5" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-25_domyslne.x" wejscie-w-zycie="2026-01-27"><nr>5</nr><p><zdanie nr="1" gd:zdGUID="623cfd6e-0ecf-460b-a637-660cb6f60279" fragment="1" gd:fragmentGUID="c83250ec-5440-4d45-b51d-055618e8e171" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-25_domyslne.x" wejscie-w-zycie="2026-01-27">Przepisu § 4 nie stosuje się, jeżeli termin wypłaty wynagrodzenia ustalony zgodnie z art. 85 przypada przed dniem rozwiązania lub wygaśnięcia stosunku pracy.</zdanie><zdanie nr="2" gd:zdGUID="0481629c-c2df-4550-817f-36998c01126d" fragment="1" gd:fragmentGUID="52577708-3511-480e-bd64-f9944e4485c4" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-25_domyslne.x" wejscie-w-zycie="2026-01-27">W takim przypadku wypłaty ekwiwalentu pieniężnego, o którym mowa w § 1, dokonuje się w terminie 10 dni od dnia rozwiązania lub wygaśnięcia stosunku pracy.</zdanie><zdanie nr="3" gd:zdGUID="91e70ffc-2037-41a8-b3ac-43c18515e42b" fragment="1" gd:fragmentGUID="f9c75f30-e38f-484d-b780-94044673a79e" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-25_domyslne.x" wejscie-w-zycie="2026-01-27">Jeżeli ustalony w ten sposób termin wypłaty ekwiwalentu jest dniem wolnym od pracy, ekwiwalent wypłaca się w dniu poprzedzającym ten dzień.</zdanie></p></paragraf-kodeksu></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/25__art_1__pkt_9" gd:GUID="a623b10c-321b-4838-8a0a-075ba1de543b" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-25_domyslne.x" wejscie-w-zycie="2026-01-27">
+          <nr>9</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="72c3370b-2fee-4ff2-a98d-7c0a278946e2" fragment="14" gd:fragmentGUID="77396cc3-f9cb-4897-b15c-690ca33a3d0c" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-25_domyslne.x" wejscie-w-zycie="2026-01-27"><now:zamien-tekst stary-tekst="pisemny" nowy-tekst="" element-eId="DU/2025/277__art_174__par_1" akt="https://eli.gov.pl/eli/DU/2025/277" gd:nowGUID="d2cf2c4c-d997-4648-9246-f6fe7dbd4956" /><now:zamien-tekst stary-tekst="pracownika" nowy-tekst="pracownika złożony w postaci papierowej lub elektronicznej," element-eId="DU/2025/277__art_174__par_1" akt="https://eli.gov.pl/eli/DU/2025/277" gd:nowGUID="2e5958ea-d26d-4d89-9ada-e00cb656a68c" />w art. 174 w § 1 skreśla się wyraz „pisemny” i po wyrazie „pracownika” dodaje się wyrazy „złożony w postaci papierowej lub elektronicznej,”;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/25__art_1__pkt_10" gd:GUID="9a3fedee-782b-4a58-9018-7f71b4d38ef8" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-25_domyslne.x" wejscie-w-zycie="2026-01-27">
+          <nr>10</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="72c3370b-2fee-4ff2-a98d-7c0a278946e2" fragment="15" gd:fragmentGUID="e6a8d826-0f9e-4244-be8e-94e25ba26d2b" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-25_domyslne.x" wejscie-w-zycie="2026-01-27"><now:zamien-tekst stary-tekst="na piśmie" nowy-tekst="w postaci papierowej lub elektronicznej" element-eId="DU/2025/277__art_174[1]__par_1" akt="https://eli.gov.pl/eli/DU/2025/277" gd:nowGUID="d70b29af-af6d-426d-8709-4b6b61031dff" /><now:zamien-tekst stary-tekst="na piśmie" nowy-tekst="w postaci papierowej lub elektronicznej" element-eId="DU/2025/277__art_237[4]__par_3" akt="https://eli.gov.pl/eli/DU/2025/277" gd:nowGUID="4f2d436a-d84a-42cd-a09e-cadaf7241fba" />w art. 174<sup>1</sup> w § 1 i w art. 237<sup>4</sup> w § 3 wyrazy „na piśmie” zastępuje się wyrazami „w postaci papierowej lub elektronicznej”.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2026/25__art_2" gd:GUID="cf5e0593-7540-4c44-a405-26c18c930189" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-25_domyslne.x" wejscie-w-zycie="2026-01-27">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="86407656-62bf-454a-9394-287bc3ea0784" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-25_domyslne.x" wejscie-w-zycie="2026-01-27">
+        <p>
+          <zdanie nr="1" gd:zdGUID="e3d3aea9-b461-4ae9-af36-a35a589da8c2" fragment="1" gd:fragmentGUID="c83ceb77-39c3-41c8-86a8-40eafa055f7f" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-25_domyslne.x" wejscie-w-zycie="2026-01-27">W ustawie z dnia 4 marca 1994 r. o zakładowym funduszu świadczeń socjalnych (Dz. U. z 2024 r. poz. 288) wprowadza się następujące zmiany:</zdanie>
+        </p>
+        <punkt eId="DU/2026/25__art_2__pkt_1" gd:GUID="67194393-a4c3-4ba7-a0d4-ec243f13f065" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-25_domyslne.x" wejscie-w-zycie="2026-01-27">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="e3d3aea9-b461-4ae9-af36-a35a589da8c2" fragment="2" gd:fragmentGUID="2716ccb6-e3cf-4a6b-b890-27dfbef32ffa" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-25_domyslne.x" wejscie-w-zycie="2026-01-27">w art. 4 ust. 3 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/288" cudzyslowy="oba" gd:nowGUID="12c3c912-aa1c-4da3-aed0-32aa857a8937" element-eId="DU/2024/288__art_4__ust_3" funkcja="zastap"><ustep eId="DU/2024/288__art_4__ust_3" gd:GUID="103cd071-fe2e-46d1-9d91-5d7a6172227b" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-25_domyslne.x" wejscie-w-zycie="2026-01-27"><nr>3</nr><p><zdanie nr="1" gd:zdGUID="17f334fc-0f98-49e0-ad80-a00611b0fe0a" fragment="1" gd:fragmentGUID="712983cf-9ab4-4c31-9ed9-ac6780ab2b20" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-25_domyslne.x" wejscie-w-zycie="2026-01-27">Jeżeli u pracodawcy, o którym mowa w ust. 2, nie działa zakładowa organizacja związkowa, postanowienia regulaminu wynagradzania w sprawie wysokości odpisu na Fundusz lub nietworzenia Funduszu wymagają uzgodnienia z pracownikami wybranymi przez załogę do reprezentowania jej interesów.</zdanie></p></ustep></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2026/25__art_2__pkt_2" gd:GUID="dd044e06-11c4-4eda-bbe8-4a65e7d46f72" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-25_domyslne.x" wejscie-w-zycie="2026-01-27">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="e3d3aea9-b461-4ae9-af36-a35a589da8c2" fragment="3" gd:fragmentGUID="1d43290c-af82-4efd-8c23-dbe0182748f1" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-25_domyslne.x" wejscie-w-zycie="2026-01-27">w art. 8 ust. 2 zdanie drugie otrzymuje brzmienie:<cytat-w-tekscie now:akt="https://eli.gov.pl/eli/DU/2024/288" cudzyslowy="oba" gd:nowGUID="a93b87c0-755c-40c9-abc8-344779771153" element-eId="DU/2024/288__art_8__ust_2__zdn_2" funkcja="zastap-tekst"><zdanie nr="1" gd:zdGUID="9271393a-6590-41ad-8e4d-142de8f1927e" fragment="1" gd:fragmentGUID="0dd3a714-0e8e-476f-9f02-1858ac89a432" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-25_domyslne.x" wejscie-w-zycie="2026-01-27">Pracodawca, u którego nie działa zakładowa organizacja związkowa, uzgadnia regulamin z pracownikami, o których mowa w art. 4 ust. 3.</zdanie></cytat-w-tekscie>.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2026/25__art_3" gd:GUID="364ab3b4-c664-4984-be0d-806250a62006" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-25_domyslne.x" wejscie-w-zycie="2026-01-27">
+      <nr>3</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="938f8cd3-7d59-44d2-abed-182086817bb0" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-25_domyslne.x" wejscie-w-zycie="2026-01-27">
+        <p>
+          <zdanie nr="1" gd:zdGUID="487a1cb9-6e27-41ee-aa9f-47460f9134c1" fragment="1" gd:fragmentGUID="d2a5838d-5006-4b67-a8de-d20c40bc9797" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-25_domyslne.x" wejscie-w-zycie="2026-01-27">Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <organ-podpisujacy>Prezydent Rzeczypospolitej Polskiej: <i><osoba podpisujacy="true" gd:osobaGUID="2ecfcd0b-425b-4456-9efb-629753db0bcc"><imie>K.</imie> <nazwisko>Nawrocki</nazwisko></osoba></i></organ-podpisujacy>
+  </ustawa>
+</akt-prawny>

@@ -1,0 +1,653 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <obwieszczenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2026/86</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>85fca8f2-7c43-495e-baff-159b84e9cbad</gd:GUIDwersji>
+      <AdresISAP>WDU20260000086</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2026</Rok>
+      <Pozycja>86</Pozycja>
+      <AdresWyswietlany>Dz.U. 2026 poz. 86</AdresWyswietlany>
+      <Tytul>Obwieszczenie Marszałka Sejmu Rzeczypospolitej Polskiej z dnia 21 stycznia 2026 r. w sprawie ogłoszenia jednolitego tekstu ustawy o nauczycielskich świadczeniach kompensacyjnych</Tytul>
+      <Rodzaj>OBW_TJ</Rodzaj>
+      <DataOgloszenia>2026-01-27</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2026-01-21</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_ujednolicenie_2026-01-27_DU-2026-86_domyslne" rodzaj="ujednolicenie" pochodzenie="domyslne-z-aktu" data="2026-01-27" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_ujednolicenie.zdarz_ujednolicenie_2026-01-27_DU-2026-86_domyslne" glowna="true">
+          <Przedzial rodzaj="ujednolicenie" od="zdarz_ujednolicenie_2026-01-27_DU-2026-86_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <DataObowiazywaniaWersji>
+        <Od>zdarz_ujednolicenie_2026-01-27_DU-2026-86_domyslne</Od>
+      </DataObowiazywaniaWersji>
+      <Organy>
+        <Organ gd:GUID="931a6c2b-2eef-472b-9c1b-0dd945088979" rola="wydajacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/MSEJMU">
+          <Nazwa>Marszałek Sejmu</Nazwa>
+          <OrganPodpisujacy>Marszałek Sejmu</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>W.</imie> <nazwisko>Czarzasty</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Obwieszczenie</rodzaj-aktu>
+    <autor-aktu>Marszałka Sejmu Rzeczypospolitej Polskiej</autor-aktu>
+    <data>z dnia 21 stycznia 2026 r.</data>
+    <tytul>w sprawie ogłoszenia jednolitego tekstu ustawy o nauczycielskich świadczeniach kompensacyjnych</tytul>
+    <punkt-OTJ eId="DU/2026/86__pkt_1" gd:GUID="830c1435-36b5-4f3d-aaf5-209c78db7a07">
+      <nr>1</nr>
+      <p>
+        <zdanie nr="1" gd:zdGUID="d32f9ea6-c989-4602-bffc-2aad3dc08631" fragment="1" gd:fragmentGUID="55d180db-feec-4843-9fee-4fde0b200a1d">Na podstawie art. 16 ust. 1 zdanie pierwsze ustawy z dnia 20 lipca 2000 r. o ogłaszaniu aktów normatywnych i niektórych innych aktów prawnych (Dz. U. z 2019 r. poz. 1461) ogłasza się w załączniku do niniejszego obwieszczenia jednolity tekst ustawy z dnia 22 maja 2009 r. o nauczycielskich świadczeniach kompensacyjnych (Dz. U. z 2025 r. poz. 174), z uwzględnieniem zmian wprowadzonych ustawą z dnia 25 lipca 2025 r. o zmianie ustawy – Karta Nauczyciela oraz niektórych innych ustaw (Dz. U. poz. 1160) oraz zmian wynikających z przepisów ogłoszonych przed dniem 20 stycznia 2026 r.</zdanie>
+      </p>
+    </punkt-OTJ>
+    <punkt-OTJ eId="DU/2026/86__pkt_2" gd:GUID="b86cb6fa-f073-4bf9-b20c-0c83b4707ffa">
+      <nr>2</nr>
+      <p>
+        <zdanie nr="1" gd:zdGUID="4c4df043-9cbb-435b-bb29-85e6aaf98c5b" fragment="1" gd:fragmentGUID="80a7ea52-158c-4505-8c22-2b01ddcbbd41">Podany w załączniku do niniejszego obwieszczenia tekst jednolity ustawy nie obejmuje art. 14 i art. 19 ustawy z dnia 25 lipca 2025 r. o zmianie ustawy – Karta Nauczyciela oraz niektórych innych ustaw (Dz. U. poz. 1160), które stanowią:<tresc-strukt cudzyslowy="oba" gd:GUID="50f7d977-3e56-48bc-99f5-3f937d5ff566"><artykul eId="DU/2025/1160__art_14" gd:GUID="ec7f7604-f4c1-4b5b-acfc-d6059ae9f618"><nr>14</nr><ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="fff84746-173b-4ca3-90a9-141170f3d4dc"><p><zdanie nr="1" gd:zdGUID="a786d182-c873-45a9-b4db-acab8d8941f1" fragment="1" gd:fragmentGUID="6faeff01-1cde-4045-8735-a898a3322f51">Do okresu 20 lat wykonywania pracy, o którym mowa w art. 4 ust. 1 pkt 2 ustawy zmienianej w art. 4, wlicza się również okresy wykonywania pracy:</zdanie></p><punkt eId="DU/2025/1160__art_14__pkt_1" gd:GUID="472032b1-b28c-426d-a8aa-d677e5c5bf0f"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="a786d182-c873-45a9-b4db-acab8d8941f1" fragment="2" gd:fragmentGUID="2d526d29-fe3d-401a-8e08-1f6c40a0bf18">przed dniem 1 stycznia 2026 r. w jednostkach, o których mowa w art. 2 pkt 1 lit. e–k ustawy zmienianej w art. 4, w brzmieniu nadanym niniejszą ustawą;</zdanie></p></punkt><punkt eId="DU/2025/1160__art_14__pkt_2" gd:GUID="ee908713-c7a3-49fb-ae21-e7412fc237ba"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="a786d182-c873-45a9-b4db-acab8d8941f1" fragment="3" gd:fragmentGUID="1f949e6a-6fa6-4bef-9713-1edf728f6e4b">przed dniem 1 września 2019 r. w placówkach kształcenia praktycznego oraz ośrodkach dokształcania i doskonalenia zawodowego, o których mowa w art. 2 pkt 4 ustawy zmienianej w art. 6, w brzmieniu obowiązującym przed dniem 1 września 2019 r.</zdanie></p></punkt></ustep-n></artykul></tresc-strukt><tresc-strukt cudzyslowy="oba" gd:GUID="c3d73a21-bf73-4c3d-95ee-4ed37db1cceb"><artykul eId="DU/2025/1160__art_19" gd:GUID="5ca9dc75-300e-4ac0-96ea-8363413e464d"><nr>19</nr><ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="056b0db5-dc50-46a7-b576-4dd7fdb41ae9"><p><zdanie nr="1" gd:zdGUID="8f78f5a8-8db0-4559-ac64-49d37853a904" fragment="1" gd:fragmentGUID="93643f78-496d-4f04-853e-27640c551ebe">Ustawa wchodzi w życie z dniem 1 września 2025 r., z wyjątkiem:</zdanie></p><punkt eId="DU/2025/1160__art_19__pkt_1" gd:GUID="f6448825-6426-44bd-8621-88cc86054566"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="8f78f5a8-8db0-4559-ac64-49d37853a904" fragment="2" gd:fragmentGUID="6720f61b-a2af-4c5e-8bb2-28ad2f033616">art. 5 pkt 2, który wchodzi w życie z dniem następującym po dniu ogłoszenia;</zdanie></p></punkt><punkt eId="DU/2025/1160__art_19__pkt_2" gd:GUID="20139909-af7c-4658-913b-7490bf3aeb2e"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="8f78f5a8-8db0-4559-ac64-49d37853a904" fragment="3" gd:fragmentGUID="b622f8a6-a1d7-4f3a-b127-7122bce8fece">art. 1 pkt 13, 14, 17, pkt 18 lit. a i pkt 19, art. 4, art. 5 pkt 5, 9 i 10, art. 6 pkt 1, art. 11, art. 12, art. 14, art. 16 i art. 17, które wchodzą w życie z dniem 1 stycznia 2026 r.;</zdanie></p></punkt><punkt eId="DU/2025/1160__art_19__pkt_3" gd:GUID="6fbed1b2-36b6-45d3-8af5-947c6f495c35"><nr>3</nr><p><zdanie nr="1" gd:zdGUID="8f78f5a8-8db0-4559-ac64-49d37853a904" fragment="4" gd:fragmentGUID="56922b6a-d6f1-47ec-bd61-edbf3c31f95f">art. 1 pkt 11 lit. b i lit. e tiret drugie, które wchodzą w życie z dniem 1 września 2026 r.</zdanie></p></punkt></ustep-n></artykul></tresc-strukt>.</zdanie>
+      </p>
+    </punkt-OTJ>
+    <organ-podpisujacy>Marszałek Sejmu: <i><osoba podpisujacy="true" gd:osobaGUID="ec56d590-3875-478f-bf57-470f5bbff826"><imie>W.</imie> <nazwisko>Czarzasty</nazwisko></osoba></i></organ-podpisujacy>
+    <ustawa>
+      <zalacznik-do>Załącznik do obwieszczenia Marszałka Sejmu Rzeczypospolitej Polskiej z dnia 21 stycznia 2026 r. (Dz. U. poz. 86)</zalacznik-do>
+      <rodzaj-aktu>Ustawa</rodzaj-aktu>
+      <data>z dnia 22 maja 2009 r.</data>
+      <tytul>o nauczycielskich świadczeniach kompensacyjnych</tytul>
+      <artykul eId="DU/2026/86__art_1" gd:GUID="50f7dea1-9b2b-4c41-a093-e5e248b50538">
+        <nr>1</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="0e46316d-5202-4c9e-9d01-11c0d8c1c3c8">
+          <p>
+            <zdanie nr="1" gd:zdGUID="d7584c2f-027d-4dfe-9ce3-28dde13e9183" fragment="1" gd:fragmentGUID="1ffb3052-40c1-458b-9b1f-23e17b010042">Ustawa określa:</zdanie>
+          </p>
+          <punkt eId="DU/2026/86__art_1__pkt_1" gd:GUID="f31dd9d0-a9b8-45a9-af27-c5d599b53d38">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="d7584c2f-027d-4dfe-9ce3-28dde13e9183" fragment="2" gd:fragmentGUID="1ee7f232-6cf4-4106-bba8-ab519f8f8742">warunki nabywania i utraty prawa do nauczycielskich świadczeń kompensacyjnych zwanych dalej „świadczeniami”;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2026/86__art_1__pkt_2" gd:GUID="a2bfb2f3-8816-48f1-aab0-dccb5bbbb83f">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="d7584c2f-027d-4dfe-9ce3-28dde13e9183" fragment="3" gd:fragmentGUID="435a81d2-185b-4059-bf40-cffcd7719b48">zasady:</zdanie>
+            </p>
+            <litera eId="DU/2026/86__art_1__pkt_2__lit_a" gd:GUID="5937225d-7b92-43f7-a5ea-13b719c25efc">
+              <nr>a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="d7584c2f-027d-4dfe-9ce3-28dde13e9183" fragment="4" gd:fragmentGUID="0a5c1aad-e366-49f0-8d8c-4aca5ad6dcc1">ustalania wysokości świadczeń,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2026/86__art_1__pkt_2__lit_b" gd:GUID="1a49f660-78ff-43ac-90c9-6da047d3813f">
+              <nr>b</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="d7584c2f-027d-4dfe-9ce3-28dde13e9183" fragment="5" gd:fragmentGUID="b98df290-5b6e-48c2-a013-3f1c9b00ab69">postępowania w sprawach o świadczenia,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2026/86__art_1__pkt_2__lit_c" gd:GUID="e87940b1-544b-430f-a72a-a4cd830e9bf2">
+              <nr>c</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="d7584c2f-027d-4dfe-9ce3-28dde13e9183" fragment="6" gd:fragmentGUID="dbf911d9-96ae-4119-b279-130a9746bddc">wypłaty świadczeń,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2026/86__art_1__pkt_2__lit_d" gd:GUID="91cf269a-2fed-46ce-877a-fd9d84f40991">
+              <nr>d</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="d7584c2f-027d-4dfe-9ce3-28dde13e9183" fragment="7" gd:fragmentGUID="9536e43b-3965-4b2a-917f-737cd42db2b4">finansowania świadczeń.</zdanie>
+              </p>
+            </litera>
+          </punkt>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2026/86__art_2" gd:GUID="3393c0f2-a542-4bf1-8025-0448bc69f88f">
+        <nr>2</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="c4edfe8c-e575-4d4b-8158-27bae183887a">
+          <p>
+            <zdanie nr="1" gd:zdGUID="0dea1337-51d4-4803-aba9-36aae304e913" fragment="1" gd:fragmentGUID="602be083-eb45-4cab-9b20-ab1312b301d2">Użyte w ustawie określenia oznaczają:</zdanie>
+          </p>
+          <punkt eId="DU/2026/86__art_2__pkt_1" gd:GUID="0d4f2543-7115-4123-8e84-f9cc0db56524">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="0dea1337-51d4-4803-aba9-36aae304e913" fragment="2" gd:fragmentGUID="4107619d-020a-412a-8e76-cab68ee1a822">nauczyciel – nauczycieli, wychowawców i innych pracowników pedagogicznych zatrudnionych w:</zdanie>
+            </p>
+            <litera eId="DU/2026/86__art_2__pkt_1__lit_a" gd:GUID="674b31d2-385a-40ff-beaf-e84020e8b608">
+              <nr>a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="0dea1337-51d4-4803-aba9-36aae304e913" fragment="3" gd:fragmentGUID="6f9c9e62-17e1-43ce-8aeb-4bc972177532">publicznych i niepublicznych przedszkolach,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2026/86__art_2__pkt_1__lit_b" gd:GUID="0cc7673a-c021-497e-8300-5149ae4b38a6">
+              <nr>b</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="0dea1337-51d4-4803-aba9-36aae304e913" fragment="4" gd:fragmentGUID="6a766ed3-167c-4005-9cef-90b093f844c2">publicznych i niepublicznych szkołach, z wyjątkiem niepublicznych szkół nieposiadających uprawnień szkoły publicznej, o których mowa w art. 104 ust. 1 ustawy z dnia 22 listopada 2018 r. o zmianie ustawy – Prawo oświatowe, ustawy o systemie oświaty oraz niektórych innych ustaw (Dz. U. poz. 2245, z późn. zm.<odnosnik id-odnosnika="1" symbol="1" gd:GUID="522ed858-cc17-44e9-a9fa-dd82ec69fec8"><p><zdanie nr="1" gd:zdGUID="eb377414-64ad-44ee-aa33-d733f64ae469" fragment="1" gd:fragmentGUID="18a3c6f6-bbfd-4b25-9a15-2ccda34cb8fb">Zmiany wymienionej ustawy zostały ogłoszone w Dz. U. z 2018 r. poz. 2432, z 2019 r. poz. 534, 1287 i 2248, z 2021 r. poz. 4, z 2022 r. poz. 1116 oraz z 2024 r. poz. 123 i 1933.</zdanie></p></odnosnik>), i niepublicznych szkół artystycznych nieposiadających uprawnień publicznej szkoły artystycznej,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2026/86__art_2__pkt_1__lit_c" gd:GUID="ee7dc933-4119-4861-894d-5ce764c5b71f">
+              <nr>c</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="0dea1337-51d4-4803-aba9-36aae304e913" fragment="5" gd:fragmentGUID="7f6109a9-ea43-4832-9c6d-807fc6fe2302"><odnosnik id-odnosnika="2" symbol="2" gd:GUID="e6750736-35d9-49d0-9256-09ac97a2ebfe"><p><zdanie nr="1" gd:zdGUID="f7fdea25-212f-410e-9576-2b85591307cb" fragment="1" gd:fragmentGUID="259db460-2a0b-4ec5-b8cf-bf5da1283803">W brzmieniu ustalonym przez art. 4 pkt 1 ustawy z dnia 25 lipca 2025 r. o zmianie ustawy – Karta Nauczyciela oraz niektórych innych ustaw (Dz. U. poz. 1160); wszedł w życie z dniem 1 stycznia 2026 r.</zdanie></p></odnosnik> publicznych i niepublicznych placówkach, o których mowa w art. 2 pkt 7 i 8 ustawy z dnia 14 grudnia 2016 r. – Prawo oświatowe (Dz. U. z 2025 r. poz. 1043, 1160 i 1837),</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2026/86__art_2__pkt_1__lit_d" gd:GUID="675e5ef2-a27d-4012-9a56-25fb9499c8c0">
+              <nr>d</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="0dea1337-51d4-4803-aba9-36aae304e913" fragment="6" gd:fragmentGUID="56516ebb-77ae-4dbc-8b18-cca0b7546845">publicznych i niepublicznych poradniach psychologiczno-pedagogicznych, w tym poradniach specjalistycznych, o których mowa w art. 2 pkt 6 ustawy z dnia 14 grudnia 2016 r. – Prawo oświatowe,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2026/86__art_2__pkt_1__lit_e" gd:GUID="e4670db4-f56c-4dbd-b7b9-2751ac6a8d52">
+              <nr>e</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="0dea1337-51d4-4803-aba9-36aae304e913" fragment="7" gd:fragmentGUID="bfc97147-fcef-43b7-9839-2b74d0cf878d"><odnosnik id-odnosnika="3" symbol="3" gd:GUID="f58b4c62-18ea-4639-b93c-32064ebe177b"><p><zdanie nr="1" gd:zdGUID="60d4b294-c410-4fbc-9274-b039d1e3b7b3" fragment="1" gd:fragmentGUID="5ea9fe05-5162-4a12-8ed5-375d6a545f61">Dodana przez art. 4 pkt 2 ustawy, o której mowa w odnośniku 2; wszedł w życie z dniem 1 stycznia 2026 r.</zdanie></p></odnosnik> publicznych i niepublicznych placówkach oświatowo-wychowawczych, o których mowa w art. 2 pkt 3 ustawy z dnia 14 grudnia 2016 r. – Prawo oświatowe,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2026/86__art_2__pkt_1__lit_f" gd:GUID="d129bb29-89c3-4baf-bd54-d0dacec2608d">
+              <nr>f</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="0dea1337-51d4-4803-aba9-36aae304e913" fragment="8" gd:fragmentGUID="5c66b363-3732-48dd-a4fc-32e078298471"><odsylacz-do-odnosnika id-odnosnika="3" symbol="3" /> publicznych i niepublicznych placówkach kształcenia ustawicznego, centrach kształcenia zawodowego oraz branżowych centrach umiejętności, o których mowa w art. 2 pkt 4 ustawy z dnia 14 grudnia 2016 r. – Prawo oświatowe,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2026/86__art_2__pkt_1__lit_g" gd:GUID="6313e5ba-82eb-458d-9944-c2689ca6fd5b">
+              <nr>g</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="0dea1337-51d4-4803-aba9-36aae304e913" fragment="9" gd:fragmentGUID="6e5051f2-204f-4085-8db5-12a17b1cd891"><odsylacz-do-odnosnika id-odnosnika="3" symbol="3" /> publicznych i niepublicznych placówkach artystycznych, o których mowa w art. 2 pkt 5 ustawy z dnia 14 grudnia 2016 r. – Prawo oświatowe,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2026/86__art_2__pkt_1__lit_h" gd:GUID="449d1b6e-0b20-49fa-8e55-e4f54f91b808">
+              <nr>h</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="0dea1337-51d4-4803-aba9-36aae304e913" fragment="10" gd:fragmentGUID="2a99b57f-b19a-4d08-ba6d-faf3cf88bd9a"><odsylacz-do-odnosnika id-odnosnika="3" symbol="3" /> publicznych i niepublicznych placówkach doskonalenia nauczycieli, o których mowa w art. 2 pkt 9 ustawy z dnia 14 grudnia 2016 r. – Prawo oświatowe,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2026/86__art_2__pkt_1__lit_i" gd:GUID="6480b128-145c-4314-aa22-f4d7cff7fc94">
+              <nr>i</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="0dea1337-51d4-4803-aba9-36aae304e913" fragment="11" gd:fragmentGUID="821082fb-caab-45e0-88e3-96c1e04e3ac0"><odsylacz-do-odnosnika id-odnosnika="3" symbol="3" /> publicznych i niepublicznych bibliotekach pedagogicznych, o których mowa w art. 2 pkt 10 ustawy z dnia 14 grudnia 2016 r. – Prawo oświatowe,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2026/86__art_2__pkt_1__lit_j" gd:GUID="b1d64745-8cce-4740-a473-d2d85e64239a">
+              <nr>j</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="0dea1337-51d4-4803-aba9-36aae304e913" fragment="12" gd:fragmentGUID="5a847991-f171-4799-848d-b6c2eb3b1d6b"><odsylacz-do-odnosnika id-odnosnika="3" symbol="3" /> publicznych i niepublicznych kolegiach pracowników służb społecznych, o których mowa w art. 2 pkt 11 ustawy z dnia 14 grudnia 2016 r. – Prawo oświatowe,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2026/86__art_2__pkt_1__lit_k" gd:GUID="0aa2fa49-05e6-406c-a17f-aac525fb9e1f">
+              <nr>k</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="0dea1337-51d4-4803-aba9-36aae304e913" fragment="13" gd:fragmentGUID="10c5d896-4fbe-428a-afc0-a664963c7bec"><odsylacz-do-odnosnika id-odnosnika="3" symbol="3" /> okręgowych ośrodkach wychowawczych, zakładach poprawczych oraz schroniskach dla nieletnich działających na podstawie ustawy z dnia 9 czerwca 2022 r. o wspieraniu i resocjalizacji nieletnich (Dz. U. z 2024 r. poz. 978, 1228 i 1872);</zdanie>
+              </p>
+            </litera>
+          </punkt>
+          <punkt eId="DU/2026/86__art_2__pkt_2" gd:GUID="240bc188-6e67-4632-9ed4-5b1e0d623e9d">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="0dea1337-51d4-4803-aba9-36aae304e913" fragment="14" gd:fragmentGUID="98ab4fe0-8432-4595-9705-59a849d6e000">organ rentowy – jednostkę organizacyjną Zakładu Ubezpieczeń Społecznych właściwą do wydawania decyzji w sprawach świadczeń, określoną w ustawie z dnia 13 października 1998 r. o systemie ubezpieczeń społecznych (Dz. U. z 2025 r. poz. 350, z późn. zm.<odnosnik id-odnosnika="4" symbol="4" gd:GUID="5ec4c14d-69c4-48fc-9a7c-a5e4d2d13456"><p><zdanie nr="1" gd:zdGUID="603e531c-c9e0-4ef9-8cd2-326a13d8e717" fragment="1" gd:fragmentGUID="7e450f42-9407-4f47-8bd4-ac0d0bf994ef">Zmiany tekstu jednolitego wymienionej ustawy zostały ogłoszone w Dz. U. z 2025 r. poz. 620, 622, 769, 820, 1083, 1160, 1216, 1409, 1413 i 1423 oraz z 2026 r. poz. 26.</zdanie></p></odnosnik>);</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2026/86__art_2__pkt_3" gd:GUID="cdce3c64-46f7-4062-a5ca-583243cc3196">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="0dea1337-51d4-4803-aba9-36aae304e913" fragment="15" gd:fragmentGUID="387ecb90-6dc2-4309-b8d9-6f3948519837">uprawniony – osobę mającą ustalone prawo do świadczenia.</zdanie>
+            </p>
+          </punkt>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2026/86__art_3" gd:GUID="d617e4a8-011e-4c7f-9028-b56790475c9f">
+        <nr>3</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="d94d8177-d584-4bb4-adc8-00e8ff01a7cf">
+          <p>
+            <zdanie nr="1" gd:zdGUID="a4eb78f4-7b61-4527-85aa-7a70587d92bd" fragment="1" gd:fragmentGUID="871a5aaf-001b-40fd-8fce-ecec80bc0d8b">Prawo do świadczenia na warunkach i w wysokości określonych w ustawie przysługuje nauczycielom zatrudnionym w jednostkach, o których mowa w art. 2 pkt 1.</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2026/86__art_4" gd:GUID="e82abed9-f293-4e2d-89dd-2518cd541ed9">
+        <nr>4</nr>
+        <ustep eId="DU/2026/86__art_4__ust_1" gd:GUID="b345849e-ff3d-49c8-87c3-76fbe2a9a5cd">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="6097a298-d440-4885-8ef8-1df6b60b7fe3" fragment="1" gd:fragmentGUID="db1d7dac-4280-43d4-9086-13d32ac2c8cc">Świadczenie przysługuje nauczycielom, którzy spełnili łącznie następujące warunki:</zdanie>
+          </p>
+          <punkt eId="DU/2026/86__art_4__ust_1__pkt_1" gd:GUID="35026d22-a77f-475e-ae20-9e8e0ccb4800">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="6097a298-d440-4885-8ef8-1df6b60b7fe3" fragment="2" gd:fragmentGUID="c4549a5d-163d-4e74-9b2c-73892ca9080f">osiągnęli wiek, o którym mowa w ust. 3;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2026/86__art_4__ust_1__pkt_2" gd:GUID="e3435ddb-c601-49f6-921e-f805b7915f21">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="6097a298-d440-4885-8ef8-1df6b60b7fe3" fragment="3" gd:fragmentGUID="e497c5e2-94e5-479a-ac93-e22fda2a81a3">mają okres składkowy i nieskładkowy w rozumieniu ustawy z dnia 17 grudnia 1998 r. o emeryturach i rentach z Funduszu Ubezpieczeń Społecznych (Dz. U. z 2025 r. poz. 1749 oraz z 2026 r. poz. 26), zwanej dalej „ustawą o emeryturach i rentach z FUS”, wynoszący 30 lat, w tym 20 lat wykonywania pracy w jednostkach, o których mowa w art. 2 pkt 1, w wymiarze co najmniej 1/2 obowiązkowego wymiaru zajęć;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2026/86__art_4__ust_1__pkt_3" gd:GUID="21210da5-a5e4-43f7-a8c7-048f3260def0">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="6097a298-d440-4885-8ef8-1df6b60b7fe3" fragment="4" gd:fragmentGUID="ee4cff89-fe7e-4df3-b362-e18b996570da">rozwiązali stosunek pracy.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2026/86__art_4__ust_2" gd:GUID="3c59345b-0021-4446-b919-32818bb5c4d9">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="01166e06-9219-4b8c-ac99-117f0ab50ee0" fragment="1" gd:fragmentGUID="54a74124-10fb-4a82-a640-38738d2e788b">Nauczycielom spełniającym warunki określone w ust. 1 pkt 1 i 2 świadczenie przysługuje również w przypadku rozwiązania stosunku pracy lub wygaśnięcia stosunku pracy w okolicznościach określonych:</zdanie>
+          </p>
+          <punkt eId="DU/2026/86__art_4__ust_2__pkt_1" gd:GUID="d4f6befa-45e9-4728-ba55-80da6cd271e6">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="01166e06-9219-4b8c-ac99-117f0ab50ee0" fragment="2" gd:fragmentGUID="9f0e2d39-9918-4dc5-8155-59ec7b2d2bbd">w art. 20 ust. 1, 5c i 7 ustawy z dnia 26 stycznia 1982 r. – Karta Nauczyciela (Dz. U. z 2024 r. poz. 986, z późn. zm.<odnosnik id-odnosnika="5" symbol="5" gd:GUID="5cc69e04-0bbc-4632-b571-df7d2b57acfd"><p><zdanie nr="1" gd:zdGUID="1fc35715-22c4-47c8-9520-d28c542af092" fragment="1" gd:fragmentGUID="166b429e-7871-42d6-b6a7-b0317a16c6c9">Zmiany tekstu jednolitego wymienionej ustawy zostały ogłoszone w Dz. U. z 2024 r. poz. 1871 oraz z 2025 r. poz. 620, 1019, 1160, 1188, 1189, 1661, 1792 i 1849.</zdanie></p></odnosnik>);</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2026/86__art_4__ust_2__pkt_2" gd:GUID="ed5217e2-582c-454e-9efa-b39d0fd70b2f">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="01166e06-9219-4b8c-ac99-117f0ab50ee0" fragment="3" gd:fragmentGUID="6ffba721-9350-438b-96e3-28f24744c0e1">w art. 225 ust. 1, 6, 7 i 10 oraz art. 226 ust. 1 ustawy z dnia 14 grudnia 2016 r. – Przepisy wprowadzające ustawę – Prawo oświatowe (Dz. U. z 2017 r. poz. 60, z późn. zm.<odnosnik id-odnosnika="6" symbol="6" gd:GUID="641aaeb2-f239-429b-a2c0-ab4bef4928b9"><p><zdanie nr="1" gd:zdGUID="9b2f26e7-69ae-40ce-bbb1-d9859032bd60" fragment="1" gd:fragmentGUID="6f918298-b8e6-49c9-a15b-4f0e27ebdd8a">Zmiany wymienionej ustawy zostały ogłoszone w Dz. U. z 2017 r. poz. 949 i 2203, z 2018 r. poz. 2245, z 2019 r. poz. 1287, z 2022 r. poz. 1116 oraz z 2024 r. poz. 1933.</zdanie></p></odnosnik>).</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2026/86__art_4__ust_3" gd:GUID="24c453c0-bd62-47b0-8e0f-e30302eadf93">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="b16b471f-2f52-4f05-b260-d8d3d3870fb1" fragment="1" gd:fragmentGUID="aced1f23-6fa0-4180-9eab-950b919e3ee4">Nauczyciel ma prawo do świadczenia, jeżeli ukończył:</zdanie>
+          </p>
+          <punkt eId="DU/2026/86__art_4__ust_3__pkt_1" gd:GUID="0b13745b-0e21-4bc3-8a3d-597f5a2f7129">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="b16b471f-2f52-4f05-b260-d8d3d3870fb1" fragment="2" gd:fragmentGUID="34ce191e-801b-405b-8e75-7d4fd7511085">55 lat – w latach 2009–2014;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2026/86__art_4__ust_3__pkt_2" gd:GUID="09dd2555-70ee-4c1f-8dc9-af4067c431e7">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="b16b471f-2f52-4f05-b260-d8d3d3870fb1" fragment="3" gd:fragmentGUID="b75be607-bd13-4520-b7eb-b443b2a51303">55 lat w przypadku kobiet i 56 lat w przypadku mężczyzn – w latach 2015–2016;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2026/86__art_4__ust_3__pkt_3" gd:GUID="eb58135f-4c02-41e8-96d7-ee5777bb2c47">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="b16b471f-2f52-4f05-b260-d8d3d3870fb1" fragment="4" gd:fragmentGUID="4c7035cb-8604-40d4-bc58-120384c4ee48">55 lat w przypadku kobiet i 57 lat w przypadku mężczyzn – w latach 2017–2018;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2026/86__art_4__ust_3__pkt_4" gd:GUID="099ccec7-bd30-4b35-8b5c-31cdc80f0013">
+            <nr>4</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="b16b471f-2f52-4f05-b260-d8d3d3870fb1" fragment="5" gd:fragmentGUID="f526536d-26c7-45bf-9a26-0a0642686342">55 lat w przypadku kobiet i 58 lat w przypadku mężczyzn – w latach 2019–2020;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2026/86__art_4__ust_3__pkt_5" gd:GUID="48e96504-9635-460f-a2ab-7781933669e8">
+            <nr>5</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="b16b471f-2f52-4f05-b260-d8d3d3870fb1" fragment="6" gd:fragmentGUID="9d110ee7-3919-4ac6-96ed-4f9b541089f4">55 lat w przypadku kobiet i 59 lat w przypadku mężczyzn – w latach 2021–2022;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2026/86__art_4__ust_3__pkt_6" gd:GUID="726e9ae8-27a4-4415-82d5-7d55c93280e5">
+            <nr>6</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="b16b471f-2f52-4f05-b260-d8d3d3870fb1" fragment="7" gd:fragmentGUID="56848603-5633-4c99-bedb-d2330660ff29">55 lat w przypadku kobiet i 60 lat w przypadku mężczyzn – w latach 2023–2024;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2026/86__art_4__ust_3__pkt_7" gd:GUID="de5fd657-1e48-4d98-9af3-d0446d54a56a">
+            <nr>7</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="b16b471f-2f52-4f05-b260-d8d3d3870fb1" fragment="8" gd:fragmentGUID="c60e0964-3f92-446c-9598-fbf165618131">56 lat w przypadku kobiet i 61 lat w przypadku mężczyzn – w latach 2025–2026;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2026/86__art_4__ust_3__pkt_8" gd:GUID="7ce8c54e-62fc-43c1-880c-bb191cc31d67">
+            <nr>8</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="b16b471f-2f52-4f05-b260-d8d3d3870fb1" fragment="9" gd:fragmentGUID="90d98d20-5713-404f-bf1c-ee6e2ba9a5b6">57 lat w przypadku kobiet i 62 lata w przypadku mężczyzn – w latach 2027–2028;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2026/86__art_4__ust_3__pkt_9" gd:GUID="2cfcf964-34e4-4ef3-9ddc-f14ac0bb9ade">
+            <nr>9</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="b16b471f-2f52-4f05-b260-d8d3d3870fb1" fragment="10" gd:fragmentGUID="1958f97c-2f41-46e2-a0f4-399b9afec049">58 lat w przypadku kobiet i 63 lata w przypadku mężczyzn – w latach 2029–2030;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2026/86__art_4__ust_3__pkt_10" gd:GUID="8008b991-4e3b-4709-b113-18d17f723a5c">
+            <nr>10</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="b16b471f-2f52-4f05-b260-d8d3d3870fb1" fragment="11" gd:fragmentGUID="b3d73a5b-ad22-4f52-ade8-78f2159632d8">59 lat w przypadku kobiet i 64 lata w przypadku mężczyzn – w latach 2031–2032.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2026/86__art_5" gd:GUID="dcffe776-c81e-4c1c-8592-977f9b7b6f9d">
+        <nr>5</nr>
+        <ustep eId="DU/2026/86__art_5__ust_1" gd:GUID="c7166278-ec6e-4d3d-a947-787275fc4343">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="3a0d442f-9334-4727-ae71-3810a56e65f1" fragment="1" gd:fragmentGUID="a258676a-d0ca-4d13-af09-f707be5598b5">Świadczenie stanowi równowartość kwoty będącej wynikiem podzielenia podstawy obliczenia emerytury, ustalonej w sposób określony w art. 25 ustawy o emeryturach i rentach z FUS, przez średnie dalsze trwanie życia dla osób w wieku 60 lat, ustalone według obowiązujących w dniu zgłoszenia wniosku o przyznanie świadczenia tablic średniego trwania życia, o których mowa w art. 26 ustawy o emeryturach i rentach z FUS.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/86__art_5__ust_2" gd:GUID="9de9d327-325f-4d5d-af5a-41107b95ae0e">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="8d97bc74-36b0-4849-b72f-14e9c4c26b1c" fragment="1" gd:fragmentGUID="1fe6ba43-dd7b-4828-b118-af9d4e16790d">Jeżeli uprawniony jest członkiem otwartego funduszu emerytalnego, przy ustalaniu podstawy obliczenia emerytury, składki na ubezpieczenie emerytalne, zewidencjonowane na jego koncie w Zakładzie Ubezpieczeń Społecznych, zwanym dalej „Zakładem”, zwiększa się przez pomnożenie wskaźnikiem korygującym 19,52/12,22, stanowiącym stosunek pełnej wysokości składki na ubezpieczenie emerytalne do wysokości zewidencjonowanej na koncie ubezpieczonego w Zakładzie.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/86__art_5__ust_3" gd:GUID="b2223e18-70c0-425a-b6e3-57edd98f54ab">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="c548fc3b-c28a-4ccf-b374-078e9be10740" fragment="1" gd:fragmentGUID="5708afb1-9fda-40f5-ad1e-e1d05ac979ed">Kwota świadczenia nie może być niższa niż kwota najniższej emerytury, o której mowa w art. 85 ustawy o emeryturach i rentach z FUS.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/86__art_5__ust_4" gd:GUID="12810269-a2d3-4c73-abfa-b836c6be5c3f">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="1112eedb-b024-4187-8b30-0cf5f9b5068e" fragment="1" gd:fragmentGUID="7f5218c8-d575-41c8-817f-9d8170d030be">Świadczenie podlega waloryzacji na zasadach i w terminach przewidzianych dla waloryzacji świadczeń w art. 88, art. 89 i art. 93 ustawy o emeryturach i rentach z FUS.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2026/86__art_6" gd:GUID="c0d48aec-c7f0-457b-b8e3-e947f99a5d42">
+        <nr>6</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="e669bea8-5cf0-423b-9d45-d2de18a1337b">
+          <p>
+            <zdanie nr="1" gd:zdGUID="0df2b126-b54b-4888-b87f-2a0522afbeb7" fragment="1" gd:fragmentGUID="aa19079b-7fda-4014-927e-5afb5bd8a616">Świadczenia finansowane są z budżetu państwa.</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2026/86__art_7" gd:GUID="0caed0e9-b57b-4743-9d45-17a5c2d71b22">
+        <nr>7</nr>
+        <ustep eId="DU/2026/86__art_7__ust_1" gd:GUID="97cfec06-f4c0-42fa-94a5-91429f39c069">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="7a8631cc-e830-464d-bb80-5150a9ba5b92" fragment="1" gd:fragmentGUID="69664aa9-fa10-4693-855e-3a873856b291">Prawo do świadczenia powstaje z dniem spełnienia warunków wymaganych do nabycia tego prawa.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/86__art_7__ust_2" gd:GUID="7e27602e-6bb4-4e44-9276-f6922e64124a">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="327ed69d-21b6-465f-aa06-c9f339202024" fragment="1" gd:fragmentGUID="c7b86b58-0f62-409b-bc32-3250b212f49b">W przypadku pobierania zasiłku chorobowego lub świadczenia rehabilitacyjnego prawo do świadczenia powstaje z dniem zaprzestania pobierania tego zasiłku lub świadczenia.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2026/86__art_8" gd:GUID="32c9d4d3-bee1-4409-9d36-a34049aa6686">
+        <nr>8</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="81efa075-a752-4e28-95cd-53c30cf27243">
+          <p>
+            <zdanie nr="1" gd:zdGUID="9db5d675-f941-4c4b-8739-e1c3ac2419c4" fragment="1" gd:fragmentGUID="cba70fe5-9672-4430-ab74-b0b3c3ae2337">Prawo do świadczenia ustaje z dniem:</zdanie>
+          </p>
+          <punkt eId="DU/2026/86__art_8__pkt_1" gd:GUID="d9dc3cda-24e5-495b-979b-0f37ec76a32b">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="9db5d675-f941-4c4b-8739-e1c3ac2419c4" fragment="2" gd:fragmentGUID="f39af656-fca7-45f4-a1be-1fa2032a1f05">poprzedzającym dzień nabycia prawa do emerytury, która jest ustalona decyzją organu rentowego lub innego organu emerytalno-rentowego, określonego w odrębnych przepisach;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2026/86__art_8__pkt_2" gd:GUID="2f01df77-2383-4901-8455-c61245862b51">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="9db5d675-f941-4c4b-8739-e1c3ac2419c4" fragment="3" gd:fragmentGUID="7b6a9e33-8514-4fd9-ba0d-66752b4fc003">poprzedzającym dzień osiągnięcia przez uprawnionego wieku:</zdanie>
+            </p>
+            <litera eId="DU/2026/86__art_8__pkt_2__lit_a" gd:GUID="23a9c66e-2435-416e-89b8-ea80ced9d4ad">
+              <nr>a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="9db5d675-f941-4c4b-8739-e1c3ac2419c4" fragment="4" gd:fragmentGUID="b9da17f7-ab25-4dbc-9e75-abca4ed09e7f">60 lat – w przypadku kobiet,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2026/86__art_8__pkt_2__lit_b" gd:GUID="0e20074c-59d2-4474-aa3c-70232061d229">
+              <nr>b</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="9db5d675-f941-4c4b-8739-e1c3ac2419c4" fragment="5" gd:fragmentGUID="8cb457df-f198-4c2f-8de4-b9bf9bdc0ed6">65 lat – w przypadku mężczyzn</zdanie>
+              </p>
+            </litera>
+            <czesc-wspolna-litera eId="DU/2026/86__art_8__pkt_2__czw" gd:GUID="32f9f63d-3aab-4c10-aa89-ecfc519c4e66">
+              <p>
+                <zdanie nr="1" gd:zdGUID="9db5d675-f941-4c4b-8739-e1c3ac2419c4" fragment="6" gd:fragmentGUID="811b1bd4-d649-4a9c-a8dc-1b42697524ca">– jeżeli uprawniony nie ma prawa do emerytury ustalonego decyzją organu rentowego lub innego organu emerytalno-rentowego, określonego w odrębnych przepisach;</zdanie>
+              </p>
+            </czesc-wspolna-litera>
+          </punkt>
+          <punkt eId="DU/2026/86__art_8__pkt_3" gd:GUID="e943f8a2-1f2d-4b27-8d39-0fad8bfd822a">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="9db5d675-f941-4c4b-8739-e1c3ac2419c4" fragment="7" gd:fragmentGUID="08264408-b315-4c50-a6a6-a4e6112cb736">śmierci uprawnionego.</zdanie>
+            </p>
+          </punkt>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2026/86__art_9" gd:GUID="68ce9e9b-3550-4461-87b7-5bc70fb30a33">
+        <nr>9</nr>
+        <ustep eId="DU/2026/86__art_9__ust_1" gd:GUID="591fc51a-f777-408e-a09d-8c847cc1823d">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="d6344dab-fba2-48de-baa9-acf24ac11229" fragment="1" gd:fragmentGUID="1ddb1b54-00ad-4597-bf6d-ced9f7e03930">Prawo do świadczenia ulega zawieszeniu lub świadczenie to ulega zmniejszeniu na zasadach określonych w art. 103 ust. 3 i art. 104–106 ustawy o emeryturach i rentach z FUS.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/86__art_9__ust_2" gd:GUID="49d34f15-8517-4e89-b8ea-a2468af76636">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="5db63946-a3a0-4a54-b15f-ddcd95f3a7d8" fragment="1" gd:fragmentGUID="7fee853f-3cd6-4b26-8411-2fc556e5580c">Prawo do świadczenia ulega zawieszeniu bez względu na wysokość uzyskiwanego przychodu w razie podjęcia przez uprawnionego pracy w jednostkach, o których mowa w art. 1 ustawy z dnia 26 stycznia 1982 r. – Karta Nauczyciela.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2026/86__art_10" gd:GUID="df41f00b-fdde-4c2f-b0fe-6cfa68968e9c">
+        <nr>10</nr>
+        <ustep eId="DU/2026/86__art_10__ust_1" gd:GUID="43074ad3-5224-4b5d-8e13-b6d4ad787aae">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="3bd573bd-4579-4f4f-8c5f-f6354f751743" fragment="1" gd:fragmentGUID="cb6c8f1a-b80d-433f-a290-b8a4cecb3b85">W razie śmierci osoby, która zgłosiła wniosek o świadczenie określone ustawą, świadczenie należne jej do dnia śmierci wypłaca się małżonkowi, dzieciom, z którymi prowadziła wspólne gospodarstwo domowe, a w przypadku ich braku – małżonkowi i dzieciom, z którymi osoba ta nie prowadziła wspólnego gospodarstwa domowego, a w razie ich braku – innym członkom rodziny uprawnionym do renty rodzinnej lub na których utrzymaniu pozostawała ta osoba.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/86__art_10__ust_2" gd:GUID="59d03b51-a802-4220-8902-e1c8b9e71e8d">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="bed83363-5dc7-44f4-bc53-4857d283239e" fragment="1" gd:fragmentGUID="b1fae688-b2a2-475f-b309-2429c51f164e">Osoby wymienione w ust. 1 mają prawo do udziału w dalszym prowadzeniu postępowania w sprawie świadczenia, nieukończonego wskutek śmierci osoby, która o to świadczenie wystąpiła.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/86__art_10__ust_3" gd:GUID="60700366-8d67-49d3-b8bd-d69a5c0b11c6">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="3d8c6672-c416-4e7e-a997-8cb4929dd50e" fragment="1" gd:fragmentGUID="923a2e57-b635-4b1b-83db-a0b263f4e688">Roszczenie o wypłatę świadczenia, o którym mowa w ust. 1, wygasa po upływie 12 miesięcy od dnia śmierci osoby, której świadczenie przysługiwało, chyba że przed upływem tego okresu zostanie zgłoszony wniosek o dalsze prowadzenie postępowania.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2026/86__art_11" gd:GUID="5d1fdb6e-a4e8-49fd-8ce5-0f78348be91c">
+        <nr>11</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="171ddaad-f0e4-4a20-a033-72af528f5a50">
+          <p>
+            <zdanie nr="1" gd:zdGUID="814d86cc-ee5b-4843-9d63-0f0ae307de4f" fragment="1" gd:fragmentGUID="5b143752-d16e-43b1-b2b0-21a27d6db306">Do świadczenia przysługuje dodatek pielęgnacyjny na zasadach i w wysokości określonych w art. 75 ustawy o emeryturach i rentach z FUS.</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2026/86__art_12" gd:GUID="f0db1af0-538f-48b7-b183-9fcb8efe2002">
+        <nr>12</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="6a9e693f-93db-4619-a050-d4bb98d3d6e0">
+          <p>
+            <zdanie nr="1" gd:zdGUID="c3b89f22-deaa-486e-8b42-1d376b54bb24" fragment="1" gd:fragmentGUID="2041c1b3-71e6-428e-9b7f-1f5700a7eff5">Osobie, która pokryła koszty pogrzebu po śmierci:</zdanie>
+          </p>
+          <punkt eId="DU/2026/86__art_12__pkt_1" gd:GUID="2a15671c-bc6a-48d9-a33e-f818c58680ee">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="c3b89f22-deaa-486e-8b42-1d376b54bb24" fragment="2" gd:fragmentGUID="2a740f56-d16f-42b9-8f9b-6213f61cd6b5">uprawnionego,</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2026/86__art_12__pkt_2" gd:GUID="35688408-949a-4083-9b1f-f27479817509">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="c3b89f22-deaa-486e-8b42-1d376b54bb24" fragment="3" gd:fragmentGUID="7cffe3b5-df6b-47bb-9c79-efed2b16d768">członka rodziny uprawnionego</zdanie>
+            </p>
+          </punkt>
+          <czesc-wspolna-punkt eId="DU/2026/86__art_12__czw" gd:GUID="e854f902-e2e4-4e4c-9d56-eb5af66b07f6">
+            <p>
+              <zdanie nr="1" gd:zdGUID="c3b89f22-deaa-486e-8b42-1d376b54bb24" fragment="4" gd:fragmentGUID="03dc8495-54bb-4fbc-9f97-0ad0b1bf71ce">– przysługuje zasiłek pogrzebowy na zasadach określonych w art. 77–81 i art. 99 ustawy o emeryturach i rentach z FUS.</zdanie>
+            </p>
+          </czesc-wspolna-punkt>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2026/86__art_13" gd:GUID="0388409b-725f-4bf8-b95f-95b4bf9e1f9b">
+        <nr>13</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="fefd4fb1-9a35-4735-9694-b0cf342ae59a">
+          <p>
+            <zdanie nr="1" gd:zdGUID="2026cc19-4cc5-4b5c-afa9-6b72f3305097" fragment="1" gd:fragmentGUID="0e25fd6d-b797-44fd-b64b-7d45be73ed04">Dodatek pielęgnacyjny oraz zasiłek pogrzebowy finansowane są z budżetu państwa.</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2026/86__art_14" gd:GUID="b11ac99b-e69b-4bf1-a808-c1aedb2518b0">
+        <nr>14</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="1eff2afd-9f2d-4a56-8b05-7734432aafb2">
+          <p>
+            <zdanie nr="1" gd:zdGUID="e906f73d-12a0-422b-ae0e-44b5e53c4936" fragment="1" gd:fragmentGUID="7b12b353-a71b-4e27-a4dd-7c95b3bac92f">Postępowanie w sprawie świadczenia wszczyna się na wniosek nauczyciela zgłoszony bezpośrednio lub za pośrednictwem płatnika składek w organie rentowym.</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2026/86__art_15" gd:GUID="65837459-6297-46f7-83cc-2b89cd540d29">
+        <nr>15</nr>
+        <ustep eId="DU/2026/86__art_15__ust_1" gd:GUID="860bb6f1-b0f5-44a2-a89d-9e34c5e498e6">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="ebec4caa-537d-4fd5-88a2-e629622f0751" fragment="1" gd:fragmentGUID="d49c4618-2dcc-4164-b669-b204f23b0285">Decyzję w sprawie świadczenia wydaje i świadczenie to wypłaca:</zdanie>
+          </p>
+          <punkt eId="DU/2026/86__art_15__ust_1__pkt_1" gd:GUID="34ec0d21-7c97-4789-a8c6-c400bc49d1a6">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="ebec4caa-537d-4fd5-88a2-e629622f0751" fragment="2" gd:fragmentGUID="07f075b8-0a2b-4821-99c0-4b5475d32f50">organ rentowy właściwy ze względu na miejsce zamieszkania nauczyciela;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2026/86__art_15__ust_1__pkt_2" gd:GUID="bd47b5c5-7e2a-40d7-970b-0d1e290254af">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="ebec4caa-537d-4fd5-88a2-e629622f0751" fragment="3" gd:fragmentGUID="0c2e7d48-cb62-4d64-84a8-9db154acd9b7">organ rentowy właściwy ze względu na ostatnie miejsce zamieszkania nauczyciela w Rzeczypospolitej Polskiej, jeżeli zamieszkuje on poza granicami Rzeczypospolitej Polskiej.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2026/86__art_15__ust_2" gd:GUID="0dfe616b-cd9d-4e6e-b3d7-6045ac70539e">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="9d5c8d40-75f0-4c38-af37-04bc6385ff8b" fragment="1" gd:fragmentGUID="246d8900-5f05-451d-ad3e-dbf344b02ba6">Od decyzji w sprawie świadczenia przysługuje odwołanie do sądu, na zasadach określonych w art. 83 ustawy z dnia 13 października 1998 r. o systemie ubezpieczeń społecznych, zwanej dalej „ustawą o systemie ubezpieczeń społecznych”.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2026/86__art_16" gd:GUID="3099378e-f69d-40fc-b47c-8551f17af9ca">
+        <nr>16</nr>
+        <ustep eId="DU/2026/86__art_16__ust_1" gd:GUID="ac533a0a-3af9-4121-bbb8-b4fcb9760328">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="c5d07e0f-de05-48c4-89b8-c82822c5f221" fragment="1" gd:fragmentGUID="b30c1880-a04f-4f64-9429-3a7cc5b23a03">Świadczenie wypłaca się za miesiąc kalendarzowy w terminach i na zasadach przewidzianych dla wypłaty emerytur określonych w art. 129, art. 130, art. 132–135 i art. 136b ustawy o emeryturach i rentach z FUS.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/86__art_16__ust_2" gd:GUID="1f0abd7f-7339-4cd0-b391-2fd78fca5bb1">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="fb3b8fc2-df45-4a75-91e8-9836cb897a9c" fragment="1" gd:fragmentGUID="00ab4026-02a7-4711-9c2a-84830ac2a802">Kwotę świadczenia za niepełny miesiąc ustala się, dzieląc kwotę świadczenia przez liczbę dni kalendarzowych w miesiącu, a otrzymaną kwotę mnoży się przez liczbę dni kalendarzowych, za które świadczenie przysługuje.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/86__art_16__ust_3" gd:GUID="f9e7c2c7-16fe-4343-bba4-be3c0dea1c96">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="ea55f41f-2146-4f01-9e67-9e78f1b261cd" fragment="1" gd:fragmentGUID="fa724700-f4ee-4843-a6bf-d6b405cfc4b2">W razie śmierci uprawnionego wstrzymanie wypłaty świadczenia następuje od miesiąca przypadającego po miesiącu, w którym zmarła osoba uprawniona.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2026/86__art_17" gd:GUID="42035e81-60e2-4c26-90ca-0e5a22a3f192">
+        <nr>17</nr>
+        <ustep eId="DU/2026/86__art_17__ust_1" gd:GUID="c67bc073-95a0-40c8-a003-0a5212b814b5">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="d7ce3038-bc12-438b-918c-b46a14c8da0f" fragment="1" gd:fragmentGUID="b6a799a3-aebf-4ea1-ad5e-65018741a619">W razie zbiegu prawa do świadczenia z prawem do renty, uposażenia w stanie spoczynku, zasiłku przedemerytalnego, świadczenia przedemerytalnego lub innego świadczenia o charakterze emerytalnym lub rentowym, ustalonym na podstawie odrębnych ustaw, przysługuje tylko jedno z tych świadczeń – wyższe lub wybrane przez uprawnionego, z zastrzeżeniem ust. 2.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/86__art_17__ust_2" gd:GUID="4e8f00e0-2c6c-4b23-9188-b8fe6c36af73">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="dae25140-cac4-45c7-9d70-ed5d43e9559e" fragment="1" gd:fragmentGUID="fcbab8a4-d347-494d-a264-2b6ed0ddb925">W razie zbiegu prawa do świadczenia z prawem do renty rodzinnej, o której mowa w art. 67 ust. 1 pkt 3 ustawy o emeryturach i rentach z FUS, osobie uprawnionej wypłaca się, zależnie od jej wyboru:</zdanie>
+          </p>
+          <punkt eId="DU/2026/86__art_17__ust_2__pkt_1" gd:GUID="640e8857-d6d3-4e96-8558-de97526453bf">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="dae25140-cac4-45c7-9d70-ed5d43e9559e" fragment="2" gd:fragmentGUID="f2052f67-0c34-4523-8a0f-1e8e83e0a47c">przysługujące świadczenie oraz 25 % renty rodzinnej albo</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2026/86__art_17__ust_2__pkt_2" gd:GUID="c6306fb9-62fd-4296-9a58-b2a877ba67ee">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="dae25140-cac4-45c7-9d70-ed5d43e9559e" fragment="3" gd:fragmentGUID="d33ebc99-372e-4625-9a58-ad45609b27da">przysługującą rentę rodzinną oraz 25 % świadczenia.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2026/86__art_17__ust_3" gd:GUID="17e5c399-f056-4134-be06-25196b15c763">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="e9b1820b-5305-4741-8d2a-ea785456db32" fragment="1" gd:fragmentGUID="cc8148ec-02fc-4408-bb55-5a41fb7942cb">Osoba uprawniona ma prawo do wypłaty świadczeń na zasadach określonych w ust. 2 w przypadku:</zdanie>
+          </p>
+          <punkt eId="DU/2026/86__art_17__ust_3__pkt_1" gd:GUID="a4e64f5f-639b-4dde-8add-2219803f3a1e">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="e9b1820b-5305-4741-8d2a-ea785456db32" fragment="2" gd:fragmentGUID="72749632-274e-4ef0-8064-58fc2039cb99">osiągnięcia wieku emerytalnego określonego w art. 24 ust. 1 ustawy o emeryturach i rentach z FUS;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2026/86__art_17__ust_3__pkt_2" gd:GUID="dc75bdc2-65bf-4ca4-b12f-17bcd7a33356">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="e9b1820b-5305-4741-8d2a-ea785456db32" fragment="3" gd:fragmentGUID="3c9ab386-fafd-4cbf-87bc-2e0733796862">pozostawania we wspólności małżeńskiej do dnia śmierci małżonka;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2026/86__art_17__ust_3__pkt_3" gd:GUID="48098274-1089-4d68-9f8a-6b899cbe8edc">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="e9b1820b-5305-4741-8d2a-ea785456db32" fragment="4" gd:fragmentGUID="7afad7a1-2435-45ce-9b58-7fef1e8a6d8d">nabycia prawa do renty rodzinnej po zmarłym małżonku niewcześniej niż 5 lat przed osiągnięciem wieku emerytalnego określonego w art. 24 ust. 1 ustawy o emeryturach i rentach z FUS.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2026/86__art_17__ust_4" gd:GUID="be829a70-a456-42d7-bb66-af5f6bb0c63e">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="668a4da9-61a0-4a1a-a7ef-abe8ffa932ef" fragment="1" gd:fragmentGUID="9e6d7cad-066c-4408-a123-276abbf3a9bf">Wypłata świadczeń na zasadach określonych w ust. 2 ustaje z dniem poprzedzającym dzień zawarcia nowego związku małżeńskiego przez osobę uprawnioną.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/86__art_17__ust_5" gd:GUID="c1766d3c-9e3e-436c-9b26-c54625f0cd43">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="d91576b1-6f27-433b-9f15-beafd32d3c7d" fragment="1" gd:fragmentGUID="3f4e8b21-5371-4564-8941-5001eea13cd1">Do ustalenia wysokości świadczeń, o których mowa w ust. 2, stosuje się zasady przewidziane w przepisach ustawy o emeryturach i rentach z FUS.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/86__art_17__ust_6" gd:GUID="ae62757e-3a4d-4cb4-b264-273107c4b16d">
+          <nr>6</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="ec23c108-ca26-4db2-b58f-957a73b3bfa9" fragment="1" gd:fragmentGUID="fc848fc1-cc09-445d-8e80-a14b4566a41d">W przypadku skorzystania z prawa do świadczenia nie przysługuje prawo do rekompensaty, o której mowa w ustawie z dnia 19 grudnia 2008 r. o emeryturach pomostowych (Dz. U. z 2024 r. poz. 1696).</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2026/86__art_18" gd:GUID="43357b2d-f63d-42ce-90f1-354eed19f92d">
+        <nr>18</nr>
+        <ustep eId="DU/2026/86__art_18__ust_1" gd:GUID="743d9502-08d2-4976-aad1-308df9fff2ff">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="138cc469-bb8c-400d-aac6-c94bc61dce39" fragment="1" gd:fragmentGUID="2822238a-b42b-4ad3-b6b1-844769b1df15">W zakresie postępowania w sprawach świadczenia stosuje się odpowiednio przepisy art. 114, art. 116 i art. 117–128a ustawy o emeryturach i rentach z FUS.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/86__art_18__ust_2" gd:GUID="644bd9cb-0406-4d80-adfb-a39f6ef803e5">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="88356da7-5903-4ab7-beb0-cd5ce23ebc8a" fragment="1" gd:fragmentGUID="c0cdbf10-44d8-4726-938d-2fad31e50159">W zakresie postępowania w sprawach zwrotu nienależnie pobranego świadczenia, egzekucji i potrąceń stosuje się odpowiednio przepisy art. 138–144 ustawy o emeryturach i rentach z FUS oraz przepisy art. 84 ustawy o systemie ubezpieczeń społecznych.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/86__art_18__ust_3" gd:GUID="713b399c-0814-4108-a431-4d0db50a76f6">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="714e6971-27d0-4221-8e83-b3f21036bd2e" fragment="1" gd:fragmentGUID="59c4927c-2224-4089-ab3c-a5cd57231530">W razie zbiegu prawa do świadczenia z prawami, o których mowa w art. 17 ust. 1, stosuje się odpowiednio art. 98 ustawy o emeryturach i rentach z FUS.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2026/86__art_19" gd:GUID="d79bcf35-123b-4f50-bc88-7795f080679b">
+        <nr />
+        <nr-od>19</nr-od>
+        <nr-do>29</nr-do>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="b08f8417-ea2e-4a18-854d-1d10f2ca8ee7">
+          <p>
+            <zdanie nr="1" gd:zdGUID="74b9449f-780f-46ad-ae4c-d35daab09f05" fragment="1" gd:fragmentGUID="7214be9c-03d2-4483-bd74-52ff887a62a7">(pominięte)</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2026/86__art_30" gd:GUID="25517c84-3295-4da0-abab-44d3a7253a10">
+        <nr>30</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="63a3e5cc-ac1b-4871-b686-e02343a54b1a">
+          <p>
+            <zdanie nr="1" gd:zdGUID="dc3e5a02-9150-425d-86c3-dda9d2d798c7" fragment="1" gd:fragmentGUID="6104ae6a-7809-4845-8468-245b13e41613">Ustawa wchodzi w życie pierwszego dnia miesiąca następującego po miesiącu ogłoszenia<odnosnik id-odnosnika="7" symbol="7" gd:GUID="e8817e29-fd2b-4f55-8ae8-6ba32226e748"><p><zdanie nr="1" gd:zdGUID="7c4a020d-2a01-4723-8772-178b9c86d261" fragment="1" gd:fragmentGUID="e5bade1a-31fa-495d-9930-b0f826734c96">Ustawa została ogłoszona w dniu 23 czerwca 2009 r.</zdanie></p></odnosnik>, z wyjątkiem art. 26 pkt 2, który wchodzi w życie z dniem ogłoszenia.</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+    </ustawa>
+  </obwieszczenie>
+</akt-prawny>

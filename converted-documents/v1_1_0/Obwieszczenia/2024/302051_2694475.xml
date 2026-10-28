@@ -1,0 +1,1099 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <obwieszczenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2024/1513</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>781cb140-81f4-4add-894d-993bd75eb437</gd:GUIDwersji>
+      <AdresISAP>WDU20240001513</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2024</Rok>
+      <Pozycja>1513</Pozycja>
+      <AdresWyswietlany>Dz.U. 2024 poz. 1513</AdresWyswietlany>
+      <Tytul>Obwieszczenie Marszałka Sejmu Rzeczypospolitej Polskiej z dnia 10 października 2024 r. w sprawie ogłoszenia jednolitego tekstu ustawy o świadczeniu usług drogą elektroniczną</Tytul>
+      <Rodzaj>OBW_TJ</Rodzaj>
+      <DataOgloszenia>2024-10-14</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2024-10-10</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_ujednolicenie_2024-10-14_DU-2024-1513_domyslne" rodzaj="ujednolicenie" pochodzenie="domyslne-z-aktu" data="2024-10-14" />
+          <Zdarzenie id="zdarz_wejscie_2024-11-10_DU-2024-1222_odczytane" rodzaj="wejscie-w-zycie" pochodzenie="odczytane" data="2024-11-10" podstawa="art. 26 pkt 1 lit. a; art. 26 pkt 1 lit. b; art. 26 pkt 2; art. 26 pkt 4; art. 26 pkt 6" zrodlo="https://eli.gov.pl/eli/DU/2024/1222" dowod="DU/2024/1513__odn_3" />
+          <Zdarzenie id="zdarz_uchylenie_2024-11-10_DU-2024-1222_odczytane" rodzaj="uchylenie" pochodzenie="odczytane" data="2024-11-10" podstawa="art. 26 pkt 3; art. 26 pkt 5" zrodlo="https://eli.gov.pl/eli/DU/2024/1222" dowod="DU/2024/1513__odn_3" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_ujednolicenie.zdarz_ujednolicenie_2024-10-14_DU-2024-1513_domyslne" glowna="true">
+          <Przedzial rodzaj="ujednolicenie" od="zdarz_ujednolicenie_2024-10-14_DU-2024-1513_domyslne" />
+        </GrupaCzasowa>
+        <GrupaCzasowa id="okr_obowiazywanie.x.zdarz_wejscie_2024-11-10_DU-2024-1222_odczytane" glowna="false">
+          <Przedzial rodzaj="obowiazywanie" do="zdarz_wejscie_2024-11-10_DU-2024-1222_odczytane" />
+        </GrupaCzasowa>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2024-11-10_DU-2024-1222_odczytane.x" glowna="false">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2024-11-10_DU-2024-1222_odczytane" />
+        </GrupaCzasowa>
+        <GrupaCzasowa id="okr_obowiazywanie.x.zdarz_uchylenie_2024-11-10_DU-2024-1222_odczytane" glowna="false">
+          <Przedzial rodzaj="obowiazywanie" do="zdarz_uchylenie_2024-11-10_DU-2024-1222_odczytane" />
+        </GrupaCzasowa>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_uchylenie_2024-11-10_DU-2024-1222_odczytane.x" glowna="false">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_uchylenie_2024-11-10_DU-2024-1222_odczytane" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <DataObowiazywaniaWersji>
+        <Od>zdarz_ujednolicenie_2024-10-14_DU-2024-1513_domyslne</Od>
+      </DataObowiazywaniaWersji>
+      <Organy>
+        <Organ gd:GUID="617e4163-a861-44da-bcd4-54ae17d7ccd2" rola="wydajacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/MSEJMU">
+          <Nazwa>Marszałek Sejmu</Nazwa>
+          <OrganPodpisujacy>Marszałek Sejmu</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>S.</imie> <nazwisko>Hołownia</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Obwieszczenie</rodzaj-aktu>
+    <autor-aktu>Marszałka Sejmu Rzeczypospolitej Polskiej</autor-aktu>
+    <data>z dnia 10 października 2024 r.</data>
+    <tytul>w sprawie ogłoszenia jednolitego tekstu ustawy o świadczeniu usług drogą elektroniczną</tytul>
+    <punkt-OTJ eId="DU/2024/1513__pkt_1" gd:GUID="e66aa974-e6cd-47d8-b0df-e21f83d36b9d">
+      <nr>1</nr>
+      <p>
+        <zdanie nr="1" gd:zdGUID="bf421fc2-1067-4ed1-ac81-a8e44d517491" fragment="1" gd:fragmentGUID="6914c966-f2c1-4e8b-96d7-4e9ed7690194">Na podstawie art. 16 ust. 1 zdanie pierwsze ustawy z dnia 20 lipca 2000 r. o ogłaszaniu aktów normatywnych i niektórych innych aktów prawnych (Dz. U. z 2019 r. poz. 1461) ogłasza się w załączniku do niniejszego obwieszczenia jednolity tekst ustawy z dnia 18 lipca 2002 r. o świadczeniu usług drogą elektroniczną (Dz. U. z 2020 r. poz. 344), z uwzględnieniem zmian wprowadzonych ustawą z dnia 12 lipca 2024 r. – Przepisy wprowadzające ustawę – Prawo komunikacji elektronicznej (Dz. U. poz. 1222) oraz zmian wynikających z przepisów ogłoszonych przed dniem 9 października 2024 r.</zdanie>
+      </p>
+    </punkt-OTJ>
+    <punkt-OTJ eId="DU/2024/1513__pkt_2" gd:GUID="b4c8c7bc-a55f-470d-8c79-ad9d288361b6">
+      <nr>2</nr>
+      <p>
+        <zdanie nr="1" gd:zdGUID="73500572-95d0-4c9f-b0cb-cfe3cb603b9f" fragment="1" gd:fragmentGUID="01acca4c-aa8c-4144-8987-c04af8bcb87c">Podany w załączniku do niniejszego obwieszczenia tekst jednolity ustawy nie obejmuje art. 124 ustawy z dnia 12 lipca 2024 r. – Przepisy wprowadzające ustawę – Prawo komunikacji elektronicznej (Dz. U. poz. 1222), który stanowi:<tresc-strukt cudzyslowy="oba" gd:GUID="3029408f-b6a7-48e4-bcf4-948d9e2648c7"><artykul eId="DU/2024/1222__art_124" gd:GUID="ff49fd1c-fcfb-41ba-9b7e-7cf111599f49"><nr>124</nr><ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="e669dbf9-cefa-4c4f-8bfa-2274914e6d08"><p><zdanie nr="1" gd:zdGUID="51557817-8775-4c58-bb8c-7c412f4b787a" fragment="1" gd:fragmentGUID="57822b4f-b198-45e7-8e15-5d290fe9a7e8">Ustawa wchodzi w życie po upływie 3 miesięcy od dnia ogłoszenia, z wyjątkiem:</zdanie></p><punkt eId="DU/2024/1222__art_124__pkt_1" gd:GUID="c88a3e00-524d-4786-9b07-73af16bcbd71"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="51557817-8775-4c58-bb8c-7c412f4b787a" fragment="2" gd:fragmentGUID="95f9724c-b369-4f5c-901b-d4af8367fc3b">art. 1, art. 39 pkt 11 lit. b w zakresie art. 16a ust. 4 pkt 2c i 2d, art. 46 pkt 5, art. 52 pkt 1, art. 63, art. 68 ust. 2, art. 80 ust. 3 i 5–8 oraz art. 120, które wchodzą w życie z dniem następującym po dniu ogłoszenia;</zdanie></p></punkt><punkt eId="DU/2024/1222__art_124__pkt_2" gd:GUID="e9e87248-86a7-4887-8316-c6da6953e489"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="51557817-8775-4c58-bb8c-7c412f4b787a" fragment="3" gd:fragmentGUID="ea2e286a-ae31-4e68-8ffa-7f46a57b9250">art. 44 pkt 9 w zakresie art. 20 ust. 1 pkt 2 lit. b, który wchodzi w życie z dniem 1 grudnia 2024 r.;</zdanie></p></punkt><punkt eId="DU/2024/1222__art_124__pkt_3" gd:GUID="62281150-e386-46ef-a2d1-52cf6dd1e90c"><nr>3</nr><p><zdanie nr="1" gd:zdGUID="51557817-8775-4c58-bb8c-7c412f4b787a" fragment="4" gd:fragmentGUID="60d59e3e-d55b-4aed-917e-bcce39836c21">art. 39 pkt 24 i 27, które wchodzą w życie z dniem 1 stycznia 2025 r.;</zdanie></p></punkt><punkt eId="DU/2024/1222__art_124__pkt_4" gd:GUID="a0392b5e-c89c-43b4-bb44-1bbc551b7379"><nr>4</nr><p><zdanie nr="1" gd:zdGUID="51557817-8775-4c58-bb8c-7c412f4b787a" fragment="5" gd:fragmentGUID="1ca23ee6-838d-4e6f-a7f0-0bf754cdb437">art. 39 pkt 31, który wchodzi w życie po upływie 14 dni od dnia ogłoszenia;</zdanie></p></punkt><punkt eId="DU/2024/1222__art_124__pkt_5" gd:GUID="b3a9c0b4-4010-4929-850e-3806563d79ac"><nr>5</nr><p><zdanie nr="1" gd:zdGUID="51557817-8775-4c58-bb8c-7c412f4b787a" fragment="6" gd:fragmentGUID="7d3123d1-9543-4d86-a5fe-7dc77593b48e">art. 49 i art. 106, które wchodzą w życie z dniem 18 października 2024 r.</zdanie></p></punkt></ustep-n></artykul></tresc-strukt>.</zdanie>
+      </p>
+    </punkt-OTJ>
+    <organ-podpisujacy>Marszałek Sejmu: <i><osoba podpisujacy="true" gd:osobaGUID="42b3a70e-a3c7-424b-bcf4-75d1302f17fb"><imie>S.</imie> <nazwisko>Hołownia</nazwisko></osoba></i></organ-podpisujacy>
+    <ustawa>
+      <zalacznik-do>Załącznik do obwieszczenia Marszałka Sejmu Rzeczypospolitej Polskiej z dnia 10 października 2024 r. (Dz. U. poz. 1513)</zalacznik-do>
+      <rodzaj-aktu>Ustawa</rodzaj-aktu>
+      <data>z dnia 18 lipca 2002 r.</data>
+      <tytul>o świadczeniu usług drogą elektroniczną<odnosnik id-odnosnika="1" symbol="1" gd:GUID="7b3dcddc-c973-4c7f-9193-2be17a1e6416"><p><zdanie nr="1" gd:zdGUID="8bd9c8c5-0bcf-446c-a092-2ee2ba034dee" fragment="1" gd:fragmentGUID="bcdd4555-e40d-4c25-a3f5-14e1034dfe7f">Niniejsza ustawa dokonuje w zakresie swojej regulacji wdrożenia dyrektywy 2000/31/WE z dnia 8 czerwca 2000 r. w sprawie niektórych aspektów prawnych usług społeczeństwa informacyjnego, w szczególności handlu elektronicznego na rynku wewnętrznym (dyrektywa o handlu elektronicznym) (Dz. Urz. WE L 178 z 17.07.2000).</zdanie></p><fragment-odnosnik><p><zdanie nr="1" gd:zdGUID="004982ab-7a0f-4443-9908-7531d926428e" fragment="1" gd:fragmentGUID="f1d2c0e9-a520-42d4-9200-8d99465464c0">Dane dotyczące ogłoszenia aktów prawa Unii Europejskiej, zamieszczone w niniejszej ustawie – z dniem uzyskania przez Rzeczpospolitą Polską członkostwa w Unii Europejskiej – dotyczą ogłoszenia tych aktów w Dzienniku Urzędowym Unii Europejskiej – wydanie specjalne.</zdanie></p></fragment-odnosnik></odnosnik></tytul>
+      <rozdzial eId="DU/2024/1513__rozdz_1" gd:GUID="c3c99775-0cd2-4eb3-b833-fad0bfe404ba">
+        <naglowek-rozdzialu>
+          <nr>1</nr>
+          <p>Przepisy ogólne</p>
+        </naglowek-rozdzialu>
+        <oddzial-n brak-eid="jednostka-nieoznaczona" gd:GUID="e20d5af8-d04c-4ef7-a62e-041014ecc005">
+          <artykul eId="DU/2024/1513__art_1" gd:GUID="e5145ef0-a34c-485c-b294-2f82ee1105db">
+            <nr>1</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="b365702f-a68b-400b-807b-747628092f99">
+              <p>
+                <zdanie nr="1" gd:zdGUID="b8a6174e-0647-4752-ad36-6a0f0345767b" fragment="1" gd:fragmentGUID="f320841f-c0f4-47f8-b1dc-602505de3f22">Ustawa określa:</zdanie>
+              </p>
+              <punkt eId="DU/2024/1513__art_1__pkt_1" gd:GUID="8a534be9-ec9c-4cf2-a159-d53618b36e41">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="b8a6174e-0647-4752-ad36-6a0f0345767b" fragment="2" gd:fragmentGUID="a219f0bd-b1c9-4482-8097-317100cfb49c">obowiązki usługodawcy związane ze świadczeniem usług drogą elektroniczną;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1513__art_1__pkt_2" gd:GUID="832ca154-8d57-41a2-b199-5357ab5ae563">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="b8a6174e-0647-4752-ad36-6a0f0345767b" fragment="3" gd:fragmentGUID="a84669e4-0404-4ba7-94a1-5b7a60576b3f">zasady wyłączania odpowiedzialności usługodawcy z tytułu świadczenia usług drogą elektroniczną;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1513__art_1__pkt_3" gd:GUID="3bec56db-88a0-40b1-8b99-abacc1dc826f">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="b8a6174e-0647-4752-ad36-6a0f0345767b" fragment="4" gd:fragmentGUID="fc33487b-9966-404c-922f-32cb6effbdb2">zasady ochrony danych osobowych osób fizycznych korzystających z usług świadczonych drogą elektroniczną.</zdanie>
+                </p>
+              </punkt>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2024/1513__art_2" gd:GUID="55fd48f0-09d4-46c2-813c-65151e4f924c">
+            <nr>2</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="3d005e95-4546-40d1-a5c0-349bd82fbf55">
+              <p>
+                <zdanie nr="1" gd:zdGUID="fd0d45f5-7910-4435-ad61-2172e2046b10" fragment="1" gd:fragmentGUID="5a13fcc6-156f-43a9-92d9-bd10591f7442">Określenia użyte w ustawie oznaczają:</zdanie>
+              </p>
+              <punkt eId="DU/2024/1513__art_2__pkt_1" gd:GUID="2e91e0a2-e5be-401d-9916-fbeeffe7e841">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="fd0d45f5-7910-4435-ad61-2172e2046b10" fragment="2" gd:fragmentGUID="0e1f941a-06dd-4f94-a393-817d6c6ed198">adres elektroniczny – oznaczenie systemu teleinformatycznego umożliwiające porozumiewanie się za pomocą środków komunikacji elektronicznej, w szczególności poczty elektronicznej;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1513__art_2__pkt_2" gd:GUID="c10684d1-dce6-4ec0-bd79-d6cecc531f3c">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="fd0d45f5-7910-4435-ad61-2172e2046b10" fragment="3" gd:fragmentGUID="28e80395-2f18-47cb-93dc-03380009b721">informacja handlowa – każdą informację przeznaczoną bezpośrednio lub pośrednio do promowania towarów, usług lub wizerunku przedsiębiorcy lub osoby wykonującej zawód, której prawo do wykonywania zawodu jest uzależnione od spełnienia wymagań określonych w odrębnych ustawach, z wyłączeniem informacji umożliwiającej porozumiewanie się za pomocą środków komunikacji elektronicznej z określoną osobą oraz informacji o towarach i usługach niesłużącej osiągnięciu efektu handlowego pożądanego przez podmiot, który zleca jej rozpowszechnianie, w szczególności bez wynagrodzenia lub innych korzyści od producentów, sprzedawców i świadczących usługi;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1513__art_2__pkt_3" gd:GUID="0267e744-6ff4-4cc3-b629-f7599327ba40" okres="okr_obowiazywanie.x.zdarz_wejscie_2024-11-10_DU-2024-1222_odczytane" obowiazuje-do="2024-11-10">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="fd0d45f5-7910-4435-ad61-2172e2046b10" fragment="4" gd:fragmentGUID="7855a68c-6919-46d1-9e8d-e6bbf3b68fad"><odnosnik id-odnosnika="2" symbol="2" gd:GUID="9986b6cd-7990-44ab-9c6d-f452a6592daf"><p><zdanie nr="1" gd:zdGUID="9405b358-cb8c-498d-bc16-ff5d5aa2a13d" fragment="1" gd:fragmentGUID="5a767933-5819-43f4-bf89-995acaedcd29">W tym brzmieniu obowiązuje do wejścia w życie zmiany, o której mowa w odnośniku 3.</zdanie></p></odnosnik> system teleinformatyczny – zespół współpracujących ze sobą urządzeń informatycznych i oprogramowania, zapewniający przetwarzanie i przechowywanie, a także wysyłanie i odbieranie danych poprzez sieci telekomunikacyjne za pomocą właściwego dla danego rodzaju sieci telekomunikacyjnego urządzenia końcowego w rozumieniu ustawy z dnia 16 lipca 2004 r. – Prawo telekomunikacyjne (Dz. U. z 2024 r. poz. 34, 731 i 834);</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1513__art_2__pkt_3" gd:GUID="954af9a4-08b7-4761-81b5-45b0bbe8bb24" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-10_DU-2024-1222_odczytane.x" wejscie-w-zycie="2024-11-10">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="fd0d45f5-7910-4435-ad61-2172e2046b10" fragment="5" gd:fragmentGUID="9b5017f3-0692-460f-940d-277acdfbdbcb"><odnosnik id-odnosnika="3" symbol="3" gd:GUID="554ae6df-6748-4ead-9f94-a25c9e473f84"><p><zdanie nr="1" gd:zdGUID="14792f62-9312-499a-ad93-1e384d15d165" fragment="1" gd:fragmentGUID="890b909d-eda6-4249-ad77-06d3a2dd6cc0">Ze zmianą wprowadzoną przez art. 26 pkt 1 lit. a ustawy z dnia 12 lipca 2024 r. – Przepisy wprowadzające ustawę – Prawo komunikacji elektronicznej (Dz. U. poz. 1222), która wejdzie w życie z dniem 10 listopada 2024 r.</zdanie></p></odnosnik> system teleinformatyczny – zespół współpracujących ze sobą urządzeń informatycznych i oprogramowania, zapewniający przetwarzanie i przechowywanie, a także wysyłanie i odbieranie danych poprzez sieci telekomunikacyjne za pomocą właściwego dla danego rodzaju sieci telekomunikacyjnego urządzenia końcowego w rozumieniu ustawy z dnia 12 lipca 2024 r. – Prawo komunikacji elektronicznej (Dz. U. poz. 1221);</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1513__art_2__pkt_4" gd:GUID="65bc2dda-edf0-463a-822c-77aa5e3213bc" okres="okr_obowiazywanie.x.zdarz_wejscie_2024-11-10_DU-2024-1222_odczytane" obowiazuje-do="2024-11-10">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="fd0d45f5-7910-4435-ad61-2172e2046b10" fragment="6" gd:fragmentGUID="f5c0dee5-1d25-4f2e-b0b4-dfe2d2ceba50"><odnosnik id-odnosnika="4" symbol="4" gd:GUID="304cb993-de00-4c8c-8a4c-c4fd58460c61"><p><zdanie nr="1" gd:zdGUID="758f8664-094e-4399-8d8e-e05614003d5b" fragment="1" gd:fragmentGUID="8ee26886-6621-4fa1-af29-2b57d2642cbf">W tym brzmieniu obowiązuje do wejścia w życie zmiany, o której mowa w odnośniku 5.</zdanie></p></odnosnik> świadczenie usługi drogą elektroniczną – wykonanie usługi świadczonej bez jednoczesnej obecności stron (na odległość), poprzez przekaz danych na indywidualne żądanie usługobiorcy, przesyłanej i otrzymywanej za pomocą urządzeń do elektronicznego przetwarzania, włącznie z kompresją cyfrową, i przechowywania danych, która jest w całości nadawana, odbierana lub transmitowana za pomocą sieci telekomunikacyjnej w rozumieniu ustawy z dnia 16 lipca 2004 r. – Prawo telekomunikacyjne;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1513__art_2__pkt_4" gd:GUID="b95a3c3a-2e0e-41ad-b5e4-e656b3fdb1f5" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-10_DU-2024-1222_odczytane.x" wejscie-w-zycie="2024-11-10">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="fd0d45f5-7910-4435-ad61-2172e2046b10" fragment="7" gd:fragmentGUID="2097c43b-d89c-4b8b-8234-db0d7098ca7a"><odnosnik id-odnosnika="5" symbol="5" gd:GUID="bfe53d34-e018-4d80-8b12-cdcb0407b45c"><p><zdanie nr="1" gd:zdGUID="88446649-a94f-437b-81b9-4707162197d7" fragment="1" gd:fragmentGUID="bf9709ba-88b9-46dd-be49-330a3ad7ba42">Ze zmianą wprowadzoną przez art. 26 pkt 1 lit. b ustawy, o której mowa w odnośniku 3.</zdanie></p></odnosnik> świadczenie usługi drogą elektroniczną – wykonanie usługi świadczonej bez jednoczesnej obecności stron (na odległość), poprzez przekaz danych na indywidualne żądanie usługobiorcy, przesyłanej i otrzymywanej za pomocą urządzeń do elektronicznego przetwarzania, włącznie z kompresją cyfrową, i przechowywania danych, która jest w całości nadawana, odbierana lub transmitowana za pomocą sieci telekomunikacyjnej w rozumieniu ustawy z dnia 12 lipca 2024 r. – Prawo komunikacji elektronicznej;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1513__art_2__pkt_5" gd:GUID="298349bb-07c8-48d4-ba77-03eeac4cb785">
+                <nr>5</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="fd0d45f5-7910-4435-ad61-2172e2046b10" fragment="8" gd:fragmentGUID="55968417-a19d-4fd4-b36b-df11a396b415">środki komunikacji elektronicznej – rozwiązania techniczne, w tym urządzenia teleinformatyczne i współpracujące z nimi narzędzia programowe, umożliwiające indywidualne porozumiewanie się na odległość przy wykorzystaniu transmisji danych między systemami teleinformatycznymi, a w szczególności pocztę elektroniczną;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1513__art_2__pkt_6" gd:GUID="8e986c7e-0711-48be-8275-fde982b17845">
+                <nr>6</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="fd0d45f5-7910-4435-ad61-2172e2046b10" fragment="9" gd:fragmentGUID="5cf2496c-acb3-40f1-8f2e-a96035c8568c">usługodawca – osobę fizyczną, osobę prawną albo jednostkę organizacyjną nieposiadającą osobowości prawnej, która prowadząc, chociażby ubocznie, działalność zarobkową lub zawodową świadczy usługi drogą elektroniczną;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1513__art_2__pkt_7" gd:GUID="6f4ffbdc-de9c-4513-badd-03f9f7dd359f">
+                <nr>7</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="fd0d45f5-7910-4435-ad61-2172e2046b10" fragment="10" gd:fragmentGUID="7ce9d15e-0fe1-411c-8a11-ccb9301c2885">usługobiorca – osobę fizyczną, osobę prawną albo jednostkę organizacyjną nieposiadającą osobowości prawnej, która korzysta z usługi świadczonej drogą elektroniczną;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1513__art_2__pkt_8" gd:GUID="294b6b5e-cce7-41d4-885b-a3e5ffe27e84">
+                <nr>8</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="fd0d45f5-7910-4435-ad61-2172e2046b10" fragment="11" gd:fragmentGUID="0c6d6294-93e1-4763-8be3-8c7f622272fe">siedziba – siedziba przedsiębiorcy lub siedziba oddziału przedsiębiorcy zagranicznego wykonującego działalność gospodarczą na terytorium Rzeczypospolitej Polskiej.</zdanie>
+                </p>
+              </punkt>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2024/1513__art_3" gd:GUID="b397bbff-2af0-4ea8-be59-be04f0089957">
+            <nr>3</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="b70d5de9-ad9f-4a1d-8b7f-e12a674a905d">
+              <p>
+                <zdanie nr="1" gd:zdGUID="d41ec882-4b70-4c64-9190-7b7d2881735e" fragment="1" gd:fragmentGUID="605b3eaa-924a-40d7-883b-673c2eb4b375">Przepisów ustawy nie stosuje się do:</zdanie>
+              </p>
+              <punkt eId="DU/2024/1513__art_3__pkt_1" gd:GUID="bb513169-3278-42c6-b089-109686f362bb">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="d41ec882-4b70-4c64-9190-7b7d2881735e" fragment="2" gd:fragmentGUID="dedafebf-c517-4c6e-a582-faafa283145e">rozpowszechniania lub rozprowadzania programów radiowych lub programów telewizyjnych i związanych z nimi przekazów tekstowych w rozumieniu ustawy z dnia 29 grudnia 1992 r. o radiofonii i telewizji (Dz. U. z 2022 r. poz. 1722 oraz z 2024 r. poz. 96 i 1222), z wyłączeniem programów rozpowszechnianych wyłącznie w systemie teleinformatycznym;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1513__art_3__pkt_2" gd:GUID="106309b1-25d7-44f7-bb56-5ee7cc3e4855">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="d41ec882-4b70-4c64-9190-7b7d2881735e" fragment="3" gd:fragmentGUID="46171538-5f83-484b-a841-4b1ab10e4d58">używania poczty elektronicznej lub innego równorzędnego środka komunikacji elektronicznej między osobami fizycznymi, w celach osobistych niezwiązanych z prowadzoną przez te osoby, chociażby ubocznie, działalnością zarobkową lub wykonywanym przez nie zawodem;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1513__art_3__pkt_3" gd:GUID="476508be-371a-4b01-b777-f9b3a47d3efa">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="d41ec882-4b70-4c64-9190-7b7d2881735e" fragment="4" gd:fragmentGUID="44aef342-690a-4085-9dd7-9fa6a5130e93">świadczenia przez przedsiębiorcę telekomunikacyjnego usług telekomunikacyjnych, z wyłączeniem art. 12–15;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1513__art_3__pkt_4" gd:GUID="9293e5d3-9e79-4fbb-ba20-7e1e8b90a855">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="d41ec882-4b70-4c64-9190-7b7d2881735e" fragment="5" gd:fragmentGUID="3587ed8d-4983-497a-af8d-bcddf356a457">(uchylony)</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1513__art_3__pkt_5" gd:GUID="977bb85e-662b-4ee1-bc9d-9cd437541a13">
+                <nr>5</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="d41ec882-4b70-4c64-9190-7b7d2881735e" fragment="6" gd:fragmentGUID="4f507cc0-8e3b-48c6-931e-6e4aeaa1e4d7">(uchylony)</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1513__art_3__pkt_6" gd:GUID="71b17329-c521-470e-bb9c-3b9ce69db2f6">
+                <nr>6</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="d41ec882-4b70-4c64-9190-7b7d2881735e" fragment="7" gd:fragmentGUID="e5bdd7d3-178a-4451-8df0-ccc009f1fcbb">świadczenia usług drogą elektroniczną, jeżeli odbywa się ono w ramach struktury organizacyjnej usługodawcy, przy czym usługa świadczona drogą elektroniczną służy wyłącznie do kierowania pracą lub procesami gospodarczymi tego podmiotu.</zdanie>
+                </p>
+              </punkt>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2024/1513__art_3a" gd:GUID="778466cb-5aba-4a66-8598-26c238b99252">
+            <nr>3a</nr>
+            <ustep eId="DU/2024/1513__art_3a__ust_1" gd:GUID="c8cd27e9-4292-4e0b-b409-edae3949ddfa">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="caadeb05-9705-4a9c-9ee8-c11d85ec2b41" fragment="1" gd:fragmentGUID="8618e1fe-fbfb-488e-8d93-600a44cfc4e1">Świadczenie usług drogą elektroniczną podlega prawu państwa członkowskiego Unii Europejskiej oraz Europejskiego Porozumienia o Wolnym Handlu (EFTA) – strony umowy o Europejskim Obszarze Gospodarczym, na którego terytorium usługodawca ma miejsce zamieszkania lub siedzibę.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2024/1513__art_3a__ust_2" gd:GUID="7a67d2fd-da49-4426-8383-0e579e582b1d">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="77d16eee-dda0-4828-b7d8-3c0867494678" fragment="1" gd:fragmentGUID="2be7946b-0ead-4d16-a396-5ae37f4e6080">Przepisu ust. 1 nie stosuje się do:</zdanie>
+              </p>
+              <punkt eId="DU/2024/1513__art_3a__ust_2__pkt_1" gd:GUID="2c80b904-0bd8-49d2-b60f-f62e66c3ab54">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="77d16eee-dda0-4828-b7d8-3c0867494678" fragment="2" gd:fragmentGUID="7d5a799b-817e-4c89-a19f-33e44ccbac79">ochrony praw autorskich i praw pokrewnych w rozumieniu ustawy z dnia 4 lutego 1994 r. o prawie autorskim i prawach pokrewnych (Dz. U. z 2022 r. poz. 2509 oraz z 2024 r. poz. 1222 i 1254), baz danych w rozumieniu ustawy z dnia 27 lipca 2001 r. o ochronie baz danych (Dz. U. z 2021 r. poz. 386 oraz z 2024 r. poz. 1254) oraz własności przemysłowej w rozumieniu ustawy z dnia 30 czerwca 2000 r. – Prawo własności przemysłowej (Dz. U. z 2023 r. poz. 1170);</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1513__art_3a__ust_2__pkt_2" gd:GUID="8f9de76c-6404-4394-96ca-8e4a5a0fa017">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="77d16eee-dda0-4828-b7d8-3c0867494678" fragment="3" gd:fragmentGUID="32df198f-6928-4709-88b4-c1b12cc67f8f">(uchylony)</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1513__art_3a__ust_2__pkt_3" gd:GUID="19e57a93-4586-4056-9d10-83a0ac55cf89">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="77d16eee-dda0-4828-b7d8-3c0867494678" fragment="4" gd:fragmentGUID="fb6c6c4d-1965-4456-9e25-605789db589f">wykonywania na terytorium Rzeczypospolitej Polskiej działalności ubezpieczeniowej przez zagraniczny zakład ubezpieczeń, o którym mowa w art. 204 ust. 1 ustawy z dnia 11 września 2015 r. o działalności ubezpieczeniowej i reasekuracyjnej (Dz. U. z 2024 r. poz. 838);</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1513__art_3a__ust_2__pkt_4" gd:GUID="bc70743e-1cdf-496e-b466-77248f7b11eb">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="77d16eee-dda0-4828-b7d8-3c0867494678" fragment="5" gd:fragmentGUID="b18ffd60-a822-4dc3-b390-85e05184441f">udostępniania na terytorium Rzeczypospolitej Polskiej informacji reklamowych przez fundusz zagraniczny, o którym mowa w art. 2 pkt 9 ustawy z dnia 27 maja 2004 r. o funduszach inwestycyjnych i zarządzaniu alternatywnymi funduszami inwestycyjnymi (Dz. U. z 2024 r. poz. 1034), oraz zarządzającego z UE, o którym mowa w art. 2 pkt 10c tej ustawy;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1513__art_3a__ust_2__pkt_5" gd:GUID="53a1736d-6c41-4bad-a852-f75f890d2a37">
+                <nr>5</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="77d16eee-dda0-4828-b7d8-3c0867494678" fragment="6" gd:fragmentGUID="a831ebe7-0770-44dc-b383-0cbc1165f2ae">umów z udziałem konsumentów – w zakresie, w jakim ochronę praw konsumentów zapewniają przepisy odrębne;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1513__art_3a__ust_2__pkt_6" gd:GUID="6c70df89-af46-4b5e-bb5a-50edce6fdcf8">
+                <nr>6</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="77d16eee-dda0-4828-b7d8-3c0867494678" fragment="7" gd:fragmentGUID="0714ffe8-b0a4-4424-920c-680552f750fb">warunków dopuszczalności przesyłania niezamówionych informacji handlowych za pośrednictwem poczty elektronicznej.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2024/1513__art_3a__ust_3" gd:GUID="4c8bd07d-6a50-4d02-ad85-f6239f3f5339">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="7403e8f7-9728-4b3c-8270-b4bb37ecb603" fragment="1" gd:fragmentGUID="af2c87f2-a6cf-43c1-865d-33ff105e3292">Przepis ust. 1 nie skutkuje również:</zdanie>
+              </p>
+              <punkt eId="DU/2024/1513__art_3a__ust_3__pkt_1" gd:GUID="6faebeec-81c6-4b76-be29-8b7b523253f7">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="7403e8f7-9728-4b3c-8270-b4bb37ecb603" fragment="2" gd:fragmentGUID="b9923bea-517c-43b2-a5a0-40e2c64799fd">wyłączeniem swobody stron w zakresie wyboru prawa właściwego dla zobowiązań umownych;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1513__art_3a__ust_3__pkt_2" gd:GUID="1bb5c3df-3c08-44e6-aa1c-cd8f36bcaf92">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="7403e8f7-9728-4b3c-8270-b4bb37ecb603" fragment="3" gd:fragmentGUID="156d46f7-12ac-41ec-a8de-ac824aa5d07a">wyłączeniem stosowania przepisów o formie czynności prawnych ustanawiających lub przenoszących prawa rzeczowe na nieruchomościach, które obowiązują w państwie, w którym znajduje się nieruchomość.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2024/1513__art_3a[1]" gd:GUID="d5e2e014-cf14-4852-9ca0-0faab01a6375">
+            <nr>3a[1]</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="a9af609b-093b-4dfe-991b-48a4f6bab9bf">
+              <p>
+                <zdanie nr="1" gd:zdGUID="2f12069e-55e2-4756-a258-45b52b7524d9" fragment="1" gd:fragmentGUID="dad10a04-54fd-47bd-ae1d-f07f6b9b0b5b">Świadczenie usług drogą elektroniczną w zakresie gier hazardowych podlega prawu polskiemu, w przypadku gdy gra hazardowa jest urządzana na terytorium Rzeczypospolitej Polskiej lub usługobiorca uczestniczy na terytorium Rzeczypospolitej Polskiej w grze hazardowej, lub usługa jest kierowana do usługobiorców na terytorium Rzeczypospolitej Polskiej, w szczególności dostępne jest korzystanie z niej w języku polskim lub jest reklamowana na terytorium Rzeczypospolitej Polskiej.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2024/1513__art_3b" gd:GUID="41f6b2aa-f10b-4887-b84d-b164cd29083c" okres="okr_obowiazywanie.x.zdarz_wejscie_2024-11-10_DU-2024-1222_odczytane" obowiazuje-do="2024-11-10">
+            <nr>3b</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="cff45684-7fef-4449-bb75-b71706ec6c5a" okres="okr_obowiazywanie.x.zdarz_wejscie_2024-11-10_DU-2024-1222_odczytane" obowiazuje-do="2024-11-10">
+              <p>
+                <zdanie nr="1" gd:zdGUID="56074b42-5338-4495-a7ae-21170f656996" fragment="1" gd:fragmentGUID="68d23e5f-30d6-4369-9ca1-2dd56e0a4e2c"><odnosnik id-odnosnika="6" symbol="6" gd:GUID="a787c907-d706-47e6-afef-fc86429e35d6"><p><zdanie nr="1" gd:zdGUID="1521fb67-105b-4a2e-a20c-f8afd66b648e" fragment="1" gd:fragmentGUID="a4883582-502b-4baa-9ffb-a70f0a39d5d5">W tym brzmieniu obowiązuje do wejścia w życie zmiany, o której mowa w odnośniku 7.</zdanie></p></odnosnik> Na zasadach określonych przez przepisy odrębne swoboda świadczenia usług drogą elektroniczną może zostać ograniczona, jeżeli jest to niezbędne ze względu na ochronę zdrowia, obronność, bezpieczeństwo państwa lub bezpieczeństwo publiczne.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2024/1513__art_3b" gd:GUID="97eaabbe-0c65-4f57-9ae8-ba98bf273f84" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-10_DU-2024-1222_odczytane.x" wejscie-w-zycie="2024-11-10">
+            <nr>3b</nr>
+            <ustep eId="DU/2024/1513__art_3b__ust_1" gd:GUID="3d2cba22-bd03-485b-882f-48117feac610" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-10_DU-2024-1222_odczytane.x" wejscie-w-zycie="2024-11-10">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="de3514a3-7c14-44fe-b3a9-72330230c025" fragment="1" gd:fragmentGUID="c27d6414-a8be-4bd4-844d-50e881501968"><odnosnik id-odnosnika="7" symbol="7" gd:GUID="3673ea77-25db-46ea-93f8-bfabc7141d41"><p><zdanie nr="1" gd:zdGUID="6448f83a-eb43-4f5e-8424-f867f6a28995" fragment="1" gd:fragmentGUID="ba8188cf-7fbd-4c81-b027-f3e3927b260f">W brzmieniu ustalonym przez art. 26 pkt 2 ustawy, o której mowa w odnośniku 3.</zdanie></p></odnosnik> Na zasadach określonych w ustawie i w przepisach odrębnych swoboda świadczenia usług drogą elektroniczną może zostać ograniczona, w odniesieniu do określonej usługi, jeżeli jest to niezbędne ze względu na ochronę zdrowia publicznego, obronność, bezpieczeństwo państwa, bezpieczeństwo publiczne, porządek publiczny lub ochronę interesów konsumentów, oraz proporcjonalne do celu, jakiemu ma służyć to ograniczenie.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2024/1513__art_3b__ust_2" gd:GUID="8f6f7859-2877-4eaa-af59-c997640cd785" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-10_DU-2024-1222_odczytane.x" wejscie-w-zycie="2024-11-10">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="4a026fb3-6c34-4c2f-8ae5-98c38d400dfc" fragment="1" gd:fragmentGUID="a27bcb44-a527-44c7-bd19-dc4721a23c97">Właściwy organ dokonuje ograniczenia swobody świadczenia usług drogą elektroniczną:</zdanie>
+              </p>
+              <punkt eId="DU/2024/1513__art_3b__ust_2__pkt_1" gd:GUID="74ba1059-b344-40ba-9881-9846f26c99c2" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-10_DU-2024-1222_odczytane.x" wejscie-w-zycie="2024-11-10">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="4a026fb3-6c34-4c2f-8ae5-98c38d400dfc" fragment="2" gd:fragmentGUID="fd52d3b2-a99f-4644-977c-c412d56b6eb6">po uprzednim zwróceniu się do państwa członkowskiego Unii Europejskiej lub Europejskiego Porozumienia o Wolnym Handlu (EFTA) – strony umowy o Europejskim Obszarze Gospodarczym, o którym mowa w art. 3a ust. 1, o podjęcie środków koniecznych do zapewnienia realizacji wskazanego w wystąpieniu celu, w następstwie którego takie państwo nie podjęło tych środków lub były one niewystarczające;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1513__art_3b__ust_2__pkt_2" gd:GUID="9cf7bfe3-c021-4785-b3fb-0e2053ab23b5" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-10_DU-2024-1222_odczytane.x" wejscie-w-zycie="2024-11-10">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="4a026fb3-6c34-4c2f-8ae5-98c38d400dfc" fragment="3" gd:fragmentGUID="792e47f8-8e37-4e2a-9f61-7373a2e678e1">po powiadomieniu Komisji Europejskiej i państwa członkowskiego Unii Europejskiej lub Europejskiego Porozumienia o Wolnym Handlu (EFTA) – strony umowy o Europejskim Obszarze Gospodarczym, o którym mowa w art. 3a ust. 1, o zamiarze dokonania ograniczenia swobody świadczenia usług drogą elektroniczną.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2024/1513__art_3b__ust_3" gd:GUID="b43b612b-0c1f-4fe7-8878-b25d97b416b9" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-10_DU-2024-1222_odczytane.x" wejscie-w-zycie="2024-11-10">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="b250c11a-5d13-4580-b2f5-e01698f25d86" fragment="1" gd:fragmentGUID="b4acd0b5-e70e-453e-9932-a5f81d1a5754">Właściwy organ planujący dokonać ograniczenia swobody świadczenia usług, o którym mowa w ust. 1, może w nagłym przypadku odstąpić od zasad, o których mowa w ust. 2.</zdanie>
+                <zdanie nr="2" gd:zdGUID="1ed61c58-7cb1-4a79-944e-2ac246c06f21" fragment="1" gd:fragmentGUID="fe39e4c0-7878-407e-99e8-e370f5f51d0d">W takim przypadku powiadamia bez zbędnej zwłoki Komisję Europejską i państwo członkowskie Unii Europejskiej lub Europejskiego Porozumienia o Wolnym Handlu (EFTA) – strony umowy o Europejskim Obszarze Gospodarczym, o którym mowa w art. 3a ust. 1, o dokonanym ograniczeniu, wskazując powody uzasadniające stwierdzenie wystąpienia nagłego przypadku.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2024/1513__art_3b__ust_4" gd:GUID="c6e722fb-a4eb-4464-bc42-00555f9bef70" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-10_DU-2024-1222_odczytane.x" wejscie-w-zycie="2024-11-10">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="1de1364c-dd54-4c27-a282-d605eb951b5b" fragment="1" gd:fragmentGUID="913e3382-2045-4b4b-ac7e-099e86b27df6">Właściwy organ wstrzymuje się od dokonania ograniczenia swobody świadczenia usług lub zaprzestaje stosowania takiego ograniczenia po otrzymaniu w tym zakresie wezwania Komisji Europejskiej, w którym stwierdzono, że planowane lub dokonane ograniczenie swobody świadczenia usług jest niezgodne z prawem Unii Europejskiej.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2024/1513__art_3c" gd:GUID="e2062fba-c0f3-456a-a336-bbf6d8b9411b">
+            <nr>3c</nr>
+            <ustep eId="DU/2024/1513__art_3c__ust_1" gd:GUID="6c570d65-27eb-4085-b85a-70a719a123eb">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ce92e336-9b21-4558-9062-0e99f6335f3d" fragment="1" gd:fragmentGUID="10bf5b72-781e-4a9e-91dc-24a11800efe8">Zadania polegające na współpracy z państwami członkowskimi Unii Europejskiej oraz Europejskiego Porozumienia o Wolnym Handlu (EFTA) – stronami umowy o Europejskim Obszarze Gospodarczym w zakresie świadczenia usług drogą elektroniczną wykonują jednostki organizacyjne – punkty kontaktowe dla administracji.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2024/1513__art_3c__ust_2" gd:GUID="def86e6d-92f4-4e6b-bf23-5b3e260e8a1c">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="66c812bf-68a1-4ed2-a31c-c1b3d992b0a7" fragment="1" gd:fragmentGUID="df506381-e5fd-4902-b34c-232a7dbc184b">Zadania polegające na:</zdanie>
+              </p>
+              <punkt eId="DU/2024/1513__art_3c__ust_2__pkt_1" gd:GUID="ce414ba5-4074-4c59-a73e-e3f4cd372a2c">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="66c812bf-68a1-4ed2-a31c-c1b3d992b0a7" fragment="2" gd:fragmentGUID="4901bfaa-24ea-4622-986d-b25a74a8be41">umożliwieniu usługodawcom i usługobiorcom otrzymywania informacji ogólnych na temat ich praw i obowiązków, jak również na temat procedur reklamacyjnych oraz naprawiania szkody w przypadku sporów, łącznie z informacjami na temat praktycznych aspektów związanych z wykorzystaniem tych procedur,</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1513__art_3c__ust_2__pkt_2" gd:GUID="c3a936ac-0090-4d1d-8d16-bda12347c05a">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="66c812bf-68a1-4ed2-a31c-c1b3d992b0a7" fragment="3" gd:fragmentGUID="d4752781-4bed-4bd6-bed4-4be8112124c1">umożliwieniu usługodawcom i usługobiorcom uzyskiwania danych szczegółowych dotyczących władz, stowarzyszeń lub organizacji, od których mogą oni otrzymać dalsze informacje lub praktyczną pomoc</zdanie>
+                </p>
+              </punkt>
+              <czesc-wspolna-punkt eId="DU/2024/1513__art_3c__ust_2__czw" gd:GUID="1b543ace-a937-4bf0-b9b6-e391d87bd095">
+                <p>
+                  <zdanie nr="1" gd:zdGUID="66c812bf-68a1-4ed2-a31c-c1b3d992b0a7" fragment="4" gd:fragmentGUID="a8d18a36-01a1-4db2-beb9-721738fa42b9">– wykonują jednostki organizacyjne – punkty kontaktowe dla usługodawców i usługobiorców.</zdanie>
+                </p>
+              </czesc-wspolna-punkt>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2024/1513__art_3d" gd:GUID="c4c63a3a-9f08-4fe9-a7a1-86b1aacf6885">
+            <nr>3d</nr>
+            <ustep eId="DU/2024/1513__art_3d__ust_1" gd:GUID="90ae41ba-fca3-4d70-b5b2-615d209e38bc">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="acb379d9-8e24-4f1b-9397-e59ee891f033" fragment="1" gd:fragmentGUID="a46e2fd6-5a86-40e4-8cfa-41c8268caa51">Punkty kontaktowe, o których mowa w art. 3c ust. 1 i 2, tworzy, w drodze rozporządzenia, minister właściwy do spraw gospodarki w porozumieniu z ministrem właściwym do spraw informatyzacji.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2024/1513__art_3d__ust_2" gd:GUID="fd6518bf-08fc-4bee-ac13-108e9009cebc">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="687b9d63-ed33-47fe-8af2-977854d51ce5" fragment="1" gd:fragmentGUID="3374b403-773e-4d7a-aa36-214e028e8e7b">Rozporządzenie, o którym mowa w ust. 1, określa w szczególności:</zdanie>
+              </p>
+              <punkt eId="DU/2024/1513__art_3d__ust_2__pkt_1" gd:GUID="3ca2bc61-6dd3-40ed-9cfa-df851ac7d8a2">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="687b9d63-ed33-47fe-8af2-977854d51ce5" fragment="2" gd:fragmentGUID="2775987d-7007-412e-86ca-c51c497c3bc9">liczbę i rodzaj punktów kontaktowych oraz ich szczegółowy zakres zadań,</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1513__art_3d__ust_2__pkt_2" gd:GUID="def0fa54-7c8e-4470-8f73-07b4ed41a4bb">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="687b9d63-ed33-47fe-8af2-977854d51ce5" fragment="3" gd:fragmentGUID="421147c8-cc58-4efd-be14-76cf24f7976c">warunki techniczne i organizacyjne punktu kontaktowego</zdanie>
+                </p>
+              </punkt>
+              <czesc-wspolna-punkt eId="DU/2024/1513__art_3d__ust_2__czw" gd:GUID="de360038-4d95-448f-a280-699752d05bc4">
+                <p>
+                  <zdanie nr="1" gd:zdGUID="687b9d63-ed33-47fe-8af2-977854d51ce5" fragment="4" gd:fragmentGUID="ab2a1a48-4cec-4b9f-96d5-e8c8c979026c">– uwzględniając potrzebę zapewnienia właściwej realizacji zadań punktów kontaktowych.</zdanie>
+                </p>
+              </czesc-wspolna-punkt>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2024/1513__art_4" gd:GUID="e15f4717-cddc-44d8-87ac-b694081b46d3">
+            <nr>4</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="7a113339-0156-4c02-befe-f9e26280ceb8">
+              <p>
+                <zdanie nr="1" gd:zdGUID="c399ec64-9e2c-4231-83aa-872b41565694" fragment="1" gd:fragmentGUID="d3e4cd31-705b-429c-a0c3-791e38f58bc1">Jeżeli ustawa wymaga uzyskania zgody usługobiorcy, stosuje się przepisy o ochronie danych osobowych.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+        </oddzial-n>
+      </rozdzial>
+      <rozdzial eId="DU/2024/1513__rozdz_2" gd:GUID="379247e0-1045-44d3-b4b9-3c8e33915d6b">
+        <naglowek-rozdzialu>
+          <nr>2</nr>
+          <p>Obowiązki usługodawcy świadczącego usługi drogą elektroniczną</p>
+        </naglowek-rozdzialu>
+        <oddzial-n brak-eid="jednostka-nieoznaczona" gd:GUID="4ad9a1a0-faae-47b3-ae5f-417002490ee9">
+          <artykul eId="DU/2024/1513__art_5" gd:GUID="b3a24330-ce52-4c20-aec0-cb70ddf5a252">
+            <nr>5</nr>
+            <ustep eId="DU/2024/1513__art_5__ust_1" gd:GUID="8e79ff0b-e11c-462c-8fca-4062c05719a2">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="7aaf3454-614a-421e-a386-9b663ea89781" fragment="1" gd:fragmentGUID="e6168028-87d1-40ae-80b0-113d833ed33f">Usługodawca podaje, w sposób wyraźny, jednoznaczny i bezpośrednio dostępny poprzez system teleinformatyczny, którym posługuje się usługobiorca, informacje podstawowe określone w ust. 2–5.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2024/1513__art_5__ust_2" gd:GUID="79ecfce3-d8f9-4490-8f86-b6fda54ead96">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="900a70b0-4927-4a31-b0a9-967f2d699523" fragment="1" gd:fragmentGUID="c8b2e62f-1af7-4f89-ba68-85955445deaf">Usługodawca podaje:</zdanie>
+              </p>
+              <punkt eId="DU/2024/1513__art_5__ust_2__pkt_1" gd:GUID="49cf1e37-197f-411c-921c-ff9738e0798d">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="900a70b0-4927-4a31-b0a9-967f2d699523" fragment="2" gd:fragmentGUID="ff55ab31-4151-4295-adc5-340bf5b68847">adresy elektroniczne;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1513__art_5__ust_2__pkt_2" gd:GUID="ef918f49-6541-442e-ad02-a62c8af64d81">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="900a70b0-4927-4a31-b0a9-967f2d699523" fragment="3" gd:fragmentGUID="f1de6fba-c295-41d7-b645-44011b4a489e">imię, nazwisko, miejsce zamieszkania i adres albo nazwę lub firmę oraz siedzibę i adres.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2024/1513__art_5__ust_3" gd:GUID="f3196c1e-4240-4f3d-bddc-3a82b307d7cd">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="a075e2e2-0692-41f9-a026-5bd7f0b6bace" fragment="1" gd:fragmentGUID="931104e3-fc14-4ab6-9fc0-ef6888769ad4">Jeżeli usługodawcą jest przedsiębiorca, podaje on również informacje dotyczące właściwego zezwolenia i organu zezwalającego, w razie gdy świadczenie usługi wymaga, na podstawie odrębnych przepisów, takiego zezwolenia.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2024/1513__art_5__ust_4" gd:GUID="92d91edf-6afd-4645-9dea-3d3df03fe13b">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="4f31fda8-80ce-45bf-9ed0-299bde010267" fragment="1" gd:fragmentGUID="2c6db51c-4e16-4199-842c-3d94fb159268">Przepis ust. 3 nie narusza obowiązku określonego w art. 20 ust. 3 ustawy z dnia 6 marca 2018 r. – Prawo przedsiębiorców (Dz. U. z 2024 r. poz. 236 i 1222) w zakresie podawania w ofercie danych dotyczących numeru identyfikacji podatkowej (NIP).</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2024/1513__art_5__ust_5" gd:GUID="19a9ec27-a10e-488c-a0d7-e1862c218288">
+              <nr>5</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="d7819b04-3943-4c91-b4a5-bde8e934bb0a" fragment="1" gd:fragmentGUID="d56c3c95-7e84-49c6-a178-5c4c6d442a49">Jeżeli usługodawcą jest osoba fizyczna, której prawo do wykonywania zawodu jest uzależnione od spełnienia określonych w odrębnych ustawach wymagań, podaje również:</zdanie>
+              </p>
+              <punkt eId="DU/2024/1513__art_5__ust_5__pkt_1" gd:GUID="6616b7a7-34f9-4b1f-97a2-fe20a8af4833">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="d7819b04-3943-4c91-b4a5-bde8e934bb0a" fragment="2" gd:fragmentGUID="70b68e01-f70a-4dd9-8587-2b43b10ba92b">w przypadku ustanowienia pełnomocnika, jego imię, nazwisko, miejsce zamieszkania i adres albo jego nazwę lub firmę oraz siedzibę i adres;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1513__art_5__ust_5__pkt_2" gd:GUID="d596a6a5-8870-491c-b9b1-7b6630f7eaa4">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="d7819b04-3943-4c91-b4a5-bde8e934bb0a" fragment="3" gd:fragmentGUID="4a1d2b6b-45e4-40f2-86f0-2638c7ca5446">samorząd zawodowy, do którego należy;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1513__art_5__ust_5__pkt_3" gd:GUID="294cf4c6-bd76-4d7f-867f-ec407204040a">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="d7819b04-3943-4c91-b4a5-bde8e934bb0a" fragment="4" gd:fragmentGUID="64bcd40d-e3a7-446b-8f84-8e3ddbd4dc5c">tytuł zawodowy, którego używa, oraz państwo, w którym został on przyznany;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1513__art_5__ust_5__pkt_4" gd:GUID="19f6ec84-2354-4287-aaba-b4d42e08cb34">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="d7819b04-3943-4c91-b4a5-bde8e934bb0a" fragment="5" gd:fragmentGUID="04273740-ac53-4b09-8f5e-10295e9ddd08">numer w rejestrze publicznym, do którego jest wpisany wraz ze wskazaniem nazwy rejestru i organu prowadzącego rejestr;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1513__art_5__ust_5__pkt_5" gd:GUID="a683d32d-12de-4111-96e7-df228df8422a">
+                <nr>5</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="d7819b04-3943-4c91-b4a5-bde8e934bb0a" fragment="6" gd:fragmentGUID="06e06760-c08b-467f-b3cd-0ca81964073b">informację o istnieniu właściwych dla danego zawodu zasad etyki zawodowej oraz o sposobie dostępu do tych zasad.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2024/1513__art_6" gd:GUID="a0311289-5f3d-4988-ae9a-b24cd5777644">
+            <nr>6</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="93138aa3-3307-46b1-b565-d226e7a7eb6e">
+              <p>
+                <zdanie nr="1" gd:zdGUID="1cb44fe3-71cd-42e5-aa4f-0ffbe1955659" fragment="1" gd:fragmentGUID="889315fe-0e9d-4bec-bef4-51962cd7f97a">Usługodawca jest obowiązany zapewnić usługobiorcy dostęp do aktualnej informacji o:</zdanie>
+              </p>
+              <punkt eId="DU/2024/1513__art_6__pkt_1" gd:GUID="a7b43db8-b93b-4218-95aa-ce05dd79a3f7">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="1cb44fe3-71cd-42e5-aa4f-0ffbe1955659" fragment="2" gd:fragmentGUID="c66db6b2-67b0-4289-8aed-ed43108e4a82">szczególnych zagrożeniach związanych z korzystaniem z usługi świadczonej drogą elektroniczną;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1513__art_6__pkt_2" gd:GUID="e93c84cd-73be-46b1-ae4d-b744d6e4b703">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="1cb44fe3-71cd-42e5-aa4f-0ffbe1955659" fragment="3" gd:fragmentGUID="ffe7c928-6eab-455c-b658-7f599ce11cef">funkcji i celu oprogramowania lub danych niebędących składnikiem treści usługi, wprowadzanych przez usługodawcę do systemu teleinformatycznego, którym posługuje się usługobiorca.</zdanie>
+                </p>
+              </punkt>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2024/1513__art_7" gd:GUID="207994f3-a11e-4adc-82e6-38297d4da105">
+            <nr>7</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="1642e37e-3055-4882-a76c-0930d13da7bd">
+              <p>
+                <zdanie nr="1" gd:zdGUID="9860112d-8a34-45ea-90c4-dc9a99481dc9" fragment="1" gd:fragmentGUID="77a4c8f0-7b10-4f0a-9420-c8a6032aa504">Usługodawca zapewnia działanie systemu teleinformatycznego, którym się posługuje, umożliwiając nieodpłatnie usługobiorcy:</zdanie>
+              </p>
+              <punkt eId="DU/2024/1513__art_7__pkt_1" gd:GUID="13816b9d-dcab-4482-9390-a388b9df265f">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="9860112d-8a34-45ea-90c4-dc9a99481dc9" fragment="2" gd:fragmentGUID="62899824-4485-4488-ae0e-25435eb3cf49">w razie, gdy wymaga tego właściwość usługi:</zdanie>
+                </p>
+                <litera eId="DU/2024/1513__art_7__pkt_1__lit_a" gd:GUID="ccf14b36-a633-4716-81b8-e453f2ae96b3">
+                  <nr>a</nr>
+                  <p>
+                    <zdanie nr="1" gd:zdGUID="9860112d-8a34-45ea-90c4-dc9a99481dc9" fragment="3" gd:fragmentGUID="2423105b-76a2-4e5a-a0f2-24e03f08ac4b">korzystanie przez usługobiorcę z usługi świadczonej drogą elektroniczną, w sposób uniemożliwiający dostęp osób nieuprawnionych do treści przekazu składającego się na tę usługę, w szczególności przy wykorzystaniu technik kryptograficznych odpowiednich dla właściwości świadczonej usługi,</zdanie>
+                  </p>
+                </litera>
+                <litera eId="DU/2024/1513__art_7__pkt_1__lit_b" gd:GUID="a9b5d25b-b002-4a6e-9bd2-4f682823bda4">
+                  <nr>b</nr>
+                  <p>
+                    <zdanie nr="1" gd:zdGUID="9860112d-8a34-45ea-90c4-dc9a99481dc9" fragment="4" gd:fragmentGUID="0193682e-efb4-4e27-8d2a-33652a647830">jednoznaczną identyfikację stron usługi świadczonej drogą elektroniczną oraz potwierdzenie faktu złożenia oświadczeń woli i ich treści, niezbędnych do zawarcia drogą elektroniczną umowy o świadczenie tej usługi, w szczególności przy wykorzystaniu kwalifikowanego podpisu elektronicznego;</zdanie>
+                  </p>
+                </litera>
+              </punkt>
+              <punkt eId="DU/2024/1513__art_7__pkt_2" gd:GUID="2e116a54-e408-4d87-91f5-c10fecfa0cc3">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="9860112d-8a34-45ea-90c4-dc9a99481dc9" fragment="5" gd:fragmentGUID="0a73fe53-5362-4eed-a6a7-2485a04bbfb5">zakończenie, w każdej chwili, korzystania z usługi świadczonej drogą elektroniczną.</zdanie>
+                </p>
+              </punkt>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2024/1513__art_8" gd:GUID="859de570-2c34-4331-9cec-bfa8706bc200">
+            <nr>8</nr>
+            <ustep eId="DU/2024/1513__art_8__ust_1" gd:GUID="7c56853b-cb3d-472f-873b-83cef062ce1d">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="65fb8374-95ee-4618-9225-958cb450d941" fragment="1" gd:fragmentGUID="c6b268db-f8f8-4d66-9876-f2144056bfc9">Usługodawca:</zdanie>
+              </p>
+              <punkt eId="DU/2024/1513__art_8__ust_1__pkt_1" gd:GUID="a8dbe26b-ca5a-42e2-b26e-adf5b36beeae">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="65fb8374-95ee-4618-9225-958cb450d941" fragment="2" gd:fragmentGUID="ab0c573b-8f04-4572-8792-08036dfc3a91">określa regulamin świadczenia usług drogą elektroniczną, zwany dalej „regulaminem”;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1513__art_8__ust_1__pkt_2" gd:GUID="014c661f-2743-41ad-9ce2-c113009a7d82">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="65fb8374-95ee-4618-9225-958cb450d941" fragment="3" gd:fragmentGUID="51f41f11-2b44-4427-930d-f30383f3d35a">nieodpłatnie udostępnia usługobiorcy regulamin przed zawarciem umowy o świadczenie takich usług, a także – na jego żądanie – w taki sposób, który umożliwia pozyskanie, odtwarzanie i utrwalanie treści regulaminu za pomocą systemu teleinformatycznego, którym posługuje się usługobiorca.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2024/1513__art_8__ust_2" gd:GUID="0214bc5b-76b5-48a1-b6d5-47681ab3a9ac">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="97ca39ce-6697-4dbd-9a79-a03d9a08aa3f" fragment="1" gd:fragmentGUID="f38db37e-e346-4140-82aa-4721f9a78933">Usługobiorca nie jest związany tymi postanowieniami regulaminu, które nie zostały mu udostępnione w sposób, o którym mowa w ust. 1 pkt 2.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2024/1513__art_8__ust_3" gd:GUID="5c0e2b15-65f6-48d8-a66b-bfe1541610df">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="21a2db4b-1b76-46c0-858b-4cd073da1c3c" fragment="1" gd:fragmentGUID="a0bc2bc7-dcdf-4408-a9b7-aaa34a696bac">Regulamin określa w szczególności:</zdanie>
+              </p>
+              <punkt eId="DU/2024/1513__art_8__ust_3__pkt_1" gd:GUID="9f786c0c-ddd7-4d26-9c29-eec1522094ba">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="21a2db4b-1b76-46c0-858b-4cd073da1c3c" fragment="2" gd:fragmentGUID="5fe6a123-a126-4fad-aac2-90cea477108e">rodzaje i zakres usług świadczonych drogą elektroniczną;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1513__art_8__ust_3__pkt_2" gd:GUID="3ff58328-afd3-4d43-943d-0124bdedd8a6">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="21a2db4b-1b76-46c0-858b-4cd073da1c3c" fragment="3" gd:fragmentGUID="b3859a6b-3360-4ac3-bdb3-00803f94b7cc">warunki świadczenia usług drogą elektroniczną, w tym:</zdanie>
+                </p>
+                <litera eId="DU/2024/1513__art_8__ust_3__pkt_2__lit_a" gd:GUID="baf0c937-a976-49a6-8644-2321bfe01323">
+                  <nr>a</nr>
+                  <p>
+                    <zdanie nr="1" gd:zdGUID="21a2db4b-1b76-46c0-858b-4cd073da1c3c" fragment="4" gd:fragmentGUID="6e7f739b-9bc6-4c03-9906-a69748cd01c4">wymagania techniczne niezbędne do współpracy z systemem teleinformatycznym, którym posługuje się usługodawca,</zdanie>
+                  </p>
+                </litera>
+                <litera eId="DU/2024/1513__art_8__ust_3__pkt_2__lit_b" gd:GUID="cb8c6737-3062-4f26-8586-8b606f29f931">
+                  <nr>b</nr>
+                  <p>
+                    <zdanie nr="1" gd:zdGUID="21a2db4b-1b76-46c0-858b-4cd073da1c3c" fragment="5" gd:fragmentGUID="aef8b007-24f0-4e6c-8371-a987da452b70">zakaz dostarczania przez usługobiorcę treści o charakterze bezprawnym;</zdanie>
+                  </p>
+                </litera>
+              </punkt>
+              <punkt eId="DU/2024/1513__art_8__ust_3__pkt_3" gd:GUID="c8697d02-ef9e-45fd-b216-59015dea5b04">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="21a2db4b-1b76-46c0-858b-4cd073da1c3c" fragment="6" gd:fragmentGUID="a2f34a12-17ef-4221-acec-40e4f606a5ff">warunki zawierania i rozwiązywania umów o świadczenie usług drogą elektroniczną;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1513__art_8__ust_3__pkt_4" gd:GUID="8d3a4e01-be1b-4b55-b956-2c6ebd9c1cc1">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="21a2db4b-1b76-46c0-858b-4cd073da1c3c" fragment="7" gd:fragmentGUID="8312c4a5-b10d-4211-833f-0698ed92fea8">tryb postępowania reklamacyjnego.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2024/1513__art_8__ust_4" gd:GUID="bab9a69a-04f4-4099-8f39-efc4c955b2ac">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="8dcdf94f-7189-4e30-8266-8c9129e75833" fragment="1" gd:fragmentGUID="4eb0a1ea-e0f0-476e-9739-cadfc7ef64c3">Usługodawca świadczy usługi drogą elektroniczną zgodnie z regulaminem.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2024/1513__art_9" gd:GUID="54dde53d-d297-45e9-8e24-554d681386f7">
+            <nr>9</nr>
+            <ustep eId="DU/2024/1513__art_9__ust_1" gd:GUID="596f34b1-39d8-40ae-89c4-cbc8497b8603">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="e3b1e791-d910-46a2-9634-55e17f93597f" fragment="1" gd:fragmentGUID="f66c5c12-5590-418a-85fe-fc0bb1f94236">Informacja handlowa jest wyraźnie wyodrębniana i oznaczana w sposób niebudzący wątpliwości, że jest to informacja handlowa.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2024/1513__art_9__ust_2" gd:GUID="513c37e3-eae1-4b72-bc21-2320d132d96b">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="23438fa8-2e19-4cff-970a-6897eaf8185a" fragment="1" gd:fragmentGUID="38a9ef88-367f-4735-8129-e6bfac23f0cf">Informacja handlowa zawiera:</zdanie>
+              </p>
+              <punkt eId="DU/2024/1513__art_9__ust_2__pkt_1" gd:GUID="7f2b7f92-4fef-4ccf-b040-2a3fbfcba738">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="23438fa8-2e19-4cff-970a-6897eaf8185a" fragment="2" gd:fragmentGUID="8afd75e5-388d-423b-8226-35e81ca46bd3">oznaczenie podmiotu, na którego zlecenie jest ona rozpowszechniana, oraz jego adresy elektroniczne;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1513__art_9__ust_2__pkt_2" gd:GUID="147cf004-be9a-4019-8a86-49a61b04a4cc">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="23438fa8-2e19-4cff-970a-6897eaf8185a" fragment="3" gd:fragmentGUID="f737d94d-b102-4808-80e3-f1765b429a63">wyraźny opis form działalności promocyjnej, w szczególności obniżek cen, nieodpłatnych świadczeń pieniężnych lub rzeczowych i innych korzyści związanych z promowanym towarem, usługą lub wizerunkiem, a także jednoznaczne określenie warunków niezbędnych do skorzystania z tych korzyści, o ile są one składnikiem oferty;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1513__art_9__ust_2__pkt_3" gd:GUID="32e975ab-1466-4a62-92a5-97f9282f45ef">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="23438fa8-2e19-4cff-970a-6897eaf8185a" fragment="4" gd:fragmentGUID="7e151643-642e-4a73-a018-9ef91f05b3bd">wszelkie informacje, które mogą mieć wpływ na określenie zakresu odpowiedzialności stron, w szczególności ostrzeżenia i zastrzeżenia.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2024/1513__art_9__ust_3" gd:GUID="a04d8e65-8472-4b77-8498-07403679b491">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="e82a8495-f182-4900-aed3-6a7aa6311c43" fragment="1" gd:fragmentGUID="23137c7a-2e67-4108-9adf-b4e13d1f18f1">Przepisy ust. 1 i 2 nie naruszają przepisów ustawy:</zdanie>
+              </p>
+              <punkt eId="DU/2024/1513__art_9__ust_3__pkt_1" gd:GUID="2700e7fd-39d1-4c07-9e40-039f7940f471">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="e82a8495-f182-4900-aed3-6a7aa6311c43" fragment="2" gd:fragmentGUID="33edb11c-466e-495c-bb9f-54975743db3f">z dnia 16 kwietnia 1993 r. o zwalczaniu nieuczciwej konkurencji (Dz. U. z 2022 r. poz. 1233) oraz</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1513__art_9__ust_3__pkt_2" gd:GUID="93841d33-389a-41f4-ab08-3799fc26d8f0">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="e82a8495-f182-4900-aed3-6a7aa6311c43" fragment="3" gd:fragmentGUID="13bc0fd8-b60a-4ca3-badd-4da966801146">z dnia 19 listopada 2009 r. o grach hazardowych (Dz. U. z 2023 r. poz. 227 oraz z 2024 r. poz. 1473).</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2024/1513__art_10" gd:GUID="1adbc59a-37f9-4f8a-b8a6-d5268ea2a5b2" okres="okr_obowiazywanie.x.zdarz_uchylenie_2024-11-10_DU-2024-1222_odczytane" obowiazuje-do="2024-11-10">
+            <nr>10</nr>
+            <ustep eId="DU/2024/1513__art_10__ust_1" gd:GUID="4fc0d4d4-2814-4868-9ae3-a1512c93a0b9" okres="okr_obowiazywanie.x.zdarz_uchylenie_2024-11-10_DU-2024-1222_odczytane" obowiazuje-do="2024-11-10">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="f6dfa743-022e-44bb-829e-fe650f2f3710" fragment="1" gd:fragmentGUID="b0cd8ce0-6a0d-4540-81a0-d933a0086e63"><odnosnik id-odnosnika="8" symbol="8" gd:GUID="41cc64a7-2936-4bf4-a05b-f160d24796d1"><p><zdanie nr="1" gd:zdGUID="c3e07b2c-b32b-4fcf-8b2f-5deb3bb1226b" fragment="1" gd:fragmentGUID="c44cea67-e44f-4c77-bcbd-1126f896be01">Obowiązuje do wejścia w życie zmiany, o której mowa w odnośniku 9.</zdanie></p></odnosnik> Zakazane jest przesyłanie niezamówionej informacji handlowej skierowanej do oznaczonego odbiorcy będącego osobą fizyczną za pomocą środków komunikacji elektronicznej, w szczególności poczty elektronicznej.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2024/1513__art_10__ust_2" gd:GUID="eaf872ec-d2f2-40c2-bded-76d5102ffc00" okres="okr_obowiazywanie.x.zdarz_uchylenie_2024-11-10_DU-2024-1222_odczytane" obowiazuje-do="2024-11-10">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="7b18a978-09c4-4b66-b6af-7ef2a3c0bb07" fragment="1" gd:fragmentGUID="58159127-4492-4c32-8b77-d1602afb0b5a">Informację handlową uważa się za zamówioną, jeżeli odbiorca wyraził zgodę na otrzymywanie takiej informacji, w szczególności udostępnił w tym celu identyfikujący go adres elektroniczny.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2024/1513__art_10__ust_3" gd:GUID="31cc1766-5a0e-41a0-a5c5-6721fa17fe74" okres="okr_obowiazywanie.x.zdarz_uchylenie_2024-11-10_DU-2024-1222_odczytane" obowiazuje-do="2024-11-10">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="476372c7-45e0-43dd-8aca-390338592108" fragment="1" gd:fragmentGUID="72698ee4-c19c-4420-9ad6-48115ae20692">Działanie, o którym mowa w ust. 1, stanowi czyn nieuczciwej konkurencji w rozumieniu przepisów ustawy, o której mowa w art. 9 ust. 3 pkt 1.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2024/1513__art_10" gd:GUID="263be874-4a6e-4098-a995-f68b43a18d30" okres="okr_obowiazywanie.zdarz_uchylenie_2024-11-10_DU-2024-1222_odczytane.x" stan-jednostki="uchylony">
+            <nr>10</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="b737a3c9-b80c-4c4e-9ff7-070d9cc22ba3" okres="okr_obowiazywanie.zdarz_uchylenie_2024-11-10_DU-2024-1222_odczytane.x" stan-jednostki="uchylony">
+              <p>
+                <zdanie nr="1" gd:zdGUID="d9e22aa0-8cae-4d7e-99f6-a96a28508f2b" fragment="1" gd:fragmentGUID="608a5d23-fc35-4cec-bb88-4f24f5096709">(uchylony)<odnosnik id-odnosnika="9" symbol="9" gd:GUID="b97a0cf7-6318-46b2-b885-746702cdccc6"><p><zdanie nr="1" gd:zdGUID="0c4f76cc-90b5-48da-9c9b-e1fd2b66ba70" fragment="1" gd:fragmentGUID="1b8098ab-cbb8-46af-b869-129312fa4285">Przez art. 26 pkt 3 ustawy, o której mowa w odnośniku 3.</zdanie></p></odnosnik></zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2024/1513__art_11" gd:GUID="d9185dc7-64c6-4419-983c-197d889d26f5">
+            <nr>11</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="345ef70e-bdcf-4841-aebd-7b8271ae64ef">
+              <p>
+                <zdanie nr="1" gd:zdGUID="c5094ce3-1d7a-41a1-9682-f930ed04b0f7" fragment="1" gd:fragmentGUID="263ebfa1-622e-4822-bf87-ff6041044267">W sprawach nieuregulowanych w ustawie do świadczenia usług drogą elektroniczną, w szczególności do składania oświadczeń woli w postaci elektronicznej, stosuje się przepisy Kodeksu cywilnego oraz innych ustaw.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+        </oddzial-n>
+      </rozdzial>
+      <rozdzial eId="DU/2024/1513__rozdz_3" gd:GUID="1b45cef2-24e7-4f50-beb0-91693754e09e">
+        <naglowek-rozdzialu>
+          <nr>3</nr>
+          <p>Wyłączenie odpowiedzialności usługodawcy z tytułu świadczenia usług drogą elektroniczną</p>
+        </naglowek-rozdzialu>
+        <oddzial-n brak-eid="jednostka-nieoznaczona" gd:GUID="8d712c96-e3d3-4da5-b91a-dd564d70c68f">
+          <artykul eId="DU/2024/1513__art_12" gd:GUID="0c30e017-01eb-452d-ac02-1d83b903640b">
+            <nr>12</nr>
+            <ustep eId="DU/2024/1513__art_12__ust_1" gd:GUID="8628b6d8-0b25-4cfa-a78b-855bc2ba0040" okres="okr_obowiazywanie.x.zdarz_wejscie_2024-11-10_DU-2024-1222_odczytane" obowiazuje-do="2024-11-10">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="8b894e4b-2efe-48f3-aaef-71395dfd5aa0" fragment="1" gd:fragmentGUID="9ce43252-3bb9-4d61-8ce2-05b8190cd8c2"><odnosnik id-odnosnika="10" symbol="10" gd:GUID="ae8209e6-fa9d-4e35-a0da-55e1892c9c47"><p><zdanie nr="1" gd:zdGUID="c220fcf8-d669-4004-ae10-95b39e66edcc" fragment="1" gd:fragmentGUID="e3252a2e-553b-4110-bc4f-37afb4b38222">W tym brzmieniu obowiązuje do wejścia w życie zmiany, o której mowa w odnośniku 11.</zdanie></p></odnosnik> Usługodawca, który świadczy usługi drogą elektroniczną obejmujące transmisję w sieci telekomunikacyjnej danych przekazywanych przez odbiorcę usługi lub zapewnienie dostępu do sieci telekomunikacyjnej w rozumieniu ustawy z dnia 16 lipca 2004 r. – Prawo telekomunikacyjne, nie ponosi odpowiedzialności za treść tych danych, jeżeli:</zdanie>
+              </p>
+              <punkt eId="DU/2024/1513__art_12__ust_1__pkt_1" gd:GUID="f5036eb0-1986-42d6-999f-75561d236ee8" okres="okr_obowiazywanie.x.zdarz_wejscie_2024-11-10_DU-2024-1222_odczytane" obowiazuje-do="2024-11-10">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="8b894e4b-2efe-48f3-aaef-71395dfd5aa0" fragment="2" gd:fragmentGUID="0096f21f-c850-43e6-854e-66ad5a0da156">nie jest inicjatorem przekazu danych;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1513__art_12__ust_1__pkt_2" gd:GUID="6aceff8a-6c4f-4e00-995f-403721b35e3c" okres="okr_obowiazywanie.x.zdarz_wejscie_2024-11-10_DU-2024-1222_odczytane" obowiazuje-do="2024-11-10">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="8b894e4b-2efe-48f3-aaef-71395dfd5aa0" fragment="3" gd:fragmentGUID="6df115b4-8b64-4ca3-a0c9-52845524874a">nie wybiera odbiorcy przekazu danych;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1513__art_12__ust_1__pkt_3" gd:GUID="07af6d81-d3a6-4582-ae3d-a9f5e20e9d88" okres="okr_obowiazywanie.x.zdarz_wejscie_2024-11-10_DU-2024-1222_odczytane" obowiazuje-do="2024-11-10">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="8b894e4b-2efe-48f3-aaef-71395dfd5aa0" fragment="4" gd:fragmentGUID="341ea1b8-0dd1-4875-9386-dbc718f84e92">nie wybiera oraz nie modyfikuje informacji zawartych w przekazie.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2024/1513__art_12__ust_1" gd:GUID="07b01369-559b-4e48-8aaa-efdf1a8329c4" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-10_DU-2024-1222_odczytane.x" wejscie-w-zycie="2024-11-10">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="475ea839-e917-4862-b3f8-abbef8d216c3" fragment="1" gd:fragmentGUID="d403528e-f1e1-449c-a53e-62286f48c3f9"><odnosnik id-odnosnika="11" symbol="11" gd:GUID="650020c4-e19b-4875-8ad7-8ec9b0b92a54"><p><zdanie nr="1" gd:zdGUID="35b1d2bc-9b3f-49d1-8c3d-e9bbd5d5abaa" fragment="1" gd:fragmentGUID="92bc016d-f2fc-4e0e-808a-a8919be9bee7">Ze zmianą wprowadzoną przez art. 26 pkt 4 ustawy, o której mowa w odnośniku 3.</zdanie></p></odnosnik> Usługodawca, który świadczy usługi drogą elektroniczną obejmujące transmisję w sieci telekomunikacyjnej danych przekazywanych przez odbiorcę usługi lub zapewnienie dostępu do sieci telekomunikacyjnej w rozumieniu ustawy z dnia 12 lipca 2024 r. – Prawo komunikacji elektronicznej, nie ponosi odpowiedzialności za treść tych danych, jeżeli:</zdanie>
+              </p>
+              <punkt eId="DU/2024/1513__art_12__ust_1__pkt_1" gd:GUID="007780e0-e5e7-4b3b-ae8c-bbd5ff7ae47c" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-10_DU-2024-1222_odczytane.x" wejscie-w-zycie="2024-11-10">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="475ea839-e917-4862-b3f8-abbef8d216c3" fragment="2" gd:fragmentGUID="0bbc06e6-cd0b-40ef-9518-96f4dbc19460">nie jest inicjatorem przekazu danych;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1513__art_12__ust_1__pkt_2" gd:GUID="928459e6-0647-453e-a4c2-a82c80dc7317" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-10_DU-2024-1222_odczytane.x" wejscie-w-zycie="2024-11-10">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="475ea839-e917-4862-b3f8-abbef8d216c3" fragment="3" gd:fragmentGUID="af16469e-2a10-4387-bd3d-3e314a159c24">nie wybiera odbiorcy przekazu danych;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1513__art_12__ust_1__pkt_3" gd:GUID="71430ef8-eaed-47f1-a764-fa3523165054" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-10_DU-2024-1222_odczytane.x" wejscie-w-zycie="2024-11-10">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="475ea839-e917-4862-b3f8-abbef8d216c3" fragment="4" gd:fragmentGUID="f75e6e4d-de2b-4991-adca-e8735ba8176e">nie wybiera oraz nie modyfikuje informacji zawartych w przekazie.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2024/1513__art_12__ust_2" gd:GUID="d526fdab-e00b-44a1-992c-c480d0fd4dac">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="dcd58e83-0a72-4922-af8e-ccc8634e3ff8" fragment="1" gd:fragmentGUID="bb9297bc-220a-4061-88a0-6117239e0d64">Wyłączenie odpowiedzialności, o którym mowa w ust. 1, obejmuje także automatyczne i krótkotrwałe pośrednie przechowywanie transmitowanych danych, jeżeli działanie to ma wyłącznie na celu przeprowadzenie transmisji, a dane nie są przechowywane dłużej, niż jest to w zwykłych warunkach konieczne dla zrealizowania transmisji.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2024/1513__art_13" gd:GUID="07e7fead-f491-4ba1-a899-9005a04b98df">
+            <nr>13</nr>
+            <ustep eId="DU/2024/1513__art_13__ust_1" gd:GUID="769af1c7-5ea4-48e5-98da-9712bf2e0326">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="084a0298-7414-4cb4-bcba-18cd1c27bf4d" fragment="1" gd:fragmentGUID="2932293c-ef4f-4841-a05e-7e7719cdd652">Nie ponosi odpowiedzialności za przechowywane dane ten, kto transmitując dane oraz zapewniając automatyczne i krótkotrwałe pośrednie przechowywanie tych danych w celu przyspieszenia ponownego dostępu do nich na żądanie innego podmiotu:</zdanie>
+              </p>
+              <punkt eId="DU/2024/1513__art_13__ust_1__pkt_1" gd:GUID="4e7c7c7f-378c-4473-b5d3-9a21cbc7ba2d">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="084a0298-7414-4cb4-bcba-18cd1c27bf4d" fragment="2" gd:fragmentGUID="2c0c5bfa-bfaf-43ce-ac58-10ca055f2d59">nie modyfikuje danych;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1513__art_13__ust_1__pkt_2" gd:GUID="e1faa034-fe34-408b-a3c7-919c0f73a783">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="084a0298-7414-4cb4-bcba-18cd1c27bf4d" fragment="3" gd:fragmentGUID="8e6c37ae-56e1-4aa9-89ae-3158bc911b66">posługuje się uznanymi i stosowanymi zwykle w tego rodzaju działalności technikami informatycznymi określającymi parametry techniczne dostępu do danych i ich aktualizowania oraz</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1513__art_13__ust_1__pkt_3" gd:GUID="1b910a61-aacd-4e7f-acee-b2eb278049a6">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="084a0298-7414-4cb4-bcba-18cd1c27bf4d" fragment="4" gd:fragmentGUID="b3945117-d3dc-4cb9-93fc-71ea81825adb">nie zakłóca posługiwania się technikami informatycznymi uznanymi i stosowanymi zwykle w tego rodzaju działalności w zakresie zbierania informacji o korzystaniu ze zgromadzonych danych.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2024/1513__art_13__ust_2" gd:GUID="8595258d-0810-463b-afa0-274662dbd000">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="3b8bfa21-4ff2-4b33-a5c3-f35ab8a4dadf" fragment="1" gd:fragmentGUID="daf8a156-0f71-4ba3-9118-fbf9d5df3874">Nie ponosi odpowiedzialności za przechowywane dane ten, kto przy zachowaniu warunków, o których mowa w ust. 1, niezwłocznie usunie dane albo uniemożliwi dostęp do przechowywanych danych, gdy uzyska wiadomość, że dane zostały usunięte z początkowego źródła transmisji lub dostęp do nich został uniemożliwiony, albo gdy sąd lub inny właściwy organ nakazał usunięcie danych lub uniemożliwienie do nich dostępu.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2024/1513__art_14" gd:GUID="5c59d45e-7b97-45b3-979b-a5687e1d4151">
+            <nr>14</nr>
+            <ustep eId="DU/2024/1513__art_14__ust_1" gd:GUID="5c8a3a87-277d-440d-8356-550c9d03fc5d">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ecb6de66-7128-40e0-adaf-9b3fe9eea01c" fragment="1" gd:fragmentGUID="d168269a-7692-4e64-94aa-6877543c274f">Nie ponosi odpowiedzialności za przechowywane dane ten, kto udostępniając zasoby systemu teleinformatycznego w celu przechowywania danych przez usługobiorcę nie wie o bezprawnym charakterze danych lub związanej z nimi działalności, a w razie otrzymania urzędowego zawiadomienia lub uzyskania wiarygodnej wiadomości o bezprawnym charakterze danych lub związanej z nimi działalności niezwłocznie uniemożliwi dostęp do tych danych.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2024/1513__art_14__ust_2" gd:GUID="d5599b9b-cfce-4355-bf49-052744a72c34">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="612bdccf-fda0-4977-83dd-fe0892478748" fragment="1" gd:fragmentGUID="57098573-7181-4075-9e6f-3d21e0798c43">Usługodawca, który otrzymał urzędowe zawiadomienie o bezprawnym charakterze przechowywanych danych dostarczonych przez usługobiorcę i uniemożliwił dostęp do tych danych, nie ponosi odpowiedzialności względem tego usługobiorcy za szkodę powstałą w wyniku uniemożliwienia dostępu do tych danych.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2024/1513__art_14__ust_3" gd:GUID="fe2fe697-3e48-42b1-9493-475324bbdd13">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="b0e73392-a559-44a5-8b9c-39b36d85db7b" fragment="1" gd:fragmentGUID="b1a39d43-c459-4838-a212-458429e95810">Usługodawca, który uzyskał wiarygodną wiadomość o bezprawnym charakterze przechowywanych danych dostarczonych przez usługobiorcę i uniemożliwił dostęp do tych danych, nie odpowiada względem tego usługobiorcy za szkodę powstałą w wyniku uniemożliwienia dostępu do tych danych, jeżeli niezwłocznie zawiadomił usługobiorcę o zamiarze uniemożliwienia do nich dostępu.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2024/1513__art_14__ust_4" gd:GUID="57b73cda-ed27-432e-a46d-1792e09b1015">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="3e6156c6-59bf-4632-9af1-fbc6c73335b9" fragment="1" gd:fragmentGUID="0b240c0c-9d82-48d8-942e-aac9097e909a">Przepisów ust. 1–3 nie stosuje się, jeżeli usługodawca przejął kontrolę nad usługobiorcą w rozumieniu przepisów o ochronie konkurencji i konsumentów.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2024/1513__art_15" gd:GUID="6a04d9d1-ae56-41eb-b58f-4584e9d33f39">
+            <nr>15</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="442d0e1f-c096-4a75-827e-4681c3effaca">
+              <p>
+                <zdanie nr="1" gd:zdGUID="700396dc-8139-45f9-8516-5f28c48c480c" fragment="1" gd:fragmentGUID="830d421b-f4d8-405d-9156-cf2f61defac3">Podmiot, który świadczy usługi określone w art. 12–14, nie jest obowiązany do sprawdzania przekazywanych, przechowywanych lub udostępnianych przez niego danych, o których mowa w art. 12–14.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+        </oddzial-n>
+      </rozdzial>
+      <rozdzial eId="DU/2024/1513__rozdz_4" gd:GUID="dc40e989-fbfd-4ab9-bdaf-808bae84b097">
+        <naglowek-rozdzialu>
+          <nr>4</nr>
+          <p>Zasady ochrony danych osobowych w związku ze świadczeniem usług drogą elektroniczną</p>
+        </naglowek-rozdzialu>
+        <oddzial-n brak-eid="jednostka-nieoznaczona" gd:GUID="bc663954-becf-418f-b69b-4ff7b8378841">
+          <artykul eId="DU/2024/1513__art_16" gd:GUID="1a39ed9f-bcfa-46be-9052-13a6cdc2116f">
+            <nr>16</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="f6e5e21b-f0d6-4399-88e8-a9f9b1fc37a5">
+              <p>
+                <zdanie nr="1" gd:zdGUID="d19f05a3-c26c-4a75-8c26-77efa7679a27" fragment="1" gd:fragmentGUID="271d024f-c2d1-4256-8802-150004c8691b">(uchylony)</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2024/1513__art_17" gd:GUID="93bcb1d7-2601-476a-8cd2-0045f279f4cd">
+            <nr>17</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="94e60050-eb83-4f45-a377-b91fb3c5ef42">
+              <p>
+                <zdanie nr="1" gd:zdGUID="0afb6a06-bc34-4f15-b28a-28dc5be96ded" fragment="1" gd:fragmentGUID="215cf7f2-ad86-4d94-a269-04912a3d3d33">(uchylony)</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2024/1513__art_18" gd:GUID="5899715e-88a3-4d7e-b439-17ecfb629bd6">
+            <nr>18</nr>
+            <ustep eId="DU/2024/1513__art_18__ust_1" gd:GUID="42a249c0-f0fb-4ae4-8c62-b13bf4b99fec">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="2689fc33-7891-4554-996d-16371cccd53a" fragment="1" gd:fragmentGUID="67ae8208-76d0-4b87-be4f-ce3977541b92">Usługodawca może przetwarzać następujące dane osobowe usługobiorcy niezbędne do nawiązania, ukształtowania treści, zmiany lub rozwiązania stosunku prawnego między nimi:</zdanie>
+              </p>
+              <punkt eId="DU/2024/1513__art_18__ust_1__pkt_1" gd:GUID="0e495e9f-2a3e-4964-803f-8e44ecbb51e0">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="2689fc33-7891-4554-996d-16371cccd53a" fragment="2" gd:fragmentGUID="4b6d846d-91a6-4e61-bc80-aec00a56fb0c">nazwisko i imiona usługobiorcy;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1513__art_18__ust_1__pkt_2" gd:GUID="d8362bfc-a3ee-4479-b432-1d29582018bd">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="2689fc33-7891-4554-996d-16371cccd53a" fragment="3" gd:fragmentGUID="c6614908-756d-4737-956f-efdef5f7cfe7">numer ewidencyjny PESEL lub – gdy ten numer nie został nadany – numer paszportu, dowodu osobistego lub innego dokumentu potwierdzającego tożsamość;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1513__art_18__ust_1__pkt_3" gd:GUID="64edc55d-6211-4c1f-ac1d-a79e374cdb43">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="2689fc33-7891-4554-996d-16371cccd53a" fragment="4" gd:fragmentGUID="bd14bb28-5136-4b3e-ae8e-aca8805e14b9">adres zameldowania na pobyt stały;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1513__art_18__ust_1__pkt_4" gd:GUID="91ea4e5e-4cfe-482b-a3fe-35aeaeb490ad">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="2689fc33-7891-4554-996d-16371cccd53a" fragment="5" gd:fragmentGUID="7911ba1c-b98b-4570-aea9-71fcef83fd5e">adres do korespondencji, jeżeli jest inny niż adres, o którym mowa w pkt 3;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1513__art_18__ust_1__pkt_5" gd:GUID="a055aaa9-e165-48e9-bfc3-7c7b6deb5dc1">
+                <nr>5</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="2689fc33-7891-4554-996d-16371cccd53a" fragment="6" gd:fragmentGUID="1949d6e9-1da7-4b82-83ea-7923190d39c7">dane służące do weryfikacji podpisu elektronicznego usługobiorcy;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1513__art_18__ust_1__pkt_6" gd:GUID="cc53ce36-60a9-43f1-9b1d-876ce991ab5a">
+                <nr>6</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="2689fc33-7891-4554-996d-16371cccd53a" fragment="7" gd:fragmentGUID="6a08d336-42e7-4bb9-8685-60d5c145894b">adresy elektroniczne usługobiorcy.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2024/1513__art_18__ust_2" gd:GUID="5b06454f-3b49-4fa3-9666-d79a16876b1d">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="2b9626ba-9cfa-43e8-894a-0802912757e5" fragment="1" gd:fragmentGUID="7794e329-0761-4010-bed7-684e41841d18">W celu realizacji umów lub dokonania innej czynności prawnej z usługobiorcą, usługodawca może przetwarzać inne dane niezbędne ze względu na właściwość świadczonej usługi lub sposób jej rozliczenia.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2024/1513__art_18__ust_3" gd:GUID="c8564564-882c-4a9f-ab9c-1ac6b617a2e7">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="fb0718e9-685a-400b-82df-71779e9cd5ef" fragment="1" gd:fragmentGUID="2e5e66e7-59c9-46b2-b4a8-b257033e7b81">Usługodawca wyróżnia i oznacza te spośród danych, o których mowa w ust. 2, jako dane, których podanie jest niezbędne do świadczenia usługi drogą elektroniczną.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2024/1513__art_18__ust_4" gd:GUID="e52478be-4c0a-4e8a-8ee0-3a468b5f3b74">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="87a07cdc-1a98-4ee5-9115-ac4692dbbcfd" fragment="1" gd:fragmentGUID="4b7d9a7d-60b8-422a-ac8a-5da3015b9688">Usługodawca może przetwarzać, za zgodą usługobiorcy i dla celów reklamy, badania rynku oraz zachowań i preferencji usługobiorców z przeznaczeniem wyników tych badań na potrzeby polepszenia jakości usług świadczonych przez usługodawcę, inne dane dotyczące usługobiorcy, które nie są niezbędne do świadczenia usługi drogą elektroniczną.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2024/1513__art_18__ust_5" gd:GUID="5bfd307e-d8e6-4055-b9fd-c40bb75e84c7">
+              <nr>5</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="c4d8f97a-62e7-48cd-9b18-0c212d2ba8f3" fragment="1" gd:fragmentGUID="893d6bd9-50e1-41c3-8146-70dcd9454cf8">Usługodawca może przetwarzać następujące dane charakteryzujące sposób korzystania przez usługobiorcę z usługi świadczonej drogą elektroniczną (dane eksploatacyjne):</zdanie>
+              </p>
+              <punkt eId="DU/2024/1513__art_18__ust_5__pkt_1" gd:GUID="adc5a975-97fa-4e50-a07e-7ec8f71b88a5">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="c4d8f97a-62e7-48cd-9b18-0c212d2ba8f3" fragment="2" gd:fragmentGUID="279d6a81-2532-43bc-a54b-5078107e8b70">oznaczenia identyfikujące usługobiorcę nadawane na podstawie danych, o których mowa w ust. 1;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1513__art_18__ust_5__pkt_2" gd:GUID="077078f6-53b8-4189-9327-137de513151a">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="c4d8f97a-62e7-48cd-9b18-0c212d2ba8f3" fragment="3" gd:fragmentGUID="e37319a4-1a1b-4cf7-9da6-d7cb53ac93c9">oznaczenia identyfikujące zakończenie sieci telekomunikacyjnej lub system teleinformatyczny, z którego korzystał usługobiorca;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1513__art_18__ust_5__pkt_3" gd:GUID="fc38c364-8222-4beb-bec0-8250d1a8140e">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="c4d8f97a-62e7-48cd-9b18-0c212d2ba8f3" fragment="4" gd:fragmentGUID="258ccec8-9e2f-448d-ab3d-fb4e10e8dd53">informacje o rozpoczęciu, zakończeniu oraz zakresie każdorazowego korzystania z usługi świadczonej drogą elektroniczną;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2024/1513__art_18__ust_5__pkt_4" gd:GUID="4db6085b-b5b9-4997-9430-e9acf104514e">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="c4d8f97a-62e7-48cd-9b18-0c212d2ba8f3" fragment="5" gd:fragmentGUID="f0eb01bd-7cc4-4e96-80d3-4e33186213e8">informacje o skorzystaniu przez usługobiorcę z usług świadczonych drogą elektroniczną.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2024/1513__art_18__ust_6" gd:GUID="09494c38-9120-4dfc-be1e-5ed03e1e7104">
+              <nr>6</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="a53637ce-f57c-4c60-8b2a-d5259c1ddae4" fragment="1" gd:fragmentGUID="f8207001-39d0-4269-a3e9-25a56246e169">Usługodawca nieodpłatnie udostępnia dane, o których mowa w ust. 1–5, organom państwa uprawnionym na podstawie odrębnych przepisów na potrzeby prowadzonych przez nie postępowań.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2024/1513__art_19" gd:GUID="86b2ae2e-27f9-4992-9713-acf97bed0641">
+            <nr>19</nr>
+            <ustep eId="DU/2024/1513__art_19__ust_1" gd:GUID="76f47c11-a305-43f9-aefe-d31ec13155ab">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="c5d1af71-bf06-4917-ac17-3c853619d0aa" fragment="1" gd:fragmentGUID="46a522e0-6e37-45d1-babb-6dfc212431e3">(uchylony)</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2024/1513__art_19__ust_2" gd:GUID="2ada0b11-3e82-438e-a639-c8a62958b85e">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="757121c3-fd40-460e-a1cc-20610ae984cb" fragment="1" gd:fragmentGUID="a4b559db-59c5-4d38-9f0f-1cd922679bb0">(uchylony)</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2024/1513__art_19__ust_3" gd:GUID="4113d112-69d5-4264-a98c-d0802dc575bc">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="965139c2-c81f-4b4e-81f7-e7645aa23a49" fragment="1" gd:fragmentGUID="cd687e29-37c1-49fa-bd79-ffa11ac0a0ad">Rozliczenie usługi świadczonej drogą elektroniczną przedstawione usługobiorcy nie może ujawniać rodzaju, czasu trwania, częstotliwości i innych parametrów technicznych poszczególnych usług, z których skorzystał usługobiorca, chyba że zażądał on szczegółowych informacji w tym zakresie.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2024/1513__art_19__ust_4" gd:GUID="c2e9f067-05c3-483e-8acb-99eab158d220">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="efb2b8cb-7cad-4c51-9c44-ce8c3a3a7843" fragment="1" gd:fragmentGUID="40e4372f-aca0-4511-aa78-021a79a65ca1">(uchylony)</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2024/1513__art_19__ust_5" gd:GUID="44802d7d-6393-4db8-b518-623f877ae535">
+              <nr>5</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="c69d9701-d2e1-458d-a5e7-84962431873a" fragment="1" gd:fragmentGUID="e83d52d3-004f-4476-a7fe-47f9fc22cc92">(uchylony)</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2024/1513__art_20" gd:GUID="04da8242-04f1-479b-85a5-a28d4acd43b9">
+            <nr />
+            <nr-od>20</nr-od>
+            <nr-do>22</nr-do>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="53931ccd-c54f-423c-8d85-2091e90c5cd0">
+              <p>
+                <zdanie nr="1" gd:zdGUID="722ae2c4-8a05-42da-945e-d4351ac873a8" fragment="1" gd:fragmentGUID="f57f4f17-00ae-4798-aa14-52f729d0a04a">(uchylone)</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+        </oddzial-n>
+      </rozdzial>
+      <rozdzial eId="DU/2024/1513__rozdz_5" gd:GUID="165adbfa-935a-4cca-a86e-e94ab1e67b18">
+        <naglowek-rozdzialu>
+          <nr>5</nr>
+          <p>Przepisy karne</p>
+        </naglowek-rozdzialu>
+        <oddzial-n brak-eid="jednostka-nieoznaczona" gd:GUID="1ae1b9c6-d523-487d-b2c0-96c5b6ae54f8">
+          <artykul eId="DU/2024/1513__art_23" gd:GUID="4d394a64-7c07-4db6-ab7c-f83f8147fc69">
+            <nr>23</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="85caeea3-cedc-4e35-9345-14eb41e629d2">
+              <p>
+                <zdanie nr="1" gd:zdGUID="1d93e2bb-3832-4a80-876b-aa39cf45f4aa" fragment="1" gd:fragmentGUID="789886d5-bf76-4fe4-ac93-0e0de13edbb6">Kto wbrew obowiązkom określonym w art. 5 nie podaje danych, o których mowa w art. 5 ust. 2, 3 lub 5, albo podaje dane nieprawdziwe lub niepełne, <sankcja-karna>podlega karze grzywny</sankcja-karna>.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2024/1513__art_24" gd:GUID="726a6ffd-66a2-4cd2-8e3f-5b5279734a7a" okres="okr_obowiazywanie.x.zdarz_uchylenie_2024-11-10_DU-2024-1222_odczytane" obowiazuje-do="2024-11-10">
+            <nr>24</nr>
+            <ustep eId="DU/2024/1513__art_24__ust_1" gd:GUID="b809404d-86b3-43a7-b08d-9aef3b9f5179" okres="okr_obowiazywanie.x.zdarz_uchylenie_2024-11-10_DU-2024-1222_odczytane" obowiazuje-do="2024-11-10">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ed9c5dfa-d68f-450e-a43e-83dced80aa0c" fragment="1" gd:fragmentGUID="15f9848a-82c3-40d6-a93d-3c7e540ea5b8"><odnosnik id-odnosnika="12" symbol="12" gd:GUID="8629b996-5571-4ab2-a0b8-541a065041a8"><p><zdanie nr="1" gd:zdGUID="287b46ef-fba1-4122-851b-46ae740930f3" fragment="1" gd:fragmentGUID="ae1f0832-16e4-4fcc-9257-45086320c809">Obowiązuje do wejścia w życie zmiany, o której mowa w odnośniku 13.</zdanie></p></odnosnik> Kto przesyła za pomocą środków komunikacji elektronicznej niezamówione informacje handlowe, <sankcja-karna>podlega karze grzywny</sankcja-karna>.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2024/1513__art_24__ust_2" gd:GUID="7e06cbb5-eef3-438d-b768-5e6b594bdcce" okres="okr_obowiazywanie.x.zdarz_uchylenie_2024-11-10_DU-2024-1222_odczytane" obowiazuje-do="2024-11-10">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="c535e531-2f16-47f3-a3a2-f0fcbd2d07e8" fragment="1" gd:fragmentGUID="fd401edb-3b93-4151-9cc8-33e83c094ec5">Ściganie wykroczenia, o którym mowa w ust. 1, następuje na wniosek pokrzywdzonego.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2024/1513__art_24" gd:GUID="f5502e19-02da-4894-8386-7b09dfd68da1" okres="okr_obowiazywanie.zdarz_uchylenie_2024-11-10_DU-2024-1222_odczytane.x" stan-jednostki="uchylony">
+            <nr>24</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="6c5349c1-243b-47c4-be83-460527945a08" okres="okr_obowiazywanie.zdarz_uchylenie_2024-11-10_DU-2024-1222_odczytane.x" stan-jednostki="uchylony">
+              <p>
+                <zdanie nr="1" gd:zdGUID="e355c0da-38da-4fc1-b724-023bf9bffed5" fragment="1" gd:fragmentGUID="3a0beed8-de52-48e0-9b10-dbfe7dd15b7f">(uchylony)<odnosnik id-odnosnika="13" symbol="13" gd:GUID="463d20f3-6f8a-4912-ade8-9d29751dc894"><p><zdanie nr="1" gd:zdGUID="75232cac-ebcd-46f0-9be1-0d6ba5586290" fragment="1" gd:fragmentGUID="50875007-b49a-40b7-8e61-e3d9ca896db6">Przez art. 26 pkt 5 ustawy, o której mowa w odnośniku 3.</zdanie></p></odnosnik></zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2024/1513__art_25" gd:GUID="0e40bee1-e306-4a63-9f47-d01da7805a50" okres="okr_obowiazywanie.x.zdarz_wejscie_2024-11-10_DU-2024-1222_odczytane" obowiazuje-do="2024-11-10">
+            <nr>25</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="19a4ccdf-ae3c-43b6-8d2d-cd3939d9ba30" okres="okr_obowiazywanie.x.zdarz_wejscie_2024-11-10_DU-2024-1222_odczytane" obowiazuje-do="2024-11-10">
+              <p>
+                <zdanie nr="1" gd:zdGUID="db8466ab-7328-45c1-b425-f929bed38d71" fragment="1" gd:fragmentGUID="f2fc1bea-770f-4d22-aed9-a80c758b1d96"><odnosnik id-odnosnika="14" symbol="14" gd:GUID="652fdfa9-84bf-42e8-9d55-b6a035e9baad"><p><zdanie nr="1" gd:zdGUID="880cad12-b517-4870-af9f-2b4ced22b00f" fragment="1" gd:fragmentGUID="9abe3f70-29d6-45c5-8144-0364cc94ae3b">W tym brzmieniu obowiązuje do wejścia w życie zmiany, o której mowa w odnośniku 15.</zdanie></p></odnosnik> Orzekanie w sprawach o czyny określone w art. 23 i 24 następuje w trybie przepisów o postępowaniu w sprawach o wykroczenia.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2024/1513__art_25" gd:GUID="20df0bfa-b59f-487a-8719-0784168fcc3d" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-10_DU-2024-1222_odczytane.x" wejscie-w-zycie="2024-11-10">
+            <nr>25</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="28de4058-15bc-497d-97c3-3f6ab8ea524f" okres="okr_obowiazywanie.zdarz_wejscie_2024-11-10_DU-2024-1222_odczytane.x" wejscie-w-zycie="2024-11-10">
+              <p>
+                <zdanie nr="1" gd:zdGUID="2459984f-90de-44ea-9340-12aaded13e90" fragment="1" gd:fragmentGUID="b62fa4f5-9a6d-4ea4-a820-e50edb6fe390"><odnosnik id-odnosnika="15" symbol="15" gd:GUID="502466bf-4b9d-419c-bc98-483e1c8d851d"><p><zdanie nr="1" gd:zdGUID="195eef80-fcc4-4467-8ef4-7f2d7be074f5" fragment="1" gd:fragmentGUID="54608097-99b4-47d0-94af-24b1046ca8c4">W brzmieniu ustalonym przez art. 26 pkt 6 ustawy, o której mowa w odnośniku 3.</zdanie></p></odnosnik> Orzekanie w sprawach o czyny określone w art. 23 następuje w trybie przepisów o postępowaniu w sprawach o wykroczenia.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+        </oddzial-n>
+      </rozdzial>
+      <rozdzial eId="DU/2024/1513__rozdz_6" gd:GUID="f2676357-9b88-402a-88d8-acfa4f0b71bb">
+        <naglowek-rozdzialu>
+          <nr>6</nr>
+          <p>Zmiany w przepisach obowiązujących</p>
+        </naglowek-rozdzialu>
+        <oddzial-n brak-eid="jednostka-nieoznaczona" gd:GUID="b9303b89-4eeb-497e-90aa-311ee24da75c">
+          <artykul eId="DU/2024/1513__art_26" gd:GUID="47dedb49-aafe-482d-8d5d-e06129c945c3">
+            <nr />
+            <nr-od>26</nr-od>
+            <nr-do>29</nr-do>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="faa4bda8-2949-4062-b453-d20f12de6783">
+              <p>
+                <zdanie nr="1" gd:zdGUID="94e40048-485f-4ed6-92e3-75ef19e280c1" fragment="1" gd:fragmentGUID="f23f4240-d4ba-4651-8814-d433b02fb050">(pominięte)</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2024/1513__art_30" gd:GUID="a084129f-d693-4a4b-aa12-c4386bfbfc41">
+            <nr>30</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="1db88d3a-23be-4278-b220-37f66288596e">
+              <p>
+                <zdanie nr="1" gd:zdGUID="a98afc21-3983-40af-a8bb-43d8762b2366" fragment="1" gd:fragmentGUID="ce0a22a2-b533-4867-8903-c245c8dc2809">Ustawa wchodzi w życie po upływie 6 miesięcy od dnia ogłoszenia<odnosnik id-odnosnika="16" symbol="16" gd:GUID="4571f4f8-f7b2-4d89-b1c9-fd3573c591cf"><p><zdanie nr="1" gd:zdGUID="d971a45c-447e-4031-a9d9-198120b3e05d" fragment="1" gd:fragmentGUID="d08ac12c-8ffc-45a4-9486-17e729bbdf0f">Ustawa została ogłoszona w dniu 9 września 2002 r.</zdanie></p></odnosnik>, z wyjątkiem art. 5 ust. 5, który stosuje się od dnia uzyskania przez Rzeczpospolitą Polską członkostwa w Unii Europejskiej<odnosnik id-odnosnika="17" symbol="17" gd:GUID="91bae15c-61ff-4ec2-90a8-4480aa001c95"><p><zdanie nr="1" gd:zdGUID="8c939214-fd22-4652-b064-bae8f202b1ab" fragment="1" gd:fragmentGUID="4602b9ca-fe56-43d7-aecb-3bad7c7731ba">Rzeczpospolita Polska uzyskała członkostwo w Unii Europejskiej z dniem 1 maja 2004 r.</zdanie></p></odnosnik>.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+        </oddzial-n>
+      </rozdzial>
+    </ustawa>
+  </obwieszczenie>
+</akt-prawny>

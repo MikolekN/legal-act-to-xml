@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <ustawa>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2026/24</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>85e1a51f-6c67-4b4d-ab06-ca3997023d44</gd:GUIDwersji>
+      <AdresISAP>WDU20260000024</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2026</Rok>
+      <Pozycja>24</Pozycja>
+      <AdresWyswietlany>Dz.U. 2026 poz. 24</AdresWyswietlany>
+      <Tytul>Ustawa z dnia 4 grudnia 2025 r. o zmianie ustawy o planowaniu i zagospodarowaniu przestrzennym</Tytul>
+      <Rodzaj>USTAWA</Rodzaj>
+      <DataOgloszenia>2026-01-12</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-12-04</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2026-01-27_DU-2026-24_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2026-01-27" warunek="po upływie 14 dni od dnia ogłoszenia" podstawa="art. 3" zrodlo="https://eli.gov.pl/eli/DU/2026/24" dowod="DU/2026/24__art_3" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-24_domyslne.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2026-01-27_DU-2026-24_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="11b2009c-fd3d-4936-bd93-af18137191d5" rola="wydajacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Sejm">
+          <Nazwa>SEJM</Nazwa>
+        </Organ>
+        <Organ gd:GUID="184786c1-0d5b-4f7a-a83d-280170f340e6" rola="podpisujacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Prezydent">
+          <Nazwa>Prezydent Rzeczypospolitej Polskiej</Nazwa>
+          <OrganPodpisujacy>Prezydent Rzeczypospolitej Polskiej</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>K.</imie> <nazwisko>Nawrocki</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Ustawa</rodzaj-aktu>
+    <data>z dnia 4 grudnia 2025 r.</data>
+    <tytul>o zmianie ustawy o planowaniu i zagospodarowaniu przestrzennym</tytul>
+    <artykul eId="DU/2026/24__art_1" gd:GUID="394013e0-d5a6-45f9-ba49-f74c3ecf2d0a" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-24_domyslne.x" wejscie-w-zycie="2026-01-27">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="5856a4d0-0095-4146-8bb7-ba7681406fe4" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-24_domyslne.x" wejscie-w-zycie="2026-01-27">
+        <p>
+          <zdanie nr="1" gd:zdGUID="66646132-c3b5-42a2-9796-cc5ded8149c5" fragment="1" gd:fragmentGUID="682e5b38-1e59-447f-b5fd-7acb8fe6ee11" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-24_domyslne.x" wejscie-w-zycie="2026-01-27">W ustawie z dnia 27 marca 2003 r. o planowaniu i zagospodarowaniu przestrzennym (Dz. U. z 2024 r. poz. 1130, z późn. zm.<odnosnik id-odnosnika="1" symbol="1" gd:GUID="9e2db431-c85f-450a-adb5-dda6b34ae3bd"><p><zdanie nr="1" gd:zdGUID="7a4883c7-3f57-48e8-a7a8-c515d34b218d" fragment="1" gd:fragmentGUID="e3c6333e-534b-4145-9c03-62ab8c9410f1">Zmiany tekstu jednolitego wymienionej ustawy zostały ogłoszone w Dz. U. z 2024 r. poz. 1907 i 1940 oraz z 2025 r. poz. 527, 680, 1668 i 1847.</zdanie></p></odnosnik>) w art. 37ed dodaje się ust. 12–14 w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/1130" cudzyslowy="oba" gd:nowGUID="95a09b20-5811-4f93-93f5-7d102e47266c" element-eId="DU/2024/1130__art_37ed" funkcja="dodaj-w"><ustep eId="DU/2024/1130__art_37ed__ust_12" gd:GUID="a17502a9-64d7-4472-bff0-00a0a5c18ae2" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-24_domyslne.x" wejscie-w-zycie="2026-01-27"><nr>12</nr><p><zdanie nr="1" gd:zdGUID="f213ecfb-3221-4fdd-95df-1de75b0bc8b6" fragment="1" gd:fragmentGUID="6e561fdb-669b-467a-9c5d-d8197ad399d4" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-24_domyslne.x" wejscie-w-zycie="2026-01-27">Rada gminy może ustalić w formie uchwały, stanowiącej akt prawa miejscowego, zasady określania postanowień umów urbanistycznych.</zdanie></p></ustep><ustep eId="DU/2024/1130__art_37ed__ust_13" gd:GUID="6a95cba2-bc57-426f-9ba5-1344e8783027" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-24_domyslne.x" wejscie-w-zycie="2026-01-27"><nr>13</nr><p><zdanie nr="1" gd:zdGUID="5e1126ff-23b1-4308-aff6-6f2062919020" fragment="1" gd:fragmentGUID="ee00598c-1abb-44be-8538-e3360c65f2a0" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-24_domyslne.x" wejscie-w-zycie="2026-01-27">Uchwała, o której mowa w ust. 12, dotyczy wszystkich umów urbanistycznych zawieranych przez gminę.</zdanie></p></ustep><ustep eId="DU/2024/1130__art_37ed__ust_14" gd:GUID="fe646e46-082a-4f68-a0b3-6c8831646b53" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-24_domyslne.x" wejscie-w-zycie="2026-01-27"><nr>14</nr><p><zdanie nr="1" gd:zdGUID="ee563ae3-a82d-474e-ad50-b045162a972f" fragment="1" gd:fragmentGUID="d40c90e1-1e88-443d-984f-e38390f96a31" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-24_domyslne.x" wejscie-w-zycie="2026-01-27">W uchwale, o której mowa w ust. 12, dopuszcza się ustalenie różnych zasad określania postanowień umów urbanistycznych, biorąc pod uwagę w szczególności rodzaj lub parametry inwestycji głównej.</zdanie></p></ustep></cytat-strukt>.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2026/24__art_2" gd:GUID="875dfd60-1322-4e9c-a934-32a91a340428" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-24_domyslne.x" wejscie-w-zycie="2026-01-27">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="10574f3e-7c63-4fd9-bc26-cdc1d4ef32ae" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-24_domyslne.x" wejscie-w-zycie="2026-01-27">
+        <p>
+          <zdanie nr="1" gd:zdGUID="88bd1611-d5b2-4cb0-af81-45b572092c2a" fragment="1" gd:fragmentGUID="493c59eb-c9b0-4a02-973d-1b6fd6686d3b" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-24_domyslne.x" wejscie-w-zycie="2026-01-27">Do spraw opracowania i uchwalania zintegrowanych planów inwestycyjnych sporządzanych na podstawie wniosku złożonego przed dniem wejścia w życie niniejszej ustawy stosuje się przepisy ustawy zmienianej w art. 1, w brzmieniu dotychczasowym.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2026/24__art_3" gd:GUID="bb974ed3-3b36-40a4-a6fe-0dbb64c3557d" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-24_domyslne.x" wejscie-w-zycie="2026-01-27">
+      <nr>3</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="91fa7bb7-c30e-4245-8bc3-d64b07a77b92" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-24_domyslne.x" wejscie-w-zycie="2026-01-27">
+        <p>
+          <zdanie nr="1" gd:zdGUID="f620dd45-6ee7-41f5-b276-0877a95d9e5c" fragment="1" gd:fragmentGUID="bf91bfcb-ffae-47d3-aebe-6382290863fe" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-27_DU-2026-24_domyslne.x" wejscie-w-zycie="2026-01-27">Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <organ-podpisujacy>Prezydent Rzeczypospolitej Polskiej: <i><osoba podpisujacy="true" gd:osobaGUID="b84e08a9-3280-4bb9-9582-cba827c60ff9"><imie>K.</imie> <nazwisko>Nawrocki</nazwisko></osoba></i></organ-podpisujacy>
+  </ustawa>
+</akt-prawny>

@@ -1,0 +1,1286 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <obwieszczenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/294</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>78c3a00b-f708-4ebb-b70f-21bf719d436d</gd:GUIDwersji>
+      <AdresISAP>WDU20250000294</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>294</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 294</AdresWyswietlany>
+      <Tytul>Obwieszczenie Marszałka Sejmu Rzeczypospolitej Polskiej z dnia 6 marca 2025 r. w sprawie ogłoszenia jednolitego tekstu ustawy o Krajowym Ośrodku Wsparcia Rolnictwa</Tytul>
+      <Rodzaj>OBW_TJ</Rodzaj>
+      <DataOgloszenia>2025-03-11</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-03-06</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_ujednolicenie_2025-03-11_DU-2025-294_domyslne" rodzaj="ujednolicenie" pochodzenie="domyslne-z-aktu" data="2025-03-11" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_ujednolicenie.zdarz_ujednolicenie_2025-03-11_DU-2025-294_domyslne" glowna="true">
+          <Przedzial rodzaj="ujednolicenie" od="zdarz_ujednolicenie_2025-03-11_DU-2025-294_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <DataObowiazywaniaWersji>
+        <Od>zdarz_ujednolicenie_2025-03-11_DU-2025-294_domyslne</Od>
+      </DataObowiazywaniaWersji>
+      <Organy>
+        <Organ gd:GUID="65e4d834-1142-4f53-9b59-43843779070d" rola="wydajacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/MSEJMU">
+          <Nazwa>Marszałek Sejmu</Nazwa>
+          <OrganPodpisujacy>Marszałek Sejmu</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>S.</imie> <nazwisko>Hołownia</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Obwieszczenie</rodzaj-aktu>
+    <autor-aktu>Marszałka Sejmu Rzeczypospolitej Polskiej</autor-aktu>
+    <data>z dnia 6 marca 2025 r.</data>
+    <tytul>w sprawie ogłoszenia jednolitego tekstu ustawy o Krajowym Ośrodku Wsparcia Rolnictwa</tytul>
+    <punkt-OTJ eId="DU/2025/294__pkt_1" gd:GUID="dad0dc2e-ef45-4444-9bc8-97d2e47b929c">
+      <nr>1</nr>
+      <p>
+        <zdanie nr="1" gd:zdGUID="438da131-ea0f-46db-bb1f-19ada83095d6" fragment="1" gd:fragmentGUID="f29ede5d-df9d-424b-b282-96df43ad5ef3">Na podstawie art. 16 ust. 1 zdanie pierwsze ustawy z dnia 20 lipca 2000 r. o ogłaszaniu aktów normatywnych i niektórych innych aktów prawnych (Dz. U. z 2019 r. poz. 1461) ogłasza się w załączniku do niniejszego obwieszczenia jednolity tekst ustawy z dnia 10 lutego 2017 r. o Krajowym Ośrodku Wsparcia Rolnictwa (Dz. U. z 2024 r. poz. 700), z uwzględnieniem zmiany wprowadzonej ustawą z dnia 5 grudnia 2024 r. o zmianie ustawy o Funduszu Ochrony Rolnictwa oraz niektórych innych ustaw (Dz. U. poz. 1964) oraz zmian wynikających z przepisów ogłoszonych przed dniem 21 lutego 2025 r.</zdanie>
+      </p>
+    </punkt-OTJ>
+    <punkt-OTJ eId="DU/2025/294__pkt_2" gd:GUID="4f491c9a-f8b5-45d9-8614-057269d8f7fe">
+      <nr>2</nr>
+      <p>
+        <zdanie nr="1" gd:zdGUID="b19286fd-e131-4fe7-8258-8f43145408ec" fragment="1" gd:fragmentGUID="1d367167-0962-4fce-8fa5-dafccd1a66c7">Podany w załączniku do niniejszego obwieszczenia tekst jednolity ustawy nie obejmuje art. 6 ustawy z dnia 5 grudnia 2024 r. o zmianie ustawy o Funduszu Ochrony Rolnictwa oraz niektórych innych ustaw (Dz. U. poz. 1964), który stanowi:<tresc-strukt cudzyslowy="oba" gd:GUID="8bf32bca-dc7b-4670-a21a-afc33a649707"><artykul eId="DU/2024/1964__art_6" gd:GUID="720339e3-2bec-4b07-99ed-ba87c00ee97c"><nr>6</nr><ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="43740250-be5d-4fff-a9da-716d06b4ecb9"><p><zdanie nr="1" gd:zdGUID="c88add13-9402-47bc-9d71-7754e5fc5561" fragment="1" gd:fragmentGUID="bfffd40f-3554-4e7f-987e-01697317bdba">Ustawa wchodzi w życie z dniem 1 stycznia 2025 r.</zdanie></p></ustep-n></artykul></tresc-strukt>.</zdanie>
+      </p>
+    </punkt-OTJ>
+    <organ-podpisujacy>Marszałek Sejmu: <i><osoba podpisujacy="true" gd:osobaGUID="562c0d29-fe66-494f-8763-abb70990f22b"><imie>S.</imie> <nazwisko>Hołownia</nazwisko></osoba></i></organ-podpisujacy>
+    <ustawa>
+      <zalacznik-do>Załącznik do obwieszczenia Marszałka Sejmu Rzeczypospolitej Polskiej z dnia 6 marca 2025 r. (Dz. U. poz. 294)</zalacznik-do>
+      <rodzaj-aktu>Ustawa</rodzaj-aktu>
+      <data>z dnia 10 lutego 2017 r.</data>
+      <tytul>o Krajowym Ośrodku Wsparcia Rolnictwa</tytul>
+      <artykul eId="DU/2025/294__art_1" gd:GUID="2e4d4d78-341a-4d5b-b1c6-a15f516b1ae2">
+        <nr>1</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="9b1c811f-205a-4c94-a7d1-45f4627969dc">
+          <p>
+            <zdanie nr="1" gd:zdGUID="880c3ecd-34fe-4a07-96e1-9bf54964e847" fragment="1" gd:fragmentGUID="fea8cddb-72a5-4500-97e0-1f3fc2dd8dc9">Ustawa określa organizację i zadania Krajowego Ośrodka Wsparcia Rolnictwa, zwanego dalej „Krajowym Ośrodkiem”.</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2025/294__art_2" gd:GUID="f4964049-b9e2-41b1-bec2-e3b47cbf2a08">
+        <nr>2</nr>
+        <ustep eId="DU/2025/294__art_2__ust_1" gd:GUID="6a6a92bb-f25e-44f2-a00c-3521a191f108">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="2c924aba-e635-4bf7-9eaf-da81ebfed994" fragment="1" gd:fragmentGUID="c3ccde82-94b7-455c-a9c5-24c8fa3bdd98">Krajowy Ośrodek jest państwową osobą prawną będącą agencją wykonawczą w rozumieniu ustawy z dnia 27 sierpnia 2009 r. o finansach publicznych (Dz. U. z 2024 r. poz. 1530, 1572, 1717, 1756 i 1907 oraz z 2025 r. poz. 39).</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/294__art_2__ust_2" gd:GUID="106fd3fc-aec7-487d-97ca-c6507da7db62">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="b327d5cd-7a6c-42fb-8e1d-f060b6d4795e" fragment="1" gd:fragmentGUID="70e25930-f8eb-4585-9609-62c4e53602ad">Siedzibą Krajowego Ośrodka jest miasto stołeczne Warszawa.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/294__art_2__ust_3" gd:GUID="c9e045d8-2a3d-401c-a31f-d4a440212b98">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="e8accfb2-d9ad-4682-8c42-5652f84a3ce3" fragment="1" gd:fragmentGUID="fa3eccb7-cc5b-418e-9f1d-f677540ba42c">Nadzór nad Krajowym Ośrodkiem sprawuje minister właściwy do spraw rozwoju wsi.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/294__art_3" gd:GUID="166cf671-4d53-441c-a13e-dd64221c959e">
+        <nr>3</nr>
+        <ustep eId="DU/2025/294__art_3__ust_1" gd:GUID="c6d12efc-a720-46b8-b652-655f4170a50b">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="14d114a1-982a-4acb-b2a0-ea8ec3d72238" fragment="1" gd:fragmentGUID="87bb61ad-d013-44fd-b913-4f1411c5dd8e">Krajowy Ośrodek działa na podstawie ustawy oraz statutu.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/294__art_3__ust_2" gd:GUID="5b5232e6-eafd-49f9-aa86-9f7d5a6aa391">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="0735551e-1157-465a-a391-6b4c55da68aa" fragment="1" gd:fragmentGUID="bc02bbe8-70e0-49df-b9f3-822b7cb16390">Minister właściwy do spraw rozwoju wsi, w drodze rozporządzenia, nadaje Krajowemu Ośrodkowi statut, biorąc pod uwagę zakres jego zadań.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/294__art_3__ust_3" gd:GUID="54ea03fc-76df-4a44-8ada-5fcf8d51c4d0">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="2fde7747-ca91-4ebb-b919-43e1265464b5" fragment="1" gd:fragmentGUID="4f1b2404-264f-459c-a73c-d3c90a23e7e9">Statut Krajowego Ośrodka określa w szczególności:</zdanie>
+          </p>
+          <punkt eId="DU/2025/294__art_3__ust_3__pkt_1" gd:GUID="9ac39bfb-205b-46d6-a0fa-1b02aa48132d">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="2fde7747-ca91-4ebb-b919-43e1265464b5" fragment="2" gd:fragmentGUID="c0f6dbe9-ad85-4ce9-ac7c-dc0a26e0b973">organizację wewnętrzną Krajowego Ośrodka;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/294__art_3__ust_3__pkt_2" gd:GUID="e20b6af1-7b7d-47c1-9436-02624e5364aa">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="2fde7747-ca91-4ebb-b919-43e1265464b5" fragment="3" gd:fragmentGUID="118da69c-4445-4386-bd74-9988e6ac0e4d">system kontroli wewnętrznej i audytu wewnętrznego;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/294__art_3__ust_3__pkt_3" gd:GUID="19e3a903-fbb9-4547-a92c-f61a87470681">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="2fde7747-ca91-4ebb-b919-43e1265464b5" fragment="4" gd:fragmentGUID="e879cbef-519a-40f9-bb5a-88ac613a3617">sposób postępowania z mieniem niezagospodarowanym, wchodzącym w skład Zasobu Własności Rolnej Skarbu Państwa w rozumieniu przepisów ustawy z dnia 19 października 1991 r. o gospodarowaniu nieruchomościami rolnymi Skarbu Państwa (Dz. U. z 2024 r. poz. 589, 1089 i 1230);</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/294__art_3__ust_3__pkt_4" gd:GUID="0cea7e92-c0f1-44db-ae0c-19da9f338458">
+            <nr>4</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="2fde7747-ca91-4ebb-b919-43e1265464b5" fragment="5" gd:fragmentGUID="526b2c15-87d4-4c37-9894-1bd094e688a6">siedziby oddziałów terenowych Krajowego Ośrodka, a w przypadku oddziałów terenowych działających w województwie zachodniopomorskim – również ich zasięg terytorialny.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/294__art_4" gd:GUID="13b0f95d-26b2-4feb-b331-a85949b51bb2">
+        <nr>4</nr>
+        <ustep eId="DU/2025/294__art_4__ust_1" gd:GUID="c01434e3-ae0a-47f5-b69d-8d53198348bd">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="baecd141-8800-4b5d-8c8e-5a724f0d490a" fragment="1" gd:fragmentGUID="5dba1f5c-4552-4dca-b84a-e586778194de">Organem Krajowego Ośrodka jest Dyrektor Generalny, który kieruje Krajowym Ośrodkiem i reprezentuje go na zewnątrz.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/294__art_4__ust_2" gd:GUID="7c2e41dc-71ad-4913-abc3-e665ec35c63f">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="214c28fa-e108-4242-938e-99ff8dccd62d" fragment="1" gd:fragmentGUID="5da463be-8c7e-4bc7-8579-e2813a51b223">Dyrektora Generalnego powołuje Prezes Rady Ministrów na wniosek ministra właściwego do spraw rozwoju wsi.</zdanie>
+            <zdanie nr="2" gd:zdGUID="f3bbc59e-d91c-4ac0-b816-9afbbdd19e7a" fragment="1" gd:fragmentGUID="55091693-2b2c-44f7-af61-e8930dd949c0">Prezes Rady Ministrów odwołuje Dyrektora Generalnego.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/294__art_4__ust_3" gd:GUID="b547a9ac-9cd8-42c7-8411-5d53595cfc67">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="ba6e4c55-0ff8-4dc0-8cf0-ae48fef68342" fragment="1" gd:fragmentGUID="f9277bad-0f79-4315-97b8-01c39c1958e1">Dyrektor Generalny wykonuje zadania przy pomocy zastępców Dyrektora Generalnego oraz dyrektorów oddziałów terenowych Krajowego Ośrodka.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/294__art_4__ust_4" gd:GUID="86bede50-1c4a-403a-b96b-0111992d6ced">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="4bd3a4b9-7cbf-4fbf-8d68-4129df1f220e" fragment="1" gd:fragmentGUID="d7faa89f-deb2-43fd-a2c6-3e51c7f14a3e">Zastępców Dyrektora Generalnego powołuje minister właściwy do spraw rozwoju wsi na wniosek Dyrektora Generalnego.</zdanie>
+            <zdanie nr="2" gd:zdGUID="ce15a11b-22d6-4333-bf4d-402ade9ce735" fragment="1" gd:fragmentGUID="e3459cbb-da17-496e-8e86-54e6bc304ace">Minister właściwy do spraw rozwoju wsi odwołuje zastępców Dyrektora Generalnego.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/294__art_4__ust_5" gd:GUID="ba9cefce-96fb-40aa-a5de-93d48159fe6b">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a6714dae-5bf4-492e-9d79-b289f3bffcbd" fragment="1" gd:fragmentGUID="e28bc4f6-9d40-4c32-8121-601fd1465b8a">Stanowisko Dyrektora Generalnego i zastępcy Dyrektora Generalnego może zajmować osoba, która:</zdanie>
+          </p>
+          <punkt eId="DU/2025/294__art_4__ust_5__pkt_1" gd:GUID="f2778f77-1a9c-44d5-859e-6f6c37484281">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="a6714dae-5bf4-492e-9d79-b289f3bffcbd" fragment="2" gd:fragmentGUID="266ff993-7904-4066-b934-3c84e4122ccd">posiada tytuł zawodowy magistra lub równorzędny;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/294__art_4__ust_5__pkt_2" gd:GUID="148800f9-5c27-43a8-8171-932079116608">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="a6714dae-5bf4-492e-9d79-b289f3bffcbd" fragment="3" gd:fragmentGUID="64b08ef0-7d05-4e30-bb32-ce36c909a718">jest obywatelem polskim;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/294__art_4__ust_5__pkt_3" gd:GUID="5839c948-929f-4c19-8972-92c710d2365f">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="a6714dae-5bf4-492e-9d79-b289f3bffcbd" fragment="4" gd:fragmentGUID="7b8b425b-5525-432f-bcf0-67bf099f5d2c">korzysta z pełni praw publicznych;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/294__art_4__ust_5__pkt_4" gd:GUID="0e79b4e0-e5ea-4f97-a340-04c1b18ee242">
+            <nr>4</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="a6714dae-5bf4-492e-9d79-b289f3bffcbd" fragment="5" gd:fragmentGUID="bb4992be-8d57-40c5-b911-711f5196a791">nie była skazana prawomocnym wyrokiem za umyślne przestępstwo lub umyślne przestępstwo skarbowe;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/294__art_4__ust_5__pkt_5" gd:GUID="50afe0aa-5c3a-4a7b-903c-ee7b620fc39d">
+            <nr>5</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="a6714dae-5bf4-492e-9d79-b289f3bffcbd" fragment="6" gd:fragmentGUID="8a8c0d7d-1fb3-4b9d-b058-050bd0e0cdd9">posiada co najmniej 6-letni staż pracy, w tym co najmniej 3-letni staż pracy na stanowisku kierowniczym;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/294__art_4__ust_5__pkt_6" gd:GUID="6186c95a-747c-4421-acd1-963f9967ea50">
+            <nr>6</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="a6714dae-5bf4-492e-9d79-b289f3bffcbd" fragment="7" gd:fragmentGUID="15f26e56-f761-46f6-9c5e-23f233d15c27">posiada wykształcenie i wiedzę z zakresu zadań realizowanych przez Krajowy Ośrodek.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/294__art_5" gd:GUID="ae025fe4-fbdf-4a9b-bc1b-9df90190157d">
+        <nr>5</nr>
+        <ustep eId="DU/2025/294__art_5__ust_1" gd:GUID="cfe674ef-dff7-4c81-90e7-2ee4aff8a40b">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="f6f07bc6-6047-49bf-8373-70f1328dc402" fragment="1" gd:fragmentGUID="c61147b0-2d33-4fc9-a8b6-aaaa69b80eb6">W Krajowym Ośrodku wyodrębnia się następujące jednostki organizacyjne:</zdanie>
+          </p>
+          <punkt eId="DU/2025/294__art_5__ust_1__pkt_1" gd:GUID="da25b321-ae05-4250-b763-3575324ef5b0">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="f6f07bc6-6047-49bf-8373-70f1328dc402" fragment="2" gd:fragmentGUID="55abacf8-7978-4e49-b84d-1baa6b83c271">biuro Krajowego Ośrodka, zwane dalej „Centralą”;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/294__art_5__ust_1__pkt_2" gd:GUID="933fa6e9-a266-4379-92dc-00bd5080165b">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="f6f07bc6-6047-49bf-8373-70f1328dc402" fragment="3" gd:fragmentGUID="134e4b0d-77b6-44bf-b376-a0f9ac3139cc">oddziały terenowe Krajowego Ośrodka działające w każdym województwie, z tym że w województwie zachodniopomorskim wyodrębnia się dwa oddziały terenowe.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/294__art_5__ust_2" gd:GUID="50ab8392-ea9d-4267-8029-70244c6db15a">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a1b916e1-0e82-4180-9731-0a1e443a455d" fragment="1" gd:fragmentGUID="91c6f647-0a18-4833-a6e1-afad8ee003a2">Oddziałem terenowym Krajowego Ośrodka kieruje dyrektor przy pomocy zastępców.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/294__art_5__ust_3" gd:GUID="a439a391-05af-4fa7-a906-930a4c32d16b">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="7ba2d185-a89c-424f-9d04-633794cd5603" fragment="1" gd:fragmentGUID="8cca16a1-3eab-4156-a493-5d1aef21a413">Dyrektor Generalny powołuje i odwołuje:</zdanie>
+          </p>
+          <punkt eId="DU/2025/294__art_5__ust_3__pkt_1" gd:GUID="1c3eebee-1e21-48ee-9e97-b97bdc487e89">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="7ba2d185-a89c-424f-9d04-633794cd5603" fragment="2" gd:fragmentGUID="c190d78a-8c1e-4d11-a964-97423c592604">kierowników komórek organizacyjnych w Centrali i ich zastępców;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/294__art_5__ust_3__pkt_2" gd:GUID="bd73c412-3dbd-4587-a176-789db1a9e33c">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="7ba2d185-a89c-424f-9d04-633794cd5603" fragment="3" gd:fragmentGUID="1f26d7c3-1381-4a13-ab99-13924befd02f">głównego księgowego;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/294__art_5__ust_3__pkt_3" gd:GUID="c31ad1b3-e85e-4b54-bb49-2c811d58f8d5">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="7ba2d185-a89c-424f-9d04-633794cd5603" fragment="4" gd:fragmentGUID="50f68220-9d29-4401-97fb-2a537386efe4">dyrektorów i zastępców dyrektorów oddziałów terenowych Krajowego Ośrodka;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/294__art_5__ust_3__pkt_4" gd:GUID="cbbd264b-04ef-4557-8dc7-5c2a6b067a91">
+            <nr>4</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="7ba2d185-a89c-424f-9d04-633794cd5603" fragment="5" gd:fragmentGUID="45d8a221-6b31-48c0-9616-08f32ecacc73">pełnomocników i doradców Dyrektora Generalnego w Centrali lub oddziałach terenowych Krajowego Ośrodka.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/294__art_5__ust_4" gd:GUID="e1cbf701-5fa4-4f47-9032-bdc790a2375f">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="52f41a77-8d19-4a9c-8257-7988d7f6f58f" fragment="1" gd:fragmentGUID="47f7a59d-01d7-466d-b75c-54c1236f1066">Stanowiska wymienione w ust. 3 pkt 1, 3 i 4 może zajmować osoba, która:</zdanie>
+          </p>
+          <punkt eId="DU/2025/294__art_5__ust_4__pkt_1" gd:GUID="6c893e3f-67ca-4546-ba69-1b8770ac9a7a">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="52f41a77-8d19-4a9c-8257-7988d7f6f58f" fragment="2" gd:fragmentGUID="12a17c1c-af98-4d30-9af9-8bd75b348c39">posiada wykształcenie wyższe;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/294__art_5__ust_4__pkt_2" gd:GUID="8228b5c1-c572-46bc-926a-a98a53298d1d">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="52f41a77-8d19-4a9c-8257-7988d7f6f58f" fragment="3" gd:fragmentGUID="7d33904b-c851-4719-956b-918e6413991d">jest obywatelem polskim;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/294__art_5__ust_4__pkt_3" gd:GUID="872f76ef-b54a-4da7-ad05-694102f8cae3">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="52f41a77-8d19-4a9c-8257-7988d7f6f58f" fragment="4" gd:fragmentGUID="677f6f1e-c66c-48dd-a34d-e360b567f8d6">korzysta z pełni praw publicznych;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/294__art_5__ust_4__pkt_4" gd:GUID="877c5306-f69f-487f-b84e-cb937c8cf78d">
+            <nr>4</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="52f41a77-8d19-4a9c-8257-7988d7f6f58f" fragment="5" gd:fragmentGUID="76b60b9d-1adc-42b6-8e8e-188edca536eb">nie była skazana prawomocnym wyrokiem za umyślne przestępstwo lub umyślne przestępstwo skarbowe.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/294__art_5a" gd:GUID="37ffe6e7-59b5-4664-b04a-476acafe0eda">
+        <nr>5a</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="d532e643-8217-4200-b4d9-bc39bb360a37">
+          <p>
+            <zdanie nr="1" gd:zdGUID="188d46b9-d0dd-41b7-9bb9-c11332111520" fragment="1" gd:fragmentGUID="9d769452-3e4a-474b-9533-02c1f4fa2c9c">Centrala i oddziały terenowe Krajowego Ośrodka używają wizerunku orła ustalonego dla godła Rzeczypospolitej Polskiej oraz pieczęci urzędowej określonej w przepisach o pieczęciach państwowych.</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2025/294__art_6" gd:GUID="07ae9360-2e34-4618-bc0c-c4f810969dc8">
+        <nr>6</nr>
+        <ustep eId="DU/2025/294__art_6__ust_1" gd:GUID="b67d2c4f-adfa-4610-b88c-027f9975c0af">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="0daeeeb7-915e-438a-9a5f-1a09d4a25205" fragment="1" gd:fragmentGUID="5be1a7c5-e18a-4d0e-92a7-745632d287a8">Powołanie na stanowiska, o których mowa w art. 4 ust. 5 i art. 5 ust. 3, jest równoznaczne z nawiązaniem stosunku pracy na podstawie powołania w rozumieniu przepisów ustawy z dnia 26 czerwca 1974 r. – Kodeks pracy (Dz. U. z 2023 r. poz. 1465 oraz z 2024 r. poz. 878, 1222, 1871 i 1965).</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/294__art_6__ust_2" gd:GUID="2e3f8aca-7e95-40e6-9d27-fb76def9123d">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="baeb6869-0d62-419b-97f5-4843d3dc7a22" fragment="1" gd:fragmentGUID="2320336b-e99f-4942-b58f-16acae8c3361">Jeżeli przepisy ustawy nie stanowią inaczej, czynności z zakresu prawa pracy w odniesieniu do Dyrektora Generalnego wykonuje minister właściwy do spraw rozwoju wsi.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/294__art_7" gd:GUID="a172901c-d4c8-4b34-a422-82d3cef23d32">
+        <nr>7</nr>
+        <ustep eId="DU/2025/294__art_7__ust_1" gd:GUID="d55fedd8-db76-4db7-838d-2610ceb71cf6">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="55823a03-053c-42fd-84b4-5cd9236b963d" fragment="1" gd:fragmentGUID="b47eac55-644f-4d66-9712-3713a86c7ecb">Nabór kandydatów do zatrudnienia na wolne stanowiska pracy w Krajowym Ośrodku, z wyłączeniem stanowisk pracy, o których mowa w art. 4 ust. 5 i art. 5 ust. 3, jest otwarty i konkurencyjny.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/294__art_7__ust_2" gd:GUID="d96c8f2c-3fe4-4daa-b45d-a3e6804a4f6e">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a394f2e0-ad7f-4fb5-a75b-cd21a93be07f" fragment="1" gd:fragmentGUID="bf4944b0-1aee-41b6-bc7b-412276f4f123">Ogłoszenie o naborze udostępnia się w Biuletynie Informacji Publicznej, o którym mowa w ustawie z dnia 6 września 2001 r. o dostępie do informacji publicznej (Dz. U. z 2022 r. poz. 902), oraz umieszcza się w miejscu powszechnie dostępnym w jednostce organizacyjnej, w której jest prowadzony nabór.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/294__art_7__ust_3" gd:GUID="c77c0912-0f49-46aa-a062-749aa27f18ca">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="b080e95e-96c9-443e-971e-b81e3c1e83ad" fragment="1" gd:fragmentGUID="5437eb7b-67ba-478a-8839-99137be1ac14">Informacje o kandydatach, którzy zgłosili się do naboru, stanowią informację publiczną w zakresie objętym wymaganiami określonymi w ogłoszeniu o naborze.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/294__art_7__ust_4" gd:GUID="f7e1db45-2221-42dd-aa3c-e0fb6170ce7a">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="f9b03d29-059f-42af-b5d3-517ee5cb8c2b" fragment="1" gd:fragmentGUID="fa246cfe-9e28-4d5e-9298-0e9fdc2dbc04">Termin do składania dokumentów, określony w ogłoszeniu o naborze, nie może być krótszy niż 14 dni od dnia udostępnienia tego ogłoszenia w Biuletynie Informacji Publicznej.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/294__art_7__ust_5" gd:GUID="a82022dd-6154-4303-85e3-da724f6c1328">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="cb44563e-daea-4620-809a-a8a753cbb89c" fragment="1" gd:fragmentGUID="7497c313-ef86-44a9-9ae3-02cc6b908681">Po upływie terminu do składania dokumentów określonego w ogłoszeniu o naborze niezwłocznie upowszechnia się listę kandydatów, którzy spełniają wymagania formalne określone w ogłoszeniu o naborze, przez udostępnienie jej w Biuletynie Informacji Publicznej, a także przez umieszczenie jej w miejscu powszechnie dostępnym w jednostce organizacyjnej, w której jest prowadzony nabór.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/294__art_7__ust_6" gd:GUID="f48cbff2-37b1-4e89-ad62-627994298aad">
+          <nr>6</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="3e8a0005-793a-4b39-8b09-c0a21c521da1" fragment="1" gd:fragmentGUID="425714a4-d266-4338-9418-0599cc2e0aae">Lista, o której mowa w ust. 5, zawiera imię i nazwisko kandydata oraz jego miejsce zamieszkania w rozumieniu przepisów ustawy z dnia 23 kwietnia 1964 r. – Kodeks cywilny (Dz. U. z 2024 r. poz. 1061 i 1237).</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/294__art_7__ust_7" gd:GUID="9ff5c44f-03ef-48d2-9c93-02f2769c3555">
+          <nr>7</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="71ca186c-5c14-4654-bc7f-47e218a518a2" fragment="1" gd:fragmentGUID="2ed0906c-4836-473b-b442-d52ac149874b">Z przeprowadzonego naboru kandydatów do zatrudnienia na wolne stanowiska pracy w Krajowym Ośrodku sporządza się protokół oraz informację o wyniku naboru.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/294__art_7__ust_8" gd:GUID="70521161-b870-4021-95d4-4288c5837489">
+          <nr>8</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="6c0c552d-2c8c-4e4e-94cd-058afc286783" fragment="1" gd:fragmentGUID="b1fafc77-dd17-43b0-b83e-6656ea2b2141">Protokół, o którym mowa w ust. 7, zawiera w szczególności:</zdanie>
+          </p>
+          <punkt eId="DU/2025/294__art_7__ust_8__pkt_1" gd:GUID="44cced62-314e-40c4-8518-1ec0a586c71c">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="6c0c552d-2c8c-4e4e-94cd-058afc286783" fragment="2" gd:fragmentGUID="e13712a1-2442-4d93-8c3c-451a0a3674fc">określenie stanowiska pracy, na które był prowadzony nabór, liczbę kandydatów oraz imiona, nazwiska i adresy nie więcej niż 5 najlepszych kandydatów uszeregowanych według poziomu spełniania przez nich wymagań określonych w ogłoszeniu o naborze;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/294__art_7__ust_8__pkt_2" gd:GUID="7e1341c1-d648-401d-a902-d4646d79abb0">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="6c0c552d-2c8c-4e4e-94cd-058afc286783" fragment="3" gd:fragmentGUID="7f28a79e-781b-4efd-97f9-707082aaf7f9">informację o zastosowanych metodach i technikach naboru;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/294__art_7__ust_8__pkt_3" gd:GUID="561df118-56c8-49f0-904b-1289aefc0ec9">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="6c0c552d-2c8c-4e4e-94cd-058afc286783" fragment="4" gd:fragmentGUID="0203faf9-d89e-4227-a9c9-d21a7ba10cc8">uzasadnienie dokonanego wyboru kandydata.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/294__art_7__ust_9" gd:GUID="d387f7e4-152d-4e1d-b0b2-116fa0411a77">
+          <nr>9</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="00f70607-b7cf-4494-9229-3472fca676e8" fragment="1" gd:fragmentGUID="7863ef1a-16e2-497d-a9af-7af92c2f625c">Informacja, o której mowa w ust. 7, zawiera:</zdanie>
+          </p>
+          <punkt eId="DU/2025/294__art_7__ust_9__pkt_1" gd:GUID="408fe465-d4b0-45f8-92c0-378130e4c6b9">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="00f70607-b7cf-4494-9229-3472fca676e8" fragment="2" gd:fragmentGUID="1d8b6e4d-3252-47f3-8147-07d85d5afddd">nazwę i adres urzędu, do którego był prowadzony nabór;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/294__art_7__ust_9__pkt_2" gd:GUID="8ddc2809-e7de-4c8f-9de7-e96a0ba158e9">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="00f70607-b7cf-4494-9229-3472fca676e8" fragment="3" gd:fragmentGUID="23ebcaf7-4b87-48d3-9d3e-54afd0212cb6">określenie stanowiska pracy, na które był prowadzony nabór;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/294__art_7__ust_9__pkt_3" gd:GUID="573dd1ce-7538-4693-9550-43636abf63b9">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="00f70607-b7cf-4494-9229-3472fca676e8" fragment="4" gd:fragmentGUID="b373a66e-335a-4bcc-bba1-0db78910349d">imię i nazwisko kandydata oraz jego miejsce zamieszkania w rozumieniu przepisów ustawy z dnia 23 kwietnia 1964 r. – Kodeks cywilny;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/294__art_7__ust_9__pkt_4" gd:GUID="0fae5537-ecdb-493c-8235-d6ae94b7705d">
+            <nr>4</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="00f70607-b7cf-4494-9229-3472fca676e8" fragment="5" gd:fragmentGUID="72eb3012-3d4e-4498-bf09-38a81a3e4980">uzasadnienie dokonanego wyboru kandydata albo uzasadnienie niezatrudnienia żadnego kandydata.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/294__art_7__ust_10" gd:GUID="61c7ae57-35de-4286-920e-f98fed80b75a">
+          <nr>10</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="d47b1cb1-70e3-4be0-86dd-d2e03eb9c21e" fragment="1" gd:fragmentGUID="7f1f7fdc-14c4-415c-b94d-764d7f29ba6f">Informację, o której mowa w ust. 7, udostępnia się w Biuletynie Informacji Publicznej i umieszcza w miejscu powszechnie dostępnym w jednostce organizacyjnej, w której był prowadzony nabór, w terminie 14 dni od dnia zatrudnienia wybranego kandydata albo zakończenia naboru – w przypadku gdy w jego wyniku nie doszło do zatrudnienia żadnego kandydata.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/294__art_7__ust_11" gd:GUID="d4490102-348a-461c-8a01-32c4eb19a287">
+          <nr>11</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="b2cf77a3-a56d-4917-a18e-4525997d7427" fragment="1" gd:fragmentGUID="a32c371b-16ea-48fb-b63c-98f603cc3c61">Jeżeli stosunek pracy osoby wyłonionej w drodze naboru ustał w ciągu 3 miesięcy od dnia nawiązania stosunku pracy, można zatrudnić na tym samym stanowisku kolejnego najlepszego kandydata wymienionego w protokole tego naboru.</zdanie>
+            <zdanie nr="2" gd:zdGUID="245e1ce2-b2a5-4d29-846b-dd5c64ae96a7" fragment="1" gd:fragmentGUID="4023d724-a7d9-47b1-88fc-22baf658b1a3">Przepisy ust. 9 i 10 stosuje się odpowiednio.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/294__art_7a" gd:GUID="17df6d10-8536-41e1-8155-e9038807ad5c">
+        <nr>7a</nr>
+        <ustep eId="DU/2025/294__art_7a__ust_1" gd:GUID="a4e757eb-6158-4a27-a048-e4aadb8fd647">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="6eec8277-6e54-437d-910f-3d8b1f915329" fragment="1" gd:fragmentGUID="57754ea8-35a5-411d-b19f-0ba0276b5ec4">Na wolne stanowisko pracy w Krajowym Ośrodku może zostać przeniesiony pracownik urzędu obsługującego ministra właściwego do spraw rolnictwa, rozwoju wsi, rynków rolnych oraz rybołówstwa, w tym będący członkiem korpusu służby cywilnej w rozumieniu art. 3 pkt 3 ustawy z dnia 21 listopada 2008 r. o służbie cywilnej (Dz. U. z 2024 r. poz. 409), w drodze porozumienia pracodawców, za zgodą tego pracownika.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/294__art_7a__ust_2" gd:GUID="f77f5d66-a464-4ce3-a430-612bb8b06f85">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="e399c8d6-af6c-4c13-a245-ab868bf7a9fd" fragment="1" gd:fragmentGUID="72bea528-2f42-4d86-9918-1579d02db3d3">W przypadku przeniesienia, o którym mowa w ust. 1, z pracownikiem nawiązuje się stosunek pracy na podstawie umowy o pracę na czas nieokreślony albo na czas określony.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/294__art_7a__ust_3" gd:GUID="3f58ee01-f966-4967-9751-3120b43e3d9a">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="bc6c1f0f-cdb4-47a3-be78-8d8cf51a1af3" fragment="1" gd:fragmentGUID="6becf184-3c08-4709-a6df-0c506aed31e2">Pracownik, o którym mowa w ust. 1, zachowuje prawo do dotychczasowego wynagrodzenia, z uwzględnieniem dodatków, o których mowa w art. 85 ustawy z dnia 21 listopada 2008 r. o służbie cywilnej, przez okres trzech miesięcy następujących po miesiącu, w którym został przeniesiony na nowe stanowisko, jeżeli jest ono wyższe od przysługującego na nowym stanowisku.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/294__art_8" gd:GUID="731341a2-76ce-43d2-a5dc-b7721cdc1395">
+        <nr>8</nr>
+        <ustep eId="DU/2025/294__art_8__ust_1" gd:GUID="9dae0361-b101-45a8-a7cc-fcfbd33b164c">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="45fd0dc1-384c-475c-b6d1-7e4f078a7453" fragment="1" gd:fragmentGUID="5428e86b-1e20-41aa-a874-48ef6d8c0f72">Dyrektor Generalny i dyrektorzy oddziałów terenowych Krajowego Ośrodka wydają decyzje administracyjne w zakresie określonym w odrębnych przepisach.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/294__art_8__ust_2" gd:GUID="948c2793-c6fa-44d1-81c7-601d15a1595e">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="f383fed0-63a4-4742-8808-702541c91e48" fragment="1" gd:fragmentGUID="8ba411e5-9765-4dea-bcec-6a1a47d9c0ad">Dyrektor Generalny oraz dyrektorzy oddziałów terenowych Krajowego Ośrodka mogą upoważniać pracowników Krajowego Ośrodka do podejmowania określonych czynności, w tym do wydawania decyzji administracyjnych.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/294__art_8__ust_3" gd:GUID="825bc4e2-b234-4df5-ab9a-d63b1904d44a">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="4bcf1c40-81f7-41d8-8422-3026ad300966" fragment="1" gd:fragmentGUID="bda34293-39d6-4367-81a5-3a3b149a15b9">W postępowaniu administracyjnym organem wyższego stopnia w rozumieniu ustawy z dnia 14 czerwca 1960 r. – Kodeks postępowania administracyjnego (Dz. U. z 2024 r. poz. 572) w stosunku do:</zdanie>
+          </p>
+          <punkt eId="DU/2025/294__art_8__ust_3__pkt_1" gd:GUID="58d113d0-b6f9-42e8-8717-4cb6a3d35fcf">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="4bcf1c40-81f7-41d8-8422-3026ad300966" fragment="2" gd:fragmentGUID="9928c9e6-c685-4d20-8393-4fa9d4852510">dyrektorów oddziałów terenowych Krajowego Ośrodka – jest Dyrektor Generalny;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/294__art_8__ust_3__pkt_2" gd:GUID="c5e98bfe-6efc-4133-997d-8f4ccd43132d">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="4bcf1c40-81f7-41d8-8422-3026ad300966" fragment="3" gd:fragmentGUID="67a41b5e-e101-4913-9182-a65db94a74cb">Dyrektora Generalnego – jest minister właściwy do spraw rozwoju wsi.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/294__art_9" gd:GUID="26e2ed8b-2b73-4cea-9416-9a3e61d318b4">
+        <nr>9</nr>
+        <ustep eId="DU/2025/294__art_9__ust_1" gd:GUID="f7aad774-f6a1-47d8-94b6-73310f376e2f">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="8fe6d180-4a2c-4f9b-88c6-1e6b892bc6e3" fragment="1" gd:fragmentGUID="2ea89f74-5656-4b53-9fab-6d01f3739fb8">Krajowy Ośrodek realizuje zadania wynikające z polityki państwa, w szczególności w zakresie wdrażania i stosowania instrumentów wsparcia rolnictwa, aktywnej polityki rolnej oraz rozwoju obszarów wiejskich.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/294__art_9__ust_2" gd:GUID="f700c7de-8a15-45a9-a92b-800ca38e5f6d">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="aa96cbef-e3c5-4195-9eb1-eb900ec7e146" fragment="1" gd:fragmentGUID="1d43a269-e3f2-429d-a225-6fc99dad1c37">Do zadań Krajowego Ośrodka należy:</zdanie>
+          </p>
+          <punkt eId="DU/2025/294__art_9__ust_2__pkt_1" gd:GUID="31f70608-1a64-4fa5-a669-6305c3315f01">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="aa96cbef-e3c5-4195-9eb1-eb900ec7e146" fragment="2" gd:fragmentGUID="20c53c05-f90f-4e19-9017-e8414ff984c4">tworzenie oraz poprawa struktury obszarowej gospodarstw rodzinnych;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/294__art_9__ust_2__pkt_2" gd:GUID="146a5b00-eec6-4418-bb77-a9ead91d2541">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="aa96cbef-e3c5-4195-9eb1-eb900ec7e146" fragment="3" gd:fragmentGUID="9da77e5a-1d43-4f1d-9fcb-cdf6fcf027bd">tworzenie warunków sprzyjających racjonalnemu wykorzystaniu potencjału produkcyjnego Zasobu Własności Rolnej Skarbu Państwa;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/294__art_9__ust_2__pkt_3" gd:GUID="a81cebd1-f01b-46d3-a510-afce4fdcd527">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="aa96cbef-e3c5-4195-9eb1-eb900ec7e146" fragment="4" gd:fragmentGUID="bbeb4024-623f-41bd-8a6b-489be9ec8624">restrukturyzacja oraz prywatyzacja mienia Skarbu Państwa użytkowanego na cele rolnicze;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/294__art_9__ust_2__pkt_4" gd:GUID="06d35d54-c2e0-4e72-b3d8-482497413f00">
+            <nr>4</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="aa96cbef-e3c5-4195-9eb1-eb900ec7e146" fragment="5" gd:fragmentGUID="76c9175b-154e-4c0b-a389-61a9ee724617">obrót nieruchomościami i innymi składnikami majątku Skarbu Państwa;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/294__art_9__ust_2__pkt_5" gd:GUID="ff3951ad-c7bb-45a6-99eb-ed2f732be178">
+            <nr>5</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="aa96cbef-e3c5-4195-9eb1-eb900ec7e146" fragment="6" gd:fragmentGUID="12eb9a24-445e-449f-9ca5-288f721f8122">administrowanie zasobami majątkowymi Skarbu Państwa przeznaczonymi na cele rolne;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/294__art_9__ust_2__pkt_6" gd:GUID="a75e40f9-454c-4431-a7eb-c9f129da0331">
+            <nr>6</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="aa96cbef-e3c5-4195-9eb1-eb900ec7e146" fragment="7" gd:fragmentGUID="0e05da4e-4c19-4087-89eb-0e620a9384c5">zabezpieczenie majątku Skarbu Państwa;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/294__art_9__ust_2__pkt_7" gd:GUID="ec939db6-08d8-4e9e-a663-7e1fbd924436">
+            <nr>7</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="aa96cbef-e3c5-4195-9eb1-eb900ec7e146" fragment="8" gd:fragmentGUID="53498423-27ad-4d4d-aacf-4df15ae9acd9">inicjowanie prac urządzeniowo-rolnych;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/294__art_9__ust_2__pkt_8" gd:GUID="6b12dde1-ead5-43a4-8fd9-69497447c357">
+            <nr>8</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="aa96cbef-e3c5-4195-9eb1-eb900ec7e146" fragment="9" gd:fragmentGUID="db58e3c5-8996-4355-ab7f-6e2411792f38">popieranie organizowania na gruntach Skarbu Państwa gospodarstw rolnych;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/294__art_9__ust_2__pkt_9" gd:GUID="524d57af-40cf-48e6-8180-ad4319b626a7">
+            <nr>9</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="aa96cbef-e3c5-4195-9eb1-eb900ec7e146" fragment="10" gd:fragmentGUID="0758c471-0a57-421c-8702-ef4114010f61">wykonywanie praw z udziałów i akcji;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/294__art_9__ust_2__pkt_9a" gd:GUID="a3685a06-9679-4add-8ef7-ae02e54cdda9">
+            <nr>9a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="aa96cbef-e3c5-4195-9eb1-eb900ec7e146" fragment="11" gd:fragmentGUID="757b543d-409f-4917-a71a-9ed1e6d142ef">tworzenie lub przystępowanie do spółki handlowej oraz posiadanie, obejmowanie lub nabywanie akcji lub udziałów w spółkach na zasadach określonych w ustawie oraz przepisach odrębnych ustaw;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/294__art_9__ust_2__pkt_10" gd:GUID="9a3f23e9-f6d9-43d3-8009-bea10d8ccc3f">
+            <nr>10</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="aa96cbef-e3c5-4195-9eb1-eb900ec7e146" fragment="12" gd:fragmentGUID="60973149-6935-4320-bbe4-6d59381dd8fa">wsparcie działań na rzecz odnawialnych źródeł energii, w szczególności w rolnictwie;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/294__art_9__ust_2__pkt_11" gd:GUID="dda53d05-6392-4991-bd48-0dd4a329c63f">
+            <nr>11</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="aa96cbef-e3c5-4195-9eb1-eb900ec7e146" fragment="13" gd:fragmentGUID="60b74a5a-0155-4d94-b1c9-87fae89a0e5c">monitorowanie:</zdanie>
+            </p>
+            <litera eId="DU/2025/294__art_9__ust_2__pkt_11__lit_a" gd:GUID="b5a20389-108b-4d3d-a870-ea3686a2e881">
+              <nr>a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="aa96cbef-e3c5-4195-9eb1-eb900ec7e146" fragment="14" gd:fragmentGUID="db1fa8e8-a25a-4eb7-80da-e84468eee7d2">produkcji biogazu rolniczego,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/294__art_9__ust_2__pkt_11__lit_b" gd:GUID="449ab396-e209-4600-9025-5f7884e067eb">
+              <nr>b</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="aa96cbef-e3c5-4195-9eb1-eb900ec7e146" fragment="15" gd:fragmentGUID="9412d5ee-f1e9-419e-91b2-cfcff013b819">rynku biokomponentów i biopaliw ciekłych,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/294__art_9__ust_2__pkt_11__lit_c" gd:GUID="d64df863-ad41-4c5e-930a-315ad537a75d">
+              <nr>c</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="aa96cbef-e3c5-4195-9eb1-eb900ec7e146" fragment="16" gd:fragmentGUID="241df73c-847f-4d43-a7b0-42d12103ebfe">produkcji biopłynów,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/294__art_9__ust_2__pkt_11__lit_d" gd:GUID="87d47572-9105-4961-a9b4-583106a31d48">
+              <nr>d</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="aa96cbef-e3c5-4195-9eb1-eb900ec7e146" fragment="17" gd:fragmentGUID="e75e8974-91e5-44e1-86df-9706879698f1">rynku maku,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/294__art_9__ust_2__pkt_11__lit_e" gd:GUID="a0afbf55-c5b2-49ba-890b-656414edbe00">
+              <nr>e</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="aa96cbef-e3c5-4195-9eb1-eb900ec7e146" fragment="18" gd:fragmentGUID="5cc7e941-9593-4418-81fb-a3f92c86db6a">rynku konopi włóknistych;</zdanie>
+              </p>
+            </litera>
+          </punkt>
+          <punkt eId="DU/2025/294__art_9__ust_2__pkt_12" gd:GUID="78c23d73-9c20-4e2a-941d-86a2537a26d2">
+            <nr>12</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="aa96cbef-e3c5-4195-9eb1-eb900ec7e146" fragment="19" gd:fragmentGUID="fddab52b-2f23-491d-83e1-4c9470b9b6e6">gromadzenie informacji dotyczących istniejącej, będącej w budowie lub planowanej infrastruktury energetycznej służącej do wytwarzania energii elektrycznej z biogazu rolniczego oraz biokomponentów, o których mowa w ustawie z dnia 25 sierpnia 2006 r. o biokomponentach i biopaliwach ciekłych (Dz. U. z 2024 r. poz. 20, 834 i 1946);</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/294__art_9__ust_2__pkt_13" gd:GUID="b13f2269-5388-4b06-acfa-a0f15ada03e5">
+            <nr>13</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="aa96cbef-e3c5-4195-9eb1-eb900ec7e146" fragment="20" gd:fragmentGUID="402ea245-07d6-4138-9280-bc823e1b8746">obsługa funduszy promocji produktów rolno-spożywczych;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/294__art_9__ust_2__pkt_14" gd:GUID="f3bcc7b9-553f-471a-a9a6-85d8bb6646b0">
+            <nr>14</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="aa96cbef-e3c5-4195-9eb1-eb900ec7e146" fragment="21" gd:fragmentGUID="495b3e56-ffd3-4a4c-ac5b-78e1a98ae69b">gromadzenie, analiza i udostępnianie informacji dotyczących rynków produktów rolnych i żywnościowych;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/294__art_9__ust_2__pkt_15" gd:GUID="5446cda8-887b-435b-9402-5cd1b3edf3bd">
+            <nr>15</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="aa96cbef-e3c5-4195-9eb1-eb900ec7e146" fragment="22" gd:fragmentGUID="045c8b54-5d95-4533-b00f-ece029a634d0">opracowywanie i upowszechnianie informacji związanych z realizacją mechanizmów aktywnej polityki rolnej na rynkach produktów rolnych i żywnościowych;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/294__art_9__ust_2__pkt_16" gd:GUID="90f96731-1ba7-4106-b16a-31633ead3dbb">
+            <nr>16</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="aa96cbef-e3c5-4195-9eb1-eb900ec7e146" fragment="23" gd:fragmentGUID="4b1e51e8-283e-4219-ba95-6f410e4e6d81">prowadzenie i wsparcie działań promocyjnych, informacyjnych, edukacyjnych, kulturalnych, w tym w formie wystaw, pokazów oraz konkursów, w szczególności dotyczących:</zdanie>
+            </p>
+            <litera eId="DU/2025/294__art_9__ust_2__pkt_16__lit_a" gd:GUID="8373de4d-cbc1-4f83-ba58-8b32677dfb7a">
+              <nr>a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="aa96cbef-e3c5-4195-9eb1-eb900ec7e146" fragment="24" gd:fragmentGUID="c003ede3-6fdb-4cb5-a6e6-f06bac7af14f">produktów rolnych i żywnościowych, metod ich produkcji, a także systemów jakości produktów rolnych i żywnościowych, z wyłączeniem działań informacyjnych i promocyjnych dotyczących rolnictwa i gospodarki żywnościowej realizowanych przez ministra właściwego do spraw rolnictwa, rynków rolnych, rybołówstwa lub rozwoju wsi,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/294__art_9__ust_2__pkt_16__lit_b" gd:GUID="1c7cd9df-6336-4089-8a9f-88a9aa8a3b9e">
+              <nr>b</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="aa96cbef-e3c5-4195-9eb1-eb900ec7e146" fragment="25" gd:fragmentGUID="151e6374-be93-4f5c-be7c-1b678175e747">upowszechniania postępu biologicznego w rolnictwie w zakresie hodowli roślin uprawnych oraz zwierząt gospodarskich;</zdanie>
+              </p>
+            </litera>
+          </punkt>
+          <punkt eId="DU/2025/294__art_9__ust_2__pkt_17" gd:GUID="0fceb7c4-732a-47f1-b47a-9b5d9e4cc0bc">
+            <nr>17</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="aa96cbef-e3c5-4195-9eb1-eb900ec7e146" fragment="26" gd:fragmentGUID="be230661-c539-4de6-931a-1ea867d66317">wspieranie rozwoju współpracy handlowej sektora rolno-spożywczego z zagranicą;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/294__art_9__ust_2__pkt_17a" gd:GUID="eaa475f3-386c-4e7c-b68e-99a7510902a9">
+            <nr>17a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="aa96cbef-e3c5-4195-9eb1-eb900ec7e146" fragment="27" gd:fragmentGUID="997c5508-d4b4-4c65-9b46-a44575917f47">wspieranie rozwoju sektora rolno-spożywczego;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/294__art_9__ust_2__pkt_18" gd:GUID="1b6649f4-d097-4f7c-bfd0-fd776721d7d8">
+            <nr>18</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="aa96cbef-e3c5-4195-9eb1-eb900ec7e146" fragment="28" gd:fragmentGUID="a1fe6a38-6532-4c48-9268-3d6fdad184c8">(uchylony)</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/294__art_9__ust_2__pkt_19" gd:GUID="b63fc0c6-ef73-4c3e-a454-ddb2d752c973">
+            <nr>19</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="aa96cbef-e3c5-4195-9eb1-eb900ec7e146" fragment="29" gd:fragmentGUID="6440b80d-5efd-4f1f-b9d5-6f9c5f455092">(uchylony)</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/294__art_9__ust_2__pkt_20" gd:GUID="e3c4b4b5-470d-4967-9180-c7c761b5d593">
+            <nr>20</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="aa96cbef-e3c5-4195-9eb1-eb900ec7e146" fragment="30" gd:fragmentGUID="59993ed3-ae3b-45fb-b3d1-832558d1125b">uczestnictwo, jako instytucja pośrednicząca i beneficjent, w realizacji programu operacyjnego Europejskiego Funduszu Pomocy Najbardziej Potrzebującym, o którym mowa w rozporządzeniu Parlamentu Europejskiego i Rady (UE) nr 223/2014 z dnia 11 marca 2014 r. w sprawie Europejskiego Funduszu Pomocy Najbardziej Potrzebującym (Dz. Urz. UE L 72 z 12.03.2014, str. 1);</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/294__art_9__ust_2__pkt_21" gd:GUID="5cab8e19-5037-4ae1-a022-ab458a10390a">
+            <nr>21</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="aa96cbef-e3c5-4195-9eb1-eb900ec7e146" fragment="31" gd:fragmentGUID="54d748e2-6628-40aa-984a-c84543120b38">administrowanie potencjałem produkcyjnym produktów sektora wina w rozumieniu art. 2 pkt 25 ustawy z dnia 2 grudnia 2021 r. o wyrobach winiarskich (Dz. U. z 2023 r. poz. 550);</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/294__art_9__ust_2__pkt_22" gd:GUID="36e3e302-2bf3-4352-b06d-0f307d80d48c">
+            <nr>22</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="aa96cbef-e3c5-4195-9eb1-eb900ec7e146" fragment="32" gd:fragmentGUID="b7217427-6df3-4ebd-8707-f2b926e21898">prowadzenie rejestru przedsiębiorców wykonujących działalność w zakresie wyrobu lub rozlewu wyrobów winiarskich, o którym mowa w art. 7 ust. 1 ustawy z dnia 2 grudnia 2021 r. o wyrobach winiarskich;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/294__art_9__ust_2__pkt_23" gd:GUID="11637c65-6688-4960-aef6-39fd811d36b5">
+            <nr>23</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="aa96cbef-e3c5-4195-9eb1-eb900ec7e146" fragment="33" gd:fragmentGUID="28849536-50ee-4e02-aec1-6960b1b30111">uczestnictwo, jako instytucja pośrednicząca i beneficjent, w realizacji operacji współfinansowanych ze środków Europejskiego Funduszu Społecznego Plus (EFS+) przeznaczonych na zwalczanie deprywacji materialnej;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/294__art_9__ust_2__pkt_24" gd:GUID="d627583c-5d7a-41c1-ba4c-7dc2d48fa480">
+            <nr>24</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="aa96cbef-e3c5-4195-9eb1-eb900ec7e146" fragment="34" gd:fragmentGUID="68d50b59-8664-4056-9a11-e0ed56b062df">realizacja działań rozwojowych i inwestycyjnych w zakresie innowacyjności w sektorze rolno-spożywczym;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/294__art_9__ust_2__pkt_25" gd:GUID="4dd894ba-df03-453f-a79c-0f7149a115a8">
+            <nr>25</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="aa96cbef-e3c5-4195-9eb1-eb900ec7e146" fragment="35" gd:fragmentGUID="61c3f0b0-4686-46a7-ac22-97d574437e9a">prowadzenie rejestrów, o których mowa w art. 3 ust. 1 i 2 ustawy z dnia 2 marca 2001 r. o wyrobie alkoholu etylowego oraz wytwarzaniu wyrobów tytoniowych (Dz. U. z 2024 r. poz. 262);</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/294__art_9__ust_2__pkt_26" gd:GUID="c3603e62-bf46-46d7-9b2d-a897b756cf98">
+            <nr>26</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="aa96cbef-e3c5-4195-9eb1-eb900ec7e146" fragment="36" gd:fragmentGUID="10d2402f-add2-4fff-8183-97b7744e7495">prowadzenie rejestru, o którym mowa w art. 3 ust. 1 ustawy z dnia 18 października 2006 r. o wyrobie napojów spirytusowych (Dz. U. z 2023 r. poz. 1584);</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/294__art_9__ust_2__pkt_27" gd:GUID="ee714409-0eb0-44a3-966a-fbef0868867b">
+            <nr>27</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="aa96cbef-e3c5-4195-9eb1-eb900ec7e146" fragment="37" gd:fragmentGUID="46926709-b380-40a5-b8bd-9bbc4da4dfbe"><odnosnik id-odnosnika="1" symbol="1" gd:GUID="1c91515e-bd52-4bae-a9ce-0774a27c9246"><p><zdanie nr="1" gd:zdGUID="3f1e014e-d1d4-4dae-acb5-5c29c967de27" fragment="1" gd:fragmentGUID="ca671066-0791-4419-bf80-52065b29efcb">Dodany przez art. 3 ustawy z dnia 5 grudnia 2024 r. o zmianie ustawy o Funduszu Ochrony Rolnictwa oraz niektórych innych ustaw (Dz. U. poz. 1964), która weszła w życie z dniem 1 stycznia 2025 r.</zdanie></p></odnosnik> wykonywanie zadań, o których mowa w przepisach ustawy z dnia 9 maja 2023 r. o Funduszu Ochrony Rolnictwa (Dz. U. poz. 1130 oraz z 2024 r. poz. 1964).</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/294__art_9__ust_3" gd:GUID="52c7441e-f62e-4fd9-af29-e785e173c2a6">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="e6d3db80-44e2-467b-b940-1781cf658fa6" fragment="1" gd:fragmentGUID="2538b703-5fc3-4984-9b36-04ad8a5c832b">Krajowy Ośrodek wykonuje również zadania inne niż wymienione w ust. 2, w szczególności zadania delegowane, jeżeli odrębne przepisy tak stanowią.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/294__art_9__ust_4" gd:GUID="cc339a0d-f5a5-4886-ae79-4e2af958cddb">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="5ff8adbd-cb0a-41ce-8f72-7ebed8f02dcd" fragment="1" gd:fragmentGUID="e7981c67-b259-4e27-8ac5-f808b6912c08">Dyrektor Generalny składa ministrowi właściwemu do spraw rozwoju wsi roczne sprawozdanie z działalności Krajowego Ośrodka do dnia 15 maja każdego roku.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/294__art_9__ust_5" gd:GUID="49c83115-d9e8-4505-b2bf-393bc54db3d7">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="9dc2cd21-86e5-4020-a651-b53701b1008b" fragment="1" gd:fragmentGUID="fe02de4d-661c-42fb-a60e-fa330c8e5dfa">Dane gromadzone przez Krajowy Ośrodek są udostępniane Głównemu Urzędowi Statystycznemu zgodnie ze szczegółowym zakresem, w formie, postaci i terminach określonych w programie badań statystycznych statystyki publicznej, ustalonym na podstawie art. 18 ustawy z dnia 29 czerwca 1995 r. o statystyce publicznej (Dz. U. z 2024 r. poz. 1799).</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/294__art_10" gd:GUID="00f5f138-db31-4c5c-bd53-62f77b4dd4c5">
+        <nr>10</nr>
+        <ustep eId="DU/2025/294__art_10__ust_1" gd:GUID="3509a1b4-8517-4035-8a5c-d71d24e081ea">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="e7a92a58-f115-4a69-a23d-dc678b1dcb34" fragment="1" gd:fragmentGUID="5f11879a-9df2-4476-983c-03c5300105d5">Minister właściwy do spraw rozwoju wsi może powierzać Krajowemu Ośrodkowi realizację zadań dla niego określonych, zapewniając Krajowemu Ośrodkowi na ten cel odpowiednie środki finansowe.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/294__art_10__ust_2" gd:GUID="3816a5f5-f252-4433-a54d-655d3d06c50d">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="8c6b1c7a-4bac-477c-a540-57573a943474" fragment="1" gd:fragmentGUID="127d5fbd-f959-4588-9f55-82cc1203299a">Jednostki sektora finansów publicznych mogą, za zgodą ministra właściwego do spraw rozwoju wsi, powierzać Krajowemu Ośrodkowi realizację zadań dla nich określonych, zapewniając Krajowemu Ośrodkowi na ten cel odpowiednie środki finansowe.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/294__art_11" gd:GUID="e7c9cb55-5f7a-4c32-ac3d-2e81a5f9b9b4">
+        <nr>11</nr>
+        <ustep eId="DU/2025/294__art_11__ust_1" gd:GUID="49aa6462-1a9e-40f7-9cff-0c9ebc0f886a">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="f96e451d-b4f3-4a69-836f-6ade7421c427" fragment="1" gd:fragmentGUID="e223a0b6-80fa-4c20-bc51-b2cbb5686b47">Krajowy Ośrodek prowadzi samodzielną gospodarkę finansową.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/294__art_11__ust_2" gd:GUID="44a1443c-5783-4264-b2d9-27807a5d6565">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="8bca7dd1-0a26-4b06-99aa-6b7fd8e72b21" fragment="1" gd:fragmentGUID="5eefe1cc-e53b-441d-bee0-a99a3f9907fd">Krajowy Ośrodek działa zgodnie z planem finansowym obejmującym rok obrotowy pokrywający się z rokiem kalendarzowym.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/294__art_11__ust_2a" gd:GUID="6cb32f5c-cd74-492e-a60e-3f8560c0506f">
+          <nr>2a</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="e7b5b4c5-d883-4cf3-ba3c-0a80f6ab3701" fragment="1" gd:fragmentGUID="887702ba-2294-4f8d-9734-2c3566c4bf4d">Dyrektor Generalny przekazuje dyrektorom oddziałów terenowych limit wydatków przeznaczonych na funkcjonowanie oddziałów terenowych Krajowego Ośrodka w danym roku obrotowym, w terminie 20 dni od dnia wejścia w życie ustawy budżetowej na dany rok.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/294__art_11__ust_2b" gd:GUID="328e4e24-df25-45c9-803b-f0b072b505b0">
+          <nr>2b</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="408159ac-8463-4bb6-880c-0d17d61bcd6d" fragment="1" gd:fragmentGUID="66c7f9c0-9f86-45db-ba89-9032b23c7782">Roczny plan finansowy Krajowego Ośrodka nie obejmuje swoim zakresem środków pochodzących z funduszy Unii Europejskiej oraz krajowych środków publicznych przeznaczonych na współfinansowanie wydatków realizowanych z tych funduszy, z wyłączeniem środków na finansowanie projektów w ramach pomocy technicznej oraz zadań, które są realizowane na podstawie odrębnych przepisów.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/294__art_11__ust_3" gd:GUID="9625c399-405c-400c-9fd6-a95931b13677">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="d0d83e75-781a-418d-8ae4-330040bf4833" fragment="1" gd:fragmentGUID="e9c8464e-0cd5-4149-8196-ffb2f40b148f">Projekt rocznego planu finansowego Krajowego Ośrodka, o którym mowa w ust. 2, zatwierdza minister właściwy do spraw rozwoju wsi i przekazuje ministrowi właściwemu do spraw finansów publicznych w trybie określonym w przepisach dotyczących prac nad projektem ustawy budżetowej.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/294__art_11__ust_4" gd:GUID="fe8d00a7-20b4-44cc-9ea9-26960aaa8e42">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="aa213954-051c-45f9-981c-6cec819e0f8d" fragment="1" gd:fragmentGUID="69ee96a9-5527-4a26-bf29-912a4530b235">Zasady wynagradzania pracowników Krajowego Ośrodka są określone w regulaminie wynagradzania ustalonym przez Dyrektora Generalnego za zgodą ministra właściwego do spraw rozwoju wsi.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/294__art_12" gd:GUID="832d7662-d2cc-4beb-aaf4-77c4771f6cb1">
+        <nr>12</nr>
+        <ustep eId="DU/2025/294__art_12__ust_1" gd:GUID="425eb4f2-2e81-4a2c-8a06-5f98084329e5">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="ded58fdd-e05a-4f7b-a33a-5ece3ca15096" fragment="1" gd:fragmentGUID="947b9ba2-cfcf-4053-bc11-eb81f51a1ce4">Krajowy Ośrodek prowadzi rachunkowość na zasadach określonych w przepisach o rachunkowości, z uwzględnieniem przepisów niniejszej ustawy.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/294__art_12__ust_2" gd:GUID="6a97a835-1283-4fb7-9a6e-0918a522b751">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="24e5b3a6-d2e8-44fc-96fa-343f63f12864" fragment="1" gd:fragmentGUID="fc059b45-573e-470c-a3fa-af2a7caf46a7">Roczne sprawozdanie finansowe Krajowego Ośrodka podlega badaniu przez biegłego rewidenta.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/294__art_12__ust_3" gd:GUID="fd2639fd-db71-4d1a-a78e-563441b7cf1f">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="ecb67a94-fa00-49de-bdff-30fc7227ef65" fragment="1" gd:fragmentGUID="4e889ea6-04aa-4548-86c1-128e7f88e09e">Wyboru podmiotu uprawnionego do badania rocznego sprawozdania finansowego Krajowego Ośrodka dokonuje minister właściwy do spraw rozwoju wsi.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/294__art_12__ust_4" gd:GUID="ecdc2eea-468d-4b01-9b24-6cfe2850b6e5">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="65e37879-92ec-4328-bbb0-9ec1f7e23b3b" fragment="1" gd:fragmentGUID="b153e5aa-6caf-49c3-b11e-8b99512d5263">Roczne sprawozdanie finansowe Krajowego Ośrodka wraz z opinią z przeprowadzonego badania tego sprawozdania zatwierdza minister właściwy do spraw rozwoju wsi na wniosek Dyrektora Generalnego.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/294__art_12__ust_5" gd:GUID="e77bc02c-69f6-41fc-ae5a-1e295e3c806e">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="c3960939-1f5c-4e98-961c-9b80a475e512" fragment="1" gd:fragmentGUID="8cfc36f3-e388-467f-bf05-2450fa5814f0">Minister właściwy do spraw rozwoju wsi, na wniosek Dyrektora Generalnego, dokonuje podziału rocznego wyniku finansowego Krajowego Ośrodka.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/294__art_13" gd:GUID="022c9257-7de2-4ac2-84f5-7fc4f09a085e">
+        <nr>13</nr>
+        <ustep eId="DU/2025/294__art_13__ust_1" gd:GUID="db4061a9-d156-46fa-bc27-343d670c245e">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="348dd2b6-4788-44be-9f96-8688569e83a9" fragment="1" gd:fragmentGUID="5458a2ae-1491-4708-b04a-e75dae1d8b2e">W zakresie gospodarki finansowej Krajowego Ośrodka:</zdanie>
+          </p>
+          <punkt eId="DU/2025/294__art_13__ust_1__pkt_1" gd:GUID="872383cd-ac65-4508-bcb2-0fca0ae0b190">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="348dd2b6-4788-44be-9f96-8688569e83a9" fragment="2" gd:fragmentGUID="50b1533f-ef5e-4920-b599-710f0b6aa112">przychodami Krajowego Ośrodka są:</zdanie>
+            </p>
+            <litera eId="DU/2025/294__art_13__ust_1__pkt_1__lit_a" gd:GUID="eed26f14-7c2d-4398-abb8-3e6e522480f1">
+              <nr>a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="348dd2b6-4788-44be-9f96-8688569e83a9" fragment="3" gd:fragmentGUID="5eac578f-496c-495d-b01a-bdcbb7dac9b4">przychody ze sprzedaży mienia własnego Krajowego Ośrodka,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/294__art_13__ust_1__pkt_1__lit_b" gd:GUID="eaaf8290-1e5d-4239-a265-176ce977624c">
+              <nr>b</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="348dd2b6-4788-44be-9f96-8688569e83a9" fragment="4" gd:fragmentGUID="ae7153a8-001a-492d-8ed5-073130f49bd1">przychody z umów najmu lub innych umów o podobnym charakterze, dotyczących mienia własnego Krajowego Ośrodka,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/294__art_13__ust_1__pkt_1__lit_c" gd:GUID="6b51b467-739e-4d66-9187-76b56acce886">
+              <nr>c</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="348dd2b6-4788-44be-9f96-8688569e83a9" fragment="5" gd:fragmentGUID="7ed0a4eb-d6f2-4557-8fa9-2e19cf862204">środki, o których mowa w art. 20 ust. 4 ustawy z dnia 19 października 1991 r. o gospodarowaniu nieruchomościami rolnymi Skarbu Państwa, w kwocie przyznanej Krajowemu Ośrodkowi w ramach limitu, o którym mowa w art. 20 ust. 5 tej ustawy,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/294__art_13__ust_1__pkt_1__lit_d" gd:GUID="51a6380a-70b0-4770-99b5-86b6160f8441">
+              <nr>d</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="348dd2b6-4788-44be-9f96-8688569e83a9" fragment="6" gd:fragmentGUID="5bafa3fd-4e20-4416-8a49-0400a74505fd">odsetki od wolnych środków przekazanych w depozyt zgodnie z przepisami o finansach publicznych,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/294__art_13__ust_1__pkt_1__lit_e" gd:GUID="593de70c-30b1-4015-b4c8-e17f8d08e9fd">
+              <nr>e</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="348dd2b6-4788-44be-9f96-8688569e83a9" fragment="7" gd:fragmentGUID="2e9ad2dd-e713-41a8-89aa-3e915863eec2">środki budżetowe określone corocznie w ustawie budżetowej w formie dotacji podmiotowych i dotacji celowych,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/294__art_13__ust_1__pkt_1__lit_f" gd:GUID="3122b803-60a0-41ad-8e06-7863cd80c108">
+              <nr>f</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="348dd2b6-4788-44be-9f96-8688569e83a9" fragment="8" gd:fragmentGUID="d71a1613-69fa-4c9a-bd08-463bbea83b1e">inne przychody z działalności Krajowego Ośrodka;</zdanie>
+              </p>
+            </litera>
+          </punkt>
+          <punkt eId="DU/2025/294__art_13__ust_1__pkt_2" gd:GUID="cb6553c9-1656-4061-a084-bf9a816cf510">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="348dd2b6-4788-44be-9f96-8688569e83a9" fragment="9" gd:fragmentGUID="65ef1d02-1808-4aa2-9045-9ce30d4bf68d">kosztami Krajowego Ośrodka są:</zdanie>
+            </p>
+            <litera eId="DU/2025/294__art_13__ust_1__pkt_2__lit_a" gd:GUID="40919780-ebae-4877-b7a9-8bded5fed8a7">
+              <nr>a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="348dd2b6-4788-44be-9f96-8688569e83a9" fragment="10" gd:fragmentGUID="024bdad9-b4e5-4119-a878-ff0225649d05">koszty funkcjonowania Centrali i oddziałów terenowych Krajowego Ośrodka,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2025/294__art_13__ust_1__pkt_2__lit_b" gd:GUID="1150bad1-15b5-4181-9c3a-46632a3455df">
+              <nr>b</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="348dd2b6-4788-44be-9f96-8688569e83a9" fragment="11" gd:fragmentGUID="63c4cbff-dea6-4e8b-aa18-fbb081bee9a8">inne koszty działalności Krajowego Ośrodka związane z realizacją zadań, o których mowa w art. 9.</zdanie>
+              </p>
+            </litera>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/294__art_13__ust_2" gd:GUID="1777d7a0-edc5-4ad9-a956-91767c73bfd0">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="fdad688c-6912-4dc5-ad5b-7bd4f25f51b8" fragment="1" gd:fragmentGUID="11aa26e5-6f2a-4ae1-b585-73ef0735d690">Krajowy Ośrodek tworzy następujące fundusze własne:</zdanie>
+          </p>
+          <punkt eId="DU/2025/294__art_13__ust_2__pkt_1" gd:GUID="7b2b9687-1032-4ccd-bd94-bdb4d5535323">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="fdad688c-6912-4dc5-ad5b-7bd4f25f51b8" fragment="2" gd:fragmentGUID="7a6ef6c4-a546-42d1-b840-cf2578f74aab">fundusz Krajowego Ośrodka;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/294__art_13__ust_2__pkt_2" gd:GUID="0f0a63c6-9257-4775-88e4-d4efbe14aba7">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="fdad688c-6912-4dc5-ad5b-7bd4f25f51b8" fragment="3" gd:fragmentGUID="372b7c2e-7109-4abd-978b-9734cd6cbf4b">fundusz rezerwowy.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/294__art_14" gd:GUID="0016c9e6-926e-449b-8704-fe153d90ef1f">
+        <nr>14</nr>
+        <ustep eId="DU/2025/294__art_14__ust_1" gd:GUID="88a6edad-51bd-4ee3-905b-66cf9ea370c8">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="09215ee2-e451-4f6a-a079-923425e553c6" fragment="1" gd:fragmentGUID="3763a849-8a56-4f13-8dd1-50104bfaff87">Fundusz Krajowego Ośrodka odzwierciedla wartość mienia własnego Krajowego Ośrodka w dniu jego utworzenia.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/294__art_14__ust_2" gd:GUID="74021e50-c2a2-447e-8104-3e090460b31b">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="0dd9b524-6fd7-40a6-928d-f99a389142e7" fragment="1" gd:fragmentGUID="8e5bb5b6-b6fa-4a4f-8181-af9c33c0325f">Fundusz rezerwowy ulega:</zdanie>
+          </p>
+          <punkt eId="DU/2025/294__art_14__ust_2__pkt_1" gd:GUID="5e6aaf96-ad62-4d6b-9bf3-b4af13208aad">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="0dd9b524-6fd7-40a6-928d-f99a389142e7" fragment="2" gd:fragmentGUID="cb38a131-df22-4573-9d21-d4b4cf385713">zwiększeniu o zysk netto;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/294__art_14__ust_2__pkt_2" gd:GUID="dbc52ed5-86a2-417f-b8b4-5a0747ba469a">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="0dd9b524-6fd7-40a6-928d-f99a389142e7" fragment="3" gd:fragmentGUID="5b05e513-40de-4294-8e8c-190b2931fc67">zmniejszeniu o stratę netto.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/294__art_14a" gd:GUID="1ae58d20-7872-46a3-b93a-69611549b234">
+        <nr>14a</nr>
+        <ustep eId="DU/2025/294__art_14a__ust_1" gd:GUID="b238d7b0-4f6f-4aa4-86f2-98ec33ccc178">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="1b0b192f-d8f6-446d-8ebc-8e6740c77962" fragment="1" gd:fragmentGUID="1d8bb7a5-0aa3-4ea7-814a-eb86c3aa6faa">Dyrektor oddziału terenowego Krajowego Ośrodka, w ramach limitu wydatków, o którym mowa w art. 11 ust. 2a, może w imieniu i na rzecz Krajowego Ośrodka udzielać zamówień publicznych, których przedmiotem są usługi, dostawy lub roboty budowlane, związane wyłącznie z działalnością tego oddziału terenowego Krajowego Ośrodka.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/294__art_14a__ust_2" gd:GUID="506c5237-94b2-42db-9bed-353323de4113">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="1fdad0cb-17e8-47ec-b1ef-8fb0f91f86e0" fragment="1" gd:fragmentGUID="a5e50683-96b0-4e3d-acfb-e40cfe96f9e9">W przypadku, o którym mowa w ust. 1, do dyrektora oddziału terenowego Krajowego Ośrodka stosuje się odpowiednio przepisy prawa zamówień publicznych dotyczące kierownika zamawiającego.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/294__art_14a__ust_3" gd:GUID="bdb2e982-1e07-4193-9236-8b7854dbbc36">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="52a00c2f-1c93-44ab-a227-b87b9aed76af" fragment="1" gd:fragmentGUID="ec2cb5e3-a316-4f6f-b317-54efbb42016f">Każda jednostka organizacyjna Krajowego Ośrodka, zgodnie z przepisami prawa zamówień publicznych, samodzielnie sporządza:</zdanie>
+          </p>
+          <punkt eId="DU/2025/294__art_14a__ust_3__pkt_1" gd:GUID="ff557e9a-608f-404c-9bef-8df2506f6006">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="52a00c2f-1c93-44ab-a227-b87b9aed76af" fragment="2" gd:fragmentGUID="8d88360a-afe0-40cf-8475-929e600cd90c">plan postępowań o udzielenie zamówień publicznych, jakie przewiduje przeprowadzić w danym roku finansowym,</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/294__art_14a__ust_3__pkt_2" gd:GUID="dc68633e-7010-45f1-8744-af09aaebb62a">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="52a00c2f-1c93-44ab-a227-b87b9aed76af" fragment="3" gd:fragmentGUID="e0843777-9227-4db6-aaf4-79d5434875c1">roczne sprawozdanie o udzielonych zamówieniach publicznych</zdanie>
+            </p>
+          </punkt>
+          <czesc-wspolna-punkt eId="DU/2025/294__art_14a__ust_3__czw" gd:GUID="6784cb1a-128a-41c9-9800-f0297af5b336">
+            <p>
+              <zdanie nr="1" gd:zdGUID="52a00c2f-1c93-44ab-a227-b87b9aed76af" fragment="4" gd:fragmentGUID="aa057a28-3042-454e-986f-2b4113e97799">– uwzględniając wydatki planowane i dokonane w ramach rocznego planu finansowego Krajowego Ośrodka, o którym mowa w art. 11 ust. 2, oraz rocznego planu finansowego Zasobu Własności Rolnej Skarbu Państwa.</zdanie>
+            </p>
+          </czesc-wspolna-punkt>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/294__art_15" gd:GUID="14c7d63a-4a83-409d-babb-b3f8924e29e3">
+        <nr>15</nr>
+        <ustep eId="DU/2025/294__art_15__ust_1" gd:GUID="a1ba2185-ed1e-4e6e-a0fe-a0edb3fde96a">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="931175f0-34de-43ec-9a9d-e1cdcfd2e8a3" fragment="1" gd:fragmentGUID="f2d4a414-9c48-4073-8d9b-a56ad55441e4">W celu pełnego pokrycia wydatków własnych oraz realizacji przedsięwzięć inwestycyjnych, Krajowy Ośrodek może zaciągać zobowiązania finansowe.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/294__art_15__ust_2" gd:GUID="42d37588-093c-4a11-b37a-198c518a493c">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="2505ede9-ceb7-4a42-b7f8-0be9da87fdf4" fragment="1" gd:fragmentGUID="e0247382-2317-4d91-a843-2af27ba2dc24">Krajowy Ośrodek może dokonywać, za zgodą ministra właściwego do spraw finansów publicznych, emisji własnych obligacji.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/294__art_15__ust_3" gd:GUID="477afd03-a905-4d3d-ae02-9a837221ad35">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="635a390d-f5f3-49e7-9a46-1425efcfaff1" fragment="1" gd:fragmentGUID="19324535-4bda-4b9c-a57f-78e0cdb6d284">Krajowy Ośrodek, za zgodą ministra właściwego do spraw rozwoju wsi, może wykorzystywać mienie do ustanawiania zabezpieczeń zaciąganych zobowiązań finansowych, o których mowa w ust. 1, oraz emisji obligacji, o których mowa w ust. 2.</zdanie>
+            <zdanie nr="2" gd:zdGUID="8e795da9-a0b2-446b-969b-b08e1bcc0ca0" fragment="1" gd:fragmentGUID="87cbd540-2655-403d-8fba-e131d22ea8e1">Krajowy Ośrodek może w szczególności ustanowić hipotekę na nieruchomościach Krajowego Ośrodka.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/294__art_15__ust_4" gd:GUID="9b8e0ba2-84ed-4d44-9a11-7df5d51dcd8b">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="7438d339-2d14-4c4f-acf3-bccc4e2450e5" fragment="1" gd:fragmentGUID="fa786d87-5197-46f4-adb2-b68069168168">Krajowy Ośrodek, za zgodą ministra właściwego do spraw rozwoju wsi, może wykorzystywać mienie do ustanawiania zabezpieczeń zobowiązań finansowych innych niż te, o których mowa w ust. 1, jeżeli są związane z realizacją zadań wynikających z polityki państwa, w szczególności w zakresie wdrażania i stosowania instrumentów wsparcia rolnictwa, aktywnej polityki rolnej oraz rozwoju obszarów wiejskich.</zdanie>
+            <zdanie nr="2" gd:zdGUID="5bdad384-b19e-4b67-b468-0a2ccbdcb242" fragment="1" gd:fragmentGUID="0afbbbcb-0601-4297-a863-65e87289dc12">Krajowy Ośrodek może w szczególności ustanowić hipotekę na nieruchomościach Krajowego Ośrodka.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/294__art_16" gd:GUID="8be76c36-b87b-4b8f-b72e-b159319837a3">
+        <nr>16</nr>
+        <ustep eId="DU/2025/294__art_16__ust_1" gd:GUID="ff9abc4a-1881-426e-b844-efd370fcfeeb">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a0dc08fb-4dd8-45ba-96fc-46456323c29d" fragment="1" gd:fragmentGUID="e6bccf55-d999-4dd1-9586-c4c0164b6c20">W celu realizacji zadań Krajowy Ośrodek jest uprawniony do użytkowania krajowego systemu ewidencji producentów, ewidencji gospodarstw rolnych oraz ewidencji wniosków o przyznanie płatności, o którym mowa w ustawie z dnia 18 grudnia 2003 r. o krajowym systemie ewidencji producentów, ewidencji gospodarstw rolnych oraz ewidencji wniosków o przyznanie płatności (Dz. U. z 2023 r. poz. 885), oraz do pozyskiwania informacji z komputerowej bazy danych prowadzonej na podstawie ustawy z dnia 4 listopada 2022 r. o systemie identyfikacji i rejestracji zwierząt (Dz. U. z 2023 r. poz. 1815).</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/294__art_16__ust_2" gd:GUID="222aef3a-df08-40cd-a0df-ea3c54fdfcb8">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="197411ac-61d5-492f-aaa2-15b9ab86e2ed" fragment="1" gd:fragmentGUID="3d73818b-2d01-4d36-91ba-d198e1d8ef6d">Agencja Restrukturyzacji i Modernizacji Rolnictwa zapewnia Krajowemu Ośrodkowi nieodpłatnie pełny dostęp do krajowego systemu ewidencji producentów, ewidencji gospodarstw rolnych oraz ewidencji wniosków o przyznanie płatności, o którym mowa w ustawie z dnia 18 grudnia 2003 r. o krajowym systemie ewidencji producentów, ewidencji gospodarstw rolnych oraz ewidencji wniosków o przyznanie płatności, a także możliwość pozyskiwania informacji z komputerowej bazy danych prowadzonej na podstawie ustawy z dnia 4 listopada 2022 r. o systemie identyfikacji i rejestracji zwierząt.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/294__art_16a" gd:GUID="5fc9c761-a3f6-44dc-bebb-43f8c2a28b5a">
+        <nr>16a</nr>
+        <ustep eId="DU/2025/294__art_16a__ust_1" gd:GUID="e9e08912-65eb-4975-9c21-7b560164d97a">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="1687ef63-0127-4dca-aab0-030577b98aca" fragment="1" gd:fragmentGUID="e23f9e9f-1f61-4c0d-b377-a6c9c7f55c75">W celu realizacji zadań ustawowych Krajowy Ośrodek jest uprawniony do wykorzystywania danych z ewidencji gruntów i budynków, o której mowa w ustawie z dnia 17 maja 1989 r. – Prawo geodezyjne i kartograficzne (Dz. U. z 2024 r. poz. 1151 i 1824).</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/294__art_16a__ust_2" gd:GUID="e31d7412-2583-4d53-bde3-a9fc2e28b65d">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="bc5d8b56-f6b5-479b-aff9-45775dfa32e0" fragment="1" gd:fragmentGUID="61166837-17fa-400d-ac3a-0faa31b67747">Starosta udostępnia Krajowemu Ośrodkowi dane z ewidencji gruntów i budynków nieodpłatnie.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/294__art_16a__ust_3" gd:GUID="f1a33e8d-e11c-4de7-ab8c-68e36c349bda">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="3b2cd6d0-5226-40b4-b912-f96877fbca5b" fragment="1" gd:fragmentGUID="773a1c89-23ec-4b20-ab98-bd9861663872">Przy udostępnianiu danych, o których mowa w ust. 2, przepis art. 15 ustawy z dnia 17 lutego 2005 r. o informatyzacji działalności podmiotów realizujących zadania publiczne (Dz. U. z 2024 r. poz. 1557 i 1717) stosuje się odpowiednio.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/294__art_17" gd:GUID="ce1121bb-e4b1-4284-ab50-ee2062d7c9ab">
+        <nr>17</nr>
+        <ustep eId="DU/2025/294__art_17__ust_1" gd:GUID="10c3a348-71de-4417-b562-5f430a9aab68">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="7054825c-8477-49ca-85ba-7b43112c4c49" fragment="1" gd:fragmentGUID="435c1583-f76e-4509-9578-33bada408e41">Krajowy Ośrodek, za zgodą ministra właściwego do spraw aktywów państwowych, może tworzyć lub przystępować do spółki handlowej oraz posiadać, obejmować lub nabywać akcje lub udziały w spółkach.</zdanie>
+            <zdanie nr="2" gd:zdGUID="766599ec-3277-4dcf-b670-308694c5076f" fragment="1" gd:fragmentGUID="86bae8dd-78c4-45c3-b86c-3d356e6297fe">Przepisu art. 49 ust. 2 ustawy z dnia 27 sierpnia 2009 r. o finansach publicznych nie stosuje się.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/294__art_17__ust_2" gd:GUID="76668c86-e1f6-48fc-a2fc-cfe0d98618d6">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="462220ee-cb87-468e-acbd-17dd79025539" fragment="1" gd:fragmentGUID="7e3a7525-41cc-4ce4-aabb-e661a6af0b4e">W przypadku gdy jest to niezbędne dla realizacji polityki gospodarczej państwa, w tym ochrony interesów Skarbu Państwa, na wniosek ministra właściwego do spraw aktywów państwowych Krajowy Ośrodek przekazuje temu ministrowi akcje lub udziały, o których mowa w ust. 1.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/294__art_18" gd:GUID="1e3bc5bb-22d8-46a5-b9ba-dbb3cf24d7e0">
+        <nr>18</nr>
+        <ustep eId="DU/2025/294__art_18__ust_1" gd:GUID="4f4ab6c6-b9c9-4a86-af39-1e3d6815955f">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="ca278b26-cc98-49b5-8408-ad13b9510aad" fragment="1" gd:fragmentGUID="f5ca5ac9-4f06-4624-afcb-4c016eb6694b">Krajowy Ośrodek może dokonywać sprzedaży wymagalnych wierzytelności Krajowego Ośrodka w przypadku trwałej utraty przez dłużników Krajowego Ośrodka zdolności do spłaty zadłużenia.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/294__art_18__ust_2" gd:GUID="aacb886f-0084-4693-abb9-a4540eaa2cd5">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="8f4099f5-70ea-4576-88f4-85e5869b6789" fragment="1" gd:fragmentGUID="4fab7d4d-a816-44bf-a942-4c8e27e3beee">Wierzytelności Krajowego Ośrodka są sprzedawane:</zdanie>
+          </p>
+          <punkt eId="DU/2025/294__art_18__ust_2__pkt_1" gd:GUID="a4192f8a-38af-49c6-89da-94a6034f4750">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="8f4099f5-70ea-4576-88f4-85e5869b6789" fragment="2" gd:fragmentGUID="40e08aff-f6ad-4cdb-8216-365bf2290332">w drodze przetargu;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/294__art_18__ust_2__pkt_2" gd:GUID="66aea6bc-8927-4423-8a1c-bc50dbd62238">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="8f4099f5-70ea-4576-88f4-85e5869b6789" fragment="3" gd:fragmentGUID="36ae81ad-55cd-4bd1-8566-96ffc339328a">na podstawie oferty ogłoszonej publicznie;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/294__art_18__ust_2__pkt_3" gd:GUID="4f4dc2f2-8087-4682-936e-0dc0a5b83e21">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="8f4099f5-70ea-4576-88f4-85e5869b6789" fragment="4" gd:fragmentGUID="d89da977-7b70-4ab7-8801-ba8281ea1640">w wyniku rokowań podjętych na podstawie publicznego zaproszenia.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/294__art_18__ust_3" gd:GUID="96f7c2e4-ddb2-4fe2-9f0d-765290135de2">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="fbc9155b-93ec-440e-a0ed-c79a8717253d" fragment="1" gd:fragmentGUID="633b5c40-154a-4577-b172-e41147798978">Przy sprzedaży wierzytelności Krajowego Ośrodka stosuje się przepisy ustawy z dnia 23 kwietnia 1964 r. – Kodeks cywilny o zmianie wierzyciela z następującymi wyjątkami:</zdanie>
+          </p>
+          <punkt eId="DU/2025/294__art_18__ust_3__pkt_1" gd:GUID="37d0bda2-72c8-498c-ae72-e9342fd7455d">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="fbc9155b-93ec-440e-a0ed-c79a8717253d" fragment="2" gd:fragmentGUID="16e5569c-b680-4cff-a5d6-a6d020c1e27e">nie jest wymagana zgoda dłużnika;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/294__art_18__ust_3__pkt_2" gd:GUID="2959c864-1834-4bf7-9690-3f830190b920">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="fbc9155b-93ec-440e-a0ed-c79a8717253d" fragment="3" gd:fragmentGUID="de23e076-417c-4dd1-a10e-02442d6191b5">sprzedaż nie może być dokonana na rzecz dłużnika, jego zstępnych i wstępnych, podmiotu będącego w stosunku do dłużnika podmiotem dominującym lub zależnym w rozumieniu ustawy z dnia 29 lipca 2005 r. o ofercie publicznej i warunkach wprowadzania instrumentów finansowych do zorganizowanego systemu obrotu oraz o spółkach publicznych (Dz. U. z 2024 r. poz. 620 i 1863 oraz z 2025 r. poz. 146).</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/294__art_18__ust_4" gd:GUID="61e81207-ac54-4565-8db2-b2ef2969f079">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="f12dddb1-df8b-40ed-818a-22d3e1783ae2" fragment="1" gd:fragmentGUID="18e60015-d108-4ef5-9f58-56ffa84e54e0">Minister właściwy do spraw rozwoju wsi określi, w drodze rozporządzenia, szczegółowy tryb sprzedaży wierzytelności Krajowego Ośrodka, mając na względzie prawidłowe gospodarowanie środkami finansowymi.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/294__art_19" gd:GUID="fcb620c5-48a1-4bf4-a567-46b750455fb7">
+        <nr>19</nr>
+        <ustep eId="DU/2025/294__art_19__ust_1" gd:GUID="00594e90-7032-439b-a31f-ff795240b288">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="8abc2e50-6fbe-459c-b04d-b6c5cc69c6f3" fragment="1" gd:fragmentGUID="01a84834-aa69-43c5-8c13-74a4b1a2ed6f">Krajowy Ośrodek przeprowadza kontrole podmiotów uczestniczących w mechanizmach administrowanych przez Krajowy Ośrodek w ramach zadań wykonywanych przez Krajowy Ośrodek.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/294__art_19__ust_2" gd:GUID="812159d9-8fc7-4952-9445-5eb99d27efcb">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="e460822a-7529-41f8-9596-238039c57b35" fragment="1" gd:fragmentGUID="a21c54e4-9d9a-4cd1-8977-960a437998f8">Czynności kontrolne w ramach kontroli, o których mowa w ust. 1, są wykonywane przez:</zdanie>
+          </p>
+          <punkt eId="DU/2025/294__art_19__ust_2__pkt_1" gd:GUID="758bcb62-4be5-4034-a9f5-0556d827d69d">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="e460822a-7529-41f8-9596-238039c57b35" fragment="2" gd:fragmentGUID="503b29b1-b9bd-4044-9b51-bf62e0107d63">pracowników Krajowego Ośrodka,</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/294__art_19__ust_2__pkt_2" gd:GUID="ad8bcdd9-ab80-48b8-b388-a2aae375502e">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="e460822a-7529-41f8-9596-238039c57b35" fragment="3" gd:fragmentGUID="4cc7410b-1421-41f2-a4b2-7a3f3713bdff">jednostki organizacyjne, o których mowa w art. 20</zdanie>
+            </p>
+          </punkt>
+          <czesc-wspolna-punkt eId="DU/2025/294__art_19__ust_2__czw" gd:GUID="ec415e1e-d459-4af6-963f-b52d1d404ce2">
+            <p>
+              <zdanie nr="1" gd:zdGUID="e460822a-7529-41f8-9596-238039c57b35" fragment="4" gd:fragmentGUID="adf2578a-c94a-45e0-aed7-43bc0bc55962">– na podstawie upoważnienia do wykonywania tych czynności wydanego przez Dyrektora Generalnego.</zdanie>
+            </p>
+          </czesc-wspolna-punkt>
+        </ustep>
+        <ustep eId="DU/2025/294__art_19__ust_3" gd:GUID="45659a7a-d7f9-4f8e-8f0a-928a291bbc4e">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="3d495fad-56f9-417a-a9dc-70d479c0be8b" fragment="1" gd:fragmentGUID="dbeb08de-3084-4635-8f54-1fcdd3b891da">Upoważnienie, o którym mowa w ust. 2, zawiera wskazanie osoby upoważnionej do wykonywania czynności kontrolnych, ich miejsce i zakres oraz podstawę prawną do ich wykonywania.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/294__art_19__ust_4" gd:GUID="4acd2a26-194c-4f52-83ad-4253186a6483">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="1f12b6e1-3b08-41fe-8d5b-2f435613f90e" fragment="1" gd:fragmentGUID="37717fe0-8a43-4b88-ba8e-712298ab8659">Przed przystąpieniem do czynności kontrolnych osoba upoważniona do ich wykonywania jest obowiązana okazać upoważnienie, o którym mowa w ust. 2.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/294__art_19__ust_5" gd:GUID="a3c70c53-a684-4335-bd46-6aeb1f3172c3">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="c938a633-31c9-4745-8bf8-263d5dfd18fb" fragment="1" gd:fragmentGUID="dce8ca4c-c82a-499f-a061-3305f8b43b6e">Osoba upoważniona do wykonywania czynności kontrolnych ma prawo do:</zdanie>
+          </p>
+          <punkt eId="DU/2025/294__art_19__ust_5__pkt_1" gd:GUID="da7aca32-e549-47da-aaa4-3f49b12496a3">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="c938a633-31c9-4745-8bf8-263d5dfd18fb" fragment="2" gd:fragmentGUID="853972e2-1502-4b7e-a870-aec1a73ccb27">wstępu do obiektów i pomieszczeń należących do podmiotów, o których mowa w ust. 1, w szczególności do pomieszczeń produkcyjnych i magazynowych;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/294__art_19__ust_5__pkt_2" gd:GUID="56a0204f-49a0-4463-aed0-9b1bd9cc17e3">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="c938a633-31c9-4745-8bf8-263d5dfd18fb" fragment="3" gd:fragmentGUID="83440f77-753d-4ada-8c71-23110ba1ed56">wstępu na teren gospodarstwa rolnego;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/294__art_19__ust_5__pkt_3" gd:GUID="efdc5731-5d0e-4d33-a76f-404490209f68">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="c938a633-31c9-4745-8bf8-263d5dfd18fb" fragment="4" gd:fragmentGUID="0c44b44f-cbc9-4796-9a6a-4d793054cb40">żądania pisemnych lub ustnych informacji związanych z przedmiotem czynności kontrolnych;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/294__art_19__ust_5__pkt_4" gd:GUID="e727d4cf-f3a7-429a-b2bf-b847df6675cd">
+            <nr>4</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="c938a633-31c9-4745-8bf8-263d5dfd18fb" fragment="5" gd:fragmentGUID="4250fdd0-b5af-4599-9e13-fb0b04a72873">wglądu do dokumentów związanych z przedmiotem czynności kontrolnych, sporządzania z nich odpisów, wyciągów lub kopii oraz zabezpieczania tych dokumentów;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/294__art_19__ust_5__pkt_5" gd:GUID="2f2f9065-99e2-4414-8da3-ccfe404a4604">
+            <nr>5</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="c938a633-31c9-4745-8bf8-263d5dfd18fb" fragment="6" gd:fragmentGUID="7c78f9b4-2b09-48b0-978e-79ad24d01c3a">sporządzania dokumentacji fotograficznej z przeprowadzonych czynności kontrolnych;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/294__art_19__ust_5__pkt_6" gd:GUID="a7784c5c-b292-4b21-931b-8a45c84d35d8">
+            <nr>6</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="c938a633-31c9-4745-8bf8-263d5dfd18fb" fragment="7" gd:fragmentGUID="5843d0b5-ed68-4269-a3a8-7f8bc1ef28ae">pobierania do badań próbek produktów rolnych i żywnościowych oraz innych produktów zawierających w swoim składzie produkty rolne i żywnościowe.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/294__art_19__ust_6" gd:GUID="320748be-8741-408d-8658-a18091d0fef6">
+          <nr>6</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="72b3cba8-31f2-4098-8a75-f90a6b93f371" fragment="1" gd:fragmentGUID="3f7249b1-06da-4e70-9c64-b0539b38e174">Osoba wykonująca czynności kontrolne sporządza z tych czynności raport.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/294__art_19__ust_7" gd:GUID="ecad8465-aefe-401b-9a22-6355f04339d9">
+          <nr>7</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="8fc1fffc-20ef-4196-976f-389fa64cf783" fragment="1" gd:fragmentGUID="371ad8b4-378a-4405-a728-28929b9f639a">Raport, o którym mowa w ust. 6, podpisuje osoba wykonująca czynności kontrolne oraz podmiot, o którym mowa w ust. 1.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/294__art_19__ust_8" gd:GUID="83a6157f-75a3-40b7-8107-e6442ccd6c88">
+          <nr>8</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="76b070a6-6b5a-4392-a94f-dfb7145542f0" fragment="1" gd:fragmentGUID="017b13ed-dfbd-4a63-8d16-6c22ae4d8e03">W przypadku odmowy podpisania raportu, o którym mowa w ust. 6, przez podmiot, o którym mowa w ust. 1, raport podpisuje tylko osoba wykonująca czynności kontrolne, dokonując w raporcie stosownej adnotacji o tej odmowie.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/294__art_19__ust_9" gd:GUID="d35d701c-86d1-4397-a456-d99e215656dd">
+          <nr>9</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="10763817-aed0-416b-bbc0-b4fefd4dbe68" fragment="1" gd:fragmentGUID="56319afd-5d3c-44e9-98c6-785f2f6066a0">W przypadku gdy podmiot, o którym mowa w ust. 1, nie zgadza się z ustaleniami zawartymi w raporcie, o którym mowa w ust. 6, może zgłosić umotywowane zastrzeżenia co do tych ustaleń osobie, która sporządziła raport.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/294__art_19__ust_10" gd:GUID="2aee722d-1887-4138-bb8f-582d5502614a">
+          <nr>10</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="9b98d2a9-e5ce-4612-a763-347fc3895330" fragment="1" gd:fragmentGUID="291e1942-1dd7-4c3b-98e2-1b615d8ae7ce">Minister właściwy do spraw rozwoju wsi określi, w drodze rozporządzenia, wzór upoważnienia, o którym mowa w ust. 2, mając na względzie ujednolicenie informacji zawartych w upoważnieniu.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/294__art_20" gd:GUID="c4b6cbe0-7cb1-401f-9226-9f3952c9adb2">
+        <nr>20</nr>
+        <ustep eId="DU/2025/294__art_20__ust_1" gd:GUID="7be002fd-fada-4e15-b0ac-38345b87eb9f">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="485397be-0ac5-4943-aaed-7b412dc6d87a" fragment="1" gd:fragmentGUID="49c551b0-0d97-4584-8b6d-b89aa3ea8f39">Dyrektor Generalny może powierzyć, w drodze umowy, przeprowadzanie czynności kontrolnych w ramach kontroli, o których mowa w art. 19 ust. 1, wyspecjalizowanym jednostkom organizacyjnym, które spełniają warunki organizacyjne, techniczne i kadrowe niezbędne do ich przeprowadzenia, w szczególności posiadającym procedury zapewniające właściwe przeprowadzenie czynności kontrolnych, dysponującym urządzeniami niezbędnymi do przeprowadzenia czynności kontrolnych oraz zapewniającym, że czynności kontrolne będą wykonywane przez osoby posiadające kompetencje niezbędne do ich przeprowadzenia.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2025/294__art_20__ust_2" gd:GUID="1464e0fa-f944-4674-9c12-ee5c19e27066">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="2f4b02d6-9680-432f-abf7-6695b8593bd1" fragment="1" gd:fragmentGUID="2ced560f-7b8a-4e92-a06c-6438afeff4a9">Umowa, o której mowa w ust. 1, określa w szczególności:</zdanie>
+          </p>
+          <punkt eId="DU/2025/294__art_20__ust_2__pkt_1" gd:GUID="717ccf5c-0fde-4a85-a1d7-a6d7405c09b1">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="2f4b02d6-9680-432f-abf7-6695b8593bd1" fragment="2" gd:fragmentGUID="84974da0-9dbe-4b51-933e-e1d071882e3e">szczegółowy zakres powierzonych zadań;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/294__art_20__ust_2__pkt_2" gd:GUID="af423221-9bb9-4d69-b451-fe5e24e2fdb6">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="2f4b02d6-9680-432f-abf7-6695b8593bd1" fragment="3" gd:fragmentGUID="4227eeb8-cf1a-4898-a7ad-50338ebc8dd5">zakres obowiązków i odpowiedzialność jednostki organizacyjnej za ich wykonanie;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/294__art_20__ust_2__pkt_3" gd:GUID="7c0b806c-3749-49fc-8402-75b7b9d39e1a">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="2f4b02d6-9680-432f-abf7-6695b8593bd1" fragment="4" gd:fragmentGUID="28699d70-96f9-4175-8210-db9fb009c1ab">koszty realizacji powierzonych zadań;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/294__art_20__ust_2__pkt_4" gd:GUID="d7420f77-21f4-4893-b6da-f96bfc7450ea">
+            <nr>4</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="2f4b02d6-9680-432f-abf7-6695b8593bd1" fragment="5" gd:fragmentGUID="08371a62-d048-4889-b290-033f6166f136">sposób dokumentowania wykonywanych zadań oraz terminy informowania organów Krajowego Ośrodka o wynikach przeprowadzonych czynności kontrolnych;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2025/294__art_20__ust_2__pkt_5" gd:GUID="6020679e-1b97-4365-a465-0c9867bd96ab">
+            <nr>5</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="2f4b02d6-9680-432f-abf7-6695b8593bd1" fragment="6" gd:fragmentGUID="eb8d2d15-23fa-4e12-b719-3b56cd73437a">sposób postępowania z dokumentami związanymi z realizacją powierzonych zadań.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2025/294__art_20__ust_3" gd:GUID="c6876616-3e32-4f98-896d-8cc29a238c56">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="cc2f447e-2c5a-41ab-b870-0d6bd72748f1" fragment="1" gd:fragmentGUID="546d400e-a2c5-40da-ad87-107c53cc2204">Minister właściwy do spraw rozwoju wsi określi, w drodze rozporządzenia, szczegółowe warunki organizacyjne, techniczne i kadrowe, jakie powinny spełniać jednostki organizacyjne, którym można powierzyć przeprowadzanie czynności kontrolnych w ramach kontroli, o których mowa w art. 19 ust. 1, mając na względzie, aby warunki te odpowiadały specyfice i zakresowi tych kontroli oraz zapewniały przeprowadzanie czynności kontrolnych w jednolity sposób na obszarze całego kraju.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2025/294__art_21" gd:GUID="6e3b3f71-40fc-4307-b6f7-ab3eb06b3b86">
+        <nr>21</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="511eea7f-4ce1-4e28-8fc5-d5c2dfd4f964">
+          <p>
+            <zdanie nr="1" gd:zdGUID="ae8d802b-e173-46d9-a9ef-63fac0711946" fragment="1" gd:fragmentGUID="81a4fe09-43cc-4384-8da9-afad4f0195c9">Ustawa wchodzi w życie w terminie<odnosnik id-odnosnika="2" symbol="2" gd:GUID="39ecc899-dda4-41fa-ae04-a26ad6e076ba"><p><zdanie nr="1" gd:zdGUID="2ee9c936-ac86-43e8-8331-ad05efc4ae1f" fragment="1" gd:fragmentGUID="82126991-0975-41ef-994e-78c6c7c80dd6">Ustawa weszła w życie z dniem 1 września 2017 r. na podstawie art. 1 ustawy z dnia 10 lutego 2017 r. – Przepisy wprowadzające ustawę o Krajowym Ośrodku Wsparcia Rolnictwa (Dz. U. poz. 624 i 1503), która weszła w życie z dniem 1 września 2017 r.</zdanie></p></odnosnik> i na zasadach określonych w ustawie z dnia 10 lutego 2017 r. – Przepisy wprowadzające ustawę o Krajowym Ośrodku Wsparcia Rolnictwa (Dz. U. poz. 624 i 1503).</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+    </ustawa>
+  </obwieszczenie>
+</akt-prawny>

@@ -1,0 +1,1288 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <obwieszczenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/428</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>ab0606b2-8ad6-470e-97f9-f40cb460083f</gd:GUIDwersji>
+      <AdresISAP>WDU20250000428</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>428</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 428</AdresWyswietlany>
+      <Tytul>Obwieszczenie Marszałka Sejmu Rzeczypospolitej Polskiej z dnia 24 marca 2025 r. w sprawie ogłoszenia jednolitego tekstu ustawy o wojewodzie i administracji rządowej w województwie</Tytul>
+      <Rodzaj>OBW_TJ</Rodzaj>
+      <DataOgloszenia>2025-04-02</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-03-24</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_ujednolicenie_2025-04-02_DU-2025-428_domyslne" rodzaj="ujednolicenie" pochodzenie="domyslne-z-aktu" data="2025-04-02" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_ujednolicenie.zdarz_ujednolicenie_2025-04-02_DU-2025-428_domyslne" glowna="true">
+          <Przedzial rodzaj="ujednolicenie" od="zdarz_ujednolicenie_2025-04-02_DU-2025-428_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <DataObowiazywaniaWersji>
+        <Od>zdarz_ujednolicenie_2025-04-02_DU-2025-428_domyslne</Od>
+      </DataObowiazywaniaWersji>
+      <Organy>
+        <Organ gd:GUID="9a415245-b858-4097-80c2-416ce34ee53e" rola="wydajacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/MSEJMU">
+          <Nazwa>Marszałek Sejmu</Nazwa>
+          <OrganPodpisujacy>Marszałek Sejmu</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>S.</imie> <nazwisko>Hołownia</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Obwieszczenie</rodzaj-aktu>
+    <autor-aktu>Marszałka Sejmu Rzeczypospolitej Polskiej</autor-aktu>
+    <data>z dnia 24 marca 2025 r.</data>
+    <tytul>w sprawie ogłoszenia jednolitego tekstu ustawy o wojewodzie i administracji rządowej w województwie</tytul>
+    <punkt-OTJ eId="DU/2025/428__pkt_1" gd:GUID="9c3a653f-17ae-4b73-a5d4-ee8bbe327457">
+      <nr>1</nr>
+      <p>
+        <zdanie nr="1" gd:zdGUID="4496bfd1-d869-4058-8537-732939c546e6" fragment="1" gd:fragmentGUID="366bc0ab-54b9-4fb7-a824-547f734b6e3a">Na podstawie art. 16 ust. 1 zdanie pierwsze ustawy z dnia 20 lipca 2000 r. o ogłaszaniu aktów normatywnych i niektórych innych aktów prawnych (Dz. U. z 2019 r. poz. 1461) ogłasza się w załączniku do niniejszego obwieszczenia jednolity tekst ustawy z dnia 23 stycznia 2009 r. o wojewodzie i administracji rządowej w województwie (Dz. U. z 2023 r. poz. 190), z uwzględnieniem zmiany wprowadzonej ustawą z dnia 5 grudnia 2024 r. o ochronie ludności i obronie cywilnej (Dz. U. poz. 1907) oraz zmian wynikających z przepisów ogłoszonych przed dniem 12 marca 2025 r.</zdanie>
+      </p>
+    </punkt-OTJ>
+    <punkt-OTJ eId="DU/2025/428__pkt_2" gd:GUID="525468d6-aae0-408d-b943-0bf531d16032">
+      <nr>2</nr>
+      <p>
+        <zdanie nr="1" gd:zdGUID="2aef80a5-8b25-4c5e-b69a-3129182186ca" fragment="1" gd:fragmentGUID="52dfcc70-e0a2-4188-b0c9-cf8fd472d583">Podany w załączniku do niniejszego obwieszczenia tekst jednolity ustawy nie obejmuje art. 212 ustawy z dnia 5 grudnia 2024 r. o ochronie ludności i obronie cywilnej (Dz. U. poz. 1907), który stanowi:<tresc-strukt cudzyslowy="oba" gd:GUID="c8aa81e7-71bd-4578-b415-9b2f948edee6"><artykul eId="DU/2024/1907__art_212" gd:GUID="3cb38be3-a453-4a77-b636-f808d288ca6d"><nr>212</nr><ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="0cc5d710-f7c2-40bf-8eb0-6e5eb9762b83"><p><zdanie nr="1" gd:zdGUID="9ed08a17-b510-4b67-83f2-519c7d6d5a6e" fragment="1" gd:fragmentGUID="b55855c3-230a-41de-9ecc-6c2428ca3c46">Ustawa wchodzi w życie z dniem 1 stycznia 2025 r., z wyjątkiem:</zdanie></p><punkt eId="DU/2024/1907__art_212__pkt_1" gd:GUID="23e1b0ff-1b52-4ade-b7b1-b9f73943f68a"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="9ed08a17-b510-4b67-83f2-519c7d6d5a6e" fragment="2" gd:fragmentGUID="4754f6a8-65b4-40be-bad5-2f3905ff2e79">art. 16, art. 156, art. 198 i art. 199, które wchodzą w życie z dniem następującym po dniu ogłoszenia;</zdanie></p></punkt><punkt eId="DU/2024/1907__art_212__pkt_2" gd:GUID="64aec671-50b8-4006-a5a8-386393839113"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="9ed08a17-b510-4b67-83f2-519c7d6d5a6e" fragment="3" gd:fragmentGUID="ac1c638a-5550-4324-aa7d-f7c66f2dabe3">art. 76 ust. 5 i art. 78 ust. 2, które wchodzą w życie po upływie roku od dnia ogłoszenia;</zdanie></p></punkt><punkt eId="DU/2024/1907__art_212__pkt_3" gd:GUID="c3fbec8b-2116-4730-817c-d8e612dd8472"><nr>3</nr><p><zdanie nr="1" gd:zdGUID="9ed08a17-b510-4b67-83f2-519c7d6d5a6e" fragment="4" gd:fragmentGUID="864de8f2-d511-4022-840b-ca69217b0991">art. 11 ust. 3 pkt 3, art. 45–48, art. 189 oraz art. 211, które wchodzą w życie z dniem 1 stycznia 2026 r.;</zdanie></p></punkt><punkt eId="DU/2024/1907__art_212__pkt_4" gd:GUID="67fc83a1-dcee-4513-b895-5592ee7b0ae0"><nr>4</nr><p><zdanie nr="1" gd:zdGUID="9ed08a17-b510-4b67-83f2-519c7d6d5a6e" fragment="5" gd:fragmentGUID="574cfb23-92ee-4402-bc7f-b75a3ca55191">art. 187, który wchodzi w życie z dniem 1 stycznia 2027 r.</zdanie></p></punkt></ustep-n></artykul></tresc-strukt>.</zdanie>
+      </p>
+    </punkt-OTJ>
+    <organ-podpisujacy>Marszałek Sejmu: <i><osoba podpisujacy="true" gd:osobaGUID="7f766fd6-7e75-4a28-8573-61e5529ed2bb"><imie>S.</imie> <nazwisko>Hołownia</nazwisko></osoba></i></organ-podpisujacy>
+    <ustawa>
+      <zalacznik-do>Załącznik do obwieszczenia Marszałka Sejmu Rzeczypospolitej Polskiej z dnia 24 marca 2025 r. (Dz. U. poz. 428)</zalacznik-do>
+      <rodzaj-aktu>Ustawa</rodzaj-aktu>
+      <data>z dnia 23 stycznia 2009 r.</data>
+      <tytul>o wojewodzie i administracji rządowej w województwie</tytul>
+      <rozdzial eId="DU/2025/428__rozdz_1" gd:GUID="580a5277-1bc8-4e82-af92-8f1ed807a648">
+        <naglowek-rozdzialu>
+          <nr>1</nr>
+          <p>Przepisy ogólne</p>
+        </naglowek-rozdzialu>
+        <oddzial-n brak-eid="jednostka-nieoznaczona" gd:GUID="13f19a10-7701-4fa3-9e6f-941104e57b6a">
+          <artykul eId="DU/2025/428__art_1" gd:GUID="fc44580b-8d5b-4e04-b81e-23ffabbb85e5">
+            <nr>1</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="3f4e6816-dd0f-4ee8-93f1-42c5b41ec39a">
+              <p>
+                <zdanie nr="1" gd:zdGUID="b7a66c25-815d-41d4-975c-4bd1b1f6f501" fragment="1" gd:fragmentGUID="17cbcef7-8d8c-4fed-8475-bb61e8379a9a">Ustawa określa:</zdanie>
+              </p>
+              <punkt eId="DU/2025/428__art_1__pkt_1" gd:GUID="7797783d-e651-44f6-b3aa-d598e1de95ff">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="b7a66c25-815d-41d4-975c-4bd1b1f6f501" fragment="2" gd:fragmentGUID="79d2507a-b850-4d8d-914a-e8a96dffb00c">zakres działania oraz zasady funkcjonowania wojewody;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/428__art_1__pkt_2" gd:GUID="e0e77852-0c21-4021-b156-aa1eb564de92">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="b7a66c25-815d-41d4-975c-4bd1b1f6f501" fragment="3" gd:fragmentGUID="26cab157-e62b-4e1b-874a-14d5f745d8d1">tryb powoływania i odwoływania wojewody;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/428__art_1__pkt_3" gd:GUID="3908bc27-9f8c-40df-9a5a-ac2f5ca75cfa">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="b7a66c25-815d-41d4-975c-4bd1b1f6f501" fragment="4" gd:fragmentGUID="819bdcf4-62ee-4f20-a6a2-b339ef95ad05">organizację rządowej administracji zespolonej w województwie i niezespolonej administracji rządowej.</zdanie>
+                </p>
+              </punkt>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2025/428__art_2" gd:GUID="f0bc8b2a-7675-4ec2-8d19-c2bf92e73c9d">
+            <nr>2</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="7072bba1-5fab-4437-a79d-e4d3e6aa8dd3">
+              <p>
+                <zdanie nr="1" gd:zdGUID="57e17ad2-ae8b-44c7-a826-eef19742b4b4" fragment="1" gd:fragmentGUID="dc918dc6-ab7e-4f26-a14d-01a96340f23e">Zadania administracji rządowej w województwie wykonują:</zdanie>
+              </p>
+              <punkt eId="DU/2025/428__art_2__pkt_1" gd:GUID="9b219109-f393-49a9-8503-93eabebdce2a">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="57e17ad2-ae8b-44c7-a826-eef19742b4b4" fragment="2" gd:fragmentGUID="96f449ed-dbbd-4471-b1ab-6f36d9e892bd">wojewoda;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/428__art_2__pkt_2" gd:GUID="62baea6b-689b-4a1c-8453-0d3897975dcd">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="57e17ad2-ae8b-44c7-a826-eef19742b4b4" fragment="3" gd:fragmentGUID="a7b5c484-cc58-488d-9196-11b1c88bb1e4">organy rządowej administracji zespolonej w województwie, w tym kierownicy zespolonych służb, inspekcji i straży;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/428__art_2__pkt_3" gd:GUID="6e9065f8-a984-4ea5-8b46-1e23bc300ea6">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="57e17ad2-ae8b-44c7-a826-eef19742b4b4" fragment="4" gd:fragmentGUID="3f458f60-22eb-4a2d-b7a2-be18b5f01b3e">organy niezespolonej administracji rządowej;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/428__art_2__pkt_4" gd:GUID="aaee0217-2a27-4014-b295-736fd85ab496">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="57e17ad2-ae8b-44c7-a826-eef19742b4b4" fragment="5" gd:fragmentGUID="356b9b25-d159-42a9-88bc-ff907fb6ffb5">jednostki samorządu terytorialnego i ich związki, jeżeli wykonywanie przez nie zadań administracji rządowej wynika z odrębnych ustaw lub z zawartego porozumienia;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/428__art_2__pkt_5" gd:GUID="46953fe6-6788-4dcf-8149-44055a0b37d5">
+                <nr>5</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="57e17ad2-ae8b-44c7-a826-eef19742b4b4" fragment="6" gd:fragmentGUID="c3e4b0b8-5c92-4455-b5e2-dd65f8f6d59c">starosta, jeżeli wykonywanie przez niego zadań administracji rządowej wynika z odrębnych ustaw;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/428__art_2__pkt_6" gd:GUID="65ff89a9-c9fa-4230-b07b-480f0d5c9c32">
+                <nr>6</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="57e17ad2-ae8b-44c7-a826-eef19742b4b4" fragment="7" gd:fragmentGUID="9cca247e-4883-4394-b3cc-a0add9f0b9f5">inne podmioty, jeżeli wykonywanie przez nie zadań administracji rządowej wynika z odrębnych ustaw.</zdanie>
+                </p>
+              </punkt>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2025/428__art_3" gd:GUID="3b86eb3c-c1b7-4d3f-ab42-85476b744594">
+            <nr>3</nr>
+            <ustep eId="DU/2025/428__art_3__ust_1" gd:GUID="4c36cb08-8a2b-4a67-b424-0071af19c53f">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="11330d11-e3a3-4cf1-8740-d5326894fcad" fragment="1" gd:fragmentGUID="46205edc-5d6c-44ff-862e-75bcd9a4137b">Wojewoda jest:</zdanie>
+              </p>
+              <punkt eId="DU/2025/428__art_3__ust_1__pkt_1" gd:GUID="2d82f83d-f32c-4c5d-aa87-88c23ceb40a6">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="11330d11-e3a3-4cf1-8740-d5326894fcad" fragment="2" gd:fragmentGUID="3e390f75-e462-4916-b7bc-51aa87bda261">przedstawicielem Rady Ministrów w województwie;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/428__art_3__ust_1__pkt_2" gd:GUID="04a6cfa0-fc9f-40ba-9d34-dedaad53c5c4">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="11330d11-e3a3-4cf1-8740-d5326894fcad" fragment="3" gd:fragmentGUID="718da7b1-fea8-45a1-9b74-2406fbdfd359">zwierzchnikiem rządowej administracji zespolonej w województwie;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/428__art_3__ust_1__pkt_3" gd:GUID="bdc41ea5-fc88-450d-9636-f3ad74f50267">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="11330d11-e3a3-4cf1-8740-d5326894fcad" fragment="4" gd:fragmentGUID="5755c0c3-7780-473d-a2e7-c0a17d45a338">organem rządowej administracji zespolonej w województwie;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/428__art_3__ust_1__pkt_4" gd:GUID="e8743e92-fc61-40e1-aa5e-fd3b4b2e98c1">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="11330d11-e3a3-4cf1-8740-d5326894fcad" fragment="5" gd:fragmentGUID="c014c0bd-cac7-4338-a420-605462f69dce">organem nadzoru nad działalnością jednostek samorządu terytorialnego i ich związków pod względem legalności, z zastrzeżeniem ust. 2;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/428__art_3__ust_1__pkt_5" gd:GUID="aaeb8941-19ae-4f36-bd0e-f1c415e61015">
+                <nr>5</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="11330d11-e3a3-4cf1-8740-d5326894fcad" fragment="6" gd:fragmentGUID="dabb6540-db9d-4589-9e2e-0cd692e15468">organem administracji rządowej w województwie, do którego właściwości należą wszystkie sprawy z zakresu administracji rządowej w województwie niezastrzeżone w odrębnych ustawach do właściwości innych organów tej administracji;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/428__art_3__ust_1__pkt_6" gd:GUID="fde05756-40d1-425f-a379-3df943f727c0">
+                <nr>6</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="11330d11-e3a3-4cf1-8740-d5326894fcad" fragment="7" gd:fragmentGUID="cb43ee26-b8c9-436f-8947-514daef6b2b9">reprezentantem Skarbu Państwa, w zakresie i na zasadach określonych w odrębnych ustawach;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/428__art_3__ust_1__pkt_7" gd:GUID="c7153433-4c79-4426-82a2-e9d8fcb1dc87">
+                <nr>7</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="11330d11-e3a3-4cf1-8740-d5326894fcad" fragment="8" gd:fragmentGUID="5c2b9543-b606-400b-b4be-bf2f210fa5b8">organem wyższego stopnia w rozumieniu ustawy z dnia 14 czerwca 1960 r. – Kodeks postępowania administracyjnego (Dz. U. z 2024 r. poz. 572);</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/428__art_3__ust_1__pkt_8" gd:GUID="2db3d8c3-d00b-4171-a89e-eec7a0809a68">
+                <nr>8</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="11330d11-e3a3-4cf1-8740-d5326894fcad" fragment="9" gd:fragmentGUID="3d6f31bc-6516-48fe-b0fb-9e17b72be6e7">obowiązany zapewnić gospodarowanie nieruchomościami Skarbu Państwa w województwie w sposób zgodny z zasadami prawidłowej gospodarki.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2025/428__art_3__ust_2" gd:GUID="4eec02cc-ba23-4bc5-8d62-2164276ed7c6">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="e61670de-911d-4a25-bbc8-e2e0f3b3fe9c" fragment="1" gd:fragmentGUID="43f93acd-7e6d-4f4e-960b-b134c08b8e0b">Wojewoda kontroluje pod względem legalności, gospodarności i rzetelności wykonywanie przez organy samorządu terytorialnego zadań z zakresu administracji rządowej, realizowanych przez nie na podstawie ustawy lub porozumienia z organami administracji rządowej.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/428__art_3__ust_2a" gd:GUID="7621d451-6e2a-4adb-a6f6-3032d4cdf3d3">
+              <nr>2a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="0d563250-d93e-4fa7-8d45-792f0a5291e1" fragment="1" gd:fragmentGUID="608be83c-1932-4b3e-995f-0c2710a1eacc">Wojewoda nadzoruje wykorzystanie zasobu nieruchomości Skarbu Państwa w województwie w szczególności poprzez:</zdanie>
+              </p>
+              <punkt eId="DU/2025/428__art_3__ust_2a__pkt_1" gd:GUID="68a7a993-3c7c-4d0a-9b19-cf569c77d5a8">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="0d563250-d93e-4fa7-8d45-792f0a5291e1" fragment="2" gd:fragmentGUID="b9316db3-d46f-4697-a024-5af0be6d3eea">zatwierdzanie sporządzanych przez starostów, wykonujących zadania z zakresu administracji rządowej, planów wykorzystania zasobu nieruchomości Skarbu Państwa oraz ich zmian;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/428__art_3__ust_2a__pkt_2" gd:GUID="448a85cd-f63c-4df1-a1ed-609898ef9495">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="0d563250-d93e-4fa7-8d45-792f0a5291e1" fragment="3" gd:fragmentGUID="fb30f74d-a180-4bb2-bcfd-ba6b3825d7e3">określanie stopnia szczegółowości planu wykorzystania zasobu nieruchomości Skarbu Państwa;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/428__art_3__ust_2a__pkt_3" gd:GUID="cca2da54-0112-4f72-8afe-ae4e841dd32e">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="0d563250-d93e-4fa7-8d45-792f0a5291e1" fragment="4" gd:fragmentGUID="24cdb866-fbcc-4c1f-9dc9-b97b7473c3f0">inicjowanie zmiany obowiązującego planu wykorzystania zasobu nieruchomości Skarbu Państwa;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/428__art_3__ust_2a__pkt_4" gd:GUID="25ac3ea9-ce46-4265-9bcd-6148fd604365">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="0d563250-d93e-4fa7-8d45-792f0a5291e1" fragment="5" gd:fragmentGUID="cf53f8a0-dde1-4741-80ec-b9d07023e4ac">występowanie do starosty, wykonującego zadanie z zakresu administracji rządowej, o sporządzenie w wyznaczonym terminie, nie krótszym niż dwa tygodnie, wykazu nieruchomości wchodzących w skład zasobu nieruchomości Skarbu Państwa w województwie, będących przedmiotem rozporządzenia;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/428__art_3__ust_2a__pkt_5" gd:GUID="b2b04d91-594b-49f9-a20b-48397750dd11">
+                <nr>5</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="0d563250-d93e-4fa7-8d45-792f0a5291e1" fragment="6" gd:fragmentGUID="71203871-6862-4308-a4d6-2768e9ac3fdb">występowanie do starosty, wykonującego zadanie z zakresu administracji rządowej, o sporządzenie w wyznaczonym terminie, nie krótszym niż dwa tygodnie, wykazu postępowań sądowych, sądowoadministracyjnych lub administracyjnych dotyczących nieruchomości wchodzących w skład zasobu nieruchomości Skarbu Państwa w województwie.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2025/428__art_3__ust_2aa" gd:GUID="4bd34949-6b20-4518-b213-d9337285ec4c">
+              <nr>2aa</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="c9d38237-9aa5-4128-9923-3a12ed6ad070" fragment="1" gd:fragmentGUID="47f515ad-dff3-4dd9-8a49-08200d06e808">Jeżeli starosta wykonujący zadanie z zakresu administracji rządowej nie podejmuje w sposób zgodny z zasadami prawidłowej gospodarki działań określonych w ustawie z dnia 21 sierpnia 1997 r. o gospodarce nieruchomościami (Dz. U. z 2024 r. poz. 1145, 1222, 1717 i 1881) względem nieruchomości Skarbu Państwa w województwie albo nieruchomości będących przedmiotem zbycia lub udostępnienia z zasobu nieruchomości Skarbu Państwa w województwie, wojewoda może go zobowiązać, w formie pisemnej, do podjęcia określonego działania w terminie nie krótszym niż 14 dni roboczych od dnia otrzymania pisma, w granicach przyznanych staroście środków na finansowanie zadań z zakresu gospodarki nieruchomościami.</zdanie>
+                <zdanie nr="2" gd:zdGUID="0e16ecda-ac77-40ad-b0a6-beb6edddbc59" fragment="1" gd:fragmentGUID="9fcd2ae1-a792-442d-8490-cd3f16560532">W przypadku niewykonania tego zobowiązania przez starostę w wyznaczonym terminie wojewoda może podjąć działanie określone w zobowiązaniu w imieniu Skarbu Państwa.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/428__art_3__ust_2b" gd:GUID="c2f138be-1a4f-46f8-bc39-7d9a18ec90d7">
+              <nr>2b</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="cab881c7-0183-4ed0-b125-3a283c701d6f" fragment="1" gd:fragmentGUID="7a8acc55-0fd6-4efb-b640-c1141ed52562">Wojewoda może uczestniczyć w wykonywaniu zadań, o których mowa w art. 16 ust. 1 pkt 2 i 3 ustawy z dnia 11 lipca 2014 r. o zasadach realizacji programów w zakresie polityki spójności finansowanych w perspektywie finansowej 2014–2020 (Dz. U. z 2020 r. poz. 818), na zasadach określonych w tej ustawie.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/428__art_3__ust_3" gd:GUID="b98c3727-76fb-4d9f-a53d-ec64efb38976">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="c3dcf7d2-6916-46d8-9d92-3df5e6e2a649" fragment="1" gd:fragmentGUID="819149e9-d846-4da3-aba1-3059d1d1d4d9">Zadania i kompetencje wojewody w stanach nadzwyczajnych określają odrębne ustawy.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2025/428__art_4" gd:GUID="d109144a-0da2-43c6-b88d-0cf1a7b22317">
+            <nr>4</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="1145c2f1-14dd-4894-a95a-ec6f1d524044">
+              <p>
+                <zdanie nr="1" gd:zdGUID="7bc5d365-3524-4462-9b31-44b8b4302648" fragment="1" gd:fragmentGUID="fa2ad8a3-516c-4046-bc44-839d444a47d7">Odrębne ustawy określają:</zdanie>
+              </p>
+              <punkt eId="DU/2025/428__art_4__pkt_1" gd:GUID="a0ccdede-abb8-4b35-840f-4ed1fffec8fe">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="7bc5d365-3524-4462-9b31-44b8b4302648" fragment="2" gd:fragmentGUID="059a1609-b597-44f0-b481-6298bdf06c6b">zasadniczy podział terytorialny państwa;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/428__art_4__pkt_2" gd:GUID="26939c97-796b-4f48-8a55-3ceb94b30eb9">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="7bc5d365-3524-4462-9b31-44b8b4302648" fragment="3" gd:fragmentGUID="9a3ec906-9f31-4983-97ba-7a9b3cf15dde">nazwę województwa i nazwę urzędu wojewody oraz jego siedzibę;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/428__art_4__pkt_3" gd:GUID="53d641b0-7535-40c8-aeda-49a17d96f53c">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="7bc5d365-3524-4462-9b31-44b8b4302648" fragment="4" gd:fragmentGUID="4caa0725-3c70-4046-b6fa-58d9e668276c">zasady i tryb ustalania granic województw oraz dokonywania ich zmian;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/428__art_4__pkt_4" gd:GUID="c43b9338-3169-465d-af3e-9d222454b9cd">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="7bc5d365-3524-4462-9b31-44b8b4302648" fragment="5" gd:fragmentGUID="467d8fbc-84a7-4ca6-bb08-36c72c56ea1f">zasady ustalania niepokrywających się z zasadniczym podziałem terytorialnym państwa podziałów terytorialnych w celu wykonywania zadań niezespolonej administracji rządowej.</zdanie>
+                </p>
+              </punkt>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2025/428__art_5" gd:GUID="91990440-0895-4d22-9ab0-c469e3065d1f">
+            <nr>5</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="d212d96c-7820-4bfe-b701-c9b979dd1560">
+              <p>
+                <zdanie nr="1" gd:zdGUID="4e85955c-7ea3-4cf5-bdfe-070785e0b916" fragment="1" gd:fragmentGUID="4ea0ba23-4946-45e6-ac6d-95a49567641b">Zasady organizacji, funkcjonowania i zakres zadań organów rządowej administracji zespolonej w województwie oraz organów niezespolonej administracji rządowej określają odrębne ustawy.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2025/428__art_6" gd:GUID="9b486f7f-c24c-4523-bbae-e190763e9955">
+            <nr>6</nr>
+            <ustep eId="DU/2025/428__art_6__ust_1" gd:GUID="af880063-053f-4984-8d2c-1ea06cedf671">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="faf785ba-50af-4536-a650-3fedcfa4f650" fragment="1" gd:fragmentGUID="7409e6a6-6eb1-4bc6-a3a6-26e51b9e122f">Wojewodę powołuje i odwołuje Prezes Rady Ministrów na wniosek ministra właściwego do spraw administracji publicznej.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/428__art_6__ust_2" gd:GUID="76a88815-14e5-468b-ad16-3f29fe73ae3a">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="eea65c1f-f4e0-4b87-8dd1-a4f8923d12ff" fragment="1" gd:fragmentGUID="b1b64101-c6ea-4557-951f-af65a31ee013">Na stanowisko wojewody może być powołana osoba, która:</zdanie>
+              </p>
+              <punkt eId="DU/2025/428__art_6__ust_2__pkt_1" gd:GUID="9aa6b0c8-88d6-49b4-90f0-a9ce4151a183">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="eea65c1f-f4e0-4b87-8dd1-a4f8923d12ff" fragment="2" gd:fragmentGUID="a0c7fc0a-fa56-49fc-ae73-a5a70103848e">posiada obywatelstwo polskie;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/428__art_6__ust_2__pkt_2" gd:GUID="31a7d712-7a9f-4d2e-9e42-260b54b68a68">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="eea65c1f-f4e0-4b87-8dd1-a4f8923d12ff" fragment="3" gd:fragmentGUID="44a53a44-6411-4926-b536-01ed303a6c8d">posiada tytuł zawodowy magistra lub tytuł równorzędny;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/428__art_6__ust_2__pkt_3" gd:GUID="f3793c58-7a7a-4978-9dbb-a30935339327">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="eea65c1f-f4e0-4b87-8dd1-a4f8923d12ff" fragment="4" gd:fragmentGUID="8c9b5bed-adb7-444b-92e9-4035b8cf7407">daje rękojmię należytego wykonywania obowiązków wojewody;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/428__art_6__ust_2__pkt_4" gd:GUID="047cacc2-a20e-4697-9040-50d241ac36e0">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="eea65c1f-f4e0-4b87-8dd1-a4f8923d12ff" fragment="5" gd:fragmentGUID="29820bd3-11e2-4e23-b2ce-12cc78b655f9">nie była skazana prawomocnym wyrokiem sądu za umyślne przestępstwo ścigane z oskarżenia publicznego lub umyślne przestępstwo skarbowe;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/428__art_6__ust_2__pkt_5" gd:GUID="9b75b9f2-ac56-4dbf-bba8-04b07b954a6e">
+                <nr>5</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="eea65c1f-f4e0-4b87-8dd1-a4f8923d12ff" fragment="6" gd:fragmentGUID="167589e1-f115-416e-8118-5710fc499088">korzysta z pełni praw publicznych;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/428__art_6__ust_2__pkt_6" gd:GUID="5ee83b82-4f4f-4cc7-9070-e7134f02c918">
+                <nr>6</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="eea65c1f-f4e0-4b87-8dd1-a4f8923d12ff" fragment="7" gd:fragmentGUID="e5019e97-c7a3-41d6-a937-908d3e695fd1">cieszy się nieposzlakowaną opinią.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2025/428__art_7" gd:GUID="5ae3735b-446a-40c6-95b3-71335dfa3a96">
+            <nr>7</nr>
+            <ustep eId="DU/2025/428__art_7__ust_1" gd:GUID="7811b680-93ae-48c0-880b-f824853dc483">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="7964da1b-f565-4c0d-8e33-2b0dcd2b42e5" fragment="1" gd:fragmentGUID="ab6d668a-2ee1-47ac-824b-3539a14b689f">Wojewoda wykonuje zadania przy pomocy wicewojewody albo I i II wicewojewody.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/428__art_7__ust_2" gd:GUID="8ee3cf90-b51a-4a6d-ac21-5da37ccffdf6">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="21c69006-9340-4511-b7c2-13a29959a854" fragment="1" gd:fragmentGUID="c0ab5dd4-cd11-4a54-bc95-612834c1e6d0">Wicewojewodę powołuje i odwołuje Prezes Rady Ministrów na wniosek wojewody.</zdanie>
+                <zdanie nr="2" gd:zdGUID="d4b528d4-f85b-43b9-9a98-48972d0320a3" fragment="1" gd:fragmentGUID="764be9a9-2bc0-4022-a051-5a0aba0388d9">Na stanowisko wicewojewody może być powołana osoba spełniająca wymogi określone w art. 6 ust. 2.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/428__art_7__ust_3" gd:GUID="b87dcc67-bfc1-47e0-ba4c-576487be8d00">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="c650b05c-730a-4ae4-b92a-944449d61dec" fragment="1" gd:fragmentGUID="32c09591-d721-4e6b-b0fe-33bee581527c">Wojewoda określa, w formie zarządzenia, zakres kompetencji i zadań wykonywanych przez wicewojewodów.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/428__art_7__ust_4" gd:GUID="427bc2aa-d13b-47fd-bdf3-4d10453099a7">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="f8a25d7d-1027-4ebd-83a2-47b71cec266e" fragment="1" gd:fragmentGUID="cd87ba38-f653-49c6-941d-5070f0bf0f0a">Jeżeli wojewoda nie pełni obowiązków służbowych, zakres zastępstwa wicewojewody, a w przypadku powołania dwóch wicewojewodów – I wicewojewody, rozciąga się na wszystkie kompetencje wojewody.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2025/428__art_8" gd:GUID="8e44aef8-4d86-4c3e-97f7-327dd09c999c">
+            <nr>8</nr>
+            <ustep eId="DU/2025/428__art_8__ust_1" gd:GUID="618807dc-7518-47fc-bda4-3f58e83c8359">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="4ad0f628-0e9d-4456-aeb6-eb06936ca8d6" fragment="1" gd:fragmentGUID="137ec6cf-2ecf-493a-b25d-5993e8294572">Prezes Rady Ministrów kieruje działalnością wojewody, w szczególności wydając w tym zakresie wytyczne i polecenia, żądając przekazania sprawozdań z działalności wojewody oraz dokonując okresowej oceny jego pracy.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/428__art_8__ust_2" gd:GUID="c33ceea0-216c-4276-8dd2-8933361e1453">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="96f320c5-ac74-40c8-9f0f-4ebd108afedb" fragment="1" gd:fragmentGUID="72918053-4429-487c-952e-2b87225df1e9">Prezes Rady Ministrów sprawuje nadzór nad działalnością wojewody na podstawie kryterium zgodności jego działania z polityką Rady Ministrów.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/428__art_8__ust_3" gd:GUID="8ff6d026-4d3a-4249-b3a6-5ac5ee39ccba">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="19327f2e-8004-424c-9a69-8f3c070422a9" fragment="1" gd:fragmentGUID="fd855971-4f1f-4ae7-9059-be4bf889de2b">Minister właściwy do spraw administracji publicznej sprawuje nadzór nad działalnością wojewody na podstawie kryterium zgodności jego działania z powszechnie obowiązującym prawem, a także pod względem rzetelności i gospodarności.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/428__art_8__ust_4" gd:GUID="115742e1-782b-40b5-84cc-55835ca7a127">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="37ae447d-db4d-45d7-be64-42410dcdeae3" fragment="1" gd:fragmentGUID="19105cae-f31e-4d33-a3f8-5a799800822d">Przepis ust. 3 nie narusza uprawnień właściwych ministrów w stosunku do wojewody, określonych w ustawie z dnia 14 czerwca 1960 r. – Kodeks postępowania administracyjnego.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2025/428__art_9" gd:GUID="36be845f-80b3-4813-b843-4a645d28ae9e">
+            <nr>9</nr>
+            <ustep eId="DU/2025/428__art_9__ust_1" gd:GUID="84784c46-d894-4953-8894-7d668ca1f993">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="8b30955a-039c-4423-be3a-616005698e68" fragment="1" gd:fragmentGUID="f8da264f-10d5-460f-9a4f-521eefa28afd">Właściwy minister wykonuje swoje uprawnienia wobec wojewody w zakresie i na zasadach określonych w odrębnych ustawach.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/428__art_9__ust_2" gd:GUID="6c303c57-5b07-4aee-86ff-7107347eedf3">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="3c58b8c0-eb54-4896-9cb3-fe7243d9500f" fragment="1" gd:fragmentGUID="050fe5dc-e65d-45b4-9b5c-22a0e83e77c6">Wojewoda jest obowiązany do udzielania właściwemu ministrowi lub centralnemu organowi administracji rządowej, w wyznaczonym terminie, żądanych przez niego informacji i wyjaśnień.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2025/428__art_10" gd:GUID="d08e8c9c-bbf4-4549-8e2d-3b514acdb6a1">
+            <nr>10</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="503e795a-1b97-47b7-9567-b9db69b58f19">
+              <p>
+                <zdanie nr="1" gd:zdGUID="7a621342-2dc2-4387-99ed-edaf002268f2" fragment="1" gd:fragmentGUID="d9a4ffb6-d330-4302-acec-ef14dd0a82e4">Spory między wojewodami oraz między wojewodą a członkiem Rady Ministrów lub centralnym organem administracji rządowej rozstrzyga Prezes Rady Ministrów.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2025/428__art_11" gd:GUID="0acf22d6-a18d-409c-b907-ed405544d22f">
+            <nr>11</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="3eaeaeaf-2ad6-4914-a49d-7955e22c6dd3">
+              <p>
+                <zdanie nr="1" gd:zdGUID="ed3d6f39-8c2f-4f4c-abe9-1247c5bf3897" fragment="1" gd:fragmentGUID="1721c39a-570f-4e9c-b549-e24b6cfeda83">Prezes Rady Ministrów może upoważnić ministra właściwego do spraw administracji publicznej do wykonywania, w jego imieniu, przysługujących mu wobec wojewody uprawnień, z wyjątkiem powoływania i odwoływania wojewody oraz rozstrzygania sporów między wojewodą a członkiem Rady Ministrów lub centralnym organem administracji rządowej.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2025/428__art_12" gd:GUID="82fe82e0-0ba9-4c81-834b-c0729a435c8c">
+            <nr>12</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="402b8c77-2b83-4618-8a2c-4928ea673c43">
+              <p>
+                <zdanie nr="1" gd:zdGUID="411ff969-739a-4300-8a85-ac7849c7d27e" fragment="1" gd:fragmentGUID="f349de8a-b3ba-4892-a104-d83c7d9e1829">Wojewoda sprawuje nadzór nad działalnością jednostek samorządu terytorialnego i ich związków na zasadach określonych w odrębnych ustawach.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2025/428__art_13" gd:GUID="462c9243-c2e0-4204-9d43-f01bbd21a6d8">
+            <nr>13</nr>
+            <ustep eId="DU/2025/428__art_13__ust_1" gd:GUID="54caadb1-6d1c-48a0-ac68-d133ec5f4352">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="31666384-235e-4f02-b348-d1b3e4ddfed9" fragment="1" gd:fragmentGUID="077f8415-6cca-453f-a231-268279cb42b2">Wojewoda wykonuje zadania przy pomocy urzędu wojewódzkiego oraz organów rządowej administracji zespolonej w województwie.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/428__art_13__ust_2" gd:GUID="54ae3e29-42d6-4c91-87ff-f82101fb1378">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="448f683f-2c6f-452a-97c6-aa0f608e0666" fragment="1" gd:fragmentGUID="11a981a4-95a7-45a6-89e9-a605776a0729">Dyrektor generalny urzędu wojewódzkiego zapewnia jego prawidłowe funkcjonowanie.</zdanie>
+                <zdanie nr="2" gd:zdGUID="38163d29-4318-4418-b922-f90e05b3c199" fragment="1" gd:fragmentGUID="852d2fc5-1a22-4594-9039-1ace6c61a70f">Prawa i obowiązki dyrektora generalnego urzędu określa odrębna ustawa.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2025/428__art_14" gd:GUID="35a9b6dd-6c58-4517-a466-d890151e5668">
+            <nr>14</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="c4a7c52c-4f92-478b-b383-1dc09a953e82">
+              <p>
+                <zdanie nr="1" gd:zdGUID="ea7f602e-38e4-4314-86d1-1acb80794502" fragment="1" gd:fragmentGUID="ac1c1adb-db18-4d44-af8e-7ed652937761">W celu usprawnienia działania organów rządowej administracji zespolonej w województwie wojewoda może tworzyć delegatury urzędu wojewódzkiego.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2025/428__art_15" gd:GUID="b15f79ce-f781-4508-b016-7fa562a53533">
+            <nr>15</nr>
+            <ustep eId="DU/2025/428__art_15__ust_1" gd:GUID="34fdc9ab-1a02-407b-a03f-57c51c3c61c7">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="3119b7ec-2680-4531-a241-46a45565a34e" fragment="1" gd:fragmentGUID="fda257f2-a131-48c6-9e5b-37c322f65f6a">Wojewoda nadaje urzędowi wojewódzkiemu statut podlegający zatwierdzeniu przez Prezesa Rady Ministrów, z zastrzeżeniem ust. 5.</zdanie>
+                <zdanie nr="2" gd:zdGUID="c1053933-44e5-4d47-873c-e93ee177f7cf" fragment="1" gd:fragmentGUID="8b4dc4d1-122f-4fb9-ab3a-f908cc07870c">Statut jest ogłaszany w wojewódzkim dzienniku urzędowym.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/428__art_15__ust_2" gd:GUID="2c6c406a-8b44-40ac-9a64-286d135d59a1">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="e11f6450-cce5-4ea4-aeb9-8630d503a1eb" fragment="1" gd:fragmentGUID="482ddb68-34b6-496e-a139-f13da69585ab">W skład urzędu wojewódzkiego wchodzą komórki organizacyjne:</zdanie>
+              </p>
+              <punkt eId="DU/2025/428__art_15__ust_2__pkt_1" gd:GUID="594d8033-8ff3-49d3-998c-addfa6a90b5a">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="e11f6450-cce5-4ea4-aeb9-8630d503a1eb" fragment="2" gd:fragmentGUID="f3874e43-dd32-412f-b1a1-0a1ef1fb6889">wydziały – do realizacji merytorycznych zadań urzędu;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/428__art_15__ust_2__pkt_2" gd:GUID="a419b1b9-8a91-46c8-8fc4-7254a29e6e95">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="e11f6450-cce5-4ea4-aeb9-8630d503a1eb" fragment="3" gd:fragmentGUID="e5661d3d-4eac-491d-891f-b87d59a16870">biura – do realizacji zadań w zakresie obsługi urzędu;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/428__art_15__ust_2__pkt_3" gd:GUID="389b43d8-7274-4173-8185-0edce178d990">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="e11f6450-cce5-4ea4-aeb9-8630d503a1eb" fragment="4" gd:fragmentGUID="8de1c569-6d1f-411d-aa72-97983b19789f">oddziały jako komórki organizacyjne wewnątrz komórek wymienionych w pkt 1 i 2.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2025/428__art_15__ust_3" gd:GUID="9debc6fc-73a0-49d5-945b-75c6fbf1b9e4">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="2f4f9c0f-0e57-442b-9f20-13e3e14123e5" fragment="1" gd:fragmentGUID="adcfb964-1633-475f-ab9c-011abfaabf32">Statut urzędu wojewódzkiego określa w szczególności:</zdanie>
+              </p>
+              <punkt eId="DU/2025/428__art_15__ust_3__pkt_1" gd:GUID="cb2d4a92-1e7f-4fd0-8792-47cacf88a7b3">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="2f4f9c0f-0e57-442b-9f20-13e3e14123e5" fragment="2" gd:fragmentGUID="3fdf4482-18e5-4172-90b1-f24293da4436">nazwę i siedzibę urzędu;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/428__art_15__ust_3__pkt_2" gd:GUID="57ce874a-a0e7-4450-9efd-21de0582f2ec">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="2f4f9c0f-0e57-442b-9f20-13e3e14123e5" fragment="3" gd:fragmentGUID="41f558c2-64ca-411a-9d8b-37b5ec954d26">nazwy stanowisk dyrektorów wydziałów;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/428__art_15__ust_3__pkt_3" gd:GUID="a74c1698-b502-413f-b4ea-38acf98eacc3">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="2f4f9c0f-0e57-442b-9f20-13e3e14123e5" fragment="4" gd:fragmentGUID="bd449c0f-79ea-4580-975f-a3e540c20317">nazwy wydziałów oraz innych komórek organizacyjnych urzędu;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/428__art_15__ust_3__pkt_4" gd:GUID="b24e58c3-1a64-44b8-86b5-5209e4f841a9">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="2f4f9c0f-0e57-442b-9f20-13e3e14123e5" fragment="5" gd:fragmentGUID="d13fe47b-d958-46b0-adcb-4040bf451a09">zakresy działania wydziałów i innych komórek organizacyjnych urzędu oraz, jeżeli odrębne ustawy tak stanowią, zakres kompetencji przypisanych określonym w ustawach stanowiskom lub funkcjom urzędowym;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/428__art_15__ust_3__pkt_5" gd:GUID="4812f47a-f184-43eb-a5d7-96b2d141e00d">
+                <nr>5</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="2f4f9c0f-0e57-442b-9f20-13e3e14123e5" fragment="6" gd:fragmentGUID="22fdf1c9-0e01-4307-a79c-cc8b9e89ef65">nazwy, siedziby i zakresy działania delegatur, o których mowa w art. 14;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/428__art_15__ust_3__pkt_6" gd:GUID="7846e198-b0af-4b00-82e4-644202f673cb">
+                <nr>6</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="2f4f9c0f-0e57-442b-9f20-13e3e14123e5" fragment="7" gd:fragmentGUID="1b0827bb-13c8-47c4-8c1f-987186516130">inne sprawy istotne dla organizacji i funkcjonowania urzędu.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2025/428__art_15__ust_4" gd:GUID="492f279d-3e52-4140-bba2-197c6a24e271">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="c9d4d32d-3497-4643-9742-0356c9731756" fragment="1" gd:fragmentGUID="72c04e17-1910-4bc5-a66e-b6dcceddaee4">Wykaz jednostek organizacyjnych podporządkowanych wojewodzie lub przez niego nadzorowanych stanowi załącznik do statutu urzędu wojewódzkiego.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/428__art_15__ust_5" gd:GUID="94426886-82b4-4cbe-865f-65976fa5eca9">
+              <nr>5</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="11e06cd7-ea3e-4c28-83a6-e98c2951a704" fragment="1" gd:fragmentGUID="6bc692a7-32de-47d9-a617-8e90cb8e419f">Zmiana statutu urzędu wojewódzkiego polegająca na aktualizacji wykazu jednostek podporządkowanych wojewodzie lub przez niego nadzorowanych nie wymaga zatwierdzenia przez Prezesa Rady Ministrów.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2025/428__art_16" gd:GUID="18e94b69-3299-4b39-aa12-30c8f520e404">
+            <nr>16</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="995b6d80-d999-4eed-98c9-336a4b7ada06">
+              <p>
+                <zdanie nr="1" gd:zdGUID="a87c4e84-706b-4f04-821b-3d7c77135cae" fragment="1" gd:fragmentGUID="35c8a14d-cfbc-4ef9-af57-9bcc8dd42bd7">Szczegółową organizację oraz tryb pracy urzędu wojewódzkiego określa regulamin ustalony przez wojewodę w drodze zarządzenia.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2025/428__art_17" gd:GUID="ff8d9104-9715-423a-b04c-dd1eac416bba">
+            <nr>17</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="9ab684dd-eae6-4be0-897c-7357e2055f4e">
+              <p>
+                <zdanie nr="1" gd:zdGUID="89c04aa1-7ff7-4c1b-bcce-3661da0c35a0" fragment="1" gd:fragmentGUID="a6da88c4-f6de-4074-89c0-018cd92f4bab">Wojewoda, w celu realizacji powierzonych mu zadań, wydaje zarządzenia.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2025/428__art_18" gd:GUID="dd9a6d73-5226-4f0e-a2d4-3e551b932acc">
+            <nr>18</nr>
+            <ustep eId="DU/2025/428__art_18__ust_1" gd:GUID="fedf88d2-b771-4e71-81ec-a226f70e100d">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="5ef54d67-9d24-48ac-b654-b2046b132a6b" fragment="1" gd:fragmentGUID="4314e755-4f6e-491d-aa9c-8f553a77593d">W przypadkach uzasadnionych szczególnymi potrzebami wojewoda może ustanowić, na czas oznaczony, swojego pełnomocnika do prowadzenia spraw w zakresie określonym w pełnomocnictwie.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/428__art_18__ust_2" gd:GUID="9bf33618-58c2-492a-a7dc-676125f10ff0">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ae65cecb-3759-427b-bf50-1a8444889c58" fragment="1" gd:fragmentGUID="203b9b88-7dec-42c8-a907-10720683c670">Wojewoda może tworzyć zespoły doradcze.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2025/428__art_19" gd:GUID="eef569d8-4e58-4d48-93bb-c8146f9a0724">
+            <nr>19</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="7b92da63-eb4b-42f4-983a-dade6bd10151">
+              <p>
+                <zdanie nr="1" gd:zdGUID="bc6a6ba0-bc92-41e9-a01f-f54687ce82c1" fragment="1" gd:fragmentGUID="1e44c4d8-3d4f-4baf-b5c4-f0b8a5bcbc84">Wojewoda może upoważnić na piśmie pracowników urzędu wojewódzkiego, niezatrudnionych w urzędach obsługujących inne organy rządowej administracji zespolonej w województwie, do załatwiania określonych spraw w jego imieniu i na jego odpowiedzialność, w ustalonym zakresie, a w szczególności do wydawania decyzji administracyjnych, postanowień i zaświadczeń, z tym że upoważnienie nie może dotyczyć wstrzymania egzekucji administracyjnej, o której mowa w art. 27 ust. 1.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2025/428__art_20" gd:GUID="ed8f3fd7-f44d-42b4-9983-48acbe39b04c">
+            <nr>20</nr>
+            <ustep eId="DU/2025/428__art_20__ust_1" gd:GUID="9d9b451d-3f16-4082-abf3-c11116109562">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="a03974df-09c2-4667-9f5c-afbcd206ad6e" fragment="1" gd:fragmentGUID="9f6c7bc3-9192-419e-b7a0-46798c95c32a">Wojewoda może powierzyć prowadzenie, w jego imieniu, niektórych spraw z zakresu swojej właściwości jednostkom samorządu terytorialnego lub organom innych samorządów działających na obszarze województwa, kierownikom państwowych i samorządowych osób prawnych oraz innych państwowych jednostek organizacyjnych funkcjonujących w województwie.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/428__art_20__ust_2" gd:GUID="dd93cfc9-fa7f-4d98-8b6b-4f1d7779138e">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="faeef737-c288-484b-89e8-2c794a72e5ef" fragment="1" gd:fragmentGUID="0bdfae3b-668b-4e8f-af96-273a63854c95">Powierzenie następuje na podstawie porozumienia wojewody odpowiednio z organem wykonawczym jednostki samorządu terytorialnego, właściwym organem innego samorządu lub kierownikiem państwowej i samorządowej osoby prawnej albo innej państwowej jednostki organizacyjnej, o których mowa w ust. 1.</zdanie>
+                <zdanie nr="2" gd:zdGUID="b0a366e5-6392-4119-88f9-ee5a640652e7" fragment="1" gd:fragmentGUID="5e1fb9f3-e7e9-41b5-ae0b-60b34f604542">Porozumienie, wraz ze stanowiącymi jego integralną część załącznikami, podlega ogłoszeniu w wojewódzkim dzienniku urzędowym.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/428__art_20__ust_3" gd:GUID="e8eb1dee-5652-4085-95b2-53f471cc7e22">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="db31c658-b1f7-4ad1-9aeb-f234bf0db18c" fragment="1" gd:fragmentGUID="211b9be1-e842-4c52-8489-b20d9cea46e0">W porozumieniu, o którym mowa w ust. 2, określa się zasady sprawowania przez wojewodę kontroli nad prawidłowym wykonywaniem powierzonych zadań.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2025/428__art_21" gd:GUID="5e0d9b6d-4a4d-47de-975b-8d47038df322">
+            <nr>21</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="de7e043a-55e2-4b99-8f70-a6013b18f7c3">
+              <p>
+                <zdanie nr="1" gd:zdGUID="3f3dd244-ff14-40c2-902e-8245d489d4d6" fragment="1" gd:fragmentGUID="f0a8ec6a-7aaa-403a-865c-6963dc9271a9">(uchylony)</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+        </oddzial-n>
+      </rozdzial>
+      <rozdzial eId="DU/2025/428__rozdz_2" gd:GUID="262abef4-0d07-467c-8cea-9bf680f8fc34">
+        <naglowek-rozdzialu>
+          <nr>2</nr>
+          <p>Wojewoda jako przedstawiciel Rady Ministrów</p>
+        </naglowek-rozdzialu>
+        <oddzial-n brak-eid="jednostka-nieoznaczona" gd:GUID="8b0a9198-fe85-4f8e-923f-1e2a6cacc076">
+          <artykul eId="DU/2025/428__art_22" gd:GUID="1060425d-b159-4849-a631-ee3265c0e9a8">
+            <nr>22</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="884244ef-5ebc-4717-bdd1-6f7e8c018a8e">
+              <p>
+                <zdanie nr="1" gd:zdGUID="cbd756e6-cd75-4077-b7fd-227fb0d32be8" fragment="1" gd:fragmentGUID="62d26c21-3d70-4091-8e69-4e8066dffe14">Wojewoda odpowiada za wykonywanie polityki Rady Ministrów w województwie, a w szczególności:</zdanie>
+              </p>
+              <punkt eId="DU/2025/428__art_22__pkt_1" gd:GUID="af397fc5-9c68-4ff2-94e6-4760d50ccbaf">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="cbd756e6-cd75-4077-b7fd-227fb0d32be8" fragment="2" gd:fragmentGUID="8d0b66ed-26f5-4bb7-a3fc-ebfdfd9ca5a8">dostosowuje do miejscowych warunków cele polityki Rady Ministrów oraz, w zakresie i na zasadach określonych w odrębnych ustawach, koordynuje i kontroluje wykonanie wynikających stąd zadań;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/428__art_22__pkt_2" gd:GUID="3b378082-7d45-4a4b-95ca-cf26822521d0">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="cbd756e6-cd75-4077-b7fd-227fb0d32be8" fragment="3" gd:fragmentGUID="546bd04d-3f20-4e17-87a7-3776ba23a4f8">zapewnia współdziałanie wszystkich organów administracji rządowej i samorządowej działających w województwie i kieruje ich działalnością w zakresie zapobiegania zagrożeniu życia, zdrowia lub mienia oraz zagrożeniom środowiska, bezpieczeństwa państwa i utrzymania porządku publicznego, ochrony praw obywatelskich, a także zapobiegania klęskom żywiołowym i innym nadzwyczajnym zagrożeniom oraz zwalczania i usuwania ich skutków, na zasadach określonych w odrębnych ustawach;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/428__art_22__pkt_3" gd:GUID="c0d05e65-092a-47f6-baa4-5701ab6e81d4">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="cbd756e6-cd75-4077-b7fd-227fb0d32be8" fragment="4" gd:fragmentGUID="c2032d17-bd77-46fe-b05c-c9f348281700">dokonuje oceny stanu zabezpieczenia przeciwpowodziowego województwa, opracowuje plan operacyjny ochrony przed powodzią oraz ogłasza i odwołuje pogotowie i alarm przeciwpowodziowy;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/428__art_22__pkt_3a" gd:GUID="8bd706b1-74dd-4a31-819f-cdd6081562de">
+                <nr>3a</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="cbd756e6-cd75-4077-b7fd-227fb0d32be8" fragment="5" gd:fragmentGUID="98ad6909-e71f-452f-a68f-07900d9a2ab1"><odnosnik id-odnosnika="1" symbol="1" gd:GUID="578335e8-74eb-4eb4-9efc-3a5fb4ae4f2a"><p><zdanie nr="1" gd:zdGUID="b2d1c29c-c42e-490d-9b31-555603f30dce" fragment="1" gd:fragmentGUID="c6d0f6d8-e59c-4eb0-b854-97d33030741a">Dodany przez art. 190 ustawy z dnia 5 grudnia 2024 r. o ochronie ludności i obronie cywilnej (Dz. U. poz. 1907), która weszła w życie z dniem 1 stycznia 2025 r.</zdanie></p></odnosnik> wykonuje zadania organu ochrony ludności i obrony cywilnej określone w ustawie z dnia 5 grudnia 2024 r. o ochronie ludności i obronie cywilnej (Dz. U. poz. 1907);</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/428__art_22__pkt_4" gd:GUID="d4e36be1-c962-45cf-a966-74257b200eda">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="cbd756e6-cd75-4077-b7fd-227fb0d32be8" fragment="6" gd:fragmentGUID="00551abf-6e33-4019-aef6-b88c96b02b32">wykonuje i koordynuje zadania w zakresie obronności i bezpieczeństwa państwa oraz zarządzania kryzysowego, wynikające z odrębnych ustaw;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/428__art_22__pkt_5" gd:GUID="8ff03370-9eb7-46b4-bf1d-a71ec0d37cd9">
+                <nr>5</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="cbd756e6-cd75-4077-b7fd-227fb0d32be8" fragment="7" gd:fragmentGUID="0806eddf-c6a6-45ad-bc97-6bb44627d9d0">przedstawia Radzie Ministrów, za pośrednictwem ministra właściwego do spraw administracji publicznej, projekty dokumentów rządowych w sprawach dotyczących województwa;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/428__art_22__pkt_6" gd:GUID="b88440b4-464d-4718-a93f-cc7f92fa1436">
+                <nr>6</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="cbd756e6-cd75-4077-b7fd-227fb0d32be8" fragment="8" gd:fragmentGUID="d70d09cd-a81b-42e6-97b2-6662e430b4b2">wykonuje inne zadania określone w odrębnych ustawach oraz ustalone przez Radę Ministrów i Prezesa Rady Ministrów.</zdanie>
+                </p>
+              </punkt>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2025/428__art_23" gd:GUID="8bd41402-d959-4747-bd3a-df50488cf873">
+            <nr>23</nr>
+            <ustep eId="DU/2025/428__art_23__ust_1" gd:GUID="56412be3-52eb-4ddd-9d04-93b5570e2082">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="dea19c9e-ab92-4754-ab4e-15167d8eeab1" fragment="1" gd:fragmentGUID="eb134953-e3a3-48df-819a-e257213cf75a">Wojewoda:</zdanie>
+              </p>
+              <punkt eId="DU/2025/428__art_23__ust_1__pkt_1" gd:GUID="0f26bf99-809f-4f11-a521-58b780bd7509">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="dea19c9e-ab92-4754-ab4e-15167d8eeab1" fragment="2" gd:fragmentGUID="16ad6dee-0e74-44a5-a59e-0a84cb0a1ff1">reprezentuje Radę Ministrów na uroczystościach państwowych i w czasie oficjalnych wizyt składanych w województwie przez przedstawicieli państw obcych;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/428__art_23__ust_1__pkt_2" gd:GUID="df17beec-09b4-48eb-bb9e-d6240c5c2c18">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="dea19c9e-ab92-4754-ab4e-15167d8eeab1" fragment="3" gd:fragmentGUID="4b5d1614-ff79-4931-923b-21e555bca161">współdziała z właściwymi organami innych państw oraz międzynarodowych organizacji rządowych i pozarządowych, na zasadach określonych przez ministra właściwego do spraw zagranicznych.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2025/428__art_23__ust_2" gd:GUID="e2cb18a2-f00b-49b4-aad2-b5249d8fdf5c">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="359938a4-bdf3-4e8b-8027-de847e7376f7" fragment="1" gd:fragmentGUID="ba3ffa6d-d149-4a6a-abf1-b87ca83e55d9">Wojewoda jest informowany o służbowym pobycie członków Rady Ministrów w województwie.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2025/428__art_24" gd:GUID="d15aa2f8-061a-4817-a911-7a820df67816">
+            <nr>24</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="54f43557-0150-4783-a143-dd07926abbe7">
+              <p>
+                <zdanie nr="1" gd:zdGUID="de2b9327-6329-4d25-bf1e-3e785288c869" fragment="1" gd:fragmentGUID="34f5c513-f568-488f-9218-28043b7bbb26">Wojewoda reprezentuje w swoich wystąpieniach stanowisko zgodne z ustaleniami przyjętymi przez Radę Ministrów.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2025/428__art_25" gd:GUID="b59900a4-f513-4442-9bb3-e1f41f89980f">
+            <nr>25</nr>
+            <ustep eId="DU/2025/428__art_25__ust_1" gd:GUID="ba8df6c6-e7bb-4f8d-b384-591320393ce5">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="6dcbeed7-eb58-46f1-ae56-9da4a7539711" fragment="1" gd:fragmentGUID="c247e520-0c0e-4880-932f-2ee019585abd">Wojewoda może wydawać polecenia obowiązujące wszystkie organy administracji rządowej działające w województwie, a w sytuacjach nadzwyczajnych, o których mowa w art. 22 pkt 2, obowiązujące również organy samorządu terytorialnego.</zdanie>
+                <zdanie nr="2" gd:zdGUID="8020f643-a75a-430e-88a0-73808590cf5d" fragment="1" gd:fragmentGUID="c5f25140-c6fb-4c07-8ca7-32c9835f110e">O wydanych poleceniach wojewoda niezwłocznie informuje właściwego ministra.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/428__art_25__ust_1a" gd:GUID="ef2c925e-325c-48c1-8bfe-445907566764">
+              <nr>1a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="9c949d74-f9da-48e8-9e92-642ce1bd2f37" fragment="1" gd:fragmentGUID="4f5a7580-8b5f-4530-9854-188eda985fae">Sytuacjami nadzwyczajnymi, o których mowa w ust. 1, są również sytuacje kryzysowe w rozumieniu ustawy z dnia 26 kwietnia 2007 r. o zarządzaniu kryzysowym (Dz. U. z 2023 r. poz. 122 oraz z 2024 r. poz. 834, 1222, 1473, 1572 i 1907).</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/428__art_25__ust_2" gd:GUID="51c364bc-25c3-4805-9ed9-e2211ea9d6e7">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ccd0816b-b500-44f7-b1c0-37fd8a6dc761" fragment="1" gd:fragmentGUID="f3b92a9a-8c3b-48bb-8ada-8c89c42c0bf7">Polecenia, o których mowa w ust. 1, nie mogą dotyczyć rozstrzygnięć co do istoty sprawy załatwianej w drodze decyzji administracyjnej, a także nie mogą dotyczyć czynności operacyjno-rozpoznawczych, dochodzeniowo-śledczych oraz czynności z zakresu ścigania wykroczeń.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/428__art_25__ust_3" gd:GUID="9e80463a-399b-49bf-bae2-896eae6ad0fc">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="1c36c1a9-78fb-4314-9ac1-39db78c779c7" fragment="1" gd:fragmentGUID="db61e7ba-06ad-4afd-9319-3abd5f8913a2">Właściwy minister może wstrzymać wykonanie poleceń, o których mowa w ust. 1, wydanych organom niezespolonej administracji rządowej i wystąpić z wnioskiem do Prezesa Rady Ministrów o rozstrzygnięcie sporu, przedstawiając jednocześnie stanowisko w sprawie.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2025/428__art_26" gd:GUID="e897773c-8a0a-4514-b01b-cdac0532bf36">
+            <nr>26</nr>
+            <ustep eId="DU/2025/428__art_26__ust_1" gd:GUID="d20da96d-31d9-4bdc-8e63-87dacd7a1350">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="12f07257-c474-451d-96a9-c1cfe4d4ccf5" fragment="1" gd:fragmentGUID="53f0ea9f-751e-429a-9ec5-994fb914234f">Wojewoda w zakresie zadań administracji rządowej realizowanych w województwie ma prawo żądania od organów administracji rządowej działających w województwie bieżących informacji i wyjaśnień o ich działalności, w tym w sprawach prowadzonych na podstawie ustawy z dnia 14 czerwca 1960 r. – Kodeks postępowania administracyjnego.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/428__art_26__ust_2" gd:GUID="d20dc339-5a83-43ab-acb8-e5fa200964d7">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="e79b4668-2bc5-4b69-bdf4-0ee087b644f2" fragment="1" gd:fragmentGUID="5eaba8c6-5595-42cb-805c-d8abf75a25a0">Z uwzględnieniem przepisów o ochronie informacji niejawnych lub innych tajemnic prawnie chronionych wojewoda ma prawo wglądu w tok każdej sprawy prowadzonej w województwie przez organy administracji rządowej, a także przez organy samorządu terytorialnego w zakresie zadań przejętych na podstawie porozumienia lub zadań zleconych.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2025/428__art_27" gd:GUID="ea73e186-63d9-47ab-ad2d-9635e4fc98b5">
+            <nr>27</nr>
+            <ustep eId="DU/2025/428__art_27__ust_1" gd:GUID="718b6c2e-ca0b-473d-9c14-8e75bcd3ca86">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="94886d1f-a5f1-4600-a40a-4156de8bb653" fragment="1" gd:fragmentGUID="2cec7803-45cc-4ac2-8da4-57e2bf4a2c90">Wojewoda może, w drodze decyzji administracyjnej, wstrzymać egzekucję administracyjną.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/428__art_27__ust_2" gd:GUID="541db955-cae4-46e2-a84e-fd4ddc8abffa">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="95353342-7c3f-4bd8-8268-8db3c8cbd811" fragment="1" gd:fragmentGUID="68920f08-1b84-4760-bce3-28c7b18367a3">Wstrzymanie egzekucji administracyjnej, z zastrzeżeniem ust. 4, może nastąpić w szczególnie uzasadnionych przypadkach, na czas określony, i może dotyczyć czynności każdego organu prowadzącego egzekucję administracyjną.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/428__art_27__ust_3" gd:GUID="b81c4680-56df-4a78-a67c-05b56cdff7cc">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="0e51e55d-ea0c-45fa-a174-400414c9a21a" fragment="1" gd:fragmentGUID="73261fb8-c350-4428-a6b4-e426b22d7714">O wstrzymaniu egzekucji administracyjnej wojewoda informuje ministra właściwego w sprawie postępowania, w związku z którym toczy się egzekucja administracyjna.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/428__art_27__ust_4" gd:GUID="2622b2ec-303e-47c9-879d-baa15be2fc1d">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="23dd5d49-f509-48b7-8dc2-ef05f7ea0d64" fragment="1" gd:fragmentGUID="71cb5563-fc7b-4380-a6a0-50bec668d285">Wstrzymanie przez wojewodę egzekucji administracyjnej obowiązków o charakterze pieniężnym może być dokonane w odniesieniu do tej samej należności tylko jednorazowo, na okres nie dłuższy niż 30 dni.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/428__art_27__ust_5" gd:GUID="1482db8d-5904-4678-ba1b-97b3275496b0">
+              <nr>5</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="e327af40-447a-42ca-8561-2b0b51b8602c" fragment="1" gd:fragmentGUID="0cfe857e-a6ef-4894-8ba4-cd36d3d82bc6">O wstrzymaniu egzekucji administracyjnej, o której mowa w ust. 4, wojewoda niezwłocznie zawiadamia również ministra właściwego do spraw finansów publicznych, z podaniem przyczyny jej wstrzymania.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+        </oddzial-n>
+      </rozdzial>
+      <rozdzial eId="DU/2025/428__rozdz_3" gd:GUID="fd3015f0-2708-4068-837f-3a32beb29693">
+        <naglowek-rozdzialu>
+          <nr>3</nr>
+          <p>Kontrola prowadzona przez wojewodę</p>
+        </naglowek-rozdzialu>
+        <oddzial-n brak-eid="jednostka-nieoznaczona" gd:GUID="04512356-e050-46f0-b3fd-fc672a8e6cdd">
+          <artykul eId="DU/2025/428__art_28" gd:GUID="cbe06390-b458-46af-bef1-ea17c4ac68e5">
+            <nr>28</nr>
+            <ustep eId="DU/2025/428__art_28__ust_1" gd:GUID="7a3125ae-4264-4bd6-99d2-65883adec029">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="15a3ac9a-48ae-44fd-b7d0-03d0d138a20b" fragment="1" gd:fragmentGUID="51dab4b6-a582-4228-8daa-b5ab10e3f9ad">Wojewoda kontroluje:</zdanie>
+              </p>
+              <punkt eId="DU/2025/428__art_28__ust_1__pkt_1" gd:GUID="96466c7c-4a46-45e4-9555-7f5dac099c72">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="15a3ac9a-48ae-44fd-b7d0-03d0d138a20b" fragment="2" gd:fragmentGUID="0ee36031-9ba6-4985-8c92-0336a34b335f">wykonywanie przez organy rządowej administracji zespolonej w województwie zadań wynikających z ustaw i innych aktów prawnych wydanych na podstawie upoważnień w nich zawartych, ustaleń Rady Ministrów oraz wytycznych i poleceń Prezesa Rady Ministrów;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/428__art_28__ust_1__pkt_2" gd:GUID="d7af6747-fe1d-49e6-ab8a-31a06dbe4075">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="15a3ac9a-48ae-44fd-b7d0-03d0d138a20b" fragment="3" gd:fragmentGUID="e9e5b95b-2b8e-4f27-ba05-22e4afe5b785">wykonywanie przez organy samorządu terytorialnego i inne podmioty zadań z zakresu administracji rządowej, realizowanych przez nie na podstawie ustawy lub porozumienia z organami administracji rządowej.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2025/428__art_28__ust_2" gd:GUID="0abb3812-5ada-4d23-b810-220582817c5d">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="9a9200e0-0479-4548-9496-baa43d172e8a" fragment="1" gd:fragmentGUID="1c077d5f-e054-46d5-9b9f-82666a826eee">Wojewoda w szczególnie uzasadnionych przypadkach może kontrolować sposób wykonywania przez organy niezespolonej administracji rządowej działające w województwie zadań wynikających z ustaw i innych aktów prawnych wydanych na podstawie upoważnień w nich zawartych.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/428__art_28__ust_3" gd:GUID="c805ba78-d36a-4172-9e9b-895b430192eb">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="4e5ea317-e3a0-49d4-a778-e3d9921d60c1" fragment="1" gd:fragmentGUID="2b2df4ae-b493-433c-9631-22e1239b9d01">Kontrola, o której mowa w ust. 1 i 2, wykonywana jest pod względem:</zdanie>
+              </p>
+              <punkt eId="DU/2025/428__art_28__ust_3__pkt_1" gd:GUID="272e6c09-3639-40ed-b4a7-0738cdc3201e">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="4e5ea317-e3a0-49d4-a778-e3d9921d60c1" fragment="2" gd:fragmentGUID="e135dfce-1184-4936-9f43-dbfc969294a1">legalności, gospodarności, celowości i rzetelności – w odniesieniu do działalności organów administracji rządowej oraz innych podmiotów;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/428__art_28__ust_3__pkt_2" gd:GUID="46738f36-9df6-4802-834a-2eb375466ba9">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="4e5ea317-e3a0-49d4-a778-e3d9921d60c1" fragment="3" gd:fragmentGUID="af6eff02-d445-4bef-969c-2ec80654afff">legalności, gospodarności i rzetelności – w odniesieniu do działalności organów samorządu terytorialnego.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2025/428__art_29" gd:GUID="ac7b4238-931e-4d92-8457-4d50f0ef0c44">
+            <nr />
+            <nr-od>29</nr-od>
+            <nr-do>50</nr-do>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="3729638c-8f0b-4983-b1cb-b544c7880042">
+              <p>
+                <zdanie nr="1" gd:zdGUID="0ddb0a84-47b5-4568-962d-fbd155b251a6" fragment="1" gd:fragmentGUID="47b92508-c5c0-4404-b242-707270a7a19f">(uchylone)</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+        </oddzial-n>
+      </rozdzial>
+      <rozdzial eId="DU/2025/428__rozdz_4" gd:GUID="dfaaf0a4-7b8c-42e9-9ba6-0d61f510e26c">
+        <naglowek-rozdzialu>
+          <nr>4</nr>
+          <p>Rządowa administracja zespolona w województwie</p>
+        </naglowek-rozdzialu>
+        <oddzial-n brak-eid="jednostka-nieoznaczona" gd:GUID="02220542-8ab0-4b26-bd5d-112a91908099">
+          <artykul eId="DU/2025/428__art_51" gd:GUID="0758fff7-45c5-4ad4-98e3-8f28224f3f5f">
+            <nr>51</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="6a373714-408a-4348-b8fa-0bfcf921d7de">
+              <p>
+                <zdanie nr="1" gd:zdGUID="5151a6e9-2716-434b-a264-944884e07a57" fragment="1" gd:fragmentGUID="b61795ba-84af-4f88-a3b2-5f577601cdd4">Wojewoda jako zwierzchnik rządowej administracji zespolonej w województwie:</zdanie>
+              </p>
+              <punkt eId="DU/2025/428__art_51__pkt_1" gd:GUID="fdcf17d1-55eb-4b3f-af76-b9c4f9c85e2c">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="5151a6e9-2716-434b-a264-944884e07a57" fragment="2" gd:fragmentGUID="2ee44ff0-363d-42dc-8565-262887fd2a91">kieruje nią i koordynuje jej działalność;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/428__art_51__pkt_2" gd:GUID="62d6a2a1-92b4-4995-a9da-5a8ff3d6d914">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="5151a6e9-2716-434b-a264-944884e07a57" fragment="3" gd:fragmentGUID="33b4ec3d-20bf-4ad3-9cc6-5b95398c1af5">kontroluje jej działalność;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/428__art_51__pkt_3" gd:GUID="c2f284a7-dd5c-42dc-9018-b2e0d6242630">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="5151a6e9-2716-434b-a264-944884e07a57" fragment="4" gd:fragmentGUID="353ac552-cec9-43d2-9bdf-79e2c16d592f">zapewnia warunki skutecznego jej działania;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/428__art_51__pkt_4" gd:GUID="14c2d2f2-0a60-415e-ae5e-ac160a717fb2">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="5151a6e9-2716-434b-a264-944884e07a57" fragment="5" gd:fragmentGUID="c8aceed0-399c-40e3-b43b-c8fe404ff07a">ponosi odpowiedzialność za rezultaty jej działania.</zdanie>
+                </p>
+              </punkt>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2025/428__art_52" gd:GUID="4a232e39-a863-4d64-b276-9b15b41a34ca">
+            <nr>52</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="bf284c00-2d8a-4864-bb67-0d93fb06677b">
+              <p>
+                <zdanie nr="1" gd:zdGUID="e44ec67b-68cf-436c-93eb-f8b5c29a2911" fragment="1" gd:fragmentGUID="ddb4b0fd-2edd-4ec5-a1cc-ab855c4b50e7">Tryb powoływania i odwoływania organów rządowej administracji zespolonej w województwie określają odrębne ustawy.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2025/428__art_53" gd:GUID="0b35bb1c-c2ac-4314-a4ab-5699c4925f33">
+            <nr>53</nr>
+            <ustep eId="DU/2025/428__art_53__ust_1" gd:GUID="c94aab5f-ccbc-48c4-93ac-73dbb01a3cbe">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="8ce67cd9-3c7b-475b-a9ac-65f253c7ce64" fragment="1" gd:fragmentGUID="8ef87bc7-88d1-4a0e-b918-a9a56132340a">Organy rządowej administracji zespolonej w województwie wykonują swoje zadania i kompetencje przy pomocy urzędu wojewódzkiego, chyba że odrębna ustawa stanowi inaczej.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/428__art_53__ust_2" gd:GUID="87dd47e6-8d37-4634-af51-a9a2c096caae">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="ffc0bd58-c0f5-415b-89ac-012d6199d81d" fragment="1" gd:fragmentGUID="9f49ab67-9738-4eb4-9d0b-efe263071b97">Szczegółową organizację rządowej administracji zespolonej w województwie określa statut urzędu wojewódzkiego.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/428__art_53__ust_3" gd:GUID="418aa33c-fc7d-47b7-88a1-56569bb7a9c9">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="c6cad23e-608d-47f9-ba64-328ad3dd7f29" fragment="1" gd:fragmentGUID="a9932ad7-c1b2-41e5-945e-16baacca5b8e">Do obsługi zadań organów rządowej administracji zespolonej nieposiadających własnego aparatu pomocniczego tworzy się w urzędzie wojewódzkim wydzielone komórki organizacyjne.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/428__art_53__ust_4" gd:GUID="955e28d8-4bfa-45cb-b1bf-e3f32eac6567">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="728efdfa-11c4-49ca-bd8d-ddf773f6cef0" fragment="1" gd:fragmentGUID="611d35c4-0889-4dd5-9ea6-39bbdb108a08">Regulaminy urzędów obsługujących organy rządowej administracji zespolonej są zatwierdzane przez wojewodę.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2025/428__art_54" gd:GUID="dbd00bde-d89f-4d77-a1e2-08bf8b193f48">
+            <nr>54</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="30df49a8-2ebd-4bd0-a593-9a85dc256026">
+              <p>
+                <zdanie nr="1" gd:zdGUID="54b4049e-4404-4842-9115-5bf77ba4df97" fragment="1" gd:fragmentGUID="96d9aab3-003d-4a3b-82cd-2e42ec172ce5">W celu usprawnienia działania organów rządowej administracji zespolonej w województwie wojewoda może tworzyć delegatury urzędów je obsługujących.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2025/428__art_55" gd:GUID="7f9014e6-b970-42c7-85ce-793ecfc606d6">
+            <nr>55</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="f03621ed-1a1b-4add-bffb-2538cdb0d243">
+              <p>
+                <zdanie nr="1" gd:zdGUID="303d1803-25db-41df-9440-de3e06d9b61a" fragment="1" gd:fragmentGUID="c0de655b-c7a6-4f71-a5f2-3cb500e38f73">Organy rządowej administracji zespolonej w województwie przekazują wojewodzie informacje o wynikach prowadzonych, na podstawie odrębnych ustaw, kontroli ich dotyczących.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+        </oddzial-n>
+      </rozdzial>
+      <rozdzial eId="DU/2025/428__rozdz_5" gd:GUID="d135f6a8-9b80-44e0-a5ca-39f8339e7683">
+        <naglowek-rozdzialu>
+          <nr>5</nr>
+          <p>Niezespolona administracja rządowa</p>
+        </naglowek-rozdzialu>
+        <oddzial-n brak-eid="jednostka-nieoznaczona" gd:GUID="67073a08-4bc9-4602-89e6-0fd41286bc71">
+          <artykul eId="DU/2025/428__art_56" gd:GUID="77b3925e-3abc-4673-8509-2b1e21ad0980">
+            <nr>56</nr>
+            <ustep eId="DU/2025/428__art_56__ust_1" gd:GUID="0dfafd12-1817-4da0-83be-f10655930dc9">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="140db430-bbd2-45de-863f-1862f594f13c" fragment="1" gd:fragmentGUID="35095bbb-f610-480e-9815-656d5827407f">Organami niezespolonej administracji rządowej są terenowe organy administracji rządowej podporządkowane właściwemu ministrowi lub centralnemu organowi administracji rządowej oraz kierownicy państwowych osób prawnych i kierownicy innych państwowych jednostek organizacyjnych wykonujących zadania z zakresu administracji rządowej w województwie:</zdanie>
+              </p>
+              <punkt eId="DU/2025/428__art_56__ust_1__pkt_1" gd:GUID="46d90f07-8a40-42be-8694-5f5dde376ad9">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="140db430-bbd2-45de-863f-1862f594f13c" fragment="2" gd:fragmentGUID="12b1ea3f-da60-4988-9e46-1301cb4f5b05">szefowie wojskowych centrów rekrutacji;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/428__art_56__ust_1__pkt_2" gd:GUID="73514ef9-3dd0-4dd0-b210-26a14729da80">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="140db430-bbd2-45de-863f-1862f594f13c" fragment="3" gd:fragmentGUID="f31cb9e9-fe8a-460c-8c66-9425004bf7f6">dyrektorzy izb administracji skarbowej, naczelnicy urzędów skarbowych i naczelnicy urzędów celno-skarbowych;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/428__art_56__ust_1__pkt_3" gd:GUID="bdeded3f-0fd9-4e70-9d9d-2bcdea974ed5">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="140db430-bbd2-45de-863f-1862f594f13c" fragment="4" gd:fragmentGUID="b56f9d6a-1f34-4928-864a-f0aaaffab0ea">(uchylony)</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/428__art_56__ust_1__pkt_4" gd:GUID="701e4189-4fd1-4fbe-94c1-b4939aee11de">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="140db430-bbd2-45de-863f-1862f594f13c" fragment="5" gd:fragmentGUID="12f0a5a0-e194-4cbe-92ce-a12c0268eff6">dyrektorzy okręgowych urzędów górniczych;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/428__art_56__ust_1__pkt_5" gd:GUID="64925615-631d-4d37-99de-92a7e96b2ba2">
+                <nr>5</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="140db430-bbd2-45de-863f-1862f594f13c" fragment="6" gd:fragmentGUID="0b729a7f-1b60-4a0a-8219-12b11c4f3e63">dyrektorzy okręgowych urzędów miar;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/428__art_56__ust_1__pkt_6" gd:GUID="d8dac069-ceb5-402e-b9ae-9748b324ca66">
+                <nr>6</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="140db430-bbd2-45de-863f-1862f594f13c" fragment="7" gd:fragmentGUID="b85e43ba-8cd2-4f34-a7cb-948eef1f5a29">dyrektorzy okręgowych urzędów probierczych;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/428__art_56__ust_1__pkt_7" gd:GUID="b734ae88-5198-48f3-9704-de368562c5ae">
+                <nr>7</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="140db430-bbd2-45de-863f-1862f594f13c" fragment="8" gd:fragmentGUID="6c5fb06a-2155-4765-b61f-fab03053be62">(uchylony)</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/428__art_56__ust_1__pkt_8" gd:GUID="6b61f04d-07ef-4dc5-8e41-462357f8e565">
+                <nr>8</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="140db430-bbd2-45de-863f-1862f594f13c" fragment="9" gd:fragmentGUID="18f874c7-52e4-4122-b746-559d657048bf">dyrektorzy urzędów morskich;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/428__art_56__ust_1__pkt_9" gd:GUID="af4c7958-48b8-4f24-8437-68ac1db7fc24">
+                <nr>9</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="140db430-bbd2-45de-863f-1862f594f13c" fragment="10" gd:fragmentGUID="7a9e96a4-9ebe-4a71-b7a2-f1ddda873045">dyrektorzy urzędów statystycznych;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/428__art_56__ust_1__pkt_10" gd:GUID="d2db6836-093e-4501-aab9-ea05950796d4">
+                <nr>10</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="140db430-bbd2-45de-863f-1862f594f13c" fragment="11" gd:fragmentGUID="3e397a99-48c1-4834-a778-c8fcfbea7bde">dyrektorzy urzędów żeglugi śródlądowej;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/428__art_56__ust_1__pkt_11" gd:GUID="a1b77936-e54c-481c-8837-a794726a408a">
+                <nr>11</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="140db430-bbd2-45de-863f-1862f594f13c" fragment="12" gd:fragmentGUID="dfca2ee6-ec59-4a21-a2e6-b50a84264882">graniczni i powiatowi lekarze weterynarii;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/428__art_56__ust_1__pkt_12" gd:GUID="3701bce5-fdbf-46f2-91be-49807dc2be7d">
+                <nr>12</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="140db430-bbd2-45de-863f-1862f594f13c" fragment="13" gd:fragmentGUID="15522e8e-f2fc-4b3c-b863-15ec119d253e">komendanci oddziałów Straży Granicznej, komendanci placówek i dywizjonów Straży Granicznej;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/428__art_56__ust_1__pkt_13" gd:GUID="c5c99eeb-0d92-48ec-8625-9affae90f732">
+                <nr>13</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="140db430-bbd2-45de-863f-1862f594f13c" fragment="14" gd:fragmentGUID="23279b3e-5dba-40ee-87df-3a6257dcfbe9">(uchylony)</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/428__art_56__ust_1__pkt_14" gd:GUID="c8da7efa-ecfb-4e6c-b9b1-6a55aff74106">
+                <nr>14</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="140db430-bbd2-45de-863f-1862f594f13c" fragment="15" gd:fragmentGUID="72c12177-9696-4fc7-97e6-44e2cca3a417">państwowi graniczni inspektorzy sanitarni;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/428__art_56__ust_1__pkt_15" gd:GUID="56ff0deb-b245-48fa-81ae-f1441ed7b430">
+                <nr>15</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="140db430-bbd2-45de-863f-1862f594f13c" fragment="16" gd:fragmentGUID="412c0988-d1a0-4642-84e1-1d37cbb43a8e">regionalni dyrektorzy ochrony środowiska.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2025/428__art_56__ust_2" gd:GUID="14241d8c-4eee-443d-a3f4-994fe8d3dd81">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="98cebdd6-f65a-467d-8a51-8070720d88d0" fragment="1" gd:fragmentGUID="ab751038-2c7b-4017-be7e-0313ff60464b">Powoływanie i odwoływanie organów niezespolonej administracji rządowej następuje na podstawie odrębnych ustaw.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2025/428__art_57" gd:GUID="7e0054d7-e393-4be6-b390-74fb0d933a6c">
+            <nr>57</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="fe0565aa-a155-49d0-90dc-64bb7596f290">
+              <p>
+                <zdanie nr="1" gd:zdGUID="e7f2c1d6-0aac-402c-a9a6-7fc91de41aba" fragment="1" gd:fragmentGUID="193327f4-5459-428d-be84-258a8ae2633c">Ustanowienie organów niezespolonej administracji rządowej może następować wyłącznie w drodze ustawy, jeżeli jest to uzasadnione ogólnopaństwowym charakterem wykonywanych zadań lub terytorialnym zasięgiem działania przekraczającym obszar jednego województwa.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2025/428__art_58" gd:GUID="b6ed444d-bc1e-48f3-a9a2-06968a2e2a80">
+            <nr>58</nr>
+            <ustep eId="DU/2025/428__art_58__ust_1" gd:GUID="e8f7cf81-8398-43bb-80a7-307e9b93d5af">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="13b67a38-080c-4ca5-b650-fa3134980333" fragment="1" gd:fragmentGUID="aae80f59-f9ff-467b-8758-5d86a4b9463d">Organy niezespolonej administracji rządowej działające w województwie są obowiązane do składania wojewodzie rocznych informacji o swojej działalności w województwie, do końca lutego każdego roku.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/428__art_58__ust_2" gd:GUID="3270bfea-330a-4f18-b17c-d3e62ceaf4ff">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="b562f3cf-b665-4968-8024-cc8be91df9f5" fragment="1" gd:fragmentGUID="27c0d2de-cffc-49c5-bcb6-2492af4f9c81">W przypadku gdy obszar działalności organu przekracza obszar jednego województwa, informację, o której mowa w ust. 1, składa się wszystkim właściwym wojewodom.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+        </oddzial-n>
+      </rozdzial>
+      <rozdzial eId="DU/2025/428__rozdz_6" gd:GUID="a0609f5c-eb83-4ad7-9050-0d4a215e6007">
+        <naglowek-rozdzialu>
+          <nr>6</nr>
+          <p>Akty prawa miejscowego stanowione przez wojewodę oraz organy niezespolonej administracji rządowej</p>
+        </naglowek-rozdzialu>
+        <oddzial-n brak-eid="jednostka-nieoznaczona" gd:GUID="b4204a57-f6c7-48ae-8a39-200700e14f76">
+          <artykul eId="DU/2025/428__art_59" gd:GUID="413acc5f-4b0a-4e4c-9336-5073666d9b51">
+            <nr>59</nr>
+            <ustep eId="DU/2025/428__art_59__ust_1" gd:GUID="6b03c06a-fc30-45b3-81eb-670c5e124b1f">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="0ca4b860-fba8-4704-b2f5-0d1dbc891b27" fragment="1" gd:fragmentGUID="36f2f28d-68f2-41cd-90b4-1e73d15d7d8c">Na podstawie i w granicach upoważnień zawartych w ustawach wojewoda oraz organy niezespolonej administracji rządowej stanowią akty prawa miejscowego obowiązujące w województwie lub jego części.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/428__art_59__ust_2" gd:GUID="6c306955-4ee4-4135-8441-1ae925484beb">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="3e910059-cc35-468e-a61c-1100dccd1df3" fragment="1" gd:fragmentGUID="fae27726-523a-49ec-a7d1-e7648d6e37f6">Organy niezespolonej administracji rządowej działające w województwie są obowiązane do uzgadniania z wojewodą projektów aktów prawa miejscowego stanowionych przez te organy na podstawie odrębnych przepisów.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2025/428__art_60" gd:GUID="26e394f7-dc81-40aa-8827-903771b0210d">
+            <nr>60</nr>
+            <ustep eId="DU/2025/428__art_60__ust_1" gd:GUID="a555e12c-8ad7-4a0b-977e-d5d0eb91ea91">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="1486beaf-657b-4181-9ae6-61b9657c5f93" fragment="1" gd:fragmentGUID="81f55e3a-7069-4e39-aab7-1f785add95b3">W zakresie nieuregulowanym w przepisach powszechnie obowiązujących wojewoda może wydawać rozporządzenia porządkowe, jeżeli jest to niezbędne do ochrony życia, zdrowia lub mienia oraz do zapewnienia porządku, spokoju i bezpieczeństwa publicznego.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/428__art_60__ust_2" gd:GUID="d12d19e3-f8d2-4cad-a07c-dbe08d008a34">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="6997a877-a0af-42e9-aa36-b85affbd10e6" fragment="1" gd:fragmentGUID="b7d55a7f-4a61-4649-b350-f0eadf649e30">Rozporządzenia porządkowe mogą przewidywać, za naruszenie ich przepisów, kary grzywny wymierzane w trybie i na zasadach określonych w ustawie z dnia 20 maja 1971 r. – Kodeks wykroczeń (Dz. U. z 2023 r. poz. 2119 oraz z 2024 r. poz. 1907).</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/428__art_60__ust_3" gd:GUID="03aee2cd-32e4-4f90-be2e-7ba372ebe189">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="d286d50b-0271-40da-b824-2247eeb704f5" fragment="1" gd:fragmentGUID="ef98c271-58d5-4c8c-9d56-aad8ad4c8418">Rozporządzenie porządkowe wojewoda przekazuje niezwłocznie Prezesowi Rady Ministrów, marszałkowi województwa, starostom, prezydentom miast, burmistrzom i wójtom, na których terenie rozporządzenie ma być stosowane.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2025/428__art_61" gd:GUID="caa58b11-9e2a-4d19-9045-2e404cc7adf9">
+            <nr>61</nr>
+            <ustep eId="DU/2025/428__art_61__ust_1" gd:GUID="39cd6eaf-6a98-47e8-9c2a-122541485e59">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="bb9fc6f7-b623-410e-8563-2392c44679b7" fragment="1" gd:fragmentGUID="f24da8af-98f4-4f16-86f0-c2da190144ac">Prezes Rady Ministrów uchyla, w trybie nadzoru, akty prawa miejscowego, w tym rozporządzenia porządkowe, ustanowione przez wojewodę lub organy niezespolonej administracji rządowej, jeżeli są one niezgodne z ustawami lub aktami wydanymi w celu ich wykonania, a także może je uchylać z powodu niezgodności z polityką Rady Ministrów lub naruszenia zasad rzetelności i gospodarności.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/428__art_61__ust_2" gd:GUID="8a63b5eb-3391-43af-81bb-ccf60bd9d447">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="6865eb69-e686-411a-897b-e1a977f7eb83" fragment="1" gd:fragmentGUID="532150f5-965d-483d-98d8-a3f004552698">Prezes Rady Ministrów określi, w drodze rozporządzenia, tryb kontroli aktów prawa miejscowego ustanowionych przez wojewodę i organy niezespolonej administracji rządowej, biorąc pod uwagę konieczność zapewnienia ich zgodności z przepisami powszechnie obowiązującymi oraz polityką Rady Ministrów.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2025/428__art_62" gd:GUID="c1544a84-87be-47b2-a109-038cc98d8c76">
+            <nr>62</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="e7596941-4107-414e-973a-4ab9660e18d0">
+              <p>
+                <zdanie nr="1" gd:zdGUID="87a46d69-7909-41ff-a36c-9f5962bd2ca9" fragment="1" gd:fragmentGUID="6fa334a0-6e6a-4e04-9c5e-5b5c331c31c0">Zasady i tryb ogłaszania aktów prawa miejscowego oraz wydawania wojewódzkiego dziennika urzędowego określają odrębne przepisy.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2025/428__art_63" gd:GUID="e5e3a2e7-bdf0-4862-a3d8-8633197bac55">
+            <nr>63</nr>
+            <ustep eId="DU/2025/428__art_63__ust_1" gd:GUID="7fc453fb-d76a-4769-a00c-b576e74623c9">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="db2101c1-7ea8-4004-b24e-a0a52b261f57" fragment="1" gd:fragmentGUID="73ae9890-2550-435a-9574-02d8dd55ac41">Każdy, czyj interes prawny lub uprawnienie zostały naruszone przepisem aktu prawa miejscowego, wydanym przez wojewodę lub organ niezespolonej administracji rządowej, w sprawie z zakresu administracji publicznej, może zaskarżyć przepis do sądu administracyjnego.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/428__art_63__ust_2" gd:GUID="fec6f234-8c89-4a3f-9472-ea7e1cefe8ec">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="c7ea605a-eff0-49da-b64a-44508b78355d" fragment="1" gd:fragmentGUID="8ea076bb-a674-4f8e-82bf-d97fbd1a3168">Przepisu ust. 1 nie stosuje się, jeżeli w sprawie orzekał już sąd administracyjny i skargę oddalił.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/428__art_63__ust_3" gd:GUID="61ef9078-e916-476f-8964-b5217407bf27">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="cea9679c-a23e-46c8-923f-b26edd03863d" fragment="1" gd:fragmentGUID="acd76906-0ffb-4dd4-b1a7-55a6b6c14aef">(uchylony)</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2025/428__art_64" gd:GUID="03c9d0cf-7f8e-467d-9f69-c08f3b50adfc">
+            <nr>64</nr>
+            <ustep eId="DU/2025/428__art_64__ust_1" gd:GUID="20a86167-195b-45af-b8c1-34a43737b53f">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="2adfc824-0017-4e2c-9ae4-1b1689434429" fragment="1" gd:fragmentGUID="61833fe2-84a0-4da0-a4c2-533b38416e37">Przepis art. 63 stosuje się odpowiednio, gdy wojewoda lub organy niezespolonej administracji rządowej nie wykonują czynności nakazanych prawem albo przez podejmowane czynności prawne lub faktyczne naruszają prawa osób trzecich.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/428__art_64__ust_2" gd:GUID="46bc0ab2-6e89-48c8-b3f9-a0a66af4e329">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="7b0c895f-8cef-4c14-9db7-fb1e6ae71c5b" fragment="1" gd:fragmentGUID="2528caea-b7a3-47e3-b2ce-520ef444ddaf">W przypadkach, o których mowa w ust. 1, sąd administracyjny może nakazać organowi nadzoru wykonanie niezbędnych czynności na rzecz skarżącego.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+        </oddzial-n>
+      </rozdzial>
+      <rozdzial eId="DU/2025/428__rozdz_7" gd:GUID="920c7998-aec4-4bab-a9d2-3329264e609e">
+        <naglowek-rozdzialu>
+          <nr>7</nr>
+          <p>Przepisy zmieniające</p>
+        </naglowek-rozdzialu>
+        <oddzial-n brak-eid="jednostka-nieoznaczona" gd:GUID="e8988628-5af6-4d80-a140-a9e6c2cfec8a">
+          <artykul eId="DU/2025/428__art_65" gd:GUID="de799987-a1ab-489e-91d0-bf20a6334133">
+            <nr />
+            <nr-od>65</nr-od>
+            <nr-do>77</nr-do>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="ee1b7688-ec1e-498f-aec9-9460a5bf4883">
+              <p>
+                <zdanie nr="1" gd:zdGUID="90420f36-fe45-4211-b4fb-8ba656573187" fragment="1" gd:fragmentGUID="4a018cce-741d-4775-b418-6ee34cc99794">(pominięte)</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+        </oddzial-n>
+      </rozdzial>
+      <rozdzial eId="DU/2025/428__rozdz_8" gd:GUID="1167833d-8488-4085-be5c-ea83923dc018">
+        <naglowek-rozdzialu>
+          <nr>8</nr>
+          <p>Przepisy przejściowe i końcowe</p>
+        </naglowek-rozdzialu>
+        <oddzial-n brak-eid="jednostka-nieoznaczona" gd:GUID="d81190ec-3cfd-4370-b9d4-e1d0f0c56485">
+          <artykul eId="DU/2025/428__art_78" gd:GUID="00de7669-2b1d-4100-b1a4-cf2ced580caa">
+            <nr>78</nr>
+            <ustep eId="DU/2025/428__art_78__ust_1" gd:GUID="8c19a25b-d54f-4d35-bf65-471c75862afb">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="9eb21604-2c4d-4c20-91fa-daeb26ead061" fragment="1" gd:fragmentGUID="082740a1-02e0-4c31-8fa5-82f387336918">Z dniem 1 kwietnia 2009 r. wojewodowie i wicewojewodowie powołani na podstawie ustawy uchylanej w art. 82 stają się odpowiednio wojewodami i wicewojewodami w rozumieniu niniejszej ustawy.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/428__art_78__ust_2" gd:GUID="fff7af95-3870-4c0c-a3c3-25497e1825ae">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="79db6565-770a-4ece-9ba9-25fe2f3972bc" fragment="1" gd:fragmentGUID="51c120ec-fc41-4806-8c6a-603523ade62e">Z dniem 1 kwietnia 2009 r. delegatury urzędów wojewódzkich utworzone na podstawie art. 36 ust. 1 ustawy uchylanej w art. 82 stają się delegaturami urzędów wojewódzkich, o których mowa w art. 14 niniejszej ustawy.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/428__art_78__ust_3" gd:GUID="82f331e1-3c0f-4f55-98ab-0b2489f453c7">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="0495b608-3e3b-45d5-ba7e-df21f29ce3de" fragment="1" gd:fragmentGUID="ef5e06ee-ee38-4aa9-a24e-33612bfbbd34">Z dniem 1 kwietnia 2009 r. delegatury komend, inspektoratów i innych jednostek organizacyjnych stanowiących aparat pomocniczy kierowników zespolonych służb, inspekcji i straży wojewódzkich, utworzone na podstawie art. 36 ust. 2 ustawy uchylanej w art. 82, stają się delegaturami urzędów obsługujących organy rządowej administracji zespolonej w województwie, o których mowa w art. 2 pkt 2 niniejszej ustawy.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/428__art_78__ust_4" gd:GUID="b32e2d46-cdda-4ef9-b00f-884181ac3e41">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="25550ba2-7e28-483a-ab21-c66e0849a059" fragment="1" gd:fragmentGUID="91548b87-075b-46f8-ba04-7efd65796c8d">Z dniem 1 kwietnia 2009 r. pracownicy delegatur komend, inspektoratów i innych jednostek organizacyjnych stanowiących aparat pomocniczy kierowników zespolonych służb, inspekcji i straży wojewódzkich, utworzonych na podstawie art. 36 ust. 2 ustawy uchylanej w art. 82, stają się pracownikami delegatur urzędów obsługujących organy rządowej administracji zespolonej w województwie, o których mowa w art. 2 pkt 2 niniejszej ustawy.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2025/428__art_79" gd:GUID="447f662f-bc0b-4413-862e-538767c6c889">
+            <nr>79</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="17bd62ab-f2dd-4a8f-963b-9d62e7e73d85">
+              <p>
+                <zdanie nr="1" gd:zdGUID="8a0cf3bc-f2a3-41ab-84ef-6ed4f54c85b3" fragment="1" gd:fragmentGUID="d77eafe2-d249-46af-8fce-c8e32e995873">(pominięty)</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2025/428__art_80" gd:GUID="2beb0204-11b4-4b7c-8d5e-6224305509d0">
+            <nr>80</nr>
+            <ustep eId="DU/2025/428__art_80__ust_1" gd:GUID="5a61c6c1-f72f-4db5-9c25-e4d4cd89938e">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="dfd73be5-6a5f-4b5f-8013-b280468799f0" fragment="1" gd:fragmentGUID="cd18424c-f78c-41ac-9a50-8f7a399519f2">Zachowują moc porozumienia wojewody z zarządem jednostki samorządu terytorialnego, właściwym organem innego samorządu lub kierownikiem państwowej osoby prawnej albo innej państwowej jednostki organizacyjnej na obszarze województwa, dotyczące powierzenia, na podstawie art. 33 ust. 1 ustawy uchylanej w art. 82, prowadzenia, w imieniu wojewody, niektórych spraw z zakresu jego właściwości.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/428__art_80__ust_2" gd:GUID="00ea60f3-9333-4209-af33-dbac724f9127">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="c7c8892c-87aa-4bbc-b822-7400b0222b77" fragment="1" gd:fragmentGUID="d29f73c4-d8e8-43a6-a2b2-bcc6d5720831">Do porozumień, o których mowa w ust. 1, stosuje się przepisy dotychczasowe.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2025/428__art_81" gd:GUID="ade6c120-4f0a-4eba-842e-98ccb1d8b7e4">
+            <nr>81</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="a40123be-2fdb-4a21-a00e-6d3d653b9ea1">
+              <p>
+                <zdanie nr="1" gd:zdGUID="32e4dacf-632d-4802-83c0-fee48bae1dbb" fragment="1" gd:fragmentGUID="d20e5509-6608-4cbb-aa59-73c41e07b1f3">(pominięty)</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2025/428__art_82" gd:GUID="291a2cf1-2730-437e-a41f-f3082f413bb2">
+            <nr>82</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="d1199e13-92d3-4b50-92cf-2f153fd83bed">
+              <p>
+                <zdanie nr="1" gd:zdGUID="c9402bfc-f576-46d7-81fc-d6c56b77aa86" fragment="1" gd:fragmentGUID="b0a1039a-564c-42e2-b52c-23054b9d7a3c">Traci moc ustawa z dnia 5 czerwca 1998 r. o administracji rządowej w województwie (Dz. U. z 2001 r. poz. 872, z późn. zm.<odnosnik id-odnosnika="2" symbol="2" gd:GUID="e10c793f-e032-4e86-aad4-d63c92244ff1"><p><zdanie nr="1" gd:zdGUID="c552076e-d037-4be6-b8be-8b2e6906f58e" fragment="1" gd:fragmentGUID="cebb38ec-d7ff-47e0-96b6-3050ad7ce05e">Zmiany tekstu jednolitego wymienionej ustawy zostały ogłoszone w Dz. U. z 2001 r. poz. 1407, z 2002 r. poz. 329, 365, 558, 804 i 1688, z 2003 r. poz. 450, 1302 i 1452, z 2004 r. poz. 287, z 2005 r. poz. 288, 757 i 1462 oraz z 2008 r. poz. 1227.</zdanie></p></odnosnik>).</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2025/428__art_83" gd:GUID="48fe45a7-fe21-404a-9a4d-f606f2995000">
+            <nr>83</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="f30479d8-3e41-4b24-985d-c0a11665b807">
+              <p>
+                <zdanie nr="1" gd:zdGUID="559ac88d-f303-4ff1-90b8-b40632924b4a" fragment="1" gd:fragmentGUID="86315b94-23cd-4a26-8d1e-89256f16511c">Ustawa wchodzi w życie z dniem 1 kwietnia 2009 r.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+        </oddzial-n>
+      </rozdzial>
+    </ustawa>
+  </obwieszczenie>
+</akt-prawny>

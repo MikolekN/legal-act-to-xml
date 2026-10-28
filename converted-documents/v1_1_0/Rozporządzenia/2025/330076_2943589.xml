@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <rozporzadzenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/864</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>3a6c57e5-60f7-4582-bfee-aeb8cff2b13b</gd:GUIDwersji>
+      <AdresISAP>WDU20250000864</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>864</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 864</AdresWyswietlany>
+      <Tytul>Rozporządzenie Ministra Zdrowia z dnia 30 czerwca 2025 r. zmieniające rozporządzenie w sprawie wysyłkowej sprzedaży produktów leczniczych</Tytul>
+      <Rodzaj>ROZP</Rodzaj>
+      <DataOgloszenia>2025-07-01</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-06-30</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2025-07-16_DU-2025-864_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2025-07-16" warunek="po upływie 14 dni od dnia ogłoszenia" podstawa="§ 2" zrodlo="https://eli.gov.pl/eli/DU/2025/864" dowod="DU/2025/864__art_2" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2025-07-16_DU-2025-864_domyslne.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2025-07-16_DU-2025-864_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="3649e4c0-ceb3-417b-8ab9-9683d0e66666" rola="wydajacy">
+          <Nazwa>Minister Zdrowia</Nazwa>
+          <OrganPodpisujacy>Minister Zdrowia</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>I.</imie> <nazwisko>Leszczyna</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Rozporządzenie</rodzaj-aktu>
+    <autor-aktu>Ministra Zdrowia<odnosnik id-odnosnika="1" symbol="1" gd:GUID="49dab337-7649-4e1e-a1b4-edd0931ce41d"><p><zdanie nr="1" gd:zdGUID="b9c51f73-075b-4236-b203-a8119b3b5667" fragment="1" gd:fragmentGUID="d2a5ceae-7c4f-4cbd-b0fd-57f22600119d">Minister Zdrowia kieruje działem administracji rządowej – zdrowie, na podstawie § 1 ust. 2 rozporządzenia Prezesa Rady Ministrów z dnia 18 grudnia 2023 r. w sprawie szczegółowego zakresu działania Ministra Zdrowia (Dz. U. poz. 2704).</zdanie></p></odnosnik></autor-aktu>
+    <data>z dnia 30 czerwca 2025 r.</data>
+    <tytul>zmieniające rozporządzenie w sprawie wysyłkowej sprzedaży produktów leczniczych</tytul>
+    <podstawa-prawna>Na podstawie art. 68 ust. 3a ustawy z dnia 6 września 2001 r. – Prawo farmaceutyczne (Dz. U. z 2025 r. poz. 750) zarządza się, co następuje:</podstawa-prawna>
+    <paragraf eId="DU/2025/864__art_1" gd:GUID="4ca5d631-1a44-4d92-a699-9d95a840f5b8" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-16_DU-2025-864_domyslne.x" wejscie-w-zycie="2025-07-16">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="f3c54d07-1078-4c58-9b9c-5caab1bd0ff0" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-16_DU-2025-864_domyslne.x" wejscie-w-zycie="2025-07-16">
+        <p>
+          <zdanie nr="1" gd:zdGUID="e740636c-8b92-4727-b106-dd05af61d296" fragment="1" gd:fragmentGUID="8653fed2-7b5c-4fc8-b9a3-c722e54ff92a" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-16_DU-2025-864_domyslne.x" wejscie-w-zycie="2025-07-16"><now:zamien-tekst stary-tekst="." nowy-tekst=";" element-eId="DU/2015/481__art_2__ust_1__pkt_5" akt="https://eli.gov.pl/eli/DU/2015/481" now:wystapienie="ostatnie" gd:nowGUID="ec3a88a9-adb2-480e-a0a7-365e14d74400" />W rozporządzeniu Ministra Zdrowia z dnia 26 marca 2015 r. w sprawie wysyłkowej sprzedaży produktów leczniczych (Dz. U. poz. 481) w § 2 w ust. 1 w pkt 5 kropkę zastępuje się średnikiem i dodaje się pkt 6 w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2015/481" cudzyslowy="oba" gd:nowGUID="cccd21f4-8fb3-4ebe-b67b-1a71a05db2c4" element-eId="DU/2015/481__art_2__ust_1__pkt_5" funkcja="dodaj-po"><punkt eId="DU/2015/481__art_2__ust_1__pkt_6" gd:GUID="8a098c53-214b-4573-b600-1c0fffcdb342" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-16_DU-2025-864_domyslne.x" wejscie-w-zycie="2025-07-16"><nr>6</nr><p><zdanie nr="1" gd:zdGUID="2bbc3726-4109-4170-b4bb-ce913b0c5e4c" fragment="1" gd:fragmentGUID="b9559fb3-d660-4052-a0d8-c072fc24c4b1" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-16_DU-2025-864_domyslne.x" wejscie-w-zycie="2025-07-16">za pomocą innych niż określone w pkt 3–5 środków komunikacji elektronicznej umożliwiających zakup produktu leczniczego oferowanego na stronie internetowej placówki.</zdanie></p></punkt></cytat-strukt>.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2025/864__art_2" gd:GUID="8019b127-4f3c-4aa1-90a5-08904121d705" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-16_DU-2025-864_domyslne.x" wejscie-w-zycie="2025-07-16">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="997779fc-5356-4fb8-8f11-99a91ffa2502" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-16_DU-2025-864_domyslne.x" wejscie-w-zycie="2025-07-16">
+        <p>
+          <zdanie nr="1" gd:zdGUID="189244ca-e977-41f5-b31c-24e571874b02" fragment="1" gd:fragmentGUID="3b2761fd-94ff-4589-96aa-6a71dc0ad4ad" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-16_DU-2025-864_domyslne.x" wejscie-w-zycie="2025-07-16">Rozporządzenie wchodzi w życie po upływie 14 dni od dnia ogłoszenia.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <organ-podpisujacy>Minister Zdrowia: <i><osoba podpisujacy="true" gd:osobaGUID="efc21371-602c-40c5-8672-f01d06e31fbd"><imie>I.</imie> <nazwisko>Leszczyna</nazwisko></osoba></i></organ-podpisujacy>
+  </rozporzadzenie>
+</akt-prawny>

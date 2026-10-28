@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <rozporzadzenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/1781</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>4a847c2a-3a05-4b02-89a2-7180a8e61551</gd:GUIDwersji>
+      <AdresISAP>WDU20250001781</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>1781</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 1781</AdresWyswietlany>
+      <Tytul>Rozporządzenie Ministra Rodziny, Pracy i Polityki Społecznej z dnia 12 grudnia 2025 r. zmieniające rozporządzenie w sprawie określenia wzorów zgłoszeń do ubezpieczeń społecznych i ubezpieczenia zdrowotnego, imiennych raportów miesięcznych i imiennych raportów miesięcznych korygujących, zgłoszeń płatnika składek, deklaracji rozliczeniowych i deklaracji rozliczeniowych korygujących, zgłoszeń danych o pracy w szczególnych warunkach lub o szczególnym charakterze, raportów informacyjnych, oświadczeń o zamiarze przekazania raportów informacyjnych, informacji o zawartych umowach o dzieło oraz innych dokumentów</Tytul>
+      <Rodzaj>ROZP</Rodzaj>
+      <DataOgloszenia></DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-12-12</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2026-01-01_DU-2025-1781_odczytane" rodzaj="wejscie-w-zycie" pochodzenie="odczytane" data="2026-01-01" podstawa="§ 3" zrodlo="https://eli.gov.pl/eli/DU/2025/1781" dowod="DU/2025/1781__art_3" />
+          <Zdarzenie id="zdarz_wejscie_2026-05-01_DU-2025-1781_odczytane" rodzaj="wejscie-w-zycie" pochodzenie="odczytane" data="2026-05-01" podstawa="§ 3" zrodlo="https://eli.gov.pl/eli/DU/2025/1781" dowod="DU/2025/1781__art_3">
+            <JednostkaAktu eId="DU/2025/1781__art_1__pkt_1" />
+            <JednostkaAktu eId="DU/2025/1781__art_1__pkt_2" />
+          </Zdarzenie>
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1781_odczytane.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2026-01-01_DU-2025-1781_odczytane" />
+        </GrupaCzasowa>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2026-05-01_DU-2025-1781_odczytane.x" glowna="false">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2026-05-01_DU-2025-1781_odczytane" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="a731d9c6-42b4-4e0d-90a0-277c93901d77" rola="wydajacy">
+          <Nazwa>Minister Rodziny, Pracy i Polityki Społecznej</Nazwa>
+          <OrganPodpisujacy>Minister Rodziny, Pracy i Polityki Społecznej</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>A.</imie> <nazwisko>Dziemianowicz-Bąk</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Rozporządzenie</rodzaj-aktu>
+    <autor-aktu>Ministra Rodziny, Pracy i Polityki Społecznej<odnosnik id-odnosnika="1" symbol="1" gd:GUID="ddd298c9-709a-4ecf-8b85-528fec120357"><p><zdanie nr="1" gd:zdGUID="e93a8628-9358-4a3d-abab-42faacee38c2" fragment="1" gd:fragmentGUID="5ee5e88e-9990-4cca-88f9-c099caa7901d">Minister Rodziny, Pracy i Polityki Społecznej kieruje działem administracji rządowej – zabezpieczenie społeczne, na podstawie § 1 ust. 2 pkt 3 rozporządzenia Prezesa Rady Ministrów z dnia 18 grudnia 2023 r. w sprawie szczegółowego zakresu działania Ministra Rodziny, Pracy i Polityki Społecznej (Dz. U. poz. 2715).</zdanie></p></odnosnik></autor-aktu>
+    <data>z dnia 12 grudnia 2025 r.</data>
+    <tytul>zmieniające rozporządzenie w sprawie określenia wzorów zgłoszeń do ubezpieczeń społecznych i ubezpieczenia zdrowotnego, imiennych raportów miesięcznych i imiennych raportów miesięcznych korygujących, zgłoszeń płatnika składek, deklaracji rozliczeniowych i deklaracji rozliczeniowych korygujących, zgłoszeń danych o pracy w szczególnych warunkach lub o szczególnym charakterze, raportów informacyjnych, oświadczeń o zamiarze przekazania raportów informacyjnych, informacji o zawartych umowach o dzieło oraz innych dokumentów</tytul>
+    <podstawa-prawna>Na podstawie art. 49 ust. 2 i 4 ustawy z dnia 13 października 1998 r. o systemie ubezpieczeń społecznych (Dz. U. z 2025 r. poz. 350, z późn. zm.<odnosnik id-odnosnika="2" symbol="2" gd:GUID="9829ee72-3609-472c-99c7-b23bcec081e7"><p><zdanie nr="1" gd:zdGUID="cc3cd0ab-8dc0-4f8c-afff-cd7ebbdb42b5" fragment="1" gd:fragmentGUID="06310563-8189-42a7-94f7-c87b5cc0370f">Zmiany tekstu jednolitego wymienionej ustawy zostały ogłoszone w Dz. U. z 2025 r. poz. 620, 622, 769, 820, 1083, 1160, 1216, 1409, 1413 i 1423.</zdanie></p></odnosnik>) zarządza się, co następuje:</podstawa-prawna>
+    <paragraf eId="DU/2025/1781__art_1" gd:GUID="2ffe6644-0ea4-4806-8df0-c08f2e680762" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1781_odczytane.x" wejscie-w-zycie="2026-01-01">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="d38ea69a-b9a2-444e-ac77-5063507bc5d4" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1781_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="b34a56ad-2c60-40ef-9fba-e9eeb131fdaf" fragment="1" gd:fragmentGUID="98284c3f-e250-48d4-9668-afa0fd68fd35" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1781_odczytane.x" wejscie-w-zycie="2026-01-01">W rozporządzeniu Ministra Rodziny i Polityki Społecznej z dnia 20 grudnia 2020 r. w sprawie określenia wzorów zgłoszeń do ubezpieczeń społecznych i ubezpieczenia zdrowotnego, imiennych raportów miesięcznych i imiennych raportów miesięcznych korygujących, zgłoszeń płatnika składek, deklaracji rozliczeniowych i deklaracji rozliczeniowych korygujących, zgłoszeń danych o pracy w szczególnych warunkach lub o szczególnym charakterze, raportów informacyjnych, oświadczeń o zamiarze przekazania raportów informacyjnych, informacji o zawartych umowach o dzieło oraz innych dokumentów (Dz. U. z 2025 r. poz. 1036) wprowadza się następujące zmiany:</zdanie>
+        </p>
+        <punkt eId="DU/2025/1781__art_1__pkt_1" gd:GUID="ebb8a829-3f5a-456c-bffa-9a2d2206d450" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-01_DU-2025-1781_odczytane.x" wejscie-w-zycie="2026-05-01">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="b34a56ad-2c60-40ef-9fba-e9eeb131fdaf" fragment="2" gd:fragmentGUID="04dda11d-14fc-4969-aab4-d31d84382854" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-01_DU-2025-1781_odczytane.x" wejscie-w-zycie="2026-05-01"><now:zastap akt="https://eli.gov.pl/eli/DU/2025/1036" element-eId="DU/2025/1036__zal_12" akt-nowelizujacy="https://eli.gov.pl/eli/DU/2025/1781" nowelizujacy-element-eId="DU/2025/1781__zal_1" gd:nowGUID="b2f636e8-3e0a-4aea-842c-0c48cfa286b2" />załącznik nr 12 do rozporządzenia otrzymuje brzmienie określone w załączniku nr 1 do niniejszego rozporządzenia;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1781__art_1__pkt_2" gd:GUID="aa3a5ea0-d3df-498b-924e-e862d045f622" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-01_DU-2025-1781_odczytane.x" wejscie-w-zycie="2026-05-01">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="b34a56ad-2c60-40ef-9fba-e9eeb131fdaf" fragment="3" gd:fragmentGUID="27e9e6a4-246a-4f7c-9873-b703ab3906e1" okres="okr_obowiazywanie.zdarz_wejscie_2026-05-01_DU-2025-1781_odczytane.x" wejscie-w-zycie="2026-05-01"><now:zastap akt="https://eli.gov.pl/eli/DU/2025/1036" element-eId="DU/2025/1036__zal_17" akt-nowelizujacy="https://eli.gov.pl/eli/DU/2025/1781" nowelizujacy-element-eId="DU/2025/1781__zal_2" gd:nowGUID="6a2c180a-f792-492e-9b1a-b5203e9369b2" />załącznik nr 17 do rozporządzenia otrzymuje brzmienie określone w załączniku nr 2 do niniejszego rozporządzenia;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1781__art_1__pkt_3" gd:GUID="561ca0ee-28ca-45a3-8095-330090f6f4f2" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1781_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="b34a56ad-2c60-40ef-9fba-e9eeb131fdaf" fragment="4" gd:fragmentGUID="afb72d2d-c8cc-458b-9c93-5241e60d3abb" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1781_odczytane.x" wejscie-w-zycie="2026-01-01">w załączniku nr 25 do rozporządzenia:</zdanie>
+          </p>
+          <litera eId="DU/2025/1781__art_1__pkt_3__lit_a" gd:GUID="269a5589-cb2b-4cbe-a26f-bb03755ed8b1" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1781_odczytane.x" wejscie-w-zycie="2026-01-01">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="b34a56ad-2c60-40ef-9fba-e9eeb131fdaf" fragment="5" gd:fragmentGUID="098440da-d486-4465-a8f7-1838e2166d2a" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1781_odczytane.x" wejscie-w-zycie="2026-01-01">w części I „Kod tytułu ubezpieczenia” w dziale 1 „Podmiot podstawowy wraz z rozszerzeniem” po wyrazach „23 30 - małżonek Prezydenta Rzeczypospolitej Polskiej” dodaje się:</zdanie>
+            </p>
+            <tiret eId="DU/2025/1781__art_1__pkt_3__lit_a__tir_1" gd:GUID="7ba859b0-0912-40eb-b3dc-d38e2a6eb90f" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1781_odczytane.x" wejscie-w-zycie="2026-01-01">
+              <p>
+                <zdanie nr="1" gd:zdGUID="b34a56ad-2c60-40ef-9fba-e9eeb131fdaf" fragment="6" gd:fragmentGUID="c380acdb-8220-4b60-b727-b578113cbf25" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1781_odczytane.x" wejscie-w-zycie="2026-01-01">od nowego wiersza wyrazy „24 00 - marynarz” oraz</zdanie>
+              </p>
+            </tiret>
+            <tiret eId="DU/2025/1781__art_1__pkt_3__lit_a__tir_2" gd:GUID="07868cfd-69ec-4530-9664-baaf8b04b58f" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1781_odczytane.x" wejscie-w-zycie="2026-01-01">
+              <p>
+                <zdanie nr="1" gd:zdGUID="b34a56ad-2c60-40ef-9fba-e9eeb131fdaf" fragment="7" gd:fragmentGUID="f0d690e5-c2ef-4b87-b133-16b2c0d1fe78" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1781_odczytane.x" wejscie-w-zycie="2026-01-01">od nowego wiersza wyrazy „24 01 - marynarz opłacający na swój wniosek składki na ubezpieczenia emerytalne i rentowe za wybrane miesiące w okresie od dnia 1 stycznia 2021 r. do dnia 31 grudnia 2025 r.”,</zdanie>
+              </p>
+            </tiret>
+          </litera>
+          <litera eId="DU/2025/1781__art_1__pkt_3__lit_b" gd:GUID="aa99722b-0390-4243-b717-8d609aadd502" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1781_odczytane.x" wejscie-w-zycie="2026-01-01">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="b34a56ad-2c60-40ef-9fba-e9eeb131fdaf" fragment="8" gd:fragmentGUID="8d727e3a-ba2a-4fbb-9122-faa2a89d5036" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1781_odczytane.x" wejscie-w-zycie="2026-01-01">w części VII „Kod przyczyny wyrejestrowania ubezpieczonego” po wyrazach „700 - zawieszenie wykonywania pozarolniczej działalności gospodarczej na podstawie przepisów o swobodzie działalności gospodarczej” dodaje się od nowego wiersza wyrazy „750 - zawieszenie statusu marynarza”,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/1781__art_1__pkt_3__lit_c" gd:GUID="f9c2d8a6-c71b-46b7-9473-729cb4ebd2b7" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1781_odczytane.x" wejscie-w-zycie="2026-01-01">
+            <nr>c</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="b34a56ad-2c60-40ef-9fba-e9eeb131fdaf" fragment="9" gd:fragmentGUID="04a4c33c-31e9-4687-a757-6156dc2c5cd4" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1781_odczytane.x" wejscie-w-zycie="2026-01-01">w części IX „Kod przyczyny wyrejestrowania płatnika” po wyrazach „211 - wykreślenie z rejestru, ewidencji lub skreślenie z listy” dodaje się od nowego wiersza wyrazy „218 - zawieszenie statusu marynarza”.</zdanie>
+            </p>
+          </litera>
+        </punkt>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2025/1781__art_2" gd:GUID="b0683c7f-a734-4bdd-8f29-a5c654041bc8" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1781_odczytane.x" wejscie-w-zycie="2026-01-01">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="a350ad37-6c72-4d58-b9a7-d6a7bfd2390b" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1781_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="2ac81913-6c20-49f0-81f0-38d9a1ef475d" fragment="1" gd:fragmentGUID="2b0d29e9-fb45-4399-aab9-eec437c61845" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1781_odczytane.x" wejscie-w-zycie="2026-01-01">Do dokumentów przekazywanych za okresy przypadające przed dniem wejścia w życie niniejszego rozporządzenia stosuje się kody tytułu ubezpieczenia obowiązujące w okresie, za który dokumenty te zostały złożone.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2025/1781__art_3" gd:GUID="690dbdd6-8ad6-46bf-90c7-6b956866c46d" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1781_odczytane.x" wejscie-w-zycie="2026-01-01">
+      <nr>3</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="4b9e2160-e214-44f0-9305-13e5a2ec688c" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1781_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="b75d92cf-8458-4fa6-995b-ca9a07d5868f" fragment="1" gd:fragmentGUID="6719c45c-51c1-45cd-bfbb-cc1b510dd94a" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2025-1781_odczytane.x" wejscie-w-zycie="2026-01-01">Rozporządzenie wchodzi w życie z dniem 1 stycznia 2026 r., z wyjątkiem § 1 pkt 1 i 2, które wchodzą w życie z dniem 1 maja 2026 r.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <organ-podpisujacy>Minister Rodziny, Pracy i Polityki Społecznej: <i><osoba podpisujacy="true" gd:osobaGUID="b1caed14-a7bf-4e68-82b5-03ceb91c29e6"><imie>A.</imie> <nazwisko>Dziemianowicz-Bąk</nazwisko></osoba></i></organ-podpisujacy>
+    <zalacznik eId="DU/2025/1781__zal_1" gd:GUID="d84563d0-08fe-4370-a17f-7d2b013eb8e1">
+      <zalacznik-do gd:GUID="7abec082-2b23-4a03-be5d-82d71ce2eae1">Załączniki do rozporządzenia Ministra Rodziny, Pracy i Polityki Społecznej z dnia 12 grudnia 2025 r. (Dz. U. poz. 1781)</zalacznik-do>
+      <zalacznik-nr gd:GUID="c01f0be0-804f-40d4-b172-1f958a6ba014">
+        <nr>1</nr>
+      </zalacznik-nr>
+    </zalacznik>
+    <zalacznik eId="DU/2025/1781__zal_2" gd:GUID="ca7c9261-f527-4820-a86d-b3492f5d582e">
+      <zalacznik-nr gd:GUID="8790a495-ce7e-4993-8638-fdb064306cc6">
+        <nr>2</nr>
+      </zalacznik-nr>
+    </zalacznik>
+  </rozporzadzenie>
+</akt-prawny>

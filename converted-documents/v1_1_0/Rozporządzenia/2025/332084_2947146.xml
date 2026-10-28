@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <rozporzadzenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/877</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>24dd879a-a3aa-48c0-989e-a7baab62796b</gd:GUIDwersji>
+      <AdresISAP>WDU20250000877</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>877</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 877</AdresWyswietlany>
+      <Tytul>Rozporządzenie Ministra Zdrowia z dnia 2 lipca 2025 r. zmieniające rozporządzenie w sprawie specjalizacji w dziedzinach mających zastosowanie w ochronie zdrowia</Tytul>
+      <Rodzaj>ROZP</Rodzaj>
+      <DataOgloszenia>2025-07-04</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-07-02</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2025-07-19_DU-2025-877_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2025-07-19" warunek="po upływie 14 dni od dnia ogłoszenia" podstawa="§ 2" zrodlo="https://eli.gov.pl/eli/DU/2025/877" dowod="DU/2025/877__art_2" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2025-07-19_DU-2025-877_domyslne.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2025-07-19_DU-2025-877_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="4dbb0bfd-532c-4542-be1e-7b870a111abd" rola="wydajacy">
+          <Nazwa>Minister Zdrowia</Nazwa>
+          <OrganPodpisujacy>Minister Zdrowia</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>I.</imie> <nazwisko>Leszczyna</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Rozporządzenie</rodzaj-aktu>
+    <autor-aktu>Ministra Zdrowia<odnosnik id-odnosnika="1" symbol="1" gd:GUID="6676bd3d-558c-4dd5-a1cd-c77082212429"><p><zdanie nr="1" gd:zdGUID="94982cfd-ac17-437e-ad57-5a1e14bfd0e9" fragment="1" gd:fragmentGUID="4c7592e0-fb1b-448d-b1b0-95a70c3c2de4">Minister Zdrowia kieruje działem administracji rządowej – zdrowie, na podstawie § 1 ust. 2 rozporządzenia Prezesa Rady Ministrów z dnia 18 grudnia 2023 r. w sprawie szczegółowego zakresu działania Ministra Zdrowia (Dz. U. poz. 2704).</zdanie></p></odnosnik></autor-aktu>
+    <data>z dnia 2 lipca 2025 r.</data>
+    <tytul>zmieniające rozporządzenie w sprawie specjalizacji w dziedzinach mających zastosowanie w ochronie zdrowia</tytul>
+    <podstawa-prawna>Na podstawie art. 46 ustawy z dnia 24 lutego 2017 r. o uzyskiwaniu tytułu specjalisty w dziedzinach mających zastosowanie w ochronie zdrowia (Dz. U. z 2025 r. poz. 342) zarządza się, co następuje:</podstawa-prawna>
+    <paragraf eId="DU/2025/877__art_1" gd:GUID="8fb512e9-b57d-4bbc-80ae-39f96d587d56" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-19_DU-2025-877_domyslne.x" wejscie-w-zycie="2025-07-19">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="6034509e-8fdb-448c-aa9f-f990af74c5a0" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-19_DU-2025-877_domyslne.x" wejscie-w-zycie="2025-07-19">
+        <p>
+          <zdanie nr="1" gd:zdGUID="bdecbc23-7c92-470b-93f8-044972ff1c76" fragment="1" gd:fragmentGUID="88d0bc92-4679-4d44-89ed-f0355c710584" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-19_DU-2025-877_domyslne.x" wejscie-w-zycie="2025-07-19">W rozporządzeniu Ministra Zdrowia z dnia 13 czerwca 2017 r. w sprawie specjalizacji w dziedzinach mających zastosowanie w ochronie zdrowia (Dz. U. z 2023 r. poz. 1771) § 25 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/1771" cudzyslowy="oba" gd:nowGUID="171b2111-a2bd-4b10-adf1-c778038cefb5" element-eId="DU/2023/1771__art_25" funkcja="zastap"><paragraf eId="DU/2023/1771__art_25" gd:GUID="5c55bc72-22b4-45e8-a19a-2151d61afe05" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-19_DU-2025-877_domyslne.x" wejscie-w-zycie="2025-07-19"><nr>25</nr><ustep eId="DU/2023/1771__art_25__ust_1" gd:GUID="1067d54d-7a40-4eaf-94cb-c9c3e4108f31" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-19_DU-2025-877_domyslne.x" wejscie-w-zycie="2025-07-19"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="3f1638ef-6171-4b82-b9ae-a63239152e29" fragment="1" gd:fragmentGUID="7d05e932-7fec-45d1-a1e5-325d96230d19" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-19_DU-2025-877_domyslne.x" wejscie-w-zycie="2025-07-19">Wysokość wynagrodzenia przewodniczącego zespołu egzaminacyjnego, o którym mowa w art. 33 ust. 7 pkt 1 ustawy, wynosi 500 zł za posiedzenie.</zdanie></p></ustep><ustep eId="DU/2023/1771__art_25__ust_2" gd:GUID="4e2e3d28-eb8a-4b9b-b0e3-28ea40193b02" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-19_DU-2025-877_domyslne.x" wejscie-w-zycie="2025-07-19"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="515c09bf-1b67-4928-9c08-e1ae66ae8535" fragment="1" gd:fragmentGUID="86d225c7-2c5d-401a-a52e-a4cceb2843af" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-19_DU-2025-877_domyslne.x" wejscie-w-zycie="2025-07-19">Wysokość wynagrodzenia członka zespołu egzaminacyjnego wynosi 300 zł za posiedzenie.</zdanie></p></ustep></paragraf></cytat-strukt>.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2025/877__art_2" gd:GUID="27e45fe8-18dd-42d9-b2b7-483b000b1217" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-19_DU-2025-877_domyslne.x" wejscie-w-zycie="2025-07-19">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="46f3806a-2fe8-4a6b-81b3-de01107a4662" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-19_DU-2025-877_domyslne.x" wejscie-w-zycie="2025-07-19">
+        <p>
+          <zdanie nr="1" gd:zdGUID="714ef09c-ce50-4bff-8aca-204be3ef8c48" fragment="1" gd:fragmentGUID="52bcc233-d775-43f7-9d02-1351ce7155a5" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-19_DU-2025-877_domyslne.x" wejscie-w-zycie="2025-07-19">Rozporządzenie wchodzi w życie po upływie 14 dni od dnia ogłoszenia.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <organ-podpisujacy>Minister Zdrowia: <i><osoba podpisujacy="true" gd:osobaGUID="27c92e52-9714-45f0-b531-3c6cd4e98327"><imie>I.</imie> <nazwisko>Leszczyna</nazwisko></osoba></i></organ-podpisujacy>
+  </rozporzadzenie>
+</akt-prawny>

@@ -1,0 +1,661 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <rozporzadzenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/1389</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>ce1b46bc-75b9-47d8-88a8-fcdd13abd875</gd:GUIDwersji>
+      <AdresISAP>WDU20250001389</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>1389</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 1389</AdresWyswietlany>
+      <Tytul>Rozporządzenie Ministra Zdrowia z dnia 6 października 2025 r. w sprawie kluczowych zaleceń dotyczących organizacji opieki kardiologicznej i postępowania klinicznego</Tytul>
+      <Rodzaj>ROZP</Rodzaj>
+      <DataOgloszenia>2025-10-15</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-10-06</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2025-10-30_DU-2025-1389_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2025-10-30" warunek="po upływie 14 dni od dnia ogłoszenia" podstawa="§ 3" zrodlo="https://eli.gov.pl/eli/DU/2025/1389" dowod="DU/2025/1389__art_3" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2025-10-30_DU-2025-1389_domyslne.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2025-10-30_DU-2025-1389_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="e75435e4-e856-4161-87f9-646f5d8c48a6" rola="wydajacy">
+          <Nazwa>Minister Zdrowia</Nazwa>
+          <OrganPodpisujacy>Minister Zdrowia</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>T.</imie> <nazwisko>Maciejewski</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Rozporządzenie</rodzaj-aktu>
+    <autor-aktu>Ministra Zdrowia<odnosnik id-odnosnika="1" symbol="1" gd:GUID="4ba12ff2-ce3e-4296-84a2-25f4b770a1c4"><p><zdanie nr="1" gd:zdGUID="21fee585-d071-4e4a-b2eb-ef0f06fae9cf" fragment="1" gd:fragmentGUID="24ce32b0-c52f-4f2a-9ca6-0b538714ab0e">Minister Zdrowia kieruje działem administracji rządowej – zdrowie, na podstawie § 1 ust. 2 rozporządzenia Prezesa Rady Ministrów z dnia 25 lipca 2025 r. w sprawie szczegółowego zakresu działania Ministra Zdrowia (Dz. U. poz. 1004).</zdanie></p></odnosnik></autor-aktu>
+    <data>z dnia 6 października 2025 r.</data>
+    <tytul>w sprawie kluczowych zaleceń dotyczących organizacji opieki kardiologicznej i postępowania klinicznego</tytul>
+    <podstawa-prawna>Na podstawie art. 5 ust. 3 ustawy z dnia 4 czerwca 2025 r. o Krajowej Sieci Kardiologicznej (Dz. U. poz. 779) zarządza się, co następuje:</podstawa-prawna>
+    <paragraf eId="DU/2025/1389__art_1" gd:GUID="3630a0ed-96c6-43ab-9b62-2c61e957603d" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-30_DU-2025-1389_domyslne.x" wejscie-w-zycie="2025-10-30">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="fc1f3c43-2a38-4678-8078-2888bd9b5464" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-30_DU-2025-1389_domyslne.x" wejscie-w-zycie="2025-10-30">
+        <p>
+          <zdanie nr="1" gd:zdGUID="e6ddc1c2-d338-487d-a2a1-8b4704888293" fragment="1" gd:fragmentGUID="aedab191-fb0a-4593-b513-0dd1ee01e210" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-30_DU-2025-1389_domyslne.x" wejscie-w-zycie="2025-10-30">Rozporządzenie określa kluczowe zalecenia dotyczące organizacji opieki kardiologicznej i postępowania klinicznego dla jednostek chorobowych chorób układu krążenia w zakresie świadczeń opieki zdrowotnej finansowanych ze środków publicznych, stanowiące załącznik do niniejszego rozporządzenia.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2025/1389__art_2" gd:GUID="b6ffcbdf-ff4f-4c79-83a3-b37e0e776ab8" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-30_DU-2025-1389_domyslne.x" wejscie-w-zycie="2025-10-30">
+      <nr>2</nr>
+      <ustep eId="DU/2025/1389__art_2__ust_1" gd:GUID="5b7c4991-fcce-4b7c-a406-396ff7de4695" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-30_DU-2025-1389_domyslne.x" wejscie-w-zycie="2025-10-30">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="7cb3535a-46d6-4dd9-a3b3-9c8d51679a74" fragment="1" gd:fragmentGUID="653b5780-ad8f-46d3-9103-d80cb266b86f" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-30_DU-2025-1389_domyslne.x" wejscie-w-zycie="2025-10-30">Przepisy części I.A.3, I.B.1 pkt 2 lit. a, części I.B.2, części I.D.1 ust. 2, części II.A.1 pkt 3, części II.A.2 pkt 5 oraz części III.A.1 pkt 3 załącznika do rozporządzenia w zakresie dotyczącym elektronicznej Karty Opieki Kardiologicznej stosuje się od dnia 1 stycznia 2028 r.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/1389__art_2__ust_2" gd:GUID="f27cf506-ac25-479e-95fc-50f1c00518a1" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-30_DU-2025-1389_domyslne.x" wejscie-w-zycie="2025-10-30">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="d76965e0-c837-42d6-a1ec-558451b0fac5" fragment="1" gd:fragmentGUID="becc1f5f-d355-4143-bc43-fffee2f188ec" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-30_DU-2025-1389_domyslne.x" wejscie-w-zycie="2025-10-30">Przepisy części I.D.1 ust. 1 i 3–5, części I.D.2, części II.A.5, części II.A.7 pkt 3, części II.B.3, części II.B.4 pkt 3, części II.C.5 pkt 1 lit. b oraz części III.A.2 pkt 4 i 5 załącznika do rozporządzenia dotyczące koordynatora opieki kardiologicznej stosuje się w danym ośrodku kardiologicznym drugiego i trzeciego poziomu zabezpieczenia opieki kardiologicznej Krajowej Sieci Kardiologicznej od dnia wyznaczenia tego koordynatora zgodnie z art. 46 ustawy z dnia 4 czerwca 2025 r. o Krajowej Sieci Kardiologicznej.</zdanie>
+        </p>
+      </ustep>
+    </paragraf>
+    <paragraf eId="DU/2025/1389__art_3" gd:GUID="d7d84532-6866-48df-aa9b-51829118fb92" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-30_DU-2025-1389_domyslne.x" wejscie-w-zycie="2025-10-30">
+      <nr>3</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="bce4170e-0be9-4e23-a3d6-aa7a063af295" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-30_DU-2025-1389_domyslne.x" wejscie-w-zycie="2025-10-30">
+        <p>
+          <zdanie nr="1" gd:zdGUID="0df616c7-bcdd-4017-abf7-967b616b5c88" fragment="1" gd:fragmentGUID="8af1fc1f-c5dd-4604-97e6-c883289985dd" okres="okr_obowiazywanie.zdarz_wejscie_2025-10-30_DU-2025-1389_domyslne.x" wejscie-w-zycie="2025-10-30">Rozporządzenie wchodzi w życie po upływie 14 dni od dnia ogłoszenia.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <organ-podpisujacy>Minister Zdrowia: wz. <i><osoba podpisujacy="true" gd:osobaGUID="08d69ff0-62d5-44a2-98e2-5b1cf7df563d"><imie>T.</imie> <nazwisko>Maciejewski</nazwisko></osoba></i></organ-podpisujacy>
+    <zalacznik eId="DU/2025/1389__zal_1" gd:GUID="5f685c32-0e7d-4dba-80b7-b72042468bc8">
+      <zalacznik-do gd:GUID="39919a51-666b-43fc-bb78-0b29092de157">Załącznik do rozporządzenia Ministra Zdrowia z dnia 6 października 2025 r. (Dz. U. poz. 1389)</zalacznik-do>
+      <tytul-zalacznika gd:GUID="4e5702c6-bf63-4758-8f77-e8767dc30465">Kluczowe zalecenia dotyczące organizacji opieki kardiologicznej i postępowania klinicznego dla jednostek chorobowych chorób układu krążenia w zakresie świadczeń opieki zdrowotnej finansowanych ze środków publicznych</tytul-zalacznika>
+      <segment-zalacznika gd:GUID="415f6539-14a4-4772-b704-32d5c93c7eeb" orientacja="pionowa">
+        <tabela gd:GUID="1e33c113-d66e-4352-93cc-9ee4f3b1d1b6">
+          <tbody>
+            <tr gd:GUID="8678cb70-c401-4095-9c22-9887845adabe">
+              <td gd:GUID="f846a5ce-c765-4ccc-9cfa-f2527712fb49">
+                <tekst-zwykly gd:GUID="7e8c9636-5a5f-4f57-8758-1d46730dd633">Numer kluczowego zalecenia</tekst-zwykly>
+              </td>
+              <td gd:GUID="4b091d7b-b989-4f1a-b2ca-6aa4bb481fbc">
+                <tekst-zwykly gd:GUID="23d02834-8744-4924-b901-5728a635a2f5">Nazwa kluczowego zalecenia</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="049e506c-1258-495b-8b88-88d2fcdb7d24">
+              <td colspan="2" gd:GUID="c53d837f-c215-4b77-bd40-f52b4c7a0f1d">
+                <tekst-zwykly gd:GUID="199c78f2-837c-4924-b5f6-a78504adee5c">I. Podstawowa opieka zdrowotna</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="1609329c-1fab-4cb6-87a8-aa282820969a">
+              <td colspan="2" gd:GUID="1b17c4ef-1105-4a72-a14a-b40b872863d5">
+                <tekst-zwykly gd:GUID="e5b17ed5-0306-4b60-95de-e145c71dfe39">A. Diagnostyka kardiologiczna</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="df67df99-ffda-46c4-8e9e-82c17d5926ff">
+              <td gd:GUID="3361de8d-98cf-4634-b40d-974b76426965">
+                <tekst-zwykly gd:GUID="e886c6d5-6152-4fc5-ad62-031d121b524b">I.A.1</tekst-zwykly>
+              </td>
+              <td gd:GUID="841a1839-83cc-4176-941f-4a31bef28d3c">
+                <tekst-zwykly gd:GUID="cf21a32b-dd55-4316-9ef3-2f9216d48985">W celu identyfikacji czynników ryzyka chorób układu krążenia albo w razie podejrzenia choroby układu krążenia:</tekst-zwykly>
+                <wyliczenie-1 gd:GUID="dd00de6f-fa40-4e03-80b6-3b244f8f756f">1) zaleca się realizację u świadczeniobiorcy świadczenia „Moje zdrowie – bilans zdrowia osoby dorosłej”, zgodnie z warunkami szczegółowymi określonymi w przepisach wydanych na podstawie art. 31d ustawy z dnia 27 sierpnia 2004 r. o świadczeniach opieki zdrowotnej finansowanych ze środków publicznych (Dz. U. z 2024 r. poz. 146, z późn. zm.), w zakresie, o którym mowa w art. 15 ust. 2 pkt 1 tej ustawy;</wyliczenie-1>
+                <wyliczenie-1 gd:GUID="0faf775c-0bbe-457e-9e26-d7983790693d">2) w przypadku braku możliwości udzielenia świadczeniobiorcy świadczenia „Moje zdrowie – bilans zdrowia osoby dorosłej” zaleca się realizację u świadczeniobiorcy badań diagnostycznych określonych w przepisach wydanych na podstawie art. 31d ustawy z dnia 27 sierpnia 2004 r. o świadczeniach opieki zdrowotnej finansowanych ze środków publicznych, w zakresie, o którym mowa w art. 15 ust. 2 pkt 1 tej ustawy, zgodnie z aktualną wiedzą medyczną, w tym z wytycznymi właściwych towarzystw naukowych.</wyliczenie-1>
+              </td>
+            </tr>
+            <tr gd:GUID="8fea46dd-c44a-475e-87d4-c6fc40ebb7c0">
+              <td gd:GUID="30bc5c17-ea8e-4f3b-8ab8-d27ab2653503">
+                <tekst-zwykly gd:GUID="fa23cff7-e963-48ea-a059-4c9c305b88f9">I.A.2</tekst-zwykly>
+              </td>
+              <td gd:GUID="854dba9e-26b8-4eaf-be01-c7235b72eb77">
+                <tekst-zwykly gd:GUID="faafee67-6826-43e6-9cf1-be4631d6b80c">W przypadku gdy po udzieleniu świadczeń, o których mowa w części I.A.1, zostaną stwierdzone nieprawidłowości związane z chorobami układu krążenia, lekarz udzielający świadczeń podstawowej opieki zdrowotnej, zwany dalej „lekarzem POZ”, realizuje dalszą diagnostykę kardiologiczną w ramach podstawowej opieki zdrowotnej, zwanej dalej „POZ”, w celu rozpoznania albo wykluczenia choroby układu krążenia. Diagnostyka ta obejmuje:</tekst-zwykly>
+                <wyliczenie-1 gd:GUID="aa0570d0-b2a2-4145-b542-1d2fe39ad17c">1) ocenę stanu zdrowia świadczeniobiorcy;</wyliczenie-1>
+                <wyliczenie-1 gd:GUID="1db469ce-fed6-4275-a9e6-5a432aaf275a">2) zlecenie badań diagnostycznych określonych w przepisach wydanych na podstawie art. 31d ustawy z dnia 27 sierpnia 2004 r. o świadczeniach opieki zdrowotnej finansowanych ze środków publicznych, w zakresie, o którym mowa w art. 15 ust. 2 pkt 1 tej ustawy, jeżeli jest to uzasadnione ze względów medycznych;</wyliczenie-1>
+                <wyliczenie-1 gd:GUID="b7129f75-7a37-41c6-bda2-1914a284d527">3) przeprowadzenie wizyty oceniającej wyniki badań, o których mowa w pkt 2, nie później niż w terminie 30 dni od dnia wykonania przez świadczeniobiorcę wszystkich badań zleconych przez lekarza POZ;</wyliczenie-1>
+                <wyliczenie-1 gd:GUID="c4eb238d-59dd-4840-9768-08a3a54eba4b">4) konsultację z lekarzem specjalistą w dziedzinie kardiologii udzielającym świadczeń opieki koordynowanej określonych w przepisach wydanych na podstawie art. 31d ustawy z dnia 27 sierpnia 2004 r. o świadczeniach opieki zdrowotnej finansowanych ze środków publicznych, w zakresie, o którym mowa w art. 15 ust. 2 pkt 1 tej ustawy, jeżeli jest to uzasadnione ze względów medycznych oraz możliwe do realizacji w ramach POZ lub opieki koordynowanej w POZ, lub skierowanie świadczeniobiorcy przez lekarza POZ do dalszej diagnostyki kardiologicznej poza POZ w warunkach ambulatoryjnej opieki specjalistycznej lub w warunkach leczenia szpitalnego.</wyliczenie-1>
+              </td>
+            </tr>
+            <tr gd:GUID="753da795-3b10-4af3-94ec-14a3ec4e0c4f">
+              <td gd:GUID="07d92e02-b679-4ce6-975f-9d81a5919f82">
+                <tekst-zwykly gd:GUID="c7f02c26-3c8f-4094-af4b-746997e6ac73">I.A.3</tekst-zwykly>
+              </td>
+              <td gd:GUID="b6350a9c-11dd-41bd-a6a0-e979a6a5ad76">
+                <tekst-zwykly gd:GUID="5e153c78-a770-4b6f-8574-689d515021b1">Jeżeli dalsza diagnostyka kardiologiczna, o której mowa w części I.A.2, nie może być zrealizowana w ramach POZ lub opieki koordynowanej w POZ, lekarz POZ wystawia świadczeniobiorcy elektroniczną Kartę Opieki Kardiologicznej, zwaną dalej „kartą e-KOK”, i kieruje go do ośrodka kardiologicznego Krajowej Sieci Kardiologicznej, zwanej dalej „KSK”, zgodnie z kluczowymi zaleceniami, o których mowa w części I.D.1.</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="3cfd379a-467d-47b1-a1ce-6fb2ec001d56">
+              <td gd:GUID="56d030b9-9993-4235-b289-181b4a6e7076">
+                <tekst-zwykly gd:GUID="64578f2a-5b8f-41ad-a69a-efdcf9a862d4">I.A.4</tekst-zwykly>
+              </td>
+              <td gd:GUID="d5d1533a-bc4d-405f-b9b1-2bfa7e4d0917">
+                <tekst-zwykly gd:GUID="10e39e01-dfc5-42e3-996b-ef8f9cbae6de">Jeżeli u świadczeniobiorcy w ramach przeprowadzonej diagnostyki kardiologicznej nie rozpoznano choroby układu krążenia, ale rozpoznano bardzo wysokie ryzyko sercowo-naczyniowe na podstawie oceny czynników ryzyka oraz za pomocą jednej ze skal, np. SCORE2, SCORE2-OP, SCORE2 Diabetes, ankiety „10 dla Serca” lub Karty Ryzyka Chorób Układu Krążenia, lekarz POZ:</tekst-zwykly>
+                <wyliczenie-1 gd:GUID="66aa1ff1-5f94-455a-b247-0b2c3cbb17fe">1) udziela porady edukacyjnej wynikającej z indywidualnych potrzeb świadczeniobiorcy, mającej na celu obniżenie modyfikowalnych czynników ryzyka sercowo-naczyniowego;</wyliczenie-1>
+                <wyliczenie-1 gd:GUID="d9f0106a-04ba-49e1-b988-c1fb77dc5e3c">2) zleca badania uzupełniające, jeżeli jest to uzasadnione ze względów medycznych;</wyliczenie-1>
+                <wyliczenie-1 gd:GUID="3023cdb2-b2ea-4b20-92d8-0a2e87e52c07">3) przeprowadza konsultacje z lekarzami specjalistami w innych dziedzinach medycyny w ramach opieki koordynowanej w POZ, jeżeli jest to uzasadnione ze względów medycznych;</wyliczenie-1>
+                <wyliczenie-1 gd:GUID="151fa266-97ba-48c9-9f6d-1cb15d515b5a">4) ustala harmonogram wizyt kontrolnych, które są dostosowane do indywidualnych potrzeb świadczeniobiorcy i które odbywają się co najmniej raz na 12 miesięcy, w celu monitorowania ryzyka sercowo-naczyniowego; wizyty kontrolne obejmują:</wyliczenie-1>
+                <wyliczenie-2 gd:GUID="0021e6d3-3285-4622-af45-c321b574125b">a) ocenę stanu zdrowia świadczeniobiorcy,</wyliczenie-2>
+                <wyliczenie-2 gd:GUID="74b96e4e-f203-4d01-8378-0710d664e482">b) badania kontrolne wynikające z indywidualnych potrzeb świadczeniobiorcy,</wyliczenie-2>
+                <wyliczenie-2 gd:GUID="faaa27c0-5eec-4d60-8d3f-6221ac3858c4">c) ocenę farmakoterapii, jeżeli została zastosowana,</wyliczenie-2>
+                <wyliczenie-2 gd:GUID="28b0a907-f5dd-418a-8ad1-68c5b503ca24">d) ocenę przestrzegania zaleceń i osiągnięcia celów terapeutycznych,</wyliczenie-2>
+                <wyliczenie-2 gd:GUID="d463b945-2e2f-4ac8-9d42-6df1e0c8cd4a">e) ponowną ocenę czynników ryzyka rozwoju chorób układu krążenia na podstawie oceny czynników ryzyka oraz za pomocą jednej ze skal, np. SCORE2, SCORE2-OP, SCORE2 Diabetes, ankiety „10 dla Serca” lub Karty Ryzyka Chorób Układu Krążenia.</wyliczenie-2>
+              </td>
+            </tr>
+            <tr gd:GUID="a41e7102-05c0-4d2a-85b4-a4536a9af169">
+              <td colspan="2" gd:GUID="3c77fe79-30f5-452e-9a4a-f10cb11a5ce6">
+                <tekst-zwykly gd:GUID="005da8bd-6cfd-484f-bed1-70a493cde3b0">B. Leczenie kardiologiczne</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="8faf6df4-dd84-4e0c-8e34-6023f1ad3bfd">
+              <td gd:GUID="0a263928-99eb-4b50-8653-c5d92d566423">
+                <tekst-zwykly gd:GUID="787d9541-25c1-46fa-b6ef-d59bf6e7d5f8">I.B.1</tekst-zwykly>
+              </td>
+              <td gd:GUID="bb2f3379-52bf-474f-959b-eac48f2bf63f">
+                <tekst-zwykly gd:GUID="48b976b7-e1fa-4143-a764-728a5d3378f0">Jeżeli u świadczeniobiorcy rozpoznano chorobę układu krążenia:</tekst-zwykly>
+                <wyliczenie-1 gd:GUID="7a631f8f-7f62-4d1a-aa3c-28a86252b38d">1) lekarz POZ ustala i realizuje plan leczenia kardiologicznego w ramach POZ albo opieki koordynowanej w POZ;</wyliczenie-1>
+                <wyliczenie-1 gd:GUID="fba158c2-db58-4106-91f3-a6990bef2457">2) w przypadku gdy ustalenie i realizacja planu leczenia kardiologicznego nie mogą być przeprowadzone w ramach POZ albo opieki koordynowanej w POZ, lekarz POZ:</wyliczenie-1>
+                <wyliczenie-2 gd:GUID="939440c6-9978-4993-aa12-936a1979e157">a) wystawia kartę e-KOK,</wyliczenie-2>
+                <wyliczenie-2 gd:GUID="ac941c0d-d607-451f-a3cb-2c04916c8222">b) kieruje świadczeniobiorcę do właściwego ośrodka kardiologicznego KSK zgodnie z kluczowymi zaleceniami, o których mowa w części I.D.1.</wyliczenie-2>
+              </td>
+            </tr>
+            <tr gd:GUID="4c1a2c67-a5de-4a7c-9ae7-f947d10e9ce8">
+              <td gd:GUID="b9ad48f9-c90f-495a-abd8-7342c7e4bc55">
+                <tekst-zwykly gd:GUID="971984b0-1157-401d-ae44-fb9ae75ebdeb">I.B.2</tekst-zwykly>
+              </td>
+              <td gd:GUID="2409e1a8-c20c-40c1-a5bb-55cf1eb328d9">
+                <tekst-zwykly gd:GUID="a6a59bb8-a2d1-416c-984f-1a48aad2aa4a">1. W przypadku stwierdzenia wskazań klinicznych do hospitalizacji lekarz POZ wystawia świadczeniobiorcy kartę e-KOK, jeżeli nie została wcześniej wystawiona, i kieruje go do leczenia szpitalnego do właściwego ośrodka kardiologicznego KSK zgodnie z kluczowymi zaleceniami, o których mowa w części I.D.1.</tekst-zwykly>
+                <tekst-zwykly gd:GUID="0ca50ae9-893d-43d6-b5ad-c0f403c6ed71">2. W stanach nagłych, w rozumieniu art. 5 pkt 33 ustawy z dnia 27 sierpnia 2004 r. o świadczeniach opieki zdrowotnej finansowanych ze środków publicznych, karta e-KOK, jeżeli nie została wcześniej wystawiona, jest wystawiana przez świadczeniodawcę, u którego jest kontynuowana dalsza opieka kardiologiczna.</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="2d3d4736-1c8f-4745-a185-e2a62576beb1">
+              <td colspan="2" gd:GUID="eb38ae0b-068b-4c2d-af55-f959a716f1e1">
+                <tekst-zwykly gd:GUID="7b51c142-5450-47b2-878e-dac8227c4e71">C. Obserwacja po leczeniu</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="36b94df9-3a65-4564-a661-4a6bf7267b5d">
+              <td gd:GUID="3f5c9528-ba7b-4d84-a6ca-f77aa4f056dd">
+                <tekst-zwykly gd:GUID="fbc32e8c-a777-44a3-8f8c-5e12600af7d9">I.C.1</tekst-zwykly>
+              </td>
+              <td gd:GUID="e5a3d358-f154-44dc-b920-f46565a3aeef">
+                <tekst-zwykly gd:GUID="845e89ed-d9fd-43d7-9f60-62071ad4239b">Dla świadczeniobiorców, którzy po zakończonym leczeniu kardiologicznym w ośrodku kardiologicznym KSK zostali skierowani do obserwacji, diagnostyki kardiologicznej lub leczenia kardiologicznego w ramach POZ lub opieki koordynowanej w POZ wraz z planem obserwacji po leczeniu, ustala się harmonogram wizyt kontrolnych w poradni POZ, które są dostosowane do indywidualnych potrzeb świadczeniobiorcy i które odbywają się co najmniej raz na 12 miesięcy. Wizyty kontrolne obejmują:</tekst-zwykly>
+                <wyliczenie-1 gd:GUID="23d05ecd-498b-482a-ad81-7df254f1909e">1) ocenę stanu zdrowia świadczeniobiorcy;</wyliczenie-1>
+                <wyliczenie-1 gd:GUID="c07ec7b5-549e-4481-9f62-9f6db8cfba0a">2) ocenę farmakoterapii, jeżeli została zastosowana;</wyliczenie-1>
+                <wyliczenie-1 gd:GUID="3171c649-5dd7-4003-b6b4-d1a6bde5ed1f">3) badania kontrolne wynikające z planu obserwacji po leczeniu oraz z indywidualnych potrzeb świadczeniobiorcy;</wyliczenie-1>
+                <wyliczenie-1 gd:GUID="0dbced38-b65a-49de-84f8-2db4fc9357e0">4) ocenę przestrzegania zaleceń i osiągnięcia celów terapeutycznych;</wyliczenie-1>
+                <wyliczenie-1 gd:GUID="6a08d453-8acc-4e32-bb87-2999fa544720">5) aktualizację planu obserwacji po leczeniu;</wyliczenie-1>
+                <wyliczenie-1 gd:GUID="4e024d74-d92e-4984-a701-123733c5aeca">6) poradę edukacyjną w zakresie wynikającym z indywidualnych potrzeb świadczeniobiorcy;</wyliczenie-1>
+                <wyliczenie-1 gd:GUID="60e13179-4bc6-4754-a1b6-437bf32936fd">7) ocenę zasadności skierowania na rehabilitację kardiologiczną.</wyliczenie-1>
+              </td>
+            </tr>
+            <tr gd:GUID="82adaeea-6076-4cd2-92ad-a6f27b1b3f0c">
+              <td gd:GUID="c1335d7e-f7af-48e2-8a9e-300ffc1b0593">
+                <tekst-zwykly gd:GUID="42fc00ec-3007-4bb1-8f7d-59faf59a8f38">I.C.2</tekst-zwykly>
+              </td>
+              <td gd:GUID="086a4896-7bcd-4a67-8c7f-f5557d02c9a3">
+                <tekst-zwykly gd:GUID="531eae63-4f32-487c-885b-2c81bd7e27e0">Jeżeli w trakcie obserwacji u świadczeniobiorcy po leczeniu kardiologicznym zaobserwowano duszność wysiłkową, ból w klatce piersiowej, omdlenia lub stan przedomdleniowy, odczucie arytmii, spadek tolerancji wysiłku fizycznego bez innej dającej się określić przyczyny, pogorszenie kontroli ciśnienia tętniczego, nowe nieprawidłowości w zapisie EKG lub obecność obrzęków obwodowych, a dolegliwości te nie stanowią stanu zagrożenia życia lub zdrowia świadczeniobiorcy, lekarz POZ zleca wykonanie dodatkowych badań diagnostycznych i podejmuje dalsze decyzje terapeutyczne, a w przypadku:</tekst-zwykly>
+                <wyliczenie-1 gd:GUID="7162bcb6-98b2-4f30-a134-cb223c76e9f6">1) wątpliwości – konsultuje się z lekarzem specjalistą w dziedzinie kardiologii w ramach opieki koordynowanej w POZ albo</wyliczenie-1>
+                <wyliczenie-1 gd:GUID="9062c782-fe1c-45fe-b232-141ae5bfaf45">2) braku możliwości realizacji tych badań w ramach POZ lub opieki koordynowanej w POZ – kieruje świadczeniobiorcę do ośrodka kardiologicznego KSK w celu dalszej diagnostyki kardiologicznej zgodnie z kluczowymi zaleceniami, o których mowa w części I.D.1.</wyliczenie-1>
+              </td>
+            </tr>
+            <tr gd:GUID="0496a60b-f3f9-4b56-b683-8660902c4710">
+              <td gd:GUID="239f2f4f-078b-4fcf-ab2e-5c5361bd67de">
+                <tekst-zwykly gd:GUID="c1c68f1e-0e7d-4e65-8f57-36db10b4b156">I.C.3</tekst-zwykly>
+              </td>
+              <td gd:GUID="5a178af1-4bca-4009-b4c9-9ca3c882f468">
+                <tekst-zwykly gd:GUID="444e9d64-9368-4d0b-b7f4-9fb314e0068d">Świadczeniodawca POZ sprawuje opiekę nad świadczeniobiorcą z rozpoznaną chorobą układu krążenia w miarę potrzeb świadczeniobiorcy, we współpracy z lekarzem specjalistą w dziedzinie kardiologii, w ramach opieki koordynowanej w POZ, zgodnie z planem obserwacji po leczeniu oraz aktualną wiedzą medyczną, w tym z wytycznymi właściwych towarzystw naukowych.</tekst-zwykly>
+                <tekst-zwykly gd:GUID="8d8f245f-d608-430f-89fe-3885d86810b4">W przypadku braku opieki koordynowanej w POZ ambulatoryjne leczenie kardiologiczne jest prowadzone we współpracy świadczeniodawcy POZ z ośrodkiem kardiologicznym pierwszego poziomu zabezpieczenia opieki kardiologicznej, zwanym dalej „OK I”.</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="b1b438cd-f11a-4da9-8b60-39f8fa97851c">
+              <td colspan="2" gd:GUID="d1b754de-fae3-4881-8cb6-74ff3c9bba20">
+                <tekst-zwykly gd:GUID="a05f4f5b-1a34-40c7-ab43-1cb3739ff493">D. Zasady koordynacji opieki kardiologicznej w KSK</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="320eb207-8c6c-4e81-812b-4ea7ec22db73">
+              <td gd:GUID="4a89dc24-ed61-4bcf-8779-ec87e4424575">
+                <tekst-zwykly gd:GUID="142eea99-2358-4144-8ce7-502432a47673">I.D.1</tekst-zwykly>
+              </td>
+              <td gd:GUID="b1ce5960-5388-42d2-b5f1-ea9d89a68ba8">
+                <tekst-zwykly gd:GUID="89b87ad3-571a-4c4c-a113-10ed2fb9d5d3">1. O terminach wizyt w ośrodkach kardiologicznych KSK zlokalizowanych najbliżej miejsca zamieszkania świadczeniobiorcy informuje świadczeniobiorcę świadczeniodawca POZ albo koordynator opieki kardiologicznej.</tekst-zwykly>
+                <tekst-zwykly gd:GUID="625ea54f-eeba-490e-b2b7-9bc89c652631">2. Skierowanie świadczeniobiorcy do ośrodka kardiologicznego KSK w celu dalszej diagnostyki kardiologicznej lub leczenia kardiologicznego jest możliwe pod warunkiem wykonania zleconych przez świadczeniodawcę POZ badań diagnostycznych określonych w przepisach wydanych na podstawie art. 31d ustawy z dnia 27 sierpnia 2004 r. o świadczeniach opieki zdrowotnej finansowanych ze środków publicznych, w zakresie, o którym mowa w art. 15 ust. 2 pkt 1 tej ustawy, zgodnych z aktualną wiedzą medyczną, w tym z wytycznymi właściwych towarzystw naukowych, oraz załączenia do skierowania wyników tych badań, w tym w ramach karty e-KOK. W związku z kierowaniem do ośrodka kardiologicznego KSK uwzględnia się również wyniki badań diagnostycznych wykonanych przez świadczeniobiorcę w innych podmiotach wykonujących działalność leczniczą, jeżeli wyniki te są aktualne i spełniają kryteria przydatności klinicznej w ocenie lekarza POZ, bez konieczności ponownego zlecania badań, które mogłoby spowodować nieuzasadnioną zwłokę w procesie diagnostyczno-terapeutycznym. W stanach nagłych, w rozumieniu art. 5 pkt 33 ustawy z dnia 27 sierpnia 2004 r. o świadczeniach opieki zdrowotnej finansowanych ze środków publicznych, wykonanie tych badań nie jest konieczne, jeżeli ich przeprowadzenie wiązałoby się z opóźnieniem rozpoczęcia leczenia kardiologicznego.</tekst-zwykly>
+                <tekst-zwykly gd:GUID="b92b28ec-33b2-4c10-968c-8d7c46fc7819">3. Skierowanie świadczeniobiorcy do OK I następuje w przypadku stwierdzenia możliwości przeprowadzenia procesu diagnostyczno-terapeutycznego na tym poziomie zabezpieczenia opieki kardiologicznej na podstawie decyzji lekarza kierującego oraz zgodnie ze standardami praktyki klinicznej. W przypadkach budzących wątpliwości lekarz kierujący może skontaktować się z koordynatorem opieki kardiologicznej ośrodka kardiologicznego drugiego poziomu zabezpieczenia opieki kardiologicznej, zwanego dalej „OK II”, zlokalizowanego najbliżej miejsca zamieszkania świadczeniobiorcy, lub ośrodka kardiologicznego trzeciego poziomu zabezpieczenia opieki kardiologicznej, zwanego dalej „OK III”, w celu skierowania świadczeniobiorcy do właściwego ośrodka kardiologicznego KSK.</tekst-zwykly>
+                <tekst-zwykly gd:GUID="c760bbc2-493b-4cb2-86bd-903f433d14aa">4. Skierowanie świadczeniobiorcy do OK II albo OK III jest poprzedzone kontaktem z koordynatorem opieki kardiologicznej OK II lub OK III zlokalizowanych najbliżej miejsca zamieszkania świadczeniobiorcy.</tekst-zwykly>
+                <tekst-zwykly gd:GUID="0de953e1-3682-49a1-ad7b-9c7f5393fc08">5. Koordynator opieki kardiologicznej OK II lub OK III wskazuje odpowiednio OK I, OK II albo OK III, mając na uwadze konieczność zapewnienia opieki kardiologicznej w najkrótszym możliwym terminie, i wyznacza dla świadczeniobiorcy termin wizyty, uwzględniając określone przez świadczeniobiorcę kryteria w zakresie terminu lub miejsca udzielenia świadczenia.</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="d69449e4-fd76-4615-a901-1ebac738ddfa">
+              <td gd:GUID="03886644-8ccf-486f-842d-78fb48e3823f">
+                <tekst-zwykly gd:GUID="1d9bb749-fcbc-4bdd-8adb-515936998271">I.D.2</tekst-zwykly>
+              </td>
+              <td gd:GUID="b78d7484-e3a2-436b-9694-b62bd8bf7e08">
+                <tekst-zwykly gd:GUID="b7bc3bf3-6690-407d-b68a-3697552e2c05">Koordynator opieki kardiologicznej OK II lub OK III współpracuje ze świadczeniodawcą POZ w celu udzielenia świadczeniobiorcy informacji o organizacji opieki kardiologicznej w ramach KSK oraz koordynowania poszczególnych etapów opieki kardiologicznej, zapewniając ciągłość tej opieki.</tekst-zwykly>
+                <tekst-zwykly gd:GUID="de36e675-f582-4042-a763-d5148d5b4743">Koordynator opieki kardiologicznej informuje świadczeniobiorcę o wszystkich elementach opieki kardiologicznej wymienionych w planie leczenia kardiologicznego.</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="5009059e-2b7c-494d-9020-9804a54e71d5">
+              <td colspan="2" gd:GUID="b8ac1729-61fa-43cf-b3dd-61b2df6d2181">
+                <tekst-zwykly gd:GUID="103f360c-9870-4608-adbe-8883c6b41ec4">II. Ambulatoryjna opieka specjalistyczna</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="16bde118-eec6-4d9d-a0f9-43b01470af78">
+              <td colspan="2" gd:GUID="7385e325-b868-4bca-b165-bb11fb23501e">
+                <tekst-zwykly gd:GUID="b8e4af80-e6f4-40b4-a386-b0c570728212">A. Diagnostyka kardiologiczna</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="112c59e0-d48c-45df-9652-5a1b7f72591b">
+              <td gd:GUID="4c20d590-559a-4139-bf60-b8381a8b2c4f">
+                <tekst-zwykly gd:GUID="920284bf-b18d-4ea8-b067-a255e4fdbaa0">II.A.1</tekst-zwykly>
+              </td>
+              <td gd:GUID="1dcadce3-4493-4cbb-b889-24181f7ca968">
+                <tekst-zwykly gd:GUID="4b0326d9-5351-4561-a9d4-4e9e7499e27c">W przypadku świadczeniobiorcy, który został skierowany do poradni kardiologicznej z ośrodka kardiologicznego KSK lub ośrodka współpracującego, w rozumieniu art. 12 ustawy z dnia 4 czerwca 2025 r. o Krajowej Sieci Kardiologicznej (Dz. U. poz. 779), w celu potwierdzenia albo wykluczenia rozpoznania choroby układu krążenia albo do dalszej diagnostyki kardiologicznej, podczas pierwszej wizyty w poradni kardiologicznej lekarz specjalista w dziedzinie kardiologii:</tekst-zwykly>
+                <wyliczenie-1 gd:GUID="21b75326-42a6-49f7-8c21-b8d5b57e1c69">1) dokonuje ponownej oceny stanu zdrowia świadczeniobiorcy – na podstawie wywiadu, badania przedmiotowego oraz wyników badań diagnostycznych wykonanych przed wizytą – w celu potwierdzenia albo wykluczenia rozpoznania choroby układu krążenia albo ustalenia dalszej diagnostyki kardiologicznej;</wyliczenie-1>
+                <wyliczenie-1 gd:GUID="e96f4a3c-cc84-42fe-8d44-b1991a635cb7">2) przeprowadza badania przedmiotowe ukierunkowane na rozpoznanie choroby układu krążenia, obejmujące co najmniej: pomiar ciśnienia tętniczego krwi, pomiar tętna z oceną miarowości i obecności tętna obwodowego na kończynach dolnych, osłuchanie serca, płuc oraz tętnic szyjnych i udowych, a także ocenę obecności obrzęków obwodowych;</wyliczenie-1>
+                <wyliczenie-1 gd:GUID="3be46708-55c2-49d5-8a40-04ba0d560e29">3) ustala dalszą diagnostykę na podstawie oceny klinicznej świadczeniobiorcy – zleca wykonanie badań diagnostycznych w celu potwierdzenia albo wykluczenia rozpoznania choroby układu krążenia na podstawie konsultacji specjalistycznych i badań diagnostycznych określonych w przepisach wydanych na podstawie art. 31d ustawy z dnia 27 sierpnia 2004 r. o świadczeniach opieki zdrowotnej finansowanych ze środków publicznych, w zakresie, o którym mowa w art. 15 ust. 2 pkt 2 tej ustawy, zgodnie z aktualną wiedzą medyczną, w tym z wytycznymi właściwych towarzystw naukowych, przy czym w potwierdzeniu albo wykluczeniu rozpoznania choroby układu krążenia uwzględnia się wszystkie wyniki badań diagnostycznych wykonanych przez świadczeniobiorcę oraz zawartych w karcie e-KOK, w tym również wykonanych na jego koszt lub przez innego świadczeniodawcę przed wystawieniem karty e-KOK;</wyliczenie-1>
+                <wyliczenie-1 gd:GUID="c1ab1069-1bda-4fc5-b898-fa272319c64d">4) ustala termin ponownej konsultacji w poradni kardiologicznej nie późniejszy niż 30 dni od dnia pierwszej wizyty, podczas której zlecono wykonanie badań, o których mowa w pkt 3, przy czym termin ten nie dotyczy świadczeniobiorców, których stan zdrowia w opinii lekarza specjalisty w dziedzinie kardiologii nie powinien pogorszyć się po przekroczeniu tego terminu, zgodnie z aktualną wiedzę medyczną, w tym z wytycznymi właściwych towarzystw naukowych.</wyliczenie-1>
+              </td>
+            </tr>
+            <tr gd:GUID="4b56c010-cafd-4c3a-ab0d-1e1c771d89a2">
+              <td gd:GUID="81dd525e-ea85-4cb1-ad47-1697d5c3d6b6">
+                <tekst-zwykly gd:GUID="0330523e-05a6-45aa-9e0b-4e7f42f6f630">II.A.2</tekst-zwykly>
+              </td>
+              <td gd:GUID="efd8ca4d-0751-4062-a7d1-b716021ec041">
+                <tekst-zwykly gd:GUID="d765f516-4839-4185-85ca-9b400ff2f035">W przypadku świadczeniobiorcy, który nie został skierowany z ośrodka kardiologicznego KSK lub ośrodka współpracującego, w rozumieniu art. 12 ustawy z dnia 4 czerwca 2025 r. o Krajowej Sieci Kardiologicznej, w celu potwierdzenia albo wykluczenia rozpoznania chorób układu krążenia i u którego nie rozpoznano wcześniej choroby układu krążenia, ale jest obciążony czynnikami ryzyka takiej choroby, podczas pierwszej wizyty w poradni kardiologicznej lekarz specjalista w dziedzinie kardiologii:</tekst-zwykly>
+                <wyliczenie-1 gd:GUID="0c91aec7-9225-4165-b0b5-a493081a5d89">1) przeprowadza wywiad ze świadczeniobiorcą w celu rozpoznania choroby układu krążenia oraz ustalenia czynników ryzyka takiej choroby;</wyliczenie-1>
+                <wyliczenie-1 gd:GUID="18daeaf8-895c-4f8b-954b-b4b43533d8ca">2) wykonuje badania w celu wstępnego rozpoznania choroby układu krążenia, które obejmują co najmniej:</wyliczenie-1>
+                <wyliczenie-2 gd:GUID="c2036f71-bdac-4de9-af2a-008cfb689856">a) pomiar ciśnienia tętniczego krwi,</wyliczenie-2>
+                <wyliczenie-2 gd:GUID="a8979faa-382d-45f6-b363-55e3d5073779">b) pomiar tętna z oceną miarowości oraz obecności tętna obwodowego na kończynach dolnych,</wyliczenie-2>
+                <wyliczenie-2 gd:GUID="fb547a72-a0dd-4016-b43d-7981f8346933">c) osłuchanie serca, płuc oraz tętnic szyjnych i udowych,</wyliczenie-2>
+                <wyliczenie-2 gd:GUID="06dfb2af-e73d-4030-b4c7-7037e0c37a5b">d) ocenę obecności obrzęków obwodowych;</wyliczenie-2>
+                <wyliczenie-1 gd:GUID="2d07c379-511d-4f82-9827-ebc7b915e27d">3) prowadzi dalszą diagnostykę kardiologiczną w celu potwierdzenia albo wykluczenia rozpoznania choroby układu krążenia na podstawie konsultacji specjalistycznych i badań diagnostycznych określonych w przepisach wydanych na podstawie art. 31d ustawy z dnia 27 sierpnia 2004 r. o świadczeniach opieki zdrowotnej finansowanych ze środków publicznych, w zakresie, o którym mowa w art. 15 ust. 2 pkt 2 tej ustawy, zgodnie z aktualną wiedzą medyczną, w tym z wytycznymi właściwych towarzystw naukowych, przy czym w potwierdzeniu albo wykluczeniu rozpoznania choroby układu krążenia uwzględnia się wszystkie wyniki badań diagnostycznych. W ramach kierowania do ośrodka kardiologicznego KSK uwzględnia się również wyniki badań diagnostycznych wykonanych przez świadczeniobiorcę w innych placówkach, jeżeli wyniki te są aktualne i spełniają kryteria przydatności klinicznej w ocenie lekarza kierującego, bez konieczności ponownego zlecania badań, które mogłoby spowodować nieuzasadnioną zwłokę w procesie diagnostyczno-terapeutycznym;</wyliczenie-1>
+                <wyliczenie-1 gd:GUID="1ac4cef7-07b2-4f49-a7ac-0890c810a41a">4) ustala termin ponownej konsultacji specjalistycznej w poradni kardiologicznej nie późniejszy niż 30 dni od dnia pierwszej wizyty, podczas której zlecono wykonanie badań, o których mowa w pkt 3, przy czym termin ten nie dotyczy świadczeniobiorców, których stan zdrowia w opinii lekarza specjalisty w dziedzinie kardiologii nie powinien pogorszyć się po przekroczeniu tego terminu, zgodnie z aktualną wiedzę medyczną, w tym z wytycznymi właściwych towarzystw naukowych;</wyliczenie-1>
+                <wyliczenie-1 gd:GUID="9c914dec-89f0-4c02-b6b5-2907b5337478">5) wystawia świadczeniobiorcy kartę e-KOK, jeżeli nie została wcześniej wystawiona, i ją prowadzi.</wyliczenie-1>
+              </td>
+            </tr>
+            <tr gd:GUID="e9f33523-5c77-4fcb-835e-dad5437a4736">
+              <td gd:GUID="7cbbaed8-266e-4d64-a657-d8673b8bcc22">
+                <tekst-zwykly gd:GUID="f42e7a29-6df6-418a-acef-423089e1c993">II.A.3</tekst-zwykly>
+              </td>
+              <td gd:GUID="95c271a9-5e0b-4fd3-ac02-41a4097204a7">
+                <tekst-zwykly gd:GUID="af59ea07-b167-4d1e-930f-159289055d92">Podczas drugiej wizyty w poradni kardiologicznej dokonuje się ponownej oceny stanu zdrowia świadczeniobiorcy – na podstawie wywiadu, badania przedmiotowego oraz wyników badań diagnostycznych – w celu potwierdzenia albo wykluczenia wstępnego rozpoznania choroby układu krążenia albo w celu dalszej diagnostyki kardiologicznej oraz podjęcia decyzji terapeutycznych, w tym skierowania do rehabilitacji kardiologicznej, jeżeli jest to zasadne.</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="de2d8007-4eb9-4ca3-a02c-f379f1b11640">
+              <td gd:GUID="b10450f6-798f-4913-9f63-9a9409bf17a8">
+                <tekst-zwykly gd:GUID="83638162-2068-4785-9a5c-79da6ff79f42">II.A.4</tekst-zwykly>
+              </td>
+              <td gd:GUID="6b625fca-f718-4c37-a5d5-b47a5a953e69">
+                <tekst-zwykly gd:GUID="07d505ae-6c81-4b21-9574-ef839a32e65f">W przypadku świadczeniobiorcy, który został skierowany do poradni kardiologicznej z ośrodka kardiologicznego KSK lub ośrodka współpracującego, w rozumieniu art. 12 ustawy z dnia 4 czerwca 2025 r. o Krajowej Sieci Kardiologicznej, w celu potwierdzenia albo wykluczenia wstępnego rozpoznania choroby układu krążenia albo kontynuacji diagnostyki kardiologicznej, pierwsza porada kardiologiczna jest przeprowadzana w terminie 90 dni od dnia skierowania do poradni kardiologicznej. Kolejne porady kardiologiczne, jeżeli są wymagane, odbywają się w terminie od 90 dni do 365 dni od dnia udzielenia ostatniej porady kardiologicznej, w zależności od wskazań klinicznych.</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="db8eeaa1-497c-44d8-a56c-b95d46bd8cb8">
+              <td gd:GUID="20183c08-bea9-4522-a241-0c2ae98e5aba">
+                <tekst-zwykly gd:GUID="a0cfcc5b-c827-4f23-a6eb-1d09507a8f4a">II.A.5</tekst-zwykly>
+              </td>
+              <td gd:GUID="92fb2f50-9a95-4dc5-8c5c-ee05df31d805">
+                <tekst-zwykly gd:GUID="e366d577-eb04-44cb-9396-aaf2e1256632">Świadczeniobiorcę, u którego rozpoznano chorobę układu krążenia i u którego istnieją wskazania kliniczne do hospitalizacji, kieruje się do leczenia szpitalnego w OK I, OK II albo OK III oraz zapewnia się mu kontakt z koordynatorem opieki kardiologicznej OK II lub OK III.</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="d1e9beae-7722-436f-881e-ff1f07e8e8bf">
+              <td gd:GUID="9e6407b0-2515-40bf-8e48-2039ec675206">
+                <tekst-zwykly gd:GUID="8c6084d3-1550-4f50-97c0-89fbc882e660">II.A.6</tekst-zwykly>
+              </td>
+              <td gd:GUID="ac6b63d0-e4d9-4c2c-96e0-942d325ecf2b">
+                <tekst-zwykly gd:GUID="fa59ed40-5ea6-443a-95b7-a74885e26920">Wykluczenie rozpoznania choroby układu krążenia albo jego potwierdzenie wraz z ustaleniem planu leczenia kardiologicznego albo planu leczenia kardiologicznego w zakresie rehabilitacji kardiologicznej odbywa się nie później niż w terminie 90 dni od dnia pierwszej porady w poradni kardiologicznej, jednak niezwłocznie po uzyskaniu kompletnego zestawu wyników zleconych badań diagnostycznych.</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="1507068a-d98c-4a1c-b44b-6dbe39f461ba">
+              <td gd:GUID="1b78f903-2f8f-4b5c-90be-e9de5d257261">
+                <tekst-zwykly gd:GUID="b6763336-0139-43e1-ab64-e96c22183954">II.A.7</tekst-zwykly>
+              </td>
+              <td gd:GUID="b80c50ad-0db1-4e16-98cb-ca86b1c7c834">
+                <tekst-zwykly gd:GUID="76e59e82-b7de-47d1-b04f-58b1a74ebee1">1. Skierowanie świadczeniobiorcy do OK II jest możliwe po stwierdzeniu braku możliwości przeprowadzenia właściwej diagnostyki kardiologicznej w OK I, a także w sytuacji, gdy czas oczekiwania na udzielenie świadczenia w OK II jest krótszy niż w OK I lub gdy uzasadnia to stan kliniczny świadczeniobiorcy, z uwzględnieniem określonych przez świadczeniobiorcę kryteriów w zakresie terminu lub miejsca udzielenia świadczenia.</tekst-zwykly>
+                <tekst-zwykly gd:GUID="fe4f99ce-51ef-4acc-9404-8f9508850be7">2. Skierowanie świadczeniobiorcy do OK III jest możliwe po stwierdzeniu braku możliwości przeprowadzenia właściwej diagnostyki kardiologicznej w OK I lub OK II, a także w sytuacji, gdy czas oczekiwania na udzielenie świadczenia w OK III jest krótszy niż w OK I albo OK II oraz gdy uzasadnia to stan kliniczny świadczeniobiorcy, z uwzględnieniem określonych przez świadczeniobiorcę kryteriów w zakresie terminu lub miejsca udzielenia świadczenia.</tekst-zwykly>
+                <tekst-zwykly gd:GUID="d112989f-0eec-4e89-af89-b0e404c77c44">3. W przypadku skierowania do OK II albo OK III świadczeniobiorca w celu koordynacji opieki kardiologicznej kontaktuje się odpowiednio z koordynatorem opieki kardiologicznej OK II lub OK III. Koordynator opieki kardiologicznej udziela informacji o możliwości realizacji poszczególnych procedur diagnostyczno-terapeutycznych na określonych poziomach zabezpieczenia opieki kardiologicznej oraz wskazuje ośrodki kardiologiczne KSK, w których te procedury mogą być wykonane najszybciej i najbliżej miejsca zamieszkania świadczeniobiorcy, z uwzględnieniem określonych przez świadczeniobiorcę kryteriów w zakresie terminu lub miejsca udzielenia świadczenia.</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="31cf664c-c853-45ea-9864-5efdaf520acc">
+              <td gd:GUID="1134d185-5d7f-48b6-8212-da70f4ab2289">
+                <tekst-zwykly gd:GUID="6f6f5cc5-652c-4197-a453-c5c723458396">II.A.8</tekst-zwykly>
+              </td>
+              <td gd:GUID="12942c46-0dd7-46bc-beea-50cce3d2c9a1">
+                <tekst-zwykly gd:GUID="21aa3c2e-1d0c-4a99-b047-907243854707">W przypadku świadczeniobiorcy z bardzo wysokim ryzykiem sercowo-naczyniowym, ocenionym na podstawie obecności czynników ryzyka lub oszacowanym według jednej ze skal oceny ryzyka sercowo-naczyniowego, np. SCORE2, SCORE2-OP, SCORE2 Diabetes, ankiety „10 dla Serca” lub Karty Ryzyka Chorób Układu Krążenia, u którego w poradni kardiologicznej wykluczono rozpoznanie choroby układu krążenia:</tekst-zwykly>
+                <wyliczenie-1 gd:GUID="d773b446-1162-47b7-8ac7-38ba1c03d9a3">1) udziela się mu porady edukacyjnej wynikającej z jego indywidualnych potrzeb, mającej na celu obniżenie modyfikowalnych czynników ryzyka sercowo-naczyniowego;</wyliczenie-1>
+                <wyliczenie-1 gd:GUID="a6ff403a-5f03-4867-8e60-20130ed404a3">2) kieruje się go do lekarza POZ w celu realizacji wizyt kontrolnych, o których mowa w części I.A.4.</wyliczenie-1>
+              </td>
+            </tr>
+            <tr gd:GUID="1029da25-7ff5-49e7-9ae2-5890ec195fa0">
+              <td colspan="2" gd:GUID="6a96417b-0a49-4eec-8ebd-a8086998d7f6">
+                <tekst-zwykly gd:GUID="85b98f0a-ddce-4ea3-bdfd-257e47104c0e">B. Leczenie kardiologiczne</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="368a279f-7396-4203-8989-ae9c87649686">
+              <td gd:GUID="25424357-fc3f-44ba-9021-c452decbab2a">
+                <tekst-zwykly gd:GUID="b05de2ef-f873-4162-ae14-78b2f28ee7f0">II.B.1</tekst-zwykly>
+              </td>
+              <td gd:GUID="9bc30c76-7d99-433d-b3e6-237bb091b5d6">
+                <tekst-zwykly gd:GUID="b1a0aa89-5204-4ce3-9eb3-bbaed43a28d5">Dla świadczeniobiorców, u których rozpoznano chorobę układu krążenia i którzy nie wymagają hospitalizacji, lekarz specjalista w dziedzinie kardiologii ustala:</tekst-zwykly>
+                <wyliczenie-1 gd:GUID="3da526fd-f5f7-4904-b113-15d2a7eb9c34">1) plan leczenia kardiologicznego w poradni kardiologicznej lub</wyliczenie-1>
+                <wyliczenie-1 gd:GUID="d3aa55b5-ef68-4882-888e-901eb9569e5f">2) plan leczenia kardiologicznego w POZ, lub</wyliczenie-1>
+                <wyliczenie-1 gd:GUID="c60f57ac-835b-45e2-9d04-6532d59ae2cd">3) plan leczenia kardiologicznego w zakresie rehabilitacji kardiologicznej.</wyliczenie-1>
+              </td>
+            </tr>
+            <tr gd:GUID="18511a64-6ca6-4e38-bf05-f262c0dac618">
+              <td gd:GUID="f6f58247-63ee-4933-8294-dd97d5c66772">
+                <tekst-zwykly gd:GUID="8505ec91-045b-42fd-aeda-3aed70e046d8">II.B.2</tekst-zwykly>
+              </td>
+              <td gd:GUID="73b1daca-946b-4992-aa8b-522eeaac335d">
+                <tekst-zwykly gd:GUID="f7b1228d-7654-4b6c-8199-43bd74a4b16f">W przypadku świadczeniobiorców, u których rozpoznano chorobę układu krążenia, w poradni kardiologicznej ustala się i prowadzi leczenie kardiologiczne z podziałem na:</tekst-zwykly>
+                <wyliczenie-1 gd:GUID="c2898d9d-b442-407e-a8cb-ca2a48b2eca3">1) leczenie niefarmakologiczne – obejmujące zmianę stylu życia, w tym zdrową dietę, aktywność fizyczną, redukcję stresu, ograniczenie spożycia alkoholu, zaprzestanie palenia tytoniu i wyrobów tytoniowych oraz stosowania innych używek o udokumentowanej szkodliwości, a także optymalizację masy ciała;</wyliczenie-1>
+                <wyliczenie-1 gd:GUID="c1f75aa1-2787-4166-aa1a-d027909bdea1">2) leczenie farmakologiczne – w przypadku:</wyliczenie-1>
+                <wyliczenie-2 gd:GUID="a1f63a45-363e-439c-833e-f3e4f67c8826">a) zidentyfikowania wskazań do podjęcia farmakoterapii zgodnie z aktualną wiedzą medyczną, w tym z wytycznymi właściwych towarzystw naukowych, lub</wyliczenie-2>
+                <wyliczenie-2 gd:GUID="cbbbea83-52e4-42c0-8408-32afc0926cc6">b) braku poprawy wyników badań diagnostycznych po upływie 2 miesięcy od wprowadzenia zmian w stylu życia przez świadczeniobiorcę;</wyliczenie-2>
+                <wyliczenie-1 gd:GUID="4e556231-38b3-457c-a93f-394595eb8063">3) leczenie z zastosowaniem procedur niefarmakologicznych – obejmujące procedury medyczne możliwe do wykonania w warunkach ambulatoryjnych, w tym rehabilitację kardiologiczną, jeżeli jest zasadna, zgodnie z aktualną wiedzą medyczną, w tym z wytycznymi właściwych towarzystw naukowych.</wyliczenie-1>
+              </td>
+            </tr>
+            <tr gd:GUID="ea8f47fb-74d5-46a2-82a8-7c885b76dae1">
+              <td gd:GUID="db1e2cf3-921c-4d25-a807-db2dc10604c5">
+                <tekst-zwykly gd:GUID="cbaa0e31-69ad-42c2-9db1-5d03730f0dce">II.B.3</tekst-zwykly>
+              </td>
+              <td gd:GUID="676596b0-4805-406b-99be-15e78e38721f">
+                <tekst-zwykly gd:GUID="380986bf-9c5d-4b78-80ea-a0fcceabf79d">Świadczeniobiorcę, u którego rozpoznano chorobę układu krążenia i u którego istnieją wskazania kliniczne do hospitalizacji, kieruje się do leczenia szpitalnego w OK I, OK II albo OK III oraz zapewnia się mu kontakt z koordynatorem opieki kardiologicznej OK II lub OK III.</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="fb803aa6-b365-4a95-9818-e1fea6f8accf">
+              <td gd:GUID="15e557b6-7911-4eba-978d-3c220cf5cfe2">
+                <tekst-zwykly gd:GUID="5f57fdb1-6aba-4b88-9df9-6d09c7e0d42d">II.B.4</tekst-zwykly>
+              </td>
+              <td gd:GUID="f1d5deb7-af60-4f39-a50c-0713d8ed5c57">
+                <tekst-zwykly gd:GUID="4c071560-9098-4fd0-ba87-bf3e1d9384c6">1. Skierowanie świadczeniobiorcy do OK II jest możliwe po stwierdzeniu braku możliwości przeprowadzenia właściwego leczenia kardiologicznego w OK I, a także w sytuacji, gdy czas oczekiwania na udzielenie świadczenia w OK II jest krótszy niż w OK I lub gdy uzasadnia to stan kliniczny świadczeniobiorcy, z uwzględnieniem określonych przez świadczeniobiorcę kryteriów w zakresie terminu lub miejsca udzielenia świadczenia.</tekst-zwykly>
+                <tekst-zwykly gd:GUID="c1b7b151-c68e-43d3-a9d3-b617a78026f8">2. Skierowanie świadczeniobiorcy do OK III jest możliwe po stwierdzeniu braku możliwości przeprowadzenia właściwego leczenia kardiologicznego w OK II, a także w sytuacji, gdy czas oczekiwania na udzielenie świadczenia w OK III jest krótszy niż w OK II lub gdy uzasadnia to stan kliniczny świadczeniobiorcy, z uwzględnieniem określonych przez świadczeniobiorcę kryteriów w zakresie terminu lub miejsca udzielenia świadczenia.</tekst-zwykly>
+                <tekst-zwykly gd:GUID="12ed6966-17b9-4bde-a79b-c063033f9d0a">3. W przypadku skierowania do OK II albo OK III świadczeniobiorca w celu koordynacji opieki kardiologicznej kontaktuje się odpowiednio z koordynatorem opieki kardiologicznej OK II lub OK III. Koordynator opieki kardiologicznej udziela informacji o możliwości realizacji poszczególnych procedur diagnostyczno-terapeutycznych na określonych poziomach zabezpieczenia opieki kardiologicznej oraz wskazuje ośrodki kardiologiczne KSK, w których te procedury mogą być wykonane najszybciej i najbliżej miejsca zamieszkania świadczeniobiorcy, z uwzględnieniem określonych przez świadczeniobiorcę kryteriów w zakresie terminu lub miejsca udzielenia świadczenia.</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="315248ec-0716-4f6f-b510-16d0a27fd50b">
+              <td colspan="2" gd:GUID="76bbf922-5391-47e1-aad3-522a25b825b9">
+                <tekst-zwykly gd:GUID="a0c0e238-1654-4846-aaba-b3f0ac5d63ff">C. Obserwacja po leczeniu kardiologicznym</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="5b30978e-8cab-4c93-af60-78a6398604c0">
+              <td gd:GUID="c22812eb-8d70-4fa6-9a5b-ced265b5e44b">
+                <tekst-zwykly gd:GUID="17046daa-5811-49eb-bdd9-10ba5c3bcd70">II.C.1</tekst-zwykly>
+              </td>
+              <td gd:GUID="93d3580b-72d4-4eff-b212-377ff6bcf36f">
+                <tekst-zwykly gd:GUID="36072725-7bba-4805-88b0-aa4d8e0d4fc3">Lekarz specjalista w dziedzinie kardiologii ustala plan obserwacji po leczeniu zgodnie z aktualną wiedzą medyczną, w tym z wytycznymi właściwych towarzystw naukowych, dla świadczeniobiorcy:</tekst-zwykly>
+                <wyliczenie-1 gd:GUID="b08de342-a2ae-418d-90d5-8524d91cd7b6">1) u którego plan leczenia kardiologicznego obejmuje leczenie farmakologiczne – po jego rozpoczęciu;</wyliczenie-1>
+                <wyliczenie-1 gd:GUID="a80b50ca-2edc-4660-aa80-d766b9408b92">2) u którego plan leczenia kardiologicznego obejmuje leczenie zabiegowe – po jego zakończeniu.</wyliczenie-1>
+              </td>
+            </tr>
+            <tr gd:GUID="01f326d2-a65c-4851-87f8-64898a0df41c">
+              <td gd:GUID="afd6fd89-5fba-4372-9e1d-66ce1d1b3e9e">
+                <tekst-zwykly gd:GUID="5780c6eb-edcd-4d07-bec8-56b967e7047e">II.C.2</tekst-zwykly>
+              </td>
+              <td gd:GUID="ae594f68-1c8a-402a-9bb1-19894359f3ed">
+                <tekst-zwykly gd:GUID="78d2bcb1-48ed-4bd5-86d1-3f1e7f16cab6">W przypadku świadczeniobiorcy, u którego plan leczenia kardiologicznego obejmuje leczenie farmakologiczne, po jego rozpoczęciu przeprowadza się wizyty kontrolne zgodnie z planem obserwacji po leczeniu, w ramach ambulatoryjnej opieki specjalistycznej lub w POZ. Wizyty te obejmują:</tekst-zwykly>
+                <wyliczenie-1 gd:GUID="2a08aabb-dc3f-4e75-b710-fd776f7354fe">1) wywiad lekarski;</wyliczenie-1>
+                <wyliczenie-1 gd:GUID="1126c612-e3a1-4d79-8205-bc972c26827f">2) ocenę farmakoterapii;</wyliczenie-1>
+                <wyliczenie-1 gd:GUID="058e6d3d-ab67-46af-8f23-9e66747d2e7f">3) ocenę tolerancji wysiłku i występowania objawów alarmowych, w tym:</wyliczenie-1>
+                <wyliczenie-2 gd:GUID="7ad135ee-d254-437a-b46b-1f5443a48e4c">a) duszności wysiłkowej,</wyliczenie-2>
+                <wyliczenie-2 gd:GUID="2d64143a-1125-4519-85ae-56a27ffc43f0">b) bólu w klatce piersiowej,</wyliczenie-2>
+                <wyliczenie-2 gd:GUID="53623dda-b950-4b27-a5a6-afc5454f9f85">c) omdlenia lub stanu przedomdleniowego,</wyliczenie-2>
+                <wyliczenie-2 gd:GUID="3674bfe3-a199-4344-9de1-cb3c45136cd1">d) odczucia arytmii lub kołatania serca,</wyliczenie-2>
+                <wyliczenie-2 gd:GUID="82b4bbcb-99d1-49ab-b3e9-7aedd04364ce">e) spadku tolerancji wysiłku fizycznego bez innej dającej się określić przyczyny, pogorszenia kontroli ciśnienia tętniczego, nowych nieprawidłowości w zapisie EKG oraz obecności obrzęków obwodowych;</wyliczenie-2>
+                <wyliczenie-1 gd:GUID="9f741653-4b84-48aa-bed0-11be275cf89d">4) badanie fizykalne;</wyliczenie-1>
+                <wyliczenie-1 gd:GUID="17ff670f-be53-4831-9f5d-b469d9ba99dc">5) poradę edukacyjną dostosowaną do indywidualnych potrzeb świadczeniobiorcy;</wyliczenie-1>
+                <wyliczenie-1 gd:GUID="8701618b-b5bc-4724-88ef-5bc4f90fc3e3">6) ocenę zasadności skierowania na rehabilitację kardiologiczną zgodnie z aktualną wiedzą medyczną, w tym z wytycznymi właściwych towarzystw naukowych.</wyliczenie-1>
+              </td>
+            </tr>
+            <tr gd:GUID="500b9d14-4513-4c12-b4c1-fd08422b9454">
+              <td gd:GUID="8230484b-a17f-4d0a-847b-e4f1c6ed80da">
+                <tekst-zwykly gd:GUID="01fb6829-96f7-456a-8e66-1e49bc5ddda3">II.C.3</tekst-zwykly>
+              </td>
+              <td gd:GUID="a24c5724-24d5-44e4-9b05-7bfc32c047ab">
+                <tekst-zwykly gd:GUID="bb285c20-15cc-4557-bafb-61cd1d76c229">W przypadku świadczeniobiorcy, u którego plan leczenia kardiologicznego obejmuje postępowanie zabiegowe, po jego zakończeniu przeprowadza się wizyty kontrolne zgodnie z planem obserwacji po leczeniu, w ramach ambulatoryjnej opieki specjalistycznej lub w POZ. Wizyty te obejmują zakres, o którym mowa w części II.C.2, oraz:</tekst-zwykly>
+                <wyliczenie-1 gd:GUID="849f633c-a407-4a07-acf5-1eaba7827d7e">1) spoczynkowy zapis EKG;</wyliczenie-1>
+                <wyliczenie-1 gd:GUID="09cdc24d-6ee2-4fc1-b311-d1d4fddc6ce7">2) pomiar ciśnienia tętniczego;</wyliczenie-1>
+                <wyliczenie-1 gd:GUID="3291722e-548d-495d-8f3c-9a4e8da9d4ff">3) inne, dodatkowe badania diagnostyczne określone w przepisach wydanych na podstawie art. 31d ustawy z dnia 27 sierpnia 2004 r. o świadczeniach opieki zdrowotnej finansowanych ze środków publicznych, w zakresie, o którym mowa w art. 15 ust. 2 pkt 2 tej ustawy, jeżeli jest to uzasadnione ze względów medycznych;</wyliczenie-1>
+                <wyliczenie-1 gd:GUID="1b460758-30d9-45a3-8e95-3428888e77cf">4) objęcie opieką kardiologiczną w ramach monitoringu lub objęcie zdalnym nadzorem w ramach telemonitoringu urządzeń wszczepialnych.</wyliczenie-1>
+              </td>
+            </tr>
+            <tr gd:GUID="43bd90e0-a801-486f-b6b6-b50682cb444d">
+              <td gd:GUID="d116be9e-fe81-42ac-82e4-2671228ffd9a">
+                <tekst-zwykly gd:GUID="cc61d252-a78f-4cae-af73-71a3ad845980">II.C.4</tekst-zwykly>
+              </td>
+              <td gd:GUID="c82272a6-8e3b-42d7-bbb8-c99a88acc31a">
+                <tekst-zwykly gd:GUID="921a859f-763c-47cf-ba1c-c8d1f255a060">Jeżeli stan zdrowia świadczeniobiorcy pogarsza się lub pojawiają się nowe objawy, w szczególności te, o których mowa w części II.C.2, zleca się wykonanie dodatkowych badań diagnostycznych oraz weryfikację planu obserwacji po leczeniu.</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="0ce94ccb-4b25-43ca-ab09-0c1a557e10e9">
+              <td gd:GUID="86f6dbf6-92cb-4fa1-bdf0-4883718aa56c">
+                <tekst-zwykly gd:GUID="a9069c25-ff48-4fd2-bd5a-9478cf87b434">II.C.5</tekst-zwykly>
+              </td>
+              <td gd:GUID="3c39c7a9-8aa3-4025-ad27-af5ab5144b84">
+                <tekst-zwykly gd:GUID="23e0c3cc-96d7-434e-a427-079cc7cee5a3">W przypadku:</tekst-zwykly>
+                <wyliczenie-1 gd:GUID="c11998ad-e8c2-4a6f-8d8e-bea3a4f74305">1) pogorszenia stanu zdrowia świadczeniobiorcy lub pojawienia się nowych objawów, jeżeli występują wskazania kliniczne do hospitalizacji, świadczeniodawca:</wyliczenie-1>
+                <wyliczenie-2 gd:GUID="29b47567-bc36-41e1-9021-ea5f504b5b3e">a) kieruje świadczeniobiorcę do leczenia szpitalnego w OK I, OK II albo OK III,</wyliczenie-2>
+                <wyliczenie-2 gd:GUID="649f5dd9-7450-482b-b1fc-9f7b82594867">b) zapewnia świadczeniobiorcy kontakt z koordynatorem opieki kardiologicznej OK II albo OK III;</wyliczenie-2>
+                <wyliczenie-1 gd:GUID="0e9e9496-7e1b-427d-942b-def5fa27e3e9">2) wystąpienia u świadczeniobiorcy innych chorób przewlekłych z krótkim spodziewanym okresem przeżycia (poniżej jednego roku), powodujących kwalifikację świadczeniobiorcy do opieki paliatywnej i hospicyjnej, stosuje się kluczowe zalecenia, o których mowa w części V.3.</wyliczenie-1>
+              </td>
+            </tr>
+            <tr gd:GUID="88d43730-4c58-4926-bb2f-cf332e730e43">
+              <td gd:GUID="bd2ee167-da30-4a9b-90c4-60da8db57df0">
+                <tekst-zwykly gd:GUID="16b283b6-b865-438b-bd4e-e51a9bfaeab0">II.C.6</tekst-zwykly>
+              </td>
+              <td gd:GUID="4b4d11d0-93e6-4410-8103-585e2cd69b42">
+                <tekst-zwykly gd:GUID="5a86c4a1-779a-429e-98d5-72c6618625dd">Lekarz specjalista w dziedzinie kardiologii koordynuje realizację planu obserwacji po leczeniu we współpracy z lekarzem POZ, lekarzem specjalistą w dziedzinie kardiologii, diabetologii, chorób płuc, chorób wewnętrznych, nefrologii, geriatrii lub z innymi lekarzami specjalistami z odpowiednich dziedzin medycyny, w zależności od indywidualnych potrzeb świadczeniobiorcy.</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="8b1599b2-7edb-495b-a5b8-24649d468c4d">
+              <td colspan="2" gd:GUID="ae92c08d-5642-40f3-b8bd-370fb6879a41">
+                <tekst-zwykly gd:GUID="bf528f3c-2b63-4073-9ea2-ba392503ca5e">III. Leczenie szpitalne</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="2b2dd7bb-7790-4721-8cc7-259b22009ee2">
+              <td colspan="2" gd:GUID="60fcde61-01df-46cf-9a4a-a14f11f10a21">
+                <tekst-zwykly gd:GUID="60960490-856a-4f7a-bb67-fccce8f1dece">A. Diagnostyka kardiologiczna</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="41ac27e0-5824-443b-8e94-43dddb65f6e3">
+              <td gd:GUID="94562333-7e0c-4ebc-a5f9-d748576e93a0">
+                <tekst-zwykly gd:GUID="59ee1687-d060-4111-ac22-b8e739e437a4">III.A.1</tekst-zwykly>
+              </td>
+              <td gd:GUID="2ab12851-1b74-435d-ab56-9f340ba1595b">
+                <tekst-zwykly gd:GUID="8d278471-9745-4c7c-908b-07ab166fca02">W przypadku świadczeniobiorcy, który został skierowany na oddział kardiologiczny OK I, OK II albo OK III w celu przeprowadzenia pogłębionej diagnostyki kardiologicznej lub którego stan zdrowia uzasadnia hospitalizację, w ramach leczenia szpitalnego:</tekst-zwykly>
+                <wyliczenie-1 gd:GUID="85ae5169-46b6-48b8-9579-f46e4f3b768b">1) przeprowadza się analizę wykonanych dotychczas badań diagnostycznych, z uwzględnieniem badań wykonanych również u innych świadczeniodawców;</wyliczenie-1>
+                <wyliczenie-1 gd:GUID="ed29ff89-a22f-4b5c-acaa-3b1e0b9f85df">2) zleca się wykonanie niezbędnych uzupełniających badań diagnostycznych na podstawie konsultacji specjalistycznych i wykazu badań diagnostycznych określonych w przepisach wydanych na podstawie art. 31d ustawy z dnia 27 sierpnia 2004 r. o świadczeniach opieki zdrowotnej finansowanych ze środków publicznych, w zakresie, o którym mowa w art. 15 ust. 2 pkt 1 tej ustawy;</wyliczenie-1>
+                <wyliczenie-1 gd:GUID="7a23bc5b-b370-426b-ad46-ba6e79a445ff">3) wystawia się kartę e-KOK, jeżeli nie została wcześniej wystawiona.</wyliczenie-1>
+              </td>
+            </tr>
+            <tr gd:GUID="05d80914-bddd-4e7c-9f60-9446f718837e">
+              <td gd:GUID="45fb4576-829f-4eb1-b3d5-899205f0534d">
+                <tekst-zwykly gd:GUID="6d1ff735-dedf-477b-a7e1-68fa4e62ac07">III.A.2</tekst-zwykly>
+              </td>
+              <td gd:GUID="ba4a08bb-9e3d-41b8-a69d-432ada66e77f">
+                <tekst-zwykly gd:GUID="f9e6fe0c-f4dd-40bb-93f9-508d5b40a409">1. Dalsza diagnostyka kardiologiczna i leczenie kardiologiczne są prowadzone w OK I zapewniającym dostęp do wymaganych procedur diagnostyczno-terapeutycznych.</tekst-zwykly>
+                <tekst-zwykly gd:GUID="6e6f3314-6d2d-461a-8992-27900f1e20cf">2. Świadczeniobiorcę kieruje się do OK II w przypadku konieczności przeprowadzenia pogłębionej diagnostyki kardiologicznej, w tym inwazyjnych badań diagnostycznych w warunkach szpitalnych, niedostępnych w OK I, po wyczerpaniu możliwości diagnostyczno-terapeutycznych w OK I, a także w sytuacji, gdy czas oczekiwania na udzielenie świadczenia w OK II jest krótszy niż w OK I lub gdy uzasadnia to stan kliniczny świadczeniobiorcy, z uwzględnieniem określonych przez świadczeniobiorcę kryteriów w zakresie terminu lub miejsca udzielenia świadczenia.</tekst-zwykly>
+                <tekst-zwykly gd:GUID="6f04e1d4-a648-44b0-b7cf-5269e6f625af">3. Świadczeniobiorcę kieruje się do OK III w przypadku konieczności przeprowadzenia pogłębionej diagnostyki kardiologicznej, w tym inwazyjnych badań diagnostycznych w warunkach szpitalnych, niedostępnych w OK I albo OK II, po wyczerpaniu możliwości diagnostyczno-terapeutycznych w OK I albo OK II, a także w sytuacji, gdy czas oczekiwania na udzielenie świadczenia w OK III jest krótszy niż w OK I albo OK II oraz gdy uzasadnia to stan kliniczny świadczeniobiorcy, z uwzględnieniem określonych przez świadczeniobiorcę kryteriów w zakresie terminu lub miejsca udzielenia świadczenia.</tekst-zwykly>
+                <tekst-zwykly gd:GUID="23a9c0ca-58a4-4f7a-b92a-92e40cb9d3e7">4. W przypadku skierowania do OK II albo OK III świadczeniobiorca w celu koordynacji opieki kardiologicznej kontaktuje się odpowiednio z koordynatorem opieki kardiologicznej OK II lub OK III. Koordynator opieki kardiologicznej udziela informacji o możliwości realizacji poszczególnych procedur diagnostyczno-terapeutycznych na określonych poziomach zabezpieczenia opieki kardiologicznej oraz wskazuje ośrodki kardiologiczne KSK, w których te procedury mogą być wykonane najszybciej i najbliżej miejsca zamieszkania świadczeniobiorcy, z uwzględnieniem określonych przez świadczeniobiorcę kryteriów w zakresie terminu lub miejsca udzielenia świadczenia.</tekst-zwykly>
+                <tekst-zwykly gd:GUID="e204014f-729f-4f1d-89ac-0f4cdf631bd8">5. W przypadku zrealizowania planu diagnostyczno-terapeutycznego w OK II albo OK III i konieczności dalszej hospitalizacji świadczeniobiorcy ośrodek kardiologiczny KSK, w porozumieniu z koordynatorem opieki kardiologicznej, może skierować świadczeniobiorcę do dalszego leczenia szpitalnego w ośrodku o niższym poziomie zabezpieczenia opieki kardiologicznej. Koordynator opieki kardiologicznej ustala miejsce i czas przekazania świadczeniobiorcy ośrodkowi kardiologicznemu, do którego świadczeniobiorca jest kierowany, z uwzględnieniem określonych przez świadczeniobiorcę kryteriów w zakresie miejsca udzielenia świadczenia.</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="30769348-a34f-4fa2-b434-e5a26118a621">
+              <td gd:GUID="20f6cebb-6480-458b-b114-32b3b43b65dc">
+                <tekst-zwykly gd:GUID="ea141515-5329-4324-9451-0ba918ba7856">III.A.3</tekst-zwykly>
+              </td>
+              <td gd:GUID="cea2c13a-01a0-4a8a-989c-387d22f8efdf">
+                <tekst-zwykly gd:GUID="692b809c-b5bb-4e7e-82ef-31f598d1265a">Świadczeniobiorcę kieruje się do poradni kardiologicznej w przypadku konieczności uzupełnienia badań diagnostycznych, które mogą być wykonane w ramach ambulatoryjnej opieki specjalistycznej lub po stwierdzeniu braku wskazań do hospitalizacji.</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="192825eb-8d3b-49fe-86f1-381d9e9d4851">
+              <td gd:GUID="5b041b4e-6682-4260-ad01-6c6a9396cb3c">
+                <tekst-zwykly gd:GUID="612922e0-d0f0-4ed0-af12-6d1be6bd0643">III.A.4</tekst-zwykly>
+              </td>
+              <td gd:GUID="e2355af1-73ce-435f-9b1e-ab45f1995ea9">
+                <tekst-zwykly gd:GUID="15522863-ad09-4245-97a9-1a7230d81a54">Diagnostyka kardiologiczna prowadzona w warunkach szpitalnych kończy się postawieniem ostatecznego rozpoznania choroby układu krążenia oraz opracowaniem planu leczenia kardiologicznego w terminie 7 dni od dnia przyjęcia świadczeniobiorcy na oddział kardiologii, przy czym termin ten może ulec zmianie ze względu na stan kliniczny świadczeniobiorcy oraz możliwości organizacyjne ośrodka kardiologicznego.</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="6070af39-384a-4f5f-9588-17fb20341459">
+              <td colspan="2" gd:GUID="5b358745-cf1a-4e1d-a784-1d665075d634">
+                <tekst-zwykly gd:GUID="b836e54b-b92c-46bb-869d-9fd08bb7e420">B. Leczenie kardiologiczne</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="352b0700-fee2-4833-bb7c-170feb5f005b">
+              <td gd:GUID="c2f89fee-c17e-42f4-9f55-d234d616e445">
+                <tekst-zwykly gd:GUID="22d879c5-0f6a-4c94-bdb9-3e3ce79b4eed">III.B.1</tekst-zwykly>
+              </td>
+              <td gd:GUID="fea9305a-7f05-4f49-87e8-3cdecc64df24">
+                <tekst-zwykly gd:GUID="0a18e006-2148-4b57-a089-47fba1e0c2a0">U świadczeniobiorcy z rozpoznaną chorobą układu krążenia podejmuje się leczenie szpitalne w przypadku:</tekst-zwykly>
+                <wyliczenie-1 gd:GUID="875316df-a28b-41b6-90e2-bb24918558af">1) zagrożenia życia lub zdrowia świadczeniobiorcy;</wyliczenie-1>
+                <wyliczenie-1 gd:GUID="3d8be9c8-a9a6-4469-b706-1862c73338d2">2) braku możliwości wykonania procedur diagnostyczno-terapeutycznych w trybie ambulatoryjnym lub w sytuacjach klinicznych określonych zgodnie z aktualną wiedzą medyczną, w tym z wytycznymi właściwych towarzystw naukowych, z uwzględnieniem stanu zdrowia świadczeniobiorcy.</wyliczenie-1>
+              </td>
+            </tr>
+            <tr gd:GUID="c12e6a2e-b85b-490e-8991-fd4180ae3683">
+              <td gd:GUID="f9f1a026-139e-4b7b-a5a8-8ab0592402d4">
+                <tekst-zwykly gd:GUID="8ab736a0-5c83-418f-8554-0f6719d6077e">III.B.2</tekst-zwykly>
+              </td>
+              <td gd:GUID="85c75c66-dc9f-4e18-ab12-5df7172ae1af">
+                <tekst-zwykly gd:GUID="94de609b-d1ac-480b-82be-f3ece339936f">Realizacja planu leczenia kardiologicznego w ośrodku kardiologicznym KSK w zakresie leczenia szpitalnego następuje niezwłocznie po przyjęciu świadczeniobiorcy do leczenia szpitalnego oraz po uzyskaniu wyników dodatkowych badań diagnostycznych i konsultacji specjalistycznych, jeżeli są one uzasadnione ze względów medycznych.</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="1e840fe7-18c1-48d9-832c-0095341843be">
+              <td gd:GUID="d6907e27-941d-4694-8bad-193b196d73a3">
+                <tekst-zwykly gd:GUID="c20dba03-ed98-495a-8f59-1644625f5f5d">III.B.3</tekst-zwykly>
+              </td>
+              <td gd:GUID="f8c4f582-7cc6-494a-a046-723aa6e47076">
+                <tekst-zwykly gd:GUID="9977cc48-6b6a-4954-ad90-99a625f0f3fa">Świadczeniobiorcę kieruje się do ośrodka kardiologicznego KSK, który ma wyższy poziom zabezpieczenia opieki kardiologicznej lub posiada status Centrum Doskonałości Kardiologicznej w danej jednostce chorób układu krążenia, jeżeli świadczeniobiorca wymaga leczenia specjalistycznego niedostępnego w ośrodku kardiologicznym KSK, w którym jest prowadzona opieka kardiologiczna, po wyczerpaniu w nim możliwości diagnostyczno-terapeutycznych na wcześniejszych etapach postępowania leczenia szpitalnego.</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="91c0550a-2d41-4eb9-9c5d-7e4775e25c64">
+              <td gd:GUID="eeb5f1aa-44d1-4dfa-b8f1-6a5a2123c16c">
+                <tekst-zwykly gd:GUID="c94aa647-1b01-4174-8cd7-248a63757761">III.B.4</tekst-zwykly>
+              </td>
+              <td gd:GUID="fb8c35bf-7638-48c4-bec1-7d7a8b2b21ac">
+                <tekst-zwykly gd:GUID="69b3b3ad-1f0d-42da-9d83-a191fe95cf61">Świadczeniobiorcę kieruje się do poradni kardiologicznej, jeżeli możliwe jest kontynuowanie leczenia kardiologicznego zgodnie z planem leczenia kardiologicznego w ramach ambulatoryjnej opieki specjalistycznej.</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="b439fc56-9910-4c3d-bcb7-472624195b23">
+              <td gd:GUID="8139f4a7-2abf-4617-9d47-da43bebf8f6c">
+                <tekst-zwykly gd:GUID="751f7d2b-ecde-4461-8f3b-f6b4ee3f5cec">III.B.5</tekst-zwykly>
+              </td>
+              <td gd:GUID="69e13cb7-dc82-4dd9-a17d-76bdf4a7d6d9">
+                <tekst-zwykly gd:GUID="e20e3abb-c4bc-4951-ad13-bc0fb8bdf375">Świadczeniobiorcę kieruje się do świadczeniodawcy POZ, jeżeli możliwe jest kontynuowanie leczenia kardiologicznego zgodnie z planem leczenia kardiologicznego w ramach POZ lub opieki koordynowanej w POZ.</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="6695246f-4483-413c-9c1b-bbbeb76392ac">
+              <td colspan="2" gd:GUID="fc895136-051c-4b92-87f1-291a643ed5d0">
+                <tekst-zwykly gd:GUID="df71b718-d341-4e7d-b6f9-cd73124086c1">C. Obserwacja po leczeniu</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="6db003e0-b982-4569-bc79-1b029e4a4a99">
+              <td gd:GUID="e9fd9670-5be9-43a3-be6b-8d39a229651d">
+                <tekst-zwykly gd:GUID="21eb699a-02e9-4a89-97ef-4cc3ff34a9cc">III.C.1</tekst-zwykly>
+              </td>
+              <td gd:GUID="1cbdc0d6-f36e-4a74-9638-709b9aa395de">
+                <tekst-zwykly gd:GUID="705390a2-3d57-4679-bfca-ec59cb499a2b">Dla świadczeniobiorcy po zakończonym leczeniu interwencyjnym lub w trakcie leczenia farmakologicznego ustala się plan obserwacji po leczeniu oraz plan leczenia kardiologicznego w zakresie rehabilitacji kardiologicznej, jeżeli jest wymagany. Świadczeniobiorcę kieruje się także na:</tekst-zwykly>
+                <wyliczenie-1 gd:GUID="043fb63b-3baa-452a-ba6f-b894f756a25d">1) badania kontrolne – realizowane odpowiednio w zależności od stanu zdrowia świadczeniobiorcy i w odpowiednich ramach czasowych zgodnie z planem obserwacji po leczeniu, na możliwie najniższym poziomie zabezpieczenia opieki kardiologicznej ustalonym przez lekarza specjalistę w dziedzinie kardiologii, na podstawie aktualnej wiedzy medycznej, w tym wytycznych właściwych towarzystw naukowych;</wyliczenie-1>
+                <wyliczenie-1 gd:GUID="c41b7b37-063a-46c9-b14f-6f23b580cb88">2) badania kontrolne po leczeniu kardiologicznym – realizowane w ramach POZ lub opieki koordynowanej w POZ zgodnie z planem obserwacji po leczeniu, jeżeli są wymagane;</wyliczenie-1>
+                <wyliczenie-1 gd:GUID="3de7a5c5-818e-4c58-b5fe-bd694aab3ae3">3) rehabilitację kardiologiczną – realizowaną zgodnie z planem leczenia kardiologicznego w zakresie rehabilitacji kardiologicznej, jeżeli jest wymagana, lub na objęcie opieką w ramach monitoringu lub objęcie zdalnym nadzorem w ramach telemonitoringu urządzeń wszczepialnych.</wyliczenie-1>
+              </td>
+            </tr>
+            <tr gd:GUID="83766fa0-2a7b-497a-a469-b6a5c78e93ce">
+              <td gd:GUID="3fce5539-504a-4784-85ec-911a194044c5">
+                <tekst-zwykly gd:GUID="7652148a-5936-4ef6-a8fb-7c5694587130">III.C.2</tekst-zwykly>
+              </td>
+              <td gd:GUID="02bb524d-b841-42b3-b0d5-7b5d46298990">
+                <tekst-zwykly gd:GUID="7631e59a-c774-4631-b18d-53e3825b6890">W przypadku:</tekst-zwykly>
+                <wyliczenie-1 gd:GUID="bdc6e184-b1fa-4bec-9b41-a9e449a6fcd3">1) pogorszenia stanu zdrowia świadczeniobiorcy lub pojawienia się nowych objawów, w szczególności tych, o których mowa w części II.C.2, wydłuża się hospitalizację świadczeniobiorcy według wskazań klinicznych;</wyliczenie-1>
+                <wyliczenie-1 gd:GUID="062d1db9-16e9-499c-a266-5e2e2314dade">2) wystąpienia u świadczeniobiorcy innych chorób przewlekłych z krótkim spodziewanym okresem przeżycia (poniżej jednego roku), powodujących kwalifikację świadczeniobiorcy do opieki paliatywnej i hospicyjnej, stosuje się kluczowe zalecenia, o których mowa w części V.3.</wyliczenie-1>
+              </td>
+            </tr>
+            <tr gd:GUID="0a90cee4-265d-4bbe-b204-e1b01ee9aa12">
+              <td colspan="2" gd:GUID="09436acd-f025-49dc-a306-2076ab4f4bf5">
+                <tekst-zwykly gd:GUID="9997dc78-1e2e-4f6d-a3f4-169ff8a1d712">IV. Rehabilitacja kardiologiczna</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="4b56625f-cedf-4d4a-9a4f-23f66822a164">
+              <td gd:GUID="18ef7ea3-57df-4a4d-a419-7bb8d689585c">
+                <tekst-zwykly gd:GUID="72a91004-42a0-436e-8b91-69e588bc84ec">IV.1</tekst-zwykly>
+              </td>
+              <td gd:GUID="5f88a177-f7a3-45f5-b561-98a8131b0299">
+                <tekst-zwykly gd:GUID="b2c5096a-7bdf-451e-8dc8-c60e4210b29f">1. Dla świadczeniobiorców:</tekst-zwykly>
+                <wyliczenie-1 gd:GUID="de4e839a-08be-4dc2-b67b-ff643cff26a7">1) po zawale serca lub</wyliczenie-1>
+                <wyliczenie-1 gd:GUID="a10ffe80-2921-48ec-a0a5-daed5a60476a">2) po operacji kardiochirurgicznej, lub</wyliczenie-1>
+                <wyliczenie-1 gd:GUID="348edf44-4afe-4b73-b674-a0cfd97c6b0c">3) po zabiegach z zakresu kardiologii inwazyjnej, jeżeli istnieją wskazania kliniczne, lub</wyliczenie-1>
+                <wyliczenie-1 gd:GUID="9fc65f2a-4b23-4936-842e-6aeed34d7e0f">4) po dekompensacji niewydolności serca, jeżeli istnieją wskazania kliniczne, lub</wyliczenie-1>
+                <wyliczenie-1 gd:GUID="ed1b26e9-0c0f-4e7a-a647-8747731485a4">5) w stanie zdrowia uzasadniającym konieczność rehabilitacji</wyliczenie-1>
+                <wyliczenie-2 gd:GUID="cc5aa879-2294-4724-942a-1dcb6eee0abd">– opracowuje się plan leczenia kardiologicznego w zakresie rehabilitacji kardiologicznej, jeżeli istnieją wskazania kliniczne.</wyliczenie-2>
+                <tekst-zwykly gd:GUID="7d06753d-255f-4c65-8952-da98c1f47151">2. Plan leczenia kardiologicznego w zakresie rehabilitacji kardiologicznej obejmuje:</tekst-zwykly>
+                <wyliczenie-1 gd:GUID="d9992f1e-4af0-43f7-a847-606497f8ff44">1) ocenę stanu zdrowia świadczeniobiorcy;</wyliczenie-1>
+                <wyliczenie-1 gd:GUID="eb0d4985-019c-4bb6-8e42-fb5db78a0557">2) harmonogram rehabilitacji kardiologicznej uwzględniający telerehabilitację, jeżeli jest możliwa;</wyliczenie-1>
+                <wyliczenie-1 gd:GUID="57cbd463-74ec-4273-9512-52946857174f">3) plan zabiegów i ćwiczeń;</wyliczenie-1>
+                <wyliczenie-1 gd:GUID="3b75215f-fc13-44f4-a9c5-b4adbe4bc464">4) monitorowanie stanu zdrowia świadczeniobiorcy;</wyliczenie-1>
+                <wyliczenie-1 gd:GUID="9d5f563e-8e2f-498a-bf0b-be19e0c4aabb">5) edukację zdrowotną.</wyliczenie-1>
+              </td>
+            </tr>
+            <tr gd:GUID="332230a0-e2f5-4d20-89bd-863bca886cd8">
+              <td gd:GUID="da52529b-7cbe-43f3-a704-551fd730b931">
+                <tekst-zwykly gd:GUID="86a5844d-eaae-4f04-8196-bd66910ac592">IV.2</tekst-zwykly>
+              </td>
+              <td gd:GUID="cafe28d7-1ef8-41bb-8e11-0a01b8563b1a">
+                <tekst-zwykly gd:GUID="55b77512-405e-465e-8131-e1f7ed71a9af">Świadczeniobiorcom po:</tekst-zwykly>
+                <wyliczenie-1 gd:GUID="c5342292-32e7-4fb8-a1ad-5c6388641b81">1) zawale serca lub</wyliczenie-1>
+                <wyliczenie-1 gd:GUID="3ff7748b-12e0-42b6-a42b-924051116c2f">2) operacji kardiochirurgicznej, lub</wyliczenie-1>
+                <wyliczenie-1 gd:GUID="0a17e259-b764-43b1-a3e3-caa227859e6a">3) zabiegach z zakresu kardiologii inwazyjnej, jeżeli istnieją wskazania kliniczne, lub</wyliczenie-1>
+                <wyliczenie-1 gd:GUID="43282d91-cf7f-44ba-9cf7-c35b155ace1e">4) dekompensacji niewydolności serca</wyliczenie-1>
+                <wyliczenie-2 gd:GUID="165caf14-8d24-4828-9fbd-fd4757c89b34">– zapewnia się wczesną rehabilitację, jeżeli istnieją wskazania kliniczne.</wyliczenie-2>
+              </td>
+            </tr>
+            <tr gd:GUID="3243f630-c696-4fab-9871-13ca7a3d47ef">
+              <td colspan="2" gd:GUID="14e333ae-4d7e-42dc-827c-7ac62423c101">
+                <tekst-zwykly gd:GUID="be81a9b4-1705-410a-934f-5d65f046951c">V. Opieka długoterminowa</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="481fb191-8ff8-4244-86b3-edbc3c940641">
+              <td gd:GUID="d0815b16-a22c-47f7-985f-0bdca8cd3763">
+                <tekst-zwykly gd:GUID="cfb1ce5e-15c6-464f-8d29-13fa8dfa1c55">V.1</tekst-zwykly>
+              </td>
+              <td gd:GUID="8e077c49-a629-4709-b3c3-3fdffe694b00">
+                <tekst-zwykly gd:GUID="33e49a40-6c81-48e1-abba-565ea7fa82a5">Świadczeniobiorcę po przebytych procedurach specjalistycznych podczas leczenia szpitalnego lub w ramach ambulatoryjnej opieki specjalistycznej na poszczególnych poziomach zabezpieczenia opieki kardiologicznej, który w opinii lekarza specjalisty w dziedzinie kardiologii nie wymaga dalszego postępowania diagnostyczno-terapeutycznego w ramach leczenia szpitalnego w OK II ani w OK III, kieruje się wraz z planem leczenia kardiologicznego do lekarza POZ z dostępem do opieki koordynowanej w POZ albo do OK I w ramach ambulatoryjnej opieki specjalistycznej. Ustala się harmonogram wizyt kontrolnych, które są dostosowane do indywidualnych potrzeb świadczeniobiorcy i które odbywają się co najmniej raz na 12 miesięcy. Wizyty kontrolne obejmują:</tekst-zwykly>
+                <wyliczenie-1 gd:GUID="999d586b-9e9f-4c01-b79b-8231cd2ff13a">1) ocenę stanu zdrowia świadczeniobiorcy;</wyliczenie-1>
+                <wyliczenie-1 gd:GUID="04f8d7f0-4cf9-4a76-b5cf-c6782b6ee63b">2) ocenę farmakoterapii, jeżeli została zastosowana;</wyliczenie-1>
+                <wyliczenie-1 gd:GUID="3fd0bf19-78d7-4a81-b70c-dbe1999c3ade">3) badania kontrolne wynikające z planu leczenia kardiologicznego oraz indywidualnych potrzeb świadczeniobiorcy;</wyliczenie-1>
+                <wyliczenie-1 gd:GUID="dc397792-7790-4dad-9238-8f412fdd88b3">4) ocenę przestrzegania zaleceń i osiągnięcia celów terapeutycznych;</wyliczenie-1>
+                <wyliczenie-1 gd:GUID="20310cad-ae2b-4872-aefe-6336e77e5a94">5) aktualizację planu leczenia kardiologicznego zgodnie z aktualną wiedzą medyczną, w tym z wytycznymi właściwych towarzystw naukowych;</wyliczenie-1>
+                <wyliczenie-1 gd:GUID="3d3323d6-a90d-44af-81e6-6cfbdff12752">6) poradę edukacyjną w zakresie wynikającym z indywidualnych potrzeb świadczeniobiorcy.</wyliczenie-1>
+              </td>
+            </tr>
+            <tr gd:GUID="8e0e7fb2-9cbb-4ada-b83a-215fa5211e67">
+              <td gd:GUID="9ec8d795-173c-496c-a1ca-a84371a3b878">
+                <tekst-zwykly gd:GUID="9e072c37-a99d-4b5b-9b3c-5422b086be5d">V.2</tekst-zwykly>
+              </td>
+              <td gd:GUID="162443ff-c863-4f07-8335-8940f6778458">
+                <tekst-zwykly gd:GUID="e1ebcb50-41da-44fe-9c06-5058a5afd259">W przypadku świadczeniobiorcy:</tekst-zwykly>
+                <wyliczenie-1 gd:GUID="337f7748-18ce-4281-bb26-4af2949b101b">1) wymagającego regularnego albo stałego nadzoru specjalistycznego ze względu na zaawansowanie choroby układu krążenia lub ustalony plan leczenia kardiologicznego – który obejmuje w najbliższym czasie zastosowanie wysokospecjalistycznych procedur – pozostaje on pod opieką w ramach ambulatoryjnej opieki specjalistycznej lub leczenia szpitalnego w OK I, OK II albo OK III aż do czasu zastosowania wysokospecjalistycznych procedur, a następnie jest nadzorowany zgodnie z pkt 2 lub 3, w zależności od ustalonego planu leczenia kardiologicznego;</wyliczenie-1>
+                <wyliczenie-1 gd:GUID="6232d862-c599-41d5-bfbe-ef12b058da0b">2) leczonego w ramach ambulatoryjnej opieki specjalistycznej w OK I, OK II albo OK III – ustala się harmonogram wizyt kontrolnych u lekarza POZ, które są dostosowane do indywidualnych potrzeb świadczeniobiorcy, ze szczególnym uwzględnieniem jego chorób współistniejących, i które odbywają się co najmniej dwa razy na 12 miesięcy. Wizyty kontrolne obejmują:</wyliczenie-1>
+                <wyliczenie-2 gd:GUID="e38971a6-4bc3-4061-a0ec-9ae0d244ed87">a) ocenę stanu zdrowia świadczeniobiorcy,</wyliczenie-2>
+                <wyliczenie-2 gd:GUID="a3fe73ec-e679-4cd5-94d2-5dd443e2ae36">b) ocenę farmakoterapii, jeżeli została zastosowana,</wyliczenie-2>
+                <wyliczenie-2 gd:GUID="cb0a20af-1b71-4df6-ba78-840bb3726b9b">c) ocenę przestrzegania zaleceń i osiągnięcia celów terapeutycznych,</wyliczenie-2>
+                <wyliczenie-2 gd:GUID="3acfc17d-3a02-49fa-8775-ad857b6ba238">d) aktualizację planu leczenia kardiologicznego zgodnie z aktualną wiedzą medyczną, w tym z wytycznymi właściwych towarzystw naukowych;</wyliczenie-2>
+                <wyliczenie-1 gd:GUID="6a23e67a-bbfc-4731-8586-876a4658a5ee">3) wymagającego regularnego albo stałego nadzoru specjalistycznego ze względu na wykonaną procedurę zabiegową w zakresie urządzeń wszczepialnych – może być on objęty zdalnym nadzorem w ramach telemonitoringu urządzeń wszczepialnych.</wyliczenie-1>
+              </td>
+            </tr>
+            <tr gd:GUID="421e7e76-fac4-4c6e-8e5f-8d35a0fe0ac1">
+              <td gd:GUID="502d85f1-b644-4159-b797-426e2cf6110e">
+                <tekst-zwykly gd:GUID="9b90047f-3f2b-4ba8-86e9-aea837fa6f14">V.3</tekst-zwykly>
+              </td>
+              <td gd:GUID="db71d676-f279-4efc-bcde-ed7ffbea9764">
+                <tekst-zwykly gd:GUID="2c6d6d2b-a48f-4e0a-a3f9-1dd14e7c7231">Świadczeniobiorca niezakwalifikowany do dalszego leczenia zabiegowego ze względu na:</tekst-zwykly>
+                <wyliczenie-1 gd:GUID="dc6b9306-fa78-4bfa-892e-8e3eaaac2892">1) nieakceptowalnie wysokie ryzyko zabiegu,</wyliczenie-1>
+                <wyliczenie-1 gd:GUID="589e5133-3c9f-44f1-bd95-165334e2744f">2) krótki spodziewany okres przeżycia (poniżej jednego roku),</wyliczenie-1>
+                <wyliczenie-1 gd:GUID="abbc6232-0bae-4a11-9acc-678037e576f7">3) wielochorobowość,</wyliczenie-1>
+                <wyliczenie-1 gd:GUID="8914d6fa-8098-4c6d-88d9-322c9c8895b7">4) zaawansowaną chorobę przewlekłą,</wyliczenie-1>
+                <wyliczenie-1 gd:GUID="8e56f774-2818-4982-a5f0-a92b7bf81050">5) zespół kruchości</wyliczenie-1>
+                <wyliczenie-2 gd:GUID="1aab8129-dcdd-43ad-a75c-6000fc11c4df">– zostaje przekazany, w zależności od stanu zdrowia, pod opiekę najbliższej rodziny i lekarza POZ, hospicjum domowego, zakładu opiekuńczo-leczniczego lub oddziału opieki paliatywnej w celu zapewnienia stałej opieki w podmiocie leczniczym wykonującym działalność leczniczą w rodzaju stacjonarne i całodobowe świadczenia zdrowotne.</wyliczenie-2>
+              </td>
+            </tr>
+          </tbody>
+        </tabela>
+      </segment-zalacznika>
+    </zalacznik>
+  </rozporzadzenie>
+</akt-prawny>

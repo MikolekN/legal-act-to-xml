@@ -1,0 +1,264 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <rozporzadzenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/1462</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>c6b552ef-150b-418e-bee7-04e5e5362e20</gd:GUIDwersji>
+      <AdresISAP>WDU20250001462</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>1462</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 1462</AdresWyswietlany>
+      <Tytul>Rozporządzenie Ministra Obrony Narodowej z dnia 16 października 2025 r. w sprawie określenia priorytetowych dziedzin medycyny dla Sił Zbrojnych Rzeczypospolitej Polskiej</Tytul>
+      <Rodzaj>ROZP</Rodzaj>
+      <DataOgloszenia>2025-10-24</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-10-16</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2025-11-08_DU-2025-1462_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2025-11-08" warunek="po upływie 14 dni od dnia ogłoszenia" podstawa="§ 2" zrodlo="https://eli.gov.pl/eli/DU/2025/1462" dowod="DU/2025/1462__art_2" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2025-11-08_DU-2025-1462_domyslne.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2025-11-08_DU-2025-1462_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="2bc05a2f-2a1e-4fb6-b98f-2f4ec0e10322" rola="wydajacy">
+          <Nazwa>Minister Obrony Narodowej</Nazwa>
+          <OrganPodpisujacy>Minister Obrony Narodowej</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>P.</imie> <nazwisko>Bejda</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Rozporządzenie</rodzaj-aktu>
+    <autor-aktu>Ministra Obrony Narodowej</autor-aktu>
+    <data>z dnia 16 października 2025 r.</data>
+    <tytul>w sprawie określenia priorytetowych dziedzin medycyny dla Sił Zbrojnych Rzeczypospolitej Polskiej</tytul>
+    <podstawa-prawna>Na podstawie art. 16g ust. 5 ustawy z dnia 5 grudnia 1996 r. o zawodach lekarza i lekarza dentysty (Dz. U. z 2024 r. poz. 1287 i 1897 oraz z 2025 r. poz. 619, 769 i 1301) zarządza się, co następuje:</podstawa-prawna>
+    <paragraf eId="DU/2025/1462__art_1" gd:GUID="da8e737d-e1c2-4a32-bfa6-1dc8934a44eb" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-08_DU-2025-1462_domyslne.x" wejscie-w-zycie="2025-11-08">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="dabd8763-b438-4bc5-83c1-db68c4e9b990" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-08_DU-2025-1462_domyslne.x" wejscie-w-zycie="2025-11-08">
+        <p>
+          <zdanie nr="1" gd:zdGUID="a741a752-6403-42d8-be49-926c5df0a5c1" fragment="1" gd:fragmentGUID="e5b26b5a-d83f-465b-99ed-7447e9300cd6" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-08_DU-2025-1462_domyslne.x" wejscie-w-zycie="2025-11-08">Priorytetowymi dziedzinami medycyny dla Sił Zbrojnych Rzeczypospolitej Polskiej na wszystkich poziomach systemu zabezpieczenia medycznego są:</zdanie>
+        </p>
+        <punkt eId="DU/2025/1462__art_1__pkt_1" gd:GUID="ac0942fe-31fe-4b76-b4f4-77de57f29179" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-08_DU-2025-1462_domyslne.x" wejscie-w-zycie="2025-11-08">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a741a752-6403-42d8-be49-926c5df0a5c1" fragment="2" gd:fragmentGUID="8f3eb992-eaee-4132-9ae1-4bc94e9ad568" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-08_DU-2025-1462_domyslne.x" wejscie-w-zycie="2025-11-08">anestezjologia i intensywna terapia;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1462__art_1__pkt_2" gd:GUID="5f257e43-099f-4f6b-8031-ea48f0edbfb9" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-08_DU-2025-1462_domyslne.x" wejscie-w-zycie="2025-11-08">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a741a752-6403-42d8-be49-926c5df0a5c1" fragment="3" gd:fragmentGUID="18800f0f-2c0e-4ce6-8d14-3993f301212b" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-08_DU-2025-1462_domyslne.x" wejscie-w-zycie="2025-11-08">chirurgia klatki piersiowej;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1462__art_1__pkt_3" gd:GUID="f9ee160a-9793-4f5e-b3dc-19a2a048f4ab" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-08_DU-2025-1462_domyslne.x" wejscie-w-zycie="2025-11-08">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a741a752-6403-42d8-be49-926c5df0a5c1" fragment="4" gd:fragmentGUID="41ac50fe-fcd1-4527-90ac-2cc71c096517" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-08_DU-2025-1462_domyslne.x" wejscie-w-zycie="2025-11-08">chirurgia naczyniowa;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1462__art_1__pkt_4" gd:GUID="f946b3ec-a484-4cca-9fc4-f3a27ada052c" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-08_DU-2025-1462_domyslne.x" wejscie-w-zycie="2025-11-08">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a741a752-6403-42d8-be49-926c5df0a5c1" fragment="5" gd:fragmentGUID="81c61a52-f8ed-4766-bca5-58fc67fa3231" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-08_DU-2025-1462_domyslne.x" wejscie-w-zycie="2025-11-08">chirurgia ogólna;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1462__art_1__pkt_5" gd:GUID="3f341e5e-fba2-47b9-ac1c-3ceb4ff75597" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-08_DU-2025-1462_domyslne.x" wejscie-w-zycie="2025-11-08">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a741a752-6403-42d8-be49-926c5df0a5c1" fragment="6" gd:fragmentGUID="2933f475-4ffc-4881-9e78-98abf0be351f" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-08_DU-2025-1462_domyslne.x" wejscie-w-zycie="2025-11-08">chirurgia plastyczna;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1462__art_1__pkt_6" gd:GUID="e7aef6f9-83f0-47f0-860a-c000c4c3d8df" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-08_DU-2025-1462_domyslne.x" wejscie-w-zycie="2025-11-08">
+          <nr>6</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a741a752-6403-42d8-be49-926c5df0a5c1" fragment="7" gd:fragmentGUID="db36fd64-b053-453f-aeb7-2ebb77e504fd" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-08_DU-2025-1462_domyslne.x" wejscie-w-zycie="2025-11-08">chirurgia stomatologiczna;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1462__art_1__pkt_7" gd:GUID="39022a7d-051d-40f5-9cb9-6f4557fbde40" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-08_DU-2025-1462_domyslne.x" wejscie-w-zycie="2025-11-08">
+          <nr>7</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a741a752-6403-42d8-be49-926c5df0a5c1" fragment="8" gd:fragmentGUID="61861697-94c8-42e7-8715-2374e15c81b9" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-08_DU-2025-1462_domyslne.x" wejscie-w-zycie="2025-11-08">chirurgia szczękowo-twarzowa;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1462__art_1__pkt_8" gd:GUID="cbe88b94-b5a0-4475-b270-900088c7386e" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-08_DU-2025-1462_domyslne.x" wejscie-w-zycie="2025-11-08">
+          <nr>8</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a741a752-6403-42d8-be49-926c5df0a5c1" fragment="9" gd:fragmentGUID="53a5489a-a644-41fd-8897-e46da5c41756" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-08_DU-2025-1462_domyslne.x" wejscie-w-zycie="2025-11-08">choroby wewnętrzne;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1462__art_1__pkt_9" gd:GUID="8a9ef762-49b3-4aaa-8613-24e773fcafac" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-08_DU-2025-1462_domyslne.x" wejscie-w-zycie="2025-11-08">
+          <nr>9</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a741a752-6403-42d8-be49-926c5df0a5c1" fragment="10" gd:fragmentGUID="e8367ab8-6371-47aa-81fe-f0a7ad8be5ce" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-08_DU-2025-1462_domyslne.x" wejscie-w-zycie="2025-11-08">choroby zakaźne;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1462__art_1__pkt_10" gd:GUID="6a922538-006b-4de4-8ba6-c77bebe66bf0" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-08_DU-2025-1462_domyslne.x" wejscie-w-zycie="2025-11-08">
+          <nr>10</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a741a752-6403-42d8-be49-926c5df0a5c1" fragment="11" gd:fragmentGUID="1e425a93-09b4-4b4a-9000-0f616b1bb55c" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-08_DU-2025-1462_domyslne.x" wejscie-w-zycie="2025-11-08">dermatologia i wenerologia;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1462__art_1__pkt_11" gd:GUID="e5891764-8ba9-42be-8106-cebc5a03d661" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-08_DU-2025-1462_domyslne.x" wejscie-w-zycie="2025-11-08">
+          <nr>11</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a741a752-6403-42d8-be49-926c5df0a5c1" fragment="12" gd:fragmentGUID="a123f188-d717-4a64-ac56-d61716d6b751" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-08_DU-2025-1462_domyslne.x" wejscie-w-zycie="2025-11-08">diagnostyka laboratoryjna;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1462__art_1__pkt_12" gd:GUID="11d38eac-7ba5-47a8-8dcc-bf22927fe8fd" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-08_DU-2025-1462_domyslne.x" wejscie-w-zycie="2025-11-08">
+          <nr>12</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a741a752-6403-42d8-be49-926c5df0a5c1" fragment="13" gd:fragmentGUID="5243f90e-3075-4a54-9841-45b08bf368a7" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-08_DU-2025-1462_domyslne.x" wejscie-w-zycie="2025-11-08">hematologia;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1462__art_1__pkt_13" gd:GUID="e51376c5-b86b-454b-93c8-b5591402b574" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-08_DU-2025-1462_domyslne.x" wejscie-w-zycie="2025-11-08">
+          <nr>13</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a741a752-6403-42d8-be49-926c5df0a5c1" fragment="14" gd:fragmentGUID="52fbb5e5-43b5-435c-9159-e6a1488cf7a8" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-08_DU-2025-1462_domyslne.x" wejscie-w-zycie="2025-11-08">epidemiologia;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1462__art_1__pkt_14" gd:GUID="232aca20-dfcd-4442-8597-8c8289fa6e77" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-08_DU-2025-1462_domyslne.x" wejscie-w-zycie="2025-11-08">
+          <nr>14</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a741a752-6403-42d8-be49-926c5df0a5c1" fragment="15" gd:fragmentGUID="b2919024-90fb-461d-b24d-b6d6b18a6511" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-08_DU-2025-1462_domyslne.x" wejscie-w-zycie="2025-11-08">intensywna terapia;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1462__art_1__pkt_15" gd:GUID="21964931-bf11-45f4-beae-9c8b45bc65ae" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-08_DU-2025-1462_domyslne.x" wejscie-w-zycie="2025-11-08">
+          <nr>15</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a741a752-6403-42d8-be49-926c5df0a5c1" fragment="16" gd:fragmentGUID="0cb1a586-f1ef-4ade-ab56-42b2207b42dc" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-08_DU-2025-1462_domyslne.x" wejscie-w-zycie="2025-11-08">kardiologia;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1462__art_1__pkt_16" gd:GUID="efcea20b-a220-4d4f-9dfb-74cf71a439a5" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-08_DU-2025-1462_domyslne.x" wejscie-w-zycie="2025-11-08">
+          <nr>16</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a741a752-6403-42d8-be49-926c5df0a5c1" fragment="17" gd:fragmentGUID="06ed836b-cfee-4b91-8b11-32a9d5744b6b" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-08_DU-2025-1462_domyslne.x" wejscie-w-zycie="2025-11-08">kardiochirurgia;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1462__art_1__pkt_17" gd:GUID="5ef2776d-379a-4529-8a65-58f39d128bd2" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-08_DU-2025-1462_domyslne.x" wejscie-w-zycie="2025-11-08">
+          <nr>17</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a741a752-6403-42d8-be49-926c5df0a5c1" fragment="18" gd:fragmentGUID="103b5cc6-d288-4e3b-827a-27cfbcb19f35" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-08_DU-2025-1462_domyslne.x" wejscie-w-zycie="2025-11-08">medycyna lotnicza;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1462__art_1__pkt_18" gd:GUID="c60d08b5-f99c-4898-a8dd-2b2408cbc89f" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-08_DU-2025-1462_domyslne.x" wejscie-w-zycie="2025-11-08">
+          <nr>18</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a741a752-6403-42d8-be49-926c5df0a5c1" fragment="19" gd:fragmentGUID="01bd94ba-a2a9-4463-a24d-1e5eff1bbe63" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-08_DU-2025-1462_domyslne.x" wejscie-w-zycie="2025-11-08">medycyna morska i tropikalna;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1462__art_1__pkt_19" gd:GUID="50eba475-a108-4633-9381-acbf8749b2aa" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-08_DU-2025-1462_domyslne.x" wejscie-w-zycie="2025-11-08">
+          <nr>19</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a741a752-6403-42d8-be49-926c5df0a5c1" fragment="20" gd:fragmentGUID="97a90f3d-8871-4835-a109-75fb2eeb91c2" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-08_DU-2025-1462_domyslne.x" wejscie-w-zycie="2025-11-08">medycyna nuklearna;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1462__art_1__pkt_20" gd:GUID="6d0bb37f-a1e8-44bb-87f8-f4b38d291078" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-08_DU-2025-1462_domyslne.x" wejscie-w-zycie="2025-11-08">
+          <nr>20</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a741a752-6403-42d8-be49-926c5df0a5c1" fragment="21" gd:fragmentGUID="5bdea25b-0ce7-47cb-8322-6853f37a2b82" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-08_DU-2025-1462_domyslne.x" wejscie-w-zycie="2025-11-08">medycyna pracy;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1462__art_1__pkt_21" gd:GUID="4a18d954-4065-4bfa-b830-4d01de20743c" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-08_DU-2025-1462_domyslne.x" wejscie-w-zycie="2025-11-08">
+          <nr>21</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a741a752-6403-42d8-be49-926c5df0a5c1" fragment="22" gd:fragmentGUID="fc2a3cfb-78dc-40b9-bfec-d640f4fe75a3" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-08_DU-2025-1462_domyslne.x" wejscie-w-zycie="2025-11-08">medycyna ratunkowa;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1462__art_1__pkt_22" gd:GUID="63950029-32bf-404b-842e-c3445d340ca0" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-08_DU-2025-1462_domyslne.x" wejscie-w-zycie="2025-11-08">
+          <nr>22</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a741a752-6403-42d8-be49-926c5df0a5c1" fragment="23" gd:fragmentGUID="cef8c753-0e11-4d6e-a41a-1e5cb0f4489c" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-08_DU-2025-1462_domyslne.x" wejscie-w-zycie="2025-11-08">mikrobiologia lekarska;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1462__art_1__pkt_23" gd:GUID="8d08192c-aa60-4a5d-bf81-10fc902eff4b" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-08_DU-2025-1462_domyslne.x" wejscie-w-zycie="2025-11-08">
+          <nr>23</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a741a752-6403-42d8-be49-926c5df0a5c1" fragment="24" gd:fragmentGUID="70fb4606-cf1c-465a-8e8a-46034b97faee" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-08_DU-2025-1462_domyslne.x" wejscie-w-zycie="2025-11-08">neurochirurgia;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1462__art_1__pkt_24" gd:GUID="d8decffe-06f2-47b7-b20b-671e002511a7" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-08_DU-2025-1462_domyslne.x" wejscie-w-zycie="2025-11-08">
+          <nr>24</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a741a752-6403-42d8-be49-926c5df0a5c1" fragment="25" gd:fragmentGUID="ccf3de50-c329-46d2-bc02-352ed3dff0ea" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-08_DU-2025-1462_domyslne.x" wejscie-w-zycie="2025-11-08">neurologia;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1462__art_1__pkt_25" gd:GUID="b317ed32-9ac0-4559-bf59-9de5d6deedb4" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-08_DU-2025-1462_domyslne.x" wejscie-w-zycie="2025-11-08">
+          <nr>25</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a741a752-6403-42d8-be49-926c5df0a5c1" fragment="26" gd:fragmentGUID="c77ecd5c-7518-40c8-9336-5cfb266a72e6" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-08_DU-2025-1462_domyslne.x" wejscie-w-zycie="2025-11-08">okulistyka;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1462__art_1__pkt_26" gd:GUID="a7019703-aab3-402c-b623-42c136c42e67" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-08_DU-2025-1462_domyslne.x" wejscie-w-zycie="2025-11-08">
+          <nr>26</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a741a752-6403-42d8-be49-926c5df0a5c1" fragment="27" gd:fragmentGUID="747abb83-2dc7-4193-b2d0-af8afff3901c" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-08_DU-2025-1462_domyslne.x" wejscie-w-zycie="2025-11-08">ortopedia i traumatologia narządu ruchu;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1462__art_1__pkt_27" gd:GUID="5932e990-9b68-4384-a36d-c4d3c2da42e7" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-08_DU-2025-1462_domyslne.x" wejscie-w-zycie="2025-11-08">
+          <nr>27</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a741a752-6403-42d8-be49-926c5df0a5c1" fragment="28" gd:fragmentGUID="ff576ce6-edde-47d1-8a2a-7d37fc1386a3" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-08_DU-2025-1462_domyslne.x" wejscie-w-zycie="2025-11-08">otorynolaryngologia;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1462__art_1__pkt_28" gd:GUID="ad4f22e2-3010-4f08-b64a-8ff193a0c78f" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-08_DU-2025-1462_domyslne.x" wejscie-w-zycie="2025-11-08">
+          <nr>28</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a741a752-6403-42d8-be49-926c5df0a5c1" fragment="29" gd:fragmentGUID="5f3c8e11-825a-487e-b947-0161e4194977" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-08_DU-2025-1462_domyslne.x" wejscie-w-zycie="2025-11-08">psychiatria;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1462__art_1__pkt_29" gd:GUID="aa33d63d-dc7b-43a8-83c0-6d5af4357938" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-08_DU-2025-1462_domyslne.x" wejscie-w-zycie="2025-11-08">
+          <nr>29</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a741a752-6403-42d8-be49-926c5df0a5c1" fragment="30" gd:fragmentGUID="3a676eb2-b1c6-43dd-88ef-39001d856823" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-08_DU-2025-1462_domyslne.x" wejscie-w-zycie="2025-11-08">radiologia i diagnostyka obrazowa;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1462__art_1__pkt_30" gd:GUID="e2301793-5e69-4843-a75f-0c8297fd7179" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-08_DU-2025-1462_domyslne.x" wejscie-w-zycie="2025-11-08">
+          <nr>30</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a741a752-6403-42d8-be49-926c5df0a5c1" fragment="31" gd:fragmentGUID="7f0a1607-90fb-4215-813f-1adb5d567dc9" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-08_DU-2025-1462_domyslne.x" wejscie-w-zycie="2025-11-08">rehabilitacja medyczna;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1462__art_1__pkt_31" gd:GUID="48f68364-d2c8-40ae-8ffb-6a8a9d459f41" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-08_DU-2025-1462_domyslne.x" wejscie-w-zycie="2025-11-08">
+          <nr>31</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a741a752-6403-42d8-be49-926c5df0a5c1" fragment="32" gd:fragmentGUID="41e84eba-ff94-4591-a6a0-bc2bafe3e322" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-08_DU-2025-1462_domyslne.x" wejscie-w-zycie="2025-11-08">stomatologia zachowawcza z endodoncją;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1462__art_1__pkt_32" gd:GUID="8440e786-5fac-4950-b8f3-21f0d27e5050" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-08_DU-2025-1462_domyslne.x" wejscie-w-zycie="2025-11-08">
+          <nr>32</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a741a752-6403-42d8-be49-926c5df0a5c1" fragment="33" gd:fragmentGUID="d963075b-794c-4983-9ff4-0bbd04d4cb7e" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-08_DU-2025-1462_domyslne.x" wejscie-w-zycie="2025-11-08">toksykologia kliniczna;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1462__art_1__pkt_33" gd:GUID="8bd5018f-b6e0-4905-b371-cb6c6ceade21" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-08_DU-2025-1462_domyslne.x" wejscie-w-zycie="2025-11-08">
+          <nr>33</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a741a752-6403-42d8-be49-926c5df0a5c1" fragment="34" gd:fragmentGUID="73bf7ed7-0a6b-4ffb-9beb-3fa0bb10159d" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-08_DU-2025-1462_domyslne.x" wejscie-w-zycie="2025-11-08">transfuzjologia kliniczna;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1462__art_1__pkt_34" gd:GUID="ae48e9a8-ec39-46f0-8e80-7223108da2d6" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-08_DU-2025-1462_domyslne.x" wejscie-w-zycie="2025-11-08">
+          <nr>34</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a741a752-6403-42d8-be49-926c5df0a5c1" fragment="35" gd:fragmentGUID="0baa4ceb-6e84-401a-ba1a-823df43e40f2" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-08_DU-2025-1462_domyslne.x" wejscie-w-zycie="2025-11-08">zdrowie publiczne.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2025/1462__art_2" gd:GUID="5d9071ff-5b54-40a1-bb40-9bfa46d1542a" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-08_DU-2025-1462_domyslne.x" wejscie-w-zycie="2025-11-08">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="e1832235-294c-4fe5-a6f6-1cf174d4b2ba" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-08_DU-2025-1462_domyslne.x" wejscie-w-zycie="2025-11-08">
+        <p>
+          <zdanie nr="1" gd:zdGUID="2847f177-efee-4f45-8d3d-c1146b6ba188" fragment="1" gd:fragmentGUID="dd9d36c7-6aa8-455c-a366-02e107c6fa02" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-08_DU-2025-1462_domyslne.x" wejscie-w-zycie="2025-11-08">Rozporządzenie wchodzi w życie po upływie 14 dni od dnia ogłoszenia.<odnosnik id-odnosnika="1" symbol="1" gd:GUID="3a22a416-e6a2-4aac-a248-6bee87ae3c67"><p><zdanie nr="1" gd:zdGUID="80754eb2-1439-4b69-8cab-bf19eeeec123" fragment="1" gd:fragmentGUID="a31ffc63-9fc9-406d-88cb-42e4d85f193a">Niniejsze rozporządzenie było poprzedzone rozporządzeniem Ministra Obrony Narodowej z dnia 30 sierpnia 2019 r. w sprawie określenia priorytetowych dziedzin medycyny dla Sił Zbrojnych Rzeczypospolitej Polskiej (Dz. U. poz. 1756), które utraciło moc z dniem 9 grudnia 2022 r. zgodnie z art. 27 pkt 3 ustawy z dnia 16 lipca 2020 r. o zmianie ustawy o zawodach lekarza i lekarza dentysty oraz niektórych innych ustaw (Dz. U. poz. 1291, 1493, 2112, 2345 i 2401, z 2021 r. poz. 2232 i 2459, z 2022 r. poz. 2770 oraz z 2024 r. poz. 1897).</zdanie></p></odnosnik></zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <organ-podpisujacy>Minister Obrony Narodowej: z up. <i><osoba podpisujacy="true" gd:osobaGUID="b71b1bb9-46b5-4b64-b380-1c97c87449da"><imie>P.</imie> <nazwisko>Bejda</nazwisko></osoba></i></organ-podpisujacy>
+  </rozporzadzenie>
+</akt-prawny>

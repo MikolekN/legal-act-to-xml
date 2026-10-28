@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <rozporzadzenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/930</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>28ef53c3-b4f2-4e81-b20a-ff749b75b6db</gd:GUIDwersji>
+      <AdresISAP>WDU20250000930</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>930</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 930</AdresWyswietlany>
+      <Tytul>Rozporządzenie Ministra Zdrowia z dnia 9 lipca 2025 r. zmieniające rozporządzenie w sprawie rodzajów elektronicznej dokumentacji medycznej</Tytul>
+      <Rodzaj>ROZP</Rodzaj>
+      <DataOgloszenia>2025-07-11</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-07-09</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2025-07-26_DU-2025-930_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2025-07-26" warunek="po upływie 14 dni od dnia ogłoszenia" podstawa="§ 3" zrodlo="https://eli.gov.pl/eli/DU/2025/930" dowod="DU/2025/930__art_3" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2025-07-26_DU-2025-930_domyslne.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2025-07-26_DU-2025-930_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="04731c95-8e3b-4992-9f77-f650ce44b015" rola="wydajacy">
+          <Nazwa>Minister Zdrowia</Nazwa>
+          <OrganPodpisujacy>Minister Zdrowia</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>I.</imie> <nazwisko>Leszczyna</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Rozporządzenie</rodzaj-aktu>
+    <autor-aktu>Ministra Zdrowia<odnosnik id-odnosnika="1" symbol="1" gd:GUID="3533d43d-932d-4c62-9364-514ef8ca011f"><p><zdanie nr="1" gd:zdGUID="b9fb9488-4be6-48fe-a864-a4bb8ec87250" fragment="1" gd:fragmentGUID="f5493c88-3856-4358-b4a7-a3d05e7d7102">Minister Zdrowia kieruje działem administracji rządowej – zdrowie, na podstawie § 1 ust. 2 rozporządzenia Prezesa Rady Ministrów z dnia 18 grudnia 2023 r. w sprawie szczegółowego zakresu działania Ministra Zdrowia (Dz. U. poz. 2704).</zdanie></p></odnosnik></autor-aktu>
+    <data>z dnia 9 lipca 2025 r.</data>
+    <tytul>zmieniające rozporządzenie w sprawie rodzajów elektronicznej dokumentacji medycznej</tytul>
+    <podstawa-prawna>Na podstawie art. 13a ustawy z dnia 28 kwietnia 2011 r. o systemie informacji w ochronie zdrowia (Dz. U. z 2025 r. poz. 302 i 779) zarządza się, co następuje:</podstawa-prawna>
+    <paragraf eId="DU/2025/930__art_1" gd:GUID="b8447c75-9c5b-4b27-8e5f-0c156fad3456" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-26_DU-2025-930_domyslne.x" wejscie-w-zycie="2025-07-26">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="75a05cf0-dd0a-4c19-bd8e-2d57ecdfeba3" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-26_DU-2025-930_domyslne.x" wejscie-w-zycie="2025-07-26">
+        <p>
+          <zdanie nr="1" gd:zdGUID="1201e52c-fe8e-420e-be29-9dad5f2a5a05" fragment="1" gd:fragmentGUID="357daade-d500-40e3-922f-674f148e9216" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-26_DU-2025-930_domyslne.x" wejscie-w-zycie="2025-07-26">W rozporządzeniu Ministra Zdrowia z dnia 8 maja 2018 r. w sprawie rodzajów elektronicznej dokumentacji medycznej (Dz. U. z 2023 r. poz. 1851) w § 1 w pkt 7 kropkę na końcu zdania zastępuje się średnikiem i dodaje się pkt 8 i 9 w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/1851" cudzyslowy="oba" gd:nowGUID="c6fe9499-c711-4c30-85db-5313e026f894" element-eId="DU/2023/1851__art_1__pkt_7" funkcja="dodaj-recznie"><punkt eId="DU/2023/1851__art_1__pkt_8" gd:GUID="2145c5b9-b7f9-4bbd-ba15-69bd56ce62a4" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-26_DU-2025-930_domyslne.x" wejscie-w-zycie="2025-07-26"><nr>8</nr><p><zdanie nr="1" gd:zdGUID="3b90d8d5-0c73-4d73-86b3-ae2d26551af2" fragment="1" gd:fragmentGUID="155495b4-0b17-4111-b122-5bd06c844d2f" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-26_DU-2025-930_domyslne.x" wejscie-w-zycie="2025-07-26">karta medycznych czynności ratunkowych, o której mowa w przepisach wydanych na podstawie art. 30 ust. 1 ustawy z dnia 6 listopada 2008 r. o prawach pacjenta i Rzeczniku Praw Pacjenta;</zdanie></p></punkt><punkt eId="DU/2023/1851__art_1__pkt_9" gd:GUID="3cfffb02-a3cb-49f0-a390-117ec7899eed" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-26_DU-2025-930_domyslne.x" wejscie-w-zycie="2025-07-26"><nr>9</nr><p><zdanie nr="1" gd:zdGUID="3b90d8d5-0c73-4d73-86b3-ae2d26551af2" fragment="2" gd:fragmentGUID="35648fa6-7393-4b84-b7cd-997ee2fbb3f9" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-26_DU-2025-930_domyslne.x" wejscie-w-zycie="2025-07-26">karta medyczna lotniczego zespołu ratownictwa medycznego, o której mowa w przepisach wydanych na podstawie art. 30 ust. 1 ustawy z dnia 6 listopada 2008 r. o prawach pacjenta i Rzeczniku Praw Pacjenta.</zdanie></p></punkt></cytat-strukt>.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2025/930__art_2" gd:GUID="366d13cf-0254-4f14-977c-6142a9997169" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-26_DU-2025-930_domyslne.x" wejscie-w-zycie="2025-07-26">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="d2b76f60-4958-49ce-9006-7de04465cf03" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-26_DU-2025-930_domyslne.x" wejscie-w-zycie="2025-07-26">
+        <p>
+          <zdanie nr="1" gd:zdGUID="cdddfb8f-7dfb-45b6-882e-af21ef655122" fragment="1" gd:fragmentGUID="35fe1e6d-eaf0-44a5-b279-874231b482a4" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-26_DU-2025-930_domyslne.x" wejscie-w-zycie="2025-07-26">Karta medycznych czynności ratunkowych oraz karta medyczna lotniczego zespołu ratownictwa medycznego mogą być prowadzone na dotychczasowych zasadach do dnia 31 grudnia 2025 r.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2025/930__art_3" gd:GUID="e5db29ff-e15c-4e90-947d-71a3a231c3ab" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-26_DU-2025-930_domyslne.x" wejscie-w-zycie="2025-07-26">
+      <nr>3</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="a9bb2fd8-9627-459b-a271-8d78f419e205" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-26_DU-2025-930_domyslne.x" wejscie-w-zycie="2025-07-26">
+        <p>
+          <zdanie nr="1" gd:zdGUID="386e2f3f-6f3b-43c8-91f7-0ad0ef9b6069" fragment="1" gd:fragmentGUID="0518ad5c-98db-4d99-abca-33dad40fbc2b" okres="okr_obowiazywanie.zdarz_wejscie_2025-07-26_DU-2025-930_domyslne.x" wejscie-w-zycie="2025-07-26">Rozporządzenie wchodzi w życie po upływie 14 dni od dnia ogłoszenia.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <organ-podpisujacy>Minister Zdrowia: <i><osoba podpisujacy="true" gd:osobaGUID="3fab20a1-c5d5-48a7-8944-8bf110b5a5fd"><imie>I.</imie> <nazwisko>Leszczyna</nazwisko></osoba></i></organ-podpisujacy>
+  </rozporzadzenie>
+</akt-prawny>

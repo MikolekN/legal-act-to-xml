@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <ustawa>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/479</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>f313d95b-52e6-4338-8087-5a7a07a29cfb</gd:GUIDwersji>
+      <AdresISAP>WDU20250000479</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>479</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 479</AdresWyswietlany>
+      <Tytul>Ustawa z dnia 6 marca 2025 r. o zmianie ustawy – Prawo o notariacie</Tytul>
+      <Rodzaj>USTAWA</Rodzaj>
+      <DataOgloszenia>2025-04-11</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-03-06</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2025-04-26_DU-2025-479_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2025-04-26" warunek="po upływie 14 dni od dnia ogłoszenia" podstawa="art. 3" zrodlo="https://eli.gov.pl/eli/DU/2025/479" dowod="DU/2025/479__art_3" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2025-04-26_DU-2025-479_domyslne.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2025-04-26_DU-2025-479_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="7ccf6466-57fe-48c0-85d9-16e91d8e8860" rola="wydajacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Sejm">
+          <Nazwa>SEJM</Nazwa>
+        </Organ>
+        <Organ gd:GUID="235b919e-8a60-4455-9e36-7a46e9dc9fe3" rola="podpisujacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Prezydent">
+          <Nazwa>Prezydent Rzeczypospolitej Polskiej</Nazwa>
+          <OrganPodpisujacy>Prezydent Rzeczypospolitej Polskiej</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>A.</imie> <nazwisko>Duda</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Ustawa</rodzaj-aktu>
+    <data>z dnia 6 marca 2025 r.</data>
+    <tytul>o zmianie ustawy – Prawo o notariacie</tytul>
+    <artykul eId="DU/2025/479__art_1" gd:GUID="85abae12-c0ac-45ed-bcb2-58cd9d78e6c1" okres="okr_obowiazywanie.zdarz_wejscie_2025-04-26_DU-2025-479_domyslne.x" wejscie-w-zycie="2025-04-26">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="3e65e698-56ef-48a1-abac-5fa361ebeed8" okres="okr_obowiazywanie.zdarz_wejscie_2025-04-26_DU-2025-479_domyslne.x" wejscie-w-zycie="2025-04-26">
+        <p>
+          <zdanie nr="1" gd:zdGUID="6fa5f924-9725-4abf-8c22-233ddb2eb1c2" fragment="1" gd:fragmentGUID="9b665754-2a9d-48de-9b7b-089c742a3ff4" okres="okr_obowiazywanie.zdarz_wejscie_2025-04-26_DU-2025-479_domyslne.x" wejscie-w-zycie="2025-04-26">W ustawie z dnia 14 lutego 1991 r. – Prawo o notariacie (Dz. U. z 2024 r. poz. 1001) wprowadza się następujące zmiany:</zdanie>
+        </p>
+        <punkt eId="DU/2025/479__art_1__pkt_1" gd:GUID="f921a862-5ab7-4b6d-a9f3-90ad529ec5ff" okres="okr_obowiazywanie.zdarz_wejscie_2025-04-26_DU-2025-479_domyslne.x" wejscie-w-zycie="2025-04-26">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="6fa5f924-9725-4abf-8c22-233ddb2eb1c2" fragment="2" gd:fragmentGUID="39530c34-647a-40f2-86b0-2a5d36aee147" okres="okr_obowiazywanie.zdarz_wejscie_2025-04-26_DU-2025-479_domyslne.x" wejscie-w-zycie="2025-04-26"><now:zamien-tekst stary-tekst="art. 14a" nowy-tekst="art. 14a § 1" element-eId="DU/2024/1001__art_12__par_2b" akt="https://eli.gov.pl/eli/DU/2024/1001" gd:nowGUID="d7348e2c-6f99-428c-b5ca-66576af18502" />w art. 12 w § 2b wyrazy „art. 14a” zastępuje się wyrazami „art. 14a § 1”;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/479__art_1__pkt_2" gd:GUID="48af3beb-f2e3-4a52-aba2-6958c0cbca55" okres="okr_obowiazywanie.zdarz_wejscie_2025-04-26_DU-2025-479_domyslne.x" wejscie-w-zycie="2025-04-26">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="6fa5f924-9725-4abf-8c22-233ddb2eb1c2" fragment="3" gd:fragmentGUID="c05ee343-4938-4f41-a9e5-bf015963716b" okres="okr_obowiazywanie.zdarz_wejscie_2025-04-26_DU-2025-479_domyslne.x" wejscie-w-zycie="2025-04-26"><now:dodaj-paragraf element-eId="DU/2024/1001__art_14a" akt="https://eli.gov.pl/eli/DU/2024/1001" gd:nowGUID="d234c453-d3ea-46c2-9944-a7cc32b058c3" />w art. 14a dotychczasową treść oznacza się jako § 1 i dodaje się § 2 w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/1001" cudzyslowy="oba" gd:nowGUID="d33c2834-7f3b-40c9-b6a9-9d101f3f75f0" element-eId="DU/2024/1001__art_14a__par_1" funkcja="dodaj-po"><paragraf-kodeksu eId="DU/2024/1001__art_14a__par_2" gd:GUID="13613655-290f-4285-b85e-16239e9088d3" okres="okr_obowiazywanie.zdarz_wejscie_2025-04-26_DU-2025-479_domyslne.x" wejscie-w-zycie="2025-04-26"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="8579425a-1b5d-4cbd-9940-ef51017b868e" fragment="1" gd:fragmentGUID="9349ac65-d6f2-4e50-9213-2609559dece7" okres="okr_obowiazywanie.zdarz_wejscie_2025-04-26_DU-2025-479_domyslne.x" wejscie-w-zycie="2025-04-26">Termin określony w § 1 nie dotyczy zastępców notarialnych zatrudnionych w kancelarii notarialnej łącznie przez okres co najmniej 10 lat poprzedzających datę złożenia wniosku, o którym mowa w art. 10 § 1, pod warunkiem że w okresie tym, łącznie przez okres co najmniej 5 lat, posiadali upoważnienie do wykonywania czynności notarialnych, o którym mowa w art. 76a § 2.</zdanie></p></paragraf-kodeksu></cytat-strukt>.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2025/479__art_2" gd:GUID="93ec048d-fab5-41fb-b545-36b130b5b557" okres="okr_obowiazywanie.zdarz_wejscie_2025-04-26_DU-2025-479_domyslne.x" wejscie-w-zycie="2025-04-26">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="bec59f78-82fc-4306-ba36-914bbc598879" okres="okr_obowiazywanie.zdarz_wejscie_2025-04-26_DU-2025-479_domyslne.x" wejscie-w-zycie="2025-04-26">
+        <p>
+          <zdanie nr="1" gd:zdGUID="57a43d36-a8f2-4bbc-928f-0df0d557c1b4" fragment="1" gd:fragmentGUID="834bcf4d-e628-4896-9d97-df442d361b81" okres="okr_obowiazywanie.zdarz_wejscie_2025-04-26_DU-2025-479_domyslne.x" wejscie-w-zycie="2025-04-26">Do okresów, o których mowa w art. 14a § 2 ustawy zmienianej w art. 1, wlicza się zastępcy notarialnemu okresy zatrudnienia w kancelarii notarialnej i posiadanego upoważnienia do wykonywania czynności notarialnych, o którym mowa w art. 76a § 2 ustawy zmienianej w art. 1, przypadające przed dniem wejścia w życie niniejszej ustawy.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2025/479__art_3" gd:GUID="5a5ca06d-cc65-44fc-a9eb-f054041d2221" okres="okr_obowiazywanie.zdarz_wejscie_2025-04-26_DU-2025-479_domyslne.x" wejscie-w-zycie="2025-04-26">
+      <nr>3</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="9f28cd4c-ed6f-4648-b493-acaa86231e89" okres="okr_obowiazywanie.zdarz_wejscie_2025-04-26_DU-2025-479_domyslne.x" wejscie-w-zycie="2025-04-26">
+        <p>
+          <zdanie nr="1" gd:zdGUID="4d62da30-f7a0-430c-93ae-6269df878461" fragment="1" gd:fragmentGUID="bdfc89a1-0b4a-41d6-86de-1c74033b817a" okres="okr_obowiazywanie.zdarz_wejscie_2025-04-26_DU-2025-479_domyslne.x" wejscie-w-zycie="2025-04-26">Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <organ-podpisujacy>Prezydent Rzeczypospolitej Polskiej: <i><osoba podpisujacy="true" gd:osobaGUID="7dda24d3-d464-433a-8aaf-0b02d1d4e9ff"><imie>A.</imie> <nazwisko>Duda</nazwisko></osoba></i></organ-podpisujacy>
+  </ustawa>
+</akt-prawny>

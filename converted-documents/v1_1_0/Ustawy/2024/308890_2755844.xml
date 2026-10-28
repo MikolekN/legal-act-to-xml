@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <ustawa>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2024/1828</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>447b25ff-e45a-48d8-90d6-94b24c1c3f35</gd:GUIDwersji>
+      <AdresISAP>WDU20240001828</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2024</Rok>
+      <Pozycja>1828</Pozycja>
+      <AdresWyswietlany>Dz.U. 2024 poz. 1828</AdresWyswietlany>
+      <Tytul>Ustawa z dnia 27 listopada 2024 r. o zmianie ustawy o promowaniu wytwarzania energii elektrycznej w morskich farmach wiatrowych</Tytul>
+      <Rodzaj>USTAWA</Rodzaj>
+      <DataOgloszenia>2024-12-11</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2024-11-27</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2024-12-12_DU-2024-1828_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2024-12-12" warunek="z dniem następującym po dniu ogłoszenia" podstawa="art. 2" zrodlo="https://eli.gov.pl/eli/DU/2024/1828" dowod="DU/2024/1828__art_2" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2024-12-12_DU-2024-1828_domyslne.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2024-12-12_DU-2024-1828_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="e92f8121-c74e-428e-8c1c-71d200f258cf" rola="wydajacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Sejm">
+          <Nazwa>SEJM</Nazwa>
+        </Organ>
+        <Organ gd:GUID="debb88b0-e058-4d1f-acb2-5bae6fa3d851" rola="podpisujacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Prezydent">
+          <Nazwa>Prezydent Rzeczypospolitej Polskiej</Nazwa>
+          <OrganPodpisujacy>Prezydent Rzeczypospolitej Polskiej</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>A.</imie> <nazwisko>Duda</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Ustawa</rodzaj-aktu>
+    <data>z dnia 27 listopada 2024 r.</data>
+    <tytul>o zmianie ustawy o promowaniu wytwarzania energii elektrycznej w morskich farmach wiatrowych</tytul>
+    <artykul eId="DU/2024/1828__art_1" gd:GUID="fd9a55e8-f245-4fc4-8ed1-b8638be129df" okres="okr_obowiazywanie.zdarz_wejscie_2024-12-12_DU-2024-1828_domyslne.x" wejscie-w-zycie="2024-12-12">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="5c4738c4-20ae-41fa-baf1-7649ee98e93d" okres="okr_obowiazywanie.zdarz_wejscie_2024-12-12_DU-2024-1828_domyslne.x" wejscie-w-zycie="2024-12-12">
+        <p>
+          <zdanie nr="1" gd:zdGUID="458a3d46-3bff-47cc-8649-61a9fced9b55" fragment="1" gd:fragmentGUID="0f2c7503-a197-4de6-b49d-563058cf39a2" okres="okr_obowiazywanie.zdarz_wejscie_2024-12-12_DU-2024-1828_domyslne.x" wejscie-w-zycie="2024-12-12">W ustawie z dnia 17 grudnia 2020 r. o promowaniu wytwarzania energii elektrycznej w morskich farmach wiatrowych (Dz. U. z 2024 r. poz. 182) w art. 31 w ust. 11 wprowadzenie do wyliczenia otrzymuje brzmienie:<cytat-w-tekscie now:akt="https://eli.gov.pl/eli/DU/2024/182" cudzyslowy="oba" gd:nowGUID="1c665db3-391b-43e3-af6f-9d4eb33caf6d" element-eId="DU/2024/182__art_31__ust_11" funkcja="zastap-tekst"><zdanie nr="1" gd:zdGUID="3a50d044-6b59-49c8-b5d4-34be2c208a4c" fragment="1" gd:fragmentGUID="8c317fa5-b8f1-4519-ac67-78c309595b82" okres="okr_obowiazywanie.zdarz_wejscie_2024-12-12_DU-2024-1828_domyslne.x" wejscie-w-zycie="2024-12-12">Minister właściwy do spraw klimatu, po zasięgnięciu opinii ministra właściwego do spraw aktywów państwowych oraz ministra właściwego do spraw finansów publicznych, określi, w drodze rozporządzenia, maksymalną cenę za energię elektryczną wytworzoną w morskiej farmie wiatrowej i wprowadzoną do sieci, wyrażoną w złotych za 1 MWh, jaka może być wskazana w ofertach złożonych w aukcji przez wytwórców, przy czym cena ta może być określona odmiennie dla poszczególnych obszarów, grupy obszarów lub grup obszarów wskazanych w załączniku nr 1 lub 2 do ustawy, uwzględniając:</zdanie></cytat-w-tekscie>.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2024/1828__art_2" gd:GUID="e3972ac9-0c41-48fb-a08c-6089c2be87ab" okres="okr_obowiazywanie.zdarz_wejscie_2024-12-12_DU-2024-1828_domyslne.x" wejscie-w-zycie="2024-12-12">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="73a36b3f-accb-49d3-ab02-5318259af3ac" okres="okr_obowiazywanie.zdarz_wejscie_2024-12-12_DU-2024-1828_domyslne.x" wejscie-w-zycie="2024-12-12">
+        <p>
+          <zdanie nr="1" gd:zdGUID="e6b02360-5288-45cd-9cb2-83ae29b61175" fragment="1" gd:fragmentGUID="5276d5db-0df6-4761-8bcd-079a8afa98c0" okres="okr_obowiazywanie.zdarz_wejscie_2024-12-12_DU-2024-1828_domyslne.x" wejscie-w-zycie="2024-12-12">Ustawa wchodzi w życie z dniem następującym po dniu ogłoszenia.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <organ-podpisujacy>Prezydent Rzeczypospolitej Polskiej: <i><osoba podpisujacy="true" gd:osobaGUID="920deb17-45aa-438f-b396-85caa712b682"><imie>A.</imie> <nazwisko>Duda</nazwisko></osoba></i></organ-podpisujacy>
+  </ustawa>
+</akt-prawny>

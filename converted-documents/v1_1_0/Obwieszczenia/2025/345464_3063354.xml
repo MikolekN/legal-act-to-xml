@@ -1,0 +1,411 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <obwieszczenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/1443</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>4e462fd0-333a-4c89-964a-ffde89d587a7</gd:GUIDwersji>
+      <AdresISAP>WDU20250001443</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>1443</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 1443</AdresWyswietlany>
+      <Tytul>Obwieszczenie Marszałka Sejmu Rzeczypospolitej Polskiej z dnia 20 października 2025 r. w sprawie ogłoszenia jednolitego tekstu ustawy o odpowiedzialności majątkowej funkcjonariuszy publicznych za rażące naruszenie prawa</Tytul>
+      <Rodzaj>OBW_TJ</Rodzaj>
+      <DataOgloszenia>2025-10-22</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-10-20</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_ujednolicenie_2025-10-22_DU-2025-1443_domyslne" rodzaj="ujednolicenie" pochodzenie="domyslne-z-aktu" data="2025-10-22" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_ujednolicenie.zdarz_ujednolicenie_2025-10-22_DU-2025-1443_domyslne" glowna="true">
+          <Przedzial rodzaj="ujednolicenie" od="zdarz_ujednolicenie_2025-10-22_DU-2025-1443_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <DataObowiazywaniaWersji>
+        <Od>zdarz_ujednolicenie_2025-10-22_DU-2025-1443_domyslne</Od>
+      </DataObowiazywaniaWersji>
+      <Organy>
+        <Organ gd:GUID="2e1ff4c9-bf71-4b1f-a61a-914294e44e49" rola="wydajacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/MSEJMU">
+          <Nazwa>Marszałek Sejmu</Nazwa>
+          <OrganPodpisujacy>Marszałek Sejmu</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>S.</imie> <nazwisko>Hołownia</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Obwieszczenie</rodzaj-aktu>
+    <autor-aktu>Marszałka Sejmu Rzeczypospolitej Polskiej</autor-aktu>
+    <data>z dnia 20 października 2025 r.</data>
+    <tytul>w sprawie ogłoszenia jednolitego tekstu ustawy o odpowiedzialności majątkowej funkcjonariuszy publicznych za rażące naruszenie prawa</tytul>
+    <punkt-OTJ eId="DU/2025/1443__pkt_1" gd:GUID="4baa5d68-ca3c-431d-a3a0-074a1492ab3b">
+      <nr>1</nr>
+      <p>
+        <zdanie nr="1" gd:zdGUID="ca725e23-54b3-4db0-b64d-ae602af26413" fragment="1" gd:fragmentGUID="aa4736d2-a2c2-485c-9980-d308bdc52bc2">Na podstawie art. 16 ust. 1 zdanie pierwsze ustawy z dnia 20 lipca 2000 r. o ogłaszaniu aktów normatywnych i niektórych innych aktów prawnych (Dz. U. z 2019 r. poz. 1461) ogłasza się w załączniku do niniejszego obwieszczenia jednolity tekst ustawy z dnia 20 stycznia 2011 r. o odpowiedzialności majątkowej funkcjonariuszy publicznych za rażące naruszenie prawa (Dz. U. z 2016 r. poz. 1169), z uwzględnieniem zmiany wprowadzonej ustawą z dnia 21 maja 2025 r. o zmianie niektórych ustaw w celu deregulacji prawa gospodarczego i administracyjnego oraz doskonalenia zasad opracowywania prawa gospodarczego (Dz. U. poz. 769) oraz zmian wynikających z przepisów ogłoszonych przed dniem 9 października 2025 r.</zdanie>
+      </p>
+    </punkt-OTJ>
+    <punkt-OTJ eId="DU/2025/1443__pkt_2" gd:GUID="cb260fc0-c75c-4a33-8e3c-e8442494ed55">
+      <nr>2</nr>
+      <p>
+        <zdanie nr="1" gd:zdGUID="2deb32fb-6b6d-4eb5-8185-2bca9c8a8221" fragment="1" gd:fragmentGUID="ac235544-c2d7-4978-b5a8-a0c10a6d6c31">Podany w załączniku do niniejszego obwieszczenia tekst jednolity ustawy nie obejmuje art. 48 ustawy z dnia 21 maja 2025 r. o zmianie niektórych ustaw w celu deregulacji prawa gospodarczego i administracyjnego oraz doskonalenia zasad opracowywania prawa gospodarczego (Dz. U. poz. 769), który stanowi:<tresc-strukt cudzyslowy="oba" gd:GUID="8bdf6080-fd93-4c0d-a36b-ed9964303452"><artykul eId="DU/2025/769__art_48" gd:GUID="b4a6d67c-9908-4f68-a923-9a33fd8f711e"><nr>48</nr><ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="4788ae53-f091-4e1a-8f71-4d6840a0721c"><p><zdanie nr="1" gd:zdGUID="1cbcb8fa-681e-43be-a4c4-878f2bef1a05" fragment="1" gd:fragmentGUID="07c886c0-b897-4907-ac8f-5d5be8434745">Ustawa wchodzi w życie po upływie 30 dni od dnia ogłoszenia, z wyjątkiem:</zdanie></p><punkt eId="DU/2025/769__art_48__pkt_1" gd:GUID="ddb66d38-02b9-40e7-835f-107e4ae98ca0"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="1cbcb8fa-681e-43be-a4c4-878f2bef1a05" fragment="2" gd:fragmentGUID="4988af23-fee0-4479-ba2f-cfce7a17b65f">art. 6, art. 11, art. 18, art. 22, art. 24 pkt 4, 7 i 9, art. 38 oraz art. 40 ust. 1 i 2, które wchodzą w życie z dniem 1 stycznia 2026 r.;</zdanie></p></punkt><punkt eId="DU/2025/769__art_48__pkt_2" gd:GUID="46f07344-2df5-4bba-b122-c9a2705bcc10"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="1cbcb8fa-681e-43be-a4c4-878f2bef1a05" fragment="3" gd:fragmentGUID="2ae5cc8f-e9b4-4071-be04-48a9c42ad254">art. 28 oraz art. 44, które wchodzą w życie po upływie 9 miesięcy od dnia ogłoszenia.</zdanie></p></punkt></ustep-n></artykul></tresc-strukt>.</zdanie>
+      </p>
+    </punkt-OTJ>
+    <organ-podpisujacy>Marszałek Sejmu: <i><osoba podpisujacy="true" gd:osobaGUID="c892f74f-d2f3-4e42-bbb6-b9e578163ad9"><imie>S.</imie> <nazwisko>Hołownia</nazwisko></osoba></i></organ-podpisujacy>
+    <ustawa>
+      <zalacznik-do>Załącznik do obwieszczenia Marszałka Sejmu Rzeczypospolitej Polskiej z dnia 20 października 2025 r. (Dz. U. poz. 1443)</zalacznik-do>
+      <rodzaj-aktu>Ustawa</rodzaj-aktu>
+      <data>z dnia 20 stycznia 2011 r.</data>
+      <tytul>o odpowiedzialności majątkowej funkcjonariuszy publicznych za rażące naruszenie prawa</tytul>
+      <rozdzial eId="DU/2025/1443__rozdz_1" gd:GUID="75090160-644c-49e1-a318-6da28d8f783c">
+        <naglowek-rozdzialu>
+          <nr>1</nr>
+          <p>Przepisy ogólne</p>
+        </naglowek-rozdzialu>
+        <oddzial-n brak-eid="jednostka-nieoznaczona" gd:GUID="e77854e9-4d10-4dc7-9f3f-92efb5ced070">
+          <artykul eId="DU/2025/1443__art_1" gd:GUID="2f194632-4843-4339-9ad3-b470927959e4">
+            <nr>1</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="11c89e47-4139-4108-8573-4d8dde4e7ac7">
+              <p>
+                <zdanie nr="1" gd:zdGUID="f081553c-cd75-431b-beb4-17a9f4026e41" fragment="1" gd:fragmentGUID="3fb74845-7323-4f67-ba4c-9510d1577811">Ustawa określa zasady odpowiedzialności majątkowej funkcjonariuszy publicznych wobec Skarbu Państwa, jednostek samorządu terytorialnego lub innych podmiotów ponoszących odpowiedzialność za szkodę wyrządzoną przy wykonywaniu władzy publicznej, za działania lub zaniechania prowadzące do rażącego naruszenia prawa oraz zasady postępowania w przedmiocie takiej odpowiedzialności.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2025/1443__art_2" gd:GUID="9da68824-a0c6-4058-9e8d-3da04e1188d9">
+            <nr>2</nr>
+            <ustep eId="DU/2025/1443__art_2__ust_1" gd:GUID="7c6a8689-3fb2-4d4f-b4ac-4669076e40f7">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="5eb04548-6a91-45e5-82a5-996e68a2870b" fragment="1" gd:fragmentGUID="8e54a1ef-07ec-4a58-884a-98f40f67a9d4">Użyte w ustawie określenia oznaczają:</zdanie>
+              </p>
+              <punkt eId="DU/2025/1443__art_2__ust_1__pkt_1" gd:GUID="9b8c230c-7891-4907-8b8d-8eb6beb41a53">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="5eb04548-6a91-45e5-82a5-996e68a2870b" fragment="2" gd:fragmentGUID="96120434-a34c-4447-9556-58dc05eecf09">funkcjonariusz publiczny – osobę działającą w charakterze organu administracji publicznej lub z jego upoważnienia albo jako członek kolegialnego organu administracji publicznej lub osobę wykonującą w urzędzie organu administracji publicznej pracę w ramach stosunku pracy, stosunku służbowego lub umowy cywilnoprawnej, biorącą udział w prowadzeniu sprawy rozstrzyganej w drodze decyzji lub postanowienia przez taki organ;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/1443__art_2__ust_1__pkt_2" gd:GUID="149562c5-230b-4bd7-b23c-1197ee9b6fd4">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="5eb04548-6a91-45e5-82a5-996e68a2870b" fragment="3" gd:fragmentGUID="2c768b47-e384-4ea5-b9a2-0756301246b3">podmiot odpowiedzialny – Skarb Państwa, jednostkę samorządu terytorialnego lub inny podmiot, który, zgodnie z art. 417 ustawy z dnia 23 kwietnia 1964 r. – Kodeks cywilny (Dz. U. z 2025 r. poz. 1071 i 1172), ponosi odpowiedzialność majątkową za szkody wyrządzone przy wykonywaniu władzy publicznej;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/1443__art_2__ust_1__pkt_3" gd:GUID="799b8275-14ff-4e4a-ae20-425e70549f81">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="5eb04548-6a91-45e5-82a5-996e68a2870b" fragment="4" gd:fragmentGUID="3f517898-b2d2-4672-ba14-86378ecb6e02">organ administracji publicznej – organ administracji publicznej w rozumieniu art. 5 § 2 pkt 3 ustawy z dnia 14 czerwca 1960 r. – Kodeks postępowania administracyjnego (Dz. U. z 2024 r. poz. 572 oraz z 2025 r. poz. 769).</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2025/1443__art_2__ust_2" gd:GUID="d4561cb9-fc64-42e8-b7cd-4526c7c6ce46">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="c04b0a81-9f16-4619-962d-d0d257a2290c" fragment="1" gd:fragmentGUID="deb0f074-e072-43f9-be9a-a288ef4e9152">Ilekroć w ustawie jest mowa o wykonywaniu władzy publicznej z rażącym naruszeniem prawa, należy przez to rozumieć również wykonywanie władzy publicznej bez podstawy prawnej.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/1443__art_2__ust_3" gd:GUID="f65895e7-e940-4612-ba21-6c004eafa878">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="a584601c-78fd-4b75-99f0-da3140899f2e" fragment="1" gd:fragmentGUID="18170eb1-2486-4263-b87a-502d141901b1">Ilekroć w ustawie jest mowa o wynagrodzeniu przysługującym funkcjonariuszowi publicznemu, należy przez to rozumieć również przysługujące mu uposażenie.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2025/1443__art_3" gd:GUID="7f85fc6f-d547-4655-a80b-5dc741462eb5">
+            <nr>3</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="aab4bc03-c146-45fc-833f-0d399759d461">
+              <p>
+                <zdanie nr="1" gd:zdGUID="3317be4b-303e-4d5f-a40e-efc49f1078a2" fragment="1" gd:fragmentGUID="d4fb851b-712d-4a3f-a600-90cbe88657cb">Odpowiedzialność funkcjonariusza publicznego na zasadach określonych w ustawie wyłącza przewidzianą w przepisach odrębnych odpowiedzialność majątkową funkcjonariusza publicznego wobec podmiotu odpowiedzialnego za szkodę wyrządzoną tym samym działaniem lub zaniechaniem.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2025/1443__art_4" gd:GUID="0175685a-c682-4c2e-be6c-e26b57c3ca3d">
+            <nr>4</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="b87f68b0-3137-4f3d-96a3-c3bf7e1783f7">
+              <p>
+                <zdanie nr="1" gd:zdGUID="664d0c3c-d876-490c-a8c8-c382b34fb285" fragment="1" gd:fragmentGUID="c51ec514-2961-47ce-addc-44e0c04e489b">W sprawach nieuregulowanych w ustawie do odpowiedzialności majątkowej funkcjonariuszy publicznych stosuje się przepisy ustawy z dnia 23 kwietnia 1964 r. – Kodeks cywilny.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+        </oddzial-n>
+      </rozdzial>
+      <rozdzial eId="DU/2025/1443__rozdz_2" gd:GUID="9aa474e2-cab7-4109-bfba-050823283f0f">
+        <naglowek-rozdzialu>
+          <nr>2</nr>
+          <p>Zasady odpowiedzialności majątkowej funkcjonariuszy publicznych</p>
+        </naglowek-rozdzialu>
+        <oddzial-n brak-eid="jednostka-nieoznaczona" gd:GUID="bb4d6330-1211-40fd-a81b-8f96b1ddf348">
+          <artykul eId="DU/2025/1443__art_5" gd:GUID="46dfd05e-3526-4e32-9650-d32a84c1df87">
+            <nr>5</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="89eace6b-0f00-4022-8b57-3dba4fb1a077">
+              <p>
+                <zdanie nr="1" gd:zdGUID="0bb92343-69b8-4d03-82ea-ce39b2198689" fragment="1" gd:fragmentGUID="048b231c-0c5e-4ccd-a9f4-74175209608a">Funkcjonariusz publiczny ponosi odpowiedzialność majątkową w razie łącznego zaistnienia następujących przesłanek:</zdanie>
+              </p>
+              <punkt eId="DU/2025/1443__art_5__pkt_1" gd:GUID="c9a63ede-dcf9-4948-96d1-8a8fca9bb35c">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="0bb92343-69b8-4d03-82ea-ce39b2198689" fragment="2" gd:fragmentGUID="b5810c5a-9b99-4abf-97dc-b34fe6f00e6c">na mocy prawomocnego orzeczenia sądu lub na mocy ugody zostało wypłacone przez podmiot odpowiedzialny odszkodowanie za szkodę wyrządzoną przy wykonywaniu władzy publicznej z rażącym naruszeniem prawa;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/1443__art_5__pkt_2" gd:GUID="4159629e-b78b-4b0d-8c03-39c0ee9c09ed">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="0bb92343-69b8-4d03-82ea-ce39b2198689" fragment="3" gd:fragmentGUID="f65812bd-4477-4c79-b070-e87ae673c4ae">rażące naruszenie prawa, o którym mowa w pkt 1, zostało spowodowane zawinionym działaniem lub zaniechaniem funkcjonariusza publicznego;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/1443__art_5__pkt_3" gd:GUID="98b6735f-148c-44fd-842c-23e3917c370b">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="0bb92343-69b8-4d03-82ea-ce39b2198689" fragment="4" gd:fragmentGUID="d0b145c4-eb37-444a-924d-fb863c2f8f0d">rażące naruszenie prawa, o którym mowa w pkt 1, zostało stwierdzone zgodnie z art. 6.</zdanie>
+                </p>
+              </punkt>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2025/1443__art_6" gd:GUID="a30e47d7-0c36-4793-857f-238c6fa5e8dc">
+            <nr>6</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="05f00614-c702-4482-b385-530e5bd2bd93">
+              <p>
+                <zdanie nr="1" gd:zdGUID="6ca04494-9db9-48f8-93fc-be9a22fbba60" fragment="1" gd:fragmentGUID="642397ed-615a-417e-bc16-67e02f0ee739">Przez stwierdzenie rażącego naruszenia prawa należy rozumieć:</zdanie>
+              </p>
+              <punkt eId="DU/2025/1443__art_6__pkt_1" gd:GUID="dc0da8df-029d-4de2-90d3-c8e233d1a428">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="6ca04494-9db9-48f8-93fc-be9a22fbba60" fragment="2" gd:fragmentGUID="d52d26bf-8e93-4f5b-bd1a-1ba65278b6da">wydanie ostatecznej decyzji stwierdzającej nieważność decyzji lub postanowienia na podstawie art. 156 § 1 pkt 2 lub art. 156 § 1 pkt 2 w związku z art. 126 ustawy z dnia 14 czerwca 1960 r. – Kodeks postępowania administracyjnego;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/1443__art_6__pkt_2" gd:GUID="fa725ed5-a9d2-4acd-ab62-18677ad6f38d">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="6ca04494-9db9-48f8-93fc-be9a22fbba60" fragment="3" gd:fragmentGUID="93fd8fbd-1d1f-4ced-bd02-a98bc27cedd9">wydanie ostatecznej decyzji stwierdzającej nieważność decyzji lub postanowienia na podstawie art. 247 § 1 pkt 2 albo pkt 3 lub art. 247 § 1 pkt 2 albo pkt 3, w związku z art. 219 ustawy z dnia 29 sierpnia 1997 r. – Ordynacja podatkowa (Dz. U. z 2025 r. poz. 111, z późn. zm.<odnosnik id-odnosnika="1" symbol="1" gd:GUID="4e0f7bf3-e376-4261-ae1c-f4dc69e2f439"><p><zdanie nr="1" gd:zdGUID="6e99b251-daab-44eb-b7bc-bd5f0574eb99" fragment="1" gd:fragmentGUID="81594533-3d23-478f-92ae-7bec2e13a1d3">Zmiany tekstu jednolitego wymienionej ustawy zostały ogłoszone w Dz. U. z 2025 r. poz. 497, 621, 622, 769, 820, 1203 i 1235.</zdanie></p></odnosnik>);</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/1443__art_6__pkt_3" gd:GUID="441718ad-a95b-4ea4-9840-d0dcc4a45c39">
+                <nr>3</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="6ca04494-9db9-48f8-93fc-be9a22fbba60" fragment="4" gd:fragmentGUID="fb4b45d1-761f-41ff-adb3-eabc65d0a92b">stwierdzenie braku podstawy prawnej lub rażącego naruszenia prawa na podstawie art. 54 § 3 ustawy z dnia 30 sierpnia 2002 r. – Prawo o postępowaniu przed sądami administracyjnymi (Dz. U. z 2024 r. poz. 935 i 1685 oraz z 2025 r. poz. 769);</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/1443__art_6__pkt_4" gd:GUID="79d61e9d-7f22-4593-a54e-32239680eef3">
+                <nr>4</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="6ca04494-9db9-48f8-93fc-be9a22fbba60" fragment="5" gd:fragmentGUID="ba52e61a-c9be-4030-832e-26d55520d3fe">wydanie prawomocnego wyroku na podstawie art. 145 § 1 pkt 2 ustawy z dnia 30 sierpnia 2002 r. – Prawo o postępowaniu przed sądami administracyjnymi w związku z art. 156 § 1 pkt 2 ustawy z dnia 14 czerwca 1960 r. – Kodeks postępowania administracyjnego;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/1443__art_6__pkt_5" gd:GUID="f286e8ac-d655-4d99-88ad-a4cfcf60ee33">
+                <nr>5</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="6ca04494-9db9-48f8-93fc-be9a22fbba60" fragment="6" gd:fragmentGUID="aaedd592-3837-4586-b37a-51fc3b2cef85">wydanie prawomocnego wyroku na podstawie art. 145 § 1 pkt 2 ustawy z dnia 30 sierpnia 2002 r. – Prawo o postępowaniu przed sądami administracyjnymi w związku z art. 247 § 1 pkt 2 albo 3 ustawy z dnia 29 sierpnia 1997 r. – Ordynacja podatkowa;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/1443__art_6__pkt_6" gd:GUID="e4ccfd08-c6ee-49bf-b02f-542399d4e996">
+                <nr>6</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="6ca04494-9db9-48f8-93fc-be9a22fbba60" fragment="7" gd:fragmentGUID="b6de55d8-2afd-4001-a71b-60e27b9b2472"><odnosnik id-odnosnika="2" symbol="2" gd:GUID="a5888fd2-7fb8-4fb4-85ce-e82992088efe"><p><zdanie nr="1" gd:zdGUID="b8013964-e78c-41f0-9d67-c1add12a0bd4" fragment="1" gd:fragmentGUID="fd20f95e-9f7d-4721-ad26-527d7c8289fd">W brzmieniu ustalonym przez art. 21 ustawy z dnia 21 maja 2025 r. o zmianie niektórych ustaw w celu deregulacji prawa gospodarczego i administracyjnego oraz doskonalenia zasad opracowywania prawa gospodarczego (Dz. U. poz. 769), która weszła w życie z dniem 13 lipca 2025 r.</zdanie></p></odnosnik> stwierdzenie rażącego naruszenia prawa na podstawie art. 37 § 6 pkt 1 ustawy z dnia 14 czerwca 1960 r. – Kodeks postępowania administracyjnego;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/1443__art_6__pkt_7" gd:GUID="48f54b50-a140-4f5d-8679-616b9fce758b">
+                <nr>7</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="6ca04494-9db9-48f8-93fc-be9a22fbba60" fragment="8" gd:fragmentGUID="e72d0825-31d7-4b6a-ae51-e9c76199aa26">stwierdzenie rażącego naruszenia prawa na podstawie art. 141 § 2 ustawy z dnia 29 sierpnia 1997 r. – Ordynacja podatkowa;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/1443__art_6__pkt_8" gd:GUID="77948c13-3790-4f7a-bbd7-a9c54cd32cfc">
+                <nr>8</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="6ca04494-9db9-48f8-93fc-be9a22fbba60" fragment="9" gd:fragmentGUID="edff2ceb-7def-4808-8c0b-3f8303100962">prawomocne stwierdzenie rażącego naruszenia prawa na podstawie art. 149 lub art. 154 § 2 ustawy z dnia 30 sierpnia 2002 r. – Prawo o postępowaniu przed sądami administracyjnymi;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/1443__art_6__pkt_9" gd:GUID="4e3275b0-b383-44d9-a2e4-9543d84ba901">
+                <nr>9</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="6ca04494-9db9-48f8-93fc-be9a22fbba60" fragment="10" gd:fragmentGUID="09744b6d-dbd0-49fd-bb4b-cee8e1d0e0ed">prawomocne stwierdzenie rażącego naruszenia prawa na podstawie art. 477<sup>14</sup> § 3 ustawy z dnia 17 listopada 1964 r. – Kodeks postępowania cywilnego (Dz. U. z 2024 r. poz. 1568 i 1841 oraz z 2025 r. poz. 620, 1172 i 1302);</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/1443__art_6__pkt_10" gd:GUID="53710d89-beb1-4d7a-8465-c6587402b28c">
+                <nr>10</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="6ca04494-9db9-48f8-93fc-be9a22fbba60" fragment="11" gd:fragmentGUID="ac307022-1e43-419e-88cd-5fce46764e02">prawomocne stwierdzenie braku podstawy prawnej lub rażącego naruszenia prawa na podstawie art. 479<sup>31a</sup> § 3 ustawy z dnia 17 listopada 1964 r. – Kodeks postępowania cywilnego;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/1443__art_6__pkt_11" gd:GUID="6388b259-711d-4b65-9f66-664a8b0fa986">
+                <nr>11</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="6ca04494-9db9-48f8-93fc-be9a22fbba60" fragment="12" gd:fragmentGUID="739b1e07-6a0d-4346-a28c-a8a23ee3405d">ostateczne stwierdzenie braku podstawy prawnej lub rażącego naruszenia prawa na podstawie art. 81 ust. 3 ustawy z dnia 16 lutego 2007 r. o ochronie konkurencji i konsumentów (Dz. U. z 2024 r. poz. 1616 oraz z 2025 r. poz. 794).</zdanie>
+                </p>
+              </punkt>
+            </ustep-n>
+          </artykul>
+        </oddzial-n>
+      </rozdzial>
+      <rozdzial eId="DU/2025/1443__rozdz_3" gd:GUID="b7b5e2bc-fa37-45d1-8a15-a6ffaceaca45">
+        <naglowek-rozdzialu>
+          <nr>3</nr>
+          <p>Postępowanie</p>
+        </naglowek-rozdzialu>
+        <oddzial-n brak-eid="jednostka-nieoznaczona" gd:GUID="42a24876-1012-46d4-b917-da85906ae2a1">
+          <artykul eId="DU/2025/1443__art_7" gd:GUID="167bcca5-45f1-4221-8145-e592849f3ba8">
+            <nr>7</nr>
+            <ustep eId="DU/2025/1443__art_7__ust_1" gd:GUID="f3170d98-533f-417a-9c64-004a2286ac05">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="dc78b2bd-5eea-4347-8fe8-c4d5fae0419b" fragment="1" gd:fragmentGUID="a7db9d03-5601-44be-a1a4-70de94aa3acf">W terminie 14 dni od dnia wypłaty odszkodowania, o którym mowa w art. 5 pkt 1, kierownik podmiotu odpowiedzialnego, który wypłacił odszkodowanie, albo kierownik jednostki organizacyjnej podmiotu odpowiedzialnego, która wypłaciła odszkodowanie, składa do prokuratora okręgowego właściwego ze względu na siedzibę podmiotu odpowiedzialnego wniosek o przeprowadzenie postępowania wyjaśniającego.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/1443__art_7__ust_2" gd:GUID="bebbad2b-9a9c-42c3-9817-59087c0ce0d6">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="aea366c2-19ff-4487-80d9-db3f64120e72" fragment="1" gd:fragmentGUID="4a68974a-4f1d-44fa-a441-e6268c87db9e">Do wniosku, o którym mowa w ust. 1, załącza się:</zdanie>
+              </p>
+              <punkt eId="DU/2025/1443__art_7__ust_2__pkt_1" gd:GUID="d72b1604-4a79-4544-8766-63f56695a1d9">
+                <nr>1</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="aea366c2-19ff-4487-80d9-db3f64120e72" fragment="2" gd:fragmentGUID="6d9f2438-a606-4d10-bc47-46b14d2751ed">dowód wypłaty odszkodowania, o którym mowa w art. 5 pkt 1, i stanowiące podstawę tej wypłaty orzeczenie lub ugodę;</zdanie>
+                </p>
+              </punkt>
+              <punkt eId="DU/2025/1443__art_7__ust_2__pkt_2" gd:GUID="45d35df1-89e8-4886-86bc-01a2e890c6ff">
+                <nr>2</nr>
+                <p>
+                  <zdanie nr="1" gd:zdGUID="aea366c2-19ff-4487-80d9-db3f64120e72" fragment="3" gd:fragmentGUID="4a7766b1-6be4-4b5a-9bf5-9d33adc6b434">rozstrzygnięcie stwierdzające rażące naruszenie prawa oraz uwierzytelnione kopie posiadanych akt postępowania sądowego lub administracyjnego, w którym zostało wydane to rozstrzygnięcie.</zdanie>
+                </p>
+              </punkt>
+            </ustep>
+            <ustep eId="DU/2025/1443__art_7__ust_3" gd:GUID="2dfeaf63-2e87-407e-8e11-cd5cd3adab2c">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="9a376d76-5f29-4865-b5bc-cfef24a4645a" fragment="1" gd:fragmentGUID="371bcdba-d0e7-4896-96ae-9d94a489f699">Po wpłynięciu wniosku, o którym mowa w ust. 1, prokurator przeprowadza postępowanie wyjaśniające zmierzające do ustalenia przesłanek uzasadniających wytoczenie na rzecz podmiotu odpowiedzialnego powództwa o odszkodowanie przeciwko funkcjonariuszowi publicznemu z tytułu szkody wyrządzonej przy wykonywaniu władzy publicznej z rażącym naruszeniem prawa.</zdanie>
+                <zdanie nr="2" gd:zdGUID="dec21e24-a7cf-4881-a015-dd7ce7bb017e" fragment="1" gd:fragmentGUID="1e06c9e4-aef8-44d4-b206-a376f2f4738d">Do przeprowadzenia tego postępowania stosuje się odpowiednio przepisy art. 69 ustawy z dnia 28 stycznia 2016 r. – Prawo o prokuraturze (Dz. U. z 2024 r. poz. 390 oraz z 2025 r. poz. 304 i 1178).</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/1443__art_7__ust_4" gd:GUID="8e3b001b-d49b-4694-9f7d-d328b87f3f2b">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="57587fc1-1109-4ab1-9f95-5f6725b4b159" fragment="1" gd:fragmentGUID="9fb74195-6f29-494b-943d-e650b55006d3">W przypadku stwierdzenia istnienia podstaw do wytoczenia przeciwko funkcjonariuszowi publicznemu powództwa, o którym mowa w ust. 3, prokurator przed jego wytoczeniem wzywa na piśmie funkcjonariusza publicznego do dobrowolnego spełnienia świadczenia w określonym terminie, nie krótszym jednak niż 7 dni od dnia otrzymania wezwania, a po bezskutecznym upływie tego terminu wytacza powództwo.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/1443__art_7__ust_5" gd:GUID="2f831a0b-a8c0-40b7-91e4-4e2bea4e16c1">
+              <nr>5</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="04d6248d-5a4b-42f3-9ef3-e8116f615d99" fragment="1" gd:fragmentGUID="36987861-d7ef-495c-b313-40d36385405f">Jeżeli brak jest podstaw do wytoczenia powództwa, o którym mowa w ust. 3, prokurator odmawia podjęcia tej czynności.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2025/1443__art_8" gd:GUID="a1faacb1-3cb8-4a6d-8a91-6f6116e438eb">
+            <nr>8</nr>
+            <ustep eId="DU/2025/1443__art_8__ust_1" gd:GUID="f60d1fb9-9e2c-41c9-b167-47890d19b2f9">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="2d42c7a2-c05a-422c-a9d0-5582b075342f" fragment="1" gd:fragmentGUID="d88f1591-4e53-4ef7-8eec-5f3210f5f24b">Postępowanie sądowe w sprawie o odszkodowanie, o którym mowa w art. 7 ust. 3, toczy się według przepisów ustawy z dnia 17 listopada 1964 r. – Kodeks postępowania cywilnego.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/1443__art_8__ust_2" gd:GUID="ab3234bc-3afe-435c-bf6c-ad9047d098e8">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="d4234acb-dede-4d73-88a3-2d84cb81103d" fragment="1" gd:fragmentGUID="d2c78400-980c-4056-82f7-d1f8ab75662c">Do złożenia wniosku na podstawie art. 194 lub art. 195 ustawy z dnia 17 listopada 1964 r. – Kodeks postępowania cywilnego nie jest konieczne prowadzenie postępowania wyjaśniającego, o którym mowa w art. 7 ust. 3, w odniesieniu do osoby wskazanej we wniosku.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+          <artykul eId="DU/2025/1443__art_9" gd:GUID="ef78dd8c-bebb-419c-864f-d001de3e62c9">
+            <nr>9</nr>
+            <ustep eId="DU/2025/1443__art_9__ust_1" gd:GUID="9440e715-c199-4abf-82ae-46d018923001">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="9dac2ae3-58a8-4bd3-b95f-5bf76c181ab3" fragment="1" gd:fragmentGUID="d41fc844-c0ae-48e2-9c7f-946aed507e54">Odszkodowanie, o którym mowa w art. 7 ust. 3, ustala się w wysokości odszkodowania, o którym mowa w art. 5 pkt 1, jednak nie może ono przewyższać kwoty dwunastokrotności miesięcznego wynagrodzenia przysługującego funkcjonariuszowi publicznemu.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/1443__art_9__ust_2" gd:GUID="f46695d6-cfaa-4424-ac3e-bb61467524f9">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="cbc1e97f-c0d6-4c40-9e64-bd97e9dd2e71" fragment="1" gd:fragmentGUID="f61a4b07-9d70-4daf-b522-e11e0f89514b">Jeżeli kilku funkcjonariuszy publicznych dopuściło się działania lub zaniechania, o których mowa w art. 5 pkt 2, każdy z nich ponosi odpowiedzialność stosownie do przyczynienia się do rażącego naruszenia prawa i stopnia winy.</zdanie>
+                <zdanie nr="2" gd:zdGUID="75e13277-21a0-44ea-9bba-a2e757da714b" fragment="1" gd:fragmentGUID="5ebba24e-ba1f-4d84-aee4-99c9cbf57814">Jeżeli nie jest możliwe ustalenie stopnia winy i przyczynienia się poszczególnych funkcjonariuszy publicznych do rażącego naruszenia prawa, odpowiadają oni w częściach równych.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/1443__art_9__ust_3" gd:GUID="ef19b8ac-7f7d-47fc-8a35-ceb2f76d86f4">
+              <nr>3</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="4f5bf459-b22b-4a4a-852d-5075c3008f4d" fragment="1" gd:fragmentGUID="27765f12-f2a8-4609-82b1-7a69a750934a">Jeżeli kilku funkcjonariuszy publicznych dopuściło się działania lub zaniechania, o których mowa w art. 5 pkt 2, każdy z nich ponosi odpowiedzialność do kwoty dwunastokrotności miesięcznego wynagrodzenia, o którym mowa w ust. 1.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/1443__art_9__ust_4" gd:GUID="8789d9f0-7534-4910-a19a-d98271f40368">
+              <nr>4</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="efd96c75-3c82-4c0a-a900-4635de94da60" fragment="1" gd:fragmentGUID="ec088669-087f-4b1d-b5d2-2acc98774587">Jeżeli funkcjonariusz publiczny dopuścił się działania lub zaniechania, o których mowa w art. 5 pkt 2, z winy umyślnej, odpowiada on do wysokości odszkodowania, o którym mowa w art. 5 pkt 1.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/1443__art_9__ust_5" gd:GUID="e18d854c-6294-457c-b100-aeb7158a5216">
+              <nr>5</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="da3c92b1-ce40-4c79-a980-a9ca6ffe2e6b" fragment="1" gd:fragmentGUID="ea5db523-96e3-4dd4-9faf-5ac47c1fe049">Jeżeli kilku funkcjonariuszy publicznych dopuściło się działania lub zaniechania, o których mowa w art. 5 pkt 2, z winy umyślnej, odpowiadają oni solidarnie.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/1443__art_9__ust_6" gd:GUID="d240df66-8ebb-4e3c-abee-6971f28d5374">
+              <nr>6</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="81e3a69c-d957-4bf8-a0f6-e2bb1b5b04a2" fragment="1" gd:fragmentGUID="6bb4ec55-0daf-4c52-9976-a982dc35585a">Wynagrodzenie przysługujące funkcjonariuszowi publicznemu, o którym mowa w ust. 1, określa się na dzień działania lub na koniec okresu zaniechania, które spowodowało rażące naruszenie prawa.</zdanie>
+                <zdanie nr="2" gd:zdGUID="232465ca-a3ae-4833-bfb6-4037133b9e2a" fragment="1" gd:fragmentGUID="5a85cfc6-753f-4013-b3ca-ae78701c64cb">W przypadku gdy zgodnie ze zdaniem poprzedzającym wynagrodzenie może być określone w różnej wysokości, przyjmuje się wysokość najwyższą.</zdanie>
+                <zdanie nr="3" gd:zdGUID="88608706-cbe4-4ae6-bbb4-f61236ad7601" fragment="1" gd:fragmentGUID="98802e02-8c0f-428d-ac35-cde7793e8ef0">Jeżeli ustalenie wynagrodzenia według zasad określonych w zdaniach poprzedzających nie jest możliwe, wynagrodzenie przysługujące funkcjonariuszowi publicznemu określa się na dzień stwierdzenia rażącego naruszenia prawa, o którym mowa w art. 5 pkt 3, a jeżeli w tym dniu osobie odpowiedzialnej nie przysługuje już wynagrodzenie jako funkcjonariuszowi publicznemu, wynagrodzenie określa się na ostatni dzień, w którym jej ono przysługiwało.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+        </oddzial-n>
+      </rozdzial>
+      <rozdzial eId="DU/2025/1443__rozdz_4" gd:GUID="56b2de0e-156d-4154-93eb-7b60e5ee7547">
+        <naglowek-rozdzialu>
+          <nr>4</nr>
+          <p>Przepisy karne</p>
+        </naglowek-rozdzialu>
+        <oddzial-n brak-eid="jednostka-nieoznaczona" gd:GUID="13ba903e-1160-4753-b465-ae38fef7e531">
+          <artykul eId="DU/2025/1443__art_10" gd:GUID="b89eb178-24d5-4426-b327-811a27cca3d1">
+            <nr>10</nr>
+            <ustep eId="DU/2025/1443__art_10__ust_1" gd:GUID="c0b6e8f3-98e5-4b72-9fae-46ab5686a629">
+              <nr>1</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="da4b8782-0d01-481d-80b0-9d1525ce93fa" fragment="1" gd:fragmentGUID="d79e0655-4f0a-4a0e-9085-5c1663fc48f1">Kto, będąc kierownikiem podmiotu odpowiedzialnego lub jednostki organizacyjnej takiego podmiotu, nie wykonuje obowiązku określonego w art. 7 ust. 1, <sankcja-karna>podlega grzywnie, karze ograniczenia wolności albo pozbawienia wolności do lat 3</sankcja-karna>.</zdanie>
+              </p>
+            </ustep>
+            <ustep eId="DU/2025/1443__art_10__ust_2" gd:GUID="cf94b182-6901-4203-aa7d-715aa0774939">
+              <nr>2</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="acba370b-9a56-428b-bace-8f45059d886f" fragment="1" gd:fragmentGUID="2fcdf04b-8a2e-4705-9aa8-cb1b4638b5a0">Jeżeli sprawca czynu określonego w ust. 1 działa nieumyślnie, <sankcja-karna>podlega grzywnie albo karze ograniczenia wolności</sankcja-karna>.</zdanie>
+              </p>
+            </ustep>
+          </artykul>
+        </oddzial-n>
+      </rozdzial>
+      <rozdzial eId="DU/2025/1443__rozdz_5" gd:GUID="ae41fb62-8284-4168-a442-cbdfbb3a7044">
+        <naglowek-rozdzialu>
+          <nr>5</nr>
+          <p>Zmiany w przepisach obowiązujących, przepisy przejściowe i końcowe</p>
+        </naglowek-rozdzialu>
+        <oddzial-n brak-eid="jednostka-nieoznaczona" gd:GUID="e3a98154-36b8-490c-ab20-f3609e2e09e6">
+          <artykul eId="DU/2025/1443__art_11" gd:GUID="d0c41dd7-a96d-45dd-bf80-20e24fb18061">
+            <nr />
+            <nr-od>11</nr-od>
+            <nr-do>15</nr-do>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="4137cb30-46bb-4533-8c62-470a5a275e0d">
+              <p>
+                <zdanie nr="1" gd:zdGUID="f03aa937-94ea-45ed-a993-0484ec6a2a71" fragment="1" gd:fragmentGUID="81d7199e-fba0-433d-a335-4dc57dbf0ad1">(pominięte)</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2025/1443__art_16" gd:GUID="6f04ff49-3b60-4fdf-8a89-b2d04c999748">
+            <nr>16</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="0c4b8d8c-4f81-4e7a-be60-5f86226a5d00">
+              <p>
+                <zdanie nr="1" gd:zdGUID="43bff3e5-19e1-47f6-b921-d0d7b5cb13c4" fragment="1" gd:fragmentGUID="7b7f8868-01b9-4695-8033-100ce73f9246">Przepisy ustawy stosuje się do działań i zaniechań funkcjonariuszy publicznych, które nastąpiły od dnia wejścia w życie ustawy.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+          <artykul eId="DU/2025/1443__art_17" gd:GUID="f8796dba-a8da-49c6-80b3-57f8ed035188">
+            <nr>17</nr>
+            <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="50d5a57f-f52a-414b-b5fe-73befec5d88e">
+              <p>
+                <zdanie nr="1" gd:zdGUID="0a876ff0-1361-4110-81e2-6d3a026881e7" fragment="1" gd:fragmentGUID="c9f38617-8d42-46a8-8b7e-3aa95abd75eb">Ustawa wchodzi w życie po upływie 3 miesięcy od dnia ogłoszenia<odnosnik id-odnosnika="3" symbol="3" gd:GUID="add087f9-41fb-45ac-9c4c-edd71d9c887c"><p><zdanie nr="1" gd:zdGUID="1b53b01c-0e36-468b-a2c0-9c2c341eddd0" fragment="1" gd:fragmentGUID="fe70c463-1917-47e5-801f-125d8be9aa11">Ustawa została ogłoszona w dniu 16 lutego 2011 r.</zdanie></p></odnosnik>.</zdanie>
+              </p>
+            </ustep-n>
+          </artykul>
+        </oddzial-n>
+      </rozdzial>
+    </ustawa>
+  </obwieszczenie>
+</akt-prawny>

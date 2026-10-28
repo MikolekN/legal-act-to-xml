@@ -1,0 +1,305 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <ustawa>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/527</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>06492d82-2986-4950-b12c-c396475d39c5</gd:GUIDwersji>
+      <AdresISAP>WDU20250000527</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>527</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 527</AdresWyswietlany>
+      <Tytul>Ustawa z dnia 4 kwietnia 2025 r. o zmianie ustawy o planowaniu i zagospodarowaniu przestrzennym oraz niektórych innych ustaw</Tytul>
+      <Rodzaj>USTAWA</Rodzaj>
+      <DataOgloszenia>2025-04-22</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-04-04</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2025-05-07_DU-2025-527_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2025-05-07" warunek="po upływie 14 dni od dnia ogłoszenia" podstawa="art. 9" zrodlo="https://eli.gov.pl/eli/DU/2025/527" dowod="DU/2025/527__art_9" />
+          <Zdarzenie id="zdarz_wejscie_2026-07-01_DU-2025-527_odczytane" rodzaj="wejscie-w-zycie" pochodzenie="odczytane" data="2026-07-01" podstawa="art. 9" zrodlo="https://eli.gov.pl/eli/DU/2025/527" dowod="DU/2025/527__art_9">
+            <JednostkaAktu eId="DU/2025/527__art_4__pkt_2">
+              <JednostkaWZakresie eId="DU/2023/1688__art_76" />
+            </JednostkaAktu>
+            <JednostkaAktu eId="DU/2025/527__art_4__pkt_3">
+              <JednostkaWZakresie eId="DU/2023/1688__art_75" />
+              <JednostkaWZakresie eId="DU/2023/1688__art_76" />
+              <JednostkaWZakresie eId="DU/2023/1688__art_77" />
+            </JednostkaAktu>
+            <JednostkaAktu eId="DU/2025/527__art_4__pkt_4">
+              <JednostkaWZakresie eId="DU/2023/1688__art_54" />
+              <JednostkaWZakresie eId="DU/2023/1688__art_56__ust_2" />
+            </JednostkaAktu>
+            <JednostkaAktu eId="DU/2025/527__art_4__pkt_5__lit_a" />
+            <JednostkaAktu eId="DU/2025/527__art_4__pkt_6" />
+          </Zdarzenie>
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-527_domyslne.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2025-05-07_DU-2025-527_domyslne" />
+        </GrupaCzasowa>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2026-07-01_DU-2025-527_odczytane.x" glowna="false">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2026-07-01_DU-2025-527_odczytane" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="c0b9a816-ea86-4493-a470-f7659cd405b8" rola="wydajacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Sejm">
+          <Nazwa>SEJM</Nazwa>
+        </Organ>
+        <Organ gd:GUID="bac9ff41-a314-4756-a364-1ac2b2fb5507" rola="podpisujacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Prezydent">
+          <Nazwa>Prezydent Rzeczypospolitej Polskiej</Nazwa>
+          <OrganPodpisujacy>Prezydent Rzeczypospolitej Polskiej</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>A.</imie> <nazwisko>Duda</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Ustawa</rodzaj-aktu>
+    <data>z dnia 4 kwietnia 2025 r.</data>
+    <tytul>o zmianie ustawy o planowaniu i zagospodarowaniu przestrzennym oraz niektórych innych ustaw<odnosnik id-odnosnika="1" symbol="1" gd:GUID="98176cfc-80f4-4d56-be2f-6a406410bbc9"><p><zdanie nr="1" gd:zdGUID="3eb66792-2e27-4f3d-b3a3-7872fe729e3e" fragment="1" gd:fragmentGUID="576d9c44-1ca8-451d-afac-1a479d11949a">Niniejszą ustawą zmienia się ustawy: ustawę z dnia 5 lipca 2018 r. o ułatwieniach w przygotowaniu i realizacji inwestycji mieszkaniowych oraz inwestycji towarzyszących, ustawę z dnia 16 czerwca 2023 r. o zmianie ustawy – Prawo geologiczne i górnicze oraz niektórych innych ustaw, ustawę z dnia 7 lipca 2023 r. o zmianie ustawy o planowaniu i zagospodarowaniu przestrzennym oraz niektórych innych ustaw, ustawę z dnia 13 lipca 2023 r. o ułatwieniach w przygotowaniu i realizacji inwestycji w zakresie biogazowni rolniczych, a także ich funkcjonowaniu oraz ustawę z dnia 13 lipca 2023 r. o zmianie ustawy o udostępnianiu informacji o środowisku i jego ochronie, udziale społeczeństwa w ochronie środowiska oraz o ocenach oddziaływania na środowisko oraz niektórych innych ustaw.</zdanie></p></odnosnik></tytul>
+    <artykul eId="DU/2025/527__art_1" gd:GUID="790e30f6-1b77-4d82-af73-f3a86b001bbc" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-527_domyslne.x" wejscie-w-zycie="2025-05-07">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="8a166592-5ac5-4845-9792-740c9380984d" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-527_domyslne.x" wejscie-w-zycie="2025-05-07">
+        <p>
+          <zdanie nr="1" gd:zdGUID="9d28d881-9856-41bd-bb46-533f7a15396e" fragment="1" gd:fragmentGUID="d293c997-c5a4-475a-8530-59026264f62b" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-527_domyslne.x" wejscie-w-zycie="2025-05-07">W ustawie z dnia 27 marca 2003 r. o planowaniu i zagospodarowaniu przestrzennym (Dz. U. z 2024 r. poz. 1130, 1907 i 1940) wprowadza się następujące zmiany:</zdanie>
+        </p>
+        <punkt eId="DU/2025/527__art_1__pkt_1" gd:GUID="7e96c98b-e46e-4213-892d-63ad95def1f4" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-527_domyslne.x" wejscie-w-zycie="2025-05-07">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="9d28d881-9856-41bd-bb46-533f7a15396e" fragment="2" gd:fragmentGUID="5ed78bb4-ca2f-4cb0-8d5b-806c1636f0b4" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-527_domyslne.x" wejscie-w-zycie="2025-05-07"><now:zamien-tekst stary-tekst="z wyłączeniem" nowy-tekst="z wyłączeniem morskich wód wewnętrznych oraz" element-eId="DU/2024/1130__art_13a__ust_1" akt="https://eli.gov.pl/eli/DU/2024/1130" gd:nowGUID="a6b4f308-0ac3-48d3-8796-d2234210a298" />w art. 13a w ust. 1 po wyrazach „z wyłączeniem” dodaje się wyrazy „morskich wód wewnętrznych oraz”;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/527__art_1__pkt_2" gd:GUID="e1b0c755-ba42-419d-9990-89b2a0006889" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-527_domyslne.x" wejscie-w-zycie="2025-05-07">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="9d28d881-9856-41bd-bb46-533f7a15396e" fragment="3" gd:fragmentGUID="fda196fc-3c50-4140-b1c1-fdbb80a9cf56" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-527_domyslne.x" wejscie-w-zycie="2025-05-07">po art. 13b dodaje się art. 13ba w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/1130" cudzyslowy="oba" gd:nowGUID="ffadbdf6-8dd3-4c1c-95b8-7af8d6cf0875" element-eId="DU/2024/1130__art_13b" funkcja="dodaj-po"><artykul eId="DU/2024/1130__art_13ba" gd:GUID="a30e7db5-d6cf-4576-9088-d27cd1c2a4a3" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-527_domyslne.x" wejscie-w-zycie="2025-05-07"><nr>13ba</nr><ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="c7b3bd1a-8f6e-49b2-a3fd-fd93867bd212" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-527_domyslne.x" wejscie-w-zycie="2025-05-07"><p><zdanie nr="1" gd:zdGUID="ab739038-6c1d-4950-a20a-9ebaf11b8eb2" fragment="1" gd:fragmentGUID="b4c76c44-c11d-4d45-acc1-83fb0192ed80" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-527_domyslne.x" wejscie-w-zycie="2025-05-07">Ustalenia planu ogólnego określa się, uwzględniając granice obszaru, dla którego uchwala się plan ogólny, oraz uwarunkowania rozwoju przestrzennego gminy, o których mowa w art. 13b, aktualne na dzień nie wcześniejszy niż dzień wystąpienia o opinie i uzgodnienia, o których mowa w art. 13i ust. 3 pkt 5.</zdanie></p></ustep-n></artykul></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/527__art_1__pkt_3" gd:GUID="71f7ccba-b8c3-4ace-ab0d-48dcdba6e24f" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-527_domyslne.x" wejscie-w-zycie="2025-05-07">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="9d28d881-9856-41bd-bb46-533f7a15396e" fragment="4" gd:fragmentGUID="3f816963-8b28-481f-995e-db57a033b659" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-527_domyslne.x" wejscie-w-zycie="2025-05-07">w art. 13d ust. 1 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/1130" cudzyslowy="oba" gd:nowGUID="805fedcc-ad08-4f1f-854d-00a63afd0de9" element-eId="DU/2024/1130__art_13d__ust_1" funkcja="zastap"><ustep eId="DU/2024/1130__art_13d__ust_1" gd:GUID="dcda34be-e04f-4e64-9b46-4c868fd9676c" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-527_domyslne.x" wejscie-w-zycie="2025-05-07"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="849f2ec7-59a9-403b-a96e-c1c820ab9050" fragment="1" gd:fragmentGUID="7cafaabd-92cd-44c7-9ff1-30db5115d2aa" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-527_domyslne.x" wejscie-w-zycie="2025-05-07">Strefy planistyczne, o których mowa w art. 13c ust. 2 pkt 1–3, wyznacza się w pierwszej kolejności na obszarach, dla których w obowiązujących miejscowych planach zagospodarowania przestrzennego określono przeznaczenie umożliwiające realizację funkcji mieszkaniowej, obszarach uzupełnienia zabudowy oraz obszarach z istniejącą zabudową o funkcji mieszkaniowej, z wyłączeniem luk w tej zabudowie, biorąc pod uwagę uwarunkowania, o których mowa w art. 13b.</zdanie></p></ustep></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/527__art_1__pkt_4" gd:GUID="83af6452-0464-4e5b-bd99-cab4345b5bd0" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-527_domyslne.x" wejscie-w-zycie="2025-05-07">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="9d28d881-9856-41bd-bb46-533f7a15396e" fragment="5" gd:fragmentGUID="90996170-9d38-462b-a2ff-d0366aa2d585" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-527_domyslne.x" wejscie-w-zycie="2025-05-07">w art. 17 w pkt 6 w lit. b:</zdanie>
+          </p>
+          <litera eId="DU/2025/527__art_1__pkt_4__lit_a" gd:GUID="d1af4d9f-53c3-4d98-9e8f-c7a51adb2371" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-527_domyslne.x" wejscie-w-zycie="2025-05-07">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="9d28d881-9856-41bd-bb46-533f7a15396e" fragment="6" gd:fragmentGUID="419833ad-907e-4473-8f05-b01432fcdbdb" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-527_domyslne.x" wejscie-w-zycie="2025-05-07"><now:uchyl akt="https://eli.gov.pl/eli/DU/2024/1130" element-eId="DU/2024/1130__art_17__pkt_6__lit_b__tir_15" gd:nowGUID="ec9e3203-40d0-48e0-aba4-0a75c7410f76" />uchyla się tiret piętnaste,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/527__art_1__pkt_4__lit_b" gd:GUID="b5c9d46c-1ace-4835-b3cb-18aa74405ae5" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-527_domyslne.x" wejscie-w-zycie="2025-05-07">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="9d28d881-9856-41bd-bb46-533f7a15396e" fragment="7" gd:fragmentGUID="3c38f4f0-9b3a-4bba-acfc-4548b7332a21" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-527_domyslne.x" wejscie-w-zycie="2025-05-07">dodaje się tiret szesnaste w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/1130" cudzyslowy="oba" gd:nowGUID="7175f0a7-d761-40f7-87c6-62fc3087f087" element-eId="DU/2024/1130__art_17__pkt_6__lit_b" funkcja="dodaj-w"><tiret eId="DU/2024/1130__art_17__pkt_6__lit_b__tir_1" gd:GUID="2d299fc7-ba5c-46ec-b807-005d01435678" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-527_domyslne.x" wejscie-w-zycie="2025-05-07"><p><zdanie nr="1" gd:zdGUID="ef874543-bccf-4619-b7ce-256fb6ecc65e" fragment="1" gd:fragmentGUID="48eb48d5-86aa-47cd-a544-5e2b8baea8bb" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-527_domyslne.x" wejscie-w-zycie="2025-05-07">Spółką Celową w rozumieniu art. 2 pkt 10 ustawy z dnia 10 maja 2018 r. o Centralnym Porcie Komunikacyjnym w zakresie dotyczącym lokalizacji Inwestycji i Inwestycji Towarzyszących w rozumieniu art. 2 pkt 3 i 4 tej ustawy oraz obszaru otoczenia Centralnego Portu Komunikacyjnego, o którym mowa w tej ustawie, oraz</zdanie></p></tiret></cytat-strukt>;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2025/527__art_1__pkt_5" gd:GUID="39378a26-6193-4e3d-9264-0f2cc1feb860" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-527_domyslne.x" wejscie-w-zycie="2025-05-07">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="9d28d881-9856-41bd-bb46-533f7a15396e" fragment="8" gd:fragmentGUID="16d97040-6966-4fb2-98a0-c64fe1948c5f" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-527_domyslne.x" wejscie-w-zycie="2025-05-07">w art. 20 w ust. 3 w pkt 1 lit. a otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/1130" cudzyslowy="oba" gd:nowGUID="73741501-0a77-4585-b9b4-df1fe04c578d" element-eId="DU/2024/1130__art_20__ust_3__pkt_1__lit_a" funkcja="zastap"><litera eId="DU/2024/1130__art_20__ust_3__pkt_1__lit_a" gd:GUID="d6ea8c44-62b8-4764-933b-32d3adf50a4b" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-527_domyslne.x" wejscie-w-zycie="2025-05-07"><nr>a</nr><p><zdanie nr="1" gd:zdGUID="9b0a4e75-5a47-4c45-bd8e-1fd5f78248ae" fragment="1" gd:fragmentGUID="b8fc5612-c17c-4268-90ce-432de35609c7" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-527_domyslne.x" wejscie-w-zycie="2025-05-07">przeznaczenia terenu mieszczącego się w profilu funkcjonalnym strefy planistycznej obejmującej teren,</zdanie></p></litera></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/527__art_1__pkt_6" gd:GUID="6e7b17d6-2396-43dc-b249-0474cd37ac3c" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-527_domyslne.x" wejscie-w-zycie="2025-05-07">
+          <nr>6</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="9d28d881-9856-41bd-bb46-533f7a15396e" fragment="9" gd:fragmentGUID="b742031b-8446-4102-82f4-694b86a1f507" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-527_domyslne.x" wejscie-w-zycie="2025-05-07"><now:uchyl akt="https://eli.gov.pl/eli/DU/2024/1130" element-eId="DU/2024/1130__art_27a__zdn_2" gd:nowGUID="1d82f430-c210-47be-8ffb-e007e52c7a58" />w art. 27a uchyla się zdanie drugie;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/527__art_1__pkt_7" gd:GUID="c149a826-22d0-48f2-a3cf-bb56565304c9" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-527_domyslne.x" wejscie-w-zycie="2025-05-07">
+          <nr>7</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="9d28d881-9856-41bd-bb46-533f7a15396e" fragment="10" gd:fragmentGUID="4282b886-321b-47f7-8338-1a957b7e0a12" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-527_domyslne.x" wejscie-w-zycie="2025-05-07">w art. 54 w ust. 2 w pkt 1 lit. a otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/1130" cudzyslowy="oba" gd:nowGUID="d16d2b27-a8a0-424c-b464-22ae97856c04" element-eId="DU/2024/1130__art_54__ust_2__pkt_1__lit_a" funkcja="zastap"><litera eId="DU/2024/1130__art_54__ust_2__pkt_1__lit_a" gd:GUID="762bd1bf-56af-43e9-b37e-2d38aeb9eb1d" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-527_domyslne.x" wejscie-w-zycie="2025-05-07"><nr>a</nr><p><zdanie nr="1" gd:zdGUID="ad5e9d1f-7c3f-4450-bc49-9de4e83b120f" fragment="1" gd:fragmentGUID="05e3435f-c6d3-43e6-b1bd-f500f567a842" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-527_domyslne.x" wejscie-w-zycie="2025-05-07">funkcji zabudowy i zagospodarowania terenu mieszczącej się w profilu funkcjonalnym strefy planistycznej obejmującej teren,</zdanie></p></litera></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/527__art_1__pkt_8" gd:GUID="46a9783c-6e2c-4295-857e-93ad83d99b25" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-527_domyslne.x" wejscie-w-zycie="2025-05-07">
+          <nr>8</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="9d28d881-9856-41bd-bb46-533f7a15396e" fragment="11" gd:fragmentGUID="066e91ef-b528-4b1d-abd1-c2afaf0591ea" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-527_domyslne.x" wejscie-w-zycie="2025-05-07"><now:zamien-tekst stary-tekst="i zagospodarowania terenu" nowy-tekst="" element-eId="DU/2024/1130__art_59__ust_2a" akt="https://eli.gov.pl/eli/DU/2024/1130" gd:nowGUID="44873790-18c7-4e1a-a86a-8f375b61058d" />w art. 59 w ust. 2a skreśla się wyrazy „ i zagospodarowania terenu”;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/527__art_1__pkt_9" gd:GUID="59f100ad-43a5-44f3-9690-a509c608bb75" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-527_domyslne.x" wejscie-w-zycie="2025-05-07">
+          <nr>9</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="9d28d881-9856-41bd-bb46-533f7a15396e" fragment="12" gd:fragmentGUID="5f54dcb9-4dff-4aab-b19e-32757b7b6c55" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-527_domyslne.x" wejscie-w-zycie="2025-05-07">w art. 61:</zdanie>
+          </p>
+          <litera eId="DU/2025/527__art_1__pkt_9__lit_a" gd:GUID="67d0ba30-b909-4e8c-b7fe-b96bc9171fd3" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-527_domyslne.x" wejscie-w-zycie="2025-05-07">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="9d28d881-9856-41bd-bb46-533f7a15396e" fragment="13" gd:fragmentGUID="9daff763-a860-4993-b75f-d1836120cf51" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-527_domyslne.x" wejscie-w-zycie="2025-05-07"><now:zamien-tekst stary-tekst="." nowy-tekst=";" element-eId="DU/2024/1130__art_61__ust_1a__pkt_2" akt="https://eli.gov.pl/eli/DU/2024/1130" now:wystapienie="ostatnie" gd:nowGUID="c46eb590-27f7-434f-9c82-03edf658e8c2" />w ust. 1a w pkt 2 kropkę zastępuje się średnikiem i dodaje się pkt 3 w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/1130" cudzyslowy="oba" gd:nowGUID="13334c4c-b94c-4ec1-8439-6af7e5c86b6a" element-eId="DU/2024/1130__art_61__ust_1a__pkt_2" funkcja="dodaj-po"><punkt eId="DU/2024/1130__art_61__ust_1a__pkt_3" gd:GUID="dd5c5440-d26d-472f-a9ce-096fdddd55cc" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-527_domyslne.x" wejscie-w-zycie="2025-05-07"><nr>3</nr><p><zdanie nr="1" gd:zdGUID="7cdd0c65-58bc-477a-a652-832ed0b4c7c2" fragment="1" gd:fragmentGUID="4a7a6676-ae20-4735-ac84-450e5fec2a2a" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-527_domyslne.x" wejscie-w-zycie="2025-05-07">lokalizowanych na terenach zamkniętych.</zdanie></p></punkt></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/527__art_1__pkt_9__lit_b" gd:GUID="5202a1a2-7c19-43d5-b256-657a74c47470" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-527_domyslne.x" wejscie-w-zycie="2025-05-07">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="9d28d881-9856-41bd-bb46-533f7a15396e" fragment="14" gd:fragmentGUID="fa23107f-4cb8-4ca0-a312-08ec619db784" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-527_domyslne.x" wejscie-w-zycie="2025-05-07"><now:zamien-tekst stary-tekst="o których mowa w ust. 1 pkt 1a" nowy-tekst="o których mowa w ust. 1" element-eId="DU/2024/1130__art_61__ust_5a__zdn_1" akt="https://eli.gov.pl/eli/DU/2024/1130" gd:nowGUID="e62181bf-8f3a-4cdb-9128-6a7016897011" />w ust. 5a w zdaniu pierwszym wyrazy „o których mowa w ust. 1 pkt 1a” zastępuje się wyrazami „o których mowa w ust. 1”;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2025/527__art_1__pkt_10" gd:GUID="04178d6b-fe27-4788-ba52-5916cd185886" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-527_domyslne.x" wejscie-w-zycie="2025-05-07">
+          <nr>10</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="9d28d881-9856-41bd-bb46-533f7a15396e" fragment="15" gd:fragmentGUID="d00155ed-478f-4ef4-9e1c-19e345b19c18" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-527_domyslne.x" wejscie-w-zycie="2025-05-07">w art. 67c w ust. 5 część wspólna otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/1130" cudzyslowy="oba" gd:nowGUID="246be4c3-435d-48d7-b5e1-644e4db41c3d" element-eId="DU/2024/1130__art_67c__ust_5__czw" funkcja="zastap"><czesc-wspolna-punkt eId="DU/2024/1130__art_67c__ust_5__czw" gd:GUID="9b3458ee-30de-4f3e-bec5-72dd3c0cb913" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-527_domyslne.x" wejscie-w-zycie="2025-05-07"><p><zdanie nr="1" gd:zdGUID="40bd7c22-7ccd-476f-b6e8-6a4205478acd" fragment="1" gd:fragmentGUID="8c71442b-18f4-430d-8669-bc9a13917ac2" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-527_domyslne.x" wejscie-w-zycie="2025-05-07">– dane przestrzenne dla tych aktów tworzy wojewoda, a następnie przekazuje je organowi właściwemu najpóźniej w terminie 14 dni od dnia wydania zarządzenia.</zdanie></p></czesc-wspolna-punkt></cytat-strukt>.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2025/527__art_2" gd:GUID="ab556380-0c21-4b6d-9e47-2fa743470356" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-527_domyslne.x" wejscie-w-zycie="2025-05-07">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="8ed17d21-65b0-461a-ae49-437a5bbaf453" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-527_domyslne.x" wejscie-w-zycie="2025-05-07">
+        <p>
+          <zdanie nr="1" gd:zdGUID="7367f792-d1b4-45d3-9e96-11d7ae9eb1a5" fragment="1" gd:fragmentGUID="36574609-de2a-44a9-acf9-a25b1a1e2fe6" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-527_domyslne.x" wejscie-w-zycie="2025-05-07"><now:zamien-tekst stary-tekst="1 stycznia 2026 r." nowy-tekst="1 lipca 2026 r." element-eId="DU/2024/195__art_59" akt="https://eli.gov.pl/eli/DU/2024/195" gd:nowGUID="f58e21f1-de10-4794-ae63-7db7a5c07c04" />W ustawie z dnia 5 lipca 2018 r. o ułatwieniach w przygotowaniu i realizacji inwestycji mieszkaniowych oraz inwestycji towarzyszących (Dz. U. z 2024 r. poz. 195) w art. 59 wyrazy „1 stycznia 2026 r.” zastępuje się wyrazami „1 lipca 2026 r.”.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2025/527__art_3" gd:GUID="db1ac146-9d01-4488-a18f-ea9cbf15170a" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-527_domyslne.x" wejscie-w-zycie="2025-05-07">
+      <nr>3</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="e232532a-344c-43f9-baa8-2496479b0b75" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-527_domyslne.x" wejscie-w-zycie="2025-05-07">
+        <p>
+          <zdanie nr="1" gd:zdGUID="20c9357e-34a7-44a1-9958-77961143925c" fragment="1" gd:fragmentGUID="ab69b2f4-b11d-4e45-82a0-8d0afda9c5bd" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-527_domyslne.x" wejscie-w-zycie="2025-05-07"><now:zamien-tekst stary-tekst="1 stycznia 2026 r." nowy-tekst="1 lipca 2026 r." element-eId="DU/2023/2029__art_50__ust_4__pkt_1" akt="https://eli.gov.pl/eli/DU/2023/2029" gd:nowGUID="897aaea4-6cca-4aac-ab2c-55a28bb2d9c1" />W ustawie z dnia 16 czerwca 2023 r. o zmianie ustawy – Prawo geologiczne i górnicze oraz niektórych innych ustaw (Dz. U. poz. 2029) w art. 50 w ust. 4 w pkt 1 wyrazy „1 stycznia 2026 r.” zastępuje się wyrazami „1 lipca 2026 r.”.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2025/527__art_4" gd:GUID="b4e4a853-aa9d-4f8f-a665-fb5381dc4eb0" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-527_domyslne.x" wejscie-w-zycie="2025-05-07">
+      <nr>4</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="53f79b88-e6c1-411a-b9df-44b58049b72d" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-527_domyslne.x" wejscie-w-zycie="2025-05-07">
+        <p>
+          <zdanie nr="1" gd:zdGUID="d1bc0fb0-91e1-467c-a2d9-bb47a819518b" fragment="1" gd:fragmentGUID="5c3daa8c-70b4-4e00-ba31-e24c327cafc8" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-527_domyslne.x" wejscie-w-zycie="2025-05-07">W ustawie z dnia 7 lipca 2023 r. o zmianie ustawy o planowaniu i zagospodarowaniu przestrzennym oraz niektórych innych ustaw (Dz. U. poz. 1688 oraz z 2024 r. poz. 1824) wprowadza się następujące zmiany:</zdanie>
+        </p>
+        <punkt eId="DU/2025/527__art_4__pkt_1" gd:GUID="8fa30ca7-b807-4444-b49f-eb0f715843a8" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-527_domyslne.x" wejscie-w-zycie="2025-05-07">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="d1bc0fb0-91e1-467c-a2d9-bb47a819518b" fragment="2" gd:fragmentGUID="fd15f813-bfdf-48df-97df-9b140b00c64f" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-527_domyslne.x" wejscie-w-zycie="2025-05-07">art. 51 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/1688" cudzyslowy="oba" gd:nowGUID="fda1dc3b-0343-4bb2-a1bd-ac476621c7e7" element-eId="DU/2023/1688__art_51" funkcja="zastap"><artykul eId="DU/2023/1688__art_51" gd:GUID="a85badb6-5602-4a6f-a0a6-ac54489212ba" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-527_domyslne.x" wejscie-w-zycie="2025-05-07"><nr>51</nr><ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="db7fbc70-a06f-4e78-b449-6ead439ea76d" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-527_domyslne.x" wejscie-w-zycie="2025-05-07"><p><zdanie nr="1" gd:zdGUID="d1dc687a-bab3-405f-963d-d31d73e96066" fragment="1" gd:fragmentGUID="3b09f356-232e-4b86-aec1-8fd3b41f8ee5" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-527_domyslne.x" wejscie-w-zycie="2025-05-07">Ustalenia pierwszego planu ogólnego gminy w danej gminie określa się, uwzględniając politykę przestrzenną gminy określoną w strategii rozwoju gminy lub strategii rozwoju ponadlokalnego, o ile gmina dysponuje strategią rozwoju gminy lub strategią rozwoju ponadlokalnego, których opracowanie zostało wszczęte od dnia wejścia w życie niniejszej ustawy.</zdanie></p></ustep-n></artykul></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/527__art_4__pkt_2" gd:GUID="4656cd19-256d-4074-a98d-5e540bc5c176" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-527_domyslne.x" wejscie-w-zycie="2025-05-07">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="d1bc0fb0-91e1-467c-a2d9-bb47a819518b" fragment="3" gd:fragmentGUID="214b8089-35e5-4b82-8705-69c933dbd6b4" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-527_domyslne.x" wejscie-w-zycie="2025-05-07"><now:zamien-tekst stary-tekst="31 grudnia 2025 r." nowy-tekst="30 czerwca 2026 r." element-eId="DU/2023/1688__art_52__ust_1" akt="https://eli.gov.pl/eli/DU/2023/1688" gd:nowGUID="c99ddfe6-1306-455f-9222-c2203e23fc86" /><now:zamien-tekst stary-tekst="31 grudnia 2025 r." nowy-tekst="30 czerwca 2026 r." element-eId="DU/2023/1688__art_52__ust_2" akt="https://eli.gov.pl/eli/DU/2023/1688" gd:nowGUID="034e034d-0041-453f-8434-0d761c8b9c86" /><now:zamien-tekst stary-tekst="31 grudnia 2025 r." nowy-tekst="30 czerwca 2026 r." element-eId="DU/2023/1688__art_52__ust_3" akt="https://eli.gov.pl/eli/DU/2023/1688" gd:nowGUID="d49cc690-7bf2-407f-9874-5e7f9342f8ec" /><now:zamien-tekst stary-tekst="31 grudnia 2025 r." nowy-tekst="30 czerwca 2026 r." element-eId="DU/2023/1688__art_52__ust_4" akt="https://eli.gov.pl/eli/DU/2023/1688" gd:nowGUID="4faadabb-90cc-4e88-9ce9-a54828ff37c5" /><now:zamien-tekst stary-tekst="31 grudnia 2025 r." nowy-tekst="30 czerwca 2026 r." element-eId="DU/2023/1688__art_52__ust_5" akt="https://eli.gov.pl/eli/DU/2023/1688" gd:nowGUID="75d6b0fa-b0ff-4ee2-b5e6-74c2f047b3b1" /><now:zamien-tekst stary-tekst="31 grudnia 2025 r." nowy-tekst="30 czerwca 2026 r." element-eId="DU/2023/1688__art_52__ust_6" akt="https://eli.gov.pl/eli/DU/2023/1688" gd:nowGUID="7385a4d9-1318-430a-a579-44d384fd811c" /><now:zamien-tekst stary-tekst="31 grudnia 2025 r." nowy-tekst="30 czerwca 2026 r." element-eId="DU/2023/1688__art_52__ust_8__zdn_1" akt="https://eli.gov.pl/eli/DU/2023/1688" gd:nowGUID="f7039c66-ee29-4def-b096-e9b196cd19fe" /><now:zamien-tekst stary-tekst="31 grudnia 2025 r." nowy-tekst="30 czerwca 2026 r." element-eId="DU/2023/1688__art_52__ust_9" akt="https://eli.gov.pl/eli/DU/2023/1688" gd:nowGUID="9a6fb178-1da3-4f09-8bc8-8d15ae778971" /><now:zamien-tekst stary-tekst="31 grudnia 2025 r." nowy-tekst="30 czerwca 2026 r." element-eId="DU/2023/1688__art_53" akt="https://eli.gov.pl/eli/DU/2023/1688" gd:nowGUID="36eb54eb-3327-4b1f-8056-f41c1e8cbe64" /><now:zamien-tekst stary-tekst="31 grudnia 2025 r." nowy-tekst="30 czerwca 2026 r." element-eId="DU/2023/1688__art_65__ust_1" akt="https://eli.gov.pl/eli/DU/2023/1688" gd:nowGUID="a872f875-1df9-4545-8935-b3babb6b0764" /><now:zamien-tekst stary-tekst="31 grudnia 2025 r." nowy-tekst="30 czerwca 2026 r." element-eId="DU/2023/1688__art_76" akt="https://eli.gov.pl/eli/DU/2023/1688" gd:nowGUID="9ed5d950-9d35-40bb-8eaf-aef189aa4fe5" />w art. 52 w ust. 1 we wprowadzeniu do wyliczenia, w ust. 2 i 3, w ust. 4 we wprowadzeniu do wyliczenia, w ust. 5 i 6, w ust. 8 w zdaniu pierwszym i w ust. 9, w art. 53, w art. 65 w ust. 1 oraz w art. 76 wyrazy „31 grudnia 2025 r.” zastępuje się wyrazami „30 czerwca 2026 r.”;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/527__art_4__pkt_3" gd:GUID="2d6ec92e-b184-4334-a4b5-dcc2ed95cdcf" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-527_domyslne.x" wejscie-w-zycie="2025-05-07">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="d1bc0fb0-91e1-467c-a2d9-bb47a819518b" fragment="4" gd:fragmentGUID="e9ee9413-28be-410e-a567-3de5f3b43ab3" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-527_domyslne.x" wejscie-w-zycie="2025-05-07"><now:zamien-tekst stary-tekst="1 stycznia 2026 r." nowy-tekst="1 lipca 2026 r." element-eId="DU/2023/1688__art_52__ust_7" akt="https://eli.gov.pl/eli/DU/2023/1688" gd:nowGUID="1d2ee011-048c-4486-92b3-cb2db40d0e58" /><now:zamien-tekst stary-tekst="1 stycznia 2026 r." nowy-tekst="1 lipca 2026 r." element-eId="DU/2023/1688__art_59__ust_3__zdn_1" akt="https://eli.gov.pl/eli/DU/2023/1688" gd:nowGUID="b9cca6c9-0cb2-41a5-aa4f-0b093bc9d77e" /><now:zamien-tekst stary-tekst="1 stycznia 2026 r." nowy-tekst="1 lipca 2026 r." element-eId="DU/2023/1688__art_75" element-do-eId="DU/2023/1688__art_77" akt="https://eli.gov.pl/eli/DU/2023/1688" gd:nowGUID="b0324d1f-f5e0-40c7-aacb-ba528f554d66" />w art. 52 w ust. 7, w art. 59 w ust. 3 w zdaniu pierwszym i w art. 75–77 wyrazy „1 stycznia 2026 r.” zastępuje się wyrazami „1 lipca 2026 r.”;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/527__art_4__pkt_4" gd:GUID="11036a1a-ff2b-4d4f-aaf1-7e583769a731" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-527_domyslne.x" wejscie-w-zycie="2025-05-07">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="d1bc0fb0-91e1-467c-a2d9-bb47a819518b" fragment="5" gd:fragmentGUID="a2d71574-f0d7-4cca-b6f2-e47a6f09c983" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-527_domyslne.x" wejscie-w-zycie="2025-05-07"><now:zamien-tekst stary-tekst="31 marca 2026 r." nowy-tekst="30 września 2026 r." element-eId="DU/2023/1688__art_54" akt="https://eli.gov.pl/eli/DU/2023/1688" gd:nowGUID="4085bc5b-19b1-46c0-8794-5a52cef1281f" /><now:zamien-tekst stary-tekst="31 marca 2026 r." nowy-tekst="30 września 2026 r." element-eId="DU/2023/1688__art_56__ust_1__czw" akt="https://eli.gov.pl/eli/DU/2023/1688" gd:nowGUID="859dd5b5-38f0-4d46-a26b-96dc731fbc42" /><now:zamien-tekst stary-tekst="31 marca 2026 r." nowy-tekst="30 września 2026 r." element-eId="DU/2023/1688__art_56__ust_2" akt="https://eli.gov.pl/eli/DU/2023/1688" gd:nowGUID="8cabffa4-6543-429d-97e4-ae8e71466136" />w art. 54, w art. 56 w ust. 1 w części wspólnej i w ust. 2 wyrazy „31 marca 2026 r.” zastępuje się wyrazami „30 września 2026 r.”;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/527__art_4__pkt_5" gd:GUID="0b702123-d287-49b2-9bf4-be0f03f3416d" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-527_domyslne.x" wejscie-w-zycie="2025-05-07">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="d1bc0fb0-91e1-467c-a2d9-bb47a819518b" fragment="6" gd:fragmentGUID="acfeed88-d627-444c-8cfe-1620b750563d" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-527_domyslne.x" wejscie-w-zycie="2025-05-07">w art. 67:</zdanie>
+          </p>
+          <litera eId="DU/2025/527__art_4__pkt_5__lit_a" gd:GUID="0f6d3c8d-0109-4c3f-8ddd-82256c561287" okres="okr_obowiazywanie.zdarz_wejscie_2026-07-01_DU-2025-527_odczytane.x" wejscie-w-zycie="2026-07-01">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="d1bc0fb0-91e1-467c-a2d9-bb47a819518b" fragment="7" gd:fragmentGUID="0df2a34b-4be6-4d2b-aa6a-a9a5c5f272ca" okres="okr_obowiazywanie.zdarz_wejscie_2026-07-01_DU-2025-527_odczytane.x" wejscie-w-zycie="2026-07-01">w ust. 3 pkt 3 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/1688" cudzyslowy="oba" gd:nowGUID="88922a31-12fb-491b-8f8a-65efc642a953" element-eId="DU/2023/1688__art_67__ust_3__pkt_3" funkcja="zastap"><punkt eId="DU/2023/1688__art_67__ust_3__pkt_3" gd:GUID="2917ac9c-2015-4392-af7c-6f61e6f207da" okres="okr_obowiazywanie.zdarz_wejscie_2026-07-01_DU-2025-527_odczytane.x" wejscie-w-zycie="2026-07-01"><nr>3</nr><p><zdanie nr="1" gd:zdGUID="734d4087-e8ae-48fb-91e7-7f9f699c4775" fragment="1" gd:fragmentGUID="6a14e889-2b55-47ab-ad3f-8784d23ac916" okres="okr_obowiazywanie.zdarz_wejscie_2026-07-01_DU-2025-527_odczytane.x" wejscie-w-zycie="2026-07-01">przepis art. 67a ust. 3b ustawy zmienianej w art. 1 stosuje się w brzmieniu nadanym niniejszą ustawą – w przypadku gdy przed dniem wejścia w życie niniejszego przepisu nie ogłoszono o terminie wyłożenia do publicznego wglądu oraz nie ogłoszono o rozpoczęciu konsultacji społecznych projektów tych planów albo ich zmian;</zdanie></p></punkt></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/527__art_4__pkt_5__lit_b" gd:GUID="9df53ee2-a5e5-4e6f-a991-7aed9dbfc103" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-527_domyslne.x" wejscie-w-zycie="2025-05-07">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="d1bc0fb0-91e1-467c-a2d9-bb47a819518b" fragment="8" gd:fragmentGUID="8b61b320-2f49-4674-a3fb-155572588390" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-527_domyslne.x" wejscie-w-zycie="2025-05-07">w ust. 4 pkt 1 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/1688" cudzyslowy="oba" gd:nowGUID="a224555c-dbe2-45d0-8a2a-682ce9393ebb" element-eId="DU/2023/1688__art_67__ust_4__pkt_1" funkcja="zastap"><punkt eId="DU/2023/1688__art_67__ust_4__pkt_1" gd:GUID="e546b307-f6fb-4f52-8cf1-48f6f18e8d8f" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-527_domyslne.x" wejscie-w-zycie="2025-05-07"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="c6870350-8cc2-45c0-a8b6-531efc96e87c" fragment="1" gd:fragmentGUID="04bb10d6-5f6a-402f-999a-168631c4fc73" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-527_domyslne.x" wejscie-w-zycie="2025-05-07">przed dniem utraty mocy studium uwarunkowań i kierunków zagospodarowania przestrzennego gminy w danej gminie ogłoszono o terminie wyłożenia do publicznego wglądu albo ogłoszono o rozpoczęciu konsultacji społecznych projektu tego miejscowego planu zagospodarowania przestrzennego albo jego zmiany;</zdanie></p></punkt></cytat-strukt>;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2025/527__art_4__pkt_6" gd:GUID="3b4296fc-2162-4f7a-aa69-9c654fde58dd" okres="okr_obowiazywanie.zdarz_wejscie_2026-07-01_DU-2025-527_odczytane.x" wejscie-w-zycie="2026-07-01">
+          <nr>6</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="d1bc0fb0-91e1-467c-a2d9-bb47a819518b" fragment="9" gd:fragmentGUID="3505a812-057a-41e4-9969-dcbf4f376b99" okres="okr_obowiazywanie.zdarz_wejscie_2026-07-01_DU-2025-527_odczytane.x" wejscie-w-zycie="2026-07-01">w art. 76:</zdanie>
+          </p>
+          <litera eId="DU/2025/527__art_4__pkt_6__lit_a" gd:GUID="0e9e859c-e5ce-445b-8ff7-d552602642bd" okres="okr_obowiazywanie.zdarz_wejscie_2026-07-01_DU-2025-527_odczytane.x" wejscie-w-zycie="2026-07-01">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="d1bc0fb0-91e1-467c-a2d9-bb47a819518b" fragment="10" gd:fragmentGUID="b1fefa6b-5d66-4fd1-b551-4ec0e6fbeedd" okres="okr_obowiazywanie.zdarz_wejscie_2026-07-01_DU-2025-527_odczytane.x" wejscie-w-zycie="2026-07-01"><now:zamien-tekst stary-tekst="oraz art. 28 ust. 6, 7 i 11, art. 29 ust. 1 pkt 8 lit. i oraz pkt 10, art. 99 ust. 4 pkt 4 lit. e tiret dwunaste, art. 120n ust. 1 pkt 9 lit. h, art. 120zl ust. 1 pkt 3 lit. i oraz art. 120zs ust. 1 ustawy zmienianej w art. 43" nowy-tekst=", art. 28 ust. 6, 7 i 11, art. 29 ust. 1 pkt 8 lit. i oraz pkt 10, art. 99 ust. 4 pkt 4 lit. e tiret dwunaste, art. 120n ust. 1 pkt 9 lit. h, art. 120zl ust. 1 pkt 3 lit. i oraz art. 120zs ust. 1 ustawy zmienianej w art. 43 oraz przepisy ustawy zmienianej w art. 45" element-eId="DU/2023/1688__art_76__ust_1" akt="https://eli.gov.pl/eli/DU/2023/1688" gd:nowGUID="45584149-c70b-464d-a10d-63e7863cf335" /><now:dodaj-ustep element-eId="DU/2023/1688__art_76" akt="https://eli.gov.pl/eli/DU/2023/1688" gd:nowGUID="9aede2c3-1831-46b4-9826-e2f2be17155d" />dotychczasową treść oznacza się jako ust. 1 i w tym ustępie wyrazy „oraz art. 28 ust. 6, 7 i 11, art. 29 ust. 1 pkt 8 lit. i oraz pkt 10, art. 99 ust. 4 pkt 4 lit. e tiret dwunaste, art. 120n ust. 1 pkt 9 lit. h, art. 120zl ust. 1 pkt 3 lit. i oraz art. 120zs ust. 1 ustawy zmienianej w art. 43” zastępuje się wyrazami „ , art. 28 ust. 6, 7 i 11, art. 29 ust. 1 pkt 8 lit. i oraz pkt 10, art. 99 ust. 4 pkt 4 lit. e tiret dwunaste, art. 120n ust. 1 pkt 9 lit. h, art. 120zl ust. 1 pkt 3 lit. i oraz art. 120zs ust. 1 ustawy zmienianej w art. 43 oraz przepisy ustawy zmienianej w art. 45”,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/527__art_4__pkt_6__lit_b" gd:GUID="04238ed8-b1d3-4e7e-aeb9-f6f3fd1ba149" okres="okr_obowiazywanie.zdarz_wejscie_2026-07-01_DU-2025-527_odczytane.x" wejscie-w-zycie="2026-07-01">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="d1bc0fb0-91e1-467c-a2d9-bb47a819518b" fragment="11" gd:fragmentGUID="795d6f09-f2d4-40b7-b34b-e4fa9bd1ff91" okres="okr_obowiazywanie.zdarz_wejscie_2026-07-01_DU-2025-527_odczytane.x" wejscie-w-zycie="2026-07-01">dodaje się ust. 2 w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/1688" cudzyslowy="oba" gd:nowGUID="cfb1d734-95bf-40ef-88e5-18f815da109a" element-eId="DU/2023/1688__art_76" funkcja="dodaj-w"><ustep eId="DU/2023/1688__art_76__ust_2" gd:GUID="47d5f5d2-0086-49f9-953a-2c3b86efff31" okres="okr_obowiazywanie.zdarz_wejscie_2026-07-01_DU-2025-527_odczytane.x" wejscie-w-zycie="2026-07-01"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="49fcd97b-b263-4e0b-9ad0-40462bd3275f" fragment="1" gd:fragmentGUID="4e60948c-6069-4ab9-8a5d-6b23e6245a5e" okres="okr_obowiazywanie.zdarz_wejscie_2026-07-01_DU-2025-527_odczytane.x" wejscie-w-zycie="2026-07-01">Do inwestycji mieszkaniowych lub inwestycji towarzyszących, o których mowa w ustawie zmienianej w art. 45, określonych we wniosku o ustalenie lokalizacji inwestycji złożonym przed dniem 1 lipca 2026 r. oraz przed dniem wejścia w życie planu ogólnego gminy w danej gminie stosuje się studia uwarunkowań i kierunków zagospodarowania przestrzennego gmin w brzmieniu dotychczasowym.</zdanie></p></ustep></cytat-strukt>;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2025/527__art_4__pkt_7" gd:GUID="f793b2cf-d47d-4c44-ab37-eeb6a7fa3a42" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-527_domyslne.x" wejscie-w-zycie="2025-05-07">
+          <nr>7</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="d1bc0fb0-91e1-467c-a2d9-bb47a819518b" fragment="12" gd:fragmentGUID="988e7608-04d9-4b85-8ca4-6f25960bdc37" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-527_domyslne.x" wejscie-w-zycie="2025-05-07">w art. 78:</zdanie>
+          </p>
+          <litera eId="DU/2025/527__art_4__pkt_7__lit_a" gd:GUID="c2fae52e-a0f3-48ba-80bd-cb5f0efc9f58" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-527_domyslne.x" wejscie-w-zycie="2025-05-07">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="d1bc0fb0-91e1-467c-a2d9-bb47a819518b" fragment="13" gd:fragmentGUID="9b5583c4-c271-457d-8a57-2f44ac84966a" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-527_domyslne.x" wejscie-w-zycie="2025-05-07">pkt 2 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/1688" cudzyslowy="oba" gd:nowGUID="0de2cb24-f632-4e3b-9715-f0fe1b40dd87" element-eId="DU/2023/1688__art_78__pkt_2" funkcja="zastap"><punkt eId="DU/2023/1688__art_78__pkt_2" gd:GUID="a075559c-109d-41c7-8faf-4a8d91e38100" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-527_domyslne.x" wejscie-w-zycie="2025-05-07"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="8eea2efc-c40f-4a04-9353-6f89de461890" fragment="1" gd:fragmentGUID="a02eca54-7713-44df-9ac5-ed6b3f4302ac" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-527_domyslne.x" wejscie-w-zycie="2025-05-07">art. 1 pkt 60 i art. 62, które wchodzą w życie z dniem 1 stycznia 2026 r.;</zdanie></p></punkt></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2025/527__art_4__pkt_7__lit_b" gd:GUID="607a1963-85d6-43f3-a614-c0cfb7f12d48" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-527_domyslne.x" wejscie-w-zycie="2025-05-07">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="d1bc0fb0-91e1-467c-a2d9-bb47a819518b" fragment="14" gd:fragmentGUID="98699649-0285-4f16-a7a3-b8ff2d68838a" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-527_domyslne.x" wejscie-w-zycie="2025-05-07">dodaje się pkt 3 w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/1688" cudzyslowy="oba" gd:nowGUID="d4140eab-f4f2-4d9f-bfa3-cc94bb576043" element-eId="DU/2023/1688__art_78" funkcja="dodaj-w"><punkt eId="DU/2023/1688__art_78__pkt_3" gd:GUID="d9846fad-488d-4c06-84bc-dccfb7a9acbd" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-527_domyslne.x" wejscie-w-zycie="2025-05-07"><nr>3</nr><p><zdanie nr="1" gd:zdGUID="53939fa9-5e6d-4f33-a110-be205d6ffa72" fragment="1" gd:fragmentGUID="b5a2d616-bce0-4f3b-963e-3fb7bd741f0a" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-527_domyslne.x" wejscie-w-zycie="2025-05-07">art. 1 pkt 10 w zakresie art. 8f i art. 8g ust. 3 i 4, pkt 12 w zakresie art. 13b pkt 1 i art. 13i ust. 3 pkt 4, 7 i 11, pkt 17 lit. d, g i lit. k w zakresie pkt 13c, pkt 25 w zakresie art. 27b ust. 4 pkt 3 i 7, pkt 29 lit. b, pkt 38 lit. b tiret drugie, tiret trzecie w zakresie pkt 7b i tiret piąte w zakresie pkt 11, pkt 39 w zakresie art. 37eb ust. 4 pkt 1 i art. 37ec ust. 2 pkt 3 i 8, pkt 45 lit. a tiret drugie i trzecie oraz tiret szóste w zakresie pkt 7, pkt 47 lit. a tiret czwarte i szóste, pkt 53, pkt 62 lit. b, lit. e w zakresie ust. 3b i lit. f, pkt 63 i 64, art. 6 pkt 1 lit. a i b, art. 11–13, art. 14 pkt 2 lit. b, art. 16 pkt 3, art. 22 pkt 1 i 3, art. 27 pkt 4–9, art. 37 pkt 2 lit. d w zakresie ust. 8 i 9, art. 39 pkt 2, art. 41 pkt 1 w zakresie pkt 4a, art. 43 pkt 1, 3, 5 i 10, pkt 11 lit. b i pkt 13 lit. a w zakresie ust. 1, art. 54, art. 56 ust. 2, art. 67 ust. 3 pkt 3 i art. 75–77, które wchodzą w życie z dniem 1 lipca 2026 r.</zdanie></p></punkt></cytat-strukt>.</zdanie>
+            </p>
+          </litera>
+        </punkt>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2025/527__art_5" gd:GUID="3bde0c05-3836-4191-a5aa-34cbc10bbe4d" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-527_domyslne.x" wejscie-w-zycie="2025-05-07">
+      <nr>5</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="c3c7a44f-6af7-4469-b000-5d42ca1c4c3e" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-527_domyslne.x" wejscie-w-zycie="2025-05-07">
+        <p>
+          <zdanie nr="1" gd:zdGUID="5c0c6129-662b-4b45-9ed4-445c2341a3e8" fragment="1" gd:fragmentGUID="e7badc95-92c8-4d35-89eb-85114862a31d" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-527_domyslne.x" wejscie-w-zycie="2025-05-07"><now:zamien-tekst stary-tekst="31 grudnia 2025 r." nowy-tekst="30 czerwca 2026 r." element-eId="DU/2023/1597__art_18" akt="https://eli.gov.pl/eli/DU/2023/1597" gd:nowGUID="f8c144ca-99c5-44aa-8e6d-64f59133dbce" /><now:zamien-tekst stary-tekst="31 grudnia 2025 r." nowy-tekst="30 czerwca 2026 r." element-eId="DU/2023/1597__art_19__ust_1" akt="https://eli.gov.pl/eli/DU/2023/1597" gd:nowGUID="ed510aaa-a7ad-44b5-bb9c-bd491cd732a2" /><now:zamien-tekst stary-tekst="31 grudnia 2025 r." nowy-tekst="30 czerwca 2026 r." element-eId="DU/2023/1597__art_20__ust_1" akt="https://eli.gov.pl/eli/DU/2023/1597" gd:nowGUID="b2d89a1e-3cb1-4720-a9bc-f9d3c4e7c669" />W ustawie z dnia 13 lipca 2023 r. o ułatwieniach w przygotowaniu i realizacji inwestycji w zakresie biogazowni rolniczych, a także ich funkcjonowaniu (Dz. U. poz. 1597) w art. 18 we wprowadzeniu do wyliczenia, w art. 19 w ust. 1 i w art. 20 w ust. 1 wyrazy „31 grudnia 2025 r.” zastępuje się wyrazami „30 czerwca 2026 r.”.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2025/527__art_6" gd:GUID="a60f8b6b-ad2e-4d1d-abfd-a6c432c27165" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-527_domyslne.x" wejscie-w-zycie="2025-05-07">
+      <nr>6</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="a3e080eb-d6c7-4bff-b9f1-f1173bfb4797" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-527_domyslne.x" wejscie-w-zycie="2025-05-07">
+        <p>
+          <zdanie nr="1" gd:zdGUID="4946f001-b995-4b3e-8398-9e3f3d6a4605" fragment="1" gd:fragmentGUID="8e83971d-1488-4d35-b197-9c04d6a8f785" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-527_domyslne.x" wejscie-w-zycie="2025-05-07"><now:zamien-tekst stary-tekst="1 stycznia 2026 r." nowy-tekst="1 lipca 2026 r." element-eId="DU/2023/1890__art_25" akt="https://eli.gov.pl/eli/DU/2023/1890" gd:nowGUID="5bf5d8e9-27aa-4fea-b551-9e657954eee2" />W ustawie z dnia 13 lipca 2023 r. o zmianie ustawy o udostępnianiu informacji o środowisku i jego ochronie, udziale społeczeństwa w ochronie środowiska oraz o ocenach oddziaływania na środowisko oraz niektórych innych ustaw (Dz. U. poz. 1890) w art. 25 wyrazy „1 stycznia 2026 r.” zastępuje się wyrazami „1 lipca 2026 r.”.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2025/527__art_7" gd:GUID="38baa001-b5c2-4c41-a04b-f59fd2270fc8" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-527_domyslne.x" wejscie-w-zycie="2025-05-07">
+      <nr>7</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="774bd02f-1ed9-4253-933b-7db80186d727" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-527_domyslne.x" wejscie-w-zycie="2025-05-07">
+        <p>
+          <zdanie nr="1" gd:zdGUID="afd493e6-cd4b-4388-bb26-d1a83942a9b5" fragment="1" gd:fragmentGUID="0f9c9480-062b-4303-b217-d379156128dc" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-527_domyslne.x" wejscie-w-zycie="2025-05-07">Do spraw opracowania i uchwalania miejscowych planów zagospodarowania przestrzennego albo ich zmian, do których przystąpiono przed dniem wejścia w życie niniejszej ustawy, stosuje się przepisy art. 17 pkt 6 lit. b ustawy zmienianej w art. 1 w brzmieniu nadanym niniejszą ustawą.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2025/527__art_8" gd:GUID="3091b459-2f9a-4ae3-96b3-ac011c9134f3" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-527_domyslne.x" wejscie-w-zycie="2025-05-07">
+      <nr>8</nr>
+      <ustep eId="DU/2025/527__art_8__ust_1" gd:GUID="1c339fe1-5b34-4a65-8f8d-0a8885c36fb8" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-527_domyslne.x" wejscie-w-zycie="2025-05-07">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="abdd9b3a-f77a-4c90-8b7e-b109df0be0ef" fragment="1" gd:fragmentGUID="6474426f-015a-4d4e-9212-e0dacb43184f" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-527_domyslne.x" wejscie-w-zycie="2025-05-07">Do spraw opracowania i uchwalania planów ogólnych gmin, do których przystąpiono przed dniem wejścia w życie niniejszej ustawy, stosuje się przepis art. 13ba ustawy zmienianej w art. 1.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2025/527__art_8__ust_2" gd:GUID="c5093912-266e-4e7a-816a-82eaca2f89c5" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-527_domyslne.x" wejscie-w-zycie="2025-05-07">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="2d4821bf-31f4-4ce3-a26d-6dd6fbc49390" fragment="1" gd:fragmentGUID="1934eec3-7d15-4765-931a-dd0b823795d4" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-527_domyslne.x" wejscie-w-zycie="2025-05-07">Do spraw opracowania i uchwalania planów ogólnych gmin, do których przystąpiono przed dniem wejścia w życie niniejszej ustawy, stosuje się przepis art. 13d ust. 1 ustawy zmienianej w art. 1 w brzmieniu nadanym niniejszą ustawą.</zdanie>
+        </p>
+      </ustep>
+    </artykul>
+    <artykul eId="DU/2025/527__art_9" gd:GUID="49fe3cdd-a45f-4ddc-af50-04775abd7a2f" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-527_domyslne.x" wejscie-w-zycie="2025-05-07">
+      <nr>9</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="6203b3d4-73ae-42d6-b2e1-f56ba05110b0" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-527_domyslne.x" wejscie-w-zycie="2025-05-07">
+        <p>
+          <zdanie nr="1" gd:zdGUID="3d450054-6c81-41f1-8588-88d45a8a522b" fragment="1" gd:fragmentGUID="1e985b1e-f860-41a1-947a-09c85076f3b9" okres="okr_obowiazywanie.zdarz_wejscie_2025-05-07_DU-2025-527_domyslne.x" wejscie-w-zycie="2025-05-07">Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia, z wyjątkiem art. 4 pkt 2 w zakresie art. 76, pkt 3 w zakresie art. 75–77, pkt 4 w zakresie art. 54 i art. 56 ust. 2, pkt 5 lit. a oraz pkt 6, które wchodzą w życie z dniem 1 lipca 2026 r.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <organ-podpisujacy>Prezydent Rzeczypospolitej Polskiej: <i><osoba podpisujacy="true" gd:osobaGUID="36c5e1e2-de9e-48fd-9758-712d3d4a9003"><imie>A.</imie> <nazwisko>Duda</nazwisko></osoba></i></organ-podpisujacy>
+  </ustawa>
+</akt-prawny>

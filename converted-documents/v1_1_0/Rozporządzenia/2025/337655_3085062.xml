@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <rozporzadzenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/1544</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>b457a21e-b9f0-4acd-857b-910ad60a0a75</gd:GUIDwersji>
+      <AdresISAP>WDU20250001544</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>1544</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 1544</AdresWyswietlany>
+      <Tytul>Rozporządzenie Ministra Finansów i Gospodarki z dnia 3 listopada 2025 r. w sprawie wykazu jednostek certyfikujących upoważnionych do prowadzenia certyfikacji zgodności i kontroli zgodności funkcjonowania wewnętrznego systemu kontroli i zarządzania obrotem uzbrojeniem</Tytul>
+      <Rodzaj>ROZP</Rodzaj>
+      <DataOgloszenia>2025-11-12</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-11-03</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2025-11-27_DU-2025-1544_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2025-11-27" warunek="po upływie 14 dni od dnia ogłoszenia" podstawa="§ 3" zrodlo="https://eli.gov.pl/eli/DU/2025/1544" dowod="DU/2025/1544__art_3" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2025-11-27_DU-2025-1544_domyslne.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2025-11-27_DU-2025-1544_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="2339a535-1656-4ff8-94f0-5726aee34eca" rola="wydajacy">
+          <Nazwa>Minister Finansów i Gospodarki</Nazwa>
+          <OrganPodpisujacy>Minister Finansów i Gospodarki</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>A.</imie> <nazwisko>Domański</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Rozporządzenie</rodzaj-aktu>
+    <autor-aktu>Ministra Finansów i Gospodarki<odnosnik id-odnosnika="1" symbol="1" gd:GUID="e16b1fe2-c841-471c-a35a-b537a80e80c7"><p><zdanie nr="1" gd:zdGUID="5a61884d-a3c2-4fba-a379-a36873f65e89" fragment="1" gd:fragmentGUID="a45d6787-3300-4ed7-bbca-d3ac1b3a3486">Minister Finansów i Gospodarki kieruje działem administracji rządowej – gospodarka, na podstawie § 1 ust. 2 pkt 4 rozporządzenia Prezesa Rady Ministrów z dnia 25 lipca 2025 r. w sprawie szczegółowego zakresu działania Ministra Finansów i Gospodarki (Dz. U. poz. 997).</zdanie></p></odnosnik></autor-aktu>
+    <data>z dnia 3 listopada 2025 r.</data>
+    <tytul>w sprawie wykazu jednostek certyfikujących upoważnionych do prowadzenia certyfikacji zgodności i kontroli zgodności funkcjonowania wewnętrznego systemu kontroli i zarządzania obrotem uzbrojeniem</tytul>
+    <podstawa-prawna>Na podstawie art. 11 ust. 8 ustawy z dnia 29 listopada 2000 r. o obrocie z zagranicą towarami, technologiami i usługami o znaczeniu strategicznym dla bezpieczeństwa państwa, a także dla utrzymania międzynarodowego pokoju i bezpieczeństwa (Dz. U. z 2023 r. poz. 1582) zarządza się, co następuje:</podstawa-prawna>
+    <paragraf eId="DU/2025/1544__art_1" gd:GUID="57cc9e4c-bf56-4495-bdd0-a5a206155e6b" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-27_DU-2025-1544_domyslne.x" wejscie-w-zycie="2025-11-27">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="5c02491b-f355-4b61-bb6d-2e2e83a3673f" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-27_DU-2025-1544_domyslne.x" wejscie-w-zycie="2025-11-27">
+        <p>
+          <zdanie nr="1" gd:zdGUID="42266757-85c8-4adf-8e50-1dc1e7145cdd" fragment="1" gd:fragmentGUID="9b3d579d-c72f-4957-a32c-7480a06996a2" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-27_DU-2025-1544_domyslne.x" wejscie-w-zycie="2025-11-27">Określa się wykaz jednostek certyfikujących upoważnionych do prowadzenia certyfikacji zgodności i kontroli zgodności funkcjonowania wewnętrznego systemu kontroli i zarządzania obrotem uzbrojeniem obejmujący następujące jednostki:</zdanie>
+        </p>
+        <punkt eId="DU/2025/1544__art_1__pkt_1" gd:GUID="1435dfe7-1691-4252-ba8f-c90dda67d644" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-27_DU-2025-1544_domyslne.x" wejscie-w-zycie="2025-11-27">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="42266757-85c8-4adf-8e50-1dc1e7145cdd" fragment="2" gd:fragmentGUID="adbdd80f-8fb7-471e-91f0-51f116cb6189" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-27_DU-2025-1544_domyslne.x" wejscie-w-zycie="2025-11-27">Bureau Veritas Polska sp. z o.o. z siedzibą w Warszawie;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1544__art_1__pkt_2" gd:GUID="a86ab67c-4310-4a97-aeab-1a1514dfc25c" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-27_DU-2025-1544_domyslne.x" wejscie-w-zycie="2025-11-27">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="42266757-85c8-4adf-8e50-1dc1e7145cdd" fragment="3" gd:fragmentGUID="2f9cddee-e8e1-468a-9ca0-32c00170cad8" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-27_DU-2025-1544_domyslne.x" wejscie-w-zycie="2025-11-27">Centrum Certyfikacji Jakości Wojskowej Akademii Technicznej im. Jarosława Dąbrowskiego z siedzibą w Warszawie;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1544__art_1__pkt_3" gd:GUID="36c18421-c4df-4fc0-bc04-f2ced9b83110" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-27_DU-2025-1544_domyslne.x" wejscie-w-zycie="2025-11-27">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="42266757-85c8-4adf-8e50-1dc1e7145cdd" fragment="4" gd:fragmentGUID="c01bb572-acf5-4ad9-83c7-e0dcb574bf7b" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-27_DU-2025-1544_domyslne.x" wejscie-w-zycie="2025-11-27">CeCert sp. z o.o. z siedzibą w Warszawie;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1544__art_1__pkt_4" gd:GUID="d46bd4a6-442c-4e7f-9285-2ba4b6136f41" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-27_DU-2025-1544_domyslne.x" wejscie-w-zycie="2025-11-27">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="42266757-85c8-4adf-8e50-1dc1e7145cdd" fragment="5" gd:fragmentGUID="d709f5b5-4a19-448e-b88a-4aa205c65082" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-27_DU-2025-1544_domyslne.x" wejscie-w-zycie="2025-11-27">Polskie Centrum Badań i Certyfikacji S.A. z siedzibą w Warszawie;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1544__art_1__pkt_5" gd:GUID="ab26d336-203b-446c-8c6a-14f6c6571de1" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-27_DU-2025-1544_domyslne.x" wejscie-w-zycie="2025-11-27">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="42266757-85c8-4adf-8e50-1dc1e7145cdd" fragment="6" gd:fragmentGUID="67c44b3a-1dfd-4818-8b45-8cf92c54d233" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-27_DU-2025-1544_domyslne.x" wejscie-w-zycie="2025-11-27">TÜV Rheinland Polska sp. z o.o. z siedzibą w Zabrzu;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2025/1544__art_1__pkt_6" gd:GUID="e2a7a17c-c66c-4a32-8d6c-8fcb546b738c" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-27_DU-2025-1544_domyslne.x" wejscie-w-zycie="2025-11-27">
+          <nr>6</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="42266757-85c8-4adf-8e50-1dc1e7145cdd" fragment="7" gd:fragmentGUID="06f99daa-c591-4b19-8c70-99302b0277c5" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-27_DU-2025-1544_domyslne.x" wejscie-w-zycie="2025-11-27">Urząd Dozoru Technicznego z siedzibą w Warszawie.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2025/1544__art_2" gd:GUID="39ff62b4-c692-4598-b2ae-e775d0f184c4" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-27_DU-2025-1544_domyslne.x" wejscie-w-zycie="2025-11-27">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="e1ec8b3d-cb24-4aad-8e2d-0941a22c88ed" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-27_DU-2025-1544_domyslne.x" wejscie-w-zycie="2025-11-27">
+        <p>
+          <zdanie nr="1" gd:zdGUID="cbb6f81b-45ee-452e-b8b6-2bb5f4145018" fragment="1" gd:fragmentGUID="b408c0c8-c4cf-40e2-9ab4-a25986b762f8" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-27_DU-2025-1544_domyslne.x" wejscie-w-zycie="2025-11-27">Traci moc rozporządzenie Ministra Gospodarki z dnia 12 kwietnia 2013 r. w sprawie wykazu jednostek certyfikujących upoważnionych do prowadzenia certyfikacji zgodności i kontroli zgodności funkcjonowania wewnętrznego systemu kontroli (Dz. U. poz. 525).</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2025/1544__art_3" gd:GUID="ff9c4bcd-76e1-458b-a78c-837b0f2793c4" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-27_DU-2025-1544_domyslne.x" wejscie-w-zycie="2025-11-27">
+      <nr>3</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="ac5300b0-68bc-41a3-a0ed-af207fc11214" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-27_DU-2025-1544_domyslne.x" wejscie-w-zycie="2025-11-27">
+        <p>
+          <zdanie nr="1" gd:zdGUID="0643ca17-a078-4356-a6ca-30508c4fc883" fragment="1" gd:fragmentGUID="b918aa36-9666-436d-b11d-3ea8c2303f54" okres="okr_obowiazywanie.zdarz_wejscie_2025-11-27_DU-2025-1544_domyslne.x" wejscie-w-zycie="2025-11-27">Rozporządzenie wchodzi w życie po upływie 14 dni od dnia ogłoszenia.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <organ-podpisujacy>Minister Finansów i Gospodarki: <i><osoba podpisujacy="true" gd:osobaGUID="6296c616-d3f3-4e91-9727-0e29e684073e"><imie>A.</imie> <nazwisko>Domański</nazwisko></osoba></i></organ-podpisujacy>
+  </rozporzadzenie>
+</akt-prawny>

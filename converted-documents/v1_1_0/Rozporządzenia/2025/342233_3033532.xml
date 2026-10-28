@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <rozporzadzenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/1286</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>53d22fa0-93dd-4626-9066-a104b3a029b5</gd:GUIDwersji>
+      <AdresISAP>WDU20250001286</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>1286</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 1286</AdresWyswietlany>
+      <Tytul>Rozporządzenie Ministra Klimatu i Środowiska z dnia 22 września 2025 r. zmieniające rozporządzenie w sprawie ustalenia listy gatunków zwierząt łownych</Tytul>
+      <Rodzaj>ROZP</Rodzaj>
+      <DataOgloszenia>2025-09-25</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-09-22</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2026-01-02_DU-2025-1286_odczytane" rodzaj="wejscie-w-zycie" pochodzenie="odczytane" data="2026-01-02" podstawa="§ 2" zrodlo="https://eli.gov.pl/eli/DU/2025/1286" dowod="DU/2025/1286__art_2" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2026-01-02_DU-2025-1286_odczytane.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2026-01-02_DU-2025-1286_odczytane" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="9e7c05b6-5e90-456d-bb51-61db5e3e0749" rola="wydajacy">
+          <Nazwa>Minister Klimatu i Środowiska</Nazwa>
+          <OrganPodpisujacy>Minister Klimatu i Środowiska</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>P.</imie> <nazwisko>Hennig-Kloska</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Rozporządzenie</rodzaj-aktu>
+    <autor-aktu>Ministra Klimatu i Środowiska<odnosnik id-odnosnika="1" symbol="1" gd:GUID="41974089-c7b1-4c86-9579-16a3b27db090"><p><zdanie nr="1" gd:zdGUID="d3fa1a98-4017-4058-89b0-c39b85313f25" fragment="1" gd:fragmentGUID="e05ebbff-811d-4e9f-b3a8-e44bf50c8411">Minister Klimatu i Środowiska kieruje działem administracji rządowej – środowisko, na podstawie § 1 ust. 2 pkt 2 rozporządzenia Prezesa Rady Ministrów z dnia 25 lipca 2025 r. w sprawie szczegółowego zakresu działania Ministra Klimatu i Środowiska (Dz. U. poz. 995).</zdanie></p></odnosnik></autor-aktu>
+    <data>z dnia 22 września 2025 r.</data>
+    <tytul>zmieniające rozporządzenie w sprawie ustalenia listy gatunków zwierząt łownych</tytul>
+    <podstawa-prawna>Na podstawie art. 5 ustawy z dnia 13 października 1995 r. – Prawo łowieckie (Dz. U. z 2025 r. poz. 539) zarządza się, co następuje:</podstawa-prawna>
+    <paragraf eId="DU/2025/1286__art_1" gd:GUID="a8e6b44f-b508-433e-9fa9-e5bbe232b3a9" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-02_DU-2025-1286_odczytane.x" wejscie-w-zycie="2026-01-02">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="04a47b50-8bb9-4fce-82f6-4f105fff4fbd" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-02_DU-2025-1286_odczytane.x" wejscie-w-zycie="2026-01-02">
+        <p>
+          <zdanie nr="1" gd:zdGUID="7f90349a-0f3e-4d0e-92d5-36ce6cfd9eaf" fragment="1" gd:fragmentGUID="b1da8f22-6256-4ca2-8a8c-c5a20eb8abe6" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-02_DU-2025-1286_odczytane.x" wejscie-w-zycie="2026-01-02"><now:uchyl akt="https://eli.gov.pl/eli/DU/2023/2454" element-eId="DU/2023/2454__art_1__ust_1__pkt_2__lit_l" gd:nowGUID="e5e25d45-6442-4ce0-acb5-eecdcab277be" /><now:uchyl akt="https://eli.gov.pl/eli/DU/2023/2454" element-eId="DU/2023/2454__art_1__ust_1__pkt_2__lit_u" gd:nowGUID="5788d553-584c-41da-837c-b341b3eefd7e" /><now:uchyl akt="https://eli.gov.pl/eli/DU/2023/2454" element-eId="DU/2023/2454__art_1__ust_1__pkt_2__lit_w" gd:nowGUID="50444368-f2f4-44f2-8a2c-3ea071720266" /><now:uchyl akt="https://eli.gov.pl/eli/DU/2023/2454" element-eId="DU/2023/2454__art_1__ust_1__pkt_2__lit_y" gd:nowGUID="9d846788-a5b1-4550-a5fe-b19202788e29" /><now:uchyl akt="https://eli.gov.pl/eli/DU/2023/2454" element-eId="DU/2023/2454__art_1__ust_1__pkt_2__lit_z" gd:nowGUID="7b386d74-f095-4862-9d25-1530874511d8" />W rozporządzeniu Ministra Środowiska z dnia 11 marca 2005 r. w sprawie ustalenia listy gatunków zwierząt łownych (Dz. U. z 2023 r. poz. 2454) w § 1 w ust. 1 w pkt 2 uchyla się lit. l, u, w, y oraz z.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2025/1286__art_2" gd:GUID="5cd18f4c-f929-44d3-b806-92fde10038bd" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-02_DU-2025-1286_odczytane.x" wejscie-w-zycie="2026-01-02">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="c899ddd7-fb85-4aa6-837b-3fdc1bce19cd" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-02_DU-2025-1286_odczytane.x" wejscie-w-zycie="2026-01-02">
+        <p>
+          <zdanie nr="1" gd:zdGUID="385b8e77-204b-4c08-9f62-44702b5632aa" fragment="1" gd:fragmentGUID="28b1f140-84a7-4b92-a9d1-88d76d75afe2" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-02_DU-2025-1286_odczytane.x" wejscie-w-zycie="2026-01-02">Rozporządzenie wchodzi w życie z dniem 2 stycznia 2026 r.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <organ-podpisujacy>Minister Klimatu i Środowiska: <i><osoba podpisujacy="true" gd:osobaGUID="e1417a6a-4316-4af4-b501-99aacd0e4ec0"><imie>P.</imie> <nazwisko>Hennig-Kloska</nazwisko></osoba></i></organ-podpisujacy>
+  </rozporzadzenie>
+</akt-prawny>

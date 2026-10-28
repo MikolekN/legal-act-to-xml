@@ -1,0 +1,856 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <ustawa>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2024/1911</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>f8172f1b-016e-41c2-a39d-05d4aeb654e0</gd:GUIDwersji>
+      <AdresISAP>WDU20240001911</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2024</Rok>
+      <Pozycja>1911</Pozycja>
+      <AdresWyswietlany>Dz.U. 2024 poz. 1911</AdresWyswietlany>
+      <Tytul>Ustawa z dnia 21 listopada 2024 r. o zmianie ustawy o gospodarce opakowaniami i odpadami opakowaniowymi oraz niektórych innych ustaw</Tytul>
+      <Rodzaj>USTAWA</Rodzaj>
+      <DataOgloszenia>2024-12-23</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2024-11-21</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane" rodzaj="wejscie-w-zycie" pochodzenie="odczytane" data="2025-01-01" podstawa="art. 11" zrodlo="https://eli.gov.pl/eli/DU/2024/1911" dowod="DU/2024/1911__art_11" />
+          <Zdarzenie id="zdarz_wejscie_2026-01-01_DU-2024-1911_odczytane" rodzaj="wejscie-w-zycie" pochodzenie="odczytane" data="2026-01-01" podstawa="art. 11" zrodlo="https://eli.gov.pl/eli/DU/2024/1911" dowod="DU/2024/1911__art_11">
+            <JednostkaAktu eId="DU/2024/1911__art_1__pkt_6" />
+          </Zdarzenie>
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane" />
+        </GrupaCzasowa>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2024-1911_odczytane.x" glowna="false">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2026-01-01_DU-2024-1911_odczytane" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="697e03eb-a2d3-4420-b00d-6e332097302d" rola="wydajacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Sejm">
+          <Nazwa>SEJM</Nazwa>
+        </Organ>
+        <Organ gd:GUID="2457ad53-20d8-44cb-8b21-27dfe3836334" rola="podpisujacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Prezydent">
+          <Nazwa>Prezydent Rzeczypospolitej Polskiej</Nazwa>
+          <OrganPodpisujacy>Prezydent Rzeczypospolitej Polskiej</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>A.</imie> <nazwisko>Duda</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Ustawa</rodzaj-aktu>
+    <data>z dnia 21 listopada 2024 r.</data>
+    <tytul>o zmianie ustawy o gospodarce opakowaniami i odpadami opakowaniowymi oraz niektórych innych ustaw<odnosnik id-odnosnika="1" symbol="1" gd:GUID="3e958106-b2df-455e-930f-89e6f81aea73"><p><zdanie nr="1" gd:zdGUID="ff312e53-7223-46b1-a28f-ca9269cf78bc" fragment="1" gd:fragmentGUID="809df21e-de8f-455c-b846-309757f1b1c9">Niniejsza ustawa w zakresie swojej regulacji wdraża dyrektywę Parlamentu Europejskiego i Rady (UE) 2019/904 z dnia 5 czerwca 2019 r. w sprawie zmniejszenia wpływu niektórych produktów z tworzyw sztucznych na środowisko (Dz. Urz. UE L 155 z 12.06.2019, str. 1).</zdanie></p></odnosnik><sup>,</sup> <odnosnik id-odnosnika="2" symbol="2" gd:GUID="dfa7910d-36e0-4439-8fee-ac39e6cde575"><p><zdanie nr="1" gd:zdGUID="d2d6a47a-2c02-41b4-ae5b-835c135a95ed" fragment="1" gd:fragmentGUID="943c3194-6f92-4eec-adf5-3d54d6b1448f">Niniejszą ustawą zmienia się ustawy: ustawę z dnia 11 marca 2004 r. o podatku od towarów i usług, ustawę z dnia 14 grudnia 2012 r. o odpadach oraz ustawę z dnia 13 lipca 2023 r. o zmianie ustawy o gospodarce opakowaniami i odpadami opakowaniowymi oraz niektórych innych ustaw.</zdanie></p></odnosnik><sup>,</sup> <odnosnik id-odnosnika="3" symbol="3" gd:GUID="bccdd5d9-90d6-4f9a-a2f2-dc03527ff3b3"><p><zdanie nr="1" gd:zdGUID="e98e6ae3-8242-4c36-ad92-fa4c49d5f633" fragment="1" gd:fragmentGUID="44496598-ad69-4f14-b4a9-59c0d875b99b">Niniejsza ustawa została notyfikowana Komisji Europejskiej w dniu 19 września 2024 r. pod numerem 2024/0527/PL, zgodnie z § 4 rozporządzenia Rady Ministrów z dnia 23 grudnia 2002 r. w sprawie sposobu funkcjonowania krajowego systemu notyfikacji norm i aktów prawnych (Dz. U. poz. 2039 oraz z 2004 r. poz. 597), które wdraża postanowienia dyrektywy (UE) 2015/1535 Parlamentu Europejskiego i Rady z dnia 9 września 2015 r. ustanawiającej procedurę udzielania informacji w dziedzinie przepisów technicznych oraz zasad dotyczących usług społeczeństwa informacyjnego (ujednolicenie) (Dz. Urz. UE L 241 z 17.09.2015, str. 1).</zdanie></p></odnosnik></tytul>
+    <artykul eId="DU/2024/1911__art_1" gd:GUID="93c4defd-42f6-4813-9cb6-bef454e0df30" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="1a75d362-db1b-4af7-a086-28993b11493c" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="2aaa8728-c0bb-498d-b611-18db14e9a5e2" fragment="1" gd:fragmentGUID="f5a2e4f7-b419-43fd-b633-47b260b6c697" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">W ustawie z dnia 13 czerwca 2013 r. o gospodarce opakowaniami i odpadami opakowaniowymi (Dz. U. z 2024 r. poz. 927) wprowadza się następujące zmiany:</zdanie>
+        </p>
+        <punkt eId="DU/2024/1911__art_1__pkt_1" gd:GUID="9bbeabe2-ded4-4802-ace5-a56589e93148" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="2aaa8728-c0bb-498d-b611-18db14e9a5e2" fragment="2" gd:fragmentGUID="e86db3e7-603c-4d49-8df8-b990c790ea52" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">w art. 8:</zdanie>
+          </p>
+          <litera eId="DU/2024/1911__art_1__pkt_1__lit_a" gd:GUID="5ef4faed-d692-496b-8aa7-1a700cf1059d" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="2aaa8728-c0bb-498d-b611-18db14e9a5e2" fragment="3" gd:fragmentGUID="61f0295b-4a3e-4759-9c4a-2f4f920082df" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><now:zamien-tekst stary-tekst="od użytkownika końcowego tego napoju i" nowy-tekst="" element-eId="DU/2024/927__art_8__pkt_6a" akt="https://eli.gov.pl/eli/DU/2024/927" gd:nowGUID="97bd9442-c586-453d-9d3a-a1f8a24da738" />w pkt 6a skreśla się wyrazy „od użytkownika końcowego tego napoju i”,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2024/1911__art_1__pkt_1__lit_b" gd:GUID="c786575a-4e11-4d2f-a0cd-8d8bca52be48" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="2aaa8728-c0bb-498d-b611-18db14e9a5e2" fragment="4" gd:fragmentGUID="2819fa89-8a75-4cc2-bb42-2eb91d869b14" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">po pkt 7 dodaje się pkt 7a w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/927" cudzyslowy="oba" gd:nowGUID="1daef771-3433-4baf-8616-11dfe54bc32e" element-eId="DU/2024/927__art_8__pkt_7" funkcja="dodaj-po"><punkt eId="DU/2024/927__art_8__pkt_7a" gd:GUID="409fd5b4-e93d-45e7-b084-b8fe0cdecde0" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>7a</nr><p><zdanie nr="1" gd:zdGUID="f403c67c-6d43-4b7f-9e2c-13a7300f5ee9" fragment="1" gd:fragmentGUID="cabd10e6-1fbd-453a-bc81-4ce1b61f969e" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">nieodebranej kaucji – rozumie się przez to różnicę między kaucją pobraną a kaucją zwróconą, obliczoną na ostatni dzień danego roku kalendarzowego;</zdanie></p></punkt></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2024/1911__art_1__pkt_1__lit_c" gd:GUID="47b3efe9-9d95-40f4-96f5-1193396e1f8c" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+            <nr>c</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="2aaa8728-c0bb-498d-b611-18db14e9a5e2" fragment="5" gd:fragmentGUID="9fd71c6b-0ebd-413d-b222-b67e493eaa05" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">po pkt 15b dodaje się pkt 15ba w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/927" cudzyslowy="oba" gd:nowGUID="f42e8d13-b474-41e8-b578-56080e95cdaf" element-eId="DU/2024/927__art_8__pkt_15b" funkcja="dodaj-po"><punkt eId="DU/2024/927__art_8__pkt_15ba" gd:GUID="59c19142-7766-4019-9abd-167dcff77871" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>15ba</nr><p><zdanie nr="1" gd:zdGUID="2d96a991-0e21-43ef-b141-6d315fd72502" fragment="1" gd:fragmentGUID="92ba76ea-f997-4201-af8e-7c539dc340fe" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">uruchomieniu systemu kaucyjnego – rozumie się przez to dzień, od którego system kaucyjny jest prowadzony przez podmiot reprezentujący zgodnie z zasadami określonymi w art. 40g ust. 1, jednak nie wcześniejszy niż dzień 1 października 2025 r.;</zdanie></p></punkt></cytat-strukt>;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2024/1911__art_1__pkt_2" gd:GUID="4a78d197-4405-4776-9ae9-d7096a7f8ee2" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="2aaa8728-c0bb-498d-b611-18db14e9a5e2" fragment="6" gd:fragmentGUID="a99d60b0-f02c-48f4-b7ae-4dc27a8c23e1" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">w art. 20 po ust. 4 dodaje się ust. 4a w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/927" cudzyslowy="oba" gd:nowGUID="936f27a9-e1c5-4c98-941e-1565abc6482a" element-eId="DU/2024/927__art_20__ust_4" funkcja="dodaj-po"><ustep eId="DU/2024/927__art_20__ust_4a" gd:GUID="227ba2ad-13ce-4899-806a-b8fa8d1eceb8" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>4a</nr><p><zdanie nr="1" gd:zdGUID="736768f2-4aea-4b9c-a044-653bde24604d" fragment="1" gd:fragmentGUID="73c4d0e4-0e2a-402f-a1f1-e53a4b7f45cb" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">Na potrzeby realizacji obowiązku określonego w ust. 4 odpady opakowaniowe pochodzące z systemu kaucyjnego uznaje się za odpady opakowaniowe pochodzące z gospodarstw domowych.</zdanie></p></ustep></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2024/1911__art_1__pkt_3" gd:GUID="17a17e5a-899f-4241-a156-985884eb7180" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="2aaa8728-c0bb-498d-b611-18db14e9a5e2" fragment="7" gd:fragmentGUID="6131d133-1edf-4518-9b23-eb985b0b3495" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">w art. 21a po ust. 1 dodaje się ust. 1a w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/927" cudzyslowy="oba" gd:nowGUID="3019b78e-95cb-4190-87dd-0227d89ad185" element-eId="DU/2024/927__art_21a__ust_1" funkcja="dodaj-po"><ustep eId="DU/2024/927__art_21a__ust_1a" gd:GUID="55fc7a1c-3116-47c4-9abd-5a7ea3dfc5b8" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>1a</nr><p><zdanie nr="1" gd:zdGUID="44b8ec7a-2372-439c-a64d-413a584ffb37" fragment="1" gd:fragmentGUID="5e670aa2-14d7-457f-9794-010ef00daf2e" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">Obowiązek określony w ust. 1 nie dotyczy wprowadzających produkty w opakowaniach na napoje będące mlekiem, jogurtem lub innym pitnym produktem mlecznym.</zdanie></p></ustep></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2024/1911__art_1__pkt_4" gd:GUID="9007641a-5e70-4a83-883f-1729617d4fbb" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="2aaa8728-c0bb-498d-b611-18db14e9a5e2" fragment="8" gd:fragmentGUID="950da6d1-2c70-42da-9a89-9332b5d54b9c" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">w art. 23:</zdanie>
+          </p>
+          <litera eId="DU/2024/1911__art_1__pkt_4__lit_a" gd:GUID="9df5ebce-4d13-418d-b9c5-43293a17aa70" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="2aaa8728-c0bb-498d-b611-18db14e9a5e2" fragment="9" gd:fragmentGUID="fb785517-f99e-49f8-9668-ac95a2242404" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">po ust. 5 dodaje się ust. 5a w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/927" cudzyslowy="oba" gd:nowGUID="b1312e37-a912-47c7-ad84-a39f5b5a605a" element-eId="DU/2024/927__art_23__ust_5" funkcja="dodaj-po"><ustep eId="DU/2024/927__art_23__ust_5a" gd:GUID="a8f71a55-28f3-44db-bec2-3debbce97740" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>5a</nr><p><zdanie nr="1" gd:zdGUID="a5af2e03-2581-4f3a-8329-22a1aa8a6040" fragment="1" gd:fragmentGUID="9d9db779-2a99-4b82-8a43-e456531acfd7" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">W przypadku odpadów opakowaniowych pochodzących wyłącznie z systemu kaucyjnego dokument DPR jest sporządzany przez przedsiębiorcę prowadzącego recykling odpadów opakowaniowych na wniosek podmiotu reprezentującego złożony za pośrednictwem indywidualnego konta w BDO.</zdanie></p></ustep></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2024/1911__art_1__pkt_4__lit_b" gd:GUID="7e7fa005-786f-4e16-b19b-57fa3fd59a95" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="2aaa8728-c0bb-498d-b611-18db14e9a5e2" fragment="10" gd:fragmentGUID="7855856e-a0bd-43de-a0d8-2aaa7db00f6d" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">ust. 6 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/927" cudzyslowy="oba" gd:nowGUID="068dfd15-eb3b-463b-9e20-1d0d760d0ddb" element-eId="DU/2024/927__art_23__ust_6" funkcja="zastap"><ustep eId="DU/2024/927__art_23__ust_6" gd:GUID="eb2c4d04-4338-410c-8077-9f4aac0db7df" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>6</nr><p><zdanie nr="1" gd:zdGUID="b3c0c847-17b7-47cf-9fbe-b9adbe10dec9" fragment="1" gd:fragmentGUID="aa0b1865-57e8-450f-a84c-f9f0bf0d34aa" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">Przedsiębiorca prowadzący recykling odpadów opakowaniowych jest obowiązany sporządzić dokument DPR, w przypadku gdy wprowadzający produkty w opakowaniach, organizacja odzysku opakowań, organizacja samorządu gospodarczego, o której mowa w art. 25 ust. 1, lub wnioskodawca określony w ust. 5 lub 5a przekazali odpady opakowaniowe bezpośrednio lub za pośrednictwem innego posiadacza odpadów do recyklingu, jeżeli wniosek, o którym mowa w ust. 4, 5 lub 5a, został złożony nie później niż w terminie 30 dni od upływu kwartału, w którym odpady opakowaniowe zostały przekazane do recyklingu.</zdanie></p></ustep></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2024/1911__art_1__pkt_4__lit_c" gd:GUID="5f54b98a-1628-4b26-8e9a-70b6585183fb" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+            <nr>c</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="2aaa8728-c0bb-498d-b611-18db14e9a5e2" fragment="11" gd:fragmentGUID="1cecd47e-3a4e-4779-acbe-13cfa8852018" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">ust. 8 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/927" cudzyslowy="oba" gd:nowGUID="4acabe09-0c83-4a21-829d-967d35c0f0d0" element-eId="DU/2024/927__art_23__ust_8" funkcja="zastap"><ustep eId="DU/2024/927__art_23__ust_8" gd:GUID="f93f1d74-8848-4dcb-a232-3ab14bec1731" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>8</nr><p><zdanie nr="1" gd:zdGUID="5b803e65-b80d-4f5a-93b3-6c19d63b4ad6" fragment="1" gd:fragmentGUID="d1a0365d-fd82-4478-9c57-4dc0cd0fa4e3" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">W przypadku gdy wprowadzający produkty w opakowaniach, organizacja odzysku opakowań, organizacja samorządu gospodarczego, o której mowa w art. 25 ust. 1, lub wnioskodawca określony w ust. 5 lub 5a zlecą posiadaczowi odpadów przekazanie odpadów opakowaniowych do recyklingu, wniosek, o którym mowa w ust. 4, 5 lub 5a, składa w ich imieniu posiadacz odpadów.</zdanie></p></ustep></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2024/1911__art_1__pkt_4__lit_d" gd:GUID="e8d1afae-de78-4df2-915c-586c1d1c83cd" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+            <nr>d</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="2aaa8728-c0bb-498d-b611-18db14e9a5e2" fragment="12" gd:fragmentGUID="04400c60-77aa-4a1b-96af-0d96386a9bcf" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">po ust. 10b dodaje się ust. 10c i 10d w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/927" cudzyslowy="oba" gd:nowGUID="1535f1d0-a63b-411f-b9f0-b565233d9abc" element-eId="DU/2024/927__art_23__ust_10b" funkcja="dodaj-po"><ustep eId="DU/2024/927__art_23__ust_10c" gd:GUID="282e66b8-843e-441e-bb86-b270a705d73f" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>10c</nr><p><zdanie nr="1" gd:zdGUID="a79cdd6a-3356-4a98-9491-90c1ea0522d0" fragment="1" gd:fragmentGUID="dca59e3b-10fb-4f1c-abe9-d033e9f6194f" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">W przypadku odpadów opakowaniowych pochodzących wyłącznie z systemu kaucyjnego przedsiębiorca prowadzący recykling odpadów opakowaniowych udostępnia dokument, o którym mowa w ust. 3, za pośrednictwem indywidualnego konta w BDO, wnioskodawcy określonemu w ust. 5a w terminie określonym w ust. 7.</zdanie></p></ustep><ustep eId="DU/2024/927__art_23__ust_10d" gd:GUID="4b16c0aa-073b-4cb5-82ef-c12caa587706" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>10d</nr><p><zdanie nr="1" gd:zdGUID="bb35890d-035b-4eef-9692-8b0942eb273e" fragment="1" gd:fragmentGUID="32fd4893-9d28-4e81-8dce-83cf7147bd97" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">Wnioskodawca określony w ust. 5a uzupełnia dokument, o którym mowa w ust. 3, nie później niż 2 miesiące od upływu kwartału, w którym odpady opakowaniowe zostały przekazane do recyklingu, wpisując w nim wprowadzającego produkty w opakowaniach albo organizację odzysku opakowań, i niezwłocznie go udostępnia, za pośrednictwem indywidualnego konta w BDO, wpisanemu podmiotowi oraz marszałkowi województwa właściwemu ze względu na miejsce prowadzenia działalności przez prowadzącego recykling odpadów opakowaniowych.</zdanie></p></ustep></cytat-strukt>;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2024/1911__art_1__pkt_5" gd:GUID="d53cca85-768f-485d-8583-42a2e2de0531" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="2aaa8728-c0bb-498d-b611-18db14e9a5e2" fragment="13" gd:fragmentGUID="fab1106b-19ab-40ca-942e-e0e1ee8da474" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">w art. 24:</zdanie>
+          </p>
+          <litera eId="DU/2024/1911__art_1__pkt_5__lit_a" gd:GUID="5bf00218-948a-4dc2-ae1d-59cfedbb0320" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="2aaa8728-c0bb-498d-b611-18db14e9a5e2" fragment="14" gd:fragmentGUID="96a9f4f7-153c-43a1-8f65-63e83ab0a088" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">po ust. 2a dodaje się ust. 2b w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/927" cudzyslowy="oba" gd:nowGUID="e92b3193-01cf-4e38-bebc-f98ed3464a47" element-eId="DU/2024/927__art_24__ust_2a" funkcja="dodaj-po"><ustep eId="DU/2024/927__art_24__ust_2b" gd:GUID="eb40a688-ce78-44da-8799-794344e73824" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>2b</nr><p><zdanie nr="1" gd:zdGUID="d923be21-46c3-4357-983b-9bee92acbf47" fragment="1" gd:fragmentGUID="861e4fb3-fafb-439a-9930-58b7f1421546" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">W przypadku odpadów opakowaniowych pochodzących wyłącznie z systemu kaucyjnego dokument, o którym mowa w ust. 1, jest sporządzany przez przedsiębiorcę:</zdanie></p><punkt eId="DU/2024/927__art_24__ust_2b__pkt_1" gd:GUID="9f32f13f-91bf-4205-a81f-3608d78b8345" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="d923be21-46c3-4357-983b-9bee92acbf47" fragment="2" gd:fragmentGUID="37f034d8-932a-4cf1-8da4-d66d00f27368" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">eksportującego odpady opakowaniowe,</zdanie></p></punkt><punkt eId="DU/2024/927__art_24__ust_2b__pkt_2" gd:GUID="d5503e77-fb4b-45aa-8985-402bf42d1cb1" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="d923be21-46c3-4357-983b-9bee92acbf47" fragment="3" gd:fragmentGUID="243a7942-e1aa-4032-9372-a39cfb638b81" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">dokonującego wewnątrzwspólnotowej dostawy odpadów opakowaniowych</zdanie></p></punkt><czesc-wspolna-punkt eId="DU/2024/927__art_24__ust_2b__czw" gd:GUID="591359f5-8a8b-4076-b884-2d441c9506e3" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><p><zdanie nr="1" gd:zdGUID="d923be21-46c3-4357-983b-9bee92acbf47" fragment="4" gd:fragmentGUID="baf85419-d501-4cae-bca1-a2a98e107c6f" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">– na wniosek podmiotu reprezentującego złożony za pośrednictwem indywidualnego konta w BDO.</zdanie></p></czesc-wspolna-punkt></ustep></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2024/1911__art_1__pkt_5__lit_b" gd:GUID="13c55447-174d-40b9-babf-ddb7c8207920" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="2aaa8728-c0bb-498d-b611-18db14e9a5e2" fragment="15" gd:fragmentGUID="80b101a0-562b-4b16-acf9-b0f8a39ad50f" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">ust. 4 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/927" cudzyslowy="oba" gd:nowGUID="6fe1a136-c0ae-4fdb-bc2d-8b4fa9bbf8a4" element-eId="DU/2024/927__art_24__ust_4" funkcja="zastap"><ustep eId="DU/2024/927__art_24__ust_4" gd:GUID="2f7a1031-b665-4195-9f12-1b3ba0543413" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>4</nr><p><zdanie nr="1" gd:zdGUID="4bc2ce83-4d5d-4569-b7aa-e25bb272dd6f" fragment="1" gd:fragmentGUID="7ef4e827-3678-4d08-b7b8-dd8fc06a085c" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">Przedsiębiorca jest obowiązany sporządzić dokument, o którym mowa w ust. 1, w przypadku gdy wprowadzający produkty w opakowaniach, organizacja odzysku opakowań, organizacja samorządu gospodarczego, o której mowa w art. 25 ust. 1, lub podmiot reprezentujący przekazali odpady opakowaniowe bezpośrednio lub za pośrednictwem innego posiadacza odpadów odpowiednio do eksportu odpadów opakowaniowych albo wewnątrzwspólnotowej dostawy odpadów opakowaniowych, jeżeli wnioski, o których mowa w ust. 2 lub 2b, zostały złożone nie później niż w terminie 30 dni od upływu kwartału, w którym odpady opakowaniowe zostały przekazane odpowiednio do eksportu odpadów opakowaniowych albo wewnątrzwspólnotowej dostawy odpadów opakowaniowych.</zdanie></p></ustep></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2024/1911__art_1__pkt_5__lit_c" gd:GUID="097e5635-887b-44a3-8457-7bb597ab6fcf" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+            <nr>c</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="2aaa8728-c0bb-498d-b611-18db14e9a5e2" fragment="16" gd:fragmentGUID="f0cd0aa2-1fd9-414b-a8cf-aa993894630a" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">ust. 7 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/927" cudzyslowy="oba" gd:nowGUID="ec6fe0b3-2022-434b-91ff-a5bf596103d5" element-eId="DU/2024/927__art_24__ust_7" funkcja="zastap"><ustep eId="DU/2024/927__art_24__ust_7" gd:GUID="69abbca9-eb74-47af-a4d0-f84f6b1a19ef" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>7</nr><p><zdanie nr="1" gd:zdGUID="2395d4cb-c593-4ebc-85da-e6238728f3d1" fragment="1" gd:fragmentGUID="802a24be-fb8a-43e8-9826-6cf5ed8cd48d" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">W przypadku gdy wprowadzający produkty w opakowaniach, organizacja odzysku opakowań, organizacja samorządu gospodarczego, o której mowa w art. 25 ust. 1, lub podmiot reprezentujący zlecą posiadaczowi odpadów przekazanie odpadów opakowaniowych do eksportu odpadów opakowaniowych lub wewnątrzwspólnotowej dostawy odpadów opakowaniowych, wniosek, o którym mowa w ust. 2 lub 2b, składa w ich imieniu posiadacz odpadów.</zdanie></p></ustep></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2024/1911__art_1__pkt_5__lit_d" gd:GUID="c06595e8-5904-45c9-a436-e77808259320" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+            <nr>d</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="2aaa8728-c0bb-498d-b611-18db14e9a5e2" fragment="17" gd:fragmentGUID="ab94468b-3688-4678-abde-0bcf54c8d11e" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">po ust. 9 dodaje się ust. 9a i 9b w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/927" cudzyslowy="oba" gd:nowGUID="26a4425d-0da1-4fca-b8fc-01a9966c8216" element-eId="DU/2024/927__art_24__ust_9" funkcja="dodaj-po"><ustep eId="DU/2024/927__art_24__ust_9a" gd:GUID="0377a7ff-ab9f-4edb-b54f-3f683faf323d" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>9a</nr><p><zdanie nr="1" gd:zdGUID="ab7a9b06-cb74-4524-9504-51388546f586" fragment="1" gd:fragmentGUID="d093a3b8-dd45-4afb-8d31-8cf52c6f34e7" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">W przypadku odpadów opakowaniowych pochodzących wyłącznie z systemu kaucyjnego przedsiębiorca sporządzający dokument, o którym mowa w ust. 1, udostępnia go, za pośrednictwem indywidualnego konta w BDO, podmiotowi reprezentującemu w terminie określonym w ust. 5.</zdanie></p></ustep><ustep eId="DU/2024/927__art_24__ust_9b" gd:GUID="5d8832ab-a241-4939-8c1e-ec01b58093dc" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>9b</nr><p><zdanie nr="1" gd:zdGUID="947d406a-ff22-4e6f-887e-c79af218cba7" fragment="1" gd:fragmentGUID="dfdd861a-2f37-4c54-bd4a-d92af5a25a60" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">Podmiot reprezentujący uzupełnia dokument otrzymany zgodnie z ust. 9a nie później niż w terminie 2 miesięcy od upływu kwartału, w którym odpady opakowaniowe zostały przekazane odpowiednio do eksportu odpadów opakowaniowych albo wewnątrzwspólnotowej dostawy odpadów opakowaniowych, wpisując w nim wprowadzającego produkty w opakowaniach albo organizację odzysku opakowań, i niezwłocznie go udostępnia, za pośrednictwem indywidualnego konta w BDO, wpisanemu podmiotowi oraz marszałkowi województwa właściwemu ze względu na miejsce prowadzenia działalności przez przedsiębiorcę, który sporządził ten dokument.</zdanie></p></ustep></cytat-strukt>;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2024/1911__art_1__pkt_6" gd:GUID="efc1dd55-41bd-4210-9dfd-ce18779f116c" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>6</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="2aaa8728-c0bb-498d-b611-18db14e9a5e2" fragment="18" gd:fragmentGUID="3f76c7b3-db65-483c-a417-1d90b41ef9b3" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2026-01-01"><now:zamien-tekst stary-tekst="o których mowa w załączniku nr 1a do ustawy" nowy-tekst="o których mowa w załączniku nr 1a do ustawy, z zastosowaniem potrójnej stawki opłaty produktowej określonej dla danego rodzaju opakowania na napoje" element-eId="DU/2024/927__art_34__ust_2c" akt="https://eli.gov.pl/eli/DU/2024/927" gd:nowGUID="15a44dee-0042-498c-bffc-f877ee8c5e4c" />w art. 34 w ust. 2c po wyrazach „o których mowa w załączniku nr 1a do ustawy” dodaje się przecinek oraz wyrazy „z zastosowaniem potrójnej stawki opłaty produktowej określonej dla danego rodzaju opakowania na napoje”;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2024/1911__art_1__pkt_7" gd:GUID="da9fa35c-63d2-47cb-a208-4de8ecdf6d9a" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+          <nr>7</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="2aaa8728-c0bb-498d-b611-18db14e9a5e2" fragment="19" gd:fragmentGUID="88d22e85-9cbf-49cb-a130-cc7bcd5f7998" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">w art. 37:</zdanie>
+          </p>
+          <litera eId="DU/2024/1911__art_1__pkt_7__lit_a" gd:GUID="2bccec4c-7cb4-4807-ac11-35a82f30793b" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="2aaa8728-c0bb-498d-b611-18db14e9a5e2" fragment="20" gd:fragmentGUID="e7a1f949-f820-49a7-a9ee-17482defb698" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><now:zamien-tekst stary-tekst="ustala" nowy-tekst="określa" element-eId="DU/2024/927__art_37__ust_1" akt="https://eli.gov.pl/eli/DU/2024/927" gd:nowGUID="99c4e20e-fe3b-4a08-93c9-4c22ec0e8586" />w ust. 1 wyraz „ustala” zastępuje się wyrazem „określa”,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2024/1911__art_1__pkt_7__lit_b" gd:GUID="2055373a-a2ed-424b-8958-159b9dd8ab69" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="2aaa8728-c0bb-498d-b611-18db14e9a5e2" fragment="21" gd:fragmentGUID="dd3e6831-5248-4ef5-9011-1203917b660a" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">ust. 3 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/927" cudzyslowy="oba" gd:nowGUID="ed2aa6a0-2307-48eb-8b47-328f3f886d70" element-eId="DU/2024/927__art_37__ust_3" funkcja="zastap"><ustep eId="DU/2024/927__art_37__ust_3" gd:GUID="0e108a3a-69c3-464a-bb9e-aab4a5df83c8" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>3</nr><p><zdanie nr="1" gd:zdGUID="ed274500-01d2-4cfd-90d4-feb7d3a0a090" fragment="1" gd:fragmentGUID="87908b2e-f037-4be8-8de3-c21d9f9b0f9d" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">Termin uiszczenia opłat, o których mowa w ust. 1 i 2, wynosi 14 dni od dnia, w którym decyzja, o której mowa odpowiednio w ust. 1 albo 2, stała się ostateczna.</zdanie></p></ustep></cytat-strukt>;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2024/1911__art_1__pkt_8" gd:GUID="a788a64b-5be0-4557-9aa5-e85048e6fed5" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+          <nr>8</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="2aaa8728-c0bb-498d-b611-18db14e9a5e2" fragment="22" gd:fragmentGUID="261ee37d-4fe7-4872-af39-ea123c8eb0b9" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">w art. 40ca:</zdanie>
+          </p>
+          <litera eId="DU/2024/1911__art_1__pkt_8__lit_a" gd:GUID="6d84ecc1-e4d5-4954-b2d5-90833054ba79" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="2aaa8728-c0bb-498d-b611-18db14e9a5e2" fragment="23" gd:fragmentGUID="1f898ee9-1245-48cf-8a81-6fb234664908" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><now:zamien-tekst stary-tekst="ustala" nowy-tekst="określa" element-eId="DU/2024/927__art_40ca__ust_1" akt="https://eli.gov.pl/eli/DU/2024/927" gd:nowGUID="994faeef-9603-4646-b4c1-002822fac96e" />w ust. 1 wyraz „ustala” zastępuje się wyrazem „określa”,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2024/1911__art_1__pkt_8__lit_b" gd:GUID="a4f093a1-4b60-4f37-9be2-0e9a7a636fce" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="2aaa8728-c0bb-498d-b611-18db14e9a5e2" fragment="24" gd:fragmentGUID="52cd7e2f-315d-43a8-9296-e7af99811dbe" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">ust. 3 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/927" cudzyslowy="oba" gd:nowGUID="89150e58-fcab-4448-a4c8-4d8c8a65ce26" element-eId="DU/2024/927__art_40ca__ust_3" funkcja="zastap"><ustep eId="DU/2024/927__art_40ca__ust_3" gd:GUID="ab4036dd-e9de-47f8-bdd3-efb38d2b4eb5" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>3</nr><p><zdanie nr="1" gd:zdGUID="b1da687d-9983-46ec-9612-a0479bd0b6b5" fragment="1" gd:fragmentGUID="6d76ef13-1207-424f-9cc6-45cabce68bbc" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">Termin uiszczenia opłat, o których mowa w ust. 1 i 2, wynosi 14 dni od dnia, w którym decyzja, o której mowa odpowiednio w ust. 1 albo 2, stała się ostateczna.</zdanie></p></ustep></cytat-strukt>;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2024/1911__art_1__pkt_9" gd:GUID="0e950ced-5f8d-4c20-b0a5-ae870cf08d65" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+          <nr>9</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="2aaa8728-c0bb-498d-b611-18db14e9a5e2" fragment="25" gd:fragmentGUID="4b158334-850e-4fa2-9472-71c248d0244d" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">w art. 40g:</zdanie>
+          </p>
+          <litera eId="DU/2024/1911__art_1__pkt_9__lit_a" gd:GUID="a87965f9-f9da-4e18-8be8-1809b85c1435" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="2aaa8728-c0bb-498d-b611-18db14e9a5e2" fragment="26" gd:fragmentGUID="4a500363-4f46-4930-b245-bcec150a2cf0" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><now:zamien-tekst stary-tekst="kraju" nowy-tekst="kraju przez zapewnienie w każdej gminie co najmniej jednego stacjonarnego punktu odbierania opakowań i odpadów opakowaniowych objętych systemem kaucyjnym od użytkowników końcowych" element-eId="DU/2024/927__art_40g__ust_1__pkt_1" akt="https://eli.gov.pl/eli/DU/2024/927" gd:nowGUID="7e5c05d9-cb34-4f9e-aeca-8a167253b19f" />w ust. 1 w pkt 1 po wyrazie „kraju” dodaje się wyrazy „przez zapewnienie w każdej gminie co najmniej jednego stacjonarnego punktu odbierania opakowań i odpadów opakowaniowych objętych systemem kaucyjnym od użytkowników końcowych”,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2024/1911__art_1__pkt_9__lit_b" gd:GUID="77832e8c-5423-49bf-b0ec-6457aa3c7f4b" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="2aaa8728-c0bb-498d-b611-18db14e9a5e2" fragment="27" gd:fragmentGUID="b8335ce2-27d8-4a39-b2d0-03a3a7ab8418" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">w ust. 2 po pkt 2 dodaje się pkt 2a i 2b w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/927" cudzyslowy="oba" gd:nowGUID="0cb4e310-4a15-41cf-9470-a31b80662ad7" element-eId="DU/2024/927__art_40g__ust_2__pkt_2" funkcja="dodaj-po"><punkt eId="DU/2024/927__art_40g__ust_2__pkt_2a" gd:GUID="e99580b4-fe95-4113-b77f-212448a01e2a" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>2a</nr><p><zdanie nr="1" gd:zdGUID="ecde2347-7c0f-4bf8-9583-eaad87e21f8e" fragment="1" gd:fragmentGUID="2647861e-6ec6-4618-b07d-13c4f2e9e17b" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">członkowie jego rady nadzorczej, członkowie jego zarządu ani jego prokurenci nie byli skazani prawomocnym wyrokiem sądu za umyślne przestępstwo lub umyślne przestępstwo skarbowe;</zdanie></p></punkt><punkt eId="DU/2024/927__art_40g__ust_2__pkt_2b" gd:GUID="e13559fa-892e-4818-909f-fa684b47e144" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>2b</nr><p><zdanie nr="1" gd:zdGUID="ecde2347-7c0f-4bf8-9583-eaad87e21f8e" fragment="2" gd:fragmentGUID="04d7074d-a696-4a76-b0ab-29099a925160" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">nie był prawomocnie skazany na podstawie przepisów ustawy z dnia 28 października 2002 r. o odpowiedzialności podmiotów zbiorowych za czyny zabronione pod groźbą kary (Dz. U. z 2024 r. poz. 1822);</zdanie></p></punkt></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2024/1911__art_1__pkt_9__lit_c" gd:GUID="63debaf2-f603-4f75-a13f-48a5ea5bd396" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+            <nr>c</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="2aaa8728-c0bb-498d-b611-18db14e9a5e2" fragment="28" gd:fragmentGUID="4244b4a6-dafa-43f5-8a4c-2dffc4119524" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><now:zamien-tekst stary-tekst="kaucyjnego" nowy-tekst="kaucyjnego prowadzonego przez ten podmiot" element-eId="DU/2024/927__art_40g__ust_9" akt="https://eli.gov.pl/eli/DU/2024/927" gd:nowGUID="4be52b96-0c31-4ed1-af5d-6fe42d41d8b0" />w ust. 9 po wyrazie „kaucyjnego” dodaje się wyrazy „prowadzonego przez ten podmiot”,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2024/1911__art_1__pkt_9__lit_d" gd:GUID="0d707de3-4035-418a-8114-90c33b7b378f" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+            <nr>d</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="2aaa8728-c0bb-498d-b611-18db14e9a5e2" fragment="29" gd:fragmentGUID="4e632084-ccd2-4c60-a3de-bb36f6184731" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">po ust. 9 dodaje się ust. 9a w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/927" cudzyslowy="oba" gd:nowGUID="6cde65ef-dd62-477c-9220-55a1d7f02c3e" element-eId="DU/2024/927__art_40g__ust_9" funkcja="dodaj-po"><ustep eId="DU/2024/927__art_40g__ust_9a" gd:GUID="e6dc89d9-909c-4d58-b1e3-edd9e8c132d6" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>9a</nr><p><zdanie nr="1" gd:zdGUID="a0510e01-2df6-4357-9f4b-ba0668a795c1" fragment="1" gd:fragmentGUID="baf29ca6-432e-41b4-b7b7-fb7087f1f88a" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">Do zwrotu kaucji podmiotowi, który zwrócił kaucję użytkownikowi końcowemu, obowiązany jest podmiot reprezentujący, który dokonał odbioru opakowań lub odpadów opakowaniowych powstałych z opakowań objętych systemem kaucyjnym od tego podmiotu.</zdanie></p></ustep></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2024/1911__art_1__pkt_9__lit_e" gd:GUID="1cda403c-b5a3-4ffc-8e75-1ad7e7882a58" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+            <nr>e</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="2aaa8728-c0bb-498d-b611-18db14e9a5e2" fragment="30" gd:fragmentGUID="2717650e-b3e5-429f-9ff6-cb21e66c077c" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><now:zamien-tekst stary-tekst="w formie pisemnej" nowy-tekst="w formie pisemnej w postaci papierowej lub elektronicznej" element-eId="DU/2024/927__art_40g__ust_10" akt="https://eli.gov.pl/eli/DU/2024/927" gd:nowGUID="f3db76d1-15d9-4303-b3f8-b9f7eff7c160" />w ust. 10 po wyrazach „w formie pisemnej” dodaje się wyrazy „w postaci papierowej lub elektronicznej”,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2024/1911__art_1__pkt_9__lit_f" gd:GUID="6a5007d3-0854-4829-aebe-4d5ba5f49306" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+            <nr>f</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="2aaa8728-c0bb-498d-b611-18db14e9a5e2" fragment="31" gd:fragmentGUID="40bd2841-044e-4a06-96ab-ceb5504f6058" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">dodaje się ust. 16 i 17 w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/927" cudzyslowy="oba" gd:nowGUID="0f9c6d50-72bd-456b-84e8-45a8c9dd707c" element-eId="DU/2024/927__art_40g" funkcja="dodaj-w"><ustep eId="DU/2024/927__art_40g__ust_16" gd:GUID="a9a51516-951d-46cb-9e3d-6aabd0055809" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>16</nr><p><zdanie nr="1" gd:zdGUID="15dba466-f85f-49a5-a58c-3d5832ce176c" fragment="1" gd:fragmentGUID="12e6950f-0c26-4132-8fe1-f0ff365f1a14" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">Kaucję pobiera się na etapach dystrybucji produktu w opakowaniu, o którym mowa w załączniku nr 1a do ustawy, będącego napojem, poprzedzających sprzedaż tego produktu użytkownikowi końcowemu oraz od użytkownika końcowego nabywającego ten produkt.</zdanie></p></ustep><ustep eId="DU/2024/927__art_40g__ust_17" gd:GUID="a9dca7a2-326b-41f1-9b13-847cd0c43a09" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>17</nr><p><zdanie nr="1" gd:zdGUID="f85fde22-1aad-43e1-9f90-3968f57ba56f" fragment="1" gd:fragmentGUID="3115e2b4-5936-4ade-a1e7-55a85a5ae004" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">Wprowadzający produkty w opakowaniach na napoje albo wprowadzający bezpośrednio produkty w opakowaniach na napoje uczestniczący w danym systemie kaucyjnym są obowiązani do przekazania pobranej kaucji podmiotowi reprezentującemu prowadzącemu dany system kaucyjny, z którym zawarli umowę, w terminach do:</zdanie></p><punkt eId="DU/2024/927__art_40g__ust_17__pkt_1" gd:GUID="cd789367-5441-45c8-afb0-43b4dfa468b4" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="f85fde22-1aad-43e1-9f90-3968f57ba56f" fragment="2" gd:fragmentGUID="a8dc37a4-14b6-415a-aeed-4a608fadebe8" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">siódmego dnia miesiąca, za okres od piętnastego do ostatniego dnia miesiąca poprzedniego;</zdanie></p></punkt><punkt eId="DU/2024/927__art_40g__ust_17__pkt_2" gd:GUID="0776420d-fd4d-4edf-b92f-a44bfd0d3287" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="f85fde22-1aad-43e1-9f90-3968f57ba56f" fragment="3" gd:fragmentGUID="5f856cf0-e153-4b39-bf10-34925385b9dd" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">dwudziestego pierwszego dnia miesiąca, za okres od pierwszego do czternastego dnia miesiąca.</zdanie></p></punkt></ustep></cytat-strukt>;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2024/1911__art_1__pkt_10" gd:GUID="6440b53f-2c80-4885-9729-4255ccab84ba" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+          <nr>10</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="2aaa8728-c0bb-498d-b611-18db14e9a5e2" fragment="32" gd:fragmentGUID="f6526014-6dd8-4ee7-9602-cf7ffdcb57c2" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><now:zamien-tekst stary-tekst="pisemnej" nowy-tekst="pisemnej, w postaci papierowej lub elektronicznej lub w formie dokumentowej," element-eId="DU/2024/927__art_40h__ust_3" akt="https://eli.gov.pl/eli/DU/2024/927" gd:nowGUID="6784eacd-e7f3-46ba-aacf-68bcf3401de5" />w art. 40h w ust. 3 po wyrazie „pisemnej” dodaje się przecinek i wyrazy „w postaci papierowej lub elektronicznej lub w formie dokumentowej,”;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2024/1911__art_1__pkt_11" gd:GUID="02905c26-83c2-4c38-bacd-e4068bc9548e" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+          <nr>11</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="2aaa8728-c0bb-498d-b611-18db14e9a5e2" fragment="33" gd:fragmentGUID="281b108b-0f66-4935-8bde-74c4f4f349cc" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">w art. 40i:</zdanie>
+          </p>
+          <litera eId="DU/2024/1911__art_1__pkt_11__lit_a" gd:GUID="a05a8c08-82ec-457f-8398-01464ecaeb6a" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="2aaa8728-c0bb-498d-b611-18db14e9a5e2" fragment="34" gd:fragmentGUID="c5d71a33-f51d-4c34-ba68-4547763dea08" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">po ust. 3 dodaje się ust. 3a w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/927" cudzyslowy="oba" gd:nowGUID="46ff7328-ffcf-4bdb-ba8a-9a2f02c32ea0" element-eId="DU/2024/927__art_40i__ust_3" funkcja="dodaj-po"><ustep eId="DU/2024/927__art_40i__ust_3a" gd:GUID="af1c5a04-b771-49c8-9a4c-f8262936351e" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>3a</nr><p><zdanie nr="1" gd:zdGUID="537fdfc2-7ad9-4d05-8c87-53f02099ecac" fragment="1" gd:fragmentGUID="cc032f9c-3628-4f47-a9a5-db02598357e9" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">Formę zabezpieczenia roszczeń w przypadku niewykonania przez podmiot reprezentujący obowiązku rozliczenia finansowego, o którym mowa w ust. 3, określają umowy zawarte między jednostkami handlu detalicznego, hurtowego lub innymi punktami zbierającymi opakowania i odpady opakowaniowe objęte systemem kaucyjnym a podmiotem reprezentującym, a także zawarte między podmiotami reprezentującymi prowadzącymi różne systemy kaucyjne.</zdanie></p></ustep></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2024/1911__art_1__pkt_11__lit_b" gd:GUID="3b354952-c8c8-4e44-800a-cf4496f308dd" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="2aaa8728-c0bb-498d-b611-18db14e9a5e2" fragment="35" gd:fragmentGUID="bf822117-f51a-44d8-b0a5-82a79936636a" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">ust. 4 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/927" cudzyslowy="oba" gd:nowGUID="9a77fddc-113f-4f9c-9604-1de52c85473f" element-eId="DU/2024/927__art_40i__ust_4" funkcja="zastap"><ustep eId="DU/2024/927__art_40i__ust_4" gd:GUID="78fb739b-8dfa-4fd0-b3f9-50704748ef9f" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>4</nr><p><zdanie nr="1" gd:zdGUID="885130b4-f658-4066-a869-42fc83d7a3a8" fragment="1" gd:fragmentGUID="e035c196-d2b0-46ee-8370-7ebd5bf56332" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">Środki finansowe pochodzące z nieodebranej kaucji oraz ze sprzedaży odpadów opakowaniowych zebranych w ramach systemu kaucyjnego i sprzedaży materiałów pochodzących z przetwarzania tych odpadów przeznacza się na finansowanie systemu kaucyjnego.</zdanie></p></ustep></cytat-strukt>;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2024/1911__art_1__pkt_12" gd:GUID="b578e0cc-1956-4531-9079-865c37ea75de" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+          <nr>12</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="2aaa8728-c0bb-498d-b611-18db14e9a5e2" fragment="36" gd:fragmentGUID="f09017e3-d4af-4832-bc77-522edb0bfdaa" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">w art. 40j:</zdanie>
+          </p>
+          <litera eId="DU/2024/1911__art_1__pkt_12__lit_a" gd:GUID="795a7cfd-2072-47b3-9c68-16727bc63b79" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="2aaa8728-c0bb-498d-b611-18db14e9a5e2" fragment="37" gd:fragmentGUID="a903387e-688e-4f8b-84bb-7a1c0483d765" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">w ust. 2:</zdanie>
+            </p>
+            <tiret eId="DU/2024/1911__art_1__pkt_12__lit_a__tir_1" gd:GUID="bf92f63d-4b49-44d2-8818-a4eaa973d5a2" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+              <p>
+                <zdanie nr="1" gd:zdGUID="2aaa8728-c0bb-498d-b611-18db14e9a5e2" fragment="38" gd:fragmentGUID="d089446d-d2b0-42ab-a557-0c2d83a30597" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">w pkt 6:</zdanie>
+              </p>
+              <podw-tiret eId="DU/2024/1911__art_1__pkt_12__lit_a__tir_1__dwtir_1" gd:GUID="0037e5f1-cfd0-4a5f-b9a7-682b26ca8979" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+                <p>
+                  <zdanie nr="1" gd:zdGUID="2aaa8728-c0bb-498d-b611-18db14e9a5e2" fragment="39" gd:fragmentGUID="840a761b-f3f5-414f-a249-1ff038dbb9f5" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><now:zamien-tekst stary-tekst="kaucji" nowy-tekst="kaucji oraz rozliczania kaucji między podmiotem reprezentującym a podmiotami, o których mowa w art. 40g ust. 1 pkt 3" element-eId="DU/2024/927__art_40j__ust_2__pkt_6__lit_a" akt="https://eli.gov.pl/eli/DU/2024/927" gd:nowGUID="0e0c2832-a50f-424d-9ab0-4e060af6bf1f" />w lit. a po wyrazie „kaucji” dodaje się wyrazy „oraz rozliczania kaucji między podmiotem reprezentującym a podmiotami, o których mowa w art. 40g ust. 1 pkt 3”,</zdanie>
+                </p>
+              </podw-tiret>
+              <podw-tiret eId="DU/2024/1911__art_1__pkt_12__lit_a__tir_1__dwtir_2" gd:GUID="20bda4ae-ad1b-4327-9030-4c76786140d0" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+                <p>
+                  <zdanie nr="1" gd:zdGUID="2aaa8728-c0bb-498d-b611-18db14e9a5e2" fragment="40" gd:fragmentGUID="6bae9d7d-6fe0-446f-980f-dbc37b9508fa" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">lit. b otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/927" cudzyslowy="oba" gd:nowGUID="8b3b8a23-6df5-4c8f-8232-fab92a557f6b" element-eId="DU/2024/927__art_40j__ust_2__pkt_6__lit_b" funkcja="zastap"><litera eId="DU/2024/927__art_40j__ust_2__pkt_6__lit_b" gd:GUID="570204dc-38e9-4214-bf75-f43226e736d6" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>b</nr><p><zdanie nr="1" gd:zdGUID="2317beeb-dc62-460a-b42b-435bbca567f4" fragment="1" gd:fragmentGUID="62d55427-add7-40ba-a8a8-1dd53fa8d4a3" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">zasad i planowanej częstotliwości odbioru opakowań i odpadów opakowaniowych powstałych z opakowań, o których mowa w załączniku nr 1a do ustawy, z jednostek handlu detalicznego i hurtowego oraz innych punktów zbierających opakowania i odpady opakowaniowe, objętych systemem kaucyjnym oraz zasad przekazywania tych opakowań do ponownego użycia lub tych odpadów opakowaniowych do przetworzenia,</zdanie></p></litera></cytat-strukt>,</zdanie>
+                </p>
+              </podw-tiret>
+              <podw-tiret eId="DU/2024/1911__art_1__pkt_12__lit_a__tir_1__dwtir_3" gd:GUID="04bb43ec-c1b6-4e29-9c99-53610d3132ff" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+                <p>
+                  <zdanie nr="1" gd:zdGUID="2aaa8728-c0bb-498d-b611-18db14e9a5e2" fragment="41" gd:fragmentGUID="1ec9a9ee-5296-428f-a5ef-e879a1c914be" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><now:zamien-tekst stary-tekst="kaucyjnego" nowy-tekst="kaucyjnego, z podziałem na źródła pochodzenia środków finansowych" element-eId="DU/2024/927__art_40j__ust_2__pkt_6__lit_c" akt="https://eli.gov.pl/eli/DU/2024/927" gd:nowGUID="9b643468-c387-4d54-aede-64c47c542302" />w lit. c po wyrazie „kaucyjnego” dodaje się wyrazy „ , z podziałem na źródła pochodzenia środków finansowych”,</zdanie>
+                </p>
+              </podw-tiret>
+              <podw-tiret eId="DU/2024/1911__art_1__pkt_12__lit_a__tir_1__dwtir_4" gd:GUID="a2aea8f5-7f2b-46bb-8bb2-48b3b698da60" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+                <p>
+                  <zdanie nr="1" gd:zdGUID="2aaa8728-c0bb-498d-b611-18db14e9a5e2" fragment="42" gd:fragmentGUID="5c5e2c4f-234f-42ac-8b90-a68567f0bf3d" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><now:zamien-tekst stary-tekst=";" nowy-tekst="," element-eId="DU/2024/927__art_40j__ust_2__pkt_6__lit_g" akt="https://eli.gov.pl/eli/DU/2024/927" now:wystapienie="ostatnie" gd:nowGUID="0fef966c-a75b-4c24-8c3d-4e17dd81665f" />w lit. g średnik zastępuje się przecinkiem i dodaje się lit. h oraz i w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/927" cudzyslowy="oba" gd:nowGUID="809f9fa7-1270-4193-a350-6a2f92e8b139" element-eId="DU/2024/927__art_40j__ust_2__pkt_6__lit_g" funkcja="dodaj-po"><litera eId="DU/2024/927__art_40j__ust_2__pkt_6__lit_h" gd:GUID="9db17b79-44bd-4c89-8087-47b61b9f6308" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>h</nr><p><zdanie nr="1" gd:zdGUID="318d1ef9-b09d-4650-a2b4-83f02955920e" fragment="1" gd:fragmentGUID="66c795d5-bdb1-48df-8bf6-85baa992d774" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">czynności podejmowanych w ramach monitorowania własnej działalności objętej zezwoleniem oraz ich harmonogram,</zdanie></p></litera><litera eId="DU/2024/927__art_40j__ust_2__pkt_6__lit_i" gd:GUID="8ee496b7-0234-4877-aada-8c071c5d5dd0" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>i</nr><p><zdanie nr="1" gd:zdGUID="318d1ef9-b09d-4650-a2b4-83f02955920e" fragment="2" gd:fragmentGUID="0cd78e48-91e9-46a7-885d-8fcfdd705942" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">czynności, które zostaną podjęte na koszt podmiotu reprezentującego w przypadku zakończenia działalności objętej zezwoleniem, w tym:</zdanie></p><tiret eId="DU/2024/927__art_40j__ust_2__pkt_6__lit_i__tir_1" gd:GUID="af6b933b-0846-4e10-92b1-d8c7f6ded34d" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><p><zdanie nr="1" gd:zdGUID="318d1ef9-b09d-4650-a2b4-83f02955920e" fragment="3" gd:fragmentGUID="bc59cb28-51ab-4739-8701-9443f274bed1" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">rozliczenie pobranej kaucji z jednostkami handlu detalicznego i hurtowego oraz innymi punktami zbierającymi opakowania i odpady opakowaniowe objęte systemem kaucyjnym,</zdanie></p></tiret><tiret eId="DU/2024/927__art_40j__ust_2__pkt_6__lit_i__tir_2" gd:GUID="a4a371fc-6ebd-4d17-8fbe-fa39364cf953" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><p><zdanie nr="1" gd:zdGUID="318d1ef9-b09d-4650-a2b4-83f02955920e" fragment="4" gd:fragmentGUID="0f1db210-17bd-4186-b65c-88926e0d7fde" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">rozliczenie poziomów selektywnego zbierania opakowań i odpadów opakowaniowych przez wprowadzających produkty w opakowaniach na napoje lub wprowadzających bezpośrednio produkty w opakowaniach na napoje,</zdanie></p></tiret><tiret eId="DU/2024/927__art_40j__ust_2__pkt_6__lit_i__tir_3" gd:GUID="58e3590b-4328-4693-a4d7-d2132eca92cc" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><p><zdanie nr="1" gd:zdGUID="318d1ef9-b09d-4650-a2b4-83f02955920e" fragment="5" gd:fragmentGUID="a531f7e2-b6f3-45bb-a67e-419d0a1bbbc9" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">odbiór opakowań i odpadów opakowaniowych, za które do dnia zakończenia działalności została pobrana kaucja, w ramach prowadzonego systemu kaucyjnego</zdanie></p></tiret><czesc-wspolna-tiret eId="DU/2024/927__art_40j__ust_2__pkt_6__lit_i__czw" gd:GUID="eb10d795-3762-4403-bfd7-19488e6086ab" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><p><zdanie nr="1" gd:zdGUID="318d1ef9-b09d-4650-a2b4-83f02955920e" fragment="6" gd:fragmentGUID="b8400a92-4c18-4925-a221-94d87794ccd9" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">– wraz z harmonogramem tych czynności w odniesieniu do dnia zakończenia działalności;</zdanie></p></czesc-wspolna-tiret></litera></cytat-strukt>,</zdanie>
+                </p>
+              </podw-tiret>
+            </tiret>
+            <tiret eId="DU/2024/1911__art_1__pkt_12__lit_a__tir_2" gd:GUID="995ffb64-d3bd-429d-ad8c-4462ad4e8abb" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+              <p>
+                <zdanie nr="1" gd:zdGUID="2aaa8728-c0bb-498d-b611-18db14e9a5e2" fragment="43" gd:fragmentGUID="7bf05a32-5fda-4291-9c1c-4cfa2d6d8959" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">po pkt 6 dodaje się pkt 6a i 6b w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/927" cudzyslowy="oba" gd:nowGUID="265135ec-2db4-4286-8313-76d8fe4fecbc" element-eId="DU/2024/927__art_40j__ust_2__pkt_6" funkcja="dodaj-po"><punkt eId="DU/2024/927__art_40j__ust_2__pkt_6a" gd:GUID="7c485df3-d3a3-4cd8-b146-15158ddb39bc" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>6a</nr><p><zdanie nr="1" gd:zdGUID="fdecdd26-5fa2-45ef-803f-0b1a95b6156b" fragment="1" gd:fragmentGUID="5b4eab90-7f04-4c05-8d93-843a32b50d4c" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">harmonogram przygotowania, realizacji oraz zakończenia działań podejmowanych w celu uruchomienia systemu kaucyjnego oraz wskazanie innych warunków niezbędnych do jego uruchomienia, o ile występują;</zdanie></p></punkt><punkt eId="DU/2024/927__art_40j__ust_2__pkt_6b" gd:GUID="2f43b3d8-c25e-40a2-89ad-021e03fc899c" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>6b</nr><p><zdanie nr="1" gd:zdGUID="fdecdd26-5fa2-45ef-803f-0b1a95b6156b" fragment="2" gd:fragmentGUID="7c39f65f-e28c-41ee-9e2f-0820f8f1afc4" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">informacje o zawartych umowach lub promesach lub podpisanych listach intencyjnych w celu uruchomienia systemu kaucyjnego, planowanych inwestycjach oraz zakupach maszyn i urządzeń;</zdanie></p></punkt></cytat-strukt>,</zdanie>
+              </p>
+            </tiret>
+          </litera>
+          <litera eId="DU/2024/1911__art_1__pkt_12__lit_b" gd:GUID="92375895-8d6c-4b11-9e5c-058682a6461f" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="2aaa8728-c0bb-498d-b611-18db14e9a5e2" fragment="44" gd:fragmentGUID="9ea09482-9684-4178-b8f4-300f202d005d" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">po ust. 2 dodaje się ust. 2a i 2b w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/927" cudzyslowy="oba" gd:nowGUID="25eb0cc8-dd97-43e7-986a-a513e1357292" element-eId="DU/2024/927__art_40j__ust_2" funkcja="dodaj-po"><ustep eId="DU/2024/927__art_40j__ust_2a" gd:GUID="0d92a0da-224f-4ff0-b4e1-874b5676d6d1" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>2a</nr><p><zdanie nr="1" gd:zdGUID="b45b05a3-1364-4177-ae44-701ac224534e" fragment="1" gd:fragmentGUID="c22bd6ee-7d13-4be5-a98d-aa99f23d4596" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">Do wniosku, o którym mowa w ust. 2, dołącza się:</zdanie></p><punkt eId="DU/2024/927__art_40j__ust_2a__pkt_1" gd:GUID="ac93c1c5-076c-4126-bcc1-3c4a542e8d3e" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="b45b05a3-1364-4177-ae44-701ac224534e" fragment="2" gd:fragmentGUID="f4e52b57-aa0e-47cd-8940-e48994b3fe7e" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">oświadczenie o braku skazania prawomocnym wyrokiem sądu członków rady nadzorczej, członków zarządu i prokurentów podmiotu reprezentującego za umyślne przestępstwo lub umyślne przestępstwo skarbowe;</zdanie></p></punkt><punkt eId="DU/2024/927__art_40j__ust_2a__pkt_2" gd:GUID="d1baba40-c6ad-49a8-9f1e-6abb71ea0ae8" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="b45b05a3-1364-4177-ae44-701ac224534e" fragment="3" gd:fragmentGUID="45669202-d0da-4ffe-8a29-05d5bd79a9fe" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">oświadczenie o niekaralności podmiotu reprezentującego na podstawie przepisów ustawy z dnia 28 października 2002 r. o odpowiedzialności podmiotów zbiorowych za czyny zabronione pod groźbą kary;</zdanie></p></punkt><punkt eId="DU/2024/927__art_40j__ust_2a__pkt_3" gd:GUID="1fbd2867-bddf-4e91-a44c-16d5f9e70cee" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>3</nr><p><zdanie nr="1" gd:zdGUID="b45b05a3-1364-4177-ae44-701ac224534e" fragment="4" gd:fragmentGUID="2e9739a0-0cfa-4892-abd6-96cd36648c7b" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">oświadczenie o spełnieniu wymagań, o których mowa w art. 40g ust. 2 pkt 1–4 i 6;</zdanie></p></punkt><punkt eId="DU/2024/927__art_40j__ust_2a__pkt_4" gd:GUID="b92d87f8-c1b3-4542-8add-38605d0a052f" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>4</nr><p><zdanie nr="1" gd:zdGUID="b45b05a3-1364-4177-ae44-701ac224534e" fragment="5" gd:fragmentGUID="81448d4d-18b8-4510-b357-f507d8f95427" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">plan realizacji rozliczeń finansowych między podmiotem reprezentującym a podmiotami, o których mowa w art. 40g ust. 1 pkt 3, oraz rozliczania środków finansowych pochodzących z nieodebranej kaucji.</zdanie></p></punkt></ustep><ustep eId="DU/2024/927__art_40j__ust_2b" gd:GUID="3cf165a5-d32b-47ef-856a-2fb95068fd9a" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>2b</nr><p><zdanie nr="1" gd:zdGUID="f42e5d21-5d76-4d77-89c2-b10db8304f36" fragment="1" gd:fragmentGUID="9d7bad93-3bf7-4338-b0fe-8778825f41b5" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">Oświadczenia, o których mowa w ust. 2a pkt 1–3, składa się pod rygorem odpowiedzialności karnej za składanie fałszywych oświadczeń.</zdanie><zdanie nr="2" gd:zdGUID="9e57c098-7bb2-4d29-bf0b-3211f7b6f6d2" fragment="1" gd:fragmentGUID="8b100b7d-4763-411f-99a5-a4243a6927a1" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">Składający oświadczenie jest obowiązany do zawarcia w nim klauzuli następującej treści: „Jestem świadomy odpowiedzialności karnej za złożenie fałszywego oświadczenia wynikającej z art. 233 § 6 ustawy z dnia 6 czerwca 1997 r. – Kodeks karny.”.</zdanie><zdanie nr="3" gd:zdGUID="25e12ee1-a393-4961-a840-d5da8331540e" fragment="1" gd:fragmentGUID="e877c293-5fc8-4fa4-b91f-46ed3abf7edd" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">Klauzula ta zastępuje pouczenie organu o odpowiedzialności karnej za składanie fałszywych oświadczeń.</zdanie></p></ustep></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2024/1911__art_1__pkt_12__lit_c" gd:GUID="f918bffa-20a9-46eb-9fea-08a521c5ff88" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+            <nr>c</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="2aaa8728-c0bb-498d-b611-18db14e9a5e2" fragment="45" gd:fragmentGUID="5e58fedc-cae7-4adb-806b-b4a34f38fd5e" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">w ust. 4:</zdanie>
+            </p>
+            <tiret eId="DU/2024/1911__art_1__pkt_12__lit_c__tir_1" gd:GUID="597c92c8-22a1-4e2a-b499-073588b5f40e" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+              <p>
+                <zdanie nr="1" gd:zdGUID="2aaa8728-c0bb-498d-b611-18db14e9a5e2" fragment="46" gd:fragmentGUID="7a6fdf5e-9f28-47aa-9631-d9a76eae63f3" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><now:zamien-tekst stary-tekst="kaucji" nowy-tekst="kaucji oraz rozliczania kaucji między podmiotem reprezentującym a podmiotami, o których mowa w art. 40g ust. 1 pkt 3" element-eId="DU/2024/927__art_40j__ust_4__pkt_2" akt="https://eli.gov.pl/eli/DU/2024/927" gd:nowGUID="89797deb-b413-4a6e-b960-093495f9523e" />w pkt 2 po wyrazie „kaucji” dodaje się wyrazy „oraz rozliczania kaucji między podmiotem reprezentującym a podmiotami, o których mowa w art. 40g ust. 1 pkt 3”,</zdanie>
+              </p>
+            </tiret>
+            <tiret eId="DU/2024/1911__art_1__pkt_12__lit_c__tir_2" gd:GUID="e834cad1-8317-4896-963c-30048f44ec34" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+              <p>
+                <zdanie nr="1" gd:zdGUID="2aaa8728-c0bb-498d-b611-18db14e9a5e2" fragment="47" gd:fragmentGUID="f4ab74f1-c961-4938-9fbb-1965bdaab68f" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">pkt 3 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/927" cudzyslowy="oba" gd:nowGUID="01052058-c624-4c0b-a059-4efa89380ee9" element-eId="DU/2024/927__art_40j__ust_4__pkt_3" funkcja="zastap"><punkt eId="DU/2024/927__art_40j__ust_4__pkt_3" gd:GUID="3995bb6d-7449-4df6-8273-8fa10e45ece6" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>3</nr><p><zdanie nr="1" gd:zdGUID="4707d7d4-d630-49df-aa7e-8eba0bbee356" fragment="1" gd:fragmentGUID="b96b94e6-9a7d-41c8-b04b-126a52e746f7" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">zasady i planowaną częstotliwość odbioru opakowań i odpadów opakowaniowych powstałych z opakowań, o których mowa w załączniku nr 1a do ustawy, z jednostek handlu detalicznego i hurtowego oraz innych punktów zbierających opakowania i odpady opakowaniowe, objętych systemem kaucyjnym oraz zasady przekazywania tych opakowań do ponownego użycia lub tych odpadów opakowaniowych do przetworzenia;</zdanie></p></punkt></cytat-strukt>,</zdanie>
+              </p>
+            </tiret>
+            <tiret eId="DU/2024/1911__art_1__pkt_12__lit_c__tir_3" gd:GUID="f59c5332-71dd-49e6-91e0-51a844bfe51e" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+              <p>
+                <zdanie nr="1" gd:zdGUID="2aaa8728-c0bb-498d-b611-18db14e9a5e2" fragment="48" gd:fragmentGUID="13e61f90-299f-4481-99f6-ea2a2a078290" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><now:zamien-tekst stary-tekst="kaucyjnego" nowy-tekst="kaucyjnego, z podziałem na źródła pochodzenia środków finansowych" element-eId="DU/2024/927__art_40j__ust_4__pkt_4" akt="https://eli.gov.pl/eli/DU/2024/927" gd:nowGUID="cea6ed95-dd3c-437b-a7b5-44e52679edf1" />w pkt 4 po wyrazie „kaucyjnego” dodaje się wyrazy „ , z podziałem na źródła pochodzenia środków finansowych”,</zdanie>
+              </p>
+            </tiret>
+            <tiret eId="DU/2024/1911__art_1__pkt_12__lit_c__tir_4" gd:GUID="194b5583-a34d-4e4c-86e4-1748b4bc692b" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+              <p>
+                <zdanie nr="1" gd:zdGUID="2aaa8728-c0bb-498d-b611-18db14e9a5e2" fragment="49" gd:fragmentGUID="543de907-b74d-4b65-8ed2-7bdd43375e2d" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">po pkt 8 dodaje się pkt 8a–8c w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/927" cudzyslowy="oba" gd:nowGUID="1b21fa3a-c006-47f3-b841-7cd1a08fc9e9" element-eId="DU/2024/927__art_40j__ust_4__pkt_8" funkcja="dodaj-po"><punkt eId="DU/2024/927__art_40j__ust_4__pkt_8a" gd:GUID="e2e5e99c-f238-410a-ba47-33fe66ce7260" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>8a</nr><p><zdanie nr="1" gd:zdGUID="17abf7c8-460e-4a31-98fb-b73b59c9ad59" fragment="1" gd:fragmentGUID="20fa8d77-c88a-4d54-b11c-2664deed7424" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">harmonogram przygotowania, realizacji oraz zakończenia działań podejmowanych w celu uruchomienia systemu kaucyjnego;</zdanie></p></punkt><punkt eId="DU/2024/927__art_40j__ust_4__pkt_8b" gd:GUID="765c2320-9a94-4972-83b6-8660a24fb4fa" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>8b</nr><p><zdanie nr="1" gd:zdGUID="17abf7c8-460e-4a31-98fb-b73b59c9ad59" fragment="2" gd:fragmentGUID="bfc18003-ad71-4bb9-9428-e71af5cb5397" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">czynności podejmowane w ramach monitorowania własnej działalności objętej zezwoleniem oraz ich harmonogram;</zdanie></p></punkt><punkt eId="DU/2024/927__art_40j__ust_4__pkt_8c" gd:GUID="4cffbbd4-89db-4670-8a6e-68c512d04ab3" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>8c</nr><p><zdanie nr="1" gd:zdGUID="17abf7c8-460e-4a31-98fb-b73b59c9ad59" fragment="3" gd:fragmentGUID="4e51d2b3-d8fa-42f8-893e-b43ca933461e" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">czynności, które zostaną podjęte na koszt podmiotu reprezentującego w przypadku zakończenia działalności objętej zezwoleniem, w tym:</zdanie></p><litera eId="DU/2024/927__art_40j__ust_4__pkt_8c__lit_a" gd:GUID="0a27b485-bc9f-4c13-9420-a96055bbeb73" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>a</nr><p><zdanie nr="1" gd:zdGUID="17abf7c8-460e-4a31-98fb-b73b59c9ad59" fragment="4" gd:fragmentGUID="751c3625-1226-42f1-ad17-79890534e62c" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">rozliczenie pobranej kaucji z jednostkami handlu detalicznego i hurtowego oraz innymi punktami zbierającymi opakowania i odpady opakowaniowe objęte systemem kaucyjnym,</zdanie></p></litera><litera eId="DU/2024/927__art_40j__ust_4__pkt_8c__lit_b" gd:GUID="b0ffcb97-208f-432f-95d5-fec9fe5133e1" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>b</nr><p><zdanie nr="1" gd:zdGUID="17abf7c8-460e-4a31-98fb-b73b59c9ad59" fragment="5" gd:fragmentGUID="3925e006-f758-4fa1-9e36-c02be1fd42fe" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">rozliczenie poziomów selektywnego zbierania opakowań i odpadów opakowaniowych przez wprowadzających produkty w opakowaniach na napoje lub wprowadzających bezpośrednio produkty w opakowaniach na napoje,</zdanie></p></litera><litera eId="DU/2024/927__art_40j__ust_4__pkt_8c__lit_c" gd:GUID="5d2ae518-dbad-4580-8218-3fff5be2c26b" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>c</nr><p><zdanie nr="1" gd:zdGUID="17abf7c8-460e-4a31-98fb-b73b59c9ad59" fragment="6" gd:fragmentGUID="6f6897df-bbc7-4a63-b3a5-d6d05f6c5dd1" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">odbiór opakowań i odpadów opakowaniowych, za które do dnia zakończenia działalności została pobrana kaucja, w ramach prowadzonego systemu kaucyjnego</zdanie></p></litera><czesc-wspolna-litera eId="DU/2024/927__art_40j__ust_4__pkt_8c__czw" gd:GUID="9ee6074d-0edd-49dd-a2e9-ea514afc38b1" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><p><zdanie nr="1" gd:zdGUID="17abf7c8-460e-4a31-98fb-b73b59c9ad59" fragment="7" gd:fragmentGUID="516872ce-ea53-41ad-8283-8ffe64bea6c3" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">– wraz z harmonogramem tych czynności w odniesieniu do dnia zakończenia działalności;</zdanie></p></czesc-wspolna-litera></punkt></cytat-strukt>,</zdanie>
+              </p>
+            </tiret>
+          </litera>
+          <litera eId="DU/2024/1911__art_1__pkt_12__lit_d" gd:GUID="659a04f6-3ab3-47fb-a3d8-b75dba0b0795" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+            <nr>d</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="2aaa8728-c0bb-498d-b611-18db14e9a5e2" fragment="50" gd:fragmentGUID="4926dab2-f0fb-435b-9764-c2b43d064c73" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">po ust. 4 dodaje się ust. 4a w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/927" cudzyslowy="oba" gd:nowGUID="f5010d47-4790-4244-a55e-99b0819f6438" element-eId="DU/2024/927__art_40j__ust_4" funkcja="dodaj-po"><ustep eId="DU/2024/927__art_40j__ust_4a" gd:GUID="8237b978-46e8-4599-9234-5e4fdb0598bc" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>4a</nr><p><zdanie nr="1" gd:zdGUID="f65a74e8-79a0-4ffe-863f-f5fc05721a9c" fragment="1" gd:fragmentGUID="9e2d48d1-c70d-42aa-8587-27ad0ef5831f" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">Termin, o którym mowa w ust. 4 pkt 9, nie może być dłuższy niż 24 miesiące od dnia wydania zezwolenia na prowadzenie systemu kaucyjnego.</zdanie></p></ustep></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2024/1911__art_1__pkt_12__lit_e" gd:GUID="b53eeb72-500b-47a0-b21c-6334628823ff" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+            <nr>e</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="2aaa8728-c0bb-498d-b611-18db14e9a5e2" fragment="51" gd:fragmentGUID="c9f6b8ca-c97d-4d92-8f65-d31460304de9" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><now:zamien-tekst stary-tekst="lat" nowy-tekst="lat od uruchomienia systemu kaucyjnego" element-eId="DU/2024/927__art_40j__ust_5" akt="https://eli.gov.pl/eli/DU/2024/927" gd:nowGUID="50a03273-4972-4e4e-a22c-64d6c7c2a76d" />w ust. 5 po wyrazie „lat” dodaje się wyrazy „od uruchomienia systemu kaucyjnego”,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2024/1911__art_1__pkt_12__lit_f" gd:GUID="c53bc549-9c5f-4c6a-b21b-eaada08e4a50" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+            <nr>f</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="2aaa8728-c0bb-498d-b611-18db14e9a5e2" fragment="52" gd:fragmentGUID="d0fb4eee-eca8-42f5-8f05-9956b328197e" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">po ust. 5 dodaje się ust. 5a w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/927" cudzyslowy="oba" gd:nowGUID="c034fa71-80f8-48ed-9dd4-fd01e0b940b9" element-eId="DU/2024/927__art_40j__ust_5" funkcja="dodaj-po"><ustep eId="DU/2024/927__art_40j__ust_5a" gd:GUID="b28e1b26-ab2e-4bb5-8958-981e91d9dbce" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>5a</nr><p><zdanie nr="1" gd:zdGUID="4b754963-0c78-4220-b3bc-1fdee9f3025c" fragment="1" gd:fragmentGUID="820de583-bca5-4ae0-a10e-46d53893fd07" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">Podmiot reprezentujący po uzyskaniu zezwolenia na prowadzenie systemu kaucyjnego przekazuje ministrowi właściwemu do spraw klimatu i właściwemu wojewódzkiemu inspektorowi ochrony środowiska, nie wcześniej niż cztery miesiące i nie później niż trzy miesiące przed terminem uruchomienia systemu kaucyjnego, informację o realizacji harmonogramu, o którym mowa w ust. 4 pkt 8a.</zdanie></p></ustep></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2024/1911__art_1__pkt_12__lit_g" gd:GUID="d0c717ae-9d54-4248-9f25-7946407811dc" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+            <nr>g</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="2aaa8728-c0bb-498d-b611-18db14e9a5e2" fragment="53" gd:fragmentGUID="08f67e28-1a9d-4849-b651-59e356c5684b" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">ust. 6 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/927" cudzyslowy="oba" gd:nowGUID="87b37a5b-b68a-4b93-a94a-1ca2a6fcf509" element-eId="DU/2024/927__art_40j__ust_6" funkcja="zastap"><ustep eId="DU/2024/927__art_40j__ust_6" gd:GUID="30d745bc-0579-4665-95ca-c8d531c7ee33" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>6</nr><p><zdanie nr="1" gd:zdGUID="a969c1a4-fe50-4267-939a-73a283b8a519" fragment="1" gd:fragmentGUID="c5aa6ceb-17c0-48ac-959e-a56e7e18085b" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">W przypadku gdy system kaucyjny nie zostanie uruchomiony w terminie określonym w zezwoleniu na prowadzenie systemu kaucyjnego, minister właściwy do spraw klimatu może cofnąć, w drodze decyzji, to zezwolenie bez odszkodowania, określając termin jej wykonania, biorąc pod uwagę stopień przygotowania do uruchomienia systemu kaucyjnego oraz stopień zaistniałego opóźnienia.</zdanie></p></ustep></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2024/1911__art_1__pkt_12__lit_h" gd:GUID="23c3890b-87ba-4fa2-9748-1891df00f52e" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+            <nr>h</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="2aaa8728-c0bb-498d-b611-18db14e9a5e2" fragment="54" gd:fragmentGUID="505ea661-7fe3-4f18-a1ef-76f64402bea8" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">po ust. 6 dodaje się ust. 6a w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/927" cudzyslowy="oba" gd:nowGUID="2f9e62c1-92ec-403c-aac1-8e6f2e70bc2a" element-eId="DU/2024/927__art_40j__ust_6" funkcja="dodaj-po"><ustep eId="DU/2024/927__art_40j__ust_6a" gd:GUID="f5d7ff5f-a861-4ae3-ab93-750bc36d161c" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>6a</nr><p><zdanie nr="1" gd:zdGUID="558c63fa-ed66-4db1-87e0-4dbdc8c143bf" fragment="1" gd:fragmentGUID="7cf471b1-b15c-4979-9e71-d335e61c4871" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">Decyzji, o której mowa w ust. 6, minister właściwy do spraw klimatu może nadać rygor natychmiastowej wykonalności, jeżeli jest to niezbędne ze względu na ochronę interesu podmiotów, o których mowa w art. 40g ust. 1 pkt 3.</zdanie></p></ustep></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2024/1911__art_1__pkt_12__lit_i" gd:GUID="77882cc7-9895-4e18-8824-763082dea0ea" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+            <nr>i</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="2aaa8728-c0bb-498d-b611-18db14e9a5e2" fragment="55" gd:fragmentGUID="c0198501-057b-46fb-a449-dc0f6aaab8ad" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><now:zamien-tekst stary-tekst="o których mowa w art. 40g ust. 1" nowy-tekst="o których mowa w art. 40g ust. 1, a także gdy z informacji przedstawionych zgodnie z harmonogramem, o którym mowa w ust. 2 pkt 6a, wynika, że uruchomienie systemu kaucyjnego we wskazanym terminie nie jest możliwe" element-eId="DU/2024/927__art_40j__ust_7" akt="https://eli.gov.pl/eli/DU/2024/927" gd:nowGUID="9e9918f1-adc3-4c86-baef-32e228116b95" />w ust. 7 po wyrazach „o których mowa w art. 40g ust. 1” dodaje się wyrazy „ , a także gdy z informacji przedstawionych zgodnie z harmonogramem, o którym mowa w ust. 2 pkt 6a, wynika, że uruchomienie systemu kaucyjnego we wskazanym terminie nie jest możliwe”,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2024/1911__art_1__pkt_12__lit_j" gd:GUID="234bc3b7-8c00-48b5-a07f-edc76e69bdcc" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+            <nr>j</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="2aaa8728-c0bb-498d-b611-18db14e9a5e2" fragment="56" gd:fragmentGUID="69f3f585-2b78-4f7a-8f0d-f368bb753cdc" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">dodaje się ust. 9 w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/927" cudzyslowy="oba" gd:nowGUID="2f277cf3-e2dd-47c1-b5fc-74f2ebb70628" element-eId="DU/2024/927__art_40j" funkcja="dodaj-w"><ustep eId="DU/2024/927__art_40j__ust_9" gd:GUID="47ffff42-2a22-42eb-94e9-36bd194a87ca" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>9</nr><p><zdanie nr="1" gd:zdGUID="f94cec82-e259-458d-8a58-59c316e4aace" fragment="1" gd:fragmentGUID="788db5f7-2b13-4ccb-8bc3-48def303dff2" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">Stroną postępowania w sprawie wydania decyzji, o której mowa w ust. 1, 6, 7 i 8, jest wyłącznie podmiot reprezentujący, którego dotyczy zezwolenie na prowadzenie systemu kaucyjnego.</zdanie></p></ustep></cytat-strukt>;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2024/1911__art_1__pkt_13" gd:GUID="98a25632-3cea-4f67-b949-9f8cfeb76cd4" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+          <nr>13</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="2aaa8728-c0bb-498d-b611-18db14e9a5e2" fragment="57" gd:fragmentGUID="bc4eae80-4c3f-4abf-a1f5-be7081defc0a" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">w art. 40k:</zdanie>
+          </p>
+          <litera eId="DU/2024/1911__art_1__pkt_13__lit_a" gd:GUID="40779444-d123-428b-b5b1-3b41bc1de08e" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="2aaa8728-c0bb-498d-b611-18db14e9a5e2" fragment="58" gd:fragmentGUID="a3267e20-0837-4ade-a790-839eff5b0808" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">ust. 1 i 2 otrzymują brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/927" cudzyslowy="otwierajacy" gd:nowGUID="18e7a37f-e09f-400c-8a13-e22f30fed6ad" element-eId="DU/2024/927__art_40k__ust_1" funkcja="zastap"><ustep eId="DU/2024/927__art_40k__ust_1" gd:GUID="7c738acc-dd76-46d7-802f-bc387f9018a4" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="9cf7d7c0-acd1-4c96-b607-b0f82cca00b6" fragment="1" gd:fragmentGUID="ed6dcefa-c62b-4c10-938a-2ad115ca4a44" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">Jeżeli podmiot reprezentujący prowadzi system kaucyjny w sposób, który narusza przepisy ustawy określające obowiązki podmiotu reprezentującego lub warunki określone w zezwoleniu na prowadzenie systemu kaucyjnego, lub przestał spełniać warunki, o których mowa w art. 40g ust. 2 pkt 1–4 lub 6 lub ust. 6, lub prowadzony przez niego system kaucyjny przestał spełniać warunki, o których mowa w art. 40g ust. 1, minister właściwy do spraw klimatu wzywa ten podmiot do niezwłocznego zaniechania naruszeń, wyznaczając termin usunięcia nieprawidłowości.</zdanie></p></ustep></cytat-strukt><cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/927" cudzyslowy="zamykajacy" gd:nowGUID="91eb3ee6-b3fb-4671-bfa4-95472fc2e105" element-eId="DU/2024/927__art_40k__ust_2" funkcja="zastap"><ustep eId="DU/2024/927__art_40k__ust_2" gd:GUID="d0ecdc98-d644-45e4-bb07-29b7069131e4" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="a406cb22-c8c7-439d-9d1a-679bbbd9dc68" fragment="1" gd:fragmentGUID="aff398c1-7b32-42b3-be0f-968b13559c40" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">Jeżeli podmiot reprezentujący mimo wezwania nadal prowadzi system kaucyjny w sposób, który narusza przepisy ustawy określające obowiązki podmiotu reprezentującego lub warunki określone w zezwoleniu na prowadzenie systemu kaucyjnego, lub nadal nie spełnia warunków, o których mowa w art. 40g ust. 2 pkt 1–4 lub 6 lub ust. 6, lub prowadzony przez niego system kaucyjny nadal nie spełnia warunków, o których mowa w art. 40g ust. 1, minister właściwy do spraw klimatu cofa, w drodze decyzji, zezwolenie na prowadzenie systemu kaucyjnego bez odszkodowania, określając termin jej wykonania.</zdanie></p></ustep></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2024/1911__art_1__pkt_13__lit_b" gd:GUID="5e6f1797-7092-4f13-ac6b-4423cf676b4f" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="2aaa8728-c0bb-498d-b611-18db14e9a5e2" fragment="59" gd:fragmentGUID="32f1a31c-d467-4333-b44f-7400b2af8d0b" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">po ust. 2 dodaje się ust. 2a i 2b w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/927" cudzyslowy="oba" gd:nowGUID="c376c8eb-77f6-4258-8c4e-e95943baff72" element-eId="DU/2024/927__art_40k__ust_2" funkcja="dodaj-po"><ustep eId="DU/2024/927__art_40k__ust_2a" gd:GUID="ac2c8e47-9168-4c14-bf76-9fba61ce12c8" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>2a</nr><p><zdanie nr="1" gd:zdGUID="a900840d-d65b-4799-94b1-fa6d8452ff61" fragment="1" gd:fragmentGUID="6882be3d-f415-45e8-a5e5-cc220dc7bf68" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">Decyzji, o której mowa w ust. 2, minister właściwy do spraw klimatu może nadać rygor natychmiastowej wykonalności, jeżeli jest to niezbędne ze względu na ochronę interesu podmiotów, o których mowa w art. 40g ust. 1 pkt 3.</zdanie></p></ustep><ustep eId="DU/2024/927__art_40k__ust_2b" gd:GUID="37c34ef6-a77c-4bfc-bbb1-e459f886292a" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>2b</nr><p><zdanie nr="1" gd:zdGUID="2b0b0b47-6b6f-4acb-a07f-e9558ead320d" fragment="1" gd:fragmentGUID="d03e7cfd-2d3a-4d36-bb34-65d541fe2a06" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">Stroną postępowania w sprawie wydania decyzji, o której mowa w ust. 2, jest wyłącznie podmiot reprezentujący, którego dotyczy to postępowanie.</zdanie></p></ustep></cytat-strukt>;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2024/1911__art_1__pkt_14" gd:GUID="f38a8f92-3fab-49a2-8966-8fd85d34ffba" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+          <nr>14</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="2aaa8728-c0bb-498d-b611-18db14e9a5e2" fragment="60" gd:fragmentGUID="6d85ca27-6a9f-43d9-b63f-d5bc3e5db44e" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">w art. 44:</zdanie>
+          </p>
+          <litera eId="DU/2024/1911__art_1__pkt_14__lit_a" gd:GUID="068fce8c-ed37-4600-a911-53ebf73f2f3f" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="2aaa8728-c0bb-498d-b611-18db14e9a5e2" fragment="61" gd:fragmentGUID="48766e29-c1e3-4d47-a7db-c54eee1faade" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">ust. 1 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/927" cudzyslowy="oba" gd:nowGUID="afce6317-e35c-42bb-853c-68a859ff60a6" element-eId="DU/2024/927__art_44__ust_1" funkcja="zastap"><ustep eId="DU/2024/927__art_44__ust_1" gd:GUID="74eab269-f9e5-4e70-b2a4-9e0ddbb86c32" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="b1ef9b73-2891-4d8b-89b4-d63d5d19a7ee" fragment="1" gd:fragmentGUID="b0828ed0-92e7-42b6-bd0b-5c16186c409c" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">Przedsiębiorca prowadzący jednostkę handlu detalicznego lub hurtowego o powierzchni sprzedaży nie większej niż 200 m<sup>2</sup>, w której użytkownikom końcowym są oferowane produkty będące napojami w opakowaniach na napoje objętych systemem kaucyjnym, o których mowa w:</zdanie></p><punkt eId="DU/2024/927__art_44__ust_1__pkt_1" gd:GUID="f6423151-854c-4d17-8ee2-c1d5c363d82f" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="b1ef9b73-2891-4d8b-89b4-d63d5d19a7ee" fragment="2" gd:fragmentGUID="32ab2c79-b7b0-4282-b3b0-68b8fc997245" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">poz. 1 i 2 załącznika nr 1a do ustawy – jest obowiązany do uczestniczenia w systemie kaucyjnym co najmniej w zakresie pobierania kaucji oraz może uczestniczyć w tym systemie w zakresie zwracania kaucji oraz zbierania pustych opakowań i odpadów opakowaniowych;</zdanie></p></punkt><punkt eId="DU/2024/927__art_44__ust_1__pkt_2" gd:GUID="36ed84f3-2497-4553-83ed-76ca96ad7753" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="b1ef9b73-2891-4d8b-89b4-d63d5d19a7ee" fragment="3" gd:fragmentGUID="732aa4ac-6c07-444c-959d-d64b0ab6eb54" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">poz. 3 załącznika nr 1a do ustawy – jest obowiązany do uczestniczenia w systemie kaucyjnym co najmniej w zakresie pobierania i zwracania kaucji oraz zbierania pustych opakowań.</zdanie></p></punkt></ustep></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2024/1911__art_1__pkt_14__lit_b" gd:GUID="354732ae-b315-4f53-88d7-adeac80187a1" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="2aaa8728-c0bb-498d-b611-18db14e9a5e2" fragment="62" gd:fragmentGUID="12df7405-4607-4116-b486-773c453bc80d" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><now:zamien-tekst stary-tekst="pisemnej" nowy-tekst="pisemnej, w postaci papierowej lub elektronicznej lub w formie dokumentowej," element-eId="DU/2024/927__art_44__ust_4" akt="https://eli.gov.pl/eli/DU/2024/927" gd:nowGUID="9f4cc381-1e74-4cdb-af95-60e28b5d898e" />w ust. 4 po wyrazie „pisemnej” dodaje się przecinek i wyrazy „w postaci papierowej lub elektronicznej lub w formie dokumentowej,”,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2024/1911__art_1__pkt_14__lit_c" gd:GUID="661729f9-c849-4a89-8485-a325a38ae0b3" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+            <nr>c</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="2aaa8728-c0bb-498d-b611-18db14e9a5e2" fragment="63" gd:fragmentGUID="4b8240bc-ad73-49db-9560-113950244b4c" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><now:zamien-tekst stary-tekst="pisemnej" nowy-tekst="pisemnej, w postaci papierowej lub elektronicznej lub w formie dokumentowej," element-eId="DU/2024/927__art_44__ust_6" akt="https://eli.gov.pl/eli/DU/2024/927" gd:nowGUID="788475b3-5cd3-4351-89d3-1e7f561e7854" />w ust. 6 po wyrazie „pisemnej” dodaje się przecinek i wyrazy „w postaci papierowej lub elektronicznej lub w formie dokumentowej,”;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2024/1911__art_1__pkt_15" gd:GUID="c685a186-b8c2-43bc-8c4f-ba702dc292fc" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+          <nr>15</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="2aaa8728-c0bb-498d-b611-18db14e9a5e2" fragment="64" gd:fragmentGUID="161c4896-e76e-44a0-b03d-f8d7da2557cd" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">po art. 53a dodaje się art. 53b w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/927" cudzyslowy="oba" gd:nowGUID="1d834e87-282d-4188-95bf-5cb29bb778dd" element-eId="DU/2024/927__art_53a" funkcja="dodaj-po"><artykul eId="DU/2024/927__art_53b" gd:GUID="ebba3a45-3c95-4704-ba51-56215c65ed82" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>53b</nr><ustep eId="DU/2024/927__art_53b__ust_1" gd:GUID="21a6e530-d462-4ed0-859d-dfd61d482805" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="205f070c-f9ed-476b-ac75-2b6d450b1dc6" fragment="1" gd:fragmentGUID="c85ae67b-c67b-4905-bed3-99c78bae8702" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">Wojewódzki inspektor ochrony środowiska przeprowadza kontrole podmiotu reprezentującego:</zdanie></p><punkt eId="DU/2024/927__art_53b__ust_1__pkt_1" gd:GUID="4555a485-6cc5-49ea-bec2-c40262499ff6" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="205f070c-f9ed-476b-ac75-2b6d450b1dc6" fragment="2" gd:fragmentGUID="c1e63a80-74c1-41a4-91a3-36ced604bfed" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">po przekazaniu informacji, o której mowa w art. 40j ust. 5a – w zakresie zgodności stanu faktycznego z tą informacją;</zdanie></p></punkt><punkt eId="DU/2024/927__art_53b__ust_1__pkt_2" gd:GUID="2dbe01dd-5a27-4686-8be7-3e7d1d8d4326" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="205f070c-f9ed-476b-ac75-2b6d450b1dc6" fragment="3" gd:fragmentGUID="23c9c63e-8765-42b4-851f-f3d5f3d52276" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">w pierwszym roku po uruchomieniu systemu kaucyjnego – w zakresie zgodności stanu faktycznego z wydanym temu podmiotowi reprezentującemu zezwoleniem na prowadzenie systemu kaucyjnego oraz z przepisami ustawy określającymi obowiązki podmiotu reprezentującego oraz spełnienia warunków, o których mowa w art. 40g ust. 1, 2 pkt 1–4 i 6 oraz ust. 6.</zdanie></p></punkt></ustep><ustep eId="DU/2024/927__art_53b__ust_2" gd:GUID="9732f6ea-1ba5-4953-9d25-7fa5f6146b46" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="532eddd9-ae40-4b20-bd48-823a58653086" fragment="1" gd:fragmentGUID="211e383e-f7e2-41b9-a9e6-601980cb1f30" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">Wojewódzki inspektor ochrony środowiska sporządza i przekazuje Głównemu Inspektorowi Ochrony Środowiska, w terminie do dnia 15 lutego za poprzedni rok kalendarzowy, zbiorczą informację o wynikach przeprowadzonych kontroli, o których mowa w ust. 1.</zdanie></p></ustep><ustep eId="DU/2024/927__art_53b__ust_3" gd:GUID="02d2bda8-9e1b-4113-8d95-178bad1f591c" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>3</nr><p><zdanie nr="1" gd:zdGUID="d84b77c1-fa20-4616-947e-11e99adc273d" fragment="1" gd:fragmentGUID="2d20c4e1-8ed6-49e9-9bc8-d1096e6b24a6" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">Główny Inspektor Ochrony Środowiska sporządza i przekazuje ministrowi właściwemu do spraw klimatu, w terminie do dnia 30 lipca za poprzedni rok kalendarzowy, roczny raport o wynikach przeprowadzonych kontroli, o których mowa w ust. 1.</zdanie></p></ustep></artykul></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2024/1911__art_1__pkt_16" gd:GUID="de4b88ad-1b1b-48dc-a132-06dca20ff25b" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+          <nr>16</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="2aaa8728-c0bb-498d-b611-18db14e9a5e2" fragment="65" gd:fragmentGUID="79c31dcc-7574-442e-ac1f-05532ea2115d" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">w art. 56 w ust. 1 pkt 14 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/927" cudzyslowy="oba" gd:nowGUID="21e7d36e-3e81-477a-b795-939d6b8d1072" element-eId="DU/2024/927__art_56__ust_1__pkt_14" funkcja="zastap"><punkt eId="DU/2024/927__art_56__ust_1__pkt_14" gd:GUID="22821ed4-72ad-422f-80d1-ae1e29c64a44" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>14</nr><p><zdanie nr="1" gd:zdGUID="f03cefb4-15bb-4338-b0ce-024e0448e429" fragment="1" gd:fragmentGUID="8a6a6230-b58c-4cae-a23a-994a645069f4" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">wbrew przepisowi art. 44 ust. 1, prowadząc jednostkę handlu detalicznego lub hurtowego o powierzchni sprzedaży nie większej niż 200 m<sup>2</sup>, w której użytkownikom końcowym są oferowane produkty będące napojami w opakowaniach na napoje objętych systemem kaucyjnym, o których mowa w:</zdanie></p><litera eId="DU/2024/927__art_56__ust_1__pkt_14__lit_a" gd:GUID="9a9b6362-c96c-43e2-a593-3f8f8cdc7778" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>a</nr><p><zdanie nr="1" gd:zdGUID="f03cefb4-15bb-4338-b0ce-024e0448e429" fragment="2" gd:fragmentGUID="a9c272b5-7f48-49bb-82c6-3c0665980f5e" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">poz. 1 i 2 załącznika nr 1a do ustawy, nie pobiera kaucji,</zdanie></p></litera><litera eId="DU/2024/927__art_56__ust_1__pkt_14__lit_b" gd:GUID="1887d1b0-f820-4820-9fc8-b8a79b0fa95f" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>b</nr><p><zdanie nr="1" gd:zdGUID="f03cefb4-15bb-4338-b0ce-024e0448e429" fragment="3" gd:fragmentGUID="f9720048-6156-4f04-bd6d-74cc76978e3b" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">poz. 3 załącznika nr 1a do ustawy, nie pobiera kaucji lub nie zwraca kaucji, lub nie zbiera pustych opakowań;</zdanie></p></litera></punkt></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2024/1911__art_1__pkt_17" gd:GUID="54d88517-7f80-4eed-b148-a4439be62a79" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+          <nr>17</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="2aaa8728-c0bb-498d-b611-18db14e9a5e2" fragment="66" gd:fragmentGUID="7476ceb4-ab38-481f-9fff-e4fabd77eb21" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><now:zastap akt="https://eli.gov.pl/eli/DU/2024/927" element-eId="DU/2024/927__zal_1a" akt-nowelizujacy="https://eli.gov.pl/eli/DU/2024/1911" nowelizujacy-element-eId="DU/2024/1911__zal_1" gd:nowGUID="c7cb06bb-8664-43a1-a652-c9a3c6051630" />załącznik nr 1a do ustawy otrzymuje brzmienie określone w załączniku nr 1 do niniejszej ustawy;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2024/1911__art_1__pkt_18" gd:GUID="e8ab8459-6d5b-45e7-a956-97b3d1f3b97b" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+          <nr>18</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="2aaa8728-c0bb-498d-b611-18db14e9a5e2" fragment="67" gd:fragmentGUID="fa30a01b-c748-464b-820d-d5912566ccbd" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">w załączniku nr 2 do ustawy:</zdanie>
+          </p>
+          <litera eId="DU/2024/1911__art_1__pkt_18__lit_a" gd:GUID="92d8d770-f866-4b63-98dc-f7832392e8ed" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="2aaa8728-c0bb-498d-b611-18db14e9a5e2" fragment="68" gd:fragmentGUID="678b878a-edde-461c-b131-67daf50a272a" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">w ust. 6 w objaśnieniach do wzoru dodaje się zdanie trzecie w brzmieniu:<cytat-w-tekscie now:akt="https://eli.gov.pl/eli/DU/2024/927" cudzyslowy="oba" gd:nowGUID="5e4a531e-af2a-419f-b4c2-5be0b6069e00" element-eId="DU/2024/927__zal_2__ust_6" funkcja="dodaj-recznie"><zdanie nr="1" gd:zdGUID="bc0a19af-de98-4b3f-ba5f-02fc73458263" fragment="1" gd:fragmentGUID="5ef30315-15dc-4143-b917-aa94a49cb048" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">Jeżeli wprowadzający produkty w opakowaniach na napoje nie zawarł umowy, o której mowa w art. 40h ust. 3, stosuje się potrójną stawkę opłaty produktowej (SO) – zgodnie z art. 34 ust. 2c.</zdanie></cytat-w-tekscie>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2024/1911__art_1__pkt_18__lit_b" gd:GUID="33f53ff6-55a8-4b75-8564-a5ba7127dad4" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="2aaa8728-c0bb-498d-b611-18db14e9a5e2" fragment="69" gd:fragmentGUID="69269d17-d93a-4849-a4a2-84b03c7000e7" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">w ust. 7 w objaśnieniach do wzoru dodaje się zdanie trzecie w brzmieniu:<cytat-w-tekscie now:akt="https://eli.gov.pl/eli/DU/2024/927" cudzyslowy="oba" gd:nowGUID="123fdcd0-b2fa-4d56-835f-aa1aa54eb769" element-eId="DU/2024/927__zal_2__ust_7" funkcja="dodaj-recznie"><zdanie nr="1" gd:zdGUID="4ca19f59-c664-432e-91e0-7acb28d1065d" fragment="1" gd:fragmentGUID="9686ae70-adb5-4664-82c4-7b963048df9a" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">Jeżeli wprowadzający produkty w opakowaniach na napoje nie zawarł umowy, o której mowa w art. 40h ust. 3, stosuje się potrójną stawkę opłaty produktowej (SO) – zgodnie z art. 34 ust. 2c.</zdanie></cytat-w-tekscie>;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2024/1911__art_1__pkt_19" gd:GUID="36c6ac2a-5a2b-41f7-abf8-a08e5cfb71fa" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+          <nr>19</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="2aaa8728-c0bb-498d-b611-18db14e9a5e2" fragment="70" gd:fragmentGUID="9eb3520b-2cb7-4b33-9f7d-06895963cc1c" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><now:zastap akt="https://eli.gov.pl/eli/DU/2024/927" element-eId="DU/2024/927__zal_4" akt-nowelizujacy="https://eli.gov.pl/eli/DU/2024/1911" nowelizujacy-element-eId="DU/2024/1911__zal_2" gd:nowGUID="4fd9ad55-6a11-45e3-b665-00026b8d6a78" />załącznik nr 4 do ustawy otrzymuje brzmienie określone w załączniku nr 2 do niniejszej ustawy.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2024/1911__art_2" gd:GUID="cd4b9743-b57c-42e4-9f01-de608820a1fb" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="8872c008-db54-4623-95b1-595f9f05a21c" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="5d75f26d-8f9b-4329-ba85-7003ae0c2894" fragment="1" gd:fragmentGUID="fd0fdb14-e7a5-45c7-9eca-0f0bd5f37b58" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">W ustawie z dnia 11 marca 2004 r. o podatku od towarów i usług (Dz. U. z 2024 r. poz. 361, 852, 1473 i 1721) wprowadza się następujące zmiany:</zdanie>
+        </p>
+        <punkt eId="DU/2024/1911__art_2__pkt_1" gd:GUID="17f69d9c-8e27-4676-ba5d-d97f01ce8bf2" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="5d75f26d-8f9b-4329-ba85-7003ae0c2894" fragment="2" gd:fragmentGUID="020b8d5b-1d66-49cc-bd1c-b91f56f359a5" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">w art. 2:</zdanie>
+          </p>
+          <litera eId="DU/2024/1911__art_2__pkt_1__lit_a" gd:GUID="5db4b334-b6b4-4297-8687-0495b8bebbb1" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="5d75f26d-8f9b-4329-ba85-7003ae0c2894" fragment="3" gd:fragmentGUID="08f6cb6b-26eb-473c-84a7-2cb5b9f47973" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><now:uchyl akt="https://eli.gov.pl/eli/DU/2024/361" element-eId="DU/2024/361__art_2__pkt_49" gd:nowGUID="248baf16-3f63-4d65-b23a-ffffed338d1d" />uchyla się pkt 49,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2024/1911__art_2__pkt_1__lit_b" gd:GUID="883de895-6e35-4492-8513-477f85a0b725" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="5d75f26d-8f9b-4329-ba85-7003ae0c2894" fragment="4" gd:fragmentGUID="1d91f541-c949-424b-99ce-b04d9f1c2021" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">dodaje się pkt 49a w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/361" cudzyslowy="oba" gd:nowGUID="b65a6708-c7c1-4a7f-94f7-16f7d385e5a9" element-eId="DU/2024/361__art_2" funkcja="dodaj-w"><punkt eId="DU/2024/361__art_2__pkt_49a" gd:GUID="8af42ee9-e3e9-47d3-826c-3c20047e8825" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>49a</nr><p><zdanie nr="1" gd:zdGUID="92e2e3db-03eb-4705-b1db-e09cd39761b4" fragment="1" gd:fragmentGUID="ea1b5899-b233-4500-9cfd-a763d581aff2" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">systemie kaucyjnym – rozumie się przez to system kaucyjny w rozumieniu art. 8 pkt 13a ustawy z dnia 13 czerwca 2013 r. o gospodarce opakowaniami i odpadami opakowaniowymi (Dz. U. z 2024 r. poz. 927 i 1911);</zdanie></p></punkt></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2024/1911__art_2__pkt_1__lit_c" gd:GUID="8478c8c2-3616-4dc4-88dd-0d69621abe3d" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+            <nr>c</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="5d75f26d-8f9b-4329-ba85-7003ae0c2894" fragment="5" gd:fragmentGUID="5258f157-add7-43cc-8a03-935c09e13e38" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><now:zamien-tekst stary-tekst="w rozumieniu art. 8 pkt 13a tej ustawy" nowy-tekst="" element-eId="DU/2024/361__art_2__pkt_50" akt="https://eli.gov.pl/eli/DU/2024/361" gd:nowGUID="8ecf2eaa-4d0e-44f4-9d3a-3d98c726f6ca" />w pkt 50 skreśla się wyrazy „w rozumieniu art. 8 pkt 13a tej ustawy”,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2024/1911__art_2__pkt_1__lit_d" gd:GUID="b6ed636d-d09e-4d74-9e56-a2702b009758" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+            <nr>d</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="5d75f26d-8f9b-4329-ba85-7003ae0c2894" fragment="6" gd:fragmentGUID="255ecfe4-cd55-4e9d-834c-0434379eb233" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">pkt 51 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/361" cudzyslowy="oba" gd:nowGUID="ca4d2f9e-f514-43ba-bde7-f9d618376e35" element-eId="DU/2024/361__art_2__pkt_51" funkcja="zastap"><punkt eId="DU/2024/361__art_2__pkt_51" gd:GUID="4dd51c79-c1f9-4174-9522-e89043a21454" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>51</nr><p><zdanie nr="1" gd:zdGUID="34562387-6925-4a15-a2a0-2d79a240f41f" fragment="1" gd:fragmentGUID="d4cf9899-a69a-4faa-975e-e8da11074206" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">odpadzie opakowaniowym – rozumie się przez to odpad opakowaniowy w rozumieniu art. 8 pkt 8 ustawy z dnia 13 czerwca 2013 r. o gospodarce opakowaniami i odpadami opakowaniowymi zwracany w ramach systemu kaucyjnego;</zdanie></p></punkt></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2024/1911__art_2__pkt_1__lit_e" gd:GUID="c82a997e-077d-4162-9f94-b97e98cc8356" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+            <nr>e</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="5d75f26d-8f9b-4329-ba85-7003ae0c2894" fragment="7" gd:fragmentGUID="dbd1f2b0-1175-4206-b95f-18c5fe70dd29" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">dodaje się pkt 52 w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/361" cudzyslowy="oba" gd:nowGUID="9a4f8245-bd24-4769-b010-b3c24cfc09be" element-eId="DU/2024/361__art_2" funkcja="dodaj-w"><punkt eId="DU/2024/361__art_2__pkt_52" gd:GUID="1a970a2f-1b64-4574-a24c-07dbdf515176" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>52</nr><p><zdanie nr="1" gd:zdGUID="fbe54baf-d12f-44ae-be1c-ca0d7fc9223d" fragment="1" gd:fragmentGUID="89f2f940-b13e-46c6-8388-e1054190293f" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">podmiocie reprezentującym – rozumie się przez to podmiot, o którym mowa w art. 40h ust. 1 i 2 ustawy z dnia 13 czerwca 2013 r. o gospodarce opakowaniami i odpadami opakowaniowymi.</zdanie></p></punkt></cytat-strukt>;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2024/1911__art_2__pkt_2" gd:GUID="c9f2d786-a41d-44d0-9a67-ef72819c28aa" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="5d75f26d-8f9b-4329-ba85-7003ae0c2894" fragment="8" gd:fragmentGUID="8d5f0e22-14dd-4fb1-a52e-0d1c70a05f5b" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">po art. 17a dodaje się art. 17b w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/361" cudzyslowy="oba" gd:nowGUID="0f83ecc5-a781-4fd9-8883-c0131e65171c" element-eId="DU/2024/361__art_17a" funkcja="dodaj-po"><artykul eId="DU/2024/361__art_17b" gd:GUID="f04c230c-0369-445f-8da7-aa6b49010c2b" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>17b</nr><ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="8863cec8-9099-4bfc-8beb-04cf94a6b73b" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><p><zdanie nr="1" gd:zdGUID="a09e10a3-f6d4-4e81-ab23-329d013bcaff" fragment="1" gd:fragmentGUID="9b9a2bbd-550f-46bf-a2f5-fa4f45845bba" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">Podmiot reprezentujący, który zawarł umowy z wprowadzającymi produkty w opakowaniach na napoje, jest płatnikiem podatku od kaucji pobranych przez tych wprowadzających za opakowania objęte systemem kaucyjnym, które nie zostały zwrócone w tym systemie.</zdanie></p></ustep-n></artykul></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2024/1911__art_2__pkt_3" gd:GUID="22fa13d7-2bf4-45d2-b9d9-a197903e136a" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="5d75f26d-8f9b-4329-ba85-7003ae0c2894" fragment="9" gd:fragmentGUID="a3bed04a-af51-4d95-94c3-ca049d891448" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">w art. 29a:</zdanie>
+          </p>
+          <litera eId="DU/2024/1911__art_2__pkt_3__lit_a" gd:GUID="d5aa37af-ba45-446f-87d8-614c53e183c5" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="5d75f26d-8f9b-4329-ba85-7003ae0c2894" fragment="10" gd:fragmentGUID="d022d292-abd6-4d99-81c6-e628dc566ca7" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">ust. 11a otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/361" cudzyslowy="oba" gd:nowGUID="e242e223-6dbf-4540-8cfe-95f03d645be9" element-eId="DU/2024/361__art_29a__ust_11a" funkcja="zastap"><ustep eId="DU/2024/361__art_29a__ust_11a" gd:GUID="515912c9-d4de-4cce-9521-2e9f58d7921c" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>11a</nr><p><zdanie nr="1" gd:zdGUID="6126a125-40c1-4906-a05e-f65a62f596fa" fragment="1" gd:fragmentGUID="34a052e4-c59c-4250-83f5-9da6064b14ee" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">Do podstawy opodatkowania nie wlicza się kaucji pobieranej za opakowanie objęte systemem kaucyjnym, jeżeli podatnik dokonał dostawy towaru w tym opakowaniu.</zdanie></p></ustep></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2024/1911__art_2__pkt_3__lit_b" gd:GUID="877b2a28-dad1-4069-9b42-bfca633c5478" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="5d75f26d-8f9b-4329-ba85-7003ae0c2894" fragment="11" gd:fragmentGUID="aade4d26-33fe-4c94-b9a2-8b311f2ce111" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><now:uchyl akt="https://eli.gov.pl/eli/DU/2024/361" element-eId="DU/2024/361__art_29a__ust_12a" gd:nowGUID="85266696-63d6-4a4e-a46c-168252f1d5f3" /><now:uchyl akt="https://eli.gov.pl/eli/DU/2024/361" element-eId="DU/2024/361__art_29a__ust_12b" gd:nowGUID="372b2a89-3af8-45cd-a523-d261e6ff8009" />uchyla się ust. 12a i 12b,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2024/1911__art_2__pkt_3__lit_c" gd:GUID="86cff155-b2d9-4a3e-a959-75717f4e0f1f" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+            <nr>c</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="5d75f26d-8f9b-4329-ba85-7003ae0c2894" fragment="12" gd:fragmentGUID="b621c1c7-7703-49da-a431-d9598749b5b0" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">dodaje się ust. 12c i 12d w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/361" cudzyslowy="oba" gd:nowGUID="249c66d3-bc5a-4e71-8700-434af7bc9c5b" element-eId="DU/2024/361__art_29a" funkcja="dodaj-w"><ustep eId="DU/2024/361__art_29a__ust_12c" gd:GUID="409bcb45-308a-4fc3-aaa7-085610b07d4b" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>12c</nr><p><zdanie nr="1" gd:zdGUID="374201e4-8b14-45b5-bc55-20a6fe1d1642" fragment="1" gd:fragmentGUID="5d364939-02b5-4566-81a1-4da0d3a20638" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">W przypadku niezwrócenia do podmiotu reprezentującego opakowania lub odpadu opakowaniowego objętych systemem kaucyjnym wprowadzający produkty w opakowaniach na napoje podwyższa podstawę opodatkowania na ostatni dzień roku o różnicę w wartości kaucji wynikającą z wprowadzonych przez niego do obrotu w danym roku opakowań objętych systemem kaucyjnym a opakowań lub odpadów opakowaniowych objętych tym systemem zwróconych do podmiotu reprezentującego w danym roku.</zdanie><zdanie nr="2" gd:zdGUID="701d0764-22ac-4409-b00e-6fcea502e54d" fragment="1" gd:fragmentGUID="0b082b8d-bddd-4e7b-bbf1-a038a0928246" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">Kwota tej różnicy zawiera kwotę podatku.</zdanie><zdanie nr="3" gd:zdGUID="40ea0b46-5dd8-46f5-84d2-85ae10025a16" fragment="1" gd:fragmentGUID="ed5ed93f-7287-42e6-9bd4-a54d9dcd4cbf" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">Wprowadzający produkty w opakowaniach na napoje jest obowiązany do podwyższenia podstawy opodatkowania w deklaracji podatkowej składanej za pierwszy okres rozliczeniowy roku następującego po roku, dla którego ustalono różnicę w wartości kaucji.</zdanie></p></ustep><ustep eId="DU/2024/361__art_29a__ust_12d" gd:GUID="ef2c85b5-759c-415c-8287-d40258e9a545" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>12d</nr><p><zdanie nr="1" gd:zdGUID="c1255039-13bf-4442-b332-27ff3b7cd47c" fragment="1" gd:fragmentGUID="1692afb2-66b0-401f-9b15-4d5b722a14f7" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">Jeżeli w danym roku wartość kaucji wynikająca z opakowań objętych systemem kaucyjnym wprowadzonych do obrotu przez wprowadzającego produkty w opakowaniach na napoje jest mniejsza niż wartość kaucji wynikająca z opakowań lub odpadów opakowaniowych objętych tym systemem zwróconych do podmiotu reprezentującego, wprowadzający produkty w opakowaniach na napoje uwzględnia tę różnicę przy ustaleniu podstawy opodatkowania dla:</zdanie></p><punkt eId="DU/2024/361__art_29a__ust_12d__pkt_1" gd:GUID="614f691b-7d37-48e7-b205-b1d4854e6503" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="c1255039-13bf-4442-b332-27ff3b7cd47c" fragment="2" gd:fragmentGUID="8736866d-98f8-4774-b0b3-d598e1ee003b" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">kolejnego roku albo</zdanie></p></punkt><punkt eId="DU/2024/361__art_29a__ust_12d__pkt_2" gd:GUID="0311180e-2c6a-4558-b4ce-ff35f711df49" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="c1255039-13bf-4442-b332-27ff3b7cd47c" fragment="3" gd:fragmentGUID="e251c892-7d9a-4e05-a9bc-8544c91d3d46" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">lat następujących po kolejnym roku, jeżeli w kolejnym roku wartość kaucji wynikająca z opakowań objętych systemem kaucyjnym wprowadzonych do obrotu przez wprowadzającego produkty w opakowaniach na napoje jest mniejsza niż łączna wartość kaucji wynikająca z opakowań lub odpadów opakowaniowych objętych tym systemem zwróconych do podmiotu reprezentującego oraz wartość różnicy wynikającej z roku poprzedniego.</zdanie></p></punkt></ustep></cytat-strukt>;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2024/1911__art_2__pkt_4" gd:GUID="a1bcd861-e400-4938-af23-ebb7764bf868" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="5d75f26d-8f9b-4329-ba85-7003ae0c2894" fragment="13" gd:fragmentGUID="d1dc4e13-b88b-4859-91d2-35d74c811896" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">w art. 103 po ust. 5d dodaje się ust. 5da w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/361" cudzyslowy="oba" gd:nowGUID="60bc0f8d-e274-477a-8045-2a067ed92d8f" element-eId="DU/2024/361__art_103__ust_5d" funkcja="dodaj-po"><ustep eId="DU/2024/361__art_103__ust_5da" gd:GUID="2eeb451b-c6c4-4787-b264-cfe7fce1eac8" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>5da</nr><p><zdanie nr="1" gd:zdGUID="6cf199e2-2ead-419b-83b2-bc0f0950e8ae" fragment="1" gd:fragmentGUID="de40d733-a450-4f08-8203-f056d07a7a51" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">Płatnik, o którym mowa w art. 17b, jest obowiązany, bez wezwania naczelnika urzędu skarbowego, do obliczania i wpłacania kwot podatku na rachunek właściwego urzędu skarbowego za okres roku, w terminie do ostatniego dnia miesiąca następującego po roku, dla którego ustalono różnicę w wartości kaucji wynikającą z wprowadzonych do obrotu w danym roku opakowań objętych systemem kaucyjnym i z opakowań lub odpadów opakowaniowych objętych tym systemem zwróconych do podmiotu reprezentującego w danym roku.</zdanie></p></ustep></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2024/1911__art_2__pkt_5" gd:GUID="f6fc3e5c-3ec2-4631-bccf-5093f47bb43d" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="5d75f26d-8f9b-4329-ba85-7003ae0c2894" fragment="14" gd:fragmentGUID="7463bbe0-71e9-4e7e-b532-f1edc08668cc" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">w art. 109 ust. 11ia–11ic otrzymują brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/361" cudzyslowy="oba" gd:nowGUID="afdeb0d3-3de0-4746-b7e8-c0a570c8c8af" element-eId="DU/2024/361__art_109__ust_11ia" element-do-eId="DU/2024/361__art_109__ust_11ic" funkcja="zastap"><ustep eId="DU/2024/361__art_109__ust_11ia" gd:GUID="3c0b3f94-5b82-4928-9407-95a678ce32b1" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>11ia</nr><p><zdanie nr="1" gd:zdGUID="797a204a-e5cd-458a-8273-e75ccd183420" fragment="1" gd:fragmentGUID="f8ed7c6e-bb76-48b9-bebd-5e589326430f" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">Wprowadzający produkty w opakowaniach na napoje oraz podmiot reprezentujący są obowiązani do prowadzenia ewidencji w postaci elektronicznej zawierającej dane niezbędne do określenia podstawy opodatkowania, w tym o wprowadzonych do obrotu opakowaniach objętych systemem kaucyjnym, z podziałem na rodzaje tych opakowań, o ich liczbie i wartości pobranej kaucji w danym roku oraz o zwróconych opakowaniach i odpadach opakowaniowych objętych systemem kaucyjnym, z podziałem na rodzaje tych opakowań lub odpadów opakowaniowych, o ich liczbie i wartości zwróconej kaucji w danym roku.</zdanie><zdanie nr="2" gd:zdGUID="dbe353c5-1673-4a8a-a913-5b446c97b6cd" fragment="1" gd:fragmentGUID="22480e69-c1e4-4eeb-916a-4e0e85804e7c" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">Ewidencja podmiotu reprezentującego jest prowadzona z podziałem na wprowadzających produkty w opakowaniach na napoje.</zdanie></p></ustep><ustep eId="DU/2024/361__art_109__ust_11ib" gd:GUID="c6ac9058-1cd1-4308-b4ae-d9983abe1db5" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>11ib</nr><p><zdanie nr="1" gd:zdGUID="d4785c72-8257-46ed-9821-80147c7c6c2b" fragment="1" gd:fragmentGUID="e04f74ae-88d7-4cb7-9d30-d9135461d5ca" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">Ewidencja, o której mowa w ust. 11ia, jest udostępniana przez wprowadzającego produkty w opakowaniach na napoje oraz przez podmiot reprezentujący drogą elektroniczną na każde żądanie organu podatkowego.</zdanie></p></ustep><ustep eId="DU/2024/361__art_109__ust_11ic" gd:GUID="5316b498-67cc-4fa0-9fcf-27f0a52c85ce" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>11ic</nr><p><zdanie nr="1" gd:zdGUID="d583fa17-0685-4db2-8c10-67204033ccf1" fragment="1" gd:fragmentGUID="cc32d05e-0081-4c47-a826-40282bbe75ec" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">Ewidencję, o której mowa w ust. 11ia, przechowuje się przez okres 5 lat od zakończenia roku, w rozliczeniu za który ustalono podstawę opodatkowania wynikającą z różnicy między wartością pobranej kaucji za opakowania objęte systemem kaucyjnym wprowadzone do obrotu w danym roku a wartością zwróconej kaucji za opakowania lub odpady opakowaniowe objęte systemem kaucyjnym w danym roku.</zdanie></p></ustep></cytat-strukt>.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2024/1911__art_3" gd:GUID="6c7d3a15-411f-414b-819a-fa255f6f0c08" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+      <nr>3</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="b723cad4-53ca-468d-a33a-3c1e6b9fc610" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="d2702a72-2e88-4b90-ab53-65f90f556a4f" fragment="1" gd:fragmentGUID="42502b09-e742-4194-8302-2943e01571e8" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">W ustawie z dnia 14 grudnia 2012 r. o odpadach (Dz. U. z 2023 r. poz. 1587, 1597, 1688, 1852 i 2029 oraz z 2024 r. poz. 1834) wprowadza się następujące zmiany:</zdanie>
+        </p>
+        <punkt eId="DU/2024/1911__art_3__pkt_1" gd:GUID="4a977414-4480-4aee-9b5b-02399f9aa92e" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="d2702a72-2e88-4b90-ab53-65f90f556a4f" fragment="2" gd:fragmentGUID="3be606df-d365-4e57-904f-002184188396" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">w art. 45:</zdanie>
+          </p>
+          <litera eId="DU/2024/1911__art_3__pkt_1__lit_a" gd:GUID="ece16a83-0ee2-4343-8636-6d350d1d3c32" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="d2702a72-2e88-4b90-ab53-65f90f556a4f" fragment="3" gd:fragmentGUID="183ac20d-3507-41c6-982b-d3dc830fd57e" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><now:zamien-tekst stary-tekst="." nowy-tekst=";" element-eId="DU/2023/1587__art_45__ust_1__pkt_12" akt="https://eli.gov.pl/eli/DU/2023/1587" now:wystapienie="ostatnie" gd:nowGUID="e5873c5e-933d-4c4a-9cb0-567895483da5" />w ust. 1 w pkt 12 kropkę zastępuje się średnikiem i dodaje się pkt 13 w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/1587" cudzyslowy="oba" gd:nowGUID="d2758c1f-645e-472f-af86-747846a3613e" element-eId="DU/2023/1587__art_45__ust_1__pkt_12" funkcja="dodaj-po"><punkt eId="DU/2023/1587__art_45__ust_1__pkt_13" gd:GUID="a8968fbb-d8bf-4f1a-b1bb-90c4eba3c0e6" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>13</nr><p><zdanie nr="1" gd:zdGUID="cc66833a-3dea-445e-a571-d489d423e2a4" fragment="1" gd:fragmentGUID="14a8dbf4-8346-46ca-8145-cd0f30a94bb4" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">zbierającego odpady opakowaniowe powstałe z opakowań, o których mowa w załączniku nr 1a do ustawy z dnia 13 czerwca 2013 r. o gospodarce opakowaniami i odpadami opakowaniowymi (Dz. U. z 2024 r. poz. 927 i 1911), przekazane mu przez podmioty, o których mowa w pkt 1.</zdanie></p></punkt></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2024/1911__art_3__pkt_1__lit_b" gd:GUID="96220f18-4746-4030-81d6-10d9e649a2f4" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="d2702a72-2e88-4b90-ab53-65f90f556a4f" fragment="4" gd:fragmentGUID="e5aa5631-b8e3-46fd-a875-cbbdb50e36dc" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><now:zamien-tekst stary-tekst="nieodpłatnego przyjmowania odpadów" nowy-tekst="nieodpłatnego przyjmowania odpadów, z tym że w przypadku odpadów opakowaniowych powstałych z opakowań, o których mowa w załączniku nr 1a do ustawy z dnia 13 czerwca 2013 r. o gospodarce opakowaniami i odpadami opakowaniowymi, umowa może być zawarta ze zbierającym odpady opakowaniowe, o którym mowa w ust. 1 pkt 13" element-eId="DU/2023/1587__art_45__ust_2" akt="https://eli.gov.pl/eli/DU/2023/1587" gd:nowGUID="0556bb17-b271-4dfa-a4f9-cb8b1017ce33" />w ust. 2 po wyrazach „nieodpłatnego przyjmowania odpadów” dodaje się wyrazy „ , z tym że w przypadku odpadów opakowaniowych powstałych z opakowań, o których mowa w załączniku nr 1a do ustawy z dnia 13 czerwca 2013 r. o gospodarce opakowaniami i odpadami opakowaniowymi, umowa może być zawarta ze zbierającym odpady opakowaniowe, o którym mowa w ust. 1 pkt 13”,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2024/1911__art_3__pkt_1__lit_c" gd:GUID="1ddc9b88-fee2-4e63-ba01-369cb817fcb7" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+            <nr>c</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="d2702a72-2e88-4b90-ab53-65f90f556a4f" fragment="5" gd:fragmentGUID="5742f234-b933-4696-b764-83124990e194" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">po ust. 2a dodaje się ust. 2b w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/1587" cudzyslowy="oba" gd:nowGUID="fbc3d12a-f5d5-407e-82e7-65e62328602f" element-eId="DU/2023/1587__art_45__ust_2a" funkcja="dodaj-po"><ustep eId="DU/2023/1587__art_45__ust_2b" gd:GUID="af747774-e681-44ef-8132-9b2201198c5a" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>2b</nr><p><zdanie nr="1" gd:zdGUID="2e162c41-2889-48de-a291-cf6a0f06748e" fragment="1" gd:fragmentGUID="ca5cd523-b9ee-4bb4-bac2-143d63c822ec" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">Zbierający odpady opakowaniowe, o którym mowa w ust. 1 pkt 13, może posiadać umowę zawartą w formie pisemnej pod rygorem nieważności z posiadaczem odpadów posiadającym zezwolenie na zbieranie odpadów lub zezwolenie na przetwarzanie odpadów wymienionych w ust. 1 pkt 13, dotyczącą co najmniej nieodpłatnego przyjmowania odpadów.</zdanie></p></ustep></cytat-strukt>;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2024/1911__art_3__pkt_2" gd:GUID="decb4c60-ddb0-4f96-a111-804662fa8e83" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="d2702a72-2e88-4b90-ab53-65f90f556a4f" fragment="6" gd:fragmentGUID="9eca055b-489c-4d30-9d9d-2c3992d6828f" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">art. 177 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/1587" cudzyslowy="oba" gd:nowGUID="f6de253c-d16b-42a6-81d9-531d23f8ff04" element-eId="DU/2023/1587__art_177" funkcja="zastap"><artykul eId="DU/2023/1587__art_177" gd:GUID="430358bf-8f18-4343-8567-631b970e1d73" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>177</nr><ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="8c0bfb6b-6abf-462d-9419-2a1e18c86f1d" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><p><zdanie nr="1" gd:zdGUID="81397ec4-9228-45aa-bafb-d721758fdd41" fragment="1" gd:fragmentGUID="9b989fdc-2e95-4418-9ab2-6d01fb9cd23b" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">Kto, nie mając zawartej umowy, o której mowa w art. 45 ust. 2 lub 2b, zbiera odpady podlega karze aresztu albo grzywny.</zdanie></p></ustep-n></artykul></cytat-strukt>.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2024/1911__art_4" gd:GUID="a5f9e0d1-5e8a-43d8-9d6a-5c92ff2505d0" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+      <nr>4</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="fdda6691-3f57-4cc1-9560-a6c4ddb61209" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="699c1f73-265c-4d9e-9a60-2472bccf4655" fragment="1" gd:fragmentGUID="6c04c83a-1c93-4ece-862d-21e8d3f7b67f" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">W ustawie z dnia 13 lipca 2023 r. o zmianie ustawy o gospodarce opakowaniami i odpadami opakowaniowymi oraz niektórych innych ustaw (Dz. U. poz. 1852) w art. 9:</zdanie>
+        </p>
+        <punkt eId="DU/2024/1911__art_4__pkt_1" gd:GUID="b6c23b10-08e0-42f1-bb47-9a860340fc43" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="699c1f73-265c-4d9e-9a60-2472bccf4655" fragment="2" gd:fragmentGUID="13c93055-8317-4b6e-937b-3f3d39dac8c5" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">po ust. 1 dodaje się ust. 1a w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/1852" cudzyslowy="oba" gd:nowGUID="4d861641-4795-4732-9e07-9d162d593ae3" element-eId="DU/2023/1852__art_9__ust_1" funkcja="dodaj-po"><ustep eId="DU/2023/1852__art_9__ust_1a" gd:GUID="f87d4ea8-ffcb-4e24-98b5-631e4a3ff15d" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>1a</nr><p><zdanie nr="1" gd:zdGUID="0f7851ae-b7db-4ae8-ba71-f236254a87d9" fragment="1" gd:fragmentGUID="b9cbf775-0da9-428f-a161-556ce2620950" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">Opakowania, o których mowa w załączniku nr 1a do ustawy zmienianej w art. 1, w których produkty będące napojami zostały wprowadzone do obrotu przez wprowadzających produkty w opakowaniach na napoje lub wprowadzających bezpośrednio produkty w opakowaniach na napoje w okresie 3 miesięcy od dnia przystąpienia do systemu kaucyjnego, nie później jednak niż do dnia 31 grudnia 2025 r., nieposiadające oznakowania wskazującego na objęcie opakowania systemem kaucyjnym oraz określającego wysokość kaucji, mogą być wykorzystywane do momentu ich zużycia, zwrotu lub wyczerpania zapasów.</zdanie></p></ustep></cytat-strukt>;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2024/1911__art_4__pkt_2" gd:GUID="7d9c5d69-bef1-431d-8591-1b8c2908e59e" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="699c1f73-265c-4d9e-9a60-2472bccf4655" fragment="3" gd:fragmentGUID="b241701b-1817-4cc3-b139-ec8131c4cf3f" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><now:zamien-tekst stary-tekst="w ust. 1" nowy-tekst="w ust. 1 oraz ust. 1a" element-eId="DU/2023/1852__art_9__ust_2" akt="https://eli.gov.pl/eli/DU/2023/1852" gd:nowGUID="4a7865d4-b42a-478c-99af-6bebaaf035d8" />w ust. 2 po wyrazach „w ust. 1” dodaje się wyrazy „oraz ust. 1a”;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2024/1911__art_4__pkt_3" gd:GUID="937f9235-5375-40a2-9415-7dec86946773" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="699c1f73-265c-4d9e-9a60-2472bccf4655" fragment="4" gd:fragmentGUID="92069542-5c3c-4e69-8ac5-35dcea584fc8" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01"><now:zamien-tekst stary-tekst="2024" nowy-tekst="2025" element-eId="DU/2023/1852__art_9__ust_3" akt="https://eli.gov.pl/eli/DU/2023/1852" gd:nowGUID="d091b5bf-5476-4f19-bdb2-5f5450c61e0f" /><now:zamien-tekst stary-tekst="2025" nowy-tekst="2026" element-eId="DU/2023/1852__art_9__ust_3" akt="https://eli.gov.pl/eli/DU/2023/1852" gd:nowGUID="e565b4bd-28f1-425d-9b7e-dd4195768ff7" />w ust. 3 wyraz „2024” zastępuje się wyrazem „2025” oraz występujący dwukrotnie wyraz „2025” zastępuje się wyrazem „2026”.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2024/1911__art_5" gd:GUID="3721df51-9afe-4cf3-b6d1-44f9bfd2f8ba" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+      <nr>5</nr>
+      <ustep eId="DU/2024/1911__art_5__ust_1" gd:GUID="0f030e29-47a0-440d-af55-31e6cede7b80" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="afcb9b7d-2beb-4e27-bab5-8b462bb5adf5" fragment="1" gd:fragmentGUID="50a4e384-835e-45da-a46b-d615b1b7d5b0" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">Podmiot reprezentujący, który przed dniem wejścia w życie niniejszej ustawy uzyskał zezwolenie na prowadzenie systemu kaucyjnego, o którym mowa w art. 40j ust. 1 ustawy zmienianej w art. 1, zwane dalej „zezwoleniem”, jest obowiązany, w terminie 3 miesięcy od dnia wejścia w życie niniejszej ustawy, do złożenia wniosku o zmianę tego zezwolenia.</zdanie>
+          <zdanie nr="2" gd:zdGUID="5cfd31f3-841a-4318-8648-1a6207ef0a43" fragment="1" gd:fragmentGUID="3afc001d-0092-46a1-b60c-f0a0a1955004" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">Do wniosku o zmianę zezwolenia stosuje się art. 40j ust. 2–2b ustawy zmienianej w art. 1 w brzmieniu nadanym niniejszą ustawą.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2024/1911__art_5__ust_2" gd:GUID="69d5c6bb-66c0-4bed-a2d3-7f88d8a9311e" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="8e561bf8-ba42-405d-b368-3f644aaa15b1" fragment="1" gd:fragmentGUID="d026557a-b694-4e05-a898-26195efcf210" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">Jeżeli w zezwoleniu termin uruchomienia systemu kaucyjnego jest dłuższy niż 24 miesiące od dnia wydania zezwolenia, minister właściwy do spraw klimatu zmienia ten termin na nie dłuższy niż 24 miesiące od dnia wydania tego zezwolenia.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2024/1911__art_5__ust_3" gd:GUID="72540e78-d0fe-4941-a700-1585356732d2" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+        <nr>3</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="7fbc0abf-a96f-4ca6-a38f-afc2d4e9504c" fragment="1" gd:fragmentGUID="02302505-ce9e-4986-8f6f-249f8900738f" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">Jeżeli podmiot reprezentujący nie złoży w terminie kompletnego wniosku, o którym mowa w ust. 1, minister właściwy do spraw klimatu cofa, w drodze decyzji, zezwolenie bez odszkodowania.</zdanie>
+        </p>
+      </ustep>
+    </artykul>
+    <artykul eId="DU/2024/1911__art_6" gd:GUID="f78797fa-c30d-42ca-95af-7b4d970842b8" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+      <nr>6</nr>
+      <ustep eId="DU/2024/1911__art_6__ust_1" gd:GUID="e3767b84-a857-4e3f-90ea-003a170cd7c5" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="389f9910-5ee7-46c3-94fe-eed22f4ae04a" fragment="1" gd:fragmentGUID="96720857-acd8-4fad-a77c-7535f4a9696e" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">Do postępowań w sprawach o wydanie zezwolenia wszczętych i niezakończonych przed dniem wejścia w życie niniejszej ustawy stosuje się przepisy ustawy zmienianej w art. 1 w brzmieniu nadanym niniejszą ustawą.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2024/1911__art_6__ust_2" gd:GUID="b8fd2899-c7a5-44c6-bc93-5a01eb18a530" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="fd8ab56e-0d0c-4b3f-9b6d-88254c4bba68" fragment="1" gd:fragmentGUID="ca6f5348-a1e1-4cd5-acc9-8de8fad154ef" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">Podmiot reprezentujący, który przed dniem wejścia w życie niniejszej ustawy złożył wniosek o wydanie zezwolenia, jest obowiązany do uzupełnienia tego wniosku w terminie 3 miesięcy od dnia wejścia w życie niniejszej ustawy, pod rygorem pozostawienia wniosku bez rozpoznania.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2024/1911__art_6__ust_3" gd:GUID="64381f61-7203-4412-8fb9-24087ebe5680" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+        <nr>3</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="a1882261-79f4-4c84-b45e-29ad4a719447" fragment="1" gd:fragmentGUID="7820f5f4-0c0d-4313-a35e-de6ee4285438" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">Obowiązek określony w art. 40j ust. 5a ustawy zmienianej w art. 1 nie dotyczy podmiotu reprezentującego, który przed dniem wejścia w życie niniejszej ustawy uruchomił system kaucyjny.</zdanie>
+        </p>
+      </ustep>
+    </artykul>
+    <artykul eId="DU/2024/1911__art_7" gd:GUID="ff2f535d-3ab7-4ffd-8038-86db703aa5de" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+      <nr>7</nr>
+      <ustep eId="DU/2024/1911__art_7__ust_1" gd:GUID="7c2f0def-4e74-4378-9c64-66609658a9f4" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="155dc92f-40f5-4ac4-9201-b7223ae170cb" fragment="1" gd:fragmentGUID="9dc70ee5-f1c0-447f-8692-c3b2feb2b451" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">Podmiot reprezentujący, który przed dniem wejścia w życie niniejszej ustawy uzyskał zezwolenie, w którym termin uruchomienia systemu kaucyjnego został ustalony na dzień wcześniejszy niż dzień 1 października 2025 r., może, w terminie 7 dni od dnia wejścia w życie niniejszej ustawy, wystąpić z wnioskiem o zmianę zezwolenia w zakresie ograniczonym do zmiany terminu uruchomienia systemu kaucyjnego na dzień 1 października 2025 r.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2024/1911__art_7__ust_2" gd:GUID="88be3ba6-9541-4c39-8fdc-80eec2d993ee" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="fe77fe61-b695-4029-99cf-90234555b8db" fragment="1" gd:fragmentGUID="3a44a989-e646-481f-9a81-bce23ed01248" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">W przypadku złożenia wniosku, o którym mowa w ust. 1, minister właściwy do spraw klimatu zmienia zezwolenie, w drodze decyzji, w terminie 7 dni.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2024/1911__art_7__ust_3" gd:GUID="c88e8ca0-b340-4d69-9a38-d26c7f875808" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+        <nr>3</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="634d1972-d7d5-4e73-a071-e9c754215024" fragment="1" gd:fragmentGUID="3461f589-6b52-45bb-a0e2-85353ed3c83f" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">W przypadku gdy podmiot reprezentujący złożył w terminie wniosek, o którym mowa w ust. 1, art. 40j ust. 6 ustawy zmienianej w art. 1 stosuje się do cofnięcia zezwolenia, jeżeli podmiot reprezentujący nie uruchomił systemu kaucyjnego w terminie określonym w decyzji, o której mowa w ust. 2.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2024/1911__art_7__ust_4" gd:GUID="d6ae341a-a020-474d-a3de-abd555486446" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+        <nr>4</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="01e2224e-11af-482a-bd97-9dbbd8e4759a" fragment="1" gd:fragmentGUID="e5a403e6-f36b-4d77-ad2f-48c81b15009d" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">W odniesieniu do postępowań w sprawie wydania zezwolenia wszczętych i niezakończonych przed dniem wejścia w życie niniejszej ustawy w decyzji o udzieleniu zezwolenia wskazuje się termin uruchomienia systemu kaucyjnego nie wcześniejszy niż dzień 1 października 2025 r.</zdanie>
+        </p>
+      </ustep>
+    </artykul>
+    <artykul eId="DU/2024/1911__art_8" gd:GUID="0f392304-548b-4056-a07e-1c13d0a29dfc" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+      <nr>8</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="87da8ef2-12d9-4a1a-a365-13d0828005de" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="672bf025-9c6b-4a52-82c5-105db49424fd" fragment="1" gd:fragmentGUID="a9fce616-6cb8-4b39-84d4-261c6eeb200d" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">W 2025 r. dopuszcza się stosowanie wzoru oznakowania wskazującego na objęcie opakowania systemem kaucyjnym oraz określającego wysokość kaucji określonego w załączniku nr 4 do ustawy zmienianej w art. 1 w brzmieniu dotychczasowym.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2024/1911__art_9" gd:GUID="5a2001e7-0914-47cc-8728-7da80e53bf5f" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+      <nr>9</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="6de6eb04-c1f3-4a0d-a5fb-2baa99257d07" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="f20602de-9a83-40a6-a39c-808574b9c4cb" fragment="1" gd:fragmentGUID="3f904618-fd71-4547-80bd-43013d7a336e" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">W 2025 r. w przypadku opakowań:</zdanie>
+        </p>
+        <punkt eId="DU/2024/1911__art_9__pkt_1" gd:GUID="80a2109b-6e5d-4a18-b591-9f76ab428ae5" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="f20602de-9a83-40a6-a39c-808574b9c4cb" fragment="2" gd:fragmentGUID="7dcda9d6-b9e4-468b-9916-8ede5769e247" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">o których mowa w poz. 1 i 2 załącznika nr 1a do ustawy zmienianej w art. 1, poziom selektywnego zbierania odpadów opakowaniowych w tym roku kalendarzowym stanowi wyrażona w procentach wartość ilorazu masy odpadów opakowaniowych powstałych z tych opakowań, selektywnie zebranych w ramach systemu kaucyjnego w tym roku oraz masy tych opakowań wprowadzonych do obrotu w okresie od dnia 1 października do dnia 31 grudnia tego roku;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="DU/2024/1911__art_9__pkt_2" gd:GUID="5e58f291-ec7d-4603-980a-989b8d8d2f4f" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="f20602de-9a83-40a6-a39c-808574b9c4cb" fragment="3" gd:fragmentGUID="31e68f17-0ed7-42c3-bff3-174cecf9922c" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">o których mowa w poz. 3 załącznika nr 1a do ustawy zmienianej w art. 1, poziom selektywnego zbierania opakowań w danym roku kalendarzowym stanowi wyrażona w procentach wartość ilorazu wysokości kaucji zwróconej w danym roku kalendarzowym oraz wysokości kaucji pobranej w okresie od dnia 1 października do dnia 31 grudnia tego roku w ramach systemu kaucyjnego.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2024/1911__art_10" gd:GUID="96ef69a9-7746-451e-ae79-2550e5e58e0f" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+      <nr>10</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="d23dbaa6-6441-4477-b296-f39139469b04" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="3796a6aa-b33b-436d-89cc-5e52224c571d" fragment="1" gd:fragmentGUID="6c9dbfc0-96f2-4a5a-b48d-ae4f5ecdc88e" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">Obowiązki, o których mowa w art. 40h ust. 4, art. 42 ust. 2 oraz art. 44 ust. 1, 2 i 4–7 ustawy zmienianej w art. 1, mają zastosowanie od dnia 1 października 2025 r.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2024/1911__art_11" gd:GUID="ef32036b-db1c-4899-b30a-dd62d85dc78b" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+      <nr>11</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="75189968-167c-443b-b1b0-b4b9857d1587" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="d231d3ea-5445-42a7-b06e-6ff184c43284" fragment="1" gd:fragmentGUID="6da2eed0-181b-4c20-827c-39d7a211692d" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1911_odczytane.x" wejscie-w-zycie="2025-01-01">Ustawa wchodzi w życie z dniem 1 stycznia 2025 r., z wyjątkiem art. 1 pkt 6, który wchodzi w życie z dniem 1 stycznia 2026 r.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <organ-podpisujacy>Prezydent Rzeczypospolitej Polskiej: <i><osoba podpisujacy="true" gd:osobaGUID="156eb391-079a-49b2-bda4-7ba74e74da0e"><imie>A.</imie> <nazwisko>Duda</nazwisko></osoba></i></organ-podpisujacy>
+    <zalacznik eId="DU/2024/1911__zal_1" gd:GUID="88865201-69bb-4d4a-a051-32e8eff02bbb">
+      <zalacznik-do gd:GUID="80c9f057-b9af-47b3-bc98-166bda0d8280">Załączniki do ustawy z dnia 21 listopada 2024 r.</zalacznik-do>
+      <zalacznik-do gd:GUID="0498176e-60f4-4e46-b7c0-f11cec2ff767">(Dz. U. poz. 1911)</zalacznik-do>
+      <zalacznik-nr gd:GUID="2b7bc060-cdaf-4b32-9612-56c5ae8d01ba">
+        <nr>1</nr>
+      </zalacznik-nr>
+      <tytul-zalacznika gd:GUID="c2568b79-f98f-4cf4-9e1c-35adb5e2f646">minimalne poziomy SELEKTYWNEGO zbierania opakowań i odpadów opakowaniowych</tytul-zalacznika>
+      <segment-zalacznika gd:GUID="c0ca8589-83f2-44da-98fa-3c1a8120a11c" orientacja="pionowa">
+        <tabela gd:GUID="ceb44229-47e0-4a73-b490-10a20c21aeb7">
+          <tbody>
+            <tr gd:GUID="259d1ae4-f3f9-465e-ac39-3b3c91f4937f">
+              <td rowspan="2" gd:GUID="8b761713-4e72-4e75-879d-4cc7ee31c27a">
+                <tekst-zwykly gd:GUID="a83f83c9-81d3-438a-a727-f6525fef2843">Poz.</tekst-zwykly>
+              </td>
+              <td rowspan="2" gd:GUID="88d0edc5-da44-4167-b8e4-da374273c541">
+                <tekst-zwykly gd:GUID="78d4627d-61ca-4972-bef0-0b48fe041114">Rodzaje opakowań</tekst-zwykly>
+              </td>
+              <td colspan="5" gd:GUID="9a7e3529-0119-4057-9731-fa19c11fdc54">
+                <tekst-zwykly gd:GUID="4cbc0ecc-1ef0-4ff5-a69c-89d68d716f87">Poziomy selektywnego zbierania opakowań i odpadów opakowaniowych w % w roku</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="e7439ce6-8248-4454-aa53-02483e4830fe">
+              <td gd:GUID="acbe1618-d946-47d7-a492-3f2fd96500a0">
+                <liczba gd:GUID="23c8dcdf-e87d-4e8d-88d1-024970674c5e">2025</liczba>
+              </td>
+              <td gd:GUID="ce5835db-4b53-4d31-a65c-12b5cbb5968b">
+                <liczba gd:GUID="54118f7f-d535-4ce0-83ca-46282a30d21f">2026</liczba>
+              </td>
+              <td gd:GUID="cc4752ee-263f-4f24-aed6-426cf22a9418">
+                <liczba gd:GUID="fcbe6141-fe03-49e5-9107-b67a4e4cff35">2027</liczba>
+              </td>
+              <td gd:GUID="55ffd123-f4f2-4746-9b02-9d0e8304e587">
+                <liczba gd:GUID="60a364da-eb73-4a00-a59f-b50830433517">2028</liczba>
+              </td>
+              <td gd:GUID="0612551b-9e5e-410b-8f29-c232b0be23d0">
+                <tekst-zwykly gd:GUID="5e823c26-69db-4c99-a8e5-280ac2a7fb54">2029 i latach następnych</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="49172437-fcc2-4ec0-ac7d-d5f3903af469">
+              <td gd:GUID="bc0035c8-2fff-409e-b251-7f4b5c48d4b9">
+                <liczba gd:GUID="a57f01e3-d0db-49f5-a73f-496b5b546002">1</liczba>
+              </td>
+              <td gd:GUID="5344d039-5bc9-4da0-a25c-14d8caf9489d">
+                <tekst-zwykly gd:GUID="322666f1-57ae-482b-a6a0-0c4e19784499">butelki jednorazowego użytku z tworzyw sztucznych na napoje o pojemności do trzech litrów, włącznie z ich zakrętkami i wieczkami z tworzyw sztucznych, z wyłączeniem szklanych lub metalowych butelek na napoje, których zakrętki i wieczka są wykonane z tworzyw sztucznych</tekst-zwykly>
+              </td>
+              <td gd:GUID="7434ec56-c7c9-4379-abb9-2791726e1041">
+                <liczba gd:GUID="ff0d40a8-a271-4e99-9583-a1d144e5efe5">77</liczba>
+              </td>
+              <td gd:GUID="e312caf6-9a4c-43a6-bc4d-0ed50896ff05">
+                <liczba gd:GUID="aed16696-f214-4660-89cd-2ccfb303cad8">77</liczba>
+              </td>
+              <td gd:GUID="8740d03b-9377-477e-be3b-f2f5bc8cd0f2">
+                <liczba gd:GUID="708d4dc5-ea55-4e92-844d-5a0d4c78127b">77</liczba>
+              </td>
+              <td gd:GUID="1965cfaa-c141-47b7-90f3-650c88e4d6d7">
+                <liczba gd:GUID="573cb438-1f48-41f2-bc05-e3f8c9583382">77</liczba>
+              </td>
+              <td gd:GUID="6ebc815d-0796-4a5d-8e34-822c0f0cb081">
+                <liczba gd:GUID="f13c73f0-e5b1-4811-9ec5-489d86e54777">90</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="959f7475-1525-4f8e-991c-0091dc76ea76">
+              <td gd:GUID="5e8648ed-947e-4d6e-88d3-06348ccafa9b">
+                <liczba gd:GUID="6193d1b3-0b5e-4795-b91c-2dd25cbcfbf7">2</liczba>
+              </td>
+              <td gd:GUID="9a4f58cb-f829-497c-97c1-47666aaec5e4">
+                <tekst-zwykly gd:GUID="042bd164-0b3b-4409-b923-352a9aea91a8">puszki metalowe o pojemności do jednego litra</tekst-zwykly>
+              </td>
+              <td gd:GUID="a2f70b87-8466-4b25-94ff-25223f963c10">
+                <liczba gd:GUID="bdde8f92-b5da-4c2d-a2d1-43e26a7c2453">77</liczba>
+              </td>
+              <td gd:GUID="438f332f-c814-47aa-8892-1a3698b79a07">
+                <liczba gd:GUID="3a5be965-fd7f-4896-b447-52fa522885f2">77</liczba>
+              </td>
+              <td gd:GUID="d9bb6ef4-472d-42c7-a9db-d1c8a53fdb9b">
+                <liczba gd:GUID="ae167a86-896b-423c-879c-9f9429341f43">77</liczba>
+              </td>
+              <td gd:GUID="5af988a1-11bc-44f4-b37f-f3ef5cacaf68">
+                <liczba gd:GUID="3b30b9dd-0af3-42e4-8c16-b678e03db0ff">77</liczba>
+              </td>
+              <td gd:GUID="9f9b8035-fdd7-425d-aef3-7904330cf90b">
+                <liczba gd:GUID="68567be3-eebd-49fa-8b5e-cc864fa75a75">90</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="41dd3f8c-2a48-40d5-9c09-5007fd91e452">
+              <td gd:GUID="7bd93ac7-4aed-4369-87e1-4ba3b625eb94">
+                <liczba gd:GUID="81ad25fd-13a9-48d2-ba21-f40078543bc0">3</liczba>
+              </td>
+              <td gd:GUID="c65cfcc2-a43e-4497-9c00-46970b287ebf">
+                <tekst-zwykly gd:GUID="920e8b45-e2b1-4486-a0b9-8038279fc3a6">butelki szklane wielokrotnego użytku o pojemności do półtora litra</tekst-zwykly>
+              </td>
+              <td gd:GUID="8c8224ae-b0dd-4062-9c31-3ac2f4c57efa">
+                <liczba gd:GUID="19fe6ac7-f2f7-42c0-997b-752c58e7034f">77</liczba>
+              </td>
+              <td gd:GUID="b8afb304-343b-40f5-952b-837e9a7f0fe2">
+                <liczba gd:GUID="41a4c462-1788-42d8-8adb-814310310ed8">77</liczba>
+              </td>
+              <td gd:GUID="639a4eda-5b18-4c26-8900-a63047923c43">
+                <liczba gd:GUID="7e707ced-09fc-49ca-8553-890cd9b4b0ee">77</liczba>
+              </td>
+              <td gd:GUID="4ed960b7-907b-472e-9843-4a1b05df4322">
+                <liczba gd:GUID="76346495-a936-49f6-8ad4-df94727e03a2">77</liczba>
+              </td>
+              <td gd:GUID="3dcef333-fd6b-4a2b-8a4f-574f9c9c495b">
+                <liczba gd:GUID="2c6303bb-3eb4-4ee8-812c-91c2677b2129">90</liczba>
+              </td>
+            </tr>
+          </tbody>
+        </tabela>
+      </segment-zalacznika>
+    </zalacznik>
+    <zalacznik eId="DU/2024/1911__zal_2" gd:GUID="173cd3ab-fc73-4f41-a5e6-87e328e007d8">
+      <zalacznik-nr gd:GUID="f289921a-3fa9-4252-9757-5f4f8e4726fe">
+        <nr>2</nr>
+      </zalacznik-nr>
+      <tytul-zalacznika gd:GUID="2d7ba41f-2e7a-403a-ba79-53096f6acbac">WZÓR OZNAKOWANIA WSKAZUJĄCEGO NA OBJĘCIE OPAKOWANIA SYSTEMEM KAUCYJNYM ORAZ OKREŚLAJĄCEGO WYSOKOŚĆ KAUCJI</tytul-zalacznika>
+      <segment-zalacznika gd:GUID="b7c9e04b-b3ed-492a-9857-7e379808e97d" orientacja="pionowa">
+        <tekst-zwykly gd:GUID="8e2fc7c5-cd23-4a3f-8387-65b9ab52ce31">gdzie:</tekst-zwykly>
+        <tekst-zwykly gd:GUID="01ed86ee-05c4-4d47-bd95-8a602f71f581">X,YY – oznacza kwotę kaucji, w której X oznacza złotówki, a YY grosze,</tekst-zwykly>
+        <tekst-zwykly gd:GUID="54df70ab-6a23-4ace-afb3-c2da6d1afac4">X – oznacza kwotę kaucji w pełnych złotych.</tekst-zwykly>
+        <tekst-zwykly gd:GUID="90bf4fa4-7076-4f76-a9da-941cc680b4b8">Objaśnienia:</tekst-zwykly>
+        <tekst-zwykly gd:GUID="554637a5-2e57-4f22-8fe8-b5323c997d6b">Jeżeli dla danego rodzaju opakowania kwotę kaucji określono w niepełnych złotych stosuje się wzór zawierający oznaczenie „X,YY”.</tekst-zwykly>
+        <tekst-zwykly gd:GUID="c10609f1-5171-41aa-9c55-5063ccaef9a5">Jeżeli dla danego rodzaju opakowania kwotę kaucji określono w pełnych złotych stosuje się wzór zawierający oznaczenie „X”.</tekst-zwykly>
+        <tekst-zwykly gd:GUID="a9d157fb-5046-48b7-a03b-40fa7007adc8">Oznakowanie powinno:</tekst-zwykly>
+        <tekst-zwykly gd:GUID="cb80f345-710a-4d85-b09d-d8c99300981b">1) być wyraźne, widoczne, czytelne i trwałe;</tekst-zwykly>
+        <tekst-zwykly gd:GUID="971c1bd9-7ed3-4a87-997c-d13713fb5e78">2) kontrastować z tłem;</tekst-zwykly>
+        <tekst-zwykly gd:GUID="dde13b5f-1672-4f35-9fb0-dfeeb8703745">3) znajdować się na etykiecie.</tekst-zwykly>
+      </segment-zalacznika>
+    </zalacznik>
+  </ustawa>
+</akt-prawny>

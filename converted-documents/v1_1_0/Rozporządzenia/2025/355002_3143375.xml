@@ -1,0 +1,815 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <rozporzadzenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>UNKNOWN/0000/000</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>80be3f64-45c9-42d5-b0ce-2a5eea548dc7</gd:GUIDwersji>
+      <Wydawnictwo></Wydawnictwo>
+      <Rok></Rok>
+      <Pozycja> </Pozycja>
+      <Tytul>Rozporządzenie Ministra Finansów i Gospodarki z dnia 23 grudnia 2025 r. w sprawie prowadzenia uproszczonej ewidencji przychodów i kosztów przez koła gospodyń wiejskich</Tytul>
+      <Rodzaj>ROZP</Rodzaj>
+      <DataOgloszenia></DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-12-23</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2026-01-01_odczytane" rodzaj="wejscie-w-zycie" pochodzenie="odczytane" data="2026-01-01" podstawa="§ 19" dowod="art_19" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2026-01-01_odczytane" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="9b7ac99c-23ff-4de7-a21e-f770b540a5ea" rola="wydajacy">
+          <Nazwa>Minister Finansów i Gospodarki</Nazwa>
+          <OrganPodpisujacy>Minister Finansów i Gospodarki</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>J.</imie> <nazwisko>Neneman</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Rozporządzenie</rodzaj-aktu>
+    <autor-aktu>Ministra Finansów i Gospodarki<odnosnik id-odnosnika="1" symbol="1" gd:GUID="088ff711-6381-460b-ab4e-63bfb9a86957"><p><zdanie nr="1" gd:zdGUID="db14319d-06ef-46d1-ac65-16429bb61963" fragment="1" gd:fragmentGUID="7cfd080d-9530-4b1d-baa2-e3ea89309213">Minister Finansów i Gospodarki kieruje działem administracji rządowej – finanse publiczne, na podstawie § 1 ust. 2 pkt 3 rozporządzenia Prezesa Rady Ministrów z dnia 25 lipca 2025 r. w sprawie szczegółowego zakresu działania Ministra Finansów i Gospodarki (Dz. U. poz. 997).</zdanie></p></odnosnik></autor-aktu>
+    <data>z dnia 23 grudnia 2025 r.</data>
+    <tytul>w sprawie prowadzenia uproszczonej ewidencji przychodów i kosztów przez koła gospodyń wiejskich</tytul>
+    <podstawa-prawna>Na podstawie art. 24 ust. 6 ustawy z dnia 9 listopada 2018 r. o kołach gospodyń wiejskich (Dz. U. z 2025 r. poz. 310) zarządza się, co następuje:</podstawa-prawna>
+    <paragraf eId="art_1" gd:GUID="6c0d48c7-01ee-4a65-b20f-11d67d52e2a8" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="9ad17dc2-457b-43c0-bb98-4f13d80c5950" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="f350b237-aa09-4c75-af86-7fbf21c5ba28" fragment="1" gd:fragmentGUID="e1a76d49-7627-462d-8d58-050084a3bc5f" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">Rozporządzenie określa:</zdanie>
+        </p>
+        <punkt eId="art_1__pkt_1" gd:GUID="b92940b2-d687-40ca-9ac9-0d0df0d91ce4" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="f350b237-aa09-4c75-af86-7fbf21c5ba28" fragment="2" gd:fragmentGUID="4f547122-cb69-464b-a8e8-b1d8e41a5454" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">sposób prowadzenia uproszczonej ewidencji przychodów i kosztów, zwanej dalej „uproszczoną ewidencją”, przez koła gospodyń wiejskich, zwane dalej „podatnikami”;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="art_1__pkt_2" gd:GUID="0f0ff342-707e-4a87-a2f8-1c1ba528f040" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="f350b237-aa09-4c75-af86-7fbf21c5ba28" fragment="3" gd:fragmentGUID="70b8a8fe-034d-4884-a779-cb3f99cfded8" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">warunki, jakim powinna odpowiadać uproszczona ewidencja.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="art_2" gd:GUID="37f4dcc2-0f59-4677-ba56-e859bd554626" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="b5399c0c-73ca-4db9-940e-5b67be870e0c" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="30427449-e5eb-48cd-b36b-4e7b5cbd1dff" fragment="1" gd:fragmentGUID="57244963-c53a-49e9-a536-600d2032d002" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">Uproszczona ewidencja obejmuje zbiory zapisów, które tworzą:</zdanie>
+        </p>
+        <punkt eId="art_2__pkt_1" gd:GUID="16fde30b-f329-498a-9a3a-a9ee78777449" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="30427449-e5eb-48cd-b36b-4e7b5cbd1dff" fragment="2" gd:fragmentGUID="a2a57f25-2979-4060-9601-c19de2e4305b" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">zestawienie przychodów i kosztów, którego wzór określa załącznik nr 1 do rozporządzenia;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="art_2__pkt_2" gd:GUID="402db1d4-849b-4855-9839-1129c53f4b3c" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="30427449-e5eb-48cd-b36b-4e7b5cbd1dff" fragment="3" gd:fragmentGUID="80083bb0-9297-4fbd-b73f-d7614218db1f" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">zestawienie przepływów finansowych, którego wzór określa załącznik nr 2 do rozporządzenia;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="art_2__pkt_3" gd:GUID="1870eb43-54e4-4c77-b132-03ea2cc8893a" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="30427449-e5eb-48cd-b36b-4e7b5cbd1dff" fragment="4" gd:fragmentGUID="4e2272f1-1c31-4dd7-a046-868143400789" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">wykaz środków trwałych oraz wartości niematerialnych i prawnych związanych z prowadzoną działalnością, zwany dalej „wykazem”.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="art_3" gd:GUID="ab3529be-3a34-4b55-8e53-c632fcaafe2e" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+      <nr>3</nr>
+      <ustep eId="art_3__ust_1" gd:GUID="b243ab90-9cda-43a3-86da-f280008c831f" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="c72ba6be-4973-4617-9684-594ae250912d" fragment="1" gd:fragmentGUID="38f3d6f7-593a-44b0-b52c-008abdcd10c7" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">Wykaz, w odniesieniu do danego środka trwałego lub danej wartości niematerialnej i prawnej, zawiera następujące dane:</zdanie>
+        </p>
+        <punkt eId="art_3__ust_1__pkt_1" gd:GUID="ff42600e-294b-434a-b887-98d6f801401e" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="c72ba6be-4973-4617-9684-594ae250912d" fragment="2" gd:fragmentGUID="1244808e-ac60-405a-a0a4-ebdb72b88fc1" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">liczbę porządkową;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="art_3__ust_1__pkt_2" gd:GUID="acfae1fd-0c25-4816-982c-1adb730b0b42" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="c72ba6be-4973-4617-9684-594ae250912d" fragment="3" gd:fragmentGUID="ad92bc0e-ee96-4234-aace-2142fa84222f" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">datę nabycia albo datę wytworzenia środka trwałego lub wartości niematerialnej i prawnej;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="art_3__ust_1__pkt_3" gd:GUID="da2ada9f-413e-4b5c-973f-ef8655554c32" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="c72ba6be-4973-4617-9684-594ae250912d" fragment="4" gd:fragmentGUID="1429b6ad-3fa7-4e1f-99fd-ab0f4995363f" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">datę przyjęcia do używania środka trwałego lub wartości niematerialnej i prawnej;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="art_3__ust_1__pkt_4" gd:GUID="db145be3-dfc8-4245-ae09-a8cb296d243a" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="c72ba6be-4973-4617-9684-594ae250912d" fragment="5" gd:fragmentGUID="bae908fe-2d8e-42c3-b62c-07de8487be65" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">określenie dowodu stwierdzającego nabycie, wytworzenie lub stanowiącego podstawę przyjęcia do używania lub wykreślenia z wykazu środka trwałego lub wartości niematerialnej i prawnej:</zdanie>
+          </p>
+          <litera eId="art_3__ust_1__pkt_4__lit_a" gd:GUID="2dafd3e8-821a-4dce-8251-3a62f3b30c88" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="c72ba6be-4973-4617-9684-594ae250912d" fragment="6" gd:fragmentGUID="a8c14b0f-cfc4-4809-a469-5a7b1391a158" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">numer identyfikujący fakturę w Krajowym Systemie e-Faktur, jeżeli jest to faktura wystawiona przy użyciu Krajowego Systemu e-Faktur – w przypadku faktury dotyczącej zbycia środka trwałego lub wartości niematerialnej i prawnej,</zdanie>
+            </p>
+          </litera>
+          <litera eId="art_3__ust_1__pkt_4__lit_b" gd:GUID="5eb11b10-5de7-4c98-bb5a-50026adfb536" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="c72ba6be-4973-4617-9684-594ae250912d" fragment="7" gd:fragmentGUID="f38dd731-4e4a-455b-ba7e-571ab515d621" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">numer dowodu, na podstawie którego przyjęto do używania lub wykreślono z wykazu środek trwały lub wartość niematerialną i prawną,</zdanie>
+            </p>
+          </litera>
+          <litera eId="art_3__ust_1__pkt_4__lit_c" gd:GUID="d37342af-f6ca-43e8-9d09-cd4c73805b02" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+            <nr>c</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="c72ba6be-4973-4617-9684-594ae250912d" fragment="8" gd:fragmentGUID="8710148a-814c-4c94-acae-207fd8a2bab6" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">rodzaj dowodu stwierdzającego nabycie lub wytworzenie środka trwałego lub wartości niematerialnej i prawnej;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="art_3__ust_1__pkt_5" gd:GUID="29d4396c-d517-4f6e-b03d-fd5a5e9b38b6" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="c72ba6be-4973-4617-9684-594ae250912d" fragment="9" gd:fragmentGUID="f9cab21b-8010-4552-839a-e3a16e5b910f" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">określenie środka trwałego lub wartości niematerialnej i prawnej;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="art_3__ust_1__pkt_6" gd:GUID="4abee6c4-5ff4-4cb0-badc-865c64a004a8" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>6</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="c72ba6be-4973-4617-9684-594ae250912d" fragment="10" gd:fragmentGUID="9eca5155-11b9-4836-953e-c37005b5eee8" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">symbol Klasyfikacji Środków Trwałych (KŚT) wydanej na podstawie odrębnych przepisów;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="art_3__ust_1__pkt_7" gd:GUID="143bb399-03b8-411f-923d-6a905f68b72b" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>7</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="c72ba6be-4973-4617-9684-594ae250912d" fragment="11" gd:fragmentGUID="9fbea981-f1f2-4957-adb8-a798b0d9e8d6" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">wartość początkową;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="art_3__ust_1__pkt_8" gd:GUID="8751ead5-848a-43df-8405-7497474fe629" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>8</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="c72ba6be-4973-4617-9684-594ae250912d" fragment="12" gd:fragmentGUID="8781b0de-02b1-4bc7-82b6-8ff9ddd58fb0" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">stawkę amortyzacyjną;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="art_3__ust_1__pkt_9" gd:GUID="c1cf5306-e4a3-471e-be72-12d9f91b13bf" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>9</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="c72ba6be-4973-4617-9684-594ae250912d" fragment="13" gd:fragmentGUID="cd1bc47a-22e6-4e22-8ea2-1cd53202c6c6" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">wysokość odpisu amortyzacyjnego za dany rok podatkowy i narastająco za okres dokonywania tych odpisów, w tym także gdy składnik majątku był kiedykolwiek wprowadzony do wykazu, a następnie z niego wykreślony i ponownie wprowadzony;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="art_3__ust_1__pkt_10" gd:GUID="e22c98a9-43a5-46fb-a67e-1acc2b36222c" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>10</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="c72ba6be-4973-4617-9684-594ae250912d" fragment="14" gd:fragmentGUID="d45cce52-4316-44cd-a7c4-98e53eb7fd7b" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">zaktualizowaną wartość początkową;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="art_3__ust_1__pkt_11" gd:GUID="d61d7d10-2631-464f-a480-327503558863" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>11</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="c72ba6be-4973-4617-9684-594ae250912d" fragment="15" gd:fragmentGUID="4babf373-1966-44bd-b348-63b44dd25a0e" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">datę likwidacji oraz przyczynę likwidacji albo datę zbycia środka trwałego lub wartości niematerialnej i prawnej.</zdanie>
+          </p>
+        </punkt>
+      </ustep>
+      <ustep eId="art_3__ust_2" gd:GUID="44030225-7fa2-49b4-a20f-8614e14744e0" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="0f6314f9-3097-4221-a3cf-18172a512fcd" fragment="1" gd:fragmentGUID="557f2b1e-ddc3-4994-9f64-142041953acc" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">Za środki trwałe oraz wartości niematerialne i prawne uznaje się składniki majątkowe, o których mowa w art. 16a–16m ustawy z dnia 15 lutego 1992 r. o podatku dochodowym od osób prawnych (Dz. U. z 2025 r. poz. 278, z późn. zm.<odnosnik id-odnosnika="2" symbol="2" gd:GUID="13dc3a59-4e3b-4701-866b-1b8a89a0dea1"><p><zdanie nr="1" gd:zdGUID="3c3eeeee-19ef-45f8-9c71-e48e6924c318" fragment="1" gd:fragmentGUID="878c9bb8-18ea-4be5-9f8a-2bff7760477a">Zmiany tekstu jednolitego wymienionej ustawy zostały ogłoszone w Dz. U. z 2025 r. poz. 340, 620, 680, 1022, 1074, 1218, 1301, 1426, 1657, 1658, 1804, 1817 i 1846.</zdanie></p></odnosnik>), zwanej dalej „ustawą o podatku dochodowym od osób prawnych”.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="art_3__ust_3" gd:GUID="76f77f67-11bb-4dae-835a-b0646df5e193" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <nr>3</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="f0141a5b-2cd7-4fce-bf1b-7afd4331705e" fragment="1" gd:fragmentGUID="30aa1411-0f00-4650-8a5a-54fd99a9be17" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">Zapisów dotyczących środków trwałych oraz wartości niematerialnych i prawnych dokonuje się w wykazie najpóźniej w miesiącu przyjęcia ich do używania.</zdanie>
+          <zdanie nr="2" gd:zdGUID="fa59a056-cf31-40a0-aa68-4d87d042546b" fragment="1" gd:fragmentGUID="8a4457eb-8aa9-4220-891d-683a6ab022a3" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">Późniejszy termin wprowadzenia do wykazu uznaje się za ujawnienie środka trwałego lub wartości niematerialnej i prawnej, o którym mowa w art. 16h ust. 1 pkt 4 ustawy o podatku dochodowym od osób prawnych.</zdanie>
+        </p>
+      </ustep>
+    </paragraf>
+    <paragraf eId="art_4" gd:GUID="3e6a1499-cf7d-469c-ad65-65dbbde06e43" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+      <nr>4</nr>
+      <ustep eId="art_4__ust_1" gd:GUID="8880219e-2113-41d6-933c-917be5a6ff97" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="693c4b16-2beb-4072-a415-a237e742bca6" fragment="1" gd:fragmentGUID="1f07794f-26c4-4bae-87cc-4d57a2634040" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">Uproszczoną ewidencję należy prowadzić rzetelnie i w sposób niewadliwy.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="art_4__ust_2" gd:GUID="4e337b30-164c-4325-b02b-a89f58bb04a9" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="3f4790fd-1610-435a-ac01-337b9a0f50eb" fragment="1" gd:fragmentGUID="23a737bd-66f7-41ae-86ef-03972822a0b2" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">Za rzetelną uznaje się uproszczoną ewidencję, jeżeli dokonywane w niej zapisy odzwierciedlają stan rzeczywisty.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="art_4__ust_3" gd:GUID="4c74b2d4-a459-4d0a-80df-c88f06f20858" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <nr>3</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="0d4bf0f3-804a-40d1-993e-d649b3422d8c" fragment="1" gd:fragmentGUID="712de104-4e65-4624-a9a7-a9bbfb2af79b" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">Za niewadliwą uznaje się uproszczoną ewidencję prowadzoną zgodnie z przepisami rozporządzenia.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="art_4__ust_4" gd:GUID="1a2116e8-cb7b-4c6f-82ec-f65fbc17bd3e" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <nr>4</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="bd974542-6e0b-4351-810e-f08bfb18f9a1" fragment="1" gd:fragmentGUID="f742dc67-3101-40cb-bfd0-89f5a77716c0" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">Uproszczoną ewidencję uznaje się za rzetelną i niewadliwą również wtedy, gdy:</zdanie>
+        </p>
+        <punkt eId="art_4__ust_4__pkt_1" gd:GUID="84503f6a-cca9-42dd-a6cf-f6e14ee523e6" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="bd974542-6e0b-4351-810e-f08bfb18f9a1" fragment="2" gd:fragmentGUID="6ad63f3a-0063-4727-9b34-1ea179697d94" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">niewpisane lub błędnie wpisane przychody nie przekraczają łącznie 0,5 % przychodu wykazanego w uproszczonej ewidencji za dany rok podatkowy lub przychodu wykazanego w roku podatkowym do dnia, w którym organ podatkowy stwierdził te błędy, lub</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="art_4__ust_4__pkt_2" gd:GUID="07539393-e68a-4062-951d-854047b4fd06" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="bd974542-6e0b-4351-810e-f08bfb18f9a1" fragment="3" gd:fragmentGUID="5ba9a554-ea8e-4d89-9e71-f621c587596f" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">brak właściwych zapisów jest związany ze zdarzeniem losowym, które uniemożliwiło podatnikowi prowadzenie uproszczonej ewidencji, lub</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="art_4__ust_4__pkt_3" gd:GUID="b1b1032d-0142-499e-b179-f3709aaed2c9" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="bd974542-6e0b-4351-810e-f08bfb18f9a1" fragment="4" gd:fragmentGUID="90d4789b-e181-4157-b178-6309b81bb341" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">błędy spowodowały zwiększenie wysokości podstawy opodatkowania, z wyjątkiem błędów polegających na niewykazaniu lub zaniżeniu kosztów zakupu towarów handlowych i usług, lub</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="art_4__ust_4__pkt_4" gd:GUID="86ce6902-b379-45e4-90bc-9031cc0db10c" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="bd974542-6e0b-4351-810e-f08bfb18f9a1" fragment="5" gd:fragmentGUID="eeb1375f-48fc-4252-b67a-f84366cc5e0a" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">uzupełniono zapisy lub poprawiono błędne zapisy w uproszczonej ewidencji przed rozpoczęciem kontroli przez organ podatkowy lub w terminie, w którym podatnikowi przysługuje uprawnienie do złożenia deklaracji lub korekty deklaracji na podstawie art. 62 ust. 4 ustawy z dnia 16 listopada 2016 r. o Krajowej Administracji Skarbowej (Dz. U. z 2025 r. poz. 1131, 1423, 1820 i 1863), lub</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="art_4__ust_4__pkt_5" gd:GUID="f58ba3ea-91f9-4be6-b7f9-b77abbd73da1" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="bd974542-6e0b-4351-810e-f08bfb18f9a1" fragment="6" gd:fragmentGUID="ed612f46-ae84-4ae1-9d2f-a8db83539c36" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">błędne zapisy są skutkiem oczywistej omyłki, a posiadane dowody księgowe odpowiadają wymaganiom określonym, o których mowa w § 6 ust. 3, lub</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="art_4__ust_4__pkt_6" gd:GUID="b0932a0f-7469-48db-bb68-23c103ebb2f7" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>6</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="bd974542-6e0b-4351-810e-f08bfb18f9a1" fragment="7" gd:fragmentGUID="eb14d5ed-0f8d-4581-89ea-63d6c45f6844" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">błędy nie mają wpływu na wysokość przychodów w danym roku podatkowym.</zdanie>
+          </p>
+        </punkt>
+      </ustep>
+      <ustep eId="art_4__ust_5" gd:GUID="2fdcb215-c217-432a-b9df-80ebeb4e0bf3" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <nr>5</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="7acfbf09-7110-4aba-a384-bacff3719f8d" fragment="1" gd:fragmentGUID="9dd96669-7ca7-4b8e-91c2-f4009c9bf8ca" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">Przepis ust. 4 stosuje się odpowiednio w przypadku stwierdzenia braku zapisów lub błędnych zapisów dotyczących kosztów uzyskania przychodów.</zdanie>
+        </p>
+      </ustep>
+    </paragraf>
+    <paragraf eId="art_5" gd:GUID="4a626eb3-4dad-4403-84c5-38f35efe6dd2" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+      <nr>5</nr>
+      <ustep eId="art_5__ust_1" gd:GUID="a23c1998-493a-4c68-a166-c22f0c4e1e53" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="dcd73c6b-c16a-4999-a7bd-773ab18220ea" fragment="1" gd:fragmentGUID="986cca3e-3ed4-48a7-9f90-4cd551ade076" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">Uproszczoną ewidencję prowadzi się w języku polskim i zapisy w niej są dokonywane w walucie polskiej.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="art_5__ust_2" gd:GUID="ea40d776-43bd-4ceb-8c03-04a7b69acdab" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="edff70bc-2342-45ae-9043-a95dcc734fb9" fragment="1" gd:fragmentGUID="514dd807-fa3d-435d-91bf-655e4a0e238c" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">Uproszczona ewidencja zawiera sporządzony w języku polskim opis zasad jej prowadzenia, w szczególności w zakresie:</zdanie>
+        </p>
+        <punkt eId="art_5__ust_2__pkt_1" gd:GUID="38aaa34a-b960-4432-b203-698224ebea6f" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="edff70bc-2342-45ae-9043-a95dcc734fb9" fragment="2" gd:fragmentGUID="fd00c171-7f0d-4683-ad4e-ba9d1da80d48" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">określenia roku podatkowego w rozumieniu art. 8 ustawy o podatku dochodowym od osób prawnych;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="art_5__ust_2__pkt_2" gd:GUID="ede15b26-ea24-4fd2-9673-bcbb94f11ddc" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="edff70bc-2342-45ae-9043-a95dcc734fb9" fragment="3" gd:fragmentGUID="06ebe830-61a3-499b-81eb-ec1286b884b8" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">systemu przetwarzania danych, przy czym w przypadku prowadzenia uproszczonej ewidencji w postaci elektronicznej opis zasad jej prowadzenia powinien obejmować opis systemu teleinformatycznego, zawierający wykaz programów, procedur, funkcji w zależności od struktury oprogramowania, oraz opis programowych zasad ochrony danych, w tym metod zabezpieczenia i dostępu do danych oraz systemu ich przetwarzania, a także określenie wersji oprogramowania i daty rozpoczęcia jego eksploatacji;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="art_5__ust_2__pkt_3" gd:GUID="da1a9a40-f0b7-422a-8abb-4219b36ed784" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="edff70bc-2342-45ae-9043-a95dcc734fb9" fragment="4" gd:fragmentGUID="9f61b401-ee02-4d1a-b89e-c1e03de8d18f" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">systemu służącego ochronie danych i ich zbiorów, w tym dowodów księgowych stanowiących podstawę dokonanych w nich zapisów.</zdanie>
+          </p>
+        </punkt>
+      </ustep>
+      <ustep eId="art_5__ust_3" gd:GUID="17ac8d8c-badb-480d-9ce4-39f27707a6f1" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <nr>3</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="54951280-f3af-4448-8625-5ca24714219a" fragment="1" gd:fragmentGUID="a55f488a-6fb7-4f46-9be2-42c0a032788d" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">W przypadku prowadzenia uproszczonej ewidencji w postaci elektronicznej warunkiem uznania uproszczonej ewidencji za prawidłową jest:</zdanie>
+        </p>
+        <punkt eId="art_5__ust_3__pkt_1" gd:GUID="944c5176-8678-4672-8db6-937f919de9d3" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="54951280-f3af-4448-8625-5ca24714219a" fragment="2" gd:fragmentGUID="f8a5c67c-8df6-4298-88d4-3c688e7b9521" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">używanie programu komputerowego zapewniającego bezzwłoczny wgląd w treść dokonywanych zapisów oraz umożliwiającego wydrukowanie wszystkich danych w porządku chronologicznym, zgodnie z przepisami rozporządzenia;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="art_5__ust_3__pkt_2" gd:GUID="4b29e13a-7946-4a16-9352-94bc4d88c641" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="54951280-f3af-4448-8625-5ca24714219a" fragment="3" gd:fragmentGUID="1132d352-a2ae-40b0-85d5-227d4ad6965b" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">przechowywanie zapisanych danych na informatycznych nośnikach danych, w sposób chroniący je przed zniszczeniem lub zniekształceniem, naruszeniem ustalonych zasad ich przetwarzania lub ich modyfikacją w sposób nieuprawniony;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="art_5__ust_3__pkt_3" gd:GUID="da0650c1-a486-4989-b9c2-ed7bfb121caf" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="54951280-f3af-4448-8625-5ca24714219a" fragment="4" gd:fragmentGUID="545fcc07-c539-414c-ab24-78d95f2c250c" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">przypisywanie podejmowanych w uproszczonej ewidencji działań osobom fizycznym lub procesom oraz umiejscawianie ich w czasie.</zdanie>
+          </p>
+        </punkt>
+      </ustep>
+      <ustep eId="art_5__ust_4" gd:GUID="05fe7bc0-57b0-47ff-82f4-04195be7bd4b" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <nr>4</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="cba6e95c-9c70-4da5-a086-7fda5a0d089a" fragment="1" gd:fragmentGUID="3981328c-72cf-4ce1-b13f-50cc9570d76c" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">Za prawidłowe prowadzenie uproszczonej ewidencji w postaci elektronicznej uznaje się również prowadzenie jej przy użyciu programu komputerowego niespełniającego warunków, o których mowa w ust. 3 pkt 1, i sporządzenie wydruku z informatycznego nośnika danych za rok podatkowy w terminie 90 dni od zakończenia roku podatkowego.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="art_5__ust_5" gd:GUID="50258619-2310-4a50-9924-1bd7e6051df0" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <nr>5</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="fe3b4c91-169c-45a5-9178-21d210738e96" fragment="1" gd:fragmentGUID="9c19935d-11ab-44a6-912e-925118d3924f" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">Na żądanie organu podatkowego podatnik jest obowiązany zapewnić wydruk z informatycznego nośnika danych również w terminie wcześniejszym niż określony w ust. 4.</zdanie>
+        </p>
+      </ustep>
+    </paragraf>
+    <paragraf eId="art_6" gd:GUID="52962f27-b8a4-4f4e-aebc-27ac112ae037" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+      <nr>6</nr>
+      <ustep eId="art_6__ust_1" gd:GUID="b6086c4b-749c-493f-b0c8-ad49f271a14f" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="ad0a6ccf-7df5-431e-ad51-2810c63cf291" fragment="1" gd:fragmentGUID="2c0e7532-86fa-43e9-a152-ac6cf8cedfee" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">Zapisy w uproszczonej ewidencji są dokonywane w sposób staranny, przejrzysty i trwały, na podstawie prawidłowych i rzetelnych dowodów.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="art_6__ust_2" gd:GUID="8c9e3eaf-847a-448a-b8c9-8130deb5cd4d" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="e89a99ba-764a-4b3a-b618-b20bd8f57a28" fragment="1" gd:fragmentGUID="99c8587b-c480-47dd-841f-bd191fe29157" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">Stwierdzone błędy w zapisach uproszczonej ewidencji poprawia się przez:</zdanie>
+        </p>
+        <punkt eId="art_6__ust_2__pkt_1" gd:GUID="11ef52f6-1664-4bed-82a6-0bc6bf946328" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="e89a99ba-764a-4b3a-b618-b20bd8f57a28" fragment="2" gd:fragmentGUID="cebfd11e-a7a3-4ad2-9d02-2c9de0fa67f0" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">skreślenie dotychczasowej treści i wpisanie nowej, z zachowaniem czytelności błędnego zapisu oraz podpisanie poprawki i umieszczenie daty jej dokonania, a w przypadku prowadzenia uproszczonej ewidencji w postaci elektronicznej – wpisanie nowej treści zapisu, lub</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="art_6__ust_2__pkt_2" gd:GUID="4450899a-0422-4ef5-9bda-348369d6fda7" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="e89a99ba-764a-4b3a-b618-b20bd8f57a28" fragment="3" gd:fragmentGUID="af85f882-4ad6-4c35-bf67-6e132e4eabf2" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">wprowadzenie do uproszczonej ewidencji niewpisanych dowodów lub dowodów zawierających korekty błędnych zapisów.</zdanie>
+          </p>
+        </punkt>
+      </ustep>
+      <ustep eId="art_6__ust_3" gd:GUID="1be165ed-c6ba-4640-981b-48e4e99e535f" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <nr>3</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="365886d9-e7f3-4b87-acc0-cf07924bb7c9" fragment="1" gd:fragmentGUID="d24c3cd2-30ce-4385-97a3-a1ad7dd8c610" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">Podstawą dokonywania zapisów w uproszczonej ewidencji są dowody księgowe, do których zalicza się:</zdanie>
+        </p>
+        <punkt eId="art_6__ust_3__pkt_1" gd:GUID="3143f62e-e98d-4a57-9e83-8415feca952f" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="365886d9-e7f3-4b87-acc0-cf07924bb7c9" fragment="2" gd:fragmentGUID="54f037b7-6417-47de-8607-097f65d17a12" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">faktury, rachunki, wyciągi bankowe z rachunków oraz dokumenty celne wystawione zgodnie z odrębnymi przepisami oraz zawierające wysokość odsetek wyciągi: z rachunków rozliczeniowych, z lokat terminowych oraz z innych form oszczędzania, przechowywania lub inwestowania środków pieniężnych w bankach albo spółdzielczych kasach oszczędnościowo-kredytowych lub</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="art_6__ust_3__pkt_2" gd:GUID="51b597f9-98a0-4634-bc1c-8ef45d59c846" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="365886d9-e7f3-4b87-acc0-cf07924bb7c9" fragment="3" gd:fragmentGUID="423dd73f-b4a1-4500-8687-9a492da83bd1" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">inne dowody wymienione w § 7 i § 8, stwierdzające wystąpienie zdarzenia zgodnie z jego rzeczywistym przebiegiem i zawierające co najmniej następujące dane:</zdanie>
+          </p>
+          <litera eId="art_6__ust_3__pkt_2__lit_a" gd:GUID="fbbbad77-ce94-41dc-8670-ac5b93c39541" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="365886d9-e7f3-4b87-acc0-cf07924bb7c9" fragment="4" gd:fragmentGUID="2adad238-870a-4434-8cd2-fa552e495339" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">wiarygodne określenie wystawcy lub wskazanie stron (nazwę i adresy) uczestniczących w zdarzeniu, którego dowód dotyczy,</zdanie>
+            </p>
+          </litera>
+          <litera eId="art_6__ust_3__pkt_2__lit_b" gd:GUID="b743bb46-0a7c-42fa-936e-794a70218955" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="365886d9-e7f3-4b87-acc0-cf07924bb7c9" fragment="5" gd:fragmentGUID="0794899f-ba0d-421f-a0b7-48e87b1ead38" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">datę wystawienia dowodu oraz datę lub okres wystąpienia zdarzenia, którego dowód dotyczy, z tym że jeżeli data wystąpienia zdarzenia odpowiada dacie wystawienia dowodu, wystarcza podanie jednej daty,</zdanie>
+            </p>
+          </litera>
+          <litera eId="art_6__ust_3__pkt_2__lit_c" gd:GUID="9098fe41-151b-46e4-bf1a-13097f49f6c7" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+            <nr>c</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="365886d9-e7f3-4b87-acc0-cf07924bb7c9" fragment="6" gd:fragmentGUID="8e294922-94bc-4da0-8d8e-49dabe06dd3a" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">przedmiot zdarzenia i jego wartość oraz ilościowe określenie, jeżeli przedmiot zdarzenia jest wymierny w jednostkach naturalnych,</zdanie>
+            </p>
+          </litera>
+          <litera eId="art_6__ust_3__pkt_2__lit_d" gd:GUID="62e786cf-bf29-45e3-bc92-7eda0b3181b9" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+            <nr>d</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="365886d9-e7f3-4b87-acc0-cf07924bb7c9" fragment="7" gd:fragmentGUID="dfbb1b79-661c-4140-861f-319425cacb49" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">oznaczenie imion i nazwisk osób uprawnionych do prawidłowego udokumentowania zdarzenia</zdanie>
+            </p>
+          </litera>
+          <czesc-wspolna-litera eId="art_6__ust_3__pkt_2__czw" gd:GUID="83f7d90c-b7eb-40ff-9966-a565ad4a508b" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+            <p>
+              <zdanie nr="1" gd:zdGUID="365886d9-e7f3-4b87-acc0-cf07924bb7c9" fragment="8" gd:fragmentGUID="291e0059-a020-478a-b503-9dfdee0ce6fb" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">– oznaczone numerem lub w inny sposób umożliwiający powiązanie dowodu z zapisami dokonanymi na jego podstawie.</zdanie>
+            </p>
+          </czesc-wspolna-litera>
+        </punkt>
+      </ustep>
+      <ustep eId="art_6__ust_4" gd:GUID="00a4b90c-29e1-4c1b-9268-da799647b6ed" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <nr>4</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="9a492d25-9af3-4998-b6aa-3d8dc76c611c" fragment="1" gd:fragmentGUID="03e16c4c-5d36-44ed-afa0-ba54a9685db5" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">Podstawą dokonywania zapisów w uproszczonej ewidencji mogą być również sporządzone przez podatnika dowody księgowe zbiorcze, służące do dokonania łącznych zapisów zbioru poszczególnych dowodów księgowych, które powinny być pojedynczo wymienione w dowodzie księgowym zbiorczym, przy czym dowody księgowe zbiorcze mogą odnosić się wyłącznie do zdarzeń dokumentowanych dowodem wewnętrznym, w szczególności dotyczących wpłat składek członkowskich lub darowizn.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="art_6__ust_5" gd:GUID="e11567b5-ef90-4687-bd38-8a179f423ae5" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <nr>5</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="d598f441-3dfd-47a1-a7b9-39711d4cd7ab" fragment="1" gd:fragmentGUID="1a6af90c-82ea-4aa2-be8c-783e601fb74d" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">Dowód księgowy jest sporządzany przez podatnika w języku polskim.</zdanie>
+          <zdanie nr="2" gd:zdGUID="4f95922a-a331-4258-9b51-3453f9795929" fragment="1" gd:fragmentGUID="77ab0f0e-c032-43c4-93e8-3cdd82e9d0f3" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">Treść dowodu księgowego powinna być pełna i zrozumiała, przy czym jest dopuszczalne używanie skrótów ogólnie przyjętych.</zdanie>
+          <zdanie nr="3" gd:zdGUID="f2cd90c6-460c-4f67-a9d6-30fa80a73e6a" fragment="1" gd:fragmentGUID="52cbfc02-0f6e-4df1-82f4-c98b74ddeae4" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">Jeżeli w dowodzie jest podane wartościowe określenie zdarzenia tylko w walucie obcej, podatnik posiadający ten dowód jest obowiązany przeliczyć walutę obcą na złote zgodnie z zasadami określonymi w ustawie o podatku dochodowym od osób prawnych.</zdanie>
+          <zdanie nr="4" gd:zdGUID="604962a0-2a5e-4752-bd10-58b962bff91e" fragment="1" gd:fragmentGUID="79740444-b4bf-4431-a3b9-da4db504d207" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">Wynik przeliczenia należy zamieścić w wolnych polach dowodu lub w załączniku do dowodu sporządzonego w walucie obcej.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="art_6__ust_6" gd:GUID="6853bf74-0910-4a80-9d28-a4b0042db3e7" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <nr>6</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="028e6d94-1249-451a-9076-349a3edaac4d" fragment="1" gd:fragmentGUID="0e1b7084-893d-4c68-8fc9-c830f004bea6" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">Błędy w dowodach księgowych można poprawiać przez wystawienie dowodu korygującego lub przez skreślenie niewłaściwie napisanej liczby lub innej treści, w sposób pozwalający odczytać liczbę lub inną treść pierwotną, i wpisanie liczby lub innej treści właściwej.</zdanie>
+          <zdanie nr="2" gd:zdGUID="9d46c55c-4a92-48d2-a523-27e6fdc38844" fragment="1" gd:fragmentGUID="3e0df1c7-87c0-4556-bd5c-0ef4371a05d7" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">Poprawka dokonana w dowodzie księgowym jest potwierdzana datą i podpisem osoby dokonującej poprawki, a w przypadku dowodu w postaci elektronicznej – kwalifikowanym podpisem elektronicznym, podpisem zaufanym albo podpisem osobistym.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="art_6__ust_7" gd:GUID="eeb74384-a671-43a8-aba7-5b33cf516ac0" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <nr>7</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="72678892-aef1-482c-8743-d6b2fce13a3b" fragment="1" gd:fragmentGUID="8273fdc7-3f5e-40f3-9440-4477ae5931f7" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">Zasad, o których mowa w ust. 6, nie stosuje się do dowodów księgowych, dla których ustalono odrębnymi przepisami zakaz dokonywania jakichkolwiek poprawek.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="art_6__ust_8" gd:GUID="4f3c84eb-d0a3-4362-a249-64b60b94c58d" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <nr>8</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="36b0932f-0098-464a-ba0d-3a7a493ebec6" fragment="1" gd:fragmentGUID="b82472cc-9bfa-4455-9eef-39cbda5fa036" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">Dowody obce mogą być poprawione wyłącznie przez wystawienie i przesłanie kontrahentowi dowodu korygującego (noty).</zdanie>
+          <zdanie nr="2" gd:zdGUID="bee89a76-d7cf-4a3f-8102-0add095a9edd" fragment="1" gd:fragmentGUID="4ebdcc97-c1c5-4888-ba6a-4731a4efca8e" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">Dowody własne zewnętrzne przesłane uprzednio kontrahentowi mogą być poprawione tylko przez wystawienie dowodu korygującego (noty).</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="art_6__ust_9" gd:GUID="efc573e4-ed55-4328-8b8b-ca21b9cd11fe" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <nr>9</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="12791b2b-a027-4bac-aa92-44e84410bc3f" fragment="1" gd:fragmentGUID="76788e7e-fa88-402d-843c-a07aee0e899c" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">Treść dowodów księgowych może być przeniesiona na informatyczne nośniki danych pozwalające zachować zawartość dowodów w trwałej i niezmienionej postaci, pod warunkiem posiadania urządzeń pozwalających na odtworzenie dowodów w postaci wydruku.</zdanie>
+          <zdanie nr="2" gd:zdGUID="e96f5a02-d438-43da-9cb8-d3f1a404da2e" fragment="1" gd:fragmentGUID="6a86083a-4052-43c3-9412-e33d1278ff8e" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">Dowód w postaci elektronicznej lub wydruk jest dowodem równoważnym z dowodem księgowym, z którego treść została przeniesiona na informatyczny nośnik danych.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="art_6__ust_10" gd:GUID="59953292-5007-456a-9c78-3e7f03814462" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <nr>10</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="0ee80859-66ea-4c25-bf12-e2408088a27c" fragment="1" gd:fragmentGUID="5829da3b-ef4a-4db0-a2a2-69fbd7330225" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">W przypadku uzasadnionego braku możliwości uzyskania zewnętrznych obcych dowodów źródłowych podatnik może udokumentować zdarzenie za pomocą zastępczych dowodów księgowych, sporządzonych przez osoby dokonujące tych zdarzeń.</zdanie>
+          <zdanie nr="2" gd:zdGUID="b0251ed7-299a-43b5-9d98-87d82f1d0caa" fragment="1" gd:fragmentGUID="69b84395-cbf2-465e-89ce-ee0d685fe84e" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">Nie może to jednak dotyczyć zdarzeń, których przedmiotem są zakupy opodatkowane podatkiem od towarów i usług.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="art_6__ust_11" gd:GUID="f1b55466-71e4-4a0a-a73d-565aee9d1fd3" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <nr>11</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="acf4b735-ec9c-4f1e-ad76-a6152d7f884f" fragment="1" gd:fragmentGUID="f79af678-52b2-4d0c-98ae-e1faecc4fc91" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">W przypadku dowodów księgowych mających postać faktur wystawionych i otrzymanych przy użyciu Krajowego Systemu e-Faktur obowiązki w zakresie ich przechowywania wynikające z § 5 ust. 2 pkt 3 uznaje się za spełnione przez fakt ich przechowywania w tym systemie.</zdanie>
+        </p>
+      </ustep>
+    </paragraf>
+    <paragraf eId="art_7" gd:GUID="2df58169-96de-463a-9454-e6db54164c99" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+      <nr>7</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="b27663e9-d07b-4a72-9154-467ca9c5aad0" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="0370fb77-7fdc-4915-aa22-3c71c250475e" fragment="1" gd:fragmentGUID="bf6d85d4-ff00-4c9f-bbf4-943913ea5e1b" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">Za dowody księgowe uznaje się również:</zdanie>
+        </p>
+        <punkt eId="art_7__pkt_1" gd:GUID="79c8288b-9745-4db9-9c0c-e31b3384b171" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="0370fb77-7fdc-4915-aa22-3c71c250475e" fragment="2" gd:fragmentGUID="5e21542b-f4d1-4ce7-91ed-022a43659f96" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">dzienne zestawienia dowodów sprzedaży, zwane dalej „zestawieniami sprzedaży”, sporządzone do ujęcia ich zbiorczym zapisem;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="art_7__pkt_2" gd:GUID="33a02db5-3341-42aa-bfaa-1fa2049cd2e7" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="0370fb77-7fdc-4915-aa22-3c71c250475e" fragment="3" gd:fragmentGUID="a1d9aa1e-3f35-41dc-8562-68c65bb0aab6" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">noty, sporządzone w celu skorygowania zapisu dotyczącego zdarzenia wynikającego z dowodu obcego lub własnego, otrzymane od kontrahenta lub przekazane kontrahentowi;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="art_7__pkt_3" gd:GUID="f522e726-b069-41b9-8980-bf243a887d4d" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="0370fb77-7fdc-4915-aa22-3c71c250475e" fragment="4" gd:fragmentGUID="bcc8c709-d0ad-49a9-9fff-33231b82df12" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">dowody przesunięć;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="art_7__pkt_4" gd:GUID="05bcc003-8d15-4329-8985-c549599072c3" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="0370fb77-7fdc-4915-aa22-3c71c250475e" fragment="5" gd:fragmentGUID="1fa8e66e-ed08-48a1-9c8c-2e1498958b59" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">dowody opłat pocztowych i bankowych;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="art_7__pkt_5" gd:GUID="c4d0ee33-8dcb-4d83-933a-fa705cafa6f1" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="0370fb77-7fdc-4915-aa22-3c71c250475e" fragment="6" gd:fragmentGUID="8eef21e5-6a46-4678-89e5-7a158a51333e" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">inne dowody opłat, w tym dokonywanych na podstawie książeczek opłat, oraz dowody zawierające dane, o których mowa w § 6 ust. 3 pkt 2.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="art_8" gd:GUID="42d91dac-ffd1-4e75-a908-1dc285add7ec" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+      <nr>8</nr>
+      <ustep eId="art_8__ust_1" gd:GUID="5e0a1fb9-8d8c-4822-976d-1863603550ab" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="b2f3012c-feff-4261-8969-9a29d3424588" fragment="1" gd:fragmentGUID="a749c2e7-c2eb-4a18-ac22-9d610d2a519f" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">W celu udokumentowania zapisów w uproszczonej ewidencji dotyczących niektórych wydatków (kosztów) mogą być sporządzone dowody (dowody wewnętrzne), określające:</zdanie>
+        </p>
+        <punkt eId="art_8__ust_1__pkt_1" gd:GUID="de224e06-a87d-4a28-90d1-9c058247f36c" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="b2f3012c-feff-4261-8969-9a29d3424588" fragment="2" gd:fragmentGUID="815c4a79-6fc7-4fb7-935d-3647df7aaca6" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">nazwę towaru oraz ilość, cenę jednostkową i wartość – w przypadku zakupu;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="art_8__ust_1__pkt_2" gd:GUID="ba691fb3-1dea-4a66-9c19-84d2dd01c8c5" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="b2f3012c-feff-4261-8969-9a29d3424588" fragment="3" gd:fragmentGUID="868efb59-260e-4da7-91be-93a0af60e196" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">przedmiot zdarzenia i wysokość wydatku (kosztu) – w pozostałych przypadkach.</zdanie>
+          </p>
+        </punkt>
+      </ustep>
+      <ustep eId="art_8__ust_2" gd:GUID="8e227da2-fd67-4d9f-8fff-5b8457a76d7a" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="43917d53-289c-4b89-81bb-907ad9054472" fragment="1" gd:fragmentGUID="bee8f641-3ab0-48d1-8cad-8f6c86797b13" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">Dowody wewnętrzne mogą dotyczyć wyłącznie:</zdanie>
+        </p>
+        <punkt eId="art_8__ust_2__pkt_1" gd:GUID="638e22dc-e044-40a2-a105-79ead1783623" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="43917d53-289c-4b89-81bb-907ad9054472" fragment="2" gd:fragmentGUID="66f4d3c7-5b1c-4c96-a809-01b10d24b3fb" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">zakupu, w jednostkach handlu detalicznego, materiałów, w tym surowców;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="art_8__ust_2__pkt_2" gd:GUID="d7c09b0f-c383-4e77-8e23-bfe700bb7967" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="43917d53-289c-4b89-81bb-907ad9054472" fragment="3" gd:fragmentGUID="7c3fcdba-0434-462a-9281-20afee81475b" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">kosztów diet i innych należności za czas podróży służbowej pracowników lub podróży osób niebędących pracownikami, zwanych dalej „podróżami służbowymi”, oraz wartości diet z tytułu podróży służbowych;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="art_8__ust_2__pkt_3" gd:GUID="5dfb0b5c-3498-40d8-9c72-888e7fc12021" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="43917d53-289c-4b89-81bb-907ad9054472" fragment="4" gd:fragmentGUID="1f6e06b1-7b8f-4f19-acbd-37de6699d6e9" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">opłat sądowych i notarialnych;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="art_8__ust_2__pkt_4" gd:GUID="fa776ae0-3ea1-4bcc-bf61-c53d328821f6" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="43917d53-289c-4b89-81bb-907ad9054472" fragment="5" gd:fragmentGUID="d034b457-b129-4a21-9301-9401d1d17223" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">wydatków związanych z parkowaniem samochodu lub przejazdem transportem publicznym, w przypadku gdy są one potwierdzone dokumentami niezawierającymi danych, o których mowa w § 6 ust. 3 pkt 2; podstawą wystawienia dowodu wewnętrznego jest bilet z parkometru, kupon, bilet jednorazowy załączony do sporządzonego dowodu lub potwierdzenie z aplikacji w postaci elektronicznej lub jego wydruk oraz paragon fiskalny.</zdanie>
+          </p>
+        </punkt>
+      </ustep>
+      <ustep eId="art_8__ust_3" gd:GUID="34834c09-384b-41ef-a106-bd772f4c2000" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <nr>3</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="f54bb161-ec72-4ee6-9e04-32c87d4869eb" fragment="1" gd:fragmentGUID="8fdc50b9-127b-44ea-8bd4-c955ea2b9797" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">Dowody wewnętrzne dotyczące rozliczenia kosztów podróży służbowych powinny zawierać następujące dane:</zdanie>
+        </p>
+        <punkt eId="art_8__ust_3__pkt_1" gd:GUID="aaf6012e-c41c-4bfd-b360-84d784f7bb6b" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="f54bb161-ec72-4ee6-9e04-32c87d4869eb" fragment="2" gd:fragmentGUID="67cdc353-afb8-4f97-b168-ea55face87ff" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">imię i nazwisko;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="art_8__ust_3__pkt_2" gd:GUID="b26049ea-6bd0-458e-91ca-3f1655460d77" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="f54bb161-ec72-4ee6-9e04-32c87d4869eb" fragment="3" gd:fragmentGUID="2f2f62c4-c3f0-432c-8ea7-31f33fb21ad3" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">cel podróży i nazwę miejscowości docelowej;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="art_8__ust_3__pkt_3" gd:GUID="30266d99-07fa-41e1-9771-cfd34c14ac75" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="f54bb161-ec72-4ee6-9e04-32c87d4869eb" fragment="4" gd:fragmentGUID="6165c297-9f28-464d-ac70-d069be8e5fb6" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">liczbę godzin i dni przebywania w podróży służbowej (data i godzina wyjazdu oraz powrotu);</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="art_8__ust_3__pkt_4" gd:GUID="a95c6153-53f8-434b-a481-7bd2b8a59a27" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="f54bb161-ec72-4ee6-9e04-32c87d4869eb" fragment="5" gd:fragmentGUID="710aa6af-ee14-4010-b433-3f28e70576a7" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">stawkę i wartość przysługujących diet.</zdanie>
+          </p>
+        </punkt>
+      </ustep>
+      <ustep eId="art_8__ust_4" gd:GUID="7411c8f5-c7b0-4c7d-a606-f007ee8f4075" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <nr>4</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="6f1bd629-f6bc-4458-89d9-b47049923d94" fragment="1" gd:fragmentGUID="32cbb661-2fad-4e0e-977d-b4b3e00d9578" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">Wydatki poniesione na zakup w jednostkach handlu detalicznego materiałów, w tym surowców, żywności oraz napojów bezalkoholowych, mogą być dokumentowane paragonami fiskalnymi.</zdanie>
+          <zdanie nr="2" gd:zdGUID="2d988ecd-c32f-4d28-8041-bda8497562f7" fragment="1" gd:fragmentGUID="2362ea40-ecad-4890-917b-1d01c6495a36" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">Na odwrocie paragonu fiskalnego, w przytwierdzonym dowodzie do tego paragonu lub w innym dowodzie w postaci papierowej lub elektronicznej zawierającym numer tego paragonu zamieszcza się nazwę, adres (siedzibę) podatnika oraz rodzaj (nazwę) dokonanego zakupu.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="art_8__ust_5" gd:GUID="a5e29c21-f3ab-4011-95a8-9b0d7a87ab09" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <nr>5</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="4a6d124a-d101-45f2-8917-aadefa3c79fd" fragment="1" gd:fragmentGUID="03b358f3-5da5-4b68-8c96-d6bf6432e04a" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">Wydatki poniesione za granicą na zakup paliwa i olejów mogą być dokumentowane paragonami fiskalnymi lub dowodami kasowymi.</zdanie>
+          <zdanie nr="2" gd:zdGUID="f997b62d-ab30-4a9b-be48-c97241e54c19" fragment="1" gd:fragmentGUID="7949a858-1c51-4de4-b96f-a39ceeb5d14b" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">Przepis ust. 4 zdanie drugie stosuje się odpowiednio.</zdanie>
+        </p>
+      </ustep>
+    </paragraf>
+    <paragraf eId="art_9" gd:GUID="3e40bb3c-1b06-404a-8eaa-15ab702c169e" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+      <nr>9</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="70d873ba-510d-4b8f-9db8-9a55d2351c86" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="0f1641fa-22aa-4a7f-bbf8-381829b25ba4" fragment="1" gd:fragmentGUID="e72d9029-2be8-4e3d-a03d-f9a951259e8f" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">Nie wymaga ujęcia w uproszczonej ewidencji materiał, w tym surowiec, powierzony przez zleceniodawcę.</zdanie>
+          <zdanie nr="2" gd:zdGUID="b4b06c55-1e05-4b06-97c6-9cdf8855e8c9" fragment="1" gd:fragmentGUID="e3acb3d2-b574-483d-9b52-b0721cba322a" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">W przypadku braku dowodu określającego zleceniodawcę uznaje się, że materiał, w tym surowiec, został zakupiony bez udokumentowania.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="art_10" gd:GUID="b487fe89-7376-4b23-adbe-eac584efaa83" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+      <nr>10</nr>
+      <ustep eId="art_10__ust_1" gd:GUID="2391820f-a204-46c4-8a60-d95d137f8cdc" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="0110b062-65a7-4696-af9b-8c3ad0c897c9" fragment="1" gd:fragmentGUID="8d7bbe04-7435-4f9d-85b8-4dfa7a4a2994" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">Otrzymanie materiałów, w tym surowców, lub towarów handlowych jest potwierdzane w dowodzie zakupu datą oraz imieniem i nazwiskiem osoby, która je przyjęła.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="art_10__ust_2" gd:GUID="df63fc33-0789-41d7-a9f4-8991b8767f4f" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="e347c24f-d17a-4400-ab9b-15b64167a7d8" fragment="1" gd:fragmentGUID="3a4a4f32-4b09-46a2-82ac-296c48650303" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">Jeżeli materiał, w tym surowiec, lub towar handlowy, którego zakup jest dokumentowany dowodami księgowymi, o których mowa w § 6 ust. 3 pkt 1, wystawionymi przez dostawców, został dostarczony lub dokonano nim obrotu przed otrzymaniem dowodu księgowego, należy sporządzić szczegółowy opis otrzymanego materiału, w tym surowca, lub towaru handlowego, podając imię, nazwisko (firmę) i adres (siedzibę) dostawcy, ilość i rodzaj oraz cenę jednostkową i wartość materiału, w tym surowca, lub towaru handlowego i dokonać zapisu w uproszczonej ewidencji na podstawie opisu.</zdanie>
+          <zdanie nr="2" gd:zdGUID="d0920905-b800-48f7-9209-de9ebfb6b381" fragment="1" gd:fragmentGUID="679e57a3-4838-4d6d-ba5b-1fb0fc26ce4d" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">Opis jest potwierdzany w sposób określony w ust. 1 oraz przechowywany jako dowód zakupu i połączony z nadesłanym następnie dowodem księgowym w postaci papierowej, o którym mowa w § 6 ust. 3 pkt 1.</zdanie>
+          <zdanie nr="3" gd:zdGUID="5182c0d2-3536-48c5-b586-99adfc4da2b0" fragment="1" gd:fragmentGUID="b035506f-cfea-46eb-abdd-9ca8ab6aa567" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">Jeżeli nie jest to dowód księgowy w postaci papierowej, podatnik uzupełnia opis o numer tego dowodu, a w przypadku dowodu księgowego w postaci faktury wystawionej przy użyciu Krajowego Systemu e-Faktur – o numer identyfikujący tę fakturę w tym systemie.</zdanie>
+          <zdanie nr="4" gd:zdGUID="ec4dd3a3-ad10-48d6-b935-3d9f889da342" fragment="1" gd:fragmentGUID="4f989351-4965-4e87-a834-d97e912c3674" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">Ewentualna różnica w stosunku do wartości podanej w dowodzie księgowym jest wpisywana do uproszczonej ewidencji w dniu otrzymania tego dowodu księgowego.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="art_10__ust_3" gd:GUID="7c21b862-fb23-4e79-971d-a286314dc3f2" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <nr>3</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="8d57415e-2e69-4a65-8b75-bb9f92de35a0" fragment="1" gd:fragmentGUID="a321584d-7150-4f8f-af38-6c9f0d768514" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">W przypadku otrzymania materiału, w tym surowca, lub towaru handlowego oraz dowodu księgowego, o którym mowa w § 6 ust. 3 pkt 1, na ten materiał, w tym surowiec, lub towar handlowy w tym samym miesiącu:</zdanie>
+        </p>
+        <punkt eId="art_10__ust_3__pkt_1" gd:GUID="18994279-73ac-48b4-81e1-30ecbcee9e4a" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="8d57415e-2e69-4a65-8b75-bb9f92de35a0" fragment="2" gd:fragmentGUID="3c0620c2-2154-42b6-bcee-c6857015b3c4" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">opis, o którym mowa w ust. 2, dołącza się do otrzymanego dowodu księgowego;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="art_10__ust_3__pkt_2" gd:GUID="1633e826-b6b4-4cb0-bf25-8f26f4af9603" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="8d57415e-2e69-4a65-8b75-bb9f92de35a0" fragment="3" gd:fragmentGUID="04f9f834-4b9c-47c0-8fab-0f5d500e4b67" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">zapisów w uproszczonej ewidencji dokonuje się na podstawie tego dowodu księgowego.</zdanie>
+          </p>
+        </punkt>
+      </ustep>
+      <ustep eId="art_10__ust_4" gd:GUID="b129c2e1-6f7e-4438-aaf7-85751136b82b" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <nr>4</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="bcb26383-e653-4afd-8bd1-d951af37e139" fragment="1" gd:fragmentGUID="f9ab72d6-e75a-4fbc-a303-abe26b1c8326" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">Przepisu ust. 2 nie stosuje się, jeżeli zakup jest udokumentowany specyfikacją dostawcy, pod warunkiem że specyfikacja spełnia wymogi określone dla opisu.</zdanie>
+        </p>
+      </ustep>
+    </paragraf>
+    <paragraf eId="art_11" gd:GUID="cb1a5024-f99e-4d64-8320-dd284890eed4" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+      <nr>11</nr>
+      <ustep eId="art_11__ust_1" gd:GUID="4e63486c-94fe-4d78-985b-3b95177ce476" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="65fbdbaa-6208-4ed9-8450-b7ffc924de4e" fragment="1" gd:fragmentGUID="8dd07597-af14-4d4a-a6cf-be348a948260" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">Wydatki poniesione na zakup materiałów, w tym surowców, lub towarów handlowych wpisuje się do uproszczonej ewidencji niezwłocznie po ich otrzymaniu, najpóźniej przed przekazaniem do magazynu lub sprzedaży.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="art_11__ust_2" gd:GUID="42b5843e-1e83-4c78-a482-764777a50f6b" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="97a8389e-08c5-4580-8b31-9528074ed6b0" fragment="1" gd:fragmentGUID="e93dfeac-1ec5-4686-b919-badd264ee2f8" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">Zapisów dotyczących pozostałych wydatków dokonuje się najpóźniej do 20. dnia każdego miesiąca za miesiąc poprzedni.</zdanie>
+        </p>
+      </ustep>
+    </paragraf>
+    <paragraf eId="art_12" gd:GUID="d1e5c886-8cf1-4f1f-a08f-6388c75dd959" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+      <nr>12</nr>
+      <ustep eId="art_12__ust_1" gd:GUID="93771a9d-393b-46cc-ad29-eee0a26affcd" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="5645c566-8f7b-412b-8893-71c7c3b59cd7" fragment="1" gd:fragmentGUID="b218d85f-7321-41f0-aa58-57c6204d9004" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">Zapisy w uproszczonej ewidencji dotyczące przychodów ze sprzedaży są dokonywane na podstawie wystawionych dowodów księgowych, o których mowa w § 6 ust. 3 pkt 1, a w przypadku sprzedaży nieudokumentowanej tymi dowodami – na podstawie wystawionego na koniec dnia dowodu wewnętrznego, w którym w jednej kwocie jest wykazana wysokość tych przychodów za dany dzień, jeżeli nie jest prowadzona ewidencja sprzedaży przy użyciu kas rejestrujących, o której mowa w przepisach ustawy z dnia 11 marca 2004 r. o podatku od towarów i usług (Dz. U. z 2025 r. poz. 775, 894, 896, 1203, 1541 i 1811), zwanej dalej „ustawą o podatku od towarów i usług”.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="art_12__ust_2" gd:GUID="0fbd3b6b-f790-4ab8-be07-32ba7abd1ba0" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="267312bf-0e28-467d-973b-8436a1b6fdde" fragment="1" gd:fragmentGUID="d04ddf76-5939-438f-b789-46f64df341f9" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">Zapisów, o których mowa w ust. 1, dokonuje się raz dziennie po zakończeniu dnia, nie później niż przed rozpoczęciem działalności w dniu następnym.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="art_12__ust_3" gd:GUID="37a57fc1-9f1f-4335-bc43-13435e9ae387" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <nr>3</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="56195b2e-81ca-431d-907c-434bdcb6ccf2" fragment="1" gd:fragmentGUID="390fdd0c-8418-4576-9fc6-7dd3612848e0" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">Jeżeli w danym dniu podatnik wystawia wiele dowodów księgowych, o których mowa w § 6 ust. 3 pkt 1, zapisów w uproszczonej ewidencji można dokonywać jedną sumą wynikającą z zestawienia sprzedaży.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="art_12__ust_4" gd:GUID="4cb870cf-5ca2-48f2-b190-2c26e18901cf" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <nr>4</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="629d4820-58b6-421e-9871-341c23edcc1d" fragment="1" gd:fragmentGUID="64ce71d9-3409-476f-a0f4-3f38f74d0ef2" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">Zestawienie sprzedaży powinno zawierać następujące dane:</zdanie>
+        </p>
+        <punkt eId="art_12__ust_4__pkt_1" gd:GUID="bc7a3567-855a-4ba8-8122-313c814bcaca" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="629d4820-58b6-421e-9871-341c23edcc1d" fragment="2" gd:fragmentGUID="2dcf79cb-a4ff-410f-84ef-1d442f62dc08" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">datę;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="art_12__ust_4__pkt_2" gd:GUID="497ed2b0-ca3c-4db4-91f8-58ef64494754" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="629d4820-58b6-421e-9871-341c23edcc1d" fragment="3" gd:fragmentGUID="52cb1c42-5b48-42bb-8e1e-67db89d03da3" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">numer zestawienia;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="art_12__ust_4__pkt_3" gd:GUID="8f9b139d-4831-4757-803c-8d2ab6890a38" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="629d4820-58b6-421e-9871-341c23edcc1d" fragment="4" gd:fragmentGUID="2bba18d9-1c14-459d-8bc7-357942ddc874" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">numery dowodów księgowych, o których mowa w § 6 ust. 3 pkt 1, objętych zestawieniem oraz sumę zbiorczą tych dowodów;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="art_12__ust_4__pkt_4" gd:GUID="28278738-0168-42b8-921c-c13b18b547e6" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="629d4820-58b6-421e-9871-341c23edcc1d" fragment="5" gd:fragmentGUID="896bac61-7ad1-4448-b0e1-6cafb9648447" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">dane pozwalające na ustalenie podatnika lub imię i nazwisko osoby, która sporządziła zestawienie.</zdanie>
+          </p>
+        </punkt>
+      </ustep>
+    </paragraf>
+    <paragraf eId="art_13" gd:GUID="803c49ac-2f40-46bd-b169-3d20ee8cabc4" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+      <nr>13</nr>
+      <ustep eId="art_13__ust_1" gd:GUID="92e666d1-6959-4c98-ad6c-4bcc3deb10b6" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="5502f5e0-9145-49d2-9e07-0aa4877286df" fragment="1" gd:fragmentGUID="096b4170-65c6-4b6a-b20f-6db8733824a4" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">W przypadku podatników, którzy prowadzą ewidencję sprzedaży przy użyciu kas rejestrujących, o której mowa w przepisach ustawy o podatku od towarów i usług, zapisy w uproszczonej ewidencji są dokonywane na podstawie danych wynikających z raportów fiskalnych dobowych, skorygowanych o kwoty mające wpływ na wysokość przychodu.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="art_13__ust_2" gd:GUID="942da074-ac02-4f9f-ab66-62ff7f7f97c1" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="8d1b6d86-9c60-4325-ab5a-1a91b7225055" fragment="1" gd:fragmentGUID="3b05c404-01c7-474c-8081-5ae4185acd95" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">Nie wpisuje się do uproszczonej ewidencji kwot wynikających z faktur dokumentujących dokonanie sprzedaży uprzednio ujętej w ewidencji prowadzonej przy użyciu kas rejestrujących, o której mowa w przepisach ustawy o podatku od towarów i usług.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="art_13__ust_3" gd:GUID="d10e661d-f650-4534-bb17-2fa235c0d1a8" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <nr>3</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="53a610d9-1e25-4f27-b424-895aa02f4457" fragment="1" gd:fragmentGUID="0b212dce-5634-4d56-8d78-d6572973c89f" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">Korekty danych wynikających z raportów fiskalnych dobowych dokonuje się na podstawie:</zdanie>
+        </p>
+        <punkt eId="art_13__ust_3__pkt_1" gd:GUID="7f49fad0-fc50-4ff8-bbb5-2d2fd4b02d41" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="53a610d9-1e25-4f27-b424-895aa02f4457" fragment="2" gd:fragmentGUID="07a578fc-8699-49c9-9841-969e0ef6a711" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">odrębnych ewidencji;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="art_13__ust_3__pkt_2" gd:GUID="0e1c04b7-24d8-4357-97ac-cdf88f24e530" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="53a610d9-1e25-4f27-b424-895aa02f4457" fragment="3" gd:fragmentGUID="e97f8e50-842c-49aa-871b-179445288be3" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">dowodu wewnętrznego – w przypadku korekt, które nie podlegają ujęciu w odrębnych ewidencjach prowadzonych zgodnie z przepisami wykonawczymi do ustawy o podatku od towarów i usług.</zdanie>
+          </p>
+        </punkt>
+      </ustep>
+      <ustep eId="art_13__ust_4" gd:GUID="bc41d102-c811-48ee-b513-15b21c1b558b" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <nr>4</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="943a306d-364e-46bc-af8f-008a58f3b5cd" fragment="1" gd:fragmentGUID="728d181b-6503-4af5-ac4d-db82ad08e329" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">Dowód wewnętrzny, o którym mowa w ust. 3 pkt 2, powinien zawierać co najmniej następujące dane: numer dowodu, datę wystawienia, oznaczenie raportu fiskalnego dobowego, którego dotyczy korekta, przyczynę korekty oraz wysokość korekty, która pomniejsza wysokość przychodu wynikającą z raportu fiskalnego dobowego.</zdanie>
+        </p>
+      </ustep>
+    </paragraf>
+    <paragraf eId="art_14" gd:GUID="1e12cc64-ec7f-42ce-9051-0df484344ad6" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+      <nr>14</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="d52a633b-bac0-4252-a54f-39060b872890" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="f674e946-34b7-4e13-ab91-77c961837497" fragment="1" gd:fragmentGUID="43da05a6-6857-4426-a99d-4385b7994a5f" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">W przypadku prowadzenia uproszczonej ewidencji w postaci papierowej należy ją zbroszurować i kolejno ponumerować jej karty.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="art_15" gd:GUID="bd0c654e-feb4-4687-99c2-f7f4ce3c45a1" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+      <nr>15</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="4a20576d-062d-4b4d-8968-c94e3aac2380" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="6ca9935f-30ab-463c-a583-b6f1aceab894" fragment="1" gd:fragmentGUID="af742c30-376a-4f34-aa08-1e3720323195" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">Podatnicy, którzy w roku podatkowym bezpośrednio poprzedzającym rok podatkowy rozpoczynający się po dniu 31 grudnia 2025 r. prowadzili uproszczoną ewidencję na podstawie przepisów rozporządzenia uchylanego w § 18, a w pierwszym roku podatkowym rozpoczynającym się bezpośrednio po dniu 31 grudnia 2025 r. będą prowadzić uproszczoną ewidencję na podstawie niniejszego rozporządzenia, w tym pierwszym roku podatkowym w kolumnie 5 zestawienia przepływów finansowych według wzoru określonego w załączniku nr 2 do niniejszego rozporządzenia wpisują wartość z kolumny 9 zestawienia przepływów finansowych według wzoru określonego w załączniku nr 2 do rozporządzenia uchylanego w § 18.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="art_16" gd:GUID="d9844de6-fd2e-42a5-89a6-549454420994" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+      <nr>16</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="ea89ff39-8cad-48f0-b8d0-8a254dba973f" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="2ae51697-a6fa-4bf2-9de5-224171e03729" fragment="1" gd:fragmentGUID="a43124ec-e8eb-4ed2-aa9a-02826897e3ef" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">Wykaz może nie zawierać danych, o których mowa w § 3 ust. 1 pkt 4:</zdanie>
+        </p>
+        <punkt eId="art_16__pkt_1" gd:GUID="8f468c40-3278-4b50-b78c-7a8d33de5ea8" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="2ae51697-a6fa-4bf2-9de5-224171e03729" fragment="2" gd:fragmentGUID="7c299b5e-dce4-462d-a792-ce13a6c2e720" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">lit. b – w zakresie numeru dowodu, na podstawie którego przyjęto do używania,</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="art_16__pkt_2" gd:GUID="e540cf55-d340-4515-8949-5e2b9542a697" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="2ae51697-a6fa-4bf2-9de5-224171e03729" fragment="3" gd:fragmentGUID="85bf8535-ecdd-43a4-bf2a-b462dc8257c5" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">lit. c – w zakresie rodzaju dowodu stwierdzającego wytworzenie</zdanie>
+          </p>
+        </punkt>
+        <czesc-wspolna-punkt eId="art_16__czw" gd:GUID="8279a1fe-fc75-4287-9f13-8732c41236fe" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+          <p>
+            <zdanie nr="1" gd:zdGUID="2ae51697-a6fa-4bf2-9de5-224171e03729" fragment="4" gd:fragmentGUID="6faf8d4d-3531-4a42-baa3-ac253f37f148" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">– dotyczących danego środka trwałego lub danej wartości niematerialnej i prawnej wprowadzonych do wykazu przed dniem 1 stycznia 2026 r.</zdanie>
+          </p>
+        </czesc-wspolna-punkt>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="art_17" gd:GUID="25a6aed7-1a97-47c5-bf4d-1d95dc052e3a" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+      <nr>17</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="a94a72bb-f73c-4a7f-b241-674e634ff542" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="c6bd7f4d-6885-462d-90c0-2d09afab1b4b" fragment="1" gd:fragmentGUID="4dee2f69-e778-4cc2-8782-d4eca81ed74b" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">Podatnicy, których rok podatkowy jest inny niż rok kalendarzowy i rozpoczął się przed dniem 1 stycznia 2026 r., a zakończy się po dniu 31 grudnia 2025 r., stosują do końca przyjętego przez siebie roku podatkowego przepisy rozporządzenia uchylanego w § 18.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="art_18" gd:GUID="800d4542-f1e1-435e-ae78-6a0423c7d957" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+      <nr>18</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="f6d21e92-10d6-4399-ae48-f8f60d8b68a8" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="802d56da-73f4-4580-ad81-6f335ad2f6ae" fragment="1" gd:fragmentGUID="86138f55-5655-4293-b315-ea3c5dda4eee" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">Traci moc rozporządzenie Ministra Finansów z dnia 7 stycznia 2019 r. w sprawie prowadzenia uproszczonej ewidencji przychodów i kosztów przez koła gospodyń wiejskich (Dz. U. poz. 70).</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="art_19" gd:GUID="da160caf-8520-4928-8799-6ce57b251f79" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+      <nr>19</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="d1802578-47c6-4d69-bd43-356efbfc38cc" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="c7529420-0e05-4cda-aa7e-04e8f7515a36" fragment="1" gd:fragmentGUID="e79adaf4-57a0-4d6d-9486-7c5f9017b99e" okres="okr_obowiazywanie.zdarz_wejscie_2026-01-01_odczytane.x" wejscie-w-zycie="2026-01-01">Rozporządzenie wchodzi w życie z dniem 1 stycznia 2026 r.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <organ-podpisujacy>Minister Finansów i Gospodarki: wz. <i><osoba podpisujacy="true" gd:osobaGUID="b5289a85-a55e-4f33-a1d5-697d23372d3c"><imie>J.</imie> <nazwisko>Neneman</nazwisko></osoba></i></organ-podpisujacy>
+  </rozporzadzenie>
+</akt-prawny>

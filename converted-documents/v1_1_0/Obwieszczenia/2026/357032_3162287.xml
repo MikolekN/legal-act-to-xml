@@ -1,0 +1,919 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <obwieszczenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2026/55</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>57284a8f-4f81-4f4d-ad58-7affca5c66eb</gd:GUIDwersji>
+      <AdresISAP>WDU20260000055</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2026</Rok>
+      <Pozycja>55</Pozycja>
+      <AdresWyswietlany>Dz.U. 2026 poz. 55</AdresWyswietlany>
+      <Tytul>Obwieszczenie Marszałka Sejmu Rzeczypospolitej Polskiej z dnia 9 stycznia 2026 r. w sprawie ogłoszenia jednolitego tekstu ustawy o restrukturyzacji zobowiązań koncesyjnych operatorów stacjonarnych publicznych sieci telefonicznych</Tytul>
+      <Rodzaj>OBW_TJ</Rodzaj>
+      <DataOgloszenia>2026-01-19</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2026-01-09</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_ujednolicenie_2026-01-19_DU-2026-55_domyslne" rodzaj="ujednolicenie" pochodzenie="domyslne-z-aktu" data="2026-01-19" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_ujednolicenie.zdarz_ujednolicenie_2026-01-19_DU-2026-55_domyslne" glowna="true">
+          <Przedzial rodzaj="ujednolicenie" od="zdarz_ujednolicenie_2026-01-19_DU-2026-55_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <DataObowiazywaniaWersji>
+        <Od>zdarz_ujednolicenie_2026-01-19_DU-2026-55_domyslne</Od>
+      </DataObowiazywaniaWersji>
+      <Organy>
+        <Organ gd:GUID="f49061bc-4406-43cf-80ac-497949cacdf7" rola="wydajacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/MSEJMU">
+          <Nazwa>Marszałek Sejmu</Nazwa>
+          <OrganPodpisujacy>Marszałek Sejmu</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>W.</imie> <nazwisko>Czarzasty</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Obwieszczenie</rodzaj-aktu>
+    <autor-aktu>Marszałka Sejmu Rzeczypospolitej Polskiej</autor-aktu>
+    <data>z dnia 9 stycznia 2026 r.</data>
+    <tytul>w sprawie ogłoszenia jednolitego tekstu ustawy o restrukturyzacji zobowiązań koncesyjnych operatorów stacjonarnych publicznych sieci telefonicznych</tytul>
+    <punkt-OTJ eId="DU/2026/55__pkt_1" gd:GUID="8e8cdfac-9f37-448c-963d-8fa393b7aef4">
+      <nr>1</nr>
+      <p>
+        <zdanie nr="1" gd:zdGUID="13689e7f-358c-4a24-b65e-464e1e4128db" fragment="1" gd:fragmentGUID="09fdc123-8ecb-4541-83db-ff82ea4669b1">Na podstawie art. 16 ust. 1 zdanie pierwsze ustawy z dnia 20 lipca 2000 r. o ogłaszaniu aktów normatywnych i niektórych innych aktów prawnych (Dz. U. z 2019 r. poz. 1461) ogłasza się w załączniku do niniejszego obwieszczenia jednolity tekst ustawy z dnia 23 listopada 2002 r. o restrukturyzacji zobowiązań koncesyjnych operatorów stacjonarnych publicznych sieci telefonicznych (Dz. U. z 2020 r. poz. 1700), z uwzględnieniem zmian wprowadzonych ustawą z dnia 20 marca 2025 r. o rynku pracy i służbach zatrudnienia (Dz. U. poz. 620) oraz zmian wynikających z przepisów ogłoszonych przed dniem 9 stycznia 2026 r.</zdanie>
+      </p>
+    </punkt-OTJ>
+    <punkt-OTJ eId="DU/2026/55__pkt_2" gd:GUID="5a1f4f1e-df26-49dc-8b53-4886d9f4dbde">
+      <nr>2</nr>
+      <p>
+        <zdanie nr="1" gd:zdGUID="1365c24c-6278-4381-ad27-5b994a204532" fragment="1" gd:fragmentGUID="e7fcd086-a3d3-44f1-b4c7-0285672c15e4">Podany w załączniku do niniejszego obwieszczenia tekst jednolity ustawy nie obejmuje art. 461 ustawy z dnia 20 marca 2025 r. o rynku pracy i służbach zatrudnienia (Dz. U. poz. 620), który stanowi:<tresc-strukt cudzyslowy="oba" gd:GUID="a2332667-127f-454f-87d4-ff84c3b57aa6"><artykul eId="DU/2025/620__art_461" gd:GUID="ca40ae0b-cb40-4a01-a754-841964e9692c"><nr>461</nr><ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="f9672d36-8d5a-4e78-8918-2a737c2f9da4"><p><zdanie nr="1" gd:zdGUID="77ab118e-109e-4ac2-a48e-dd98b5e4ef45" fragment="1" gd:fragmentGUID="a9478086-4421-4359-9df2-2a086800f39f">Ustawa wchodzi w życie pierwszego dnia miesiąca następującego po upływie 14 dni od dnia ogłoszenia, z wyjątkiem:</zdanie></p><punkt eId="DU/2025/620__art_461__pkt_1" gd:GUID="a2449ee6-58e3-4a42-a5f6-f69920015dc9"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="77ab118e-109e-4ac2-a48e-dd98b5e4ef45" fragment="2" gd:fragmentGUID="01a5fb6a-2da0-4345-94fd-abd98cabf661">art. 392 pkt 2 lit. b oraz art. 458, które wchodzą w życie z dniem następującym po dniu ogłoszenia;</zdanie></p></punkt><punkt eId="DU/2025/620__art_461__pkt_2" gd:GUID="4c89d484-c683-47d6-a12d-da875114f382"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="77ab118e-109e-4ac2-a48e-dd98b5e4ef45" fragment="3" gd:fragmentGUID="1a676bd8-bfb3-4a44-94fc-7318e84c2286">art. 106, art. 128 ust. 2, art. 203 oraz art. 300 ust. 3 pkt 11, które wchodzą w życie z dniem 1 stycznia 2026 r.</zdanie></p></punkt></ustep-n></artykul></tresc-strukt>.</zdanie>
+      </p>
+    </punkt-OTJ>
+    <organ-podpisujacy>Marszałek Sejmu: <i><osoba podpisujacy="true" gd:osobaGUID="b655c852-626f-43a7-a2c1-26f9211d06a5"><imie>W.</imie> <nazwisko>Czarzasty</nazwisko></osoba></i></organ-podpisujacy>
+    <ustawa>
+      <zalacznik-do>Załącznik do obwieszczenia Marszałka Sejmu Rzeczypospolitej Polskiej z dnia 9 stycznia 2026 r. (Dz. U. poz. 55)</zalacznik-do>
+      <rodzaj-aktu>Ustawa</rodzaj-aktu>
+      <data>z dnia 23 listopada 2002 r.</data>
+      <tytul>o restrukturyzacji zobowiązań koncesyjnych operatorów stacjonarnych publicznych sieci telefonicznych</tytul>
+      <artykul eId="DU/2026/55__art_1" gd:GUID="12162859-d4ba-4005-9efd-71cbce10bbbc">
+        <nr>1</nr>
+        <ustep eId="DU/2026/55__art_1__ust_1" gd:GUID="4be7c1ab-5f72-41ca-b4b9-e2ceedd05baa">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="28406215-8b56-4cf3-abda-1edd2a27c7ae" fragment="1" gd:fragmentGUID="101f5421-dca2-48f6-9c4c-a0cdccd72507">Ustawa określa zasady i tryb restrukturyzacji zobowiązań operatorów eksploatujących stacjonarne publiczne sieci telefoniczne z tytułu opłat za udzielenie koncesji na świadczenie strefowych usług telekomunikacyjnych oraz związanych z nimi opłat prolongacyjnych, przez ich:</zdanie>
+          </p>
+          <punkt eId="DU/2026/55__art_1__ust_1__pkt_1" gd:GUID="4f260c58-2725-4aa8-984f-c16cc0515fe9">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="28406215-8b56-4cf3-abda-1edd2a27c7ae" fragment="2" gd:fragmentGUID="90b825d7-6ef1-4658-8c19-e8a8dc55544a">umarzanie, w związku z poniesieniem nakładów inwestycyjnych na infrastrukturę telekomunikacyjną;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2026/55__art_1__ust_1__pkt_2" gd:GUID="216bfc19-4e4e-4578-98c5-bf67e8150344">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="28406215-8b56-4cf3-abda-1edd2a27c7ae" fragment="3" gd:fragmentGUID="62f89bcf-74c8-4ca0-9dc9-59f4d1ffa7ba">zamianę na udziały albo akcje lub obligacje.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2026/55__art_1__ust_2" gd:GUID="2e2e207f-8f77-441b-bc53-7594fe3a975a">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="f9db3650-7751-4bef-b7ff-a99529f96d82" fragment="1" gd:fragmentGUID="70d01808-1d2d-452d-ac36-fc002bd4c6da">Ustawę stosuje się do zobowiązań określonych w ust. 1, których termin płatności został określony:</zdanie>
+          </p>
+          <punkt eId="DU/2026/55__art_1__ust_2__pkt_1" gd:GUID="244eccab-c382-4572-87fb-b2062a3afe83">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="f9db3650-7751-4bef-b7ff-a99529f96d82" fragment="2" gd:fragmentGUID="423e12db-e0f7-4e4f-89ee-3b4efbf3521d">w decyzji o udzieleniu koncesji, przekształconej na podstawie art. 142 ust. 1 pkt 1 <i>ustawy z dnia 21 lipca 2000 r. – Prawo telekomunikacyjne (Dz. U. poz. 852, z późn. zm.</i><odnosnik id-odnosnika="1" symbol="1" gd:GUID="954ecfbc-dcdb-4e8d-bbf9-117a5c4dcf7a"><p><zdanie nr="1" gd:zdGUID="b4d08eb4-1385-4dbc-9317-2f59a6e32308" fragment="1" gd:fragmentGUID="151b274c-a8fe-49fe-8f70-287029b104c6">Zmiany wymienionej ustawy zostały ogłoszone w Dz. U. z 2001 r. poz. 1321, 1800 i 1802, z 2002 r. poz. 253, 676 i 1360 oraz z 2003 r. poz. 424, 1070, 1188 i 1652.</zdanie></p></odnosnik><i>)</i><odnosnik id-odnosnika="2" symbol="2" gd:GUID="71bdfd46-5eae-4f8d-b934-0478fbc4407b"><p><zdanie nr="1" gd:zdGUID="e0043863-efef-46a0-a9f5-8e9f1d49acbd" fragment="1" gd:fragmentGUID="77aacdeb-3ac7-4217-af4e-076364ecfaa9">Utraciła moc z dniem 3 września 2004 r. na podstawie art. 234 ustawy z dnia 16 lipca 2004 r. – Prawo telekomunikacyjne (Dz. U. poz. 1800), która weszła w życie z dniem 3 września 2004 r.</zdanie></p></odnosnik> w zezwolenie telekomunikacyjne, lub</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2026/55__art_1__ust_2__pkt_2" gd:GUID="06ddcb6d-7c53-4499-8daf-bdeafbd5e88b">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="f9db3650-7751-4bef-b7ff-a99529f96d82" fragment="3" gd:fragmentGUID="1954d18e-0d3a-47e2-b40b-b77ca40b2202">w decyzji wydanej przez ministra właściwego do spraw informatyzacji</zdanie>
+            </p>
+          </punkt>
+          <czesc-wspolna-punkt eId="DU/2026/55__art_1__ust_2__czw" gd:GUID="b1b21ed2-0ed5-4017-af5a-aed21e0833ad">
+            <p>
+              <zdanie nr="1" gd:zdGUID="f9db3650-7751-4bef-b7ff-a99529f96d82" fragment="4" gd:fragmentGUID="f592b7cd-5c28-453f-a831-b02f9ca7172e">i przypada po dniu wejścia w życie ustawy.</zdanie>
+            </p>
+          </czesc-wspolna-punkt>
+        </ustep>
+        <ustep eId="DU/2026/55__art_1__ust_3" gd:GUID="85c669ec-6fdb-4ecf-9cc9-2e382fc521c0">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="1cbfe262-82ea-4621-a475-a69f19f0e1bb" fragment="1" gd:fragmentGUID="a9170c70-2433-4234-a060-75a290f210e1">Ustawy nie stosuje się do przedsiębiorców znajdujących się w likwidacji lub upadłości.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2026/55__art_2" gd:GUID="ce24c27e-3b05-4497-9525-ad8fe7a81c78">
+        <nr>2</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="1ddc1372-f350-4d53-abc1-0be53c8bab68">
+          <p>
+            <zdanie nr="1" gd:zdGUID="bde033c7-e573-460b-883c-ce6033563dda" fragment="1" gd:fragmentGUID="5d8c7ff0-8bd0-45d3-a5a4-75ba5ede1d46">Ilekroć w ustawie jest mowa o:</zdanie>
+          </p>
+          <punkt eId="DU/2026/55__art_2__pkt_1" gd:GUID="f5ef93e6-d9f7-452d-a7d7-8334ecbcf53a">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="bde033c7-e573-460b-883c-ce6033563dda" fragment="2" gd:fragmentGUID="a11b8d66-3bf4-422d-801f-0ce0b2537362">„grupie kapitałowej” – rozumie się przez to grupę kapitałową, o której mowa w art. 3 ust. 1 pkt 44 ustawy z dnia 29 września 1994 r. o rachunkowości (Dz. U. z 2023 r. poz. 120, z późn. zm.<odnosnik id-odnosnika="3" symbol="3" gd:GUID="8ce3593a-1dab-4f02-b844-0a1cd0bc4f11"><p><zdanie nr="1" gd:zdGUID="63d8400a-b631-4a9f-80a4-307ef32a6e6a" fragment="1" gd:fragmentGUID="442ff469-ecdc-458b-b966-c0daad20f32e">Zmiany tekstu jednolitego wymienionej ustawy zostały ogłoszone w Dz. U. z 2023 r. poz. 295 i 1598, z 2024 r. poz. 619, 1685 i 1863 oraz z 2025 r. poz. 1218.</zdanie></p></odnosnik>);</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2026/55__art_2__pkt_2" gd:GUID="c52a41ab-93fc-44a2-b2c9-21eede0874ac">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="bde033c7-e573-460b-883c-ce6033563dda" fragment="3" gd:fragmentGUID="50c8d7bb-2288-45c6-9b2d-2f3b8a408750">„Klasyfikacji Środków Trwałych” – rozumie się przez to klasyfikację, o której mowa w przepisach wydanych na podstawie art. 40 ust. 2 ustawy z dnia 29 czerwca 1995 r. o statystyce publicznej (Dz. U. z 2024 r. poz. 1799 oraz z 2025 r. poz. 1792);</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2026/55__art_2__pkt_3" gd:GUID="bdfd27c0-1ad9-411f-b2c5-c4c9844d3fe7">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="bde033c7-e573-460b-883c-ce6033563dda" fragment="4" gd:fragmentGUID="511ac39b-2650-4a82-9b7d-7f048d473fc8">„kwocie podwyższenia” – rozumie się przez to wartość nominalną udziałów albo akcji, o którą podwyższony ma zostać kapitał zakładowy operatora albo jego podmiotu dominującego, w celu zaoferowania Skarbowi Państwa objęcia udziałów albo akcji;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2026/55__art_2__pkt_4" gd:GUID="36747289-2017-4738-9902-58e9d1672a1e">
+            <nr>4</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="bde033c7-e573-460b-883c-ce6033563dda" fragment="5" gd:fragmentGUID="6ae74d38-723f-4d43-8af7-21260606c0d5">„operatorze” – rozumie się przez to przedsiębiorcę eksploatującego stacjonarną publiczną sieć telefoniczną w rozumieniu przepisów ustawy – Prawo telekomunikacyjne, na którym ciąży obowiązek uiszczenia opłaty koncesyjnej;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2026/55__art_2__pkt_5" gd:GUID="25a4cdb6-1334-4f80-ba0b-67a7b95aa55e">
+            <nr>5</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="bde033c7-e573-460b-883c-ce6033563dda" fragment="6" gd:fragmentGUID="186ac65f-2627-49ad-9dde-fb29a3fc0ccb">„opłacie prolongacyjnej” – rozumie się przez to opłatę prolongacyjną, ustaloną na podstawie art. 57 § 1 ustawy z dnia 29 sierpnia 1997 r. – Ordynacja podatkowa (Dz. U. z 2025 r. poz. 111, z późn. zm.<odnosnik id-odnosnika="4" symbol="4" gd:GUID="85409e70-444a-4929-b213-51f78e2ccab3"><p><zdanie nr="1" gd:zdGUID="9c8a2b16-4732-4430-b68c-8443ef055198" fragment="1" gd:fragmentGUID="a5379891-1cf5-4fdb-95f2-2bac44240d7f">Zmiany tekstu jednolitego wymienionej ustawy zostały ogłoszone w Dz. U. z 2025 r. poz. 497, 621, 622, 769, 820, 1203, 1235, 1414, 1417, 1669, 1804 i 1863.</zdanie></p></odnosnik>) w związku z odroczeniem terminu płatności raty opłaty koncesyjnej;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2026/55__art_2__pkt_6" gd:GUID="6239be15-9641-4409-ae48-0bd3676e0571">
+            <nr>6</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="bde033c7-e573-460b-883c-ce6033563dda" fragment="7" gd:fragmentGUID="ae18d54a-620b-4a25-9705-4f61342f358a">„podmiocie dominującym” – rozumie się przez to jednostkę dominującą, o której mowa w art. 3 ust. 1 pkt 37 ustawy o rachunkowości;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2026/55__art_2__pkt_7" gd:GUID="d0311f66-fe22-438c-8c40-9e30b22fb7e3">
+            <nr>7</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="bde033c7-e573-460b-883c-ce6033563dda" fragment="8" gd:fragmentGUID="a91a377d-3c21-48ff-a1e7-b21e882ba4ad">„podmiocie powiązanym” – rozumie się przez to każdy podmiot będący wraz z operatorem od dnia złożenia wniosku, o którym mowa w art. 3 ust. 2, do dnia złożenia dokumentacji, o której mowa w art. 8, członkiem tej samej grupy kapitałowej;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2026/55__art_2__pkt_8" gd:GUID="63945bc5-fa50-44b7-b263-d3dfa7521c62">
+            <nr>8</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="bde033c7-e573-460b-883c-ce6033563dda" fragment="9" gd:fragmentGUID="1c2735fd-18fc-4029-95a9-4e94ba4089f4">„promesie umorzenia” – rozumie się przez to przyrzeczenie wydania pozytywnej decyzji o umorzeniu;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2026/55__art_2__pkt_9" gd:GUID="9c4c5c45-8946-4162-b5b4-763b1b62348e">
+            <nr>9</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="bde033c7-e573-460b-883c-ce6033563dda" fragment="10" gd:fragmentGUID="b6c87ccd-446c-4a89-ad93-69abeb14220a">„racie opłaty koncesyjnej” – rozumie się przez to ratę opłaty, której obowiązek uiszczenia przez operatora powstał w związku z przyznaniem operatorowi koncesji na świadczenie strefowych usług telekomunikacyjnych w stacjonarnych publicznych sieciach telefonicznych;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2026/55__art_2__pkt_10" gd:GUID="8ec5c7d5-5a2b-4612-bc63-19d65780085d">
+            <nr>10</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="bde033c7-e573-460b-883c-ce6033563dda" fragment="11" gd:fragmentGUID="7d8165fe-212d-485f-88c4-a1baac952de9">„umorzeniu” – rozumie się przez to decyzję ministra właściwego do spraw informatyzacji wydaną na podstawie przepisów art. 67 ustawy – Ordynacja podatkowa oraz przepisów niniejszej ustawy.</zdanie>
+            </p>
+          </punkt>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2026/55__art_3" gd:GUID="292e6715-c568-44b7-8b61-16b3ee6b48e3">
+        <nr>3</nr>
+        <ustep eId="DU/2026/55__art_3__ust_1" gd:GUID="2326d080-b879-4e70-a8dd-be4dc42e0f47">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="7a6ab216-516d-4cfb-a758-df5558d4cfd1" fragment="1" gd:fragmentGUID="9455bec2-1b3e-4d71-99d1-91cfa4ee25b2">Minister właściwy do spraw informatyzacji na wniosek operatora odracza, w drodze decyzji, termin płatności zobowiązań z tytułu rat opłaty koncesyjnej lub opłaty prolongacyjnej, udzielając jednocześnie promesy umorzenia tych zobowiązań – na zasadach oraz warunkach określonych w niniejszej ustawie.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/55__art_3__ust_2" gd:GUID="617ca858-cb8d-417b-ab6b-d3cb57168ba1">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="b64a5f74-7e02-4bde-957f-e205acfe4ce1" fragment="1" gd:fragmentGUID="a36d3cef-04c9-40d5-8031-ca1b3a13a40a">Wszczęcie postępowania następuje na wniosek operatora, złożony przed upływem terminu płatności, o którym mowa w art. 1 ust. 2, niepóźniej jednak niż przed dniem 31 grudnia 2004 r.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/55__art_3__ust_3" gd:GUID="50aa917e-c6c4-487e-9515-90f5c7b76ee1">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="2762f123-95e6-4043-8fe4-0448a57aab90" fragment="1" gd:fragmentGUID="5b3a1754-1fd1-4a77-8532-cf5574af3735">Wniosek powinien zawierać w szczególności:</zdanie>
+          </p>
+          <punkt eId="DU/2026/55__art_3__ust_3__pkt_1" gd:GUID="00ced9a4-f6e0-4091-8409-94a1b6792bbd">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="2762f123-95e6-4043-8fe4-0448a57aab90" fragment="2" gd:fragmentGUID="5bbebc92-bbc8-4a99-b3bf-d6b20f34e23e">określenie rodzaju, zakresu i wysokości deklarowanych nakładów inwestycyjnych, ze wskazaniem podmiotów, które będą uczestniczyć w ich ponoszeniu, oraz źródeł pochodzenia środków przeznaczonych na finansowanie nakładów inwestycyjnych;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2026/55__art_3__ust_3__pkt_2" gd:GUID="f0879068-e858-408d-b8a4-aa96a9fac809">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="2762f123-95e6-4043-8fe4-0448a57aab90" fragment="3" gd:fragmentGUID="e080fab9-e29f-4447-bcea-6925f99606bd">określenie wysokości nakładów inwestycyjnych, które mają być poniesione w każdym roku, jeżeli całkowity okres ponoszenia tych nakładów jest dłuższy niż jeden rok;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2026/55__art_3__ust_3__pkt_3" gd:GUID="608a9846-6754-40e7-932b-2c7fa737a1da">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="2762f123-95e6-4043-8fe4-0448a57aab90" fragment="4" gd:fragmentGUID="68de4fea-b376-4547-9479-4325c5aa5874">określenie przedmiotu inwestycji i obszarów, na których mają być poniesione nakłady inwestycyjne;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2026/55__art_3__ust_3__pkt_4" gd:GUID="76395a82-53dd-43ea-a116-32611ad59609">
+            <nr>4</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="2762f123-95e6-4043-8fe4-0448a57aab90" fragment="5" gd:fragmentGUID="60f9009a-479d-4cd7-b9e5-bda1cf8eb37d">harmonogram realizacji inwestycji i ponoszenia nakładów inwestycyjnych;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2026/55__art_3__ust_3__pkt_5" gd:GUID="efa31415-3b32-477c-9172-d52a329ce4da">
+            <nr>5</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="2762f123-95e6-4043-8fe4-0448a57aab90" fragment="6" gd:fragmentGUID="986f60dd-ba83-492d-92a3-235be5200e9f">oświadczenie o zamiarze skorzystania z innej, przewidzianej w ustawie formy restrukturyzacji.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2026/55__art_3__ust_4" gd:GUID="03e2de97-1793-4aa5-a263-45e68d9b3f70">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="9d6a14b1-8b0f-4a94-bb4f-365940392a7d" fragment="1" gd:fragmentGUID="1abfcb3a-34ec-4d48-92be-3e66a95a0410">Do wniosku operator dołącza informację o swojej bieżącej sytuacji finansowej, w tym:</zdanie>
+          </p>
+          <punkt eId="DU/2026/55__art_3__ust_4__pkt_1" gd:GUID="cf82d756-cd45-4159-a3fe-db6fdb520de3">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="9d6a14b1-8b0f-4a94-bb4f-365940392a7d" fragment="2" gd:fragmentGUID="e19caa45-f54d-4bf4-8c8a-36d3c1a985b0">dane identyfikujące dłużników i wierzycieli;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2026/55__art_3__ust_4__pkt_2" gd:GUID="a3f21517-622f-4f3d-b622-c491ef8d48da">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="9d6a14b1-8b0f-4a94-bb4f-365940392a7d" fragment="3" gd:fragmentGUID="a7f2577a-2c1e-489f-a341-cbfbe15276b7">informację o wysokości tych wierzytelności i wymaganych długów;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2026/55__art_3__ust_4__pkt_3" gd:GUID="c2807fa5-a753-432b-a347-e2fcbdedf782">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="9d6a14b1-8b0f-4a94-bb4f-365940392a7d" fragment="4" gd:fragmentGUID="ff6708f0-a1a0-4e48-bfc9-007c155ace1f">harmonogram spłaty wymaganych zobowiązań;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2026/55__art_3__ust_4__pkt_4" gd:GUID="d7f8e47d-105b-42c3-a14a-f8dea259888a">
+            <nr>4</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="9d6a14b1-8b0f-4a94-bb4f-365940392a7d" fragment="5" gd:fragmentGUID="f5a31c40-f576-4ab8-8bb5-51f94f35a715">kopię ewidencji środków trwałych oraz wartości niematerialnych i prawnych wraz z informacją o ustanowionych na nich obciążeniach.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2026/55__art_3__ust_5" gd:GUID="2606e250-3d6b-40cc-8979-731893c5113b">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="2e40c73f-b27f-40f1-b293-36c3d442ef49" fragment="1" gd:fragmentGUID="6f9a1fe0-185f-4123-ab23-80b225c4162a">Do wniosku operator powinien dołączyć plan inwestycyjny oraz oświadczenie zawierające zobowiązanie, że w deklarowanym okresie, niedłuższym jednak niż cztery lata od dnia złożenia wniosku, poniesie on nakłady inwestycyjne o wartości odpowiadającej co najmniej kwocie wymagalnych w tym okresie rat opłaty koncesyjnej lub opłaty prolongacyjnej lub że poniesie je podmiot powiązany.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/55__art_3__ust_6" gd:GUID="09b69adf-c1a1-422d-8501-51284ae44f1d">
+          <nr>6</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="bf1a9b9c-bd2d-4e55-9add-c13bc523066a" fragment="1" gd:fragmentGUID="3ab46369-3b86-47fe-82ed-f06d1d062b54">W przypadku gdy nakłady inwestycyjne ma ponieść podmiot powiązany, do wniosku operator jest obowiązany dołączyć również oświadczenie podmiotu powiązanego o wyrażeniu zgody na rozliczenie przez operatora nakładów inwestycyjnych poniesionych przez ten podmiot.</zdanie>
+            <zdanie nr="2" gd:zdGUID="d8a9e1ec-009a-479f-8944-391e1e6a7806" fragment="1" gd:fragmentGUID="32b4dc89-debb-4078-883a-6ac201d4aea7">Wyrażenie zgody nie pozbawia podmiotu powiązanego będącego operatorem prawa do wystąpienia z wnioskiem, o którym mowa w ust. 2, z zastrzeżeniem art. 6 ust. 2.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/55__art_3__ust_7" gd:GUID="25a7cd42-ab70-4c75-84b9-eabe0b54a4a6">
+          <nr>7</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="fa5bddd8-d348-4bcc-99ea-88c1c757fc2c" fragment="1" gd:fragmentGUID="74945c20-39f5-4d43-821d-b86dcfc61e9e">Operator, deklarując wysokość nakładów inwestycyjnych, uwzględnia zasady obliczania ich wartości określone w art. 7.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/55__art_3__ust_8" gd:GUID="0bb4f59d-ce15-485d-b1ab-2fcb06d45af2">
+          <nr>8</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="10ca8976-bad8-4bfe-87e8-eae34a0c6b80" fragment="1" gd:fragmentGUID="c20bc31d-b34e-4320-93ef-db1acd436412">Oświadczenie, o którym mowa w ust. 5 i 6, może obejmować również nakłady poniesione przed dniem złożenia oświadczenia, z wyłączeniem nakładów poniesionych przed dniem 1 stycznia 2001 r.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2026/55__art_4" gd:GUID="a44bcb0d-6152-4556-a1ad-ba9e06616106">
+        <nr>4</nr>
+        <ustep eId="DU/2026/55__art_4__ust_1" gd:GUID="a7ba0983-1830-4c46-9dc8-be905e35946f">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="27c35414-ef7d-4104-94ee-ab8e850f910f" fragment="1" gd:fragmentGUID="26bd4c97-27b3-46e7-9aab-f8648e2b510e">Minister właściwy do spraw informatyzacji, uwzględniając w całości lub w części wniosek operatora, w decyzji, o której mowa w art. 3 ust. 1, określa w szczególności:</zdanie>
+          </p>
+          <punkt eId="DU/2026/55__art_4__ust_1__pkt_1" gd:GUID="be549fee-0677-4bcb-892e-84865ce611a9">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="27c35414-ef7d-4104-94ee-ab8e850f910f" fragment="2" gd:fragmentGUID="dbb11317-28ed-4909-91c7-ae65c0e149e2">kwotę raty opłaty koncesyjnej lub opłaty prolongacyjnej, która podlega odroczeniu;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2026/55__art_4__ust_1__pkt_2" gd:GUID="feae0989-924b-4257-a9fa-b9d63ce0c21c">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="27c35414-ef7d-4104-94ee-ab8e850f910f" fragment="3" gd:fragmentGUID="f6c32d62-a9aa-4669-bc4d-4bfa137568e8">całkowity okres ponoszenia zadeklarowanych nakładów inwestycyjnych;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2026/55__art_4__ust_1__pkt_3" gd:GUID="8c5536b5-7fb1-4a77-9674-b29b7ca564bd">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="27c35414-ef7d-4104-94ee-ab8e850f910f" fragment="4" gd:fragmentGUID="2c443142-b376-42ae-a633-41e3f68b93b1">rodzaj, zakres i wysokość nakładów inwestycyjnych, które mają zostać poniesione, ze wskazaniem podmiotów, które będą uczestniczyć w ich ponoszeniu;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2026/55__art_4__ust_1__pkt_4" gd:GUID="609b0365-ce70-4612-b57e-fea238c179a4">
+            <nr>4</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="27c35414-ef7d-4104-94ee-ab8e850f910f" fragment="5" gd:fragmentGUID="cd096e59-adfa-4b70-b140-37151e945813">wysokość nakładów inwestycyjnych, które mają być poniesione przez operatora w każdym roku, jeżeli całkowity okres ponoszenia tych nakładów jest dłuższy niż rok;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2026/55__art_4__ust_1__pkt_5" gd:GUID="21bb6070-986d-4b52-b529-05a4ba6c10f2">
+            <nr>5</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="27c35414-ef7d-4104-94ee-ab8e850f910f" fragment="6" gd:fragmentGUID="92015f1e-09a9-46ac-9eba-fada89f1e3c2">przedmiot inwestycji i obszary, na których mają być poniesione nakłady inwestycyjne.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2026/55__art_4__ust_2" gd:GUID="99523811-f0e6-4878-871d-442c41235319">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="dc85f60f-5471-4a6d-905f-817d37b5f5fb" fragment="1" gd:fragmentGUID="9de93ec1-07c5-4bad-909c-14a5276df3b0">W decyzji, o której mowa w art. 3 ust. 1, minister właściwy do spraw informatyzacji udziela również promesy umorzenia raty opłaty koncesyjnej lub opłaty prolongacyjnej w wysokości określonej w ust. 1 pkt 1, pod warunkiem poniesienia nakładów inwestycyjnych, o których mowa w ust. 1 pkt 3.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/55__art_4__ust_3" gd:GUID="4fbdafdb-9ca1-4ca6-ab62-de8cb1ebe170">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="104d8fb3-8f4d-44b5-a724-2fc04e487384" fragment="1" gd:fragmentGUID="cf92cb75-23f4-4fbd-8c9a-cb7fc4cb956d">W decyzji, o której mowa w art. 3 ust. 1, nie udziela się opłat prolongacyjnych.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/55__art_4__ust_4" gd:GUID="0014c193-2f2c-4b10-ba3b-4ccb42d93704">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="8e92148f-e311-409c-a714-8dc5358118a4" fragment="1" gd:fragmentGUID="3cbc2739-5bac-4259-a159-c653c2307acf">Minister właściwy do spraw informatyzacji odmawia wydania decyzji, o której mowa w art. 3 ust. 1, jeżeli zachodzi uzasadnione przypuszczenie, że operator nie poniesie zadeklarowanych nakładów inwestycyjnych bądź też poniesienie zadeklarowanych nakładów nie przyczyni się do rozwoju infrastruktury telekomunikacyjnej lub do zwiększenia konkurencji na rynku usług telekomunikacyjnych.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2026/55__art_5" gd:GUID="1e8c9e3a-d976-4ca1-8644-fdcc756219a9">
+        <nr>5</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="9ac2b45a-3750-41d0-91f2-feadef6122cd">
+          <p>
+            <zdanie nr="1" gd:zdGUID="7dee77cb-1be0-4d86-9034-08614e06163c" fragment="1" gd:fragmentGUID="41f2a3f5-7f51-4d92-934d-11e8ca68e856">W przypadku ogłoszenia upadłości operatora lub wszczęcia postępowania likwidacyjnego, decyzja, o której mowa w art. 3 ust. 1, wygasa i należności z tytułu raty opłaty koncesyjnej i opłat prolongacyjnych stają się natychmiast wymagalne.</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2026/55__art_6" gd:GUID="34c7db31-40e6-4b64-839f-24aef035423b">
+        <nr>6</nr>
+        <ustep eId="DU/2026/55__art_6__ust_1" gd:GUID="72f472cd-5a06-4242-aa2d-4b987c172bad">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="47391524-9d1a-4386-a137-7b1b530de5b6" fragment="1" gd:fragmentGUID="ac7703c2-abbc-426c-8ae6-cc62e0869369">Nakładami inwestycyjnymi, o których mowa w art. 3 ust. 3, mogą być nakłady poniesione na:</zdanie>
+          </p>
+          <punkt eId="DU/2026/55__art_6__ust_1__pkt_1" gd:GUID="5fa91cfb-935d-4a81-9c45-cc66d3a2c8ea">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="47391524-9d1a-4386-a137-7b1b530de5b6" fragment="2" gd:fragmentGUID="4904d5c4-7424-4ad0-9e7c-ea02e0dd90f8">wytworzenie lub ulepszenie środków trwałych lub środków trwałych w budowie, w rozumieniu przepisów o rachunkowości, zaliczanych według Klasyfikacji Środków Trwałych do:</zdanie>
+            </p>
+            <litera eId="DU/2026/55__art_6__ust_1__pkt_1__lit_a" gd:GUID="d8973b17-6501-4bb5-9ed3-7efac2c67ce6">
+              <nr>a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="47391524-9d1a-4386-a137-7b1b530de5b6" fragment="3" gd:fragmentGUID="6b5e71aa-4dbc-4665-b943-385ad2c7c99b">budynków transportu i łączności,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2026/55__art_6__ust_1__pkt_1__lit_b" gd:GUID="dfaf4522-04d6-4828-8459-a933b36cd8c9">
+              <nr>b</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="47391524-9d1a-4386-a137-7b1b530de5b6" fragment="4" gd:fragmentGUID="9da69e16-0538-498b-98fb-febc0edac72a">rurociągów i linii telekomunikacyjnych oraz linii elektroenergetycznych dalekiego zasięgu,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2026/55__art_6__ust_1__pkt_1__lit_c" gd:GUID="6d95443e-be29-4c48-a237-ab01436ed713">
+              <nr>c</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="47391524-9d1a-4386-a137-7b1b530de5b6" fragment="5" gd:fragmentGUID="9675edb7-9958-4cf9-8d65-b1fc77f8d6af">rurociągów sieci rozdzielczej oraz linii kablowych rozdzielczych,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2026/55__art_6__ust_1__pkt_1__lit_d" gd:GUID="c56e5fe9-87ed-4d60-873d-571153c7e23d">
+              <nr>d</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="47391524-9d1a-4386-a137-7b1b530de5b6" fragment="6" gd:fragmentGUID="0d3909d3-44c4-4d2e-9766-637abe1b874b">zespołów komputerowych,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2026/55__art_6__ust_1__pkt_1__lit_e" gd:GUID="b3ebd646-dc66-48c5-a383-f2318a84af9d">
+              <nr>e</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="47391524-9d1a-4386-a137-7b1b530de5b6" fragment="7" gd:fragmentGUID="6bc5bc87-2aa4-43bd-9106-b8c8fb34d009">urządzeń i aparatury radionadawczej,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2026/55__art_6__ust_1__pkt_1__lit_f" gd:GUID="dbc74d95-f932-445f-b41c-3e617d4413c0">
+              <nr>f</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="47391524-9d1a-4386-a137-7b1b530de5b6" fragment="8" gd:fragmentGUID="cce673d1-a905-4dca-9df7-cdc06d7db867">urządzeń teletransmisji przewodowej,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2026/55__art_6__ust_1__pkt_1__lit_g" gd:GUID="b647bef9-820d-426d-9c81-6eaee60c9e7c">
+              <nr>g</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="47391524-9d1a-4386-a137-7b1b530de5b6" fragment="9" gd:fragmentGUID="2c634ab8-f7c5-4f6f-a568-933b09115af8">urządzeń telefonicznych,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2026/55__art_6__ust_1__pkt_1__lit_h" gd:GUID="5fcf39d3-b0fc-4498-a864-914d978d0972">
+              <nr>h</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="47391524-9d1a-4386-a137-7b1b530de5b6" fragment="10" gd:fragmentGUID="2f72c3be-fa4b-473d-a36b-7222ea21f099">innych urządzeń teletechnicznych i radiotechnicznych,</zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2026/55__art_6__ust_1__pkt_1__lit_i" gd:GUID="fb8d8432-8222-4372-82a8-be95169ccc28">
+              <nr>i</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="47391524-9d1a-4386-a137-7b1b530de5b6" fragment="11" gd:fragmentGUID="8e05e0a0-d923-4b80-99ed-3f73358daa97">elementów wyposażenia i osprzętu niezbędnych do prawidłowego działania, jak urządzenia zasilające, klimatyzacyjne i zabezpieczające</zdanie>
+              </p>
+            </litera>
+            <czesc-wspolna-litera eId="DU/2026/55__art_6__ust_1__pkt_1__czw" gd:GUID="7dd93ec3-3877-416b-80f6-70bc17400b14">
+              <p>
+                <zdanie nr="1" gd:zdGUID="47391524-9d1a-4386-a137-7b1b530de5b6" fragment="12" gd:fragmentGUID="0592dfe7-8ae0-4bdd-a94c-aa3e0996e101">– służących świadczeniu usług telefonii stacjonarnej, transmisji danych, internetu;</zdanie>
+              </p>
+            </czesc-wspolna-litera>
+          </punkt>
+          <punkt eId="DU/2026/55__art_6__ust_1__pkt_2" gd:GUID="a04cf374-82cf-4c44-9a83-a5e16cefb381">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="47391524-9d1a-4386-a137-7b1b530de5b6" fragment="13" gd:fragmentGUID="8d7941cf-2674-4895-9679-5f998a8e3ab6">nabycie w drodze zakupu lub w inny odpłatny sposób środków trwałych lub środków trwałych w budowie, wymienionych w pkt 1.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2026/55__art_6__ust_2" gd:GUID="6fd62d71-ac97-474e-a580-0e8d1b6bdc42">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="d1ecd940-ba8a-4ccd-9a0f-f8837fe601e4" fragment="1" gd:fragmentGUID="ad9f0752-8d9f-41a5-a15b-59d7761787e0">Nie stanowią nakładów inwestycyjnych w rozumieniu niniejszej ustawy nakłady, o których mowa w ust. 1, jeżeli dotyczą nakładów, których wartość stanowiła wcześniej podstawę wydania decyzji, o której mowa w art. 10 ust. 2 pkt 1.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/55__art_6__ust_3" gd:GUID="c42b18a2-f528-434f-860c-bb552e362676">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="9fd9c1b7-f648-450d-9a17-cfa529c6f3ec" fragment="1" gd:fragmentGUID="4c23b28a-4ea7-4adf-b538-5dfb04c09621">Nie stanowią nakładów inwestycyjnych wydatki, o których mowa w ust. 1 pkt 2, jeżeli sprzedaż środków trwałych oraz środków trwałych w budowie następuje między spółkami wchodzącymi w skład jednej grupy kapitałowej.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2026/55__art_7" gd:GUID="0c9eff5e-c6d9-4fc0-bae3-eed90a07f739">
+        <nr>7</nr>
+        <ustep eId="DU/2026/55__art_7__ust_1" gd:GUID="904eaadf-0c30-46c7-9cf8-2fc899eda512">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="dfeccc20-154f-4926-9c90-ff9fef3f9714" fragment="1" gd:fragmentGUID="7e7d5018-db64-4d01-9e50-6687ee374c19">Wartość nakładów inwestycyjnych, o których mowa w art. 3 ust. 3, poniesionych na środki trwałe oraz środki trwałe w budowie wymienione w art. 6 ust. 1 pkt 1, stanowi, wyrażona w euro, przeliczona stosownie do postanowień ust. 2 i 3, suma:</zdanie>
+          </p>
+          <punkt eId="DU/2026/55__art_7__ust_1__pkt_1" gd:GUID="9d344f1a-e1b4-470c-8f87-40fe8b3d95ba">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="dfeccc20-154f-4926-9c90-ff9fef3f9714" fragment="2" gd:fragmentGUID="ca3f02fd-a0a6-410f-94e8-195ee4b09d9c">kosztów ich wytworzenia;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2026/55__art_7__ust_1__pkt_2" gd:GUID="648d22c7-28dc-4aac-a762-da0fbacd8c49">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="dfeccc20-154f-4926-9c90-ff9fef3f9714" fragment="3" gd:fragmentGUID="e86eefb1-4bd1-44b7-ade9-59ece22f5795">ceny ich nabycia;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2026/55__art_7__ust_1__pkt_3" gd:GUID="813b442a-063f-412f-9515-718418363f43">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="dfeccc20-154f-4926-9c90-ff9fef3f9714" fragment="4" gd:fragmentGUID="85c1c74e-688c-4726-b7ec-f68eac8f5da7">ceny sprzedaży netto tych środków – w przypadku przejęcia aportu w formie rzeczowej lub w przypadku nabycia przedsiębiorstwa lub jego zorganizowanej części.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2026/55__art_7__ust_2" gd:GUID="cd9d3c21-80e6-4c4a-bd2c-0477e3b9cae3">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="bb3ae369-76b9-49b3-839e-e4c3f6226672" fragment="1" gd:fragmentGUID="d487eb4b-8e40-47bc-b23a-94a3dd1d0442">Wartość nakładów inwestycyjnych operatora przelicza się, przyjmując jako 1 euro:</zdanie>
+          </p>
+          <punkt eId="DU/2026/55__art_7__ust_2__pkt_1" gd:GUID="4a92c009-486a-42fc-a3d6-0f13ea20659b">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="bb3ae369-76b9-49b3-839e-e4c3f6226672" fragment="2" gd:fragmentGUID="d09b0c0a-8c29-43eb-87b0-c3f06782c013">każde 1 euro nakładów inwestycyjnych poniesionych na obszarze miast liczących w dniu wejścia w życie ustawy 100 000 mieszkańców i więcej;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2026/55__art_7__ust_2__pkt_2" gd:GUID="a46944b0-0f88-41c6-b577-d0644493005d">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="bb3ae369-76b9-49b3-839e-e4c3f6226672" fragment="3" gd:fragmentGUID="e6d1939c-6587-4e87-a022-e77b2f8dc1d8">każde 0,5 euro nakładów inwestycyjnych poniesionych na obszarze miast liczących w dniu wejścia w życie ustawy mniej niż 100 000 mieszkańców;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2026/55__art_7__ust_2__pkt_3" gd:GUID="74f7de37-1913-4c27-a5c7-4696c468a407">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="bb3ae369-76b9-49b3-839e-e4c3f6226672" fragment="4" gd:fragmentGUID="d8991792-155e-4149-99ba-3661173e67d7">(uchylony)<odnosnik id-odnosnika="5" symbol="5" gd:GUID="21ec7c62-97c0-44f5-b321-10bbfb63e2cd"><p><zdanie nr="1" gd:zdGUID="68db60d7-98db-4d37-a00a-d0857d82aa45" fragment="1" gd:fragmentGUID="1ebfaa13-3f1b-4f94-ac56-141289199286">Przez art. 388 pkt 1 ustawy z dnia 20 marca 2025 r. o rynku pracy i służbach zatrudnienia (Dz. U. poz. 620), która weszła w życie z dniem 1 czerwca 2025 r.</zdanie></p></odnosnik></zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2026/55__art_7__ust_2__pkt_4" gd:GUID="5f687734-b8f8-4510-b036-e8479946df9e">
+            <nr>4</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="bb3ae369-76b9-49b3-839e-e4c3f6226672" fragment="5" gd:fragmentGUID="c0c0f1ee-728b-450d-a307-d85f5679d802">każde 0,35 euro nakładów inwestycyjnych poniesionych na obszarach wiejskich;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2026/55__art_7__ust_2__pkt_5" gd:GUID="facb4da4-9471-45b5-a44f-a43c199681b8">
+            <nr>5</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="bb3ae369-76b9-49b3-839e-e4c3f6226672" fragment="6" gd:fragmentGUID="a6d6ef62-273f-4cb8-a4eb-3358b512a5d7">każde 0,25 euro nakładów inwestycyjnych poniesionych:</zdanie>
+            </p>
+            <litera eId="DU/2026/55__art_7__ust_2__pkt_5__lit_a" gd:GUID="a96814a4-d33c-4c7d-af6c-7f2c0d01c72b">
+              <nr>a</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="bb3ae369-76b9-49b3-839e-e4c3f6226672" fragment="7" gd:fragmentGUID="87ca3895-bb7c-4d2a-a331-3fb442327f0f">(uchylona)<odnosnik id-odnosnika="6" symbol="6" gd:GUID="be7b9fe3-10a4-4fde-b360-c207c4f0c2af"><p><zdanie nr="1" gd:zdGUID="eaa11c7f-61ce-4fe7-ab51-1f054982e26e" fragment="1" gd:fragmentGUID="e1df955b-ff50-4c89-9683-1ae72c6f93df">Przez art. 388 pkt 2 ustawy, o której mowa w odnośniku 5.</zdanie></p></odnosnik></zdanie>
+              </p>
+            </litera>
+            <litera eId="DU/2026/55__art_7__ust_2__pkt_5__lit_b" gd:GUID="d80ebae0-04b2-4aaf-be07-cac5f7ad9d9d">
+              <nr>b</nr>
+              <p>
+                <zdanie nr="1" gd:zdGUID="bb3ae369-76b9-49b3-839e-e4c3f6226672" fragment="8" gd:fragmentGUID="fdaf38ce-ced4-460e-b244-4ccc2e1f1287">bezpośrednio w związku z uruchomieniem szerokopasmowego dostępu do internetu w szkołach i placówkach oświatowych w rozumieniu ustawy z dnia 14 grudnia 2016 r. – Prawo oświatowe (Dz. U. z 2025 r. poz. 1043, 1160 i 1837).</zdanie>
+              </p>
+            </litera>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2026/55__art_7__ust_3" gd:GUID="38f4646a-64b2-44e5-a987-c7fc1f5fc9f9">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="afb85dc6-28e6-472e-808d-a63b7dd209a4" fragment="1" gd:fragmentGUID="8d273e0a-e04a-4361-a585-d6dd8441d7fc">Wartość nakładów inwestycyjnych przelicza się według średniego kursu euro, ustalanego przez Narodowy Bank Polski, obowiązującego w ostatnim dniu miesiąca poprzedzającego miesiąc, w którym nastąpi złożenie dokumentacji, o której mowa w art. 8.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2026/55__art_8" gd:GUID="d041299f-8685-46a7-bdcf-852f9146ada4">
+        <nr>8</nr>
+        <ustep eId="DU/2026/55__art_8__ust_1" gd:GUID="75fcab16-546c-4747-89ef-cb5faffd40f3">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a819f945-1e4c-4a58-9ef9-580496c29bc8" fragment="1" gd:fragmentGUID="5fcd0863-73d0-4d92-b38a-5023a5ef6fc0">Operator, który uzyskał decyzję, o której mowa w art. 3 ust. 1, jest zobowiązany, w terminie trzech miesięcy po upływie każdego roku od dnia wydania tej decyzji albo w terminie trzech miesięcy od zakończenia okresu, w którym był zobowiązany ponieść nakłady inwestycyjne, jeżeli okres ten jest krótszy od roku, złożyć sprawozdanie wraz z dokumentacją, potwierdzające rodzaj, zakres i wysokość poniesionych nakładów inwestycyjnych w danym okresie.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/55__art_8__ust_2" gd:GUID="9f85665f-25d4-40d9-b9d9-4945330f8f82">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="aed95ce2-0c6a-424e-9190-9341095e6cb8" fragment="1" gd:fragmentGUID="24959d38-4922-409d-845a-c7dd0ae25481">Minister właściwy do spraw informatyzacji określi, w drodze rozporządzenia, wzór sprawozdania wskazującego rodzaj, zakres i wysokość poniesionych przez operatora nakładów inwestycyjnych oraz wykaz składanej z nim dokumentacji, o których mowa w ust. 1, mając na względzie zapewnienie możliwości weryfikacji faktu poniesienia nakładów, ich rodzaju, zakresu i wysokości oraz umiejscowienia, z uwzględnieniem art. 7.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2026/55__art_9" gd:GUID="2260fff2-dc0b-4d3b-8c8b-4d9aff847ea9">
+        <nr>9</nr>
+        <ustep eId="DU/2026/55__art_9__ust_1" gd:GUID="ca00324b-29af-4772-bc0c-ee41d86569bc">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a136ffc5-ce35-411e-b1f1-5dcda8674b65" fragment="1" gd:fragmentGUID="fd4cc5af-3d39-404c-aad1-0a581fa03f8e">W okresie od dnia wydania decyzji, o której mowa w art. 3 ust. 1, do dnia umorzenia raty opłaty koncesyjnej lub opłaty prolongacyjnej minister właściwy do spraw informatyzacji może kontrolować rodzaj, zakres i wysokość nakładów inwestycyjnych ponoszonych przez operatora lub podmiot powiązany.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/55__art_9__ust_2" gd:GUID="49a37c4e-2d7a-4709-9b4a-baffe6f30d61">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="7f292398-5fd0-412b-8ccb-68b462266793" fragment="1" gd:fragmentGUID="4f1f5162-d92e-4e09-a577-58385b87cf00">W ramach kontroli minister właściwy do spraw informatyzacji może powierzyć wykonanie czynności kontrolnych dotyczących rodzaju i zakresu nakładów inwestycyjnych realizowanych przez operatora lub podmiot powiązany Prezesowi Urzędu Komunikacji Elektronicznej.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/55__art_9__ust_3" gd:GUID="9bca2310-c9cb-4af9-b4de-f36fcaf5608c">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="c0981017-3f95-4417-8df0-9f73f3760ca1" fragment="1" gd:fragmentGUID="03118699-cb5d-4780-a04b-5fd577b01984">Do kontroli oraz wykonywanych w jej ramach czynności kontrolnych stosuje się odpowiednio przepisy działu VI Ordynacji podatkowej.</zdanie>
+            <zdanie nr="2" gd:zdGUID="4d91d82d-2eeb-443b-bc63-6ac801f42bf2" fragment="1" gd:fragmentGUID="6aa9645e-c62f-421b-a4e5-fdb8a8a74527">Koszty biegłego lub biegłych, powoływanych w toku kontroli w celu zbadania wysokości nakładów inwestycyjnych realizowanych przez operatora lub podmiot powiązany, ponosi operator.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/55__art_9__ust_4" gd:GUID="98f9ce81-b224-473a-b405-dc82f3acf6c6">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="220e28ca-d2c0-4a6e-b57e-518c1439e6da" fragment="1" gd:fragmentGUID="2acbcb39-6a90-49fc-bd1e-2adb4330dbbf">Jeżeli kontrola stwierdzi, że rzeczywiste nakłady inwestycyjne w danym okresie będą niższe od kwoty nakładów inwestycyjnych ustalonych w decyzji, o której mowa w art. 3 ust. 1, minister właściwy do spraw informatyzacji może wydać decyzję o zabezpieczeniu zapłaty raty opłaty koncesyjnej lub opłaty prolongacyjnej.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/55__art_9__ust_5" gd:GUID="a0d12a9f-a880-4469-9ae4-b132d8eecbb3">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="d13baa03-0079-45da-9628-9037bfd9f071" fragment="1" gd:fragmentGUID="06ed7784-2b0b-4933-b5f4-44998ecb03b1">W decyzji o zabezpieczeniu zapłaty raty opłaty koncesyjnej lub opłaty prolongacyjnej określa się przybliżoną kwotę zobowiązania operatora, wyliczoną zgodnie z art. 10 ust. 5.</zdanie>
+            <zdanie nr="2" gd:zdGUID="8e408a43-a676-4268-b7f9-5efc32015920" fragment="1" gd:fragmentGUID="79f7687d-c693-4200-af47-8ca83176e1a5">Art. 33 Ordynacji podatkowej stosuje się odpowiednio.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2026/55__art_10" gd:GUID="67b30c5c-011f-4620-8a0b-64c38ba7e3dd">
+        <nr>10</nr>
+        <ustep eId="DU/2026/55__art_10__ust_1" gd:GUID="50f80932-d04d-402b-a720-3301be422cd0">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="957a6e70-b323-418d-b86d-cb36b88cac48" fragment="1" gd:fragmentGUID="8a0a4a0d-641c-4494-9467-24637252e951">Minister właściwy do spraw informatyzacji dokonuje weryfikacji złożonych przez operatora sprawozdania i dokumentacji, o których mowa w art. 8, w terminie miesiąca od dnia ich złożenia.</zdanie>
+            <zdanie nr="2" gd:zdGUID="39c43041-e318-425e-aede-36e91a4194bd" fragment="1" gd:fragmentGUID="5b2fddb3-3dfe-494b-a099-d0d31fb46459">Art. 9 ust. 1 stosuje się odpowiednio.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/55__art_10__ust_2" gd:GUID="68957e28-b0f0-4c83-ab54-7bb5eeb2bf77">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="9e9ced22-ee1d-4c44-bf9b-7b19c53b3e4e" fragment="1" gd:fragmentGUID="b87e96b0-eb10-4547-bf89-4c171efd60f4">W terminie, o którym mowa w ust. 1, minister właściwy do spraw informatyzacji z urzędu, w drodze decyzji, w zależności od wyników weryfikacji:</zdanie>
+          </p>
+          <punkt eId="DU/2026/55__art_10__ust_2__pkt_1" gd:GUID="a122cf7f-ac63-4df9-a659-9eeb5b35f434">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="9e9ced22-ee1d-4c44-bf9b-7b19c53b3e4e" fragment="2" gd:fragmentGUID="5f3a47f1-8d32-4b9a-ad75-cf6663750a0f">umarza raty opłaty koncesyjnej lub opłaty prolongacyjnej do wysokości faktycznie poniesionych w danym okresie lub w danym roku przez operatora lub podmiot powiązany nakładów inwestycyjnych, obliczonych zgodnie z art. 7, lub</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2026/55__art_10__ust_2__pkt_2" gd:GUID="9f872555-ab2a-4936-b13a-08de89d64c26">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="9e9ced22-ee1d-4c44-bf9b-7b19c53b3e4e" fragment="3" gd:fragmentGUID="87719713-95c8-4b18-b9de-6bd070752d45">stwierdza wygaśnięcie decyzji, o której mowa w art. 3 ust. 1, w zakresie, w jakim nakłady inwestycyjne zadeklarowane w danym okresie lub w danym roku nie znalazły pokrycia w faktycznie poniesionych w tym okresie przez operatora lub podmiot powiązany nakładach inwestycyjnych, obliczonych zgodnie z art. 7.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2026/55__art_10__ust_3" gd:GUID="ce11e635-88c6-4eec-87f7-875e89aa0054">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="b5abafb2-1da3-4c44-82b9-24ac236d32e8" fragment="1" gd:fragmentGUID="1f66f293-6fd0-40f9-83ec-43863f514765">Decyzja, o której mowa w ust. 2 pkt 1, dotyczy w pierwszej kolejności rat opłaty koncesyjnej lub opłaty prolongacyjnej, które były najwcześniej wymagalne.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/55__art_10__ust_4" gd:GUID="50c4695f-722a-46b6-9d05-230c428f1ece">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="9e31c671-e605-4f5b-9bad-0d1177bb312f" fragment="1" gd:fragmentGUID="0f570fb7-02c0-4089-92a9-fc29fc445d88">Na wniosek operatora, w szczególności w przypadku poniesienia przez niego wyższych nakładów inwestycyjnych od deklarowanych, decyzja o umorzeniu może dotyczyć również rat opłaty koncesyjnej lub opłaty prolongacyjnej, których termin płatności jeszcze nie nastąpił.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/55__art_10__ust_5" gd:GUID="7f12c60c-ec36-4351-b280-0437eb117f61">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="32527c69-65d5-418e-8b17-5c003b2bde83" fragment="1" gd:fragmentGUID="7532a919-b53b-4eea-8df4-ec2ed3fba6d8">Jeżeli wartość poniesionych przez operatora nakładów inwestycyjnych jest niższa od wartości przypadających na dany okres nakładów określonych w decyzji, o której mowa w art. 3 ust. 1, operator jest zobowiązany wpłacić tę różnicę wraz z odsetkami, naliczonymi według zasad określonych w ust. 6.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/55__art_10__ust_6" gd:GUID="99642ee1-aaee-4334-8e06-ece0db70a80f">
+          <nr>6</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="607ed7ab-c131-491b-a6e9-52c7f35cd385" fragment="1" gd:fragmentGUID="7bb1f1ae-ef9d-427f-a586-fbb14b3548c8">W przypadku określonym w ust. 5, od terminu płatności, o którym mowa w art. 1 ust. 2, nalicza się odsetki w wysokości jak dla zaległości podatkowych.</zdanie>
+            <zdanie nr="2" gd:zdGUID="20eca86e-b381-4077-b472-724345f54d1d" fragment="1" gd:fragmentGUID="bb0444a9-1b09-4391-b44a-81534f4d955c">Art. 53 § 3 Ordynacji podatkowej stosuje się odpowiednio.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/55__art_10__ust_7" gd:GUID="229164ec-87a5-4f94-81ca-f3536e1731b1">
+          <nr>7</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="bac1bdcd-4f3f-47e2-aa14-14dc0b3dafc8" fragment="1" gd:fragmentGUID="21d3481c-2c5b-41b6-b75b-940976cf92f1">Operator jest uprawniony do złożenia sprawozdania i dokumentacji przed upływem terminu, o którym mowa w art. 8, jeżeli przed tym terminem wartość poniesionych nakładów inwestycyjnych będzie co najmniej równa wartości nakładów inwestycyjnych przypadających na dany okres, określonych w decyzji, o której mowa w art. 3 ust. 1.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/55__art_10__ust_8" gd:GUID="28157090-2a08-4938-8801-4f80846d424a">
+          <nr>8</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="59cac459-a82f-41e8-a5ad-fdefd9e6b115" fragment="1" gd:fragmentGUID="c75a51fc-8c82-48c5-9891-1ad079d61b8a">Jeżeli operator nie złoży w terminie sprawozdania wraz z dokumentacją, o której mowa w art. 8, minister właściwy do spraw informatyzacji, w terminie miesiąca od upływu terminu do ich złożenia, wydaje decyzję stwierdzającą wygaśnięcie w całości albo w części decyzji, o której mowa w art. 3 ust. 1.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/55__art_10__ust_9" gd:GUID="be447968-ca21-4ccf-8ede-2368bfae93ba">
+          <nr>9</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a58a1585-40eb-4b40-93a6-8dd60aa56166" fragment="1" gd:fragmentGUID="fd1e6645-060f-44f3-8f74-79e10eb77a70">W przypadku, o którym mowa w ust. 8, operator jest obowiązany wpłacić kwotę równą przypadającym na dany okres nakładom określonym w decyzji, o której mowa w art. 3 ust. 1, wraz z odsetkami w wysokości przewidzianej dla zaległości podatkowych za okres od upływu terminu płatności, o którym mowa w art. 1 ust. 2.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/55__art_10__ust_10" gd:GUID="85483746-1199-4e18-9af0-97001791041e">
+          <nr>10</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a95e543e-d695-403d-8fa1-18a83fa96ae9" fragment="1" gd:fragmentGUID="ccb355f4-c441-4787-9e45-913af396b5cc">Na wniosek operatora, uzasadniony ważnymi przyczynami, minister właściwy do spraw informatyzacji może wydłużyć termin do złożenia dokumentacji przez operatora o niewięcej niż 30 dni od dnia upływu terminu, o którym mowa w art. 8.</zdanie>
+            <zdanie nr="2" gd:zdGUID="4420375a-24e8-4e9a-8cd1-647c6a94b20d" fragment="1" gd:fragmentGUID="bbecd96b-36fe-4e5e-b952-d9d185def616">Do czasu upływu terminu przedłużonego w powyższym trybie, zawieszeniu ulega bieg terminu do wykonania decyzji przez ministra właściwego do spraw informatyzacji.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2026/55__art_11" gd:GUID="226211e3-e0e7-44e3-8c69-3e0e0786b56b">
+        <nr>11</nr>
+        <ustep eId="DU/2026/55__art_11__ust_1" gd:GUID="1a17da08-30fc-4874-b5c9-214ea670fa85">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="5e6db0f7-7ad6-4c88-a314-8489bb7ba9cd" fragment="1" gd:fragmentGUID="86e81ca3-3586-4f77-9a34-fcda5c4a5e46">Zobowiązanie operatora, będącego spółką kapitałową, z tytułu rat opłaty koncesyjnej lub opłaty prolongacyjnej wygasa w przypadku objęcia przez Skarb Państwa udziałów albo akcji w podwyższonym kapitale zakładowym operatora albo jego podmiotu dominującego, na zasadach określonych w ustawie.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/55__art_11__ust_2" gd:GUID="c2bf396f-bb3d-4027-ac22-fefc85833b4d">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="fda08533-52da-4a06-a639-129003ef9ad8" fragment="1" gd:fragmentGUID="7cd4e81a-e28a-4b0f-b0b5-82c89b95df3d">Objęcie udziałów albo akcji, o którym mowa w ust. 1, następuje na wniosek operatora albo jego podmiotu dominującego, składany na ręce ministra właściwego do spraw informatyzacji, do którego powinny być załączone następujące dokumenty:</zdanie>
+          </p>
+          <punkt eId="DU/2026/55__art_11__ust_2__pkt_1" gd:GUID="29e706cf-d1c5-40b8-9ce2-5f2570134ef6">
+            <nr>1</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="fda08533-52da-4a06-a639-129003ef9ad8" fragment="2" gd:fragmentGUID="389b80ec-b453-42ed-bfe5-85e68eca4771">uchwała zgromadzenia wspólników albo walnego zgromadzenia operatora albo jego podmiotu dominującego, podjęta w trybie przewidzianym w ustawie z dnia 15 września 2000 r. – Kodeks spółek handlowych (Dz. U. z 2024 r. poz. 18 i 96), o bezwarunkowym podwyższeniu kapitału zakładowego wnioskodawcy o kwotę odpowiadającą kwocie podwyższenia, w drodze utworzenia nowych udziałów albo akcji zaoferowanych Skarbowi Państwa w trybie określonym w niniejszej ustawie w zamian za wierzytelność z tytułu rat opłaty koncesyjnej lub opłaty prolongacyjnej;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2026/55__art_11__ust_2__pkt_2" gd:GUID="51640fd3-04c0-4b44-a045-6620913b7cc9">
+            <nr>2</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="fda08533-52da-4a06-a639-129003ef9ad8" fragment="3" gd:fragmentGUID="16f6a099-dcee-403c-a3d9-51df6ec537ab">oświadczenie operatora albo jego podmiotu dominującego, że w dniu składania wniosku nie istnieją podstawy do ogłoszenia jego upadłości, jak również nie są mu znane okoliczności, które mogą doprowadzić do wystąpienia podstaw do ogłoszenia upadłości w najbliższej przyszłości;</zdanie>
+            </p>
+          </punkt>
+          <punkt eId="DU/2026/55__art_11__ust_2__pkt_3" gd:GUID="fad69db7-5bfe-4da6-9075-4c0bd08bc79b">
+            <nr>3</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="fda08533-52da-4a06-a639-129003ef9ad8" fragment="4" gd:fragmentGUID="f9bf23e9-e460-4336-86fb-2c31a105047f">raport biegłego rewidenta z badania, o którym mowa w art. 12 ust. 6.</zdanie>
+            </p>
+          </punkt>
+        </ustep>
+        <ustep eId="DU/2026/55__art_11__ust_3" gd:GUID="0f1405fa-a590-498e-80f6-71e9a55b64b2">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="7e32f681-fd59-45ce-9b1f-fd73b6a2beb9" fragment="1" gd:fragmentGUID="cd39b0a2-0e94-425f-b5d3-84ea29e5eaec">Minister właściwy do spraw informatyzacji może zażądać przedstawienia przez wnioskodawcę dodatkowych dokumentów lub informacji dotyczących sytuacji finansowej wnioskodawcy, jeżeli na podstawie dokumentacji załączonej do wniosku nie będzie możliwe stwierdzenie prawdziwości i rzetelności oświadczenia, o którym mowa w ust. 2 pkt 2.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/55__art_11__ust_4" gd:GUID="6fcd9e56-b07d-487d-a4bb-b4084a83cee4">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="688555cf-e230-48c8-be77-2eb8b121b235" fragment="1" gd:fragmentGUID="bc9ba8a6-49e9-4139-af37-83eea1f0347e">Minister właściwy do spraw informatyzacji, w terminie jednego miesiąca od dnia otrzymania wniosku albo złożenia dodatkowych dokumentów lub informacji w przypadku, o którym mowa w ust. 3, przekazuje zaakceptowany przez siebie wniosek ministrowi właściwemu do spraw aktywów państwowych albo informuje wnioskodawcę o nieuwzględnieniu wniosku.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/55__art_11__ust_5" gd:GUID="ee17d80f-ad3d-4bf0-900f-183f941bea99">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="cee185b8-39c7-4e7d-9aa5-ce86165b0e24" fragment="1" gd:fragmentGUID="60070451-34e5-4b25-a0c0-f083be762997">Minister właściwy do spraw aktywów państwowych, w terminie 14 dni od dnia otrzymania zaakceptowanego przez ministra właściwego do spraw informatyzacji wniosku, o którym mowa w ust. 2, składa oświadczenie woli o objęciu zaoferowanych Skarbowi Państwa udziałów albo akcji.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/55__art_11__ust_6" gd:GUID="0f7fcb94-9134-4d22-bcce-8faf8e7a4365">
+          <nr>6</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="c12459a6-9e40-48b5-a898-3ce96a0e7e74" fragment="1" gd:fragmentGUID="619dc3fa-7590-4cf4-bf51-3744999e558e">W przypadku objęcia przez Skarb Państwa udziałów albo akcji zgodnie z ust. 5, zobowiązanie operatora do uiszczenia rat opłaty koncesyjnej lub opłaty prolongacyjnej objętych wnioskiem, o którym mowa w ust. 2, wygasa z chwilą uprawomocnienia się postanowienia sądu rejestrowego o wpisaniu do rejestru przedsiębiorców podwyższenia kapitału zakładowego wnioskodawcy na podstawie uchwały, o której mowa w ust. 2 pkt 1.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/55__art_11__ust_7" gd:GUID="05b2783d-e5be-438b-8891-72aad631fa8a">
+          <nr>7</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="81c9b9e5-48fc-45b4-b19c-90589c7ac167" fragment="1" gd:fragmentGUID="b83a478a-e576-487b-baa3-01c9504c2fdb">Od dnia złożenia wniosku, o którym mowa w ust. 2, do dnia uprawomocnienia się postanowienia sądu rejestrowego o wpisaniu do rejestru przedsiębiorców podwyższenia kapitału zakładowego operatora albo jego podmiotu dominującego, albo do dnia upływu terminu, o którym mowa w ust. 5, lecz niedłużej niż sześć miesięcy od dnia złożenia wniosku, zawieszeniu ulega bieg terminów płatności rat opłaty koncesyjnej lub opłaty prolongacyjnej, której dotyczy wniosek.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/55__art_11__ust_8" gd:GUID="236fe666-0dac-4fdf-9171-81e2da949f48">
+          <nr>8</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="1a8be117-e538-41f1-a4f6-31fffeaa0a0c" fragment="1" gd:fragmentGUID="5a96655e-5c04-4e77-b0a0-aed30e632b56">W przypadku objęcia przez Skarb Państwa udziałów albo akcji zgodnie z ust. 5, nie stosuje się przepisów art. 312 ustawy – Kodeks spółek handlowych.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2026/55__art_12" gd:GUID="fb734c80-605a-4731-b098-2a46f4f42256">
+        <nr>12</nr>
+        <ustep eId="DU/2026/55__art_12__ust_1" gd:GUID="258640f1-d6bd-4e05-98a7-7a826866590f">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="a9297826-8d21-4f35-871a-5080295c6f5e" fragment="1" gd:fragmentGUID="c817445d-f636-4ceb-9e6c-cf6ea7d5048a">Kwota podwyższenia powinna być równa wartości nominalnej takiej ilości udziałów albo akcji w kapitale zakładowym operatora albo jego podmiotu dominującego będącego wnioskodawcą, która odpowiada ilorazowi kwoty zdyskontowanej rat opłaty koncesyjnej lub opłaty prolongacyjnej, objętych wnioskiem, o którym mowa w art. 11 ust. 2, oraz wartości jednego udziału albo akcji operatora albo jego podmiotu dominującego, obliczonej stosownie do ust. 4.</zdanie>
+          </p>
+        </ustep>
+        <nie-ztp-ustep eId="DU/2026/55__art_12__ust_2" gd:GUID="b2966c9b-c741-413f-aab0-5f5f4fa12fb5">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="c60d76e2-1523-477e-ade0-b8ea52a26de2" fragment="1" gd:fragmentGUID="4f4843fe-b171-4fe4-971f-bee3de5d8559">Kwota zdyskontowana stanowi sumę zobowiązań operatora z tytułu rat opłaty koncesyjnej lub opłaty prolongacyjnej, które, zgodnie z wnioskiem, o którym mowa w art. 11 ust. 2 oraz art. 13 ust. 3, mają podlegać restrukturyzacji, przeliczoną według następującego wzoru:</zdanie>
+          </p>
+          <fragment gd:GUID="f3c96782-21db-4510-84a0-18e52a482218">gdzie:</fragment>
+          <fragment gd:GUID="fc743f0f-cbd7-4fa6-bd80-b13ea0d3694f">i – oznacza kolejną ratę,</fragment>
+          <fragment gd:GUID="fb3cc240-9d63-4bb9-a91d-10a935f5def0">N – oznacza całkowitą liczbę pozostałych rat,</fragment>
+          <fragment gd:GUID="7cdc0a28-038f-49ff-9eb4-ea1589a31ecd">R<sub>z</sub> – oznacza kwotę zdyskontowaną wszystkich rat opłat koncesyjnych lub opłat prolongacyjnych,</fragment>
+          <fragment gd:GUID="cdc58016-006b-4599-837a-1ed66cbd0f49">R<sub>n</sub> – oznacza nominalną kwotę raty opłaty koncesyjnej lub opłaty prolongacyjnej,</fragment>
+          <fragment gd:GUID="eaa1886e-9b06-42f5-90c7-6844265b009a">S<sub>w</sub> – oznacza:</fragment>
+          <nie-ztp-tiret eId="DU/2026/55__art_12__ust_2__tir_1" gd:GUID="729cd7c6-c83d-4ec8-a4e0-022f04bcbb63">
+            <p>
+              <zdanie nr="1" gd:zdGUID="c60d76e2-1523-477e-ade0-b8ea52a26de2" fragment="2" gd:fragmentGUID="303a5cde-0191-4db1-a4d2-3b70cf8a5bcd">roczną stopę procentową WIBOR na okres trzech miesięcy, z pierwszego dnia roboczego poprzedzającego złożenie wniosku – w przypadku zobowiązań z tytułu rat opłaty koncesyjnej lub opłaty prolongacyjnej o terminie płatności przypadającym niepóźniej niż 2 lata od dnia wejścia w życie ustawy,</zdanie>
+            </p>
+          </nie-ztp-tiret>
+          <nie-ztp-tiret eId="DU/2026/55__art_12__ust_2__tir_2" gd:GUID="7d02a70e-baf3-4ad6-99b2-3ad0e3b391a1">
+            <p>
+              <zdanie nr="1" gd:zdGUID="c60d76e2-1523-477e-ade0-b8ea52a26de2" fragment="3" gd:fragmentGUID="881ae7f2-1904-40f2-bf4f-9fcc98f85909">roczną stopę procentową emitowanych przez ministra właściwego do spraw finansów publicznych obligacji dziesięcioletnich o oprocentowaniu stałym i terminie wykupu w dniu 24 listopada 2010 r. (DS.1110) – w przypadku zobowiązań z tytułu rat opłaty koncesyjnej lub opłaty prolongacyjnej o terminie płatności przypadającym po upływie 2 lat od dnia wejścia w życie ustawy,</zdanie>
+            </p>
+            <fragment gd:GUID="50b38132-7c63-4e9c-8316-603478914891">L<sub>d</sub> – oznacza liczbę dni między dniem złożenia wniosku a dniem, w którym upływa termin płatności raty opłaty koncesyjnej lub opłaty prolongacyjnej objętej wnioskiem,</fragment>
+            <fragment gd:GUID="8aae7c17-30f0-4ca7-b7ba-764cd9a210d0">k<sub>i</sub> – oznacza stosunek liczby dni przypadających między płatnościami dwóch następujących po sobie rat opłaty koncesyjnej lub opłaty prolongacyjnej do 365 dni i wynosi:</fragment>
+            <fragment gd:GUID="728fe9b5-5a53-447a-809d-c4652db5d041">k<sub>i</sub> =k<sub>i</sub> =</fragment>
+            <fragment gd:GUID="c9a02d45-087c-4090-bcf6-41114046bc68">k<sub>i</sub> =</fragment>
+            <fragment gd:GUID="050018f7-bb8a-4760-83fe-3eb611ae48af">k<sub>i</sub> =</fragment>
+          </nie-ztp-tiret>
+        </nie-ztp-ustep>
+        <ustep eId="DU/2026/55__art_12__ust_3" gd:GUID="58700c89-0367-4570-a6b2-43339ea49fc3">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="7dac9281-a265-4cee-85e5-d8ec3d2237df" fragment="1" gd:fragmentGUID="286b673e-3ff9-4626-a33d-f58a9209c3c6">Wysokość kwoty zdyskontowanej wyraża się w złotych według kursu średniego euro ustalonego przez Narodowy Bank Polski w ostatnim dniu roboczym poprzedzającym dzień złożenia wniosku, o którym mowa w art. 11 ust. 2 lub art. 13 ust. 3.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/55__art_12__ust_4" gd:GUID="074fd157-1ab2-43cd-b3e9-647f2142d56b">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="0b2d666c-3950-4e1e-8d22-af6d2076975b" fragment="1" gd:fragmentGUID="a66a51dc-d407-4e01-997b-0ba59f4219a6">Wartość jednego udziału albo akcji, na potrzeby wyliczenia kwoty podwyższenia, o której mowa w ust. 1, powinna odpowiadać ilorazowi skorygowanej wartości aktywów netto wnioskodawcy oraz całkowitej liczby objętych i opłaconych w całości akcji albo udziałów, na którą dzieli się kapitał zakładowy wnioskodawcy.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/55__art_12__ust_5" gd:GUID="d665f0d3-5e43-4518-8d30-80bc23972442">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="b703cd21-2d6d-4b5a-9efc-8ca71a7c3598" fragment="1" gd:fragmentGUID="fa17db4c-2914-4655-8a90-23a3d0bc2221">Skorygowaną wartość aktywów netto wnioskodawcy, o której mowa w ust. 4, ustala się według stanu na dzień przypadający niepóźniej niż 30 dni przed dniem złożenia wniosku, o którym mowa w art. 11 ust. 2, jako wartość aktywów netto wnioskodawcy, w rozumieniu art. 3 ust. 1 pkt 29 ustawy o rachunkowości, bez uwzględniania zobowiązań z tytułu rat opłaty koncesyjnej oraz opłaty prolongacyjnej objętych wnioskiem.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/55__art_12__ust_6" gd:GUID="565fa437-f6ee-4721-8e62-e532a9f897ab">
+          <nr>6</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="c72b2fbc-dba5-4d96-87b3-bb820f136132" fragment="1" gd:fragmentGUID="9d9cbaf9-da38-457f-9a90-52a8529b429e">Wycenę aktywów netto, a także wyliczenie skorygowanej wartości aktywów netto, wartości jednego udziału albo akcji oraz kwoty podwyższenia wnioskodawca poddaje badaniu biegłego rewidenta pod kątem poprawności i rzetelności.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/55__art_12__ust_7" gd:GUID="305d143d-2c24-4190-9ab2-07995ee8af41">
+          <nr>7</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="bf75706d-d312-4af8-a5b9-b151e74a6b71" fragment="1" gd:fragmentGUID="350087a6-2e70-4ba6-aaeb-42a55ba4d8d5">W przypadku gdy wnioskodawca jest podmiotem, wobec którego został przyjęty oraz zatwierdzony układ w rozumieniu przepisów <i>rozporządzenia Prezydenta Rzeczypospolitej z dnia 24 października 1934 r. – Prawo o postępowaniu układowym (Dz. U. poz. 836, z późn. zm.</i><odnosnik id-odnosnika="7" symbol="7" gd:GUID="69da518f-36b2-445a-9a08-9873095074c9"><p><zdanie nr="1" gd:zdGUID="e3aac9f9-a4b8-4a08-8bad-2389767dbab2" fragment="1" gd:fragmentGUID="983a97b3-0a02-4118-aca2-969a9aa439e1">Zmiany wymienionego rozporządzenia zostały ogłoszone w Dz. U. z 1950 r. poz. 349, z 1990 r. poz. 320, z 1996 r. poz. 43 i 189 oraz z 1997 r. poz. 592, 770 i 885.</zdanie></p></odnosnik><i>)</i><odnosnik id-odnosnika="8" symbol="8" gd:GUID="575067c2-60cd-48a3-9c5a-cebe10dd12cd"><p><zdanie nr="1" gd:zdGUID="5059d973-d378-4720-a012-bc3976395c1a" fragment="1" gd:fragmentGUID="871e3b03-a6da-4dda-a78e-4d3dcf7f58be">Utraciło moc z dniem 1 października 2003 r. na podstawie art. 545 pkt 3 ustawy z dnia 28 lutego 2003 r. – Prawo upadłościowe i naprawcze (Dz. U. poz. 535), która weszła w życie z dniem 1 października 2003 r.</zdanie></p></odnosnik>, przewidujący zmniejszenie sumy jego długów, wniosek, o którym mowa w art. 11 ust. 2, może być poprzedzony procedurą zmniejszenia sumy zobowiązań wnioskodawcy z tytułu rat opłaty koncesyjnej lub opłaty prolongacyjnej, będących podstawą wyliczenia kwoty zdyskontowanej.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/55__art_12__ust_8" gd:GUID="ea738546-d3d0-4311-b24a-76f903f7646f">
+          <nr>8</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="080e2405-3b60-4482-9cb5-b4d1b94d9ae2" fragment="1" gd:fragmentGUID="56e80790-0c6d-4a8e-ae7a-fd22bba4f010">Minister właściwy do spraw informatyzacji, biorąc pod uwagę sytuację finansową wnioskodawcy, może wyrazić zgodę na zmniejszenie zobowiązań wnioskodawcy z tytułu rat opłaty koncesyjnej lub opłaty prolongacyjnej, kierując się stopniem zmniejszenia zobowiązań przewidzianym w zawartym uprzednio przez wnioskodawcę układzie.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/55__art_12__ust_9" gd:GUID="eab3201e-d79b-46c9-8b1c-ec301a6c58e1">
+          <nr>9</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="bdc332a4-8c6b-4004-be08-e60407d9a4a0" fragment="1" gd:fragmentGUID="191c19b9-44d1-4a76-b8ab-0c4dd27e20ab">Przez okres od dnia wystąpienia przez wnioskodawcę o zmniejszenie jego zobowiązań do dnia zajęcia przez ministra właściwego do spraw informatyzacji ostatecznego stanowiska w sprawie, zawieszeniu ulega bieg terminów płatności rat opłat koncesyjnych oraz opłat prolongacyjnych.</zdanie>
+            <zdanie nr="2" gd:zdGUID="44718d3e-45db-42e2-82eb-2d6e1143c8aa" fragment="1" gd:fragmentGUID="3db45f7f-7a25-4538-a119-bc9d99a81893">Art. 67 Ordynacji podatkowej stosuje się odpowiednio.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2026/55__art_13" gd:GUID="a893238e-edf1-4afc-bbad-6459d38f676c">
+        <nr>13</nr>
+        <ustep eId="DU/2026/55__art_13__ust_1" gd:GUID="45a42e9d-9f67-49de-a35d-7c2b9eb1610a">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="b4e175f7-5ee0-4b25-8940-8d76394092c0" fragment="1" gd:fragmentGUID="bf96dcd4-09d5-421a-9fc3-99302b977d1c">Zobowiązania operatora, będącego spółką kapitałową, z tytułu opłaty koncesyjnej lub opłaty prolongacyjnej wygasają w przypadku objęcia przez Skarb Państwa w zamian za te zobowiązania obligacji wyemitowanych przez operatora.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/55__art_13__ust_2" gd:GUID="5786642b-c640-4f59-9d13-37e24fc18cf1">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="19d2a745-135a-49ad-a4a9-5ae7bc0cb43d" fragment="1" gd:fragmentGUID="fdbd4dcc-8c7e-4038-9da9-a92ceac5ba68">Obligacje, o których mowa w ust. 1, powinny być obligacjami imiennymi, o nieograniczonej zbywalności, zabezpieczonymi, z prawem pierwszeństwa, o maksymalnym terminie wykupu nieprzekraczającym 2010 r.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/55__art_13__ust_3" gd:GUID="77f25d2f-a899-49dc-b640-5d50d85a8a5d">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="98866f22-4455-4b93-8b02-1b96324b0429" fragment="1" gd:fragmentGUID="0fe8872f-3fc2-4877-a2af-273eac8776ef">Objęcie obligacji, o których mowa w ust. 1, następuje na wniosek operatora.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/55__art_13__ust_4" gd:GUID="98c0b101-8004-415d-b6d1-8341ffb1b1e5">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="9c4c1c0f-537a-4c86-858d-534ad23468ec" fragment="1" gd:fragmentGUID="1438f68d-4e42-4369-a5ac-178708175078">Do wniosku operator załącza dokumenty i informacje wymagane przepisami regulującymi zasady emisji i obrotu obligacjami.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/55__art_13__ust_5" gd:GUID="48a4ef1f-8562-4381-bc17-dc35eebb6bd1">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="4785ac38-418b-4dc1-bbea-6d7c7ad53991" fragment="1" gd:fragmentGUID="512ea41c-2ed9-44ac-aab1-c114ffbd1fee">Minister właściwy do spraw informatyzacji może zażądać przedstawienia przez operatora dodatkowych dokumentów lub informacji dotyczących sytuacji finansowej operatora.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/55__art_13__ust_6" gd:GUID="e6790b0c-0e41-4955-9a6d-4f8273b9f41a">
+          <nr>6</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="794f9ab1-b9f8-462c-970d-f9f651001a59" fragment="1" gd:fragmentGUID="30528bb0-dfd3-4fea-9576-3dce6efcb582">Wartość nominalna zaoferowanych obligacji nie może być niższa od kwoty zdyskontowanej rat opłaty koncesyjnej lub opłaty prolongacyjnej, z zastrzeżeniem art. 14 ust. 1.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/55__art_13__ust_7" gd:GUID="64b83503-94b3-43e2-bbd3-16f326ff0bd3">
+          <nr>7</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="64531dc7-9713-41e3-a040-372cc41ec79c" fragment="1" gd:fragmentGUID="4fd7c556-d7f8-4b9a-80ef-580add1260dc">Jeżeli operator spełnia warunki określone w ust. 1–6 i sytuacja finansowa operatora stwarza uzasadnione przypuszczenie, że wywiąże się on z zobowiązań wynikających z obligacji, minister właściwy do spraw informatyzacji, działając w imieniu Skarbu Państwa, może złożyć oświadczenie woli o dokonaniu subskrypcji obligacji.</zdanie>
+            <zdanie nr="2" gd:zdGUID="c4b8ccbf-173d-4bcb-a0e7-6174ff7c4496" fragment="1" gd:fragmentGUID="df8822e6-bec9-4900-9a02-a083314b6fe3">Wygaśnięcie zobowiązań operatora z tytułu rat opłaty koncesyjnej lub opłaty prolongacyjnej następuje w dniu wydania obligacji przez operatora.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/55__art_13__ust_8" gd:GUID="b28f8d51-2189-4a31-845a-d288f612c05b">
+          <nr>8</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="3561604b-17a2-4406-be14-57b4f6f68919" fragment="1" gd:fragmentGUID="4406b367-47b8-4b5e-bc46-b27a5935a57e">Minister właściwy do spraw informatyzacji może złożyć oświadczenie, o którym mowa w ust. 7, albo poinformować wnioskodawcę o nieprzyjęciu oferty objęcia wyemitowanych przez niego obligacji w terminie jednego miesiąca od dnia otrzymania wniosku albo złożenia dodatkowych dokumentów lub informacji, o których mowa w ust. 5.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/55__art_13__ust_9" gd:GUID="cb0b1d7e-3b3c-4ddf-9b3d-e71dc57096bd">
+          <nr>9</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="7d700365-ef90-4224-ad2b-49c0d5856777" fragment="1" gd:fragmentGUID="e1538776-8900-46c9-808e-45f4a184b46f">Od dnia złożenia wniosku, o którym mowa w ust. 3, lecz niedłużej niż przez okres 3 miesięcy od tego dnia zawieszeniu ulega bieg terminów płatności rat opłaty koncesyjnej lub opłaty prolongacyjnej, których dotyczy wniosek.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/55__art_13__ust_10" gd:GUID="0384f5d5-852c-47f7-91ac-af2a49880d7b">
+          <nr>10</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="46f30526-1240-401e-86e3-1be9b134d803" fragment="1" gd:fragmentGUID="b34430ac-702f-4495-be99-203996707c70">W zakresie nieuregulowanym ustawą do emisji obligacji mają zastosowanie przepisy ustawy z dnia 15 stycznia 2015 r. o obligacjach (Dz. U. z 2025 r. poz. 1667).</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2026/55__art_14" gd:GUID="fd982f5f-7a76-4df8-aa76-3231b9559e7f">
+        <nr>14</nr>
+        <ustep eId="DU/2026/55__art_14__ust_1" gd:GUID="5c643072-de95-4d5a-883d-5fd6c5d46a6b">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="3fc552e9-1a31-42dd-a43b-0a9c502ca25e" fragment="1" gd:fragmentGUID="9bec5c49-837d-4faa-8806-de5860618ed9">W przypadku gdy operator jest podmiotem, wobec którego został przyjęty oraz zatwierdzony układ w rozumieniu ustawy z dnia 15 maja 2015 r. – Prawo restrukturyzacyjne (Dz. U. z 2024 r. poz. 1428 oraz z 2025 r. poz. 1085, 1170 i 1172) lub ustawy z dnia 28 lutego 2003 r. − Prawo upadłościowe (Dz. U. z 2025 r. poz. 614, 1085, 1170 i 1172), przewidujący zmniejszenie sumy jego długów, wniosek operatora, o którym mowa w art. 13 ust. 3, może być poprzedzony procedurą zmniejszenia sumy zobowiązań operatora z tytułu rat opłaty koncesyjnej lub opłaty prolongacyjnej, będących podstawą wyliczenia kwoty zdyskontowanej.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/55__art_14__ust_2" gd:GUID="26a38df3-efae-44da-947a-622921ae72dd">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="afdb4ca8-911d-4ff3-b3d1-4e041ae32a8a" fragment="1" gd:fragmentGUID="3b7f7e2f-6b6f-426f-b6f4-3ad6f23eda23">Minister właściwy do spraw informatyzacji, biorąc pod uwagę sytuację finansową operatora, może wyrazić zgodę na zmniejszenie zobowiązań operatora z tytułu rat opłaty koncesyjnej lub opłaty prolongacyjnej, kierując się stopniem zmniejszenia zobowiązań przewidzianym w zawartym uprzednio przez operatora układzie.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/55__art_14__ust_3" gd:GUID="cee7af2d-b2d1-4e56-bfe8-b24e45ace0f9">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="094a4827-8827-4051-9228-fc1e04bbe009" fragment="1" gd:fragmentGUID="fb283f70-cd2b-46c5-83db-b125c3d843f1">Przez okres od dnia wystąpienia przez operatora o zmniejszenie jego zobowiązań do dnia zajęcia przez ministra właściwego do spraw informatyzacji ostatecznego stanowiska w sprawie, zawieszeniu ulega bieg terminów płatności rat opłat koncesyjnych oraz opłat prolongacyjnych.</zdanie>
+            <zdanie nr="2" gd:zdGUID="d4bbe8aa-9c73-4e50-b2e6-21cc38cca59e" fragment="1" gd:fragmentGUID="ae5d14d2-d5be-480b-b60f-73fcfff84183">Art. 67 Ordynacji podatkowej stosuje się odpowiednio.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2026/55__art_15" gd:GUID="8fad8e0b-270d-465f-a6e6-eb2655b3cb28">
+        <nr>15</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="7a738b81-6ca0-4b42-83c3-8bbedac78944">
+          <p>
+            <zdanie nr="1" gd:zdGUID="a66e3fe1-5772-4c1a-9f80-c2562af8d2fb" fragment="1" gd:fragmentGUID="c2949873-7723-4e06-b161-8cb6ac14e559">Skorzystanie z jednej z form restrukturyzacji zobowiązań koncesyjnych na zasadach i warunkach określonych w niniejszej ustawie nie pozbawia operatora prawa do skorzystania z pozostałych form restrukturyzacji przewidzianych w ustawie oraz w odrębnych przepisach.</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+      <artykul eId="DU/2026/55__art_16" gd:GUID="89965d07-adee-4bf0-8b2f-c1658d4ea056">
+        <nr>16</nr>
+        <ustep eId="DU/2026/55__art_16__ust_1" gd:GUID="2542f31a-fb70-4402-9763-98154dfa0144">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="cd0d697c-04e7-4820-82a7-040c74ae98b7" fragment="1" gd:fragmentGUID="5c7e6d72-5859-4bc4-8d66-fe0a9917e755">Kwota umorzona zgodnie z art. 10 ust. 2 pkt 1 nie stanowi przychodu w rozumieniu przepisów ustawy z dnia 15 lutego 1992 r. o podatku dochodowym od osób prawnych (Dz. U. z 2025 r. poz. 278, z późn. zm.<odnosnik id-odnosnika="9" symbol="9" gd:GUID="9479d50e-9b9d-4496-abfb-7a55da57d4f6"><p><zdanie nr="1" gd:zdGUID="22c4e583-75ac-42e2-9a4b-e6eb5b696ce6" fragment="1" gd:fragmentGUID="45bc3f38-edcd-4edc-bff2-6e9d72e3fdc4">Zmiany tekstu jednolitego wymienionej ustawy zostały ogłoszone w Dz. U. z 2025 r. poz. 340, 620, 680, 1022, 1074, 1218, 1301, 1426, 1657, 1658, 1804, 1817 i 1846.</zdanie></p></odnosnik>), jeżeli należności te nie zostały zaliczone do kosztów uzyskania przychodów.</zdanie>
+          </p>
+        </ustep>
+        <ustep eId="DU/2026/55__art_16__ust_2" gd:GUID="72c37e16-3457-44b9-a84f-68c4405efc51">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="7e413863-426b-4968-8c8b-7d0e525c87b3" fragment="1" gd:fragmentGUID="7c247157-9a27-464c-aa2e-c867975efdd7">Spółka przejmująca albo spółka nowo zawiązana, o których mowa w tytule IV w dziale I ustawy – Kodeks spółek handlowych, wstępuje w wynikające z niniejszej ustawy prawa i obowiązki spółki przejmowanej albo spółek łączących się przez zawiązanie nowej spółki.</zdanie>
+          </p>
+        </ustep>
+      </artykul>
+      <artykul eId="DU/2026/55__art_17" gd:GUID="45dc4f9e-1bbf-47b3-959f-6e4fec03a41a">
+        <nr>17</nr>
+        <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="aeb5f14c-b6e2-446b-b696-88ff6616a5e1">
+          <p>
+            <zdanie nr="1" gd:zdGUID="2f2a4a66-ccb4-4340-bbf9-80a9b01e26c0" fragment="1" gd:fragmentGUID="d2b66084-e666-41e4-930f-03f82547ac38">Ustawa wchodzi w życie z dniem ogłoszenia<odnosnik id-odnosnika="10" symbol="10" gd:GUID="c558b2d5-8378-40a5-b9ad-48a397d43ff6"><p><zdanie nr="1" gd:zdGUID="69a45181-fe58-480c-a02d-c79a173d8aa4" fragment="1" gd:fragmentGUID="091cf1fa-874b-43a0-9f46-b867614c0745">Ustawa została ogłoszona w dniu 28 grudnia 2002 r.</zdanie></p></odnosnik>.</zdanie>
+          </p>
+        </ustep-n>
+      </artykul>
+    </ustawa>
+  </obwieszczenie>
+</akt-prawny>

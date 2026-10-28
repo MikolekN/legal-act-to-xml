@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <rozporzadzenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/1686</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>2294b12f-a727-4fdc-9602-4751fadfc2a1</gd:GUIDwersji>
+      <AdresISAP>WDU20250001686</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>1686</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 1686</AdresWyswietlany>
+      <Tytul>Rozporządzenie Ministra Zdrowia z dnia 28 listopada 2025 r. zmieniające rozporządzenie w sprawie kosztów, których wysokość nie jest zależna od parametrów wskazanych w art. 118 ust. 3 ustawy z dnia 27 sierpnia 2004 r. o świadczeniach opieki zdrowotnej finansowanych ze środków publicznych</Tytul>
+      <Rodzaj>ROZP</Rodzaj>
+      <DataOgloszenia>2025-12-03</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-11-28</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_wejscie_2025-12-04_DU-2025-1686_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2025-12-04" warunek="z dniem następującym po dniu ogłoszenia" podstawa="§ 2" zrodlo="https://eli.gov.pl/eli/DU/2025/1686" dowod="DU/2025/1686__art_2" />
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2025-12-04_DU-2025-1686_domyslne.x" glowna="true">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2025-12-04_DU-2025-1686_domyslne" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="1cd49136-8951-474e-86fb-ef6b1742c198" rola="wydajacy">
+          <Nazwa>Minister Zdrowia</Nazwa>
+          <OrganPodpisujacy>Minister Zdrowia</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>T.</imie> <nazwisko>Maciejewski</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Rozporządzenie</rodzaj-aktu>
+    <autor-aktu>Ministra Zdrowia<odnosnik id-odnosnika="1" symbol="1" gd:GUID="5fce3310-d173-4212-8996-98b6cd3f0c6f"><p><zdanie nr="1" gd:zdGUID="d407f3b0-0dae-49f9-885b-2a8cf2041632" fragment="1" gd:fragmentGUID="3959ad51-6e30-486e-9bc8-7cc886db0e84">Minister Zdrowia kieruje działem administracji rządowej – zdrowie, na podstawie § 1 ust. 2 rozporządzenia Prezesa Rady Ministrów z dnia 25 lipca 2025 r. w sprawie szczegółowego zakresu działania Ministra Zdrowia (Dz. U. poz. 1004).</zdanie></p></odnosnik></autor-aktu>
+    <data>z dnia 28 listopada 2025 r.</data>
+    <tytul>zmieniające rozporządzenie w sprawie kosztów, których wysokość nie jest zależna od parametrów wskazanych w art. 118 ust. 3 ustawy z dnia 27 sierpnia 2004 r. o świadczeniach opieki zdrowotnej finansowanych ze środków publicznych</tytul>
+    <podstawa-prawna>Na podstawie art. 118 ust. 7 ustawy z dnia 27 sierpnia 2004 r. o świadczeniach opieki zdrowotnej finansowanych ze środków publicznych (Dz. U. z 2025 r. poz. 1461 i 1537) zarządza się, co następuje:</podstawa-prawna>
+    <paragraf eId="DU/2025/1686__art_1" gd:GUID="5e6d2434-8fa0-43c8-9430-574949a0043d" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-04_DU-2025-1686_domyslne.x" wejscie-w-zycie="2025-12-04">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="63f6c093-dad9-4771-9bd0-f0d0bfbccc32" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-04_DU-2025-1686_domyslne.x" wejscie-w-zycie="2025-12-04">
+        <p>
+          <zdanie nr="1" gd:zdGUID="90bb26ad-aad1-4552-9b7e-ba0e34b34fb9" fragment="1" gd:fragmentGUID="c52cfb31-2cb8-4ebe-ac59-74d42ce70e60" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-04_DU-2025-1686_domyslne.x" wejscie-w-zycie="2025-12-04"><now:zamien-tekst stary-tekst="." nowy-tekst=";" element-eId="DU/2023/1976__art_118__ust_3" akt="https://eli.gov.pl/eli/DU/2023/1976" now:wystapienie="ostatnie" gd:nowGUID="9fdb6094-193c-4179-9190-738a398e5b01" />W rozporządzeniu Ministra Zdrowia z dnia 7 września 2020 r. w sprawie kosztów, których wysokość nie jest zależna od parametrów wskazanych w art. 118 ust. 3 ustawy z dnia 27 sierpnia 2004 r. o świadczeniach opieki zdrowotnej finansowanych ze środków publicznych (Dz. U. z 2023 r. poz. 1976 oraz z 2025 r. poz. 455) w § 1 w pkt 7 kropkę zastępuje się średnikiem i dodaje się pkt 8 w brzmieniu:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2023/1976" cudzyslowy="oba" gd:nowGUID="6c21e359-721f-40bb-b303-8430350cf0ce" element-eId="DU/2023/1976__art_118__ust_3" funkcja="dodaj-w"><punkt eId="DU/2023/1976__art_118__ust_3__pkt_8" gd:GUID="a9fb52b6-68ee-4feb-a9b0-def88599db6d" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-04_DU-2025-1686_domyslne.x" wejscie-w-zycie="2025-12-04"><nr>8</nr><p><zdanie nr="1" gd:zdGUID="bddd953e-d235-4cf1-b8fa-4fb76796c35d" fragment="1" gd:fragmentGUID="f14af0a0-84a1-487d-98be-8d411b8f0017" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-04_DU-2025-1686_domyslne.x" wejscie-w-zycie="2025-12-04">koszty świadczeń opieki zdrowotnej udzielonych na podstawie umów o udzielanie świadczeń opieki zdrowotnej w zakresie świadczeń opieki zdrowotnej w ramach profilu świadczeń realizowanego w trybie hospitalizacji planowej albo trybie leczenia jednego dnia, o których mowa w art. 159a ust. 5 pkt 1 ustawy o świadczeniach.</zdanie></p></punkt></cytat-strukt>.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <paragraf eId="DU/2025/1686__art_2" gd:GUID="bbcd6fda-75a9-4257-adb1-546bee8e62bf" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-04_DU-2025-1686_domyslne.x" wejscie-w-zycie="2025-12-04">
+      <nr>2</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="27fbcd4d-c9a3-4a49-8bec-21f61aba8e3e" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-04_DU-2025-1686_domyslne.x" wejscie-w-zycie="2025-12-04">
+        <p>
+          <zdanie nr="1" gd:zdGUID="38ee768b-8ccd-44d7-9e27-ad08ff7ebba2" fragment="1" gd:fragmentGUID="8d64dcb6-0dcb-4e41-aacf-33d2aed15d9e" okres="okr_obowiazywanie.zdarz_wejscie_2025-12-04_DU-2025-1686_domyslne.x" wejscie-w-zycie="2025-12-04">Rozporządzenie wchodzi w życie z dniem następującym po dniu ogłoszenia.</zdanie>
+        </p>
+      </ustep-n>
+    </paragraf>
+    <organ-podpisujacy>Minister Zdrowia: wz. <i><osoba podpisujacy="true" gd:osobaGUID="a199d287-2ce6-4ab1-9a80-3901e6b91072"><imie>T.</imie> <nazwisko>Maciejewski</nazwisko></osoba></i></organ-podpisujacy>
+  </rozporzadzenie>
+</akt-prawny>

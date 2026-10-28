@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <ustawa>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2024/1961</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>76436d29-95df-4118-ab90-e428fb220824</gd:GUIDwersji>
+      <AdresISAP>WDU20240001961</AdresISAP>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2024</Rok>
+      <Pozycja>1961</Pozycja>
+      <AdresWyswietlany>Dz.U. 2024 poz. 1961</AdresWyswietlany>
+      <Tytul>Ustawa z dnia 5 grudnia 2024 r. o zmianie ustawy o rehabilitacji zawodowej i społecznej oraz zatrudnianiu osób niepełnosprawnych</Tytul>
+      <Rodzaj>USTAWA</Rodzaj>
+      <DataOgloszenia>2024-12-30</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2024-12-05</DataWydania>
+      </DataAktu>
+      <DaneCzasowe>
+        <CyklZyciaAktu>
+          <Zdarzenie id="zdarz_moc-wsteczna_2024-07-01_DU-2024-1961_odczytane" rodzaj="stosowanie-z-moca-wsteczna" pochodzenie="odczytane" data="2024-07-01" podstawa="art. 3" zrodlo="https://eli.gov.pl/eli/DU/2024/1961" dowod="DU/2024/1961__art_3" />
+          <Zdarzenie id="zdarz_wejscie_2024-12-31_DU-2024-1961_domyslne" rodzaj="wejscie-w-zycie" pochodzenie="domyslne-z-aktu" data="2024-12-31" warunek="z dniem następującym po dniu ogłoszenia" podstawa="art. 3" zrodlo="https://eli.gov.pl/eli/DU/2024/1961" dowod="DU/2024/1961__art_3" />
+          <Zdarzenie id="zdarz_wejscie_2025-01-01_DU-2024-1961_odczytane" rodzaj="wejscie-w-zycie" pochodzenie="odczytane" data="2025-01-01" podstawa="art. 3" zrodlo="https://eli.gov.pl/eli/DU/2024/1961" dowod="DU/2024/1961__art_3">
+            <JednostkaAktu eId="DU/2024/1961__art_1__pkt_2" />
+          </Zdarzenie>
+        </CyklZyciaAktu>
+        <GrupaCzasowa id="okr_moc-wsteczna.zdarz_moc-wsteczna_2024-07-01_DU-2024-1961_odczytane.obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1961_domyslne.x" glowna="true">
+          <Przedzial rodzaj="stosowanie-z-moca-wsteczna" od="zdarz_moc-wsteczna_2024-07-01_DU-2024-1961_odczytane" do="zdarz_wejscie_2024-12-31_DU-2024-1961_domyslne" />
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2024-12-31_DU-2024-1961_domyslne" />
+        </GrupaCzasowa>
+        <GrupaCzasowa id="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1961_odczytane.x" glowna="false">
+          <Przedzial rodzaj="obowiazywanie" od="zdarz_wejscie_2025-01-01_DU-2024-1961_odczytane" />
+        </GrupaCzasowa>
+      </DaneCzasowe>
+      <Organy>
+        <Organ gd:GUID="ddd0de61-374e-47a7-a6e5-d21e0ebbeb49" rola="wydajacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Sejm">
+          <Nazwa>SEJM</Nazwa>
+        </Organ>
+        <Organ gd:GUID="0388ef88-52d9-4e3b-9f42-c5f81c152f8b" rola="podpisujacy" eliURI="https://eli.gov.pl/resource/authority/legal-institution/Prezydent">
+          <Nazwa>Prezydent Rzeczypospolitej Polskiej</Nazwa>
+          <OrganPodpisujacy>Prezydent Rzeczypospolitej Polskiej</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>A.</imie> <nazwisko>Duda</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Ustawa</rodzaj-aktu>
+    <data>z dnia 5 grudnia 2024 r.</data>
+    <tytul>o zmianie ustawy o rehabilitacji zawodowej i społecznej oraz zatrudnianiu osób niepełnosprawnych</tytul>
+    <artykul eId="DU/2024/1961__art_1" gd:GUID="6d32d914-6cfc-41bf-a40c-b705f5698b5a" okres="okr_moc-wsteczna.zdarz_moc-wsteczna_2024-07-01_DU-2024-1961_odczytane.obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1961_domyslne.x" wejscie-w-zycie="2024-07-01">
+      <nr>1</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="1e3008b5-4d94-457a-a6f7-09e96794e312" okres="okr_moc-wsteczna.zdarz_moc-wsteczna_2024-07-01_DU-2024-1961_odczytane.obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1961_domyslne.x" wejscie-w-zycie="2024-07-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="7386163f-ff1c-481b-bdd6-c86669e8d7f8" fragment="1" gd:fragmentGUID="4910d371-49a0-4ba5-b0ec-e8a760595da1" okres="okr_moc-wsteczna.zdarz_moc-wsteczna_2024-07-01_DU-2024-1961_odczytane.obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1961_domyslne.x" wejscie-w-zycie="2024-07-01">W ustawie z dnia 27 sierpnia 1997 r. o rehabilitacji zawodowej i społecznej oraz zatrudnianiu osób niepełnosprawnych (Dz. U. z 2024 r. poz. 44, 858, 1089, 1165 i 1494) wprowadza się następujące zmiany:</zdanie>
+        </p>
+        <punkt eId="DU/2024/1961__art_1__pkt_1" gd:GUID="32f2ffff-cb49-4d70-8261-b51ca13bced0" okres="okr_moc-wsteczna.zdarz_moc-wsteczna_2024-07-01_DU-2024-1961_odczytane.obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1961_domyslne.x" wejscie-w-zycie="2024-07-01">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="7386163f-ff1c-481b-bdd6-c86669e8d7f8" fragment="2" gd:fragmentGUID="3f2c10ff-d0a7-41e2-8ef4-6b613142ce72" okres="okr_moc-wsteczna.zdarz_moc-wsteczna_2024-07-01_DU-2024-1961_odczytane.obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1961_domyslne.x" wejscie-w-zycie="2024-07-01">w art. 26a:</zdanie>
+          </p>
+          <litera eId="DU/2024/1961__art_1__pkt_1__lit_a" gd:GUID="8b86f749-f70d-4f79-af9d-c913251efc9c" okres="okr_moc-wsteczna.zdarz_moc-wsteczna_2024-07-01_DU-2024-1961_odczytane.obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1961_domyslne.x" wejscie-w-zycie="2024-07-01">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="7386163f-ff1c-481b-bdd6-c86669e8d7f8" fragment="3" gd:fragmentGUID="d76d16cc-2475-4a42-be11-18589e9b8fc7" okres="okr_moc-wsteczna.zdarz_moc-wsteczna_2024-07-01_DU-2024-1961_odczytane.obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1961_domyslne.x" wejscie-w-zycie="2024-07-01">ust. 1 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/44" cudzyslowy="oba" gd:nowGUID="c8efaa92-d61f-4c70-aa2a-cf046733fec1" element-eId="DU/2024/44__art_26a__ust_1" funkcja="zastap"><ustep eId="DU/2024/44__art_26a__ust_1" gd:GUID="58d64ca9-cd11-4038-8a4c-f09cab0b8d4c" okres="okr_moc-wsteczna.zdarz_moc-wsteczna_2024-07-01_DU-2024-1961_odczytane.obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1961_domyslne.x" wejscie-w-zycie="2024-07-01"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="90e30927-b491-4f1a-8da9-1204087f778e" fragment="1" gd:fragmentGUID="35213cca-30b0-476c-ab30-abc55105bcfb" okres="okr_moc-wsteczna.zdarz_moc-wsteczna_2024-07-01_DU-2024-1961_odczytane.obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1961_domyslne.x" wejscie-w-zycie="2024-07-01">Pracodawcy przysługuje ze środków Funduszu miesięczne dofinansowanie do wynagrodzenia pracownika niepełnosprawnego, o ile pracownik ten został ujęty w ewidencji zatrudnionych osób niepełnosprawnych, o której mowa w art. 26b ust. 1.</zdanie><zdanie nr="2" gd:zdGUID="dab3f2c3-8c95-4868-a917-ace683598edd" fragment="1" gd:fragmentGUID="e7910daf-db47-4e04-a21c-005d05342e6e" okres="okr_moc-wsteczna.zdarz_moc-wsteczna_2024-07-01_DU-2024-1961_odczytane.obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1961_domyslne.x" wejscie-w-zycie="2024-07-01">Miesięczne dofinansowanie do wynagrodzenia pracownika niepełnosprawnego, zwane dalej „miesięcznym dofinansowaniem”, przysługuje w kwocie:</zdanie></p><punkt eId="DU/2024/44__art_26a__ust_1__pkt_1" gd:GUID="3ab8ed12-fd2f-48ac-841b-916af82d4d70" okres="okr_moc-wsteczna.zdarz_moc-wsteczna_2024-07-01_DU-2024-1961_odczytane.obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1961_domyslne.x" wejscie-w-zycie="2024-07-01"><nr>1</nr><p><zdanie nr="2" gd:zdGUID="dab3f2c3-8c95-4868-a917-ace683598edd" fragment="2" gd:fragmentGUID="7ac833f1-3fac-439c-99ac-7002ef727d1a" okres="okr_moc-wsteczna.zdarz_moc-wsteczna_2024-07-01_DU-2024-1961_odczytane.obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1961_domyslne.x" wejscie-w-zycie="2024-07-01">2760 zł – w przypadku osób niepełnosprawnych zaliczonych do znacznego stopnia niepełnosprawności;</zdanie></p></punkt><punkt eId="DU/2024/44__art_26a__ust_1__pkt_2" gd:GUID="2d31c590-84b3-4765-ba4c-a4cd792599c3" okres="okr_moc-wsteczna.zdarz_moc-wsteczna_2024-07-01_DU-2024-1961_odczytane.obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1961_domyslne.x" wejscie-w-zycie="2024-07-01"><nr>2</nr><p><zdanie nr="2" gd:zdGUID="dab3f2c3-8c95-4868-a917-ace683598edd" fragment="3" gd:fragmentGUID="c529cc5e-3843-4d09-9362-4c664ed807b5" okres="okr_moc-wsteczna.zdarz_moc-wsteczna_2024-07-01_DU-2024-1961_odczytane.obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1961_domyslne.x" wejscie-w-zycie="2024-07-01">1550 zł – w przypadku osób niepełnosprawnych zaliczonych do umiarkowanego stopnia niepełnosprawności;</zdanie></p></punkt><punkt eId="DU/2024/44__art_26a__ust_1__pkt_3" gd:GUID="db66ab62-7767-44e0-af0c-9513aa17fe16" okres="okr_moc-wsteczna.zdarz_moc-wsteczna_2024-07-01_DU-2024-1961_odczytane.obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1961_domyslne.x" wejscie-w-zycie="2024-07-01"><nr>3</nr><p><zdanie nr="2" gd:zdGUID="dab3f2c3-8c95-4868-a917-ace683598edd" fragment="4" gd:fragmentGUID="84642e5b-142e-4e72-9b75-641ec2040dca" okres="okr_moc-wsteczna.zdarz_moc-wsteczna_2024-07-01_DU-2024-1961_odczytane.obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1961_domyslne.x" wejscie-w-zycie="2024-07-01">575 zł – w przypadku osób niepełnosprawnych zaliczonych do lekkiego stopnia niepełnosprawności.</zdanie></p></punkt></ustep></cytat-strukt>,</zdanie>
+            </p>
+          </litera>
+          <litera eId="DU/2024/1961__art_1__pkt_1__lit_b" gd:GUID="ad62f5c6-8b3f-45c0-ada3-addd9328ab7f" okres="okr_moc-wsteczna.zdarz_moc-wsteczna_2024-07-01_DU-2024-1961_odczytane.obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1961_domyslne.x" wejscie-w-zycie="2024-07-01">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" gd:zdGUID="7386163f-ff1c-481b-bdd6-c86669e8d7f8" fragment="4" gd:fragmentGUID="1da70eb3-d733-4dc6-b94b-5e565b337fe1" okres="okr_moc-wsteczna.zdarz_moc-wsteczna_2024-07-01_DU-2024-1961_odczytane.obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1961_domyslne.x" wejscie-w-zycie="2024-07-01">ust. 1b otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/44" cudzyslowy="oba" gd:nowGUID="c1b1dc16-4333-4c72-91be-7d832fff58bc" element-eId="DU/2024/44__art_26a__ust_1b" funkcja="zastap"><ustep eId="DU/2024/44__art_26a__ust_1b" gd:GUID="e4be2968-2c13-403c-8c92-b9864e2825e8" okres="okr_moc-wsteczna.zdarz_moc-wsteczna_2024-07-01_DU-2024-1961_odczytane.obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1961_domyslne.x" wejscie-w-zycie="2024-07-01"><nr>1b</nr><p><zdanie nr="1" gd:zdGUID="e5c774aa-c471-479c-aa22-c595cf728789" fragment="1" gd:fragmentGUID="f73e2bf5-e291-4fb5-ab51-016c77884d59" okres="okr_moc-wsteczna.zdarz_moc-wsteczna_2024-07-01_DU-2024-1961_odczytane.obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1961_domyslne.x" wejscie-w-zycie="2024-07-01">Kwoty, o których mowa w ust. 1, w odniesieniu do osób niepełnosprawnych, którym orzeczono chorobę psychiczną, upośledzenie umysłowe, całościowe zaburzenia rozwojowe lub epilepsję oraz niewidomych, zwiększa się o:</zdanie></p><punkt eId="DU/2024/44__art_26a__ust_1b__pkt_1" gd:GUID="e67a96d2-8f05-447c-9e68-fb432155282a" okres="okr_moc-wsteczna.zdarz_moc-wsteczna_2024-07-01_DU-2024-1961_odczytane.obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1961_domyslne.x" wejscie-w-zycie="2024-07-01"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="e5c774aa-c471-479c-aa22-c595cf728789" fragment="2" gd:fragmentGUID="45d75ba1-35ee-4152-84b3-2e6294c56d52" okres="okr_moc-wsteczna.zdarz_moc-wsteczna_2024-07-01_DU-2024-1961_odczytane.obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1961_domyslne.x" wejscie-w-zycie="2024-07-01">1380 zł w przypadku osób niepełnosprawnych zaliczonych do znacznego stopnia niepełnosprawności;</zdanie></p></punkt><punkt eId="DU/2024/44__art_26a__ust_1b__pkt_2" gd:GUID="def8765c-5fa7-43cc-a913-4ab6ae67e7bc" okres="okr_moc-wsteczna.zdarz_moc-wsteczna_2024-07-01_DU-2024-1961_odczytane.obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1961_domyslne.x" wejscie-w-zycie="2024-07-01"><nr>2</nr><p><zdanie nr="1" gd:zdGUID="e5c774aa-c471-479c-aa22-c595cf728789" fragment="3" gd:fragmentGUID="c47ce1cd-52f3-456b-a76f-5dfa442f6e59" okres="okr_moc-wsteczna.zdarz_moc-wsteczna_2024-07-01_DU-2024-1961_odczytane.obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1961_domyslne.x" wejscie-w-zycie="2024-07-01">1035 zł w przypadku osób niepełnosprawnych zaliczonych do umiarkowanego stopnia niepełnosprawności;</zdanie></p></punkt><punkt eId="DU/2024/44__art_26a__ust_1b__pkt_3" gd:GUID="ba1cecaa-829b-4c64-8c68-0c88567f7766" okres="okr_moc-wsteczna.zdarz_moc-wsteczna_2024-07-01_DU-2024-1961_odczytane.obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1961_domyslne.x" wejscie-w-zycie="2024-07-01"><nr>3</nr><p><zdanie nr="1" gd:zdGUID="e5c774aa-c471-479c-aa22-c595cf728789" fragment="4" gd:fragmentGUID="0ee6e4fb-0025-4cc6-a051-321fd0149351" okres="okr_moc-wsteczna.zdarz_moc-wsteczna_2024-07-01_DU-2024-1961_odczytane.obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1961_domyslne.x" wejscie-w-zycie="2024-07-01">690 zł w przypadku osób niepełnosprawnych zaliczonych do lekkiego stopnia niepełnosprawności.</zdanie></p></punkt></ustep></cytat-strukt>;</zdanie>
+            </p>
+          </litera>
+        </punkt>
+        <punkt eId="DU/2024/1961__art_1__pkt_2" gd:GUID="a532c1b8-5511-4201-9deb-951e6e465432" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1961_odczytane.x" wejscie-w-zycie="2025-01-01">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" gd:zdGUID="7386163f-ff1c-481b-bdd6-c86669e8d7f8" fragment="5" gd:fragmentGUID="08571492-64ff-4e88-bc07-702c06339d0c" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1961_odczytane.x" wejscie-w-zycie="2025-01-01">w art. 46a w ust. 1 pkt 1 otrzymuje brzmienie:<cytat-strukt now:akt="https://eli.gov.pl/eli/DU/2024/44" cudzyslowy="oba" gd:nowGUID="fcc91860-dd49-4276-947c-8b7ae2030066" element-eId="DU/2024/44__art_46a__ust_1__pkt_1" funkcja="zastap"><punkt eId="DU/2024/44__art_46a__ust_1__pkt_1" gd:GUID="f5624331-fd7f-4a1e-b548-bf8c658d054f" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1961_odczytane.x" wejscie-w-zycie="2025-01-01"><nr>1</nr><p><zdanie nr="1" gd:zdGUID="09344c68-a47d-47e3-b93d-69c06b75d6cd" fragment="1" gd:fragmentGUID="be552824-0a4f-4724-af71-d72ae505b251" okres="okr_obowiazywanie.zdarz_wejscie_2025-01-01_DU-2024-1961_odczytane.x" wejscie-w-zycie="2025-01-01">na zadanie, o którym mowa w art. 26a – w wysokości do 30 % środków zaplanowanych na realizację tego zadania na dany rok;</zdanie></p></punkt></cytat-strukt>.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </artykul>
+    <artykul eId="DU/2024/1961__art_2" gd:GUID="2cd7417d-cb64-412b-92d0-3eeb734e9696" okres="okr_moc-wsteczna.zdarz_moc-wsteczna_2024-07-01_DU-2024-1961_odczytane.obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1961_domyslne.x" wejscie-w-zycie="2024-07-01">
+      <nr>2</nr>
+      <ustep eId="DU/2024/1961__art_2__ust_1" gd:GUID="e47dc47b-ea7d-4df3-8e7f-717ed0f63916" okres="okr_moc-wsteczna.zdarz_moc-wsteczna_2024-07-01_DU-2024-1961_odczytane.obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1961_domyslne.x" wejscie-w-zycie="2024-07-01">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="3c96bc9f-0a3d-433c-aa6f-5687834b1e68" fragment="1" gd:fragmentGUID="6944689d-9fc9-4116-b987-a60a4c5e40df" okres="okr_moc-wsteczna.zdarz_moc-wsteczna_2024-07-01_DU-2024-1961_odczytane.obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1961_domyslne.x" wejscie-w-zycie="2024-07-01">Kwotę miesięcznego dofinansowania do wynagrodzenia pracownika niepełnosprawnego, o której mowa w art. 26a ust. 1 i 1b ustawy zmienianej w art. 1, w brzmieniu nadanym niniejszą ustawą, stosuje się po raz pierwszy do wynagrodzenia pracownika niepełnosprawnego za okres od miesiąca lipca 2024 r.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2024/1961__art_2__ust_2" gd:GUID="19883d92-4e18-443c-bbb0-3915ecb0338d" okres="okr_moc-wsteczna.zdarz_moc-wsteczna_2024-07-01_DU-2024-1961_odczytane.obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1961_domyslne.x" wejscie-w-zycie="2024-07-01">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="527e3cc3-e1cd-4ec6-b2c2-9440b0d402e0" fragment="1" gd:fragmentGUID="a67e39b4-6e13-4c8a-927f-bb3538f0a5c6" okres="okr_moc-wsteczna.zdarz_moc-wsteczna_2024-07-01_DU-2024-1961_odczytane.obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1961_domyslne.x" wejscie-w-zycie="2024-07-01">Pracodawca, który otrzymał dofinansowanie do wynagrodzenia pracownika niepełnosprawnego, przysługujące za miesiące od lipca 2024 r., w kwocie określonej w art. 26a ust. 1 i 1b ustawy zmienianej w art. 1, w brzmieniu dotychczasowym, może złożyć do Państwowego Funduszu Rehabilitacji Osób Niepełnosprawnych korektę wniosku o wypłatę miesięcznego dofinansowania za dany miesiąc oraz korektę miesięcznej informacji o wynagrodzeniach, zatrudnieniu, stopniach i rodzaju niepełnosprawności pracowników niepełnosprawnych, o których mowa w art. 26c ust. 1 ustawy zmienianej w art. 1, uwzględniając, za analogiczne okresy, kwoty dofinansowania, o których mowa w art. 26a ust. 1 i 1b ustawy zmienianej w art. 1, w brzmieniu nadanym niniejszą ustawą.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="DU/2024/1961__art_2__ust_3" gd:GUID="0b98c025-e26a-42e6-8a7a-9c26bca487a1" okres="okr_moc-wsteczna.zdarz_moc-wsteczna_2024-07-01_DU-2024-1961_odczytane.obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1961_domyslne.x" wejscie-w-zycie="2024-07-01">
+        <nr>3</nr>
+        <p>
+          <zdanie nr="1" gd:zdGUID="88a97da4-3b20-4a74-a3c9-d16f734e38a6" fragment="1" gd:fragmentGUID="e9d4dddf-5b91-4ddb-9cf2-53f9873013f5" okres="okr_moc-wsteczna.zdarz_moc-wsteczna_2024-07-01_DU-2024-1961_odczytane.obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1961_domyslne.x" wejscie-w-zycie="2024-07-01">Wnioski o wypłatę miesięcznego dofinansowania do wynagrodzenia pracownika niepełnosprawnego oraz miesięczne informacje o wynagrodzeniach, zatrudnieniu, stopniach i rodzaju niepełnosprawności pracowników niepełnosprawnych, o których mowa w art. 26c ust. 1 ustawy zmienianej w art. 1, uwzględniające kwoty, o których mowa w art. 26a ust. 1 i 1b ustawy zmienianej w art. 1, w brzmieniu nadanym niniejszą ustawą oraz korekty wniosków oraz informacji, o których mowa w ust. 2, mogą zostać złożone od dnia 1 stycznia 2025 r.</zdanie>
+        </p>
+      </ustep>
+    </artykul>
+    <artykul eId="DU/2024/1961__art_3" gd:GUID="8ebb808a-dcc2-4214-a11e-046e5fb81fd6" okres="okr_moc-wsteczna.zdarz_moc-wsteczna_2024-07-01_DU-2024-1961_odczytane.obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1961_domyslne.x" wejscie-w-zycie="2024-07-01">
+      <nr>3</nr>
+      <ustep-n brak-eid="jednostka-nieoznaczona" gd:GUID="bff710aa-f533-43ed-854b-5b5d35cd60e1" okres="okr_moc-wsteczna.zdarz_moc-wsteczna_2024-07-01_DU-2024-1961_odczytane.obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1961_domyslne.x" wejscie-w-zycie="2024-07-01">
+        <p>
+          <zdanie nr="1" gd:zdGUID="666ed9e8-f76a-4802-b76b-fb1d308e57a5" fragment="1" gd:fragmentGUID="16560fcd-bbb8-4ad9-80d7-245fe2d80e8a" okres="okr_moc-wsteczna.zdarz_moc-wsteczna_2024-07-01_DU-2024-1961_odczytane.obowiazywanie.zdarz_wejscie_2024-12-31_DU-2024-1961_domyslne.x" wejscie-w-zycie="2024-07-01">Ustawa wchodzi w życie z dniem następującym po dniu ogłoszenia, z mocą od dnia 1 lipca 2024 r., z wyjątkiem art. 1 pkt 2, który wchodzi w życie z dniem 1 stycznia 2025 r.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <organ-podpisujacy>Prezydent Rzeczypospolitej Polskiej: <i><osoba podpisujacy="true" gd:osobaGUID="9a344669-9104-4f97-bdf2-7b7cffbb9058"><imie>A.</imie> <nazwisko>Duda</nazwisko></osoba></i></organ-podpisujacy>
+  </ustawa>
+</akt-prawny>

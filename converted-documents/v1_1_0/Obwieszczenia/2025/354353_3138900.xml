@@ -1,0 +1,3350 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0" xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns:gd="https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0" xmlns:tpg="https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0" xmlns:kmn="https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0">
+  <obwieszczenie>
+    <metadane>
+      <ELIaktu>
+        <ELI>MP/2025/1286</ELI>
+      </ELIaktu>
+      <gd:GUIDwersji>770193dd-65ed-4341-9432-9468e824bfb1</gd:GUIDwersji>
+      <AdresISAP>WMP20250001286</AdresISAP>
+      <Wydawnictwo>MP</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>1286</Pozycja>
+      <AdresWyswietlany>M.P. 2025 poz. 1286</AdresWyswietlany>
+      <Tytul>Obwieszczenie Prezesa Głównego Urzędu Statystycznego z dnia 17 grudnia 2025 r. w sprawie przeciętnej stopy bezrobocia w kraju oraz na obszarze powiatów</Tytul>
+      <Rodzaj>OBW</Rodzaj>
+      <DataOgloszenia>2025-12-23</DataOgloszenia>
+      <DataAktu>
+        <DataWydania>2025-12-17</DataWydania>
+      </DataAktu>
+      <Organy>
+        <Organ gd:GUID="d72cc845-b28b-4190-bf55-cf227dcffd1a" rola="wydajacy">
+          <Nazwa>Prezes Głównego Urzędu Statystycznego</Nazwa>
+          <OrganPodpisujacy>Prezes Głównego Urzędu Statystycznego</OrganPodpisujacy>
+          <OsobaPodpisujaca>
+            <imie>M.</imie> <nazwisko>Cierpiał-Wolan</nazwisko></OsobaPodpisujaca>
+        </Organ>
+      </Organy>
+    </metadane>
+    <rodzaj-aktu>Obwieszczenie</rodzaj-aktu>
+    <autor-aktu>Prezesa Głównego Urzędu Statystycznego</autor-aktu>
+    <data>z dnia 17 grudnia 2025 r.</data>
+    <tytul>w sprawie przeciętnej stopy bezrobocia w kraju oraz na obszarze powiatów</tytul>
+    <podstawa-prawna>Na podstawie art. 255 ustawy z dnia 20 marca 2025 r. o rynku pracy i służbach zatrudnienia (Dz. U. poz. 620, 1746 i 1794) ogłasza się, że przeciętna stopa bezrobocia w kraju, według stanu na dzień 30 czerwca 2025 r., wyniosła 5,1 %. Przeciętną stopę bezrobocia na obszarze powiatów, według stanu na dzień 30 czerwca 2025 r., ujęto w tabeli, która stanowi załącznik do obwieszczenia.</podstawa-prawna>
+    <organ-podpisujacy>Prezes Głównego Urzędu Statystycznego: <i><osoba podpisujacy="true" gd:osobaGUID="142636f0-a8f6-496b-a1ba-4aa911c8d286"><imie>M.</imie> <nazwisko>Cierpiał-Wolan</nazwisko></osoba></i></organ-podpisujacy>
+    <zalacznik eId="MP/2025/1286__zal_1" gd:GUID="f59ee0b5-2992-444a-b5c1-31576b73dcc1">
+      <zalacznik-do gd:GUID="a9118c20-c57b-42ae-9415-a51db5006578">Załącznik do obwieszczenia Prezesa Głównego Urzędu Statystycznego z dnia 17 grudnia 2025 r. (M.P. poz. 1286)</zalacznik-do>
+      <tytul-zalacznika gd:GUID="aeb68371-f796-4bf3-b15f-88d1cc2ba5a7">PRZECIĘTNA STOPA BEZROBOCIA NA OBSZARZE POWIATÓW WEDŁUG STANU NA DZIEŃ 30 CZERWCA 2025 R.</tytul-zalacznika>
+      <segment-zalacznika gd:GUID="fba2662e-08ea-4ba8-876b-a3ff04878fe9" orientacja="pionowa">
+        <tabela gd:GUID="2a4c2a36-f552-419a-af6e-9a1f1b91a370">
+          <tbody>
+            <tr naglowek="tak" gd:GUID="f214790c-c2e6-432f-82f8-b9b4271c50ea">
+              <td gd:GUID="d6131607-c91b-4547-b9ed-57ac2ab27b8b">
+                <tytul-kolumny gd:GUID="84344a2a-c4b3-4df7-9857-c5750807b422">Obszar powiatu</tytul-kolumny>
+              </td>
+              <td gd:GUID="6eacf380-535f-496a-a83b-9e6f42f8f5d8">
+                <tytul-kolumny gd:GUID="bd02e132-6f0c-43e2-be35-8a014551b5f2">Stopa bezrobocia w %</tytul-kolumny>
+              </td>
+            </tr>
+            <tr gd:GUID="f5859c6f-d72e-42a1-9dab-6655372e7f88">
+              <td gd:GUID="90e12dd5-fa58-412f-bfa3-ea29b098aecc">
+                <tekst-zwykly gd:GUID="7c4a8a9f-aa9c-4fcf-b6b8-0be850d16887">DOLNOŚLĄSKIE</tekst-zwykly>
+              </td>
+              <td gd:GUID="8a91e602-2c49-4455-ad59-731a34f315b2">
+                <tekst-zwykly gd:GUID="acd43bd5-db8e-4937-8d3c-2ee93917851c">‒</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="5f7180c1-e780-4fc9-8680-1816959d05cf">
+              <td gd:GUID="f8533b4f-d633-424a-86fd-8a98615bb9f7">
+                <tekst-zwykly gd:GUID="ec3e532d-6446-466f-86e5-5b9b90b27f7f">Bolesławiecki</tekst-zwykly>
+              </td>
+              <td gd:GUID="cd29bc37-6aa6-4b02-9f6a-7adb229481e2">
+                <liczba gd:GUID="ee18ece0-ecea-40d0-b3dc-a14dd73325c2">3,4</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="a62f7bda-5a16-4a42-8123-d4969747f7ec">
+              <td gd:GUID="f9511bc1-042b-4a83-afda-4ef3b905dd23">
+                <tekst-zwykly gd:GUID="abe47159-2906-45a4-8c1a-f6845f6bc0f1">Dzierżoniowski</tekst-zwykly>
+              </td>
+              <td gd:GUID="c23d9143-d730-4780-9c4e-0604bfb05b5d">
+                <liczba gd:GUID="c4bafe18-aed1-4788-8cf8-fd6f6ca56856">6,7</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="f9c8d2f6-7a55-47f2-9243-4a4f449063dc">
+              <td gd:GUID="bc410d1a-2342-444c-89ae-87c9b7dbd2cc">
+                <tekst-zwykly gd:GUID="95637309-74a7-4960-a060-730cbcf687f4">Głogowski</tekst-zwykly>
+              </td>
+              <td gd:GUID="fd4dec10-d5a8-435e-81e7-5cee4adc800b">
+                <liczba gd:GUID="79d2c871-0a4c-47a6-ad1e-76209dd6d618">6,7</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="50c8a8d2-7be8-497d-856c-d0cc3056527a">
+              <td gd:GUID="7bcf8a99-08c8-4f57-8df5-3e147e874496">
+                <tekst-zwykly gd:GUID="90b9413c-bee6-40a9-bb57-06d7759412b4">Górowski</tekst-zwykly>
+              </td>
+              <td gd:GUID="109793e9-d763-45fb-9252-f20617440466">
+                <liczba gd:GUID="7ead53fd-7737-404d-81c4-66c5f7b00cbf">14,1</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="b6074ba3-4810-4f07-9543-1e0b0aee0ee3">
+              <td gd:GUID="e107642f-ca25-45b5-af03-37cf0a029edb">
+                <tekst-zwykly gd:GUID="2d992d38-ffec-4c3a-8ddd-0613b7fedcc7">Jaworski</tekst-zwykly>
+              </td>
+              <td gd:GUID="cff8ec0a-2fb9-40d5-86bc-4bddbd4c0e82">
+                <liczba gd:GUID="138c1f1b-c955-43bc-a43f-0f3950ad3320">10,2</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="df0f54d3-1381-428c-8600-9dbeb8a8ecfa">
+              <td gd:GUID="78a155a5-8874-4592-be56-3d179dfc1c95">
+                <tekst-zwykly gd:GUID="75f9483e-4be6-4fc8-a238-018ba838f9dc">Karkonoski</tekst-zwykly>
+              </td>
+              <td gd:GUID="798513d4-88c7-42b3-a8d3-6dbbbbdd96f4">
+                <liczba gd:GUID="e4d15fb8-5b18-4637-9dfb-6861e600223b">8,4</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="46e9e475-1daa-4d73-8a2b-a6e809231f38">
+              <td gd:GUID="43b9052c-da86-4b06-a22e-bc1cd344c4af">
+                <tekst-zwykly gd:GUID="2735c873-ce66-41f8-82da-20ca7467f74b">Kamiennogórski</tekst-zwykly>
+              </td>
+              <td gd:GUID="83159cab-466c-46ab-a5dc-674566c178d4">
+                <liczba gd:GUID="86998d7c-a3d4-4048-9fd6-f2b6adff6d63">7,3</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="a5e4cbfa-721c-4bc0-abdf-ea28a8583ed9">
+              <td gd:GUID="5c1ebbe6-190a-43ff-bada-ff5d82b7937e">
+                <tekst-zwykly gd:GUID="9f4a1995-4c91-4458-88c0-097bdaf91e41">Kłodzki</tekst-zwykly>
+              </td>
+              <td gd:GUID="eedf8bd8-4b94-4662-ad12-56ded46c0efa">
+                <liczba gd:GUID="f3282abf-6b85-4868-9a7d-0f8909698a62">12,8</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="3cc073d8-88c9-462f-8c54-5f375c714100">
+              <td gd:GUID="7b2a6944-a8ef-4e1e-8759-e3ff34275c24">
+                <tekst-zwykly gd:GUID="55448626-ed37-4cf7-b2b6-5b288865fb43">Legnicki</tekst-zwykly>
+              </td>
+              <td gd:GUID="42b42058-d6a8-43e4-94cc-2d149f18d521">
+                <liczba gd:GUID="39d6fb32-3f73-4045-83a8-024f18fc169d">7,3</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="1ca05422-6324-4e87-afa8-fc3d6415a2da">
+              <td gd:GUID="7a758fe7-3788-4999-9700-67d566f3a4fe">
+                <tekst-zwykly gd:GUID="992f6027-b168-4c9e-8fa9-0c92cc4e7c45">Lubański</tekst-zwykly>
+              </td>
+              <td gd:GUID="6b6496e9-c594-4e7c-9f12-aae9a2ff080c">
+                <liczba gd:GUID="32f4010e-3444-41e1-9cd4-6638d260fa05">7,0</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="e85efedf-5ad1-443e-82af-c02bbb9a7dfd">
+              <td gd:GUID="af50fd45-da0c-4441-a7bc-49f45e54a275">
+                <tekst-zwykly gd:GUID="057ac420-19d6-409a-8100-f7f051bcce5b">Lubiński</tekst-zwykly>
+              </td>
+              <td gd:GUID="67e3a012-6e85-4292-900b-2420e23ec0c0">
+                <liczba gd:GUID="cd86d6cd-8784-40d2-a359-483b718bbe9d">4,4</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="d353cf41-6a0d-4aa3-acbd-ffa89a1dfcb6">
+              <td gd:GUID="6713be11-c04a-435a-a80a-9a509ad8afb2">
+                <tekst-zwykly gd:GUID="bd899971-6bbb-4aad-9f5b-2d26a4727b94">Lwówecki</tekst-zwykly>
+              </td>
+              <td gd:GUID="f35efd5f-5842-4195-a7b4-f19507a39485">
+                <liczba gd:GUID="463afcb6-d290-441e-8b4e-99283ae0126d">9,1</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="8989b0ef-1f3c-48d2-95a5-b681af3fdc65">
+              <td gd:GUID="623a2064-d2d1-465b-a540-d315f5d6abf3">
+                <tekst-zwykly gd:GUID="96c9ddd0-9a4e-40bd-acb5-598db0f18abb">Milicki</tekst-zwykly>
+              </td>
+              <td gd:GUID="e3d7dc0f-4661-404f-be03-9660d97d48dd">
+                <liczba gd:GUID="f233d1e3-d3ff-4e0e-9506-3f3e5d912efc">6,5</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="2427ccea-ab47-413b-8927-a4322877489f">
+              <td gd:GUID="3f14e933-9cbe-4881-95aa-63b4ea965abb">
+                <tekst-zwykly gd:GUID="4ad9cc08-4673-4add-8daf-edf203a41e84">Oleśnicki</tekst-zwykly>
+              </td>
+              <td gd:GUID="686f72c8-a48e-475e-91cf-a9e1f40a77bc">
+                <liczba gd:GUID="02a25780-d920-4bfe-9511-d83368aa4d25">6,2</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="47c93451-0be8-4752-9d0f-3ab1b83f1a0e">
+              <td gd:GUID="01501c89-ea63-48b1-b553-ef5c967bec81">
+                <tekst-zwykly gd:GUID="3ac5ad3a-8c51-4798-a83a-81e1a04b48ba">Oławski</tekst-zwykly>
+              </td>
+              <td gd:GUID="68c967fa-d215-47c8-bd97-cd877f6c0469">
+                <liczba gd:GUID="6e0711a7-2070-450f-ac73-5da49e5f14a7">4,6</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="071630a0-a593-4744-adde-3835891251c9">
+              <td gd:GUID="1d51f0fb-5432-43c3-a30a-363a375dfd75">
+                <tekst-zwykly gd:GUID="bab7e479-1b27-4b2d-9a73-e83dd2ccc7f4">Polkowicki</tekst-zwykly>
+              </td>
+              <td gd:GUID="931f03ac-ae1c-4540-b6fc-aeebfef4c26a">
+                <liczba gd:GUID="3d4aac9a-722e-4503-bfb1-ebd64732c6ca">4,0</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="b893ef31-544b-4451-a0b9-31729097df39">
+              <td gd:GUID="2459cf0b-994f-45c0-8c10-c46d1ae72b4a">
+                <tekst-zwykly gd:GUID="ae4bd650-f5fc-4ce1-9cc8-6d5153a636d3">Strzeliński</tekst-zwykly>
+              </td>
+              <td gd:GUID="8d98f523-bd56-46cd-bdd1-22369c3e8d6b">
+                <liczba gd:GUID="500aa446-55d2-4ce1-812f-5f1d443884f1">11,0</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="ba308ea9-51c2-498f-9323-26ebed04bc46">
+              <td gd:GUID="dbb95910-9036-46ac-b92b-82cd41256140">
+                <tekst-zwykly gd:GUID="5172232d-e69d-4ded-a542-df563ee32d4c">Średzki</tekst-zwykly>
+              </td>
+              <td gd:GUID="a19ac9c6-69f4-49f2-9381-b357d4108380">
+                <liczba gd:GUID="7e8e83fc-b289-4581-aa8f-2b92275827f0">5,3</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="f4bed275-8a27-4cea-b4d5-e7b86ad6c4f2">
+              <td gd:GUID="9b91658e-4f71-4d82-96bf-b26e32cc53fe">
+                <tekst-zwykly gd:GUID="b75dbcdf-c4a7-4642-8d63-7eb36b672762">Świdnicki</tekst-zwykly>
+              </td>
+              <td gd:GUID="7ef74de5-e54f-4f1e-aeb4-b9fa4b728f52">
+                <liczba gd:GUID="4313bb3b-e522-4582-b22e-795d75f01900">6,6</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="5fd92a9b-5078-46ce-a29c-8892bb0a87d3">
+              <td gd:GUID="b6313a93-ed88-41b2-9234-fd056a5774f4">
+                <tekst-zwykly gd:GUID="bb8bfdaf-26f1-4ae2-8a0c-da709727bfbd">Trzebnicki</tekst-zwykly>
+              </td>
+              <td gd:GUID="67106fa4-cd46-40ba-8b3a-93091ab17e93">
+                <liczba gd:GUID="6b3087d8-4720-492c-9211-092f12ab1a2c">5,4</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="4316179b-51df-481d-956f-93d8174e8ca7">
+              <td gd:GUID="69104fdb-d943-470e-a383-198882e53da7">
+                <tekst-zwykly gd:GUID="1890bcf1-9c82-4379-8c52-58504c946bf0">Wałbrzyski</tekst-zwykly>
+              </td>
+              <td gd:GUID="bdeaf971-6468-48d8-8f08-d3c6d1555f33">
+                <liczba gd:GUID="4397c6c9-9498-40c3-bf70-63e20aa8e035">10,5</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="df04185b-3d69-4082-b141-09dad6afc6f1">
+              <td gd:GUID="c97a8dbc-8336-45af-82c0-b3a1d7cd17cb">
+                <tekst-zwykly gd:GUID="bb1988d0-5349-409d-a8f0-132d089ca3b6">Wołowski</tekst-zwykly>
+              </td>
+              <td gd:GUID="f27c3c75-59ef-4c31-94ba-208d5e0c578a">
+                <liczba gd:GUID="ca406cda-369b-41b8-a561-54b832e41f7c">10,2</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="9b1d8845-02a7-46e6-9c7f-0f4e48c6b438">
+              <td gd:GUID="02e7b3c8-3ff8-49bb-8a2c-14f913220f3b">
+                <tekst-zwykly gd:GUID="f6e5a2de-ae6c-4a1b-a62e-2f7f6b517d29">Wrocławski</tekst-zwykly>
+              </td>
+              <td gd:GUID="49aad9e8-6a92-48fb-8aeb-ee40c1dec45e">
+                <liczba gd:GUID="acc7907d-099e-4d34-a4e7-a459f3c7344f">1,8</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="2825b6b9-8e05-4326-bc46-8307c2461719">
+              <td gd:GUID="46d95035-08a9-49d2-bd57-e5755a688146">
+                <tekst-zwykly gd:GUID="e65f62a6-ea82-4df8-a5c4-fcde254ccdc8">Ząbkowicki</tekst-zwykly>
+              </td>
+              <td gd:GUID="f854aa6c-81a6-4d18-8e0f-80a6e13908f7">
+                <liczba gd:GUID="ef16681f-66bb-455b-8238-4da404d18f98">10,2</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="d57a0de6-6d8e-4b89-9953-35b3b7230fb3">
+              <td gd:GUID="dfa3a73b-31f8-460c-b885-f199478577d7">
+                <tekst-zwykly gd:GUID="bdda9d67-107b-4142-963c-e6f86584d081">Zgorzelecki</tekst-zwykly>
+              </td>
+              <td gd:GUID="32c523e4-8122-4949-be78-ff8a2671c8ed">
+                <liczba gd:GUID="fdd1ca54-d9b5-4eaa-86ac-b6073f1a59a1">5,1</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="0f33cfcd-8366-4328-8d3a-3ab30b0e6735">
+              <td gd:GUID="f1da08f0-2802-4976-9ae0-c38a029df1e9">
+                <tekst-zwykly gd:GUID="878d5dd7-8897-47e2-a953-99fba4bb1519">Złotoryjski</tekst-zwykly>
+              </td>
+              <td gd:GUID="25e710a0-5fbe-44c6-9ab4-48b870db6727">
+                <liczba gd:GUID="0fe33c98-5e17-437e-90f4-3e0db389e17d">13,6</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="bfa08eb9-4e28-4180-8b26-7834885aa09a">
+              <td gd:GUID="1046a59b-aab2-46b0-bd55-23e1783caa1f">
+                <tekst-zwykly gd:GUID="78336627-e59e-4110-8f91-7e94932ceb11">Miasta na prawach powiatu:</tekst-zwykly>
+              </td>
+              <td gd:GUID="ff85e770-d44a-4f2c-b075-e0e03ece8663">
+                <tekst-zwykly gd:GUID="c71c9db7-625f-4279-9792-0b0f585c638a">‒</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="a48b4d14-6a87-4e3d-ba82-f04d79c140a5">
+              <td gd:GUID="489546a0-6c92-4086-ac24-255be9f39bc6">
+                <tekst-zwykly gd:GUID="2370a983-7284-4d1d-8152-c96fe8e8cf96">Jelenia Góra</tekst-zwykly>
+              </td>
+              <td gd:GUID="3ad19997-3c0e-40fe-8c29-66654b0189d2">
+                <liczba gd:GUID="52ff331e-36b2-42b5-8171-f5fc7a1001d4">4,3</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="c26df88e-b927-4517-8828-2debbfbed6ca">
+              <td gd:GUID="b39f68fa-4d82-4db4-b998-c8cf5a1df824">
+                <tekst-zwykly gd:GUID="57e24abe-8f08-4f66-9aee-2b828e6c8cb6">Legnica</tekst-zwykly>
+              </td>
+              <td gd:GUID="5aeb866c-def0-42e7-a753-4fdff8a6b2f6">
+                <liczba gd:GUID="1c42200b-4118-4063-b497-29faab1da12f">4,8</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="793fca4c-bcf9-4e8f-a756-4b62ac5b7ce9">
+              <td gd:GUID="b421ce9d-e98b-4012-ae52-292809d50818">
+                <tekst-zwykly gd:GUID="fb2a57b6-99fc-4e71-8742-034cc5fd12fe">Wrocław</tekst-zwykly>
+              </td>
+              <td gd:GUID="c99005a7-0bcc-4d03-b11f-bcb3045a4140">
+                <liczba gd:GUID="8d237837-e2db-4228-b350-b3eb84f94f25">1,9</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="5edb1918-092e-42c2-8844-68a7c82ec145">
+              <td gd:GUID="9951472f-0139-4183-879f-edc8c4b084e2">
+                <tekst-zwykly gd:GUID="caf589a5-bfa0-4df0-bcc7-23f500e9673c">Wałbrzych</tekst-zwykly>
+              </td>
+              <td gd:GUID="467871fa-6a9e-4408-b31d-c9eaaba01bbd">
+                <liczba gd:GUID="2c2d9fa8-6ca2-4f1e-ac45-1e2c34682488">5,3</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="d7738ec4-1732-4606-8cdf-dddf36442a25">
+              <td gd:GUID="bcf6b40c-7d76-4208-af4b-bdb9e5b7ec79">
+                <tekst-zwykly gd:GUID="51f5d2e5-8c66-491d-8e85-548146cd8a4f">KUJAWSKO-POMORSKIE</tekst-zwykly>
+              </td>
+              <td gd:GUID="b9dec793-96b7-4b09-851a-44af43417d9d">
+                <tekst-zwykly gd:GUID="d899eb8d-3de1-400b-9f26-2095fb3b41ff">‒</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="08d95b0e-881d-4e30-9bdf-69443b84d7d6">
+              <td gd:GUID="dfa0500e-7d5e-4f09-b49c-bc74ad443dfe">
+                <tekst-zwykly gd:GUID="ebc0ba19-3256-4e7a-889a-f123f6ac01ce">Aleksandrowski</tekst-zwykly>
+              </td>
+              <td gd:GUID="fe8aef4d-198e-486f-a8da-6828d0ae259d">
+                <liczba gd:GUID="a447347b-6929-4800-afff-fb7278ae93d7">10,0</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="57f6f052-9239-44a4-b269-4e5616234210">
+              <td gd:GUID="efee1c67-b1ca-4021-a911-85abc0ffffc6">
+                <tekst-zwykly gd:GUID="db91145b-637a-4581-8e0e-969aa2bc50ed">Brodnicki</tekst-zwykly>
+              </td>
+              <td gd:GUID="8ad22f9d-8514-4302-bea0-2d1242f75b7c">
+                <liczba gd:GUID="9b3b55f2-7487-4a45-8234-b7e4cfe4b5b7">6,6</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="053e30f2-1370-47b8-9636-712c6da674a1">
+              <td gd:GUID="735913bf-6647-4ffc-86db-d6eb67154c62">
+                <tekst-zwykly gd:GUID="2efc04be-0315-46ce-b869-0a19919560d1">Bydgoski</tekst-zwykly>
+              </td>
+              <td gd:GUID="09a1bbf9-9923-477c-b2ac-16a5d700a3d6">
+                <liczba gd:GUID="a6cdda5d-cc00-4f0c-9c8e-f1f343149c5f">3,6</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="16ea806c-8b50-410f-b8e3-0440aeee9ee9">
+              <td gd:GUID="55f881cc-b92c-41f6-a55b-e1d349b96694">
+                <tekst-zwykly gd:GUID="ed53fb22-48b0-4ece-b611-a2436a3c6e7d">Chełmiński</tekst-zwykly>
+              </td>
+              <td gd:GUID="5d6184a4-4302-4fa6-9fcb-37b1762ce49e">
+                <liczba gd:GUID="a7ff3f95-c145-4875-84e4-7d6a1497cd17">12,1</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="6531564b-58cc-4d7c-8a47-48f9d90826b4">
+              <td gd:GUID="f47890c7-95d0-406a-b4da-6200a6115f32">
+                <tekst-zwykly gd:GUID="5e082f5a-0bf6-423f-a3f1-fd6938d85582">Golubsko-dobrzyński</tekst-zwykly>
+              </td>
+              <td gd:GUID="3521c00c-000d-4ac7-9b41-bdad28164e0b">
+                <liczba gd:GUID="f0e64195-fc09-46b3-9576-725c0f0ccced">10,3</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="174086dd-dfe2-41f1-bcb1-81a2b2f7b876">
+              <td gd:GUID="a8ac08d0-a2d5-4e81-bcbd-ef297da33efc">
+                <tekst-zwykly gd:GUID="79f75aff-5ab9-4efb-95f4-c04d0d404fae">Grudziądzki</tekst-zwykly>
+              </td>
+              <td gd:GUID="c043a242-898a-497b-adf5-c3031f2acded">
+                <liczba gd:GUID="3c6b98d5-24ef-43cc-b5cf-5c7266d73a93">11,0</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="55e1801d-8123-4ddb-aada-4a10fe2051e9">
+              <td gd:GUID="5473d296-f85f-47e8-8bcb-7ce0b88e61cb">
+                <tekst-zwykly gd:GUID="aebc1de5-933d-43bf-a188-3a1ba53159bf">Inowrocławski</tekst-zwykly>
+              </td>
+              <td gd:GUID="1ab08bef-818c-4d3f-8383-cb5766a796f9">
+                <liczba gd:GUID="563e7105-da92-4569-936b-598ff405c9df">10,6</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="2c6a3745-6646-48a5-9428-e020f2039716">
+              <td gd:GUID="615865ba-8dd2-4e1f-a1eb-b788e93c421e">
+                <tekst-zwykly gd:GUID="320e02f2-4b36-443c-af0c-641db6475025">Lipnowski</tekst-zwykly>
+              </td>
+              <td gd:GUID="86b95fc7-befb-4bf1-852f-1c4ee4fe681f">
+                <liczba gd:GUID="ae50c06c-df44-4162-a5c5-cb9d348ba1c7">13,1</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="5caf2ef9-14c6-47ce-a33d-b2689b355aac">
+              <td gd:GUID="1d057c7e-4ecf-456a-9d34-f99cf07391a0">
+                <tekst-zwykly gd:GUID="20338269-9b81-430d-8f60-2028d325ecb4">Mogileński</tekst-zwykly>
+              </td>
+              <td gd:GUID="3af6639a-b3cb-4878-8754-b8e5a8987924">
+                <liczba gd:GUID="94db62c7-8d28-4ca3-b116-cb01a1850307">9,7</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="b07559c9-3013-4021-b474-62ba1d4a7485">
+              <td gd:GUID="4745e270-1b19-43fe-94ef-58b983fc82ee">
+                <tekst-zwykly gd:GUID="5dc48787-9a4b-48c5-a78d-bee25a37fe58">Nakielski</tekst-zwykly>
+              </td>
+              <td gd:GUID="4c15faef-1b36-4153-bbf4-a1effc8ae60f">
+                <liczba gd:GUID="226c3603-8ea3-49b6-aec5-c23203588f6a">9,9</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="456dae5d-baa5-417c-b171-9c6b37297f93">
+              <td gd:GUID="cf87a28a-3e7f-4bf9-88e2-8aa188f6b8da">
+                <tekst-zwykly gd:GUID="fcbd3290-2848-4b61-81be-1b41b4d7240d">Radziejowski</tekst-zwykly>
+              </td>
+              <td gd:GUID="5a6e5081-c8b4-4a7b-afff-d71ab6e12946">
+                <liczba gd:GUID="dc87a8da-f8ec-41d9-88cc-afda0a7816e2">13,9</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="1150ed38-2914-4c0d-97d4-8d2c775e8440">
+              <td gd:GUID="38690060-fd93-4548-a09e-bfd8888997b2">
+                <tekst-zwykly gd:GUID="d895f779-7aca-4fdf-96c1-124b77dd3181">Rypiński</tekst-zwykly>
+              </td>
+              <td gd:GUID="74c42274-0318-4724-b9a7-4f02e70da1c8">
+                <liczba gd:GUID="35e2acbb-267a-4048-b6c6-f0d01cddb2aa">8,8</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="c89ac77b-91b3-4d27-bef8-cc6fa743ad32">
+              <td gd:GUID="e7176c85-bfc1-4e21-bcb8-23002a9862bf">
+                <tekst-zwykly gd:GUID="8851ae7b-28f4-46cb-ad56-0540afa583c8">Sępoleński</tekst-zwykly>
+              </td>
+              <td gd:GUID="3c648a26-2004-47cf-bad9-9ce61bc92325">
+                <liczba gd:GUID="71b59967-ee64-4186-938d-4af975f3c833">10,6</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="9d7397c6-f4da-496f-a646-0d34fe00bd98">
+              <td gd:GUID="9be96217-5b40-4e6b-8a32-3ae25fe3cbaf">
+                <tekst-zwykly gd:GUID="038049ae-3d30-4100-a337-431e6a5f56d0">Świecki</tekst-zwykly>
+              </td>
+              <td gd:GUID="a43f3530-da02-44b7-a2d8-14d99f75f3bb">
+                <liczba gd:GUID="59a322e6-b9da-4f40-af08-3755e80934cf">6,3</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="6a45ceee-ba71-42b5-9aed-e50d67e7a427">
+              <td gd:GUID="709193bf-ad02-416a-93d4-52c568128d00">
+                <tekst-zwykly gd:GUID="d90bac8e-ad78-4c0f-b3b1-5073c9d1f123">Toruński</tekst-zwykly>
+              </td>
+              <td gd:GUID="6aa28ce7-c7ce-4285-a9ab-bc5b4e321ffd">
+                <liczba gd:GUID="828dac27-63bc-4a36-af37-851a45fc0a61">8,3</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="027a45c4-8f4d-4f6f-962b-8da0513d0dd1">
+              <td gd:GUID="79a88019-e126-4667-afb9-3f334b9ecfed">
+                <tekst-zwykly gd:GUID="fa54cb85-13f8-4c38-916e-fb3c29ec248a">Tucholski</tekst-zwykly>
+              </td>
+              <td gd:GUID="3c05cd2b-1246-4494-8437-98d675b58553">
+                <liczba gd:GUID="e304c792-dd40-4837-8f24-fb7e87dc727d">10,5</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="f15b4882-dcf5-4caf-bd7b-e42e9ccc2a78">
+              <td gd:GUID="ec26213c-3052-4fd2-a541-6878eab9bfac">
+                <tekst-zwykly gd:GUID="f92120ef-9489-49ae-b212-2b9395e9e4ac">Wąbrzeski</tekst-zwykly>
+              </td>
+              <td gd:GUID="7fd02013-6896-4346-90ce-ecfb3aa0ca7c">
+                <liczba gd:GUID="671d42cd-80ae-460f-8739-16801a44cdca">10,7</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="f024e337-9f3e-4a2e-a61d-a8facba64b6f">
+              <td gd:GUID="e1e9e54d-7648-4b9b-9280-cee6984ed888">
+                <tekst-zwykly gd:GUID="486c54d6-e8b6-4059-a9bc-4f92cdc5e7d8">Włocławski</tekst-zwykly>
+              </td>
+              <td gd:GUID="6989e085-117a-4ed4-85a8-2602affe847e">
+                <liczba gd:GUID="8f126fd9-72d6-404f-9fc5-c66a821ba510">13,6</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="6cdeaa62-cc19-4d21-adc5-c204643a9870">
+              <td gd:GUID="c15b7cb9-840e-4b81-9728-2401f1d07eea">
+                <tekst-zwykly gd:GUID="5ff25ca2-ed20-4375-9a44-0fbd3dab2907">Żniński</tekst-zwykly>
+              </td>
+              <td gd:GUID="7649cecf-fca3-40aa-83b0-c180886d00c4">
+                <liczba gd:GUID="a2663d8b-1bad-4f96-bab0-ff8f66057f6c">9,0</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="c4d8d8b3-cf7c-44a0-b828-f227516bdefc">
+              <td gd:GUID="64428b06-6625-474e-aa4c-7d8644cd072c">
+                <tekst-zwykly gd:GUID="ce94b950-b92c-4c89-85c1-5fd7f64d9848">Miasta na prawach powiatu:</tekst-zwykly>
+              </td>
+              <td gd:GUID="b22f00b9-c3fc-4469-a49b-966522b5bea8">
+                <tekst-zwykly gd:GUID="5278b063-fe43-4b61-88de-670f2ae90823">‒</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="23754018-db15-44da-96df-e7b60c22041b">
+              <td gd:GUID="209e898f-27a1-4056-9dea-a11373174956">
+                <tekst-zwykly gd:GUID="dc57e9c8-e934-477d-a226-c755231963c7">Bydgoszcz</tekst-zwykly>
+              </td>
+              <td gd:GUID="505d3b91-5a20-4bc0-872d-22aa6d3ae314">
+                <liczba gd:GUID="a9c659c8-78e7-4956-a5d6-bcbd89ef6db5">2,7</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="5aa939ac-5939-4bc9-95f4-3a9846536288">
+              <td gd:GUID="6b23960b-30c2-4756-a496-44f23c18fb34">
+                <tekst-zwykly gd:GUID="116dac34-1da6-42f1-8903-26037485d712">Grudziądz</tekst-zwykly>
+              </td>
+              <td gd:GUID="c250630c-c641-49e9-965b-de1ea2dc97f0">
+                <liczba gd:GUID="55797123-433e-489d-88e3-cc853f62a242">9,7</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="1dac023f-9c4f-4114-be7a-ab7d3b51acea">
+              <td gd:GUID="0363d4bc-67c9-4316-a32e-bbd7edbf2c75">
+                <tekst-zwykly gd:GUID="27fe28bd-7465-4fcc-a4c3-5076a22aca5c">Toruń</tekst-zwykly>
+              </td>
+              <td gd:GUID="9683eead-99eb-4148-ae71-0c59819b72cb">
+                <liczba gd:GUID="e3d13de2-3ba3-4340-94c6-dcf67a78249a">3,3</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="878609be-0521-4814-8acf-4208891df260">
+              <td gd:GUID="5220cf65-940d-4461-b405-13e42054d23e">
+                <tekst-zwykly gd:GUID="8e919036-ce74-46b3-a16f-488da4571e33">Włocławek</tekst-zwykly>
+              </td>
+              <td gd:GUID="892aa021-ee2d-458b-bbd9-e14453becd8d">
+                <liczba gd:GUID="b56c6327-91d8-46ee-9107-5843f509faad">8,6</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="b5c446e5-34df-4198-b99a-971d043109ef">
+              <td gd:GUID="16635c61-36dc-4b7a-a329-e344fb87cbd2">
+                <tekst-zwykly gd:GUID="91185ea3-1270-4c76-a23b-09904a079877">LUBELSKIE</tekst-zwykly>
+              </td>
+              <td gd:GUID="98f8d746-3cd5-433e-85ee-e9b23cb5710c">
+                <tekst-zwykly gd:GUID="dfb236e1-a913-4418-94fb-039d9fe43c3e">‒</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="722e1c09-18a5-430e-91c4-9d59daa6062f">
+              <td gd:GUID="6d660c9d-ab2f-4efc-bb10-97874427b767">
+                <tekst-zwykly gd:GUID="cf017419-b32e-43f4-a0bb-a99362e9fd02">Bialski</tekst-zwykly>
+              </td>
+              <td gd:GUID="5a927862-bd19-4314-b73b-1d2e5b8e7998">
+                <liczba gd:GUID="1be93611-a451-4f53-94b1-40902bfec2ca">9,5</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="d95b39ea-724b-4fa2-adaf-c75ce6c46332">
+              <td gd:GUID="df15ea0c-c831-47b5-aac9-e6986c4f5a91">
+                <tekst-zwykly gd:GUID="8860dc16-8113-45df-ab24-0d175fe7a85a">Biłgorajski</tekst-zwykly>
+              </td>
+              <td gd:GUID="0cfe9e10-1d1e-4e3d-839a-0f79de825384">
+                <liczba gd:GUID="f52212e1-5a2f-473b-9bf0-c7cad41cda2b">6,0</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="733d8e26-b1ac-4bd5-8797-c68e8f52b7ed">
+              <td gd:GUID="a005e3fe-1dfb-44e3-8d68-f8a6f4ff6e37">
+                <tekst-zwykly gd:GUID="d01de01a-a0f9-4dc7-a7f7-11b5b4fbf9be">Chełmski</tekst-zwykly>
+              </td>
+              <td gd:GUID="4341c36b-881c-4694-99b8-54d6f0d2d665">
+                <liczba gd:GUID="479b59af-6332-4fea-be66-7b6d93fbaa1e">11,6</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="9c453833-00c5-45e6-9e8d-8471be3bfcb5">
+              <td gd:GUID="e4e39cf5-a98f-4b34-a6b2-f422a83bd1e3">
+                <tekst-zwykly gd:GUID="b862f9a3-0a95-4d88-806e-48eaf60459b9">Hrubieszowski</tekst-zwykly>
+              </td>
+              <td gd:GUID="a9d17b11-e317-45af-bfe4-9856fe93022e">
+                <liczba gd:GUID="1a52d6e6-84cf-4347-bb2e-2c208bcde57b">14,8</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="bc38c792-96f1-4678-bf7c-166875d4457c">
+              <td gd:GUID="92954b7b-5c04-4f0e-94b3-8099167a8298">
+                <tekst-zwykly gd:GUID="3a36510c-d2ae-4fc3-aac6-ad60355a19b2">Janowski</tekst-zwykly>
+              </td>
+              <td gd:GUID="8b18f439-b57b-4b03-8458-2eaf467a4ec7">
+                <liczba gd:GUID="28a3b975-6b17-4880-a320-1d601674cc47">11,1</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="bc205e03-f1ee-4ace-be20-698b239c6ca2">
+              <td gd:GUID="bd43f00f-7fbe-4b2c-867d-fcb46305c247">
+                <tekst-zwykly gd:GUID="813a0c5d-f012-43cf-87a1-0a36eaa92e99">Krasnostawski</tekst-zwykly>
+              </td>
+              <td gd:GUID="aab1366a-0134-4ac7-956f-ca48792897f3">
+                <liczba gd:GUID="ad61fba1-5e52-47e8-97e4-91d4b6394405">13,0</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="7b69bac2-8e19-4447-b852-22982f604967">
+              <td gd:GUID="cfaa5f77-784c-42b2-8e00-02e692f80cdd">
+                <tekst-zwykly gd:GUID="d9ad021e-74dc-4257-96e1-9ccc42426ad6">Kraśnicki</tekst-zwykly>
+              </td>
+              <td gd:GUID="30e76c91-7b2e-4632-89ec-0f0a7313c16f">
+                <liczba gd:GUID="03ae1d4d-1d8a-41e5-ab73-7a16b422d218">10,6</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="57f5600c-56b3-4e3c-9c5a-88576c4ec75d">
+              <td gd:GUID="45ed95cc-8d9d-4ae8-9265-b7918cafa118">
+                <tekst-zwykly gd:GUID="e965871d-bbd6-4316-b85b-8f58b1d8093a">Lubartowski</tekst-zwykly>
+              </td>
+              <td gd:GUID="ad6e880c-fa46-4daa-8ae7-77be23d6a248">
+                <liczba gd:GUID="0eb5fd14-3ea0-4225-8efc-a2ccaf4f0e8c">11,6</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="5f1c094c-f1ec-4a5b-bf3e-2d8f54cf8340">
+              <td gd:GUID="33704425-8b83-4c97-8d18-f3ada3bcca28">
+                <tekst-zwykly gd:GUID="bb848953-0bd2-4abd-8551-c80fd4aa60bb">Lubelski</tekst-zwykly>
+              </td>
+              <td gd:GUID="be5e4584-4ada-4ebf-8b55-0cbb5ae871bc">
+                <liczba gd:GUID="7afad0ce-58b6-431b-98f9-02ad2d212ce9">5,8</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="edcb7982-f617-455d-8758-cf41f077c6ca">
+              <td gd:GUID="aef7db8b-a92e-4e04-8194-2af357dff7d6">
+                <tekst-zwykly gd:GUID="e87bc048-fbeb-457b-9de0-45c3df3edbba">Łęczyński</tekst-zwykly>
+              </td>
+              <td gd:GUID="136979f2-c418-4fbc-8d21-5f5961f33b60">
+                <liczba gd:GUID="c854b6fb-d816-4a16-905a-f495ab1c99da">5,1</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="f1cff16e-f868-4a3b-a55e-efbc5e0bccb7">
+              <td gd:GUID="06f7e01c-a42b-4858-ba9b-2e9a589aa86d">
+                <tekst-zwykly gd:GUID="cc45f47c-5cda-4020-ad70-af428838e337">Łukowski</tekst-zwykly>
+              </td>
+              <td gd:GUID="a79d9967-884b-4801-865c-4d6c6bbe077f">
+                <liczba gd:GUID="eb300483-d6e6-475f-a4a5-3bfbe0d32e89">3,8</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="62509d60-3d88-49af-9dcb-d8fbe55a14ce">
+              <td gd:GUID="bd7ed5c1-e565-4bb7-b81f-e109b98d9de4">
+                <tekst-zwykly gd:GUID="b528e636-f0c7-4f7e-accb-b8dfa092f7fe">Opolski</tekst-zwykly>
+              </td>
+              <td gd:GUID="c64406c8-5c22-44bb-85a7-c1ad13fd9343">
+                <liczba gd:GUID="97c91e17-4d8e-44bb-b29e-603c2e0a637b">9,6</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="e9e62a16-c5c7-46b4-b9e6-7c1a9c1bdc61">
+              <td gd:GUID="c7031a8a-64ff-42a9-90b0-233fe96d8952">
+                <tekst-zwykly gd:GUID="0c597cd1-c5b1-4e4e-9131-4449319befa8">Parczewski</tekst-zwykly>
+              </td>
+              <td gd:GUID="5da050cf-66d5-4ccc-9c16-a4363c14d96b">
+                <liczba gd:GUID="bcb0d9a4-8b5b-4070-aadb-015f1ee3f423">8,0</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="39ba5086-365f-4e03-acb2-ae4d6a95d444">
+              <td gd:GUID="54ac0a68-e9a7-4145-8400-dab8b94d1c64">
+                <tekst-zwykly gd:GUID="1bc52d4c-e84e-4947-9dd4-08820a893c13">Puławski</tekst-zwykly>
+              </td>
+              <td gd:GUID="fb9e4685-c25b-4af2-8946-2ddb5a345151">
+                <liczba gd:GUID="1d27f48c-f206-48ee-98fb-391deb5b0dab">5,5</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="1aec4b3a-ef75-4a2f-aad9-a34bdda79fc2">
+              <td gd:GUID="e14bfa64-e03d-41a1-a01c-93e6215977cc">
+                <tekst-zwykly gd:GUID="dc563ba3-59df-4bad-91c7-fe5225495bea">Radzyński</tekst-zwykly>
+              </td>
+              <td gd:GUID="7ea3197f-3aed-451d-8eac-1cc727db378b">
+                <liczba gd:GUID="d3aa377f-34b7-4630-8dbb-c9108165c47a">7,1</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="4c3a2b5c-f6cd-4cbb-80b7-f9fa8981df83">
+              <td gd:GUID="4424a811-e843-4731-9326-55d99ff477b0">
+                <tekst-zwykly gd:GUID="58972c49-3191-45fa-8d78-115f99a8c3b8">Rycki</tekst-zwykly>
+              </td>
+              <td gd:GUID="f5dfa521-9aff-4163-868e-619bf366024a">
+                <liczba gd:GUID="635df54d-4c6a-4cea-8ee7-a938d9d38e25">6,7</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="72ad4c1d-a762-47c7-aea9-901eccc6e3c4">
+              <td gd:GUID="00299439-6d4e-4b66-baed-3482822d0c4e">
+                <tekst-zwykly gd:GUID="cbf3441c-d4e2-4729-9493-861c35c56624">Świdnicki</tekst-zwykly>
+              </td>
+              <td gd:GUID="b6933f75-af0d-4ffa-90e5-8eb76393b2b0">
+                <liczba gd:GUID="26bd33a0-3012-4afc-b4c2-d31d1acbf1e9">6,9</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="86b0af74-de4b-4003-8ec8-9afd11afd7d9">
+              <td gd:GUID="90df4a59-6c91-4e8b-8b22-4d9b11613fe3">
+                <tekst-zwykly gd:GUID="4d1cf05d-b6c1-46a1-ac66-f986f072be37">Tomaszowski</tekst-zwykly>
+              </td>
+              <td gd:GUID="12212d63-da28-4727-9953-13360d81a327">
+                <liczba gd:GUID="6a46534c-c6a8-492a-b613-ad89f780a845">8,3</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="3b59b7ff-7422-47d9-bfba-851aa8575172">
+              <td gd:GUID="ed3b6095-367f-459d-a4b3-dc7fad1198aa">
+                <tekst-zwykly gd:GUID="da1b377f-d3af-41ec-8c38-bb08f025c857">Włodawski</tekst-zwykly>
+              </td>
+              <td gd:GUID="3cab4394-b150-405d-8332-7ea56abcace8">
+                <liczba gd:GUID="c447ce01-542a-400c-ad4a-fbc98024885d">15,3</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="2eadcc1e-f888-4fc4-8ccb-ecfb2f8c7d57">
+              <td gd:GUID="4c076c53-e09b-41f4-b2a3-33fe4fc587d1">
+                <tekst-zwykly gd:GUID="5d9dd357-0eab-44a6-b874-ac0004110559">Zamojski</tekst-zwykly>
+              </td>
+              <td gd:GUID="2f101127-ad7b-4977-8f94-4634728ae81c">
+                <liczba gd:GUID="488583be-b05e-4976-b4e3-c6f210dbde97">10,3</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="e79d8b3d-1847-4e36-a527-81481861e5af">
+              <td gd:GUID="f3ec946f-fe56-44b4-90bd-31c089082b07">
+                <tekst-zwykly gd:GUID="ce5e885d-01fa-4c15-9755-35d20c1ec00d">Miasta na prawach powiatu:</tekst-zwykly>
+              </td>
+              <td gd:GUID="8a18119c-9993-4a69-93c2-94e0bf699550">
+                <tekst-zwykly gd:GUID="4e3cfbd1-7a99-4886-ba03-5d3f6b6ba3cc">‒</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="571c22d9-e880-4930-9445-a7325026ab28">
+              <td gd:GUID="f1cedab9-95e3-428e-9603-52fa5a2cbe16">
+                <tekst-zwykly gd:GUID="3c1f74e9-e036-4ae6-a862-7fe0cebbe4a5">Biała Podlaska</tekst-zwykly>
+              </td>
+              <td gd:GUID="914f2962-ffc5-41cf-ae24-a2a653e51b8b">
+                <liczba gd:GUID="e6857981-30d6-44e7-9d49-55a3dc05bb70">7,5</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="0fafad06-58b2-417c-be77-ab8dbde3d1b1">
+              <td gd:GUID="657533a1-c286-4a47-adfe-5983299824da">
+                <tekst-zwykly gd:GUID="1306178a-078d-4913-85e7-acc5f1c6bab8">Chełm</tekst-zwykly>
+              </td>
+              <td gd:GUID="d3b02bfb-a6cf-494d-a921-fb836c168e90">
+                <liczba gd:GUID="bc641000-13f9-459b-bbef-98a0ec8f8207">8,3</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="9ca262b1-61c8-419d-b001-a6ba4950ffeb">
+              <td gd:GUID="e41ab817-8425-4309-86b3-c8eed855259c">
+                <tekst-zwykly gd:GUID="2c9b33d8-9d60-4edb-be94-102de00bfefe">Lublin</tekst-zwykly>
+              </td>
+              <td gd:GUID="c66169ca-cde6-457f-9557-c043486e23a6">
+                <liczba gd:GUID="adedcccb-7f21-40b3-91ec-26b232dc9c87">4,2</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="fc438e72-9acd-4db7-9123-751f48864fd3">
+              <td gd:GUID="40f79dae-8886-42bb-ab96-acb02dc57dd6">
+                <tekst-zwykly gd:GUID="2c79388b-858b-46cc-80ae-07e303c8c36b">Zamość</tekst-zwykly>
+              </td>
+              <td gd:GUID="130b5248-b035-48c7-b91a-da928d821fe7">
+                <liczba gd:GUID="249dc7b4-49b3-4e42-b2fe-bb956ab94d84">7,9</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="24b42936-161d-48e8-9e2f-40e7175fcbc6">
+              <td gd:GUID="d34de508-62f8-4d76-9a69-db20b1bad6a8">
+                <tekst-zwykly gd:GUID="f56da147-bf44-4b97-bc7c-87e6609f39b7">LUBUSKIE</tekst-zwykly>
+              </td>
+              <td gd:GUID="4a9ae140-fc9e-4d41-9565-d9857cbfc341">
+                <tekst-zwykly gd:GUID="3e78f579-798b-4092-810b-a4e5b46d1bfa">‒</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="5a29a071-a964-4fa2-bb8c-35ad75ad27a0">
+              <td gd:GUID="c5bcdefc-7269-44c7-b032-c3abec109b86">
+                <tekst-zwykly gd:GUID="ad5b0d78-0870-4252-8009-a670ddf2b587">Gorzowski</tekst-zwykly>
+              </td>
+              <td gd:GUID="8a31102b-3a5d-4974-b16e-c4d9ba7141ba">
+                <liczba gd:GUID="d4f84b01-bc65-4de9-9416-3b287f6052db">3,7</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="a4793d40-a814-4f49-a584-fbfba4d70e7f">
+              <td gd:GUID="c8b8455b-20f3-42a9-8360-751518e46ffb">
+                <tekst-zwykly gd:GUID="d5cf274f-64e5-43aa-ac2c-f22adacd57f7">Krośnieński</tekst-zwykly>
+              </td>
+              <td gd:GUID="aa457a07-524b-419a-811c-38951330d034">
+                <liczba gd:GUID="30875e02-863a-46f7-9bde-f689bfa64443">6,4</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="c2d18dab-6fd9-4a45-8365-5c73d07500df">
+              <td gd:GUID="1bd8a43d-38d6-41fc-ab6f-0ef858b535e3">
+                <tekst-zwykly gd:GUID="250aa361-d432-4a2e-b96e-0e479ecc8515">Międzyrzecki</tekst-zwykly>
+              </td>
+              <td gd:GUID="b3909f9e-e1cf-4278-b344-4629e5ccc8e9">
+                <liczba gd:GUID="608ed062-133e-418d-a557-dfca8f4c550d">7,5</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="b2109900-2f86-40ee-ac93-f4343a19fcb7">
+              <td gd:GUID="e8fc733e-17a0-4c75-8472-3404c2c0c400">
+                <tekst-zwykly gd:GUID="6c8a6480-5f18-4b3c-8870-cdc9ea611804">Nowosolski</tekst-zwykly>
+              </td>
+              <td gd:GUID="f88bde1c-44dd-4cab-8337-3a704ce3cf2f">
+                <liczba gd:GUID="6b3bc830-74c3-4ce4-83ea-779163dac6bd">6,6</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="9f1e667b-642a-4be9-8435-ad38d213abbd">
+              <td gd:GUID="0b67b88e-d146-4fdd-a584-30f6452de71c">
+                <tekst-zwykly gd:GUID="86a312b1-15cd-4dc6-9199-4a2ce97e0041">Słubicki</tekst-zwykly>
+              </td>
+              <td gd:GUID="99f8453f-f3f2-4ea6-b282-82ed12178109">
+                <liczba gd:GUID="94b885d7-76ac-452c-aacc-06d20dc44a52">2,7</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="9ff9e39e-11ca-43e2-ab7e-27797b70b236">
+              <td gd:GUID="1cd831b4-b206-485f-a26c-3171fb61257d">
+                <tekst-zwykly gd:GUID="63b9c070-02ec-4a3e-bf31-4c34331b34f3">Strzelecko-drezdenecki</tekst-zwykly>
+              </td>
+              <td gd:GUID="fc72787c-c807-48bd-a728-2eb64bbe9a44">
+                <liczba gd:GUID="f2f0b8a9-4987-4322-8c43-cfef6b567bc2">9,5</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="704a6d5a-3fee-472b-8668-9bb29486ebfe">
+              <td gd:GUID="75123806-7045-43e6-9c1f-cff2d9a470d7">
+                <tekst-zwykly gd:GUID="d582e51c-9704-41bc-aa21-b256d2bbf403">Sulęciński</tekst-zwykly>
+              </td>
+              <td gd:GUID="fe9f0acf-2aec-45aa-be6f-7f6b8d486c61">
+                <liczba gd:GUID="eea34a72-88c1-459e-9439-8a1c69935bb7">4,8</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="30cd7da1-b746-4864-bca2-b5ecdaee3440">
+              <td gd:GUID="2df2263c-bbe8-47f9-8f59-8e5928fe42f8">
+                <tekst-zwykly gd:GUID="03a405ff-3fa6-4abb-9a48-496c697c6774">Świebodziński</tekst-zwykly>
+              </td>
+              <td gd:GUID="997e0efc-e68a-4a9e-890a-56ec12d279a4">
+                <liczba gd:GUID="bafe9f74-855c-4e71-8769-484cad04b0e8">2,6</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="a487581d-c441-4511-8ff2-e85992b6ba98">
+              <td gd:GUID="5b869376-d85b-430d-8c79-e7f0462a7f77">
+                <tekst-zwykly gd:GUID="8f377edb-1c52-42b0-b442-1dbfb1684a51">Wschowski</tekst-zwykly>
+              </td>
+              <td gd:GUID="3aa4a2d9-ab4c-4de3-8eee-940169a9edc3">
+                <liczba gd:GUID="8b9c5c27-589d-4541-96e5-7f1021fbd9ae">7,7</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="c6020dd0-0409-401b-9a62-ed76d6c96ead">
+              <td gd:GUID="362041c8-e50a-4b2f-b15d-0c69d9db4d2e">
+                <tekst-zwykly gd:GUID="eb174bda-38d0-4ad8-9c36-83e51ca5e3bc">Zielonogórski</tekst-zwykly>
+              </td>
+              <td gd:GUID="f165c9b8-e0ff-468b-98e7-195697be801d">
+                <liczba gd:GUID="9b926387-48ca-4bdb-bdf8-34fd32f28057">7,1</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="31160730-813c-402a-9ad8-d23894464793">
+              <td gd:GUID="64a880ac-be13-4a02-ae12-7554e15717ca">
+                <tekst-zwykly gd:GUID="cfd75e75-8627-4595-8cda-573c2cfef175">Żagański</tekst-zwykly>
+              </td>
+              <td gd:GUID="a23fb346-d197-4cda-bcfa-2e3cc5737ca7">
+                <liczba gd:GUID="a7b3e62a-84d5-4727-9946-1ade16316044">5,8</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="ee6f337b-2fde-49ec-97d3-efb69b8a2e05">
+              <td gd:GUID="802f1c7b-78f9-4a3d-8519-e9473fe2ec61">
+                <tekst-zwykly gd:GUID="cd1d44d3-d4c9-449b-b902-6559522669f6">Żarski</tekst-zwykly>
+              </td>
+              <td gd:GUID="3aa588d0-a4ed-4ae5-99d4-e628325bd93e">
+                <liczba gd:GUID="d6831330-b184-4a1d-bf1d-b3b0708d1b99">5,4</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="43517f60-c567-4063-b15b-0c24a15d3eb2">
+              <td gd:GUID="06df8285-eb24-4dd1-aed6-ebde2f68d381">
+                <tekst-zwykly gd:GUID="df6a38a3-f5eb-491e-a11f-01d9d1dbef95">Miasta na prawach powiatu:</tekst-zwykly>
+              </td>
+              <td gd:GUID="3d92154c-a8fe-4d84-aca4-58f5b8798f0b">
+                <tekst-zwykly gd:GUID="96c42038-a78f-405f-ba34-08205fc207e8">‒</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="69cc5174-7e63-4e43-add6-f1500f4a2365">
+              <td gd:GUID="9f5e0695-0320-4a72-9766-919ad9e734e1">
+                <tekst-zwykly gd:GUID="1243faf1-eda6-4e21-98b9-4ca4770c2aa5">Gorzów Wielkopolski</tekst-zwykly>
+              </td>
+              <td gd:GUID="73b71629-556a-4bff-8c10-2aaa009a4015">
+                <liczba gd:GUID="8bb852ad-9d09-4cef-8d37-f50e24404b00">3,1</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="7be90491-bcf1-4277-b9fc-b4e1d1d9a213">
+              <td gd:GUID="6aeb71e6-e775-431c-a5ac-94a64d983f23">
+                <tekst-zwykly gd:GUID="89a6fe6d-0848-4bda-836c-8105088b3e74">Zielona Góra</tekst-zwykly>
+              </td>
+              <td gd:GUID="e4271606-f673-4b5c-a902-5581c3598429">
+                <liczba gd:GUID="e7b8677b-2831-4609-b2fe-c136f9dce818">3,3</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="4639624c-eda5-4e6d-8d34-f08c8f4d92c9">
+              <td gd:GUID="0329d74f-7c3e-4304-a238-bfe9be88fdd8">
+                <tekst-zwykly gd:GUID="556446b8-941d-4b3c-88ab-2f6c2b28e4f3">ŁÓDZKIE</tekst-zwykly>
+              </td>
+              <td gd:GUID="f509985f-f954-4add-a3d2-26aabc9b1e67">
+                <tekst-zwykly gd:GUID="902a627b-2df6-4ff9-b26a-c29a90527d0e">‒</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="844b7f22-af78-4fa6-aa6b-bbf88223bc58">
+              <td gd:GUID="8ebe0b8e-986c-428e-a499-79fb7e1ce724">
+                <tekst-zwykly gd:GUID="ca45172b-85e5-4356-a268-41b0f06f90ca">Bełchatowski</tekst-zwykly>
+              </td>
+              <td gd:GUID="29646fcd-b7d3-40eb-bb6b-1d370a6781c2">
+                <liczba gd:GUID="19c33a1a-c170-49d1-bc2d-db9ad8da893c">4,8</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="edb7ddcc-6aee-49ad-977f-9f742288dc69">
+              <td gd:GUID="8fffd330-854d-4143-a827-551969b9fb2f">
+                <tekst-zwykly gd:GUID="bb73ff81-459d-4856-a991-27e0de3c2f50">Brzeziński</tekst-zwykly>
+              </td>
+              <td gd:GUID="62c2b4ae-9270-4031-87c3-23cb4bc8e58a">
+                <liczba gd:GUID="2da0efe7-2b1c-4146-bf18-613f089c4462">7,2</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="b335a47f-3881-494f-94eb-407f10b66ac6">
+              <td gd:GUID="b52d3c50-a53a-45ab-93c2-18956fdf2063">
+                <tekst-zwykly gd:GUID="1c589e5e-fe95-469d-b628-be4dcba01e2b">Kutnowski</tekst-zwykly>
+              </td>
+              <td gd:GUID="7ec1ed2f-f986-4580-8f27-e135c7dbfe0e">
+                <liczba gd:GUID="84837233-a082-4765-9686-1444f2064a6f">8,0</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="daffb05a-f629-4eac-9b45-9e0e0e8f0a29">
+              <td gd:GUID="779b85be-f146-4079-a83b-7871737a092b">
+                <tekst-zwykly gd:GUID="14f4b3ed-d0ca-413f-a3b1-a23d199daf2f">Łaski</tekst-zwykly>
+              </td>
+              <td gd:GUID="ba7bc420-c390-4fbc-bab4-c14aa08e89d9">
+                <liczba gd:GUID="7bc174a5-f285-4852-83b8-a45fa5f35ed4">8,1</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="8a4db9c6-ec18-4983-8db9-d41caa528b40">
+              <td gd:GUID="0aefc8ed-8104-43d4-80d5-9b491eaa19fa">
+                <tekst-zwykly gd:GUID="5756d0d0-26ce-4d0f-b890-97509dea9e2d">Łęczycki</tekst-zwykly>
+              </td>
+              <td gd:GUID="88cc3b87-f74e-4ea8-abcc-d840e11c58df">
+                <liczba gd:GUID="fcad617d-e3f7-4006-a74a-9357285c7191">5,3</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="24cc5f90-0bca-4da7-88f6-aabbf1373a0c">
+              <td gd:GUID="4bd631a9-5e30-4024-aeb2-ab1412c167ef">
+                <tekst-zwykly gd:GUID="c773ead7-1129-41eb-86d4-5c498fcfcd24">Łowicki</tekst-zwykly>
+              </td>
+              <td gd:GUID="5076d673-a117-478e-8f67-a1c5fcd160f0">
+                <liczba gd:GUID="2c926eba-414a-475b-a96c-899187a5c002">4,8</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="1d27bfad-ca50-487e-ad7b-f4f27f79f56b">
+              <td gd:GUID="dd4e9c7d-4000-48ec-b775-732057238743">
+                <tekst-zwykly gd:GUID="1928aed2-9b90-49ba-8fa5-863fc4b69c7c">Łódzki wschodni</tekst-zwykly>
+              </td>
+              <td gd:GUID="22285b3d-eee1-4b0b-a6d8-4efb67abb1bd">
+                <liczba gd:GUID="edb60696-f747-479c-a821-1816807c3800">5,6</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="bb7fb5d9-e3e8-49c6-9fb2-8fd96766f107">
+              <td gd:GUID="a3eeaa3b-3688-4a0f-8956-49b3079b7cc2">
+                <tekst-zwykly gd:GUID="5fb1f9c5-3cfc-4231-b2cf-1021ca730727">Opoczyński</tekst-zwykly>
+              </td>
+              <td gd:GUID="26e5f632-2a97-4ff6-a9c3-f2deb5c9e4eb">
+                <liczba gd:GUID="9f6e3264-6f12-4d4a-a946-639df54771fd">8,9</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="c167ac61-a66c-478d-8d4e-f242b54b24b5">
+              <td gd:GUID="4cf550d4-1c3e-431b-880a-30ee4bf9f6e4">
+                <tekst-zwykly gd:GUID="8fd8341a-7ef0-45f8-b654-f5c42fd8a8d3">Pabianicki</tekst-zwykly>
+              </td>
+              <td gd:GUID="fbc3641a-b3ad-4fb4-8a42-5b8ca8a3f3c4">
+                <liczba gd:GUID="29414dc8-5cac-4f95-b783-10bee7c56fec">6,1</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="73764edc-19c6-430b-a8f8-3898f85f0039">
+              <td gd:GUID="e309970d-d101-4a47-a3f2-b7af86dc8e00">
+                <tekst-zwykly gd:GUID="7310ea48-b033-44a6-9529-817edc926d3b">Pajęczański</tekst-zwykly>
+              </td>
+              <td gd:GUID="289df67e-6df7-4d49-9d6d-dde8a492a892">
+                <liczba gd:GUID="7fb9706c-842b-446c-950f-535196c9b63a">8,0</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="19c89374-07b6-4ae3-8f19-65868f4b9926">
+              <td gd:GUID="79c03625-b028-40a0-abaa-0f38d7a69207">
+                <tekst-zwykly gd:GUID="7d4c64b1-2a33-428b-9d02-0ff7131d63b5">Piotrkowski</tekst-zwykly>
+              </td>
+              <td gd:GUID="898f1a20-83ce-4475-8478-f25ccca04caa">
+                <liczba gd:GUID="0c558d87-c8b4-4e05-897f-4f44b5a1c4df">6,4</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="2104f8ab-aeeb-403e-9c5f-3eaa550bf99a">
+              <td gd:GUID="019479c4-147e-4790-9317-fbf2344d4753">
+                <tekst-zwykly gd:GUID="3cd3ce01-7fdf-47a5-b7ca-0dc2e4d0aba0">Poddębicki</tekst-zwykly>
+              </td>
+              <td gd:GUID="84381516-0fcb-4c07-9292-f8d21d98273a">
+                <liczba gd:GUID="99688278-eaab-4f3a-bd08-44d0547d2dbf">7,3</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="ead0f4f9-dc6a-428b-9281-55649baad5d3">
+              <td gd:GUID="dbaf119c-0255-4b28-817a-73a13af95ace">
+                <tekst-zwykly gd:GUID="56efbce0-6906-437d-b028-4122b8abd840">Radomszczański</tekst-zwykly>
+              </td>
+              <td gd:GUID="ca95a111-c50f-4711-b3f9-d205ebeb748f">
+                <liczba gd:GUID="7fe6b330-c973-46f2-93db-ae97382ec981">5,3</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="89154aa7-7caf-4df8-8612-80fd03b62e9d">
+              <td gd:GUID="3b712f53-98f3-4c02-8b81-c5b574b1ba5c">
+                <tekst-zwykly gd:GUID="483d329f-0f8e-4175-b2f5-0d653bfa0a86">Rawski</tekst-zwykly>
+              </td>
+              <td gd:GUID="12a59273-813c-407e-92b1-ef87950a8bdd">
+                <liczba gd:GUID="7528c54c-e311-4d21-a612-b37f097970bb">3,0</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="b53fd36e-51ac-4da2-8f89-f5dc2b20eec7">
+              <td gd:GUID="11caefd2-7979-4ac7-9401-9736a8a6f4dc">
+                <tekst-zwykly gd:GUID="748c3582-cd5d-4de5-88ca-3c521aab93cc">Sieradzki</tekst-zwykly>
+              </td>
+              <td gd:GUID="e3a5cc8d-1f3c-46af-b63c-662c30939c6c">
+                <liczba gd:GUID="74fea1ac-55f6-4f41-b51b-a57115c93417">5,2</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="833393c8-69d7-4409-ab10-a7fc83bb0e48">
+              <td gd:GUID="d23833fa-379c-4eb6-be65-932a72f27b22">
+                <tekst-zwykly gd:GUID="c9cfa40c-9b13-4ba1-9230-8ddf43445409">Skierniewicki</tekst-zwykly>
+              </td>
+              <td gd:GUID="65a6b7ee-73b0-4690-b217-8554585fcda1">
+                <liczba gd:GUID="54560be7-e7b4-4de9-a4ff-b8a34acfafd8">3,9</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="116efbea-2ad6-4b92-9db9-f7be47595159">
+              <td gd:GUID="52bb5f25-95e2-4d17-b43a-a70a765b45ff">
+                <tekst-zwykly gd:GUID="521b633d-ca4b-4829-a5c1-b7104e93cada">Tomaszowski</tekst-zwykly>
+              </td>
+              <td gd:GUID="c06a97fc-60c7-449d-91b8-b66d706c0b7c">
+                <liczba gd:GUID="a19f12b3-2a32-4095-ae93-82cccab9ddae">8,2</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="d7bef8ee-9124-4bba-84c5-060f4625b651">
+              <td gd:GUID="134fd989-440f-4d13-8d04-2aa20991eba6">
+                <tekst-zwykly gd:GUID="318a199d-d675-463e-a267-80a1bfcd388a">Wieluński</tekst-zwykly>
+              </td>
+              <td gd:GUID="a957f52c-f759-4c94-bb68-a6e43f654e44">
+                <liczba gd:GUID="c3d33978-9d00-4e8d-ae6c-b9e5012c3f47">5,9</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="12ef6534-991e-4455-a998-a08630d272f3">
+              <td gd:GUID="ab44acee-4648-461f-9cd2-f717e63f2a23">
+                <tekst-zwykly gd:GUID="82db94b7-0837-4d69-ba4e-338dc0862850">Wieruszowski</tekst-zwykly>
+              </td>
+              <td gd:GUID="171c131b-27bf-41e1-b3ff-88bbb3017268">
+                <liczba gd:GUID="1882a39d-d720-4136-9cd1-2906c1a37a92">4,4</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="bd2b75de-7ab2-4f56-a884-f58ca9147e6d">
+              <td gd:GUID="f209dc1e-f496-49f9-bcba-2fc3b1ba9e3c">
+                <tekst-zwykly gd:GUID="1ff78d20-de5f-4042-8aa4-0f5d8a16ba6e">Zduńskowolski</tekst-zwykly>
+              </td>
+              <td gd:GUID="6f46370f-f752-4d93-920e-aa414e3e0ba2">
+                <liczba gd:GUID="0c97befe-498b-4a20-a219-0393be61cd39">7,3</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="661ab4de-2513-49c0-986d-4a40d8ae0ac3">
+              <td gd:GUID="0fc1eee8-e08e-48bb-b0cd-68c74b3ec936">
+                <tekst-zwykly gd:GUID="6909f6bd-7d3e-4462-a5e1-abdfd18e0965">Zgierski</tekst-zwykly>
+              </td>
+              <td gd:GUID="87904d04-ffac-4e7d-b17f-06e5861d08ee">
+                <liczba gd:GUID="b7ce380a-956b-480a-9c64-7be3be168b0f">5,8</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="30efc33d-c8c2-4752-9a3b-22343f3b3c32">
+              <td gd:GUID="1d020cce-8467-45ad-af4a-af6f2df125a9">
+                <tekst-zwykly gd:GUID="fe863e4e-57f4-4d69-a22f-935a114dfcf4">Miasta na prawach powiatu:</tekst-zwykly>
+              </td>
+              <td gd:GUID="02478106-40fb-45a5-8b06-38b28939bae9">
+                <tekst-zwykly gd:GUID="60604b29-e428-4b9a-96b1-b87e0640288d">‒</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="4c6c9d38-6444-4fc3-b64d-5ad51236511e">
+              <td gd:GUID="96363a17-6c6f-4e33-8747-89cf9002e193">
+                <tekst-zwykly gd:GUID="2cb6541f-f724-47f1-9252-4461d2c66a94">Łódź</tekst-zwykly>
+              </td>
+              <td gd:GUID="5b707815-c0e3-4409-b1e7-c85146927eb6">
+                <liczba gd:GUID="19616f32-ef2a-4d60-a6bd-941168a4fbda">5,0</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="4e8bbbd9-2ee6-4bff-abbf-117ed830e51c">
+              <td gd:GUID="c2eed0e4-4ec8-4f42-9a26-6770e044a168">
+                <tekst-zwykly gd:GUID="06930c2f-3110-49fc-bf82-f7ce30736d14">Piotrków Trybunalski</tekst-zwykly>
+              </td>
+              <td gd:GUID="088eccac-aea4-433b-a056-f8e284602534">
+                <liczba gd:GUID="4283f29f-842e-48a9-b014-62447f1fe27a">5,8</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="f10b7da3-155a-4613-8b9b-87f4311ab69c">
+              <td gd:GUID="fdfa40d6-cfd5-42a6-91fd-a929460e2cfc">
+                <tekst-zwykly gd:GUID="ca742244-ca48-42ee-aa90-76ee8e38b79f">Skierniewice</tekst-zwykly>
+              </td>
+              <td gd:GUID="911923f9-9627-4daf-a328-bed5f59adf5f">
+                <liczba gd:GUID="b31143b9-f9ef-4f42-8099-2fc74562f7c4">4,3</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="9967760c-63a6-4ac7-a1d8-36c32ea88bee">
+              <td gd:GUID="f2cc7103-8c78-429b-a115-92d4f99fb9bc">
+                <tekst-zwykly gd:GUID="6329ba37-2f7e-4c5b-bd51-9ab713e1605e">MAŁOPOLSKIE</tekst-zwykly>
+              </td>
+              <td gd:GUID="9377ad25-c779-4f5c-865d-0a2311360a27">
+                <tekst-zwykly gd:GUID="277d36e2-4881-43d8-ba29-c3dd93f6e4e3">‒</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="add35de5-6b29-4b48-8cdc-bc8095ae60d7">
+              <td gd:GUID="5317c99e-96c9-4dea-adc6-06466b02b5c9">
+                <tekst-zwykly gd:GUID="84dad025-d13a-4cf7-a8fc-bc7cd47eef78">Bocheński</tekst-zwykly>
+              </td>
+              <td gd:GUID="2309bea0-87e5-444a-a3c4-5b075cbfadd4">
+                <liczba gd:GUID="01af63ca-b1c5-49ee-8eef-a1c6447f2654">2,6</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="6f983fb1-f472-43df-b38a-3a4d5ecacdd5">
+              <td gd:GUID="50007db5-e488-4139-845f-5fa7fda1b149">
+                <tekst-zwykly gd:GUID="1b3d8026-1a3b-44e2-8543-fdf6a6337267">Brzeski</tekst-zwykly>
+              </td>
+              <td gd:GUID="8ca5b508-d791-4e26-a14d-1d969b87da27">
+                <liczba gd:GUID="95d39692-d0b4-43ab-89b2-63112e6226e9">5,0</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="eeb80cc6-8712-457b-9b80-9dd23253881c">
+              <td gd:GUID="0397e60f-79be-461a-872c-00bec6805345">
+                <tekst-zwykly gd:GUID="a2cf0990-ccba-4a6f-8750-f622cefa4f2e">Chrzanowski</tekst-zwykly>
+              </td>
+              <td gd:GUID="9e64d0ea-b054-45a0-9cb5-57dd9c281737">
+                <liczba gd:GUID="264ced5f-121d-464c-92dc-055763bf00de">6,3</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="7b02fade-3683-473a-ae06-cc58d218c775">
+              <td gd:GUID="7fe2669c-7b38-44f3-a345-04cb61771531">
+                <tekst-zwykly gd:GUID="761a46d3-4f25-4f5a-b8fd-ee1373966181">Dąbrowski</tekst-zwykly>
+              </td>
+              <td gd:GUID="aee42bfc-2877-4549-9208-9e160bfa7dfc">
+                <liczba gd:GUID="fb78bd64-1661-4187-b7f8-5a20e7f438d1">10,8</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="782b80e8-ea46-4d06-93ed-d4938182c9d7">
+              <td gd:GUID="5359608e-56d0-49e3-8a65-f4727eff17cd">
+                <tekst-zwykly gd:GUID="cd5a512c-3778-4b18-8499-637d74d49403">Gorlicki</tekst-zwykly>
+              </td>
+              <td gd:GUID="e5bfacd7-c1df-486d-a900-db167c7c063f">
+                <liczba gd:GUID="9775d14f-ba43-4f87-a686-55b521bc0e7e">6,2</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="10b7dbe9-691d-403a-861b-e623212b84a5">
+              <td gd:GUID="f7c0e7cc-4734-4d33-b809-536ff4b61e27">
+                <tekst-zwykly gd:GUID="a1ca0cad-b4c1-4b2b-bf4d-30361642abba">Krakowski</tekst-zwykly>
+              </td>
+              <td gd:GUID="63b33abb-3fa6-4423-82ca-8a438173d885">
+                <liczba gd:GUID="35684693-8a8d-45e5-ad80-f76aafc4426e">4,1</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="6b179fc9-21f0-4e4b-83c0-19ff361a3066">
+              <td gd:GUID="477e6061-5fc2-4840-afc2-ae9cdd319372">
+                <tekst-zwykly gd:GUID="3dc0e67a-29a9-46c7-b59c-4b21398fbc20">Limanowski</tekst-zwykly>
+              </td>
+              <td gd:GUID="a40f953b-f29e-4c7b-b1c9-9d885edfee20">
+                <liczba gd:GUID="0ad074de-a5f5-4ab7-981f-4aaf2909bcd7">6,8</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="3865c8a9-74a9-4742-a103-d53fbba2f00c">
+              <td gd:GUID="0154d50c-42e3-4a36-aefc-4587ff542003">
+                <tekst-zwykly gd:GUID="725ef06c-bc9d-45b8-b9a1-998ee28dc33e">Miechowski</tekst-zwykly>
+              </td>
+              <td gd:GUID="1aed0ff8-7b90-4ff5-b89b-daa00228a636">
+                <liczba gd:GUID="93698df4-b17b-4e9d-a0cd-0f071378c5e7">5,4</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="a750d2f0-53dc-45e5-b6a9-741ac45f08ab">
+              <td gd:GUID="8c05d30f-1461-44bb-8e43-ddb392fcf541">
+                <tekst-zwykly gd:GUID="fa3feab9-6d62-4ef7-8bfd-e096127c090a">Myślenicki</tekst-zwykly>
+              </td>
+              <td gd:GUID="0e51658a-aa28-4b90-a4ee-09b93aac3f99">
+                <liczba gd:GUID="9edf9f3a-f7e7-43f5-877a-2aa680c0ff6a">3,4</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="407e25f1-3a5e-4f7b-bd0a-f97a42259e35">
+              <td gd:GUID="3e4fe3c1-932e-4904-8dd5-9ab38375acaa">
+                <tekst-zwykly gd:GUID="563a781a-3205-4e64-86e3-5210211bd772">Nowosądecki</tekst-zwykly>
+              </td>
+              <td gd:GUID="a58caeff-0da6-4faf-84e9-c271f2e0ed25">
+                <liczba gd:GUID="fd621162-52e6-4094-9cb6-6fa886f7afe7">7,5</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="56f4a46d-58fa-4d1e-a822-fe8a44e062b0">
+              <td gd:GUID="3e15ac2c-fb40-4bd4-8f18-b431aade1de1">
+                <tekst-zwykly gd:GUID="aa19e32e-56d4-4fba-8651-9be420c07b9b">Nowotarski</tekst-zwykly>
+              </td>
+              <td gd:GUID="183a54a5-b5c1-4534-a299-d751b3971b6f">
+                <liczba gd:GUID="85ac601d-8ded-432f-b1e7-e6bf334c0270">4,6</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="29d52fbe-d72c-489d-90fe-9c3c3d9b3113">
+              <td gd:GUID="f53ff6a6-15bc-4cb0-997f-94d36b2a7fb4">
+                <tekst-zwykly gd:GUID="c0146180-809c-4a9d-8898-62f24612443a">Olkuski</tekst-zwykly>
+              </td>
+              <td gd:GUID="16e6c844-4f0d-4b8f-a6c6-0f1e2f1d6107">
+                <liczba gd:GUID="1a1513e1-cadc-4979-b4de-36f1e01a9315">6,5</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="cdc628bb-eb3f-4f7a-a3be-e07050bc0655">
+              <td gd:GUID="0b4ac214-e589-447c-8a56-4b9aac9ec280">
+                <tekst-zwykly gd:GUID="e73af447-be2c-471d-ba36-dbd676dbf417">Oświęcimski</tekst-zwykly>
+              </td>
+              <td gd:GUID="fb2fc834-ca4e-415c-a4dc-8abc66b1c0b8">
+                <liczba gd:GUID="bf2bd2b5-9d09-4d4b-b3c1-d5d1401d6a46">4,8</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="fea0a0d8-f4f1-4c07-bf4e-77bd39ed2189">
+              <td gd:GUID="c9bd4f71-926a-4643-8abd-306c5a413664">
+                <tekst-zwykly gd:GUID="b2702404-bbab-41d7-9ad0-b21744aba223">Proszowicki</tekst-zwykly>
+              </td>
+              <td gd:GUID="5bac509e-6344-4cc3-89d4-f3723c7ab58e">
+                <liczba gd:GUID="aaf92bc5-978e-44c0-aeeb-dcf354099ec1">5,9</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="d2d943ba-2b0d-491c-b1cc-0f2fa1748619">
+              <td gd:GUID="94ec3aef-7516-4486-9275-d3d8ab044d4d">
+                <tekst-zwykly gd:GUID="1ff0bb65-bfbb-4443-89fa-478ccc87a10f">Suski</tekst-zwykly>
+              </td>
+              <td gd:GUID="532d23a3-7af2-45b5-9d08-289d8675528f">
+                <liczba gd:GUID="fd6d9990-8c81-4e79-9eca-2b63c1d370b2">4,2</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="fc6f3dab-c0b3-4946-b2d7-162d4cdf2642">
+              <td gd:GUID="6ddc4de3-4c6b-4821-b5da-f9e37c8b50df">
+                <tekst-zwykly gd:GUID="14e52639-edf1-426c-9d53-18293a43256e">Tarnowski</tekst-zwykly>
+              </td>
+              <td gd:GUID="7fa0f2e6-ece2-4e5f-904b-cc2283943331">
+                <liczba gd:GUID="9c609d54-2cb5-4696-ad8a-1e6ed195f19d">6,8</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="baaa1b4b-c461-416f-94f5-b9bdd4213563">
+              <td gd:GUID="d1ac8624-4759-4e36-9503-3d87e5adc50b">
+                <tekst-zwykly gd:GUID="0b8dbef3-6185-4115-81db-da01489e7445">Tatrzański</tekst-zwykly>
+              </td>
+              <td gd:GUID="a0f86250-eca4-4f46-8e53-1cd50a49fe6b">
+                <liczba gd:GUID="fa1f3217-761a-4283-8ddd-4c54444af185">8,5</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="a9323a3d-ba16-4516-a09f-0542cca41d39">
+              <td gd:GUID="98c2c695-7b69-40d8-b186-a6219fc48947">
+                <tekst-zwykly gd:GUID="c4ecb481-5a0b-4b18-9765-e9adad1050a8">Wadowicki</tekst-zwykly>
+              </td>
+              <td gd:GUID="de9daf32-4ebb-490f-950b-6612ca2058f9">
+                <liczba gd:GUID="7782726d-a2f2-4bc8-9531-ed180f2096ac">5,6</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="f10d6f63-c9c6-4ac9-8538-30cab3210f63">
+              <td gd:GUID="9fdeb54f-88ad-4be5-928e-bd4513616b94">
+                <tekst-zwykly gd:GUID="579938e0-73a3-4568-9725-ad1b87cfe7c7">Wielicki</tekst-zwykly>
+              </td>
+              <td gd:GUID="baeea475-74f3-406a-ab00-01a036a7e0e8">
+                <liczba gd:GUID="d64ed625-351e-4a59-9464-ae1ca8a3352e">3,6</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="9daa7b2e-4479-4f9f-afd6-d4e7cc07fc8c">
+              <td gd:GUID="e15c30e7-9b31-4fbe-ace1-12c102f9ef10">
+                <tekst-zwykly gd:GUID="6cc1e70f-fbbb-46e0-9063-c3165364e938">Miasta na prawach powiatu:</tekst-zwykly>
+              </td>
+              <td gd:GUID="6526b86a-0ffb-4b07-bde4-5d593d248c9b">
+                <tekst-zwykly gd:GUID="10827ceb-9461-4124-aad4-429c171f931d">‒</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="6cf7167a-fdcb-4231-b80d-09d35ed861cd">
+              <td gd:GUID="53b9d341-be4a-412e-9ecd-c9621a585577">
+                <tekst-zwykly gd:GUID="f577186b-55a5-4c86-8051-439b81b63f8d">Kraków</tekst-zwykly>
+              </td>
+              <td gd:GUID="aa4aff27-282f-4a39-b1c9-156f47e7737c">
+                <liczba gd:GUID="117b2d44-3734-493c-aa5c-e9136c562869">2,2</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="6f491830-552f-4766-97a6-211fc310ca9f">
+              <td gd:GUID="ceea9c42-a98b-4a24-9c7f-737abffe7fa8">
+                <tekst-zwykly gd:GUID="d15d26b5-035e-484b-bb64-2e6b5ff6ae2e">Nowy Sącz</tekst-zwykly>
+              </td>
+              <td gd:GUID="813760ba-ab43-477c-9932-8db6d7a8fa4c">
+                <liczba gd:GUID="cda592ae-50b9-4fbc-91c4-06cc22d96b27">3,7</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="76e7d3cd-3d26-4c2f-8b8c-39c78971dfff">
+              <td gd:GUID="30dc87df-6897-4e11-bf21-4b90de6407d8">
+                <tekst-zwykly gd:GUID="fc01f5cc-1ed4-48c5-8c7c-e9182f67eb45">Tarnów</tekst-zwykly>
+              </td>
+              <td gd:GUID="cddc4e6b-6624-4dac-979c-6cd26a0a29b9">
+                <liczba gd:GUID="53ad6d89-53f9-4c76-8e6e-2694825cf23e">4,4</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="ff282a86-4586-40f3-afe1-7960838edc29">
+              <td gd:GUID="a1f7bf55-89e2-4d7e-ade7-79478fa6b105">
+                <tekst-zwykly gd:GUID="1abd37af-4e44-41cb-a77d-bba225fa75fe">MAZOWIECKIE</tekst-zwykly>
+              </td>
+              <td gd:GUID="c4a4f79e-a444-4337-9a27-e3284f26bafe">
+                <tekst-zwykly gd:GUID="63e4aa20-4d44-4c56-ac3d-2d390698189b">‒</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="6c6f497d-3e35-4a37-a210-5cf8dfb5f198">
+              <td gd:GUID="3ac4e3f7-2ad1-4081-b57f-995669ca0a3b">
+                <tekst-zwykly gd:GUID="1a899db0-5d6b-4d8e-ab47-0301364577cd">Białobrzeski</tekst-zwykly>
+              </td>
+              <td gd:GUID="0c67af01-4a4a-4335-a1cb-06f80bcb8d07">
+                <liczba gd:GUID="5b3ba528-d64b-4d5d-8154-bc1bc2b0c64e">7,5</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="8ad4d3cc-2a0d-4a0a-a5a6-d1bb6dd964fe">
+              <td gd:GUID="e7783e31-8a51-4c43-87c2-ca9ffe6733ef">
+                <tekst-zwykly gd:GUID="802385fa-f77c-4a79-8c04-2eed2bf520c2">Ciechanowski</tekst-zwykly>
+              </td>
+              <td gd:GUID="a94bd96a-89fd-4043-87f4-0344bff8dc3f">
+                <liczba gd:GUID="9b3f781f-77bc-4037-a64c-c9c173a870cb">8,4</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="8936dbd3-a9cf-4d50-9925-f6611f680b0f">
+              <td gd:GUID="5cc909a7-df79-42c3-a7a7-245747a62f07">
+                <tekst-zwykly gd:GUID="2c07db4b-133e-4b17-9d5c-94c06dbb3ae0">Garwoliński</tekst-zwykly>
+              </td>
+              <td gd:GUID="13a7fa05-88d9-4206-8513-916b9f7f266c">
+                <liczba gd:GUID="22702cff-eff0-4f1d-85e0-f66535fb6a0f">8,2</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="6be4ada9-0cd9-4b99-9fb9-92b1d7fa78a7">
+              <td gd:GUID="76b4c28d-98dc-46f8-a10e-ef0cc923adf0">
+                <tekst-zwykly gd:GUID="d336a04b-6d2e-44be-ae81-3fadd0b7b262">Gostyniński</tekst-zwykly>
+              </td>
+              <td gd:GUID="41e2d985-5e6c-40e9-8d88-0f531283ac11">
+                <liczba gd:GUID="92f10a91-3bb4-4174-8441-ad38e57f51ec">10,4</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="f4b18870-85b0-4386-911e-8e731428253b">
+              <td gd:GUID="38b5fc3e-51bb-4844-8393-c52e48cb6d7c">
+                <tekst-zwykly gd:GUID="3cc80248-d2ab-4468-baca-104d4caf6b10">Grodziski</tekst-zwykly>
+              </td>
+              <td gd:GUID="b3cdd4b3-a165-43e0-b16d-1cf396c6e9cb">
+                <liczba gd:GUID="479191ab-ea8b-4cc6-99a6-e465109dbc85">2,8</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="7fe21a2d-a438-4c93-bb6e-d9c479d3269a">
+              <td gd:GUID="86e28ab7-af9c-4e86-a36b-53ea99b971aa">
+                <tekst-zwykly gd:GUID="a8cf0bc0-176a-4bd3-bdfb-9d1e090c00d6">Grójecki</tekst-zwykly>
+              </td>
+              <td gd:GUID="2d1c371f-f656-45a7-88da-e59ac419a0e6">
+                <liczba gd:GUID="a2e4e916-72b4-43fa-99a9-9db2362a4e68">2,8</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="aa8911d7-4e37-44ca-859e-ee2d3d17a18b">
+              <td gd:GUID="0c428ef8-5379-488d-8bec-67b921ccc5fb">
+                <tekst-zwykly gd:GUID="6455af2b-dbab-48c6-be7c-87e3262f827b">Kozienicki</tekst-zwykly>
+              </td>
+              <td gd:GUID="86599bc3-dc1c-4d33-9cdb-94551a7c30e0">
+                <liczba gd:GUID="67f91ecd-7f74-400d-80c7-9bdd4987e18d">9,0</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="6e9882c2-6d50-4c6c-9687-5c136e2b42e0">
+              <td gd:GUID="90a580a4-2b26-4401-9420-2d069bb3ae22">
+                <tekst-zwykly gd:GUID="9c008d91-7b40-4adf-8cec-a5ff7a6d6366">Legionowski</tekst-zwykly>
+              </td>
+              <td gd:GUID="63275dfc-9e8b-4c20-9dab-3bc0d75fe250">
+                <liczba gd:GUID="ea8257c0-6746-4c47-9cea-d57b187c65ef">5,9</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="6868ef48-4bfe-4fde-9a8f-a45db1e90236">
+              <td gd:GUID="d0b7bf06-d14a-4ae7-9625-e7dbb868e585">
+                <tekst-zwykly gd:GUID="eec0eadb-156a-4a91-af21-3716aa562967">Lipski</tekst-zwykly>
+              </td>
+              <td gd:GUID="7959237d-0f09-400d-9702-82d8619f4cd6">
+                <liczba gd:GUID="6b3873e9-773f-4a28-b470-4e43836d7896">11,9</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="92ad2c4c-5842-4359-a477-16f6db413175">
+              <td gd:GUID="487942f7-b183-4149-876e-ef4393691607">
+                <tekst-zwykly gd:GUID="f3d4db05-c5ca-4146-8ee4-ac3f0657a619">Łosicki</tekst-zwykly>
+              </td>
+              <td gd:GUID="da590043-b212-4c8d-b24d-6c8f0e3dbe86">
+                <liczba gd:GUID="f86f807e-19af-4e64-ab12-e9bace927fce">4,9</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="ea4de6bf-f039-4d5a-aa2d-ec00f3543a87">
+              <td gd:GUID="a4db2e0b-bf3e-4586-b233-f51a05377117">
+                <tekst-zwykly gd:GUID="d27ecac6-3150-416a-9f3a-e1d8e664cb36">Makowski</tekst-zwykly>
+              </td>
+              <td gd:GUID="c26e3416-4dbc-494a-9207-f55b1f10b03e">
+                <liczba gd:GUID="e3815c75-0c8f-43be-9f8c-3ab66b72b35d">15,5</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="1f0d4654-39a7-4b67-af49-33bca1c47325">
+              <td gd:GUID="f9c8b16b-e71f-4594-be2a-9c47b3e66569">
+                <tekst-zwykly gd:GUID="ffd28398-6ed5-4410-bb53-803367779428">Miński</tekst-zwykly>
+              </td>
+              <td gd:GUID="4ff04710-1bd7-410d-8a8c-116727fb4a8b">
+                <liczba gd:GUID="bb48b8f0-e98e-47e9-bcc7-060b07fcd1b3">4,3</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="64038417-e63b-4921-a196-f087cc907f92">
+              <td gd:GUID="fc1c1893-69d0-4602-a78b-bd2230bbab21">
+                <tekst-zwykly gd:GUID="c5c2cf93-3548-4c5c-8fa6-11b4afc3e93a">Mławski</tekst-zwykly>
+              </td>
+              <td gd:GUID="e63dfa0c-8948-443a-8d10-1b6f6d118a9e">
+                <liczba gd:GUID="bbe162fc-f2cb-4721-a693-3a148f304d61">6,3</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="92b343e8-8d9a-475a-9e0f-dd02ffeaf8bf">
+              <td gd:GUID="f26d0686-ae2e-4417-a967-37114b926150">
+                <tekst-zwykly gd:GUID="3114c7c0-106a-468e-ad8f-4c4f4ad8eeac">Nowodworski</tekst-zwykly>
+              </td>
+              <td gd:GUID="a4d1bcb7-ca55-4582-ba62-13400fae7b01">
+                <liczba gd:GUID="2c35f908-a3d1-4b4b-beaf-1bd0aa74ef2b">5,5</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="ac8c2d1e-db8f-474c-bb4f-a476f157dd1d">
+              <td gd:GUID="d7e1c786-fbfe-426e-848c-1d8ad4fc38d7">
+                <tekst-zwykly gd:GUID="a31502a6-5fed-46f8-b8d4-f90b0d3f240a">Ostrołęcki</tekst-zwykly>
+              </td>
+              <td gd:GUID="ceacfd2d-c761-47cb-bd63-80fa86c1e07e">
+                <liczba gd:GUID="ae2381af-8100-4431-8b7b-d3da75474897">8,8</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="97f16482-1892-4e6f-bb76-d55ca7cc26d9">
+              <td gd:GUID="9ccfbf6f-0d19-4e11-8665-ce57766ff496">
+                <tekst-zwykly gd:GUID="79114f3f-cda2-44af-a233-13dc053d259e">Ostrowski</tekst-zwykly>
+              </td>
+              <td gd:GUID="43c20384-6743-4da2-a757-6a1148f079f0">
+                <liczba gd:GUID="c501e767-8eb2-4461-b797-74f86b4afe6f">8,9</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="a8da10da-61d6-47dc-acf0-6d0f26b60ad0">
+              <td gd:GUID="dd53ba0a-3b95-4a3d-917d-71736f11b9b2">
+                <tekst-zwykly gd:GUID="940e4f75-0b61-4f1a-99fd-6e5e5ad73721">Otwocki</tekst-zwykly>
+              </td>
+              <td gd:GUID="c3279d31-5118-4ff5-a1bb-e6fb31ca4aac">
+                <liczba gd:GUID="3294afd8-ab04-48f0-9780-53283f2dc08e">3,5</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="3c67a60c-d5b5-41b4-a46c-881d572ca6a4">
+              <td gd:GUID="bdfb7112-1a73-4d1b-9dc4-5abc185d9003">
+                <tekst-zwykly gd:GUID="13bf79e4-0baa-4f02-9c7d-56e2cf0efe8d">Piaseczyński</tekst-zwykly>
+              </td>
+              <td gd:GUID="50a4edd9-b097-42fa-9db4-c8dc9388e5b7">
+                <liczba gd:GUID="2d79b2d9-d791-4989-b3b9-4bd45e92efd8">3,5</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="16560bfb-470a-49fa-ab27-4a5e21a415ee">
+              <td gd:GUID="4b69623d-3bb7-4109-a8a0-4e4b97950d5a">
+                <tekst-zwykly gd:GUID="1589fe4f-8396-4cca-ab09-6236115782d9">Płocki</tekst-zwykly>
+              </td>
+              <td gd:GUID="a565e06a-d3ec-43de-956f-69541fe2445f">
+                <liczba gd:GUID="f4e8497f-b810-4710-b9a6-77c4ae9fffe4">9,5</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="1ebdebf4-117a-4f59-9986-32d498dcd8a4">
+              <td gd:GUID="2250bb46-0d55-462c-b911-8329bbcf5f99">
+                <tekst-zwykly gd:GUID="d5c1268b-5011-4b1c-a899-b7789387954c">Płoński</tekst-zwykly>
+              </td>
+              <td gd:GUID="e83cc8fd-bd5c-402f-8d2f-e3219db13165">
+                <liczba gd:GUID="cc7c6b6f-75c1-4304-b0a5-31dfac547ba6">9,7</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="75fcfa46-7192-4189-b408-0c44df72c040">
+              <td gd:GUID="b621459a-8dfb-48cd-9f20-3b802fd7c1c0">
+                <tekst-zwykly gd:GUID="1bfa0b48-7368-4d4f-9a1b-aaf992aa53da">Pruszkowski</tekst-zwykly>
+              </td>
+              <td gd:GUID="19f3d038-0fe1-44bb-b10d-904e8529f957">
+                <liczba gd:GUID="368457a3-a912-4297-8ec3-140a6053f326">2,3</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="3fcb0f4c-9575-41dd-aac8-9d1395994e76">
+              <td gd:GUID="8ff46447-4bbd-43db-9ffe-6ca746aa8e98">
+                <tekst-zwykly gd:GUID="b2e7d1eb-c4bd-4783-812a-7541913fd290">Przasnyski</tekst-zwykly>
+              </td>
+              <td gd:GUID="66c7443a-efe7-410c-b3cd-100730ec814e">
+                <liczba gd:GUID="5e5fdd85-7d80-489d-b95c-2e09aa0f1ae8">9,1</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="55814cfc-401b-4cc2-ae24-3fa82649acdc">
+              <td gd:GUID="7843e21a-47da-45d7-a7a5-e0715be41e15">
+                <tekst-zwykly gd:GUID="2bae1179-9894-4f14-bb66-e6a00fe53132">Przysuski</tekst-zwykly>
+              </td>
+              <td gd:GUID="c66b43a4-f820-4e0b-8e66-f08c8689cb36">
+                <liczba gd:GUID="5f990957-d1c3-4718-9d95-b7bbf1a032b7">17,9</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="afda9450-9e19-4e88-91f6-f06b965ae7f8">
+              <td gd:GUID="653cd8c7-99ec-4ac2-a740-e465b04af943">
+                <tekst-zwykly gd:GUID="c05eac92-a1fc-4be8-830e-df69a2fef82d">Pułtuski</tekst-zwykly>
+              </td>
+              <td gd:GUID="dfa76433-4570-457c-b419-ed517be5b5de">
+                <liczba gd:GUID="afd0de81-1e1f-486a-9aaf-f0d07dddabec">13,2</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="96f2c94b-207e-420d-b2d6-3d6b482d5d81">
+              <td gd:GUID="cb70ac05-24f7-4da5-bf50-6de5e27e4e9d">
+                <tekst-zwykly gd:GUID="0bbb1a2b-cad0-4092-8939-87495ef1ddd3">Radomski</tekst-zwykly>
+              </td>
+              <td gd:GUID="152a36cd-fea3-43e0-8856-f0cd9c629a17">
+                <liczba gd:GUID="bd77b8e7-a895-4b8c-be77-0d8a0094e237">16,3</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="ae50f2f1-c268-4ae8-8132-46df54804a77">
+              <td gd:GUID="54d3421d-e095-4846-85cc-4a87b8ddd9ed">
+                <tekst-zwykly gd:GUID="f3fca9f5-237e-4a5a-b2ad-9d2a519a269f">Siedlecki</tekst-zwykly>
+              </td>
+              <td gd:GUID="1386c05d-2f87-452b-891a-9dc523ca9221">
+                <liczba gd:GUID="a0ddc9e9-2a39-4b80-83f9-3c0e30a0ada4">5,1</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="92758021-91de-4e4d-935a-3e246c682502">
+              <td gd:GUID="d9690c22-f149-44bd-9cd6-9a4c4976e1f2">
+                <tekst-zwykly gd:GUID="cc44a48d-f552-4831-a2b9-3ed528025de1">Sierpecki</tekst-zwykly>
+              </td>
+              <td gd:GUID="e1d7fb8b-1fd1-4a0a-a7c2-a6c27e52eaf7">
+                <liczba gd:GUID="f63271a5-54dc-43e8-a09e-6fde8f1865c1">11,4</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="53b9aff6-d729-462c-80eb-5fe48257fd3c">
+              <td gd:GUID="ed4a0c54-4399-441d-84c2-d18c1e56f7b0">
+                <tekst-zwykly gd:GUID="95e90646-0c4a-49bd-a9d0-42412bd13c64">Sochaczewski</tekst-zwykly>
+              </td>
+              <td gd:GUID="ad943a80-a4e7-4a32-bb80-f44bf50b5ecd">
+                <liczba gd:GUID="cc9fdcdc-6580-457d-baaf-4f50491d300f">2,9</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="9a054431-6201-4eac-ba60-41c1a9177261">
+              <td gd:GUID="49dcdb69-38d0-46c1-a745-e168c14b7de3">
+                <tekst-zwykly gd:GUID="0f4d3d1f-cee9-441c-9b49-831ad901735b">Sokołowski</tekst-zwykly>
+              </td>
+              <td gd:GUID="ed765f33-b2e1-418a-91dc-611f91f885d8">
+                <liczba gd:GUID="a7502f46-9790-4bd6-812f-44d86093defa">5,1</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="f08f54f9-a42a-4033-989c-d10718084619">
+              <td gd:GUID="e59b52f3-f1ca-498f-a1c4-6c36b86643c3">
+                <tekst-zwykly gd:GUID="15068f99-6dbe-4f26-b3cf-11b02ea2292a">Szydłowiecki</tekst-zwykly>
+              </td>
+              <td gd:GUID="3f35358e-0d99-4ed3-9f29-57214ad79419">
+                <liczba gd:GUID="9151d5a1-3911-4cc5-8963-412f72e6f490">21,9</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="64e6df6c-7c99-4c4e-b44d-4e579f2c0c55">
+              <td gd:GUID="4ee58429-95e6-441d-9d3d-f8689a139d9a">
+                <tekst-zwykly gd:GUID="7785f883-5bcd-4b4b-8f73-11126de2aaf4">Warszawski zachodni</tekst-zwykly>
+              </td>
+              <td gd:GUID="11796690-c314-4c4a-b164-d12591af394c">
+                <liczba gd:GUID="a0550d10-e07a-47bf-83fb-e90a2fcbdbac">1,6</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="1c666229-ac0a-4872-9807-b08978b3339f">
+              <td gd:GUID="8e2782f9-58fc-4ad6-b50f-a52975481a96">
+                <tekst-zwykly gd:GUID="4a94b70c-cacb-4f76-8356-9c6616a5bf7c">Węgrowski</tekst-zwykly>
+              </td>
+              <td gd:GUID="1b9fed4b-0edd-472b-b6e7-5b24b257c9c2">
+                <liczba gd:GUID="04472f93-0e52-4002-807a-2823b209c1b8">5,2</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="3c9bd397-13a6-4cfe-b2ac-1326a89f119c">
+              <td gd:GUID="636f5e11-2031-4281-8299-db1a041b2977">
+                <tekst-zwykly gd:GUID="66441967-4d9e-443c-aaad-cde37b77de3b">Wołomiński</tekst-zwykly>
+              </td>
+              <td gd:GUID="4b97c28a-0b90-4ec0-b009-44039e3b7e9c">
+                <liczba gd:GUID="4bdac5be-bd9f-4ba3-8a78-5460a5a5dec0">5,6</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="273d6223-c5ce-45f9-8449-6d79144db097">
+              <td gd:GUID="b8784951-77f2-4443-83f0-f1c93affaaca">
+                <tekst-zwykly gd:GUID="d4e39a85-2198-4c95-bfef-29377339528d">Wyszkowski</tekst-zwykly>
+              </td>
+              <td gd:GUID="633732ef-baec-4269-a336-bc224e1c3681">
+                <liczba gd:GUID="70ec82ac-ee91-4740-b7a0-1c83f7418d55">3,4</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="979f8854-42f2-4830-aa9b-599e78fae457">
+              <td gd:GUID="02d83aa0-4976-41e6-a6b3-5be334054c0d">
+                <tekst-zwykly gd:GUID="a5c204dd-9caf-47f0-85ec-8a1c658bbf72">Zwoleński</tekst-zwykly>
+              </td>
+              <td gd:GUID="d5dc16bd-6f5f-4c3d-89a7-b3c330f102c2">
+                <liczba gd:GUID="3aa0c6ab-6f66-47a3-a20f-f9d8d3e4c8c1">11,3</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="5fa28a27-7a94-4b44-99ae-225c92cc6495">
+              <td gd:GUID="e27bfdde-9218-4025-a152-ca181a6c1e3b">
+                <tekst-zwykly gd:GUID="0dd75b4e-963c-4a74-898e-658d5c87d504">Żuromiński</tekst-zwykly>
+              </td>
+              <td gd:GUID="d58fac33-dc17-473f-8f2a-30eb9030f5b5">
+                <liczba gd:GUID="2b99377d-0863-4986-9357-e6bac0e381ac">13,8</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="4f2beda1-20cd-4aa2-a1d9-2c1d86e15d7a">
+              <td gd:GUID="be092359-ddc0-40f9-b5fa-e7de18412994">
+                <tekst-zwykly gd:GUID="91f4dcb2-b53c-4077-a612-8e0ca2a67e1c">Żyrardowski</tekst-zwykly>
+              </td>
+              <td gd:GUID="7685772e-3e39-4707-970f-9d9f0904a57e">
+                <liczba gd:GUID="a0324458-1e57-4801-9cdf-56ddf4c58bae">8,4</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="d9dad521-64cd-44ac-a4fe-d084b41b56b7">
+              <td gd:GUID="af9161b7-9d19-417b-8bdf-2c5d91f41b9d">
+                <tekst-zwykly gd:GUID="cb4d481f-e009-4476-a12f-dfe90288229f">Miasta na prawach powiatu:</tekst-zwykly>
+              </td>
+              <td gd:GUID="4c47ce80-3aaf-476e-8763-ca3920eb9425">
+                <tekst-zwykly gd:GUID="0c1c5cd7-2a3b-4260-aadf-598a450df0d4">‒</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="8226ff1a-be24-4878-8b69-46ab2a4ebf3a">
+              <td gd:GUID="f80020bb-6ffe-4e48-95dc-4e989abb5c0b">
+                <tekst-zwykly gd:GUID="b1026e30-7147-479b-9d8a-0edd2562e5e3">Ostrołęka</tekst-zwykly>
+              </td>
+              <td gd:GUID="592b3d06-d8bf-402a-891d-b9adc78b6abb">
+                <liczba gd:GUID="8ece4972-0465-4eee-8dba-dfad320c6689">7,1</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="9b6a2cd7-b97b-4500-8e20-5421634cc504">
+              <td gd:GUID="1722487a-3c62-4571-975d-5890073ccb6f">
+                <tekst-zwykly gd:GUID="5e1e01a8-08d8-42d7-8a31-c7b6f5e44d8b">Płock</tekst-zwykly>
+              </td>
+              <td gd:GUID="cf0ea486-fcb1-4739-84b7-e48c6946e78a">
+                <liczba gd:GUID="71551718-8c8d-46bc-8257-98cf51a7124a">5,1</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="9c4affb5-b605-45aa-9b14-f42fcb3d4798">
+              <td gd:GUID="60232701-3623-4804-b931-8346339f2cea">
+                <tekst-zwykly gd:GUID="c8bb5eb7-4665-4ab5-bffe-4ba1e3cb578d">Radom</tekst-zwykly>
+              </td>
+              <td gd:GUID="18e256e4-e462-4d16-9926-b4d832d41966">
+                <liczba gd:GUID="475afaf8-5317-4973-9b20-a609bbc583bb">9,6</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="7f7c5ce6-ef5e-44bd-90a4-5ec82eee1250">
+              <td gd:GUID="af4821b7-e3a5-4568-b79b-78b4be52bb3b">
+                <tekst-zwykly gd:GUID="2f4c0db0-275a-47a4-9b4d-5452ef1bd463">Siedlce</tekst-zwykly>
+              </td>
+              <td gd:GUID="e6eddfe7-a5aa-428d-b271-a847b7a95606">
+                <liczba gd:GUID="f32b1605-a003-4768-8a24-98e0b5783f43">3,8</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="28045a35-806f-4c49-8a3c-2151157256f8">
+              <td gd:GUID="b4513f4b-136d-4c54-b7de-ede315344b9c">
+                <tekst-zwykly gd:GUID="7cd218c1-2997-46c0-b7ab-21b09660b5b6">M.st. Warszawa</tekst-zwykly>
+              </td>
+              <td gd:GUID="e7dde3df-bd47-4777-a213-cf8efc3e6c7a">
+                <liczba gd:GUID="c7940845-4b80-4974-8ece-a64a80c3d249">1,5</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="9c99bc05-5af2-45a4-b7f4-44c52816e952">
+              <td gd:GUID="89c9eac6-04c8-4b3b-ba43-4f9c27eea333">
+                <tekst-zwykly gd:GUID="5be16ab9-ddad-4be9-91e7-8ce6137dea8f">OPOLSKIE</tekst-zwykly>
+              </td>
+              <td gd:GUID="02a4d476-d8fc-467f-8874-1d72a2e29840">
+                <tekst-zwykly gd:GUID="3ff82739-1bd5-4d64-8415-020f12404449">‒</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="2810147f-a179-4719-bc11-0c855bc2f958">
+              <td gd:GUID="81fc0c59-1119-4404-a6ac-4f690082666c">
+                <tekst-zwykly gd:GUID="5abcabc0-f7ab-4fab-ae81-ba65c3959567">Brzeski</tekst-zwykly>
+              </td>
+              <td gd:GUID="dc760caa-f125-4f3b-8997-c0796590c5a1">
+                <liczba gd:GUID="5c31330d-b9b3-4733-9e2f-0c180fae85b2">8,3</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="65e38ad0-7c5b-4673-8e18-bc3f999b431b">
+              <td gd:GUID="1a36d42a-36d5-4631-93c5-10e2e4451ec5">
+                <tekst-zwykly gd:GUID="c78b546d-b9b8-40e6-8982-4763ce0afca5">Głubczycki</tekst-zwykly>
+              </td>
+              <td gd:GUID="50fecbb4-08bf-43a8-b938-e7b103f74fbb">
+                <liczba gd:GUID="97351f6d-8d28-42a5-b96b-28c6346baf8e">10,4</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="0d83563f-e83e-4440-992d-b8c3665f7160">
+              <td gd:GUID="3dfe4630-a0ff-465e-9596-8136022b70eb">
+                <tekst-zwykly gd:GUID="fe67b16a-224b-492c-aba1-ed970bd56ae1">Kędzierzyńsko-kozielski</tekst-zwykly>
+              </td>
+              <td gd:GUID="682d74b0-1676-4cd8-9ae6-727126078519">
+                <liczba gd:GUID="3a025d5d-05a5-4bbe-ad6d-de800facb7dc">6,4</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="0063b884-a2c6-4ac1-b247-7179daa410dc">
+              <td gd:GUID="af3f45c6-e32b-4254-b43d-930fc07da224">
+                <tekst-zwykly gd:GUID="bff47b72-8595-49f4-b208-b48df8a101d3">Kluczborski</tekst-zwykly>
+              </td>
+              <td gd:GUID="9f4974b8-9342-48f7-9873-dfb4d2cf2483">
+                <liczba gd:GUID="94c3607f-b21d-4cf8-ac1d-6ce84c37bd46">6,1</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="a0e0f479-6ac7-4294-8875-1dd8e7c41375">
+              <td gd:GUID="d81795e1-6d5e-4d9d-9861-8c126f457f06">
+                <tekst-zwykly gd:GUID="c6e546b9-df26-4b1a-8993-840b1439fa8c">Krapkowicki</tekst-zwykly>
+              </td>
+              <td gd:GUID="ee5e3cf9-8e05-48f1-bd72-bd8ec89e9df1">
+                <liczba gd:GUID="a12af904-c8e6-46ae-9bb6-6905aa4650b1">4,7</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="d3cd2c6a-a8bd-4063-93fc-1ab1cd72e894">
+              <td gd:GUID="ebb0772a-e149-4f50-aa11-9c43599e3ec2">
+                <tekst-zwykly gd:GUID="00a246dc-04c3-4283-a3e3-1e43de9d0fb5">Namysłowski</tekst-zwykly>
+              </td>
+              <td gd:GUID="b337d872-f31a-4268-adf6-3494ce399e5d">
+                <liczba gd:GUID="f4bc2270-4e7e-4e3b-8c0f-15889b347c77">9,3</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="f55936d9-64dd-41e6-9b7e-996d760cea88">
+              <td gd:GUID="682cfc64-5ff5-4443-8f20-2006350dc650">
+                <tekst-zwykly gd:GUID="0f3c9568-c9af-46dd-a6bf-3ce8affbb8b5">Nyski</tekst-zwykly>
+              </td>
+              <td gd:GUID="ae2883e7-b7ff-4228-8f74-4c0f170f2606">
+                <liczba gd:GUID="51af151c-4d20-41a7-b0ca-00b1047b4501">7,2</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="a4ff0745-5435-43d3-a73d-978e53b423bc">
+              <td gd:GUID="f9720fd7-2b06-4830-b7e5-15fbb80f7d2f">
+                <tekst-zwykly gd:GUID="653c143a-17ed-485c-a460-6d99908ebc34">Oleski</tekst-zwykly>
+              </td>
+              <td gd:GUID="3ab70111-be1a-4fd0-aad2-bab32c996f39">
+                <liczba gd:GUID="35c93338-320b-4144-beaa-de283813cfd6">4,5</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="f255af86-fbb3-48b7-8b64-0fd3d1fc60d6">
+              <td gd:GUID="153253b5-a526-4203-8946-6f16c0d1125f">
+                <tekst-zwykly gd:GUID="dd21e8b2-a9bf-41a0-9af0-e18c3eb04246">Opolski</tekst-zwykly>
+              </td>
+              <td gd:GUID="e189d84b-a048-4845-99d5-7c0fce1815c7">
+                <liczba gd:GUID="4f57aa4e-6ae5-4bc3-a86d-02cda06aef63">5,6</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="48ba75c2-87ed-42c2-a875-a4f5aea6c93e">
+              <td gd:GUID="70444732-46ba-4d88-a15c-c5f495471881">
+                <tekst-zwykly gd:GUID="62653e85-f8f9-4012-8ecb-595f8fd0974c">Prudnicki</tekst-zwykly>
+              </td>
+              <td gd:GUID="2f6a6502-0589-4c73-a477-846a541786e4">
+                <liczba gd:GUID="8b7c86c9-87d7-4756-b25d-a9a9ca9f67f9">9,0</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="2e2310cf-f263-43f6-9c51-004e4f67ae67">
+              <td gd:GUID="c714dc0a-c404-45f3-8d95-7a867b9e14ca">
+                <tekst-zwykly gd:GUID="eab20591-caef-465a-81f3-56e95f00188b">Strzelecki</tekst-zwykly>
+              </td>
+              <td gd:GUID="cc97559e-1b97-46ba-b3cc-fa3dc8a2ff0f">
+                <liczba gd:GUID="707cbc91-a779-48bd-a3ca-3e8dc43c35e5">4,4</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="967342fc-0ef4-4014-8a50-73ebd7cf676b">
+              <td gd:GUID="b6c8936e-99e5-4e3f-b1b9-fe9ef2a818d6">
+                <tekst-zwykly gd:GUID="3e0c6f22-481d-4b91-a94b-79a46265540e">Miasto na prawach powiatu:</tekst-zwykly>
+              </td>
+              <td gd:GUID="d08078ed-e38d-4ad4-b659-01831f575251">
+                <tekst-zwykly gd:GUID="1ad34413-b400-47e1-bcf5-52bee988a53b">‒</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="f90b9954-9b61-43c0-a5d7-138c29ac92e8">
+              <td gd:GUID="19cde5aa-70f7-464a-a405-ef30f763a181">
+                <tekst-zwykly gd:GUID="8958514f-1e68-4c45-b0f8-dd16cbc84947">Opole</tekst-zwykly>
+              </td>
+              <td gd:GUID="2bb075d8-2156-433d-9f7a-b5fa5eb7b007">
+                <liczba gd:GUID="95a2eb90-934e-4c8e-9eba-034d825e1641">3,0</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="1919ae6b-e6ea-44b4-9efa-77ff03ce9893">
+              <td gd:GUID="1f104064-7ef4-47e6-8032-541dbbe0cc34">
+                <tekst-zwykly gd:GUID="ba770400-e08b-4b30-bee5-3a0df2ba82e6">PODKARPACKIE</tekst-zwykly>
+              </td>
+              <td gd:GUID="7df20a9a-ff02-4761-ad11-bad87bdb7162">
+                <tekst-zwykly gd:GUID="bfd3bda4-0f8f-41cd-b7f4-5adcfb951c99">‒</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="497944c8-90d1-452b-b9e5-161f2e8d3c29">
+              <td gd:GUID="bf15845a-a049-4ac1-91f2-b5af2d952d1b">
+                <tekst-zwykly gd:GUID="7a74494e-35e8-4128-8f5a-2502a057833e">Bieszczadzki</tekst-zwykly>
+              </td>
+              <td gd:GUID="6a2538f4-6632-496c-96ca-fcfcb6996d96">
+                <liczba gd:GUID="782f7884-93f3-494d-a0ce-bc75978de09e">14,4</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="6bb01629-0bb6-415b-9aad-8663736866b2">
+              <td gd:GUID="9119f7c1-8208-4da5-95cf-9660a9d1bbef">
+                <tekst-zwykly gd:GUID="76ca1561-1ed6-4b9e-a80b-9c8fba16c2a6">Brzozowski</tekst-zwykly>
+              </td>
+              <td gd:GUID="57e54006-8834-49af-8115-659e8773239b">
+                <liczba gd:GUID="186dbda1-7bd4-4179-ba6e-e970055ec32e">19,4</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="124d1ea3-87e2-4a88-93a0-35cd0444180c">
+              <td gd:GUID="1966dd39-e030-4cdb-b38d-7ad5a7e1e7a7">
+                <tekst-zwykly gd:GUID="2dc6fc2a-d69d-408d-bcf1-41c45ec4cca1">Dębicki</tekst-zwykly>
+              </td>
+              <td gd:GUID="6f550e92-1018-47c4-8101-686e9e0e1120">
+                <liczba gd:GUID="cf756933-482e-428f-86fd-dc4da5cbc720">4,3</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="33e6edc9-a0e5-41d9-b1b9-2b7054381184">
+              <td gd:GUID="ceb67a23-038c-4c08-872d-18d20ec9c261">
+                <tekst-zwykly gd:GUID="83d0c307-d802-4136-9c71-f833402d8617">Jarosławski</tekst-zwykly>
+              </td>
+              <td gd:GUID="d6afa52e-f5ac-41ee-b1a9-3020257dec6d">
+                <liczba gd:GUID="ac000a53-eff7-44cd-9f1c-05457ef5127d">10,9</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="6025b525-60ac-4850-b4f6-661d41486c06">
+              <td gd:GUID="ec2dd9d4-047c-4f95-95be-f6f2e96b2b33">
+                <tekst-zwykly gd:GUID="4384c235-cf83-4728-9d26-1478308ceabf">Jasielski</tekst-zwykly>
+              </td>
+              <td gd:GUID="f1ebb24a-4600-4833-8ab9-0e5c0dc96684">
+                <liczba gd:GUID="4be61abf-e6d6-42ac-92f4-989b9c9bbd81">12,4</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="81ea205f-4073-47dc-a674-d5210f9c44f5">
+              <td gd:GUID="9c80dc54-7495-48de-948d-e4fef154018e">
+                <tekst-zwykly gd:GUID="86938722-fca4-4381-8dd1-886b32df4881">Kolbuszowski</tekst-zwykly>
+              </td>
+              <td gd:GUID="fd95377a-d54a-476e-8835-ec1c984f3ae4">
+                <liczba gd:GUID="c59ee3c9-9665-4d23-8547-3b896d01f657">7,9</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="4b345951-5a5b-45a9-90d5-25691d71be51">
+              <td gd:GUID="8c26f4bf-7291-4293-8b8f-b44f7e99247f">
+                <tekst-zwykly gd:GUID="b5e0be04-9304-4460-a198-f78987d940a6">Krośnieński</tekst-zwykly>
+              </td>
+              <td gd:GUID="86289ff5-8b77-408f-a7fe-556dbcd51e5b">
+                <liczba gd:GUID="1122ae38-b2b6-499b-a424-62cd4372a81c">9,0</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="e159b3bc-f047-4a4e-9245-b514999e156f">
+              <td gd:GUID="240b3fc0-f7b6-44cc-b3e6-24cdc39fc2b1">
+                <tekst-zwykly gd:GUID="1c102d80-6f47-4332-aec4-e153aa191180">Leski</tekst-zwykly>
+              </td>
+              <td gd:GUID="d023fb4c-65b4-4580-b2be-c46a1fbc2d6f">
+                <liczba gd:GUID="2fc9c229-5de5-474d-9991-cf5b0ec2d100">17,5</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="9e1157ff-7123-419e-8166-df2f2ea1d9d0">
+              <td gd:GUID="cf5ea61e-982a-479d-bcae-4683a86cbd22">
+                <tekst-zwykly gd:GUID="2a07026f-361e-4a0c-b4aa-2236324d93f7">Leżajski</tekst-zwykly>
+              </td>
+              <td gd:GUID="54f1f9d8-c96e-4af3-932b-8171b204136a">
+                <liczba gd:GUID="9b2194ce-d76a-47db-9a31-6d12b0b98df3">13,4</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="4c227fc7-ffb9-455c-aae2-a82ae6677722">
+              <td gd:GUID="22b960af-9da4-455d-b873-26dcf9ea831b">
+                <tekst-zwykly gd:GUID="cb95fc96-3aa5-4a90-a5b0-9652db6d6d02">Lubaczowski</tekst-zwykly>
+              </td>
+              <td gd:GUID="b73c10b4-4893-4186-a461-93c6c986a8e5">
+                <liczba gd:GUID="c1fd6e76-0de0-4292-8d25-6596868f0b48">9,1</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="91c5163d-9123-4782-a290-fdfce68c1554">
+              <td gd:GUID="8606ba50-24ea-40c2-9cc5-b12af6cc2e7f">
+                <tekst-zwykly gd:GUID="95289e6f-bb99-4362-af69-298cabd82bc4">Łańcucki</tekst-zwykly>
+              </td>
+              <td gd:GUID="1b95aca6-1851-42d2-8753-404ff4f9a38d">
+                <liczba gd:GUID="ce12682c-5bde-4abb-be02-0b0621258076">8,7</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="58c69d28-5701-4885-b8ee-62b2a8221ffb">
+              <td gd:GUID="cef7d004-2922-4c2e-842f-82eea19f9c64">
+                <tekst-zwykly gd:GUID="9a5c5dbe-2ce6-4a54-b6f4-4f548907999e">Mielecki</tekst-zwykly>
+              </td>
+              <td gd:GUID="b0cc2c05-6ee0-4b9d-9f46-022c54ecdff8">
+                <liczba gd:GUID="6c741d14-c7f2-4c8f-8864-660fc3a90a90">5,3</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="21e1bf7f-193e-46b7-8ac7-8d66fcfa454b">
+              <td gd:GUID="a826fac7-d105-4564-bf06-864df5c321c8">
+                <tekst-zwykly gd:GUID="36baa6cc-aaa1-42d4-8580-edcd4d517976">Niżański</tekst-zwykly>
+              </td>
+              <td gd:GUID="4643d5fc-1113-432b-aff3-68441b3acb6e">
+                <liczba gd:GUID="872d9fce-97df-40c4-96fc-affabcc62b23">15,7</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="d88756b6-3e07-4596-ac33-88902c0cfd2e">
+              <td gd:GUID="b7a35b5b-f899-4b51-9aa5-36624ce703ae">
+                <tekst-zwykly gd:GUID="08d32fa9-c655-452d-8264-4579da30ebe3">Przemyski</tekst-zwykly>
+              </td>
+              <td gd:GUID="0b335619-bccf-4db7-956d-e6b878d23edd">
+                <liczba gd:GUID="0fba1aba-98cf-4c8a-99d1-46e90cb9ccab">15,3</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="8f32493b-d4e2-4d74-b88c-8847ee085b40">
+              <td gd:GUID="fa43a2e4-0794-47e5-ab1e-73b5bac7dc62">
+                <tekst-zwykly gd:GUID="19ef6382-703d-470e-8eab-487e12128ba5">Przeworski</tekst-zwykly>
+              </td>
+              <td gd:GUID="1b546d21-0f74-49eb-ae04-a8384e526904">
+                <liczba gd:GUID="3b90a884-ff7d-4ddb-9999-b707966926da">13,1</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="db5d342d-3c77-4173-ab36-dfe38c0945c4">
+              <td gd:GUID="e4c0d5b9-0bc0-4053-8e73-7a451a37d909">
+                <tekst-zwykly gd:GUID="587361e2-ccdb-4c67-af85-79aefdfc468d">Ropczycko-sędziszowski</tekst-zwykly>
+              </td>
+              <td gd:GUID="b3a6fe1b-169e-4c35-8878-810c41dc054a">
+                <liczba gd:GUID="b3edd993-62a2-42e2-b819-b2b25c7908c0">10,6</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="c2172aed-d87e-46b6-b9a7-6ca8333220be">
+              <td gd:GUID="6afa8206-1924-4a5a-a5e4-f989ea59b98d">
+                <tekst-zwykly gd:GUID="b59fce4d-4c17-4de3-a360-eae858fbf9d4">Rzeszowski</tekst-zwykly>
+              </td>
+              <td gd:GUID="3ab8ac54-f2db-494d-9b1d-bdd38639ce43">
+                <liczba gd:GUID="b33cd4d5-c01c-4bdf-9cd0-63e9db034a4d">7,3</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="5e483496-1425-47b0-8daa-f7ee141fc665">
+              <td gd:GUID="9c1cf0d6-7059-4db3-a4ad-d8ec5798d3f8">
+                <tekst-zwykly gd:GUID="86d380ec-8488-4aa6-adbe-dd784c855604">Sanocki</tekst-zwykly>
+              </td>
+              <td gd:GUID="bdb34d27-2f80-4c1f-bced-1e343dd48e77">
+                <liczba gd:GUID="2da9a785-1f35-4a83-9915-cb265ed807e1">8,8</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="7613b5ef-aa62-4942-96d1-7001b9855ea7">
+              <td gd:GUID="45abc88f-f3c8-4e78-b41d-da9fad4f7bf4">
+                <tekst-zwykly gd:GUID="e087b9b4-2a95-4750-9df1-d90608d5aabf">Stalowowolski</tekst-zwykly>
+              </td>
+              <td gd:GUID="fc0c467d-cac5-4f4e-814f-a20cf774d934">
+                <liczba gd:GUID="b4fa771f-3750-44a0-bc92-82df8ac79fa0">5,6</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="deb1e542-ace1-48d6-84c4-ed19cf3038e4">
+              <td gd:GUID="9dfb76eb-a5ef-4247-adc2-4b773a4f0935">
+                <tekst-zwykly gd:GUID="c442f4fe-e55d-4aec-93bf-e41c05b508dd">Strzyżowski</tekst-zwykly>
+              </td>
+              <td gd:GUID="6eddd997-009c-48e7-b14f-5fe156b3c79f">
+                <liczba gd:GUID="70155d1e-a810-44d6-8954-4c2429519ed5">16,5</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="d802add4-20e2-4506-ac1d-3797bb98eac6">
+              <td gd:GUID="6d3a5d14-733b-4b22-bfc1-3c02e46fb649">
+                <tekst-zwykly gd:GUID="60cb8ed3-20a9-49e5-923f-28ca1c4ce58b">Tarnobrzeski</tekst-zwykly>
+              </td>
+              <td gd:GUID="4a4fa6a8-207c-4498-9ccd-a5ef19f8d832">
+                <liczba gd:GUID="7a33d068-470e-475f-bece-1d9f30bbf44b">7,3</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="8a8ae6a3-032b-44fc-960a-2a5dc2cbf509">
+              <td gd:GUID="cf018945-5138-4f0b-a3bc-6321926a4e91">
+                <tekst-zwykly gd:GUID="a2d66dc9-8cd1-49b4-8f82-99f5c89fdf9b">Miasta na prawach powiatu:</tekst-zwykly>
+              </td>
+              <td gd:GUID="f6235ab3-fdb8-4ada-928c-7f118b723f5d">
+                <tekst-zwykly gd:GUID="b8eb7c66-4990-45f3-8031-a59f709df389">‒</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="09f726a8-b3f8-44cc-a6bd-e35d9ce0b5db">
+              <td gd:GUID="0a5b654e-cadd-4650-a159-a7fdd926d74a">
+                <tekst-zwykly gd:GUID="4e039379-19fa-4a75-920d-61d6e550e66a">Krosno</tekst-zwykly>
+              </td>
+              <td gd:GUID="3d27b1c7-150d-4b62-aabf-44b74cc398ab">
+                <liczba gd:GUID="459c9b51-df30-4445-ad23-a078d5e2cb20">3,3</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="7c73d744-b819-462d-a1ec-ffb5598f37b2">
+              <td gd:GUID="9262ea89-27d6-45d1-a7dc-4dc161141c03">
+                <tekst-zwykly gd:GUID="11db9ddb-93fa-4ec8-bab3-8585887f828a">Przemyśl</tekst-zwykly>
+              </td>
+              <td gd:GUID="3e5fdb1d-1b4a-40b7-9c3e-52aa2bbb9293">
+                <liczba gd:GUID="aa21848e-3b8b-43f4-8eac-217ce4efa83b">10,1</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="74d65ba6-4d20-4235-ac64-c74c95f4d48b">
+              <td gd:GUID="6e539df2-37f1-4f81-be1b-0d131b9d061c">
+                <tekst-zwykly gd:GUID="5956f684-36ad-438e-8bba-f59b974d304a">Rzeszów</tekst-zwykly>
+              </td>
+              <td gd:GUID="f2d8918d-b498-4d47-900b-efd71aee3ed3">
+                <liczba gd:GUID="6453af41-d836-4f93-9b84-6555f9b3702d">4,1</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="66c18853-157d-405e-a62b-b1c811950e39">
+              <td gd:GUID="69c68cba-28ee-40dd-9e1c-2ce65d31ec51">
+                <tekst-zwykly gd:GUID="6030be4f-40e0-4bbd-bb4c-b5662d01ef03">Tarnobrzeg</tekst-zwykly>
+              </td>
+              <td gd:GUID="8ece4351-d34c-4fa3-beae-8d9692ede733">
+                <liczba gd:GUID="c2afadd6-f9ed-4138-a719-7e34d17096f5">6,9</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="942fb5f0-d55d-45e2-8fc3-aa404586a9d7">
+              <td gd:GUID="c5c254a0-b411-45f4-af14-6ea8f72bea0d">
+                <tekst-zwykly gd:GUID="8a3620a9-45e8-49f3-bf6d-2d2e66314370">PODLASKIE</tekst-zwykly>
+              </td>
+              <td gd:GUID="d5bee9ce-5244-4562-9bda-b18ec755d5bf">
+                <tekst-zwykly gd:GUID="3b926d38-e9d4-46cc-847c-eac53deb8d7d">‒</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="0b0a9a08-eb59-4138-b8d6-60912262eaf6">
+              <td gd:GUID="b514da20-a177-4466-b089-2354b4a1ed56">
+                <tekst-zwykly gd:GUID="0eaaf2f2-8e83-4de4-8996-ae829727a167">Augustowski</tekst-zwykly>
+              </td>
+              <td gd:GUID="73529d36-b7b0-4074-b628-075dcae6b797">
+                <liczba gd:GUID="6a0c5b00-8d1e-442a-a91c-9525d2a78ddc">9,5</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="311e9835-b713-4c77-8a58-09dcf60eabf1">
+              <td gd:GUID="771fde06-a1a6-4e0b-b812-b19cadbb3806">
+                <tekst-zwykly gd:GUID="0a509399-160e-40f5-b7c8-70b2d22511ec">Białostocki</tekst-zwykly>
+              </td>
+              <td gd:GUID="612ec8e1-090a-4a83-a7b3-7fb36386aac0">
+                <liczba gd:GUID="dbf7bb60-189e-4bc7-83df-51fa4405920c">7,4</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="3c89414b-5f6e-4e62-bf88-1cb13ec8f03e">
+              <td gd:GUID="4e4b142d-4276-4331-ae78-2550de14bdca">
+                <tekst-zwykly gd:GUID="66652de7-501b-4b10-8046-ba27afd5666e">Bielski</tekst-zwykly>
+              </td>
+              <td gd:GUID="2735ec68-f8bd-4f99-b588-3cf3b756383a">
+                <liczba gd:GUID="60870f85-9578-4029-a4dd-7d8de024b453">5,0</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="3ad82c88-971e-4705-b152-39e5c88befd5">
+              <td gd:GUID="75b81f9c-ea29-44cc-b9bf-0d975d4bdff9">
+                <tekst-zwykly gd:GUID="71646eba-5649-4204-b89d-94234f3abbb2">Grajewski</tekst-zwykly>
+              </td>
+              <td gd:GUID="eb00f2ce-b15a-4227-a84e-64f556412125">
+                <liczba gd:GUID="15a95f29-376b-437a-928f-6c178a7f1d7b">11,1</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="f28dc011-6e5f-4f41-8cfb-0856ca95f696">
+              <td gd:GUID="776944f2-9ac6-47f5-9661-a8ad186b383d">
+                <tekst-zwykly gd:GUID="d428612a-5ac0-48b3-97c9-a1225ac03d20">Hajnowski</tekst-zwykly>
+              </td>
+              <td gd:GUID="30ef527f-4bc9-4d84-8934-08d018570533">
+                <liczba gd:GUID="21023faf-0016-43a1-9d56-e24205dc675d">8,5</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="e67436b5-1d84-4ed6-ad24-a37ec5a51b9a">
+              <td gd:GUID="91acdb70-6fb8-4cc3-afa8-48adc9b7c594">
+                <tekst-zwykly gd:GUID="bf61d692-ad79-40d1-ad9d-c92862b25c33">Kolneński</tekst-zwykly>
+              </td>
+              <td gd:GUID="2b1e779b-6565-41f3-bf03-9d4c186bf24b">
+                <liczba gd:GUID="d258eb8f-c5cc-425f-b6da-3b93a7327457">13,2</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="f6c77bb9-8cc5-4951-a2f0-6ee21854544f">
+              <td gd:GUID="e1bcd0c0-47c8-4687-8258-1a9b08f669d0">
+                <tekst-zwykly gd:GUID="198f76e0-2981-4ef6-b7c6-63d0aa97e21a">Łomżyński</tekst-zwykly>
+              </td>
+              <td gd:GUID="81a8fa6c-b571-444c-9242-9cd9d53a1a10">
+                <liczba gd:GUID="8eb23c26-9fa5-4c0b-95e5-a947edd125c3">5,1</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="09d662c4-23e8-467c-878a-95f926edfaf4">
+              <td gd:GUID="50cc0249-a800-4ada-926e-b3bcb5895586">
+                <tekst-zwykly gd:GUID="cba3ca4d-99cc-4c66-b36b-39f85e6d348f">Moniecki</tekst-zwykly>
+              </td>
+              <td gd:GUID="f03170ef-36ba-4405-b41d-822b002d7203">
+                <liczba gd:GUID="18c18434-6fde-42b5-84c8-957da1f3c039">6,9</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="2017a267-6c88-4255-9969-35288050cccd">
+              <td gd:GUID="bc98ff53-d89e-4824-85d1-275a46951e7b">
+                <tekst-zwykly gd:GUID="c095b47b-68cb-47e3-9b3a-5d0093166462">Sejneński</tekst-zwykly>
+              </td>
+              <td gd:GUID="ed24d307-4836-4009-b118-3459b12339f3">
+                <liczba gd:GUID="0757927d-bdc5-49e4-8ddf-75efbd340fde">12,0</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="5d6fc2a8-e3b8-4882-a1f1-bb8db4314473">
+              <td gd:GUID="670f5c5a-4cf0-40cc-a5b9-c000f5b053bd">
+                <tekst-zwykly gd:GUID="5d89de2e-c04b-41ea-b9a4-89dc0b6e1833">Siemiatycki</tekst-zwykly>
+              </td>
+              <td gd:GUID="d798aead-dadf-4397-802c-0357f372ad42">
+                <liczba gd:GUID="f594fa06-b1a9-4e79-8020-7ddabcf3c5a2">6,2</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="80250123-3494-4682-a61f-20158791e066">
+              <td gd:GUID="f95f136f-2d29-4504-9ed5-fe309c40f938">
+                <tekst-zwykly gd:GUID="fba3154e-45c5-4b36-8191-38efe2294777">Sokólski</tekst-zwykly>
+              </td>
+              <td gd:GUID="70dc252b-b578-4dbd-9739-e6cc2092161c">
+                <liczba gd:GUID="3453bc40-a14a-4f89-a005-c5e13511a5a3">10,8</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="26f50f62-7e2f-4a91-ad21-290125d414ba">
+              <td gd:GUID="ffdadff5-9568-49a2-8136-6e7ec21734a7">
+                <tekst-zwykly gd:GUID="70c25dd2-bfbf-47e6-82fa-74f9891afce4">Suwalski</tekst-zwykly>
+              </td>
+              <td gd:GUID="fc890f11-68ac-4a33-b8cd-3fe370c60188">
+                <liczba gd:GUID="9f56d252-85c4-43f6-9a72-dfa94b54c41d">5,9</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="1c1ebbc4-53f2-45c2-ae56-52f13fa49d7c">
+              <td gd:GUID="f2f06105-f993-40cb-a6d1-60805be7f211">
+                <tekst-zwykly gd:GUID="5cbedaee-f208-4ed9-9bec-c8b3bde067d5">Wysokomazowiecki</tekst-zwykly>
+              </td>
+              <td gd:GUID="7ee72aac-9ebf-4db6-b335-788ea21dea52">
+                <liczba gd:GUID="a0ec1481-367b-4567-9d17-7ad4a51a8364">6,8</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="414b59e9-752c-46bb-b48d-9d9efaf90ee1">
+              <td gd:GUID="efee53d3-9962-4557-98cc-fbc6cacd4bcb">
+                <tekst-zwykly gd:GUID="aad3e277-1374-4609-801e-c2e292f3c044">Zambrowski</tekst-zwykly>
+              </td>
+              <td gd:GUID="a760d500-29dc-423f-8601-f9a06271b896">
+                <liczba gd:GUID="fb8198fa-212e-4ac6-88dc-8afbe274f965">6,3</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="174c0490-ab65-4baa-bb44-174f40aacd74">
+              <td gd:GUID="22e6e9d5-f8ee-440c-b3ac-6680f351a059">
+                <tekst-zwykly gd:GUID="f41a7d92-5f44-4cad-bb9d-c09d757c32f3">Miasta na prawach powiatu:</tekst-zwykly>
+              </td>
+              <td gd:GUID="effbdeeb-39d6-4924-a0e0-ba418be1736c">
+                <tekst-zwykly gd:GUID="4b63230d-eafe-4319-b322-c548362a6661">‒</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="93e841cb-f035-47a9-8c44-544237b24afd">
+              <td gd:GUID="a786eaa0-f18b-4ef1-a623-c9f469c735cd">
+                <tekst-zwykly gd:GUID="a07f3725-74fc-4b06-93fa-6cbd67caad36">Białystok</tekst-zwykly>
+              </td>
+              <td gd:GUID="cf53e855-1697-4e46-bda7-11452db72c1e">
+                <liczba gd:GUID="93ebee1d-3565-44fd-98d0-30b151e0a972">5,3</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="574c2ce5-71e5-4436-b041-69d2dec7239e">
+              <td gd:GUID="5a1fe2e3-a6aa-4b15-aa35-6841fa5ff286">
+                <tekst-zwykly gd:GUID="a9af2153-713b-43f0-b5aa-7b9c51a97d40">Łomża</tekst-zwykly>
+              </td>
+              <td gd:GUID="ae0dac42-7703-40bb-848d-27945b18d560">
+                <liczba gd:GUID="2bb4d9dc-9423-4009-a4fe-7b30e9d96be1">7,0</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="d07689f5-3229-4a8f-aa43-1402a4c2bc1e">
+              <td gd:GUID="e9ecfb39-d845-4660-ae51-9d594f1fdb7f">
+                <tekst-zwykly gd:GUID="edf003f4-af7d-465c-901a-95848053a2d0">Suwałki</tekst-zwykly>
+              </td>
+              <td gd:GUID="306c1b01-6333-4a2f-809a-b50d5054bafb">
+                <liczba gd:GUID="03f64ef1-ebd2-4554-ad41-b62a8f3ccafa">5,9</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="f36e35c4-219d-41ef-8cc0-36c533e81cad">
+              <td gd:GUID="3e2ae600-d57f-4a03-9c72-dc873f95493b">
+                <tekst-zwykly gd:GUID="df7cafed-6940-4f75-82c5-b649994d4161">POMORSKIE</tekst-zwykly>
+              </td>
+              <td gd:GUID="8ab69d98-0ccd-481f-a346-91e06e7d94dc">
+                <tekst-zwykly gd:GUID="adf97cc0-92b9-40ad-8150-4c79b4e670d8">‒</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="386a708c-875e-43c5-ac16-ba85aab8b977">
+              <td gd:GUID="d3ef56bd-7334-4c1c-a674-04e9b5e680a5">
+                <tekst-zwykly gd:GUID="30b7845b-ec16-4f6d-a721-cb3b02bf6aab">Bytowski</tekst-zwykly>
+              </td>
+              <td gd:GUID="3414b295-23a3-4d32-8a96-55c3ba9d65d2">
+                <liczba gd:GUID="4d8b6d3f-0bb2-49cb-b7f7-6d78059cdf8f">9,0</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="9658ea9f-30bd-4fdd-8a02-d14710cedc47">
+              <td gd:GUID="31b719b3-2125-4b01-bd55-23da23b90cc4">
+                <tekst-zwykly gd:GUID="c9e7ce0c-520b-48de-ab56-927b4b62b53e">Chojnicki</tekst-zwykly>
+              </td>
+              <td gd:GUID="7eb5bd54-f902-49d6-b89d-6f912449e527">
+                <liczba gd:GUID="648d3b36-f8b9-4b93-a677-c9f60f6c5f57">8,5</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="0229763e-fffa-43f7-bddc-bf2501ae3b4b">
+              <td gd:GUID="29c4bd3f-91cd-40b1-ad00-7586e7f8c4c5">
+                <tekst-zwykly gd:GUID="89dceeef-1158-4eae-b075-89581204ffca">Człuchowski</tekst-zwykly>
+              </td>
+              <td gd:GUID="18f6e14a-ad21-40b7-ace2-53b492001fb0">
+                <liczba gd:GUID="30b95f1f-0424-41da-95da-56bf7535d5e5">10,1</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="8720c07a-19a8-485d-93f9-b4dfca7c1af2">
+              <td gd:GUID="621e015c-cb3e-4332-9313-79433a31a192">
+                <tekst-zwykly gd:GUID="dfd4a168-2051-48ab-8a14-b36e86796d3a">Gdański</tekst-zwykly>
+              </td>
+              <td gd:GUID="17dd4f07-4ce5-434e-93ff-2eb4a53b5daf">
+                <liczba gd:GUID="c4ec3d5f-9cb5-498e-9a70-5bab86286dc4">3,8</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="ea9b756b-5911-4b34-a942-37131977b4f9">
+              <td gd:GUID="ffe8bc1c-259b-4a81-a9cc-744b9b392090">
+                <tekst-zwykly gd:GUID="afa79a67-f0db-4ee3-95a5-948ff9e4cf07">Kartuski</tekst-zwykly>
+              </td>
+              <td gd:GUID="957c92d2-52cd-4800-b526-0036bac1d1d6">
+                <liczba gd:GUID="e9d186d4-3085-444c-b941-d6d2cf1bc448">2,6</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="79d9c157-b501-4bfd-95f7-c587825966c4">
+              <td gd:GUID="5dba5041-8588-40de-ae50-b074a9ad19f9">
+                <tekst-zwykly gd:GUID="593d9c9d-7e8e-464a-ab4f-6a94fb509164">Kościerski</tekst-zwykly>
+              </td>
+              <td gd:GUID="f3a0b775-c42c-4208-b39a-2783b63b34a0">
+                <liczba gd:GUID="e3309de7-4f49-435e-aea1-ea8adc25087c">7,2</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="f3a65ec1-0e0d-4ff6-9667-eee439de0077">
+              <td gd:GUID="f75070f5-5a95-4660-a26f-3cb885eb7c50">
+                <tekst-zwykly gd:GUID="57c5c5b0-f441-4dba-a8d3-1bced0729e7a">Kwidzyński</tekst-zwykly>
+              </td>
+              <td gd:GUID="401e7227-319b-42e1-9a36-ce9ae73976e9">
+                <liczba gd:GUID="30cbb15d-2894-41d2-b6ae-a76514c9e6ca">7,9</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="cfcf2f3b-0571-4aa1-babb-9e85fdcfc6ca">
+              <td gd:GUID="7ab98047-2524-4a76-896a-64e875a0f9da">
+                <tekst-zwykly gd:GUID="eb6b33f2-5753-49ee-b116-12809b9febdc">Lęborski</tekst-zwykly>
+              </td>
+              <td gd:GUID="dc0cb98b-5d17-42fb-9b8b-01b72fa88bee">
+                <liczba gd:GUID="e02e45cb-9621-4bc6-9510-05585a3ed4c2">9,4</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="13d72048-7b85-48a6-bc54-ea95b3156501">
+              <td gd:GUID="5c6851f3-d966-4ba3-a89d-b4b20bd36390">
+                <tekst-zwykly gd:GUID="72245afa-4156-4d99-b4a7-407ac91a4ada">Malborski</tekst-zwykly>
+              </td>
+              <td gd:GUID="a5bb387f-b706-4413-9a0e-6630b138a38e">
+                <liczba gd:GUID="f9623439-9500-4adf-a080-739e6a5d8080">9,1</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="e02ea1ec-71c3-40f1-9071-a72846e8593e">
+              <td gd:GUID="82648ade-11a7-44f5-b0db-f36163b7a37c">
+                <tekst-zwykly gd:GUID="9d6050b1-ba0c-4ec1-83cf-1d97a5e0aaf7">Nowodworski</tekst-zwykly>
+              </td>
+              <td gd:GUID="e0b6d84a-7c27-4e69-94e4-b89f5b32a51e">
+                <liczba gd:GUID="98c772cb-b054-4b6d-9b34-c35efb385bff">9,9</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="55ea7e43-c5d9-4926-91a8-89691639baf4">
+              <td gd:GUID="e56636d8-1ec7-4a3f-b679-a30b11b1ef27">
+                <tekst-zwykly gd:GUID="1389ec46-dbea-4c10-8f64-d07bf09e880d">Pucki</tekst-zwykly>
+              </td>
+              <td gd:GUID="fa5f1263-9749-4b88-a9f2-eb311db6806d">
+                <liczba gd:GUID="c64cdd04-ac92-4741-a08d-6a2e7cda8192">4,8</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="67cc95d3-cba1-4f61-9e4f-57a0ce1d5887">
+              <td gd:GUID="a6c4ffec-18a9-4dd1-9112-413b6bb1d143">
+                <tekst-zwykly gd:GUID="3311a4d7-53d0-4d06-8a48-3d3f1b8f2689">Słupski</tekst-zwykly>
+              </td>
+              <td gd:GUID="9362096e-faa1-42d5-9f58-61b0a6aa64f9">
+                <liczba gd:GUID="64ad3889-d4ab-4a48-96c4-5c2a4493d6d5">7,2</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="8eeeedc9-6580-4b90-a5bf-cf193d2a1e8b">
+              <td gd:GUID="48f6d24d-6f45-4c58-bc9d-e0e970523b4d">
+                <tekst-zwykly gd:GUID="7114170f-98c2-44ad-b0c6-e7da8102295b">Starogardzki</tekst-zwykly>
+              </td>
+              <td gd:GUID="c0373a02-ffe4-405b-b5a9-3ac45acc0610">
+                <liczba gd:GUID="90a89f35-296f-4298-b0a1-22566d6a5cb4">5,8</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="c9f0902e-44fa-4fad-996e-27689da04d74">
+              <td gd:GUID="f2556838-0205-45af-98ac-a7615d4c4bf9">
+                <tekst-zwykly gd:GUID="def6044a-1c42-4cf2-a69f-ec412212404f">Sztumski</tekst-zwykly>
+              </td>
+              <td gd:GUID="74880704-4415-4dcf-8ec7-05bb2a9d8c7d">
+                <liczba gd:GUID="1daa3f80-f225-44fb-b29c-4a500bf77c09">4,4</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="1dd75b87-5a6f-4efd-9fa2-cc56403c7b54">
+              <td gd:GUID="e609669a-ef1e-40c0-b436-ca4540828be4">
+                <tekst-zwykly gd:GUID="efb2d984-1a72-439b-94d6-c5f4b26e1db6">Tczewski</tekst-zwykly>
+              </td>
+              <td gd:GUID="d52568d3-3235-4514-9914-53f6bf0451a7">
+                <liczba gd:GUID="4e5a9a68-bc02-47a9-aa91-293544247771">6,0</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="8fd7c8ee-f883-4020-9d2c-2482c0cb0044">
+              <td gd:GUID="712e49ac-4b5b-4bf5-9789-88b1c5a3b2c1">
+                <tekst-zwykly gd:GUID="dc7adced-8f36-425a-9141-3e4e5f9cc542">Wejherowski</tekst-zwykly>
+              </td>
+              <td gd:GUID="f46b07f2-5064-4eb1-b3f5-d904a1ca7b50">
+                <liczba gd:GUID="b1dc9ef6-41b3-44fb-9f6d-117a11df0a82">5,5</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="882f239d-a519-4eee-a051-0c16f19a1e55">
+              <td gd:GUID="e886e299-b25c-4945-bb69-5744c338e3cb">
+                <tekst-zwykly gd:GUID="daef7612-903a-4333-bbef-93e2ecd39f67">Miasta na prawach powiatu:</tekst-zwykly>
+              </td>
+              <td gd:GUID="95fe08aa-d865-4aa7-8afd-becb6c9e9a7f">
+                <tekst-zwykly gd:GUID="bca4e54e-ffd6-4eb3-a13d-916b9d22399c">‒</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="2f84baf9-0ae7-48cc-b281-07fa6c389c11">
+              <td gd:GUID="a0e92b39-227d-4842-b97e-342bce5bea40">
+                <tekst-zwykly gd:GUID="3fd81921-a321-47b0-bf29-e394aeb9d456">Gdańsk</tekst-zwykly>
+              </td>
+              <td gd:GUID="6ccbee45-db7b-491d-aac7-407129681d31">
+                <liczba gd:GUID="fc6e5572-8317-4046-8e38-02d3d5adb04a">2,7</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="fcf7f103-2fc8-462a-9158-d4ddc126fc70">
+              <td gd:GUID="62980244-c2c9-48c2-b3c2-83d8a471468c">
+                <tekst-zwykly gd:GUID="92bd7a82-7aee-4d9a-a87b-e179d221bb55">Gdynia</tekst-zwykly>
+              </td>
+              <td gd:GUID="065517ec-37e1-47f4-9371-1edfd2d12a69">
+                <liczba gd:GUID="c1372fbf-809b-481b-9669-d8204a687bb1">2,5</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="050b1d69-c95b-4f32-851c-c64d88b0a58a">
+              <td gd:GUID="451d312c-40fd-42fd-b438-6ec7481a69b4">
+                <tekst-zwykly gd:GUID="dd9d8d43-c92f-40ba-ac89-0b4d87a32fa9">Słupsk</tekst-zwykly>
+              </td>
+              <td gd:GUID="9f0aeac2-a446-46d2-bf7b-629bbbe5b1f0">
+                <liczba gd:GUID="37abc528-0c21-4c98-9798-6cdf616e57dc">4,5</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="df699c66-507f-4c7f-a1ce-edc3167c3a3d">
+              <td gd:GUID="2f41dccc-e10f-44c8-b567-d64e4fd0c26b">
+                <tekst-zwykly gd:GUID="3b491b32-891b-4faf-a400-a4bbdaeab251">Sopot</tekst-zwykly>
+              </td>
+              <td gd:GUID="654d5d53-2d7f-4380-b10d-81ae031ecf90">
+                <liczba gd:GUID="9b906c22-afac-477b-b284-e3f15630f67a">2,2</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="dcc860d2-9cac-4822-af7c-fe14bca46a53">
+              <td gd:GUID="d2ba6433-6a67-42a0-a632-1a42a5b333d5">
+                <tekst-zwykly gd:GUID="13f8e641-febf-4e81-b52e-4e950e351efe">ŚLĄSKIE</tekst-zwykly>
+              </td>
+              <td gd:GUID="e30e2aad-6435-4042-ac4f-3b7d3a8839e3">
+                <tekst-zwykly gd:GUID="18a8d876-b52e-4436-8b5b-62c272088b4d">‒</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="fee3ab5b-fab9-4693-b964-430c4895888d">
+              <td gd:GUID="5f1175dd-c32d-4b0a-9bfe-bb7a016f299f">
+                <tekst-zwykly gd:GUID="9773b033-18d0-475e-8b7e-c0825178b1fe">Będziński</tekst-zwykly>
+              </td>
+              <td gd:GUID="50a91ae4-2204-429b-9ef0-b54d4cb91ae4">
+                <liczba gd:GUID="222add80-2417-4dbc-b36a-4b9708ff74bb">5,6</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="2277aa0c-137a-42bd-ab16-3482f7137442">
+              <td gd:GUID="4086555d-b1a7-4f00-8a23-943753ab69e4">
+                <tekst-zwykly gd:GUID="3aacb6c8-b519-41ef-aacd-66d817380329">Bielski</tekst-zwykly>
+              </td>
+              <td gd:GUID="cfe806f6-44a7-4c2c-b266-06113242f9fe">
+                <liczba gd:GUID="07ec58a9-6a17-409f-9263-25af4905f49c">3,4</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="d0c38eef-b99d-42ca-aa42-4c741e05b858">
+              <td gd:GUID="7246ff39-dfd0-4ded-9dba-e2ecd42b1012">
+                <tekst-zwykly gd:GUID="c90c3d41-7860-460b-be0e-050892c05ce4">Bieruńsko-lędziński</tekst-zwykly>
+              </td>
+              <td gd:GUID="b7a9d97e-db97-4343-ac06-7a1e507fd98a">
+                <liczba gd:GUID="8035418c-ca51-4d94-a56b-cb6ac182f813">1,5</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="fe0e6245-10b6-49d4-998f-aad3997710f3">
+              <td gd:GUID="0a10858a-c4f8-400d-bc39-d2cc8f7b1a34">
+                <tekst-zwykly gd:GUID="0f2e3d7b-aede-46db-8c20-78f109a6cd5b">Cieszyński</tekst-zwykly>
+              </td>
+              <td gd:GUID="ac6ad814-145c-4c40-a0aa-d8f7b4bfecc5">
+                <liczba gd:GUID="96665610-ae69-4cc4-a9d7-69cb4036e41f">4,6</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="def3420f-a77b-48b6-9983-7b2d88602ff5">
+              <td gd:GUID="1edd0a49-9d34-4ac3-946f-f786eabd9a69">
+                <tekst-zwykly gd:GUID="b1ebd05b-ec36-4c69-abf6-5618404d9809">Częstochowski</tekst-zwykly>
+              </td>
+              <td gd:GUID="22e1ec17-1aea-4079-9dd2-38653dd8107d">
+                <liczba gd:GUID="590eea29-56a6-40a8-8011-4bf699cd6b55">6,2</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="122b5f80-da45-4dfb-92a8-451d5e19e948">
+              <td gd:GUID="572aaf2b-20d5-4317-ba0f-0be9fe01414a">
+                <tekst-zwykly gd:GUID="8ab83f5f-e2dd-4ebc-946b-ceea4b9056e1">Gliwicki</tekst-zwykly>
+              </td>
+              <td gd:GUID="dbf34861-bbc8-4844-a8d2-4d795818794a">
+                <liczba gd:GUID="ab3aa30f-11ba-4c2d-b84a-49831348e895">3,6</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="fbe26487-3eae-4548-ba9a-28567fc84692">
+              <td gd:GUID="b5790fe0-bec5-419e-bd91-2b3d9ca1b5ec">
+                <tekst-zwykly gd:GUID="97fcb83d-f8ad-4819-a6fc-737bab902460">Kłobucki</tekst-zwykly>
+              </td>
+              <td gd:GUID="56c3c03a-dc17-4c2e-bdcb-d26cb23a043a">
+                <liczba gd:GUID="e748384f-f836-43d1-a6ca-70e4c3380d50">7,4</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="f78507d1-a98a-4003-a36a-f2918079f64f">
+              <td gd:GUID="05319a3e-3fa0-4a1c-a9f6-f05970ee653c">
+                <tekst-zwykly gd:GUID="a1a95da1-6051-4972-923d-05eca7fe27a8">Lubliniecki</tekst-zwykly>
+              </td>
+              <td gd:GUID="2a877266-d0ec-4d30-b7c6-f6d97f68e17e">
+                <liczba gd:GUID="0862944b-d8c0-4734-b197-9c2627e4212b">5,1</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="b3d5b143-73bc-43ca-8b54-874ee75e1b63">
+              <td gd:GUID="4c0aaedb-c4d7-43dc-9f99-c291d861f8d0">
+                <tekst-zwykly gd:GUID="cbd3a9e0-ffea-4523-bf9b-776ee445ff81">Mikołowski</tekst-zwykly>
+              </td>
+              <td gd:GUID="f3592fed-12f4-47bd-862e-c793775b920f">
+                <liczba gd:GUID="1c66eb7a-d681-4ea3-84bb-d30315d06be3">2,9</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="03cb1530-67fc-4ef0-85fe-f6d54a4c4f9b">
+              <td gd:GUID="f7a42ea4-0cfd-4847-885b-ec0ed2880043">
+                <tekst-zwykly gd:GUID="89dbca84-6d17-41c9-b06f-f343d75b504f">Myszkowski</tekst-zwykly>
+              </td>
+              <td gd:GUID="64fadf83-5c80-4b07-a24c-740873c7b222">
+                <liczba gd:GUID="8249770a-5f5f-49e5-a1d7-99df729bb832">4,8</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="9218298f-db60-4fd9-b383-b3d4ca59e8ea">
+              <td gd:GUID="74f7d500-48e7-44ec-bfb0-df2ad7ea10b3">
+                <tekst-zwykly gd:GUID="9f78ada4-e8d3-4b0b-af50-f9433da88f98">Pszczyński</tekst-zwykly>
+              </td>
+              <td gd:GUID="686cf612-9252-4740-b653-9702696d76c0">
+                <liczba gd:GUID="fc2030a2-eacd-459f-be77-7afd4ca7519e">3,0</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="35b30589-f2f0-4c70-9beb-c1841518cb31">
+              <td gd:GUID="a3abd184-b79a-43ea-904e-9506c21924f9">
+                <tekst-zwykly gd:GUID="096a77d2-4a07-4730-ab67-0cf0e4cb27ad">Raciborski</tekst-zwykly>
+              </td>
+              <td gd:GUID="1b667922-a683-43d5-bb6e-a62b557b74b6">
+                <liczba gd:GUID="1843a3f3-54e9-492b-9bca-829678b76ecb">3,8</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="27f354f4-9bbb-4fcd-9c3c-5ba2bfe3bcc5">
+              <td gd:GUID="ff9b7a27-d8db-4244-b788-a9816aeea5e0">
+                <tekst-zwykly gd:GUID="63d489b2-43b2-4f92-8986-95265ec81ac2">Rybnicki</tekst-zwykly>
+              </td>
+              <td gd:GUID="e8f6c752-6dbe-4e03-a6d5-fed1847fbefd">
+                <liczba gd:GUID="02433bb5-e731-416e-b244-75bac475badd">5,4</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="ff7592b0-c76c-45e9-8016-db90efc5432c">
+              <td gd:GUID="3c8634e7-5a7f-4069-9f69-122d290b77e8">
+                <tekst-zwykly gd:GUID="bd062e3b-4bd6-4e8f-8d6e-33406d15753e">Tarnogórski</tekst-zwykly>
+              </td>
+              <td gd:GUID="8df49782-5b1d-4c77-a02b-1c4c6f7e79e5">
+                <liczba gd:GUID="fd85d7b6-2258-4397-bc4a-c46b35302145">4,6</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="ed3b4d42-e159-4c12-a123-84bf5c2ee270">
+              <td gd:GUID="8453661a-2bbb-455f-b666-a700a5646bb5">
+                <tekst-zwykly gd:GUID="ea5b5a2c-f710-4fd6-94f2-9de39a0e695d">Wodzisławski</tekst-zwykly>
+              </td>
+              <td gd:GUID="b879a51e-4694-453a-85db-35f3c15eaab6">
+                <liczba gd:GUID="3dde36d7-bca2-4976-83b4-92f54df42147">4,7</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="e9c4d227-bd01-47ff-a5d8-b31dc35a0fb6">
+              <td gd:GUID="0ef3e99b-17c3-4164-bd24-2879bf2bb190">
+                <tekst-zwykly gd:GUID="ce18eb3e-9b89-4f50-a2f6-59c6c9d52ca4">Zawierciański</tekst-zwykly>
+              </td>
+              <td gd:GUID="a0f7f032-c986-4a92-bc32-f0becc038e5a">
+                <liczba gd:GUID="e4549f18-c9f7-4160-a91d-8279f7b12e20">6,1</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="d5a4c75a-6a9a-432b-9309-ab51e61ed7b6">
+              <td gd:GUID="ead59a11-ce3e-4190-aa32-ba7a397261d6">
+                <tekst-zwykly gd:GUID="8abc4ff0-e327-4caf-8ed3-8593b6fe9d75">Żywiecki</tekst-zwykly>
+              </td>
+              <td gd:GUID="9efe0fd8-7b20-4a9b-91de-28068961ee42">
+                <liczba gd:GUID="4d6b4138-7b7f-4efa-b92d-948301c40562">5,9</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="4ba2f2b9-12e1-41e8-8d4e-585317bf9908">
+              <td gd:GUID="c522a81b-dd3f-4c3c-9465-ecc90e0dc6a9">
+                <tekst-zwykly gd:GUID="2bd0f31d-c142-4fb4-a172-796be9c32c9f">Miasta na prawach powiatu:</tekst-zwykly>
+              </td>
+              <td gd:GUID="ae6a0e96-7dd1-4965-9ac6-25ef3b6be1fc">
+                <tekst-zwykly gd:GUID="3a2b8d25-2aa4-440b-ab4f-4ec092b287de">‒</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="f30a5579-d93a-4028-a9e6-a0ca004ddacb">
+              <td gd:GUID="ce0d85dc-29cb-45e7-9525-94750109a5ae">
+                <tekst-zwykly gd:GUID="096ebb6f-c6ac-4a78-be42-c9ab28585c2a">Bielsko-Biała</tekst-zwykly>
+              </td>
+              <td gd:GUID="2f303016-91ea-4ecb-8fa0-cf567e8e8419">
+                <liczba gd:GUID="febdf3ab-5266-426f-843d-234846507dd0">2,2</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="30a4509b-9010-47f5-83f8-626f9950e18a">
+              <td gd:GUID="5f0ded8c-90ff-48ba-97c4-afdadc17d222">
+                <tekst-zwykly gd:GUID="7554b906-d739-4075-876c-92a8251ccee1">Bytom</tekst-zwykly>
+              </td>
+              <td gd:GUID="b2526ca4-572e-4352-99d1-496e0206f040">
+                <liczba gd:GUID="8b5b93a1-8e46-4c2c-896c-7752a0177209">8,7</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="d31c10e5-8924-4019-9a5d-5c83c03c17ff">
+              <td gd:GUID="de480ef7-70a5-43f6-9cea-55330f819d83">
+                <tekst-zwykly gd:GUID="8c0dc4c7-c5f0-4907-b9eb-a9f53351c324">Chorzów</tekst-zwykly>
+              </td>
+              <td gd:GUID="196e48f8-0e44-44c4-bbad-6b2a5ba7bab2">
+                <liczba gd:GUID="8be2c919-deca-4110-b219-ec378ba5b01f">3,8</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="04873118-43d5-4d1f-be2a-e5061cf19825">
+              <td gd:GUID="151ee038-93f5-4cff-ac3c-4ae824cae954">
+                <tekst-zwykly gd:GUID="50abcfaa-2818-4d26-8926-375fb760c3cc">Częstochowa</tekst-zwykly>
+              </td>
+              <td gd:GUID="ef7b9eab-d402-452a-8c4f-996d478caae3">
+                <liczba gd:GUID="20d195e2-d867-4581-a1f7-ff7b8e9608ca">3,7</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="b80d7a2c-8f00-49e4-9cdb-99bb1f1cfc45">
+              <td gd:GUID="1b210bb8-5843-4fb3-8405-76c88452388e">
+                <tekst-zwykly gd:GUID="200a8766-e83a-44bf-96c3-b68752adeaab">Dąbrowa Górnicza</tekst-zwykly>
+              </td>
+              <td gd:GUID="b3d2e760-ab0f-43ac-8a8f-513aab8a81a7">
+                <liczba gd:GUID="2be814cb-dcca-47c7-81a6-03a52ecd5b55">4,2</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="e43d47f1-6591-475d-bb14-b2946c9bfa04">
+              <td gd:GUID="be81e6c6-f56c-4a44-a3de-595989a81062">
+                <tekst-zwykly gd:GUID="25dabc4c-f789-436e-93af-490dca4e7637">Gliwice</tekst-zwykly>
+              </td>
+              <td gd:GUID="71bdb715-86bd-4880-ad28-474322946489">
+                <liczba gd:GUID="3fa12a23-fcb6-4e35-a7bd-4bd8b9b369ef">2,5</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="d482003b-59d5-476c-bf61-4063b3fb74a1">
+              <td gd:GUID="d1a768ff-db0d-41e6-8613-62834979d3a7">
+                <tekst-zwykly gd:GUID="fa7619cf-d0e8-4d69-bdb2-670432feab80">Jastrzębie-Zdrój</tekst-zwykly>
+              </td>
+              <td gd:GUID="b127087e-9a77-4477-839a-401f4976a84f">
+                <liczba gd:GUID="5e3bce06-465e-4dba-bfed-fba0848be8bb">3,6</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="5b6e3ee2-78a3-43f1-b653-3126bf4a2308">
+              <td gd:GUID="721665b8-be99-4bb9-80e2-ca1b729ccc26">
+                <tekst-zwykly gd:GUID="2cfcd0cd-6256-4522-ad96-80c7470898d1">Jaworzno</tekst-zwykly>
+              </td>
+              <td gd:GUID="0c5b1285-324c-4f3c-90c6-c965307bde92">
+                <liczba gd:GUID="edf1bda5-5888-41d4-b561-1e1a4fd9f0dd">3,9</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="7594a75f-e868-4357-a6d7-d4aad292fbeb">
+              <td gd:GUID="18b4e521-1958-473e-890d-5bb0d4f318c5">
+                <tekst-zwykly gd:GUID="28c57781-6bdc-4de5-9ddd-06c1b16eed6e">Katowice</tekst-zwykly>
+              </td>
+              <td gd:GUID="4d214215-75c1-4a0b-8e12-0c1b76babe42">
+                <liczba gd:GUID="32209df3-4e89-4ece-b8bd-346a3c8f0022">1,2</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="74fbfcb0-2873-4ea7-bcc6-09ac7a2aa0a8">
+              <td gd:GUID="35714043-b7f6-42e5-abee-0e37c528dbc7">
+                <tekst-zwykly gd:GUID="62f03a2c-59c3-4c45-af2d-86411d640b00">Mysłowice</tekst-zwykly>
+              </td>
+              <td gd:GUID="f770f6b4-3cf7-471e-8c3a-25db7a539ae6">
+                <liczba gd:GUID="8ef34e50-c07d-4900-ada7-20ca0d0f464e">4,4</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="3f2a246f-5b27-4bc3-beec-adac0bd38d54">
+              <td gd:GUID="fef8231c-435c-40ba-9a65-4b6e12d98d21">
+                <tekst-zwykly gd:GUID="bfc2676b-e4f7-4ebe-8473-43ec8c498db6">Piekary Śląskie</tekst-zwykly>
+              </td>
+              <td gd:GUID="c851d517-c28a-4a2d-a1d9-6bd3e5d781d6">
+                <liczba gd:GUID="c9d43830-9302-4c6c-b3c9-8673096c6df6">8,3</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="08968502-511b-4f3e-9717-e26fe8ae711d">
+              <td gd:GUID="bdef3b6a-2b09-48ec-9436-345af6f7d82a">
+                <tekst-zwykly gd:GUID="87bd1208-176c-418d-87da-a5d2417ffcd7">Ruda Śląska</tekst-zwykly>
+              </td>
+              <td gd:GUID="3674062d-cfc1-4cca-9131-f2967f937fd6">
+                <liczba gd:GUID="6ecdd524-8cdd-44de-bf1d-d15af5c5409c">3,2</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="4bfdfff8-c5a3-4550-b9d7-57e34ef9cb44">
+              <td gd:GUID="a712df46-7b66-46a2-9a8a-33e24858482c">
+                <tekst-zwykly gd:GUID="b5d2a756-cdae-4830-bf61-f0b4d2bc6e90">Rybnik</tekst-zwykly>
+              </td>
+              <td gd:GUID="25b5cc50-e353-4365-b998-1c75ad6777cc">
+                <liczba gd:GUID="69656f7d-f7b4-499b-8ea7-a2434560fe95">3,1</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="d8763a84-204b-445f-9b6d-c20303eb20e4">
+              <td gd:GUID="3b223056-ac84-4233-b9ea-96d269990cee">
+                <tekst-zwykly gd:GUID="0526cb46-fdf9-46c1-b280-c5719ab1b2c3">Siemianowice Śląskie</tekst-zwykly>
+              </td>
+              <td gd:GUID="a98d05b4-aef4-4d74-9cad-73df58142bef">
+                <liczba gd:GUID="90395bbd-8a03-4e11-ac7b-47664bcea3e2">4,8</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="1b409bac-a69d-4ba7-8e0c-59fa076e3ef1">
+              <td gd:GUID="5d773717-ce16-4ead-b01f-0aba333dc8cc">
+                <tekst-zwykly gd:GUID="ef545657-46a9-4b23-b6af-b766a63d462b">Sosnowiec</tekst-zwykly>
+              </td>
+              <td gd:GUID="3ad3fd17-4e9e-48cb-b5e6-447a9ca6dfbc">
+                <liczba gd:GUID="307e0695-43ae-4f94-a5fc-151520ced018">5,9</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="878aa160-ab6d-4030-b843-eab451a91241">
+              <td gd:GUID="01cce3dc-179e-42bf-beab-c117ed47fc16">
+                <tekst-zwykly gd:GUID="71ada3d2-a594-4954-9f7a-2ffab56759c9">Świętochłowice</tekst-zwykly>
+              </td>
+              <td gd:GUID="868a2891-eb89-4131-803c-a494caeb0ab8">
+                <liczba gd:GUID="5c377a74-7c31-4309-8dab-1f23146b90ee">5,1</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="e67202ea-8f1b-44b5-b1e5-d471825e3bc3">
+              <td gd:GUID="c87be865-0151-4220-b0a6-4117d0649f45">
+                <tekst-zwykly gd:GUID="10b063f1-0e3c-4a2f-ba0d-0ef63522649c">Tychy</tekst-zwykly>
+              </td>
+              <td gd:GUID="66d98ac6-562e-4e72-892d-c3a4ec5d86f0">
+                <liczba gd:GUID="a93427cb-021f-4f1b-bfe4-8ade46281075">1,8</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="790f7e6d-d993-4d49-8d16-8e6937da9fc0">
+              <td gd:GUID="d0b0bd2b-2665-41cf-8b17-a9ffc3508275">
+                <tekst-zwykly gd:GUID="ad58767b-3b2f-4677-a790-9480d7fe6405">Zabrze</tekst-zwykly>
+              </td>
+              <td gd:GUID="d8c8c416-3948-42e9-8bb1-e037a9bf3391">
+                <liczba gd:GUID="2d9ee34b-a5eb-40c9-b7d3-7d902abfed17">4,8</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="ad77aff6-4ee0-44b5-ab2a-6832542edea2">
+              <td gd:GUID="7b0e8615-dc5e-469a-9199-3813e9e7506e">
+                <tekst-zwykly gd:GUID="b4e70cab-e72f-42ba-b4f2-770889d06bb8">Żory</tekst-zwykly>
+              </td>
+              <td gd:GUID="1c0b13c5-fa73-4a64-8deb-f8a953986042">
+                <liczba gd:GUID="50289faa-de53-4213-84db-f11c98eb90dd">3,7</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="72857051-8bcb-403f-9a2b-c79aaf25a377">
+              <td gd:GUID="46294cb3-5031-47c2-887e-e651324419c8">
+                <tekst-zwykly gd:GUID="f2d1c601-ec16-4688-aafd-9c2d564a866e">ŚWIĘTOKRZYSKIE</tekst-zwykly>
+              </td>
+              <td gd:GUID="41035654-54ab-41ca-85cb-6c3f229948c0">
+                <tekst-zwykly gd:GUID="4563e618-f0aa-44b3-92c7-ae1eafaf91ac">‒</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="784bd76d-de71-4dc1-89bc-0a6787e7d16a">
+              <td gd:GUID="a74cadc0-add2-4a0e-9b56-d64918b27576">
+                <tekst-zwykly gd:GUID="b216e27e-f9b2-4456-acc7-db501681deaa">Buski</tekst-zwykly>
+              </td>
+              <td gd:GUID="918b0ffd-fcbd-4f64-bb00-3f4b52edb34c">
+                <liczba gd:GUID="1435ab2c-e2ea-4ec6-ba7d-fcd8c171a6f0">4,2</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="a7b0c2b6-45d4-4992-ab4c-2cc0b9d1129b">
+              <td gd:GUID="c5e52310-e9d7-47a3-836a-162cad605ebc">
+                <tekst-zwykly gd:GUID="705ff6d0-07a2-495e-a08c-1ef5ef2eb745">Jędrzejowski</tekst-zwykly>
+              </td>
+              <td gd:GUID="321affc4-34a9-4840-95ae-6fcf5987f014">
+                <liczba gd:GUID="11cb046c-b888-4019-8aed-5753012bac7d">6,1</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="934957bc-23f9-4526-8e83-96161500e3cd">
+              <td gd:GUID="4a3e0089-9d24-47bf-bf2f-b436d3566876">
+                <tekst-zwykly gd:GUID="8c246616-8a34-40cd-8a58-a57a45ff9fc6">Kazimierski</tekst-zwykly>
+              </td>
+              <td gd:GUID="85a3fb46-2edb-469a-b250-35aa19cce4ce">
+                <liczba gd:GUID="7c5478ab-cffb-4731-b5af-25b158effae3">10,3</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="656d89e6-5dc7-4c80-9e5a-b178aac9604b">
+              <td gd:GUID="12aee005-eb66-4cf8-b04f-3f1eb05c729d">
+                <tekst-zwykly gd:GUID="c24f8926-f865-41a7-862a-61b769649b1e">Kielecki</tekst-zwykly>
+              </td>
+              <td gd:GUID="4070cad7-f010-4d82-8f68-92cb3f35d99f">
+                <liczba gd:GUID="153c4fa5-e70a-444c-a30d-1fd1575d690a">6,5</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="9cafbd0f-ff64-4510-9413-2161f7a594b1">
+              <td gd:GUID="112f370f-da34-49f6-a0e3-3a892c7ae23e">
+                <tekst-zwykly gd:GUID="a849d275-3368-4f9b-bf15-5c96bde40480">Konecki</tekst-zwykly>
+              </td>
+              <td gd:GUID="0e51aea6-c6bd-4d80-b27b-9f3eb81fd600">
+                <liczba gd:GUID="0d77ee7f-c4a3-441a-b011-6ee55d18a2b8">10,0</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="78d6a116-b104-4f2b-9554-07adb622f144">
+              <td gd:GUID="e6801b6e-f112-4c6a-9955-28548ebc118e">
+                <tekst-zwykly gd:GUID="e95bc35f-24aa-4a7f-be52-27022d792bd3">Opatowski</tekst-zwykly>
+              </td>
+              <td gd:GUID="387282cc-cb42-4e72-aff8-40f16df0a3d4">
+                <liczba gd:GUID="cc5bbb4d-44dc-4a30-8234-5b1234b90151">14,3</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="a2af1531-a313-4863-af37-35c685863222">
+              <td gd:GUID="6ed0edb3-a53b-4750-ae06-fe9f9121362b">
+                <tekst-zwykly gd:GUID="2a9ee0e9-4241-483a-a22c-8945a0c55b4c">Ostrowiecki</tekst-zwykly>
+              </td>
+              <td gd:GUID="34c160f4-24a3-4ce0-a9f6-4ab9ea61c77c">
+                <liczba gd:GUID="242949b4-c01c-42d1-b21a-ad49ac15b1ed">10,9</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="55c31edc-a1d7-4c49-ad49-07b2bff8f2ae">
+              <td gd:GUID="81b1cfe9-7dc3-4915-9384-c88cd1c33c57">
+                <tekst-zwykly gd:GUID="dc65d88d-5b73-44d3-91d0-8df680e15f5e">Pińczowski</tekst-zwykly>
+              </td>
+              <td gd:GUID="1c002463-65c7-4938-b77c-5291ad174f58">
+                <liczba gd:GUID="e50aa9d1-b432-4753-a888-778709e88f01">7,1</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="8018330a-1193-4e70-be0b-4ac189bc3f9e">
+              <td gd:GUID="a0299e25-4e33-4779-8b8e-dfcbc707dfdb">
+                <tekst-zwykly gd:GUID="7ed597ed-5f16-4cab-828d-ac25906bcf6d">Sandomierski</tekst-zwykly>
+              </td>
+              <td gd:GUID="2e072200-1ff3-4a83-8139-110a20cef6da">
+                <liczba gd:GUID="224025e9-847d-42e1-ae4d-56cb978c9272">8,0</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="2bbad37c-626a-49cb-aaad-49f5746205e8">
+              <td gd:GUID="521e03b0-ddf0-4bdd-b4fd-33a5ad6e7e64">
+                <tekst-zwykly gd:GUID="993fba7b-24fb-4ffe-8bb0-242f145a6155">Skarżyski</tekst-zwykly>
+              </td>
+              <td gd:GUID="b6b3db62-b5c7-475f-8c16-ff02e51e100c">
+                <liczba gd:GUID="82ca62d4-4685-4acd-a8d4-d821f369adb0">14,2</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="10775e0d-593f-4b64-b809-14fdf9c0589d">
+              <td gd:GUID="1b9200c6-a0da-4b93-9f5c-56e4bbd3d5ab">
+                <tekst-zwykly gd:GUID="be000a93-f682-4a70-81fd-19c810ab4945">Starachowicki</tekst-zwykly>
+              </td>
+              <td gd:GUID="acd3e6c3-89a9-4586-8815-6103124dc59f">
+                <liczba gd:GUID="45c729d6-b728-4cec-bce0-81631762a943">9,4</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="0cbf5b8c-a4a2-4fad-82ce-44cab789c0f9">
+              <td gd:GUID="36b35afd-e47b-4453-b5a9-1ecd9bb20cb1">
+                <tekst-zwykly gd:GUID="3b9c56a8-4e0b-4a5c-84f8-b63397a064d7">Staszowski</tekst-zwykly>
+              </td>
+              <td gd:GUID="84546963-0a1d-4155-b29c-77d0df82e7e4">
+                <liczba gd:GUID="464b301e-0467-4f31-81b7-900ce01c00fb">6,2</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="41826b99-97bd-4e02-b357-cb3e1c887e6b">
+              <td gd:GUID="84e14ef5-030f-430c-a318-8d26cb4a57c3">
+                <tekst-zwykly gd:GUID="28625c53-bd90-4098-ba71-e6a02a52e515">Włoszczowski</tekst-zwykly>
+              </td>
+              <td gd:GUID="a3746f28-9ecf-417a-915b-91e61cd368dc">
+                <liczba gd:GUID="2a70788f-81c1-4f78-8750-c4e6bbbbc964">5,8</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="c274ed22-0341-44a5-a7b2-1110afe324ff">
+              <td gd:GUID="4ce77d19-5164-4a93-85c6-2e3503fca1d8">
+                <tekst-zwykly gd:GUID="947c46f6-15a4-4046-a496-1d5dbe209d3c">Miasto na prawach powiatu:</tekst-zwykly>
+              </td>
+              <td gd:GUID="39697240-722a-4b34-9539-df94f5405d9c">
+                <tekst-zwykly gd:GUID="1ee930fd-587b-4dcb-9eb1-9302d4b745ca">‒</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="a56cf24a-6785-43ca-8efd-4ef76aa80b4b">
+              <td gd:GUID="5714ff7d-7a7d-4924-8629-78f9f106f505">
+                <tekst-zwykly gd:GUID="95eacb6a-9dc1-4598-a532-890620442c83">Kielce</tekst-zwykly>
+              </td>
+              <td gd:GUID="3ac9efee-fb1c-4fd4-ae61-c44293d10d4d">
+                <liczba gd:GUID="7a7a6a84-b670-4b89-b1b8-ab134ffefe08">4,7</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="f84277b4-e486-41a0-9c42-ad582d1cb34f">
+              <td gd:GUID="5c7d2244-8e1a-4279-8bf8-79183f71344c">
+                <tekst-zwykly gd:GUID="5759ec82-1e97-4cde-b293-a0a84bf355bc">WARMIŃSKO-MAZURSKIE</tekst-zwykly>
+              </td>
+              <td gd:GUID="05f4f58c-3ff0-4b24-950e-241b13bcbc34">
+                <tekst-zwykly gd:GUID="d3b48b88-645b-414c-92eb-a5790c6e35ee">‒</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="71804fcb-11fe-4b15-abc4-7b7905f621b4">
+              <td gd:GUID="d1bcf51a-4030-4d11-a1c2-a7955ec06221">
+                <tekst-zwykly gd:GUID="dd6e8f7c-f1ce-4e18-8fb2-49d08d377050">Bartoszycki</tekst-zwykly>
+              </td>
+              <td gd:GUID="56aca808-826c-424b-bd02-045c449b3b0f">
+                <liczba gd:GUID="169531d7-d360-4b44-8b6a-ece7b0398e68">16,2</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="eaea3b82-dd08-4e87-8da4-96de6b59e65c">
+              <td gd:GUID="4a101442-6189-4bc1-af43-ea1a5cbea46b">
+                <tekst-zwykly gd:GUID="93a9e38f-5201-4d48-b3e5-b98fbb4471cb">Braniewski</tekst-zwykly>
+              </td>
+              <td gd:GUID="3fc83264-0aba-4c40-84da-f4b84350d6c8">
+                <liczba gd:GUID="25a3a0f9-dad0-4f20-966b-2f3a05426b32">13,9</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="cba15dc0-61ea-4082-b971-d0666a2ec7f7">
+              <td gd:GUID="57482611-e1ab-40c6-9f18-48962818ef69">
+                <tekst-zwykly gd:GUID="d9357f2b-e268-40c2-9f34-8de26ab796b4">Działdowski</tekst-zwykly>
+              </td>
+              <td gd:GUID="995f04d0-6462-49bf-ab92-e363929d70d4">
+                <liczba gd:GUID="c576910d-cd7f-48eb-8cfe-071b1cbd63f7">12,5</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="66b539c9-af78-45a4-8d96-86188fd33951">
+              <td gd:GUID="516574df-4bc2-436c-a4ac-252f58a5e3db">
+                <tekst-zwykly gd:GUID="53814b99-636b-4297-b67b-4593e98778ba">Elbląski</tekst-zwykly>
+              </td>
+              <td gd:GUID="b63a391a-2f58-4868-83c7-0db3ce0d6a1c">
+                <liczba gd:GUID="f3b09b27-0b2a-47f5-af24-f80623deccdb">12,7</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="ad14d07f-e5d6-40a2-bbc8-4df56f9d09e4">
+              <td gd:GUID="08593869-d59a-456c-b730-286dfe058f93">
+                <tekst-zwykly gd:GUID="465fb7db-e467-4c9c-ae2f-ee427cffbad4">Ełcki</tekst-zwykly>
+              </td>
+              <td gd:GUID="f73d3c2a-ba1b-4837-82c9-e29904d1ea09">
+                <liczba gd:GUID="cc3fcb3c-9ddc-484f-af10-b98670783388">10,7</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="ddfe7d8b-6d01-4d88-8ad5-7ae2fc3ac333">
+              <td gd:GUID="68e5e8a5-bd00-4a6e-830c-a2839d60a868">
+                <tekst-zwykly gd:GUID="139724b0-9e35-4ee1-ba5f-38906b9afc8a">Giżycki</tekst-zwykly>
+              </td>
+              <td gd:GUID="f3c30c8e-fbd4-4199-831e-7698651b492c">
+                <liczba gd:GUID="b0069637-fde7-49aa-8fcf-02163568c83b">8,1</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="17927f5f-32da-443a-bef9-a1acfd9e15ac">
+              <td gd:GUID="68344af5-9634-41ec-bc2d-42fe6f182a1a">
+                <tekst-zwykly gd:GUID="a9e602d9-ecd2-4ac0-9cb0-38814abb6bae">Gołdapski</tekst-zwykly>
+              </td>
+              <td gd:GUID="c578a71f-33fa-41ae-9660-886f7d944aa0">
+                <liczba gd:GUID="8e782d34-27e3-4ee2-93c9-475209ccd5b0">7,0</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="fdcdb2bb-2ece-4096-a3da-3bdfc0c4f8df">
+              <td gd:GUID="1fcae3d0-2ab8-4ced-809a-0fd4c112ded6">
+                <tekst-zwykly gd:GUID="ab0e5225-96d1-46bd-bd8e-2c6ab9869b21">Iławski</tekst-zwykly>
+              </td>
+              <td gd:GUID="63943620-d0eb-4c40-b8d1-c42187c4fc9c">
+                <liczba gd:GUID="aa6988b8-1cc1-4521-93db-fa371a4db8cb">4,2</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="efd0bf2c-13a2-4ce0-a2bb-1db6b9859448">
+              <td gd:GUID="b7599ace-fdd6-472b-8391-b0407f0a007a">
+                <tekst-zwykly gd:GUID="e2fd16ab-34fb-4fc4-9e3f-3f6c16bd6ca0">Kętrzyński</tekst-zwykly>
+              </td>
+              <td gd:GUID="dda94f28-01f6-4198-888f-1efbca344813">
+                <liczba gd:GUID="58f83d70-6bc3-4345-84df-0782c0fb6f0d">15,8</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="710ee305-5129-4c05-a7dd-3b361f472149">
+              <td gd:GUID="20ce5d86-f0ea-4dbf-888e-25c8c382f92b">
+                <tekst-zwykly gd:GUID="ea14f113-892b-4a26-afa3-f9e9d98c74a0">Lidzbarski</tekst-zwykly>
+              </td>
+              <td gd:GUID="a6df5a49-7432-4507-a314-bd952f4a4fec">
+                <liczba gd:GUID="40a56fc3-c160-4014-bce4-3ce144bb2b0d">10,5</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="9c6c36ff-9d69-48cb-b178-55cd4835bc35">
+              <td gd:GUID="b7c06a7b-6cc4-4f24-b376-f2025dc5e6bb">
+                <tekst-zwykly gd:GUID="061e1297-eeb1-4383-a195-6756f251d501">Mrągowski</tekst-zwykly>
+              </td>
+              <td gd:GUID="0665b960-d336-4f13-b3b5-c58c19dd760a">
+                <liczba gd:GUID="97531a61-776c-4dd7-a193-acf0452608cf">7,3</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="bb6bbac4-987b-4974-8117-0aaa8c886fae">
+              <td gd:GUID="559fdcc4-bc90-460b-82db-fb5b3734ce14">
+                <tekst-zwykly gd:GUID="8fd91e65-d5d4-4bf1-bbff-8040288b56d4">Nidzicki</tekst-zwykly>
+              </td>
+              <td gd:GUID="0572977c-a02c-4252-987c-75fff77c7f65">
+                <liczba gd:GUID="ebe48354-e07c-4332-8820-8bcfdd32e91d">6,9</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="5a0f6ec5-ec21-4824-a4a3-ec851bb91153">
+              <td gd:GUID="13d4f824-db06-40a8-8813-876d9ee989d8">
+                <tekst-zwykly gd:GUID="9151d900-9a0d-4f46-bb1d-db6b631b8b39">Nowomiejski</tekst-zwykly>
+              </td>
+              <td gd:GUID="36cf1a2f-85d1-44d6-94cb-8f70f9b2b8dc">
+                <liczba gd:GUID="5d2298c1-f68d-4c4c-a998-6e918491189f">10,6</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="74ab69db-e9f9-441e-85f1-5dc2e2852812">
+              <td gd:GUID="bca1d419-7016-4bb3-8f46-95a641787d42">
+                <tekst-zwykly gd:GUID="6fae57da-43a2-4cd9-9ee8-d9e70b3859c7">Olecki</tekst-zwykly>
+              </td>
+              <td gd:GUID="38860835-dbbd-4ed2-87d8-11e92a616dd3">
+                <liczba gd:GUID="94c1103b-f479-488b-b4fe-a56de77b31dc">12,8</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="540313d4-b15e-4ce1-8fb2-95614f6bac85">
+              <td gd:GUID="92317fdf-9ead-4e99-8283-fb8956357a37">
+                <tekst-zwykly gd:GUID="75f818bb-5e39-4d8e-bdd4-18028d831b2b">Olsztyński</tekst-zwykly>
+              </td>
+              <td gd:GUID="e6911309-4233-40a7-9313-16ab07ebe7f0">
+                <liczba gd:GUID="dd6a7afe-ecaa-440b-a05d-5085bba556d7">5,9</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="7da18ca5-702f-4df6-ae86-8c98a82a236e">
+              <td gd:GUID="6b488477-9f50-4bcb-8bbf-6988dc6864a9">
+                <tekst-zwykly gd:GUID="287a1da2-87a6-47c0-a936-936580ad1cec">Ostródzki</tekst-zwykly>
+              </td>
+              <td gd:GUID="8affb470-863a-4ef5-9d3c-c6f04612762d">
+                <liczba gd:GUID="a08b3996-5097-4f03-aab5-579adeedc3de">8,8</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="0d4d11b4-6fd9-42e8-9b1f-16add95cb2de">
+              <td gd:GUID="d0a5c748-1753-47df-9ce0-9c121a601d85">
+                <tekst-zwykly gd:GUID="5119ca15-e0bc-42be-ba05-da3c91eea5cf">Piski</tekst-zwykly>
+              </td>
+              <td gd:GUID="0a998cf7-dec7-48f7-bc30-cf70d0d7e242">
+                <liczba gd:GUID="28d01369-b7d3-4d4e-a829-1ad745f94c68">11,0</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="cac36f01-379c-4e8b-89a1-8c93081128dc">
+              <td gd:GUID="ac9e8d5c-86fd-47f7-86f4-69b884036437">
+                <tekst-zwykly gd:GUID="1067e6f0-122c-493e-b7b4-accbed754b19">Szczycieński</tekst-zwykly>
+              </td>
+              <td gd:GUID="705a944b-0709-4f65-8167-def420cdc872">
+                <liczba gd:GUID="9ccc3080-0bda-4720-8489-126eff8477df">9,5</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="3e5aa916-020f-4ab7-aeb1-5931787b3325">
+              <td gd:GUID="4de53d2b-57b9-4ef5-8cca-75ecbd44a44b">
+                <tekst-zwykly gd:GUID="814643fc-c898-47ec-8305-39523fc4841e">Węgorzewski</tekst-zwykly>
+              </td>
+              <td gd:GUID="6ffd782d-704f-44d8-a398-b10c58e7f1cd">
+                <liczba gd:GUID="17057f08-3908-40cb-981e-9ffb21dd150e">10,7</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="a84e61bc-0d6d-4a99-b382-c8868e47a4c9">
+              <td gd:GUID="561f5b67-0e02-4c86-acac-1e1a22e2fed9">
+                <tekst-zwykly gd:GUID="e33654a8-1342-4b2d-89c7-8bc126fe1dcd">Miasta na prawach powiatu:</tekst-zwykly>
+              </td>
+              <td gd:GUID="7d666435-b6fc-4b23-95d7-cc6b3f2a0cc7">
+                <tekst-zwykly gd:GUID="778407f0-c5a5-4492-9eca-c428125aa648">‒</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="31900682-bbd2-4307-803b-a619142e987f">
+              <td gd:GUID="953a1ff4-08ec-421f-a238-50156b0fe9d9">
+                <tekst-zwykly gd:GUID="4b0758e2-9734-4db2-925b-c02c25497c2a">Elbląg</tekst-zwykly>
+              </td>
+              <td gd:GUID="ac2299bc-a0cd-42d9-a8c2-5e436744c196">
+                <liczba gd:GUID="eabb87ff-c7ae-4620-b901-9d752b6b6ad4">7,4</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="8be94770-771c-4324-b23f-5f6fc675271e">
+              <td gd:GUID="28797f5c-28ee-4ce7-a2db-35d6f0825542">
+                <tekst-zwykly gd:GUID="296a2c82-8e0c-4c12-ae9e-970d826b1fcd">Olsztyn</tekst-zwykly>
+              </td>
+              <td gd:GUID="bb60b53e-7332-40bb-91b2-ea46a5fc6971">
+                <liczba gd:GUID="ea85eb12-aa8b-4271-8dbd-d71e3fd885e5">2,1</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="3b568d44-89aa-4233-9f20-545412e67161">
+              <td gd:GUID="525e9fa8-8a88-460b-8f62-eb0722296d89">
+                <tekst-zwykly gd:GUID="454d450d-8437-4582-930e-651a536ce000">WIELKOPOLSKIE</tekst-zwykly>
+              </td>
+              <td gd:GUID="39a72f43-a0ae-48e5-9345-f507918147c2">
+                <tekst-zwykly gd:GUID="cc11f14c-0767-42fc-a076-a2a7d147f68b">‒</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="fcec5a92-d16c-40b1-8fe0-6840b9eac7b3">
+              <td gd:GUID="e41b9006-02ce-4d94-bb34-a964ee28a186">
+                <tekst-zwykly gd:GUID="c7d381c6-d316-4a7a-971b-06d4a3e7af56">Chodzieski</tekst-zwykly>
+              </td>
+              <td gd:GUID="0ad5313c-b294-4240-9c27-1017d97ac9ab">
+                <liczba gd:GUID="32c84366-78c5-4197-8386-341e10f134ac">7,2</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="2f34722b-13c2-47e4-81f8-f0ff418497ba">
+              <td gd:GUID="1a6895c9-4788-40f9-afa7-7e38f27f074c">
+                <tekst-zwykly gd:GUID="76da2d11-3dd6-41ce-8c68-4cda09b87569">Czarnkowsko-trzcianecki</tekst-zwykly>
+              </td>
+              <td gd:GUID="7ee908b7-14cb-4662-b67b-1b58bbec1fbf">
+                <liczba gd:GUID="e5cd6035-393e-49e2-a02f-490ac1cf4a86">5,2</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="43f604c8-827e-4619-93f5-27a481c98dbe">
+              <td gd:GUID="c3aaa276-52e0-4d35-80ff-859d64e831c8">
+                <tekst-zwykly gd:GUID="c383f168-5aa9-4d42-86d9-9172841904e2">Gnieźnieński</tekst-zwykly>
+              </td>
+              <td gd:GUID="55f63761-f61d-4eac-821c-c764f6aee5f4">
+                <liczba gd:GUID="f60eb96e-c9b1-4bb1-a38b-088e251d5e89">4,8</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="ba53614b-bc8a-428f-aba3-3b0bb5825459">
+              <td gd:GUID="698e768e-5ede-4b97-9034-e6f75c43bccf">
+                <tekst-zwykly gd:GUID="43e07523-d658-4291-a275-364129b60d0f">Gostyński</tekst-zwykly>
+              </td>
+              <td gd:GUID="38f449ea-88ec-41ef-9332-f2c5b03a8d88">
+                <liczba gd:GUID="790f20f3-d5c6-49cb-b60e-0176dd5477ee">4,9</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="852f0ed2-f09b-4a4e-9ca6-8e8ffc3958e4">
+              <td gd:GUID="47b99dbc-61d9-4534-9b14-518796ec41aa">
+                <tekst-zwykly gd:GUID="6452a729-8274-4ac7-bbca-fd7bccc1dce1">Grodziski</tekst-zwykly>
+              </td>
+              <td gd:GUID="d8cebb40-c136-492e-b198-26139b0c881e">
+                <liczba gd:GUID="9270f087-0870-472e-87c9-8f9b781170cf">4,6</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="a55e340e-79b8-431f-9615-bac3c853fd18">
+              <td gd:GUID="3e854115-8552-4322-839c-add51bb1ebc8">
+                <tekst-zwykly gd:GUID="9b6db73d-63f1-41c7-8e5a-74bea64b772b">Jarociński</tekst-zwykly>
+              </td>
+              <td gd:GUID="c182f08f-b41c-41cb-8d73-3fccbcc70091">
+                <liczba gd:GUID="3b498fd4-638d-4be5-9b8b-29803e2ee3b9">4,8</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="c7e6d6f9-c5a5-4a53-86cf-845f93c8788e">
+              <td gd:GUID="6e798e7e-cf6b-4036-b766-bf0f2b969858">
+                <tekst-zwykly gd:GUID="9d5b5f5c-e8d3-4eda-8826-68aec258a074">Kaliski</tekst-zwykly>
+              </td>
+              <td gd:GUID="eeb02fd0-cfee-43f3-bf10-53beee9f2c5c">
+                <liczba gd:GUID="bbb1f4d8-f3fc-4f8b-aee0-7f6a7f0ac558">3,6</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="4e885ae8-82fb-4b2d-b056-1fe238d031ac">
+              <td gd:GUID="47a33d2f-38fe-43c1-b88b-063b24648555">
+                <tekst-zwykly gd:GUID="8ff5a8f3-07cb-428c-904d-23f3f17ca8af">Kępiński</tekst-zwykly>
+              </td>
+              <td gd:GUID="87a807f1-6f1c-4f37-9634-5f86af0fac7f">
+                <liczba gd:GUID="8f999b26-16a7-424c-967c-2e1479e32c18">1,6</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="03ceef5a-31e1-4b5b-963e-f5b0cfbd3353">
+              <td gd:GUID="21eeb1cb-4710-49a4-87b2-9e6c4fb9f810">
+                <tekst-zwykly gd:GUID="35acc2e3-29b3-4e72-872b-e94caa4636b7">Kolski</tekst-zwykly>
+              </td>
+              <td gd:GUID="256595e6-84c0-4fba-a296-913888e6dda2">
+                <liczba gd:GUID="e007852b-a516-48c6-9ddd-010bdb8d8ad0">3,8</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="76c6793b-1cc9-40f5-8aa8-43c1ba34b9bb">
+              <td gd:GUID="224c6c42-e43d-4123-9817-49b567598614">
+                <tekst-zwykly gd:GUID="394510e6-cfc4-4a85-8b88-8c57025ba691">Koniński</tekst-zwykly>
+              </td>
+              <td gd:GUID="228d3918-7ef7-4d8b-b8ac-78f4952e8a72">
+                <liczba gd:GUID="e8080d5f-5ab3-4842-964f-8b55c5f9d200">8,3</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="e54bc5c1-3836-496a-b48e-67b81653d3a5">
+              <td gd:GUID="627c0074-60fb-489f-8571-bd6268266cb9">
+                <tekst-zwykly gd:GUID="8ade29d1-6057-44ea-9bfd-98d571b9e26c">Kościański</tekst-zwykly>
+              </td>
+              <td gd:GUID="213357f3-d535-4c5a-a67b-c10f86855fe9">
+                <liczba gd:GUID="48f532c4-0728-47bf-a07b-ce3365cd55d1">3,2</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="f0ca5f59-db41-42e6-86d0-a75d5d01843f">
+              <td gd:GUID="5e573436-fc0f-4634-b090-5a7b8b2651ed">
+                <tekst-zwykly gd:GUID="d90b4c23-3b11-47c4-ab4d-3b992114bede">Krotoszyński</tekst-zwykly>
+              </td>
+              <td gd:GUID="226a1505-450b-4fe7-b6a5-27a18992fd22">
+                <liczba gd:GUID="538a91d9-f279-40f9-913d-e397d189692b">2,8</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="e6894448-d07e-41b8-85e3-70340b5ac4d1">
+              <td gd:GUID="c859fbb6-f674-4fc1-b390-4198f23addd9">
+                <tekst-zwykly gd:GUID="dec4ba88-34ff-4c6e-b873-aed4f2f53437">Leszczyński</tekst-zwykly>
+              </td>
+              <td gd:GUID="4f964634-e35d-4787-818f-a32c90140bea">
+                <liczba gd:GUID="d846ee5c-b37c-42de-aadf-40e7ebd9808a">2,8</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="270ae920-d6df-4a78-9a79-59b71c5badf8">
+              <td gd:GUID="181dcd2d-d202-495e-9aac-34d2670dcb32">
+                <tekst-zwykly gd:GUID="ef3a8f6f-beaa-42db-8c75-b67cf2d425b4">Międzychodzki</tekst-zwykly>
+              </td>
+              <td gd:GUID="33cadaea-dc39-43fa-84f4-d9e9eff6a7e8">
+                <liczba gd:GUID="37311040-e6be-4ff8-bf1f-591638a345e2">5,1</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="c853255f-9b27-4576-b0f9-97e4005d81d8">
+              <td gd:GUID="6ffc6542-41fe-4fe1-bfce-e88c668412fe">
+                <tekst-zwykly gd:GUID="3a55ae8d-efd4-4af6-866a-1a2e9adbfad1">Nowotomyski</tekst-zwykly>
+              </td>
+              <td gd:GUID="3806c8a9-2acb-424d-b89e-63eb1e51b7d1">
+                <liczba gd:GUID="16d0dd37-8711-418c-8634-54980e6a82e0">2,6</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="d184b559-ab82-4518-82c4-105c46f05ecf">
+              <td gd:GUID="7b33f8f1-84d8-49b1-9bd7-0c80bde229da">
+                <tekst-zwykly gd:GUID="7124162d-6616-4054-a59c-58781916cb60">Obornicki</tekst-zwykly>
+              </td>
+              <td gd:GUID="3d09b4ce-aebb-4a88-bf95-27e3b6060553">
+                <liczba gd:GUID="777ed621-8f0c-49b0-b492-0e95a219dcf8">3,6</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="765d36a1-3a75-4712-b16a-c52707388d0c">
+              <td gd:GUID="c331a3a1-1b5e-4bc2-ac0c-e38aa42b5e7e">
+                <tekst-zwykly gd:GUID="4269eb3b-0dfc-406a-a159-5d070ae1e31a">Ostrowski</tekst-zwykly>
+              </td>
+              <td gd:GUID="8c449fbb-f46a-4f2e-a950-90ca7f59b4b1">
+                <liczba gd:GUID="5597606e-363f-4ff4-aec5-c0d228d8aadb">3,1</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="53983e2d-1120-40f0-84df-68c68641855c">
+              <td gd:GUID="2bccf8e4-f1e3-49d4-9887-8fb7ef7f27c3">
+                <tekst-zwykly gd:GUID="2a6cffd1-4948-4c9d-a834-418adc4ee1cf">Ostrzeszowski</tekst-zwykly>
+              </td>
+              <td gd:GUID="5f0f1288-71f5-475d-b1ff-6a27015cbb0d">
+                <liczba gd:GUID="b57ca81e-7571-4427-b27c-2112bfee4852">3,6</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="262df8a0-d401-440a-826d-b07fbb548837">
+              <td gd:GUID="7f5f2cf6-8626-48f1-9d6e-44f986bf66b6">
+                <tekst-zwykly gd:GUID="8ef4f56a-3e3c-4d3a-a208-5126e04e0239">Pilski</tekst-zwykly>
+              </td>
+              <td gd:GUID="52b8a01b-122a-40ef-af66-3b195a1af313">
+                <liczba gd:GUID="ccfdcc06-d727-49f0-8c5f-729d5de91a84">5,0</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="f1545d83-8a00-4eb1-aa9d-aa6edf2b3989">
+              <td gd:GUID="a2268fb6-6bcf-482f-a024-1dd2c0973d60">
+                <tekst-zwykly gd:GUID="0461a8dd-63b3-4fc2-8286-4364451500eb">Pleszewski</tekst-zwykly>
+              </td>
+              <td gd:GUID="9f04f87a-9b32-4667-8e09-c743b825c6db">
+                <liczba gd:GUID="068c30cb-9394-4a17-a563-d65e69deeb3d">3,6</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="2d675dce-a6ed-4f75-836c-f95745b43158">
+              <td gd:GUID="b917413a-e2c8-4c78-a99f-8c888a3b6434">
+                <tekst-zwykly gd:GUID="2edd1da3-7a97-4041-acfe-b2d70227e50f">Poznański</tekst-zwykly>
+              </td>
+              <td gd:GUID="9f7dcf43-3413-408c-842c-405d23242cac">
+                <liczba gd:GUID="6e97fda4-4bca-4a03-b24b-3b9bf4259285">1,1</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="99ec5b38-052d-4d99-bad0-50de3ded7c28">
+              <td gd:GUID="4be5056f-48ad-4a33-a7e8-c949b370d6fa">
+                <tekst-zwykly gd:GUID="8055efcc-cc6c-40c8-a792-fb05b994cac0">Rawicki</tekst-zwykly>
+              </td>
+              <td gd:GUID="8ef6e4f2-f79d-4b90-b41e-9eb8a6d7d1ca">
+                <liczba gd:GUID="25042112-59f3-45f0-aa83-ae2439b4182d">3,6</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="9966ca15-7f5f-469e-ad5e-6b4f66713372">
+              <td gd:GUID="16845cc3-d248-427b-9662-634c1cb152a0">
+                <tekst-zwykly gd:GUID="060e97de-2f3b-4ae8-816a-0fe3baf6952e">Słupecki</tekst-zwykly>
+              </td>
+              <td gd:GUID="5c8922c2-ce3f-4608-8348-9dfcdd8bf821">
+                <liczba gd:GUID="4b29bfb9-c0ea-4f60-8480-9c8ee27ac7b4">7,1</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="7f1ad9bb-cd32-480a-8417-0af2d5f9c08a">
+              <td gd:GUID="6204ad5f-e35f-47da-9c0e-3f4bd82aaa86">
+                <tekst-zwykly gd:GUID="dd521358-b7b3-4e2d-8ff4-57f051016894">Szamotulski</tekst-zwykly>
+              </td>
+              <td gd:GUID="a49c03c9-e281-4588-9598-5728ecfdf0a5">
+                <liczba gd:GUID="62c90d59-55a3-4ee7-9733-61ab87ce1d25">3,6</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="0f65921e-abeb-4c3e-89cb-93f5f9cd22d1">
+              <td gd:GUID="537e1c67-fd4d-438d-8468-a8db2d627426">
+                <tekst-zwykly gd:GUID="9e32ba20-7f63-404c-8be0-ba44289ce2b8">Średzki</tekst-zwykly>
+              </td>
+              <td gd:GUID="91616766-acb3-4635-8795-740a76897aee">
+                <liczba gd:GUID="b6c39644-6c5f-4e82-a228-5f0b3b74dd56">5,8</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="948df470-afba-434e-96e9-c53df45567b1">
+              <td gd:GUID="a6a5795e-68fb-4dd3-a801-78c7ac4d55a1">
+                <tekst-zwykly gd:GUID="2181df9e-60f7-45e7-a033-f24bad5ccd45">Śremski</tekst-zwykly>
+              </td>
+              <td gd:GUID="010a5fe9-4026-47f0-8278-7433b31888a2">
+                <liczba gd:GUID="c9d43dae-b1e9-4ccf-9c48-07bff27c1654">2,7</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="c3058295-9589-4169-beea-fd05d835dda2">
+              <td gd:GUID="ab9bea72-faa6-4eda-88b8-40c6aaaecea0">
+                <tekst-zwykly gd:GUID="2c25926d-c76b-4abe-a55f-e3622eae950c">Turecki</tekst-zwykly>
+              </td>
+              <td gd:GUID="00138d4f-b82a-4e26-8713-cbf90eb81ea6">
+                <liczba gd:GUID="4a1db59b-a182-4d44-be1e-c1a2fbe3e13a">3,9</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="9de74cbd-a01f-49d8-8a56-e0c5044312db">
+              <td gd:GUID="bb2622db-47a1-4e3d-a4a7-636aa6268baa">
+                <tekst-zwykly gd:GUID="deddccb7-3658-4616-90eb-dbefc0fb9ad6">Wągrowiecki</tekst-zwykly>
+              </td>
+              <td gd:GUID="a63ac825-7900-46af-86e3-0e3c4240ec98">
+                <liczba gd:GUID="a463260f-5049-489e-a498-c906527161e0">5,6</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="a8f09b64-5a68-483e-817a-9b53c91e0170">
+              <td gd:GUID="45d28b2f-a555-4249-a716-8b8a94760867">
+                <tekst-zwykly gd:GUID="bb33a949-5998-4c97-b252-2181754c7791">Wolsztyński</tekst-zwykly>
+              </td>
+              <td gd:GUID="95ea1927-ef46-4185-a938-f85ae28ec493">
+                <liczba gd:GUID="d122f0b3-26ca-47d1-9998-8cdb93be2aae">1,7</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="ff8e3a56-3826-4798-9e66-d9c87d66ec27">
+              <td gd:GUID="082f8a98-9171-4ff8-b753-a74aa64e02a7">
+                <tekst-zwykly gd:GUID="7776599d-8ef6-44bf-ad56-0ecad274893a">Wrzesiński</tekst-zwykly>
+              </td>
+              <td gd:GUID="1541c136-a1f4-41b3-8104-fe3ef820592a">
+                <liczba gd:GUID="bf2831f9-b30b-453b-b48d-7368fffbdc0a">3,5</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="cd38ea88-88ae-4751-a294-408cc20bafb0">
+              <td gd:GUID="8c4ad4d6-c062-4f18-8ca9-2c6f8304cc69">
+                <tekst-zwykly gd:GUID="3243a796-e80e-4b88-a3d1-a476ba68480c">Złotowski</tekst-zwykly>
+              </td>
+              <td gd:GUID="5a9a3b87-ef03-4c95-9130-be2e245087bb">
+                <liczba gd:GUID="def6d7ea-a081-43eb-adf8-fdf73a6c109b">4,3</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="34793f5b-3c53-4bc6-9d08-dd410e10d592">
+              <td gd:GUID="772b1699-655f-4335-a86d-93d0a67c6430">
+                <tekst-zwykly gd:GUID="fcaed7fe-51bc-43a7-b029-c3c318181eaf">Miasta na prawach powiatu:</tekst-zwykly>
+              </td>
+              <td gd:GUID="5971576e-3f47-4075-abee-27a45f2c60ce">
+                <tekst-zwykly gd:GUID="ebee9b1e-ca9d-4743-9fe4-89dec95062ae">‒</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="39bc4adc-9b56-46a5-bac8-a4f8c8858405">
+              <td gd:GUID="52b3ac2e-de63-4be9-8b00-dd6372954d2d">
+                <tekst-zwykly gd:GUID="eadfcb2a-bc55-48e8-af9e-806887d8ac71">Kalisz</tekst-zwykly>
+              </td>
+              <td gd:GUID="c277d49f-d78e-497b-8e49-db759885e500">
+                <liczba gd:GUID="799dccb1-d2c3-4100-99ba-88351db3b6a4">3,7</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="5b133db5-938c-4a4e-96dc-7a92771f6699">
+              <td gd:GUID="fcb430c2-26ea-4c01-beba-cfabf2e9c614">
+                <tekst-zwykly gd:GUID="d974c35e-d5a4-46ba-b5af-6ea128935109">Konin</tekst-zwykly>
+              </td>
+              <td gd:GUID="9ba037c7-a32e-468b-9ce7-7a3fd857b17b">
+                <liczba gd:GUID="539b1bdb-303e-44ef-ae47-30ad55d575e5">6,1</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="7cfb3bd0-a0ed-4b8f-aca2-908b7e00747b">
+              <td gd:GUID="747be220-6c44-42ac-a10d-cb3def4515f6">
+                <tekst-zwykly gd:GUID="87c1cf43-cf0c-4b6b-9be1-d26b3b231c86">Leszno</tekst-zwykly>
+              </td>
+              <td gd:GUID="5cae9db4-7b6f-4f90-b09d-cc7c277c7b7e">
+                <liczba gd:GUID="c8047411-7eb3-46b8-bce9-957a2ea8d4f8">3,4</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="dc5b01d6-31e2-48d0-ab76-7f8d12268e79">
+              <td gd:GUID="afe1f581-3e1d-47d9-a723-c62b067098c7">
+                <tekst-zwykly gd:GUID="ec104a9b-4f70-4937-a0db-b8860e31d9c1">Poznań</tekst-zwykly>
+              </td>
+              <td gd:GUID="5f8e3220-0544-436b-8967-86b095e846e7">
+                <liczba gd:GUID="5655fb19-3934-4a39-a3e7-33cf3b59a589">1,2</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="0690a72f-e7ae-49fb-8e7b-ab7cfc404e13">
+              <td gd:GUID="abdafc10-6d69-4330-aa74-cfe6b0ed36e4">
+                <tekst-zwykly gd:GUID="cd8b2534-46eb-493a-865f-713fded67d96">ZACHODNIOPOMORSKIE</tekst-zwykly>
+              </td>
+              <td gd:GUID="363d00b5-5f1b-44f8-bd5e-83713525011b">
+                <tekst-zwykly gd:GUID="9297e5bc-6f76-4bb1-ba82-b53ab0f66f7b">‒</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="805eeb19-5e00-41ab-856d-a6444bebfb44">
+              <td gd:GUID="e62dd1b8-9634-45cd-805c-954bd4fc8da4">
+                <tekst-zwykly gd:GUID="7dcc6b08-2c9b-4da3-bcb3-ce14b4abfd8d">Białogardzki</tekst-zwykly>
+              </td>
+              <td gd:GUID="dc4c5199-97b0-480e-b0ae-a995638401ba">
+                <liczba gd:GUID="3b6d7e30-b494-4a0e-afe2-5e567362fb35">16,8</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="d3efbf14-1f73-421c-af1a-38d6eb6e40f6">
+              <td gd:GUID="9bccf6fc-2fcd-4900-b57d-faf4a6e175df">
+                <tekst-zwykly gd:GUID="7396d561-59ac-4b59-ac5f-4c7410737161">Choszczeński</tekst-zwykly>
+              </td>
+              <td gd:GUID="9d839b41-db71-4621-bb48-fd964e3dfc0c">
+                <liczba gd:GUID="a66e3f30-4ae5-40a5-a2b6-0a3ebe5e2dd1">15,4</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="31779019-5c30-4d33-80e0-d0f71066cdc6">
+              <td gd:GUID="1c34e82e-85f5-42a8-af23-a3591322445d">
+                <tekst-zwykly gd:GUID="f3a5a6b6-eeda-4b90-ae69-f2e21e12aa1c">Drawski</tekst-zwykly>
+              </td>
+              <td gd:GUID="d96edaa3-1690-4896-bb96-571ca7703986">
+                <liczba gd:GUID="e53b812b-8eff-4d27-8764-f1779df2afc5">11,4</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="6575f8b2-9ecb-473a-8611-0497881aa895">
+              <td gd:GUID="29cc56cd-8fc6-4d27-9b45-8671e8187512">
+                <tekst-zwykly gd:GUID="0bdfbc55-d4f6-4d5f-a0b9-a40e0a12d8b4">Goleniowski</tekst-zwykly>
+              </td>
+              <td gd:GUID="78aa3a55-48b6-4aad-8fea-5cadc05ef98b">
+                <liczba gd:GUID="928d3945-45de-4abc-b70e-881a00159779">4,5</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="5e3c72c6-59af-408c-996c-86eabe970745">
+              <td gd:GUID="dba3f71e-0e4e-4b0e-bcec-1f3d771f3413">
+                <tekst-zwykly gd:GUID="e52ba19b-9228-4614-af90-85ceb5436f48">Gryficki</tekst-zwykly>
+              </td>
+              <td gd:GUID="c4f13bb6-6b99-4616-aa94-3d1112211980">
+                <liczba gd:GUID="4221dca6-c613-4ed6-837f-3307a97f6a44">7,7</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="44b6852a-917b-4fc4-8e4c-dd750850be04">
+              <td gd:GUID="52673259-d4f4-43ce-b955-38072221076e">
+                <tekst-zwykly gd:GUID="6a6da8ac-86c0-4502-9c8b-127c381aef1a">Gryfiński</tekst-zwykly>
+              </td>
+              <td gd:GUID="c66b6d0e-ef66-4e7b-ac59-daf2420f5db2">
+                <liczba gd:GUID="586d6b98-a727-44a6-9517-a65a40152ced">6,6</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="b43618d6-8efa-48b3-8535-ce1ee2f7c8c4">
+              <td gd:GUID="c87172e7-f5b3-4012-befb-4edbe8658b27">
+                <tekst-zwykly gd:GUID="07228b78-fe04-4f7a-b1fa-1817bc0afb83">Kamieński</tekst-zwykly>
+              </td>
+              <td gd:GUID="e8f7572e-329e-4a77-82fd-4ae3edd398ae">
+                <liczba gd:GUID="70252586-96d3-4394-81e6-12dccef72eb1">11,7</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="dea11105-5706-4631-8df1-5631508399d5">
+              <td gd:GUID="062be82c-6014-4f73-9950-064797554987">
+                <tekst-zwykly gd:GUID="6f7a041e-60e7-4ab9-abea-0c0938f580d6">Kołobrzeski</tekst-zwykly>
+              </td>
+              <td gd:GUID="5959b010-68ee-4399-b9b9-3c6a41d340ba">
+                <liczba gd:GUID="a7b7f614-b61d-43ae-a9de-3ff6d02fe284">2,3</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="087d0258-02b2-4896-b6dd-134d182fd78d">
+              <td gd:GUID="3ba95573-1fac-408c-99dd-c9159b275008">
+                <tekst-zwykly gd:GUID="06ac2f7f-b828-4984-9e5f-05e59a3e201a">Koszaliński</tekst-zwykly>
+              </td>
+              <td gd:GUID="05615d17-781f-47aa-beae-217cb973ee11">
+                <liczba gd:GUID="cc618e82-6567-4059-bf41-f0beb41f53e5">10,9</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="a5c475fe-2661-4e2d-9a0f-de57b67aafeb">
+              <td gd:GUID="bf1fea92-86e1-4acf-bf8a-bd83ae6bf0b4">
+                <tekst-zwykly gd:GUID="dec6394b-9e92-4de4-9757-2edfce1a0a97">Łobeski</tekst-zwykly>
+              </td>
+              <td gd:GUID="5751c63a-3d55-46f4-a474-f4acc02e55bd">
+                <liczba gd:GUID="20d7f232-33f5-48b4-9038-fcd2cf32a94f">14,5</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="715647c3-d655-4be1-9ac6-ce80721dd486">
+              <td gd:GUID="836eb00d-9b2d-41a1-90e3-4a1b6312de98">
+                <tekst-zwykly gd:GUID="e0a803f3-1dbf-4165-9beb-efa6c0ba2b0e">Myśliborski</tekst-zwykly>
+              </td>
+              <td gd:GUID="55f1f8bb-a79f-4a91-b48e-fd1f27d55ea2">
+                <liczba gd:GUID="634022e9-a29f-4594-bce0-76b84492de90">7,2</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="64aac2d7-c370-463e-904e-986a0b533019">
+              <td gd:GUID="161a76dd-d0a1-4108-9a78-e29acff5b9a6">
+                <tekst-zwykly gd:GUID="b6b5c8cc-a6ce-45a7-a1cf-fb97dea49173">Policki</tekst-zwykly>
+              </td>
+              <td gd:GUID="0e2f4a81-7e44-45d1-b97e-35b78e95bc50">
+                <liczba gd:GUID="2abaec44-f2ad-4657-8e96-88c92f1a50ef">3,8</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="9c7f9503-612e-4617-9d9c-3e50ee1659c3">
+              <td gd:GUID="de4d5c0c-7452-4341-a234-58c50595bd6a">
+                <tekst-zwykly gd:GUID="8aabdd9b-369f-42fb-81b1-3b5ebc95dd8e">Pyrzycki</tekst-zwykly>
+              </td>
+              <td gd:GUID="630af894-8efc-41ad-9cd8-cbb5343d5281">
+                <liczba gd:GUID="9270f890-d031-4a2b-a832-fa200096bf5f">10,6</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="91717f9e-5c0b-491d-bc46-7f1536989e57">
+              <td gd:GUID="27442ce5-7e65-4cf5-a349-0fbd075416fc">
+                <tekst-zwykly gd:GUID="c0668324-ea53-4acb-b993-357ec2771172">Sławieński</tekst-zwykly>
+              </td>
+              <td gd:GUID="d10be930-550c-4904-97d1-aaec7472e25f">
+                <liczba gd:GUID="723d6866-4414-47ab-88fa-bc8ba03ed889">14,1</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="a98c9c91-72ca-409c-8b11-04a35ec85c5a">
+              <td gd:GUID="7385ca2f-59ec-41f1-b17d-b86da1dd1785">
+                <tekst-zwykly gd:GUID="65a49313-b656-4176-bd1f-0c70c71a04ea">Stargardzki</tekst-zwykly>
+              </td>
+              <td gd:GUID="62536417-209d-4a52-972a-cca9bc0bf5c1">
+                <liczba gd:GUID="aa3ebb9c-7a0b-4b6d-9ec3-2223ef040b45">7,5</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="6759bd9b-6d9e-4d58-b958-f9935800345d">
+              <td gd:GUID="5b4a1c32-ea26-41be-87ad-0e360db6fcad">
+                <tekst-zwykly gd:GUID="0e989d2c-05df-46af-8c3b-dc6a101e2ab4">Szczecinecki</tekst-zwykly>
+              </td>
+              <td gd:GUID="93c5b551-9136-4ead-a218-9aee0bb0be82">
+                <liczba gd:GUID="b37e1641-295c-471f-9021-346092c4c3a6">12,9</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="deb83a67-4109-4469-85e1-095037e3e4a6">
+              <td gd:GUID="77098938-3eb0-41f7-bb84-0fc4f7dd5697">
+                <tekst-zwykly gd:GUID="0bbdb9bf-097f-4db8-a454-941ffcc715be">Świdwiński</tekst-zwykly>
+              </td>
+              <td gd:GUID="ad9e0b4e-2d1b-4c71-8a30-da11383c7d1d">
+                <liczba gd:GUID="47878671-38af-4ceb-9725-36bf98cce2ac">13,9</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="3d9cab4e-0ba6-4386-83f5-aadc8ab9ecf0">
+              <td gd:GUID="b94556fd-ae62-401d-9441-e3e035ed96fc">
+                <tekst-zwykly gd:GUID="4c5714bf-bae6-49f3-a7a7-9430bea6bc85">Wałecki</tekst-zwykly>
+              </td>
+              <td gd:GUID="71fb10a9-1ecd-45c4-8169-bdacd9607caa">
+                <liczba gd:GUID="1e122e05-1906-473b-a076-6334b30937ed">9,3</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="0c72e118-1e97-4c89-b36e-073d4aa4863b">
+              <td gd:GUID="5e3c4a3e-909e-4b41-9e11-55f8ee4025c5">
+                <tekst-zwykly gd:GUID="e01d19b1-921a-49cd-b8f4-2a21bc9bbced">Miasta na prawach powiatu:</tekst-zwykly>
+              </td>
+              <td gd:GUID="0617c03a-4510-41ca-82ce-40556654bcf2">
+                <tekst-zwykly gd:GUID="7bcea5e0-8c67-4827-bbfc-d038d240fa43">‒</tekst-zwykly>
+              </td>
+            </tr>
+            <tr gd:GUID="57bf6c3c-8ad8-415f-b57d-f8e092f049aa">
+              <td gd:GUID="88c8133a-be6a-478b-9012-00d17e7e9d2d">
+                <tekst-zwykly gd:GUID="119b834c-e975-45bd-9bc7-7513e1cc962d">Koszalin</tekst-zwykly>
+              </td>
+              <td gd:GUID="495b4328-8da9-4469-8068-22c4e1665bc9">
+                <liczba gd:GUID="b8fad19d-8418-45ed-8d05-3a1c1bbf0bbc">4,7</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="e26aa69e-3525-4f11-8e4e-b18b26131b59">
+              <td gd:GUID="c66339d0-872f-48a9-be81-432ed59d09c4">
+                <tekst-zwykly gd:GUID="9a546193-1801-487e-8c08-3779dbc191ef">Szczecin</tekst-zwykly>
+              </td>
+              <td gd:GUID="2e68ebdb-021e-4f46-8416-8e4c22749d71">
+                <liczba gd:GUID="40b6fa67-290c-4795-87aa-cac87805b253">3,8</liczba>
+              </td>
+            </tr>
+            <tr gd:GUID="ff71034b-e89f-4460-82a9-01486605dc03">
+              <td gd:GUID="4ba03040-4bf1-467a-9523-a7d77dd8256a">
+                <tekst-zwykly gd:GUID="207f8676-2dcc-4f33-bc3b-35b2d23e45a1">Świnoujście</tekst-zwykly>
+              </td>
+              <td gd:GUID="f2941904-cb5d-472f-a0e7-142880234aab">
+                <liczba gd:GUID="defd8f98-ca35-4b20-9a82-5f2bc0e4bf4a">4,7</liczba>
+              </td>
+            </tr>
+          </tbody>
+        </tabela>
+      </segment-zalacznika>
+    </zalacznik>
+  </obwieszczenie>
+</akt-prawny>
