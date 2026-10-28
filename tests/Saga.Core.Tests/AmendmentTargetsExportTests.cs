@@ -220,6 +220,50 @@ namespace Saga.Core.Tests
             Assert.Equal("w art. 5 wyrazy „organ właściwy” zastępuje się wyrazami „organ nadzoru”;", sentence.Value);
         }
 
+        /// <summary>Cały akt zmieniający przez publiczny parser: punkty komend między formułą a przepisem o wejściu w życie.</summary>
+        private static XElement ConvertAct(params string[] commandLines) =>
+            LegalDocumentConverter.Convert(LegalDocumentParser.Parse(
+                new[]
+                {
+                    "USTAWA", "z dnia 14 czerwca 2024 r.", "o zmianie ustawy o opłatach",
+                    "Art. 1. W ustawie z dnia 1 lutego 2021 r. o opłatach (Dz. U. poz. 200) wprowadza się następujące zmiany:",
+                }
+                .Concat(commandLines)
+                .Append("Art. 2. Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.")
+                .Select(line => new DocumentBlock { Text = line }).ToList(),
+                new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!);
+
+        [Fact]
+        public void ManualCitations_OfTargetsCollapsedToOneAddress_AreNotRepeated()
+        {
+            // Korpus: 329092_3181272 — „uchyla się pkt 8, 9 i 26” w nazwanej części załącznika dawało trzy identyczne cytaty
+            // uchyl-recznie, różne tylko nowGUID; to jedna zmiana do wprowadzenia ręcznie (ADR-0100, ADR-0108).
+            var xml = ConvertAct("1) w załączniku nr 2 do ustawy w części „ZNAKI DROGOWE” uchyla się pkt 3 i 6.");
+
+            var citation = Assert.Single(xml.Descendants(), e => e.Name.LocalName == "cytat-w-tekscie");
+            Assert.Equal("uchyl-recznie", citation.Attribute("funkcja")?.Value);
+            Assert.Equal("DU/2021/200__zal_2", citation.Attribute("element-eId")?.Value);
+            Assert.Equal("pkt 3 i 6", citation.Value);
+        }
+
+        [Fact]
+        public void PointsOfAnAddedSentence_AreAddedInTheUnit_NotInTheSentenceBefore()
+        {
+            // Korpus: 310708_2773514 — „w ust. 8 dodaje się zdanie drugie w brzmieniu: „…: 1) …”": zdanie stoi po zdaniu
+            // pierwszym, a punkty jego wyliczenia są punktami ustępu, nie zdania pierwszego (ADR-0055, ADR-0102).
+            var (xml, _) = Convert(
+                "1) w art. 8a w ust. 8 dodaje się zdanie drugie w brzmieniu:",
+                "„Obwieszczenie zawiera:",
+                "1) wykaz osób,",
+                "2) wykaz podmiotów.”;");
+
+            var commands = Commands(xml);
+            var sentence = Assert.Single(commands, c => c.Name.LocalName == "cytat-w-tekscie");
+            Assert.Equal(("dodaj-po", "art_8a__ust_8__zdn_1"), (Attr(sentence, "funkcja"), Attr(sentence, "element-eId")));
+            var points = Assert.Single(commands, c => c.Name.LocalName == "cytat-strukt");
+            Assert.Equal(("dodaj-w", "art_8a__ust_8"), (Attr(points, "funkcja"), Attr(points, "element-eId")));
+        }
+
         [Fact]
         public void EveryInstructionAndCitation_HasItsOwnGuid_AndNoTargetGuid()
         {

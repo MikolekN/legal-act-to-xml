@@ -231,6 +231,23 @@ namespace Saga.Core.Services.Converters
         /// Uchylenie celu bez adresu: tekstu do uchylenia akt zmieniający nie przytacza, więc cytat niesie przedmiot uchylenia
         /// tak, jak nazywa go przepis („lp. 7"), bez cudzysłowów — to wskazanie dla tego, kto zmianę wprowadzi ręcznie.
         /// </summary>
+        /// <summary>
+        /// Cytaty instrukcji ręcznych różniące się tylko <c>nowGUID</c> — cele zwinięte do jednego adresu (ADR-0100), np.
+        /// „uchyla się pkt 8, 9 i 26” w załączniku — to jedna zmiana do wprowadzenia ręcznie: zostaje pierwszy.
+        /// </summary>
+        private static List<XElement> Distinct(List<XElement> manual)
+        {
+            var seen = new HashSet<string>(StringComparer.Ordinal);
+            return manual.Where(citation => seen.Add(WithoutGuid(citation))).ToList();
+
+            static string WithoutGuid(XElement citation)
+            {
+                var copy = new XElement(citation);
+                copy.Attribute(XmlConverterConstants.Contents.Citation.Quotation.GUIDAttribute)?.Remove();
+                return copy.ToString(SaveOptions.DisableFormatting);
+            }
+        }
+
         private static XElement ManualRepeal(Amendment amendment, Command command)
         {
             var raw = command.Target?.RawText?.Trim() ?? string.Empty;
@@ -314,7 +331,7 @@ namespace Saga.Core.Services.Converters
             }
 
             zdanie.AddFirst(instructions);
-            zdanie.Add(manual);
+            zdanie.Add(Distinct(manual));
         }
 
         /// <summary>
@@ -384,7 +401,7 @@ namespace Saga.Core.Services.Converters
             }
 
             zdanie.AddFirst(instructions);
-            zdanie.Add(manual);
+            zdanie.Add(Distinct(manual));
         }
 
         /// <summary>
@@ -457,7 +474,7 @@ namespace Saga.Core.Services.Converters
             }
 
             zdanie.AddFirst(instructions);
-            zdanie.Add(manual);
+            zdanie.Add(Distinct(manual));
         }
 
         /// <summary>
@@ -555,11 +572,13 @@ namespace Saga.Core.Services.Converters
                     .Select(element => element!)
                     .ToList();
 
+                // Jednostki dodawane W jednostce stoją pod nią samą, nie pod jej zdaniem — „w ust. 8 dodaje się zdanie drugie
+                // w brzmieniu: „…: 1) …”": zdanie po zdaniu pierwszym, punkty w ustępie (ADR-0055, ADR-0102).
+                var inside = AddsInside(amendment, command, group.First());
                 var citation = Element(XmlConverterConstants.Contents.Citation.StructElement);
                 ApplyAttributes(citation, amendment, command, isStructural: true,
-                    function: AddsInside(amendment, command, group.First())
-                        ? XmlConverterConstants.Contents.Citation.Quotation.Function.AddInside
-                        : null);
+                    function: inside ? XmlConverterConstants.Contents.Citation.Quotation.Function.AddInside : null,
+                    address: inside && command.Target?.Structure is { Sentence: not null } structure ? WithoutSentence(structure) : null);
                 citation.Add(elements);
                 if (sentence is XElement zdanie)
                     zdanie.Add(citation);
@@ -594,6 +613,13 @@ namespace Saga.Core.Services.Converters
                 Tiret => target.Tiret is null && (target.Article ?? target.Paragraph ?? target.Point ?? target.Letter) is not null,
                 _ => false,
             };
+        }
+
+        private static string WithoutSentence(StructuralReference structure)
+        {
+            var unit = structure.Clone();
+            unit.Sentence = null;
+            return unit.ToString();
         }
 
         private static XElement? BuildContentElement(BaseEntity entity) =>
