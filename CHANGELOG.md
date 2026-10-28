@@ -1847,6 +1847,9 @@ a wersjonowanie zgodne z Semantic Versioning.
   zawiera numer dziennika, którego parser nie czyta, więc elementu nie ma; nie ma go też bez danych ogłoszenia
   ([ADR-0129](docs/adr/0129-adres-isap-z-danych-ogloszenia-od-2012.md)).
 
+- **Stały komplet przestrzeni nazw**: korzeń deklaruje zawsze przestrzeń domyślną, `now`, `gd`, `tpg` i `kmn`, jak
+  przykłady autorów schematu — także w pliku bez typografii i komentarzy; `mml` dochodzi tylko przy wzorach.
+
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —
   żaden kod ich nie wołał. Dokumentacja nie zapowiada już eksportu XLSX, którego nie ma; jedynym formatem

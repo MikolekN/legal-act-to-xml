@@ -14,9 +14,15 @@ namespace Saga.Core.Services
     {
         public static XElement Convert(LegalDocument document)
         {
+            // Stały komplet przestrzeni nazw schematu, jak w przykładach jego autorów — także tych, których plik nie
+            // używa: każdy plik ma ten sam nagłówek, a dopisane później tpg:/kmn: nie dostają lokalnych deklaracji.
+            // MathML dochodzi tylko przy wzorach.
             var rootElement = Element(XmlConverterConstants.RootElement,
+                new XAttribute("xmlns", XmlConverterConstants.Namespace),
                 new XAttribute(XNamespace.Xmlns + "now", XmlConverterConstants.AmendmentNamespace),
-                new XAttribute(XNamespace.Xmlns + "gd", XmlConverterConstants.GuidNamespace.NamespaceName));
+                new XAttribute(XNamespace.Xmlns + "gd", XmlConverterConstants.GuidNamespace.NamespaceName),
+                new XAttribute(XNamespace.Xmlns + "tpg", XmlConverterConstants.TypographyNamespace.NamespaceName),
+                new XAttribute(XNamespace.Xmlns + "kmn", XmlConverterConstants.CommentsNamespace));
 
             // Tekst jednolity ustawy: korzeniem jest obwieszczenie, a ogłaszany akt stoi w nim jako osobny
             // element z własną strefą tytułową (ADR-0031).
@@ -84,8 +90,6 @@ namespace Saga.Core.Services
 
             if (ContainsMathML(rootElement))
                 rootElement.Add(new XAttribute(XNamespace.Xmlns + "mml", XmlConverterConstants.MathMLNamespace));
-            if (rootElement.Descendants().Attributes().Any(a => a.Name.Namespace == XmlConverterConstants.TypographyNamespace))
-                rootElement.Add(new XAttribute(XNamespace.Xmlns + "tpg", XmlConverterConstants.TypographyNamespace.NamespaceName));
 
             return rootElement;
         }

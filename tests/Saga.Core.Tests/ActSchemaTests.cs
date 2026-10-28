@@ -204,6 +204,23 @@ namespace Saga.Core.Tests
             Assert.Equal(Attr(main, "id"), Attr(Unit("DU/2024/928__art_1"), "okres"));
         }
 
+
+        [Fact]
+        public void Root_DeclaresTheSchemaNamespaces_AlsoTheUnusedOnes_AndMathMlOnlyWithFormulas()
+        {
+            // Jak w przykładach autorów schematu: każdy plik ma ten sam nagłówek, także bez typografii i komentarzy.
+            var declared = Export().Attributes().Where(a => a.IsNamespaceDeclaration)
+                .Select(a => (a.Name.LocalName == "xmlns" ? "" : a.Name.LocalName, a.Value)).ToList();
+
+            Assert.Equal(
+            [
+                ("", "https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0"),
+                ("now", "https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now"),
+                ("gd", "https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0"),
+                ("tpg", "https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0"),
+                ("kmn", "https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0"),
+            ], declared);
+        }
         [Fact]
         public void QuotedSentence_TakesTheDateAndGroupOfTheSentenceItStandsIn()
         {

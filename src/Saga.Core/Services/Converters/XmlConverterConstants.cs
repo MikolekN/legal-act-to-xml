@@ -15,6 +15,9 @@ namespace Saga.Core.Services.Converters
 
         /// <summary>Przestrzeń atrybutów typografii schematu (typografia.xsd) — prefiks „tpg".</summary>
         internal static readonly XNamespace TypographyNamespace = "https://projects.task.gda.pl/caise/NLP/kisi/rcl/typografia/1.0";
+
+        /// <summary>Przestrzeń komentarzy schematu (komentarze.xsd) — prefiks „kmn"; eksport jej nie wypełnia.</summary>
+        internal const string CommentsNamespace = "https://projects.task.gda.pl/caise/NLP/kisi/rcl/komentarze/1.0";
         internal const string ELIUrl = "https://eli.gov.pl/";
         internal const string Act = "ustawa";
 

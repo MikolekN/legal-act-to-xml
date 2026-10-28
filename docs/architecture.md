@@ -1197,7 +1197,8 @@ ogłaszanego w załączniku (`DocumentMetadataCollector`). Rodzaj nazwany przez 
 w treści stawałby się nagłówkiem) i stosowanie wersalików ze stylu przy odczycie (`ParagraphExtensions.GetFullText`
 czyta tekst tak, jak go zapisano; wersaliki stosuje tylko dla formatowania nadanego wprost).
 
-**Korzeń eksportu.** `LegalDocumentConverter.Convert` pisze `ustawa`, `kodeks` (ustawa o tytule „Kodeks …",
+**Korzeń eksportu.** Korzeń deklaruje zawsze stały komplet przestrzeni nazw schematu (domyślna, `now`, `gd`, `tpg`,
+`kmn`), jak przykłady autorów schematu; `mml` — tylko przy wzorach. `LegalDocumentConverter.Convert` pisze `ustawa`, `kodeks` (ustawa o tytule „Kodeks …",
 której artykuły stoją w jednostkach systematyzacyjnych) albo korzeń aktu opartego na paragrafach, a dla tekstu
 jednolitego —
 `obwieszczenie` (z `autor-aktu`), w nim punkty obwieszczenia (`AnnouncementXmlConverter`: `punkt-OTJ`,
