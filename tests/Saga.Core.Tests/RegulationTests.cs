@@ -139,7 +139,7 @@ namespace Saga.Core.Tests
             Assert.Equal(
                 new[] { "metadane", "rodzaj-aktu", "autor-aktu", "data", "tytul", "podstawa-prawna", "paragraf", "paragraf", "paragraf" },
                 ChildNames(act));
-            Assert.Equal("MINISTRA FINANSÓW", act.Elements().Single(e => e.Name.LocalName == "autor-aktu").Value);
+            Assert.Equal("Ministra Finansów", act.Elements().Single(e => e.Name.LocalName == "autor-aktu").Value);
             Assert.StartsWith("Na podstawie art. 12 ust. 3", act.Elements().Single(e => e.Name.LocalName == "podstawa-prawna").Value);
 
             var sections = act.Elements().Where(e => e.Name.LocalName == "paragraf").ToList();
@@ -287,8 +287,8 @@ namespace Saga.Core.Tests
 
             var act = Export(lines);
 
-            Assert.Equal("ROZPORZĄDZENIE", act.Elements().Single(e => e.Name.LocalName == "rodzaj-aktu").Value);
-            Assert.Equal("MINISTRA FINANSÓW", act.Elements().Single(e => e.Name.LocalName == "autor-aktu").Value);
+            Assert.Equal("Rozporządzenie", act.Elements().Single(e => e.Name.LocalName == "rodzaj-aktu").Value);
+            Assert.Equal("Ministra Finansów", act.Elements().Single(e => e.Name.LocalName == "autor-aktu").Value);
         }
 
         [Fact]
@@ -530,7 +530,7 @@ namespace Saga.Core.Tests
             Assert.Equal(
                 new[] { "zalacznik-do", "rodzaj-aktu", "autor-aktu", "data", "tytul", "podstawa-prawna", "paragraf", "paragraf", "paragraf" },
                 ChildNames(act));
-            Assert.Equal("MINISTRA FINANSÓW", act.Elements().Single(e => e.Name.LocalName == "autor-aktu").Value);
+            Assert.Equal("Ministra Finansów", act.Elements().Single(e => e.Name.LocalName == "autor-aktu").Value);
 
             // Nagłówek dokumentu pozostaje nagłówkiem obwieszczenia.
             Assert.Equal("Prezesa Rady Ministrów", announcement.Elements().Single(e => e.Name.LocalName == "autor-aktu").Value);
@@ -538,10 +538,12 @@ namespace Saga.Core.Tests
 
         [Theory]
         // Korpus: 303866_2776495, 298226_2711116, 318274_2881159 — nagłówek aktu w załączniku pisany inaczej niż wzorzec.
-        [InlineData("rozporządzenie", "Ministra Finansów", "rozporzadzenie")]
-        [InlineData("ZARządzenie NR 249", "prezesa rady ministrów", "zarzadzenie")]
-        [InlineData("zaRZĄDZENIE nr 53", "Prezesa RADY MINISTRÓW", "zarzadzenie")]
-        public void ConsolidatedActWithAKindLineInUnusualSpelling_IsEmbeddedByItsKind(string kindLine, string issuer, string element)
+        // Eksport zapisuje rodzaj jak w przykładach, a organ — wielkimi literami słów, jakkolwiek go wpisano (ADR-0130).
+        [InlineData("rozporządzenie", "Ministra Finansów", "rozporzadzenie", "Rozporządzenie", "Ministra Finansów")]
+        [InlineData("ZARządzenie NR 249", "prezesa rady ministrów", "zarzadzenie", "Zarządzenie nr 249", "Prezesa Rady Ministrów")]
+        [InlineData("zaRZĄDZENIE nr 53", "Prezesa RADY MINISTRÓW", "zarzadzenie", "Zarządzenie nr 53", "Prezesa Rady Ministrów")]
+        public void ConsolidatedActWithAKindLineInUnusualSpelling_IsEmbeddedByItsKind(
+            string kindLine, string issuer, string element, string exportedKind, string exportedIssuer)
         {
             var lines = ConsolidatedRegulation.ToList();
             var kind = lines.IndexOf("ROZPORZĄDZENIE");
@@ -552,8 +554,8 @@ namespace Saga.Core.Tests
 
             Assert.Equal("obwieszczenie", announcement.Name.LocalName);
             var act = Assert.Single(announcement.Elements(), e => e.Name.LocalName == element);
-            Assert.Equal(kindLine, act.Elements().Single(e => e.Name.LocalName == "rodzaj-aktu").Value);
-            Assert.Equal(issuer, act.Elements().Single(e => e.Name.LocalName == "autor-aktu").Value);
+            Assert.Equal(exportedKind, act.Elements().Single(e => e.Name.LocalName == "rodzaj-aktu").Value);
+            Assert.Equal(exportedIssuer, act.Elements().Single(e => e.Name.LocalName == "autor-aktu").Value);
             Assert.Equal(3, act.Elements().Count(e => e.Name.LocalName == "paragraf"));
         }
 

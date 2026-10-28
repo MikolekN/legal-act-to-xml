@@ -86,7 +86,7 @@ namespace Saga.Core.Tests
         {
             var xml = LegalDocumentConverter.Convert(Act());
 
-            Assert.Equal("USTAWA z dnia 14 czerwca 2024 r. o ochronie sygnalistów", Named(xml, "Tytul").Single().Value);
+            Assert.Equal("Ustawa z dnia 14 czerwca 2024 r. o ochronie sygnalistów", Named(xml, "Tytul").Single().Value);
             Assert.DoesNotContain("[", xml.Value);
         }
 
@@ -302,7 +302,7 @@ namespace Saga.Core.Tests
 
             var issuer = Named(xml, "autor-aktu").Single();
             Assert.Equal("1", Assert.Single(issuer.Elements(), e => e.Name.LocalName == "odnosnik").Attribute("symbol")?.Value);
-            Assert.StartsWith("MINISTRA FINANSÓW", issuer.Value);
+            Assert.StartsWith("Ministra Finansów", issuer.Value);
             Assert.DoesNotContain("[", issuer.Value);
 
             var basis = Named(xml, "podstawa-prawna").Single();

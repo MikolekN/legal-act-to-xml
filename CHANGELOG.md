@@ -1847,6 +1847,12 @@ a wersjonowanie zgodne z Semantic Versioning.
   zawiera numer dziennika, którego parser nie czyta, więc elementu nie ma; nie ma go też bez danych ogłoszenia
   ([ADR-0129](docs/adr/0129-adres-isap-z-danych-ogloszenia-od-2012.md)).
 
+- **Wielkość liter rodzaju i organu**: `rodzaj-aktu` wychodzi jak w przykładach autorów schematu („Ustawa”,
+  „Rozporządzenie”, „Zarządzenie nr 272”), a `autor-aktu` i organ w `Tytul` — wielkimi literami słów („Ministra
+  Finansów”), niezależnie od tego, jak wpisano je pod stylem wersalików („ustawa”, „USTAWA”, „RozporządzeniE”).
+  `Tytul` zaczyna się więc od „Ustawa z dnia …” albo „Rozporządzenie Ministra Finansów z dnia …”, jak w ISAP
+  ([ADR-0130](docs/adr/0130-rodzaj-i-organ-aktu-w-eksporcie-maja-stala-wielkosc-liter.md)).
+
 - **Grupy czasowe w kolejności chronologicznej**: `GrupaCzasowa` stoją według zdarzenia, od którego biegnie okres,
   jak zdarzenia w `CyklZyciaAktu` i w przykładach autorów schematu — wcześniej najpierw grupa główna, potem
   w kolejności pierwszego użycia w tekście.

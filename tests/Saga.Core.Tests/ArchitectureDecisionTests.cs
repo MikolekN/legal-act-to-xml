@@ -1718,6 +1718,39 @@ namespace Saga.Core.Tests
                 (citation.Attribute("funkcja")?.Value, citation.Attribute("element-eId")?.Value));
         }
 
+
+        // ============================================================
+        // ADR-0130: wielkość liter strefy tytułowej w eksporcie
+        // ============================================================
+
+        [Fact]
+        public void Adr0130_KindAndIssuer_AreWrittenLikeInTheExamples_WhateverTheTypedCase()
+        {
+            // Styl rodzaju i organu składa je wersalikami, więc litery wpisane w źródle nic nie znaczą (DU/2026/252:
+            // „ustawa”); eksport pisze je jak przykłady autorów schematu i ISAP.
+            Assert.Equal("Ustawa", ActHeadingText.Kind("ustawa"));
+            Assert.Equal("Rozporządzenie", ActHeadingText.Kind("RozporządzeniE"));
+            Assert.Equal("Uchwała nr XII/123/2025", ActHeadingText.Kind("UCHWAŁA NR XII/123/2025"));
+            Assert.Equal("Ministra Spraw Wewnętrznych i Administracji", ActHeadingText.Organ("MINISTRA SPRAW WEWNĘTRZNYCH I ADMINISTRACJI"));
+            Assert.Equal("Prezesa Rady Ministrów", ActHeadingText.Organ("prezesa rady ministrów"));
+            Assert.Equal("Zarządu NBP", ActHeadingText.Organ("ZARZĄDU NBP"));
+            Assert.Equal("Ministra Rolnictwa i Rozwoju Wsi", ActHeadingText.Organ("MINISTRA ROLNICTWA I ROZWOJU WSI"));
+            Assert.Equal("Ministra Finansów i Gospodarki", ActHeadingText.Organ("MINISTRA FINANSÓW i gospodarki"));
+            Assert.Equal("Przewodniczącego Komitetu do spraw Pożytku Publicznego", ActHeadingText.Organ("PRZEWODNICZĄCEGO KOMITETU DO SPRAW POŻYTKU PUBLICZNEGO"));
+            Assert.Equal(
+                "Rozporządzenie Ministra Finansów z dnia 3 lipca 2025 r. w sprawie zwrotu podatku",
+                ActHeadingText.Title("ROZPORZĄDZENIE MINISTRA FINANSÓW z dnia 3 lipca 2025 r. w sprawie zwrotu podatku",
+                    "ROZPORZĄDZENIE", "z dnia 3 lipca 2025 r."));
+
+            string[] lines = ["ustawa", "z dnia 23 stycznia 2026 r.", "o opłatach", "Art. 1. Ustawa określa opłaty."];
+            var blocks = lines.Select(line => new DocumentBlock { Text = line }).ToList();
+            var xml = LegalDocumentConverter.Convert(LegalDocumentParser.Parse(blocks, new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!);
+            Assert.Equal(
+                ("Ustawa", "Ustawa z dnia 23 stycznia 2026 r. o opłatach"),
+                (xml.Descendants().Single(e => e.Name.LocalName == "rodzaj-aktu").Value,
+                 xml.Descendants().Single(e => e.Name.LocalName == "Tytul").Value));
+        }
+
         // ============================================================
         // ADR-0129: adres ISAP z danych ogłoszenia — tylko dla dzienników bez numerów (od 2012 r.)
         // ============================================================

@@ -525,7 +525,7 @@ namespace Saga.Core.Tests
             // Akt ogłaszany w załączniku ma własną strefę tytułową i tylko własne artykuły.
             var act = Child(announcement, "ustawa");
             Assert.Equal(new[] { "zalacznik-do", "rodzaj-aktu", "data", "tytul", "artykul", "artykul" }, ChildNames(act));
-            Assert.Equal("USTAWA", Child(act, "rodzaj-aktu").Value);
+            Assert.Equal("Ustawa", Child(act, "rodzaj-aktu").Value);
             Assert.Equal("o odbudowie obiektów budowlanych", Child(act, "tytul").Value);
         }
 

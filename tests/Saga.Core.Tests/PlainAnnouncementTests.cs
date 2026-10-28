@@ -443,8 +443,8 @@ namespace Saga.Core.Tests
             Assert.Equal(
                 new[] { "metadane", "rodzaj-aktu", "autor-aktu", "data", "tytul", "podstawa-prawna", "organ-podpisujacy" },
                 root.Elements().Select(e => e.Name.LocalName));
-            Assert.Equal("OBWIESZCZENIE", Named(xml, "rodzaj-aktu").Single().Value);
-            Assert.Equal("MINISTRA INFRASTRUKTURY", Named(xml, "autor-aktu").Single().Value);
+            Assert.Equal("Obwieszczenie", Named(xml, "rodzaj-aktu").Single().Value);
+            Assert.Equal("Ministra Infrastruktury", Named(xml, "autor-aktu").Single().Value);
             Assert.Equal(LegalBasis, Named(xml, "podstawa-prawna").Single().Value);
             Assert.Equal("OBW", Named(xml, "Rodzaj").Single().Value);
         }

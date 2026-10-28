@@ -405,7 +405,7 @@ namespace Saga.Core.Tests
             var act = Export().Elements().First();
             var ns = act.Name.Namespace;
 
-            Assert.Equal("USTAWA", act.Element(ns + "rodzaj-aktu")?.Value);
+            Assert.Equal("Ustawa", act.Element(ns + "rodzaj-aktu")?.Value);
             Assert.Equal("z dnia 14 czerwca 2024 r.", act.Element(ns + "data")?.Value);
             Assert.Equal("o ochronie sygnalistów", act.Element(ns + "tytul")?.Value);
             Assert.Equal(new[] { "metadane", "rodzaj-aktu", "data", "tytul", "rozdzial" },

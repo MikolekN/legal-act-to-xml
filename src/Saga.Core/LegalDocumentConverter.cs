@@ -1,5 +1,4 @@
 using System.Xml.Linq;
-using Saga.Core.Services.Classify.Document;
 using Saga.Core.Services.Converters;
 using Saga.Core.Services.Parsing;
 using Saga.Model;
@@ -101,10 +100,11 @@ namespace Saga.Core.Services
         private static void PrepareHeading(LegalDocument document, XElement actElement, bool withIssuer)
         {
             if (document.KindLine.Length > 0)
-                actElement.Add(Element(XmlConverterConstants.ActHeading.Kind,
-                    withIssuer ? KindWithoutIssuer(document.KindLine, document.IssuerLine) : document.KindLine));
+                actElement.Add(Element(XmlConverterConstants.ActHeading.Kind, withIssuer
+                    ? ActHeadingText.Kind(ActHeadingText.KindWithoutIssuer(document.KindLine, document.IssuerLine))
+                    : ActHeadingText.Heading(document.KindLine)));
             if (withIssuer && document.IssuerLine.Length > 0)
-                actElement.Add(Element(XmlConverterConstants.Announcements.Author, document.IssuerLine));
+                actElement.Add(Element(XmlConverterConstants.Announcements.Author, ActHeadingText.Organ(document.IssuerLine)));
             if (document.DateLine.Length > 0)
                 actElement.Add(Element(XmlConverterConstants.ActHeading.Date, document.DateLine));
             if (document.Subject.Length > 0)
@@ -147,10 +147,10 @@ namespace Saga.Core.Services
                 act.Add(Element(XmlConverterConstants.Attachments.AttachedTo, announcement.AttachedTo));
             if (announcement.ActKindLine.Length > 0)
                 act.Add(Element(XmlConverterConstants.ActHeading.Kind, sectionBased
-                    ? KindWithoutIssuer(announcement.ActKindLine, announcement.ActIssuerLine)
-                    : announcement.ActKindLine));
+                    ? ActHeadingText.Kind(ActHeadingText.KindWithoutIssuer(announcement.ActKindLine, announcement.ActIssuerLine))
+                    : ActHeadingText.Heading(announcement.ActKindLine)));
             if (sectionBased && announcement.ActIssuerLine.Length > 0)
-                act.Add(Element(XmlConverterConstants.Announcements.Author, announcement.ActIssuerLine));
+                act.Add(Element(XmlConverterConstants.Announcements.Author, ActHeadingText.Organ(announcement.ActIssuerLine)));
             if (announcement.ActDateLine.Length > 0)
                 act.Add(Element(XmlConverterConstants.ActHeading.Date, announcement.ActDateLine));
             if (announcement.ActSubject.Length > 0)
@@ -161,15 +161,6 @@ namespace Saga.Core.Services
                 act.Add(Preamble(document));
             return act;
         }
-
-        /// <summary>
-        /// Rodzaj aktu bez organu stojącego w tym samym wierszu („ROZPORZĄDZENIE MINISTRA FINANSÓW" →
-        /// „ROZPORZĄDZENIE") — organ wychodzi wtedy osobno, w <c>autor-aktu</c>.
-        /// </summary>
-        private static string KindWithoutIssuer(string kindLine, string issuerLine) =>
-            issuerLine.Length > 0 && ZtpPatterns.KindWithIssuerPattern.Match(kindLine) is { Success: true } sameLine
-                ? sameLine.Groups["kind"].Value
-                : kindLine;
 
         private static void PrepareMetadata(LegalDocument document, XElement rootElement)
         {
@@ -205,7 +196,8 @@ namespace Saga.Core.Services
                 metaElement.Add(Element(XmlConverterConstants.Metadata.DisplayAddressElement,
                     $"{document.SourceJournal.PublisherShort()} {document.SourceJournal.Year} poz. {document.SourceJournal.Positions.First()}"));
 
-            metaElement.Add(Element(XmlConverterConstants.Metadata.TitleElement, FootnoteXmlConverter.WithoutMarkers(document.Title)));
+            metaElement.Add(Element(XmlConverterConstants.Metadata.TitleElement, ActHeadingText.Title(
+                FootnoteXmlConverter.WithoutMarkers(document.Title), document.KindLine, document.DateLine)));
 
             metaElement.Add(Element(XmlConverterConstants.Metadata.TypeElement, ActKindXml.Code(document)));
 
