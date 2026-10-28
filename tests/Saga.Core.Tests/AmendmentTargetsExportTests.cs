@@ -101,16 +101,57 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
-        public void CommandWithoutATarget_IsExportedAsUnknown()
+        public void CommandWithoutATargetOrAct_IsAManualInstructionWithoutAnAddress()
         {
-            var sentence = new XElement("zdanie");
+            // Aktu nieodczytanego się nie zgaduje: bez adresu, z przedmiotem uchylenia z tekstu zdania (ADR-0125).
+            var sentence = new XElement("zdanie", "uchyla się preambułę;");
 
             AmendmentXmlConverter.ToXml(
                 new Amendment { OperationType = AmendmentOperationType.Repeal }, sentence);
 
             var instruction = Assert.Single(sentence.Elements());
-            Assert.Equal("UNKNOWN", Attr(instruction, "element-eId"));
+            Assert.Equal("cytat-w-tekscie", instruction.Name.LocalName);
+            Assert.Equal("uchyl-recznie", Attr(instruction, "funkcja"));
+            Assert.Null(Attr(instruction, "element-eId"));
             Assert.Null(Attr(instruction, "element-do-eId"));
+            Assert.Equal("brak", Attr(instruction, "cudzyslowy"));
+            Assert.Equal("preambułę", instruction.Value);
+        }
+
+        [Fact]
+        public void AdditionWithoutAPlace_IsAManualInstructionOnTheAmendedAct()
+        {
+            // Korpus: 334848_2970919, 338276_2999624 — „dodaje się art. 37a w brzmieniu:" bez „po art. 37": miejsca akt
+            // zmieniający nie podaje (ADR-0055), więc instrukcja jest ręczna, z adresem samego aktu (ADR-0125).
+            var xml = ConvertAct(
+                "1) uchyla się art. 37;",
+                "2) dodaje się art. 37a w brzmieniu:",
+                "„Art. 37a. Opłaty nie pobiera się.”;",
+                "3) dodaje się art. 12aa–12ab w brzmieniu:",
+                "„Art. 12aa. Opłatę wnosi się w terminie 14 dni.",
+                "Art. 12ab. Opłata jest dochodem gminy.”.");
+
+            var citations = xml.Descendants().Where(e => e.Name.LocalName == "cytat-strukt").ToList();
+            Assert.Equal([("dodaj-recznie", "DU/2021/200"), ("dodaj-recznie", "DU/2021/200")],
+                citations.Select(c => (c.Attribute("funkcja")?.Value, c.Attribute("element-eId")?.Value)));
+            Assert.Equal(["DU/2021/200__art_37a", "DU/2021/200__art_12aa", "DU/2021/200__art_12ab"],
+                citations.Elements().Select(unit => unit.Attribute("eId")?.Value));
+            Assert.Equal("DU/2021/200__art_37", xml.Descendants().Single(e => e.Name.LocalName == "uchyl").Attribute("element-eId")?.Value);
+            Assert.DoesNotContain(xml.Descendants().Attributes(), attribute => attribute.Value == "UNKNOWN");
+        }
+
+        [Theory]
+        [InlineData("cytat-w-tekscie", "zastap-recznie", "1) preambuła otrzymuje brzmienie:", "„Opłaty służą gminom.”;")]
+        [InlineData("cytat-w-tekscie", "zastap-recznie", "1) wyrazy „organ właściwy” zastępuje się wyrazami „organ nadzoru”.")]
+        [InlineData("cytat-w-tekscie", "uchyl-recznie", "1) uchyla się preambułę.")]
+        public void CommandWithoutATarget_GetsTheManualFunctionOfItsOperation(string element, string function, params string[] lines)
+        {
+            var xml = ConvertAct(lines);
+
+            var instruction = Assert.Single(xml.Descendants(),
+                e => e.Attribute("funkcja") is not null || e.Name.NamespaceName == XmlConverterConstants.AmendmentNamespace);
+            Assert.Equal((element, function, "DU/2021/200"),
+                (instruction.Name.LocalName, instruction.Attribute("funkcja")?.Value, instruction.Attribute("element-eId")?.Value));
         }
 
         [Fact]

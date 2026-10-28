@@ -21,6 +21,16 @@ namespace Saga.Core.Services.Converters
             internal StructuralAmendmentReference? Target { get; } = target;
 
             /// <summary>
+            /// Adres celu w akcie zmienianym („art_5__ust_2", „zal_2"); null — komenda bez celu (ADR-0125), tytuł aktu
+            /// (ADR-0101) albo cel, z którego nie powstał żaden segment adresu.
+            /// </summary>
+            internal string? Address =>
+                Target is { Structure.ActTitle: false } target && target.Structure.ToString() is { Length: > 0 } address ? address : null;
+
+            /// <summary>Instrukcja ręczna: cel, którego eId nie zaadresuje (ADR-0100), albo cel bez adresu (ADR-0101, ADR-0125).</summary>
+            internal bool IsManual => Target is { IsManual: true } || Address is null;
+
+            /// <summary>
             /// GUID kolejnego elementu komendy. Pierwszy niesie GUID komendy, następne własne — jedna komenda
             /// bywa kilkoma cytatami (tekstowy i strukturalny), a schemat wymaga unikalnego nowGUID.
             /// </summary>
@@ -132,6 +142,7 @@ namespace Saga.Core.Services.Converters
         {
             var first = amendment.Guid != Guid.Empty ? amendment.Guid : Guid.NewGuid();
             var targets = amendment.Targets ?? [];
+            // Nowelizacja bez celu to jedna komenda bez celu: instrukcja ręczna na samym akcie (ADR-0125).
             if (targets.Count == 0)
                 return [new Command(null, first)];
 
@@ -183,15 +194,15 @@ namespace Saga.Core.Services.Converters
             // if (amendment.RefNowGuid != Guid.Empty)
             // element.Add(new XAttribute(XmlConverterConstants.QuotationRefGUIDAttribute, "UNKNOWN"));
 
-            if (string.IsNullOrEmpty(address))
-                AddTargetAttributes(element, amendment, command.Target);
-            else
+            var explicitAddress = !string.IsNullOrEmpty(address);
+            if (explicitAddress)
                 element.Add(new XAttribute(XmlConverterConstants.Contents.Citation.Quotation.ElementAttribute, address));
+            else
+                AddTargetAttributes(element, amendment, command);
 
+            var manual = command.Target is { IsManual: true } || (!explicitAddress && command.Address is null);
             element.Add(new XAttribute(XmlConverterConstants.Contents.Citation.Quotation.FunctionAttribute,
-                command.Target is { IsManual: true }
-                    ? ManualFunction(amendment.OperationType)
-                    : function ?? GetFunctionType(amendment.OperationType, isStructural)));
+                manual ? ManualFunction(amendment.OperationType) : function ?? GetFunctionType(amendment.OperationType, isStructural)));
 
             // element.Add(new XAttribute(XmlConverterConstants.Contents.Citation.Quotation.SentenceAttribute, sentence.ReferenceSentenceNumber));
 
@@ -228,10 +239,6 @@ namespace Saga.Core.Services.Converters
             RegexOptions.Compiled | RegexOptions.IgnoreCase);
 
         /// <summary>
-        /// Uchylenie celu bez adresu: tekstu do uchylenia akt zmieniający nie przytacza, więc cytat niesie przedmiot uchylenia
-        /// tak, jak nazywa go przepis („lp. 7"), bez cudzysłowów — to wskazanie dla tego, kto zmianę wprowadzi ręcznie.
-        /// </summary>
-        /// <summary>
         /// Cytaty instrukcji ręcznych różniące się tylko <c>nowGUID</c> — cele zwinięte do jednego adresu (ADR-0100), np.
         /// „uchyla się pkt 8, 9 i 26” w załączniku — to jedna zmiana do wprowadzenia ręcznie: zostaje pierwszy.
         /// </summary>
@@ -248,9 +255,14 @@ namespace Saga.Core.Services.Converters
             }
         }
 
-        private static XElement ManualRepeal(Amendment amendment, Command command)
+        /// <summary>
+        /// Uchylenie celu bez adresu: tekstu do uchylenia akt zmieniający nie przytacza, więc cytat niesie przedmiot uchylenia
+        /// tak, jak nazywa go przepis („lp. 7"), bez cudzysłowów — to wskazanie dla tego, kto zmianę wprowadzi ręcznie.
+        /// Komenda bez celu bierze przedmiot z tekstu zdania (ADR-0125).
+        /// </summary>
+        private static XElement ManualRepeal(Amendment amendment, Command command, XElement sentence)
         {
-            var raw = command.Target?.RawText?.Trim() ?? string.Empty;
+            var raw = (command.Target?.RawText ?? string.Concat(sentence.Nodes().OfType<XText>().Select(text => text.Value))).Trim();
             var repealed = RepealedObject.Match(raw) is { Success: true } match ? match.Groups["object"].Value : raw;
 
             var citation = Element(XmlConverterConstants.Contents.Citation.Text.Element,
@@ -286,25 +298,25 @@ namespace Saga.Core.Services.Converters
         private static bool AddsWithoutAPlace(TextChange change) => change.OldText.Length == 0 && change.NewText.Length > 0;
 
         /// <summary>
-        /// Adres celu; tytuł aktu zmienianego nie ma <c>eId</c>, więc jego adresem jest sam akt („DU/2021/200") —
-        /// instrukcja jest wtedy ręczna (ADR-0101).
+        /// Adres celu; cel bez adresu — tytuł aktu (ADR-0101) albo komenda bez celu (ADR-0125) — ma za adres sam akt
+        /// („DU/2021/200"), a instrukcja jest wtedy ręczna. Aktu nieodczytanego się nie zgaduje: bez adresu.
         /// </summary>
-        private static void AddTargetAttributes(XElement element, Amendment amendment, StructuralAmendmentReference? target)
+        private static void AddTargetAttributes(XElement element, Amendment amendment, Command command)
         {
-            var start = target is { Structure.ActTitle: true }
-                ? amendment.TargetLegalAct.GetELIStrings().FirstOrDefault()
-                : target?.Structure.ToString();
-            element.Add(new XAttribute(XmlConverterConstants.Contents.Citation.Quotation.ElementAttribute,
-                string.IsNullOrWhiteSpace(start) ? "UNKNOWN" : start));
+            var start = command.Address ?? amendment.TargetLegalAct.GetELIStrings().FirstOrDefault();
+            if (string.IsNullOrWhiteSpace(start))
+                return;
 
-            var end = target?.RangeEnd?.ToString();
+            element.Add(new XAttribute(XmlConverterConstants.Contents.Citation.Quotation.ElementAttribute, start));
+
+            var end = command.Address is null ? null : command.Target?.RangeEnd?.ToString();
             if (!string.IsNullOrWhiteSpace(end) && end != start)
                 element.Add(new XAttribute(XmlConverterConstants.Contents.Citation.Quotation.ElementDoAttribute, end));
         }
 
         /// <summary>
         /// Uchylenie: <c>now:uchyl</c> na każdy cel, przed tekstem zdania jak każda instrukcja <c>now:</c> (ADR-0123),
-        /// w kolejności celów; cel bez adresu — cytat <c>uchyl-recznie</c> za tekstem (ADR-0100).
+        /// w kolejności celów; cel bez adresu — cytat <c>uchyl-recznie</c> za tekstem (ADR-0100, ADR-0125).
         /// </summary>
         private static void AddRepealInstructions(Amendment amendment, List<Command> commands, XNode? sentence)
         {
@@ -317,15 +329,15 @@ namespace Saga.Core.Services.Converters
 
             foreach (var command in commands)
             {
-                if (command.Target is { IsManual: true })
+                if (command.IsManual)
                 {
-                    manual.Add(ManualRepeal(amendment, command));
+                    manual.Add(ManualRepeal(amendment, command, zdanie));
                     continue;
                 }
 
                 var uchyl = new XElement(now + XmlConverterConstants.Contents.Instruction.Repeal);
                 uchyl.Add(new XAttribute(XmlConverterConstants.Contents.Citation.Quotation.ActAttribute, BuildActUri(amendment)));
-                AddTargetAttributes(uchyl, amendment, command.Target);
+                AddTargetAttributes(uchyl, amendment, command);
                 uchyl.Add(new XAttribute(XmlConverterConstants.Contents.Citation.Quotation.GUIDAttribute, command.NextGuid().ToString()));
                 instructions.Add(uchyl);
             }
@@ -451,7 +463,7 @@ namespace Saga.Core.Services.Converters
 
                 foreach (var command in targets)
                 {
-                    if (command.Target is { IsManual: true } || AddsWithoutAPlace(change))
+                    if (command.IsManual || AddsWithoutAPlace(change))
                     {
                         manual.Add(ManualTextChange(amendment, command, change));
                         continue;
@@ -460,7 +472,7 @@ namespace Saga.Core.Services.Converters
                     var instruction = new XElement(now + XmlConverterConstants.Contents.Instruction.ReplaceText,
                         new XAttribute(XmlConverterConstants.Contents.Instruction.OldTextAttribute, change.OldText),
                         new XAttribute(XmlConverterConstants.Contents.Instruction.NewTextAttribute, change.NewText));
-                    AddTargetAttributes(instruction, amendment, command.Target);
+                    AddTargetAttributes(instruction, amendment, command);
                     instruction.Add(new XAttribute(XmlConverterConstants.Contents.Citation.Quotation.ActAttribute, BuildActUri(amendment)));
                     if (change.Occurrence == TextOccurrence.Last)
                     {

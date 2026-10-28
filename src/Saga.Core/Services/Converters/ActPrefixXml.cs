@@ -133,7 +133,7 @@ namespace Saga.Core.Services.Converters
             element.Name.LocalName is XmlConverterConstants.Contents.Citation.StructElement
                 or XmlConverterConstants.Contents.Citation.QuotedStructElement;
 
-        // „UNKNOWN" i pusta wartość nie są adresami — nie ma czego poprzedzać.
+        // Sam akt („DU/2021/200", ADR-0101, ADR-0125) i pusta wartość nie są adresem jednostki — nie ma czego poprzedzać.
         private static bool IsAddress(string value) => value.Length > 0 && value.Contains('_');
     }
 }

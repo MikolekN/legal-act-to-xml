@@ -1819,6 +1819,13 @@ a wersjonowanie zgodne z Semantic Versioning.
   razem z punktami ma adres swojego ustępu, nie pierwszego punktu
   ([ADR-0124](docs/adr/0124-zdanie-i-wprowadzenie-do-wyliczenia-przytoczone-w-calosci-sa-zdaniem.md)).
 
+- **Poprawki celów nowelizacji**: komenda bez celu („dodaje się art. 37a w brzmieniu:” bez „po art. 37”) daje
+  instrukcję ręczną (`dodaj-recznie`, `uchyl-recznie`, `zastap-recznie`) z adresem samego aktu, a bez odczytanego aktu —
+  bez `element-eId`; eksport nie pisze już `element-eId="UNKNOWN"`
+  ([ADR-0125](docs/adr/0125-komenda-bez-celu-to-instrukcja-reczna-na-akcie.md)). Cele zwinięte do jednego adresu ręcznego
+  („w części „…” uchyla się pkt 3 i 6”) dają jeden cytat zamiast powtórzeń, a punkty dodawanego zdania („w ust. 8
+  dodaje się zdanie drugie w brzmieniu: „…: 1) …””) są dodawane w ustępie, nie w zdaniu pierwszym.
+
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —
   żaden kod ich nie wołał. Dokumentacja nie zapowiada już eksportu XLSX, którego nie ma; jedynym formatem

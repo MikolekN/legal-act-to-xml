@@ -1,6 +1,6 @@
 # ADR-0101: Tytuł aktu zmienianego jako cel komendy to instrukcja ręczna (`*-recznie`) z adresem samego aktu
 
-- Status: Accepted
+- Status: Accepted — Superseded in part by [ADR-0125](0125-komenda-bez-celu-to-instrukcja-reczna-na-akcie.md) (cel bez odczytanego aktu: bez `element-eId`)
 - Data: 2026-10-20
 
 ## Kontekst

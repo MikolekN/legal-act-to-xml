@@ -1719,6 +1719,36 @@ namespace Saga.Core.Tests
         }
 
         // ============================================================
+        // ADR-0125: komenda bez celu to instrukcja ręczna na samym akcie zmienianym
+        // ============================================================
+
+        [Fact]
+        public void Adr0125_CommandWithoutATarget_IsAManualInstructionOnTheAct()
+        {
+            // „Dodaje się art. 37a" bez „po art. 37" nie wskazuje miejsca (ADR-0055): instrukcja ręczna z adresem aktu, nie
+            // „UNKNOWN". Rozstrzyga brak celu, nie brak atrybutu: pierwszy załącznik dodawany odesłaniem zostaje now:dodaj-po
+            // bez element-eId (ADR-0058).
+            string[] lines =
+            [
+                "USTAWA", "z dnia 14 czerwca 2024 r.", "o zmianie ustawy o opłatach",
+                "Art. 1. W ustawie z dnia 1 lutego 2021 r. o opłatach (Dz. U. poz. 200) wprowadza się następujące zmiany:",
+                "1) dodaje się art. 37a w brzmieniu:",
+                "„Art. 37a. Opłaty nie pobiera się.”;",
+                "2) dodaje się załącznik do ustawy w brzmieniu określonym w załączniku do niniejszej ustawy.",
+                "Art. 2. Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.",
+            ];
+            var blocks = lines.Select(line => new DocumentBlock { Text = line }).ToList();
+            var xml = LegalDocumentConverter.Convert(LegalDocumentParser.Parse(blocks, new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!);
+
+            var addressed = xml.Descendants().Where(e => e.Attribute("element-eId") is not null)
+                .Select(e => (e.Name.LocalName, e.Attribute("element-eId")!.Value, e.Attribute("funkcja")?.Value)).ToList();
+            Assert.Equal([("cytat-strukt", "DU/2021/200", "dodaj-recznie")], addressed);
+            var annex = Assert.Single(xml.Descendants(), e => e.Name.LocalName == "dodaj-po");
+            Assert.Null(annex.Attribute("element-eId"));
+            Assert.DoesNotContain(xml.Descendants().Attributes(), attribute => attribute.Value == "UNKNOWN");
+        }
+
+        // ============================================================
         // ADR-0124: zdanie i wprowadzenie do wyliczenia przytoczone w całości są zdaniem; reszta tekstem
         // ============================================================
 
