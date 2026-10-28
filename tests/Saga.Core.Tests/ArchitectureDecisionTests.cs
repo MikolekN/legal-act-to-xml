@@ -1612,12 +1612,16 @@ namespace Saga.Core.Tests
                 lines.Select(line => new DocumentBlock { Text = line }).ToList(),
                 new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!;
 
-            var instructions = LegalDocumentConverter.Convert(document).Descendants()
+            var xml = LegalDocumentConverter.Convert(document);
+            var instructions = xml.Descendants()
                 .Where(e => e.Name.LocalName == "zamien-tekst")
                 .Select(e => (e.Attribute("stary-tekst")?.Value, e.Attribute("nowy-tekst")?.Value))
                 .ToList();
 
             Assert.Equal([("na piśmie", ""), ("pracodawcy", "pracodawcy w postaci papierowej")], instructions);
+            // Skreślenie jest jedną operacją: obok instrukcji nie stoi cytat uchyl-tekst skreślanych wyrazów
+            // (autor schematu, 2026-10-27: obie postaci pasują; dwie operacje skreśliłyby wyrazy dwa razy).
+            Assert.DoesNotContain(xml.Descendants(), e => e.Name.LocalName == "cytat-w-tekscie");
         }
 
         // ============================================================

@@ -221,6 +221,41 @@ namespace Saga.Core.Tests
         }
 
         [Fact]
+        public void EveryInstructionAndCitation_HasItsOwnGuid_AndNoTargetGuid()
+        {
+            // GUID elementu aktu zmienianego jest nieznany — akt zmieniający go nie niesie — więc eksport nie pisze
+            // GUIDcelu; cel bez eId to instrukcja ręczna (odpowiedź autorów schematu, 2026-10-18). Każda instrukcja
+            // i każdy cytat ma za to własny nowGUID, różny od pozostałych, także przy kopii na kolejne cele.
+            string[] lines =
+            [
+                "USTAWA", "z dnia 14 czerwca 2024 r.", "o zmianie ustawy o opłatach",
+                "Art. 1. W ustawie z dnia 1 lutego 2021 r. o opłatach (Dz. U. poz. 200) wprowadza się następujące zmiany:",
+                "1) w art. 2 w ust. 1 uchyla się pkt 31, 32 i 34;",
+                "2) w art. 5 i 6 wyrazy „organ właściwy” zastępuje się wyrazami „organ nadzoru”;",
+                "3) w art. 7 i 8 zdanie pierwsze otrzymuje brzmienie:",
+                "„Opłatę wnosi się w terminie 14 dni.”;",
+                "4) po art. 9 dodaje się art. 9a w brzmieniu:",
+                "„Art. 9a. Opłaty nie pobiera się.”;",
+                "5) w załączniku nr 2 do ustawy uchyla się lp. 7.",
+                "Art. 2. Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.",
+            ];
+            var xml = LegalDocumentConverter.Convert(LegalDocumentParser.Parse(
+                lines.Select(line => new DocumentBlock { Text = line }).ToList(),
+                new ParseOptions { Policy = ParsePolicy.AlwaysParse }).Document!);
+
+            XNamespace gd = "https://projects.task.gda.pl/caise/NLP/kisi/rcl/GUIDs/1.0";
+            var instructions = xml.Descendants()
+                .Where(e => e.Name.NamespaceName == XmlConverterConstants.AmendmentNamespace || e.Name.LocalName.StartsWith("cytat-"))
+                .ToList();
+            Assert.Equal(9, instructions.Count);
+
+            var guids = instructions.Select(e => e.Attribute(gd + "nowGUID")?.Value).ToList();
+            Assert.All(guids, guid => Assert.True(Guid.TryParse(guid, out _)));
+            Assert.Equal(guids.Count, guids.Distinct().Count());
+            Assert.DoesNotContain(xml.Descendants().Attributes(), attribute => attribute.Name.LocalName.Contains("GUIDcelu"));
+        }
+
+        [Fact]
         public void RepealedUnit_IsAnInstructionBeforeTheSentenceText()
         {
             // Odpowiedź autora schematu (2026-10-27): instrukcja przed tekstem, jak w DU/2026/26 (ADR-0123).
