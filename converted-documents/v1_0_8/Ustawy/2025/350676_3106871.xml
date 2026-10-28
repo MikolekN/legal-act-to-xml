@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0">
+  <ustawa>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/1659</ELI>
+      </ELIaktu>
+      <GUIDwersji>d2a591cf-c9cf-4564-8533-9626bba76ebb</GUIDwersji>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>1659</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 1659</AdresWyswietlany>
+      <Tytul>Ustawa z dnia 5 listopada 2025 r. o zmianie ustawy o dochodach jednostek samorządu terytorialnego</Tytul>
+      <Rodzaj>USTAWA</Rodzaj>
+      <DataOgloszenia>2025-11-28</DataOgloszenia>
+      <DataAktu />
+      <DataWejsciaWZycie>2025-11-29</DataWejsciaWZycie>
+      <Organy>
+        <Organ GUID="b67a52c1-99cb-41ac-9a59-b7e4ea19aea3" rola="wydający" eliURI="URI">
+          <Nazwa>UNKNOWN</Nazwa>
+        </Organ>
+      </Organy>
+    </metadane>
+    <artykul eId="art_1" GUID="89e8bd1a-c298-4d05-b151-d2996198c2de" wejscie-w-zycie="2025-11-29">
+      <nr>1</nr>
+      <ustep-n GUID="0ac6f71c-bf54-420f-b011-1b9cba50148b" wejscie-w-zycie="2025-11-29">
+        <p>
+          <zdanie nr="1" GUID="572a2c0f-becb-4275-bcdf-cde3822e91fc" fragment="1" fragmentGUID="a59ee471-cb98-4f75-bb75-3cea473ef217" wejscie-w-zycie="2025-11-29">W ustawie z dnia 1 października 2024 r. o dochodach jednostek samorządu terytorialnego (Dz. U. poz. 1572 i 1717) po rozdziale 9 dodaje się rozdział 9a w brzmieniu:<cytat-w-tekscie now:akt="https://eli.gov.pl/eli//2026/1572" cudzyslowy="0" nowGUID="f6505e3a-73da-435a-9035-72dc1b5db402" element-eId="UNKNOWN" funkcja="dodaj-po"><tekst>„Rozdział 9a
+Przepisy epizodyczne
+Kategoria jednostki samorządu terytorialnego
+Obszar wydatkowy
+Wartość wagi obszaru wydatkowego (𝜆f)
+Determinanty wpływające na potrzeby wydatkowe w danym obszarze wydatkowym
+Wysokość współczynników regresji dla poszczególnych determinant (𝛽)
+gminy
+administracja publiczna
+0,24
+iloczyn liczby mieszkańców i relacji przeciętnego miesięcznego wynagrodzenia brutto w danym powiecie do średniej krajowej
+1
+oświata i wychowanie - szkoły
+0,17
+liczba oddziałów w szkołach podstawowych
+1
+oświata i wychowanie - wychowanie przedszkolne
+0,19
+liczba dzieci uczęszczających do przedszkoli, oddziałów przedszkolnych w szkołach podstawowych i innych form wychowania przedszkolnego prowadzonych przez jednostki samorządu terytorialnego, osoby prawne niebędące jednostkami samorządu terytorialnego oraz osoby fizyczne
+1
+polityka społeczna
+0,12
+liczba gospodarstw domowych korzystających ze środowiskowej pomocy społecznej
+1
+gospodarka komunalna i ochrona środowiska
+0,07
+ilość wody dostarczonej i ścieków bytowych odprowadzonych siecią kanalizacyjną [dam[3]]
+1
+transport i łączność
+0,06
+liczba mieszkańców w wieku 20-64
+1
+kultura i ochrona dziedzictwa narodowego
+0,07
+iloczyn liczby mieszkańców i relacji przeciętnego miesięcznego wynagrodzenia brutto w danym powiecie do średniej krajowej
+1
+pozostałe
+0,08
+liczba mieszkańców
+1
+miasta na prawach powiatu
+transport i łączność
+0,18
+liczba pracujących ogółem
+1
+administracja publiczna
+0,15
+iloczyn liczby mieszkańców i relacji przeciętnego miesięcznego wynagrodzenia brutto do średniej krajowej
+1
+oświata i wychowanie - szkoły
+0,15
+liczba oddziałów w szkołach podstawowych, ponadpodstawowych i policealnych
+1
+oświata i wychowanie - wychowanie przedszkolne
+0,17
+liczba dzieci uczęszczających do przedszkoli, oddziałów przedszkolnych w szkołach podstawowych i innych form wychowania przedszkolnego prowadzonych przez jednostki samorządu terytorialnego, osoby prawne niebędące jednostkami samorządu terytorialnego oraz osoby fizyczne
+1
+polityka społeczna
+0,15
+liczba osób korzystających ze środowiskowej pomocy społecznej (łącznie z filiami)
+0,8065
+liczba bezrobotnych zarejestrowanych
+0,1935
+gospodarka komunalna i ochrona środowiska
+0,05
+suma powierzchni parków spacerowowypoczynkowych, zieleńców i terenów zieleni osiedlowej oraz średniej powierzchni objętej utrzymaniem czystości i porządku przez gminy w okresie letnim i powierzchni objętej utrzymaniem czystości i porządku przez gminy w okresie zimowym - będąca w gestii miasta [w ha]
+1
+kultura i ochrona dziedzictwa narodowego
+0,06
+iloczyn liczby mieszkańców i relacji przeciętnego miesięcznego wynagrodzenia brutto do średniej krajowej
+1
+pozostałe
+0,09
+liczba mieszkańców
+1
+powiaty
+administracja publiczna
+0,40
+iloczyn liczby mieszkańców i relacji przeciętnego miesięcznego wynagrodzenia brutto do średniej krajowej
+1
+polityka społeczna
+0,25
+liczba mieszkańców zakładów stacjonarnych pomocy społecznej podległych samorządowi powiatu (łącznie z filiami)
+0,3712
+liczba bezrobotnych zarejestrowanych
+0,6288
+transport i łączność
+0,12
+długość dróg powiatowych o nawierzchni twardej [w km]
+0,1632
+liczba mieszkańców w wieku 20-64
+0,8368
+oświata i wychowanie - szkoły
+0,16
+liczba oddziałów w szkołach ponadpodstawowych i policealnych
+1
+pozostałe
+0,07
+liczba mieszkańców
+1
+województwa
+transport i łączność
+0,36
+suma długości dróg wojewódzkich o nawierzchni twardej i długości linii kolejowych eksploatowanych [w km]
+1
+administracja publiczna
+0,24
+iloczyn liczby mieszkańców i relacji przeciętnego miesięcznego wynagrodzenia brutto do średniej krajowej
+1
+ochrona zdrowia
+0,05
+liczba mieszkańców
+1
+polityka społeczna
+0,08
+suma liczby bezrobotnych zarejestrowanych i liczby osób w wieku poprodukcyjnym
+1
+kultura i ochrona dziedzictwa narodowego
+0,16
+iloczyn liczby mieszkańców i relacji przeciętnego miesięcznego wynagrodzenia brutto do średniej krajowej
+1
+pozostałe
+0,11
+liczba mieszkańców
+1</tekst></cytat-w-tekscie><cytat-strukt now:akt="https://eli.gov.pl/eli//2026/1572" cudzyslowy="2" nowGUID="f6505e3a-73da-435a-9035-72dc1b5db402" element-eId="UNKNOWN" funkcja="dodaj-po"><artykul eId="art_78a" GUID="cbbce5c2-65f6-47da-8f7f-22c59759de4f" wejscie-w-zycie="2025-11-29"><nr>78a</nr><ustep eId="art_78a__ust_1" GUID="4f890360-7c66-4faa-b789-965b205105e1" wejscie-w-zycie="2025-11-29"><nr>1</nr><p><zdanie nr="1" GUID="fc50f668-59d5-4e98-bafa-da302cab3b6e" fragment="1" fragmentGUID="29aed26c-494e-41c9-ab54-1f2ae5c7f0aa" wejscie-w-zycie="2025-11-29">W celu obliczenia na rok 2026 przeliczeniowej liczby mieszkańców jednostki samorządu terytorialnego przyjmuje się dla poszczególnych kategorii jednostek samorządu terytorialnego następujące obszary wydatkowe i wartości ich wag, determinanty wpływające na potrzeby wydatkowe w danym obszarze wydatkowym oraz wysokość współczynników regresji dla poszczególnych determinant:</zdanie></p></ustep><ustep eId="art_78a__ust_2" GUID="67292dfe-b58a-49f8-a446-ddbbc0e3e358" wejscie-w-zycie="2025-11-29"><nr>2</nr><p><zdanie nr="1" GUID="ed3e5fc1-f73d-4f90-b2a6-02d28a9f9ffd" fragment="1" fragmentGUID="9ded890b-35b3-45ae-8e2e-d9836094494d" wejscie-w-zycie="2025-11-29">W przypadku gdy na dzień 31 maja 2025 r. wartości determinant wpływających na potrzeby wydatkowe w danym obszarze wydatkowym były objęte tajemnicą statystyczną, do obliczenia przeliczeniowej liczby mieszkańców jednostek samorządu terytorialnego na rok 2026 przyjmuje się posiadane przez Główny Urząd Statystyczny i ostatnio dostępne wartości determinant, które nie były objęte tą tajemnicą w dniu 30 czerwca 2025 r.</zdanie></p></ustep></artykul><artykul eId="art_78b" GUID="3e6c0a08-af28-4a75-9d0c-1bb54cfb9b22" wejscie-w-zycie="2025-11-29"><nr>78b</nr><ustep-n GUID="4534ca33-2fc9-467c-9c76-95cd680dbe31" wejscie-w-zycie="2025-11-29"><p><zdanie nr="1" GUID="d0bd039f-802d-442d-a84d-0ee2529ce8be" fragment="1" fragmentGUID="4d9f5d74-de48-4433-a5a7-d6002dcacd07" wejscie-w-zycie="2025-11-29">Do obliczenia dochodów jednostek samorządu terytorialnego na rok 2026 z tytułu udziału w podatku dochodowym od osób fizycznych, podatku dochodowym od osób prawnych i subwencji ogólnej przyjmuje się:</zdanie></p><punkt eId="art_78b__pkt_1" GUID="4f6ae0e5-12e6-4431-be87-69bf894f80d5" wejscie-w-zycie="2025-11-29"><nr>1</nr><p><zdanie nr="1" GUID="d0bd039f-802d-442d-a84d-0ee2529ce8be" fragment="2" fragmentGUID="cf063aee-fe60-4162-b511-877b292ebd8f" wejscie-w-zycie="2025-11-29">kwoty dochodów za 2025 r. z tytułu udziału w podatku dochodowym od osób fizycznych i podatku dochodowym od osób prawnych, subwencji ogólnej oraz środków z rezerwy, o których mowa w art. 89 ust. 2 i 3, obliczone w sposób określony w niniejszej ustawie, przy czym:</zdanie></p><litera eId="art_78b__pkt_1__lit_a" GUID="5f196513-148c-4ab7-991f-359cce2093d3" wejscie-w-zycie="2025-11-29"><nr>a</nr><p><zdanie nr="1" GUID="d0bd039f-802d-442d-a84d-0ee2529ce8be" fragment="3" fragmentGUID="0a49d244-9196-41b8-83fd-94684c840f50" wejscie-w-zycie="2025-11-29">do obliczenia dochodu jednostki samorządu terytorialnego z tytułu udziału w podatku dochodowym od osób prawnych przyjmuje się kwotę dochodów podatników podatku dochodowego od osób prawnych, o których mowa w art. 12, ustaloną na podstawie danych według stanu na dzień 30 czerwca 2025 r.,</zdanie></p></litera><litera eId="art_78b__pkt_1__lit_b" GUID="90f16ee5-6795-4aa8-87ff-890eae87760f" wejscie-w-zycie="2025-11-29"><nr>b</nr><p><zdanie nr="1" GUID="d0bd039f-802d-442d-a84d-0ee2529ce8be" fragment="4" fragmentGUID="598a18df-6b31-43cb-b9ae-d4be3cd4851b" wejscie-w-zycie="2025-11-29">do obliczenia kwoty rocznego dochodu jednostki samorządu terytorialnego z tytułu udziału we wpływach z podatku dochodowego od osób prawnych za lata 2024 i 2025 przyjmuje się kwotę należnego podatku dochodowego od osób prawnych i wskaźnik udziału należnego podatku dochodowego od osób prawnych od podatników posiadających siedzibę na obszarze danej jednostki samorządu terytorialnego w ogólnej kwocie należnego podatku, ustalone, w przypadku lat 2021 i 2022, na podstawie danych według stanu na dzień 30 czerwca 2025 r.,</zdanie></p></litera><litera eId="art_78b__pkt_1__lit_c" GUID="daa1fb39-2168-4f0e-a978-74f25824bbf2" wejscie-w-zycie="2025-11-29"><nr>c</nr><p><zdanie nr="1" GUID="d0bd039f-802d-442d-a84d-0ee2529ce8be" fragment="5" fragmentGUID="30997bea-9539-4e97-9c0e-706f5b95c29c" wejscie-w-zycie="2025-11-29">do obliczenia kwoty kalkulacyjnej za rok 2025 przyjmuje się dochody jednostki samorządu terytorialnego z tytułu udziału w podatku dochodowym od osób prawnych obliczone z uwzględnieniem danych, o których mowa w lit. a i b,</zdanie></p></litera><litera eId="art_78b__pkt_1__lit_d" GUID="e2da229f-6eb7-42a4-9b39-64a7f23fcd45" wejscie-w-zycie="2025-11-29"><nr>d</nr><p><zdanie nr="1" GUID="d0bd039f-802d-442d-a84d-0ee2529ce8be" fragment="6" fragmentGUID="5deacec6-8bda-4c57-83ec-f40a919c7333" wejscie-w-zycie="2025-11-29">w zakresie potrzeb oświatowych za rok 2025 przyjmuje się dla poszczególnych jednostek samorządu terytorialnego kwoty przekazane przez ministra właściwego do spraw oświaty i wychowania ministrowi właściwemu do spraw finansów publicznych do dnia 31 maja 2025 r.,</zdanie></p></litera><litera eId="art_78b__pkt_1__lit_e" GUID="cb615623-f481-450d-a953-a8fccd50a170" wejscie-w-zycie="2025-11-29"><nr>e</nr><p><zdanie nr="1" GUID="d0bd039f-802d-442d-a84d-0ee2529ce8be" fragment="7" fragmentGUID="13b53da6-cdc2-4f21-9a16-c6ab67e1850e" wejscie-w-zycie="2025-11-29">do obliczenia potrzeb wyrównawczych i uzupełniających oraz korekty z tytułu zamożności za rok 2025 przyjmuje się dane, o których mowa w lit. a i b, oraz potrzeby oświatowe, o których mowa w lit. d;</zdanie></p></litera></punkt><punkt eId="art_78b__pkt_2" GUID="da90373f-7d76-4487-89df-51b9b7cd5f58" wejscie-w-zycie="2025-11-29"><nr>2</nr><p><zdanie nr="1" GUID="d0bd039f-802d-442d-a84d-0ee2529ce8be" fragment="8" fragmentGUID="8434df38-11b5-4ffd-8efd-f5efd1d8274f" wejscie-w-zycie="2025-11-29">wskaźnik, o którym mowa w art. 31 ust. 2, ustalony jako iloraz dochodów jednostki samorządu terytorialnego z tytułu udziału w podatku dochodowym od osób fizycznych i podatku dochodowym od osób prawnych na rok 2026 i dochodów tej jednostki z tych tytułów za rok 2025, obliczonych z uwzględnieniem danych, o których mowa w pkt 1 lit. a.</zdanie></p></punkt></ustep-n></artykul></cytat-strukt>.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="art_2" GUID="93e6bcf1-8aca-4646-b998-0773b3ff3489" wejscie-w-zycie="2025-11-29">
+      <nr>2</nr>
+      <ustep-n GUID="5737d6be-b758-406c-b808-e3ac7aae7bcd" wejscie-w-zycie="2025-11-29">
+        <p>
+          <zdanie nr="1" GUID="17c32550-345b-4135-b362-e0ed18097d9c" fragment="1" fragmentGUID="d9db4b75-514b-4f57-b8d9-c1930baa7d42" wejscie-w-zycie="2025-11-29">Ustawa wchodzi w życie z dniem następującym po dniu ogłoszenia.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+  </ustawa>
+</akt-prawny>
