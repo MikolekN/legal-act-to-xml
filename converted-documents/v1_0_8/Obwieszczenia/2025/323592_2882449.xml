@@ -1,0 +1,943 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<akt-prawny xmlns:now="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/now" xmlns="https://projects.task.gda.pl/caise/NLP/kisi/rcl/schemaPL/1.0">
+  <ustawa>
+    <metadane>
+      <ELIaktu>
+        <ELI>DU/2025/573</ELI>
+      </ELIaktu>
+      <GUIDwersji>d7781f72-6067-4476-a145-4e4f88459fd9</GUIDwersji>
+      <Wydawnictwo>DU</Wydawnictwo>
+      <Rok>2025</Rok>
+      <Pozycja>573</Pozycja>
+      <AdresWyswietlany>Dz.U. 2025 poz. 573</AdresWyswietlany>
+      <Tytul>Obwieszczenie Marszałka Sejmu Rzeczypospolitej Polskiej z dnia 23 kwietnia 2025 r. w sprawie ogłoszenia jednolitego tekstu ustawy o odwróconym kredycie hipotecznym</Tytul>
+      <Rodzaj>USTAWA</Rodzaj>
+      <DataOgloszenia>2025-04-30</DataOgloszenia>
+      <DataAktu />
+      <DataWejsciaWZycie>2025-05-31</DataWejsciaWZycie>
+      <Organy>
+        <Organ GUID="791b7fa9-95ae-47d0-8228-0c5a5e868d3f" rola="wydający" eliURI="URI">
+          <Nazwa>UNKNOWN</Nazwa>
+        </Organ>
+      </Organy>
+    </metadane>
+    <artykul eId="art_76" GUID="a5795735-eaf4-4829-9d7a-f75a53b44798" wejscie-w-zycie="2025-05-31">
+      <nr>76</nr>
+      <ustep-n GUID="b516f7df-56e0-49a7-adde-10e4f57fcd84" wejscie-w-zycie="2025-05-31">
+        <p>
+          <zdanie nr="1" GUID="ddb015e9-800a-4c76-816f-bb2152468f58" fragment="1" fragmentGUID="b96c0186-833b-474c-b3aa-7de025869ea0" wejscie-w-zycie="2025-05-31">Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia, z wyjątkiem:</zdanie>
+        </p>
+        <punkt eId="art_76__pkt_1" GUID="43ab60a3-264c-43e3-b95e-4db1898a6087" wejscie-w-zycie="2025-05-31">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" GUID="ddb015e9-800a-4c76-816f-bb2152468f58" fragment="2" fragmentGUID="1b097be9-e626-462d-a0b4-3c0e84f16e0e" wejscie-w-zycie="2025-05-31">art. 65, art. 67 i art. 75, które wchodzą w życie z dniem następującym po dniu ogłoszenia;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="art_76__pkt_2" GUID="dd7422c5-6117-4fa3-ab0b-21c30c505060" wejscie-w-zycie="2025-05-31">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" GUID="ddb015e9-800a-4c76-816f-bb2152468f58" fragment="3" fragmentGUID="12e4e37c-3edb-4f9a-b48a-d989d5d5bbdd" wejscie-w-zycie="2025-05-31">art. 61 pkt 2 i art. 68, które wchodzą w życie po upływie 2 miesięcy od dnia ogłoszenia.”.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </artykul>
+    <artykul eId="rozdz_1__art_1" GUID="43f54976-d476-4a05-aec0-7eb907d9eeb6" wejscie-w-zycie="2025-05-31">
+      <nr>1</nr>
+      <ustep-n GUID="a7c173ba-45da-4bc9-82a3-47528c8537e4" wejscie-w-zycie="2025-05-31">
+        <p>
+          <zdanie nr="1" GUID="f0d94e36-b088-405b-9db6-e2303600eae6" fragment="1" fragmentGUID="65c8aab3-4356-4e39-8264-091381fc39b0" wejscie-w-zycie="2025-05-31">Ustawa określa zasady i tryb zawierania umowy odwróconego kredytu hipotecznego, prawa i obowiązki stron oraz zasady rozliczenia zobowiązań z niej wynikających.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="rozdz_1__art_2" GUID="48920d50-24d0-4b60-83b9-fe7beb6a2fd0" wejscie-w-zycie="2025-05-31">
+      <nr>2</nr>
+      <ustep eId="rozdz_1__art_2__ust_1" GUID="619d6cd8-24c3-44a4-bfa2-8047cd7f511b" wejscie-w-zycie="2025-05-31">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" GUID="1a63495b-278c-4e35-b87b-09ffded36301" fragment="1" fragmentGUID="c4cd88fe-6979-4fa6-a4bc-78e974547df5" wejscie-w-zycie="2025-05-31">Użyte w ustawie określenia oznaczają:</zdanie>
+        </p>
+        <punkt eId="rozdz_1__art_2__ust_1__pkt_1" GUID="c14e4f28-6d4f-4f5a-8d4d-035d72070a03" wejscie-w-zycie="2025-05-31">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" GUID="1a63495b-278c-4e35-b87b-09ffded36301" fragment="2" fragmentGUID="2337db8a-d662-4d10-b573-819c9781598f" wejscie-w-zycie="2025-05-31">całkowita kwota do zapłaty - sumę wypłaconej kwoty odwróconego kredytu hipotecznego, odsetek oraz innych kosztów niezapłaconych przez kredytobiorcę przed spłatą kredytu, należnych do dnia spłaty;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="rozdz_1__art_2__ust_1__pkt_2" GUID="a6a932de-36f5-4e24-854d-7f1ffab6cbb8" wejscie-w-zycie="2025-05-31">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" GUID="1a63495b-278c-4e35-b87b-09ffded36301" fragment="3" fragmentGUID="5e30de95-ba89-4e7b-8cb5-8a6f382ee032" wejscie-w-zycie="2025-05-31">inne koszty - koszty, inne niż odsetki, które kredytobiorca jest zobowiązany ponieść w związku z umową odwróconego kredytu hipotecznego, w szczególności prowizje i inne opłaty.</zdanie>
+          </p>
+        </punkt>
+      </ustep>
+      <ustep eId="rozdz_1__art_2__ust_2" GUID="cd672bf1-e138-4d75-82ce-4b54192f00f1" wejscie-w-zycie="2025-05-31">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" GUID="018fa2c8-d28b-4e0d-b387-732a30a72e71" fragment="1" fragmentGUID="bc422cad-86f3-403b-9c4b-cc585c266df4" wejscie-w-zycie="2025-05-31">Ilekroć w niniejszej ustawie jest mowa o banku, należy przez to rozumieć także oddział banku zagranicznego, oddział instytucji kredytowej lub instytucję kredytową prowadzącą działalność transgraniczną, o których mowa w ustawie z dnia 29 sierpnia 1997 r. - Prawo bankowe (Dz. U. z 2024 r. poz. 1646, 1685 i 1863 oraz z 2025 r. poz. 146 i 222).</zdanie>
+        </p>
+      </ustep>
+    </artykul>
+    <artykul eId="rozdz_1__art_3" GUID="f54da99c-4c0f-477d-b280-1977715f7aa8" wejscie-w-zycie="2025-05-31">
+      <nr>3</nr>
+      <ustep-n GUID="7d3369c3-df4a-42c0-ae09-b4f023a9954c" wejscie-w-zycie="2025-05-31">
+        <p>
+          <zdanie nr="1" GUID="a545d9a3-7319-4c0a-bde9-5ea43dd1a113" fragment="1" fragmentGUID="3b4e01db-5845-4de7-bd47-c05758fc8841" wejscie-w-zycie="2025-05-31">W sprawach związanych z umową odwróconego kredytu hipotecznego nie stosuje się art. 69 ust. 1 i 2, art. 70, art. 74-75a, art. 76a, art. 77, art. 78 i art. 78a ustawy z dnia 29 sierpnia 1997 r. - Prawo bankowe oraz art. 387[1] ustawy z dnia 23 kwietnia 1964 r. - Kodeks cywilny (Dz. U. z 2024 r. poz. 1061 i 1237).</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="rozdz_1__art_4" GUID="3d57632c-bed0-4c43-9437-fc31b4bcfd21" wejscie-w-zycie="2025-05-31">
+      <nr>4</nr>
+      <ustep eId="rozdz_1__art_4__ust_1" GUID="375066ba-c386-4ec8-9b5c-9a9ddfdc7755" wejscie-w-zycie="2025-05-31">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" GUID="a0b22a88-89a4-44a4-a09c-24bf76801b94" fragment="1" fragmentGUID="710a70c2-6275-4604-9f2a-c42b435ff1cd" wejscie-w-zycie="2025-05-31">Przez umowę odwróconego kredytu hipotecznego bank zobowiązuje się oddać do dyspozycji kredytobiorcy na czas nieoznaczony określoną sumę środków pieniężnych, których spłata nastąpi po śmierci kredytobiorcy, a kredytobiorca zobowiązuje się do ustanowienia zabezpieczenia spłaty tej sumy wraz z należnymi odsetkami oraz innymi kosztami.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="rozdz_1__art_4__ust_2" GUID="f8a1b776-3ab8-4036-969e-192035679443" wejscie-w-zycie="2025-05-31">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" GUID="b38ea91a-9ce1-4368-9b15-db0062fdde88" fragment="1" fragmentGUID="0911b87e-0b41-46c1-94d1-fb2e4477f760" wejscie-w-zycie="2025-05-31">Kredytobiorcą może być osoba fizyczna, która jest właścicielem nieruchomości lub której przysługuje spółdzielcze własnościowe prawo do lokalu, lub prawo użytkowania wieczystego.</zdanie>
+          <zdanie nr="2" GUID="032b140f-0bfd-4068-82b6-0866e22fd704" fragment="1" fragmentGUID="baee5276-a1b4-4127-9932-a34c89590aec" wejscie-w-zycie="2025-05-31">Kredytobiorcą może być również osoba fizyczna będąca współwłaścicielem nieruchomości lub której przysługuje udział w spółdzielczym własnościowym prawie do lokalu lub w prawie użytkowania wieczystego.</zdanie>
+        </p>
+      </ustep>
+    </artykul>
+    <artykul eId="rozdz_1__art_5" GUID="c1193cf6-e52b-4dbc-b62d-92bfa7b57266" wejscie-w-zycie="2025-05-31">
+      <nr>5</nr>
+      <ustep eId="rozdz_1__art_5__ust_1" GUID="34854191-a49f-4611-9256-f27a53fbd049" wejscie-w-zycie="2025-05-31">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" GUID="4e25f22a-eb3f-491e-80fd-273ae0ced68f" fragment="1" fragmentGUID="4dfa94a5-f74e-45dd-9f48-d72ec62cf64e" wejscie-w-zycie="2025-05-31">Wierzytelność banku wynikająca z umowy odwróconego kredytu hipotecznego może być zabezpieczona wyłącznie przez:</zdanie>
+        </p>
+        <punkt eId="rozdz_1__art_5__ust_1__pkt_1" GUID="95607b9e-ad4f-4986-b682-963a5102f5b7" wejscie-w-zycie="2025-05-31">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" GUID="4e25f22a-eb3f-491e-80fd-273ae0ced68f" fragment="2" fragmentGUID="80ea337a-523d-4fb3-945f-2f33689f40a0" wejscie-w-zycie="2025-05-31">ustanowienie hipoteki na nieruchomości lub prawie, o którym mowa w art. 4 ust. 2, oraz</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="rozdz_1__art_5__ust_1__pkt_2" GUID="cf5edc61-4040-4893-a8ff-b33383e59639" wejscie-w-zycie="2025-05-31">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" GUID="4e25f22a-eb3f-491e-80fd-273ae0ced68f" fragment="3" fragmentGUID="4ad4abc5-7743-49ee-865a-01a1bfd3cf9b" wejscie-w-zycie="2025-05-31">ujawnienie w księdze wieczystej roszczenia o przeniesienie własności nieruchomości lub prawa, o którym mowa w art. 4 ust. 2.</zdanie>
+          </p>
+        </punkt>
+      </ustep>
+      <ustep eId="rozdz_1__art_5__ust_2" GUID="1dee5cbb-c209-4451-8cf3-72e445768671" wejscie-w-zycie="2025-05-31">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" GUID="e0dc3ce2-2f6f-42e3-8278-50b84e463c98" fragment="1" fragmentGUID="a15a388a-e0c6-4b7d-8c3e-be64224a297f" wejscie-w-zycie="2025-05-31">Podstawą wpisu roszczenia, o którym mowa w ust. 1 pkt 2, do księgi wieczystej jest oświadczenie banku o zawarciu umowy odwróconego kredytu hipotecznego spełniające wymagania, o których mowa w art. 95 ust. 1 ustawy z dnia 29 sierpnia 1997 r. - Prawo bankowe.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="rozdz_1__art_5__ust_3" GUID="0ceae15f-c268-4808-9274-21409c3d45d9" wejscie-w-zycie="2025-05-31">
+        <nr>3</nr>
+        <p>
+          <zdanie nr="1" GUID="0863ae11-16d3-4829-acdf-c1a8fbc2cb39" fragment="1" fragmentGUID="a02f9a80-101a-4ed5-9f3c-f3f8c6234cc8" wejscie-w-zycie="2025-05-31">Bank nie może uzależniać zawarcia umowy odwróconego kredytu hipotecznego od zawarcia innych umów, z wyjątkiem umowy ubezpieczenia od zdarzeń losowych nieruchomości lub lokalu, do którego kredytobiorcy przysługuje spółdzielcze własnościowe prawo do lokalu.</zdanie>
+        </p>
+      </ustep>
+    </artykul>
+    <artykul eId="rozdz_1__art_6" GUID="3a589fb4-e3ce-4ed8-a036-eeefcd15e59d" wejscie-w-zycie="2025-05-31">
+      <nr>6</nr>
+      <ustep eId="rozdz_1__art_6__ust_1" GUID="afc40a8a-655a-4fdf-b8f3-69472323d91f" wejscie-w-zycie="2025-05-31">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" GUID="256bfc73-b396-4aa2-be93-40d1d679cc70" fragment="1" fragmentGUID="2452f687-c783-4708-a5ca-591697435150" wejscie-w-zycie="2025-05-31">Podstawą do ustalenia kwoty odwróconego kredytu hipotecznego jest wartość rynkowa:</zdanie>
+        </p>
+        <punkt eId="rozdz_1__art_6__ust_1__pkt_1" GUID="4c824302-e238-4cd8-ad86-6bbe387beea2" wejscie-w-zycie="2025-05-31">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" GUID="256bfc73-b396-4aa2-be93-40d1d679cc70" fragment="2" fragmentGUID="180eed8d-41f6-4649-971f-6d3231a7caf2" wejscie-w-zycie="2025-05-31">nieruchomości będącej własnością kredytobiorcy lub do której kredytobiorcy przysługuje prawo użytkowania wieczystego lub</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="rozdz_1__art_6__ust_1__pkt_2" GUID="cb6b399f-344c-42ed-ac06-15b818a2e9e8" wejscie-w-zycie="2025-05-31">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" GUID="256bfc73-b396-4aa2-be93-40d1d679cc70" fragment="3" fragmentGUID="82f023bd-d5d9-4fd6-893e-9891ba4ab91b" wejscie-w-zycie="2025-05-31">lokalu, do którego kredytobiorcy przysługuje spółdzielcze własnościowe prawo do lokalu</zdanie>
+          </p>
+        </punkt>
+        <czesc-wspolna-punkt GUID="a85ef5b0-1d1f-4fa7-a520-bd7ca870bc15" wejscie-w-zycie="2025-05-31">
+          <p>
+            <zdanie nr="1" GUID="256bfc73-b396-4aa2-be93-40d1d679cc70" fragment="4" fragmentGUID="8a78162e-e72f-4bb2-a4f8-40d2fff23aa8" wejscie-w-zycie="2025-05-31">na których kredytobiorca ustanowi zabezpieczenie odwróconego kredytu hipotecznego.</zdanie>
+          </p>
+        </czesc-wspolna-punkt>
+      </ustep>
+      <ustep eId="rozdz_1__art_6__ust_2" GUID="4f47fdd3-238f-465a-8e0e-0a76ce9dff91" wejscie-w-zycie="2025-05-31">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" GUID="1a23a6f9-de99-489a-8e29-a13f3fb1a3a2" fragment="1" fragmentGUID="7434ef68-c8fd-4d83-bdf6-d25f988b13e1" wejscie-w-zycie="2025-05-31">Do określenia wartości rynkowej nieruchomości lub lokalu, o którym mowa w ust. 1 pkt 2, stosuje się przepisy ustawy z dnia 21 sierpnia 1997 r. o gospodarce nieruchomościami (Dz. U. z 2024 r. poz. 1145, 1222, 1717 i 1881).</zdanie>
+        </p>
+      </ustep>
+    </artykul>
+    <artykul eId="rozdz_1__art_7" GUID="bf6b159c-7aae-49fa-94ba-3abb9b2fc713" wejscie-w-zycie="2025-05-31">
+      <nr>7</nr>
+      <ustep eId="rozdz_1__art_7__ust_1" GUID="6eaf6016-6261-42ba-a89d-bd36482dd515" wejscie-w-zycie="2025-05-31">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" GUID="cfe6d31c-3da8-4f90-bc1f-36d628fc2754" fragment="1" fragmentGUID="37d93535-73ef-42d8-85a5-8005420d8e3b" wejscie-w-zycie="2025-05-31">Wypłata kwoty odwróconego kredytu hipotecznego następuje jednorazowo albo w ratach, przez okres i w wyso-kości określonych w umowie odwróconego kredytu hipotecznego, nie dłużej jednak niż do dnia śmierci kredytobiorcy.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="rozdz_1__art_7__ust_2" GUID="98c9c9b9-a183-4faa-bda5-53ea1af832f3" wejscie-w-zycie="2025-05-31">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" GUID="38a33d3d-3099-4813-9842-f233fa89f193" fragment="1" fragmentGUID="eb9cabd8-8f87-4b75-a446-49551301cf10" wejscie-w-zycie="2025-05-31">Jeżeli umowa odwróconego kredytu hipotecznego została zawarta z więcej niż jednym kredytobiorcą, w przypadku śmierci jednego z kredytobiorców prawo do wypłaty rat odwróconego kredytu hipotecznego przysługujących zmarłemu kredytobiorcy przysługuje tym z żyjących kredytobiorców, którzy nabyli po zmarłym udział we własności nieruchomości lub w prawie, o którym mowa w art. 4 ust. 2, stanowiących zabezpieczenie odwróconego kredytu hipotecznego, proporcjonalnie do wysokości nabytego przez nich udziału.</zdanie>
+        </p>
+      </ustep>
+    </artykul>
+    <artykul eId="rozdz_2__art_8" GUID="9b384405-b1a6-480c-80b5-f2bfafae62c8" wejscie-w-zycie="2025-05-31">
+      <nr>8</nr>
+      <ustep eId="rozdz_2__art_8__ust_1" GUID="1827d45d-568d-48e2-a76b-b9a46cd40867" wejscie-w-zycie="2025-05-31">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" GUID="332fe1a1-a031-4532-89d8-6f684bfc5a8a" fragment="1" fragmentGUID="734d69e9-e94c-4146-bea2-57422f95bac8" wejscie-w-zycie="2025-05-31">Bank, w terminie nie krótszym niż 14 dni przed zawarciem umowy odwróconego kredytu hipotecznego, dostarcza kredytobiorcy, według jego wyboru, w postaci papierowej lub elektronicznej, formularz informacyjny zawierający informacje o ofercie odwróconego kredytu hipotecznego.</zdanie>
+          <zdanie nr="2" GUID="4e44cbbc-dcf7-45c8-8a87-d833c469fed9" fragment="1" fragmentGUID="643b9eb1-78e9-4091-b263-8734746b5def" wejscie-w-zycie="2025-05-31">Termin, o którym mowa w zdaniu pierwszym, może być skrócony na żądanie kredytobiorcy.</zdanie>
+          <zdanie nr="3" GUID="0ec2fdcf-1c3d-4f65-95ef-eae0b025c675" fragment="1" fragmentGUID="4b1f989a-98e2-44bb-b913-a7f13aca5fa0" wejscie-w-zycie="2025-05-31">Formularz informacyjny nie stanowi oferty w rozumieniu art. 66 ustawy z dnia 23 kwietnia 1964 r. - Kodeks cywilny.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="rozdz_2__art_8__ust_2" GUID="13990135-6198-44f5-8377-38b4588a3431" wejscie-w-zycie="2025-05-31">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" GUID="eb0cb2f5-8425-4c29-8bcc-7844a354abe8" fragment="1" fragmentGUID="7e10f21d-2ae5-4c8d-8906-c2c3f2e7cc8c" wejscie-w-zycie="2025-05-31">W formularzu informacyjnym bank wskazuje:</zdanie>
+        </p>
+        <punkt eId="rozdz_2__art_8__ust_2__pkt_1" GUID="63b5a758-86f1-4410-8ea7-7cf7db8e6e19" wejscie-w-zycie="2025-05-31">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" GUID="eb0cb2f5-8425-4c29-8bcc-7844a354abe8" fragment="2" fragmentGUID="345929bc-1d07-4248-bb2e-c7a05e56a869" wejscie-w-zycie="2025-05-31">dane identyfikacyjne banku;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="rozdz_2__art_8__ust_2__pkt_2" GUID="36f0a226-6994-4b12-8278-15f3102c1632" wejscie-w-zycie="2025-05-31">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" GUID="eb0cb2f5-8425-4c29-8bcc-7844a354abe8" fragment="3" fragmentGUID="7d4c650e-f749-4dff-96a9-1ac4cc941ca0" wejscie-w-zycie="2025-05-31">kwotę odwróconego kredytu hipotecznego, sposób jej ustalenia, w tym stosunek tej kwoty do wartości nieruchomości będącej własnością kredytobiorcy lub do której przysługuje mu prawo użytkowania wieczystego, lub lokalu, do którego przysługuje kredytobiorcy spółdzielcze własnościowe prawo do lokalu;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="rozdz_2__art_8__ust_2__pkt_3" GUID="c6c0b6aa-f226-4e8f-a765-bebdfe9bcf96" wejscie-w-zycie="2025-05-31">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" GUID="eb0cb2f5-8425-4c29-8bcc-7844a354abe8" fragment="4" fragmentGUID="63faa44e-341c-48e4-a0e0-61b5289642e9" wejscie-w-zycie="2025-05-31">termin i sposób wypłaty odwróconego kredytu hipotecznego;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="rozdz_2__art_8__ust_2__pkt_4" GUID="b1384294-1ff8-4296-9ced-57158c26cd08" wejscie-w-zycie="2025-05-31">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" GUID="eb0cb2f5-8425-4c29-8bcc-7844a354abe8" fragment="5" fragmentGUID="5160dcd7-f1f7-4d67-837c-e05d907bbbf9" wejscie-w-zycie="2025-05-31">sposób ustalenia wysokości oprocentowania, wysokość oprocentowania i warunki jego zmiany;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="rozdz_2__art_8__ust_2__pkt_5" GUID="b0b61e05-3414-4f00-959c-4715dcef3a3a" wejscie-w-zycie="2025-05-31">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" GUID="eb0cb2f5-8425-4c29-8bcc-7844a354abe8" fragment="6" fragmentGUID="8057a3c8-3c50-4d55-99fc-0f2f52318fb6" wejscie-w-zycie="2025-05-31">wysokość i sposób płatności innych kosztów, w tym:</zdanie>
+          </p>
+          <litera eId="rozdz_2__art_8__ust_2__pkt_5__lit_a" GUID="c8a5276c-07bd-48a3-8579-74191741b08f" wejscie-w-zycie="2025-05-31">
+            <nr>a</nr>
+            <p>
+              <zdanie nr="1" GUID="eb0cb2f5-8425-4c29-8bcc-7844a354abe8" fragment="7" fragmentGUID="665b16c6-1df1-4519-8cfe-a76becc2f8a2" wejscie-w-zycie="2025-05-31">prowizji,</zdanie>
+            </p>
+          </litera>
+          <litera eId="rozdz_2__art_8__ust_2__pkt_5__lit_b" GUID="2c1d8ff6-874f-4cdf-ad11-8603aeee3268" wejscie-w-zycie="2025-05-31">
+            <nr>b</nr>
+            <p>
+              <zdanie nr="1" GUID="eb0cb2f5-8425-4c29-8bcc-7844a354abe8" fragment="8" fragmentGUID="1be32a22-3796-45a8-a722-ef2c74be48b7" wejscie-w-zycie="2025-05-31">opłaty za przygotowanie i rozpatrzenie wniosku kredytowego,</zdanie>
+            </p>
+          </litera>
+          <litera eId="rozdz_2__art_8__ust_2__pkt_5__lit_c" GUID="b351286f-8738-4407-aa3f-31c5954a8c2f" wejscie-w-zycie="2025-05-31">
+            <nr>c</nr>
+            <p>
+              <zdanie nr="1" GUID="eb0cb2f5-8425-4c29-8bcc-7844a354abe8" fragment="9" fragmentGUID="a69f69b2-2d97-40d3-bd9e-e742366d121c" wejscie-w-zycie="2025-05-31">kosztu wyceny nieruchomości lub lokalu, o których mowa w pkt 2,</zdanie>
+            </p>
+          </litera>
+          <litera eId="rozdz_2__art_8__ust_2__pkt_5__lit_d" GUID="2e9c5b59-010f-4d43-8d64-5829a5f8523f" wejscie-w-zycie="2025-05-31">
+            <nr>d</nr>
+            <p>
+              <zdanie nr="1" GUID="eb0cb2f5-8425-4c29-8bcc-7844a354abe8" fragment="10" fragmentGUID="d32b86f4-a5a7-4df5-ae21-1c0b9668dfa0" wejscie-w-zycie="2025-05-31">kosztu monitorowania wartości nieruchomości lub lokalu, o których mowa w pkt 2</zdanie>
+            </p>
+          </litera>
+          <czesc-wspolna-litera GUID="8c73244a-804b-44f1-85df-40f28ab74306" wejscie-w-zycie="2025-05-31">
+            <p>
+              <zdanie nr="1" GUID="eb0cb2f5-8425-4c29-8bcc-7844a354abe8" fragment="11" fragmentGUID="7e5596e4-a8de-4a56-81c3-d88c05bf2e39" wejscie-w-zycie="2025-05-31">oraz sposób ich rozliczania;</zdanie>
+            </p>
+          </czesc-wspolna-litera>
+        </punkt>
+        <punkt eId="rozdz_2__art_8__ust_2__pkt_6" GUID="c58b4b1d-f1b5-4051-8a9c-50ddffe76e36" wejscie-w-zycie="2025-05-31">
+          <nr>6</nr>
+          <p>
+            <zdanie nr="1" GUID="eb0cb2f5-8425-4c29-8bcc-7844a354abe8" fragment="12" fragmentGUID="85bd0f06-1a34-45cc-ac59-9059e6c8a205" wejscie-w-zycie="2025-05-31">stronę umowy odwróconego kredytu hipotecznego zobowiązaną do poniesienia kosztu wyceny nieruchomości lub lokalu, o których mowa w pkt 2, oraz kosztu monitorowania ich wartości;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="rozdz_2__art_8__ust_2__pkt_7" GUID="0fc4d8f1-e56d-4d16-8791-263fe10e0530" wejscie-w-zycie="2025-05-31">
+          <nr>7</nr>
+          <p>
+            <zdanie nr="1" GUID="eb0cb2f5-8425-4c29-8bcc-7844a354abe8" fragment="13" fragmentGUID="92747eb4-2515-437d-8497-af4257b27f70" wejscie-w-zycie="2025-05-31">częstotliwość i sposób monitorowania wartości nieruchomości lub lokalu, o których mowa w pkt 2;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="rozdz_2__art_8__ust_2__pkt_8" GUID="3c0b7d53-436f-4cb4-b04d-0fdd4d40eab7" wejscie-w-zycie="2025-05-31">
+          <nr>8</nr>
+          <p>
+            <zdanie nr="1" GUID="eb0cb2f5-8425-4c29-8bcc-7844a354abe8" fragment="14" fragmentGUID="d081c339-b740-44c0-b848-3d73c46a2e09" wejscie-w-zycie="2025-05-31">sposób zabezpieczenia wierzytelności banku;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="rozdz_2__art_8__ust_2__pkt_9" GUID="229dcbeb-aa51-4fe2-8dc4-b213ef2bdc3f" wejscie-w-zycie="2025-05-31">
+          <nr>9</nr>
+          <p>
+            <zdanie nr="1" GUID="eb0cb2f5-8425-4c29-8bcc-7844a354abe8" fragment="15" fragmentGUID="4971e9e5-bde4-4081-9179-4e63bdfd76bb" wejscie-w-zycie="2025-05-31">prawa i obowiązki kredytobiorcy;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="rozdz_2__art_8__ust_2__pkt_10" GUID="c685e326-37c2-4afc-b7d4-45276f4da0ab" wejscie-w-zycie="2025-05-31">
+          <nr>10</nr>
+          <p>
+            <zdanie nr="1" GUID="eb0cb2f5-8425-4c29-8bcc-7844a354abe8" fragment="16" fragmentGUID="16d86c78-76c5-4f3a-a240-e195df3d95b4" wejscie-w-zycie="2025-05-31">zasady rozliczenia odwróconego kredytu hipotecznego;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="rozdz_2__art_8__ust_2__pkt_11" GUID="8ea77934-0058-42ea-9cb7-1b18eb0ffaf8" wejscie-w-zycie="2025-05-31">
+          <nr>11</nr>
+          <p>
+            <zdanie nr="1" GUID="eb0cb2f5-8425-4c29-8bcc-7844a354abe8" fragment="17" fragmentGUID="d0bc27c9-3bac-44bc-aa63-78353ba2b3c9" wejscie-w-zycie="2025-05-31">informację, że formularz informacyjny nie stanowi oferty w rozumieniu art. 66 ustawy z dnia 23 kwietnia 1964 r. - Kodeks cywilny;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="rozdz_2__art_8__ust_2__pkt_12" GUID="bfb6fc2e-05bb-4b32-9216-a6a1abe26ab6" wejscie-w-zycie="2025-05-31">
+          <nr>12</nr>
+          <p>
+            <zdanie nr="1" GUID="eb0cb2f5-8425-4c29-8bcc-7844a354abe8" fragment="18" fragmentGUID="ca3f83c1-0477-4329-9175-2b3bc16bab7c" wejscie-w-zycie="2025-05-31">inne informacje niezbędne do podjęcia przez kredytobiorcę decyzji o zawarciu umowy odwróconego kredytu hipotecznego.</zdanie>
+          </p>
+        </punkt>
+      </ustep>
+      <ustep eId="rozdz_2__art_8__ust_3" GUID="0d91d5d5-4ffb-4ee1-ac4d-1e942c248d43" wejscie-w-zycie="2025-05-31">
+        <nr>3</nr>
+        <p>
+          <zdanie nr="1" GUID="f843c300-ab09-4eef-b6d1-b25fe8142ef3" fragment="1" fragmentGUID="f9cf6327-a6dd-4c78-900e-12a0dd423c03" wejscie-w-zycie="2025-05-31">Kwoty, o których mowa w ust. 2 pkt 2, 4 i 5, mogą mieć charakter szacunkowy.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="rozdz_2__art_8__ust_4" GUID="938a5e5d-2a3c-471e-bc4e-ff63fdcef2c0" wejscie-w-zycie="2025-05-31">
+        <nr>4</nr>
+        <p>
+          <zdanie nr="1" GUID="ecef1f32-48be-4500-8b1a-5eab58cf7d7c" fragment="1" fragmentGUID="de99c1b0-206b-4d71-bef1-26af553ebbed" wejscie-w-zycie="2025-05-31">Minister właściwy do spraw instytucji finansowych określi, w drodze rozporządzenia, wzór formularza informacyjnego, uwzględniając konieczność prawidłowego zapoznania się przez kredytobiorcę ze szczegółowymi warunkami udzielania i rozliczania odwróconego kredytu hipotecznego.</zdanie>
+        </p>
+      </ustep>
+    </artykul>
+    <artykul eId="rozdz_2__art_9" GUID="36744fc2-1122-4b76-83e2-f7b362353dac" wejscie-w-zycie="2025-05-31">
+      <nr>9</nr>
+      <ustep eId="rozdz_2__art_9__ust_1" GUID="896344f5-eeaa-4341-8b11-a0deb5a64f42" wejscie-w-zycie="2025-05-31">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" GUID="87c99b9b-694b-4ac9-9926-374396dff96a" fragment="1" fragmentGUID="3347aa93-e84e-4631-ae96-ed7483b2e53c" wejscie-w-zycie="2025-05-31">Bank, przed zawarciem umowy odwróconego kredytu hipotecznego, dokonuje oceny stanu i historii zobowiązań kredytobiorcy oraz stanu prawnego nieruchomości lub lokalu, o których mowa w art. 6 ust. 1.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="rozdz_2__art_9__ust_2" GUID="0f5b1ada-f34f-41d2-b7e8-87cc784d3f76" wejscie-w-zycie="2025-05-31">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" GUID="fc5043c9-52c9-4098-b1ab-127182995ddd" fragment="1" fragmentGUID="944f9099-0c4d-4ccf-89ac-7282b342a613" wejscie-w-zycie="2025-05-31">Kredytobiorca jest obowiązany do przedstawienia, na żądanie banku, dokumentów i informacji niezbędnych do dokonania oceny, o której mowa w ust. 1.</zdanie>
+        </p>
+      </ustep>
+    </artykul>
+    <artykul eId="rozdz_2__art_10" GUID="cd1f75d6-5d0b-4808-9117-635c669cd993" wejscie-w-zycie="2025-05-31">
+      <nr>10</nr>
+      <ustep eId="rozdz_2__art_10__ust_1" GUID="980b34cb-614a-4e19-aaf7-4afe365b9b66" wejscie-w-zycie="2025-05-31">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" GUID="57984160-a575-4b29-a60d-0afef7bfe679" fragment="1" fragmentGUID="d2f9cca7-1d04-4f78-95b7-51032b9ce8d7" wejscie-w-zycie="2025-05-31">Umowę odwróconego kredytu hipotecznego zawiera się w formie pisemnej.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="rozdz_2__art_10__ust_2" GUID="36093555-803c-4092-aea1-bcd8ad4a113d" wejscie-w-zycie="2025-05-31">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" GUID="083f116e-271e-49e9-ad28-59059b6f2fd4" fragment="1" fragmentGUID="c64dfa0a-4723-461b-b2fa-992f741700c4" wejscie-w-zycie="2025-05-31">Umowa odwróconego kredytu hipotecznego określa w szczególności:</zdanie>
+        </p>
+        <punkt eId="rozdz_2__art_10__ust_2__pkt_1" GUID="0f309313-b88b-455e-be4d-b6d305d5433f" wejscie-w-zycie="2025-05-31">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" GUID="083f116e-271e-49e9-ad28-59059b6f2fd4" fragment="2" fragmentGUID="5a2c93b2-ebb0-496c-afc8-ff8a2f909acc" wejscie-w-zycie="2025-05-31">strony umowy;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="rozdz_2__art_10__ust_2__pkt_2" GUID="e540c763-ccb9-4e6a-b586-4ba565510abd" wejscie-w-zycie="2025-05-31">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" GUID="083f116e-271e-49e9-ad28-59059b6f2fd4" fragment="3" fragmentGUID="ce8a1e28-8fae-4d0d-aa34-d8034444c075" wejscie-w-zycie="2025-05-31">kwotę odwróconego kredytu hipotecznego;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="rozdz_2__art_10__ust_2__pkt_3" GUID="867e6c1d-0123-467d-a9b8-7c51f41503b4" wejscie-w-zycie="2025-05-31">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" GUID="083f116e-271e-49e9-ad28-59059b6f2fd4" fragment="4" fragmentGUID="b250cc5e-95f6-4d83-86c4-4238d6888900" wejscie-w-zycie="2025-05-31">rynkową wartość nieruchomości lub lokalu, o których mowa w art. 6 ust. 1;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="rozdz_2__art_10__ust_2__pkt_4" GUID="32076b6a-4533-478f-a595-572b16e84c7e" wejscie-w-zycie="2025-05-31">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" GUID="083f116e-271e-49e9-ad28-59059b6f2fd4" fragment="5" fragmentGUID="17db5b24-5cd0-4f0a-9846-5688218ce4bc" wejscie-w-zycie="2025-05-31">stosunek kwoty odwróconego kredytu hipotecznego do rynkowej wartości nieruchomości lub lokalu, o których mowa w art. 6 ust. 1;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="rozdz_2__art_10__ust_2__pkt_5" GUID="e7734602-727d-4d96-b323-eae791416875" wejscie-w-zycie="2025-05-31">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" GUID="083f116e-271e-49e9-ad28-59059b6f2fd4" fragment="6" fragmentGUID="d657f0d8-9271-4a74-918b-75c4a908b787" wejscie-w-zycie="2025-05-31">termin, wysokość i sposób wypłaty kwoty odwróconego kredytu hipotecznego;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="rozdz_2__art_10__ust_2__pkt_6" GUID="fbf0e981-6d7a-4cc6-91b9-1c603d4e5d52" wejscie-w-zycie="2025-05-31">
+          <nr>6</nr>
+          <p>
+            <zdanie nr="1" GUID="083f116e-271e-49e9-ad28-59059b6f2fd4" fragment="7" fragmentGUID="100d8911-4a93-480c-9945-87960100e7a1" wejscie-w-zycie="2025-05-31">sposób zabezpieczenia wierzytelności banku;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="rozdz_2__art_10__ust_2__pkt_7" GUID="cbeaf625-4695-4b3b-a5ad-cd69808fcf61" wejscie-w-zycie="2025-05-31">
+          <nr>7</nr>
+          <p>
+            <zdanie nr="1" GUID="083f116e-271e-49e9-ad28-59059b6f2fd4" fragment="8" fragmentGUID="6dccf8d2-71b5-4572-8182-05cb00d5b1cc" wejscie-w-zycie="2025-05-31">stronę umowy zobowiązaną do poniesienia kosztu wyceny nieruchomości lub lokalu, o których mowa w art. 6 ust. 1, oraz kosztu monitorowania ich wartości;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="rozdz_2__art_10__ust_2__pkt_8" GUID="c4341c42-f0c9-4712-a4f4-602802a80b8a" wejscie-w-zycie="2025-05-31">
+          <nr>8</nr>
+          <p>
+            <zdanie nr="1" GUID="083f116e-271e-49e9-ad28-59059b6f2fd4" fragment="9" fragmentGUID="4ef7b4e2-bfbe-4bd5-a8c1-29454bbcb83d" wejscie-w-zycie="2025-05-31">sposób ustalenia wysokości oprocentowania, wysokość oprocentowania i warunki jego zmiany;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="rozdz_2__art_10__ust_2__pkt_9" GUID="d6b707da-84af-46d8-a05d-66f7cf75995a" wejscie-w-zycie="2025-05-31">
+          <nr>9</nr>
+          <p>
+            <zdanie nr="1" GUID="083f116e-271e-49e9-ad28-59059b6f2fd4" fragment="10" fragmentGUID="ccb4872d-1d33-4ca0-96fb-8293a1105359" wejscie-w-zycie="2025-05-31">wysokość i sposób płatności innych kosztów, w tym kosztu wykonywania przez bank upoważnienia, kosztu monitorowania wartości nieruchomości lub lokalu, o których mowa w art. 6 ust. 1, jeżeli umowa je przewiduje, oraz warunki, na jakich koszty te mogą ulegać zmianie;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="rozdz_2__art_10__ust_2__pkt_10" GUID="e341231a-8f4f-487a-a4b6-85737b93a9a5" wejscie-w-zycie="2025-05-31">
+          <nr>10</nr>
+          <p>
+            <zdanie nr="1" GUID="083f116e-271e-49e9-ad28-59059b6f2fd4" fragment="11" fragmentGUID="f9e5c7c8-e133-47c5-aeaa-18daec4033ab" wejscie-w-zycie="2025-05-31">obowiązki kredytobiorcy, o których mowa w art. 16 ust. 1, oraz skutki ich niewykonywania przez kredytobiorcę, w szczególności prawo do żądania przez bank udzielenia mu upoważnienia do wykonania tych obowiązków;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="rozdz_2__art_10__ust_2__pkt_11" GUID="a5b2656f-d66b-4f4c-9a34-08f75d538d21" wejscie-w-zycie="2025-05-31">
+          <nr>11</nr>
+          <p>
+            <zdanie nr="1" GUID="083f116e-271e-49e9-ad28-59059b6f2fd4" fragment="12" fragmentGUID="fb294526-e4d0-4cd1-9ef4-bd7c664862c0" wejscie-w-zycie="2025-05-31">częstotliwość i sposób monitorowania wartości nieruchomości lub lokalu, o których mowa w art. 6 ust. 1;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="rozdz_2__art_10__ust_2__pkt_12" GUID="33b6c6b6-1477-41ce-9d58-4109b719a69f" wejscie-w-zycie="2025-05-31">
+          <nr>12</nr>
+          <p>
+            <zdanie nr="1" GUID="083f116e-271e-49e9-ad28-59059b6f2fd4" fragment="13" fragmentGUID="1efe4654-81ee-44e7-b6df-c9127a58719d" wejscie-w-zycie="2025-05-31">prawa kredytobiorcy, w tym prawo do odstąpienia od umowy wraz z określeniem wysokości odsetek za okres do upływu terminu określonego w art. 12 ust. 1, prawo do przedterminowej spłaty odwróconego kredytu hipotecznego oraz uprawnienia, o których mowa w art. 15;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="rozdz_2__art_10__ust_2__pkt_13" GUID="8ac8060b-d686-44eb-bb1a-a613a9d6c4d4" wejscie-w-zycie="2025-05-31">
+          <nr>13</nr>
+          <p>
+            <zdanie nr="1" GUID="083f116e-271e-49e9-ad28-59059b6f2fd4" fragment="14" fragmentGUID="455b05a9-9d31-458f-aada-c193e7d06828" wejscie-w-zycie="2025-05-31">warunki wypowiedzenia umowy;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="rozdz_2__art_10__ust_2__pkt_14" GUID="c2fa6247-ba6e-4a5a-bf32-ba97d2d9c80b" wejscie-w-zycie="2025-05-31">
+          <nr>14</nr>
+          <p>
+            <zdanie nr="1" GUID="083f116e-271e-49e9-ad28-59059b6f2fd4" fragment="15" fragmentGUID="86b2155b-6b03-4e89-9401-4876fbf09580" wejscie-w-zycie="2025-05-31">zasady i termin rozliczenia umowy odwróconego kredytu hipotecznego;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="rozdz_2__art_10__ust_2__pkt_15" GUID="b04d9dbf-0816-4e61-b13b-73318f5d12d5" wejscie-w-zycie="2025-05-31">
+          <nr>15</nr>
+          <p>
+            <zdanie nr="1" GUID="083f116e-271e-49e9-ad28-59059b6f2fd4" fragment="16" fragmentGUID="a2d45ae9-cfec-49e4-bc25-6f31eb19b2ac" wejscie-w-zycie="2025-05-31">osoby do kontaktu po śmierci kredytobiorcy.</zdanie>
+          </p>
+        </punkt>
+      </ustep>
+      <ustep eId="rozdz_2__art_10__ust_3" GUID="430c8ef3-c170-4ead-9547-d578d0fe50d0" wejscie-w-zycie="2025-05-31">
+        <nr>3</nr>
+        <p>
+          <zdanie nr="1" GUID="06dcfef8-7135-411a-bcea-ddb0fd132bca" fragment="1" fragmentGUID="c6c1a1fe-6b0f-4d26-8052-e9584f3da27a" wejscie-w-zycie="2025-05-31">Do umowy odwróconego kredytu hipotecznego bank dołącza wzór oświadczenia o odstąpieniu od umowy zawierający w szczególności adres oraz adres do doręczeń elektronicznych, o którym mowa w art. 2 pkt 1 ustawy z dnia 18 listopada 2020 r. o doręczeniach elektronicznych (Dz. U. z 2024 r. poz. 1045 i 1841), o ile taki posiada, pod który należy je złożyć.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="rozdz_2__art_10__ust_4" GUID="8fd15c5f-dc0d-479e-9084-e4ea8b8d160b" wejscie-w-zycie="2025-05-31">
+        <nr>4</nr>
+        <p>
+          <zdanie nr="1" GUID="16762b1a-52ab-4ab8-a83f-d91f7c80a757" fragment="1" fragmentGUID="e7b6214a-74c0-45a0-9b57-59e61fa3faee" wejscie-w-zycie="2025-05-31">Zmiana umowy odwróconego kredytu hipotecznego w zakresie wskazania osoby do kontaktu po śmierci kredytobiorcy jest bezpłatna.</zdanie>
+        </p>
+      </ustep>
+    </artykul>
+    <artykul eId="rozdz_2__art_11" GUID="5d1b5122-ae38-4293-a9ca-17dd54f477e3" wejscie-w-zycie="2025-05-31">
+      <nr>11</nr>
+      <ustep-n GUID="f743f2e5-1d0c-4422-97c4-c5aa631d7c52" wejscie-w-zycie="2025-05-31">
+        <p>
+          <zdanie nr="1" GUID="5380dd91-ed36-453a-bb6b-63ef2c6df531" fragment="1" fragmentGUID="697c340c-9094-478e-8eb3-71bf1b244632" wejscie-w-zycie="2025-05-31">W umowie odwróconego kredytu hipotecznego kredytobiorca może zobowiązać się do niezbywania własności nieruchomości lub prawa, o którym mowa w art. 4 ust. 2, stanowiących zabezpieczenie odwróconego kredytu hipotecznego, bez zgody banku.</zdanie>
+          <zdanie nr="2" GUID="6d9a06b0-835e-42bc-abd7-49acf1d9cb16" fragment="1" fragmentGUID="e153551f-a45e-405a-bc8c-daa7e8eccb24" wejscie-w-zycie="2025-05-31">Przepisu art. 72 ustawy z dnia 6 lipca 1982 r. o księgach wieczystych i hipotece (Dz. U. z 2025 r. poz. 341) nie stosuje się.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="rozdz_3__art_12" GUID="39b62eed-6e92-410e-b536-98a2121919e7" wejscie-w-zycie="2025-05-31">
+      <nr>12</nr>
+      <ustep eId="rozdz_3__art_12" GUID="5ed86dc1-09cf-428e-b8b9-7bf7442003c4" wejscie-w-zycie="2025-05-31">
+        <nr>UNKNOWN</nr>
+        <p>
+          <zdanie nr="1" GUID="8151a0ba-9f69-4c45-b02b-cde4aa748cf2" fragment="1" fragmentGUID="cf374ca3-95dc-4720-ac3b-5c42e61ed406" wejscie-w-zycie="2025-05-31">1.[1)] Kredytobiorca może bez podania przyczyny odstąpić od umowy odwróconego kredytu hipotecznego, w terminie 30 dni od dnia jej zawarcia.</zdanie>
+          <zdanie nr="2" GUID="e748d159-b63d-4db2-896a-a1f41f819abe" fragment="1" fragmentGUID="d60f0d00-8c27-4a42-9a0c-dc26d2ec2a86" wejscie-w-zycie="2025-05-31">Termin do odstąpienia uważa się za zachowany, jeżeli kredytobiorca złoży oświadczenie o odstąpieniu od umowy przed upływem tego terminu pod wskazany przez kredytodawcę adres lub nada je w placówce pocztowej operatora pocztowego w rozumieniu ustawy z dnia 23 listopada 2012 r. - Prawo pocztowe (Dz. U. z 2025 r. poz. 366) albo placówce podmiotu zajmującego się doręczaniem korespondencji na terenie Unii Europejskiej albo wyśle je na adres do doręczeń elektronicznych, o którym mowa w art. 2 pkt 1 ustawy z dnia 18 listopada 2020 r. o doręczeniach elektronicznych.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="rozdz_3__art_12__ust_2" GUID="49d0be75-3977-4aea-8f8a-d50d6772d100" wejscie-w-zycie="2025-05-31">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" GUID="b198f916-38ab-4a99-a3b5-ff566219fe77" fragment="1" fragmentGUID="2ab51cc8-5985-491d-afdc-8fc365100570" wejscie-w-zycie="2025-05-31">Kredytobiorca nie ponosi kosztów związanych z odstąpieniem od umowy odwróconego kredytu hipotecznego, z wyjątkiem niepodlegających zwrotowi opłat lub ich części poniesionych przez bank na rzecz organów administracji państwowej lub sądów.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="rozdz_3__art_12__ust_3" GUID="32b1c519-8ba1-4013-ae70-60bf0f68a5b2" wejscie-w-zycie="2025-05-31">
+        <nr>3</nr>
+        <p>
+          <zdanie nr="1" GUID="4d61cde5-f885-4cf8-8148-bfc9bf6facff" fragment="1" fragmentGUID="520bfe34-3cdc-414b-9d95-15fc8c37e690" wejscie-w-zycie="2025-05-31">Kredytobiorca zwraca bankowi wypłaconą kwotę odwróconego kredytu hipotecznego wraz z odsetkami należnymi do dnia odstąpienia od umowy odwróconego kredytu hipotecznego, nie później niż w terminie 30 dni od dnia złożenia oświadczenia o odstąpieniu od umowy.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="rozdz_3__art_12__ust_4" GUID="97222f52-dd02-430e-b5cc-09a8551aed0c" wejscie-w-zycie="2025-05-31">
+        <nr>4</nr>
+        <p>
+          <zdanie nr="1" GUID="41d192fa-a64d-4176-b7e2-1fe0ad5df0c7" fragment="1" fragmentGUID="93789403-6e2d-47d6-802c-be160831808f" wejscie-w-zycie="2025-05-31">Dniem spłaty odwróconego kredytu hipotecznego jest dzień złożenia dyspozycji przekazania bankowi środków pieniężnych w kwocie, o której mowa w ust. 3.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="rozdz_3__art_12__ust_5" GUID="d30c74f2-2488-4816-b54c-9489dc3b8db2" wejscie-w-zycie="2025-05-31">
+        <nr>5</nr>
+        <p>
+          <zdanie nr="1" GUID="c83a298d-107c-412f-8b9a-3a893c157fa7" fragment="1" fragmentGUID="2973754d-9682-47ea-9655-eaa9b8dae4f7" wejscie-w-zycie="2025-05-31">Umowa odwróconego kredytu hipotecznego może stanowić, że wypłata środków pieniężnych nastąpi po upływie terminu do odstąpienia od umowy.</zdanie>
+        </p>
+      </ustep>
+    </artykul>
+    <artykul eId="rozdz_3__art_13" GUID="7ef49cd3-df07-478a-b193-f6a6274f2fa0" wejscie-w-zycie="2025-05-31">
+      <nr>13</nr>
+      <ustep eId="rozdz_3__art_13__ust_1" GUID="14353798-7b08-40de-9f03-7999094bd326" wejscie-w-zycie="2025-05-31">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" GUID="30254b13-e534-46ab-9214-929e858e4f65" fragment="1" fragmentGUID="f09c5ebf-f420-411d-8ffe-17177d6815de" wejscie-w-zycie="2025-05-31">Kredytobiorca ma prawo w każdym czasie do spłaty całkowitej kwoty do zapłaty lub jej części.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="rozdz_3__art_13__ust_2" GUID="fdd78062-9b38-4f77-8732-133b1da5256a" wejscie-w-zycie="2025-05-31">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" GUID="c1d397d6-52ec-4fed-8437-f10410b9ee34" fragment="1" fragmentGUID="86e99631-1099-4e42-9e87-1fb6c34f9274" wejscie-w-zycie="2025-05-31">W przypadku spłaty przez kredytobiorcę całkowitej kwoty do zapłaty lub jej części bank nie pobiera prowizji.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="rozdz_3__art_13__ust_3" GUID="b91f3d9d-b657-459b-8539-698aba58b73a" wejscie-w-zycie="2025-05-31">
+        <nr>3</nr>
+        <p>
+          <zdanie nr="1" GUID="539072af-3dc9-4a69-a0f0-d75dfd68171f" fragment="1" fragmentGUID="13378b0f-e3ab-4795-85a5-6105218bcbce" wejscie-w-zycie="2025-05-31">Bank nie może uzależnić spłaty całkowitej kwoty do zapłaty lub jej części od uprzedniego poinformowania go o tym przez kredytobiorcę.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="rozdz_3__art_13__ust_4" GUID="a87d2a05-1b8c-4d65-a9ea-74a2bda01577" wejscie-w-zycie="2025-05-31">
+        <nr>4</nr>
+        <p>
+          <zdanie nr="1" GUID="a815a109-b719-460d-bded-4a85062e95cf" fragment="1" fragmentGUID="c08a5bae-f72c-459b-bf58-a2d83e147ab0" wejscie-w-zycie="2025-05-31">Spłata części całkowitej kwoty do zapłaty nie wstrzymuje wypłaty rat niewykorzystanej kwoty odwróconego kredytu hipotecznego, chyba że strony postanowiły inaczej.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="rozdz_3__art_13__ust_5" GUID="b4ddccc0-10bd-41f2-8c03-51f75b36a819" wejscie-w-zycie="2025-05-31">
+        <nr>5</nr>
+        <p>
+          <zdanie nr="1" GUID="9dfb1f1f-b12e-4ccd-9f50-83c75c18293d" fragment="1" fragmentGUID="526f4541-2ef1-424f-bb64-4e3cc1852f0d" wejscie-w-zycie="2025-05-31">W przypadku spłaty całkowitej kwoty do zapłaty bank jest zobowiązany do potwierdzenia rozliczenia umowy odwróconego kredytu hipotecznego, w terminie 14 dni od dnia dokonania tej spłaty.</zdanie>
+        </p>
+      </ustep>
+    </artykul>
+    <artykul eId="rozdz_3__art_14" GUID="313bfd6d-9239-404b-9468-d624f1dc0a98" wejscie-w-zycie="2025-05-31">
+      <nr>14</nr>
+      <ustep-n GUID="05121c9a-3fe0-4fe5-860f-8f4732a33bd6" wejscie-w-zycie="2025-05-31">
+        <p>
+          <zdanie nr="1" GUID="29c12dbc-5bd7-40a7-8d75-2d33c2612221" fragment="1" fragmentGUID="0cc48d90-92cd-43c9-a887-f9f86d145c0d" wejscie-w-zycie="2025-05-31">Kredytobiorca może wypowiedzieć umowę odwróconego kredytu hipotecznego w każdym czasie, z zachowaniem terminu 30dniowego.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="rozdz_3__art_15" GUID="38c3771d-be98-445f-b25f-9d585ad07d4a" wejscie-w-zycie="2025-05-31">
+      <nr>15</nr>
+      <ustep-n GUID="6c60eeb6-03bf-4808-8af8-e01aa7f81ee1" wejscie-w-zycie="2025-05-31">
+        <p>
+          <zdanie nr="1" GUID="0148d2ec-19ed-4fee-9671-55b344577ed8" fragment="1" fragmentGUID="8502c468-7f3c-438b-92bd-369ea732b977" wejscie-w-zycie="2025-05-31">W przypadku gdy bank nie wykonuje obowiązku, o którym mowa w art. 8, lub sporządza umowę odwróconego kredytu hipotecznego niezgodnie z wymogami, o których mowa w art. 10, kredytobiorca, po złożeniu bankowi pisemnego oświadczenia, może:</zdanie>
+        </p>
+        <punkt eId="rozdz_3__art_15__pkt_1" GUID="f101a52a-31fc-41c2-92a8-628ece3e608d" wejscie-w-zycie="2025-05-31">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" GUID="0148d2ec-19ed-4fee-9671-55b344577ed8" fragment="2" fragmentGUID="39c3eddb-a10d-410f-b96c-8d34e48faefc" wejscie-w-zycie="2025-05-31">żądać od banku zapłaty dziesiątej części odsetek i innych kosztów należnych od wypłaconej części odwróconego kredytu hipotecznego albo</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="rozdz_3__art_15__pkt_2" GUID="a10e23a2-5fdd-400c-affa-732097272245" wejscie-w-zycie="2025-05-31">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" GUID="0148d2ec-19ed-4fee-9671-55b344577ed8" fragment="3" fragmentGUID="0779728c-2d65-4a9a-9ba1-bfaa0fa8ac8f" wejscie-w-zycie="2025-05-31">wypowiedzieć umowę odwróconego kredytu hipotecznego i spłacić całkowitą kwotę do zapłaty bez dziesiątej części odsetek i innych kosztów.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </artykul>
+    <artykul eId="rozdz_3__art_16" GUID="91b9d4dd-e08e-4d33-b909-ac88dfad542a" wejscie-w-zycie="2025-05-31">
+      <nr>16</nr>
+      <ustep eId="rozdz_3__art_16__ust_1" GUID="02c6d8b4-392c-462c-b0d1-365ba5c74bed" wejscie-w-zycie="2025-05-31">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" GUID="1f826712-3d86-4584-981c-1bd310741eb8" fragment="1" fragmentGUID="f0bf3613-1fd4-4e6f-a591-04641cd0a920" wejscie-w-zycie="2025-05-31">W okresie trwania umowy odwróconego kredytu hipotecznego kredytobiorca jest zobowiązany w odniesieniu do nieruchomości lub lokalu, o których mowa w art. 6 ust. 1:</zdanie>
+        </p>
+        <punkt eId="rozdz_3__art_16__ust_1__pkt_1" GUID="99e3cdfe-d3d4-4b41-9b26-2f23c066274e" wejscie-w-zycie="2025-05-31">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" GUID="1f826712-3d86-4584-981c-1bd310741eb8" fragment="2" fragmentGUID="212e4ee7-6096-43a0-bb6b-31eace73c412" wejscie-w-zycie="2025-05-31">posiadać ubezpieczenie tej nieruchomości lub tego lokalu od zdarzeń losowych, jeżeli jest wymagane przez bank;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="rozdz_3__art_16__ust_1__pkt_2" GUID="250ec700-7ad9-49d4-a703-e1e89bb6e938" wejscie-w-zycie="2025-05-31">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" GUID="1f826712-3d86-4584-981c-1bd310741eb8" fragment="3" fragmentGUID="76aae374-788d-4268-a336-0504946ed93f" wejscie-w-zycie="2025-05-31">utrzymywać tę nieruchomość lub ten lokal w stanie niepogorszonym, z uwzględnieniem zwykłego używania rzeczy zgodnie z jej przeznaczeniem, w szczególności dokonywać bieżących napraw i remontów;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="rozdz_3__art_16__ust_1__pkt_3" GUID="6a669f03-28be-463d-9251-1d8520ea9f3e" wejscie-w-zycie="2025-05-31">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" GUID="1f826712-3d86-4584-981c-1bd310741eb8" fragment="4" fragmentGUID="d203ca56-49ad-4c49-a342-0f0b78c698fa" wejscie-w-zycie="2025-05-31">terminowo uiszczać podatki i obowiązkowe opłaty związane z korzystaniem z tej nieruchomości lub tego lokalu.</zdanie>
+          </p>
+        </punkt>
+      </ustep>
+      <ustep eId="rozdz_3__art_16__ust_2" GUID="98efe127-d2b8-4f88-ba12-89496ff3e9f9" wejscie-w-zycie="2025-05-31">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" GUID="4d995841-3955-4fd7-aae4-7debc6a157f2" fragment="1" fragmentGUID="80082bfe-ffb9-4501-b16e-0d09c0084ad9" wejscie-w-zycie="2025-05-31">W przypadku niewykonania obowiązku, o którym mowa w ust. 1, bank wzywa kredytobiorcę do jego dopełnienia, wyznaczając termin nie krótszy niż 60 dni.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="rozdz_3__art_16__ust_3" GUID="54eb7b0b-1dcb-4b33-8c56-bf1337fee16e" wejscie-w-zycie="2025-05-31">
+        <nr>3</nr>
+        <p>
+          <zdanie nr="1" GUID="a5e4b8b8-7ac3-4345-b9ca-426cea702ced" fragment="1" fragmentGUID="acc00bb1-90a1-4ab9-a561-8da8b6a6ec4f" wejscie-w-zycie="2025-05-31">Termin, o którym mowa w ust. 2, wyznacza się z uwzględnieniem rodzaju niewykonanego obowiązku i możliwości jego wykonania przez kredytobiorcę.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="rozdz_3__art_16__ust_4" GUID="49ef14e5-9357-46b5-8ac0-3c8a49014dbb" wejscie-w-zycie="2025-05-31">
+        <nr>4</nr>
+        <p>
+          <zdanie nr="1" GUID="40482510-a6b4-42d9-a929-f4da04cd4498" fragment="1" fragmentGUID="0900f511-2eef-4ee5-b7ba-0ead92e3c123" wejscie-w-zycie="2025-05-31">W przypadku niewykonania przez kredytobiorcę obowiązku, o którym mowa w ust. 1, w wyznaczonym terminie, bank żąda od kredytobiorcy udzielenia mu upoważnienia do wykonania tego obowiązku w imieniu kredytobiorcy.</zdanie>
+        </p>
+      </ustep>
+    </artykul>
+    <artykul eId="rozdz_3__art_17" GUID="197ecd92-8e07-4374-b3ed-ec928ae76ddb" wejscie-w-zycie="2025-05-31">
+      <nr>17</nr>
+      <ustep eId="rozdz_3__art_17__ust_1" GUID="2e169421-1dc4-479a-b57b-dd5f3fb8d6c8" wejscie-w-zycie="2025-05-31">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" GUID="4a48e9c0-63b9-4fae-ae13-a3e3adf9b126" fragment="1" fragmentGUID="d074ac64-32d0-4d6d-82e9-ec9a664b917f" wejscie-w-zycie="2025-05-31">Bank może wypowiedzieć umowę odwróconego kredytu hipotecznego, wyłącznie jeżeli:</zdanie>
+        </p>
+        <punkt eId="rozdz_3__art_17__ust_1__pkt_1" GUID="288c5b23-4585-4a0f-ac5b-f376da2712ca" wejscie-w-zycie="2025-05-31">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" GUID="4a48e9c0-63b9-4fae-ae13-a3e3adf9b126" fragment="2" fragmentGUID="942763ae-03b5-4b82-a286-a2491502016e" wejscie-w-zycie="2025-05-31">została wszczęta egzekucja z nieruchomości lub z prawa, o którym mowa w art. 4 ust. 2, stanowiących zabezpieczenie odwróconego kredytu hipotecznego, przez innego niż ten bank wierzyciela, przy czym o istnieniu tej wierzytelności bank nie wiedział w dniu zawarcia umowy odwróconego kredytu hipotecznego, lub</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="rozdz_3__art_17__ust_1__pkt_2" GUID="438074ed-155b-47e7-b8fd-d23650393da3" wejscie-w-zycie="2025-05-31">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" GUID="4a48e9c0-63b9-4fae-ae13-a3e3adf9b126" fragment="3" fragmentGUID="2e8f0daf-bd5a-49ad-b418-933652647b79" wejscie-w-zycie="2025-05-31">kredytobiorca przeniósł na osoby trzecie własność nieruchomości lub prawo, o którym mowa w art. 4 ust. 2, stanowiące zabezpieczenie odwróconego kredytu hipotecznego, bez zgody banku, w przypadku gdy w umowie odwróconego kredytu hipotecznego strony zastrzegły obowiązek niezbywania własności tej nieruchomości lub tego prawa bez zgody banku, lub</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="rozdz_3__art_17__ust_1__pkt_3" GUID="7b8870f1-cd2f-4d36-8e32-fb5ab386517a" wejscie-w-zycie="2025-05-31">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" GUID="4a48e9c0-63b9-4fae-ae13-a3e3adf9b126" fragment="4" fragmentGUID="18042330-8847-4c10-be26-687b2ceeef02" wejscie-w-zycie="2025-05-31">wartość nieruchomości lub lokalu, o których mowa w art. 6 ust. 1, z przyczyn zawinionych przez kredytobiorcę uległa istotnemu zmniejszeniu, lub</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="rozdz_3__art_17__ust_1__pkt_4" GUID="0425a7ff-b671-4ae1-8ce2-4f84558971c0" wejscie-w-zycie="2025-05-31">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" GUID="4a48e9c0-63b9-4fae-ae13-a3e3adf9b126" fragment="5" fragmentGUID="09b22710-707e-4d12-9002-883198ad7efe" wejscie-w-zycie="2025-05-31">kredytobiorca odmówił udzielenia bankowi upoważnienia w przypadku, o którym mowa w art. 16 ust. 4.</zdanie>
+          </p>
+        </punkt>
+      </ustep>
+      <ustep eId="rozdz_3__art_17__ust_2" GUID="6e3e0dad-8a6c-45c4-ac90-e00c4029acc9" wejscie-w-zycie="2025-05-31">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" GUID="a0543586-fdfb-4f82-b6b0-bb66f36dec4f" fragment="1" fragmentGUID="1d8bc1ac-2c23-4d73-ab6c-f877cde193c6" wejscie-w-zycie="2025-05-31">Okres wypowiedzenia przez bank umowy odwróconego kredytu hipotecznego wynosi 30 dni.</zdanie>
+        </p>
+      </ustep>
+    </artykul>
+    <artykul eId="rozdz_3__art_18" GUID="a7348e36-c161-42c9-8833-df1aa8069aa7" wejscie-w-zycie="2025-05-31">
+      <nr>18</nr>
+      <ustep-n GUID="0e73cf17-75cf-43ab-9a5d-401621c67640" wejscie-w-zycie="2025-05-31">
+        <p>
+          <zdanie nr="1" GUID="50bc8596-da82-4ab3-bf4f-3abb22fb4abd" fragment="1" fragmentGUID="1604b97a-c4da-423e-ac7d-38a4f162bdcd" wejscie-w-zycie="2025-05-31">W przypadku wypowiedzenia umowy odwróconego kredytu hipotecznego z przyczyn, o których mowa w art. 17 ust. 1:</zdanie>
+        </p>
+        <punkt eId="rozdz_3__art_18__pkt_1" GUID="2311599c-968a-4a93-b93c-e0b6af9b95b8" wejscie-w-zycie="2025-05-31">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" GUID="50bc8596-da82-4ab3-bf4f-3abb22fb4abd" fragment="2" fragmentGUID="32b76930-1bc0-4a65-afd8-4837c54993a1" wejscie-w-zycie="2025-05-31">pkt 1 lub 2 - bank wstrzymuje wypłatę odwróconego kredytu hipotecznego;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="rozdz_3__art_18__pkt_2" GUID="92112ce6-64f6-476e-b4e4-863cf6676dbf" wejscie-w-zycie="2025-05-31">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" GUID="50bc8596-da82-4ab3-bf4f-3abb22fb4abd" fragment="3" fragmentGUID="e63243fe-62d5-4fbb-916a-8bef2753f8a0" wejscie-w-zycie="2025-05-31">pkt 3 lub 4 - bank może wstrzymać wypłatę odwróconego kredytu hipotecznego.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </artykul>
+    <artykul eId="rozdz_3__art_19" GUID="14cd07e5-c5a2-4d4d-be05-3ce6eb5ad8ea" wejscie-w-zycie="2025-05-31">
+      <nr>19</nr>
+      <ustep eId="rozdz_3__art_19__ust_1" GUID="7745b982-9922-4491-b840-5b9cc53f8c78" wejscie-w-zycie="2025-05-31">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" GUID="fb985165-5dcf-42b2-8bf8-721b3cf61df5" fragment="1" fragmentGUID="f4504710-5dc0-4a8e-abca-fd106c4c04f4" wejscie-w-zycie="2025-05-31">Bank jest obowiązany ustalić zasady zarządzania ryzykiem długowieczności.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="rozdz_3__art_19__ust_2" GUID="f9d14c75-935d-4800-95fa-f276c6e81962" wejscie-w-zycie="2025-05-31">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" GUID="d3b85eda-3679-4759-9dc1-622fe00015eb" fragment="1" fragmentGUID="2f43c164-f542-4a35-bde9-e8d7bd2db4f6" wejscie-w-zycie="2025-05-31">Jeżeli suma wierzytelności banku z tytułu zawartych umów odwróconego kredytu hipotecznego przekracza 5 % odpowiednio funduszy własnych lub funduszy oddziału, do czynności szacowania ryzyka długowieczności bank powołuje aktuariusza, o którym mowa w art. 68 ust. 1 ustawy z dnia 11 września 2015 r. o działalności ubezpieczeniowej i reasekuracyjnej (Dz. U. z 2024 r. poz. 838, 1565 i 1863 oraz z 2025 r. poz. 146).</zdanie>
+        </p>
+      </ustep>
+    </artykul>
+    <artykul eId="rozdz_4__art_20" GUID="d0021c73-efb4-4ee2-b109-62155af9841e" wejscie-w-zycie="2025-05-31">
+      <nr>20</nr>
+      <ustep eId="rozdz_4__art_20__ust_1" GUID="275184bc-5a40-4f28-b9d1-9198393b6724" wejscie-w-zycie="2025-05-31">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" GUID="baccf78e-98fb-491a-adfe-d52327b37d50" fragment="1" fragmentGUID="8d2cf197-be81-45c7-b61d-76cbcd68992c" wejscie-w-zycie="2025-05-31">Całkowita kwota do zapłaty staje się wymagalna z upływem:</zdanie>
+        </p>
+        <punkt eId="rozdz_4__art_20__ust_1__pkt_1" GUID="62667d5f-0eaa-4d4a-a074-4be1c9c0aa89" wejscie-w-zycie="2025-05-31">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" GUID="baccf78e-98fb-491a-adfe-d52327b37d50" fragment="2" fragmentGUID="0d1fd299-e766-4854-bb4b-119e5be199cf" wejscie-w-zycie="2025-05-31">okresu wypowiedzenia umowy odwróconego kredytu hipotecznego;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="rozdz_4__art_20__ust_1__pkt_2" GUID="fcfd1ec2-022b-4df9-a5d3-8587fedcc231" wejscie-w-zycie="2025-05-31">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" GUID="baccf78e-98fb-491a-adfe-d52327b37d50" fragment="3" fragmentGUID="886158e5-06b0-44dc-834f-c8c552adcaec" wejscie-w-zycie="2025-05-31">roku od dnia śmierci kredytobiorcy.</zdanie>
+          </p>
+        </punkt>
+      </ustep>
+      <ustep eId="rozdz_4__art_20__ust_2" GUID="357f2a51-a3a8-490a-8916-dcfbe3ab1ca1" wejscie-w-zycie="2025-05-31">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" GUID="8be97f47-0216-4b12-b3ac-3608eceea82e" fragment="1" fragmentGUID="47b94182-2a1d-41de-98ca-3b981bd0940d" wejscie-w-zycie="2025-05-31">W przypadku, o którym mowa w art. 7 ust. 2, całkowita kwota do zapłaty staje się wymagalna z upływem roku od dnia śmierci ostatniego z kredytobiorców.</zdanie>
+        </p>
+      </ustep>
+    </artykul>
+    <artykul eId="rozdz_4__art_21" GUID="313d812a-d12c-4c23-b853-e888d0d8b278" wejscie-w-zycie="2025-05-31">
+      <nr>21</nr>
+      <ustep eId="rozdz_4__art_21__ust_1" GUID="7452d951-67f4-4425-b87f-ad0c0cdf53a1" wejscie-w-zycie="2025-05-31">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" GUID="80630e28-335c-45f9-a2cd-74ebe851840a" fragment="1" fragmentGUID="ea4e0704-4310-4b1a-8cad-dfa20d5d94ff" wejscie-w-zycie="2025-05-31">Spadkobiercy, w terminie 12 miesięcy od dnia śmierci kredytobiorcy lub ostatniego z kredytobiorców, mogą dokonać spłaty całkowitej kwoty do zapłaty.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="rozdz_4__art_21__ust_2" GUID="a26484e5-5ee0-49dc-9deb-21edb633cb04" wejscie-w-zycie="2025-05-31">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" GUID="a6b64995-7dde-4b27-a0aa-71d990d89790" fragment="1" fragmentGUID="60efd916-57ff-46f4-ae80-44e6db4ab055" wejscie-w-zycie="2025-05-31">W przypadku, o którym mowa w ust. 1, roszczenie banku o przeniesienie własności nieruchomości lub prawa, o którym mowa w art. 4 ust. 2, stanowiących zabezpieczenie odwróconego kredytu hipotecznego, wygasa.</zdanie>
+        </p>
+      </ustep>
+    </artykul>
+    <artykul eId="rozdz_4__art_22" GUID="8e9c8880-4ae7-44bf-a428-1c43a2f87dcf" wejscie-w-zycie="2025-05-31">
+      <nr>22</nr>
+      <ustep-n GUID="0871f671-8237-4d63-9b00-8983f48154c1" wejscie-w-zycie="2025-05-31">
+        <p>
+          <zdanie nr="1" GUID="5ce40143-b664-487c-bb08-d78d634f276c" fragment="1" fragmentGUID="ce971be6-b00a-4735-ac17-63b466679c27" wejscie-w-zycie="2025-05-31">Z dniem wymagalności całkowitej kwoty do zapłaty wymagalne staje się roszczenie o przeniesienie własności nieruchomości lub prawa, o którym mowa w art. 4 ust. 2, stanowiących zabezpieczenie odwróconego kredytu hipotecznego.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="rozdz_4__art_23" GUID="b280e4f2-da0b-4376-bcf9-5696db28cf7c" wejscie-w-zycie="2025-05-31">
+      <nr>23</nr>
+      <ustep-n GUID="3f797a6e-5549-488e-beac-ce4ecfbcc06b" wejscie-w-zycie="2025-05-31">
+        <p>
+          <zdanie nr="1" GUID="9e72bb75-2a5a-443b-95f2-c62ec10702b2" fragment="1" fragmentGUID="0fef493f-50cb-46a8-81ef-9908b8e4d75d" wejscie-w-zycie="2025-05-31">Bank nalicza odsetki oraz inne koszty do dnia spłaty całkowitej kwoty do zapłaty albo przeniesienia na niego własności nieruchomości lub prawa, o którym mowa w art. 4 ust. 2, stanowiących zabezpieczenie odwróconego kredytu hipotecznego.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="rozdz_4__art_24" GUID="6c4dc278-c2c9-4497-9fca-1c588e4832ef" wejscie-w-zycie="2025-05-31">
+      <nr>24</nr>
+      <ustep eId="rozdz_4__art_24__ust_1" GUID="fe0ba970-2557-44f3-8375-72acc5af297f" wejscie-w-zycie="2025-05-31">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" GUID="924afccc-eb01-45a3-9544-c630a3bf1ada" fragment="1" fragmentGUID="8ff399c4-6aca-42b6-bf92-04f4f922719e" wejscie-w-zycie="2025-05-31">Kredytobiorca albo jego spadkobiercy ponoszą wobec banku odpowiedzialność do wysokości wartości nieruchomości lub lokalu, o których mowa w art. 6 ust. 1.</zdanie>
+          <zdanie nr="2" GUID="89e68f03-a9a4-4476-b894-57aee8486a81" fragment="1" fragmentGUID="680a30aa-feb8-44ad-922b-6f3f4382ad1a" wejscie-w-zycie="2025-05-31">Bank może żądać zaspokojenia wyłącznie z nieruchomości lub lokalu, o których mowa w art. 6 ust. 1, stanowiących zabezpieczenie odwróconego kredytu hipotecznego.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="rozdz_4__art_24__ust_2" GUID="9c4e405f-82e6-4edc-beef-cd0022200680" wejscie-w-zycie="2025-05-31">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" GUID="14cf6b1c-41a7-456f-9a63-8f33bba43331" fragment="1" fragmentGUID="304d5318-87f4-408e-9ba6-cce733c0eafc" wejscie-w-zycie="2025-05-31">Jeżeli kredytobiorca lub jego spadkobiercy przenieśli na osoby trzecie własność nieruchomości lub prawo, o którym mowa w art. 4 ust. 2, stanowiące zabezpieczenie odwróconego kredytu hipotecznego, bez zgody banku, w przypadku, o którym mowa w art. 11, lub jeżeli wartość nieruchomości lub lokalu, o których mowa w art. 6 ust. 1, uległa istotnemu zmniejszeniu z przyczyn zawinionych przez kredytobiorcę lub jego spadkobierców, bank może żądać zaspokojenia także z innych składników majątku kredytobiorcy lub jego spadkobierców:</zdanie>
+        </p>
+        <punkt eId="rozdz_4__art_24__ust_2__pkt_1" GUID="3546af65-7b05-44f0-a452-e5811c145a17" wejscie-w-zycie="2025-05-31">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" GUID="14cf6b1c-41a7-456f-9a63-8f33bba43331" fragment="2" fragmentGUID="c57a0985-76f8-428a-8cfc-a342a7fc70f2" wejscie-w-zycie="2025-05-31">w przypadku gdy zaspokojenie z tej nieruchomości lub tego prawa jest niemożliwe lub jest możliwe jedynie częściowo oraz</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="rozdz_4__art_24__ust_2__pkt_2" GUID="01d0bb8e-4511-47dc-b3f9-77898113d952" wejscie-w-zycie="2025-05-31">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" GUID="14cf6b1c-41a7-456f-9a63-8f33bba43331" fragment="3" fragmentGUID="40bc3e1a-3e05-47e1-a2e0-21a2ad13bc91" wejscie-w-zycie="2025-05-31">do wysokości kwoty, o jaką została zmniejszona wartość tej nieruchomości lub tego lokalu lub w wysokości różnicy pomiędzy kwotą uzyskaną z egzekucji a całkowitą kwotą do zapłaty.</zdanie>
+          </p>
+        </punkt>
+      </ustep>
+    </artykul>
+    <artykul eId="rozdz_4__art_25" GUID="64d50b8f-cd14-4972-bea6-8a78628be588" wejscie-w-zycie="2025-05-31">
+      <nr>25</nr>
+      <ustep eId="rozdz_4__art_25__ust_1" GUID="e65068bf-ad4f-4a89-b5b7-0bd821996d21" wejscie-w-zycie="2025-05-31">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" GUID="29d57440-77c1-41c3-b1db-c7535f461aa0" fragment="1" fragmentGUID="1fd23fe2-66ae-4491-8f1e-09cd61f2235e" wejscie-w-zycie="2025-05-31">Bank niezwłocznie po uzyskaniu informacji o śmierci kredytobiorcy zamieszcza na swojej stronie internetowej ogłoszenie zawierające:</zdanie>
+        </p>
+        <punkt eId="rozdz_4__art_25__ust_1__pkt_1" GUID="6eff9131-3eab-4f27-a5a6-ab4e2158b9f4" wejscie-w-zycie="2025-05-31">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" GUID="29d57440-77c1-41c3-b1db-c7535f461aa0" fragment="2" fragmentGUID="f01f2274-c5bb-4291-8dc0-578a23bf8687" wejscie-w-zycie="2025-05-31">imię i nazwisko kredytobiorcy;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="rozdz_4__art_25__ust_1__pkt_2" GUID="bee246e0-eda0-41d4-96f5-823329a9d0d2" wejscie-w-zycie="2025-05-31">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" GUID="29d57440-77c1-41c3-b1db-c7535f461aa0" fragment="3" fragmentGUID="b7fd2e26-552d-42e1-b3b0-c5e65ebef4e7" wejscie-w-zycie="2025-05-31">informację o zawarciu z kredytobiorcą umowy odwróconego kredytu hipotecznego;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="rozdz_4__art_25__ust_1__pkt_3" GUID="46ccbde3-52d6-4c1c-b1a1-3c03b3cd4dd1" wejscie-w-zycie="2025-05-31">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" GUID="29d57440-77c1-41c3-b1db-c7535f461aa0" fragment="4" fragmentGUID="4f8f46ba-bd13-4311-831b-026d329ef2cf" wejscie-w-zycie="2025-05-31">informację o możliwości dokonania przez spadkobierców kredytobiorcy rozliczenia umowy odwróconego kredytu hipotecznego;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="rozdz_4__art_25__ust_1__pkt_4" GUID="1e25e061-2746-4ef3-88be-22938aded7f9" wejscie-w-zycie="2025-05-31">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" GUID="29d57440-77c1-41c3-b1db-c7535f461aa0" fragment="5" fragmentGUID="56abb221-d55b-415f-8c09-6ddcd759dec6" wejscie-w-zycie="2025-05-31">termin wyznaczony do rozliczenia umowy odwróconego kredytu hipotecznego.</zdanie>
+          </p>
+        </punkt>
+      </ustep>
+      <ustep eId="rozdz_4__art_25__ust_2" GUID="f8aba50d-4a10-4488-8a0a-4fb92a5e3962" wejscie-w-zycie="2025-05-31">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" GUID="059ac5c2-a214-4c3c-93ec-69d598087814" fragment="1" fragmentGUID="226f442e-d3d8-4986-9933-f3b606b13065" wejscie-w-zycie="2025-05-31">Informacje, o których mowa w ust. 1, bank przekazuje, na piśmie, także osobom do kontaktu po śmierci kredytobiorcy, wskazanym w umowie odwróconego kredytu hipotecznego.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="rozdz_4__art_25__ust_3" GUID="952bcf79-704d-4a9e-adc6-ec8cc67ba218" wejscie-w-zycie="2025-05-31">
+        <nr>3</nr>
+        <p>
+          <zdanie nr="1" GUID="ab23a51e-942d-48cf-b6e6-f19fd1894f40" fragment="1" fragmentGUID="61aab396-97db-4005-91cf-94ac01615b69" wejscie-w-zycie="2025-05-31">Umowa odwróconego kredytu hipotecznego może, na wniosek kredytobiorcy, przewidywać publikację informacji, o których mowa w ust. 1, w dzienniku o zasięgu ogólnopolskim.</zdanie>
+        </p>
+      </ustep>
+    </artykul>
+    <artykul eId="rozdz_4__art_26" GUID="9098f18f-c09c-4eb9-95d7-4c42b46c3406" wejscie-w-zycie="2025-05-31">
+      <nr>26</nr>
+      <ustep eId="rozdz_4__art_26__ust_1" GUID="54f04b2f-8c62-4e36-a1f8-afb5007c2a58" wejscie-w-zycie="2025-05-31">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" GUID="f430de91-f01a-4956-b52e-288f2a6af893" fragment="1" fragmentGUID="9614c066-1353-4cf6-8997-f110e2945281" wejscie-w-zycie="2025-05-31">W przypadku, o którym mowa w art. 20 ust. 1 pkt 2, oraz pod warunkiem że nie zachodzą przesłanki ustanowienia kuratora spadku, bank może wystąpić do sądu o ustanowienie kuratora.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="rozdz_4__art_26__ust_2" GUID="0b77ccfe-89eb-4325-b58b-a278b0ba0d6d" wejscie-w-zycie="2025-05-31">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" GUID="dcec5d94-6ea8-406f-9d37-1c5c677ae832" fragment="1" fragmentGUID="2dfac740-4eb0-43ad-81bd-a637cce8d6d1" wejscie-w-zycie="2025-05-31">Sąd upoważnia kuratora do przeniesienia na bank własności nieruchomości lub prawa, o którym mowa w art. 4 ust. 2, stanowiących zabezpieczenie odwróconego kredytu hipotecznego, i rozliczenia odwróconego kredytu hipotecznego.</zdanie>
+          <zdanie nr="2" GUID="e7811109-6eb7-4789-8d4f-88b92c55de23" fragment="1" fragmentGUID="911383dd-734a-4956-a193-3a9c24fc2465" wejscie-w-zycie="2025-05-31">W sprawach wynikających z rozliczenia odwróconego kredytu hipotecznego kurator może pozywać lub być pozywany.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="rozdz_4__art_26__ust_3" GUID="de414520-14c7-4892-bd92-d9131dd9ef40" wejscie-w-zycie="2025-05-31">
+        <nr>3</nr>
+        <p>
+          <zdanie nr="1" GUID="264bc760-f921-4f18-a5a1-0fea341abe9f" fragment="1" fragmentGUID="ad739fa5-ffeb-4af0-aae9-80d14ca47be5" wejscie-w-zycie="2025-05-31">Kurator podejmuje czynności do dnia uprawomocnienia się postanowienia o stwierdzeniu nabycia spadku albo zarejestrowania aktu poświadczenia dziedziczenia po kredytobiorcy.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="rozdz_4__art_26__ust_4" GUID="c88ad421-1f54-4b73-83f6-c3bde29d70a7" wejscie-w-zycie="2025-05-31">
+        <nr>4</nr>
+        <p>
+          <zdanie nr="1" GUID="64fc1112-821f-4d18-9333-de32a5b0db9c" fragment="1" fragmentGUID="5abea3e9-12b1-4360-bb53-9330f367ef9c" wejscie-w-zycie="2025-05-31">Koszty działania kuratora ponosi bank.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="rozdz_4__art_26__ust_5" GUID="9d211885-524e-4731-be42-2ee295144590" wejscie-w-zycie="2025-05-31">
+        <nr>5</nr>
+        <p>
+          <zdanie nr="1" GUID="a7f1a205-cce2-4651-a6d5-4bf7d4d5626e" fragment="1" fragmentGUID="56ebc209-d74b-4184-a9dd-8bff27de5eb6" wejscie-w-zycie="2025-05-31">Do przeniesienia przez kuratora własności nieruchomości lub prawa, o którym mowa w art. 4 ust. 2, stanowiących zabezpieczenie odwróconego kredytu hipotecznego, na rzecz banku nie stosuje się art. 19 ust. 6 ustawy z dnia 28 lipca 1983 r. o podatku od spadków i darowizn (Dz. U. z 2024 r. poz. 1837).</zdanie>
+        </p>
+      </ustep>
+    </artykul>
+    <artykul eId="rozdz_4__art_27" GUID="a40cc270-ff79-4711-b079-ffd43663f719" wejscie-w-zycie="2025-05-31">
+      <nr>27</nr>
+      <ustep-n GUID="fe494945-0343-4550-9b96-94cb85a65ade" wejscie-w-zycie="2025-05-31">
+        <p>
+          <zdanie nr="1" GUID="40ce86ed-dbbf-4274-937d-7936ea375deb" fragment="1" fragmentGUID="f6dd603a-2ac9-4c04-86ad-bc3a2c58cecd" wejscie-w-zycie="2025-05-31">Umowę o przeniesienie własności nieruchomości lub prawa, o którym mowa w art. 4 ust. 2, stanowiących zabezpieczenie odwróconego kredytu hipotecznego, bank zawiera:</zdanie>
+        </p>
+        <punkt eId="rozdz_4__art_27__pkt_1" GUID="b590ef58-6e08-49b5-8321-b894e7f87ce2" wejscie-w-zycie="2025-05-31">
+          <nr>1</nr>
+          <p>
+            <zdanie nr="1" GUID="40ce86ed-dbbf-4274-937d-7936ea375deb" fragment="2" fragmentGUID="d62d308d-b046-44d6-b26f-b04c452145ac" wejscie-w-zycie="2025-05-31">ze spadkobiercami kredytobiorcy;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="rozdz_4__art_27__pkt_2" GUID="9b9081ad-4b75-452a-a26d-321c7079eff7" wejscie-w-zycie="2025-05-31">
+          <nr>2</nr>
+          <p>
+            <zdanie nr="1" GUID="40ce86ed-dbbf-4274-937d-7936ea375deb" fragment="3" fragmentGUID="0b17ad1d-d08e-40cd-b5ea-5f91a3aef880" wejscie-w-zycie="2025-05-31">z wykonawcą testamentu, jeżeli został powołany;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="rozdz_4__art_27__pkt_3" GUID="6093f392-8ff1-4312-a4f8-251eeee25b73" wejscie-w-zycie="2025-05-31">
+          <nr>3</nr>
+          <p>
+            <zdanie nr="1" GUID="40ce86ed-dbbf-4274-937d-7936ea375deb" fragment="4" fragmentGUID="be5164ec-c094-4940-bdad-2b1c60c31169" wejscie-w-zycie="2025-05-31">z kuratorem spadku, jeżeli został ustanowiony, a spadkobiercy nie uzyskali jeszcze stwierdzenia nabycia spadku albo poświadczenia dziedziczenia;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="rozdz_4__art_27__pkt_4" GUID="f0837558-a2c6-4218-b73c-4984053090cf" wejscie-w-zycie="2025-05-31">
+          <nr>4</nr>
+          <p>
+            <zdanie nr="1" GUID="40ce86ed-dbbf-4274-937d-7936ea375deb" fragment="5" fragmentGUID="940d26f5-65c3-4aa9-b1e3-50f3885e79c0" wejscie-w-zycie="2025-05-31">z kuratorem, jeżeli został ustanowiony;</zdanie>
+          </p>
+        </punkt>
+        <punkt eId="rozdz_4__art_27__pkt_5" GUID="60cb9c93-3533-4562-9207-47e4d6bc13b4" wejscie-w-zycie="2025-05-31">
+          <nr>5</nr>
+          <p>
+            <zdanie nr="1" GUID="40ce86ed-dbbf-4274-937d-7936ea375deb" fragment="6" fragmentGUID="9cc16815-1c58-400d-b525-d3dfaab5d6df" wejscie-w-zycie="2025-05-31">z osobą trzecią, jeżeli zostały przeniesione na nią własność nieruchomości lub prawo, o którym mowa w art. 4 ust. 2, stanowiące zabezpieczenie odwróconego kredytu hipotecznego.</zdanie>
+          </p>
+        </punkt>
+      </ustep-n>
+    </artykul>
+    <artykul eId="rozdz_4__art_28" GUID="89b272df-cb83-4dfe-818f-b84124d9dd26" wejscie-w-zycie="2025-05-31">
+      <nr>28</nr>
+      <ustep eId="rozdz_4__art_28__ust_1" GUID="3c8b44be-e6fe-4cfc-a919-2c41bda9a332" wejscie-w-zycie="2025-05-31">
+        <nr>1</nr>
+        <p>
+          <zdanie nr="1" GUID="61f7f980-f1d9-4d6b-9fdf-e32c999216e5" fragment="1" fragmentGUID="d5c9982e-920e-4432-b5ff-cd881d6532b9" wejscie-w-zycie="2025-05-31">W terminie 30 dni od dnia zawarcia umowy o przeniesienie własności nieruchomości lub prawa, o którym mowa w art. 4 ust. 2, stanowiących zabezpieczenie odwróconego kredytu hipotecznego, bank w uzgodnieniu z osobą, o której mowa w art. 27, z którą zawarł tę umowę, zleca rzeczoznawcy majątkowemu oszacowanie wartości rynkowej nieruchomości w rozumieniu art. 151 ust. 1 ustawy z dnia 21 sierpnia 1997 r. o gospodarce nieruchomościami.</zdanie>
+        </p>
+      </ustep>
+      <ustep eId="rozdz_4__art_28__ust_2" GUID="a18a5b6f-7bc4-4fde-a6dc-8fe2b40bc187" wejscie-w-zycie="2025-05-31">
+        <nr>2</nr>
+        <p>
+          <zdanie nr="1" GUID="625b44d2-34a6-497e-8f7b-37df985b4b95" fragment="1" fragmentGUID="dbe843ca-9aa4-45b0-94b6-dfb0a8d2527a" wejscie-w-zycie="2025-05-31">W terminie 30 dni od dnia sporządzenia operatu szacunkowego bank zwraca osobie, o której mowa w art. 27 pkt 1, 2 albo 5, albo do depozytu sądowego, kwotę pieniężną stanowiącą różnicę pomiędzy wartością rynkową, o której mowa w ust. 1, a całkowitą kwotą do zapłaty, albo zawiadamia osoby, z którymi zawarł umowę, o której mowa w art. 27, że wartość jego wierzytelności jest wyższa od tej wartości rynkowej.</zdanie>
+        </p>
+      </ustep>
+    </artykul>
+    <artykul eId="rozdz_4__art_29" GUID="537ca7c6-ae39-4556-81bc-0df6235d47ef" wejscie-w-zycie="2025-05-31">
+      <nr>29</nr>
+      <ustep-n GUID="ef4148c9-2e50-4ce7-b445-22f30806d8ea" wejscie-w-zycie="2025-05-31">
+        <p>
+          <zdanie nr="1" GUID="fc1f4f39-4159-4680-be24-91f94ed958de" fragment="1" fragmentGUID="c2150dd0-df57-43eb-8230-4bdc3b1c8674" wejscie-w-zycie="2025-05-31">Do wartości stanu czynnego spadku może zostać zaliczona wyłącznie kwota, którą bank zwraca spadkobiercom lub wykonawcy testamentu, albo kwota, którą bank złożył do depozytu sądowego, zgodnie z art. 28 ust. 2.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="rozdz_4__art_30" GUID="c8ab1daf-8f1c-4533-8e7b-b977c8b94093" wejscie-w-zycie="2025-05-31">
+      <nr>30</nr>
+      <ustep-n GUID="e6e7c1b6-4d20-4c6b-85e7-cf7ea556d91b" wejscie-w-zycie="2025-05-31">
+        <p>
+          <zdanie nr="1" GUID="94e1ce0f-5f32-4960-992d-39a8e669c4eb" fragment="1" fragmentGUID="edc48ee2-bcb0-493c-8d58-e75fefb6f06b" wejscie-w-zycie="2025-05-31">Wartości nieruchomości lub lokalu, o których mowa w art. 6 ust. 1, nie uwzględnia się przy obliczaniu zachowku do wysokości całkowitej kwoty do zapłaty.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="rozdz_4__art_31" GUID="5ba626ea-e123-4fd6-aff2-4d6aeeaaac00" wejscie-w-zycie="2025-05-31">
+      <nr>31</nr>
+      <ustep-n GUID="b5cbdf01-4524-453d-95eb-2d33ab34fccb" wejscie-w-zycie="2025-05-31">
+        <p>
+          <zdanie nr="1" GUID="da82abd9-522d-48f7-9d65-59400aee088e" fragment="1" fragmentGUID="5fa19f66-d6d3-4488-aefe-673ff0bbd62a" wejscie-w-zycie="2025-05-31">Zapis zwykły lub zapis windykacyjny nieruchomości lub prawa, o którym mowa w art. 4 ust. 2, stanowiących zabezpieczenie odwróconego kredytu hipotecznego, dokonany przez kredytobiorcę lub spadkobierców kredytobiorców na rzecz osoby trzeciej jest bezskuteczny.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="rozdz_5__art_32" GUID="34997660-8a1d-4989-99f4-b27aa9acd1f2" wejscie-w-zycie="2025-05-31">
+      <nr>32</nr>
+      <ustep-n GUID="e86ee087-c25c-4e62-92e3-8234a2abe473" wejscie-w-zycie="2025-05-31">
+        <p>
+          <zdanie nr="1" GUID="22745260-e016-4887-a92f-142a1fc85744" fragment="1" fragmentGUID="b01d9b54-a66f-4782-8129-82f88753d88d" wejscie-w-zycie="2025-05-31">Z chwilą ogłoszenia upadłości banku umowa odwróconego kredytu hipotecznego ulega rozwiązaniu w zakresie niewykonanej części.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="rozdz_5__art_33" GUID="2297da2c-2874-4a86-a58f-1a36d54c31da" wejscie-w-zycie="2025-05-31">
+      <nr>33</nr>
+      <ustep-n GUID="f553a44d-4c3a-4b12-a604-d39fb80b843e" wejscie-w-zycie="2025-05-31">
+        <p>
+          <zdanie nr="1" GUID="64e697e8-7b1f-47e1-84f3-8964d712cc6d" fragment="1" fragmentGUID="8bf06235-c518-4eb5-accd-1b69ddd93bb0" wejscie-w-zycie="2025-05-31">Niezwłocznie po ogłoszeniu upadłości banku syndyk masy upadłości składa do właściwego sądu rejonowego wniosek o zmniejszenie sumy hipotecznej do kwoty odpowiadającej całkowitej kwocie do zapłaty, z zastrzeżeniem że odsetki nalicza się do dnia ogłoszenia upadłości banku.</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="rozdz_6__art_34" GUID="915100ed-2de5-47bd-a7f2-49d692aa953d" wejscie-w-zycie="2025-05-31">
+      <nr>34</nr>
+      <ustep-n GUID="c8ed0025-6949-4bb1-b8dc-0d612a9fef07" wejscie-w-zycie="2025-05-31">
+        <p>
+          <zdanie nr="1" GUID="98d027b9-898d-4872-8b0d-0a97d848d205" fragment="1" fragmentGUID="8b1ea710-82ad-4417-9742-ccc53dbbdef4" wejscie-w-zycie="2025-05-31">-37. (pominięte)</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+    <artykul eId="rozdz_7__art_38" GUID="3856dabb-67fa-4bd7-80c0-74e175961b0c" wejscie-w-zycie="2025-05-31">
+      <nr>38</nr>
+      <ustep-n GUID="37024b81-1ed8-4e48-8801-96d62dd15e32" wejscie-w-zycie="2025-05-31">
+        <p>
+          <zdanie nr="1" GUID="098d6368-83a9-4f03-8b8a-4a40945259ed" fragment="1" fragmentGUID="7773a566-64e9-43c3-8f21-89c9df128439" wejscie-w-zycie="2025-05-31">Ustawa wchodzi w życie po upływie 30 dni od dnia ogłoszenia[2)].</zdanie>
+        </p>
+      </ustep-n>
+    </artykul>
+  </ustawa>
+</akt-prawny>
