@@ -1,6 +1,6 @@
 # ADR-0057: Zdanie przytoczone w całości wychodzi jako `zdanie`; wprowadzenie do wyliczenia zostaje fragmentem tekstu
 
-- Status: Accepted
+- Status: Superseded by [ADR-0124](0124-zdanie-i-wprowadzenie-do-wyliczenia-przytoczone-w-calosci-sa-zdaniem.md)
 - Data: 2026-10-12
 
 ## Kontekst

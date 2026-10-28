@@ -101,14 +101,26 @@ namespace Saga.Core.Services.Parsing
         }
 
         /// <summary>
-        /// Komenda, której przedmiotem jest zdanie („zdanie pierwsze otrzymuje brzmienie:", „dodaje się zdanie
-        /// drugie w brzmieniu:") — treść cytowana to wtedy całe zdania (ADR-0057). Miejscownik („w zdaniu
-        /// pierwszym …") przedmiotu nie nazywa. Wprowadzenie do wyliczenia zdaniem nie jest: kończy je dwukropek,
-        /// a domykają dopiero pozycje wyliczenia.
+        /// Komenda, której przedmiotem jest zdanie albo wprowadzenie do wyliczenia („zdanie pierwsze otrzymuje
+        /// brzmienie:", „dodaje się zdanie drugie w brzmieniu:", „wprowadzenie do wyliczenia otrzymuje brzmienie:") —
+        /// treść cytowana to wtedy całe zdania albo cały fragment zdania (ADR-0124). Miejscownik („w zdaniu
+        /// pierwszym …", „we wprowadzeniu do wyliczenia …") przedmiotu nie nazywa.
         /// </summary>
         internal static readonly Regex SentenceObjectPattern = new(
-            $@"\bzdani[ea]\b[^:{QuotationMarks.Any}]{{0,60}}?(?:otrzymuj[eą]\s+brzmienie|w\s+brzmieniu)\s*:\s*$",
+            $@"\b(?<object>zdani[ea]|wprowadzeni[ea]\s+do\s+wyliczenia)\b[^:{QuotationMarks.Any}]{{0,60}}?(?:otrzymuj[eą]\s+brzmienie|w\s+brzmieniu)\s*:?\s*$",
             RegexOptions.Compiled | RegexOptions.IgnoreCase);
+
+        /// <summary>
+        /// Oznacza tekst cytowany jako zdania albo wprowadzenie do wyliczenia, gdy tak nazywa go komenda (ADR-0124).
+        /// </summary>
+        internal static void MarkTextObject(AmendmentContent content, string command)
+        {
+            if (content is not { PlainText.Length: > 0 } || SentenceObjectPattern.Match(command.TrimEnd()) is not { Success: true } match)
+                return;
+
+            content.PlainTextIsSentences = true;
+            content.PlainTextIsIntroduction = match.Groups["object"].Value.StartsWith("wprowadzeni", StringComparison.OrdinalIgnoreCase);
+        }
 
         /// <summary>
         /// Zwrot zmiany brzmienia na końcu przepisu, ale bez dwukropka („ust. 1 otrzymuje brzmienie") —
@@ -152,8 +164,8 @@ namespace Saga.Core.Services.Parsing
                 OperationType = operationType,
                 Content = operationType == AmendmentOperationType.Repeal ? null : content
             };
-            if (amendment.Content is { PlainText.Length: > 0 } quoted)
-                quoted.PlainTextIsSentences = SentenceObjectPattern.IsMatch(collector.CommandText.TrimEnd());
+            if (amendment.Content is { } quoted)
+                MarkTextObject(quoted, collector.CommandText);
 
             amendment.TextChanges.AddRange(input.TextChanges ?? []);
             if (context.PendingTextChanges.Remove(collector.Owner.Guid, out var pendingTextChanges))
@@ -457,6 +469,7 @@ namespace Saga.Core.Services.Parsing
             }
 
             existing.PlainTextIsSentences |= added.PlainTextIsSentences;
+            existing.PlainTextIsIntroduction |= added.PlainTextIsIntroduction;
             existing.Footnote ??= added.Footnote;
             existing.SystematizingUnits.AddRange(added.SystematizingUnits);
             existing.Articles.AddRange(added.Articles);

@@ -1715,12 +1715,15 @@ namespace Saga.Core.Tests
         }
 
         // ============================================================
-        // ADR-0057: zdanie przytoczone w całości jest zdaniem; wprowadzenie do wyliczenia — fragmentem tekstu
+        // ADR-0124: zdanie i wprowadzenie do wyliczenia przytoczone w całości są zdaniem; reszta tekstem
         // ============================================================
 
         [Fact]
-        public void Adr0057_QuotedSentenceIsASentence_AnIntroductionIsNot()
+        public void Adr0124_QuotedSentenceAndIntroduction_AreSentences_OtherTextIsNot()
         {
+            // Odpowiedź autora schematu (2026-10-27): „zdanie", gdy zastępowane jest całe zdanie albo cały fragment zdania;
+            // „tekst" dla kilku wyrazów. Wprowadzenie do wyliczenia jest fragmentem zdania (zdanie nr 1, fragment 1),
+            // tytuł zdaniem nie jest. Przykład autorów: DU/2026/26 art. 11.
             string[] lines =
             [
                 "USTAWA", "z dnia 14 czerwca 2024 r.", "o zmianie ustawy o opłatach",
@@ -1728,7 +1731,9 @@ namespace Saga.Core.Tests
                 "1) w art. 126 zdanie pierwsze otrzymuje brzmienie:",
                 "„Opłatę wnosi się w terminie 14 dni.”;",
                 "2) w art. 127 wprowadzenie do wyliczenia otrzymuje brzmienie:",
-                "„Opłaty nie pobiera się od:”.",
+                "„Opłaty nie pobiera się od:”;",
+                "3) tytuł rozdziału 3 otrzymuje brzmienie:",
+                "„Opłaty szczególne”.",
                 "Art. 2. Ustawa wchodzi w życie po upływie 14 dni od dnia ogłoszenia.",
             ];
             var document = LegalDocumentParser.Parse(
@@ -1737,10 +1742,12 @@ namespace Saga.Core.Tests
 
             var contents = LegalDocumentConverter.Convert(document).Descendants()
                 .Where(e => e.Name.LocalName == "cytat-w-tekscie")
-                .Select(citation => citation.Elements().Single().Name.LocalName)
+                .Select(citation => citation.Elements().Single())
                 .ToList();
 
-            Assert.Equal(["zdanie", "tekst"], contents);
+            Assert.Equal(["zdanie", "zdanie", "tekst"], contents.Select(content => content.Name.LocalName));
+            Assert.Equal(("1", "1"), (contents[1].Attribute("nr")?.Value, contents[1].Attribute("fragment")?.Value));
+            Assert.Equal("Opłaty nie pobiera się od:", contents[1].Value);
         }
 
         // ============================================================

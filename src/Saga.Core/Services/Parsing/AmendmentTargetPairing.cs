@@ -95,6 +95,23 @@ namespace Saga.Core.Services.Parsing
                     unit.AddressAnchor = AnchorFor(targets[i].Structure, unit);
         }
 
+        /// <summary>
+        /// Adres jednostki, której wyliczenie otwiera cytowane wprowadzenie do wyliczenia zmieniane razem z jego pozycjami
+        /// („wprowadzenie do wyliczenia i pkt 1 otrzymują brzmienie:") — cel komendy wskazuje pozycję, a wprowadzenie
+        /// należy do jednostki nad nią (ADR-0124). Null, gdy tekst nie jest wprowadzeniem albo cytat pozycji nie niesie.
+        /// </summary>
+        internal static string? IntroductionOwner(Amendment amendment)
+        {
+            if (amendment is not { Content: { PlainTextIsIntroduction: true } content, Targets: [var first, ..] })
+                return null;
+
+            UnitType? items = content.Points.Count > 0 ? UnitType.Point
+                : content.Letters.Count > 0 ? UnitType.Letter
+                : content.Tirets.Count > 0 ? UnitType.Tiret
+                : null;
+            return items is null ? null : HostOf(first.Structure, items).ToString();
+        }
+
         private static bool QuotesItemsOf(AmendmentContent content, UnitType? listItemType) => listItemType switch
         {
             UnitType.Point => content.Points.Count > 0,

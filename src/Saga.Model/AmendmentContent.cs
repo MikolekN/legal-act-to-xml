@@ -60,10 +60,18 @@ namespace Saga.Model
         public string? PlainText { get; set; }
 
         /// <summary>
-        /// Czy <see cref="PlainText"/> to całe zdania — komenda zmienia albo dodaje zdanie („zdanie pierwsze
-        /// otrzymuje brzmienie:") — a nie wyrazy, tytuł, wprowadzenie do wyliczenia czy inny fragment tekstu.
+        /// Czy <see cref="PlainText"/> to całe zdania albo cały fragment zdania — komenda zmienia albo dodaje zdanie
+        /// („zdanie pierwsze otrzymuje brzmienie:") albo wprowadzenie do wyliczenia — a nie wyrazy, tytuł czy inny
+        /// tekst (ADR-0124).
         /// </summary>
         public bool PlainTextIsSentences { get; set; }
+
+        /// <summary>
+        /// Czy <see cref="PlainText"/> to wprowadzenie do wyliczenia („wprowadzenie do wyliczenia i pkt 1 otrzymują
+        /// brzmienie:") — należy do jednostki, której wyliczenie wprowadza, a nie do celów komendy będących jego
+        /// pozycjami (ADR-0124).
+        /// </summary>
+        public bool PlainTextIsIntroduction { get; set; }
 
         /// <summary>
         /// Odnośnik (przypis) będący treścią nowelizacji — „odnośnik nr 1 do tytułu ustawy otrzymuje brzmienie:".

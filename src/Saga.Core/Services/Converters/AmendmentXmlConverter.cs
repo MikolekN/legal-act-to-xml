@@ -83,7 +83,7 @@ namespace Saga.Core.Services.Converters
                 {
                     if (i == 0)
                     {
-                        AddPlainTextContent(amendment, commands[i], sentence, blocks);
+                        AddPlainTextContent(amendment, commands[i], sentence, blocks, AmendmentTargetPairing.IntroductionOwner(amendment));
                         AddQuotedFootnote(amendment, commands[i], sentence, blocks);
                     }
 
@@ -478,11 +478,12 @@ namespace Saga.Core.Services.Converters
             blocks.Add(citation);
         }
 
-        private static void AddPlainTextContent(Amendment amendment, Command command, XNode? sentence, List<XElement> blocks)
+        /// <param name="address">Adres inny niż cel komendy — wprowadzenia do wyliczenia zmienianego razem z pozycjami.</param>
+        private static void AddPlainTextContent(Amendment amendment, Command command, XNode? sentence, List<XElement> blocks, string? address = null)
         {
             var plainText = amendment.Content?.PlainText;
             if (plainText == null) return;
-            AddTextCitation(amendment, command, sentence, plainText, blocks);
+            AddTextCitation(amendment, command, sentence, plainText, blocks, address);
         }
 
         private static void AddCommonParts(Amendment amendment, Command command, XNode? sentence, List<XElement> blocks)
@@ -521,10 +522,11 @@ namespace Saga.Core.Services.Converters
             blocks.Add(citation);
         }
 
-        private static void AddTextCitation(Amendment amendment, Command command, XNode? sentence, string text, List<XElement> blocks)
+        private static void AddTextCitation(Amendment amendment, Command command, XNode? sentence, string text, List<XElement> blocks,
+            string? address = null)
         {
-            // Zdanie przytoczone w całości wychodzi jako zdanie, nie jako fragment tekstu (ADR-0057), z datami
-            // nowelizacji — czyli zdania, które je przytacza (ADR-0121).
+            // Zdanie albo wprowadzenie do wyliczenia przytoczone w całości wychodzi jako zdanie, nie jako tekst (ADR-0124),
+            // z datami nowelizacji — czyli zdania, które je przytacza (ADR-0121).
             var citation = Element(XmlConverterConstants.Contents.Citation.Text.Element);
             if (amendment.Content is { PlainTextIsSentences: true })
             {
@@ -536,7 +538,7 @@ namespace Saga.Core.Services.Converters
             if (!citation.HasElements)
                 citation.Add(Element(XmlConverterConstants.Contents.Citation.Text.Content, text));
 
-            ApplyAttributes(citation, amendment, command, isStructural: false);
+            ApplyAttributes(citation, amendment, command, isStructural: false, address: address);
             if (sentence is XElement zdanie)
                 zdanie.Add(citation);
             blocks.Add(citation);

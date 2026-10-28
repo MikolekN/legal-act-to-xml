@@ -353,6 +353,7 @@ namespace Saga.Core.Services.Converters
             {
                 el.Add(new XElement("plainText",
                     content.PlainTextIsSentences ? new XAttribute("sentences", true) : null,
+                    content.PlainTextIsIntroduction ? new XAttribute("introduction", true) : null,
                     content.PlainText));
             }
 

@@ -1812,6 +1812,13 @@ a wersjonowanie zgodne z Semantic Versioning.
   Cytaty i cytaty instrukcji ręcznych zostają w toku zdania
   ([ADR-0123](docs/adr/0123-instrukcje-nowelizacyjne-stoja-przed-tekstem-zdania.md)).
 
+- **Wprowadzenie do wyliczenia przytoczone w całości jest zdaniem**: „w ust. 1 wprowadzenie do wyliczenia otrzymuje
+  brzmienie: „…:”” daje w `cytat-w-tekscie` `zdanie` nr 1, fragment 1 (z datami), a nie `tekst` — zgodnie z odpowiedzią
+  autora schematu („zdanie” dla całego zdania albo całego fragmentu zdania, „tekst” dla wyrazów) i przykładem
+  DU/2026/26 art. 11. Wprowadzenie złożone stylem części wspólnej nie jest już częścią wspólną (`…__czw`), a zmieniane
+  razem z punktami ma adres swojego ustępu, nie pierwszego punktu
+  ([ADR-0124](docs/adr/0124-zdanie-i-wprowadzenie-do-wyliczenia-przytoczone-w-calosci-sa-zdaniem.md)).
+
 ### Usunięto
 - **Nieużywane helpery `SpreadsheetHelper` i `EnumExtensions`** (`ToDescription()`, `[EnumDescription]`) —
   żaden kod ich nie wołał. Dokumentacja nie zapowiada już eksportu XLSX, którego nie ma; jedynym formatem

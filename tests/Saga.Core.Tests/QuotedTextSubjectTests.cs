@@ -22,6 +22,9 @@ namespace Saga.Core.Tests
         [InlineData("– dodaje się akapit w brzmieniu:")]
         [InlineData("a) w ust. 7 dodaje się zdanie trzecie w brzmieniu:")]
         [InlineData("Zdanie drugie otrzymuje brzmienie:")]
+        // Wprowadzenie do wyliczenia — fragment zdania (ADR-0124).
+        [InlineData("w art. 9 w ust. 1 wprowadzenie do wyliczenia otrzymuje brzmienie:")]
+        [InlineData("w ust. 1 i 2 wprowadzenia do wyliczenia otrzymują brzmienie:")]
         public void SentenceOrParagraphBeforeTheCommand_IsATextSubject(string command)
         {
             Assert.True(QuotedTextSubject.Names(command));
@@ -36,6 +39,9 @@ namespace Saga.Core.Tests
         [InlineData("– w akapicie drugim dodaje się pkt 4 w brzmieniu:")]
         [InlineData("w ust. 2 pkt 3 otrzymuje brzmienie:")]
         [InlineData("w ust. 2 zdanie pierwsze")]
+        // Przedmiot mieszany: wprowadzenie i punkt — punkt jest jednostką.
+        [InlineData("w ust. 1 wprowadzenie do wyliczenia i pkt 1 otrzymują brzmienie:")]
+        [InlineData("w ust. 1 we wprowadzeniu do wyliczenia dodaje się pkt 4 w brzmieniu:")]
         public void OtherSubjects_AreNotTextSubjects(string command)
         {
             Assert.False(QuotedTextSubject.Names(command));
@@ -77,6 +83,21 @@ namespace Saga.Core.Tests
 
             // Komenda o jednostce nadal buduje jednostkę.
             Assert.Single(points[1].Amendment!.Content!.Paragraphs);
+        }
+
+        [Fact]
+        public void QuotedIntroductionInACommonPartStyle_IsText_NotACommonPart()
+        {
+            // Korpus: 317406_2823164 — wprowadzenie złożone stylem części wspólnej wychodziło częścią wspólną (…__czw).
+            var document = Parse(
+                Point("1) w art. 9 w ust. 1 wprowadzenie do wyliczenia otrzymuje brzmienie:"),
+                Quote("„Organ wydaje decyzję w sprawie:”;"));
+
+            var content = document.Articles.First().Paragraphs.Single().Points[0].Amendment!.Content!;
+            Assert.Equal("Organ wydaje decyzję w sprawie:", content.PlainText);
+            Assert.True(content.PlainTextIsSentences);
+            Assert.True(content.PlainTextIsIntroduction);
+            Assert.Empty(content.CommonParts);
         }
 
         [Fact]

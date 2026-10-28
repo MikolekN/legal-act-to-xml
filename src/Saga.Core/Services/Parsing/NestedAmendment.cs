@@ -24,8 +24,7 @@ namespace Saga.Core.Services.Parsing
                     paragraphs, null, AmendmentOperationType.Modification, sectionIsBasicUnit,
                     QuotesCommonPart: AmendmentCommandParser.QuotesCommonPartPattern.IsMatch(command)));
             AmendmentBuilder.DemoteLoneCommonParts(content, command);
-            if (content is { PlainText.Length: > 0 })
-                content.PlainTextIsSentences = AmendmentFinalizer.SentenceObjectPattern.IsMatch(command.TrimEnd());
+            AmendmentFinalizer.MarkTextObject(content, command);
 
             var amendment = new Amendment
             {

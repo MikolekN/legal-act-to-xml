@@ -255,13 +255,16 @@ namespace Saga.Core.Tests
             },
         };
 
-        [Fact]
-        public void LoneCommonParts_UnderACommandNotNamingThem_AreQuotedText()
+        [Theory]
+        // Korpus: 329091_3181227 — podpisy rysunków złożone stylem części wspólnej.
+        [InlineData("rysunki 6.3.1.8 i 6.3.1.9 otrzymują brzmienie:")]
+        // Wprowadzenie do wyliczenia częścią wspólną nie jest — to fragment zdania (ADR-0124).
+        [InlineData("w pkt 3 wprowadzenie do wyliczenia otrzymuje brzmienie:")]
+        public void LoneCommonParts_UnderACommandNotNamingThem_AreQuotedText(string command)
         {
-            // Korpus: 329091_3181227 — podpisy rysunków złożone stylem części wspólnej.
             var content = LoneCommonParts();
 
-            AmendmentBuilder.DemoteLoneCommonParts(content, "rysunki 6.3.1.8 i 6.3.1.9 otrzymują brzmienie:");
+            AmendmentBuilder.DemoteLoneCommonParts(content, command);
 
             Assert.Empty(content.CommonParts);
             Assert.Equal("Rys. 6.3.1.8. Tablica E-1a I" + Environment.NewLine + "Rys. 6.3.1.9. Tablica E-1a II", content.PlainText);
@@ -270,7 +273,6 @@ namespace Saga.Core.Tests
 
         [Theory]
         [InlineData("w ust. 2 część wspólna otrzymuje brzmienie:")]
-        [InlineData("w pkt 3 wprowadzenie do wyliczenia otrzymuje brzmienie:")]
         public void CommonParts_NamedByTheCommand_StayCommonParts(string command)
         {
             var content = LoneCommonParts();

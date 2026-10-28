@@ -1,6 +1,6 @@
 # ADR-0086: Część wspólna bez wyliczenia i bez komendy, która ją nazywa, jest tekstem cytowanym
 
-- Status: Accepted
+- Status: Accepted — Superseded in part by [ADR-0124](0124-zdanie-i-wprowadzenie-do-wyliczenia-przytoczone-w-calosci-sa-zdaniem.md) (wprowadzenie do wyliczenia nie nazywa części wspólnej)
 - Data: 2026-10-14
 
 ## Kontekst

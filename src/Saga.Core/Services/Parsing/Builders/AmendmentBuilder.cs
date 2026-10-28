@@ -1000,9 +1000,10 @@ namespace Saga.Core.Services.Parsing.Builders
         // Helpers
         // ============================================================
 
-        // Przedmiot komendy, którym jest część wspólna albo wprowadzenie do wyliczenia.
+        // Przedmiot komendy, którym jest część wspólna. Wprowadzenie do wyliczenia częścią wspólną nie jest: to fragment
+        // zdania, tekst cytowany (ADR-0124).
         private static readonly Regex CommonPartSubject = new(
-            @"(?<![\p{L}])(?:częś\w*\s+wspóln|wprowadzeni\w*\s+do\s+wyliczenia)", RegexOptions.Compiled | RegexOptions.IgnoreCase);
+            @"(?<![\p{L}])częś\w*\s+wspóln", RegexOptions.Compiled | RegexOptions.IgnoreCase);
 
         /// <summary>
         /// Treść cytowana złożona z samych części wspólnych, bez wyliczenia, którego byłyby częścią, i pod komendą, która

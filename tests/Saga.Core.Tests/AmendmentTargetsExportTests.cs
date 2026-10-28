@@ -545,7 +545,7 @@ namespace Saga.Core.Tests
         }
 
         // ============================================================
-        // Zdanie przytoczone w całości (ADR-0057)
+        // Zdanie przytoczone w całości (ADR-0057, ADR-0124)
         // ============================================================
 
         [Theory]
@@ -582,12 +582,48 @@ namespace Saga.Core.Tests
         }
 
         [Theory]
-        // Wprowadzenie do wyliczenia domykają dopiero jego pozycje — to fragment tekstu, nie zdanie.
-        [InlineData("1) w art. 5 wprowadzenie do wyliczenia otrzymuje brzmienie:", "„Organ właściwy:”;")]
+        // Wprowadzenie do wyliczenia to cały fragment zdania: zdanie nr 1, fragment 1 (DU/2026/26 art. 11).
+        [InlineData("1) w art. 5 wprowadzenie do wyliczenia otrzymuje brzmienie:", "art_5")]
+        // „W zdaniu pierwszym" wskazuje miejsce (zdanie, ADR-0102); przedmiotem jest wprowadzenie.
+        [InlineData("1) w art. 5 w zdaniu pierwszym wprowadzenie do wyliczenia otrzymuje brzmienie:", "art_5__zdn_1")]
+        // Korpus: 326224_2994150 — komenda bez dwukropka.
+        [InlineData("1) w art. 5 wprowadzenie do wyliczenia otrzymuje brzmienie", "art_5")]
+        public void QuotedIntroduction_IsExportedAsAFragmentOfASentence(string command, string target)
+        {
+            var (xml, context) = Convert(command, "„Organ właściwy wydaje decyzję w sprawie:”;");
+
+            var citation = Assert.Single(Commands(xml), c => c.Name.LocalName == "cytat-w-tekscie");
+            var sentence = Assert.Single(citation.Elements());
+            Assert.Equal("zdanie", sentence.Name.LocalName);
+            Assert.Equal(("1", "1"), (Attr(sentence, "nr"), Attr(sentence, "fragment")));
+            Assert.Equal("Organ właściwy wydaje decyzję w sprawie:", sentence.Value);
+            Assert.Equal(target, Attr(citation, "element-eId"));
+
+            var content = context.Document.Articles.First().Paragraphs[0].Points.Single().Amendment!.Content!;
+            Assert.True(content.PlainTextIsSentences);
+            Assert.True(content.PlainTextIsIntroduction);
+        }
+
+        [Fact]
+        public void IntroductionChangedWithItsPoints_IsAddressedToTheUnitWhoseEnumerationItOpens()
+        {
+            // Korpus: 308795_2759226 — cel komendy wskazuje punkt, a wprowadzenie należy do ustępu nad nim (ADR-0124).
+            var (xml, _) = Convert(
+                "1) w art. 103 w ust. 1 wprowadzenie do wyliczenia i pkt 1 otrzymują brzmienie:",
+                "„Przepisy ustawy stosuje się do:",
+                "1) pracodawców;”;");
+
+            var commands = Commands(xml);
+            var introduction = Assert.Single(commands, c => c.Name.LocalName == "cytat-w-tekscie");
+            Assert.Equal("art_103__ust_1", Attr(introduction, "element-eId"));
+            Assert.Equal("zdanie", Assert.Single(introduction.Elements()).Name.LocalName);
+            var point = Assert.Single(commands, c => c.Name.LocalName == "cytat-strukt");
+            Assert.Equal("art_103__ust_1__pkt_1", Attr(point, "element-eId"));
+        }
+
+        [Theory]
         // Tytuł zdaniem nie jest.
         [InlineData("1) tytuł rozdziału 3 otrzymuje brzmienie:", "„Obowiązki podmiotów kluczowych”;")]
-        // „W zdaniu pierwszym" wskazuje miejsce, a przedmiotem komendy jest co innego.
-        [InlineData("1) w art. 5 w zdaniu pierwszym wprowadzenie do wyliczenia otrzymuje brzmienie:", "„Organ właściwy:”;")]
         public void QuotedTextThatIsNotASentence_StaysAFragment(string command, string quoted)
         {
             var (xml, _) = Convert(command, quoted);
